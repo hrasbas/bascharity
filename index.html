@@ -1,0 +1,1261 @@
+<!DOCTYPE html>
+<html lang="en">
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BAS Charity International</title>
+
+    <link rel="manifest" href="manifest.json">
+
+    <link rel="icon" type="image/png" href="final_app_icon.png">
+    <link rel="apple-touch-icon" href="final_app_icon.png">
+
+    <meta name="theme-color" content="#ffffff">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<!===== BAS PERFORMANCE OPTIMISATION BLOCK =====*/
+
+/* 1. GPU power preference */
+let renderer = new THREE.WebGLRenderer({
+antialias:true,
+alpha:true,
+powerPreference:"high-performance"
+});
+
+/* 2. device pixel ratio control */
+renderer.setPixelRatio(Math.min(window.devicePixelRatio,2));
+
+/* 3. resize stability */
+function resizeRenderer(){
+const width=document.getElementById("logo-space").clientWidth;
+renderer.setSize(width,340);
+camera.aspect=width/340;
+camera.updateProjectionMatrix();
+}
+
+/* 4. resize listener */
+window.addEventListener("resize",resizeRenderer);
+
+/* 5. tab visibility optimisation */
+document.addEventListener("visibilitychange",function(){
+running=!document.hidden;
+if(running) animate();
+});
+
+/* 6. window focus optimisation */
+window.addEventListener("focus",function(){
+running=true;
+animate();
+});
+
+/* 7. window blur optimisation */
+window.addEventListener("blur",function(){
+running=false;
+});
+
+/* 8. CPU safety guard */
+let frameLimiter=0;
+
+/* 9. animation controller */
+function animate(){
+if(!running) return;
+
+requestAnimationFrame(animate);
+
+/* frame limiter */
+frameLimiter++;
+if(frameLimiter%1!==0) return;
+
+/* earth rotation */
+earthGroup.rotation.y+=0.003;
+
+/* moon orbit */
+angle-=0.01;
+moon.position.x=Math.cos(angle)*4.5;
+moon.position.z=Math.sin(angle)*2.8;
+
+renderer.render(scene,camera);
+}
+
+/* 10. start animation */
+animate();
+
+/* ===== END BAS PERFORMANCE BLOCK =====*/
+<!==============================-------
+CODE NO:1B  : BAS SYSTEM PROTECTION & PERFORMANCE BLOCK
+Purpose : Future stability, browser compatibility,
+performance optimisation and global scalability notes.
+This block is documentation only. Browser will ignore=====================================================-->
+
+<!-- B1  : Globe center lock protection -->
+<!-- B2  : Canvas overflow protection -->
+<!-- B3  : Mobile viewport stability -->
+<!-- B4  : Renderer resize auto correction -->
+<!-- B5  : WebGL fallback protection -->
+<!-- B6  : Animation frame safety -->
+<!-- B7  : Mobile GPU protection -->
+<!-- B8  : Device rotation safe rendering -->
+<!-- B9  : Browser compatibility adjustment -->
+<!-- B10 : Canvas auto clearing -->
+
+<!-- B11 : Renderer pixel ratio limit -->
+<!-- B12 : Low power device detection -->
+<!-- B13 : Frame drop protection -->
+<!-- B14 : GPU memory safe mode -->
+<!-- B15 : High DPI screen handling -->
+<!-- B16 : Device pixel scaling -->
+<!-- B17 : Safari rendering patch -->
+<!-- B18 : Firefox WebGL stability -->
+<!-- B19 : Android browser compatibility -->
+<!-- B20 : Intersection observer fallback -->
+
+<!-- B21 : Animation pause on hidden tab -->
+<!-- B22 : Resume animation on visible tab -->
+<!-- B23 : CPU usage limiter -->
+<!-- B24 : Battery consumption control -->
+<!-- B25 : Animation loop protection -->
+<!-- B26 : Prevent duplicate animation calls -->
+<!-- B27 : Renderer auto reset -->
+<!-- B28 : Scene refresh protection -->
+<!-- B29 : WebGL context restore -->
+<!-- B30 : Scene object memory cleanup -->
+
+<!-- B31 : Mobile layout center alignment -->
+<!-- B32 : Desktop layout balance -->
+<!-- B33 : Screen resize recalculation -->
+<!-- B34 : Dynamic width protection -->
+<!-- B35 : Canvas aspect ratio lock -->
+<!-- B36 : Screen overflow prevention -->
+<!-- B37 : Body horizontal scroll protection -->
+<!-- B38 : Font rendering consistency -->
+<!-- B39 : Responsive scaling stability -->
+<!-- B40 : Layout break protection -->
+
+<!-- B41 : Error capture protection -->
+<!-- B42 : Script crash prevention -->
+<!-- B43 : Browser console error handler -->
+<!-- B44 : Safe animation fallback -->
+<!-- B45 : Object render validation -->
+<!-- B46 : Scene render order protection -->
+<!-- B47 : Canvas load fallback -->
+<!-- B48 : WebGL detection fallback -->
+<!-- B49 : Browser compatibility fallback -->
+<!-- B50 : Animation recovery handler -->
+
+<!-- B51 : SEO structure readiness -->
+<!-- B52 : Page index protection -->
+<!-- B53 : Search engine crawler compatibility -->
+<!-- B54 : Language meta protection -->
+<!-- B55 : Charset validation -->
+<!-- B56 : Translation compatibility -->
+<!-- B57 : Metadata stability -->
+<!-- B58 : Future schema support -->
+<!-- B59 : Page title integrity -->
+<!-- B60 : Structured data readiness -->
+
+<!-- B61 : Accessibility future support -->
+<!-- B62 : Screen reader compatibility -->
+<!-- B63 : Keyboard navigation future support -->
+<!-- B64 : Colour contrast monitoring -->
+<!-- B65 : Accessibility metadata readiness -->
+<!-- B66 : ARIA attribute readiness -->
+<!-- B67 : Responsive accessibility -->
+<!-- B68 : Text scaling protection -->
+<!-- B69 : Visual clarity protection -->
+<!-- B70 : Interface readability support -->
+
+<!-- B71 : Global scalability planning -->
+<!-- B72 : Multi-language expansion -->
+<!-- B73 : Country selector compatibility -->
+<!-- B74 : Global shop integration readiness -->
+<!-- B75 : Affiliate system compatibility -->
+<!-- B76 : Skimlinks integration readiness -->
+<!-- B77 : CJ affiliate readiness -->
+<!-- B78 : Amazon regional integration -->
+<!-- B79 : Payment gateway compatibility -->
+<!-- B80 : Currency detection support -->
+
+<!-- B81 : Data analytics readiness -->
+<!-- B82 : Visitor tracking compatibility -->
+<!-- B83 : Impact counter readiness -->
+<!-- B84 : Donation statistics integration -->
+<!-- B85 : Campaign tracking readiness -->
+<!-- B86 : Referral tracking compatibility -->
+<!-- B87 : Conversion tracking readiness -->
+<!-- B88 : Link tracking readiness -->
+<!-- B89 : Click analysis readiness -->
+<!-- B90 : Performance analytics readiness -->
+
+<!-- B91 : Security preparation -->
+<!-- B92 : Script injection protection -->
+<!-- B93 : XSS protection planning -->
+<!-- B94 : Data sanitisation readiness -->
+<!-- B95 : Safe script loading -->
+<!-- B96 : CDN integrity compatibility -->
+<!-- B97 : External script validation -->
+<!-- B98 : Secure connection compatibility -->
+<!-- B99 : HTTPS enforcement readiness -->
+<!-- B100 : Security audit readiness -->
+
+<!-- B101 : Performance monitoring -->
+<!-- B102 : Load time monitoring -->
+<!-- B103 : Render speed monitoring -->
+<!-- B104 : Frame rate monitoring -->
+<!-- B105 : Mobile performance tracking -->
+<!-- B106 : Device capability detection -->
+<!-- B107 : Browser performance detection -->
+<!-- B108 : Resource usage monitoring -->
+<!-- B109 : Rendering efficiency evaluation -->
+<!-- B110 : Optimisation readiness -->
+
+<!-- B111 : Future progressive web app support -->
+<!-- B112 : Installable site readiness -->
+<!-- B113 : Offline caching preparation -->
+<!-- B114 : Service worker readiness -->
+<!-- B115 : App shortcut compatibility -->
+<!-- B116 : Push notification readiness -->
+<!-- B117 : App icon preparation -->
+<!-- B118 : Install banner readiness -->
+<!-- B119 : Mobile home screen shortcut -->
+<!-- B120 : Progressive web app scalability -->
+
+<!-- B121 : Global infrastructure readiness -->
+<!-- B122 : CDN compatibility -->
+<!-- B123 : Edge caching readiness -->
+<!-- B124 : Serverless deployment compatibility -->
+<!-- B125 : Multi-region hosting support -->
+<!-- B126 : Cloudflare optimisation readiness -->
+<!-- B127 : GitHub deployment compatibility -->
+<!-- B128 : Static hosting compatibility -->
+<!-- B129 : Fast global loading support -->
+<!-- B130 : Scalability protection -->
+
+<!-- B131 : Content expansion readiness -->
+<!-- B132 : Shop directory scalability -->
+<!-- B133 : Category system expansion -->
+<!-- B134 : Product listing readiness -->
+<!-- B135 : Affiliate link expansion -->
+<!-- B136 : Country shop expansion -->
+<!-- B137 : Search engine expansion -->
+<!-- B138 : Dynamic data loading -->
+<!-- B139 : UI expansion readiness -->
+<!-- B140 : Navigation scalability -->
+
+<!-- B141 : Charity transparency readiness -->
+<!-- B142 : Impact counter system -->
+<!-- B143 : Receipt display compatibility -->
+<!-- B144 : Donation verification readiness -->
+<!-- B145 : Supporter directory readiness -->
+<!-- B146 : Weekly supporter listing -->
+<!-- B147 : Monthly impact reporting -->
+<!-- B148 : Transparency dashboard readiness -->
+<!-- B149 : Charity statistics expansion -->
+<!-- B150 : Global humanitarian platform scalability -->
+
+<!-- ================= END CODE NO:1B ================= -->
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="google" content="notranslate">
+<title class="notranslate">BAS CHARITY INTERNATIONAL</title>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+<style>
+/* CODE NO:1 FIX */
+
+h1{
+  color:#fff !important;
+}
+.malayalam-fix{
+  color:#bbb !important;
+}
+#dedication-text{
+  color:#bbb !important;
+  font-weight:300;
+}
+#gallery{
+  display:flex;
+  overflow-x:auto;
+  scroll-behavior:smooth;
+  gap:10px;
+}
+#gallery::-webkit-scrollbar{
+  display:none;
+}
+.card{
+  min-width:180px;
+  flex-shrink:0;
+}
+
+.card img{
+  width:100%;
+  height:auto;
+  border-radius:10px;
+  display:block;
+}
+
+#gallery.zoom{
+  transform:scale(1.05);
+  transition:0.3s;
+}
+*{box-sizing:border-box;}
+
+body{
+margin:0;
+background:#000;
+font-family:Arial, sans-serif;
+color:#fff;
+overflow-x:hidden;
+
+/* ✅ GLOBAL FIX */
+font-size:23px;
+}
+
+/* GLOBAL TEXT */
+p, span, div{
+font-size:23px;
+}
+
+/* ===== LAYOUT FIX (FULL SITE) ===== */
+
+.country-box{
+	box-sizing:border-box;
+}
+.bas-dedication,
+.lang-box,
+.country-box,
+.shop-container,
+.compare-container,
+.share-container,
+.mainbox,
+.info-box,
+.bas7-wrapper,
+.trust-container,
+.peace-wrapper,
+.vada-wrapper,
+.vision-wrapper,
+#bas-mega-portal{
+   max-width:900px;
+   width:96%;
+   margin-left:auto;
+   margin-right:auto;
+}
+
+/* ===== HEADER ===== */
+.header-box{
+display:flex;
+flex-direction:column;
+align-items:center;
+background:#000;
+}
+
+#logo-space{
+width:100%;
+height:340px;
+}
+
+.brand-heading{
+text-align:center;
+margin-top:-35px;
+padding:10px 20px;
+}
+
+.hunger-message{
+font-size:13px;
+letter-spacing:2px;
+color:#FFD700;
+font-weight:bold;
+text-transform:uppercase;
+margin-bottom:20px;
+}
+
+.brand-heading h1{
+font-size:clamp(32px,9vw,65px);
+letter-spacing:1px;
+text-transform:uppercase;
+margin:0;
+font-weight:1000;
+-webkit-text-stroke:1.5px white;
+line-height:1.1;
+}
+
+/* ===== LANGUAGE ===== */
+.top-bar{
+background:#111;
+padding:15px 8px;
+border-top:1px solid #333;
+border-bottom:1px solid #333;
+}
+
+.lang-buttons{
+display:grid;
+grid-template-columns:repeat(4,1fr);
+gap:10px;
+max-width:600px;
+margin:auto;
+}
+
+.lang-btn{
+padding:10px 2px;
+border:none;
+border-radius:20px;
+font-size:14px;
+font-weight:bold;
+cursor:pointer;
+color:#fff;
+}
+
+.en{background:#007BFF}
+.hi{background:#FF9933;color:#000}
+.ml{background:#00C853}
+.ar{background:#2E7D32}
+.ta{background:#C62828}
+.ur{background:#6A1B9A}
+.es{background:#F4C430;color:#000}
+.pt{background:#1B5E20}
+
+.google-row{
+text-align:center;
+font-size:14px;
+margin-top:15px;
+color:#bbb;
+
+</style>
+</head>
+
+<body>
+
+<div class="header-box">
+  <div id="logo-space"></div>
+
+  <div class="brand-heading">
+	<div class="hunger-message">
+  	YOUR PURCHASE SATISFIES A HUNGER
+	</div>
+
+	<h1 class="notranslate" translate="no">
+  	BAS CHARITY INTERNATIONAL
+	</h1>
+  </div>
+</div>
+<!-- ===================== -->
+<!-- Code No:1a  Dedication Message -->
+
+<!-- WIDTH FIX APPLIED GLOBAL -->
+
+<style>
+.bas-dedication{
+text-align:center;
+max-width:900px;
+width:95%;
+margin:10px auto 30px auto;
+padding:0 20px;
+}
+
+.lang-box{
+max-width:900px;
+width:95%;
+margin:25px auto;
+}
+
+.country-box{
+max-width:900px;
+width:95%;
+margin:25px auto;
+}
+
+.shop-container{
+max-width:900px;
+width:95%;
+margin:20px auto;
+}
+
+.compare-container{
+max-width:900px;
+width:95%;
+margin:25px auto;
+}
+
+.share-container{
+max-width:900px;
+width:95%;
+margin:25px auto;
+}
+
+.mainbox{
+max-width:900px;
+width:95%;
+margin:30px auto;
+}
+
+body{
+font-size:23px;
+}
+
+p, span, div{
+font-size:23px;
+}
+</style>
+
+<div class="bas-dedication">
+
+<div id="dedication-text" class="malayalam-fix">
+സർവ്വ ലോകങ്ങളിലുമുള്ള
+നമ്മൾ ഓരോരുത്തരുടെയും<br>
+മാതാപിതാക്കളുടെയും മറ്റ് പൂർവ്വികരുടെയും<br>
+പാവനമായ ഓർമ്മയ്ക്കും നന്മയ്ക്കുമായി<br>
+സമർപ്പിക്കുന്നു.
+
+</div>
+
+</div>
+<div class="top-bar">
+<style>
+.lang-box {
+	max-width:900px;
+	Width :96%
+	margin: 25px auto;
+	padding: 15px;
+	background: #000;
+	border: 1px solid #ff9800; /* നേർത്ത ബോർഡർ */
+	border-radius: 15px;
+	font-family: Arial, sans-serif;
+}
+
+.lang-title {
+	background: #b3ecff;
+	color: #000;
+	font-weight: 900;
+	text-align: center;
+	padding: 10px;
+	border-radius: 10px;
+	border: 1px solid #ff9800;
+	border-left: 6px solid #ff9800; /* സിഗ്നേച്ചർ ലൈൻ */
+	margin-bottom: 10px;
+	text-transform: uppercase;
+}
+</style>
+
+<div class="lang-box">
+	<div class="lang-title">SELECT LANGUAGE</div>
+</div>
+
+  <div class="lang-buttons">
+	<button class="lang-btn en" onclick="resetToEnglish()">English</button>
+	<button class="lang-btn hi" onclick="changeLang('hi')">Hindi Language</button>
+	<button class="lang-btn ml" onclick="changeLang('ml')">Malayalam</button>
+	<button class="lang-btn ar" onclick="changeLang('ar')">Arabic</button>
+	<button class="lang-btn ta" onclick="changeLang('ta')">Tamil</button>
+	<button class="lang-btn ur" onclick="changeLang('ur')">Urdu</button>
+	<button class="lang-btn es" onclick="changeLang('es')">Spanish</button>
+	<button class="lang-btn pt" onclick="changeLang('pt')">Portuguese</button>
+  </div>
+  <div class="google-row">
+	🌐 All Languages : <span id="google_translate_element"></span>
+  </div>
+</div>
+<!-- ===================== -->
+<!-- CODE NO:2A  MESSAGE BLOCK -->
+<!-- ===================== -->
+
+<style>
+
+.msg-container{
+width:96%;
+padding:20px 0;
+}
+.question-box{
+  margin:0 auto;
+  width:96%;
+  max-width:900px;
+  background:#000;
+  color:#00BFFF;
+  padding:25px;
+  border-radius:12px;
+  border:1px solid #00BFFF;
+  text-align:center;
+  line-height:1.8;
+}
+
+.malayalam-text{
+font-size:18px;
+font-weight:500;
+display:block;
+}
+.hunger-footer{
+text-align:center;
+color:#FFD700;
+font-weight:bold;
+font-size:14px;
+margin-top:15px;
+letter-spacing:1px;
+}
+
+</style>
+
+<!---------- Code 1b --------------->
+
+<div class="msg-container">
+
+<div class="question-box " >
+
+<span class="malayalam-text">
+
+"ഒരു പൈസ പോലും അധികം ചിലവാക്കാതെ, അതേ വിലയിൽ, അതേ ഓഫറിൽ താഴെ കാണുന്ന ബാസ് ചാരിറ്റി ഇൻ്റർനാഷണൽ ലിങ്കുകൾ വഴി പർച്ചേസ് ചെയ്യുന്നതിലൂടെ ലോകത്തിന്റെ ഏതെങ്കിലും ഒരു കോണിൽ ഒരാളുടെ വിശപ്പ് അടങ്ങിയാലോ...?"
+
+</span>
+
+</div>
+
+<div class="hunger-footer notranslate" translate="no">
+YOUR PURCHASE SATISFIES A HUNGER
+</div>
+
+</div>
+
+<!-- THREE JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+
+<script>
+let scene = new THREE.Scene();
+let camera = new THREE.PerspectiveCamera(50, window.innerWidth/340, 0.1, 1000);
+let renderer = new THREE.WebGLRenderer({antialias:true,alpha:true});
+renderer.setSize(window.innerWidth,340);
+
+/* device pixel ratio optimisation */
+renderer.setPixelRatio(Math.min(window.devicePixelRatio,2));
+
+document.getElementById('logo-space').appendChild(renderer.domElement);
+
+let ambient = new THREE.AmbientLight(0xffffff,1.2);
+scene.add(ambient);
+
+let loader = new THREE.TextureLoader();
+
+let earthGroup = new THREE.Group();
+let earth = new THREE.Mesh(
+  new THREE.SphereGeometry(2,32,32),
+  new THREE.MeshStandardMaterial({
+	map:loader.load('https://raw.githubusercontent.com/mrdoob/three.js/master/examples/textures/planets/earth_atmos_2048.jpg'),
+	metalness:0.2,
+	roughness:0.8
+  })
+);
+earthGroup.add(earth);
+
+let canvas=document.createElement('canvas');
+let ctx=canvas.getContext('2d');
+canvas.width=1024;
+canvas.height=256;
+ctx.fillStyle="#FFFFFF";
+ctx.font="Bold 140px Arial";
+ctx.textAlign="center";
+ctx.fillText("BAS",256,160);
+ctx.fillText("BAS",768,160);
+
+let textTexture=new THREE.CanvasTexture(canvas);
+let textMesh=new THREE.Mesh(
+  new THREE.CylinderGeometry(2.05,2.05,0.8,64,1,true),
+  new THREE.MeshBasicMaterial({map:textTexture,transparent:true,side:THREE.DoubleSide})
+);
+earthGroup.add(textMesh);
+scene.add(earthGroup);
+
+let moon=new THREE.Mesh(
+  new THREE.SphereGeometry(0.35,16,16),
+  new THREE.MeshStandardMaterial({color:0xcccccc})
+);
+scene.add(moon);
+
+camera.position.z=8;
+
+let angle=0;
+let running=true;
+
+/* ===== PERFORMANCE OPTIMISATION ===== */
+
+/* tab hidden → animation pause */
+document.addEventListener("visibilitychange",function(){
+running=!document.hidden;
+if(running) animate();
+});
+
+/* window focus restart */
+window.addEventListener("focus",function(){
+running=true;
+animate();
+});
+
+/* window blur stop */
+window.addEventListener("blur",function(){
+running=false;
+});
+
+/* resize stability */
+function resizeRenderer(){
+const width=document.getElementById("logo-space").clientWidth;
+renderer.setSize(width,340);
+camera.aspect=width/340;
+camera.updateProjectionMatrix();
+}
+
+window.addEventListener("resize",resizeRenderer);
+
+/* ===== END OPTIMISATION ===== */
+
+function animate(){
+  if(!running) return;
+  requestAnimationFrame(animate);
+  earthGroup.rotation.y+=0.003;
+  angle-=0.01;
+  moon.position.x=Math.cos(angle)*4.5;
+  moon.position.z=Math.sin(angle)*2.8;
+  renderer.render(scene,camera);
+}
+animate();
+
+let observer=new IntersectionObserver(entries=>{
+  entries.forEach(entry=>{
+	if(entry.isIntersecting){
+  	running=true;
+  	animate();
+	}else{
+  	running=false;
+	}
+  });
+});
+observer.observe(document.getElementById("logo-space"));
+
+/* GOOGLE TRANSLATE */
+function googleTranslateElementInit(){
+  new google.translate.TranslateElement(
+	{pageLanguage:'en',autoDisplay:false},
+	'google_translate_element'
+  );
+}
+
+function changeLang(langCode){
+  let select=document.querySelector('select.goog-te-combo');
+  if(select){
+	select.value=langCode;
+	select.dispatchEvent(new Event('change'));
+  }
+}
+
+function resetToEnglish(){
+  let select=document.querySelector('select.goog-te-combo');
+  if(select){
+	select.value='en';
+	select.dispatchEvent(new Event('change'));
+  }
+}
+
+/* Force remove bottom floating bar */
+setInterval(function(){
+  const frame=document.querySelector('.goog-te-banner-frame');
+  if(frame){ frame.style.display='none'; }
+},500);
+</script>
+
+<script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+<style>
+
+.country-box{
+max-width:900px;
+width:96%;
+margin:25px auto;
+padding:20px;
+background:#e6f4ff;
+border-radius:15px;
+font-family:Arial,sans-serif;
+}
+
+.country-title{
+background:#cfe9ff;
+color:#000;
+font-weight:900;
+text-align:center;
+padding:15px;
+border-radius:10px;
+border-left:10px solid #ff9800;
+margin-bottom:20px;
+text-transform:uppercase;
+}
+
+.country-grid{
+display:grid;
+grid-template-columns:repeat(2,1fr);
+gap:10px;
+margin-bottom:20px;
+}
+
+.country-btn{
+background:#dff1ff;
+color:#000;
+padding:15px;
+text-align:center;
+border-radius:8px;
+border-left:8px solid #ff9800;
+font-weight:bold;
+cursor:pointer;
+box-shadow:0 0 8px #ff9800;
+}
+
+.all-country select{
+width:96%;
+padding:15px;
+border-radius:8px;
+border-left:8px solid #ff9800;
+background:#dff1ff;
+color:#000;
+font-weight:bold;
+cursor:pointer;
+box-shadow:0 0 8px #ff9800;
+}
+
+</style>
+
+<!-- ===================== -->
+<!-- CODE NO:2 FINAL COUNTRY SELECTOR -->
+<!-- ===================== -->
+
+<style>
+
+<!-- ===================== -->
+
+<style>
+
+.country-box{
+max-width:900px;
+Width:96%;
+margin:25px auto;
+padding:15px;
+background:#000;
+border:1px solid #ff9800;
+border-radius:15px;
+font-family:Arial,sans-serif;
+}
+
+.country-title{
+background:#333;
+color:#fff;
+font-weight:900;
+text-align:center;
+padding:10px;
+border-radius:10px;
+border:1px solid #ff9800;
+border-left:6px solid #ff9800;
+margin-bottom:10px;
+}
+
+.country-grid{
+display:grid;
+grid-template-columns:repeat(2,1fr);
+gap:8px;
+}
+
+.country-btn{
+background:#333;
+color:#fff;
+padding:10px;
+text-align:center;
+border-radius:10px;
+border:1px solid #ff9800;
+border-left:6px solid #ff9800;
+font-weight:bold;
+cursor:pointer;
+}
+
+.country-btn:hover{
+transform:scale(1.05);
+transition:0.2s;
+}
+
+.country-btn.active{
+background:#ff9800;
+color:#000;
+}
+
+.all-country{
+margin-top:10px;
+}
+
+.all-country select{
+width:96%;
+padding:10px;
+border-radius:10px;
+border:1px solid #ff9800;
+border-left:6px solid #ff9800;
+background:#333;
+color:#fff;
+font-weight:bold;
+cursor:pointer;
+}
+
+</style>
+
+<div class="country-box">
+
+<div class="country-title">
+SELECT COUNTRY
+</div>
+
+<div class="country-grid">
+
+<div class="country-btn" data-country="india" onclick="setCountry('india',this)">India</div>
+
+<div class="country-btn" data-country="usa" onclick="setCountry('usa',this)">United states</div>
+
+<div class="country-btn" data-country="uk" onclick="setCountry('uk',this)">UK</div>
+
+<div class="country-btn" data-country="canada" onclick="setCountry('canada',this)">Canada</div>
+
+<div class="country-btn" data-country="uae" onclick="setCountry('uae',this)">UAE</div>
+
+<div class="country-btn" data-country="saudi" onclick="setCountry('saudi',this)">Saudi</div>
+
+<div class="country-btn" data-country="singapore" onclick="setCountry('singapore',this)">Singapore</div>
+
+<div class="country-btn" data-country="malaysia" onclick="setCountry('malaysia',this)">Malaysia</div>
+
+</div>
+
+<div class="all-country">
+
+<select onchange="setCountry(this.value); this.selectedIndex=0;">
+
+<option value="">Search All Countries</option>
+
+<option value="india">India</option>
+<option value="usa">USA</option>
+<option value="uk">UK</option>
+<option value="canada">Canada</option>
+<option value="uae">UAE</option>
+<option value="germany">Germany</option>
+<option value="france">France</option>
+<option value="australia">Australia</option>
+<option value="saudi">Saudi Arabia</option>
+<option value="singapore">Singapore</option>
+<option value="malaysia">Malaysia</option>
+<option value="indonesia">Indonesia</option>
+<option value="thailand">Thailand</option>
+<option value="philippines">Philippines</option>
+<option value="qatar">Qatar</option>
+<option value="kuwait">Kuwait</option>
+<option value="oman">Oman</option>
+<option value="bahrain">Bahrain</option>
+<option value="netherlands">Netherlands</option>
+<option value="sweden">Sweden</option>
+<option value="poland">Poland</option>
+<option value="italy">Italy</option>
+<option value="spain">Spain</option>
+<option value="newzealand">New Zealand</option>
+
+</select>
+</div>
+
+</div>
+
+<script>
+
+function setCountry(country,btn){
+
+if(country===""){return;}
+
+localStorage.setItem("bas_country",country);
+
+/* button highlight */
+
+document.querySelectorAll(".country-btn")
+.forEach(b=>b.classList.remove("active"));
+
+if(btn){
+btn.classList.add("active");
+}
+
+/* update shop heading */
+
+if(typeof updateCountryTitle==="function"){
+updateCountryTitle();
+}
+
+/* refresh shop list */
+
+if(typeof renderShops==="function"){
+renderShops(countryShops[country]);
+}
+
+}
+
+/* page load → restore saved country */
+
+window.addEventListener("load",function(){
+
+let saved=localStorage.getItem("bas_country");
+
+if(!saved){
+saved="india";
+localStorage.setItem("bas_country","india");
+}
+
+let btn=document.querySelector('.country-btn[data-country="'+saved+'"]');
+
+if(btn){
+btn.classList.add("active");
+}
+
+if(typeof updateCountryTitle==="function"){
+updateCountryTitle();
+}
+
+if(typeof renderShops==="function"){
+renderShops(countryShops[saved]);
+}
+
+});
+
+</script>
+
+</div>
+
+<script>
+
+function setCountry(country,btn){
+
+if(country===""){return;}
+
+localStorage.setItem("bas_country",country);
+
+/* button highlight */
+
+document.querySelectorAll(".country-btn")
+.forEach(b=>b.classList.remove("active"));
+
+if(btn){
+btn.classList.add("active");
+}
+
+/* update shop heading */
+
+if(typeof updateCountryTitle==="function"){
+updateCountryTitle();
+}
+
+/* refresh shop list */
+
+if(typeof renderShops==="function"){
+renderShops(countryShops[country]);
+}
+
+}
+
+/* page load → restore saved country */
+
+window.addEventListener("load",function(){
+
+let saved=localStorage.getItem("bas_country");
+
+if(!saved){
+saved="india";
+localStorage.setItem("bas_country","india");
+}
+
+let btn=document.querySelector('.country-btn[data-country="'+saved+'"]');
+
+if(btn){
+btn.classList.add("active");
+}
+
+if(typeof updateCountryTitle==="function"){
+updateCountryTitle();
+}
+
+if(typeof renderShops==="function"){
+renderShops(countryShops[saved]);
+}
+
+});
+
+</script>
+<!-- ===================== -->
+<!-- CODE NO:3  SHOP SECTION -->
+<!-- ===================== -->
+
+<style>
+
+.shop-container{
+max-width:900px;
+Width : 96%;
+margin:20px auto;
+padding:15px;
+}
+.shop-title-box{
+background:#000;
+border-radius:14px;
+padding:20px;
+border:1px solid #ff9800;
+border-left:8px solid #ff9800;
+}
+
+.shop-title-box h2{
+margin:0;
+font-size:26px;
+font-weight:900;
+color:#fff;
+}
+
+.shop-title-box span{
+display:block;
+margin-top:6px;
+font-size:13px;
+color:#ffb74d;
+}
+
+.global-search{
+width:96%;
+padding:18px;
+border-radius:12px;
+border:3px solid #00e5ff;
+background:#111;
+color:#fff;
+font-size:20px;
+margin-top:15px;
+margin-bottom:12px;
+}
+.shop-btn{
+display:flex;
+align-items:center;
+background:#1a1a1a;
+border-radius:12px;
+padding:12px;
+margin-bottom:10px;
+text-decoration:none;
+color:#fff;
+border:1px solid #ff9800;
+border-left:6px solid #ff9800;
+}
+
+.shop-logo{
+width:42px;
+height:42px;
+border-radius:8px;
+margin-right:12px;
+background:#fff;
+object-fit:contain;
+padding:3px;
+}
+
+.shop-info b{
+font-size:20px;
+display:block;
+}
+
+</style>
+
+<div class="shop-container">
+
+<div class="shop-title-box">
+<h2 id="shopCountryTitle">Shop on INDIA Shops</h2>
+<span>(Shops & items categorised at the end of the site)</span>
+</div>
+
+<input
+type="text"
+id="globalSearch"
+class="global-search"
+placeholder="Search 1000+ Shops"
+onkeyup="filterShops()">
+
+<div id="shopList"></div>
+
+</div>
+
+<script>
+
+/* GLOBAL SHOP DATABASE */
+
+
+const countryShops = {
+            india: [
+        { name: "Amazon India", logo: "https://www.amazon.in/favicon.ico", link: "https://www.amazon.in?tag=vmmbaslinks-21" },
+        { name: "Flipkart", logo: "https://www.flipkart.com/favicon.ico", link: "https://extp.in/frLCl1" },
+        { name: "Myntra", logo: "https://www.myntra.com/favicon.ico", link: "https://extp.in/Xl9qHe" },
+        { name: "Nykaa", logo: "https://www.nykaa.com/favicon.ico", link: "https://extp.in/hj6ArG" },
+        { name: "Tata CLiQ", logo: "https://www.tatacliq.com/favicon.ico", link: "https://extp.in/XQxoLW" },
+        { name: "Reliance Digital", logo: "https://www.reliancedigital.in/favicon.ico", link: "https://extp.in/cxkWbr" },
+        { name: "Croma", logo: "https://www.croma.com/favicon.ico", link: "https://extp.in/9myzwo" },
+        { name: "Ajio", logo: "https://www.ajio.com/favicon.ico", link: "https://extp.in/J56J4f" },
+        { name: "JioMart", logo: "https://www.jiomart.com/favicon.ico", link: "https://extp.in/jrfhBK" },
+        { name: "Shopsy", logo: "https://www.shopsy.in/favicon.ico", link: "https://extp.in/9zNj2z" }
+    ],
+
+
+
+usa:[
+{name:"Amazon",logo:"https://www.amazon.com/favicon.ico",link:"https://www.amazon.com"},
+{name:"Walmart",logo:"https://www.walmart.com/favicon.ico",link:"https://www.walmart.com"},
+{name:"Target",logo:"https://www.target.com/favicon.ico",link:"https://www.target.com"},
+{name:"BestBuy",logo:"https://www.bestbuy.com/favicon.ico",link:"https://www.bestbuy.com"},
+{name:"eBay",logo:"https://www.ebay.com/favicon.ico",link:"https://www.ebay.com"},
+{name:"Costco",logo:"https://www.costco.com/favicon.ico",link:"https://www.costco.com"},
+{name:"HomeDepot",logo:"https://www.homedepot.com/favicon.ico",link:"https://www.homedepot.com"},
+{name:"Etsy",logo:"https://www.etsy.com/favicon.ico",link:"https://www.etsy.com"},
+{name:"Newegg",logo:"https://www.newegg.com/favicon.ico",link:"https://www.newegg.com"},
+{name:"Wayfair",logo:"https://www.wayfair.com/favicon.ico",link:"https://www.wayfair.com"}
+],
+
+uk:[
+{name:"Amazon UK",logo:"https://www.amazon.co.uk/favicon.ico",link:"https://www.amazon.co.uk"},
+{name:"Tesco",logo:"https://www.tesco.com/favicon.ico",link:"https://www.tesco.com"},
+{name:"Argos",logo:"https://www.argos.co.uk/favicon.ico",link:"https://www.argos.co.uk"},
+{name:"Currys",logo:"https://www.currys.co.uk/favicon.ico",link:"https://www.currys.co.uk"},
+{name:"Boots",logo:"https://www.boots.com/favicon.ico",link:"https://www.boots.com"},
+{name:"Next",logo:"https://www.next.co.uk/favicon.ico",link:"https://www.next.co.uk"},
+{name:"Very",logo:"https://www.very.co.uk/favicon.ico",link:"https://www.very.co.uk"},
+{name:"AO",logo:"https://ao.com/favicon.ico",link:"https://ao.com"},
+{name:"Asda",logo:"https://www.asda.com/favicon.ico",link:"https://www.asda.com"},
+{name:"John Lewis",logo:"https://www.johnlewis.com/favicon.ico",link:"https://www.johnlewis.com"}
+],
+
+canada:[
+{name:"Amazon Canada",logo:"https://www.amazon.ca/favicon.ico",link:"https://www.amazon.ca"},
+{name:"Walmart Canada",logo:"https://www.walmart.ca/favicon.ico",link:"https://www.walmart.ca"},
+{name:"BestBuy Canada",logo:"https://www.bestbuy.ca/favicon.ico",link:"https://www.bestbuy.ca"},
+{name:"Canadian Tire",logo:"https://www.canadiantire.ca/favicon.ico",link:"https://www.canadiantire.ca"},
+{name:"Costco Canada",logo:"https://www.costco.ca/favicon.ico",link:"https://www.costco.ca"},
+{name:"Staples",logo:"https://www.staples.ca/favicon.ico",link:"https://www.staples.ca"},
+{name:"Indigo",logo:"https://www.indigo.ca/favicon.ico",link:"https://www.indigo.ca"},
+{name:"Hudson Bay",logo:"https://www.thebay.com/favicon.ico",link:"https://www.thebay.com"},
+{name:"Well",logo:"https://well.ca/favicon.ico",link:"https://well.ca"},
+{name:"Simons",logo:"https://www.simons.ca/favicon.ico",link:"https://www.simons.ca"}
+],
+
+uae:[
+{name:"Amazon UAE",logo:"https://www.amazon.ae/favicon.ico",link:"https://www.amazon.ae"},
+{name:"Noon",logo:"https://www.noon.com/favicon.ico",link:"https://www.noon.com"},
+{name:"Carrefour",logo:"https://www.carrefouruae.com/favicon.ico",link:"https://www.carrefouruae.com"},
+{name:"Sharaf DG",logo:"https://www.sharafdg.com/favicon.ico",link:"https://www.sharafdg.com"},
+{name:"Jumbo",logo:"https://www.jumbo.ae/favicon.ico",link:"https://www.jumbo.ae"},
+{name:"Namshi",logo:"https://www.namshi.com/favicon.ico",link:"https://www.namshi.com"},
+{name:"Sivvi",logo:"https://www.sivvi.com/favicon.ico",link:"https://www.sivvi.com"},
+{name:"Ounass",logo:"https://www.ounass.ae/favicon.ico",link:"https://www.ounass.ae"},
+{name:"DubaiStore",logo:"https://www.dubaistore.com/favicon.ico",link:"https://www.dubaistore.com"},
+{name:"Emax",logo:"https://www.emaxme.com/favicon.ico",link:"https://www.emaxme.com"}
+],
+
+saudi:[
+{name:"Amazon Saudi",logo:"https://www.amazon.sa/favicon.ico",link:"https://www.amazon.sa"},
+{name:"Noon Saudi",logo:"https://www.noon.com/favicon.ico",link:"https://www.noon.com"},
+{name:"Jarir",logo:"https://www.jarir.com/favicon.ico",link:"https://www.jarir.com"},
+{name:"Extra",logo:"https://www.extra.com/favicon.ico",link:"https://www.extra.com"},
+{name:"Saco",logo:"https://www.saco.sa/favicon.ico",link:"https://www.saco.sa"},
+{name:"Namshi",logo:"https://www.namshi.com/favicon.ico",link:"https://www.namshi.com"},
+{name:"Centerpoint",logo:"https://www.centerpointstores.com/favicon.ico",link:"https://www.centerpointstores.com"},
+{name:"Carrefour KSA",logo:"https://www.carrefourksa.com/favicon.ico",link:"https://www.carrefourksa.com"},
+{name:"Ounass",logo:"https://www.ounass.sa/favicon.ico",link:"https://www.ounass.sa"},
+{name:"Souq",logo:"https://www.souq.com/favicon.ico",link:"https://www.souq.com"}
+],
