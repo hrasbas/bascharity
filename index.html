@@ -1259,3 +1259,1748 @@ saudi:[
 {name:"Ounass",logo:"https://www.ounass.sa/favicon.ico",link:"https://www.ounass.sa"},
 {name:"Souq",logo:"https://www.souq.com/favicon.ico",link:"https://www.souq.com"}
 ],
+singapore:[
+{name:"Shopee",logo:"https://shopee.sg/favicon.ico",link:"https://shopee.sg"},
+{name:"Lazada",logo:"https://www.lazada.sg/favicon.ico",link:"https://www.lazada.sg"},
+{name:"Qoo10",logo:"https://www.qoo10.sg/favicon.ico",link:"https://www.qoo10.sg"},
+{name:"Amazon SG",logo:"https://www.amazon.sg/favicon.ico",link:"https://www.amazon.sg"},
+{name:"FairPrice",logo:"https://www.fairprice.com.sg/favicon.ico",link:"https://www.fairprice.com.sg"},
+{name:"Courts",logo:"https://www.courts.com.sg/favicon.ico",link:"https://www.courts.com.sg"},
+{name:"Harvey Norman",logo:"https://www.harveynorman.com.sg/favicon.ico",link:"https://www.harveynorman.com.sg"},
+{name:"RedMart",logo:"https://redmart.lazada.sg/favicon.ico",link:"https://redmart.lazada.sg"},
+{name:"Best Denki",logo:"https://www.bestdenki.com.sg/favicon.ico",link:"https://www.bestdenki.com.sg"},
+{name:"Zalora",logo:"https://www.zalora.sg/favicon.ico",link:"https://www.zalora.sg"}
+],
+
+malaysia:[
+{name:"Shopee MY",logo:"https://shopee.com.my/favicon.ico",link:"https://shopee.com.my"},
+{name:"Lazada MY",logo:"https://www.lazada.com.my/favicon.ico",link:"https://www.lazada.com.my"},
+{name:"Zalora MY",logo:"https://www.zalora.com.my/favicon.ico",link:"https://www.zalora.com.my"},
+{name:"PGMall",logo:"https://pgmall.my/favicon.ico",link:"https://pgmall.my"},
+{name:"Senheng",logo:"https://www.senheng.com.my/favicon.ico",link:"https://www.senheng.com.my"},
+{name:"Courts",logo:"https://www.courts.com.my/favicon.ico",link:"https://www.courts.com.my"},
+{name:"Harvey Norman",logo:"https://www.harveynorman.com.my/favicon.ico",link:"https://www.harveynorman.com.my"},
+{name:"Lelong",logo:"https://www.lelong.com.my/favicon.ico",link:"https://www.lelong.com.my"},
+{name:"AEON Store",logo:"https://www.aeonstore.com.my/favicon.ico",link:"https://www.aeonstore.com.my"},
+{name:"Tesco MY",logo:"https://www.tesco.com/favicon.ico",link:"https://www.tesco.com.my"}
+]
+
+};
+
+/* RENDER SHOPS */
+
+function renderShops(list){
+
+const container=document.getElementById("shopList");
+
+container.innerHTML="";
+
+if(!list) return;
+
+list.forEach(function(shop){
+
+const a=document.createElement("a");
+
+a.className="shop-btn";
+a.href=shop.link;
+a.target="_blank";
+
+a.innerHTML =
+'<img class="shop-logo" src="'+shop.logo+'">'+
+'<div class="shop-info notranslate" translate="no"><b>'+shop.name+'</b></div>';
+
+container.appendChild(a);
+
+});
+
+}
+
+/* SEARCH */
+
+function filterShops(){
+
+let value=document.getElementById("globalSearch").value.toLowerCase();
+
+let country=localStorage.getItem("bas_country") || "india";
+
+let shops=countryShops[country] || countryShops["india"];
+
+const filtered=shops.filter(function(s){
+return s.name.toLowerCase().includes(value);
+});
+
+renderShops(filtered);
+
+}
+
+/* UPDATE COUNTRY */
+
+function updateCountryTitle(){
+
+let country=localStorage.getItem("bas_country") || "india";
+
+document.getElementById("shopCountryTitle").innerText =
+"Shop on "+country.toUpperCase()+" Shops";
+
+let shops=countryShops[country] || countryShops["india"];
+
+renderShops(shops);
+
+}
+
+/* PAGE LOAD */
+
+window.addEventListener("load",function(){
+
+updateCountryTitle();
+
+});
+
+</script>
+
+<!-- ===================== -->
+<!-- CODE NO:4 PRICE COMPARE BLOCK -->
+<!-- ===================== -->
+
+<style>
+
+.compare-container{
+max-width:900px;
+width:96%;
+margin:25px auto;
+}
+
+.compare-box{
+background:#000;
+border:1px solid #00BFFF;
+border-radius:12px;
+padding:20px;
+text-align:center;
+line-height:1.6;
+}
+
+.compare-btn{
+width:96%;
+padding:14px;
+border-radius:10px;
+border:none;
+font-weight:bold;
+font-size: 22px;
+background:#00BFFF;
+color:#000;
+cursor:pointer;
+margin-bottom:15px;
+}
+
+.return-note{
+font-size:22px;
+color:#fff;
+text-align:center;
+}
+
+.return-note b{
+color:#FFD700;
+font-size:16px;
+}
+
+</style>
+
+<div class="compare-container">
+
+<div class="compare-box">
+
+<button class="compare-btn"
+onclick="window.open('https://www.google.com/shopping','_blank')">
+
+Compare Price on Trusted Sites
+
+</button>
+
+<div class="return-note">
+
+<b>വില താരതമ്യം ചെയ്ത് തിരിച്ചു വരണേ...</b>
+
+<br><br>
+
+<span>
+വ്യത്യസ്ത ഷോപ്പുകളിൽ ഏറ്റവും കുറഞ്ഞ വില കണ്ടെത്തി,
+അതേ ഷോപ്പിൽ നിന്ന് അതേ ഓഫറിൽ
+മുകളിലെ ലിങ്കുകൾ വഴി വാങ്ങുമ്പോൾ
+നിങ്ങളും ഈ ചാരിറ്റിയുടെ ഭാഗമാകുന്നു —
+അതുവഴി വിശക്കുന്ന ഒരു വയറിന് ആശ്വാസമാകുന്നു. നന്ദി.
+</span>
+
+</div>
+
+</div>
+
+</div>
+
+<!-- CODE NO:5 SHARE BLOCK -->
+<!-- ===================== -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+<style>
+.share-container {
+	max-width: 900px;
+	width;96%;
+	margin: 25px auto;
+	padding: 20px;
+	background: #000;
+	border: 1px solid #00BFFF;
+	border-radius: 12px;
+	text-align: center;
+}
+
+.share-text {
+	font-size: 22px;
+	line-height: 1.7;
+	color: #fff;
+	margin-bottom: 20px;
+}
+
+.share-grid {
+	display: grid;
+	grid-template-columns: repeat(5, 1fr);
+	gap: 10px
+	margin-top: 15px;
+}
+
+.share-grid a {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-size: 22px;
+	height: 50px;
+	background: #111;
+	border-radius: 10px;
+	border: 1px solid #333;
+	text-decoration: none;
+}
+
+.share-grid a:hover {
+	transform: scale(1.08);
+	transition: 0.2s;
+}
+
+.share-sign {
+	margin-top: 20px;
+	padding-top: 15px;
+	border-top: 1px solid #333;
+	color: #FFD700;
+	font-weight: bold;
+	letter-spacing: 2px;
+	font-size: 16px;
+}
+</style>
+<div class="share-container">
+	<p class="share-text">
+		Even if you are not buying anything right now, you can still support this charity mission.
+		<br><br>Simply share this page with your friends and groups.
+		<br><br>When someone purchases through these links, most of the income helps provide food for a hungry person somewhere in the world.
+		<br><br>Through your share, you and your parents become part of this act of kindness.
+	</p>
+
+	<div class="share-grid">
+		<a href="https://api.whatsapp.com/send?text=https://bascharity.com" target="_blank"><i class="fab fa-whatsapp" style="color:#25D366"></i></a>
+		<a href="https://www.facebook.com/sharer/sharer.php?u=https://bascharity.com" target="_blank"><i class="fab fa-facebook" style="color:#1877F2"></i></a>
+		<a href="https://telegram.me/share/url?url=https://bascharity.com" target="_blank"><i class="fab fa-telegram" style="color:#0088cc"></i></a>
+		<a href="https://twitter.com/intent/tweet?url=https://bascharity.com" target="_blank"><i class="fab fa-x-twitter" style="color:#ffffff"></i></a>
+		<a href="javascript:void(0)" onclick="copyLink()"><i class="fas fa-link" style="color:#FFD700"></i></a>
+	</div>
+
+	<div class="share-sign">
+		YOUR PURCHASE SATISFIES A HUNGER
+	</div>
+</div>
+<script>
+function copyLink() {
+	navigator.clipboard.writeText("https://bascharity.com");
+	alert("Link Copied. Share with friends.");
+}
+</script>
+<!--Code 6 --->
+
+<style>
+body {
+	background: #000;
+	color: #fff;
+	font-family: Arial;
+	text-align: center;
+	margin: 0;
+	padding: 0;
+	font-weight: bold;
+}
+
+/* മെയിൻ ബോക്സ്: മൊബൈലിൽ 96% വീതി, കമ്പ്യൂട്ടറിൽ പരമാവധി 900px */
+.mainbox {
+	max-width: 900px;
+	width: 96%;
+	margin: 20px auto;
+	padding: 25px 15px;
+	border: 2px solid #ff4500;
+	border-radius: 15px;
+	background: #050505;
+	box-sizing: border-box;
+}
+
+h1 {
+	color: #ff4500;
+	font-size: clamp(24px, 8vw, 36px);
+	margin-top: 0;
+}
+
+.sub {
+	color: #aaa;
+	font-size: clamp(16px, 5vw, 22px);
+	margin-bottom: 20px;
+}
+
+.impact {
+	width: 100%;
+	max-width: 420px;
+	margin: auto;
+	padding: 20px;
+	border: 2px solid #555;
+	background: #111;
+	box-sizing: border-box;
+}
+
+.amount {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 10px;
+}
+
+.rs {
+	font-size: 36px;
+	color: #00ff00;
+}
+
+.counter {
+	font-size: 44px;
+	color: #00ff00;
+	border: 2px solid #333;
+	padding: 5px 12px;
+	background: #000;
+}
+
+.till {
+	color: #ff4500;
+	font-size: 16px;
+	margin-top: 8px;
+}
+
+/* RECEIPT GALLERY */
+.gallery {
+	display: flex;
+	overflow: hidden;
+	gap: 20px;
+	padding: 20px;
+	margin: 25px auto;
+	width: 100%;
+	position: relative;
+	box-sizing: border-box;
+}
+
+.card {
+	min-width: 280px;
+	height: 230px;
+	border: 3px solid #ff4500;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background: #000;
+	border-radius: 10px;
+	overflow: hidden;
+	transition: transform 0.4s ease, z-index 0.4s;
+	cursor: pointer;
+	position: relative;
+	flex-shrink: 0;
+}
+.gallery {
+	scroll-behavior: auto !important; /* സ്മൂത്ത് ആകാൻ ഇത് സഹായിക്കും */
+}
+
+/* ടച്ച് സൂം */
+.card.zoom-active {
+	transform: scale(2);
+	z-index: 100;
+	border-color: #00ff00;
+	box-shadow: 0 0 20px rgba(0,255,0,0.5);
+}
+
+.card img {
+	width: 100%;
+	height: 100%;
+	object-fit: contain;
+}
+
+.rotate {
+	transform: rotate(-90deg);
+}
+</style>
+</head>
+
+<body>
+
+<div class="mainbox">
+	<h1>IMPACT</h1>
+	<div class="sub">Amount Distributed for Hunger Relief & Food Support</div>
+	
+	<div class="impact">
+		<div class="amount">
+			<div class="rs">Rs</div>
+			<div class="counter" id="counter">0000000</div>
+			<div class="rs">/-</div>
+		</div>
+		<div class="till">TILL TODAY</div>
+	</div>
+
+	<div class="gallery" id="gallery"></div>
+
+	<div style="margin-top:10px; font-size:16px; color:#bbb; line-height:1.6; text-align:center;">
+Updated weekly/monthly.<br>
+Affiliate income may take 2–3 months to reflect after purchase.<br>
+Your direct donations are not included in this impact.
+</div>
+</div>
+
+<script>
+/* COUNTER */
+let count = 0;
+let target = 27000;
+let counter = document.getElementById("counter");
+
+function runCounter() {
+	if (count < target) {
+		count += 251;
+		counter.innerText = count.toString().padStart(7, "0");
+		setTimeout(runCounter, 120);
+	}
+}
+runCounter();
+
+/* PHOTO LIST */
+const photos = [
+	"https://raw.githubusercontent.com/2vmmbas-cmd/bas-charity/main/receipts/IMG-20260313-WA0110.jpg",
+	"https://raw.githubusercontent.com/2vmmbas-cmd/bas-charity/main/receipts/IMG-20260313-WA0111.jpg",
+	"https://raw.githubusercontent.com/2vmmbas-cmd/bas-charity/main/receipts/Screenshot_20260313_175205_Drive.jpg",
+
+	"https://raw.githubusercontent.com/2vmmbas-cmd/bas-charity/main/receipts/Screenshot_20260314_140531_Drive.jpg",
+	"https://raw.githubusercontent.com/2vmmbas-cmd/bas-charity/main/receipts/Screenshot_20260314_140000_Drive.jpg",
+	"https://raw.githubusercontent.com/2vmmbas-cmd/bas-charity/main/receipts/Screenshot_20260314_140310_Chrome.jpg",
+	"https://raw.githubusercontent.com/2vmmbas-cmd/bas-charity/main/receipts/Screenshot_20260314_140644_Chrome.jpg"
+];
+
+const gallery = document.getElementById("gallery");
+
+function loadImages() {
+	photos.forEach((src, i) => {
+		let card = document.createElement("div");
+		card.className = "card";
+
+		card.onclick = function() {
+			scrolling = false;
+			this.classList.add("zoom-active");
+			
+			setTimeout(() => {
+    			this.classList.remove("zoom-active");
+    			scrolling = true;
+			}, 4000);
+		};
+
+		let img = document.createElement("img");
+		if (i < 2) { img.className = "rotate"; }
+		img.src = src;
+
+		card.appendChild(img);
+		gallery.appendChild(card);
+	});
+}
+
+loadImages();
+loadImages();
+
+/* ✅ CONTINUOUS SCROLL FIXED */
+let scrolling = true;
+function scrollGallery() {
+	if (scrolling) {
+		gallery.scrollLeft += 5; // വേഗത അല്പം കുറച്ചു (1 ആക്കി)
+		
+		// പകുതി ദൂരം എത്തുമ്പോൾ തടസ്സമില്ലാതെ ആദ്യം മുതൽ തുടങ്ങാൻ
+		if (gallery.scrollLeft >= (gallery.scrollWidth / 2)) {
+			gallery.scrollLeft = 0;
+		}
+	}
+}
+setInterval(scrollGallery, 10);
+</script>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Test</title>
+</head>
+
+<body>
+
+<!-- Code 7 -->
+<!-- Code 8 -->
+<!-- ===================================================== -->
+<!-- CODE NO:7  ABOUT + DISCLOSURE -->
+<!-- ===================================================== -->
+
+<style>
+.info-box{
+max-width:480px;
+width:85%;
+margin:30px auto;
+padding:20px;
+background:#000;
+border:1px solid #00BFFF;
+border-radius:12px;
+text-align:center;
+line-height:1.7;
+box-sizing:border-box;
+}
+
+.info-title{
+font-size:25px;
+color:#FFD700;
+margin-bottom:10px;
+font-weight:bold;
+}
+
+.info-text{
+font-size:25px;
+color:#ccc;
+}
+
+.readmore-btn{
+color:#00BFFF;
+font-size:26px;
+font-weight:bold;
+cursor:pointer;
+}
+
+.more-text{
+display:none;
+}
+
+.signature{
+margin-top:15px;
+font-size:25px;
+color:#FFD700;
+font-weight:bold;
+}
+</style>
+
+<div class="info-box" id="section7">
+
+<div class="info-title">BAS CHARITY PURPOSE</div>
+
+<div class="info-text">
+Our mission is to ensure that support reaches those who truly need it.
+Through affiliate partnerships with 50,000+ online shops worldwide,
+a significant portion of the income generated is used for hunger relief
+and similar humanitarian activities.
+</div>
+
+<br>
+
+<div class="info-text">
+At present, 100% of the
+<span class="readmore-btn" id="readBtn" onclick="toggleMore7()">Read More...</span>
+</div>
+
+<div class="more-text" id="moreText">
+
+<br>
+
+<div class="info-text">
+affiliate income is directed towards helping people in need.
+In the future, a minimum of 51% or more will always be dedicated to
+charity and hunger relief.
+The remaining portion may be used for platform maintenance, staff support,
+development, and operational expenses ,etc
+</div>
+
+<br>
+
+<div class="info-text">
+Many people have expressed their willingness to donate through this platform.
+However, currently we do not accept any donations through this website.
+This may be considered in the future only after obtaining the necessary approvals
+from the Central Government and relevant authorities.
+</div>
+
+<br>
+
+<div class="info-text">
+Anyone who wishes to support hunger relief may do so directly through
+our trusted institutions listed below.
+</div>
+
+<br>
+
+<div class="info-text">
+The widespread misuse and scams carried out in the name of charity on many
+online platforms inspired us to start this initiative.
+</div>
+
+<br>
+
+<div class="info-text">
+In any case, our goal is to ensure that 100% of your donation reaches those
+who truly need it.
+</div>
+
+<div class="readmore-btn" onclick="toggleMore7()">Less</div>
+
+</div>
+
+<div class="signature">
+Give your donations only through trusted hands
+</div>
+
+</div>
+
+<!-- ===================================================== -->
+<!-- CODE NO:8  VISIONARY -->
+<!-- ===================================================== -->
+
+<style>
+
+.bas7-wrapper{
+max-width:480px;
+margin:30px auto;
+font-family:Arial,sans-serif;
+}
+
+.bas7-box{
+background:#1a1a1a;
+border-radius:14px;
+border:1px solid #333;
+border-left:6px solid #e91e63;
+overflow:hidden;
+color:#fff;
+}
+
+.bas7-header{
+padding:18px;
+text-align:center;
+background:#111;
+border-bottom:1px solid #333;
+}
+
+.title-main{
+margin:0;
+font-size:22px;
+font-weight:900;
+color:#FFD700;
+}
+
+.title-name{
+margin:8px 0 0;
+font-size:20px;
+font-weight:800;
+}
+
+.title-sub{
+margin:5px 0 0;
+font-size:16px;
+}
+
+.bas7-slider{
+width:100%;
+height:420px;
+overflow:hidden;
+background:#000;
+}
+
+.bas7-slider img{
+width:100%;
+height:100%;
+object-fit:cover;
+transition:opacity .8s;
+}
+
+.bas7-content{
+padding:18px;
+font-size:20px;
+line-height:1.6;
+color:#ccc;
+text-align:justify;
+}
+
+.bas8-more{
+display:none;
+}
+
+.bas8-toggle{
+color:#39FF14;
+cursor:pointer;
+font-weight:bold;
+font-size:18px;
+display:block;
+margin-top:10px;
+}
+
+.bas7-quote{
+margin:15px;
+padding:12px;
+background:#111;
+border-radius:10px;
+border-left:4px solid #e91e63;
+font-weight:bold;
+text-align:center;
+color:#FFD700;
+font-size:14px;
+}
+
+</style>
+
+<div class="bas7-wrapper" id="section8">
+
+<div class="bas7-box">
+
+<div class="bas7-header">
+<h2 class="title-main">VISIONARY</h2>
+<h2 class="title-name">Mohammed M. Basheer (BAS)</h2>
+<h3 class="title-sub">Retired Assistant Engineer, KSEB</h3>
+</div>
+
+<div class="bas7-slider">
+<img id="bas7Img"
+src="https://drive.google.com/thumbnail?id=1keyWL0GF-HysweqAYntVaS-vB_fwZj_H&sz=w1000">
+</div>
+
+<div class="bas7-content">
+
+<p>
+Mohammed M. Basheer is the visionary founder behind this project,
+bringing over four decades of dedicated professional and social
+expertise to the mission.
+</p>
+
+<p>
+A Retired Assistant Engineer from KSEB, his career is marked by
+20 years of <span id="bas8Dots">...</span>
+
+<span class="bas8-more" id="bas8More">
+
+exemplary service in the power sector.
+His professional journey also includes 5 years of international
+experience working across various Arabian countries.
+
+<br><br>
+
+He has dedicated more than 10 years as an active member of the
+Ideal Relief Wing (IRW), a premier government-recognized NGO
+known for disaster management.
+
+<br><br>
+
+He is supported by his family, including his wife Rasheena K H
+(High School Teacher – English, Govt. Girl's High School,
+Perumbavoor) and children Alif Bayan (Oman), Amna Bayan (Qatar),
+Azeem Ahmed (Oman) and son-in-law Anees Ameer (Qatar Naval Force).
+
+</span>
+
+<span class="bas8-toggle" onclick="toggleBas8()" id="bas8Btn">
+More
+</span>
+
+</p>
+
+</div>
+
+<div class="bas7-quote">
+"YOUR PURCHASE SATISFIES A HUNGER"
+</div>
+
+</div>
+
+</div>
+
+<script>
+
+/* SECTION 7 */
+
+let opened7=false;
+
+function toggleMore7(){
+
+let more=document.getElementById("moreText");
+let btn=document.getElementById("readBtn");
+
+if(opened7){
+more.style.display="none";
+btn.innerText="Read More...";
+opened7=false;
+}
+else{
+more.style.display="block";
+btn.innerText="";
+opened7=true;
+}
+
+}
+
+/* SECTION 8 */
+
+let opened8=false;
+
+function toggleBas8(){
+
+let more=document.getElementById("bas8More");
+let dots=document.getElementById("bas8Dots");
+let btn=document.getElementById("bas8Btn");
+
+if(opened8){
+
+more.style.display="none";
+dots.style.display="inline";
+btn.innerText="More";
+opened8=false;
+
+}
+else{
+
+more.style.display="inline";
+dots.style.display="none";
+btn.innerText="Less";
+opened8=true;
+
+}
+
+}
+
+/* IMAGE SLIDER */
+
+const bas7Images=[
+
+"https://drive.google.com/thumbnail?id=1keyWL0GF-HysweqAYntVaS-vB_fwZj_H&sz=w1000",
+
+"https://drive.google.com/thumbnail?id=1KdZnPqKlSOXAFY-Lu2FU41B1n7sWtt85&sz=w1000"
+
+];
+
+let bas7Index=0;
+
+const bas7Img=document.getElementById("bas7Img");
+
+setInterval(function(){
+
+bas7Img.style.opacity=0;
+
+setTimeout(function(){
+
+bas7Index=(bas7Index+1)%bas7Images.length;
+
+bas7Img.src=bas7Images[bas7Index];
+
+bas7Img.style.opacity=1;
+
+},800);
+
+},5000);
+
+/* AUTO RESET WHEN SECTION LEAVES SCREEN */
+
+const observer78=new IntersectionObserver(entries=>{
+
+entries.forEach(entry=>{
+
+if(!entry.isIntersecting){
+
+if(entry.target.id==="section7" && opened7){
+toggleMore7();
+}
+
+if(entry.target.id==="section8" && opened8){
+toggleBas8();
+}
+
+}
+
+});
+
+},{threshold:0});
+
+observer78.observe(document.getElementById("section7"));
+observer78.observe(document.getElementById("section8"));
+
+</script>
+
+<!-- Code 9 -->
+
+<!-- CODE NO:9 -->
+
+<style>
+.trust-container{
+max-width:480px;
+margin:auto;
+}
+.trust-title{
+background:#000;
+color:#00e676;
+font-weight:900;
+font-size:28px;
+text-align:center;
+padding:20px;
+border-radius:12px;
+margin-bottom:25px;
+border:1px solid #333;
+border-left:6px solid #00e676;
+}
+.trust-box{
+background:#1a1a1a;
+padding:22px;
+border-radius:12px;
+border:1px solid #333;
+border-left:6px solid #e91e63;
+margin-bottom:20px;
+}
+.trust-box h1{
+font-size:26px;
+margin-bottom:10px;
+color:#fff;
+}
+.trust-sub{
+font-size:22px;
+color:#4fc3f7;
+margin-bottom:15px;
+display:block;
+}
+.trust-box p{
+font-size:22px;
+color:#ddd;
+line-height:1.7;
+}
+.btn-row{
+display:flex;
+gap:10px;
+margin-top:20px;
+}
+.trust-btn{
+padding:16px;
+border-radius:10px;
+font-size:22px;
+font-weight:bold;
+text-align:center;
+cursor:pointer;
+
+display:flex;              /* ✅ ADD */
+align-items:center;        /* ✅ ADD */
+justify-content:center;    /* ✅ ADD */
+flex-direction: column;    /* already added */
+
+}
+.btn-red{
+background:#8b0000;
+color:#fff;
+flex:1;
+}
+.btn-green{
+background:#006400;
+color:#fff;
+flex:2;
+}
+.inner-card{
+background:#111;
+padding:18px;
+border-radius:10px;
+border:1px solid #333;
+margin-top:15px;
+font-size:22px;
+line-height:1.7;
+border-left:4px solid #00e676;
+color:#fff;
+}
+.sub-view{display:none;}
+.back-btn{
+margin-top:20px;
+background:#333;
+color:#fff;
+padding:14px;
+border-radius:10px;
+text-align:center;
+font-size:22px;
+font-weight:bold;
+cursor:pointer;
+}
+</style>
+
+<div class="trust-container">
+
+<div class="trust-title"> OUR TRUSTED INSTITUTIONS </div>
+
+<div class="trust-box">
+<h1>Guidance India Education and Charitable Trust</h1>
+<span class="trust-sub"> Paracode Rehabilitation Project </span>
+
+<p>
+A rehabilitation initiative focusing on pain and palliative care, orphan support, ration aid, education assistance, de addiction awareness and sustainable welfare.
+</p>
+
+<div class="btn-row">
+<div class="trust-btn btn-red" onclick="showDetails9()">DETAILS</div>
+<div <div class="trust-btn btn-green" onclick="showDonate9()">
+Donate Directly→
+<span style="font-size:18px;">(India Only)</span>
+</div>
+</div>
+
+<div id="details9" class="sub-view">
+<div class="trust-box">
+<h1>Project Details</h1>
+
+<div class="inner-card">
+The Paracode Rehabilitation Project supports individuals and families through pain and palliative care, orphan care, ration distribution, education support and rehabilitation awareness.
+</div>
+
+<div class="inner-card">
+Even a small daily contribution can relieve hunger and bring dignity to lives in need.
+</div>
+
+<div class="back-btn" onclick="reset9()">BACK</div>
+</div>
+</div>
+
+<div id="donate9" class="sub-view">
+<div class="trust-box">
+<h1>Donation Categories</h1>
+
+<div class="inner-card">
+<b>Pain and Palliative Care</b><br>
+Medical support, medicines and comfort care.
+</div>
+
+<div class="inner-card">
+<b>Orphan Support</b><br>
+Food, shelter, education and basic needs.
+</div>
+
+<div class="inner-card">
+<b>Building Fund Contribution - Sustainable Income (Sadaqa Jaria)</b>
+<br><br>
+1 sq.ft - Rs 1500<br>
+2 sq.ft - Rs 3000<br>
+5 sq.ft - Rs 7500<br>
+10 sq.ft - Rs 15000<br>
+25 sq.ft - Rs 37500<br>
+50 sq.ft - Rs 75000<br>
+100 sq.ft - Rs 150000
+<br><br>
+One Flat Sponsorship - Rs 1500000<br>
+Total Project - Rs 7500000
+</div>
+
+<div class="inner-card">
+<b>Bank Transfer Details</b><br><br>
+Account Name : Guidance India Education and Charitable Trust<br>
+Account Number : 10350200008909<br>
+IFSC : FDRL0001035<br>
+Federal Bank Kizhakkambalam Branch
+</div>
+
+<div class="back-btn" onclick="reset9()">BACK</div>
+</div>
+</div>
+
+</div>
+
+<script>
+let timer9;
+
+function showDetails9(){
+document.getElementById("details9").style.display="block";
+document.getElementById("donate9").style.display="none";
+window.scrollBy({top:200, behavior:"smooth"});
+startTimer9();
+}
+
+function showDonate9(){
+document.getElementById("details9").style.display="none";
+document.getElementById("donate9").style.display="block";
+window.scrollBy({top:200, behavior:"smooth"});
+startTimer9();
+}
+
+function reset9(){
+document.getElementById("details9").style.display="none";
+document.getElementById("donate9").style.display="none";
+clearTimeout(timer9);
+}
+
+function startTimer9(){
+clearTimeout(timer9);
+timer9=setTimeout(function(){
+  reset9();
+},15000);
+}
+</script>
+
+<!-- Code 10 -->
+<!-- CODE NO:10 -->
+
+<style>
+.peace-wrapper{
+max-width:480px;
+margin:30px auto;
+}
+.peace-box{
+background:#1a1a1a;
+padding:22px;
+border-radius:12px;
+border:1px solid #333;
+border-left:6px solid #e91e63;
+color:#fff;
+margin-bottom:20px;
+}
+.peace-box h1{
+font-size:26px;
+margin-bottom:12px;
+}
+.peace-sub{
+font-size:22px;
+color:#4fc3f7;
+margin-bottom:14px;
+display:block;
+font-weight:700;
+}
+.peace-box p{
+font-size:22px;
+line-height:1.7;
+color:#ccc;
+}
+.peace-btn-row{
+display:flex;
+gap:10px;
+margin-top:20px;
+}
+.peace-btn{
+padding:16px;
+border-radius:10px;
+font-weight:800;
+cursor:pointer;
+font-size:22px;
+text-align:center;
+}
+.peace-btn-details{
+background:#8b0000;
+color:#fff;
+flex:1;
+}
+.peace-btn-donate{
+background:#006400;
+color:#fff;
+flex:2;
+}
+.peace-section{
+display:none;
+}
+.peace-card{
+background:#111;
+padding:16px;
+border-radius:10px;
+border:1px solid #333;
+margin-bottom:14px;
+font-size:22px;
+line-height:1.7;
+border-left:4px solid #00e676;
+}
+.peace-link{
+display:inline-block;
+margin-top:10px;
+padding:12px 18px;
+background:#00c853;
+color:#000;
+border-radius:10px;
+font-weight:bold;
+text-decoration:none;
+font-size:22px;
+}
+.peace-back{
+margin-top:20px;
+background:#333;
+color:#fff;
+padding:14px;
+border-radius:10px;
+text-align:center;
+cursor:pointer;
+font-weight:bold;
+font-size:22px;
+}
+</style>
+
+<div class="peace-wrapper">
+
+<!-- MAIN -->
+<div class="peace-box">
+<h1>Peace Valley – Kothamangalam</h1>
+<span class="peace-sub"> Charitable Care Institution </span>
+
+<p>
+A humanitarian institution providing shelter, medical care, rehabilitation and daily support for the needy and vulnerable.
+</p>
+
+<div class="peace-btn-row">
+<div class="peace-btn peace-btn-details" onclick="peaceDetails10()">Details</div>
+<a class="peace-link" href="https://peacevalley.org.in/donation/" target="_blank">
+Donate Directly ➜
+<br><span style="font-size:18px;">(Global)</span>
+</a>
+</div>
+
+<!-- DETAILS -->
+<div id="peaceDetails10" class="peace-section">
+<div class="peace-box">
+
+<h1>About Peace Valley</h1>
+
+<div class="peace-card">
+Peace Valley Charitable Trust in Kothamangalam provides long-term shelter, food, medical care and rehabilitation support.
+</div>
+
+<div class="peace-card">
+Visit official website for full information.
+<br>
+<a class="peace-link" href="https://peacevalley.org.in/" target="_blank">
+Visit Website
+</a>
+</div>
+
+<div class="peace-back" onclick="peaceReset10()">BACK</div>
+
+</div>
+</div>
+
+<!-- DONATE -->
+<div id="peaceDonate10" class="peace-section">
+<div class="peace-box">
+
+<h1>Support Categories</h1>
+
+<div class="peace-card">
+<b>Food and Daily Care</b><br>
+Providing nutritious meals and daily essentials.
+<br>
+<a class="peace-link" href="https://peacevalley.org.in/donation/" target="_blank">
+Donate Directly
+</a>
+</div>
+
+<div class="peace-card">
+<b>Medical and Dialysis Support</b><br>
+Helping patients with life-saving treatment.
+<br>
+<a class="peace-link" href="https://peacevalley.org.in/donation/" target="_blank">
+Donate Directly
+</a>
+</div>
+
+<div class="peace-card">
+<b>Shelter and Rehabilitation</b><br>
+Safe accommodation and rehabilitation support.
+<br>
+<a class="peace-link" href="https://peacevalley.org.in/donation/" target="_blank">
+Donate Directly
+</a>
+</div>
+
+<div class="peace-back" onclick="peaceReset10()">BACK</div>
+
+</div>
+</div>
+
+</div>
+
+<script>
+let timer10;
+
+function peaceDetails10(){
+document.getElementById("peaceDetails10").style.display="block";
+document.getElementById("peaceDonate10").style.display="none";
+window.scrollBy({top:200, behavior:"smooth"});
+startTimer10();
+}
+
+function peaceDonate10(){
+document.getElementById("peaceDetails10").style.display="none";
+document.getElementById("peaceDonate10").style.display="block";
+window.scrollBy({top:200, behavior:"smooth"});
+startTimer10();
+}
+
+function peaceReset10(){
+document.getElementById("peaceDetails10").style.display="none";
+document.getElementById("peaceDonate10").style.display="none";
+clearTimeout(timer10);
+}
+
+function startTimer10(){
+clearTimeout(timer10);
+timer10=setTimeout(function(){
+  peaceReset10();
+},15000);
+}
+</script>
+
+<!-- CODE NO:11 -->
+
+<style>
+.vada-wrapper{
+max-width:480px;
+margin:30px auto;
+}
+.vada-box{
+background:#1a1a1a;
+padding:22px;
+border-radius:12px;
+border:1px solid #333;
+border-left:6px solid #e53935;
+color:#fff;
+margin-bottom:20px;
+}
+.vada-box h1{
+font-size:26px;
+margin-bottom:10px;
+}
+.vada-box h2{
+font-size:22px;
+color:#ffd54f;
+margin-bottom:12px;
+}
+.vada-box p{
+font-size:22px;
+line-height:1.7;
+color:#ccc;
+}
+.vada-btn-row{
+display:flex;
+gap:10px;
+margin-top:20px;
+}
+.vada-btn{
+padding:16px;
+border-radius:10px;
+font-size:22px;
+font-weight:bold;
+text-align:center;
+cursor:pointer;
+
+display:flex;              /* ✅ ADD */
+align-items:center;        /* ✅ ADD */
+justify-content:center;    /* ✅ ADD */
+flex-direction: column;    /* already added */
+}
+.vada-details{
+background:#b71c1c;
+color:#fff;
+flex:1;
+}
+.vada-donate{
+background:#0b5e20;
+color:#fff;
+flex:2;
+}
+.vada-section{
+display:none;
+}
+.vada-card{
+background:#111;
+padding:18px;
+border-radius:10px;
+border:1px solid #333;
+margin-bottom:14px;
+font-size:22px;
+line-height:1.7;
+border-left:4px solid #00e676;
+}
+.vada-back{
+margin-top:20px;
+background:#333;
+color:#fff;
+padding:14px;
+border-radius:10px;
+text-align:center;
+cursor:pointer;
+font-weight:bold;
+font-size:22px;
+}
+</style>
+
+<div class="vada-wrapper">
+
+<!-- MAIN -->
+<div class="vada-box">
+<h1>Vadanappally Orphanage</h1>
+
+<p>
+A charitable institution dedicated to the care, protection and
+upbringing of orphaned and destitute children through education,
+shelter and moral support.
+</p>
+
+<div class="vada-btn-row">
+<div class="vada-btn vada-details" onclick="vadaDetails11()">Details</div>
+<div class="vada-btn vada-donate" onclick="vadaDonate11()">
+Donate Directly→
+<span style="font-size:18px;">(India Only)</span>
+</div>
+</div>
+</div>
+
+<!-- DETAILS -->
+<div id="vadaDetails11" class="vada-section">
+<div class="vada-box">
+
+<h2>About Vadanappally Orphanage</h2>
+
+<div class="vada-card">
+Vadanappally Orphanage Committee is a community-based charitable
+organisation functioning in Thrissur district, Kerala.
+The institution provides shelter, education and emotional care
+for orphaned and vulnerable children.
+</div>
+
+<div class="vada-card">
+Their activities focus on long-term child welfare, education
+support and social upliftment.
+</div>
+
+<div class="vada-back" onclick="vadaReset11()">BACK</div>
+
+</div>
+</div>
+
+<!-- DONATE -->
+<div id="vadaDonate11" class="vada-section">
+<div class="vada-box">
+
+<h2>Support Their Work</h2>
+
+<div class="vada-card">
+<b>Orphan Care & Shelter</b><br>
+Providing food, clothing, accommodation and daily care for orphaned children.
+</div>
+
+<div class="vada-card">
+<b>Education Support</b><br>
+Schooling, books, uniforms and guidance to help children build a better future.
+</div>
+
+<div class="vada-card">
+<b>Bank Details</b><br><br>
+
+A/c Name : VATANAPPALLY ORPHANAGE COMMITTEE<br><br>
+
+A/c No : 917020025053101<br>
+Bank : Axis Bank<br>
+Branch : Vatanappally, Thrissur<br>
+IFSC : UTIB0003224<br><br>
+
+A/c No : 10532244438<br>
+Bank : SBI<br>
+Branch : Vatanappally, Thrissur<br>
+IFSC : SBIN0008683
+</div>
+
+<div class="vada-back" onclick="vadaReset11()">BACK</div>
+
+</div>
+</div>
+
+</div>
+
+<script>
+let timer11;
+
+function vadaDetails11(){
+document.getElementById("vadaDetails11").style.display="block";
+document.getElementById("vadaDonate11").style.display="none";
+window.scrollBy({top:200, behavior:"smooth"});
+startTimer11();
+}
+
+function vadaDonate11(){
+document.getElementById("vadaDetails11").style.display="none";
+document.getElementById("vadaDonate11").style.display="block";
+window.scrollBy({top:200, behavior:"smooth"});
+startTimer11();
+}
+
+function vadaReset11(){
+document.getElementById("vadaDetails11").style.display="none";
+document.getElementById("vadaDonate11").style.display="none";
+clearTimeout(timer11);
+}
+
+function startTimer11(){
+clearTimeout(timer11);
+timer11=setTimeout(function(){
+  vadaReset11();
+},20000);
+}
+</script>
+<!-- CODE NO:12 (VISION FORMAT) -->
+
+<style>
+.vision-wrapper{
+max-width:420px;
+margin:30px auto;
+}
+.vision-box{
+background:#121212;
+padding:22px;
+border-radius:16px;
+border:1px solid #1f1f1f;
+border-left:6px solid #e91e63;
+color:#fff;
+margin-bottom:22px;
+position:relative;
+overflow:hidden;
+}
+.vision-box::after{
+content:"";
+position:absolute;
+left:6px;
+top:0;
+width:3px;
+height:100%;
+
+}
+.vision-box h1{
+font-size:26px;
+margin:0 0 12px;
+}
+.vision-box h2{
+font-size:22px;
+color:#ffd54f;
+margin-bottom:10px;
+}
+.vision-box p{
+font-size:22px;
+line-height:1.6;
+color:#ddd;
+}
+.vision-impact{
+margin-top:14px;
+font-size:18px;
+line-height:1.8;
+color:#ffd54f;
+}
+.vision-btn-row{
+display:flex;
+gap:14px;
+margin-top:18px;
+}
+.vision-btn{
+flex:1;
+padding:14px 0;
+text-align:center;
+border-radius:12px;
+font-weight:bold;
+cursor:pointer;
+}
+.vision-details{
+background:#b71c1c;
+color:#fff;
+}
+.vision-donate{
+background:#0b5e20;
+color:#fff;
+}
+.vision-section{
+display:none;
+margin-top:18px;
+}
+.vision-card{
+background:#181818;
+padding:14px;
+border-radius:12px;
+margin-bottom:12px;
+font-size:14px;
+line-height:1.6;
+}
+.vision-card b{
+display:block;
+margin-bottom:6px;
+}
+.vision-link{
+display:inline-block;
+margin-top:8px;
+padding:8px 14px;
+background:#00c853;
+color:#000;
+border-radius:8px;
+font-weight:bold;
+text-decoration:none;
+}
+.vision-back{
+margin-top:20px;
+background:#333;
+color:#fff;
+padding:14px;
+border-radius:10px;
+text-align:center;
+cursor:pointer;
+font-weight:bold;
+}
+</style>
+
+<div class="vision-wrapper">
+
+<!-- MAIN -->
+<div class="vision-box">
+
+<h1>Vision 2026 – Human Welfare Foundation</h1>
+
+<p>
+Humanitarian initiatives focusing on hunger relief, education,
+healthcare, orphan care and disaster response.
+</p>
+
+<div class="vision-impact">
+✔️ <b>20,000,000+</b> Lives Impacted<br>
+✔️ <b>6000+</b> Projects Implemented<br>
+✔️ <b>200+</b> Partner Organisations<br>
+✔️ <b>23+</b> States Covered<br>
+✔️ <b>16+</b> Years of Service
+</div>
+
+<div class="vision-btn-row">
+<div class="vision-btn vision-details" onclick="visionDetails12()">Details</div>
+<a class="vision-link" href="https://www.hwfindia.org/donate/" target="_blank">
+ Donate Directly⇒
+<br><span style="font-size:18px;">(Global)</span>
+</a>
+
+</div>
+
+<!-- DETAILS -->
+<div id="visionDetails12" class="vision-section">
+<div class="vision-box">
+
+<h2>About Vision 2026 – HWF</h2>
+
+<p>
+Vision 2026 is a flagship humanitarian mission of Human Welfare Foundation,
+addressing hunger, education, healthcare, orphan care, disaster relief
+and sustainable livelihood development across communities.
+</p>
+
+<p>
+<a href="https://www.hwfindia.org/about-hwf/" target="_blank" style="color:#4fc3f7;">
+For more details →
+</a>
+</p>
+
+<div class="vision-back" onclick="visionReset12()">BACK</div>
+
+</div>
+</div>
+
+<!-- DONATE -->
+<div id="visionDonate12" class="vision-section">
+<div class="vision-box">
+
+<h2>Donation Categories</h2>
+
+<div class="vision-card">
+<b>Orphan Care</b>
+Food, shelter, education and protection for orphaned children.
+<br>
+<a class="vision-link" href="https://www.hwfindia.org/donate/" target="_blank">
+Donate Directly
+</a>
+</div>
+
+<div class="vision-card">
+<b>Hunger Relief</b>
+Feeding programmes for vulnerable families and disaster victims.
+<br>
+<a class="vision-link" href="https://www.hwfindia.org/donate/" target="_blank">
+Donate Directly
+</a>
+</div>
+
+<div class="vision-card">
+<b>Education Support</b>
+Scholarships, learning materials and school support for poor students.
+<br>
+<a class="vision-link" href="https://www.hwfindia.org/donate/" target="_blank">
+Donate Directly
+</a>
+</div>
+
+<div class="vision-card">
+<b>Healthcare Assistance</b>
+Medical aid, treatment support and health awareness programs.
+<br>
+<a class="vision-link" href="https://www.hwfindia.org/donate/" target="_blank">
+Donate Directly
+</a>
+</div>
+
+<div class="vision-card">
+<b>Disaster Relief</b>
+Emergency response during floods, earthquakes and crises.
+<br>
+<a class="vision-link" href="https://www.hwfindia.org/donate/" target="_blank">
+Donate Directly
+</a>
+</div>
+
+<div class="vision-card">
+<b>Livelihood & Community Development</b>
+Empowering families through skills, employment and sustainability.
+<br>
+<a class="vision-link" href="https://www.hwfindia.org/donate/" target="_blank">
+Donate Directly
+</a>
+</div>
+
+<div class="vision-back" onclick="visionReset12()">BACK</div>
+
+</div>
+</div>
+
+</div>
+
+<script>
+let timer12;
+
+function visionDetails12(){
+document.getElementById("visionDetails12").style.display="block";
+document.getElementById("visionDonate12").style.display="none";
+window.scrollBy({top:200, behavior:"smooth"});
+startTimer12();
+}
+
+function visionDonate12(){
+document.getElementById("visionDetails12").style.display="none";
+document.getElementById("visionDonate12").style.display="block";
+window.scrollBy({top:200, behavior:"smooth"});
+startTimer12();
+}
+
+function visionReset12(){
+document.getElementById("visionDetails12").style.display="none";
+document.getElementById("visionDonate12").style.display="none";
+clearTimeout(timer12);
+}
+
+function startTimer12(){
+clearTimeout(timer12);
+timer12=setTimeout(function(){
+  visionReset12();
+},20000);
+}
+</script>
+<style>
