@@ -4162,4 +4162,127 @@ if ('serviceWorker' in navigator) {
     100% { opacity: 1; transform: scale(1); }
   }
 
-  @k
+  
+  @keyframes blue-float {
+    0%, 100% { transform: translate(0, 0) rotate(-3deg); }
+    30% { transform: translate(85px, 145px) rotate(6deg); }
+    60% { transform: translate(-55px, -75px) rotate(-5deg); }
+  }
+
+  @keyframes red-float {
+    0%, 100% { transform: translate(0, 0) rotate(4deg); }
+    50% { transform: translate(55px, -25px) rotate(-4deg); }
+  }
+
+  .info-txt { font-size: 16px; padding: 15px; font-weight: 900; line-height: 1.2; }
+</style>
+
+<div id="balloonSection" class="balloon-scene">
+  
+  <div class="balloon blue-ball" onclick="handleBalloonTap()">
+    <div id="defaultMsg" class="info-txt">SAVE A BEAUTIFUL ICON TO YOUR HOME SCREEN</div>
+    <div id="animSteps">
+      <div class="step-item">CHROM ✓</div>
+      <div class="step-item">⋮ 3 DOT ✓</div>
+      <div class="step-item">SAVE TO SCREEN ✓</div>
+      <div class="step-item">INSTALL ✓</div>
+    </div>
+    <div class="nipple-wrap"></div><div class="knot-white"></div><div class="string-white"></div>
+  </div>
+
+  <div class="balloon red-ball" onclick="goWhatsApp()">
+    <div class="info-txt" style="font-size: 14px;">SAVE TO<br>WHATSAPP</div>
+    <div class="nipple-wrap"></div><div class="knot-white"></div><div class="string-white"></div>
+  </div>
+
+</div>
+
+<script>
+  let stepInterval = null;
+  let resetTimeout = null;
+  let animationTimeouts = [];
+  let isAnimating = false;
+  let hideTimeout = null;
+
+  // പകുതി വഴിയിലാണെങ്കിലും ബലൂൺ തിരിച്ചു കൊണ്ടുവരാനുള്ള ഫംഗ്ഷൻ
+  function returnBalloon() {
+    const section = document.getElementById('balloonSection');
+    section.classList.remove('hide-action');
+    if (hideTimeout) {
+      clearTimeout(hideTimeout);
+      startHideLoop(); 
+    }
+  }
+
+  function goWhatsApp(){
+    returnBalloon(); 
+    let msg = "Save a beautiful icon to your screen\n\n" +
+              "https://bas-charity.pages.dev\n\n" +
+              "Chrome → ⋮ 3 dot → Save to Screen → Install";
+    window.open("https://wa.me/?text=" + encodeURIComponent(msg), "_blank");
+  }
+
+  function handleBalloonTap() {
+    returnBalloon(); 
+    if (isAnimating) return; 
+    isAnimating = true;
+    const msg = document.getElementById('defaultMsg');
+    const items = document.querySelectorAll('.step-item');
+    msg.style.display = 'none';
+    
+    const runSteps = () => {
+      animationTimeouts.forEach(t => clearTimeout(t));
+      animationTimeouts = [];
+      items.forEach((item, i) => {
+        item.style.display = 'none';
+        item.style.animation = 'none';
+        void item.offsetWidth; 
+        let t = setTimeout(() => { 
+          item.style.display = 'block'; 
+          item.style.animation = 'tick-loop 0.5s forwards';
+        }, i * 1000);
+        animationTimeouts.push(t);
+      });
+    };
+
+    runSteps();
+    stepInterval = setInterval(runSteps, 4500);
+    resetTimeout = setTimeout(() => { stopAndReset(); }, 10000);
+  }
+
+  function stopAndReset() {
+    if (stepInterval) { clearInterval(stepInterval); stepInterval = null; }
+    if (resetTimeout) { clearTimeout(resetTimeout); resetTimeout = null; }
+    animationTimeouts.forEach(t => clearTimeout(t));
+    animationTimeouts = [];
+    const msg = document.getElementById('defaultMsg');
+    const items = document.querySelectorAll('.step-item');
+    items.forEach(item => {
+      item.style.display = 'none';
+      item.style.animation = 'none';
+    });
+    msg.style.display = 'block';
+    isAnimating = false; 
+  }
+
+  function startHideLoop() {
+    const section = document.getElementById('balloonSection');
+    hideTimeout = setTimeout(() => {
+      section.classList.add('hide-action'); 
+      hideTimeout = setTimeout(() => {
+        section.classList.remove('hide-action'); 
+        startHideLoop();
+      }, 7000); 
+    }, 15000); 
+  }
+  
+  window.addEventListener('load', startHideLoop);
+</script>
+
+</body>
+</html>
+			
+
+	
+
+
