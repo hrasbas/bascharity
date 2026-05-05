@@ -1905,5 +1905,569 @@ Federal Bank Kizhakkambalam Branch
 </div>
 </div>
 </div>
+   
+<div class="peace-wrapper">
+<div class="peace-box">
+<h1>Peace Valley – Kothamangalam</h1>
+<span class="peace-sub"> Charitable Care Institution </span>
+<p>
+A humanitarian institution providing shelter, medical care, rehabilitation and daily support for the needy and vulnerable.
+</p>
+<div class="peace-btn-row">
+<div class="peace-btn peace-btn-details" onclick="peaceDetails10()">Details</div>
+<a class="peace-link" href="https://peacevalley.org.in/donation/" target="_blank" rel="noopener noreferrer">
+Donate Directly ➜
+<br><span style="font-size:18px;">(Global)</span>
+</a>
+</div>
+<div id="peaceDetails10" class="peace-section">
+<div class="peace-box">
+<h1>About Peace Valley</h1>
+<div class="peace-card">
+Peace Valley Charitable Trust in Kothamangalam provides long-term shelter, food, medical care and rehabilitation support.
+</div>
+<div class="peace-card">
+Visit official website for full information.
+<br>
+<a class="peace-link" href="https://peacevalley.org.in/" target="_blank" rel="noopener noreferrer">
+Visit Website
+</a>
+</div>
+<div class="peace-back" onclick="peaceReset10()">BACK</div>
+</div>
+</div>
+<div id="peaceDonate10" class="peace-section">
+<div class="peace-box">
+<h1>Support Categories</h1>
+<div class="peace-card">
+<b>Food and Daily Care</b><br>
+Providing nutritious meals and daily essentials.
+<br>
+<a class="peace-link" href="https://peacevalley.org.in/donation/" target="_blank" rel="noopener noreferrer">
+Donate Directly
+</a>
+</div>
+<div class="peace-card">
+<b>Medical and Dialysis Support</b><br>
+Helping patients with life-saving treatment.
+<br>
+<a class="peace-link" href="https://peacevalley.org.in/donation/" target="_blank" rel="noopener noreferrer">
+Donate Directly
+</a>
+</div>
+<div class="peace-card">
+<b>Shelter and Rehabilitation</b><br>
+Safe accommodation and rehabilitation support.
+<br>
+<a class="peace-link" href="https://peacevalley.org.in/donation/" target="_blank" rel="noopener noreferrer">
+Donate Directly
+</a>
+</div>
+<div class="peace-back" onclick="peaceReset10()">BACK</div>
+</div>
+</div>
+</div>
+
+<div class="vada-wrapper">
+<div class="vada-box">
+<h1>Vadanappally Orphanage</h1>
+<p>
+A charitable institution dedicated to the care, protection and
+upbringing of orphaned and destitute children through education,
+shelter and moral support.
+</p>
+<div class="vada-btn-row">
+<div class="vada-btn vada-details" onclick="vadaDetails11()">Details</div>
+<div class="vada-btn vada-donate" onclick="vadaDonate11()">
+Donate Directly→
+<span style="font-size:18px;">(India Only)</span>
+</div>
+</div>
+</div>
+<div id="vadaDetails11" class="vada-section">
+<div class="vada-box">
+<h2>About Vadanappally Orphanage</h2>
+<div class="vada-card">
+Vadanappally Orphanage Committee is a community-based charitable
+organisation functioning in Thrissur district, Kerala.
+The institution provides shelter, education and emotional care
+for orphaned and vulnerable children.
+</div>
+<div class="vada-card">
+Their activities focus on long-term child welfare, education
+support and social upliftment.
+</div>
+<div class="vada-back" onclick="vadaReset11()">BACK</div>
+</div>
+</div>
+<div id="vadaDonate11" class="vada-section">
+<div class="vada-box">
+<h2>Support Their Work</h2>
+<div class="vada-card">
+<b>Orphan Care & Shelter</b><br>
+Providing food, clothing, accommodation and daily care for orphaned children.
+</div>
+<div class="vada-card">
+<b>Education Support</b><br>
+Schooling, books, uniforms and guidance to help children build a better future.
+</div>
+<div class="vada-card">
+<b>Bank Details</b><br><br>
+A/c Name : VATANAPPALLY ORPHANAGE COMMITTEE<br><br>
+A/c No : 917020025053101<br>
+Bank : Axis Bank<br>
+Branch : Vatanappally, Thrissur<br>
+IFSC : UTIB0003224<br><br>
+A/c No : 10532244438<br>
+Bank : SBI<br>
+Branch : Vatanappally, Thrissur<br>
+IFSC : SBIN0008683
+</div>
+<div class="vada-back" onclick="vadaReset11()">BACK</div>
+</div>
+</div>
+</div>
+
+<script>
+let count = 0;
+let target = 27000;
+let counter = document.getElementById("counter");
+
+function runCounter() {
+\tif (count < target) {
+\t\tcount += 251;
+\t\tcounter.innerText = count.toString().padStart(7, "0");
+\t\tsetTimeout(runCounter, 120);
+\t}
+}
+runCounter();
+
+const photos = [
+\t"https://raw.githubusercontent.com/2vmmbas-cmd/bas-charity/main/receipts/IMG-20260313-WA0110.jpg",
+\t"https://raw.githubusercontent.com/2vmmbas-cmd/bas-charity/main/receipts/IMG-20260313-WA0111.jpg",
+\t"https://raw.githubusercontent.com/2vmmbas-cmd/bas-charity/main/receipts/Screenshot_20260313_175205_Drive.jpg",
+\t"https://raw.githubusercontent.com/2vmmbas-cmd/bas-charity/main/receipts/Screenshot_20260314_140531_Drive.jpg",
+\t"https://raw.githubusercontent.com/2vmmbas-cmd/bas-charity/main/receipts/Screenshot_20260314_140000_Drive.jpg",
+\t"https://raw.githubusercontent.com/2vmmbas-cmd/bas-charity/main/receipts/Screenshot_20260314_140310_Chrome.jpg",
+\t"https://raw.githubusercontent.com/2vmmbas-cmd/bas-charity/main/receipts/Screenshot_20260314_140644_Chrome.jpg"
+];
+
+const gallery = document.getElementById("gallery");
+let scrolling = true;
+
+function loadImages() {
+\tphotos.forEach((src, i) => {
+\t\tlet card = document.createElement("div");
+\t\tcard.className = "card";
+
+\t\tcard.onclick = function() {
+\t\t\tscrolling = false;
+\t\t\tthis.classList.add("zoom-active");
+\t\t\tsetTimeout(() => {
+\t\t\t\tthis.classList.remove("zoom-active");
+\t\t\t\tscrolling = true;
+\t\t\t}, 4000);
+\t\t};
+
+\t\tlet img = document.createElement("img");
+\t\tif (i < 2) { img.className = "rotate"; }
+\t\timg.src = src;
+
+\t\tcard.appendChild(img);
+\t\tgallery.appendChild(card);
+\t});
+}
+
+loadImages();
+loadImages();
+
+function scrollGallery() {
+\tif (scrolling) {
+\t\tgallery.scrollLeft += 5;
+\t\tif (gallery.scrollLeft >= (gallery.scrollWidth / 2)) {
+\t\t\tgallery.scrollLeft = 0;
+\t\t}
+\t}
+}
+setInterval(scrollGallery, 10);
+
+let opened7=false;
+function toggleMore7(){
+\tlet more=document.getElementById("moreText");
+\tlet btn=document.getElementById("readBtn");
+\tif(opened7){
+\t\tmore.style.display="none";
+\t\tbtn.innerText="Read More...";
+\t\topened7=false;
+\t}
+\telse{
+\t\tmore.style.display="block";
+\t\tbtn.innerText="";
+\t\topened7=true;
+\t}
+}
+
+let opened8=false;
+function toggleBas8(){
+\tlet more=document.getElementById("bas8More");
+\tlet dots=document.getElementById("bas8Dots");
+\tlet btn=document.getElementById("bas8Btn");
+\tif(opened8){
+\t\tmore.style.display="none";
+\t\tdots.style.display="inline";
+\t\tbtn.innerText="More";
+\t\topened8=false;
+\t}
+\telse{
+\t\tmore.style.display="inline";
+\t\tdots.style.display="none";
+\t\tbtn.innerText="Less";
+\t\topened8=true;
+\t}
+}
+
+const bas7Images=[
+\t"https://drive.google.com/thumbnail?id=1keyWL0GF-HysweqAYntVaS-vB_fwZj_H&sz=w1000",
+\t"https://drive.google.com/thumbnail?id=1KdZnPqKlSOXAFY-Lu2FU41B1n7sWtt85&sz=w1000"
+];
+
+let bas7Index=0;
+const bas7Img=document.getElementById("bas7Img");
+
+setInterval(function(){
+\tbas7Img.style.opacity=0;
+\tsetTimeout(function(){
+\t\tbas7Index=(bas7Index+1)%bas7Images.length;
+\t\tbas7Img.src=bas7Images[bas7Index];
+\t\tbas7Img.style.opacity=1;
+\t},800);
+},5000);
+
+const observer78=new IntersectionObserver(entries=>{
+\tentries.forEach(entry=>{
+\t\tif(!entry.isIntersecting){
+\t\t\tif(entry.target.id==="section7" && opened7){
+\t\t\t\ttoggleMore7();
+\t\t\t}
+\t\t\tif(entry.target.id==="section8" && opened8){
+\t\t\t\ttoggleBas8();
+\t\t\t}
+\t\t}
+\t});
+},{threshold:0});
+
+observer78.observe(document.getElementById("section7"));
+observer78.observe(document.getElementById("section8"));
+
+let timer9;
+function showDetails9(){
+\tdocument.getElementById("details9").style.display="block";
+\tdocument.getElementById("donate9").style.display="none";
+\twindow.scrollBy({top:200, behavior:"smooth"});
+\tstartTimer9();
+}
+function showDonate9(){
+\tdocument.getElementById("details9").style.display="none";
+\tdocument.getElementById("donate9").style.display="block";
+\twindow.scrollBy({top:200, behavior:"smooth"});
+\tstartTimer9();
+}
+function reset9(){
+\tdocument.getElementById("details9").style.display="none";
+\tdocument.getElementById("donate9").style.display="none";
+\tclearTimeout(timer9);
+}
+function startTimer9(){
+\tclearTimeout(timer9);
+\ttimer9=setTimeout(function(){
+\t\treset9();
+\t},15000);
+}
+
+let timer10;
+function peaceDetails10(){
+\tdocument.getElementById("peaceDetails10").style.display="block";
+\tdocument.getElementById("peaceDonate10").style.display="none";
+\twindow.scrollBy({top:200, behavior:"smooth"});
+\tstartTimer10();
+}
+function peaceDonate10(){
+\tdocument.getElementById("peaceDetails10").style.display="none";
+\tdocument.getElementById("peaceDonate10").style.display="block";
+\twindow.scrollBy({top:200, behavior:"smooth"});
+\tstartTimer10();
+}
+function peaceReset10(){
+\tdocument.getElementById("peaceDetails10").style.display="none";
+\tdocument.getElementById("peaceDonate10").style.display="none";
+\tclearTimeout(timer10);
+}
+function startTimer10(){
+\tclearTimeout(timer10);
+\ttimer10=setTimeout(function(){
+\t\tpeaceReset10();
+\t},15000);
+}
+
+let timer11;
+function vadaDetails11(){
+\tdocument.getElementById("vadaDetails11").style.display="block";
+\tdocument.getElementById("vadaDonate11").style.display="none";
+\twindow.scrollBy({top:200, behavior:"smooth"});
+\tstartTimer11();
+}
+function vadaDonate11(){
+\tdocument.getElementById("vadaDetails11").style.display="none";
+\tdocument.getElementById("vadaDonate11").style.display="block";
+\twindow.scrollBy({top:200, behavior:"smooth"});
+\tstartTimer11();
+}
+function vadaReset11(){
+\tdocument.getElementById("vadaDetails11").style.display="none";
+\tdocument.getElementById("vadaDonate11").style.display="none";
+\tclearTimeout(timer11);
+}
+function startTimer11(){
+\tclearTimeout(timer11);
+\ttimer11=setTimeout(function(){
+\t\tvadaReset11();
+\t},20000);
+}
+</script>
+
+</body>
+</html>
+
+<!-- CODE 12 TO 19 - ERROR CLEAN VERSION -->
+
+<!-- ===================== CODE 12 ===================== -->
+<style>
+.vision-wrapper{
+max-width:420px;
+margin:30px auto;
+}
+.vision-box{
+background:#121212;
+padding:22px;
+border-radius:16px;
+border:1px solid #1f1f1f;
+border-left:6px solid #e91e63;
+color:#fff;
+margin-bottom:22px;
+position:relative;
+overflow:hidden;
+}
+.vision-box::after{
+content:"";
+position:absolute;
+left:6px;
+top:0;
+width:3px;
+height:100%;
+}
+.vision-box h1{
+font-size:26px;
+margin:0 0 12px;
+}
+.vision-box h2{
+font-size:22px;
+color:#ffd54f;
+margin-bottom:10px;
+}
+.vision-box p{
+font-size:22px;
+line-height:1.6;
+color:#ddd;
+}
+.vision-impact{
+margin-top:14px;
+font-size:18px;
+line-height:1.8;
+color:#ffd54f;
+}
+.vision-btn-row{
+display:flex;
+gap:14px;
+margin-top:18px;
+}
+.vision-btn{
+flex:1;
+padding:14px 0;
+text-align:center;
+border-radius:12px;
+font-weight:bold;
+cursor:pointer;
+display:flex;
+align-items:center;
+justify-content:center;
+gap:10px;
+box-shadow:0 0 10px rgba(0,255,150,0.2);
+transition:0.2s;
+}
+.vision-btn:hover{
+transform:scale(1.05);
+box-shadow:0 0 15px rgba(0,255,150,0.5);
+}
+.vision-details{
+background:#b71c1c;
+color:#fff;
+}
+.vision-donate{
+background:#0b5e20;
+color:#fff;
+}
+.vision-section{
+display:none;
+margin-top:18px;
+}
+.vision-card{
+background:#181818;
+padding:14px;
+border-radius:12px;
+margin-bottom:12px;
+font-size:14px;
+line-height:1.6;
+}
+.vision-card b{
+display:block;
+margin-bottom:6px;
+}
+.vision-link{
+display:inline-block;
+margin-top:8px;
+padding:8px 14px;
+background:#00c853;
+color:#000;
+border-radius:8px;
+font-weight:bold;
+text-decoration:none;
+}
+.vision-back{
+margin-top:20px;
+background:#333;
+color:#fff;
+padding:14px;
+border-radius:10px;
+text-align:center;
+cursor:pointer;
+font-weight:bold;
+}
+.btn-icon{
+font-size:20px;
+}
+.info-box,
+.bas7-wrapper,
+.trust-container,
+.peace-wrapper,
+.vada-wrapper,
+.vision-wrapper{
+max-width:900px !important;
+width:96% !important;
+margin-left:auto !important;
+margin-right:auto !important;
+}
+</style>
+
+<div class="vision-wrapper">
+<div class="vision-box">
+
+<h1>Vision 2026 – Human Welfare Foundation</h1>
+
+<p>
+Humanitarian initiatives focusing on hunger relief, education,
+healthcare, orphan care and disaster response.
+</p>
+
+<div class="vision-impact">
+✔️ <b>20,000,000+</b> Lives Impacted<br>
+✔️ <b>6000+</b> Projects Implemented<br>
+✔️ <b>200+</b> Partner Organisations<br>
+✔️ <b>23+</b> States Covered<br>
+✔️ <b>16+</b> Years of Service
+</div>
+
+<div class="vision-btn-row">
+<div class="vision-btn vision-details" onclick="visionDetails12()">Details</div>
+<a class="vision-link" href="https://www.hwfindia.org/donate/" target="_blank" rel="noopener noreferrer">
+Donate Directly⇒
+<br><span style="font-size:18px;">(Global)</span>
+</a>
+</div>
+
+<div id="visionDetails12" class="vision-section">
+<div class="vision-box">
+
+<h2>About Vision 2026 – HWF</h2>
+
+<p>
+Vision 2026 is a flagship humanitarian mission of Human Welfare Foundation,
+addressing hunger, education, healthcare, orphan care, disaster relief
+and sustainable livelihood development across communities.
+</p>
+
+<p>
+<a href="https://www.hwfindia.org/about-hwf/" target="_blank" rel="noopener noreferrer" style="color:#4fc3f7;">
+For more details →
+</a>
+</p>
+
+<div class="vision-back" onclick="visionReset12()">BACK</div>
+
+</div>
+</div>
+
+<div id="visionDonate12" class="vision-section">
+<div class="vision-box">
+
+<h2>Donation Categories</h2>
+
+<div class="vision-card">
+<b>Orphan Care</b>
+Food, shelter, education and protection for orphaned children.
+<br>
+<a class="vision-link" href="https://www.hwfindia.org/donate/" target="_blank" rel="noopener noreferrer">Donate Directly</a>
+</div>
+
+<div class="vision-card">
+<b>Hunger Relief</b>
+Feeding programmes for vulnerable families and disaster victims.
+<br>
+<a class="vision-link" href="https://www.hwfindia.org/donate/" target="_blank" rel="noopener noreferrer">Donate Directly</a>
+</div>
+
+<div class="vision-card">
+<b>Education Support</b>
+Scholarships, learning materials and school support for poor students.
+<br>
+<a class="vision-link" href="https://www.hwfindia.org/donate/" target="_blank" rel="noopener noreferrer">Donate Directly</a>
+</div>
+
+<div class="vision-card">
+<b>Healthcare Assistance</b>
+Medical aid, treatment support and health awareness programs.
+<br>
+<a class="vision-link" href="https://www.hwfindia.org/donate/" target="_blank" rel="noopener noreferrer">Donate Directly</a>
+</div>
+
+<div class="vision-card">
+<b>Disaster Relief</b>
+Emergency response during floods, earthquakes and crises.
+<br>
+<a class="vision-link" href="https://www.hwfindia.org/donate/" target="_blank" rel="noopener noreferrer">Donate Directly</a>
+</div>
+
+<div class="vision-card">
+<b>Livelihood & Community Development</b>
+Empowering families through skills, employment and sustainability.
+<br>
+<a class="vision-link" href="https://www.hwfindia.org/donate/" target="_blank" rel="noopener noreferrer">Donate Directly</a>
+</div>
+
+<div class="vision-back" onclick="visionReset12()">BACK</div>
+
+</div>
+</div>
+
+</div>
 
    
