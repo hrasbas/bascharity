@@ -2770,4 +2770,184 @@ const baseColors = [
 
 ];
 
-    
+    /* 👆 ഇതിന് താഴെ ലോജിക് ആണ്, അവിടെ മാറ്റം വരുത്തണ്ട */
+
+const cats = [...new Set(shops.map(s => s.c))]; 
+const baseColors = ["#2196f3","#e91e63","#9c27b0","#ff5722","#4caf50","#00bcd4","#795548","#607d8b"]; 
+const colors = {}; 
+cats.forEach((cat, i) => { colors[cat] = baseColors[i % baseColors.length]; }); 
+
+function render(data) {
+  let out = document.getElementById("out");
+  out.innerHTML = ""; 
+  cats.forEach(cat => {
+    let g = data.filter(s => s.c === cat);
+    if (!g.length) return; 
+    out.innerHTML += `<div class="cat-head" style="background:${colors[cat]}">${cat}</div>`; 
+    g.forEach(s => {
+      out.innerHTML += `
+        <a class="shop-card" href="${s.u}" target="_blank" style="border-left-color:${colors[cat]}">
+          <img src="https://www.google.com/s2/favicons?sz=64&domain=${s.d}">
+          <div class="info"><b class="notranslate">${s.n}</b><small>${s.t}</small></div>
+        </a>`;
+    });
+  });
+}
+
+function search() {
+  let v = document.getElementById("findShop").value.toLowerCase();
+  let data = shops.filter(s => s.n.toLowerCase().includes(v) || s.t.toLowerCase().includes(v));
+  render(data);
+}
+
+function resetView() {
+  document.getElementById("findShop").value = "";
+  render(shops);
+}
+
+function filter(cat) {
+  let data = shops.filter(s => s.c === cat);
+  render(data);
+}
+
+function initBtns() {
+  let b = "";
+  cats.forEach(c => {
+    b += `<button class="m-btn" onclick="filter('${c}')" style="border-bottom:2px solid ${colors[c]}">${c}</button>`;
+  });
+  document.getElementById("btns").innerHTML = b;
+}
+
+initBtns();
+render(shops);
+</script>
+
+<script> 
+/* INDIA CATEGORY CONTROL */ 
+function initBtns(){ 
+  let b=""; 
+  if((activeCountry || "").toLowerCase()==="india"){ 
+    cats.forEach(c=>{
+      b+=`<button class="m-btn" onclick="filter('${c}')" style="border-bottom:2px solid ${colors[c]}">${c}</button>`;
+    }); 
+  } 
+  document.getElementById("btns").innerHTML=b;
+} 
+
+/* RENDER CATEGORY HEADINGS ONLY FOR INDIA */
+const oldRender = render; 
+render = function(data){ 
+  let out=document.getElementById("out");
+  out.innerHTML=""; 
+  const isIndia = (activeCountry || "").toLowerCase()==="india"; 
+
+  cats.forEach(cat=>{ 
+    let g=data.filter(s=>s.c===cat);
+    if(!g.length) return; 
+
+    if(isIndia){
+      out.innerHTML+=`<div class="cat-head" style="background:${colors[cat]}">${cat}</div>`;
+    } 
+
+    g.forEach(s=>{
+      out.innerHTML+=`
+      <a class="shop-card" href="${s.u}" target="_blank" style="border-left-color:${colors[cat]}">
+        <img src="https://www.google.com/s2/favicons?sz=64&domain=${s.d}">
+        <div class="info">
+          <b class="notranslate" translate="no">${s.n}</b>
+          <small>${s.t}</small>
+        </div>
+      </a>`;
+    }); 
+  });
+}; 
+
+/* AUTO UPDATE ON COUNTRY CHANGE */
+document.addEventListener("click",function(e){
+  if(e.target.classList.contains("country-btn")){
+    setTimeout(initBtns,100);
+  }
+}); 
+
+document.addEventListener("change",function(e){
+  if(e.target.closest(".all-country")){
+    setTimeout(initBtns,100);
+  }
+}); 
+</script>
+
+<div id="bas-charity-total-dark-info" style="font-family: sans-serif; line-height: 1.8; color: #eeeeee; background-color: #121212; border: 1px solid #333; border-radius: 15px; max-width: 900px; margin: 25px auto; box-shadow: 0 10px 30px rgba(0,0,0,0.5); width: 96%; overflow: hidden;"> 
+  <div style="padding: 35px 25px;">
+    <div style="margin-bottom: 40px; text-align: center;">
+        <h2 style="color: #2ecc71; border-bottom: 3px solid #27ae60; display: inline-block; padding-bottom: 8px; margin-bottom: 15px;">TRANSPARENCY & LEGAL DISCLOSURES</h2>
+        <p style="font-weight: bold; color: #27ae60; font-size: 1.15em; margin: 15px 0;">"YOUR PURCHASE SATISFIES A HUNGER"</p>
+        <p style="text-align: justify; color: #cccccc; font-size: 0.98em;">
+            <strong>BAS Charity International</strong> acts as a bridge between global commerce and humanitarian aid. Our mission is to ensure that support reaches those who truly need it through affiliate partnerships with <strong>50,000+ online shops</strong> worldwide.
+        </p>
+    </div> 
+
+    <div style="background: linear-gradient(135deg, #1a1a1a 0%, #252525 100%); padding: 25px; border-radius: 12px; margin-bottom: 35px; border-left: 8px solid #27ae60;">
+        <h3 style="color: #2ecc71; margin-top: 0;">Financial Governance</h3>
+        <p><strong>Initially, 100% of the affiliate income</strong> generated through this platform was dedicated entirely to hunger relief. As we scale, a <strong>minimum of 51% or more</strong> will always be strictly dedicated to these noble causes.</p>
+    </div> 
+
+    <div style="margin-bottom: 10px; padding: 20px; border: 2px solid #c0392b; border-radius: 12px; background-color: #1a0d0d; text-align: center;">
+        <h3 style="color: #e74c3c; margin-top: 0;">Direct Donations Notice</h3>
+        <p style="font-weight: 500;">Currently, we <strong>do not accept any direct donations</strong> through this website.</p>
+        <p style="font-size: 0.92em; color: #888888; font-weight: bold;">"Give your donations only through trusted hands."</p>
+    </div> 
+  </div> 
+
+  <div style="text-align: center; background-color: #0a0a0a; color: #ffffff; padding: 35px 20px; border-top: 1px solid #222;">
+      <p style="font-size: 1.1em; color: #2ecc71; margin: 0;"><strong>Contact:</strong> <a href="mailto:support@bascharity.com" style="color: #27ae60; text-decoration: none; font-weight: bold;">support@bascharity.com</a> | Kerala, India</p>
+      <p style="font-size: 0.85em; color: #666; margin-top: 20px;">&copy; 2026 BAS Charity International. All Rights Reserved.</p>
+  </div>
+</div>
+
+<div id="floating-selector" style="position: fixed; bottom: 30px; right: 20px; display: flex; flex-direction: column; gap: 15px; z-index: 9999;">
+  <div onclick="document.querySelector('.lang-box').scrollIntoView({behavior: 'smooth'})" style="background: linear-gradient(135deg, #FF5722, #E64A19); color: white; padding: 15px 20px; border-radius: 50px; cursor: pointer; font-weight: bold; box-shadow: 0 10px 20px rgba(0,0,0,0.3); display: flex; align-items: center; gap: 10px; animation: float-anim 3s ease-in-out infinite;">
+      <span>🌐</span> <span>ഭാഷ മാറ്റുക</span>
+  </div> 
+  <div onclick="document.querySelector('.country-box').scrollIntoView({behavior: 'smooth'})" style="background: linear-gradient(135deg, #2196F3, #1976D2); color: white; padding: 15px 20px; border-radius: 50px; cursor: pointer; font-weight: bold; box-shadow: 0 10px 20px rgba(0,0,0,0.3); display: flex; align-items: center; gap: 10px; animation: float-anim 3s ease-in-out infinite 1.5s;">
+      <span>📍</span> <span>രാജ്യം മാറ്റുക</span>
+  </div> 
+</div>
+
+<style>
+@keyframes float-anim { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-10px); } }
+.goog-te-banner-frame.skiptranslate, .goog-te-balloon-frame, #goog-gt-tt { display: none !important; }
+body { top: 0 !important; }
+</style>
+
+<script>
+// Clear Google Translate UI
+setInterval(function(){
+  const elements = ['.goog-te-banner-frame', '.goog-te-balloon-frame', '#goog-gt-tt'];
+  elements.forEach(id => {
+    let el = document.querySelector(id) || document.getElementById(id);
+    if(el) el.remove();
+  });
+  document.body.style.top='0px';
+}, 1000);
+
+// Shop Name Fix for Translation
+setTimeout(function(){
+  document.querySelectorAll('.shop-card b').forEach(el => {
+    el.classList.add('notranslate');
+    el.setAttribute('translate','no');
+  });
+}, 2000);
+
+// PWA Service Worker
+if ('serviceWorker' in navigator) {
+  window.addEventListener('load', () => {
+    navigator.serviceWorker.register('/sw.js').then(reg => console.log("SW OK")).catch(err => console.log("SW Fail"));
+  });
+}
+</script>
+</body>
+</html>
+
+
+
+
