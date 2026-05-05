@@ -2469,5 +2469,699 @@ Empowering families through skills, employment and sustainability.
 </div>
 
 </div>
+   
+<!-- ===================== CODE 13 ===================== -->
+<style>
+body{
+-webkit-font-smoothing:antialiased;
+-moz-osx-font-smoothing:grayscale;
+}
+.basglobal-wrapper{
+max-width:900px;
+width:95%;
+margin:20px auto;
+padding:0 10px;
+font-family:Arial, Helvetica, sans-serif;
+}
+.basglobal-box{
+background:#121212;
+padding:18px;
+border-radius:14px;
+border:1px solid #666;
+color:#fff;
+}
+.basglobal-box h1{
+font-size:24px;
+text-align:center;
+margin-bottom:14px;
+}
+.basglobal-btn{
+background:#1a1a1a;
+padding:16px;
+border-radius:10px;
+margin-bottom:10px;
+cursor:pointer;
+font-size:22px;
+font-weight:600;
+border:1px solid #00e676;
+border-left:6px solid #00e676;
+transition:0.3s;
+}
+.basglobal-btn.active{
+border-left:6px solid #ff5252;
+background:#222;
+}
+.basglobal-support{
+position:fixed;
+left:50%;
+bottom:0;
+width:90%;
+max-width:480px;
+background:#1a1a1a;
+padding:24px;
+padding-bottom:100px;
+border-top-left-radius:18px;
+border-top-right-radius:18px;
+line-height:1.8;
+font-size:22px;
+color:#ddd;
+border:1px solid #666;
+border-top:2px solid #00e676;
+box-shadow:0 -10px 30px rgba(0,0,0,0.8);
+transform:translate(-50%,100%);
+display:none;
+transition:0.4s;
+overflow-y:auto;
+z-index:999;
+}
+.basglobal-support.show{
+transform:translate(-50%,0);
+}
+.basglobal-head{
+font-size:22px;
+font-weight:bold;
+margin-bottom:12px;
+color:#ffd54f;
+}
+.basglobal-big{
+position:sticky;
+bottom:0;
+background:#00c853;
+padding:18px;
+border-radius:12px;
+text-align:center;
+font-weight:bold;
+margin-top:18px;
+cursor:pointer;
+font-size:22px;
+}
+.basglobal-back{
+background:#333;
+margin-top:10px;
+}
+</style>
 
+<div class="basglobal-wrapper">
+<div class="basglobal-box">
+
+<h1>Bas-Global relief& support</h1>
+
+<div id="basglobal-list">
+<div class="basglobal-btn" onclick="basglobalSwitch(this,'ifrc')">Red Crescent</div>
+<div class="basglobal-btn" onclick="basglobalSwitch(this,'ifrc')">Red Cross</div>
+<div class="basglobal-btn" onclick="basglobalSwitch(this,'ifrc')">Red Crystal</div>
+<div class="basglobal-btn" onclick="basglobalSwitch(this,'unicef')">UNICEF</div>
+<div class="basglobal-btn" onclick="basglobalSwitch(this,'msf')">MSF</div>
+<div class="basglobal-btn" onclick="basglobalSwitch(this,'unrwa')">UNRWA</div>
+<div class="basglobal-btn" onclick="basglobalSwitch(this,'irc')">IRC</div>
+<div class="basglobal-btn" onclick="basglobalSwitch(this,'care')">CARE</div>
+<div class="basglobal-btn" onclick="basglobalSwitch(this,'save')">Save the Children</div>
+<div class="basglobal-btn" onclick="basglobalSwitch(this,'islamic')">Islamic Relief</div>
+</div>
+
+</div>
+</div>
+
+<div id="basglobal-support" class="basglobal-support">
+<div class="basglobal-head">Details & Donate</div>
+
+<p>Many people want to help, but are afraid of scams. Once money is sent, we may never know where it goes.</p>
+<p>This platform helps you reach trusted humanitarian organisations, so you can support safely and confidently.</p>
+<p>
+Remember:<br>
+Your support can save lives.<br>
+Your support can satisfy someone’s hunger.<br>
+Your purchase can also help feed someone.
+</p>
+<p>
+Please spread this.<br>
+Let your one share become a lasting reward beyond this life.
+</p>
+
+<div class="basglobal-big" onclick="basglobalGo()">View Details & Donate</div>
+<div class="basglobal-big basglobal-back" onclick="basglobalClose()">Close</div>
+</div>
+
+<!-- ===================== CODE 14 ===================== -->
+<style>
+#bas{
+width:96%;
+max-width:900px;
+margin:auto;
+padding:10px;
+}
+#findShop{
+width:100%;
+height:50px;
+border-radius:10px;
+border:1px solid #333;
+background:#111;
+color:#fff;
+padding:0 15px;
+margin-bottom:15px;
+box-sizing:border-box;
+}
+#resetBtn{
+display:block;
+background:#111;
+color:orange;
+padding:14px;
+border-radius:10px;
+text-align:center;
+margin-bottom:20px;
+cursor:pointer;
+font-weight:bold;
+border:1px solid orange;
+}
+.btn-grid{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:8px;
+margin-bottom:20px;
+}
+.m-btn{
+background:#161616;
+color:#eee;
+border:1px solid #333;
+padding:12px 5px;
+border-radius:8px;
+cursor:pointer;
+font-weight:bold;
+font-size:13px;
+}
+.cat-head{
+padding:12px;
+border-radius:8px;
+margin:25px 0 12px;
+text-align:center;
+font-weight:bold;
+color:#fff;
+text-transform:uppercase;
+}
+.shop-card{
+display:flex;
+align-items:center;
+gap:12px;
+padding:14px;
+background:#111;
+border-radius:12px;
+margin-bottom:10px;
+text-decoration:none;
+color:#fff;
+border:1px solid currentColor;
+border-left:6px solid currentColor;
+transition:.2s;
+}
+.shop-card:hover{
+background:#1a1a1a;
+transform:translateX(5px);
+}
+.shop-card img{
+width:38px;
+height:38px;
+background:#fff;
+border-radius:6px;
+padding:4px;
+object-fit:contain;
+}
+.sl{
+color:orange;
+font-weight:bold;
+width:25px;
+font-size:14px;
+}
+.info b{
+font-size:17px;
+display:block;
+}
+.info small{
+color:#888;
+font-size:12px;
+}
+</style>
+
+<div id="bas">
+<input id="findShop" placeholder="Search Shops..." onkeyup="search()">
+<div id="resetBtn" onclick="resetView()">← Back to All Shops</div>
+<div class="btn-grid" id="btns"></div>
+<div id="out"></div>
+</div>
+
+<!-- ===================== CODE 15 ===================== -->
+<div id="bas-charity-total-dark-info" style="
+font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+line-height:1.8;
+color:#eeeeee;
+background-color:#121212;
+border:1px solid #333333;
+border-radius:15px;
+max-width:900px;
+margin:25px auto;
+box-shadow:0 10px 30px rgba(0,0,0,0.5);
+box-sizing:border-box;
+width:96%;
+overflow:hidden;
+">
+<div style="padding:35px 25px;">
+<div style="margin-bottom:40px; text-align:center;">
+<h2 style="color:#2ecc71; border-bottom:3px solid #27ae60; display:inline-block; padding-bottom:8px; margin-bottom:15px; letter-spacing:1px;">TRANSPARENCY & LEGAL DISCLOSURES</h2>
+<p style="font-weight:bold; color:#27ae60; font-size:1.15em; margin:15px 0;">"YOUR PURCHASE SATISFIES A HUNGER"</p>
+<p style="text-align:justify; color:#cccccc; font-size:0.98em;">
+<strong>BAS Charity International</strong> acts as a bridge between global commerce and humanitarian aid. Our mission is to ensure that support reaches those who truly need it through affiliate partnerships with <strong>50,000+ online shops</strong> worldwide.
+</p>
+</div>
+
+<div style="background:linear-gradient(135deg, #1a1a1a 0%, #252525 100%); padding:25px; border-radius:12px; margin-bottom:35px; border-left:8px solid #27ae60;">
+<h3 style="color:#2ecc71; margin-top:0; font-size:1.25em;">Financial Governance</h3>
+<p><strong>Initially, 100% of the affiliate income</strong> generated through this platform was dedicated entirely to hunger relief. As we scale, a <strong>minimum of 51% or more</strong> will always be strictly dedicated to these noble causes.</p>
+<p style="font-style:italic; color:#999999; font-size:0.95em; margin-bottom:0;">The remaining portion is utilized for platform maintenance, technical development, staff support, and operational expenses to ensure long-term sustainability.</p>
+</div>
+
+<div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(300px, 1fr)); gap:25px; margin-bottom:35px;">
+<div style="padding:0 10px;">
+<h3 style="color:#3498db; border-left:4px solid #3498db; padding-left:12px; margin-bottom:12px; font-size:1.15em;">Privacy Commitment</h3>
+<p style="font-size:0.93em; text-align:justify; color:#bbbbbb;">
+We value your digital safety. <strong>BAS Charity International</strong> does not collect or store your personal financial information. When you click the <strong>above links</strong>, your transaction happens directly on the official retailer's secure website.
+</p>
+</div>
+<div style="padding:0 10px;">
+<h3 style="color:#f39c12; border-left:4px solid #f39c12; padding-left:12px; margin-bottom:12px; font-size:1.15em;">Affiliate Disclosure</h3>
+<p style="font-size:0.93em; text-align:justify; color:#bbbbbb;">
+Shopping through the <strong>above links</strong> costs you <strong>nothing extra</strong>. The retailers pay a commission to us, which we use for our humanitarian missions to fight hunger and help those in need.
+</p>
+</div>
+</div>
+
+<div style="margin-bottom:10px; padding:20px; border:2px solid #c0392b; border-radius:12px; background-color:#1a0d0d; text-align:center;">
+<h3 style="color:#e74c3c; margin-top:0; font-size:1.15em;">Direct Donations Notice</h3>
+<p style="font-weight:500; margin-bottom:8px;">Currently, we <strong>do not accept any direct donations</strong> through this website.</p>
+<p style="font-size:0.92em; color:#888888; font-weight:bold; letter-spacing:0.5px;">"Give your donations only through trusted hands."</p>
+</div>
+</div>
+
+<div style="text-align:center; background-color:#0a0a0a; color:#ffffff; padding:35px 20px; border-top:1px solid #222222;">
+<p style="font-size:1.1em; color:#2ecc71; margin:0;"><strong>Contact:</strong> <a href="mailto:support@bascharity.com" style="color:#27ae60; text-decoration:none; font-weight:bold; border-bottom:1px dashed #27ae60;">support@bascharity.com</a> | Kerala, India</p>
+<p style="font-size:0.85em; color:#666666; margin-top:20px; letter-spacing:1px;">&copy; 2026 BAS Charity International. All Rights Reserved.</p>
+</div>
+</div>
+
+<!-- ===================== CODE 16 ===================== -->
+<div id="floating-selector" style="position:fixed; bottom:30px; right:20px; display:flex; flex-direction:column; gap:15px; z-index:9999;">
+<div onclick="var a=document.querySelector('.lang-box'); if(a){a.scrollIntoView({behavior:'smooth'});}"
+style="background:linear-gradient(135deg, #FF5722, #E64A19); color:white; padding:15px 20px; border-radius:50px; cursor:pointer; font-weight:bold; box-shadow:0 10px 20px rgba(0,0,0,0.3); display:flex; align-items:center; gap:10px; animation:float-anim 3s ease-in-out infinite;">
+<span style="font-size:20px;">🌐</span> <span>ഭാഷ മാറ്റുക</span>
+</div>
+
+<div onclick="var b=document.querySelector('.country-box'); if(b){b.scrollIntoView({behavior:'smooth'});}"
+style="background:linear-gradient(135deg, #2196F3, #1976D2); color:white; padding:15px 20px; border-radius:50px; cursor:pointer; font-weight:bold; box-shadow:0 10px 20px rgba(0,0,0,0.3); display:flex; align-items:center; gap:10px; animation:float-anim 3s ease-in-out infinite 1.5s;">
+<span style="font-size:20px;">📍</span> <span>രാജ്യം മാറ്റുക</span>
+</div>
+</div>
+
+<!-- ===================== CODE 17 ===================== -->
+<style>
+@keyframes float-anim{
+0%,100%{transform:translateY(0) rotate(0deg);}
+50%{transform:translateY(-10px) rotate(2deg);}
+}
+#floating-selector div:active{
+transform:scale(0.9);
+}
+</style>
+
+<!-- ===================== CODE 18 ===================== -->
+<style>
+.goog-te-banner-frame.skiptranslate{display:none!important;}
+body{top:0!important;}
+</style>
+
+<!-- ===================== CODE 19 ===================== -->
+<script>
+let timer12;
+
+function scrollTopSmooth(el){
+document.getElementById(el).scrollIntoView({
+behavior:"smooth",
+block:"start"
+});
+}
+
+function visionDetails12(){
+document.getElementById("visionDetails12").style.display="block";
+document.getElementById("visionDonate12").style.display="none";
+scrollTopSmooth("visionDetails12");
+startTimer12();
+}
+
+function visionDonate12Open(){
+document.getElementById("visionDetails12").style.display="none";
+document.getElementById("visionDonate12").style.display="block";
+scrollTopSmooth("visionDonate12");
+startTimer12();
+}
+
+function visionReset12(){
+document.getElementById("visionDetails12").style.display="none";
+document.getElementById("visionDonate12").style.display="none";
+clearTimeout(timer12);
+}
+
+function startTimer12(){
+clearTimeout(timer12);
+timer12=setTimeout(function(){
+visionReset12();
+},20000);
+}
+
+let basglobalLink="";
+let basglobalTimer;
+let box=document.getElementById("basglobal-support");
+
+function basglobalSwitch(el,type){
+document.querySelectorAll(".basglobal-btn").forEach(btn=>{
+btn.classList.remove("active");
+});
+el.classList.add("active");
+box.classList.remove("show");
+setTimeout(()=>{
+box.style.display="block";
+setTimeout(()=>{box.classList.add("show");},10);
+setLink(type);
+},250);
+resetTimer();
+}
+
+function setLink(type){
+if(type==="ifrc"){basglobalLink="https://www.ifrc.org/donate";}
+else if(type==="unicef"){basglobalLink="https://www.unicef.org/donate";}
+else if(type==="msf"){basglobalLink="https://www.doctorswithoutborders.org/donate";}
+else if(type==="unrwa"){basglobalLink="https://donate.unrwa.org";}
+else if(type==="irc"){basglobalLink="https://www.rescue.org/donate";}
+else if(type==="care"){basglobalLink="https://www.care.org/donate";}
+else if(type==="save"){basglobalLink="https://www.savethechildren.org/donate";}
+else if(type==="islamic"){basglobalLink="https://www.islamic-relief.org/donate";}
+}
+
+function basglobalGo(){
+window.open(basglobalLink,"_blank");
+}
+
+function basglobalClose(){
+box.classList.remove("show");
+setTimeout(()=>{box.style.display="none";},300);
+document.querySelectorAll(".basglobal-btn").forEach(btn=>{
+btn.classList.remove("active");
+});
+clearTimeout(basglobalTimer);
+}
+
+function resetTimer(){
+clearTimeout(basglobalTimer);
+basglobalTimer=setTimeout(()=>{
+basglobalClose();
+},30000);
+}
+
+const shops = [
+{n:"Times Prime", c:"General", country:"India", u:"https://extp.in/ZMd1Nw", d:"timesprime.com", t:"Subscriptions"},
+{n:"Flipkart", c:"General", country:"India", u:"https://fkrt.co/4qfbAT", d:"flipkart.com", t:"Online Shopping"},
+{n:"Shopsy", c:"General", country:"India", u:"https://extp.in/Gs6Rb1", d:"shopsy.in", t:"Budget Deals"},
+{n:"TATA CLiQ", c:"General", country:"India", u:"https://extp.in/xBzdCz", d:"tatacliq.com", t:"Premium Shopping"},
+{n:"HamaraMall", c:"General", country:"India", u:"https://extp.in/8X1jbY", d:"hamaramall.com", t:"Multi-Brand"},
+{n:"Zop Multi-Brand", c:"General", country:"India", u:"https://extp.in/IrhoNZ", d:"zopnow.com", t:"Deals"},
+{n:"Borosil", c:"General", country:"India", u:"https://extp.in/24qA7X", d:"borosil.com", t:"Home & Kitchen"},
+{n:"Loop Earplugs", c:"General", country:"India", u:"https://extp.in/BB0Xou", d:"loopearplugs.com", t:"Accessories"},
+{n:"BigRock", c:"General", country:"India", u:"https://extp.in/Nlegt8", d:"bigrock.in", t:"Domains & Hosting"},
+{n:"Hostinger", c:"General", country:"India", u:"https://extp.in/ftfK2f", d:"hostinger.in", t:"Web Hosting"},
+
+{n:"Reliance Digital", c:"Electronics", country:"India", u:"https://extp.in/0PgZJ7", d:"reliancedigital.in", t:"Tech Store"},
+{n:"Realme", c:"Electronics", country:"India", u:"https://extp.in/hnJCyL", d:"realme.com", t:"Official Store"},
+{n:"OPPO", c:"Electronics", country:"India", u:"https://extp.in/fVoq06", d:"oppo.com", t:"Official Store"},
+{n:"Croma", c:"Electronics", country:"India", u:"https://extp.in/8qwyol", d:"croma.com", t:"Electronics"},
+{n:"OnePlus", c:"Electronics", country:"India", u:"https://extp.in/FEEReP", d:"oneplus.in", t:"Smartphones"},
+{n:"boAt", c:"Electronics", country:"India", u:"https://extp.in/oRxSTk", d:"boat-lifestyle.com", t:"Audio & Wearables"},
+{n:"HP Store", c:"Electronics", country:"India", u:"https://extp.in/U9ewhY", d:"hp.com", t:"Laptops & PCs"},
+{n:"Apple (Imagine)", c:"Electronics", country:"India", u:"https://extp.in/SqFm4N", d:"apple.com", t:"Authorised Store"},
+{n:"Havells", c:"Electronics", country:"India", u:"https://extp.in/S9xPk5", d:"havells.com", t:"Home Appliances"},
+{n:"Acer", c:"Electronics", country:"India", u:"https://extp.in/VrnWUI", d:"acer.com", t:"Laptops"},
+
+{n:"Agoda", c:"Travel", country:"India", u:"https://extp.in/IVQGXK", d:"agoda.com", t:"Hotels Worldwide"},
+{n:"Cleartrip", c:"Travel", country:"India", u:"https://extp.in/MScmZs", d:"cleartrip.com", t:"Flights & Hotels"},
+{n:"Skyscanner", c:"Travel", country:"India", u:"https://extp.in/OkutuN", d:"skyscanner.co.in", t:"Flight Search"},
+{n:"Wego Hotels", c:"Travel", country:"India", u:"https://extp.in/p1wwg6", d:"wego.com", t:"Best Prices"},
+{n:"Cleartrip App", c:"Travel", country:"India", u:"https://extp.in/LK0lCN", d:"cleartrip.com", t:"Mobile Booking"},
+{n:"Air India Express", c:"Travel", country:"India", u:"https://extp.in/Yt5n0D", d:"airindiaexpress.com", t:"Low-cost Flights"},
+{n:"Goibibo Hotels", c:"Travel", country:"India", u:"https://extp.in/hI611P", d:"goibibo.com", t:"Hotel Deals"},
+{n:"Radisson", c:"Travel", country:"India", u:"https://extp.in/NZ4D3c", d:"radissonhotels.com", t:"Premium Hotels"},
+{n:"Air India", c:"Travel", country:"India", u:"https://extp.in/dglSuK", d:"airindia.com", t:"International Flights"},
+{n:"Qatar Airways", c:"Travel", country:"India", u:"https://extp.in/j1zDhQ", d:"qatarairways.com", t:"Global Travel"},
+
+{n:"Ajio", c:"Fashion", country:"India", u:"https://ajiio.co/FB2bjd", d:"ajio.com", t:"Fashion Deals"},
+{n:"Savana", c:"Fashion", country:"India", u:"https://extp.in/vneaiB", d:"savana.com", t:"Latest Trends"},
+{n:"Adidas", c:"Fashion", country:"India", u:"https://extp.in/O8an9N", d:"adidas.co.in", t:"Sportswear"},
+{n:"Snitch", c:"Fashion", country:"India", u:"https://extp.in/9HobPl", d:"snitch.co.in", t:"Men Fashion"},
+{n:"Bewakoof", c:"Fashion", country:"India", u:"https://extp.in/YTpmLn", d:"bewakoof.com", t:"Casual Wear"},
+{n:"Nykaa Fashion", c:"Fashion", country:"India", u:"https://extp.in/K4vmPe", d:"nykaafashion.com", t:"Designer Wear"},
+{n:"Shyaway", c:"Fashion", country:"India", u:"https://extp.in/I17VdZ", d:"shyaway.com", t:"Lingerie"},
+{n:"Palmonas", c:"Fashion", country:"India", u:"https://extp.in/zLMREw", d:"palmonas.com", t:"Jewellery"},
+{n:"Tanishq", c:"Fashion", country:"India", u:"https://extp.in/JW39eV", d:"tanishq.co.in", t:"Gold Jewellery"},
+{n:"Aramya", c:"Fashion", country:"India", u:"https://extp.in/weizVL", d:"aranya.com", t:"Ethnic Wear"},
+
+{n:"PharmEasy", c:"Health", country:"India", u:"https://extp.in/health1", d:"pharmeasy.in", t:"Online Pharmacy"},
+{n:"Tata 1mg", c:"Health", country:"India", u:"https://extp.in/health2", d:"1mg.com", t:"Medicines & Lab Tests"},
+{n:"Netmeds", c:"Health", country:"India", u:"https://extp.in/health3", d:"netmeds.com", t:"Online Pharmacy"},
+{n:"Apollo Pharmacy", c:"Health", country:"India", u:"https://extp.in/health4", d:"apollopharmacy.in", t:"Medicines"},
+{n:"Practo", c:"Health", country:"India", u:"https://extp.in/health5", d:"practo.com", t:"Doctor Consultation"},
+{n:"HealthKart", c:"Health", country:"India", u:"https://extp.in/health6", d:"healthkart.com", t:"Supplements"},
+{n:"Boldfit", c:"Health", country:"India", u:"https://extp.in/health7", d:"boldfit.com", t:"Fitness Products"},
+{n:"Wellness Forever", c:"Health", country:"India", u:"https://extp.in/health8", d:"wellnessforever.com", t:"Pharmacy"},
+{n:"Zandu Care", c:"Health", country:"India", u:"https://extp.in/health9", d:"zanducare.com", t:"Ayurveda"},
+{n:"MyUpchar", c:"Health", country:"India", u:"https://extp.in/health10", d:"myupchar.com", t:"Health Info & Products"},
+
+{n:"Dot & Key", c:"Beauty", country:"India", u:"https://extp.in/FLG6iL", d:"dotandkey.com", t:"Skincare"},
+{n:"Love Beauty & Planet", c:"Beauty", country:"India", u:"https://extp.in/IGrjfb", d:"lovebeautyandplanet.com", t:"Haircare"},
+{n:"Nykaa", c:"Beauty", country:"India", u:"https://extp.in/BnQJFH", d:"nykaa.com", t:"Beauty Store"},
+{n:"Clove Oral Care", c:"Beauty", country:"India", u:"https://extp.in/RSLak4", d:"cloveoralcare.com", t:"Dental Care"},
+{n:"The Man Company", c:"Beauty", country:"India", u:"https://extp.in/JW1fyD", d:"themancompany.com", t:"Men Grooming"},
+{n:"Lotus Botanicals", c:"Beauty", country:"India", u:"https://extp.in/2vyqbh", d:"lotusbotanicals.com", t:"Ayurvedic"},
+{n:"Nourish Mantra", c:"Beauty", country:"India", u:"https://extp.in/Gg2Mzw", d:"nourishmantra.com", t:"Natural Beauty"},
+{n:"The Body Shop", c:"Beauty", country:"India", u:"https://extp.in/Uel1q3", d:"thebodyshop.in", t:"Skincare"},
+{n:"Swiss Beauty", c:"Beauty", country:"India", u:"https://extp.in/0I5GeF", d:"swissbeauty.in", t:"Cosmetics"},
+{n:"Sadhev Ayurveda", c:"Beauty", country:"India", u:"https://extp.in/BCljjQ", d:"sadhev.com", t:"Ayurveda"},
+
+{n:"Airtel Payments Bank", c:"Banking", country:"India", u:"https://extp.in/g0pxj2", d:"airtel.in", t:"Open Account"},
+{n:"Angel One", c:"Banking", country:"India", u:"https://extp.in/frLCl1", d:"angelone.in", t:"Demat Account"},
+{n:"Swiggy HDFC Card", c:"Banking", country:"India", u:"https://extp.in/Xl9qHe", d:"hdfcbank.com", t:"Apply Now"},
+{n:"IndusInd Avios Card", c:"Banking", country:"India", u:"https://extp.in/hj6ArG", d:"indusind.com", t:"Apply Now"},
+{n:"AyushPay", c:"Banking", country:"India", u:"https://extp.in/XQxoLW", d:"ayushpay.com", t:"Healthcare Finance"},
+{n:"Marriott Bonvoy HDFC", c:"Banking", country:"India", u:"https://extp.in/cxkWbr", d:"marriott.com", t:"Apply Now"},
+{n:"Axis MyZone Card", c:"Banking", country:"India", u:"https://extp.in/9myzwo", d:"axisbank.com", t:"Apply Now"},
+{n:"Navi UPI", c:"Banking", country:"India", u:"https://extp.in/J56J4f", d:"navi.com", t:"UPI Services"},
+{n:"Upstox", c:"Banking", country:"India", u:"https://extp.in/jrfhBK", d:"upstox.com", t:"Trading Platform"},
+{n:"Zagg Money", c:"Banking", country:"India", u:"https://extp.in/9zNj2z", d:"zagg.money", t:"UPI Credit"},
+
+{id:"G2", n:"Amazon UK", c:"General", country:"UK", u:"https://www.amazon.co.uk/?tag=vmmbaslinks03-21", d:"amazon.co.uk", t:"Online Shopping"},
+{id:"G3", n:"Amazon USA", c:"General", country:"USA", u:"https://www.amazon.com/?tag=vmmbaslinks-20", d:"amazon.com", t:"Online Shopping"},
+{id:"G4", n:"Amazon Canada", c:"General", country:"Canada", u:"https://www.amazon.ca/?tag=vmmbaslinks06-20", d:"amazon.ca", t:"Online Shopping"},
+{id:"G5", n:"Amazon UAE", c:"General", country:"UAE", u:"https://www.amazon.ae/?tag=vmmbaslinks01-21", d:"amazon.ae", t:"Online Shopping"},
+{id:"G6", n:"Amazon Saudi", c:"General", country:"Saudi", u:"https://www.amazon.sa/?tag=vmmbaslinks01-21", d:"amazon.sa", t:"Online Shopping"},
+
+{n:"Alibaba", c:"Shopping", country:"ALL", u:"https://rzekl.com/g/pm1aev55clcf9d224bea219aa26f6f/", t:"Shop Now"},
+{n:"AliExpress", c:"Shopping", country:"ALL", u:"https://rzekl.com/g/1e8d114494cf9d224bea16525dc3e8/?ulp=https%3A%2F%2Fwww.aliexpress.com%2F", t:"Shop Now"},
+{n:"Boardmix", c:"Tools", country:"ALL", u:"https://axavl.com/g/3tevoaw5qqcf9d224bead12233f6f4/?ulp=https%3A%2F%2Fboardmix.com%2F", t:"Try Now"},
+{n:"Kama Ayurveda", c:"Beauty", country:"India", u:"https://tjzuh.com/g/yqewe0ii4ccf9d224bea238bfeb32d/?ulp=https%3A%2F%2Fwww.kamaayurveda.com%2F", t:"Shop Now"},
+{n:"Malabar Gold", c:"Jewellery", country:"India", u:"https://tjzuh.com/g/zcflox2g0ncf9d224bea24725e5aee/?ulp=https%3A%2F%2Fwww.malabargoldanddiamonds.com%2F", t:"Shop Jewellery"},
+{n:"Bodylab24", c:"Health", country:"ALL", u:"https://ad.admitad.com/...", t:"Fitness Supplements"},
+{n:"italki", c:"Education", country:"ALL", u:"https://xcudus.com/...", t:"Learn Languages Online"},
+
+{n:"Amazon USA", c:"General", country:"United states", u:"#", d:"amazon.com", t:"Shopping"},
+{n:"BestBuy", c:"Electronics", country:"United states", u:"#", d:"bestbuy.com", t:"Electronics"},
+{n:"Expedia", c:"Travel", country:"USA", u:"#", d:"expedia.com", t:"Travel"},
+{n:"Sephora", c:"Beauty", country:"USA", u:"#", d:"sephora.com", t:"Beauty"},
+{n:"Nike USA", c:"Fashion", country:"USA", u:"#", d:"nike.com", t:"Fashion"},
+{n:"Walgreens", c:"Health", country:"USA", u:"#", d:"walgreens.com", t:"Pharmacy"},
+
+{n:"Amazon UK", c:"General", country:"UK", u:"#", d:"amazon.co.uk", t:"Shopping"},
+{n:"Currys", c:"Electronics", country:"UK", u:"#", d:"currys.co.uk", t:"Electronics"},
+{n:"Booking UK", c:"Travel", country:"UK", u:"#", d:"booking.com", t:"Travel"},
+{n:"Boots UK", c:"Beauty", country:"UK", u:"#", d:"boots.com", t:"Beauty"},
+{n:"ASOS", c:"Fashion", country:"UK", u:"#", d:"asos.com", t:"Fashion"},
+{n:"NHS Shop", c:"Health", country:"UK", u:"#", d:"nhs.uk", t:"Health"},
+
+{n:"Amazon Canada", c:"General", country:"Canada", u:"#", d:"amazon.ca", t:"Shopping"},
+{n:"BestBuy Canada", c:"Electronics", country:"Canada", u:"#", d:"bestbuy.ca", t:"Electronics"},
+{n:"Expedia Canada", c:"Travel", country:"Canada", u:"#", d:"expedia.ca", t:"Travel"},
+{n:"Sephora Canada", c:"Beauty", country:"Canada", u:"#", d:"sephora.ca", t:"Beauty"},
+{n:"Zara Canada", c:"Fashion", country:"Canada", u:"#", d:"zara.com", t:"Fashion"},
+{n:"Shoppers Drug Mart", c:"Health", country:"Canada", u:"#", d:"shoppersdrugmart.ca", t:"Pharmacy"},
+
+{n:"Noon", c:"General", country:"UAE", u:"#", d:"noon.com", t:"Shopping"},
+{n:"Sharaf DG", c:"Electronics", country:"UAE", u:"#", d:"sharafdg.com", t:"Electronics"},
+{n:"Cleartrip UAE", c:"Travel", country:"UAE", u:"#", d:"cleartrip.ae", t:"Travel"},
+{n:"Faces UAE", c:"Beauty", country:"UAE", u:"#", d:"faces.com", t:"Beauty"},
+{n:"Namshi", c:"Fashion", country:"UAE", u:"#", d:"namshi.com", t:"Fashion"},
+{n:"Aster Pharmacy", c:"Health", country:"UAE", u:"#", d:"asterpharmacy.ae", t:"Pharmacy"},
+
+{n:"Amazon Saudi", c:"General", country:"Saudi", u:"#", d:"amazon.sa", t:"Shopping"},
+{n:"Extra Stores", c:"Electronics", country:"Saudi", u:"#", d:"extra.com", t:"Electronics"},
+{n:"Almosafer", c:"Travel", country:"Saudi", u:"#", d:"almosafer.com", t:"Travel"},
+{n:"Nice One", c:"Beauty", country:"Saudi", u:"#", d:"niceonesa.com", t:"Beauty"},
+{n:"Namshi Saudi", c:"Fashion", country:"Saudi", u:"#", d:"namshi.com", t:"Fashion"},
+{n:"Nahdi Pharmacy", c:"Health", country:"Saudi", u:"#", d:"nahdionline.com", t:"Pharmacy"},
+
+{n:"Lazada", c:"General", country:"Singapore", u:"#", d:"lazada.sg", t:"Shopping"},
+{n:"Courts", c:"Electronics", country:"Singapore", u:"#", d:"courts.com.sg", t:"Electronics"},
+{n:"Agoda SG", c:"Travel", country:"Singapore", u:"#", d:"agoda.com", t:"Travel"},
+{n:"Sephora SG", c:"Beauty", country:"Singapore", u:"#", d:"sephora.sg", t:"Beauty"},
+{n:"Zalora", c:"Fashion", country:"Singapore", u:"#", d:"zalora.sg", t:"Fashion"},
+{n:"Guardian", c:"Health", country:"Singapore", u:"#", d:"guardian.com.sg", t:"Pharmacy"},
+
+{n:"Shopee", c:"General", country:"Malaysia", u:"#", d:"shopee.com.my", t:"Shopping"},
+{n:"Senheng", c:"Electronics", country:"Malaysia", u:"#", d:"senheng.com.my", t:"Electronics"},
+{n:"AirAsia Travel", c:"Travel", country:"Malaysia", u:"#", d:"airasia.com", t:"Travel"},
+{n:"Sephora MY", c:"Beauty", country:"Malaysia", u:"#", d:"sephora.my", t:"Beauty"},
+{n:"Zalora MY", c:"Fashion", country:"Malaysia", u:"#", d:"zalora.com.my", t:"Fashion"},
+{n:"Watsons MY", c:"Health", country:"Malaysia", u:"#", d:"watsons.com.my", t:"Pharmacy"}
+];
+
+const cats=[...new Set(shops.map(s=>s.c))];
+const baseColors=["#2196f3","#e91e63","#9c27b0","#ff5722","#4caf50","#00bcd4","#795548","#607d8b","#3f51b5","#8bc34a","#ffc107","#009688"];
+const colors={};
+
+cats.forEach((cat,i)=>{
+colors[cat]=baseColors[i % baseColors.length];
+});
+
+let activeCountry="";
+
+shops.forEach(s=>{
+if(!s.country) s.country="India";
+});
+
+function render(data){
+let out=document.getElementById("out");
+out.innerHTML="";
+const isIndia=(activeCountry || "").toLowerCase()==="india";
+
+cats.forEach(cat=>{
+let g=data.filter(s=>s.c===cat);
+if(!g.length) return;
+
+if(isIndia){
+out.innerHTML+=`<div class="cat-head" style="background:${colors[cat]}">${cat}</div>`;
+}
+
+g.forEach(s=>{
+out.innerHTML+=`
+<a class="shop-card" href="${s.u}" target="_blank" rel="noopener noreferrer" style="border-left-color:${colors[cat]}">
+<img src="https://www.google.com/s2/favicons?sz=64&domain=${s.d || ''}">
+<div class="info">
+<b class="notranslate" translate="no">${s.n}</b>
+<small>${s.t}</small>
+</div>
+</a>`;
+});
+});
+}
+
+function search(){
+let v=document.getElementById("findShop").value.toLowerCase();
+let data=shops;
+
+if(activeCountry && activeCountry!=="All Countries"){
+data=data.filter(s =>
+(s.country && s.country.toLowerCase()===activeCountry.toLowerCase()) ||
+(s.country && s.country.toLowerCase()==="all")
+);
+}
+
+if(v){
+data=data.filter(s =>
+s.n.toLowerCase().includes(v) ||
+s.t.toLowerCase().includes(v)
+);
+}
+
+render(data);
+}
+
+function resetView(){
+document.getElementById("findShop").value="";
+if(activeCountry && activeCountry!=="All Countries"){
+search();
+}else{
+render(shops);
+}
+}
+
+function filter(cat){
+let data=shops.filter(s=>s.c===cat);
+
+if(activeCountry && activeCountry!=="All Countries"){
+data=data.filter(s =>
+(s.country && s.country.toLowerCase()===activeCountry.toLowerCase()) ||
+(s.country && s.country.toLowerCase()==="all")
+);
+}
+
+render(data);
+}
+
+function initBtns(){
+let b="";
+if((activeCountry || "").toLowerCase()==="india"){
+cats.forEach(c=>{
+b+=`<button class="m-btn" onclick="filter('${c}')" style="border-bottom:2px solid ${colors[c]}">${c}</button>`;
+});
+}
+document.getElementById("btns").innerHTML=b;
+}
+
+document.addEventListener("click",function(e){
+if(e.target.classList.contains("country-btn")){
+activeCountry=e.target.innerText.trim();
+document.getElementById("findShop").value="";
+search();
+setTimeout(initBtns,100);
+}
+});
+
+document.addEventListener("change",function(e){
+if(e.target.closest(".all-country")){
+activeCountry=e.target.value;
+document.getElementById("findShop").value="";
+search();
+setTimeout(initBtns,100);
+}
+});
+
+function detectUserCountry(){
+fetch("https://ipapi.co/json/")
+.then(r=>r.json())
+.then(d=>{
+const map={
+"India":"India",
+"United States":"USA",
+"United Kingdom":"UK",
+"United Arab Emirates":"UAE",
+"Saudi Arabia":"Saudi",
+"Singapore":"Singapore",
+"Malaysia":"Malaysia",
+"Canada":"Canada"
+};
+activeCountry=map[d.country_name] || "All Countries";
+initBtns();
+search();
+})
+.catch(()=>{
+activeCountry="All Countries";
+initBtns();
+render(shops);
+});
+}
+
+detectUserCountry();
+</script>
+</body> 
+   </html>
    
