@@ -1,1 +1,1256 @@
- 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="google" content="notranslate">
+    <title>BAS Charity International</title>
+
+    <link rel="manifest" href="manifest.json">
+    <link rel="icon" type="image/png" href="final_app_icon.png">
+    <link rel="apple-touch-icon" href="final_app_icon.png">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+    <meta name="theme-color" content="#ffffff">
+</head>
+<body>
+
+<script>
+/* ===== BAS PERFORMANCE OPTIMISATION BLOCK ===== */
+/* ഇവിടെ നിങ്ങളുടെ ആ 1 മുതൽ 10 വരെയുള്ള JavaScript കോഡുകൾ പേസ്റ്റ് ചെയ്യുക */
+/* 1. GPU power preference */
+let renderer = new THREE.WebGLRenderer({
+antialias:true,
+alpha:true,
+powerPreference:"high-performance"
+});
+
+/* 2. device pixel ratio control */
+renderer.setPixelRatio(Math.min(window.devicePixelRatio,2));
+
+/* 3. resize stability */
+function resizeRenderer(){
+const width=document.getElementById("logo-space").clientWidth;
+renderer.setSize(width,340);
+camera.aspect=width/340;
+camera.updateProjectionMatrix();
+}
+
+/* 4. resize listener */
+window.addEventListener("resize",resizeRenderer);
+
+/* 5. tab visibility optimisation */
+document.addEventListener("visibilitychange",function(){
+running=!document.hidden;
+if(running) animate();
+});
+
+/* 6. window focus optimisation */
+window.addEventListener("focus",function(){
+running=true;
+animate();
+});
+
+/* 7. window blur optimisation */
+window.addEventListener("blur",function(){
+running=false;
+});
+
+/* 8. CPU safety guard */
+let frameLimiter=0;
+
+/* 9. animation controller */
+function animate(){
+if(!running) return;
+
+requestAnimationFrame(animate);
+
+/* frame limiter */
+frameLimiter++;
+if(frameLimiter%1!==0) return;
+
+/* earth rotation */
+earthGroup.rotation.y+=0.003;
+
+/* moon orbit */
+angle-=0.01;
+moon.position.x=Math.cos(angle)*4.5;
+moon.position.z=Math.sin(angle)*2.8;
+
+renderer.render(scene,camera);
+}
+
+/* 10. start animation */
+animate();
+</script>
+/* 10. start animation */
+animate();
+</script>
+<style>
+/* CODE NO:1 FIX - GLOBAL STYLES */ 
+
+*{
+  box-sizing: border-box;
+} 
+
+body {
+  margin: 0;
+  background: #000;
+  font-family: Arial, sans-serif;
+  color: #fff;
+  overflow-x: hidden; 
+  /* ഫോൺ റെസല്യൂഷൻ നോർമലൈസ് ചെയ്യാൻ 22px സെറ്റ് ചെയ്തു */
+  font-size: 22px;
+  line-height: 1.5;
+} 
+
+/* ടൈപ്പോഗ്രഫി - ലാപ്ടോപ്പിലും ഫോണിലും വായന സുഖകരമാക്കാൻ */
+p, span, div {
+  font-size: 22px;
+  word-wrap: break-word;
+} 
+
+h1 {
+  color: #fff !important;
+} 
+
+.malayalam-fix {
+  color: #bbb !important;
+} 
+
+#dedication-text {
+  color: #bbb !important;
+  font-weight: 300;
+  text-align: center;
+} 
+
+/* ലേഔട്ട് കൺട്രോൾ - എല്ലാ ബ്ലോക്കുകളും ഒരേ വലിപ്പത്തിൽ വരാൻ */
+.bas-dedication,
+.lang-box,
+.country-box,
+.shop-container,
+.compare-container,
+.share-container,
+.mainbox,
+.info-box,
+.bas7-wrapper,
+.trust-container,
+.peace-wrapper,
+.vada-wrapper,
+.vision-wrapper,
+#bas-mega-portal {
+  max-width: 900px;
+  width: 95%; /* ഫോണിൽ അരികുകൾ മുട്ടാതിരിക്കാൻ */
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 25px; /* ബ്ലോക്കുകൾ തമ്മിലുള്ള അകലം */
+} 
+
+/* HEADER SECTION */
+.header-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #000;
+} 
+
+#logo-space {
+  width: 100%;
+  height: 340px;
+} 
+
+.brand-heading {
+  text-align: center;
+  margin-top: -35px;
+  padding: 10px 20px;
+} 
+
+.hunger-message {
+  font-size: 14px;
+  letter-spacing: 2px;
+  color: #FFD700;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+} 
+
+.brand-heading h1 {
+  font-size: clamp(32px, 8vw, 60px);
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin: 0;
+  font-weight: 900;
+  -webkit-text-stroke: 1px white;
+  line-height: 1.1;
+} 
+
+/* LANGUAGE BLOCK DESIGN */
+.top-bar {
+  background: #111;
+  padding: 15px 8px;
+  border-top: 1px solid #333;
+  border-bottom: 1px solid #333;
+} 
+
+.lang-box {
+  padding: 15px;
+  background: #000;
+  border: 1px solid #ff9800;
+  border-radius: 15px;
+} 
+
+.lang-title {
+  background: #b3ecff;
+  color: #000;
+  font-weight: 900;
+  text-align: center;
+  padding: 10px;
+  border-radius: 10px;
+  border: 1px solid #ff9800;
+  border-left: 6px solid #ff9800; /* സിഗ്നേച്ചർ ലൈൻ */
+  margin-bottom: 15px;
+  text-transform: uppercase;
+  font-size: 18px;
+} 
+
+.lang-buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+  max-width: 600px;
+  margin: auto;
+} 
+
+.lang-btn {
+  padding: 12px 2px;
+  border: none;
+  border-radius: 10px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  color: #fff;
+  transition: 0.3s;
+} 
+
+/* ബട്ടൺ കളറുകൾ */
+.en{background:#007BFF}
+.hi{background:#FF9933; color:#000}
+.ml{background:#00C853}
+.ar{background:#2E7D32}
+.ta{background:#C62828}
+.ur{background:#6A1B9A}
+.es{background:#F4C430; color:#000}
+.pt{background:#1B5E20} 
+
+.google-row {
+  text-align: center;
+  font-size: 16px;
+  margin-top: 15px;
+  color: #bbb;
+} 
+
+/* GALLERY SECTION */
+#gallery {
+  display: flex;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  gap: 10px;
+}
+#gallery::-webkit-scrollbar {
+  display: none;
+}
+.card {
+  min-width: 180px;
+  flex-shrink: 0;
+} 
+.card img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  display: block;
+} 
+
+</style>
+
+<div class="header-box">
+  <div id="logo-space"></div> 
+  <div class="brand-heading">
+    <div class="hunger-message">YOUR PURCHASE SATISFIES A HUNGER</div> 
+    <h1 class="notranslate" translate="no">BAS CHARITY INTERNATIONAL</h1>
+  </div>
+</div>
+
+<div class="bas-dedication"> 
+  <div id="dedication-text" class="malayalam-fix">
+    സർവ്വ ലോകങ്ങളിലുമുള്ള നമ്മൾ ഓരോരുത്തരുടെയും<br>
+    മാതാപിതാക്കളുടെയും മറ്റ് പൂർവ്വികരുടെയും<br>
+    പാവനമായ ഓർമ്മയ്ക്കും നന്മയ്ക്കുമായി സമർപ്പിക്കുന്നു. 
+  </div> 
+</div>
+
+<div class="top-bar">
+  <div class="lang-box">
+    <div class="lang-title">SELECT LANGUAGE</div>
+  </div> 
+
+  <div class="lang-buttons">
+    <button class="lang-btn en" onclick="resetToEnglish()">English</button>
+    <button class="lang-btn hi" onclick="changeLang('hi')">Hindi Language</button>
+    <button class="lang-btn ml" onclick="changeLang('ml')">Malayalam</button>
+    <button class="lang-btn ar" onclick="changeLang('ar')">Arabic</button>
+    <button class="lang-btn ta" onclick="changeLang('ta')">Tamil</button>
+    <button class="lang-btn ur" onclick="changeLang('ur')">Urdu</button>
+    <button class="lang-btn es" onclick="changeLang('es')">Spanish</button>
+    <button class="lang-btn pt" onclick="changeLang('pt')">Portuguese</button>
+  </div>
+
+  <div class="google-row">
+    🌐 All Languages : <span id="google_translate_element"></span>
+  </div>
+</div>
+<style> 
+.question-box {
+  background: #000;
+  color: #00BFFF;
+  padding: 30px 20px;
+  border-radius: 12px;
+  border: 1px solid #00BFFF;
+  text-align: center;
+  line-height: 1.6;
+} 
+
+.malayalam-text {
+  /* വായനക്കാർക്ക് വ്യക്തമാകാൻ 24px ആക്കി */
+  font-size: 24px;
+  font-weight: 500;
+  display: block;
+}
+
+.hunger-footer {
+  text-align: center;
+  color: #FFD700;
+  font-weight: bold;
+  font-size: 16px;
+  margin-top: 15px;
+  letter-spacing: 1px;
+} 
+</style> 
+
+<div class="msg-container mainbox"> <div class="question-box"> 
+    <span class="malayalam-text"> 
+      "ഒരു പൈസ പോലും അധികം ചിലവാക്കാതെ, അതേ വിലയിൽ, അതേ ഓഫറിൽ താഴെ കാണുന്ന ബാസ് ചാരിറ്റി ഇൻ്റർനാഷണൽ ലിങ്കുകൾ വഴി പർച്ചേസ് ചെയ്യുന്നതിലൂടെ ലോകത്തിന്റെ ഏതെങ്കിലും ഒരു കോണിൽ ഒരാളുടെ വിശപ്പ് അടങ്ങിയാലോ...?" 
+    </span> 
+  </div> 
+
+  <div class="hunger-footer notranslate" translate="no">
+    YOUR PURCHASE SATISFIES A HUNGER
+  </div> 
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script> 
+
+<script>
+// ഗൂഗിൾ ട്രാൻസ്ലേറ്റ് ഫംഗ്ഷനുകൾ (ഇത് മുകളിൽ വേണം)
+function googleTranslateElementInit(){
+  new google.translate.TranslateElement(
+    {pageLanguage:'en',autoDisplay:false},
+    'google_translate_element'
+  );
+}
+
+let scene = new THREE.Scene();
+let camera = new THREE.PerspectiveCamera(50, window.innerWidth/340, 0.1, 1000);
+let renderer = new THREE.WebGLRenderer({antialias:true,alpha:true});
+renderer.setSize(window.innerWidth,340); 
+
+/* device pixel ratio optimisation */
+renderer.setPixelRatio(Math.min(window.devicePixelRatio,2)); 
+
+// എറർ ഒഴിവാക്കാൻ വിൻഡോ ലോഡ് ആയ ശേഷം ലോഗോ സ്പേസ് എടുക്കുന്നു
+window.addEventListener('load', function() {
+  let container = document.getElementById('logo-space');
+  if(container) {
+    container.appendChild(renderer.domElement);
+  }
+});
+
+let ambient = new THREE.AmbientLight(0xffffff,1.2);
+scene.add(ambient); 
+
+let loader = new THREE.TextureLoader(); 
+
+let earthGroup = new THREE.Group();
+let earth = new THREE.Mesh(
+  new THREE.SphereGeometry(2,32,32),
+  new THREE.MeshStandardMaterial({
+    map:loader.load('https://raw.githubusercontent.com/mrdoob/three.js/master/examples/textures/planets/earth_atmos_2048.jpg'),
+    metalness:0.2,
+    roughness:0.8
+  })
+);
+earthGroup.add(earth); 
+
+let canvas=document.createElement('canvas');
+let ctx=canvas.getContext('2d');
+canvas.width=1024;
+canvas.height=256;
+ctx.fillStyle="#FFFFFF";
+ctx.font="Bold 140px Arial";
+ctx.textAlign="center";
+ctx.fillText("BAS",256,160);
+ctx.fillText("BAS",768,160); 
+
+let textTexture=new THREE.CanvasTexture(canvas);
+let textMesh=new THREE.Mesh(
+  new THREE.CylinderGeometry(2.05,2.05,0.8,64,1,true),
+  new THREE.MeshBasicMaterial({map:textTexture,transparent:true,side:THREE.DoubleSide})
+);
+earthGroup.add(textMesh);
+scene.add(earthGroup); 
+
+let moon=new THREE.Mesh(
+  new THREE.SphereGeometry(0.35,16,16),
+  new THREE.MeshStandardMaterial({color:0xcccccc})
+);
+scene.add(moon); 
+
+camera.position.z=8; 
+
+let angle=0;
+let running=true; 
+
+/* ===== PERFORMANCE OPTIMISATION ===== */ 
+
+document.addEventListener("visibilitychange",function(){
+  running=!document.hidden;
+  if(running) animate();
+}); 
+
+window.addEventListener("focus",function(){
+  running=true;
+  animate();
+}); 
+
+window.addEventListener("blur",function(){
+  running=false;
+}); 
+
+function resizeRenderer(){
+  let container = document.getElementById("logo-space");
+  if(container){
+    const width=container.clientWidth;
+    renderer.setSize(width,340);
+    camera.aspect=width/340;
+    camera.updateProjectionMatrix();
+  }
+} 
+
+window.addEventListener("resize",resizeRenderer); 
+
+function animate(){
+  if(!running) return;
+  requestAnimationFrame(animate);
+  earthGroup.rotation.y+=0.003;
+  angle-=0.01;
+  moon.position.x=Math.cos(angle)*4.5;
+  moon.position.z=Math.sin(angle)*2.8;
+  renderer.render(scene,camera);
+}
+animate(); 
+
+// IntersectionObserver എറർ ഒഴിവാക്കാൻ ചെക്ക് ചെയ്യുന്നു
+let logoEl = document.getElementById("logo-space");
+if(logoEl){
+  let observer=new IntersectionObserver(entries=>{
+    entries.forEach(entry=>{
+      if(entry.isIntersecting){
+        running=true;
+        animate();
+      }else{
+        running=false;
+      }
+    });
+  });
+  observer.observe(logoEl);
+}
+
+function changeLang(langCode){
+  let select=document.querySelector('select.goog-te-combo');
+  if(select){
+    select.value=langCode;
+    select.dispatchEvent(new Event('change'));
+  }
+} 
+
+function resetToEnglish(){
+  let select=document.querySelector('select.goog-te-combo');
+  if(select){
+    select.value='en';
+    select.dispatchEvent(new Event('change'));
+  }
+} 
+
+setInterval(function(){
+  const frame=document.querySelector('.goog-te-banner-frame');
+  if(frame){ frame.style.display='none'; }
+  document.body.style.top = '0px'; // ഗൂഗിൾ ബാർ മാറ്റുമ്പോൾ ബോഡി മുകളിലേക്ക് കയറാൻ
+},500);
+</script> 
+
+<script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+<style> 
+.country-box {
+  max-width: 900px;
+  width: 96%;
+  margin: 25px auto;
+  padding: 15px;
+  background: #000;
+  border: 1px solid #ff9800;
+  border-radius: 15px;
+  font-family: Arial,sans-serif;
+} 
+
+.country-title {
+  background: #333;
+  color: #fff;
+  font-weight: 900;
+  text-align: center;
+  padding: 10px;
+  border-radius: 10px;
+  border: 1px solid #ff9800;
+  border-left: 6px solid #ff9800;
+  margin-bottom: 10px;
+} 
+
+.country-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 8px;
+} 
+
+.country-btn {
+  background: #333;
+  color: #fff;
+  padding: 10px;
+  text-align: center;
+  border-radius: 10px;
+  border: 1px solid #ff9800;
+  border-left: 6px solid #ff9800;
+  font-weight: bold;
+  cursor: pointer;
+} 
+
+.country-btn:hover {
+  transform: scale(1.05);
+  transition: 0.2s;
+} 
+
+.country-btn.active {
+  background: #ff9800;
+  color: #000;
+} 
+
+.all-country {
+  margin-top: 10px;
+  text-align: center;
+} 
+
+.all-country select {
+  width: 96%;
+  padding: 10px;
+  border-radius: 10px;
+  border: 1px solid #ff9800;
+  border-left: 6px solid #ff9800;
+  background: #333;
+  color: #fff;
+  font-weight: bold;
+  cursor: pointer;
+} 
+</style> 
+
+<div class="country-box"> 
+  <div class="country-title">SELECT COUNTRY</div> 
+
+  <div class="country-grid"> 
+    <div class="country-btn" data-country="india" onclick="setCountry('india',this)">India</div> 
+    <div class="country-btn" data-country="usa" onclick="setCountry('usa',this)">United states</div> 
+    <div class="country-btn" data-country="uk" onclick="setCountry('uk',this)">UK</div> 
+    <div class="country-btn" data-country="canada" onclick="setCountry('canada',this)">Canada</div> 
+    <div class="country-btn" data-country="uae" onclick="setCountry('uae',this)">UAE</div> 
+    <div class="country-btn" data-country="saudi" onclick="setCountry('saudi',this)">Saudi</div> 
+    <div class="country-btn" data-country="singapore" onclick="setCountry('singapore',this)">Singapore</div> 
+    <div class="country-btn" data-country="malaysia" onclick="setCountry('malaysia',this)">Malaysia</div> 
+  </div> 
+
+  <div class="all-country"> 
+    <select onchange="setCountry(this.value); this.selectedIndex=0;"> 
+      <option value="">Search All Countries</option> 
+      <option value="india">India</option>
+      <option value="usa">USA</option>
+      <option value="uk">UK</option>
+      <option value="canada">Canada</option>
+      <option value="uae">UAE</option>
+      <option value="germany">Germany</option>
+      <option value="france">France</option>
+      <option value="australia">Australia</option>
+      <option value="saudi">Saudi Arabia</option>
+      <option value="singapore">Singapore</option>
+      <option value="malaysia">Malaysia</option>
+      <option value="indonesia">Indonesia</option>
+      <option value="thailand">Thailand</option>
+      <option value="philippines">Philippines</option>
+      <option value="qatar">Qatar</option>
+      <option value="kuwait">Kuwait</option>
+      <option value="oman">Oman</option>
+      <option value="bahrain">Bahrain</option>
+      <option value="netherlands">Netherlands</option>
+      <option value="sweden">Sweden</option>
+      <option value="poland">Poland</option>
+      <option value="italy">Italy</option>
+      <option value="spain">Spain</option>
+      <option value="newzealand">New Zealand</option> 
+    </select>
+  </div> 
+</div> 
+
+<script> 
+function setCountry(country, btn) { 
+  if (country === "") return; 
+
+  localStorage.setItem("bas_country", country); 
+
+  /* button highlight */ 
+  document.querySelectorAll(".country-btn").forEach(b => b.classList.remove("active")); 
+
+  if (btn) {
+    btn.classList.add("active");
+  } else {
+    // Dropdown വഴി മാറുമ്പോൾ ബട്ടൺ ഹൈലൈറ്റ് ചെയ്യാൻ
+    let activeBtn = document.querySelector('.country-btn[data-country="' + country + '"]');
+    if (activeBtn) activeBtn.classList.add("active");
+  }
+
+  /* update shop heading and list */ 
+  if (typeof updateCountryTitle === "function") updateCountryTitle();
+  if (typeof renderShops === "function" && typeof countryShops !== "undefined") {
+    renderShops(countryShops[country]);
+  } 
+} 
+
+/* page load → restore saved country */ 
+window.addEventListener("load", function() { 
+  let saved = localStorage.getItem("bas_country") || "india";
+  localStorage.setItem("bas_country", saved); 
+
+  let btn = document.querySelector('.country-btn[data-country="' + saved + '"]'); 
+  if (btn) btn.classList.add("active");
+
+  if (typeof updateCountryTitle === "function") updateCountryTitle();
+  if (typeof renderShops === "function" && typeof countryShops !== "undefined") {
+    renderShops(countryShops[saved]);
+  } 
+}); 
+</script>
+<style> 
+.shop-container{
+  max-width:900px;
+  width : 96%; /* സ്പെല്ലിംഗ് തിരുത്തി */
+  margin:20px auto;
+  padding:15px;
+}
+.shop-title-box{
+  background:#000;
+  border-radius:14px;
+  padding:20px;
+  border:1px solid #ff9800;
+  border-left:8px solid #ff9800;
+} 
+
+.shop-title-box h2{
+  margin:0;
+  font-size:26px;
+  font-weight:900;
+  color:#fff;
+} 
+
+.shop-title-box span{
+  display:block;
+  margin-top:6px;
+  font-size:13px;
+  color:#ffb74d;
+} 
+
+.global-search{
+  width:100%; /* ബോക്സിനുള്ളിൽ കൃത്യമായി വരാൻ */
+  padding:18px;
+  border-radius:12px;
+  border:3px solid #00e5ff;
+  background:#111;
+  color:#fff;
+  font-size:20px;
+  margin-top:15px;
+  margin-bottom:12px;
+}
+
+.shop-btn{
+  display:flex;
+  align-items:center;
+  background:#1a1a1a;
+  border-radius:12px;
+  padding:12px;
+  margin-bottom:10px;
+  text-decoration:none;
+  color:#fff;
+  border:1px solid #ff9800;
+  border-left:6px solid #ff9800;
+} 
+
+.shop-logo{
+  width:42px;
+  height:42px;
+  border-radius:8px;
+  margin-right:12px;
+  background:#fff;
+  object-fit:contain;
+  padding:3px;
+} 
+
+.shop-info b{
+  font-size:20px;
+  display:block;
+} 
+</style> 
+
+<div class="shop-container"> 
+  <div class="shop-title-box">
+    <h2 id="shopCountryTitle">Shop on INDIA Shops</h2>
+    <span>(Shops & items categorised at the end of the site)</span>
+  </div> 
+
+  <input
+    type="text"
+    id="globalSearch"
+    class="global-search"
+    placeholder="Search 1000+ Shops"
+    onkeyup="filterShops()"> 
+
+  <div id="shopList"></div> 
+</div>
+
+<script> 
+/* GLOBAL SHOP DATABASE */
+const countryShops = {
+    india: [
+        { name: "Amazon India", logo: "https://www.amazon.in/favicon.ico", link: "https://www.amazon.in?tag=vmmbaslinks-21" },
+        { name: "Flipkart", logo: "https://www.flipkart.com/favicon.ico", link: "https://extp.in/frLCl1" },
+        { name: "Myntra", logo: "https://www.myntra.com/favicon.ico", link: "https://extp.in/Xl9qHe" },
+        { name: "Nykaa", logo: "https://www.nykaa.com/favicon.ico", link: "https://extp.in/hj6ArG" },
+        { name: "Tata CLiQ", logo: "https://www.tatacliq.com/favicon.ico", link: "https://extp.in/XQxoLW" },
+        { name: "Reliance Digital", logo: "https://www.reliancedigital.in/favicon.ico", link: "https://extp.in/cxkWbr" },
+        { name: "Croma", logo: "https://www.croma.com/favicon.ico", link: "https://extp.in/9myzwo" },
+        { name: "Ajio", logo: "https://www.ajio.com/favicon.ico", link: "https://extp.in/J56J4f" },
+        { name: "JioMart", logo: "https://www.jiomart.com/favicon.ico", link: "https://extp.in/jrfhBK" },
+        { name: "Shopsy", logo: "https://www.shopsy.in/favicon.ico", link: "https://extp.in/9zNj2z" }
+    ],
+    usa: [
+        { name: "Amazon", logo: "https://www.amazon.com/favicon.ico", link: "https://www.amazon.com" },
+        { name: "Walmart", logo: "https://www.walmart.com/favicon.ico", link: "https://www.walmart.com" },
+        { name: "Target", logo: "https://www.target.com/favicon.ico", link: "https://www.target.com" },
+        { name: "BestBuy", logo: "https://www.bestbuy.com/favicon.ico", link: "https://www.bestbuy.com" },
+        { name: "eBay", logo: "https://www.ebay.com/favicon.ico", link: "https://www.ebay.com" },
+        { name: "Costco", logo: "https://www.costco.com/favicon.ico", link: "https://www.costco.com" },
+        { name: "HomeDepot", logo: "https://www.homedepot.com/favicon.ico", link: "https://www.homedepot.com" },
+        { name: "Etsy", logo: "https://www.etsy.com/favicon.ico", link: "https://www.etsy.com" },
+        { name: "Newegg", logo: "https://www.newegg.com/favicon.ico", link: "https://www.newegg.com" },
+        { name: "Wayfair", logo: "https://www.wayfair.com/favicon.ico", link: "https://www.wayfair.com" }
+    ],
+    uk: [
+        { name: "Amazon UK", logo: "https://www.amazon.co.uk/favicon.ico", link: "https://www.amazon.co.uk" },
+        { name: "Tesco", logo: "https://www.tesco.com/favicon.ico", link: "https://www.tesco.com" },
+        { name: "Argos", logo: "https://www.argos.co.uk/favicon.ico", link: "https://www.argos.co.uk" },
+        { name: "Currys", logo: "https://www.currys.co.uk/favicon.ico", link: "https://www.currys.co.uk" },
+        { name: "Boots", logo: "https://www.boots.com/favicon.ico", link: "https://www.boots.com" },
+        { name: "Next", logo: "https://www.next.co.uk/favicon.ico", link: "https://www.next.co.uk" },
+        { name: "Very", logo: "https://www.very.co.uk/favicon.ico", link: "https://www.very.co.uk" },
+        { name: "AO", logo: "https://ao.com/favicon.ico", link: "https://ao.com" },
+        { name: "Asda", logo: "https://www.asda.com/favicon.ico", link: "https://www.asda.com" },
+        { name: "John Lewis", logo: "https://www.johnlewis.com/favicon.ico", link: "https://www.johnlewis.com" }
+    ],
+    canada: [
+        { name: "Amazon Canada", logo: "https://www.amazon.ca/favicon.ico", link: "https://www.amazon.ca" },
+        { name: "Walmart Canada", logo: "https://www.walmart.ca/favicon.ico", link: "https://www.walmart.ca" },
+        { name: "BestBuy Canada", logo: "https://www.bestbuy.ca/favicon.ico", link: "https://www.bestbuy.ca" },
+        { name: "Canadian Tire", logo: "https://www.canadiantire.ca/favicon.ico", link: "https://www.canadiantire.ca" },
+        { name: "Costco Canada", logo: "https://www.costco.ca/favicon.ico", link: "https://www.costco.ca" },
+        { name: "Staples", logo: "https://www.staples.ca/favicon.ico", link: "https://www.staples.ca" },
+        { name: "Indigo", logo: "https://www.indigo.ca/favicon.ico", link: "https://www.indigo.ca" },
+        { name: "Hudson Bay", logo: "https://www.thebay.com/favicon.ico", link: "https://www.thebay.com" },
+        { name: "Well", logo: "https://well.ca/favicon.ico", link: "https://well.ca" },
+        { name: "Simons", logo: "https://www.simons.ca/favicon.ico", link: "https://www.simons.ca" }
+    ],
+    uae: [
+        { name: "Amazon UAE", logo: "https://www.amazon.ae/favicon.ico", link: "https://www.amazon.ae" },
+        { name: "Noon", logo: "https://www.noon.com/favicon.ico", link: "https://www.noon.com" },
+        { name: "Carrefour", logo: "https://www.carrefouruae.com/favicon.ico", link: "https://www.carrefouruae.com" },
+        { name: "Sharaf DG", logo: "https://www.sharafdg.com/favicon.ico", link: "https://www.sharafdg.com" },
+        { name: "Jumbo", logo: "https://www.jumbo.ae/favicon.ico", link: "https://www.jumbo.ae" },
+        { name: "Namshi", logo: "https://www.namshi.com/favicon.ico", link: "https://www.namshi.com" },
+        { name: "Sivvi", logo: "https://www.sivvi.com/favicon.ico", link: "https://www.sivvi.com" },
+        { name: "Ounass", logo: "https://www.ounass.ae/favicon.ico", link: "https://www.ounass.ae" },
+        { name: "DubaiStore", logo: "https://www.dubaistore.com/favicon.ico", link: "https://www.dubaistore.com" },
+        { name: "Emax", logo: "https://www.emaxme.com/favicon.ico", link: "https://www.emaxme.com" }
+    ],
+    saudi: [
+        { name: "Amazon Saudi", logo: "https://www.amazon.sa/favicon.ico", link: "https://www.amazon.sa" },
+        { name: "Noon Saudi", logo: "https://www.noon.com/favicon.ico", link: "https://www.noon.com" },
+        { name: "Jarir", logo: "https://www.jarir.com/favicon.ico", link: "https://www.jarir.com" },
+        { name: "Extra", logo: "https://www.extra.com/favicon.ico", link: "https://www.extra.com" },
+        { name: "Saco", logo: "https://www.saco.sa/favicon.ico", link: "https://www.saco.sa" },
+        { name: "Namshi", logo: "https://www.namshi.com/favicon.ico", link: "https://www.namshi.com" },
+        { name: "Centerpoint", logo: "https://www.centerpointstores.com/favicon.ico", link: "https://www.centerpointstores.com" },
+        { name: "Carrefour KSA", logo: "https://www.carrefourksa.com/favicon.ico", link: "https://www.carrefourksa.com" },
+        { name: "Ounass", logo: "https://www.ounass.sa/favicon.ico", link: "https://www.ounass.sa" },
+        { name: "Souq", logo: "https://www.souq.com/favicon.ico", link: "https://www.souq.com" }
+    ],
+    singapore: [
+        { name: "Shopee", logo: "https://shopee.sg/favicon.ico", link: "https://shopee.sg" },
+        { name: "Lazada", logo: "https://www.lazada.sg/favicon.ico", link: "https://www.lazada.sg" },
+        { name: "Qoo10", logo: "https://www.qoo10.sg/favicon.ico", link: "https://www.qoo10.sg" },
+        { name: "Amazon SG", logo: "https://www.amazon.sg/favicon.ico", link: "https://www.amazon.sg" },
+        { name: "FairPrice", logo: "https://www.fairprice.com.sg/favicon.ico", link: "https://www.fairprice.com.sg" },
+        { name: "Courts", logo: "https://www.courts.com.sg/favicon.ico", link: "https://www.courts.com.sg" },
+        { name: "Harvey Norman", logo: "https://www.harveynorman.com.sg/favicon.ico", link: "https://www.harveynorman.com.sg" },
+        { name: "RedMart", logo: "https://redmart.lazada.sg/favicon.ico", link: "https://redmart.lazada.sg" },
+        { name: "Best Denki", logo: "https://www.bestdenki.com.sg/favicon.ico", link: "https://www.bestdenki.com.sg" },
+        { name: "Zalora", logo: "https://www.zalora.sg/favicon.ico", link: "https://www.zalora.sg" }
+    ],
+    malaysia: [
+        { name: "Shopee MY", logo: "https://shopee.com.my/favicon.ico", link: "https://shopee.com.my" },
+        { name: "Lazada MY", logo: "https://www.lazada.com.my/favicon.ico", link: "https://www.lazada.com.my" },
+        { name: "Zalora MY", logo: "https://www.zalora.com.my/favicon.ico", link: "https://www.zalora.com.my" },
+        { name: "PGMall", logo: "https://pgmall.my/favicon.ico", link: "https://pgmall.my" },
+        { name: "Senheng", logo: "https://www.senheng.com.my/favicon.ico", link: "https://www.senheng.com.my" },
+        { name: "Courts", logo: "https://www.courts.com.my/favicon.ico", link: "https://www.courts.com.my" },
+        { name: "Harvey Norman", logo: "https://www.harveynorman.com.my/favicon.ico", link: "https://www.harveynorman.com.my" },
+        { name: "Lelong", logo: "https://www.lelong.com.my/favicon.ico", link: "https://www.lelong.com.my" },
+        { name: "AEON Store", logo: "https://www.aeonstore.com.my/favicon.ico", link: "https://www.aeonstore.com.my" },
+        { name: "Tesco MY", logo: "https://www.tesco.com/favicon.ico", link: "https://www.tesco.com.my" }
+    ]
+}; 
+
+/* RENDER SHOPS */ 
+function renderShops(list) { 
+    const container = document.getElementById("shopList"); 
+    if (!container) return;
+    container.innerHTML = ""; 
+
+    if (!list || list.length === 0) {
+        container.innerHTML = "<p style='text-align:center; color:#bbb;'>No shops found.</p>";
+        return;
+    }
+
+    list.forEach(function(shop) { 
+        const a = document.createElement("a"); 
+        a.className = "shop-btn";
+        a.href = shop.link;
+        a.target = "_blank"; 
+
+        a.innerHTML = 
+            '<img class="shop-logo" src="' + shop.logo + '">' +
+            '<div class="shop-info notranslate" translate="no"><b>' + shop.name + '</b></div>'; 
+
+        container.appendChild(a); 
+    }); 
+} 
+
+/* SEARCH */ 
+function filterShops() { 
+    let value = document.getElementById("globalSearch").value.toLowerCase(); 
+    let country = localStorage.getItem("bas_country") || "india"; 
+    let shops = countryShops[country] || countryShops["india"]; 
+
+    const filtered = shops.filter(function(s) {
+        return s.name.toLowerCase().includes(value);
+    }); 
+
+    renderShops(filtered); 
+} 
+
+/* UPDATE COUNTRY TITLE & LIST */ 
+function updateCountryTitle() { 
+    let country = localStorage.getItem("bas_country") || "india"; 
+    const titleEl = document.getElementById("shopCountryTitle");
+    if (titleEl) {
+        titleEl.innerText = "Shop on " + country.toUpperCase() + " Shops"; 
+    }
+
+    let shops = countryShops[country] || countryShops["india"]; 
+    renderShops(shops); 
+} 
+
+/* PAGE LOAD */ 
+window.addEventListener("load", function() { 
+    updateCountryTitle(); 
+}); 
+</script>
+
+<style> 
+.compare-container {
+  max-width: 900px;
+  width: 96%;
+  margin: 25px auto;
+} 
+.compare-box {
+  background: #000;
+  border: 1px solid #00BFFF;
+  border-radius: 12px;
+  padding: 25px 20px;
+  text-align: center;
+  line-height: 1.6;
+} 
+.compare-btn {
+  width: 100%;
+  padding: 16px;
+  border-radius: 10px;
+  border: none;
+  font-weight: bold;
+  font-size: 22px;
+  background: #00BFFF;
+  color: #000;
+  cursor: pointer;
+  margin-bottom: 20px;
+} 
+.return-note {
+  font-size: 22px;
+  color: #fff;
+  text-align: center;
+} 
+.return-note b {
+  color: #FFD700;
+  font-size: 24px; /* മലയാളം വ്യക്തമാക്കാൻ കൂട്ടി */
+  display: block;
+  margin-bottom: 10px;
+} 
+</style> 
+
+<div class="compare-container"> 
+  <div class="compare-box"> 
+    <button class="compare-btn" onclick="window.open('https://www.google.com/shopping','_blank')"> 
+      Compare Price on Trusted Sites 
+    </button> 
+    <div class="return-note"> 
+      <b>വില താരതമ്യം ചെയ്ത് തിരിച്ചു വരണേ...</b> 
+      <span>
+        വ്യത്യസ്ത ഷോപ്പുകളിൽ ഏറ്റവും കുറഞ്ഞ വില കണ്ടെത്തി, അതേ ഷോപ്പിൽ നിന്ന് അതേ ഓഫറിൽ മുകളിലെ ലിങ്കുകൾ വഴി വാങ്ങുമ്പോൾ നിങ്ങളും ഈ ചാരിറ്റിയുടെ ഭാഗമാകുന്നു — അതുവഴി വിശക്കുന്ന ഒരു വയറിന് ആശ്വാസമാകുന്നു. നന്ദി.
+      </span> 
+    </div> 
+  </div> 
+</div> 
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"> 
+<style>
+.share-container {
+  max-width: 900px;
+  width: 96%;
+  margin: 25px auto;
+  padding: 25px 20px;
+  background: #000;
+  border: 1px solid #00BFFF;
+  border-radius: 12px;
+  text-align: center;
+} 
+.share-text {
+  font-size: 22px;
+  line-height: 1.6;
+  color: #fff;
+  margin-bottom: 25px;
+} 
+.share-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 12px;
+  margin-top: 15px;
+} 
+.share-grid a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  height: 60px;
+  background: #111;
+  border-radius: 12px;
+  border: 1px solid #333;
+  text-decoration: none;
+  transition: 0.2s;
+} 
+.share-grid a:hover {
+  transform: scale(1.08);
+  border-color: #00BFFF;
+} 
+.share-sign {
+  margin-top: 25px;
+  padding-top: 15px;
+  border-top: 1px solid #333;
+  color: #FFD700;
+  font-weight: bold;
+  letter-spacing: 2px;
+  font-size: 16px;
+}
+</style>
+
+<div class="share-container">
+  <p class="share-text">
+    Even if you are not buying anything right now, you can still support this charity mission. 
+    Simply share this page with your friends and groups.
+  </p> 
+
+  <div class="share-grid">
+    <a href="https://api.whatsapp.com/send?text=https://bascharity.com" target="_blank"><i class="fab fa-whatsapp" style="color:#25D366"></i></a>
+    <a href="https://www.facebook.com/sharer/sharer.php?u=https://bascharity.com" target="_blank"><i class="fab fa-facebook" style="color:#1877F2"></i></a>
+    <a href="https://telegram.me/share/url?url=https://bascharity.com" target="_blank"><i class="fab fa-telegram" style="color:#0088cc"></i></a>
+    <a href="https://twitter.com/intent/tweet?url=https://bascharity.com" target="_blank"><i class="fab fa-x-twitter" style="color:#ffffff"></i></a>
+    <a href="javascript:void(0)" onclick="copyLink()"><i class="fas fa-link" style="color:#FFD700"></i></a>
+  </div> 
+
+  <div class="share-sign">YOUR PURCHASE SATISFIES A HUNGER</div>
+</div>
+
+<script>
+function copyLink() {
+  navigator.clipboard.writeText("https://bascharity.com");
+  alert("Link Copied. Share with friends.");
+}
+</script>
+
+<style>
+.impact-main {
+  max-width: 900px;
+  width: 96%;
+  margin: 30px auto;
+  padding: 30px 15px;
+  border: 2px solid #ff4500;
+  border-radius: 15px;
+  background: #050505;
+  box-sizing: border-box;
+} 
+.impact-box {
+  width: 100%;
+  max-width: 450px;
+  margin: 20px auto;
+  padding: 20px;
+  border: 2px solid #555;
+  background: #111;
+} 
+.amount-flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+} 
+.rs-label { font-size: 32px; color: #00ff00; }
+.counter-display {
+  font-size: clamp(30px, 10vw, 44px);
+  color: #00ff00;
+  border: 2px solid #333;
+  padding: 5px 10px;
+  background: #000;
+  font-family: monospace;
+}
+.gallery {
+  display: flex;
+  overflow-x: auto;
+  gap: 15px;
+  padding: 20px 0;
+  margin-top: 20px;
+  scroll-behavior: auto;
+}
+.gallery::-webkit-scrollbar { display: none; }
+.card {
+  min-width: 250px;
+  height: 200px;
+  border: 2px solid #ff4500;
+  background: #000;
+  border-radius: 10px;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+.card img { width: 100%; height: 100%; object-fit: contain; }
+.rotate { transform: rotate(-90deg); }
+</style>
+
+<div class="impact-main">
+  <h1 style="color:#ff4500; margin:0;">IMPACT</h1>
+  <p style="color:#aaa; font-size:18px;">Amount Distributed for Hunger Relief & Food Support</p>
+
+  <div class="impact-box">
+    <div class="amount-flex">
+      <div class="rs-label">Rs</div>
+      <div class="counter-display" id="counter">0000000</div>
+      <div class="rs-label">/-</div>
+    </div>
+    <div style="color:#ff4500; font-size:16px; margin-top:10px;">TILL TODAY</div>
+  </div> 
+
+  <div class="gallery" id="gallery"></div> 
+
+  <p style="font-size:14px; color:#888; margin-top:15px; line-height:1.5;">
+    Updated weekly/monthly. Affiliate income may take 2–3 months to reflect.
+  </p>
+</div>
+
+<script>
+/* COUNTER */
+let currentCount = 0;
+let targetAmount = 27000;
+function runCounter() {
+  if (currentCount < targetAmount) {
+    currentCount += 251;
+    if(currentCount > targetAmount) currentCount = targetAmount;
+    document.getElementById("counter").innerText = currentCount.toString().padStart(7, "0");
+    setTimeout(runCounter, 100);
+  }
+}
+runCounter();
+
+/* GALLERY IMAGES */
+const images = [
+  "https://raw.githubusercontent.com/2vmmbas-cmd/bas-charity/main/receipts/IMG-20260313-WA0110.jpg",
+  "https://raw.githubusercontent.com/2vmmbas-cmd/bas-charity/main/receipts/IMG-20260313-WA0111.jpg",
+  "https://raw.githubusercontent.com/2vmmbas-cmd/bas-charity/main/receipts/Screenshot_20260313_175205_Drive.jpg",
+  "https://raw.githubusercontent.com/2vmmbas-cmd/bas-charity/main/receipts/Screenshot_20260314_140531_Drive.jpg",
+  "https://raw.githubusercontent.com/2vmmbas-cmd/bas-charity/main/receipts/Screenshot_20260314_140000_Drive.jpg"
+];
+
+const galleryEl = document.getElementById("gallery");
+images.concat(images).forEach((src, idx) => {
+  let card = document.createElement("div");
+  card.className = "card";
+  let img = document.createElement("img");
+  if(idx === 0 || idx === 1 || idx === 5 || idx === 6) img.className = "rotate";
+  img.src = src;
+  card.appendChild(img);
+  galleryEl.appendChild(card);
+});
+
+/* AUTO SCROLL */
+let isScrolling = true;
+function autoScroll() {
+  if (isScrolling) {
+    galleryEl.scrollLeft += 1;
+    if (galleryEl.scrollLeft >= galleryEl.scrollWidth / 2) galleryEl.scrollLeft = 0;
+  }
+}
+setInterval(autoScroll, 20);
+</script>
+
+<style>
+.info-box {
+  max-width: 900px; /* മറ്റ് ബോക്സുകളുമായി ചേരാൻ വീതി കൂട്ടി */
+  width: 96%;
+  margin: 30px auto;
+  padding: 25px;
+  background: #000;
+  border: 1px solid #00BFFF;
+  border-radius: 12px;
+  text-align: center;
+  line-height: 1.6;
+  box-sizing: border-box;
+} 
+
+.info-title {
+  font-size: 24px;
+  color: #FFD700;
+  margin-bottom: 15px;
+  font-weight: bold;
+} 
+
+.info-text {
+  /* മൊബൈലിൽ ഭംഗിയായി വരാൻ clamp ഉപയോഗിച്ചു */
+  font-size: clamp(18px, 5vw, 22px); 
+  color: #ccc;
+  margin-bottom: 15px;
+} 
+
+.readmore-btn {
+  color: #00BFFF;
+  font-size: clamp(18px, 5vw, 22px);
+  font-weight: bold;
+  cursor: pointer;
+  display: inline-block;
+  margin-top: 10px;
+} 
+
+.more-text {
+  display: none;
+} 
+
+.signature {
+  margin-top: 20px;
+  font-size: 20px;
+  color: #FFD700;
+  font-weight: bold;
+  border-top: 1px solid #333;
+  padding-top: 15px;
+}
+</style> 
+
+<div class="info-box" id="section7"> 
+  <div class="info-title">BAS CHARITY PURPOSE</div> 
+
+  <div class="info-text">
+    Our mission is to ensure that support reaches those who truly need it.
+    Through affiliate partnerships with 50,000+ online shops worldwide,
+    a significant portion of the income generated is used for hunger relief
+    and similar humanitarian activities.
+  </div> 
+
+  <div class="info-text">
+    At present, 100% of the
+    <span class="readmore-btn" id="readBtn" onclick="toggleMore7()">Read More...</span>
+  </div> 
+
+  <div class="more-text" id="moreText"> 
+    <div class="info-text">
+      affiliate income is directed towards helping people in need.
+      In the future, a minimum of 51% or more will always be dedicated to
+      charity and hunger relief.
+      The remaining portion may be used for platform maintenance, staff support,
+      development, and operational expenses, etc.
+    </div> 
+
+    <div class="info-text">
+      Many people have expressed their willingness to donate through this platform.
+      However, currently we do not accept any donations through this website.
+      This may be considered in the future only after obtaining the necessary approvals
+      from the Central Government and relevant authorities.
+    </div> 
+
+    <div class="info-text">
+      Anyone who wishes to support hunger relief may do so directly through
+      our trusted institutions listed below.
+    </div> 
+
+    <div class="info-text">
+      The widespread misuse and scams carried out in the name of charity on many
+      online platforms inspired us to start this initiative.
+    </div> 
+
+    <div class="info-text">
+      In any case, our goal is to ensure that 100% of your donation reaches those
+      who truly need it.
+    </div> 
+
+    <div class="readmore-btn" onclick="toggleMore7()">Show Less</div> 
+  </div> 
+
+  <div class="signature">
+    Give your donations only through trusted hands
+  </div> 
+</div> 
+
+<script>
+function toggleMore7() {
+  var moreText = document.getElementById("moreText");
+  var btnText = document.getEle
