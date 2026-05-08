@@ -81,6 +81,38 @@ p, span, div { font-size:23px; }
 </head> 
 
 <body> 
+	<div class="shop-container">
+    <div class="shop-title-box">
+        <h2 id="shopCountryTitle" class="notranslate" translate="no">Shop on INDIA Shops</h2>
+        <div class="hunger-text" style="font-weight: bold; color: #d9534f; margin-top: 5px;">
+            YOUR PURCHASE SATISFIES A HUNGER
+        </div>
+    </div>
+
+    <div class="country-buttons-grid" style="display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; margin: 20px 0;">
+        <button class="country-btn active" data-country="india" onclick="setCountry('india', this)">India</button>
+        <button class="country-btn" data-country="uae" onclick="setCountry('uae', this)">UAE</button>
+        <button class="country-btn" data-country="usa" onclick="setCountry('usa', this)">USA</button>
+        <button class="country-btn" data-country="uk" onclick="setCountry('uk', this)">UK</button>
+        <button class="country-btn" data-country="qatar" onclick="setCountry('qatar', this)">Qatar</button>
+        <button class="country-btn" data-country="saudi" onclick="setCountry('saudi', this)">Saudi</button>
+    </div>
+
+    <div class="search-wrapper" style="text-align: center; margin-bottom: 25px;">
+        <input type="text" id="globalSearch" onkeyup="filterShops()" placeholder="240+ ഷോപ്പുകളിൽ നിന്ന് തിരയുക..." 
+               style="padding: 12px; width: 85%; max-width: 600px; border-radius: 30px; border: 1px solid #ccc; outline: none; box-shadow: 0 2px 5px rgba(0,0,0,0.1);">
+    </div>
+
+    <div id="shopList" class="shops-display-grid">
+        </div>
+
+    <div class="charity-footer" style="text-align: center; margin-top: 40px; padding: 20px; background: #f8f9fa; border-radius: 10px;">
+        <p style="font-style: italic; color: #555;">
+            "When you shop through BAS International Charity, it becomes food for someone in a corner of the world."
+        </p>
+    </div>
+</div>
+
 
 <div class="header-box">
   <div id="logo-space"></div> 
