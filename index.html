@@ -425,108 +425,35 @@ setInterval(function(){
 </div>
 
 <script>
-const countryShops = {
-    india: [
-        { name: "Amazon India", logo: "https://www.amazon.in/favicon.ico", link: "https://www.amazon.in?tag=vmmbaslinks-21" },
-        { name: "Flipkart", logo: "https://www.flipkart.com/favicon.ico", link: "https://extp.in/frLCl1" },
-        { name: "Myntra", logo: "https://www.myntra.com/favicon.ico", link: "https://extp.in/Xl9qHe" },
-        { name: "Nykaa", logo: "https://www.nykaa.com/favicon.ico", link: "https://extp.in/hj6ArG" },
-        { name: "Tata CLiQ", logo: "https://www.tatacliq.com/favicon.ico", link: "https://extp.in/XQxoLW" },
-        { name: "Reliance Digital", logo: "https://www.reliancedigital.in/favicon.ico", link: "https://extp.in/cxkWbr" },
-        { name: "Croma", logo: "https://www.croma.com/favicon.ico", link: "https://extp.in/9myzwo" },
-        { name: "Ajio", logo: "https://www.ajio.com/favicon.ico", link: "https://extp.in/J56J4f" },
-        { name: "JioMart", logo: "https://www.jiomart.com/favicon.ico", link: "https://extp.in/jrfhBK" },
-        { name: "Shopsy", logo: "https://www.shopsy.in/favicon.ico", link: "https://extp.in/9zNj2z" }
-    ],
-    usa: [
-        {name:"Amazon",logo:"https://www.amazon.com/favicon.ico",link:"https://www.amazon.com"},
-        {name:"Walmart",logo:"https://www.walmart.com/favicon.ico",link:"https://www.walmart.com"},
-        {name:"Target",logo:"https://www.target.com/favicon.ico",link:"https://www.target.com"},
-        {name:"BestBuy",logo:"https://www.bestbuy.com/favicon.ico",link:"https://www.bestbuy.com"},
-        {name:"eBay",logo:"https://www.ebay.com/favicon.ico",link:"https://www.ebay.com"},
-        {name:"Costco",logo:"https://www.costco.com/favicon.ico",link:"https://www.costco.com"},
-        {name:"HomeDepot",logo:"https://www.homedepot.com/favicon.ico",link:"https://www.homedepot.com"},
-        {name:"Etsy",logo:"https://www.etsy.com/favicon.ico",link:"https://www.etsy.com"},
-        {name:"Newegg",logo:"https://www.newegg.com/favicon.ico",link:"https://www.newegg.com"},
-        {name:"Wayfair",logo:"https://www.wayfair.com/favicon.ico",link:"https://www.wayfair.com"}
-    ],
-    uk: [
-        {name:"Amazon UK",logo:"https://www.amazon.co.uk/favicon.ico",link:"https://www.amazon.co.uk"},
-        {name:"Tesco",logo:"https://www.tesco.com/favicon.ico",link:"https://www.tesco.com"},
-        {name:"Argos",logo:"https://www.argos.co.uk/favicon.ico",link:"https://www.argos.co.uk"},
-        {name:"Currys",logo:"https://www.currys.co.uk/favicon.ico",link:"https://www.currys.co.uk"},
-        {name:"Boots",logo:"https://www.boots.com/favicon.ico",link:"https://www.boots.com"},
-        {name:"Next",logo:"https://www.next.co.uk/favicon.ico",link:"https://www.next.co.uk"},
-        {name:"Very",logo:"https://www.very.co.uk/favicon.ico",link:"https://www.very.co.uk"},
-        {name:"AO",logo:"https://ao.com/favicon.ico",link:"https://ao.com"},
-        {name:"Asda",logo:"https://www.asda.com/favicon.ico",link:"https://www.asda.com"},
-        {name:"John Lewis",logo:"https://www.johnlewis.com/favicon.ico",link:"https://www.johnlewis.com"}
-    ],
-    canada: [
-        {name:"Amazon Canada",logo:"https://www.amazon.ca/favicon.ico",link:"https://www.amazon.ca"},
-        {name:"Walmart Canada",logo:"https://www.walmart.ca/favicon.ico",link:"https://www.walmart.ca"},
-        {name:"BestBuy Canada",logo:"https://www.bestbuy.ca/favicon.ico",link:"https://www.bestbuy.ca"},
-        {name:"Canadian Tire",logo:"https://www.canadiantire.ca/favicon.ico",link:"https://www.canadiantire.ca"},
-        {name:"Costco Canada",logo:"https://www.costco.ca/favicon.ico",link:"https://www.costco.ca"},
-        {name:"Staples",logo:"https://www.staples.ca/favicon.ico",link:"https://www.staples.ca"},
-        {name:"Indigo",logo:"https://www.indigo.ca/favicon.ico",link:"https://www.indigo.ca"},
-        {name:"Hudson Bay",logo:"https://www.thebay.com/favicon.ico",link:"https://www.thebay.com"},
-        {name:"Well",logo:"https://well.ca/favicon.ico",link:"https://well.ca"},
-        {name:"Simons",logo:"https://www.simons.ca/favicon.ico",link:"https://www.simons.ca"}
-    ],
-    uae: [
-        {name:"Amazon UAE",logo:"https://www.amazon.ae/favicon.ico",link:"https://www.amazon.ae"},
-        {name:"Noon",logo:"https://www.noon.com/favicon.ico",link:"https://www.noon.com"},
-        {name:"Carrefour",logo:"https://www.carrefouruae.com/favicon.ico",link:"https://www.carrefouruae.com"},
-        {name:"Sharaf DG",logo:"https://www.sharafdg.com/favicon.ico",link:"https://www.sharafdg.com"},
-        {name:"Jumbo",logo:"https://www.jumbo.ae/favicon.ico",link:"https://www.jumbo.ae"},
-        {name:"Namshi",logo:"https://www.namshi.com/favicon.ico",link:"https://www.namshi.com"},
-        {name:"Sivvi",logo:"https://www.sivvi.com/favicon.ico",link:"https://www.sivvi.com"},
-        {name:"Ounass",logo:"https://www.ounass.ae/favicon.ico",link:"https://www.ounass.ae"},
-        {name:"DubaiStore",logo:"https://www.dubaistore.com/favicon.ico",link:"https://www.dubaistore.com"},
-        {name:"Emax",logo:"https://www.emaxme.com/favicon.ico",link:"https://www.emaxme.com"}
-    ],
-    saudi: [
-        {name:"Amazon Saudi",logo:"https://www.amazon.sa/favicon.ico",link:"https://www.amazon.sa"},
-        {name:"Noon Saudi",logo:"https://www.noon.com/favicon.ico",link:"https://www.noon.com"},
-        {name:"Jarir",logo:"https://www.jarir.com/favicon.ico",link:"https://www.jarir.com"},
-        {name:"Extra",logo:"https://www.extra.com/favicon.ico",link:"https://www.extra.com"},
-        {name:"Saco",logo:"https://www.saco.sa/favicon.ico",link:"https://www.saco.sa"},
-        {name:"Namshi",logo:"https://www.namshi.com/favicon.ico",link:"https://www.namshi.com"},
-        {name:"Centerpoint",logo:"https://www.centerpointstores.com/favicon.ico",link:"https://www.centerpointstores.com"},
-        {name:"Carrefour KSA",logo:"https://www.carrefourksa.com/favicon.ico",link:"https://www.carrefourksa.com"},
-        {name:"Ounass",logo:"https://www.ounass.sa/favicon.ico",link:"https://www.ounass.sa"},
-        {name:"Souq",logo:"https://www.souq.com/favicon.ico",link:"https://www.souq.com"}
-    ],
-    singapore: [
-        {name:"Shopee",logo:"https://shopee.sg/favicon.ico",link:"https://shopee.sg"},
-        {name:"Lazada",logo:"https://www.lazada.sg/favicon.ico",link:"https://www.lazada.sg"},
-        {name:"Qoo10",logo:"https://www.qoo10.sg/favicon.ico",link:"https://www.qoo10.sg"},
-        {name:"Amazon SG",logo:"https://www.amazon.sg/favicon.ico",link:"https://www.amazon.sg"},
-        {name:"FairPrice",logo:"https://www.fairprice.com.sg/favicon.ico",link:"https://www.fairprice.com.sg"},
-        {name:"Courts",logo:"https://www.courts.com.sg/favicon.ico",link:"https://www.courts.com.sg"},
-        {name:"Harvey Norman",logo:"https://www.harveynorman.com.sg/favicon.ico",link:"https://www.harveynorman.com.sg"},
-        {name:"RedMart",logo:"https://redmart.lazada.sg/favicon.ico",link:"https://redmart.lazada.sg"},
-        {name:"Best Denki",logo:"https://www.bestdenki.com.sg/favicon.ico",link:"https://www.bestdenki.com.sg"},
-        {name:"Zalora",logo:"https://www.zalora.sg/favicon.ico",link:"https://www.zalora.sg"}
-    ],
-    malaysia: [
-        {name:"Shopee MY",logo:"https://shopee.com.my/favicon.ico",link:"https://shopee.com.my"},
-        {name:"Lazada MY",logo:"https://www.lazada.com.my/favicon.ico",link:"https://www.lazada.com.my"},
-        {name:"Zalora MY",logo:"https://www.zalora.com.my/favicon.ico",link:"https://www.zalora.com.my"},
-        {name:"PGMall",logo:"https://pgmall.my/favicon.ico",link:"https://pgmall.my"},
-        {name:"Senheng",logo:"https://www.senheng.com.my/favicon.ico",link:"https://www.senheng.com.my"},
-        {name:"Courts",logo:"https://www.courts.com.my/favicon.ico",link:"https://www.courts.com.my"},
-        {name:"Harvey Norman",logo:"https://www.harveynorman.com.my/favicon.ico",link:"https://www.harveynorman.com.my"},
-        {name:"Lelong",logo:"https://www.lelong.com.my/favicon.ico",link:"https://www.lelong.com.my"},
-        {name:"AEON Store",logo:"https://www.aeonstore.com.my/favicon.ico",link:"https://www.aeonstore.com.my"},
-        {name:"Tesco MY",logo:"https://www.tesco.com/favicon.ico",link:"https://www.tesco.com.my"}
-    ]
-};
+let countryShops = {}; // ഇത് JSON വഴി ഡാറ്റ എടുക്കാൻ സഹായിക്കും
+
+// --- JSON ഫയലുകൾ ലോഡ് ചെയ്യാനുള്ള പുതിയ ഭാഗം ---
+async function loadAllShops() {
+    const files = ['shops_j1.json', 'shops_j2.json', 'shops_j3.json'];
+    for (const file of files) {
+        try {
+            const response = await fetch(file);
+            const data = await response.json();
+            // JSON-ലെ ഷോപ്പുകളെ ഓരോ രാജ്യത്തിനനുസരിച്ച് ക്രമീകരിക്കുന്നു
+            data.shops.forEach(shop => {
+                if (!countryShops[shop.country.toLowerCase()]) {
+                    countryShops[shop.country.toLowerCase()] = [];
+                }
+                // ഷോപ്പിന്റെ ലോഗോ ഗൂഗിളിൽ നിന്ന് തനിയെ എടുക്കുന്നു
+                shop.logo = `https://www.google.com/s2/favicons?sz=64&domain=${shop.url}`;
+                shop.link = shop.url; // ലിങ്ക് സെറ്റ് ചെയ്യുന്നു
+                countryShops[shop.country.toLowerCase()].push(shop);
+            });
+        } catch (e) { console.log(file + " ലോഡ് ചെയ്യാൻ കഴിഞ്ഞില്ല."); }
+    }
+    // ഡാറ്റ ലോഡ് ആയിക്കഴിഞ്ഞാൽ പേജ് അപ്ഡേറ്റ് ചെയ്യുന്നു
+    let saved = localStorage.getItem("bas_country") || "india";
+    setCountry(saved);
+}
 
 function setCountry(country, btn) {
     if (country === "") return;
-    localStorage.setItem("bas_country", country);
+    localStorage.setItem("bas_country", country.toLowerCase());
 
     document.querySelectorAll(".country-btn").forEach(b => b.classList.remove("active"));
     if (btn) {
@@ -542,7 +469,10 @@ function setCountry(country, btn) {
 function renderShops(list) {
     const container = document.getElementById("shopList");
     container.innerHTML = "";
-    if (!list) return;
+    if (!list || list.length === 0) {
+        container.innerHTML = "<p style='color:white; text-align:center;'>No shops found.</p>";
+        return;
+    }
     list.forEach(function(shop) {
         const a = document.createElement("a");
         a.className = "shop-btn";
@@ -557,7 +487,7 @@ function renderShops(list) {
 function filterShops() {
     let value = document.getElementById("globalSearch").value.toLowerCase();
     let country = localStorage.getItem("bas_country") || "india";
-    let shops = countryShops[country] || countryShops["india"];
+    let shops = countryShops[country.toLowerCase()] || [];
     const filtered = shops.filter(function(s) {
         return s.name.toLowerCase().includes(value);
     });
@@ -567,15 +497,16 @@ function filterShops() {
 function updateCountryTitle() {
     let country = localStorage.getItem("bas_country") || "india";
     document.getElementById("shopCountryTitle").innerText = "Shop on " + country.toUpperCase() + " Shops";
-    let shops = countryShops[country] || countryShops["india"];
+    let shops = countryShops[country.toLowerCase()] || [];
     renderShops(shops);
 }
 
+// പേജ് ലോഡ് ആകുമ്പോൾ JSON ലോഡ് ചെയ്യാൻ വിളിക്കുന്നു
 window.addEventListener("load", function() {
-    let saved = localStorage.getItem("bas_country") || "india";
-    setCountry(saved);
+    loadAllShops();
 });
 </script>
+
 
 <style> 
 .compare-container{
