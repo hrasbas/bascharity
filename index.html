@@ -2678,9 +2678,9 @@ msgBox.remove();
   
   window.addEventListener('load', startHideLoop);
  
-<!---25A-->
-            
-  <script>
+<!---25A--> 
+
+ <script>
 
 let countryShops = {};
 
@@ -2690,17 +2690,12 @@ function normalizeCountry(name) {
 
     const map = {
 
+        "india": "india",
         "usa": "usa",
         "uk": "uk",
+        "canada": "canada",
         "uae": "uae",
         "saudi": "saudi arabia",
-
-        "india": "india",
-        "canada": "canada",
-        "germany": "germany",
-        "france": "france",
-        "australia": "australia",
-        "japan": "japan",
         "singapore": "singapore",
         "malaysia": "malaysia"
 
@@ -2800,7 +2795,7 @@ function renderShops(list) {
     if (!list || !list.length) {
 
         container.innerHTML =
-        "<div style='padding:20px;color:#ff9800;text-align:center;font-weight:bold;'>No Shops Found</div>";
+        "<div style='padding:20px;text-align:center;color:#ff9800;font-weight:bold;'>No Shops Found</div>";
 
         return;
     }
@@ -2831,6 +2826,7 @@ function renderShops(list) {
         container.appendChild(a);
 
     });
+
 }
 
 function filterShops() {
@@ -2866,6 +2862,7 @@ function filterShops() {
         );
 
     renderShops(filtered);
+
 }
 
 function updateCountryTitle() {
@@ -2894,6 +2891,7 @@ function updateCountryTitle() {
         || [];
 
     renderShops(shops);
+
 }
 
 window.addEventListener("load", () => {
@@ -2905,7 +2903,7 @@ window.addEventListener("load", () => {
 
         || "india";
 
-    updateCountryTitle();
+    setCountry(saved);
 
 });
 
