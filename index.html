@@ -2680,10 +2680,34 @@ msgBox.remove();
  
 <!---25A-->
             
- 
-<script>
+  <script>
 
 let countryShops = {};
+
+function normalizeCountry(name) {
+
+    name = name.toLowerCase();
+
+    const map = {
+
+        "usa": "usa",
+        "uk": "uk",
+        "uae": "uae",
+        "saudi": "saudi arabia",
+
+        "india": "india",
+        "canada": "canada",
+        "germany": "germany",
+        "france": "france",
+        "australia": "australia",
+        "japan": "japan",
+        "singapore": "singapore",
+        "malaysia": "malaysia"
+
+    };
+
+    return map[name] || name;
+}
 
 Promise.all([
 
@@ -2745,11 +2769,14 @@ Promise.all([
 
 function setCountry(country, btn) {
 
-    if (country === "") return;
+    if (!country) return;
 
-    country = country.toLowerCase();
+    country = normalizeCountry(country);
 
-    localStorage.setItem("bas_country", country);
+    localStorage.setItem(
+        "bas_country",
+        country
+    );
 
     document.querySelectorAll(".country-btn")
     .forEach(b => b.classList.remove("active"));
@@ -2758,13 +2785,6 @@ function setCountry(country, btn) {
 
         btn.classList.add("active");
 
-    } else {
-
-        let activeBtn = document.querySelector(
-            '.country-btn[data-country="' + country + '"]'
-        );
-
-        if (activeBtn) activeBtn.classList.add("active");
     }
 
     updateCountryTitle();
@@ -2780,14 +2800,15 @@ function renderShops(list) {
     if (!list || !list.length) {
 
         container.innerHTML =
-        "<div style='padding:20px;text-align:center;color:#ff9800;font-weight:bold;'>No Shops Found</div>";
+        "<div style='padding:20px;color:#ff9800;text-align:center;font-weight:bold;'>No Shops Found</div>";
 
         return;
     }
 
-    list.forEach(function(shop) {
+    list.forEach(shop => {
 
-        const a = document.createElement("a");
+        const a =
+            document.createElement("a");
 
         a.className = "shop-btn";
 
@@ -2796,9 +2817,15 @@ function renderShops(list) {
         a.target = "_blank";
 
         a.innerHTML =
-            '<img class="shop-logo" src="' + shop.logo + '">' +
+
+            '<img class="shop-logo" src="' +
+            shop.logo +
+            '">' +
+
             '<div class="shop-info notranslate" translate="no"><b>' +
+
             shop.name +
+
             '</b></div>';
 
         container.appendChild(a);
@@ -2809,25 +2836,34 @@ function renderShops(list) {
 function filterShops() {
 
     let value =
-        document.getElementById("globalSearch")
+
+        document
+        .getElementById("globalSearch")
         .value
         .toLowerCase();
 
     let country =
-        localStorage.getItem("bas_country")
+
+        localStorage
+        .getItem("bas_country")
+
         || "india";
 
     let shops =
+
         countryShops[country]
+
         || [];
 
-    const filtered = shops.filter(function(s) {
+    let filtered =
 
-        return s.name
-        .toLowerCase()
-        .includes(value);
+        shops.filter(shop =>
 
-    });
+            shop.name
+            .toLowerCase()
+            .includes(value)
+
+        );
 
     renderShops(filtered);
 }
@@ -2835,28 +2871,41 @@ function filterShops() {
 function updateCountryTitle() {
 
     let country =
-        localStorage.getItem("bas_country")
+
+        localStorage
+        .getItem("bas_country")
+
         || "india";
 
-    document.getElementById("shopCountryTitle").innerText =
+    document
+    .getElementById("shopCountryTitle")
+    .innerText =
+
         "Shop on " +
+
         country.toUpperCase() +
+
         " Shops";
 
     let shops =
+
         countryShops[country]
+
         || [];
 
     renderShops(shops);
 }
 
-window.addEventListener("load", function() {
+window.addEventListener("load", () => {
 
     let saved =
-        localStorage.getItem("bas_country")
+
+        localStorage
+        .getItem("bas_country")
+
         || "india";
 
-    setCountry(saved);
+    updateCountryTitle();
 
 });
 
