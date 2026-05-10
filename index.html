@@ -2677,158 +2677,189 @@ msgBox.remove();
   }
   
   window.addEventListener('load', startHideLoop);
-</script>
-SL No: 25
-TYPE: POSTING
-
-എന്തിനാണ്:
-GitHubൽ upload ചെയ്ത j1.json / j2.json / j3.json files
-automatic ആയി load ചെയ്ത് shops കാണിക്കാൻ.
-
-ഈ block സ്വതന്ത്രമാണ്.
-</body> ന് മുകളിൽ ഇടാം.
-
-<!-- SHOP CONTAINER -->
-<div id="bas-shop-list-25"></div>
-
-<style>
-#bas-shop-list-25{
-    width:96%;
-    max-width:900px;
-    margin:30px auto;
-}
-
-.bas-shop-card-25{
-    display:flex;
-    align-items:center;
-    gap:12px;
-    background:#111;
-    border:1px solid #333;
-    border-left:6px solid #00bfff;
-    border-radius:12px;
-    padding:14px;
-    margin-bottom:12px;
-    text-decoration:none;
-    color:#fff;
-    transition:.2s;
-}
-
-.bas-shop-card-25:hover{
-    transform:translateX(5px);
-    background:#1a1a1a;
-}
-
-.bas-shop-card-25 img{
-    width:42px;
-    height:42px;
-    border-radius:8px;
-    background:#fff;
-    padding:4px;
-    object-fit:contain;
-}
-
-.bas-shop-info-25 b{
-    display:block;
-    font-size:16px;
-    margin-bottom:4px;
-}
-
-.bas-shop-info-25 small{
-    color:#aaa;
-    font-size:12px;
-}
-
-.bas-loading-25{
-    text-align:center;
-    color:#00bfff;
-    padding:30px;
-    font-size:18px;
-    font-weight:bold;
-}
-
-.bas-error-25{
-    text-align:center;
-    color:red;
-    padding:30px;
-    font-size:18px;
-    font-weight:bold;
-}
-</style>
-
+ 
+<!---25A-->
+            
+ 
 <script>
-(async function(){
 
-const container = document.getElementById("bas-shop-list-25");
+let countryShops = {};
 
-container.innerHTML = `
-<div class="bas-loading-25">
-Loading Shops...
-</div>
-`;
+Promise.all([
 
-try{
+    fetch("j1.json").then(r => r.json()),
+    fetch("j2.json").then(r => r.json()),
+    fetch("j3.json").then(r => r.json())
 
-const files = [
-    "j1.json",
-    "j2.json",
-    "j3.json"
-];
+])
 
-let allShops = [];
+.then(allData => {
 
-for(const file of files){
+    allData.forEach(file => {
 
-    const response = await fetch(file);
+        file.shops.forEach(shop => {
 
-    if(!response.ok){
-        throw new Error(file + " failed");
-    }
+            let country =
+                shop.country.toLowerCase();
 
-    const data = await response.json();
+            if (!countryShops[country]) {
 
-    if(Array.isArray(data)){
-        allShops = allShops.concat(data);
-    }
-}
+                countryShops[country] = [];
 
-container.innerHTML = "";
+            }
 
-allShops.forEach(shop => {
+            let hostname = "";
 
-    const card = document.createElement("a");
+            try {
 
-    card.className = "bas-shop-card-25";
+                hostname =
+                    new URL(shop.url).hostname;
 
-    card.href = shop.u || "#";
+            } catch(e) {}
 
-    card.target = "_blank";
+            countryShops[country].push({
 
-    card.innerHTML = `
-        <img src="https://www.google.com/s2/favicons?sz=64&domain=${shop.d || ''}">
-        
-        <div class="bas-shop-info-25">
-            <b>${shop.n || 'Shop'}</b>
-            <small>${shop.t || ''}</small>
-        </div>
-    `;
+                name: shop.name,
 
-    container.appendChild(card);
+                link: shop.url,
+
+                logo:
+                "https://www.google.com/s2/favicons?sz=64&domain=" +
+                hostname
+
+            });
+
+        });
+
+    });
+
+    updateCountryTitle();
+
+})
+
+.catch(err => {
+
+    console.log("JSON LOAD ERROR", err);
 
 });
 
-}catch(error){
+function setCountry(country, btn) {
 
-container.innerHTML = `
-<div class="bas-error-25">
-JSON Loading Failed
-</div>
-`;
+    if (country === "") return;
 
-console.error(error);
+    country = country.toLowerCase();
 
+    localStorage.setItem("bas_country", country);
+
+    document.querySelectorAll(".country-btn")
+    .forEach(b => b.classList.remove("active"));
+
+    if (btn) {
+
+        btn.classList.add("active");
+
+    } else {
+
+        let activeBtn = document.querySelector(
+            '.country-btn[data-country="' + country + '"]'
+        );
+
+        if (activeBtn) activeBtn.classList.add("active");
+    }
+
+    updateCountryTitle();
 }
 
-})();
+function renderShops(list) {
+
+    const container =
+        document.getElementById("shopList");
+
+    container.innerHTML = "";
+
+    if (!list || !list.length) {
+
+        container.innerHTML =
+        "<div style='padding:20px;text-align:center;color:#ff9800;font-weight:bold;'>No Shops Found</div>";
+
+        return;
+    }
+
+    list.forEach(function(shop) {
+
+        const a = document.createElement("a");
+
+        a.className = "shop-btn";
+
+        a.href = shop.link;
+
+        a.target = "_blank";
+
+        a.innerHTML =
+            '<img class="shop-logo" src="' + shop.logo + '">' +
+            '<div class="shop-info notranslate" translate="no"><b>' +
+            shop.name +
+            '</b></div>';
+
+        container.appendChild(a);
+
+    });
+}
+
+function filterShops() {
+
+    let value =
+        document.getElementById("globalSearch")
+        .value
+        .toLowerCase();
+
+    let country =
+        localStorage.getItem("bas_country")
+        || "india";
+
+    let shops =
+        countryShops[country]
+        || [];
+
+    const filtered = shops.filter(function(s) {
+
+        return s.name
+        .toLowerCase()
+        .includes(value);
+
+    });
+
+    renderShops(filtered);
+}
+
+function updateCountryTitle() {
+
+    let country =
+        localStorage.getItem("bas_country")
+        || "india";
+
+    document.getElementById("shopCountryTitle").innerText =
+        "Shop on " +
+        country.toUpperCase() +
+        " Shops";
+
+    let shops =
+        countryShops[country]
+        || [];
+
+    renderShops(shops);
+}
+
+window.addEventListener("load", function() {
+
+    let saved =
+        localStorage.getItem("bas_country")
+        || "india";
+
+    setCountry(saved);
+
+});
+
 </script>
 	<!-- ============================= -->
 <!-- SL No: 26 -->
