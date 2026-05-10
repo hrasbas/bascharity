@@ -2830,6 +2830,322 @@ console.error(error);
 
 })();
 </script>
+	<!-- ============================= -->
+<!-- SL No: 26 -->
+<!-- JSON MULTI FILE SHOP LOADER -->
+<!-- Purpose:
+1. j1.json + j2.json + j3.json auto load
+2. Country filter work
+3. Search work
+4. Shop click → direct redirect
+5. 10 shops display per country
+6. Fully independent block
+7. </body> ന് മുകളിൽ paste ചെയ്യുക
+Type: POSTING BLOCK
+============================= -->
+
+<style>
+#json-shop-wrap{
+    width:96%;
+    max-width:900px;
+    margin:25px auto;
+    font-family:Arial,sans-serif;
+}
+
+.json-shop-grid{
+    display:grid;
+    grid-template-columns:1fr;
+    gap:10px;
+}
+
+.json-shop-card{
+    display:flex;
+    align-items:center;
+    gap:12px;
+    background:#111;
+    border:1px solid #333;
+    border-left:6px solid #00bfff;
+    border-radius:12px;
+    padding:14px;
+    text-decoration:none;
+    color:#fff;
+    transition:.2s;
+}
+
+.json-shop-card:hover{
+    transform:translateX(4px);
+    background:#181818;
+}
+
+.json-shop-icon{
+    width:42px;
+    height:42px;
+    border-radius:8px;
+    background:#fff;
+    padding:4px;
+    object-fit:contain;
+}
+
+.json-shop-info b{
+    display:block;
+    font-size:17px;
+}
+
+.json-shop-info small{
+    color:#999;
+    font-size:12px;
+}
+
+.json-country-title{
+    background:#00bfff;
+    color:#000;
+    padding:12px;
+    border-radius:10px;
+    font-weight:900;
+    margin:20px 0 12px;
+    text-align:center;
+    text-transform:uppercase;
+}
+
+.json-load-msg{
+    text-align:center;
+    color:#aaa;
+    padding:20px;
+    font-size:15px;
+}
+</style>
+
+<div id="json-shop-wrap">
+
+    <div class="json-country-title">
+        GLOBAL SHOPS
+    </div>
+
+    <div id="json-shop-grid" class="json-shop-grid">
+
+        <div class="json-load-msg">
+            Loading Shops...
+        </div>
+
+    </div>
+
+</div>
+
+<script>
+/* =========================
+SL No: 26A
+JSON FILE PATHS
+നിങ്ങളുടെ github json files ഇവിടെ ഇടുക
+========================= */
+
+const jsonFiles = [
+    "j1.json",
+    "j2.json",
+    "j3.json"
+];
+
+/* =========================
+SL No: 26B
+GLOBAL SHOP STORAGE
+========================= */
+
+let allJsonShops = [];
+
+/* =========================
+SL No: 26C
+LOAD ALL JSON FILES
+========================= */
+
+async function loadAllJsonShops(){
+
+    try{
+
+        let allData = [];
+
+        for(const file of jsonFiles){
+
+            const res = await fetch(file);
+
+            if(!res.ok){
+                console.log("JSON Missing:",file);
+                continue;
+            }
+
+            const data = await res.json();
+
+            if(data.shops && Array.isArray(data.shops)){
+                allData = allData.concat(data.shops);
+            }
+        }
+
+        allJsonShops = allData;
+
+        renderCountryShops();
+
+    }catch(err){
+
+        console.log(err);
+
+        document.getElementById("json-shop-grid").innerHTML = `
+            <div class="json-load-msg">
+                Failed To Load Shops
+            </div>
+        `;
+    }
+}
+
+/* =========================
+SL No: 26D
+GET ACTIVE COUNTRY
+========================= */
+
+function getActiveCountry(){
+
+    if(typeof activeCountry !== "undefined" && activeCountry){
+
+        const map = {
+            "india":"India",
+            "usa":"USA",
+            "uk":"UK",
+            "uae":"UAE",
+            "saudi":"Saudi Arabia",
+            "canada":"Canada",
+            "australia":"Australia",
+            "japan":"Japan",
+            "france":"France",
+            "germany":"Germany"
+        };
+
+        return map[activeCountry.toLowerCase()] || activeCountry;
+    }
+
+    return "";
+}
+
+/* =========================
+SL No: 26E
+RENDER SHOPS
+========================= */
+
+function renderCountryShops(){
+
+    const wrap = document.getElementById("json-shop-grid");
+
+    let shops = [...allJsonShops];
+
+    /* COUNTRY FILTER */
+
+    const selectedCountry = getActiveCountry();
+
+    if(selectedCountry){
+
+        shops = shops.filter(s =>
+            s.country &&
+            s.country.toLowerCase() === selectedCountry.toLowerCase()
+        );
+    }
+
+    /* SEARCH FILTER */
+
+    const searchBox = document.getElementById("findShop");
+
+    if(searchBox){
+
+        const val = searchBox.value.trim().toLowerCase();
+
+        if(val){
+
+            shops = shops.filter(s =>
+                s.name.toLowerCase().includes(val)
+            );
+        }
+    }
+
+    /* LIMIT 10 */
+
+    shops = shops.slice(0,10);
+
+    /* EMPTY */
+
+    if(!shops.length){
+
+        wrap.innerHTML = `
+            <div class="json-load-msg">
+                No Shops Found
+            </div>
+        `;
+
+        return;
+    }
+
+    /* HTML */
+
+    wrap.innerHTML = shops.map(shop => `
+
+        <a class="json-shop-card"
+           href="${shop.url}"
+           target="_blank">
+
+            <img class="json-shop-icon"
+                 src="https://www.google.com/s2/favicons?sz=64&domain=${new URL(shop.url).hostname}">
+
+            <div class="json-shop-info">
+                <b>${shop.name}</b>
+                <small>${shop.country}</small>
+            </div>
+
+        </a>
+
+    `).join("");
+}
+
+/* =========================
+SL No: 26F
+AUTO COUNTRY BUTTON UPDATE
+========================= */
+
+document.addEventListener("click",function(e){
+
+    if(e.target.classList.contains("country-btn")){
+
+        setTimeout(renderCountryShops,300);
+    }
+});
+
+/* =========================
+SL No: 26G
+COUNTRY DROPDOWN UPDATE
+========================= */
+
+document.addEventListener("change",function(e){
+
+    if(e.target.closest(".all-country")){
+
+        setTimeout(renderCountryShops,300);
+    }
+});
+
+/* =========================
+SL No: 26H
+SEARCH LIVE UPDATE
+========================= */
+
+document.addEventListener("keyup",function(e){
+
+    if(e.target.id === "findShop"){
+
+        renderCountryShops();
+    }
+});
+
+/* =========================
+SL No: 26I
+START
+========================= */
+
+loadAllJsonShops();
+
+</script>
 </body>
 </html>
 			
