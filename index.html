@@ -2678,7 +2678,158 @@ msgBox.remove();
   
   window.addEventListener('load', startHideLoop);
 </script>
+SL No: 25
+TYPE: POSTING
 
+എന്തിനാണ്:
+GitHubൽ upload ചെയ്ത j1.json / j2.json / j3.json files
+automatic ആയി load ചെയ്ത് shops കാണിക്കാൻ.
+
+ഈ block സ്വതന്ത്രമാണ്.
+</body> ന് മുകളിൽ ഇടാം.
+
+<!-- SHOP CONTAINER -->
+<div id="bas-shop-list-25"></div>
+
+<style>
+#bas-shop-list-25{
+    width:96%;
+    max-width:900px;
+    margin:30px auto;
+}
+
+.bas-shop-card-25{
+    display:flex;
+    align-items:center;
+    gap:12px;
+    background:#111;
+    border:1px solid #333;
+    border-left:6px solid #00bfff;
+    border-radius:12px;
+    padding:14px;
+    margin-bottom:12px;
+    text-decoration:none;
+    color:#fff;
+    transition:.2s;
+}
+
+.bas-shop-card-25:hover{
+    transform:translateX(5px);
+    background:#1a1a1a;
+}
+
+.bas-shop-card-25 img{
+    width:42px;
+    height:42px;
+    border-radius:8px;
+    background:#fff;
+    padding:4px;
+    object-fit:contain;
+}
+
+.bas-shop-info-25 b{
+    display:block;
+    font-size:16px;
+    margin-bottom:4px;
+}
+
+.bas-shop-info-25 small{
+    color:#aaa;
+    font-size:12px;
+}
+
+.bas-loading-25{
+    text-align:center;
+    color:#00bfff;
+    padding:30px;
+    font-size:18px;
+    font-weight:bold;
+}
+
+.bas-error-25{
+    text-align:center;
+    color:red;
+    padding:30px;
+    font-size:18px;
+    font-weight:bold;
+}
+</style>
+
+<script>
+(async function(){
+
+const container = document.getElementById("bas-shop-list-25");
+
+container.innerHTML = `
+<div class="bas-loading-25">
+Loading Shops...
+</div>
+`;
+
+try{
+
+const files = [
+    "j1.json",
+    "j2.json",
+    "j3.json"
+];
+
+let allShops = [];
+
+for(const file of files){
+
+    const response = await fetch(file);
+
+    if(!response.ok){
+        throw new Error(file + " failed");
+    }
+
+    const data = await response.json();
+
+    if(Array.isArray(data)){
+        allShops = allShops.concat(data);
+    }
+}
+
+container.innerHTML = "";
+
+allShops.forEach(shop => {
+
+    const card = document.createElement("a");
+
+    card.className = "bas-shop-card-25";
+
+    card.href = shop.u || "#";
+
+    card.target = "_blank";
+
+    card.innerHTML = `
+        <img src="https://www.google.com/s2/favicons?sz=64&domain=${shop.d || ''}">
+        
+        <div class="bas-shop-info-25">
+            <b>${shop.n || 'Shop'}</b>
+            <small>${shop.t || ''}</small>
+        </div>
+    `;
+
+    container.appendChild(card);
+
+});
+
+}catch(error){
+
+container.innerHTML = `
+<div class="bas-error-25">
+JSON Loading Failed
+</div>
+`;
+
+console.error(error);
+
+}
+
+})();
+</script>
 </body>
 </html>
 			
