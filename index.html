@@ -671,7 +671,10 @@ function updateCountryTitle() {
     renderShops(shops);
 } 
 
-window.addEventListener("load", loadShops);
+document.addEventListener("DOMContentLoaded", function() {
+    loadShops();
+});
+
 </script>
 
 
