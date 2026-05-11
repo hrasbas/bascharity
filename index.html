@@ -483,27 +483,48 @@ async function loadShops() {
     }
 }
 
+<script>
+let allShops = [];
+let selectedCountry = "India"; // ഡിഫോൾട്ട് ആയി ഇന്ത്യ സെലക്ട് ചെയ്യുന്നു
+
+async function loadShops() {
+    const jsonUrl = 'https://raw.githubusercontent.com/hrasbas/bascharity/main/j1.json'; 
+    try {
+        const response = await fetch(jsonUrl);
+        if (!response.ok) throw new Error('Network response was not ok');
+        const data = await response.json();
+        allShops = data.shops;
+        
+        // പേജ് ലോഡ് ചെയ്യുമ്പോൾ തന്നെ ഷോപ്പുകൾ കാണിക്കാൻ
+        updateDisplay();
+    } catch (error) {
+        console.error("Error loading JSON:", error);
+        document.getElementById("shopList").innerHTML = "<p style='color:red; text-align:center;'>Error loading data!</p>";
+    }
+}
+
 function setCountry(country, btn) {
     if (!country) return;
-    localStorage.setItem("bas_country", country); 
+    selectedCountry = country; // ലോക്കൽ സ്റ്റോറേജ് ഒഴിവാക്കി വേരിയബിളിലേക്ക് മാറ്റി
 
+    // ബട്ടണുകളിലെ ആക്റ്റീവ് ക്ലാസ് മാറ്റാൻ
     document.querySelectorAll(".country-btn").forEach(b => b.classList.remove("active"));
-    if (btn) {
-        btn.classList.add("active");
-    } else {
-        let activeBtn = document.querySelector('.country-btn[data-country="' + country + '"]');
-        if (activeBtn) activeBtn.classList.add("active");
-    } 
+    
+    let activeBtn = btn || document.querySelector('.country-btn[data-country="' + country + '"]');
+    if (activeBtn) activeBtn.classList.add("active");
+
     updateDisplay();
 } 
 
 function renderShops(list) {
     const container = document.getElementById("shopList");
     container.innerHTML = "";
+    
     if (!list || list.length === 0) {
         container.innerHTML = "<p style='color:white; text-align:center;'>No shops found.</p>";
         return;
     }
+
     list.forEach(function(shop) {
         const a = document.createElement("a");
         a.className = "shop-btn";
@@ -518,18 +539,20 @@ function renderShops(list) {
 
 function filterShops() {
     let value = document.getElementById("globalSearch").value.toLowerCase();
-    let country = localStorage.getItem("bas_country") || "India";
     
-    let shopsByCountry = allShops.filter(s => s.country.toLowerCase() === country.toLowerCase());
-    const filtered = shopsByCountry.filter(s => s.name.toLowerCase().includes(value));
+    // രാജ്യത്തിന്റെ പേര് അക്ഷരവ്യത്യാസമില്ലാതെ ഫിൽട്ടർ ചെയ്യുന്നു
+    let filtered = allShops.filter(s => 
+        s.country.toLowerCase() === selectedCountry.toLowerCase() && 
+        s.name.toLowerCase().includes(value)
+    );
     renderShops(filtered);
 } 
 
 function updateDisplay() {
-    let country = localStorage.getItem("bas_country") || "India";
-    document.getElementById("shopCountryTitle").innerText = "Shop on " + country.toUpperCase() + " Shops";
+    document.getElementById("shopCountryTitle").innerText = "Shop on " + selectedCountry.toUpperCase() + " Shops";
     
-    let filtered = allShops.filter(s => s.country.toLowerCase() === country.toLowerCase());
+    // JSON-ലെ കൺട്രിയും സെലക്ട് ചെയ്ത കൺട്രിയും ചെറിയ അക്ഷരമാക്കി മാറ്റിയ ശേഷം താരതമ്യം ചെയ്യുന്നു
+    let filtered = allShops.filter(s => s.country.toLowerCase() === selectedCountry.toLowerCase());
     renderShops(filtered);
 } 
 
