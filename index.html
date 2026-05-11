@@ -404,52 +404,46 @@ setInterval(function(){
 
 <!----------------- code No:2----------------> 
 <!-- 1. Country Selector Section -->
-     <style>
-/* 1. Country Selector Design */
+ <style>
 .country-box { max-width:900px; width:96%; margin:25px auto; padding:15px; background:#000; border:1px solid #ff9800; border-radius:15px; font-family:Arial,sans-serif; text-align:center; }
-.country-title { background:#333; color:#fff; font-weight:900; text-align:center; padding:10px; border-radius:10px; border:1px solid #ff9800; border-left:6px solid #ff9800; margin-bottom:15px; text-transform:uppercase; }
+.country-title { background:#333; color:#fff; font-weight:900; text-align:center; padding:10px; border-radius:10px; border:1px solid #ff9800; border-left:6px solid #ff9800; margin-bottom:15px; }
 
-.country-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; margin-bottom: 15px; }
+.country-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px; margin-bottom: 15px; }
 
-/* സ്ക്രീൻഷോട്ടിലെ പോലെ വിവിധ നിറങ്ങൾ */
-.c-btn { padding: 12px 5px; border-radius: 12px; color: white; font-weight: bold; font-size: 14px; cursor: pointer; border: none; transition: 0.3s; text-align: center; }
-.c-btn:hover { opacity: 0.8; transform: scale(1.05); }
-.c-btn.active { outline: 3px solid #fff; outline-offset: -4px; }
+.c-btn { 
+    background: #333; 
+    color: #fff; 
+    padding: 12px; 
+    border-radius: 10px; 
+    border: 1px solid #ff9800; 
+    border-left: 6px solid #ff9800; 
+    font-weight: bold; 
+    font-size: 16px; 
+    cursor: pointer; 
+}
+.c-btn.active { background: #ff9800 !important; color: #000 !important; }
 
-.btn-blue { background: #007bff; }
-.btn-orange { background: #f39c12; }
-.btn-green { background: #28a745; }
-.btn-darkgreen { background: #1e8449; }
-.btn-red { background: #c0392b; }
-.btn-purple { background: #6f42c1; }
-.btn-yellow { background: #f1c40f; color: #000; }
-.btn-leaf { background: #52be80; }
+.country-select { width: 96%; padding: 12px; border-radius: 10px; border: 1px solid #ff9800; background: #333; color: #fff; font-weight: bold; }
 
-.all-lang-text { color: #5bc0de; font-size: 14px; margin: 10px 0; display: block; }
-.lang-select { width: 80%; padding: 10px; border-radius: 8px; background: #fff; color: #000; border: 1px solid #ccc; font-weight: bold; }
-
-/* മൊബൈൽ വ്യൂവിൽ 2 കോളം ആക്കാൻ */
 @media (max-width: 600px) {
     .country-grid { grid-template-columns: repeat(2, 1fr); }
 }
 </style>
 
 <div class="country-box">
-    <div class="country-title">Select Country</div>
+    <div class="country-title">SELECT COUNTRY</div>
     <div class="country-grid">
-        <button class="c-btn btn-blue active" onclick="setCountry('India', this)">English</button>
-        <button class="c-btn btn-orange" onclick="setCountry('USA', this)">Hindi Language</button>
-        <button class="c-btn btn-green" onclick="setCountry('UK', this)">Malayalam</button>
-        <button class="c-btn btn-darkgreen" onclick="setCountry('Arabic', this)">Arabic</button>
-        <button class="c-btn btn-red" onclick="setCountry('Tamil', this)">Tamil</button>
-        <button class="c-btn btn-purple" onclick="setCountry('Urdu', this)">Urdu</button>
-        <button class="c-btn btn-yellow" onclick="setCountry('Spanish', this)">Spanish</button>
-        <button class="c-btn btn-leaf" onclick="setCountry('Portuguese', this)">Portuguese</button>
+        <button class="c-btn active" data-id="India" onclick="changeCountry('India', this)">India</button>
+        <button class="c-btn" data-id="USA" onclick="changeCountry('USA', this)">United states</button>
+        <button class="c-btn" data-id="UK" onclick="changeCountry('UK', this)">UK</button>
+        <button class="c-btn" data-id="Canada" onclick="changeCountry('Canada', this)">Canada</button>
+        <button class="c-btn" data-id="UAE" onclick="changeCountry('UAE', this)">UAE</button>
+        <button class="c-btn" data-id="Saudi Arabia" onclick="changeCountry('Saudi Arabia', this)">Saudi</button>
+        <button class="c-btn" data-id="Singapore" onclick="changeCountry('Singapore', this)">Singapore</button>
+        <button class="c-btn" data-id="Malaysia" onclick="changeCountry('Malaysia', this)">Malaysia</button>
     </div>
-
-    <span class="all-lang-text">🌐 All Countries :</span>
-    <select class="lang-select" onchange="setCountry(this.value, null); this.selectedIndex=0;">
-        <option value="">Select Country</option>
+    <select class="country-select" onchange="changeCountry(this.value, null); this.selectedIndex=0;">
+        <option value="">Search All Countries</option>
         <option value="India">India</option>
         <option value="USA">USA</option>
         <option value="UK">UK</option>
@@ -459,74 +453,78 @@ setInterval(function(){
     </select>
 </div>
 
-<div class="shop-container" style="max-width:900px; width:96%; margin:auto;">
-    <div style="background:#000; border-radius:14px; padding:20px; border:1px solid #ff9800; border-left:8px solid #ff9800; margin-top:20px;">
-        <h2 id="shopCountryTitle" style="color:white; margin:0;">Shop on INDIA Shops</h2>
-        <span style="color:#ffb74d; font-size:13px;">(Shops & items categorised at the end of the site)</span>
+<div style="max-width:900px; width:96%; margin:auto;">
+    <div style="background:#000; border-radius:14px; padding:20px; border:1px solid #ff9800; border-left:8px solid #ff9800;">
+        <h2 id="shopTitle" style="color:white; margin:0; font-weight:900;">Shop on INDIA Shops</h2>
     </div>
-    <input type="text" id="globalSearch" onkeyup="filterShops()" placeholder="Search Shops..." style="width:100%; padding:15px; margin:15px 0; border-radius:12px; border:3px solid #00e5ff; background:#111; color:#fff; box-sizing:border-box;">
-    <div id="shopList"></div>
+    <input type="text" id="shopSearch" onkeyup="searchShops()" placeholder="Search Shops..." style="width:100%; padding:18px; margin:15px 0; border-radius:12px; border:3px solid #00e5ff; background:#111; color:#fff; font-size:18px; box-sizing:border-box;">
+    <div id="displayArea"></div>
 </div>
 
 <script>
-let allShops = [];
-let currentCountry = "India";
+let shopData = [];
+let activeCountry = "India";
 
-async function loadShops() {
+async function init() {
     try {
-        const response = await fetch('https://raw.githubusercontent.com/hrasbas/bascharity/main/j1.json');
-        const data = await response.json();
-        allShops = data.shops || [];
-        updateDisplay();
-    } catch (e) {
-        document.getElementById("shopList").innerHTML = "<p style='color:red; text-align:center;'>Loading Error!</p>";
+        const res = await fetch('https://raw.githubusercontent.com/hrasbas/bascharity/main/j1.json');
+        const json = await res.json();
+        shopData = json.shops || [];
+        showShops();
+    } catch (err) {
+        document.getElementById("displayArea").innerHTML = "<p style='color:red;'>Failed to load shops!</p>";
     }
 }
 
-function setCountry(country, btn) {
-    if (!country) return;
-    currentCountry = country;
-
-    // ബട്ടൺ ആക്റ്റീവ് ആക്കാൻ
+function changeCountry(name, btn) {
+    if (!name) return;
+    activeCountry = name;
+    
+    // ബട്ടൺ കളർ മാറ്റാൻ
     document.querySelectorAll(".c-btn").forEach(b => b.classList.remove("active"));
-    if (btn) btn.classList.add("active");
-
-    updateDisplay();
+    if (btn) {
+        btn.classList.add("active");
+    } else {
+        const b = document.querySelector(`.c-btn[data-id="${name}"]`);
+        if (b) b.classList.add("active");
+    }
+    
+    showShops();
 }
 
-function updateDisplay() {
-    document.getElementById("shopCountryTitle").innerText = "Shop on " + currentCountry.toUpperCase() + " Shops";
-    const filtered = allShops.filter(s => s.country.toLowerCase().trim() === currentCountry.toLowerCase().trim());
-    render(filtered);
+function showShops() {
+    document.getElementById("shopTitle").innerText = "Shop on " + activeCountry.toUpperCase() + " Shops";
+    const filtered = shopData.filter(s => s.country.toLowerCase().trim() === activeCountry.toLowerCase().trim());
+    renderUI(filtered);
 }
 
-function filterShops() {
-    const val = document.getElementById("globalSearch").value.toLowerCase().trim();
-    const filtered = allShops.filter(s => 
-        s.country.toLowerCase().trim() === currentCountry.toLowerCase().trim() && 
-        s.name.toLowerCase().includes(val)
+function searchShops() {
+    const term = document.getElementById("shopSearch").value.toLowerCase().trim();
+    const filtered = shopData.filter(s => 
+        s.country.toLowerCase().trim() === activeCountry.toLowerCase().trim() && 
+        s.name.toLowerCase().includes(term)
     );
-    render(filtered);
+    renderUI(filtered);
 }
 
-function render(list) {
-    const container = document.getElementById("shopList");
-    container.innerHTML = "";
+function renderUI(list) {
+    const area = document.getElementById("displayArea");
+    area.innerHTML = "";
     if (list.length === 0) {
-        container.innerHTML = "<p style='color:white; text-align:center;'>No shops found.</p>";
+        area.innerHTML = "<p style='color:white; text-align:center; padding:20px;'>No shops found.</p>";
         return;
     }
-    list.forEach(shop => {
-        const domain = shop.url.replace('https://','').replace('http://','').split(/[/?#]/)[0];
-        container.innerHTML += `
-            <a href="${shop.url}" target="_blank" style="display:flex; align-items:center; background:#1a1a1a; border-radius:12px; padding:12px; margin-bottom:10px; text-decoration:none; color:#fff; border:1px solid #ff9800; border-left:6px solid #ff9800;">
-                <img src="https://www.google.com/s2/favicons?sz=64&domain=${domain}" style="width:40px; height:40px; margin-right:12px; background:#fff; border-radius:8px; padding:2px;">
-                <b style="font-size:18px;">${shop.name}</b>
+    list.forEach(item => {
+        const domain = item.url.replace('https://','').replace('http://','').split(/[/?#]/)[0];
+        area.innerHTML += `
+            <a href="${item.url}" target="_blank" style="display:flex; align-items:center; background:#1a1a1a; border-radius:12px; padding:15px; margin-bottom:10px; text-decoration:none; color:#fff; border:1px solid #ff9800; border-left:6px solid #ff9800;">
+                <img src="https://www.google.com/s2/favicons?sz=64&domain=${domain}" style="width:40px; height:40px; margin-right:15px; background:#fff; border-radius:8px; padding:3px;">
+                <b style="font-size:20px;">${item.name}</b>
             </a>`;
     });
 }
 
-window.onload = loadShops;
+window.onload = init;
 </script>
 
 
