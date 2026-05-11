@@ -2679,38 +2679,21 @@ msgBox.remove();
   window.addEventListener('load', startHideLoop);
 </script>
 /* SL No: 25 A*/
- 
-/* Purpose: 
-നിങ്ങളുടെ സൈറ്റിലെ കൺട്രി ബട്ടണുകൾ ഉപയോഗിച്ച് ഷോപ്പുകളുടെ ലിസ്റ്റ് മാറുന്നതിനായി 
-ഈ സ്ക്രിപ്റ്റ് മാത്രം ഉപയോഗിച്ചാൽ മതി. ലേഔട്ട് മാറില്ല.
+ <script>
+/* ഈ ഡാറ്റ ഉപയോഗിച്ച് നിങ്ങളുടെ നിലവിലുള്ള ലിസ്റ്റിനെ മാറ്റാൻ കഴിയും.
 */
-
-<script>
-// ഷോപ്പുകളുടെ ഡാറ്റ JSON ആയി ഇവിടെ നൽകുന്നു
-const shopData = {
-  "India": ["Amazon.in", "Flipkart", "JioMart"],
-  "UAE": ["Amazon.ae", "Noon", "Carrefour"],
-  "UK": ["Amazon.co.uk", "eBay UK", "Tesco"]
+const allShops = {
+  "India": ["Amazon.in", "Flipkart", "Myntra"],
+  "UAE": ["Amazon.ae", "Noon"],
+  "UK": ["Amazon.co.uk", "eBay"]
 };
 
-// രാജ്യം മാറുമ്പോൾ ഷോപ്പുകൾ അപ്ഡേറ്റ് ചെയ്യാനുള്ള ഫംഗ്ഷൻ
-function changeCountry(countryName) {
-  const shopContainer = document.querySelector('.shop-list');
-  if (!shopContainer) return;
-
-  const shops = shopData[countryName] || [];
-  
-  let shopHtml = '';
-  shops.forEach(shop => {
-    shopHtml += `
-      <div class="shop-item">
-        <span>${shop}</span>
-      </div>`;
-  });
-  
-  shopContainer.innerHTML = shopHtml;
-  alert("Country changed to: " + countryName);
+function updateShopList(country) {
+  const shopContainer = document.querySelector('.shop-list'); 
+  if (shopContainer && allShops[country]) {
+    shopContainer.innerHTML = allShops[country].map(shop => `<span>${shop}</span>`).join('<br>');
+  }
 }
 </script>
- </body>
+  </body>
 </html>
