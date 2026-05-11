@@ -404,100 +404,66 @@ setInterval(function(){
 
 <!----------------- code No:2----------------> 
 <!-- 1. Country Selector Section -->
- <style>
-.country-box { max-width:900px; width:96%; margin:25px auto; padding:15px; background:#000; border:1px solid #ff9800; border-radius:15px; font-family:Arial,sans-serif; text-align:center; }
-.country-title { background:#333; color:#fff; font-weight:900; text-align:center; padding:10px; border-radius:10px; border:1px solid #ff9800; border-left:6px solid #ff9800; margin-bottom:15px; }
-
-.country-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px; margin-bottom: 15px; }
-
-.c-btn { 
-    background: #333; 
-    color: #fff; 
-    padding: 12px; 
-    border-radius: 10px; 
-    border: 1px solid #ff9800; 
-    border-left: 6px solid #ff9800; 
-    font-weight: bold; 
-    font-size: 16px; 
-    cursor: pointer; 
-}
-.c-btn.active { background: #ff9800 !important; color: #000 !important; }
-
-.country-select { width: 96%; padding: 12px; border-radius: 10px; border: 1px solid #ff9800; background: #333; color: #fff; font-weight: bold; }
-
-@media (max-width: 600px) {
-    .country-grid { grid-template-columns: repeat(2, 1fr); }
-}
-</style>
-
-<div class="country-box">
-    <div class="country-title">SELECT COUNTRY</div>
-    <div class="country-grid">
-        <button class="c-btn active" data-id="India" onclick="changeCountry('India', this)">India</button>
-        <button class="c-btn" data-id="USA" onclick="changeCountry('USA', this)">United states</button>
-        <button class="c-btn" data-id="UK" onclick="changeCountry('UK', this)">UK</button>
-        <button class="c-btn" data-id="Canada" onclick="changeCountry('Canada', this)">Canada</button>
-        <button class="c-btn" data-id="UAE" onclick="changeCountry('UAE', this)">UAE</button>
-        <button class="c-btn" data-id="Saudi Arabia" onclick="changeCountry('Saudi Arabia', this)">Saudi</button>
-        <button class="c-btn" data-id="Singapore" onclick="changeCountry('Singapore', this)">Singapore</button>
-        <button class="c-btn" data-id="Malaysia" onclick="changeCountry('Malaysia', this)">Malaysia</button>
-    </div>
-    <select class="country-select" onchange="changeCountry(this.value, null); this.selectedIndex=0;">
-        <option value="">Search All Countries</option>
-        <option value="India">India</option>
-        <option value="USA">USA</option>
-        <option value="UK">UK</option>
-        <option value="Canada">Canada</option>
-        <option value="UAE">UAE</option>
-        <option value="Saudi Arabia">Saudi Arabia</option>
-    </select>
-</div>
-
-<div style="max-width:900px; width:96%; margin:auto;">
-    <div style="background:#000; border-radius:14px; padding:20px; border:1px solid #ff9800; border-left:8px solid #ff9800;">
-        <h2 id="shopTitle" style="color:white; margin:0; font-weight:900;">Shop on INDIA Shops</h2>
-    </div>
-    <input type="text" id="shopSearch" onkeyup="searchShops()" placeholder="Search Shops..." style="width:100%; padding:18px; margin:15px 0; border-radius:12px; border:3px solid #00e5ff; background:#111; color:#fff; font-size:18px; box-sizing:border-box;">
-    <div id="displayArea"></div>
-</div>
-
-<script>
+     <script>
 let shopData = [];
 let activeCountry = "India";
 
+// 1. ഫയൽ ലോഡ് ചെയ്യാനുള്ള ഫങ്ക്ഷൻ (കൂടുതൽ സുരക്ഷിതമായ രീതി)
 async function init() {
+    const jsonUrl = 'https://raw.githubusercontent.com/hrasbas/bascharity/main/j1.json';
+    const area = document.getElementById("displayArea");
+    
     try {
-        const res = await fetch('https://raw.githubusercontent.com/hrasbas/bascharity/main/j1.json');
+        area.innerHTML = "<p style='color:orange; text-align:center;'>Loading...</p>";
+        
+        const res = await fetch(jsonUrl);
+        if (!res.ok) throw new Error('Network Response Failed');
+        
         const json = await res.json();
         shopData = json.shops || [];
-        showShops();
+        
+        if(shopData.length === 0) {
+            area.innerHTML = "<p style='color:red; text-align:center;'>No data found in JSON!</p>";
+        } else {
+            showShops();
+        }
     } catch (err) {
-        document.getElementById("displayArea").innerHTML = "<p style='color:red;'>Failed to load shops!</p>";
+        console.error("Fetch Error:", err);
+        area.innerHTML = "<p style='color:red; text-align:center;'>Failed to load shops! Please check Link.</p>";
     }
 }
 
+// 2. രാജ്യം മാറ്റുമ്പോൾ പ്രവർത്തിക്കുന്നത്
 function changeCountry(name, btn) {
     if (!name) return;
     activeCountry = name;
     
-    // ബട്ടൺ കളർ മാറ്റാൻ
+    // ബട്ടൺ ആക്റ്റീവ് ആക്കാൻ
     document.querySelectorAll(".c-btn").forEach(b => b.classList.remove("active"));
     if (btn) {
         btn.classList.add("active");
     } else {
-        const b = document.querySelector(`.c-btn[data-id="${name}"]`);
-        if (b) b.classList.add("active");
+        // ഡ്രോപ്പ് ഡൗൺ വഴിയാണെങ്കിൽ ബട്ടൺ കണ്ടുപിടിക്കുന്നു
+        const allBtns = document.querySelectorAll(".c-btn");
+        allBtns.forEach(b => {
+            if(b.innerText.trim().toLowerCase() === name.toLowerCase().trim()) b.classList.add("active");
+        });
     }
-    
     showShops();
 }
 
+// 3. ഷോപ്പുകൾ കാണിക്കുന്നത്
 function showShops() {
     document.getElementById("shopTitle").innerText = "Shop on " + activeCountry.toUpperCase() + " Shops";
-    const filtered = shopData.filter(s => s.country.toLowerCase().trim() === activeCountry.toLowerCase().trim());
+    
+    // രാജ്യം മാച്ച് ചെയ്യുന്നുണ്ടോ എന്ന് നോക്കുന്നു (Case Insensitive)
+    const filtered = shopData.filter(s => 
+        s.country.toLowerCase().trim() === activeCountry.toLowerCase().trim()
+    );
     renderUI(filtered);
 }
 
+// 4. സെർച്ച് ബോക്സ് പ്രവർത്തിക്കുന്നത്
 function searchShops() {
     const term = document.getElementById("shopSearch").value.toLowerCase().trim();
     const filtered = shopData.filter(s => 
@@ -507,26 +473,34 @@ function searchShops() {
     renderUI(filtered);
 }
 
+// 5. ലിസ്റ്റ് ഡിസ്പ്ലേ ചെയ്യുന്നത്
 function renderUI(list) {
     const area = document.getElementById("displayArea");
     area.innerHTML = "";
+    
     if (list.length === 0) {
-        area.innerHTML = "<p style='color:white; text-align:center; padding:20px;'>No shops found.</p>";
+        area.innerHTML = "<p style='color:white; text-align:center; padding:20px;'>No shops found for " + activeCountry + ".</p>";
         return;
     }
+    
     list.forEach(item => {
-        const domain = item.url.replace('https://','').replace('http://','').split(/[/?#]/)[0];
+        // ലോഗോ എടുക്കാൻ ഡൊമെയ്ൻ വേർതിരിക്കുന്നു
+        let domain = "";
+        try {
+            domain = item.url.replace('https://','').replace('http://','').split(/[/?#]/)[0];
+        } catch(e) { domain = "google.com"; }
+        
         area.innerHTML += `
             <a href="${item.url}" target="_blank" style="display:flex; align-items:center; background:#1a1a1a; border-radius:12px; padding:15px; margin-bottom:10px; text-decoration:none; color:#fff; border:1px solid #ff9800; border-left:6px solid #ff9800;">
                 <img src="https://www.google.com/s2/favicons?sz=64&domain=${domain}" style="width:40px; height:40px; margin-right:15px; background:#fff; border-radius:8px; padding:3px;">
-                <b style="font-size:20px;">${item.name}</b>
+                <b class="notranslate" translate="no" style="font-size:20px;">${item.name}</b>
             </a>`;
     });
 }
 
-window.onload = init;
+// പേജ് റെഡി ആകുമ്പോൾ ലോഡ് ചെയ്യുന്നു
+document.addEventListener("DOMContentLoaded", init);
 </script>
-
 
 <style> 
 .compare-container{
