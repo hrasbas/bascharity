@@ -403,312 +403,99 @@ setInterval(function(){
 
 
 <!----------------- code No:2---------------->
+                               <script>
+let countryShops = []; // JSON-ൽ നിന്നുള്ള എല്ലാ ഷോപ്പുകളും സൂക്ഷിക്കാൻ
 
-<style>
-.country-box{
-    max-width:900px;
-    width:96%;
-    margin:25px auto;
-    padding:15px;
-    background:#000;
-    border:1px solid #ff9800;
-    border-radius:15px;
-    font-family:Arial,sans-serif;
+// 1. j1.json ഫയൽ ലോഡ് ചെയ്യുന്നു
+async function loadJsonData() {
+    try {
+        const response = await fetch('j1.json');
+        const data = await response.json();
+        countryShops = data.shops; // JSON-ലെ 'shops' ലിസ്റ്റ് എടുക്കുന്നു
+        
+        let saved = localStorage.getItem("bas_country") || "india";
+        setCountry(saved);
+    } catch (error) {
+        console.error("Error loading JSON:", error);
+    }
 }
 
-.country-title{
-    background:#333;
-    color:#fff;
-    font-weight:900;
-    text-align:center;
-    padding:10px;
-    border-radius:10px;
-    border:1px solid #ff9800;
-    border-left:6px solid #ff9800;
-    margin-bottom:10px;
-}
-
-.country-grid{
-    display:grid;
-    grid-template-columns:repeat(2,1fr);
-    gap:8px;
-}
-
-.country-btn{
-    background:#333;
-    color:#fff;
-    padding:10px;
-    text-align:center;
-    border-radius:10px;
-    border:1px solid #ff9800;
-    border-left:6px solid #ff9800;
-    font-weight:bold;
-    cursor:pointer;
-}
-
-.country-btn:hover{
-    transform:scale(1.05);
-    transition:0.2s;
-}
-
-.country-btn.active{
-    background:#ff9800;
-    color:#000;
-}
-
-.all-country{
-    margin-top:10px;
-}
-
-.all-country select{
-    width:96%;
-    padding:10px;
-    border-radius:10px;
-    border:1px solid #ff9800;
-    border-left:6px solid #ff9800;
-    background:#333;
-    color:#fff;
-    font-weight:bold;
-    cursor:pointer;
-}
-</style>
-
-<div class="country-box">
-    <div class="country-title">SELECT COUNTRY</div>
-    <div class="country-grid">
-        <div class="country-btn" data-country="india" onclick="setCountry('india',this)">India</div>
-        <div class="country-btn" data-country="usa" onclick="setCountry('usa',this)">United states</div>
-        <div class="country-btn" data-country="uk" onclick="setCountry('uk',this)">UK</div>
-        <div class="country-btn" data-country="canada" onclick="setCountry('canada',this)">Canada</div>
-        <div class="country-btn" data-country="uae" onclick="setCountry('uae',this)">UAE</div>
-        <div class="country-btn" data-country="saudi" onclick="setCountry('saudi',this)">Saudi</div>
-        <div class="country-btn" data-country="singapore" onclick="setCountry('singapore',this)">Singapore</div>
-        <div class="country-btn" data-country="malaysia" onclick="setCountry('malaysia',this)">Malaysia</div>
-    </div>
-
-    <div class="all-country">
-        <select onchange="setCountry(this.value); this.selectedIndex=0;">
-            <option value="">Search All Countries</option>
-            <option value="india">India</option>
-            <option value="usa">USA</option>
-            <option value="uk">UK</option>
-            <option value="canada">Canada</option>
-            <option value="uae">UAE</option>
-            <option value="germany">Germany</option>
-            <option value="france">France</option>
-            <option value="australia">Australia</option>
-            <option value="saudi">Saudi Arabia</option>
-            <option value="singapore">Singapore</option>
-            <option value="malaysia">Malaysia</option>
-            <option value="indonesia">Indonesia</option>
-            <option value="thailand">Thailand</option>
-            <option value="philippines">Philippines</option>
-            <option value="qatar">Qatar</option>
-            <option value="kuwait">Kuwait</option>
-            <option value="oman">Oman</option>
-            <option value="bahrain">Bahrain</option>
-            <option value="netherlands">Netherlands</option>
-            <option value="sweden">Sweden</option>
-            <option value="poland">Poland</option>
-            <option value="italy">Italy</option>
-            <option value="spain">Spain</option>
-            <option value="newzealand">New Zealand</option>
-        </select>
-    </div>
-</div>
-  <style>
-.shop-container{
-    max-width:900px;
-    width: 96%;
-    margin:20px auto;
-    padding:15px;
-}
-.shop-title-box{
-    background:#000;
-    border-radius:14px;
-    padding:20px;
-    border:1px solid #ff9800;
-    border-left:8px solid #ff9800;
-}
-.shop-title-box h2{
-    margin:0;
-    font-size:26px;
-    font-weight:900;
-    color:#fff;
-}
-.shop-title-box span{
-    display:block;
-    margin-top:6px;
-    font-size:13px;
-    color:#ffb74d;
-}
-.global-search{
-    width:96%;
-    padding:18px;
-    border-radius:12px;
-    border:3px solid #00e5ff;
-    background:#111;
-    color:#fff;
-    font-size:20px;
-    margin-top:15px;
-    margin-bottom:12px;
-}
-.shop-btn{
-    display:flex;
-    align-items:center;
-    background:#1a1a1a;
-    border-radius:12px;
-    padding:12px;
-    margin-bottom:10px;
-    text-decoration:none;
-    color:#fff;
-    border:1px solid #ff9800;
-    border-left:6px solid #ff9800;
-}
-.shop-logo{
-    width:42px;
-    height:42px;
-    border-radius:8px;
-    margin-right:12px;
-    background:#fff;
-    object-fit:contain;
-    padding:3px;
-}
-.shop-info b{
-    font-size:20px;
-    display:block;
-}
-</style>
-
-<div class="shop-container">
-
-    <div class="shop-title-box">
-
-        <h2 id="shopCountryTitle">
-            Shop on INDIA Shops
-        </h2>
-
-        <span>
-            (Shops & items categorised at the end of the site)
-        </span>
-
-    </div>
-
-    <input
-        type="text"
-        id="globalSearch"
-        class="global-search"
-        placeholder="Search 1000+ Shops"
-        onkeyup="filterShops()"
-    >
-
-    <div id="shopList"></div>
-
-</div>
-
-<script>
-
+// 2. രാജ്യം സെലക്ട് ചെയ്യുമ്പോൾ
 function setCountry(country, btn) {
-
     if (country === "") return;
 
     localStorage.setItem("bas_country", country);
 
-    document.querySelectorAll(".country-btn")
-    .forEach(b => b.classList.remove("active"));
+    document.querySelectorAll(".country-btn").forEach(b => b.classList.remove("active"));
 
     if (btn) {
-
         btn.classList.add("active");
-
     } else {
-
-        let activeBtn = document.querySelector(
-            '.country-btn[data-country="' + country + '"]'
-        );
-
+        let activeBtn = document.querySelector('.country-btn[data-country="' + country.toLowerCase() + '"]');
         if (activeBtn) activeBtn.classList.add("active");
     }
 
     updateCountryTitle();
 }
 
+// 3. പേജിൽ ഷോപ്പുകൾ കാണിക്കാൻ
 function renderShops(list) {
-
-    const container =
-        document.getElementById("shopList");
-
+    const container = document.getElementById("shopList");
     container.innerHTML = "";
 
-    if (!list) return;
+    if (!list || list.length === 0) {
+        container.innerHTML = "<p style='color:#fff; text-align:center;'>No shops found for this country.</p>";
+        return;
+    }
 
     list.forEach(function(shop) {
-
         const a = document.createElement("a");
-
         a.className = "shop-btn";
-
-        a.href = shop.link;
-
+        a.href = shop.url; // JSON-ലെ 'url' ഉപയോഗിക്കുന്നു
         a.target = "_blank";
 
+        // ലോഗോ ഇല്ലെങ്കിൽ ഒരു പ്ലേസ്ഹോൾഡർ അല്ലെങ്കിൽ ഷോപ്പ് പേരിന്റെ ആദ്യ അക്ഷരം കാണിക്കാം
+        const logoImg = shop.logo ? shop.logo : "https://ui-avatars.com/api/?name=" + shop.name;
+
         a.innerHTML =
-            '<img class="shop-logo" src="' + shop.logo + '">' +
+            '<img class="shop-logo" src="' + logoImg + '">' +
             '<div class="shop-info notranslate" translate="no"><b>' +
             shop.name +
             '</b></div>';
 
         container.appendChild(a);
-
     });
 }
 
+// 4. സെർച്ച് ചെയ്യുമ്പോൾ
 function filterShops() {
+    let value = document.getElementById("globalSearch").value.toLowerCase();
+    let country = localStorage.getItem("bas_country") || "india";
 
-    let value =
-        document.getElementById("globalSearch")
-        .value
-        .toLowerCase();
+    // നിലവിലെ രാജ്യത്തെ ഷോപ്പുകൾ മാത്രം ഫിൽട്ടർ ചെയ്യുന്നു
+    const currentCountryShops = countryShops.filter(s => s.country.toLowerCase() === country.toLowerCase());
 
-    let country =
-        localStorage.getItem("bas_country") || "india";
-
-    let shops =
-        countryShops[country] || [];
-
-    const filtered = shops.filter(function(s) {
-
+    const filtered = currentCountryShops.filter(function(s) {
         return s.name.toLowerCase().includes(value);
-
     });
 
     renderShops(filtered);
 }
 
+// 5. ടൈറ്റിൽ അപ്ഡേറ്റ് ചെയ്യാൻ
 function updateCountryTitle() {
+    let country = localStorage.getItem("bas_country") || "india";
+    document.getElementById("shopCountryTitle").innerText = "Shop on " + country.toUpperCase() + " Shops";
 
-    let country =
-        localStorage.getItem("bas_country") || "india";
-
-    document.getElementById("shopCountryTitle").innerText =
-        "Shop on " + country.toUpperCase() + " Shops";
-
-    let shops =
-        countryShops[country] || [];
-
-    renderShops(shops);
+    // JSON-ൽ നിന്ന് ആ രാജ്യത്തെ ഷോപ്പുകൾ മാത്രം എടുക്കുന്നു
+    const filtered = countryShops.filter(s => s.country.toLowerCase() === country.toLowerCase());
+    renderShops(filtered);
 }
 
-window.addEventListener("load", function() {
-
-    let saved =
-        localStorage.getItem("bas_country") || "india";
-
-    setCountry(saved);
-
-});
-
+// പേജ് ലോഡ് ചെയ്യുമ്പോൾ JSON ലോഡ് ചെയ്യുന്നു
+window.addEventListener("load", loadJsonData);
 </script>
+>
 <style> 
 .compare-container{
     max-width:900px;
