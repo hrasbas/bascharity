@@ -2679,70 +2679,38 @@ msgBox.remove();
   window.addEventListener('load', startHideLoop);
 </script>
 /* SL No: 25 */
-          
-/* ഈ കോഡ് എന്തിനാണെന്ന് (Purpose): 
-JSON-ൽ ഉള്ള രാജ്യങ്ങളുടെ ലിസ്റ്റ് ഉപയോഗിച്ച് ഒരു ഡ്രോപ്പ്ഡൗൺ (Country Selector) 
-ഉണ്ടാക്കാനും, ഒരു രാജ്യം സെലക്ട് ചെയ്യുമ്പോൾ അതനുസരിച്ചുള്ള ഷോപ്പുകൾ കാണിക്കാനും ഇത് സഹായിക്കുന്നു.
+ 
+/* Purpose: 
+നിങ്ങളുടെ സൈറ്റിലെ കൺട്രി ബട്ടണുകൾ ഉപയോഗിച്ച് ഷോപ്പുകളുടെ ലിസ്റ്റ് മാറുന്നതിനായി 
+ഈ സ്ക്രിപ്റ്റ് മാത്രം ഉപയോഗിച്ചാൽ മതി. ലേഔട്ട് മാറില്ല.
 */
 
-<script type="application/json" id="countryShopData">
-{
-  "India": ["Amazon.in", "Flipkart", "Jiomart"],
+<script>
+// ഷോപ്പുകളുടെ ഡാറ്റ JSON ആയി ഇവിടെ നൽകുന്നു
+const shopData = {
+  "India": ["Amazon.in", "Flipkart", "JioMart"],
   "UAE": ["Amazon.ae", "Noon", "Carrefour"],
   "UK": ["Amazon.co.uk", "eBay UK", "Tesco"]
+};
+
+// രാജ്യം മാറുമ്പോൾ ഷോപ്പുകൾ അപ്ഡേറ്റ് ചെയ്യാനുള്ള ഫംഗ്ഷൻ
+function changeCountry(countryName) {
+  const shopContainer = document.querySelector('.shop-list');
+  if (!shopContainer) return;
+
+  const shops = shopData[countryName] || [];
+  
+  let shopHtml = '';
+  shops.forEach(shop => {
+    shopHtml += `
+      <div class="shop-item">
+        <span>${shop}</span>
+      </div>`;
+  });
+  
+  shopContainer.innerHTML = shopHtml;
+  alert("Country changed to: " + countryName);
 }
 </script>
-
-<style>
-  .selector-container {
-    background: #222;
-    padding: 15px;
-    border-radius: 8px;
-    color: white;
-    margin: 10px 0;
-  }
-  select {
-    width: 100%;
-    padding: 8px;
-    margin-top: 5px;
-    border-radius: 4px;
-  }
-  .shop-display {
-    margin-top: 10px;
-    font-size: 0.9em;
-    color: #ffd700;
-  }
-</style>
-
-<div class="selector-container">
-  <label>Select Country:</label>
-  <select id="countrySelect" onchange="updateShops()">
-    <option value="">-- Choose --</option>
-    <option value="India">India</option>
-    <option value="UAE">UAE</option>
-    <option value="UK">UK</option>
-  </select>
-
-  <div id="shopList" class="shop-display"></div>
-</div>
-
-<script>
-  function updateShops() {
-    const selectedCountry = document.getElementById('countrySelect').value;
-    const data = JSON.parse(document.getElementById('countryShopData').textContent);
-    const display = document.getElementById('shopList');
-    
-    if (selectedCountry && data[selectedCountry]) {
-      display.innerHTML = "Available Shops: " + data[selectedCountry].join(", ");
-    } else {
-      display.innerHTML = "";
-    }
-  }
-</script>
-</body>
+ </body>
 </html>
-
-
-
-
- 
