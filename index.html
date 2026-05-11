@@ -403,59 +403,93 @@ setInterval(function(){
 
 
 <!----------------- code No:2----------------> 
-        <div class="country-box">
-    <div class="country-title">SELECT COUNTRY</div>
-    <div class="country-grid">
-        <div class="country-btn" data-country="india" onclick="setCountry('india',this)">India</div>
-        <div class="country-btn" data-country="usa" onclick="setCountry('usa',this)">United states</div>
-        <div class="country-btn" data-country="uk" onclick="setCountry('uk',this)">UK</div>
-        <div class="country-btn" data-country="canada" onclick="setCountry('canada',this)">Canada</div>
-        <div class="country-btn" data-country="uae" onclick="setCountry('uae',this)">UAE</div>
-        <div class="country-btn" data-country="saudi" onclick="setCountry('saudi',this)">Saudi</div>
-        <div class="country-btn" data-country="singapore" onclick="setCountry('singapore',this)">Singapore</div>
-        <div class="country-btn" data-country="malaysia" onclick="setCountry('malaysia',this)">Malaysia</div>
-    </div>
+<script>
+  let allShopsData = []; // JSON-ൽ നിന്നുള്ള മുഴുവൻ ഷോപ്പുകളും ഇവിടെ സൂക്ഷിക്കും
 
-    <div class="all-country">
-        <select onchange="setCountry(this.value); this.selectedIndex=0;">
-            <option value="">Search All Countries</option>
-            <option value="india">India</option>
-            <option value="usa">USA</option>
-            <option value="uk">UK</option>
-            <option value="canada">Canada</option>
-            <option value="uae">UAE</option>
-            <option value="germany">Germany</option>
-            <option value="france">France</option>
-            <option value="australia">Australia</option>
-            <option value="saudi">Saudi Arabia</option>
-            <option value="singapore">Singapore</option>
-            <option value="malaysia">Malaysia</option>
-            <option value="indonesia">Indonesia</option>
-            <option value="thailand">Thailand</option>
-            <option value="philippines">Philippines</option>
-            <option value="qatar">Qatar</option>
-            <option value="kuwait">Kuwait</option>
-            <option value="oman">Oman</option>
-            <option value="bahrain">Bahrain</option>
-            <option value="netherlands">Netherlands</option>
-            <option value="sweden">Sweden</option>
-            <option value="poland">Poland</option>
-            <option value="italy">Italy</option>
-            <option value="spain">Spain</option>
-            <option value="newzealand">New Zealand</option>
-        </select>
-    </div>
-</div>
+  // 1. JSON ഫയലിൽ നിന്ന് ഡാറ്റ Fetch ചെയ്യാനുള്ള ഫംഗ്ഷൻ
+  async function fetchShopData() {
+    const jsonUrl = "https://raw.githubusercontent.com/hrasbas/bascharity/main/j1.json";
+    try {
+      const response = await fetch(jsonUrl);
+      const data = await response.json();
+      allShopsData = data.shops;
+      
+      // ഡാറ്റ ലോഡ് ആയിക്കഴിഞ്ഞാൽ സേവ് ചെയ്ത കൺട്രി പ്രകാരം ഡിസ്പ്ലേ ചെയ്യുക
+      let saved = localStorage.getItem("bas_country") || "india";
+      setCountry(saved);
+    } catch (error) {
+      console.error("JSON ലോഡ് ചെയ്യുന്നതിൽ പിശക്:", error);
+      document.getElementById("shopList").innerHTML = "<p style='color:white; text-align:center;'>Data loading failed. Please check your internet.</p>";
+    }
+  }
 
-<div class="shop-container">
-    <div class="shop-title-box">
-        <h2 id="shopCountryTitle">Shop on INDIA Shops</h2>
-        <span>(Shops & items categorised at the end of the site)</span>
-    </div>
+  // 2. കൺട്രി സെലക്ട് ചെയ്യുമ്പോൾ ഉള്ള മാറ്റങ്ങൾ
+  function setCountry(country, btn) {
+    if (!country) return;
+    localStorage.setItem("bas_country", country);
 
-    <input type="text" id="globalSearch" class="global-search" placeholder="Search 100+ Shops" onkeyup="filterShops()">
-    <div id="shopList"></div>
-</div>
+    // ആക്റ്റീവ് ബട്ടൺ സ്റ്റൈൽ മാറ്റം
+    document.querySelectorAll(".country-btn").forEach(b => b.classList.remove("active"));
+    if (btn) {
+      btn.classList.add("active");
+    } else {
+      let activeBtn = document.querySelector('.country-btn[data-country="' + country.toLowerCase() + '"]');
+      if (activeBtn) activeBtn.classList.add("active");
+    }
+
+    updateCountryTitle();
+  }
+
+  // 3. കൺട്രിക്ക് അനുസരിച്ചുള്ള ഷോപ്പുകൾ ഫിൽട്ടർ ചെയ്ത് കാണിക്കുന്നു
+  function updateCountryTitle() {
+    let country = localStorage.getItem("bas_country") || "india";
+    document.getElementById("shopCountryTitle").innerText = "Shop on " + country.toUpperCase() + " Shops";
+    
+    // JSON ഡാറ്റയിൽ നിന്ന് കൺട്രി മാച്ച് ആവുന്ന ഷോപ്പുകൾ മാത്രം എടുക്കുന്നു
+    const filteredShops = allShopsData.filter(s => s.country.toLowerCase() === country.toLowerCase());
+    renderShops(filteredShops);
+  }
+
+  // 4. ഷോപ്പുകൾ സ്ക്രീനിൽ കാണിക്കുന്ന ഫംഗ്ഷൻ
+  function renderShops(list) {
+    const container = document.getElementById("shopList");
+    container.innerHTML = "";
+    
+    if (list.length === 0) {
+      container.innerHTML = "<p style='color:#ffb74d; text-align:center;'>No shops found for this category.</p>";
+      return;
+    }
+
+    list.forEach(function(shop) {
+      const a = document.createElement("a");
+      a.className = "shop-btn";
+      a.href = shop.url; // JSON-ൽ 'url' എന്നാണ് കീ നൽകിയിരിക്കുന്നത്
+      a.target = "_blank";
+      
+      // ലോഗോ ലിങ്ക് ഉണ്ടെങ്കിൽ അത് കാണിക്കും, ഇല്ലെങ്കിൽ ഒരു ഡിഫോൾട്ട് ബാഗ് ഐക്കൺ
+      const logoSrc = shop.logo ? shop.logo : "https://cdn-icons-png.flaticon.com/512/1170/1170678.png";
+      
+      a.innerHTML = '<img class="shop-logo" src="' + logoSrc + '">' +
+                    '<div class="shop-info notranslate" translate="no"><b>' + shop.name + '</b></div>';
+      container.appendChild(a);
+    });
+  }
+
+  // 5. സെർച്ച് ബോക്സ് ഫിൽട്ടർ
+  function filterShops() {
+    let value = document.getElementById("globalSearch").value.toLowerCase();
+    let country = localStorage.getItem("bas_country") || "india";
+    
+    const filtered = allShopsData.filter(function(s) {
+      return s.country.toLowerCase() === country.toLowerCase() && 
+             s.name.toLowerCase().includes(value);
+    });
+    renderShops(filtered);
+  }
+
+  // പേജ് ലോഡ് ആകുമ്പോൾ JSON Fetch തുടങ്ങുന്നു
+  window.addEventListener("load", fetchShopData);
+</script>
 
 <style> 
 .compare-container{
