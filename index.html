@@ -402,104 +402,60 @@ setInterval(function(){
 </script>
 
 
-<!----------------- code No:2---------------->
-                                    <script>
-let countryShops = []; // JSON ഡാറ്റ ഇവിടെ സൂക്ഷിക്കും
+<!----------------- code No:2----------------> 
+        <div class="country-box">
+    <div class="country-title">SELECT COUNTRY</div>
+    <div class="country-grid">
+        <div class="country-btn" data-country="india" onclick="setCountry('india',this)">India</div>
+        <div class="country-btn" data-country="usa" onclick="setCountry('usa',this)">United states</div>
+        <div class="country-btn" data-country="uk" onclick="setCountry('uk',this)">UK</div>
+        <div class="country-btn" data-country="canada" onclick="setCountry('canada',this)">Canada</div>
+        <div class="country-btn" data-country="uae" onclick="setCountry('uae',this)">UAE</div>
+        <div class="country-btn" data-country="saudi" onclick="setCountry('saudi',this)">Saudi</div>
+        <div class="country-btn" data-country="singapore" onclick="setCountry('singapore',this)">Singapore</div>
+        <div class="country-btn" data-country="malaysia" onclick="setCountry('malaysia',this)">Malaysia</div>
+    </div>
 
-// 1. j1.json ഫയൽ ലോഡ് ചെയ്യുന്നു
-async function loadJsonData() {
-    try {
-        const response = await fetch('j1.json');
-        const data = await response.json();
-        countryShops = data.shops; // JSON-ലെ 'shops' ലിസ്റ്റ് എടുക്കുന്നു
-        
-        // ലോക്കൽ സ്റ്റോറേജിൽ നിന്ന് സേവ് ചെയ്ത രാജ്യം എടുക്കുന്നു (ഇല്ലെങ്കിൽ India)
-        let saved = localStorage.getItem("bas_country") || "India";
-        setCountry(saved);
-    } catch (error) {
-        console.error("Error: j1.json ഫയൽ കണ്ടെത്താനായില്ല!", error);
-    }
-}
+    <div class="all-country">
+        <select onchange="setCountry(this.value); this.selectedIndex=0;">
+            <option value="">Search All Countries</option>
+            <option value="india">India</option>
+            <option value="usa">USA</option>
+            <option value="uk">UK</option>
+            <option value="canada">Canada</option>
+            <option value="uae">UAE</option>
+            <option value="germany">Germany</option>
+            <option value="france">France</option>
+            <option value="australia">Australia</option>
+            <option value="saudi">Saudi Arabia</option>
+            <option value="singapore">Singapore</option>
+            <option value="malaysia">Malaysia</option>
+            <option value="indonesia">Indonesia</option>
+            <option value="thailand">Thailand</option>
+            <option value="philippines">Philippines</option>
+            <option value="qatar">Qatar</option>
+            <option value="kuwait">Kuwait</option>
+            <option value="oman">Oman</option>
+            <option value="bahrain">Bahrain</option>
+            <option value="netherlands">Netherlands</option>
+            <option value="sweden">Sweden</option>
+            <option value="poland">Poland</option>
+            <option value="italy">Italy</option>
+            <option value="spain">Spain</option>
+            <option value="newzealand">New Zealand</option>
+        </select>
+    </div>
+</div>
 
-// 2. രാജ്യം മാറ്റുമ്പോൾ
-function setCountry(country, btn) {
-    if (!country) return;
+<div class="shop-container">
+    <div class="shop-title-box">
+        <h2 id="shopCountryTitle">Shop on INDIA Shops</h2>
+        <span>(Shops & items categorised at the end of the site)</span>
+    </div>
 
-    localStorage.setItem("bas_country", country);
-
-    // പഴയ ആക്റ്റീവ് ബട്ടണുകളെ മാറ്റുന്നു
-    document.querySelectorAll(".country-btn").forEach(b => b.classList.remove("active"));
-
-    // പുതിയ ആക്റ്റീവ് ബട്ടൺ സെറ്റ് ചെയ്യുന്നു
-    if (btn) {
-        btn.classList.add("active");
-    } else {
-        // ഡാറ്റ ആട്രിബ്യൂട്ട് നോക്കി ബട്ടൺ കണ്ടെത്തുന്നു (case insensitive)
-        let activeBtn = document.querySelector('.country-btn[data-country="' + country.toLowerCase() + '"]');
-        if (activeBtn) activeBtn.classList.add("active");
-    }
-
-    updateCountryTitle();
-}
-
-// 3. ലിസ്റ്റ് കാണിക്കാൻ
-function renderShops(list) {
-    const container = document.getElementById("shopList");
-    container.innerHTML = "";
-
-    if (!list || list.length === 0) {
-        container.innerHTML = "<p style='color:#fff; text-align:center; padding:20px;'>No shops found.</p>";
-        return;
-    }
-
-    list.forEach(function(shop) {
-        const a = document.createElement("a");
-        a.className = "shop-btn";
-        a.href = shop.url; // JSON-ലെ 'url'
-        a.target = "_blank";
-
-        // ലോഗോ ഇല്ലെങ്കിൽ ഒരു കളർഫുൾ ഐക്കൺ കാണിക്കാൻ
-        const logoImg = shop.logo ? shop.logo : "https://ui-avatars.com/api/?name=" + shop.name + "&background=random";
-
-        a.innerHTML =
-            '<img class="shop-logo" src="' + logoImg + '">' +
-            '<div class="shop-info notranslate" translate="no"><b>' +
-            shop.name +
-            '</b></div>';
-
-        container.appendChild(a);
-    });
-}
-
-// 4. സെർച്ച് ബാർ വർക്ക് ചെയ്യാൻ
-function filterShops() {
-    let value = document.getElementById("globalSearch").value.toLowerCase();
-    let country = localStorage.getItem("bas_country") || "India";
-
-    // ആ രാജ്യത്തെ ഷോപ്പുകൾ മാത്രം ഫിൽട്ടർ ചെയ്യുന്നു
-    const currentCountryShops = countryShops.filter(s => s.country.toLowerCase() === country.toLowerCase());
-
-    const filtered = currentCountryShops.filter(function(s) {
-        return s.name.toLowerCase().includes(value);
-    });
-
-    renderShops(filtered);
-}
-
-// 5. ടൈറ്റിലും ഷോപ്പുകളും അപ്ഡേറ്റ് ചെയ്യാൻ
-function updateCountryTitle() {
-    let country = localStorage.getItem("bas_country") || "India";
-    document.getElementById("shopCountryTitle").innerText = "Shop on " + country.toUpperCase() + " Shops";
-
-    // JSON-ൽ നിന്ന് ആ രാജ്യത്തെ ഷോപ്പുകൾ മാത്രം എടുക്കുന്നു
-    const filtered = countryShops.filter(s => s.country.toLowerCase() === country.toLowerCase());
-    renderShops(filtered);
-}
-
-// പേജ് ലോഡ് ആകുമ്പോൾ ഡാറ്റ വിളിക്കുന്നു
-window.addEventListener("load", loadJsonData);
-</script>
-
+    <input type="text" id="globalSearch" class="global-search" placeholder="Search 100+ Shops" onkeyup="filterShops()">
+    <div id="shopList"></div>
+</div>
 
 <style> 
 .compare-container{
