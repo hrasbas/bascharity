@@ -2678,6 +2678,97 @@ msgBox.remove();
   
   window.addEventListener('load', startHideLoop);
 </script>
+/* SL No: 25 */
+
+/* ഈ കോഡ് എന്തിനാണെന്ന് (Purpose): 
+ഒരു വെബ്പേജിന് ആവശ്യമായ HTML ഘടന, ഡിസൈൻ (CSS), പ്രവർത്തനം (JavaScript), 
+കൂടാതെ ഡാറ്റ കൈകാര്യം ചെയ്യാനുള്ള JSON മാതൃക എന്നിവയെല്ലാം ഒറ്റ ബ്ലോക്കിൽ ഉൾപ്പെടുത്തിയിരിക്കുന്നു.
+*/
+
+<script type="application/json" id="projectData">
+{
+  "projectName": "BAS International Charity",
+  "goal": "100% donation reaches beneficiary",
+  "status": "Active",
+  "stockTarget": 600
+}
+</script>
+
+<style>
+  body {
+    font-family: sans-serif;
+    background-color: #f4f4f4;
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+  }
+  .main-card {
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    text-align: center;
+    max-width: 400px;
+  }
+  .btn-charity {
+    background: #27ae60;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+</style>
+
+<body>
+  <div class="main-card">
+    <h2>BAS Charity</h2>
+    <p id="message">YOUR PURCHASE SATISFIES A HUNGER</p>
+    <button class="btn-charity" onclick="showInfo()">More Info</button>
+  </div>
+</body>
+
+<script>
+  function showInfo() {
+    const dataElement = document.getElementById('projectData');
+    const data = JSON.parse(dataElement.textContent);
+    alert("Project: " + data.projectName + "\nGoal: " + data.goal);
+    console.log("Current Stock Target: " + data.stockTarget);
+  }
+</script>
+/* SL No: 26 */
+
+/* ഈ കോഡ് എന്തിനാണെന്ന് (Purpose): 
+JSON ഡാറ്റ ശരിയായി വർക്ക് ചെയ്യാനും വെബ്പേജ് വേഗത്തിൽ ലോഡ് ആകാനും വേണ്ടി 
+സ്ക്രിപ്റ്റുകൾ </body> ടാഗിന് തൊട്ടുമുകളിൽ ക്രമീകരിച്ചിരിക്കുന്നു.
+*/
+
+<script type="application/json" id="projectData">
+{
+  "projectName": "BAS International Charity",
+  "mission": "Helping through affiliate marketing",
+  "stockTarget": 600
+}
+</script>
+
+<body>
+  <div class="main-card">
+    <h2>BAS Charity Data</h2>
+    <div id="data-display">JSON ഡാറ്റ ഇവിടെ കാണാം...</div>
+  </div>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      const dataElement = document.getElementById('projectData');
+      const data = JSON.parse(dataElement.textContent);
+      
+      document.getElementById('data-display').innerHTML = `
+        <p>Project: ${data.projectName}</p>
+        <p>Target: ${data.stockTarget}</p>
+      `;
+    });
+  </script>
+</body>
 
 </body>
 </html>
