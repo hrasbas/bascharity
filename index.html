@@ -403,8 +403,8 @@ setInterval(function(){
 
 
 <!----------------- code No:2---------------->
-                               <script>
-let countryShops = []; // JSON-ൽ നിന്നുള്ള എല്ലാ ഷോപ്പുകളും സൂക്ഷിക്കാൻ
+                                    <script>
+let countryShops = []; // JSON ഡാറ്റ ഇവിടെ സൂക്ഷിക്കും
 
 // 1. j1.json ഫയൽ ലോഡ് ചെയ്യുന്നു
 async function loadJsonData() {
@@ -413,24 +413,28 @@ async function loadJsonData() {
         const data = await response.json();
         countryShops = data.shops; // JSON-ലെ 'shops' ലിസ്റ്റ് എടുക്കുന്നു
         
-        let saved = localStorage.getItem("bas_country") || "india";
+        // ലോക്കൽ സ്റ്റോറേജിൽ നിന്ന് സേവ് ചെയ്ത രാജ്യം എടുക്കുന്നു (ഇല്ലെങ്കിൽ India)
+        let saved = localStorage.getItem("bas_country") || "India";
         setCountry(saved);
     } catch (error) {
-        console.error("Error loading JSON:", error);
+        console.error("Error: j1.json ഫയൽ കണ്ടെത്താനായില്ല!", error);
     }
 }
 
-// 2. രാജ്യം സെലക്ട് ചെയ്യുമ്പോൾ
+// 2. രാജ്യം മാറ്റുമ്പോൾ
 function setCountry(country, btn) {
-    if (country === "") return;
+    if (!country) return;
 
     localStorage.setItem("bas_country", country);
 
+    // പഴയ ആക്റ്റീവ് ബട്ടണുകളെ മാറ്റുന്നു
     document.querySelectorAll(".country-btn").forEach(b => b.classList.remove("active"));
 
+    // പുതിയ ആക്റ്റീവ് ബട്ടൺ സെറ്റ് ചെയ്യുന്നു
     if (btn) {
         btn.classList.add("active");
     } else {
+        // ഡാറ്റ ആട്രിബ്യൂട്ട് നോക്കി ബട്ടൺ കണ്ടെത്തുന്നു (case insensitive)
         let activeBtn = document.querySelector('.country-btn[data-country="' + country.toLowerCase() + '"]');
         if (activeBtn) activeBtn.classList.add("active");
     }
@@ -438,24 +442,24 @@ function setCountry(country, btn) {
     updateCountryTitle();
 }
 
-// 3. പേജിൽ ഷോപ്പുകൾ കാണിക്കാൻ
+// 3. ലിസ്റ്റ് കാണിക്കാൻ
 function renderShops(list) {
     const container = document.getElementById("shopList");
     container.innerHTML = "";
 
     if (!list || list.length === 0) {
-        container.innerHTML = "<p style='color:#fff; text-align:center;'>No shops found for this country.</p>";
+        container.innerHTML = "<p style='color:#fff; text-align:center; padding:20px;'>No shops found.</p>";
         return;
     }
 
     list.forEach(function(shop) {
         const a = document.createElement("a");
         a.className = "shop-btn";
-        a.href = shop.url; // JSON-ലെ 'url' ഉപയോഗിക്കുന്നു
+        a.href = shop.url; // JSON-ലെ 'url'
         a.target = "_blank";
 
-        // ലോഗോ ഇല്ലെങ്കിൽ ഒരു പ്ലേസ്ഹോൾഡർ അല്ലെങ്കിൽ ഷോപ്പ് പേരിന്റെ ആദ്യ അക്ഷരം കാണിക്കാം
-        const logoImg = shop.logo ? shop.logo : "https://ui-avatars.com/api/?name=" + shop.name;
+        // ലോഗോ ഇല്ലെങ്കിൽ ഒരു കളർഫുൾ ഐക്കൺ കാണിക്കാൻ
+        const logoImg = shop.logo ? shop.logo : "https://ui-avatars.com/api/?name=" + shop.name + "&background=random";
 
         a.innerHTML =
             '<img class="shop-logo" src="' + logoImg + '">' +
@@ -467,12 +471,12 @@ function renderShops(list) {
     });
 }
 
-// 4. സെർച്ച് ചെയ്യുമ്പോൾ
+// 4. സെർച്ച് ബാർ വർക്ക് ചെയ്യാൻ
 function filterShops() {
     let value = document.getElementById("globalSearch").value.toLowerCase();
-    let country = localStorage.getItem("bas_country") || "india";
+    let country = localStorage.getItem("bas_country") || "India";
 
-    // നിലവിലെ രാജ്യത്തെ ഷോപ്പുകൾ മാത്രം ഫിൽട്ടർ ചെയ്യുന്നു
+    // ആ രാജ്യത്തെ ഷോപ്പുകൾ മാത്രം ഫിൽട്ടർ ചെയ്യുന്നു
     const currentCountryShops = countryShops.filter(s => s.country.toLowerCase() === country.toLowerCase());
 
     const filtered = currentCountryShops.filter(function(s) {
@@ -482,9 +486,9 @@ function filterShops() {
     renderShops(filtered);
 }
 
-// 5. ടൈറ്റിൽ അപ്ഡേറ്റ് ചെയ്യാൻ
+// 5. ടൈറ്റിലും ഷോപ്പുകളും അപ്ഡേറ്റ് ചെയ്യാൻ
 function updateCountryTitle() {
-    let country = localStorage.getItem("bas_country") || "india";
+    let country = localStorage.getItem("bas_country") || "India";
     document.getElementById("shopCountryTitle").innerText = "Shop on " + country.toUpperCase() + " Shops";
 
     // JSON-ൽ നിന്ന് ആ രാജ്യത്തെ ഷോപ്പുകൾ മാത്രം എടുക്കുന്നു
@@ -492,9 +496,10 @@ function updateCountryTitle() {
     renderShops(filtered);
 }
 
-// പേജ് ലോഡ് ചെയ്യുമ്പോൾ JSON ലോഡ് ചെയ്യുന്നു
+// പേജ് ലോഡ് ആകുമ്പോൾ ഡാറ്റ വിളിക്കുന്നു
 window.addEventListener("load", loadJsonData);
 </script>
+
 
 <style> 
 .compare-container{
