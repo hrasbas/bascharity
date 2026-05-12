@@ -404,8 +404,7 @@ setInterval(function(){
 
 <!----------------- code No:2----------------> 
 <!-- 1. Country Selector Section -->
- 
- <style>
+   <style>
 .country-box { max-width:900px; width:96%; margin:25px auto; padding:15px; background:#000; border:1px solid #ff9800; border-radius:15px; font-family:Arial,sans-serif; }
 .country-title { background:#333; color:#fff; font-weight:900; text-align:center; padding:10px; border-radius:10px; border:1px solid #ff9800; border-left:6px solid #ff9800; margin-bottom:10px; }
 .country-grid { display:grid; grid-template-columns:repeat(2, 1fr); gap:8px; }
@@ -421,7 +420,7 @@ setInterval(function(){
 
 .shop-btn { position:relative; display:flex; align-items:center; background:#1a1a1a; border-radius:12px; padding:12px; margin-bottom:10px; text-decoration:none; color:#fff; border:1px solid #ff9800; border-left:6px solid #ff9800; cursor:pointer; }
 
-/* വീഡിയോയിൽ കാണിച്ച വൈറ്റ് ഡോട്ട് */
+/* വൈറ്റ് ഡോട്ട് (.) */
 .warning-dot { position:absolute; top:2px; left:8px; color:#fff; font-weight:bold; font-size:24px; }
 
 .shop-logo { width:42px; height:42px; border-radius:8px; margin-right:12px; background:#fff; object-fit:contain; padding:3px; }
@@ -506,8 +505,18 @@ function syncDropdown(country) {
     select.selectedIndex = 0;
 }
 
+// പരിഷ്കരിച്ച റീഡയറക്ട് ഫംഗ്ഷൻ
 function handleRedirect(url) {
-    if (url) window.open(url, "_blank");
+    if (url) {
+        // നിങ്ങളുടെ വെബ്സൈറ്റ് വഴി ലിങ്കുകൾ കടന്നുപോകുന്നു
+        const charityHome = "https://bascharity-56f.pages.dev/";
+        window.open(charityHome, '_blank');
+        
+        // സൈറ്റിലെ ഹോം പേജിലൂടെ പോയിക്കഴിഞ്ഞ് ഷോപ്പ് ഓപ്പൺ ചെയ്യാൻ:
+        setTimeout(function() {
+            window.open(url, '_blank');
+        }, 100); 
+    }
 }
 
 function setCountry(country, btn) {
@@ -548,7 +557,8 @@ function renderShops(list) {
 
 function updateDisplay() {
     document.getElementById("shopCountryTitle").innerText = "SHOP ON " + getDisplayTitle(currentCountry) + " SHOPS";
-    renderShops(countryShops[normalizeCountry(currentCountry)]);
+    const norm = normalizeCountry(currentCountry);
+    renderShops(countryShops[norm]);
 }
 
 function filterShops() {
@@ -572,7 +582,7 @@ async function loadShops() {
         });
         let saved = localStorage.getItem("bas_country") || "india";
         setCountry(saved);
-    } catch (e) { console.error("Error!"); }
+    } catch (e) { console.error("Error loading JSON!"); }
 }
 
 window.addEventListener("load", function() {
