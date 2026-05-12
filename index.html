@@ -2664,5 +2664,86 @@ function updateShopList(country) {
   }
 }
 </script>
+<script>
+let countryShops = []; 
+
+async function loadShops() {
+    const url = "https://pub-1b9151db07ce4b7eaed8228eb2528ee5.r2.dev/j1.json";
+    const container = document.getElementById("shopList");
+    
+    // ചെക്കിംഗിന് വേണ്ടി ഒരു മെസേജ്
+    container.innerHTML = "<p style='color:white; text-align:center;'>Connecting to R2...</p>";
+    
+    try {
+        const response = await fetch(url);
+        if (!response.ok) {
+            container.innerHTML = "<p style='color:red;'>Error: Cannot find file J1.json</p>";
+            return;
+        }
+        
+        const data = await response.json();
+        countryShops = data.shops;
+        
+        let saved = localStorage.getItem("bas_country") || "india";
+        setCountry(saved);
+        
+    } catch (error) {
+        container.innerHTML = "<p style='color:red;'>Error: " + error.message + "</p>";
+    }
+}
+
+function setCountry(country, btn) {
+    if (country === "") return;
+    localStorage.setItem("bas_country", country); 
+
+    document.querySelectorAll(".country-btn").forEach(b => b.classList.remove("active"));
+    if (btn) {
+        btn.classList.add("active");
+    } else {
+        let activeBtn = document.querySelector('.country-btn[data-country="' + country.toLowerCase() + '"]');
+        if (activeBtn) activeBtn.classList.add("active");
+    } 
+    updateCountryTitle();
+} 
+
+function renderShops(list) {
+    const container = document.getElementById("shopList");
+    container.innerHTML = "";
+    if (!list || list.length === 0) {
+        container.innerHTML = "<p style='color:#ffb74d; text-align:center;'>No shops found.</p>";
+        return;
+    }
+    list.forEach(function(shop) {
+        const a = document.createElement("a");
+        a.className = "shop-btn";
+        a.href = shop.url;
+        a.target = "_blank";
+        const logo = shop.logo ? shop.logo : "https://cdn-icons-png.flaticon.com/512/1170/1170678.png";
+        a.innerHTML = '<img class="shop-logo" src="' + logo + '">' +
+            '<div class="shop-info notranslate" translate="no"><b>' + shop.name + '</b></div>';
+        container.appendChild(a);
+    });
+} 
+
+function filterShops() {
+    let value = document.getElementById("globalSearch").value.toLowerCase();
+    let country = localStorage.getItem("bas_country") || "india";
+    const filtered = countryShops.filter(s => 
+        s.country.toLowerCase() === country.toLowerCase() && 
+        s.name.toLowerCase().includes(value)
+    );
+    renderShops(filtered);
+} 
+
+function updateCountryTitle() {
+    let country = localStorage.getItem("bas_country") || "india";
+    document.getElementById("shopCountryTitle").innerText = "Shop on " + country.toUpperCase() + " Shops";
+    const shops = countryShops.filter(s => s.country.toLowerCase() === country.toLowerCase());
+    renderShops(shops);
+} 
+
+window.addEventListener("load", loadShops);
+</script>
+ 
   </body>
 </html>
