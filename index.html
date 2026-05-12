@@ -404,10 +404,7 @@ setInterval(function(){
 
 <!----------------- code No:2----------------> 
 <!-- 1. Country Selector Section -->
- 
- 
- 
-<style>
+ <style>
 .country-box{ max-width:900px; width:96%; margin:25px auto; padding:15px; background:#000; border:1px solid #ff9800; border-radius:15px; font-family:Arial,sans-serif; }
 .country-title{ background:#333; color:#fff; font-weight:900; text-align:center; padding:10px; border-radius:10px; border:1px solid #ff9800; border-left:6px solid #ff9800; margin-bottom:10px; }
 .country-grid{ display:grid; grid-template-columns:repeat(2,1fr); gap:8px; }
@@ -415,7 +412,7 @@ setInterval(function(){
 .country-btn.active{ background:#ff9800; color:#000; }
 
 /* SELECT ALL COUNTRIES - CENTER & CAPITAL */
-.all-country select{ width:100%; padding:12px; border-radius:10px; border:1px solid #ff9800; border-left:6px solid #ff9800; background:#333; color:#fff; font-weight:bold; cursor:pointer; margin-top:10px; text-align:center; text-transform: uppercase; }
+.all-country select{ width:100%; padding:12px; border-radius:10px; border:1px solid #ff9800; border-left:6px solid #ff9800; background:#333; color:#fff; font-weight:bold; cursor:pointer; margin-top:10px; text-align-last:center; text-transform: uppercase; }
 
 .shop-container{ max-width:900px; width:96%; margin:20px auto; padding:15px; }
 
@@ -426,8 +423,8 @@ setInterval(function(){
 
 .shop-btn{ position: relative; display:flex; align-items:center; background:#1a1a1a; border-radius:12px; padding:12px; margin-bottom:10px; text-decoration:none; color:#fff; border:1px solid #ff9800; border-left:6px solid #ff9800; cursor: pointer; }
 
-/* REAL DOT (.) */
-.warning-dot { position: absolute; top: 5px; left: 8px; color: #fff; font-weight: bold; font-size: 20px; line-height: 1; }
+/* കൃത്യമായ ഡോട്ട് (.) */
+.warning-dot { position: absolute; top: 2px; left: 8px; color: #fff; font-weight: bold; font-size: 24px; }
 
 .shop-logo{ width:42px; height:42px; border-radius:8px; margin-right:12px; background:#fff; object-fit:contain; padding:3px; }
 .shop-info b{ font-size:20px; display:block; }
@@ -483,9 +480,9 @@ function populateCountries() {
 
 function normalizeCountry(c) {
     c = (c || "").toLowerCase().trim();
-    if (c === "saudi arabia") return "saudi";
-    if (c === "united states") return "usa";
-    if (c === "united arab emirates") return "uae";
+    if (c === "saudi arabia" || c === "saudi") return "saudi";
+    if (c === "united states" || c === "usa") return "usa";
+    if (c === "united arab emirates" || c === "uae") return "uae";
     return c;
 }
 
@@ -497,13 +494,13 @@ function setCountry(country, btn) {
     if (!country) return;
     currentCountry = country;
     localStorage.setItem("bas_country", country);
+    
     document.querySelectorAll(".country-btn").forEach(b => b.classList.remove("active"));
-    if (btn) btn.classList.add("active");
-    else {
-        let norm = normalizeCountry(country);
-        let activeBtn = document.querySelector('.country-btn[data-country="' + norm + '"]');
-        if (activeBtn) activeBtn.classList.add("active");
-    }
+    
+    const norm = normalizeCountry(country);
+    const activeBtn = btn || document.querySelector(`.country-btn[data-country="${norm}"]`);
+    if (activeBtn) activeBtn.classList.add("active");
+    
     document.getElementById("globalSearch").value = "";
     updateDisplay();
 }
@@ -520,14 +517,17 @@ function renderShops(list) {
         div.className = "shop-btn";
         div.onclick = () => handleRedirect(shop.url);
         let dot = (normalizeCountry(currentCountry) !== 'india') ? '<span class="warning-dot">.</span>' : '';
-        div.innerHTML = dot + '<img class="shop-logo" src="https://www.google.com/s2/favicons?sz=64&domain_url=' + encodeURIComponent(shop.url) + '"><div class="shop-info notranslate" translate="no"><b>' + shop.name + '</b></div>';
+        div.innerHTML = dot + 
+            '<img class="shop-logo" src="https://www.google.com/s2/favicons?sz=64&domain_url=' + encodeURIComponent(shop.url) + '">' +
+            '<div class="shop-info notranslate" translate="no"><b>' + shop.name + '</b></div>';
         container.appendChild(div);
     });
 }
 
 function updateDisplay() {
     document.getElementById("shopCountryTitle").innerText = "SHOP ON " + currentCountry.toUpperCase() + " SHOPS";
-    renderShops(countryShops[normalizeCountry(currentCountry)]);
+    const norm = normalizeCountry(currentCountry);
+    renderShops(countryShops[norm]);
 }
 
 function filterShops() {
