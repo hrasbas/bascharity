@@ -406,7 +406,9 @@ setInterval(function(){
 <!-- 1. Country Selector Section -->
  
  
-<style>
+ 
+              
+        <style>
 .country-box{
     max-width:900px;
     width:96%;
@@ -462,8 +464,8 @@ setInterval(function(){
 }
 
 .all-country select{
-    width:96%;
-    padding:10px;
+    width:100%;
+    padding:12px;
     border-radius:10px;
     border:1px solid #ff9800;
     border-left:6px solid #ff9800;
@@ -503,7 +505,7 @@ setInterval(function(){
 }
 
 .global-search{
-    width:96%;
+    width:100%;
     padding:18px;
     border-radius:12px;
     border:3px solid #00e5ff;
@@ -512,9 +514,11 @@ setInterval(function(){
     font-size:20px;
     margin-top:15px;
     margin-bottom:12px;
+    box-sizing: border-box;
 }
 
 .shop-btn{
+    position: relative;
     display:flex;
     align-items:center;
     background:#1a1a1a;
@@ -525,6 +529,18 @@ setInterval(function(){
     color:#fff;
     border:1px solid #ff9800;
     border-left:6px solid #ff9800;
+    cursor: pointer;
+}
+
+/* ഡയറക്ട് ലിങ്ക് വാണിംഗ് ഡോട്ട് */
+.warning-dot {
+    height: 8px;
+    width: 8px;
+    background-color: #fff;
+    border-radius: 50%;
+    position: absolute;
+    top: 8px;
+    left: 8px;
 }
 
 .shop-logo{
@@ -561,18 +577,28 @@ setInterval(function(){
     </div>
 
     <div class="all-country">
-        <select onchange="setCountry(this.value); this.selectedIndex=0;">
+        <select id="countryDropdown" onchange="setCountry(this.value)">
             <option value="">Search All Countries</option>
             <option value="india">India</option>
             <option value="usa">USA</option>
             <option value="uk">UK</option>
             <option value="canada">Canada</option>
             <option value="uae">UAE</option>
+            <option value="saudi">Saudi Arabia</option>
+            <option value="qatar">Qatar</option>
+            <option value="oman">Oman</option>
+            <option value="kuwait">Kuwait</option>
+            <option value="bahrain">Bahrain</option>
+            <option value="singapore">Singapore</option>
+            <option value="malaysia">Malaysia</option>
             <option value="germany">Germany</option>
             <option value="france">France</option>
+            <option value="italy">Italy</option>
+            <option value="spain">Spain</option>
             <option value="australia">Australia</option>
-            <option value="saudi">Saudi Arabia</option>
             <option value="japan">Japan</option>
+            <option value="china">China</option>
+            <!-- കൂടുതൽ രാജ്യങ്ങൾ ഇവിടെ എളുപ്പത്തിൽ ആഡ് ചെയ്യാം -->
         </select>
     </div>
 </div>
@@ -588,12 +614,15 @@ setInterval(function(){
 </div>
 
 <script>
+// j1.json ചെറിയ അക്ഷരത്തിൽ തന്നെ നൽകിയിരിക്കുന്നു
 const JSON_URL = "https://pub-168159db07cc407eaa28228eb2520ea5.r2.dev/j1.json";
 let countryShops = {};
+let currentCountry = "india";
 
 function normalizeCountry(country) {
     country = (country || "").toLowerCase().trim();
     if (country === "saudi arabia") return "saudi";
+    if (country === "united states") return "usa";
     return country;
 }
 
@@ -601,8 +630,19 @@ function renderLogo(url) {
     return "https://www.google.com/s2/favicons?sz=64&domain_url=" + encodeURIComponent(url);
 }
 
+// Redirect Logic - എല്ലാ ലിങ്കുകളും ഇതുവഴി പോകും
+function handleRedirect(url, country) {
+    let finalUrl = url;
+    // ഇന്ത്യയ്ക്ക് മാത്രം അഫിലിയേറ്റ് ലിങ്ക് ഭാവിയിൽ ഇവിടെ നൽകാം
+    if(normalizeCountry(country) === 'india') {
+        // finalUrl = "AFFILIATE_CODE" + url;
+    }
+    window.open(finalUrl, '_blank');
+}
+
 function setCountry(country, btn) {
-    if (country === "") return;
+    if (!country || country === "") return;
+    currentCountry = country;
     localStorage.setItem("bas_country", country);
 
     document.querySelectorAll(".country-btn").forEach(function(b) {
@@ -623,24 +663,30 @@ function setCountry(country, btn) {
 function renderShops(list) {
     const container = document.getElementById("shopList");
     container.innerHTML = "";
-    if (!list) return;
+    
+    if (!list || list.length === 0) {
+        container.innerHTML = "<p style='color:#fff; text-align:center; padding:20px;'>In Progress for " + currentCountry.toUpperCase() + "...</p>";
+        return;
+    }
 
     list.forEach(function(shop) {
-        const a = document.createElement("a");
-        a.className = "shop-btn";
-        a.href = shop.url;
-        a.target = "_blank";
+        const div = document.createElement("div");
+        div.className = "shop-btn";
+        div.onclick = function() { handleRedirect(shop.url, currentCountry); };
         
-        a.innerHTML = '<img class="shop-logo" src="' + renderLogo(shop.url) + '">' +
+        // ഇന്ത്യ ഒഴികെയുള്ള രാജ്യങ്ങൾക്ക് വൈറ്റ് ഡോട്ട് കാണിക്കുന്നു
+        let dotHTML = (normalizeCountry(currentCountry) !== 'india') ? '<span class="warning-dot"></span>' : '';
+        
+        div.innerHTML = dotHTML + 
+            '<img class="shop-logo" src="' + renderLogo(shop.url) + '">' +
             '<div class="shop-info notranslate" translate="no"><b>' + shop.name + '</b></div>';
-        container.appendChild(a);
+        container.appendChild(div);
     });
 }
 
 function filterShops() {
     let value = document.getElementById("globalSearch").value.toLowerCase();
-    let country = localStorage.getItem("bas_country") || "india";
-    let normalized = normalizeCountry(country);
+    let normalized = normalizeCountry(currentCountry);
     
     if (countryShops[normalized]) {
         const filtered = countryShops[normalized].filter(function(s) {
@@ -651,10 +697,8 @@ function filterShops() {
 }
 
 function updateCountryTitle() {
-    let country = localStorage.getItem("bas_country") || "india";
-    document.getElementById("shopCountryTitle").innerText = "Shop on " + country.toUpperCase() + " Shops";
-    
-    let normalized = normalizeCountry(country);
+    document.getElementById("shopCountryTitle").innerText = "Shop on " + currentCountry.toUpperCase() + " Shops";
+    let normalized = normalizeCountry(currentCountry);
     renderShops(countryShops[normalized]);
 }
 
@@ -678,6 +722,7 @@ async function loadShops() {
 
 window.addEventListener("load", loadShops);
 </script>
+
 <style>
 .compare-container{
     max-width:900px;
