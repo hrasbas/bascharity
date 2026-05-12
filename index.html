@@ -404,46 +404,43 @@ setInterval(function(){
 
 <!----------------- code No:2----------------> 
 <!-- 1. Country Selector Section -->
- <style>
-.country-box{ max-width:900px; width:96%; margin:25px auto; padding:15px; background:#000; border:1px solid #ff9800; border-radius:15px; font-family:Arial,sans-serif; }
-.country-title{ background:#333; color:#fff; font-weight:900; text-align:center; padding:10px; border-radius:10px; border:1px solid #ff9800; border-left:6px solid #ff9800; margin-bottom:10px; }
-.country-grid{ display:grid; grid-template-columns:repeat(2,1fr); gap:8px; }
-.country-btn{ background:#333; color:#fff; padding:10px; text-align:center; border-radius:10px; border:1px solid #ff9800; border-left:6px solid #ff9800; font-weight:bold; cursor:pointer; }
-.country-btn.active{ background:#ff9800; color:#000; }
+     <style>
+.country-box { max-width:900px; width:96%; margin:25px auto; padding:15px; background:#000; border:1px solid #ff9800; border-radius:15px; font-family:Arial,sans-serif; }
+.country-title { background:#333; color:#fff; font-weight:900; text-align:center; padding:10px; border-radius:10px; border:1px solid #ff9800; border-left:6px solid #ff9800; margin-bottom:10px; }
+.country-grid { display:grid; grid-template-columns:repeat(2, 1fr); gap:8px; }
+.country-btn { background:#333; color:#fff; padding:10px; text-align:center; border-radius:10px; border:1px solid #ff9800; border-left:6px solid #ff9800; font-weight:bold; cursor:pointer; }
+.country-btn.active { background:#ff9800; color:#000; }
 
-/* SELECT ALL COUNTRIES - CENTER & CAPITAL */
-.all-country select{ width:100%; padding:12px; border-radius:10px; border:1px solid #ff9800; border-left:6px solid #ff9800; background:#333; color:#fff; font-weight:bold; cursor:pointer; margin-top:10px; text-align-last:center; text-transform: uppercase; }
+.all-country select { width:100%; padding:12px; border-radius:10px; border:1px solid #ff9800; border-left:6px solid #ff9800; background:#333; color:#fff; font-weight:bold; cursor:pointer; margin-top:10px; text-align-last:center; text-transform:uppercase; }
 
-.shop-container{ max-width:900px; width:96%; margin:20px auto; padding:15px; }
+.shop-container { max-width:900px; width:96%; margin:20px auto; padding:15px; }
+.shop-title-box { background:#000; border-radius:14px; padding:20px; border:1px solid #ff9800; border-left:8px solid #ff9800; text-align:center; }
+.shop-title-box h2 { margin:0; font-size:26px; font-weight:900; color:#fff; text-transform:uppercase; }
+.shop-title-box span { display:block; margin-top:6px; font-size:13px; color:#ffb74d; }
 
-/* SHOP TITLE BOX - CENTER & CAPITAL */
-.shop-title-box{ background:#000; border-radius:14px; padding:20px; border:1px solid #ff9800; border-left:8px solid #ff9800; text-align: center; }
-.shop-title-box h2{ margin:0; font-size:26px; font-weight:900; color:#fff; text-transform: uppercase; }
-.shop-title-box span{ display:block; margin-top:6px; font-size:13px; color:#ffb74d; }
+.shop-btn { position:relative; display:flex; align-items:center; background:#1a1a1a; border-radius:12px; padding:12px; margin-bottom:10px; text-decoration:none; color:#fff; border:1px solid #ff9800; border-left:6px solid #ff9800; cursor:pointer; }
 
-.shop-btn{ position: relative; display:flex; align-items:center; background:#1a1a1a; border-radius:12px; padding:12px; margin-bottom:10px; text-decoration:none; color:#fff; border:1px solid #ff9800; border-left:6px solid #ff9800; cursor: pointer; }
+/* വീഡിയോയിൽ കാണിച്ച വൈറ്റ് ഡോട്ട് */
+.warning-dot { position:absolute; top:2px; left:8px; color:#fff; font-weight:bold; font-size:24px; }
 
-/* കൃത്യമായ ഡോട്ട് (.) */
-.warning-dot { position: absolute; top: 2px; left: 8px; color: #fff; font-weight: bold; font-size: 24px; }
-
-.shop-logo{ width:42px; height:42px; border-radius:8px; margin-right:12px; background:#fff; object-fit:contain; padding:3px; }
-.shop-info b{ font-size:20px; display:block; }
-.global-search{ width:100%; padding:18px; border-radius:12px; border:3px solid #00e5ff; background:#111; color:#fff; font-size:20px; margin-top:15px; margin-bottom:12px; box-sizing: border-box; text-align: center; }
+.shop-logo { width:42px; height:42px; border-radius:8px; margin-right:12px; background:#fff; object-fit:contain; padding:3px; }
+.shop-info b { font-size:20px; display:block; }
+.global-search { width:100%; padding:18px; border-radius:12px; border:3px solid #00e5ff; background:#111; color:#fff; font-size:20px; margin-top:15px; margin-bottom:12px; box-sizing:border-box; text-align:center; }
 </style>
 
 <div class="country-box">
     <div class="country-title">SELECT COUNTRY</div>
     <div class="country-grid">
-        <div class="country-btn" data-country="india" onclick="setCountry('india',this)">India</div>
-        <div class="country-btn" data-country="usa" onclick="setCountry('usa',this)">United states</div>
-        <div class="country-btn" data-country="uk" onclick="setCountry('uk',this)">UK</div>
-        <div class="country-btn" data-country="canada" onclick="setCountry('canada',this)">Canada</div>
-        <div class="country-btn" data-country="uae" onclick="setCountry('uae',this)">UAE</div>
-        <div class="country-btn" data-country="saudi" onclick="setCountry('saudi',this)">Saudi</div>
-        <div class="country-btn" data-country="germany" onclick="setCountry('germany',this)">Germany</div>
-        <div class="country-btn" data-country="france" onclick="setCountry('france',this)">France</div>
-        <div class="country-btn" data-country="australia" onclick="setCountry('australia',this)">Australia</div>
-        <div class="country-btn" data-country="japan" onclick="setCountry('japan',this)">Japan</div>
+        <div class="country-btn" data-country="india" onclick="setCountry('india', this)">India</div>
+        <div class="country-btn" data-country="usa" onclick="setCountry('usa', this)">United States</div>
+        <div class="country-btn" data-country="uk" onclick="setCountry('uk', this)">UK</div>
+        <div class="country-btn" data-country="canada" onclick="setCountry('canada', this)">Canada</div>
+        <div class="country-btn" data-country="uae" onclick="setCountry('uae', this)">UAE</div>
+        <div class="country-btn" data-country="saudi" onclick="setCountry('saudi', this)">Saudi</div>
+        <div class="country-btn" data-country="germany" onclick="setCountry('germany', this)">Germany</div>
+        <div class="country-btn" data-country="france" onclick="setCountry('france', this)">France</div>
+        <div class="country-btn" data-country="australia" onclick="setCountry('australia', this)">Australia</div>
+        <div class="country-btn" data-country="japan" onclick="setCountry('japan', this)">Japan</div>
     </div>
     <div class="all-country">
         <select id="countryDropdown" onchange="setCountry(this.value)">
@@ -470,7 +467,7 @@ const countries = ["Afghanistan","Albania","Algeria","Andorra","Angola","Argenti
 
 function populateCountries() {
     const select = document.getElementById("countryDropdown");
-    countries.forEach(c => {
+    countries.forEach(function(c) {
         let opt = document.createElement("option");
         opt.value = c.toLowerCase();
         opt.text = c.toUpperCase();
@@ -483,24 +480,48 @@ function normalizeCountry(c) {
     if (c === "saudi arabia" || c === "saudi") return "saudi";
     if (c === "united states" || c === "usa") return "usa";
     if (c === "united arab emirates" || c === "uae") return "uae";
+    if (c === "united kingdom" || c === "uk") return "uk";
     return c;
 }
 
+function getDisplayTitle(c) {
+    const norm = normalizeCountry(c);
+    if (norm === "usa") return "USA";
+    if (norm === "uae") return "UAE";
+    if (norm === "uk") return "UK";
+    if (norm === "saudi") return "SAUDI";
+    return norm.toUpperCase();
+}
+
+function syncDropdown(country) {
+    const select = document.getElementById("countryDropdown");
+    const norm = normalizeCountry(country);
+    for (let i = 0; i < select.options.length; i++) {
+        if (normalizeCountry(select.options[i].value) === norm) {
+            select.selectedIndex = i;
+            return;
+        }
+    }
+    select.selectedIndex = 0;
+}
+
 function handleRedirect(url) {
-    if (url) window.open(url, '_blank');
+    if (url) window.open(url, "_blank");
 }
 
 function setCountry(country, btn) {
     if (!country) return;
-    currentCountry = country;
-    localStorage.setItem("bas_country", country);
+    currentCountry = normalizeCountry(country);
+    localStorage.setItem("bas_country", currentCountry);
     
-    document.querySelectorAll(".country-btn").forEach(b => b.classList.remove("active"));
+    document.querySelectorAll(".country-btn").forEach(function(b) {
+        b.classList.remove("active");
+    });
     
-    const norm = normalizeCountry(country);
-    const activeBtn = btn || document.querySelector(`.country-btn[data-country="${norm}"]`);
+    const activeBtn = btn || document.querySelector(".country-btn[data-country='" + currentCountry + "']");
     if (activeBtn) activeBtn.classList.add("active");
     
+    syncDropdown(country);
     document.getElementById("globalSearch").value = "";
     updateDisplay();
 }
@@ -509,49 +530,56 @@ function renderShops(list) {
     const container = document.getElementById("shopList");
     container.innerHTML = "";
     if (!list || list.length === 0) {
-        container.innerHTML = "<p style='color:#fff; text-align:center;'>IN PROGRESS FOR " + currentCountry.toUpperCase() + "...</p>";
+        container.innerHTML = "<p style='color:#fff; text-align:center;'>IN PROGRESS FOR " + getDisplayTitle(currentCountry) + "...</p>";
         return;
     }
-    list.forEach(shop => {
+    list.forEach(function(shop) {
         const div = document.createElement("div");
         div.className = "shop-btn";
-        div.onclick = () => handleRedirect(shop.url);
-        let dot = (normalizeCountry(currentCountry) !== 'india') ? '<span class="warning-dot">.</span>' : '';
-        div.innerHTML = dot + 
-            '<img class="shop-logo" src="https://www.google.com/s2/favicons?sz=64&domain_url=' + encodeURIComponent(shop.url) + '">' +
-            '<div class="shop-info notranslate" translate="no"><b>' + shop.name + '</b></div>';
+        div.onclick = function() { handleRedirect(shop.url); };
+        
+        let dot = normalizeCountry(currentCountry) !== "india" ? '<span class="warning-dot">.</span>' : '';
+        
+        div.innerHTML = dot + '<img class="shop-logo" src="https://www.google.com/s2/favicons?sz=64&domain_url=' + encodeURIComponent(shop.url) + '"><div class="shop-info notranslate" translate="no"><b>' + shop.name + '</b></div>';
         container.appendChild(div);
     });
 }
 
 function updateDisplay() {
-    document.getElementById("shopCountryTitle").innerText = "SHOP ON " + currentCountry.toUpperCase() + " SHOPS";
-    const norm = normalizeCountry(currentCountry);
-    renderShops(countryShops[norm]);
+    document.getElementById("shopCountryTitle").innerText = "SHOP ON " + getDisplayTitle(currentCountry) + " SHOPS";
+    renderShops(countryShops[normalizeCountry(currentCountry)]);
 }
 
 function filterShops() {
     let val = document.getElementById("globalSearch").value.toLowerCase();
     let norm = normalizeCountry(currentCountry);
-    if (countryShops[norm]) renderShops(countryShops[norm].filter(s => s.name.toLowerCase().includes(val)));
+    if (countryShops[norm]) {
+        renderShops(countryShops[norm].filter(function(s) {
+            return s.name.toLowerCase().includes(val);
+        }));
+    }
 }
 
 async function loadShops() {
     try {
         const response = await fetch(JSON_URL);
         const data = await response.json();
-        data.shops.forEach(s => {
+        data.shops.forEach(function(s) {
             let c = normalizeCountry(s.country);
             if (!countryShops[c]) countryShops[c] = [];
             countryShops[c].push(s);
         });
         let saved = localStorage.getItem("bas_country") || "india";
         setCountry(saved);
-    } catch (e) { console.error("Error loading JSON!"); }
+    } catch (e) { console.error("Error!"); }
 }
 
-window.addEventListener("load", () => { populateCountries(); loadShops(); });
+window.addEventListener("load", function() {
+    populateCountries();
+    loadShops();
+});
 </script>
+
 
 <style>
 .compare-container{
