@@ -545,22 +545,25 @@ function setCountry(country, btn) {
     renderShops(countryShops[currentCountry]);
 }
 
-
 function renderShops(list) {
     const container = document.getElementById("shopList");
     container.innerHTML = "";
-    if (!list || list.length === 0) {
-        container.innerHTML = "<p style='color:#fff; text-align:center; padding:20px;'>IN PROGRESS FOR " + currentCountry.toUpperCase() + "...</p>";
+
+    if (crisisCountries.includes(currentCountry)) {
+        container.innerHTML = `
+            <div style="background:#222; border:2px solid #ff9800; border-radius:15px; padding:25px; text-align:center; color:#fff; margin-top:20px;">
+                <h3 style="color:#ff9800; text-transform:uppercase;">Unavailable due to world crisis</h3>
+                <p style="font-size:18px; line-height:1.6; font-weight:bold; color:#ffeb3b;">
+                    Dear friend, due to current global crisis and restrictions, international shopping platforms have limited services in your region. 
+                    However, we sincerely pray for the peace and prosperity of your land. 
+                    May the Almighty remove all obstacles and bring better days soon.
+                </p>
+                <div style="font-size:30px; margin-top:15px;">🌍🕊️</div>
+            </div>`;
         return;
     }
-    list.forEach(shop => {
-        const div = document.createElement("div");
-        div.className = "shop-btn";
-        div.onclick = () => handleRedirect(shop.url);
-        div.innerHTML = '<span class="warning-dot">.</span><img class="shop-logo" src="https://www.google.com/s2/favicons?sz=64&domain_url=' + encodeURIComponent(shop.url) + '"><div class="shop-info notranslate"><b>' + shop.name + '</b></div>';
-        container.appendChild(div);
-    });
-}
+    // ... ബാക്കി കോഡ് പഴയതുപോലെ ...
+
 
 function filterShops() {
     let val = document.getElementById("globalSearch").value.toLowerCase();
