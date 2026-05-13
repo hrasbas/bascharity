@@ -511,14 +511,20 @@ function setCountry(country, btn) {
     if (!country) return;
     currentCountry = normalizeCountry(country);
     localStorage.setItem("bas_country", currentCountry);
+    
+    // ബട്ടണുകളിലെ ആക്റ്റീവ് ക്ലാസ് മാറ്റാൻ
     document.querySelectorAll(".country-btn").forEach(b => b.classList.remove("active"));
     const activeBtn = btn || document.querySelector(".country-btn[data-country='"+currentCountry+"']");
     if (activeBtn) activeBtn.classList.add("active");
+    
+    // ഡ്രോപ്പ്ഡൗണിൽ എപ്പോഴും "SEARCH ALL COUNTRIES" എന്ന് തന്നെ കാണിക്കാൻ ഇത് സഹായിക്കും
+    document.getElementById("countryDropdown").selectedIndex = 0; 
     
     document.getElementById("shopCountryTitle").innerText = "SHOP ON " + currentCountry.toUpperCase() + " SHOPS";
     document.getElementById("globalSearch").value = "";
     renderShops(countryShops[currentCountry]);
 }
+
 
 function renderShops(list) {
     const container = document.getElementById("shopList");
