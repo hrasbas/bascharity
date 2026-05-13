@@ -1,1 +1,23 @@
-
+{
+  "category": "J21",
+  "status_code": "WORLD_CRISIS_RESTRICTION",
+  "status_message": "Unavailable due to world crisis",
+  "support_message": "പ്രിയ സുഹൃത്തേ, നിലവിലെ ആഗോള പ്രതിസന്ധികൾ കാരണം നിങ്ങളുടെ പ്രദേശത്ത് നേരിട്ട് സേവനം എത്തിക്കാൻ അന്താരാഷ്ട്ര ഷോപ്പിംഗ് പ്ലാറ്റ്‌ഫോമുകൾക്ക് പരിമിതികളുണ്ട്. എങ്കിലും നിങ്ങളുടെ നാടിന്റെ സമാധാനത്തിനും പുരോഗതിക്കും വേണ്ടി ഞങ്ങൾ പ്രാർത്ഥിക്കുന്നു. ഉടനെ തന്നെ എല്ലാ തടസ്സങ്ങളും മാറി സന്തോഷകരമായ നാളുകൾ വരാൻ സർവ്വശക്തൻ അനുഗ്രഹിക്കട്ടെ.",
+  "countries": [
+    { "name": "Afghanistan", "flag": "🇦🇫" },
+    { "name": "Belarus", "flag": "🇧🇾" },
+    { "name": "Cuba", "flag": "🇨🇺" },
+    { "name": "Iran", "flag": "🇮🇷" },
+    { "name": "Libya", "flag": "🇱🇾" },
+    { "name": "Myanmar", "flag": "🇲🇲" },
+    { "name": "North Korea", "flag": "🇰🇵" },
+    { "name": "Palestine", "flag": "🇵🇸" },
+    { "name": "Russia", "flag": "🇷🇺" },
+    { "name": "Somalia", "flag": "🇸🇴" },
+    { "name": "South Sudan", "flag": "🇸🇸" },
+    { "name": "Sudan", "flag": "🇸🇩" },
+    { "name": "Syria", "flag": "🇸🇾" },
+    { "name": "Venezuela", "flag": "🇻🇪" },
+    { "name": "Yemen", "flag": "🇾🇪" }
+  ]
+}
