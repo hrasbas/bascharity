@@ -85,6 +85,67 @@ p, span, div { font-size:23px; }
 .malayalam-text { font-size:18px; font-weight:500; display:block; }
 .hunger-footer { text-align:center; color:#FFD700; font-weight:bold; font-size:14px; margin-top:15px; letter-spacing:1px; } 
 </style>
+ <link rel="manifest" href="manifest.json">
+<meta name="theme-color" content="#ff9800">
+<link rel="apple-touch-icon" href="icon-512.png">
+
+<style>
+  #install-div {
+    display: none;
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    z-index: 10000;
+  }
+  #install-btn {
+    background: #ff9800;
+    color: #fff;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 50px;
+    font-size: 16px;
+    font-weight: bold;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.4);
+    cursor: pointer;
+  }
+</style>
+
+<div id="install-div">
+  <button id="install-btn">Install App</button>
+</div>
+
+<script>
+  let deferredPrompt;
+  const installDiv = document.getElementById('install-div');
+  const installBtn = document.getElementById('install-btn');
+
+  // ബ്രൗസറിന്റെ വെള്ള ബോക്സ് തടയാൻ
+  window.addEventListener('beforeinstallprompt', (e) => {
+    e.preventDefault();
+    deferredPrompt = e;
+    installDiv.style.display = 'block';
+  });
+
+  // ബട്ടൺ ക്ലിക്ക് ചെയ്യുമ്പോൾ ഇൻസ്റ്റാൾ ചെയ്യാൻ
+  installBtn.addEventListener('click', () => {
+    installDiv.style.display = 'none';
+    deferredPrompt.prompt();
+    deferredPrompt.userChoice.then((choice) => {
+      if (choice.outcome === 'accepted') {
+        console.log('App Installed');
+      }
+      deferredPrompt = null;
+    });
+  });
+
+  // സർവീസ് വർക്കർ രജിസ്ട്രേഷൻ
+  if ('serviceWorker' in navigator) {
+    window.addEventListener('load', () => {
+      navigator.serviceWorker.register('sw.js');
+    });
+  }
+</script>
+
 </head> 
 
 <body> 
