@@ -2433,11 +2433,10 @@ msgBox.remove();
 });
 });
 </script> 
-  
-      <style>
+<style>
   .balloon-scene {
     position: fixed;
-    bottom: -50px;
+    bottom: -150px; /* തുടക്കത്തിൽ ഫുൾ ഹൈഡ് */
     left: -20px;
     width: 280px;
     height: 100vh;
@@ -2447,8 +2446,8 @@ msgBox.remove();
   }
 
   /* സ്റ്റേറ്റുകൾ */
-  .full-hide { transform: translateY(120%); } /* പൂർണ്ണമായും താഴെ */
-  .semi-rest { transform: translateY(65%); } /* പകുതിയിൽ അധികം താഴെ */
+  .show-balloons { transform: translateY(-130px); } /* മുകളിലേക്ക് വരാൻ */
+  .semi-rest { transform: translateY(65%); } /* പകുതി ഒളിച്ചു നിൽക്കാൻ */
 
   .balloon {
     position: absolute;
@@ -2463,7 +2462,6 @@ msgBox.remove();
     box-shadow: inset -10px -10px 25px rgba(0,0,0,0.4);
   }
 
-  /* ചരട് പഴയപോലെ */
   .string-bas {
     position: absolute;
     width: 2px;
@@ -2483,7 +2481,6 @@ msgBox.remove();
     clip-path: polygon(20% 0%, 80% 0%, 100% 100%, 0% 100%);
   }
 
-  /* ബലൂൺ വലിപ്പവും കളറും */
   .white-ball {
     width: 130px; height: 170px;
     background: #ffffff;
@@ -2501,14 +2498,12 @@ msgBox.remove();
     animation: bas-float-sub 11s ease-in-out infinite;
   }
 
-  /* ഐക്കൺ ഒട്ടിച്ചതുപോലെ തോന്നിക്കാൻ */
   .ball-icon-sticker {
     width: 50px; height: 50px;
     border-radius: 12px;
     margin-bottom: 5px;
     border: 2px solid #fff;
     box-shadow: 0 4px 8px rgba(0,0,0,0.3);
-    object-fit: cover;
   }
 
   .ball-label { font-family: 'Arial Black', sans-serif; font-size: 12px; font-weight: 900; }
@@ -2543,54 +2538,65 @@ msgBox.remove();
   const section = document.getElementById('balloonSection');
   const statusTxt = document.getElementById('installStatus');
 
-  function startLogic() {
-    // 1. ആദ്യം 15 സെക്കൻഡ് പറക്കുന്നു
-    section.classList.remove('full-hide', 'semi-rest');
-    
+  function startCycle() {
+    // 1. സൈറ്റ് തുറന്ന് 5 സെക്കൻഡ് കഴിഞ്ഞ് ബലൂൺ മുകളിലേക്ക് വരുന്നു
     setTimeout(() => {
-      // 2. ശേഷം 60 സെക്കൻഡ് ഫുൾ ഹൈഡ്
-      section.classList.add('full-hide');
+      section.classList.add('show-balloons');
       
+      // 2. 15 സെക്കൻഡ് പറന്ന ശേഷം ഫുൾ ഹൈഡ് ആകുന്നു
       setTimeout(() => {
-        // 3. ശേഷം പൊങ്ങി വന്ന് സെമി-റെസ്റ്റ് (പകുതി താഴെ)
-        section.classList.remove('full-hide');
-        section.classList.add('semi-rest');
-      }, 60000); 
+        section.classList.remove('show-balloons');
+        
+        // 3. 60 സെക്കൻഡ് കഴിഞ്ഞാൽ പകുതിയിൽ താഴെ വന്ന് വിശ്രമിക്കുന്നു (Rest)
+        setTimeout(() => {
+          section.classList.add('semi-rest');
+        }, 60000);
 
-    }, 15000);
+      }, 15000);
+    }, 5000);
   }
 
-  // തൊട്ടാൽ ഉടൻ മുകളിലേക്ക് വന്ന് കളി തുടങ്ങും
+  // തൊട്ടാൽ മുകളിലേക്ക് വരാൻ
   const wakeUp = () => {
-    section.classList.remove('full-hide', 'semi-rest');
+    section.classList.remove('semi-rest');
+    section.classList.add('show-balloons');
   };
   section.addEventListener('mouseenter', wakeUp);
   section.addEventListener('touchstart', wakeUp);
 
-  window.addEventListener('load', startLogic);
+  window.addEventListener('load', startCycle);
 
+  // വാട്സാപ്പ് ലിങ്ക് കണക്ഷൻ
   function goWhatsApp(){
-    let msg = "BAS Charity - Your purchase satisfies a hunger.\nhttps://bascharity-56f.pages.dev";
-    window.open("https://wa.me/?text=" + encodeURIComponent(msg), "_blank");
+    let shareText = "Save this beautiful icon to your home screen and support a mission.\n\nhttps://bascharity-56f.pages.dev";
+    window.open("https://api.whatsapp.com/send?text=" + encodeURIComponent(shareText), "_blank");
   }
 
+  // ഇൻസ്റ്റാൾ പോപ്പ്അപ്പ് ലോജിക്
   window.addEventListener('beforeinstallprompt', (e) => {
     e.preventDefault();
     deferredPrompt = e;
+    console.log("Install prompt ready");
   });
 
   function handleInstallTap() {
     if (deferredPrompt) {
       deferredPrompt.prompt();
       deferredPrompt.userChoice.then((choice) => {
-        if (choice.outcome === 'accepted') { statusTxt.innerText = "INSTALLED"; }
+        if (choice.outcome === 'accepted') {
+          statusTxt.innerText = "INSTALLED";
+        }
         deferredPrompt = null;
       });
+    } else {
+      // പോപ്പ്അപ്പ് ലഭ്യമല്ലെങ്കിൽ സാധാരണ അറിയിപ്പ്
+      alert("Please use Chrome browser for 'Install' option.");
     }
   }
 
   window.addEventListener('appinstalled', () => {
     statusTxt.innerText = "INSTALLED";
+    alert("BAS App Installed Successfully!");
   });
 </script>
 
