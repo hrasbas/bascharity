@@ -2656,117 +2656,92 @@ function updateShopList(country) {
   }
 }
 </script>
+
  <style>
-  /* മുകളിലുള്ള എല്ലാ ബലൂണുകളെയും ഹൈഡ് ചെയ്യുന്നു */
-  div[id*="balloon"], div[id*="install"], button[id*="install"] {
+  /* പഴയ ഐക്കണുകളെയും ബട്ടണുകളെയും പൂർണ്ണമായും ഒഴിവാക്കുന്നു */
+  div[id*="balloon"], div[id*="install"], button[id*="install"], .floating-icon-container {
     display: none !important;
   }
-</style>
 
-<script>
-  /* മുകളിലുള്ള പഴയ വിൻഡോ ഇവന്റുകളെ ബ്ലോക്ക് ചെയ്യുന്നു */
-  window.addEventListener('beforeinstallprompt', (e) => e.stopImmediatePropagation(), true);
-</script>
-
-<style>
-  #shy-balloon-latest {
-    display: block !important; /* ഇതിനെ മാത്രം കാണിക്കുന്നു */
-    position: fixed; bottom: 80px; right: -55px;
-    width: 100px; height: 100px; cursor: pointer;
-    transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-    z-index: 20000; /* ഏറ്റവും മുകളിൽ നിൽക്കാൻ */
-    filter: drop-shadow(0 5px 15px rgba(0,0,0,0.4));
-  }
-  #shy-balloon-latest.active, #shy-balloon-latest:hover { right: 20px; transform: scale(1.1); }
-  .float-anim { animation: floating 3s ease-in-out infinite; }
-  @keyframes floating {
-    0% { transform: translateY(0px) rotate(0deg); }
-    50% { transform: translateY(-15px) rotate(8deg); }
-    100% { transform: translateY(0px) rotate(0deg); }
-  }
-</style>
-
-<div id="shy-balloon-latest" class="float-anim" onclick="latestBalloonAction()">
-  <img src="icon-512.png" alt="BAS Charity" style="width: 100%; border-radius: 50%;">
-</div>
-
-<script>
-  let latestPrompt;
-  const lb = document.getElementById('shy-balloon-latest');
-
-  setTimeout(() => {
-    lb.classList.add('balloon-intro');
-    setTimeout(() => lb.classList.remove('balloon-intro'), 5000);
-  }, 3000);
-
-  function latestBalloonAction() {
-    lb.classList.toggle('active');
-    if (latestPrompt) {
-      latestPrompt.prompt();
-      latestPrompt = null;
-    }
-  } 
- <style>
-  /* ഐക്കണിനെ നിർബന്ധമായും ഇടതുവശത്തേക്ക് മാറ്റുന്നു */
-  .floating-icon-container {
-    right: auto !important; 
-    left: 20px !important;
-  }
-
-  /* ഇൻസ്റ്റാൾ ബട്ടൺ - തുടക്കത്തിൽ തന്നെ കാണാൻ */
-  #install-notice {
-    display: none; /* ഫോൺ സപ്പോർട്ട് ചെയ്താൽ മാത്രം തെളിയും */
+  /* പുതിയ ഐക്കൺ - ഇടതുവശത്ത് മാത്രം */
+  #bas-final-icon {
+    display: block !important;
     position: fixed;
-    bottom: 100px;
+    bottom: 30px;
+    left: 20px; /* ഇടതുവശത്തേക്ക് കൃത്യമായി മാറ്റി */
+    width: 70px;
+    height: 70px;
+    cursor: pointer;
+    z-index: 99999;
+    filter: drop-shadow(0 5px 15px rgba(0,0,0,0.4));
+    transition: transform 0.3s ease;
+  }
+
+  #bas-final-icon:hover { transform: scale(1.1); }
+
+  /* ഇൻസ്റ്റാൾ നിർദ്ദേശം - ഐക്കണിന് മുകളിലായി */
+  #bas-install-text {
+    display: none;
+    position: fixed;
+    bottom: 110px;
     left: 20px;
     background: #ff4500;
     color: white;
-    padding: 10px 20px;
-    border-radius: 25px;
-    z-index: 10000;
-    cursor: pointer;
-    border: none;
+    padding: 8px 15px;
+    border-radius: 20px;
+    font-size: 12px;
     font-weight: bold;
+    z-index: 99999;
+    animation: bounce 2s infinite;
   }
+
+  @keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+  }
+
+  .bas-img { width: 100%; border-radius: 50%; border: 2px solid #fff; }
 </style>
 
-<button id="install-notice">Install BAS App</button>
+<div id="bas-install-text">Install App</div>
+<div id="bas-final-icon" onclick="handleBasAction()">
+  <img src="icon-512.png" alt="BAS" class="bas-img">
+</div>
 
 <script>
-  let deferredPrompt;
-  const installBtn = document.getElementById('install-notice');
+  let basPrompt;
+  const icon = document.getElementById('bas-final-icon');
+  const installText = document.getElementById('bas-install-text');
 
-  // ഇൻസ്റ്റാൾ ഓപ്ഷൻ ലഭ്യമാണോ എന്ന് നോക്കുന്നു
+  // ഇൻസ്റ്റാൾ ചെയ്യാനുള്ള സാധ്യത ബ്രൗസർ അറിയിക്കുമ്പോൾ
   window.addEventListener('beforeinstallprompt', (e) => {
-    console.log('Install Prompt Ready');
     e.preventDefault();
-    deferredPrompt = e;
-    installBtn.style.display = 'block'; 
+    basPrompt = e;
+    installText.style.display = 'block'; // ഇൻസ്റ്റാൾ ചെയ്യാമെങ്കിൽ മാത്രം ടെക്സ്റ്റ് കാണിക്കും
   });
 
-  installBtn.addEventListener('click', async () => {
-    if (deferredPrompt) {
-      deferredPrompt.prompt();
-      const { outcome } = await deferredPrompt.userChoice;
-      if (outcome === 'accepted') {
-        installBtn.style.display = 'none';
-      }
-      deferredPrompt = null;
+  function handleBasAction() {
+    if (basPrompt) {
+      basPrompt.prompt();
+      basPrompt.userChoice.then((choice) => {
+        if (choice.outcome === 'accepted') {
+          installText.style.display = 'none';
+        }
+        basPrompt = null;
+      });
+    } else {
+      // ഇൻസ്റ്റാൾ ഓപ്ഷൻ ഇല്ലെങ്കിൽ മെനു കാണിക്കാനോ മറ്റോ ഇവിടെ മാറ്റം വരുത്താം
+      console.log("App already installed or not supported.");
     }
-  });
-</script>
+  }
 
-
-  // പുതിയ ഇവന്റ് ലിസണർ - പഴയതിനെ മറികടക്കുന്നു
-  window.addEventListener('beforeinstallprompt', (e) => {
-    e.preventDefault();
-    latestPrompt = e;
-  }, { capture: true });
-
+  // സർവീസ് വർക്കർ രജിസ്ട്രേഷൻ
   if ('serviceWorker' in navigator) {
-    window.addEventListener('load', () => navigator.serviceWorker.register('sw.js'));
+    window.addEventListener('load', () => {
+      navigator.serviceWorker.register('sw.js').catch(err => console.log('SW error', err));
+    });
   }
 </script>
- 
+
 </body>
 </html>
