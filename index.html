@@ -2432,21 +2432,23 @@ document.getElementById('closeBtn').addEventListener('click', () => {
 msgBox.remove();
 });
 });
-</script> <style>
-  .balloon-scene {
+</script>
+   <style>
+  /* പ്രധാന കണ്ടെയ്‌നർ */
+  #balloonMaster {
     position: fixed;
-    bottom: -500px; /* ഫുൾ ഹൈഡ് ഉറപ്പാക്കാൻ */
-    left: -20px;
-    width: 280px;
-    height: 100vh;
-    z-index: 99999;
+    bottom: -500px; /* തുടക്കത്തിൽ ഫുൾ ഹൈഡ് */
+    left: 0;
+    width: 300px;
+    height: 450px;
+    z-index: 2147483647; /* ഏറ്റവും മുകളിൽ വരാൻ */
     pointer-events: none;
-    transition: bottom 2.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    transition: bottom 2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
   }
 
-  /* സ്റ്റേറ്റുകൾ */
-  .show-balloons { bottom: 0px !important; } 
-  .semi-rest { bottom: -120px !important; } /* പകുതി ഒളിച്ചു നിൽക്കാൻ */
+  /* സ്റ്റേറ്റുകൾ - ഇത് മാറ്റരുത് */
+  .up-now { bottom: 0px !important; } 
+  .rest-now { bottom: -280px !important; } /* പകുതി ഒളിച്ചു നിൽക്കാൻ */
 
   .balloon {
     position: absolute;
@@ -2455,107 +2457,103 @@ msgBox.remove();
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    text-align: center;
     cursor: pointer;
     pointer-events: auto;
-    overflow: hidden; /* മഞ്ഞ ബട്ടൺ ബലൂണിന് ഉള്ളിൽ നിൽക്കാൻ */
     box-shadow: inset -10px -10px 25px rgba(0,0,0,0.4);
   }
 
-  .string-bas {
+  /* ചരട് */
+  .bas-string {
     position: absolute;
     width: 2px;
-    background: rgba(255,255,255,0.6);
+    background: rgba(255,255,255,0.5);
     bottom: -1000px;
     left: 50%;
     height: 1000px;
   }
 
+  /* വെള്ള ബലൂൺ (INSTALL) */
   .white-ball {
-    width: 130px; height: 170px;
+    width: 125px; height: 165px;
     background: #ffffff;
-    bottom: 250px; left: 60px;
+    bottom: 240px; left: 60px;
     z-index: 30;
-    animation: bas-float-main 14s ease-in-out infinite;
+    animation: bas-float-white 12s ease-in-out infinite;
   }
 
+  /* നീല ബലൂൺ (WHATSAPP) */
   .blue-ball {
     width: 110px; height: 140px;
     background: #007bff;
-    bottom: 90px; left: 30px;
+    bottom: 90px; left: 35px;
     z-index: 20;
     color: white;
-    animation: bas-float-sub 11s ease-in-out infinite;
+    animation: bas-float-blue 10s ease-in-out infinite;
   }
 
-  .ball-icon-sticker {
-    width: 50px; height: 50px;
-    border-radius: 12px;
-    margin-bottom: 5px;
-    border: 2px solid #fff;
-  }
+  .ball-sticker { width: 45px; height: 45px; border-radius: 10px; margin-bottom: 5px; border: 1px solid #ddd; }
+  .ball-text { font-family: 'Arial Black', sans-serif; font-size: 11px; font-weight: 900; text-align: center; color: inherit; }
 
-  .ball-label { font-family: 'Arial Black', sans-serif; font-size: 11px; font-weight: 900; }
-
-  @keyframes bas-float-main {
+  @keyframes bas-float-white {
     0%, 100% { transform: translate(0, 0) rotate(-4deg); }
-    30% { transform: translate(40px, 60px) rotate(6deg); }
-    60% { transform: translate(-20px, -30px) rotate(-4deg); }
+    50% { transform: translate(40px, 50px) rotate(6deg); }
   }
 
-  @keyframes bas-float-sub {
+  @keyframes bas-float-blue {
     0%, 100% { transform: translate(0, 0) rotate(5deg); }
-    50% { transform: translate(30px, -20px) rotate(-5deg); }
+    50% { transform: translate(30px, -30px) rotate(-5deg); }
   }
 </style>
 
-<div id="balloonSection" class="balloon-scene">
+<div id="balloonMaster">
   <div class="balloon white-ball" onclick="handleInstallTap()">
-    <img src="icon-512.png" class="ball-icon-sticker">
-    <div id="installStatus" class="ball-label" style="color: #333;">INSTALL</div>
-    <div class="nipple" style="position:absolute;bottom:-10px;width:20px;height:10px;background:inherit;clip-path:polygon(20% 0,80% 0,100% 100%,0 100%);"></div>
-    <div class="string-bas"></div>
+    <img src="icon-512.png" class="ball-sticker">
+    <div id="installStatus" class="ball-text" style="color:#333;">INSTALL</div>
+    <div style="position:absolute;bottom:-10px;width:20px;height:12px;background:inherit;clip-path:polygon(20% 0,80% 0,100% 100%,0 100%);"></div>
+    <div class="bas-string"></div>
   </div>
 
   <div class="balloon blue-ball" onclick="goWhatsApp()">
-    <div class="ball-label">SAVE TO<br>WHATSAPP</div>
-    <div class="nipple" style="position:absolute;bottom:-10px;width:20px;height:10px;background:inherit;clip-path:polygon(20% 0,80% 0,100% 100%,0 100%);"></div>
-    <div class="string-bas"></div>
+    <div class="ball-text">SAVE TO<br>WHATSAPP</div>
+    <div style="position:absolute;bottom:-10px;width:20px;height:12px;background:inherit;clip-path:polygon(20% 0,80% 0,100% 100%,0 100%);"></div>
+    <div class="bas-string"></div>
   </div>
 </div>
 
 <script>
   let deferredPrompt;
-  const section = document.getElementById('balloonSection');
+  const master = document.getElementById('balloonMaster');
   const statusTxt = document.getElementById('installStatus');
 
-  function startCycle() {
+  function startBalloonSystem() {
+    // 1. 5 സെക്കൻഡ് കഴിഞ്ഞ് ഉയർന്നു വരുന്നു
     setTimeout(() => {
-      section.classList.add('show-balloons');
+      master.classList.add('up-now');
       
+      // 2. 15 സെക്കൻഡ് പറന്ന ശേഷം ഫുൾ ഹൈഡ് (താഴേക്ക് പോകുന്നു)
       setTimeout(() => {
-        section.classList.remove('show-balloons'); // 15s കഴിഞ്ഞ് ഫുൾ ഹൈഡ്
+        master.classList.remove('up-now');
         
+        // 3. 60 സെക്കൻഡ് കഴിഞ്ഞ് പകുതി പൊങ്ങുന്നു (Rest State)
         setTimeout(() => {
-          section.classList.add('semi-rest'); // 60s കഴിഞ്ഞ് റെസ്റ്റ് പൊസിഷൻ
+          master.classList.add('rest-now');
         }, 60000);
       }, 15000);
     }, 5000);
   }
 
-  const wakeUp = () => {
-    section.classList.remove('semi-rest');
-    section.classList.add('show-balloons');
+  // തൊട്ടാൽ കളി തുടങ്ങാൻ
+  const interaction = () => {
+    master.classList.remove('rest-now');
+    master.classList.add('up-now');
   };
-  section.addEventListener('mouseenter', wakeUp);
-  section.addEventListener('touchstart', wakeUp);
+  master.addEventListener('click', interaction);
+  master.addEventListener('touchstart', interaction);
 
-  window.addEventListener('load', startCycle);
+  window.addEventListener('load', startBalloonSystem);
 
   function goWhatsApp(){
-    let msg = "Save a beautiful icon to your screen\n\n" +
-              "https://bascharity-56f.pages.dev\n\n" +
-              "Chrome → ⋮ 3 dot → Save to Screen → Install";
+    let msg = "Save a beautiful icon to your screen\n\nhttps://bascharity-56f.pages.dev\n\nChrome → ⋮ 3 dot → Save to Screen → Install";
     window.open("https://wa.me/?text=" + encodeURIComponent(msg), "_blank");
   }
 
@@ -2568,13 +2566,11 @@ msgBox.remove();
     if (deferredPrompt) {
       deferredPrompt.prompt();
       deferredPrompt.userChoice.then((choice) => {
-        if (choice.outcome === 'accepted') {
-          statusTxt.innerText = "INSTALLED";
-        }
+        if (choice.outcome === 'accepted') { statusTxt.innerText = "INSTALLED"; }
         deferredPrompt = null;
       });
     } else {
-      alert("App is ready to use!");
+      alert("Please use Chrome browser for 'Install' option.");
     }
   }
 
@@ -2582,7 +2578,6 @@ msgBox.remove();
     statusTxt.innerText = "INSTALLED";
   });
 </script>
-
 
 </body>
 </html>
