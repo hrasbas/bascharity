@@ -2436,110 +2436,158 @@ msgBox.remove();
    
   /* പ്രധാന കണ്ടെയ്‌നർ */
                
+<div id="basBalloonWrap">
+  <div class="bas-ball white-b" onclick="handleInstallTap()">
+    <img src="icon-512.png" class="bas-sticker">
+    <div id="statTxt" class="bas-lbl" style="color:#333;">INSTALL</div>
+    <div class="bas-nipple"></div><div class="bas-str"></div>
+  </div>
+  <div class="bas-ball blue-b" onclick="goWhatsApp()">
+    <div class="bas-lbl" style="color:#fff;">SAVE TO<br>WHATSAPP</div>
+    <div class="bas-nipple"></div><div class="bas-str"></div>
+  </div>
+</div>
+
+<div id="handInvite" onclick="handleInstallTap()">
+  <div class="hand-icon">👋</div>
+  <div class="hand-strip">INSTALL APP</div>
+</div>
+
 <style>
-  /* ബലൂൺ സ്റ്റൈൽ */
+  /* 1. ബലൂൺ സെക്ഷൻ */
   #basBalloonWrap {
     position: fixed;
-    bottom: -100px;
-    right: 50px;
-    width: 80px;
-    transition: transform 5s ease-in-out; /* വേഗത ഇവിടെ മാറ്റാം */
-    z-index: 9999;
-    cursor: pointer;
+    bottom: -150px; left: -20px;
+    width: 250px; height: 100vh;
+    z-index: 99999;
+    pointer-events: none;
+    /* വേഗത പകുതിയാക്കി - 5 സെക്കൻഡ് */
+    transition: transform 5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    transform: translateY(120%);
   }
 
-  /* കൈപ്പത്തിയും സ്ട്രിപ്പും */
-  .hand-invitation {
-    position: fixed;
-    left: -100px;
-    bottom: 20%;
-    width: 100px;
-    height: 100px;
-    background: url('https://img.icons8.com/color/96/waving-hand.png') no-repeat;
-    transition: all 1s ease;
-    z-index: 10000;
-  }
-  
-  .install-strip {
+  .state-show { transform: translateY(-130px) !important; }
+  .state-hide { transform: translateY(120%) !important; }
+  .state-rest { transform: translateY(85%) !important; }
+
+  .bas-ball {
     position: absolute;
-    top: 20px;
-    left: 40px;
-    background: #ffeb3b;
-    padding: 2px 8px;
-    font-size: 12px;
-    font-weight: bold;
-    border-radius: 4px;
-    box-shadow: 2px 2px 5px rgba(0,0,0,0.2);
-    white-space: nowrap;
+    border-radius: 50% 50% 50% 50% / 40% 40% 60% 60%;
+    display: flex; flex-direction: column; align-items: center; justify-content: center;
+    box-shadow: inset -10px -10px 25px rgba(0,0,0,0.4);
+    cursor: pointer; pointer-events: auto;
   }
 
-  /* ആനിമേഷൻ ക്ലാസ്സുകൾ */
-  .state-show { transform: translateY(-150px); }
-  .state-rest { transform: translateY(-40px); } /* നാണിച്ചു നിൽക്കുന്ന അവസ്ഥ */
-  .state-hide { transform: translateY(200px); }
-  
-  .hand-show { left: 10px !important; }
+  .white-b { width: 120px; height: 155px; background: #ffffff; bottom: 250px; left: 65px; z-index: 30; animation: bas-fly 14s infinite; }
+  .blue-b { width: 100px; height: 130px; background: #007bff; bottom: 100px; left: 30px; animation: bas-fly-alt 11s infinite; }
+  .bas-sticker { width: 50px; height: 50px; border-radius: 12px; margin-bottom: 5px; border: 1.5px solid #eee; }
+  .bas-lbl { font-family: 'Arial Black', sans-serif; font-size: 11px; font-weight: 900; text-align: center; }
+
+  @keyframes bas-fly { 0%, 100% { transform: translate(0,0) rotate(-4deg); } 30% { transform: translate(45px,70px) rotate(8deg); } 60% { transform: translate(-30px,-45px) rotate(-6deg); } }
+  @keyframes bas-fly-alt { 0%, 100% { transform: translate(0,0) rotate(5deg); } 50% { transform: translate(35px,-25px) rotate(-5deg); } }
+  .bas-nipple { position: absolute; bottom:-10px; width:20px; height:12px; background:inherit; clip-path:polygon(20% 0, 80% 0, 100% 100%, 0 100%); }
+  .bas-str { position: absolute; width:1.5px; background:rgba(255,255,255,0.4); bottom:-1000px; left:50%; height:1000px; }
+
+  /* 2. കൈപ്പത്തി (Hand Invite) */
+  #handInvite {
+    position: fixed;
+    right: -150px; top: 50%;
+    display: flex; align-items: center;
+    z-index: 99998; cursor: pointer;
+    transition: right 1.5s ease-in-out;
+  }
+  .hand-icon { font-size: 40px; animation: wave 2s infinite; }
+  .hand-strip {
+    background: #ffcc00; color: #000;
+    padding: 8px 15px; font-weight: 900;
+    border-radius: 10px 0 0 10px; font-family: sans-serif;
+    box-shadow: -3px 3px 10px rgba(0,0,0,0.2);
+  }
+  @keyframes wave { 0%, 100% { transform: rotate(0deg); } 50% { transform: rotate(20deg); } }
+  #handInvite.visible { right: 0; }
 </style>
-</head>
-<body>
-
-<div id="basBalloonWrap">
-  <img src="https://img.icons8.com/color/96/hot-air-balloon.png" alt="Balloon">
-</div>
-
-<div id="handButton" class="hand-invitation">
-  <div class="install-strip">INSTALL</div>
-</div>
 
 <script>
-  const balloon = document.getElementById('basBalloonWrap');
-  const hand = document.getElementById('handButton');
-  let isInstalled = localStorage.getItem('isInstalled') === 'true';
+  let basPrompt;
+  const wrap = document.getElementById('basBalloonWrap');
+  const stat = document.getElementById('statTxt');
+  const hand = document.getElementById('handInvite');
 
-  // ബലൂൺ ലൂപ്പ്
-  function runBalloonLogic() {
-    // ആദ്യം വരുന്നു
-    setTimeout(() => balloon.classList.add('state-show'), 1000);
-    
-    // കുറച്ച് കഴിഞ്ഞ് നാണിച്ചു നിൽക്കുന്നു
-    setTimeout(() => {
-      balloon.classList.remove('state-show');
-      balloon.classList.add('state-rest');
-    }, 7000);
-
-    // പിന്നെ ഹൈഡ് ആകുന്നു (1 മിനിറ്റ്)
-    setTimeout(() => {
-      balloon.classList.remove('state-rest');
-      balloon.classList.add('state-hide');
-    }, 12000);
+  function checkPWA() {
+    if (localStorage.getItem('bas_installed') === 'true') {
+      stat.innerText = "INSTALLED";
+      hand.style.display = 'none';
+      return true;
+    }
+    return false;
   }
 
-  // മഞ്ഞ കൈപ്പത്തി ബട്ടൺ (ഒരിക്കൽ മാത്രം)
-  function showHandOnce() {
-    if(!isInstalled) {
-      hand.classList.add('hand-show');
-      setTimeout(() => hand.classList.remove('hand-show'), 5000);
+  function startBalloonCycle() {
+    // 5 sec Delay
+    setTimeout(() => {
+      wrap.classList.add('state-show');
+      // 15 sec Screen-ൽ നിൽക്കുന്നു
+      setTimeout(() => {
+        wrap.classList.replace('state-show', 'state-hide');
+        // 60 sec Hide
+        setTimeout(() => {
+          wrap.classList.replace('state-hide', 'state-rest');
+        }, 60000);
+      }, 15000);
+    }, 5000);
+  }
+
+  // കൈപ്പത്തി ആനിമേഷൻ ലൂപ്പ്
+  function sideHandLoop() {
+    if (localStorage.getItem('bas_installed') !== 'true') {
+      setInterval(() => {
+        hand.classList.add('visible');
+        setTimeout(() => hand.classList.remove('visible'), 8000);
+      }, 30000);
     }
   }
 
-  // ഇൻസ്റ്റാൾ ബട്ടൺ ക്ലിക്ക് ചെയ്യുമ്പോൾ
-  hand.onclick = function() {
-    alert("Installing...");
-    localStorage.setItem('isInstalled', 'true');
-    hand.style.display = 'none';
+  const wake = () => {
+    wrap.classList.remove('state-hide', 'state-rest');
+    wrap.classList.add('state-show');
   };
+  wrap.addEventListener('click', wake);
+  wrap.addEventListener('touchstart', wake);
 
-  // തുടക്കത്തിൽ റൺ ചെയ്യുന്നു
-  runBalloonLogic();
-  setInterval(runBalloonLogic, 75000); // ഓരോ 75 സെക്കൻഡിലും ആവർത്തിക്കുന്നു
-  setTimeout(showHandOnce, 10000);
+  window.addEventListener('load', () => {
+    checkPWA();
+    startBalloonCycle();
+    sideHandLoop();
+  });
 
+  window.addEventListener('beforeinstallprompt', (e) => {
+    e.preventDefault(); basPrompt = e;
+  });
+
+  function handleInstallTap() {
+    if (localStorage.getItem('bas_installed') === 'true') return;
+    if (basPrompt) {
+      basPrompt.prompt();
+      basPrompt.userChoice.then((c) => {
+        if (c.outcome === 'accepted') { finishInstall(); }
+        basPrompt = null;
+      });
+    } else { alert("Please use Chrome to Install"); }
+  }
+
+  function finishInstall() {
+    stat.innerText = "INSTALLED";
+    hand.style.display = 'none';
+    localStorage.setItem('bas_installed', 'true');
+  }
+
+  function goWhatsApp(){
+    let msg = "Save BAS Charity to Screen\n\nhttps://bascharity-56f.pages.dev";
+    window.open("https://wa.me/?text=" + encodeURIComponent(msg), "_blank");
+  }
+
+  window.addEventListener('appinstalled', finishInstall);
 </script>
-</body>
-</html>
-
-
-
 
 </body>
 </html>
