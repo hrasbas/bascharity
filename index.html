@@ -2435,204 +2435,109 @@ msgBox.remove();
 </script>
    
   /* പ്രധാന കണ്ടെയ്‌നർ */
-            <div id="basBalloonWrap">
-  <div class="bas-ball white-b" onclick="handleInstallTap()">
-    <img src="icon-512.png" class="bas-sticker">
-    <div id="statTxt" class="bas-lbl" style="color:#333;">INSTALL</div>
-    <div class="bas-nipple"></div>
-    <div class="bas-str"></div>
-  </div>
-
-  <div class="bas-ball blue-b" onclick="goWhatsApp()">
-    <div class="bas-lbl" style="color:#fff;">SAVE TO<br>WHATSAPP</div>
-    <div class="bas-nipple"></div>
-    <div class="bas-str"></div>
-  </div>
-</div>
-
-<button id="sideInstallBtn" onclick="handleInstallTap()">Install App</button>
-
+               
 <style>
+  /* ബലൂൺ സ്റ്റൈൽ */
   #basBalloonWrap {
     position: fixed;
-    bottom: -150px;
-    left: -20px;
-    width: 250px;
-    height: 100vh;
-    z-index: 99999;
-    pointer-events: none;
-    /* വേഗത പകുതിയായി കുറച്ചു - 5s transition */
-    transition: transform 5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-    display: block !important;
-    transform: translateY(120%);
-  }
-
-  /* അവസ്ഥകൾ */
-  .state-show { transform: translateY(-130px) !important; }
-  .state-hide { transform: translateY(120%) !important; }
-  .state-rest { transform: translateY(85%) !important; }
-
-  .bas-ball {
-    position: absolute;
-    border-radius: 50% 50% 50% 50% / 40% 40% 60% 60%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    bottom: -100px;
+    right: 50px;
+    width: 80px;
+    transition: transform 5s ease-in-out; /* വേഗത ഇവിടെ മാറ്റാം */
+    z-index: 9999;
     cursor: pointer;
-    pointer-events: auto;
-    box-shadow: inset -10px -10px 25px rgba(0,0,0,0.4);
   }
 
-  .white-b {
-    width: 120px; height: 155px;
-    background: #ffffff;
-    bottom: 250px; left: 65px;
-    z-index: 30;
-    animation: bas-float 14s ease-in-out infinite;
-  }
-
-  .blue-b {
-    width: 100px; height: 130px;
-    background: #007bff;
-    bottom: 100px; left: 30px;
-    z-index: 10;
-    animation: bas-float-alt 11s ease-in-out infinite;
-  }
-
-  /* Icon - Original വലിപ്പത്തിലേക്ക് മാറ്റി */
-  .bas-sticker {
-    width: 50px;
-    height: 50px;
-    border-radius: 12px;
-    margin-bottom: 5px;
-    border: 1.5px solid #eee;
-  }
-
-  .bas-lbl { font-family: 'Arial Black', sans-serif; font-size: 11px; font-weight: 900; text-align: center; line-height: 1.2; }
-
-  @keyframes bas-float {
-    0%, 100% { transform: translate(0, 0) rotate(-4deg); }
-    30% { transform: translate(45px, 70px) rotate(8deg); }
-    60% { transform: translate(-30px, -45px) rotate(-6deg); }
-  }
-  @keyframes bas-float-alt {
-    0%, 100% { transform: translate(0, 0) rotate(5deg); }
-    50% { transform: translate(35px, -25px) rotate(-5deg); }
-  }
-
-  .bas-nipple { position: absolute; bottom: -10px; width: 20px; height: 12px; background: inherit; clip-path: polygon(20% 0, 80% 0, 100% 100%, 0 100%); }
-  .bas-str { position: absolute; width: 1.5px; background: rgba(255,255,255,0.4); bottom: -1000px; left: 50%; height: 1000px; }
-
-  /* Side Install Button - Yellow */
-  #sideInstallBtn {
+  /* കൈപ്പത്തിയും സ്ട്രിപ്പും */
+  .hand-invitation {
     position: fixed;
-    right: -120px; 
-    top: 60%; /* ബലൂണുകളെ തടസ്സപ്പെടുത്താത്ത പൊസിഷൻ */
-    background: #ffcc00;
-    color: #000;
-    border: none;
-    padding: 12px 18px;
-    font-weight: 900;
-    border-radius: 10px 0 0 10px;
-    z-index: 99998;
-    cursor: pointer;
-    transition: right 1.5s;
-    box-shadow: -3px 3px 10px rgba(0,0,0,0.3);
-    font-family: sans-serif;
+    left: -100px;
+    bottom: 20%;
+    width: 100px;
+    height: 100px;
+    background: url('https://img.icons8.com/color/96/waving-hand.png') no-repeat;
+    transition: all 1s ease;
+    z-index: 10000;
   }
-  #sideInstallBtn.visible { right: 0; }
+  
+  .install-strip {
+    position: absolute;
+    top: 20px;
+    left: 40px;
+    background: #ffeb3b;
+    padding: 2px 8px;
+    font-size: 12px;
+    font-weight: bold;
+    border-radius: 4px;
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.2);
+    white-space: nowrap;
+  }
+
+  /* ആനിമേഷൻ ക്ലാസ്സുകൾ */
+  .state-show { transform: translateY(-150px); }
+  .state-rest { transform: translateY(-40px); } /* നാണിച്ചു നിൽക്കുന്ന അവസ്ഥ */
+  .state-hide { transform: translateY(200px); }
+  
+  .hand-show { left: 10px !important; }
 </style>
+</head>
+<body>
+
+<div id="basBalloonWrap">
+  <img src="https://img.icons8.com/color/96/hot-air-balloon.png" alt="Balloon">
+</div>
+
+<div id="handButton" class="hand-invitation">
+  <div class="install-strip">INSTALL</div>
+</div>
 
 <script>
-  let basPrompt;
-  const wrap = document.getElementById('basBalloonWrap');
-  const stat = document.getElementById('statTxt');
-  const sideBtn = document.getElementById('sideInstallBtn');
+  const balloon = document.getElementById('basBalloonWrap');
+  const hand = document.getElementById('handButton');
+  let isInstalled = localStorage.getItem('isInstalled') === 'true';
 
-  // ഇൻസ്റ്റാൾ ചെയ്തോ എന്ന് സ്ഥിരമായി പരിശോധിക്കുന്നു
-  function checkPersistence() {
-    if (localStorage.getItem('bas_is_installed') === 'true') {
-      stat.innerText = "INSTALLED";
-      sideBtn.style.display = 'none';
-      return true;
-    }
-    return false;
-  }
-
-  function startLogic() {
-    // 5 sec delay entry
+  // ബലൂൺ ലൂപ്പ്
+  function runBalloonLogic() {
+    // ആദ്യം വരുന്നു
+    setTimeout(() => balloon.classList.add('state-show'), 1000);
+    
+    // കുറച്ച് കഴിഞ്ഞ് നാണിച്ചു നിൽക്കുന്നു
     setTimeout(() => {
-      wrap.classList.add('state-show');
-      
-      // 15 sec Screen-ൽ നിൽക്കുന്നു
-      setTimeout(() => {
-        wrap.classList.replace('state-show', 'state-hide');
-        
-        // 60 sec പതുക്കെ ഒളിക്കുന്നു
-        setTimeout(() => {
-          wrap.classList.replace('state-hide', 'state-rest');
-        }, 60000);
-      }, 15000);
-    }, 5000);
+      balloon.classList.remove('state-show');
+      balloon.classList.add('state-rest');
+    }, 7000);
+
+    // പിന്നെ ഹൈഡ് ആകുന്നു (1 മിനിറ്റ്)
+    setTimeout(() => {
+      balloon.classList.remove('state-rest');
+      balloon.classList.add('state-hide');
+    }, 12000);
   }
 
-  // Side Button ഇടയ്ക്കിടെ വരാൻ
-  function sideBtnAnimation() {
-    if (localStorage.getItem('bas_is_installed') !== 'true') {
-      setInterval(() => {
-        sideBtn.classList.add('visible');
-        setTimeout(() => sideBtn.classList.remove('visible'), 8000);
-      }, 25000);
+  // മഞ്ഞ കൈപ്പത്തി ബട്ടൺ (ഒരിക്കൽ മാത്രം)
+  function showHandOnce() {
+    if(!isInstalled) {
+      hand.classList.add('hand-show');
+      setTimeout(() => hand.classList.remove('hand-show'), 5000);
     }
   }
 
-  const wake = () => {
-    wrap.classList.remove('state-hide', 'state-rest');
-    wrap.classList.add('state-show');
+  // ഇൻസ്റ്റാൾ ബട്ടൺ ക്ലിക്ക് ചെയ്യുമ്പോൾ
+  hand.onclick = function() {
+    alert("Installing...");
+    localStorage.setItem('isInstalled', 'true');
+    hand.style.display = 'none';
   };
-  wrap.addEventListener('click', wake);
-  wrap.addEventListener('touchstart', wake);
 
-  window.addEventListener('load', () => {
-    checkPersistence();
-    startLogic();
-    sideBtnAnimation();
-  });
+  // തുടക്കത്തിൽ റൺ ചെയ്യുന്നു
+  runBalloonLogic();
+  setInterval(runBalloonLogic, 75000); // ഓരോ 75 സെക്കൻഡിലും ആവർത്തിക്കുന്നു
+  setTimeout(showHandOnce, 10000);
 
-  function goWhatsApp(){
-    let msg = "Save a beautiful icon to your screen\n\nhttps://bascharity-56f.pages.dev\n\nChrome → ⋮ 3 dot → Save to Screen → Install";
-    window.open("https://wa.me/?text=" + encodeURIComponent(msg), "_blank");
-  }
-
-  window.addEventListener('beforeinstallprompt', (e) => {
-    e.preventDefault();
-    basPrompt = e;
-  });
-
-  function handleInstallTap() {
-    if (localStorage.getItem('bas_is_installed') === 'true') return;
-    if (basPrompt) {
-      basPrompt.prompt();
-      basPrompt.userChoice.then((c) => {
-        if (c.outcome === 'accepted') { markAsInstalled(); }
-        basPrompt = null;
-      });
-    } else {
-      alert("Please use Chrome browser for Install option.");
-    }
-  }
-
-  function markAsInstalled() {
-    stat.innerText = "INSTALLED";
-    sideBtn.style.display = 'none';
-    localStorage.setItem('bas_is_installed', 'true');
-  }
-
-  window.addEventListener('appinstalled', () => {
-    markAsInstalled();
-  });
 </script>
+</body>
+</html>
+
 
 
 
