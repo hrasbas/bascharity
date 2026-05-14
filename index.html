@@ -2432,22 +2432,21 @@ document.getElementById('closeBtn').addEventListener('click', () => {
 msgBox.remove();
 });
 });
-</script> 
-<style>
+</script> <style>
   .balloon-scene {
     position: fixed;
-    bottom: -150px; /* തുടക്കത്തിൽ ഫുൾ ഹൈഡ് */
+    bottom: -500px; /* ഫുൾ ഹൈഡ് ഉറപ്പാക്കാൻ */
     left: -20px;
     width: 280px;
     height: 100vh;
     z-index: 99999;
     pointer-events: none;
-    transition: transform 2.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    transition: bottom 2.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
   }
 
   /* സ്റ്റേറ്റുകൾ */
-  .show-balloons { transform: translateY(-130px); } /* മുകളിലേക്ക് വരാൻ */
-  .semi-rest { transform: translateY(65%); } /* പകുതി ഒളിച്ചു നിൽക്കാൻ */
+  .show-balloons { bottom: 0px !important; } 
+  .semi-rest { bottom: -120px !important; } /* പകുതി ഒളിച്ചു നിൽക്കാൻ */
 
   .balloon {
     position: absolute;
@@ -2459,6 +2458,7 @@ msgBox.remove();
     text-align: center;
     cursor: pointer;
     pointer-events: auto;
+    overflow: hidden; /* മഞ്ഞ ബട്ടൺ ബലൂണിന് ഉള്ളിൽ നിൽക്കാൻ */
     box-shadow: inset -10px -10px 25px rgba(0,0,0,0.4);
   }
 
@@ -2469,16 +2469,6 @@ msgBox.remove();
     bottom: -1000px;
     left: 50%;
     height: 1000px;
-    transform-origin: top;
-  }
-
-  .nipple-bas {
-    position: absolute;
-    bottom: -12px;
-    width: 22px;
-    height: 12px;
-    background: inherit;
-    clip-path: polygon(20% 0%, 80% 0%, 100% 100%, 0% 100%);
   }
 
   .white-ball {
@@ -2503,20 +2493,19 @@ msgBox.remove();
     border-radius: 12px;
     margin-bottom: 5px;
     border: 2px solid #fff;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
   }
 
-  .ball-label { font-family: 'Arial Black', sans-serif; font-size: 12px; font-weight: 900; }
+  .ball-label { font-family: 'Arial Black', sans-serif; font-size: 11px; font-weight: 900; }
 
   @keyframes bas-float-main {
     0%, 100% { transform: translate(0, 0) rotate(-4deg); }
-    30% { transform: translate(50px, 80px) rotate(7deg); }
-    60% { transform: translate(-30px, -40px) rotate(-5deg); }
+    30% { transform: translate(40px, 60px) rotate(6deg); }
+    60% { transform: translate(-20px, -30px) rotate(-4deg); }
   }
 
   @keyframes bas-float-sub {
     0%, 100% { transform: translate(0, 0) rotate(5deg); }
-    50% { transform: translate(40px, -30px) rotate(-6deg); }
+    50% { transform: translate(30px, -20px) rotate(-5deg); }
   }
 </style>
 
@@ -2524,12 +2513,14 @@ msgBox.remove();
   <div class="balloon white-ball" onclick="handleInstallTap()">
     <img src="icon-512.png" class="ball-icon-sticker">
     <div id="installStatus" class="ball-label" style="color: #333;">INSTALL</div>
-    <div class="nipple-bas"></div><div class="string-bas"></div>
+    <div class="nipple" style="position:absolute;bottom:-10px;width:20px;height:10px;background:inherit;clip-path:polygon(20% 0,80% 0,100% 100%,0 100%);"></div>
+    <div class="string-bas"></div>
   </div>
 
   <div class="balloon blue-ball" onclick="goWhatsApp()">
     <div class="ball-label">SAVE TO<br>WHATSAPP</div>
-    <div class="nipple-bas"></div><div class="string-bas"></div>
+    <div class="nipple" style="position:absolute;bottom:-10px;width:20px;height:10px;background:inherit;clip-path:polygon(20% 0,80% 0,100% 100%,0 100%);"></div>
+    <div class="string-bas"></div>
   </div>
 </div>
 
@@ -2539,24 +2530,19 @@ msgBox.remove();
   const statusTxt = document.getElementById('installStatus');
 
   function startCycle() {
-    // 1. സൈറ്റ് തുറന്ന് 5 സെക്കൻഡ് കഴിഞ്ഞ് ബലൂൺ മുകളിലേക്ക് വരുന്നു
     setTimeout(() => {
       section.classList.add('show-balloons');
       
-      // 2. 15 സെക്കൻഡ് പറന്ന ശേഷം ഫുൾ ഹൈഡ് ആകുന്നു
       setTimeout(() => {
-        section.classList.remove('show-balloons');
+        section.classList.remove('show-balloons'); // 15s കഴിഞ്ഞ് ഫുൾ ഹൈഡ്
         
-        // 3. 60 സെക്കൻഡ് കഴിഞ്ഞാൽ പകുതിയിൽ താഴെ വന്ന് വിശ്രമിക്കുന്നു (Rest)
         setTimeout(() => {
-          section.classList.add('semi-rest');
+          section.classList.add('semi-rest'); // 60s കഴിഞ്ഞ് റെസ്റ്റ് പൊസിഷൻ
         }, 60000);
-
       }, 15000);
     }, 5000);
   }
 
-  // തൊട്ടാൽ മുകളിലേക്ക് വരാൻ
   const wakeUp = () => {
     section.classList.remove('semi-rest');
     section.classList.add('show-balloons');
@@ -2566,17 +2552,16 @@ msgBox.remove();
 
   window.addEventListener('load', startCycle);
 
-  // വാട്സാപ്പ് ലിങ്ക് കണക്ഷൻ
   function goWhatsApp(){
-    let shareText = "Save this beautiful icon to your home screen and support a mission.\n\nhttps://bascharity-56f.pages.dev";
-    window.open("https://api.whatsapp.com/send?text=" + encodeURIComponent(shareText), "_blank");
+    let msg = "Save a beautiful icon to your screen\n\n" +
+              "https://bascharity-56f.pages.dev\n\n" +
+              "Chrome → ⋮ 3 dot → Save to Screen → Install";
+    window.open("https://wa.me/?text=" + encodeURIComponent(msg), "_blank");
   }
 
-  // ഇൻസ്റ്റാൾ പോപ്പ്അപ്പ് ലോജിക്
   window.addEventListener('beforeinstallprompt', (e) => {
     e.preventDefault();
     deferredPrompt = e;
-    console.log("Install prompt ready");
   });
 
   function handleInstallTap() {
@@ -2589,16 +2574,15 @@ msgBox.remove();
         deferredPrompt = null;
       });
     } else {
-      // പോപ്പ്അപ്പ് ലഭ്യമല്ലെങ്കിൽ സാധാരണ അറിയിപ്പ്
-      alert("Please use Chrome browser for 'Install' option.");
+      alert("App is ready to use!");
     }
   }
 
   window.addEventListener('appinstalled', () => {
     statusTxt.innerText = "INSTALLED";
-    alert("BAS App Installed Successfully!");
   });
 </script>
+
 
 </body>
 </html>
