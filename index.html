@@ -2435,22 +2435,42 @@ msgBox.remove();
 </script>
    <style>
   /* പ്രധാന കണ്ടെയ്‌നർ */
-  #balloonMaster {
+<div id="basBalloonWrap">
+  <div class="bas-ball white-b" onclick="handleInstallTap()">
+    <img src="icon-512.png" class="bas-sticker">
+    <div id="statTxt" class="bas-lbl" style="color:#333;">INSTALL</div>
+    <div class="bas-nipple"></div>
+    <div class="bas-str"></div>
+  </div>
+
+  <div class="bas-ball blue-b" onclick="goWhatsApp()">
+    <div class="bas-lbl" style="color:#fff;">SAVE TO<br>WHATSAPP</div>
+    <div class="bas-nipple"></div>
+    <div class="bas-str"></div>
+  </div>
+</div>
+
+<style>
+  #basBalloonWrap {
     position: fixed;
-    bottom: -500px; /* തുടക്കത്തിൽ ഫുൾ ഹൈഡ് */
+    bottom: 0;
     left: 0;
-    width: 300px;
-    height: 450px;
-    z-index: 2147483647; /* ഏറ്റവും മുകളിൽ വരാൻ */
+    width: 280px;
+    height: 400px;
+    z-index: 2147483647;
     pointer-events: none;
-    transition: bottom 2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    /* തുടക്കത്തിൽ സ്ക്രീനിന് താഴെ ഒളിപ്പിക്കുന്നു */
+    transform: translateY(120%); 
+    transition: transform 2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    display: block !important;
   }
 
-  /* സ്റ്റേറ്റുകൾ - ഇത് മാറ്റരുത് */
-  .up-now { bottom: 0px !important; } 
-  .rest-now { bottom: -280px !important; } /* പകുതി ഒളിച്ചു നിൽക്കാൻ */
+  /* അവസ്ഥകൾ */
+  .state-up { transform: translateY(0%) !important; } 
+  .state-hide { transform: translateY(120%) !important; }
+  .state-rest { transform: translateY(70%) !important; }
 
-  .balloon {
+  .bas-ball {
     position: absolute;
     border-radius: 50% 50% 50% 50% / 40% 40% 60% 60%;
     display: flex;
@@ -2459,123 +2479,111 @@ msgBox.remove();
     justify-content: center;
     cursor: pointer;
     pointer-events: auto;
-    box-shadow: inset -10px -10px 25px rgba(0,0,0,0.4);
+    box-shadow: inset -8px -8px 20px rgba(0,0,0,0.4);
   }
 
-  /* ചരട് */
-  .bas-string {
+  .bas-str {
     position: absolute;
-    width: 2px;
-    background: rgba(255,255,255,0.5);
+    width: 1px;
+    background: rgba(255,255,255,0.4);
     bottom: -1000px;
     left: 50%;
     height: 1000px;
   }
 
-  /* വെള്ള ബലൂൺ (INSTALL) */
-  .white-ball {
-    width: 125px; height: 165px;
+  .bas-nipple {
+    position: absolute;
+    bottom: -10px;
+    width: 18px;
+    height: 10px;
+    background: inherit;
+    clip-path: polygon(20% 0, 80% 0, 100% 100%, 0 100%);
+  }
+
+  .white-b {
+    width: 120px; height: 160px;
     background: #ffffff;
-    bottom: 240px; left: 60px;
-    z-index: 30;
-    animation: bas-float-white 12s ease-in-out infinite;
+    bottom: 220px; left: 60px;
+    animation: floatW 12s ease-in-out infinite;
   }
 
-  /* നീല ബലൂൺ (WHATSAPP) */
-  .blue-ball {
-    width: 110px; height: 140px;
+  .blue-b {
+    width: 105px; height: 135px;
     background: #007bff;
-    bottom: 90px; left: 35px;
-    z-index: 20;
-    color: white;
-    animation: bas-float-blue 10s ease-in-out infinite;
+    bottom: 70px; left: 30px;
+    animation: floatB 10s ease-in-out infinite;
   }
 
-  .ball-sticker { width: 45px; height: 45px; border-radius: 10px; margin-bottom: 5px; border: 1px solid #ddd; }
-  .ball-text { font-family: 'Arial Black', sans-serif; font-size: 11px; font-weight: 900; text-align: center; color: inherit; }
+  .bas-sticker { width: 45px; height: 45px; border-radius: 10px; margin-bottom: 5px; border: 1px solid #ddd; }
+  .bas-lbl { font-family: sans-serif; font-size: 11px; font-weight: 900; text-align: center; line-height: 1.2; }
 
-  @keyframes bas-float-white {
-    0%, 100% { transform: translate(0, 0) rotate(-4deg); }
-    50% { transform: translate(40px, 50px) rotate(6deg); }
+  @keyframes floatW {
+    0%, 100% { transform: translate(0, 0) rotate(-3deg); }
+    50% { transform: translate(35px, 45px) rotate(5deg); }
   }
 
-  @keyframes bas-float-blue {
-    0%, 100% { transform: translate(0, 0) rotate(5deg); }
-    50% { transform: translate(30px, -30px) rotate(-5deg); }
+  @keyframes floatB {
+    0%, 100% { transform: translate(0, 0) rotate(4deg); }
+    50% { transform: translate(25px, -25px) rotate(-4deg); }
   }
 </style>
 
-<div id="balloonMaster">
-  <div class="balloon white-ball" onclick="handleInstallTap()">
-    <img src="icon-512.png" class="ball-sticker">
-    <div id="installStatus" class="ball-text" style="color:#333;">INSTALL</div>
-    <div style="position:absolute;bottom:-10px;width:20px;height:12px;background:inherit;clip-path:polygon(20% 0,80% 0,100% 100%,0 100%);"></div>
-    <div class="bas-string"></div>
-  </div>
-
-  <div class="balloon blue-ball" onclick="goWhatsApp()">
-    <div class="ball-text">SAVE TO<br>WHATSAPP</div>
-    <div style="position:absolute;bottom:-10px;width:20px;height:12px;background:inherit;clip-path:polygon(20% 0,80% 0,100% 100%,0 100%);"></div>
-    <div class="bas-string"></div>
-  </div>
-</div>
-
 <script>
-  let deferredPrompt;
-  const master = document.getElementById('balloonMaster');
-  const statusTxt = document.getElementById('installStatus');
+  let basPrompt;
+  const wrap = document.getElementById('basBalloonWrap');
+  const stat = document.getElementById('statTxt');
 
-  function startBalloonSystem() {
-    // 1. 5 സെക്കൻഡ് കഴിഞ്ഞ് ഉയർന്നു വരുന്നു
+  function initBalloons() {
+    // 5 സെക്കൻഡ് കഴിഞ്ഞ് വരുന്നു
     setTimeout(() => {
-      master.classList.add('up-now');
+      wrap.classList.add('state-up');
       
-      // 2. 15 സെക്കൻഡ് പറന്ന ശേഷം ഫുൾ ഹൈഡ് (താഴേക്ക് പോകുന്നു)
+      // 15 സെക്കൻഡ് കഴിഞ്ഞ് ഫുൾ ഹൈഡ്
       setTimeout(() => {
-        master.classList.remove('up-now');
+        wrap.classList.replace('state-up', 'state-hide');
         
-        // 3. 60 സെക്കൻഡ് കഴിഞ്ഞ് പകുതി പൊങ്ങുന്നു (Rest State)
+        // 60 സെക്കൻഡ് കഴിഞ്ഞ് റെസ്റ്റ് (പകുതി)
         setTimeout(() => {
-          master.classList.add('rest-now');
+          wrap.classList.replace('state-hide', 'state-rest');
         }, 60000);
       }, 15000);
     }, 5000);
   }
 
-  // തൊട്ടാൽ കളി തുടങ്ങാൻ
-  const interaction = () => {
-    master.classList.remove('rest-now');
-    master.classList.add('up-now');
+  const wake = () => {
+    wrap.classList.remove('state-hide', 'state-rest');
+    wrap.classList.add('state-up');
   };
-  master.addEventListener('click', interaction);
-  master.addEventListener('touchstart', interaction);
+  wrap.addEventListener('click', wake);
+  wrap.addEventListener('touchstart', wake);
 
-  window.addEventListener('load', startBalloonSystem);
+  window.addEventListener('load', initBalloons);
 
   function goWhatsApp(){
-    let msg = "Save a beautiful icon to your screen\n\nhttps://bascharity-56f.pages.dev\n\nChrome → ⋮ 3 dot → Save to Screen → Install";
-    window.open("https://wa.me/?text=" + encodeURIComponent(msg), "_blank");
+    let url = "https://bascharity-56f.pages.dev";
+    let text = "Save a beautiful icon to your screen\n\n" + url + "\n\nChrome → ⋮ 3 dot → Save to Screen → Install";
+    window.open("https://wa.me/?text=" + encodeURIComponent(text), "_blank");
   }
 
   window.addEventListener('beforeinstallprompt', (e) => {
     e.preventDefault();
-    deferredPrompt = e;
+    basPrompt = e;
   });
 
   function handleInstallTap() {
-    if (deferredPrompt) {
-      deferredPrompt.prompt();
-      deferredPrompt.userChoice.then((choice) => {
-        if (choice.outcome === 'accepted') { statusTxt.innerText = "INSTALLED"; }
-        deferredPrompt = null;
+    if (basPrompt) {
+      basPrompt.prompt();
+      basPrompt.userChoice.then((c) => {
+        if (c.outcome === 'accepted') stat.innerText = "INSTALLED";
+        basPrompt = null;
       });
     } else {
-      alert("Please use Chrome browser for 'Install' option.");
+      alert("Please use Chrome browser for Install option.");
     }
   }
 
   window.addEventListener('appinstalled', () => {
-    statusTxt.innerText = "INSTALLED";
+    stat.innerText = "INSTALLED";
   });
 </script>
 
