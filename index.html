@@ -2433,19 +2433,22 @@ msgBox.remove();
 });
 });
 </script> 
- 	<style>
+  
+      <style>
   .balloon-scene {
     position: fixed;
-    bottom: -25px;
+    bottom: -50px;
     left: -20px;
-    width: 380px;
+    width: 280px;
     height: 100vh;
     z-index: 99999;
     pointer-events: none;
-    transition: transform 12s ease-in-out;
+    transition: transform 2.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
   }
 
-  .hide-action { transform: translateY(120%); }
+  /* സ്റ്റേറ്റുകൾ */
+  .full-hide { transform: translateY(120%); } /* പൂർണ്ണമായും താഴെ */
+  .semi-rest { transform: translateY(65%); } /* പകുതിയിൽ അധികം താഴെ */
 
   .balloon {
     position: absolute;
@@ -2455,25 +2458,23 @@ msgBox.remove();
     align-items: center;
     justify-content: center;
     text-align: center;
-    color: black;
-    font-family: 'Arial Black', sans-serif;
-    box-shadow: inset -10px -10px 25px rgba(0,0,0,0.4);
     cursor: pointer;
     pointer-events: auto;
+    box-shadow: inset -10px -10px 25px rgba(0,0,0,0.4);
   }
 
-  .string-white {
+  /* ചരട് പഴയപോലെ */
+  .string-bas {
     position: absolute;
     width: 2px;
-    background: #ffffff;
+    background: rgba(255,255,255,0.6);
     bottom: -1000px;
     left: 50%;
     height: 1000px;
     transform-origin: top;
-    opacity: 0.7;
   }
 
-  .nipple-wrap {
+  .nipple-bas {
     position: absolute;
     bottom: -12px;
     width: 22px;
@@ -2481,266 +2482,116 @@ msgBox.remove();
     background: inherit;
     clip-path: polygon(20% 0%, 80% 0%, 100% 100%, 0% 100%);
   }
-  
-  .knot-white {
-    position: absolute;
-    bottom: -15px;
-    width: 10px;
-    height: 8px;
+
+  /* ബലൂൺ വലിപ്പവും കളറും */
+  .white-ball {
+    width: 130px; height: 170px;
     background: #ffffff;
-    border-radius: 50%;
+    bottom: 250px; left: 60px;
+    z-index: 30;
+    animation: bas-float-main 14s ease-in-out infinite;
   }
 
   .blue-ball {
-    width: 240px;
-    height: 310px;
+    width: 110px; height: 140px;
     background: #007bff;
-    bottom: 230px;
-    left: 60px;
-    z-index: 30;
-    animation: blue-float 14s ease-in-out infinite;
+    bottom: 90px; left: 30px;
+    z-index: 20;
+    color: white;
+    animation: bas-float-sub 11s ease-in-out infinite;
   }
 
-  .red-ball {
-    width: 140px;
-    height: 185px;
-    background: #ff4d4d;
-    bottom: 75px;
-    left: 25px;
-    z-index: 10;
-    animation: red-float 10s ease-in-out infinite;
+  /* ഐക്കൺ ഒട്ടിച്ചതുപോലെ തോന്നിക്കാൻ */
+  .ball-icon-sticker {
+    width: 50px; height: 50px;
+    border-radius: 12px;
+    margin-bottom: 5px;
+    border: 2px solid #fff;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+    object-fit: cover;
   }
 
-  .step-item { 
-    display: none; 
-    font-size: 21px; 
-    margin: 4px 0; 
-    font-weight: 900;
-    color: #ffffff;
-  }
-  
-  @keyframes tick-loop {
-    0% { opacity: 0; transform: scale(0.8); }
-    100% { opacity: 1; transform: scale(1); }
+  .ball-label { font-family: 'Arial Black', sans-serif; font-size: 12px; font-weight: 900; }
+
+  @keyframes bas-float-main {
+    0%, 100% { transform: translate(0, 0) rotate(-4deg); }
+    30% { transform: translate(50px, 80px) rotate(7deg); }
+    60% { transform: translate(-30px, -40px) rotate(-5deg); }
   }
 
-  @keyframes blue-float {
-    0%, 100% { transform: translate(0, 0) rotate(-3deg); }
-    30% { transform: translate(85px, 145px) rotate(6deg); }
-    60% { transform: translate(-55px, -75px) rotate(-5deg); }
+  @keyframes bas-float-sub {
+    0%, 100% { transform: translate(0, 0) rotate(5deg); }
+    50% { transform: translate(40px, -30px) rotate(-6deg); }
   }
-
-  @keyframes red-float {
-    0%, 100% { transform: translate(0, 0) rotate(4deg); }
-    50% { transform: translate(55px, -25px) rotate(-4deg); }
-  }
-
-  .info-txt { font-size: 16px; padding: 15px; font-weight: 900; line-height: 1.2; }
 </style>
 
 <div id="balloonSection" class="balloon-scene">
-  
-  <div class="balloon blue-ball" onclick="handleBalloonTap()">
-    <div id="defaultMsg" class="info-txt">SAVE A BEAUTIFUL ICON TO YOUR HOME SCREEN</div>
-    <div id="animSteps">
-      <div class="step-item">CHROM ✓</div>
-      <div class="step-item">⋮ 3 DOT ✓</div>
-      <div class="step-item">SAVE TO SCREEN ✓</div>
-      <div class="step-item">INSTALL ✓</div>
-    </div>
-    <div class="nipple-wrap"></div><div class="knot-white"></div><div class="string-white"></div>
+  <div class="balloon white-ball" onclick="handleInstallTap()">
+    <img src="icon-512.png" class="ball-icon-sticker">
+    <div id="installStatus" class="ball-label" style="color: #333;">INSTALL</div>
+    <div class="nipple-bas"></div><div class="string-bas"></div>
   </div>
 
-  <div class="balloon red-ball" onclick="goWhatsApp()">
-    <div class="info-txt" style="font-size: 14px;">SAVE TO<br>WHATSAPP</div>
-    <div class="nipple-wrap"></div><div class="knot-white"></div><div class="string-white"></div>
+  <div class="balloon blue-ball" onclick="goWhatsApp()">
+    <div class="ball-label">SAVE TO<br>WHATSAPP</div>
+    <div class="nipple-bas"></div><div class="string-bas"></div>
   </div>
-
 </div>
 
 <script>
-  let stepInterval = null;
-  let resetTimeout = null;
-  let animationTimeouts = [];
-  let isAnimating = false;
-  let hideTimeout = null;
+  let deferredPrompt;
+  const section = document.getElementById('balloonSection');
+  const statusTxt = document.getElementById('installStatus');
 
-  // പകുതി വഴിയിലാണെങ്കിലും ബലൂൺ തിരിച്ചു കൊണ്ടുവരാനുള്ള ഫംഗ്ഷൻ
-  function returnBalloon() {
-    const section = document.getElementById('balloonSection');
-    section.classList.remove('hide-action');
-    if (hideTimeout) {
-      clearTimeout(hideTimeout);
-      startHideLoop(); 
-    }
+  function startLogic() {
+    // 1. ആദ്യം 15 സെക്കൻഡ് പറക്കുന്നു
+    section.classList.remove('full-hide', 'semi-rest');
+    
+    setTimeout(() => {
+      // 2. ശേഷം 60 സെക്കൻഡ് ഫുൾ ഹൈഡ്
+      section.classList.add('full-hide');
+      
+      setTimeout(() => {
+        // 3. ശേഷം പൊങ്ങി വന്ന് സെമി-റെസ്റ്റ് (പകുതി താഴെ)
+        section.classList.remove('full-hide');
+        section.classList.add('semi-rest');
+      }, 60000); 
+
+    }, 15000);
   }
 
+  // തൊട്ടാൽ ഉടൻ മുകളിലേക്ക് വന്ന് കളി തുടങ്ങും
+  const wakeUp = () => {
+    section.classList.remove('full-hide', 'semi-rest');
+  };
+  section.addEventListener('mouseenter', wakeUp);
+  section.addEventListener('touchstart', wakeUp);
+
+  window.addEventListener('load', startLogic);
+
   function goWhatsApp(){
-    returnBalloon(); 
-    let msg = "Save a beautiful icon to your screen\n\n" +
-              "https://bas-charity.pages.dev\n\n" +
-              "Chrome → ⋮ 3 dot → Save to Screen → Install";
+    let msg = "BAS Charity - Your purchase satisfies a hunger.\nhttps://bascharity-56f.pages.dev";
     window.open("https://wa.me/?text=" + encodeURIComponent(msg), "_blank");
   }
 
-  function handleBalloonTap() {
-    returnBalloon(); 
-    if (isAnimating) return; 
-    isAnimating = true;
-    const msg = document.getElementById('defaultMsg');
-    const items = document.querySelectorAll('.step-item');
-    msg.style.display = 'none';
-    
-    const runSteps = () => {
-      animationTimeouts.forEach(t => clearTimeout(t));
-      animationTimeouts = [];
-      items.forEach((item, i) => {
-        item.style.display = 'none';
-        item.style.animation = 'none';
-        void item.offsetWidth; 
-        let t = setTimeout(() => { 
-          item.style.display = 'block'; 
-          item.style.animation = 'tick-loop 0.5s forwards';
-        }, i * 1000);
-        animationTimeouts.push(t);
-      });
-    };
-
-    runSteps();
-    stepInterval = setInterval(runSteps, 4500);
-    resetTimeout = setTimeout(() => { stopAndReset(); }, 10000);
-  }
-
-  function stopAndReset() {
-    if (stepInterval) { clearInterval(stepInterval); stepInterval = null; }
-    if (resetTimeout) { clearTimeout(resetTimeout); resetTimeout = null; }
-    animationTimeouts.forEach(t => clearTimeout(t));
-    animationTimeouts = [];
-    const msg = document.getElementById('defaultMsg');
-    const items = document.querySelectorAll('.step-item');
-    items.forEach(item => {
-      item.style.display = 'none';
-      item.style.animation = 'none';
-    });
-    msg.style.display = 'block';
-    isAnimating = false; 
-  }
-
-  function startHideLoop() {
-    const section = document.getElementById('balloonSection');
-    hideTimeout = setTimeout(() => {
-      section.classList.add('hide-action'); 
-      hideTimeout = setTimeout(() => {
-        section.classList.remove('hide-action'); 
-        startHideLoop();
-      }, 7000); 
-    }, 15000); 
-  }
-  
-  window.addEventListener('load', startHideLoop);
-</script>
-/* SL No: 25 A*/
- <script>
-/* ഈ ഡാറ്റ ഉപയോഗിച്ച് നിങ്ങളുടെ നിലവിലുള്ള ലിസ്റ്റിനെ മാറ്റാൻ കഴിയും.
-*/
-const allShops = {
-  "India": ["Amazon.in", "Flipkart", "Myntra"],
-  "UAE": ["Amazon.ae", "Noon"],
-  "UK": ["Amazon.co.uk", "eBay"]
-};
-
-function updateShopList(country) {
-  const shopContainer = document.querySelector('.shop-list'); 
-  if (shopContainer && allShops[country]) {
-    shopContainer.innerHTML = allShops[country].map(shop => `<span>${shop}</span>`).join('<br>');
-  }
-}
-</script>
-
- <style>
-  /* പഴയ ഐക്കണുകളെയും ബട്ടണുകളെയും പൂർണ്ണമായും ഒഴിവാക്കുന്നു */
-  div[id*="balloon"], div[id*="install"], button[id*="install"], .floating-icon-container {
-    display: none !important;
-  }
-
-  /* പുതിയ ഐക്കൺ - ഇടതുവശത്ത് മാത്രം */
-  #bas-final-icon {
-    display: block !important;
-    position: fixed;
-    bottom: 30px;
-    left: 20px; /* ഇടതുവശത്തേക്ക് കൃത്യമായി മാറ്റി */
-    width: 70px;
-    height: 70px;
-    cursor: pointer;
-    z-index: 99999;
-    filter: drop-shadow(0 5px 15px rgba(0,0,0,0.4));
-    transition: transform 0.3s ease;
-  }
-
-  #bas-final-icon:hover { transform: scale(1.1); }
-
-  /* ഇൻസ്റ്റാൾ നിർദ്ദേശം - ഐക്കണിന് മുകളിലായി */
-  #bas-install-text {
-    display: none;
-    position: fixed;
-    bottom: 110px;
-    left: 20px;
-    background: #ff4500;
-    color: white;
-    padding: 8px 15px;
-    border-radius: 20px;
-    font-size: 12px;
-    font-weight: bold;
-    z-index: 99999;
-    animation: bounce 2s infinite;
-  }
-
-  @keyframes bounce {
-    0%, 100% { transform: translateY(0); }
-    50% { transform: translateY(-10px); }
-  }
-
-  .bas-img { width: 100%; border-radius: 50%; border: 2px solid #fff; }
-</style>
-
-<div id="bas-install-text">Install App</div>
-<div id="bas-final-icon" onclick="handleBasAction()">
-  <img src="icon-512.png" alt="BAS" class="bas-img">
-</div>
-
-<script>
-  let basPrompt;
-  const icon = document.getElementById('bas-final-icon');
-  const installText = document.getElementById('bas-install-text');
-
-  // ഇൻസ്റ്റാൾ ചെയ്യാനുള്ള സാധ്യത ബ്രൗസർ അറിയിക്കുമ്പോൾ
   window.addEventListener('beforeinstallprompt', (e) => {
     e.preventDefault();
-    basPrompt = e;
-    installText.style.display = 'block'; // ഇൻസ്റ്റാൾ ചെയ്യാമെങ്കിൽ മാത്രം ടെക്സ്റ്റ് കാണിക്കും
+    deferredPrompt = e;
   });
 
-  function handleBasAction() {
-    if (basPrompt) {
-      basPrompt.prompt();
-      basPrompt.userChoice.then((choice) => {
-        if (choice.outcome === 'accepted') {
-          installText.style.display = 'none';
-        }
-        basPrompt = null;
+  function handleInstallTap() {
+    if (deferredPrompt) {
+      deferredPrompt.prompt();
+      deferredPrompt.userChoice.then((choice) => {
+        if (choice.outcome === 'accepted') { statusTxt.innerText = "INSTALLED"; }
+        deferredPrompt = null;
       });
-    } else {
-      // ഇൻസ്റ്റാൾ ഓപ്ഷൻ ഇല്ലെങ്കിൽ മെനു കാണിക്കാനോ മറ്റോ ഇവിടെ മാറ്റം വരുത്താം
-      console.log("App already installed or not supported.");
     }
   }
 
-  // സർവീസ് വർക്കർ രജിസ്ട്രേഷൻ
-  if ('serviceWorker' in navigator) {
-    window.addEventListener('load', () => {
-      navigator.serviceWorker.register('sw.js').catch(err => console.log('SW error', err));
-    });
-  }
+  window.addEventListener('appinstalled', () => {
+    statusTxt.innerText = "INSTALLED";
+  });
 </script>
 
 </body>
