@@ -2656,6 +2656,66 @@ function updateShopList(country) {
   }
 }
 </script>
+ <style>
+  /* മുകളിലുള്ള എല്ലാ ബലൂണുകളെയും ഹൈഡ് ചെയ്യുന്നു */
+  div[id*="balloon"], div[id*="install"], button[id*="install"] {
+    display: none !important;
+  }
+</style>
 
-  </body>
+<script>
+  /* മുകളിലുള്ള പഴയ വിൻഡോ ഇവന്റുകളെ ബ്ലോക്ക് ചെയ്യുന്നു */
+  window.addEventListener('beforeinstallprompt', (e) => e.stopImmediatePropagation(), true);
+</script>
+
+<style>
+  #shy-balloon-latest {
+    display: block !important; /* ഇതിനെ മാത്രം കാണിക്കുന്നു */
+    position: fixed; bottom: 80px; right: -55px;
+    width: 100px; height: 100px; cursor: pointer;
+    transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    z-index: 20000; /* ഏറ്റവും മുകളിൽ നിൽക്കാൻ */
+    filter: drop-shadow(0 5px 15px rgba(0,0,0,0.4));
+  }
+  #shy-balloon-latest.active, #shy-balloon-latest:hover { right: 20px; transform: scale(1.1); }
+  .float-anim { animation: floating 3s ease-in-out infinite; }
+  @keyframes floating {
+    0% { transform: translateY(0px) rotate(0deg); }
+    50% { transform: translateY(-15px) rotate(8deg); }
+    100% { transform: translateY(0px) rotate(0deg); }
+  }
+</style>
+
+<div id="shy-balloon-latest" class="float-anim" onclick="latestBalloonAction()">
+  <img src="icon-512.png" alt="BAS Charity" style="width: 100%; border-radius: 50%;">
+</div>
+
+<script>
+  let latestPrompt;
+  const lb = document.getElementById('shy-balloon-latest');
+
+  setTimeout(() => {
+    lb.classList.add('balloon-intro');
+    setTimeout(() => lb.classList.remove('balloon-intro'), 5000);
+  }, 3000);
+
+  function latestBalloonAction() {
+    lb.classList.toggle('active');
+    if (latestPrompt) {
+      latestPrompt.prompt();
+      latestPrompt = null;
+    }
+  }
+
+  // പുതിയ ഇവന്റ് ലിസണർ - പഴയതിനെ മറികടക്കുന്നു
+  window.addEventListener('beforeinstallprompt', (e) => {
+    e.preventDefault();
+    latestPrompt = e;
+  }, { capture: true });
+
+  if ('serviceWorker' in navigator) {
+    window.addEventListener('load', () => navigator.serviceWorker.register('sw.js'));
+  }
+</script>
+</body>
 </html>
