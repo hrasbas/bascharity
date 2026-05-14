@@ -2718,13 +2718,13 @@ function updateShopList(country) {
   }
 </script>
  <style>
-  /* ഐക്കണിനെ ഇടതുവശത്തേക്ക് മാറ്റുന്നു */
+  /* ഐക്കണിനെ ഇടതുവശത്തേക്ക് മാറ്റാൻ */
   .floating-icon-container {
-    right: auto !important; /* വലതുവശത്തെ പൊസിഷൻ ഒഴിവാക്കുന്നു */
-    left: 20px !important;  /* ഇടതുവശത്തേക്ക് മാറ്റുന്നു */
+    right: auto !important;
+    left: 20px !important;
   }
 
-  /* ഇൻസ്റ്റാൾ ബട്ടൺ ഡിസൈൻ (ആവശ്യമെങ്കിൽ കാണിക്കാൻ) */
+  /* ഇൻസ്റ്റാൾ ബട്ടൺ ഡിസൈൻ */
   #install-notice {
     display: none;
     position: fixed;
@@ -2734,24 +2734,23 @@ function updateShopList(country) {
     color: white;
     padding: 10px 20px;
     border-radius: 25px;
-    z-index: 1000;
+    z-index: 10000;
     cursor: pointer;
     font-weight: bold;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    border: none;
   }
 </style>
 
-<div id="install-notice">Install App</div>
+<button id="install-notice">Install BAS App</button>
 
 <script>
   let deferredPrompt;
   const installBtn = document.getElementById('install-notice');
 
-  // ഇൻസ്റ്റാൾ ചെയ്യാൻ സാധിക്കുമെങ്കിൽ ബട്ടൺ കാണിക്കുന്നു
   window.addEventListener('beforeinstallprompt', (e) => {
     e.preventDefault();
     deferredPrompt = e;
-    installBtn.style.display = 'block'; // ഇൻസ്റ്റാൾ ഓപ്ഷൻ ഉണ്ടെങ്കിൽ മാത്രം ബട്ടൺ വരും
+    installBtn.style.display = 'block'; 
   });
 
   installBtn.addEventListener('click', async () => {
@@ -2763,12 +2762,6 @@ function updateShopList(country) {
       }
       deferredPrompt = null;
     }
-  });
-
-  // ആപ്പ് ഇൻസ്റ്റാൾ ആയിക്കഴിഞ്ഞാൽ ബട്ടൺ മറയ്ക്കുന്നു
-  window.addEventListener('appinstalled', () => {
-    installBtn.style.display = 'none';
-    console.log('App Installed Successfully');
   });
 </script>
 
