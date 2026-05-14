@@ -2718,52 +2718,6 @@ function updateShopList(country) {
   }
 </script>
  <style>
-  /* ഐക്കണിനെ ഇടതുവശത്തേക്ക് മാറ്റാൻ */
-  .floating-icon-container {
-    right: auto !important;
-    left: 20px !important;
-  }
-
-  /* ഇൻസ്റ്റാൾ ബട്ടൺ ഡിസൈൻ */
-  #install-notice {
-    display: none;
-    position: fixed;
-    bottom: 100px;
-    left: 20px;
-    background: #ff4500;
-    color: white;
-    padding: 10px 20px;
-    border-radius: 25px;
-    z-index: 10000;
-    cursor: pointer;
-    font-weight: bold;
-    border: none;
-  }
-</style>
-
-<button id="install-notice">Install BAS App</button>
-
-<script>
-  let deferredPrompt;
-  const installBtn = document.getElementById('install-notice');
-
-  window.addEventListener('beforeinstallprompt', (e) => {
-    e.preventDefault();
-    deferredPrompt = e;
-    installBtn.style.display = 'block'; 
-  });
-
-  installBtn.addEventListener('click', async () => {
-    if (deferredPrompt) {
-      deferredPrompt.prompt();
-      const { outcome } = await deferredPrompt.userChoice;
-      if (outcome === 'accepted') {
-        installBtn.style.display = 'none';
-      }
-      deferredPrompt = null;
-    }
-  });
-</script>
-
+ 
 </body>
 </html>
