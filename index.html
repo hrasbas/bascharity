@@ -654,12 +654,7 @@ function renderShops(list) {
 
     const dotHtml = isAffiliate ? '' : '<span class="warning-dot">.</span>';
 
-    div.innerHTML = dotHtml + '<img class="shop-logo" ​src="https://www.google.com/s2/favicons?sz=64&domain_url=${shop.domain}"
-        
-});
-} 
-
- 
+    div.innerHTML = dotHtml + `<img class="shop-logo" src="https://www.google.com/s2/favicons?sz=64&domain_url=${shop.domain}">`;
 
 function filterShops() {
     let val = document.getElementById("globalSearch").value.toLowerCase();
