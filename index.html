@@ -640,32 +640,40 @@ function renderShops(list) {
     }
 
     // 3. ഷോപ്പുകൾ ഉണ്ടെങ്കിൽ അവ ഡിസ്പ്ലേ ചെയ്യുന്നു
-        list.forEach(shop => {
+           // പഴയ list.forEach-ന് പകരം ഇത് നൽകുക
+    const list = data.shops || data; 
+
+    list.forEach(shop => {
         const div = document.createElement("div");
         div.className = "shop-btn";
-        div.onclick = () => handleRedirect(shop.url);
+        
+        // പേരും ലിങ്കും അക്ഷരങ്ങൾ മാറിയാലും പിടിക്കാൻ ഈ 3 വരികൾ സഹായിക്കും
+        const finalName = shop.n || shop.name || "Shop";
+        const finalUrl = shop.u || shop.url || "#";
+        const finalDomain = shop.d || shop.domain || "";
 
-        const isAffiliate = shop.url && (
-            shop.url.includes("tag=") || 
-            shop.url.includes("vmmbaslinks") || 
-            shop.url.includes("extp") || 
-            shop.url.includes("afflt") || 
-            shop.url.includes("redirect")
+        div.onclick = () => handleRedirect(finalUrl);
+
+        const isAffiliate = finalUrl && (
+            finalUrl.includes("tag=") || 
+            finalUrl.includes("vmmbaslinks") || 
+            finalUrl.includes("extp") || 
+            finalUrl.includes("fkrt.co") ||
+            finalUrl.includes("ajiio.co")
         );
 
         const dotHtml = isAffiliate ? '' : '<span class="warning-dot"></span>';
 
-        let shopDomain = "";
-        try {
-            shopDomain = shop.domain || (shop.url ? new URL(shop.url).hostname : "");
-        } catch (e) {
-            shopDomain = "";
-        }
-
-        div.innerHTML = dotHtml + `<img class="shop-logo" src="https://www.google.com/s2/favicons?sz=64&domain_url=${shopDomain}">`;
+        // പേരും ലോഗോയും ഒന്നിച്ച് വരാൻ താഴെ കാണുന്ന രീതിയിൽ മാറ്റണം
+        div.innerHTML = `
+            ${dotHtml}
+            <img class="shop-logo" src="https://www.google.com/s2/favicons?sz=64&domain_url=${finalDomain}">
+            <span class="shop-name">${finalName}</span>
+        `;
+        
         container.appendChild(div);
     });
-}
+
 
 function filterShops() {
     let val = document.getElementById("globalSearch").value.toLowerCase();
