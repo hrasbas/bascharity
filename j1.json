@@ -1,17 +1,4 @@
-[
-  { "name": "Amazon", "country": "India", "code": "IN", "url": "https://amzn.to/3Z9mN9y", "domain": "amazon.in" },
-  { "name": "Flipkart", "country": "India", "code": "IN", "url": "https://extp.in/v9GqE1", "domain": "flipkart.com" },
-  { "name": "Ajio", "country": "India", "code": "IN", "url": "https://ajiio.in/gtNL7U3", "domain": "ajio.com" },
-  { "name": "Myntra", "country": "India", "code": "IN", "url": "https://extp.in/4KBPuR", "domain": "myntra.com" },
-  { "name": "Nykaa", "country": "India", "code": "IN", "url": "https://extp.in/Y1zuEL", "domain": "nykaa.com" },
-  { "name": "Croma", "country": "India", "code": "IN", "url": "https://extp.in/yUoADU", "domain": "croma.com" },
-  { "name": "Tata 1mg", "country": "India", "code": "IN", "url": "https://extp.in/health2", "domain": "1mg.com" },
-  { "name": "Boat", "country": "India", "code": "IN", "url": "https://extp.in/B5mL1p", "domain": "boat-lifestyle.com" },
-  { "name": "Goibibo", "country": "India", "code": "IN", "url": "https://extp.in/scev6j", "domain": "goibibo.com" },
-  { "name": "Hostinger", "country": "India", "code": "IN", "url": "https://extp.in/CvS0HD", "domain": "hostinger.in" }
-]
-
-    { "name": "Amazon US", "country": "USA", "code": "US", "url": "https://www.amazon.com" },
+[   { "name": "Amazon US", "country": "USA", "code": "US", "url": "https://www.amazon.com" },
     { "name": "eBay", "country": "USA", "code": "US", "url": "https://www.ebay.com" },
     { "name": "Walmart", "country": "USA", "code": "US", "url": "https://www.walmart.com" },
     { "name": "Target", "country": "USA", "code": "US", "url": "https://www.target.com" },
@@ -110,4 +97,4 @@
     { "name": "Carrefour France", "country": "France", "code": "FR", "url": "https://www.carrefour.fr" },
     { "name": "ManoMano", "country": "France", "code": "FR", "url": "https://www.manomano.fr" }
   ]
-}
+
