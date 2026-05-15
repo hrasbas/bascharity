@@ -640,22 +640,22 @@ function renderShops(list) {
     }
 
     // 3. ഷോപ്പുകൾ ഉണ്ടെങ്കിൽ അവ ഡിസ്പ്ലേ ചെയ്യുന്നു
-    list.forEach(shop => {
-    const div = document.createElement("div");
-    div.className = "shop-btn";
-    div.onclick = () => handleRedirect(shop.url);
+        list.forEach(shop => {
+        const div = document.createElement("div");
+        div.className = "shop-btn";
+        div.onclick = () => handleRedirect(shop.url);
 
-    // അഫിലിയേറ്റ് ലിങ്ക് തിരിച്ചറിയാനുള്ള ലോജിക്
-    const isAffiliate = shop.url.includes("tag=") || 
-                        shop.url.includes("vmmbaslinks") || 
-                        shop.url.includes("extp") || 
-                        shop.url.includes("afflt") ||
-                        shop.url.includes("redirect");
+        const isAffiliate = shop.url.includes("tag=") || 
+                           shop.url.includes("vmmbaslinks") || 
+                           shop.url.includes("extp") || 
+                           shop.url.includes("afflt") || 
+                           shop.url.includes("redirect");
 
-    const dotHtml = isAffiliate ? '' : '<span class="warning-dot">.</span>';
+        const dotHtml = isAffiliate ? '' : '<span class="warning-dot"></span>';
 
-    div.innerHTML = dotHtml + `<img class="shop-logo" src="https://www.google.com/s2/favicons?sz=64&domain_url=${shop.domain}">`;
-container.appendChild(div);
+        div.innerHTML = dotHtml + `<img class="shop-logo" src="https://www.google.com/s2/favicons?sz=64&domain_url=${shop.domain}">`;
+        container.appendChild(div);
+    });
 
 function filterShops() {
     let val = document.getElementById("globalSearch").value.toLowerCase();
