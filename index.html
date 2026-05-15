@@ -640,7 +640,7 @@ function renderShops(list) {
     }
 
     // 3. ഷോപ്പുകൾ ഉണ്ടെങ്കിൽ അവ ഡിസ്പ്ലേ ചെയ്യുന്നു
-        list.forEach(shop => {
+    list.forEach(shop => {
         const div = document.createElement("div");
         div.className = "shop-btn";
         div.onclick = () => handleRedirect(shop.url);
@@ -652,8 +652,16 @@ function renderShops(list) {
                            shop.url.includes("redirect");
 
         const dotHtml = isAffiliate ? '' : '<span class="warning-dot"></span>';
+        
+        // domain ഇല്ലെങ്കിൽ ലിങ്കിൽ നിന്ന് ഓട്ടോമാറ്റിക്കായി ലോഗോ കണ്ടെത്താനുള്ള വഴി
+        let shopDomain = "";
+        try {
+            shopDomain = shop.domain || new URL(shop.url).hostname;
+        } catch (e) {
+            shopDomain = "";
+        }
 
-        div.innerHTML = dotHtml + `<img class="shop-logo" src="https://www.google.com/s2/favicons?sz=64&domain_url=${shop.domain}">`;
+        div.innerHTML = dotHtml + `<img class="shop-logo" src="https://www.google.com/s2/favicons?sz=64&domain_url=${shopDomain}">`;
         container.appendChild(div);
     });
 
