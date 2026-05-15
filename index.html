@@ -537,137 +537,255 @@ if(frame){ frame.style.display='none'; }
 
 <script>
 const JSON_FILES = [
-"https://pub-168159db07cc407eaa28228eb2520ea5.r2.dev/j1.json",
-"https://pub-168159db07cc407eaa28228eb2520ea5.r2.dev/j2.json",
-"https://pub-168159db07cc407eaa28228eb2520ea5.r2.dev/j3.json",
-"https://pub-168159db07cc407eaa28228eb2520ea5.r2.dev/j4.json",
-"https://pub-168159db07cc407eaa28228eb2520ea5.r2.dev/j5.json",
-"https://pub-168159db07cc407eaa28228eb2520ea5.r2.dev/j6.json",
-"https://pub-168159db07cc407eaa28228eb2520ea5.r2.dev/j7.json",
-"https://pub-168159db07cc407eaa28228eb2520ea5.r2.dev/j8.json",
-"https://pub-168159db07cc407eaa28228eb2520ea5.r2.dev/j9.json",
-"https://pub-168159db07cc407eaa28228eb2520ea5.r2.dev/j10.json",
-"https://pub-168159db07cc407eaa28228eb2520ea5.r2.dev/j11.json",
-"https://pub-168159db07cc407eaa28228eb2520ea5.r2.dev/j12.json",
-"https://pub-168159db07cc407eaa28228eb2520ea5.r2.dev/j13.json",
-"https://pub-168159db07cc407eaa28228eb2520ea5.r2.dev/j14.json",
-"https://pub-168159db07cc407eaa28228eb2520ea5.r2.dev/j15.json",
-"https://pub-168159db07cc407eaa28228eb2520ea5.r2.dev/j16.json",
-"https://pub-168159db07cc407eaa28228eb2520ea5.r2.dev/j17.json",
-"https://pub-168159db07cc407eaa28228eb2520ea5.r2.dev/j18.json",
-"https://pub-168159db07cc407eaa28228eb2520ea5.r2.dev/j19.json",
-"https://pub-168159db07cc407eaa28228eb2520ea5.r2.dev/j20.json",
-"https://pub-168159db07cc407eaa28228eb2520ea5.r2.dev/j21.json"
+  "https://pub-168159db07cc407eaa28228eb2520ea5.r2.dev/j1.json",
+  "https://pub-168159db07cc407eaa28228eb2520ea5.r2.dev/j2.json",
+  "https://pub-168159db07cc407eaa28228eb2520ea5.r2.dev/j3.json",
+  "https://pub-168159db07cc407eaa28228eb2520ea5.r2.dev/j4.json",
+  "https://pub-168159db07cc407eaa28228eb2520ea5.r2.dev/j5.json",
+  "https://pub-168159db07cc407eaa28228eb2520ea5.r2.dev/j6.json",
+  "https://pub-168159db07cc407eaa28228eb2520ea5.r2.dev/j7.json",
+  "https://pub-168159db07cc407eaa28228eb2520ea5.r2.dev/j8.json",
+  "https://pub-168159db07cc407eaa28228eb2520ea5.r2.dev/j9.json",
+  "https://pub-168159db07cc407eaa28228eb2520ea5.r2.dev/j10.json",
+  "https://pub-168159db07cc407eaa28228eb2520ea5.r2.dev/j11.json",
+  "https://pub-168159db07cc407eaa28228eb2520ea5.r2.dev/j12.json",
+  "https://pub-168159db07cc407eaa28228eb2520ea5.r2.dev/j13.json",
+  "https://pub-168159db07cc407eaa28228eb2520ea5.r2.dev/j14.json",
+  "https://pub-168159db07cc407eaa28228eb2520ea5.r2.dev/j15.json",
+  "https://pub-168159db07cc407eaa28228eb2520ea5.r2.dev/j16.json",
+  "https://pub-168159db07cc407eaa28228eb2520ea5.r2.dev/j17.json",
+  "https://pub-168159db07cc407eaa28228eb2520ea5.r2.dev/j18.json",
+  "https://pub-168159db07cc407eaa28228eb2520ea5.r2.dev/j19.json",
+  "https://pub-168159db07cc407eaa28228eb2520ea5.r2.dev/j20.json",
+  "https://pub-168159db07cc407eaa28228eb2520ea5.r2.dev/j21.json"
 ];
-
 
 let countryShops = {};
 let currentCountry = "india";
-const crisisCountries = ["afghanistan", "belarus", "cuba", "iran", "libya", "myanmar", "north korea", "palestine", "russia", "somalia", "south sudan", "sudan", "syria", "venezuela", "yemen"];
 
-const countries = ["Afghanistan","Albania","Algeria","Andorra","Angola","Argentina","Armenia","Australia","Austria","Azerbaijan","Bahamas","Bahrain","Bangladesh","Barbados","Belarus","Belgium","Belize","Benin","Bhutan","Bolivia","Bosnia","Botswana","Brazil","Brunei","Bulgaria","Burkina Faso","Burundi","Cambodia","Cameroon","Canada","Cape Verde","Chad","Chile","China","Colombia","Comoros","Congo","Costa Rica","Croatia","Cuba","Cyprus","Denmark","Djibouti","Dominica","Dominican Republic","Ecuador","Egypt","El Salvador","Equatorial Guinea","Eritrea","Estonia","Ethiopia","Fiji","Finland","France","Gabon","Gambia","Georgia","Germany","Ghana","Greece","Grenada","Guatemala","Guinea","Guyana","Haiti","Honduras","Hungary","Iceland","India","Indonesia","Iran","Iraq","Ireland","Israel","Italy","Jamaica","Japan","Jordan","Kazakhstan","Kenya","Kiribati","Kuwait","Kyrgyzstan","Laos","Latvia","Lebanon","Lesotho","Liberia","Libya","Liechtenstein","Lithuania","Luxembourg","Madagascar","Malawi","Malaysia","Maldives","Mali","Malta","Marshall Islands","Mauritania","Mauritius","Mexico","Micronesia","Moldova","Monaco","Mongolia","Montenegro","Morocco","Mozambique","Myanmar","Namibia","Nauru","Nepal","Netherlands","New Zealand","Nicaragua","Niger","Nigeria","North Korea","North Macedonia","Norway","Oman","Pakistan","Palau","Palestine","Panama","Papua New Guinea","Paraguay","Peru","Philippines","Poland","Portugal","Qatar","Romania","Russia","Rwanda","Saint Kitts and Nevis","Saint Lucia","Saint Vincent","Samoa","San Marino","Sao Tome and Principe","Saudi Arabia","Senegal","Serbia","Seychelles","Sierra Leone","Singapore","Slovakia","Slovenia","Solomon Islands","Somalia","South Africa","South Korea","South Sudan","Spain","Sri Lanka","Sudan","Suriname","Sweden","Switzerland","Syria","Taiwan","Tajikistan","Tanzania","Thailand","Timor-Leste","Togo","Tonga","Trinidad and Tobago","Tunisia","Turkey","Turkmenistan","Tuvalu","Uganda","Ukraine","United Arab Emirates","United Kingdom","United States","Uruguay","Uzbekistan","Vanuatu","Vatican City","Venezuela","Vietnam","Yemen","Zambia","Zimbabwe"];
+const crisisCountries = [
+  "afghanistan","belarus","cuba","iran","libya","myanmar","north korea",
+  "palestine","russia","somalia","south sudan","sudan","syria","venezuela","yemen"
+];
+
+const countries = [
+  "Afghanistan","Albania","Algeria","Andorra","Angola","Argentina","Armenia","Australia","Austria","Azerbaijan",
+  "Bahamas","Bahrain","Bangladesh","Barbados","Belarus","Belgium","Belize","Benin","Bhutan","Bolivia","Bosnia",
+  "Botswana","Brazil","Brunei","Bulgaria","Burkina Faso","Burundi","Cambodia","Cameroon","Canada","Cape Verde",
+  "Chad","Chile","China","Colombia","Comoros","Congo","Costa Rica","Croatia","Cuba","Cyprus","Denmark","Djibouti",
+  "Dominica","Dominican Republic","Ecuador","Egypt","El Salvador","Equatorial Guinea","Eritrea","Estonia","Ethiopia",
+  "Fiji","Finland","France","Gabon","Gambia","Georgia","Germany","Ghana","Greece","Grenada","Guatemala","Guinea",
+  "Guyana","Haiti","Honduras","Hungary","Iceland","India","Indonesia","Iran","Iraq","Ireland","Israel","Italy",
+  "Jamaica","Japan","Jordan","Kazakhstan","Kenya","Kiribati","Kuwait","Kyrgyzstan","Laos","Latvia","Lebanon",
+  "Lesotho","Liberia","Libya","Liechtenstein","Lithuania","Luxembourg","Madagascar","Malawi","Malaysia","Maldives",
+  "Mali","Malta","Marshall Islands","Mauritania","Mauritius","Mexico","Micronesia","Moldova","Monaco","Mongolia",
+  "Montenegro","Morocco","Mozambique","Myanmar","Namibia","Nauru","Nepal","Netherlands","New Zealand","Nicaragua",
+  "Niger","Nigeria","North Korea","North Macedonia","Norway","Oman","Pakistan","Palau","Palestine","Panama",
+  "Papua New Guinea","Paraguay","Peru","Philippines","Poland","Portugal","Qatar","Romania","Russia","Rwanda",
+  "Saint Kitts and Nevis","Saint Lucia","Saint Vincent","Samoa","San Marino","Sao Tome and Principe","Saudi Arabia",
+  "Senegal","Serbia","Seychelles","Sierra Leone","Singapore","Slovakia","Slovenia","Solomon Islands","Somalia",
+  "South Africa","South Korea","South Sudan","Spain","Sri Lanka","Sudan","Suriname","Sweden","Switzerland","Syria",
+  "Taiwan","Tajikistan","Tanzania","Thailand","Timor-Leste","Togo","Tonga","Trinidad and Tobago","Tunisia","Turkey",
+  "Turkmenistan","Tuvalu","Uganda","Ukraine","United Arab Emirates","United Kingdom","United States","Uruguay",
+  "Uzbekistan","Vanuatu","Vatican City","Venezuela","Vietnam","Yemen","Zambia","Zimbabwe"
+];
+
+const indiaAffiliateShops = [
+  { "name": "Amazon", "url": "https://amzn.to/3Z9mN9y", "domain": "amazon.in", "country": "India" },
+  { "name": "Flipkart", "url": "https://extp.in/v9GqE1", "domain": "flipkart.com", "country": "India" },
+  { "name": "Ajio", "url": "https://ajiio.in/gtNL7U3", "domain": "ajio.com", "country": "India" },
+  { "name": "Myntra", "url": "https://extp.in/4KBPuR", "domain": "myntra.com", "country": "India" },
+  { "name": "Nykaa", "url": "https://extp.in/Y1zuEL", "domain": "nykaa.com", "country": "India" },
+  { "name": "Croma", "url": "https://extp.in/yUoADU", "domain": "croma.com", "country": "India" },
+  { "name": "Tata 1mg", "url": "https://extp.in/health2", "domain": "1mg.com", "country": "India" },
+  { "name": "Boat", "url": "https://extp.in/B5mL1p", "domain": "boat-lifestyle.com", "country": "India" },
+  { "name": "Goibibo", "url": "https://extp.in/scev6j", "domain": "goibibo.com", "country": "India" },
+  { "name": "Hostinger", "url": "https://extp.in/CvS0HD", "domain": "hostinger.in", "country": "India" }
+];
 
 function populateCountries() {
-const select = document.getElementById("countryDropdown");
-countries.forEach(c => {
-let opt = document.createElement("option");
-opt.value = c.toLowerCase();
-opt.text = c.toUpperCase();
-select.add(opt);
-});
+  const select = document.getElementById("countryDropdown");
+  if (!select) return;
+  select.innerHTML = '<option value="">SEARCH ALL COUNTRIES</option>';
+  countries.forEach(c => {
+    const opt = document.createElement("option");
+    opt.value = c.toLowerCase();
+    opt.textContent = c.toUpperCase();
+    select.appendChild(opt);
+  });
 }
 
 function normalizeCountry(c) {
-c = (c || "").toLowerCase().trim();
-if (c === "saudi arabia" || c === "saudi") return "saudi";
-if (c === "united states" || c === "usa") return "usa";
-if (c === "united arab emirates" || c === "uae") return "uae";
-if (c === "united kingdom" || c === "uk") return "uk";
-return c;
+  c = (c || "").toLowerCase().trim();
+  if (c === "saudi arabia" || c === "saudi") return "saudi";
+  if (c === "united states" || c === "usa" || c === "us") return "usa";
+  if (c === "united arab emirates" || c === "uae") return "uae";
+  if (c === "united kingdom" || c === "uk" || c === "gb") return "uk";
+  return c;
+}
+
+function safeSetItem(key, value) {
+  try { localStorage.setItem(key, value); } catch(e) {}
+}
+
+function safeGetItem(key, fallback) {
+  try { return localStorage.getItem(key) || fallback; }
+  catch(e) { return fallback; }
+}
+
+function getShopName(shop) {
+  return shop.n || shop.name || "Shop";
+}
+
+function getShopUrl(shop) {
+  return shop.u || shop.url || "#";
+}
+
+function getShopDomain(shop) {
+  let d = shop.d || shop.domain || "";
+  if (d) return d.replace(/^https?:///, "").replace(/^www./, "").split("/")[0];
+  const u = getShopUrl(shop);
+  try {
+    return new URL(u).hostname.replace(/^www./, "");
+  } catch(e) {
+    return "";
+  }
 }
 
 function handleRedirect(url) {
-if (url) {
-document.getElementById("charityOverlay").style.display = "flex";
-setTimeout(() => {
-window.open(url, '_blank');
-document.getElementById("charityOverlay").style.display = "none";
-}, 3000);
+  if (!url || url === "#") return;
+  const overlay = document.getElementById("charityOverlay");
+  if (overlay) overlay.style.display = "flex";
+  setTimeout(() => {
+    window.open(url, "_blank");
+    if (overlay) overlay.style.display = "none";
+  }, 3000);
 }
-}
 
-function setCountry(country, btn) {
-if (!country) return;
-currentCountry = normalizeCountry(country);
-localStorage.setItem("bas_country", currentCountry);
+function setCountry(country, btn = null) {
+  if (!country) return;
+  currentCountry = normalizeCountry(country);
+  safeSetItem("bas_country", currentCountry);
 
-// ബട്ടണുകളിലെ ആക്റ്റീവ് ക്ലാസ് മാറ്റാൻ
-document.querySelectorAll(".country-btn").forEach(b => b.classList.remove("active"));
-const activeBtn = btn || document.querySelector(".country-btn[data-country='"+currentCountry+"']");
-if (activeBtn) activeBtn.classList.add("active");
+  document.querySelectorAll(".country-btn").forEach(b => b.classList.remove("active"));
+  const autoBtn = btn || document.querySelector(`.country-btn[data-country="${currentCountry}"]`);
+  if (autoBtn) autoBtn.classList.add("active");
 
-// ഡ്രോപ്പ്ഡൗണിൽ എപ്പോഴും "SEARCH ALL COUNTRIES" എന്ന് തന്നെ കാണിക്കാൻ ഇത് സഹായിക്കും
-document.getElementById("countryDropdown").selectedIndex = 0;
+  const dd = document.getElementById("countryDropdown");
+  if (dd && dd.value !== currentCountry) dd.value = currentCountry;
 
-document.getElementById("shopCountryTitle").innerText = "SHOP ON " + currentCountry.toUpperCase() + " SHOPS";
-document.getElementById("globalSearch").value = "";
-renderShops(countryShops[currentCountry]);
+  const title = document.getElementById("shopCountryTitle");
+  if (title) title.innerText = `SHOP ON ${currentCountry.toUpperCase()} SHOPS`;
+
+  const search = document.getElementById("globalSearch");
+  if (search) search.value = "";
+
+  renderShops(countryShops[currentCountry] || []);
 }
 
 function renderShops(list) {
-const container = document.getElementById("shopList");
-container.innerHTML = "";
+  const container = document.getElementById("shopList");
+  if (!container) return;
+  container.innerHTML = "";
 
-// 1. പ്രതിസന്ധി നേരിടുന്ന രാജ്യമാണോ എന്ന് നോക്കുന്നു
-if (crisisCountries.includes(currentCountry)) {
-container.innerHTML = &lt;div style="background:#222; border:2px solid #ff9800; border-radius:15px; padding:25px; text-align:center; color:#fff; margin-top:20px;"&gt; &lt;h3 style="color:#ff9800; text-transform:uppercase;"&gt;Unavailable due to world crisis&lt;/h3&gt; &lt;p style="font-size:18px; line-height:1.6; font-weight:bold; color:#ffeb3b;"&gt; Dear friend, due to current global crisis and restrictions, international shopping platforms have limited services in your region. However, we sincerely pray for the peace and prosperity of your land. May the Almighty remove all obstacles and bring better days soon. &lt;/p&gt; &lt;div style="font-size:30px; margin-top:15px;"&gt;🌍🕊️&lt;/div&gt; &lt;/div>;
-return;
+  if (crisisCountries.includes(currentCountry)) {
+    container.innerHTML = `
+      <div style="background:#222; border:2px solid #ff9800; border-radius:15px; padding:25px; text-align:center; color:#fff; margin-top:20px;">
+        <h3 style="color:#ff9800; text-transform:uppercase;">Unavailable due to world crisis</h3>
+        <p style="font-size:18px; line-height:1.6; font-weight:bold; color:#ffeb3b;">
+          Dear friend, due to current global crisis and restrictions, international shopping platforms have limited services in your region.
+          However, we sincerely pray for the peace and prosperity of your land. May the Almighty remove all obstacles and bring better days soon.
+        </p>
+        <div style="font-size:30px; margin-top:15px;">🌍🕊️</div>
+      </div>
+    `;
+    return;
+  }
+
+  if (!list || !list.length) {
+    container.innerHTML = `<p style="color:#fff; text-align:center; padding:20px;">IN PROGRESS FOR ${currentCountry.toUpperCase()}...</p>`;
+    return;
+  }
+
+  list.forEach(shop => {
+    const finalName = getShopName(shop);
+    const finalUrl = getShopUrl(shop);
+    const finalDomain = getShopDomain(shop);
+
+    const isAffiliate = finalUrl.includes("tag=") ||
+      finalUrl.includes("vmmbaslinks") ||
+      finalUrl.includes("extp.in") ||
+      finalUrl.includes("fkrt") ||
+      finalUrl.includes("ajiio") ||
+      finalUrl.includes("amzn.to");
+
+    const dotHtml = isAffiliate ? "" : '<span class="warning-dot">.</span>';
+
+    const div = document.createElement("div");
+    div.className = "shop-btn";
+    div.onclick = () => handleRedirect(finalUrl);
+    div.innerHTML = `
+      ${dotHtml}
+      <img class="shop-logo" src="https://www.google.com/s2/favicons?sz=64&domain=${encodeURIComponent(finalDomain)}" alt="${finalName}">
+      <div class="shop-info notranslate"><b>${finalName}</b></div>
+    `;
+    container.appendChild(div);
+  });
 }
-
-// 2. ഷോപ്പുകൾ ഒന്നുമില്ലെങ്കിൽ കാണിക്കേണ്ട മെസ്സേജ്
-if (!list || list.length === 0) {
-container.innerHTML = "<p style='color:#fff; text-align:center; padding:20px;'>IN PROGRESS FOR " + currentCountry.toUpperCase() + "...</p>";
-return;
-}
-
-// 3. ഷോപ്പുകൾ ഉണ്ടെങ്കിൽ അവ ഡിസ്പ്ലേ ചെയ്യുന്നു
-list.forEach(shop => {
-const div = document.createElement("div");
-div.className = "shop-btn";
-div.onclick = () => handleRedirect(shop.url);
-div.innerHTML = '<span class="warning-dot">.</span><img class="shop-logo" src="https://www.google.com/s2/favicons?sz=64&domain_url=' + encodeURIComponent(shop.url) + '"><div class="shop-info notranslate"><b>' + shop.name + '</b></div>';
-container.appendChild(div);
-});
-}
-
-
 
 function filterShops() {
-let val = document.getElementById("globalSearch").value.toLowerCase();
-if (countryShops[currentCountry]) {
-renderShops(countryShops[currentCountry].filter(s => s.name.toLowerCase().includes(val)));
-}
+  const input = document.getElementById("globalSearch");
+  const val = input ? input.value.toLowerCase().trim() : "";
+  const base = countryShops[currentCountry] || [];
+  const filtered = base.filter(s => getShopName(s).toLowerCase().includes(val));
+  renderShops(filtered);
 }
 
 async function loadShops() {
-for (const url of JSON_FILES) {
-try {
-const response = await fetch(url);
-const data = await response.json();
-data.shops.forEach(s => {
-let c = normalizeCountry(s.country);
-if (!countryShops[c]) countryShops[c] = [];
-countryShops[c].push(s);
-});
-} catch (e) { console.error("Error loading: " + url); }
-}
-let saved = localStorage.getItem("bas_country") || "india";
-setCountry(saved);
+  countryShops = {};
+
+  for (const url of JSON_FILES) {
+    try {
+      const res = await fetch(url, { cache: "no-store" });
+      const data = await res.json();
+      const list = Array.isArray(data) ? data : (Array.isArray(data.shops) ? data.shops : []);
+
+      list.forEach(shop => {
+        const c = normalizeCountry(shop.country || shop.code || "");
+        if (!c) return;
+        if (!countryShops[c]) countryShops[c] = [];
+        countryShops[c].push(shop);
+      });
+    } catch (err) {
+      console.error("JSON load failed:", url, err);
+    }
+  }
+
+  if (!countryShops["india"]) countryShops["india"] = [];
+  countryShops["india"] = [...indiaAffiliateShops, ...countryShops["india"]];
+
+  const savedCountry = safeGetItem("bas_country", "india");
+  setCountry(savedCountry);
 }
 
-window.onload = () => { populateCountries(); loadShops(); };
+document.addEventListener("DOMContentLoaded", () => {
+  populateCountries();
+  loadShops();
+
+  const searchInput = document.getElementById("globalSearch");
+  if (searchInput) searchInput.addEventListener("input", filterShops);
+
+  const dropdown = document.getElementById("countryDropdown");
+  if (dropdown) {
+    dropdown.addEventListener("change", function() {
+      if (this.value) setCountry(this.value);
+    });
+  }
+});
+
+window.setCountry = setCountry;
+window.filterShops = filterShops;
 </script>
-<style>
 .compare-box{
 background:#000;
 border:1px solid #00BFFF;
