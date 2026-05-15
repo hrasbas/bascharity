@@ -645,25 +645,22 @@ function renderShops(list) {
         div.className = "shop-btn";
         div.onclick = () => handleRedirect(shop.url);
 
-        const isAffiliate = shop.url.includes("tag=") || 
+        const isAffiliate = shop.url && (
+                           shop.url.includes("tag=") || 
                            shop.url.includes("vmmbaslinks") || 
                            shop.url.includes("extp") || 
                            shop.url.includes("afflt") || 
-                           shop.url.includes("redirect");
+                           shop.url.includes("redirect"));
 
         const dotHtml = isAffiliate ? '' : '<span class="warning-dot"></span>';
-        
-        // domain ഇല്ലെങ്കിൽ ലിങ്കിൽ നിന്ന് ഓട്ടോമാറ്റിക്കായി ലോഗോ കണ്ടെത്താനുള്ള വഴി
-        let shopDomain = "";
-        try {
-            shopDomain = shop.domain || new URL(shop.url).hostname;
-        } catch (e) {
-            shopDomain = "";
-        }
+
+        // domain ഉള്ളവയ്ക്ക് അത് എടുക്കും, ഇല്ലാത്തവയ്ക്ക് തൽക്കാലം കാലിയായി ഇടും (എറർ വരില്ല)
+        const shopDomain = shop.domain || "";
 
         div.innerHTML = dotHtml + `<img class="shop-logo" src="https://www.google.com/s2/favicons?sz=64&domain_url=${shopDomain}">`;
         container.appendChild(div);
     });
+
 
 function filterShops() {
     let val = document.getElementById("globalSearch").value.toLowerCase();
