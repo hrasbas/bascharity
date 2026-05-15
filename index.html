@@ -640,27 +640,32 @@ function renderShops(list) {
     }
 
     // 3. ഷോപ്പുകൾ ഉണ്ടെങ്കിൽ അവ ഡിസ്പ്ലേ ചെയ്യുന്നു
-    list.forEach(shop => {
+        list.forEach(shop => {
         const div = document.createElement("div");
         div.className = "shop-btn";
         div.onclick = () => handleRedirect(shop.url);
 
         const isAffiliate = shop.url && (
-                           shop.url.includes("tag=") || 
-                           shop.url.includes("vmmbaslinks") || 
-                           shop.url.includes("extp") || 
-                           shop.url.includes("afflt") || 
-                           shop.url.includes("redirect"));
+            shop.url.includes("tag=") || 
+            shop.url.includes("vmmbaslinks") || 
+            shop.url.includes("extp") || 
+            shop.url.includes("afflt") || 
+            shop.url.includes("redirect")
+        );
 
         const dotHtml = isAffiliate ? '' : '<span class="warning-dot"></span>';
 
-        // domain ഉള്ളവയ്ക്ക് അത് എടുക്കും, ഇല്ലാത്തവയ്ക്ക് തൽക്കാലം കാലിയായി ഇടും (എറർ വരില്ല)
-        const shopDomain = shop.domain || "";
+        let shopDomain = "";
+        try {
+            shopDomain = shop.domain || (shop.url ? new URL(shop.url).hostname : "");
+        } catch (e) {
+            shopDomain = "";
+        }
 
         div.innerHTML = dotHtml + `<img class="shop-logo" src="https://www.google.com/s2/favicons?sz=64&domain_url=${shopDomain}">`;
         container.appendChild(div);
     });
-
+}
 
 function filterShops() {
     let val = document.getElementById("globalSearch").value.toLowerCase();
