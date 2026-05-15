@@ -1,17 +1,65 @@
-{
-  "batch": "J1",
-  "total_countries": 10,
-  "shops": [
-    { "name": "Amazon India", "country": "India", "code": "IN", "url": "https://www.amazon.in?tag=vmmbaslinks-21" },
-    { "name": "Flipkart", "country": "India", "code": "IN", "url": "https://extp.in/frLCl1" },
-    { "name": "Myntra", "country": "India", "code": "IN", "url": "https://extp.in/Xl9qHe" },
-    { "name": "Nykaa", "country": "India", "code": "IN", "url": "https://extp.in/hj6ArG" },
-    { "name": "Tata CLiQ", "country": "India", "code": "IN", "url": "https://extp.in/XQxoLW" },
-    { "name": "Reliance Digital", "country": "India", "code": "IN", "url": "https://extp.in/cxkWbr" },
-    { "name": "Croma", "country": "India", "code": "IN", "url": "https://extp.in/9myzwo" },
-    { "name": "Ajio", "country": "India", "code": "IN", "url": "https://extp.in/J56J4f" },
-    { "name": "JioMart", "country": "India", "code": "IN", "url": "https://extp.in/jrfhBK" },
-    { "name": "Shopsy", "country": "India", "code": "IN", "url": "https://extp.in/9zNj2z" },
+india: [
+    { 
+        name: "Amazon India", 
+        domain: "amazon.in", 
+        logo: "https://www.google.com/s2/favicons?sz=64&domain_url=amazon.in", 
+        link: "https://www.amazon.in?tag=vmmbaslinks-21" 
+    },
+    { 
+        name: "Flipkart", 
+        domain: "flipkart.com", 
+        logo: "https://www.google.com/s2/favicons?sz=64&domain_url=flipkart.com", 
+        link: "https://extp.in/frLCl1" 
+    },
+    { 
+        name: "Myntra", 
+        domain: "myntra.com", 
+        logo: "https://www.google.com/s2/favicons?sz=64&domain_url=myntra.com", 
+        link: "https://extp.in/Xl9qHe" 
+    },
+    { 
+        name: "Nykaa", 
+        domain: "nykaa.com", 
+        logo: "https://www.google.com/s2/favicons?sz=64&domain_url=nykaa.com", 
+        link: "https://extp.in/hj6ArG" 
+    },
+    { 
+        name: "Tata CLiQ", 
+        domain: "tatacliq.com", 
+        logo: "https://www.google.com/s2/favicons?sz=64&domain_url=tatacliq.com", 
+        link: "https://extp.in/XQxoLW" 
+    },
+    { 
+        name: "Reliance Digital", 
+        domain: "reliancedigital.in", 
+        logo: "https://www.google.com/s2/favicons?sz=64&domain_url=reliancedigital.in", 
+        link: "https://extp.in/cxkWbr" 
+    },
+    { 
+        name: "Croma", 
+        domain: "croma.com", 
+        logo: "https://www.google.com/s2/favicons?sz=64&domain_url=croma.com", 
+        link: "https://extp.in/9myzwo" 
+    },
+    { 
+        name: "Ajio", 
+        domain: "ajio.com", 
+        logo: "https://www.google.com/s2/favicons?sz=64&domain_url=ajio.com", 
+        link: "https://extp.in/J56J4f" 
+    },
+    { 
+        name: "JioMart", 
+        domain: "jiomart.com", 
+        logo: "https://www.google.com/s2/favicons?sz=64&domain_url=jiomart.com", 
+        link: "https://extp.in/jrfhBK" 
+    },
+    { 
+        name: "Shopsy", 
+        domain: "shopsy.in", 
+        logo: "https://www.google.com/s2/favicons?sz=64&domain_url=shopsy.in", 
+        link: "https://extp.in/9zNj2z" 
+    }
+]
 
     { "name": "Amazon US", "country": "USA", "code": "US", "url": "https://www.amazon.com" },
     { "name": "eBay", "country": "USA", "code": "US", "url": "https://www.ebay.com" },
