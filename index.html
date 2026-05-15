@@ -654,8 +654,8 @@ function renderShops(list) {
 
     const dotHtml = isAffiliate ? '' : '<span class="warning-dot">.</span>';
 
-    div.innerHTML = dotHtml + '<img class="shop-logo" src="https://www.google.com/s2/favicons?sz=64&domain_url=' + encodeURIComponent(shop.url) + '"><div class="shop-info notranslate"><b>' + shop.name + '</b></div>';
-    container.appendChild(div);
+    div.innerHTML = dotHtml + '<img class="shop-logo" ​src="https://www.google.com/s2/favicons?sz=64&domain_url=${shop.domain}"
+        
 });
 } 
 
