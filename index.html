@@ -472,7 +472,7 @@ if(frame){ frame.style.display='none'; }
 
 <!----------------- code No:2---------------->
 <!-- 1. Country Selector Section -->
-  
+
   <script>
 const JSON_FILES = [
   "https://pub-168159db07cc407eaa28228eb2520ea5.r2.dev/j1.json",
@@ -526,6 +526,19 @@ const countries = [
   "Taiwan","Tajikistan","Tanzania","Thailand","Timor-Leste","Togo","Tonga","Trinidad and Tobago","Tunisia","Turkey",
   "Turkmenistan","Tuvalu","Uganda","Ukraine","United Arab Emirates","United Kingdom","United States","Uruguay",
   "Uzbekistan","Vanuatu","Vatican City","Venezuela","Vietnam","Yemen","Zambia","Zimbabwe"
+];
+
+const indiaAffiliateShops = [
+  { "name": "Amazon", "url": "https://amzn.to/3Z9mN9y", "domain": "amazon.in", "country": "India" },
+  { "name": "Flipkart", "url": "https://extp.in/v9GqE1", "domain": "flipkart.com", "country": "India" },
+  { "name": "Ajio", "url": "https://ajiio.in/gtNL7U3", "domain": "ajio.com", "country": "India" },
+  { "name": "Myntra", "url": "https://extp.in/4KBPuR", "domain": "myntra.com", "country": "India" },
+  { "name": "Nykaa", "url": "https://extp.in/Y1zuEL", "domain": "nykaa.com", "country": "India" },
+  { "name": "Croma", "url": "https://extp.in/yUoADU", "domain": "croma.com", "country": "India" },
+  { "name": "Tata 1mg", "url": "https://extp.in/health2", "domain": "1mg.com", "country": "India" },
+  { "name": "Boat", "url": "https://extp.in/B5mL1p", "domain": "boat-lifestyle.com", "country": "India" },
+  { "name": "Goibibo", "url": "https://extp.in/scev6j", "domain": "goibibo.com", "country": "India" },
+  { "name": "Hostinger", "url": "https://extp.in/CvS0HD", "domain": "hostinger.in", "country": "India" }
 ];
 
 function populateCountries() {
@@ -615,7 +628,7 @@ function renderShops(list) {
         <div style="font-size:30px; margin-top:15px;">🌍🕊️</div>
       </div>
     `;
-    return; // ഇവിടെ മെസ്സേജ് കൃത്യമായി ക്ലോസ് ചെയ്ത് നിർത്തി
+    return;
   }
 
   if (!list || !list.length) {
@@ -677,9 +690,8 @@ async function loadShops() {
     }
   }
 
-  if (!countryShops["india"]) {
-    countryShops["india"] = [];
-  }
+  if (!countryShops["india"]) countryShops["india"] = [];
+  countryShops["india"] = [...indiaAffiliateShops, ...countryShops["india"]];
 
   setCountry("india");
 }
