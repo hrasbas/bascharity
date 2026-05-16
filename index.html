@@ -2396,9 +2396,7 @@ msgBox.remove();
 </script>
 
  <!---------------------> 
- 
- 
-/* പ്രധാന കണ്ടെയ്‌നർ */
+ /* പ്രധാന കണ്ടെയ്‌നർ */
 <div id="basBalloonWrap">
 <div class="bas-ball white-b" onclick="handleInstallTap()">
 <img src="icon-512.png" class="bas-sticker">
@@ -2551,75 +2549,6 @@ stat.innerText = "INSTALLED";
 });
 </script>
 <!-------------------------------->
-<div id="basHandStrip">
-<span class="hand-icon">✋</span>
-<span>SAVE TO PHONE</span>
-</div>
-
-<style>
-#basHandStrip {
-position: fixed;
-left: 0;
-top: 50%;
-transform: translate(-82%, -50%);
-background: rgba(0,0,0,0.92);
-color: #fff;
-padding: 12px 18px;
-border-radius: 0 18px 18px 0;
-font-family: sans-serif;
-font-weight: bold;
-font-size: 14px;
-z-index: 2147483647;
-display: flex;
-align-items: center;
-gap: 10px;
-white-space: nowrap;
-box-shadow: 4px 4px 18px rgba(0,0,0,0.45);
-transition: transform 0.6s ease;
-pointer-events: none;
-}
-
-#basHandStrip.show {
-transform: translate(0, -50%);
-}
-
-#basHandStrip.hide-part {
-transform: translate(-82%, -50%);
-}
-
-.hand-icon {
-font-size: 20px;
-display: inline-block;
-animation: waveHand 1.2s infinite;
-}
-
-@keyframes waveHand {
-0%, 100% { transform: rotate(0deg); }
-50% { transform: rotate(20deg); }
-}
-</style>
-
-<script>
-(function () {
-const strip = document.getElementById('basHandStrip');
-if (!strip) return;
-
-function showStrip() {
-strip.classList.add('show');
-strip.classList.remove('hide-part');
-
-setTimeout(() => {
-strip.classList.remove('show');
-strip.classList.add('hide-part');
-}, 6000);
-}
-
-setTimeout(showStrip, 3000);
-setInterval(showStrip, 40000);
-})();
-</script>
-
-
 </body>
 </html>
 
