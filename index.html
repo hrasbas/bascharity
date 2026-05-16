@@ -2397,13 +2397,10 @@ msgBox.remove();
 
  <!---------------------> 
  
-<div id="basHandStrip" class="hand-strip-hide">
-<span class="hand-icon">✋</span><span id="stripMsg">SAVE TO PHONE</span>
-</div>
-
-<!-- പ്രധാന കണ്ടെയ്‌നർ -->
+ 
+/* പ്രധാന കണ്ടെയ്‌നർ */
 <div id="basBalloonWrap">
-<div id="installBall" class="bas-ball white-b" onclick="handleInstallTap()">
+<div class="bas-ball white-b" onclick="handleInstallTap()">
 <img src="icon-512.png" class="bas-sticker">
 <div id="statTxt" class="bas-lbl" style="color:#333;">INSTALL</div>
 <div class="bas-nipple"></div>
@@ -2424,8 +2421,9 @@ bottom: 0;
 left: 0;
 width: 280px;
 height: 400px;
-z-index: 2147483646;
+z-index: 2147483647;
 pointer-events: none;
+/* തുടക്കത്തിൽ സ്ക്രീനിന് താഴെ ഒളിപ്പിക്കുന്നു */
 transform: translateY(120%);
 transition: transform 2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 display: block !important;
@@ -2473,10 +2471,6 @@ bottom: 220px; left: 60px;
 animation: floatW 25s ease-in-out infinite;
 }
 
-.installed-green-yellow {
-background: #d4ff2a !important;
-}
-
 .blue-b {
 width: 105px; height: 135px;
 background: #007bff;
@@ -2486,48 +2480,6 @@ animation: floatB 20s ease-in-out infinite;
 
 .bas-sticker { width: 75px; height: 75px; border-radius: 20px; margin-bottom: 5px; border: 1px solid #ddd; }
 .bas-lbl { font-family: sans-serif; font-size: 11px; font-weight: 900; text-align: center; line-height: 1.2; }
-
-/* LEFT SIDE STRIP */
-#basHandStrip {
-position: fixed;
-left: 0;
-top: 50%;
-transform: translateX(-82%) translateY(-50%);
-background: rgba(0,0,0,0.92);
-color: #fff;
-padding: 12px 18px;
-border-radius: 0 18px 18px 0;
-font-family: sans-serif;
-font-weight: bold;
-font-size: 14px;
-z-index: 2147483647;
-display: flex;
-align-items: center;
-gap: 10px;
-box-shadow: 4px 4px 18px rgba(0,0,0,0.45);
-transition: transform 0.6s ease, opacity 0.4s ease;
-white-space: nowrap;
-pointer-events: auto;
-}
-
-.hand-icon {
-font-size: 20px;
-display: inline-block;
-animation: waveHand 1.2s infinite;
-}
-
-.hand-strip-show {
-transform: translateX(0) translateY(-50%) !important;
-}
-
-.hand-strip-retract {
-transform: translateX(-82%) translateY(-50%) !important;
-}
-
-@keyframes waveHand {
-0%, 100% { transform: rotate(0deg); }
-50% { transform: rotate(20deg); }
-}
 
 @keyframes floatW {
 0%, 100% { transform: translate(0, 0) rotate(-3deg); }
@@ -2544,86 +2496,38 @@ transform: translateX(-82%) translateY(-50%) !important;
 let basPrompt;
 const wrap = document.getElementById('basBalloonWrap');
 const stat = document.getElementById('statTxt');
-const ball = document.getElementById('installBall');
-const handStrip = document.getElementById('basHandStrip');
-
-let isAppInstalledStatus = false;
-let stripInterval;
-let stripTimeout1;
-let stripTimeout2;
 
 function initBalloons() {
-if (!wrap) return;
-
-wrap.classList.remove('state-hide', 'state-rest');
+// 5 സെക്കൻഡ് കഴിഞ്ഞ് വരുന്നു
+setTimeout(() => {
 wrap.classList.add('state-up');
 
+// 15 സെക്കൻഡ് കഴിഞ്ഞ് ഫുൾ ഹൈഡ്
 setTimeout(() => {
-wrap.classList.remove('state-up');
-wrap.classList.add('state-hide');
+wrap.classList.replace('state-up', 'state-hide');
 
+// 60 സെക്കൻഡ് കഴിഞ്ഞ് റെസ്റ്റ് (പകുതി)
 setTimeout(() => {
-wrap.classList.remove('state-hide');
-wrap.classList.add('state-rest');
+wrap.classList.replace('state-hide', 'state-rest');
 }, 30000);
-
 }, 15000);
+}, 5000);
 }
 
-function triggerStripPush() {
-if (!handStrip || isAppInstalledStatus) return;
+const wake = () => {
+wrap.classList.remove('state-hide', 'state-rest');
+wrap.classList.add('state-up');
+};
+wrap.addEventListener('click', wake);
+wrap.addEventListener('touchstart', wake);
 
-handStrip.classList.remove('hand-strip-retract');
-handStrip.classList.add('hand-strip-show');
+window.addEventListener('load', initBalloons);
 
-stripTimeout2 = setTimeout(() => {
-if (!isAppInstalledStatus) {
-handStrip.classList.remove('hand-strip-show');
-handStrip.classList.add('hand-strip-retract');
+function goWhatsApp(){
+let url = "https://bascharity-56f.pages.dev";
+let text = "Save a beautiful icon to your screen\n\n" + url + "\n\nChrome → ⋮ 3 dot → Save to Screen → Install";
+window.open("https://wa.me/?text=" + encodeURIComponent(text), "_blank");
 }
-}, 6000);
-}
-
-function startHandStripAnimation() {
-if (!handStrip) return;
-
-clearInterval(stripInterval);
-clearTimeout(stripTimeout1);
-clearTimeout(stripTimeout2);
-
-stripTimeout1 = setTimeout(() => {
-triggerStripPush();
-}, 3000);
-
-stripInterval = setInterval(() => {
-triggerStripPush();
-}, 40000);
-}
-
-function updateToInstalledState() {
-isAppInstalledStatus = true;
-if (stat) stat.innerText = "INSTALLED";
-if (ball) ball.classList.add('installed-green-yellow');
-if (handStrip) {
-handStrip.classList.remove('hand-strip-show');
-handStrip.classList.add('hand-strip-retract');
-}
-clearInterval(stripInterval);
-clearTimeout(stripTimeout1);
-clearTimeout(stripTimeout2);
-}
-
-function updateToUninstalledState() {
-isAppInstalledStatus = false;
-if (stat) stat.innerText = "INSTALL";
-if (ball) ball.classList.remove('installed-green-yellow');
-startHandStripAnimation();
-}
-
-window.addEventListener('load', () => {
-initBalloons();
-startHandStripAnimation();
-});
 
 window.addEventListener('beforeinstallprompt', (e) => {
 e.preventDefault();
@@ -2634,7 +2538,7 @@ function handleInstallTap() {
 if (basPrompt) {
 basPrompt.prompt();
 basPrompt.userChoice.then((c) => {
-if (c.outcome === 'accepted') updateToInstalledState();
+if (c.outcome === 'accepted') stat.innerText = "INSTALLED";
 basPrompt = null;
 });
 } else {
@@ -2643,19 +2547,78 @@ alert("Please use Chrome browser for Install option.");
 }
 
 window.addEventListener('appinstalled', () => {
-updateToInstalledState();
+stat.innerText = "INSTALLED";
 });
-
-function goWhatsApp(){
-let url = "https://bascharity-56f.pages.dev";
-let text = "Save a beautiful icon to your screen
-
-" + url + "
-
-Chrome → ⋮ 3 dot → Save to Screen → Install";
-window.open("https://wa.me/?text=" + encodeURIComponent(text), "_blank");
-}
 </script>
+<!-------------------------------->
+<div id="basHandStrip">
+<span class="hand-icon">✋</span>
+<span>SAVE TO PHONE</span>
+</div>
+
+<style>
+#basHandStrip {
+position: fixed;
+left: 0;
+top: 50%;
+transform: translate(-82%, -50%);
+background: rgba(0,0,0,0.92);
+color: #fff;
+padding: 12px 18px;
+border-radius: 0 18px 18px 0;
+font-family: sans-serif;
+font-weight: bold;
+font-size: 14px;
+z-index: 2147483647;
+display: flex;
+align-items: center;
+gap: 10px;
+white-space: nowrap;
+box-shadow: 4px 4px 18px rgba(0,0,0,0.45);
+transition: transform 0.6s ease;
+pointer-events: none;
+}
+
+#basHandStrip.show {
+transform: translate(0, -50%);
+}
+
+#basHandStrip.hide-part {
+transform: translate(-82%, -50%);
+}
+
+.hand-icon {
+font-size: 20px;
+display: inline-block;
+animation: waveHand 1.2s infinite;
+}
+
+@keyframes waveHand {
+0%, 100% { transform: rotate(0deg); }
+50% { transform: rotate(20deg); }
+}
+</style>
+
+<script>
+(function () {
+const strip = document.getElementById('basHandStrip');
+if (!strip) return;
+
+function showStrip() {
+strip.classList.add('show');
+strip.classList.remove('hide-part');
+
+setTimeout(() => {
+strip.classList.remove('show');
+strip.classList.add('hide-part');
+}, 6000);
+}
+
+setTimeout(showStrip, 3000);
+setInterval(showStrip, 40000);
+})();
+</script>
+
 
 </body>
 </html>
