@@ -472,108 +472,8 @@ if(frame){ frame.style.display='none'; }
 
 <!----------------- code No:2---------------->
 <!-- 1. Country Selector Section -->
- 
-  return shop.u || shop.url || "#";
-}
-
-function getShopDomain(shop) {
-  let d = shop.d || shop.domain || "";
-  if (d) return d.replace(/^https?:///, "").replace(/^www./, "").split("/")[0];
-  const u = getShopUrl(shop);
-  try {
-    return new URL(u).hostname.replace(/^www./, "");
-  } catch(e) {
-    return "";
-  }
-}
-
-function handleRedirect(url) {
-  if (!url || url === "#") return;
-  const overlay = document.getElementById("charityOverlay");
-  if (overlay) overlay.style.display = "flex";
-  setTimeout(() => {
-    window.open(url, "_blank");
-    if (overlay) overlay.style.display = "none";
-  }, 3000);
-}
-
-function setCountry(country, btn = null) {
-  if (!country) return;
-  currentCountry = normalizeCountry(country);
-  safeSetItem("bas_country", currentCountry);
-
-  document.querySelectorAll(".country-btn").forEach(b => b.classList.remove("active"));
-  const autoBtn = btn || document.querySelector(`.country-btn[data-country="${currentCountry}"]`);
-  if (autoBtn) autoBtn.classList.add("active");
-
-  const dd = document.getElementById("countryDropdown");
-  if (dd && dd.value !== currentCountry) dd.value = currentCountry;
-
-  const title = document.getElementById("shopCountryTitle");
-  if (title) title.innerText = `SHOP ON ${currentCountry.toUpperCase()} SHOPS`;
-
-  const search = document.getElementById("globalSearch");
-  if (search) search.value = "";
-
-  renderShops(countryShops[currentCountry] || []);
-}
-
-function renderShops(list) {
-  const container = document.getElementById("shopList");
-  if (!container) return;
-  container.innerHTML = "";
-
-  if (crisisCountries.includes(currentCountry)) {
-    container.innerHTML = `
-      <div style="background:#222; border:2px solid #ff9800; border-radius:15px; padding:25px; text-align:center; color:#fff; margin-top:20px;">
-        <h3 style="color:#ff9800; text-transform:uppercase;">Unavailable due to world crisis</h3>
-        <p style="font-size:18px; line-height:1.6; font-weight:bold; color:#ffeb3b;">
-          Dear friend, due to current global crisis and restrictions, international shopping platforms have limited services in your region.
-          However, we sincerely pray for the peace and prosperity of your land. May the Almighty remove all obstacles and bring better days soon.
-        </p>
-        <div style="font-size:30px; margin-top:15px;">🌍🕊️</div>
-      </div>
-    `;
-    return;
-  }
-
-  if (!list || !list.length) {
-    container.innerHTML = `<p style="color:#fff; text-align:center; padding:20px;">IN PROGRESS FOR ${currentCountry.toUpperCase()}...</p>`;
-    return;
-  }
-
-  list.forEach(shop => {
-    const finalName = getShopName(shop);
-    const finalUrl = getShopUrl(shop);
-    const finalDomain = getShopDomain(shop);
-
-    const isAffiliate = finalUrl.includes("tag=") ||
-      finalUrl.includes("vmmbaslinks") ||
-      finalUrl.includes("extp.in") ||
-      finalUrl.includes("fkrt") ||
-      finalUrl.includes("ajiio") ||
-      finalUrl.includes("amzn.to");
-
-    const dotHtml = isAffiliate ? "" : '<span class="warning-dot">.</span>';
-
-    const div = document.createElement("div");
-    div.className = "shop-btn";
-    div.onclick = () => handleRedirect(finalUrl);
-    div.innerHTML = `
-      ${dotHtml}
-      <img class="shop-logo" src="https://www.google.com/s2/favicons?sz=64&domain=${encodeURIComponent(finalDomain)}" alt="${finalName}">
-      <div class="shop-info notranslate"><b>${finalName}</b></div>
-    `;
-    container.appendChild(div);
-  });
-}
-
-function filterShops() {
-  const input = document.getElementById("globalSearch");
-  const val = input ? input.value.toLowerCase().trim() : "";
-  const base = countryShops[currentCountry] || [];
-  const filtered = base.filter(s => getShopName(s).toLowerCase().includes(val));
-<script>
+  
+  <script>
 const JSON_FILES = [
   "https://pub-168159db07cc407eaa28228eb2520ea5.r2.dev/j1.json",
   "https://pub-168159db07cc407eaa28228eb2520ea5.r2.dev/j2.json",
@@ -715,7 +615,7 @@ function renderShops(list) {
         <div style="font-size:30px; margin-top:15px;">🌍🕊️</div>
       </div>
     `;
-    return;
+    return; // ഇവിടെ മെസ്സേജ് കൃത്യമായി ക്ലോസ് ചെയ്ത് നിർത്തി
   }
 
   if (!list || !list.length) {
@@ -728,7 +628,6 @@ function renderShops(list) {
     const finalUrl = getShopUrl(shop);
     const finalDomain = getShopDomain(shop);
 
-    // അഫിലിയേറ്റ് ലിങ്ക് തിരിച്ചറിയാനുള്ള ചെക്കിംഗ് സിസ്റ്റം
     const isAffiliate = finalUrl.includes("tag=") ||
       finalUrl.includes("vmmbaslinks") ||
       finalUrl.includes("extp.in") ||
@@ -736,7 +635,6 @@ function renderShops(list) {
       finalUrl.includes("ajiio") ||
       finalUrl.includes("amzn.to");
 
-    // അഫിലിയേറ്റ് അല്ലാത്ത ഡയറക്ട് ഷോപ്പുകൾക്ക് മാത്രം വാണിംഗ് ഡോട്ട് കാണിക്കും
     const dotHtml = isAffiliate ? "" : '<span class="warning-dot">.</span>';
 
     const div = document.createElement("div");
@@ -779,7 +677,6 @@ async function loadShops() {
     }
   }
 
-  // എല്ലാ JSON ലോഡ് ചെയ്ത ശേഷവും ഇന്ത്യ ഒട്ടും എംപ്റ്റി ആയി കിടക്കാതിരിക്കാൻ
   if (!countryShops["india"]) {
     countryShops["india"] = [];
   }
