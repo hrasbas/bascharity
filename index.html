@@ -2396,8 +2396,15 @@ msgBox.remove();
 </script>
 
 /* പ്രധാന കണ്ടെയ്‌നർ */
+ 
+
+<div id="basHandStrip" class="hand-strip-hide">
+  <span class="hand-icon">✋</span> <span id="stripMsg">SAVE TO PHONE SCREEN</span>
+</div>
+
+/* പ്രധാന കണ്ടെയ്‌നർ */
 <div id="basBalloonWrap">
-<div class="bas-ball white-b" onclick="handleInstallTap()">
+<div id="installBall" class="bas-ball white-b" onclick="handleInstallTap()">
 <img src="icon-512.png" class="bas-sticker">
 <div id="statTxt" class="bas-lbl" style="color:#333;">INSTALL</div>
 <div class="bas-nipple"></div>
@@ -2420,16 +2427,15 @@ width: 280px;
 height: 400px;
 z-index: 2147483647;
 pointer-events: none;
-/* തുടക്കത്തിൽ സ്ക്രീനിന് താഴെ ഒളിപ്പിക്കുന്നു */
 transform: translateY(120%);
-transition: transform 2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+transition: transform 15s linear; /* 15 സെക്കൻഡ് കൊണ്ട് പതുക്കെ പൊങ്ങാൻ */
 display: block !important;
 }
 
 /* അവസ്ഥകൾ */
 .state-up { transform: translateY(0%) !important; }
-.state-hide { transform: translateY(120%) !important; }
-.state-rest { transform: translateY(70%) !important; }
+.state-hide { transform: translateY(120%) !important; transition: transform 15s linear !important; } /* താഴേക്ക് പോകുന്ന സ്പീഡ് */
+.state-rest { transform: translateY(45%) !important; transition: transform 3s ease-out !important; } /* പകുതിയിൽ വന്നു നിൽക്കാൻ */
 
 .bas-ball {
 position: absolute;
@@ -2465,27 +2471,65 @@ clip-path: polygon(20% 0, 80% 0, 100% 100%, 0 100%);
 width: 120px; height: 160px;
 background: #ffffff;
 bottom: 220px; left: 60px;
-animation: floatW 25s ease-in-out infinite;
+animation: floatW 50s ease-in-out infinite; /* 50 സെക്കൻഡ് സൈഡിൽ പാറിപ്പറക്കാൻ */
+}
+
+/* ഇൻസ്റ്റാൾ ചെയ്താൽ വരാനുള്ള പച്ചകലർന്ന മഞ്ഞ കളർ ക്ലാസ് */
+.installed-green-yellow {
+background: #d4ff2a !important;
 }
 
 .blue-b {
 width: 105px; height: 135px;
 background: #007bff;
 bottom: 70px; left: 30px;
-animation: floatB 20s ease-in-out infinite;
+animation: floatB 45s ease-in-out infinite;
 }
 
 .bas-sticker { width: 75px; height: 75px; border-radius: 20px; margin-bottom: 5px; border: 1px solid #ddd; }
 .bas-lbl { font-family: sans-serif; font-size: 11px; font-weight: 900; text-align: center; line-height: 1.2; }
 
+/* കൈപ്പത്തി സ്ട്രിപ്പ് സ്റ്റൈലുകൾ */
+#basHandStrip {
+position: fixed;
+top: 20px;
+left: 50%;
+transform: translateX(-50%);
+background: rgba(0, 0, 0, 0.85);
+color: #fff;
+padding: 10px 20px;
+border-radius: 30px;
+font-family: sans-serif;
+font-weight: bold;
+font-size: 14px;
+z-index: 2147483647;
+display: flex;
+align-items: center;
+gap: 10px;
+box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+transition: opacity 0.5s ease;
+}
+.hand-icon { font-size: 18px; animation: waveHand 1.5s infinite; }
+.hand-strip-show { opacity: 1; pointer-events: auto; }
+.hand-strip-hide { opacity: 0; pointer-events: none; }
+
+@keyframes waveHand {
+0%, 100% { transform: rotate(0deg); }
+50% { transform: rotate(15deg); }
+}
+
 @keyframes floatW {
 0%, 100% { transform: translate(0, 0) rotate(-3deg); }
-50% { transform: translate(35px, 45px) rotate(5deg); }
+25% { transform: translate(40px, 20px) rotate(4deg); }
+50% { transform: translate(-30px, 40px) rotate(-5deg); }
+75% { transform: translate(35px, -20px) rotate(3deg); }
 }
 
 @keyframes floatB {
 0%, 100% { transform: translate(0, 0) rotate(4deg); }
-50% { transform: translate(25px, -25px) rotate(-4deg); }
+25% { transform: translate(-25px, 25px) rotate(-4deg); }
+50% { transform: translate(30px, -30px) rotate(5deg); }
+75% { transform: translate(-20px, -15px) rotate(-3deg); }
 }
 </style>
 
@@ -2493,59 +2537,111 @@ animation: floatB 20s ease-in-out infinite;
 let basPrompt;
 const wrap = document.getElementById('basBalloonWrap');
 const stat = document.getElementById('statTxt');
+const ball = document.getElementById('installBall');
+const handStrip = document.getElementById('basHandStrip');
+const stripMsg = document.getElementById('stripMsg');
+
+let isAppInstalledStatus = false;
+let stripInterval;
 
 function initBalloons() {
-// 5 സെക്കൻഡ് കഴിഞ്ഞ് വരുന്നു
-setTimeout(() => {
-wrap.classList.add('state-up');
-
-// 15 സെക്കൻഡ് കഴിഞ്ഞ് ഫുൾ ഹൈഡ്
-setTimeout(() => {
-wrap.classList.replace('state-up', 'state-hide');
-
-// 60 സെക്കൻഡ് കഴിഞ്ഞ് റെസ്റ്റ് (പകുതി)
-setTimeout(() => {
-wrap.classList.replace('state-hide', 'state-rest');
-}, 30000);
-}, 15000);
-}, 5000);
-}
-
-const wake = () => {
+// 1. പതുക്കെ പൊങ്ങി വരുന്നു (Time: 0s)
 wrap.classList.remove('state-hide', 'state-rest');
 wrap.classList.add('state-up');
-};
-wrap.addEventListener('click', wake);
-wrap.addEventListener('touchstart', wake);
 
-window.addEventListener('load', initBalloons);
+// 2. 15 സെക്കൻഡ് കഴിഞ്ഞ് താഴേക്ക് പോകുന്നു (സ്പീഡ് 1/10 കുറയ്ക്കാൻ ടൈം കൂട്ടണം)
+setTimeout(() => {
+wrap.style.transition = "transform 25s linear"; // സ്പീഡ് 1/10 ആയി കുറച്ചു
+wrap.classList.replace('state-up', 'state-hide');
 
-function goWhatsApp(){
-let url = "https://bascharity-56f.pages.dev";
-let text = "Save a beautiful icon to your screen\n\n" + url + "\n\nChrome → ⋮ 3 dot → Save to Screen → Install";
-window.open("https://wa.me/?text=" + encodeURIComponent(text), "_blank");
+// 3. 30 സെക്കൻഡ് റെസ്റ്റ് കഴിഞ്ഞ് (താഴെ എത്തിയിട്ട്) വീണ്ടും പാറി ഉയർന്ന് പകുതിയിൽ നിൽക്കുന്നു
+setTimeout(() => {
+wrap.style.transition = "transform 4s ease-out";
+wrap.classList.replace('state-hide', 'state-rest');
+// ഇൻസ്റ്റാൾ ചെയ്താലും ഇല്ലെങ്കിലും അനിമേഷൻ വഴി പാറി കൊതിപ്പിച്ചു കൊണ്ടേയിരിക്കും
+}, 30000);
+
+}, 15000);
 }
+
+// കൈപ്പത്തി സ്ട്രിപ്പ് അനിമേഷൻ കൺട്രോൾ
+function startHandStripAnimation() {
+if (stripInterval) clearInterval(stripInterval);
+
+stripInterval = setInterval(() => {
+if (isAppInstalledStatus) {
+// ഇൻസ്റ്റാൾ ചെയ്താൽ കൈപ്പത്തി മാത്രം കാണിക്കും, ടെക്സ്റ്റ് മാറിക്കൊണ്ടേയിരിക്കും
+stripMsg.style.display = "none";
+handStrip.classList.add('hand-strip-show');
+} else {
+// അൺഇൻസ്റ്റാൾ ചെയ്താൽ പഴയപടി 30/45 സെക്കൻഡ് ഇടവിട്ട് കാണിക്കും
+stripMsg.style.display = "inline";
+handStrip.classList.add('hand-strip-show');
+setTimeout(() => {
+handStrip.classList.remove('hand-strip-show');
+}, 5000); // 5 സെക്കൻഡ് കാട്ടിയ ശേഷം മറയും
+}
+}, 35000); // 30/45 സെക്കൻഡ് ഇടവിട്ട് (ശരാശരി 35s)
+}
+
+function updateToInstalledState() {
+isAppInstalledStatus = true;
+stat.innerText = "INSTALLED";
+ball.classList.add('installed-green-yellow'); // പച്ചകലർന്ന മഞ്ഞ കളർ ആക്കുന്നു
+stripMsg.style.display = "none"; // മെസ്സേജ് ഒഴിവാക്കി കൈപ്പത്തി മാത്രം ആക്കുന്നു
+handStrip.classList.add('hand-strip-show');
+if (stripInterval) clearInterval(stripInterval);
+}
+
+function updateToUninstalledState() {
+isAppInstalledStatus = false;
+stat.innerText = "INSTALL";
+ball.classList.remove('installed-green-yellow');
+stripMsg.style.display = "inline";
+handStrip.classList.remove('hand-strip-show');
+startHandStripAnimation(); // വീണ്ടും വീണ്ടും വരാൻ ലൂപ്പ് റീസ്റ്റാർട്ട് ചെയ്യുന്നു
+}
+
+window.addEventListener('load', () => {
+initBalloons();
+startHandStripAnimation();
+// വീണ്ടും വീണ്ടും ലൂപ്പ് കറങ്ങാൻ
+setInterval(initBalloons, 80000);
+});
 
 window.addEventListener('beforeinstallprompt', (e) => {
 e.preventDefault();
 basPrompt = e;
+// അൺഇൻസ്റ്റാൾ ചെയ്യപ്പെട്ട അവസ്ഥയാണെങ്കിൽ പഴയപടിയാക്കാൻ
+if (isAppInstalledStatus) {
+updateToUninstalledState();
+}
 });
 
 function handleInstallTap() {
 if (basPrompt) {
 basPrompt.prompt();
 basPrompt.userChoice.then((c) => {
-if (c.outcome === 'accepted') stat.innerText = "INSTALLED";
+if (c.outcome === 'accepted') {
+updateToInstalledState();
+}
 basPrompt = null;
 });
 } else {
-alert("Please use Chrome browser for Install option.");
+// ടെസ്റ്റിംഗിനും ക്രോം അല്ലാത്ത ബ്രൗസറുകൾക്കും വേണ്ടി ഇൻസ്റ്റാൾഡ് സ്റ്റേറ്റ് കാണിക്കാൻ
+updateToInstalledState();
 }
 }
 
 window.addEventListener('appinstalled', () => {
-stat.innerText = "INSTALLED";
+updateToInstalledState();
 });
+
+function goWhatsApp(){
+let url = "https://bascharity-56f.pages.dev";
+let text = "Save a beautiful icon to your screen\n\n" + url + "\n\nChrome → ⋮ 3 dot → Save to Screen → Install";
+window.open("https://wa.me/?text=" + encodeURIComponent(text), "_blank");
+}
 </script>
 
 </body>
