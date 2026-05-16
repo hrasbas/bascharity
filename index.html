@@ -2395,11 +2395,11 @@ msgBox.remove();
 });
 </script>
 
-/* പ്രധാന കണ്ടെയ്‌നർ */
+ <!---------------------> 
  
 
-<div id="basHandStrip" class="hand-strip-hide">
-  <span class="hand-icon">✋</span> <span id="stripMsg">SAVE TO PHONE SCREEN</span>
+ <div id="basHandStrip" class="hand-strip-hide">
+  <span class="hand-icon">✋</span> <span id="stripMsg">SAVE TO PHONE, NO NEED MEMORY</span>
 </div>
 
 /* പ്രധാന കണ്ടെയ്‌നർ */
@@ -2425,17 +2425,17 @@ bottom: 0;
 left: 0;
 width: 280px;
 height: 400px;
-z-index: 2147483647;
+z-index: 2147483646; /* സ്ട്രിപ്പിന് താഴെയായിരിക്കാൻ ഒന്ന് കുറച്ചു */
 pointer-events: none;
 transform: translateY(120%);
-transition: transform 15s linear; /* 15 സെക്കൻഡ് കൊണ്ട് പതുക്കെ പൊങ്ങാൻ */
+transition: transform 15s linear;
 display: block !important;
 }
 
 /* അവസ്ഥകൾ */
 .state-up { transform: translateY(0%) !important; }
-.state-hide { transform: translateY(120%) !important; transition: transform 15s linear !important; } /* താഴേക്ക് പോകുന്ന സ്പീഡ് */
-.state-rest { transform: translateY(45%) !important; transition: transform 3s ease-out !important; } /* പകുതിയിൽ വന്നു നിൽക്കാൻ */
+.state-hide { transform: translateY(120%) !important; transition: transform 15s linear !important; }
+.state-rest { transform: translateY(45%) !important; transition: transform 3s ease-out !important; }
 
 .bas-ball {
 position: absolute;
@@ -2471,10 +2471,9 @@ clip-path: polygon(20% 0, 80% 0, 100% 100%, 0 100%);
 width: 120px; height: 160px;
 background: #ffffff;
 bottom: 220px; left: 60px;
-animation: floatW 50s ease-in-out infinite; /* 50 സെക്കൻഡ് സൈഡിൽ പാറിപ്പറക്കാൻ */
+animation: floatW 50s ease-in-out infinite;
 }
 
-/* ഇൻസ്റ്റാൾ ചെയ്താൽ വരാനുള്ള പച്ചകലർന്ന മഞ്ഞ കളർ ക്ലാസ് */
 .installed-green-yellow {
 background: #d4ff2a !important;
 }
@@ -2489,33 +2488,44 @@ animation: floatB 45s ease-in-out infinite;
 .bas-sticker { width: 75px; height: 75px; border-radius: 20px; margin-bottom: 5px; border: 1px solid #ddd; }
 .bas-lbl { font-family: sans-serif; font-size: 11px; font-weight: 900; text-align: center; line-height: 1.2; }
 
-/* കൈപ്പത്തി സ്ട്രിപ്പ് സ്റ്റൈലുകൾ */
+/* പുതുക്കിയ ലോങ് സ്ട്രിപ്പ് സ്റ്റൈൽ - നടുവിലേക്ക് തള്ളി വരാൻ */
 #basHandStrip {
 position: fixed;
-top: 20px;
-left: 50%;
-transform: translateX(-50%);
-background: rgba(0, 0, 0, 0.85);
+bottom: 50%; /* സ്ക്രീനിന്റെ നടുവിലേക്ക് തള്ളി വരാൻ */
+left: 0;
+transform: translate(-100%, 50%); /* തുടക്കത്തിൽ ഇടതുവശത്ത് ഒളിച്ചു നിൽക്കും */
+background: rgba(0, 0, 0, 0.9);
 color: #fff;
-padding: 10px 20px;
-border-radius: 30px;
+padding: 15px 30px;
+border-radius: 0 30px 30px 0; /* വശങ്ങളിലേക്ക് നീളുന്ന ഡിസൈൻ */
 font-family: sans-serif;
 font-weight: bold;
-font-size: 14px;
+font-size: 15px;
 z-index: 2147483647;
 display: flex;
 align-items: center;
-gap: 10px;
-box-shadow: 0 4px 15px rgba(0,0,0,0.5);
-transition: opacity 0.5s ease;
+gap: 15px;
+box-shadow: 5px 4px 20px rgba(0,0,0,0.6);
+transition: transform 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275), opacity 0.5s ease;
+white-space: nowrap;
+pointer-events: auto;
 }
-.hand-icon { font-size: 18px; animation: waveHand 1.5s infinite; }
-.hand-strip-show { opacity: 1; pointer-events: auto; }
-.hand-strip-hide { opacity: 0; pointer-events: none; }
+
+.hand-icon { font-size: 22px; display: inline-block; animation: waveHand 1.2s infinite; }
+
+/* നടുവിലേക്ക് നീണ്ടു തള്ളി വരുന്ന അവസ്ഥ */
+.hand-strip-show { 
+  transform: translate(0%, 50%) !important; 
+}
+
+/* മടങ്ങി കൈ മാത്രം ഇടതുവശത്ത് ബാക്കി നിൽക്കുന്ന അവസ്ഥ */
+.hand-strip-retract { 
+  transform: translate(-80%, 50%) !important; /* ടെക്സ്റ്റ് ഒളിക്കും, കൈപ്പത്തി മാത്രം വശത്ത് നിൽക്കും */
+}
 
 @keyframes waveHand {
 0%, 100% { transform: rotate(0deg); }
-50% { transform: rotate(15deg); }
+50% { transform: rotate(20deg); }
 }
 
 @keyframes floatW {
@@ -2545,91 +2555,140 @@ let isAppInstalledStatus = false;
 let stripInterval;
 
 function initBalloons() {
-// 1. പതുക്കെ പൊങ്ങി വരുന്നു (Time: 0s)
+if (!wrap) return;
+wrap.style.transition = "transform 15s linear";
 wrap.classList.remove('state-hide', 'state-rest');
 wrap.classList.add('state-up');
 
-// 2. 15 സെക്കൻഡ് കഴിഞ്ഞ് താഴേക്ക് പോകുന്നു (സ്പീഡ് 1/10 കുറയ്ക്കാൻ ടൈം കൂട്ടണം)
 setTimeout(() => {
-wrap.style.transition = "transform 25s linear"; // സ്പീഡ് 1/10 ആയി കുറച്ചു
+wrap.style.transition = "transform 25s linear";
 wrap.classList.replace('state-up', 'state-hide');
 
-// 3. 30 സെക്കൻഡ് റെസ്റ്റ് കഴിഞ്ഞ് (താഴെ എത്തിയിട്ട്) വീണ്ടും പാറി ഉയർന്ന് പകുതിയിൽ നിൽക്കുന്നു
 setTimeout(() => {
-wrap.style.transition = "transform 4s ease-out";
+wrap.style.transition = "transform 3s ease-out";
 wrap.classList.replace('state-hide', 'state-rest');
-// ഇൻസ്റ്റാൾ ചെയ്താലും ഇല്ലെങ്കിലും അനിമേഷൻ വഴി പാറി കൊതിപ്പിച്ചു കൊണ്ടേയിരിക്കും
 }, 30000);
 
 }, 15000);
 }
 
-// കൈപ്പത്തി സ്ട്രിപ്പ് അനിമേഷൻ കൺട്രോൾ
+// സ്ട്രിപ്പ് തള്ളി വരുന്നതിനും മടങ്ങുന്നതിനുമുള്ള കൃത്യമായ ടൈമിംഗ്
 function startHandStripAnimation() {
 if (stripInterval) clearInterval(stripInterval);
 
-stripInterval = setInterval(() => {
-if (isAppInstalledStatus) {
-// ഇൻസ്റ്റാൾ ചെയ്താൽ കൈപ്പത്തി മാത്രം കാണിക്കും, ടെക്സ്റ്റ് മാറിക്കൊണ്ടേയിരിക്കും
-stripMsg.style.display = "none";
-handStrip.classList.add('hand-strip-show');
-} else {
-// അൺഇൻസ്റ്റാൾ ചെയ്താൽ പഴയപടി 30/45 സെക്കൻഡ് ഇടവിട്ട് കാണിക്കും
-stripMsg.style.display = "inline";
-handStrip.classList.add('hand-strip-show');
+// ആദ്യ ലോഡിംഗിൽ 3 സെക്കൻഡ് കഴിഞ്ഞ് ആദ്യം തള്ളി വരുന്നു
 setTimeout(() => {
-handStrip.classList.remove('hand-strip-show');
-}, 5000); // 5 സെക്കൻഡ് കാട്ടിയ ശേഷം മറയും
+if (!isAppInstalledStatus) {
+triggerStripPush();
 }
-}, 35000); // 30/45 സെക്കൻഡ് ഇടവിട്ട് (ശരാശരി 35s)
+}, 3000);
+
+stripInterval = setInterval(() => {
+if (!isAppInstalledStatus) {
+triggerStripPush();
+}
+}, 40000); // 30/45 സെക്കൻഡ് ഇടവിട്ട് വീണ്ടും വരാൻ
+}
+
+function triggerStripPush() {
+handStrip.classList.remove('hand-strip-retract');
+handStrip.classList.add('hand-strip-show');
+
+// 6 സെക്കൻഡ് കഴിഞ്ഞ് മടങ്ങി കൈപ്പത്തി മാത്രം വശത്ത് നിൽക്കുന്നു
+setTimeout(() => {
+if (!isAppInstalledStatus) {
+handStrip.classList.remove('hand-strip-show');
+handStrip.classList.add('hand-strip-retract');
+}
+}, 6000);
 }
 
 function updateToInstalledState() {
 isAppInstalledStatus = true;
-stat.innerText = "INSTALLED";
-ball.classList.add('installed-green-yellow'); // പച്ചകലർന്ന മഞ്ഞ കളർ ആക്കുന്നു
-stripMsg.style.display = "none"; // മെസ്സേജ് ഒഴിവാക്കി കൈപ്പത്തി മാത്രം ആക്കുന്നു
-handStrip.classList.add('hand-strip-show');
+if (stat) stat.innerText = "INSTALLED";
+if (ball) ball.classList.add('installed-green-yellow');
+
+// ഇൻസ്റ്റാൾ ചെയ്താൽ പിന്നെ തള്ളി വരില്ല, കൈപ്പത്തി മാത്രം വശത്ത് സ്ഥിരമായി നിൽക്കും
+handStrip.classList.remove('hand-strip-show');
+handStrip.classList.add('hand-strip-retract');
 if (stripInterval) clearInterval(stripInterval);
 }
 
 function updateToUninstalledState() {
 isAppInstalledStatus = false;
-stat.innerText = "INSTALL";
-ball.classList.remove('installed-green-yellow');
-stripMsg.style.display = "inline";
-handStrip.classList.remove('hand-strip-show');
-startHandStripAnimation(); // വീണ്ടും വീണ്ടും വരാൻ ലൂപ്പ് റീസ്റ്റാർട്ട് ചെയ്യുന്നു
+if (stat) stat.innerText = "INSTALL";
+if (ball) ball.classList.remove('installed-green-yellow');
+handStrip.classList.remove('hand-strip-retract', 'hand-strip-show');
+startHandStripAnimation(); // അൺഇൻസ്റ്റാൾ ചെയ്താൽ വീണ്ടും ലൂപ്പ് തുടങ്ങുന്നു
 }
+
+// പഴയ ഷോപ്പുകളും സെർച്ചും തിരിച്ചു കൊണ്ടുവരാൻ ഒറിജിനൽ ലോഡ് ഫങ്ക്ഷൻ നിലനിർത്തി
+async function loadShops() {
+if (typeof countryShops === 'undefined') countryShops = {};
+
+for (const url of JSON_FILES) {
+try {
+const res = await fetch(url, { cache: "no-store" });
+const data = await res.json();
+const list = Array.isArray(data) ? data : (Array.isArray(data.shops) ? data.shops : []);
+
+list.forEach(shop => {
+const c = normalizeCountry(shop.country || shop.code || "");
+if (!c) return;
+if (!countryShops[c]) countryShops[c] = [];
+countryShops[c].push(shop);
+});
+} catch (err) {
+console.error("JSON load failed:", url, err);
+}
+}
+
+if (!countryShops["india"]) countryShops["india"] = [];
+if (typeof indiaAffiliateShops !== 'undefined') {
+countryShops["india"] = [...indiaAffiliateShops, ...countryShops["india"]];
+}
+
+if (typeof setCountry === 'function') setCountry("india");
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+if (typeof populateCountries === 'function') populateCountries();
+loadShops();
+startHandStripAnimation();
+
+const searchInput = document.getElementById("globalSearch");
+if (searchInput && typeof filterShops === 'function') {
+searchInput.addEventListener("input", filterShops);
+}
+
+const dropdown = document.getElementById("countryDropdown");
+if (dropdown) {
+dropdown.addEventListener("change", function() {
+if (this.value && typeof setCountry === 'function') setCountry(this.value);
+});
+}
+});
 
 window.addEventListener('load', () => {
 initBalloons();
-startHandStripAnimation();
-// വീണ്ടും വീണ്ടും ലൂപ്പ് കറങ്ങാൻ
 setInterval(initBalloons, 80000);
 });
 
 window.addEventListener('beforeinstallprompt', (e) => {
 e.preventDefault();
 basPrompt = e;
-// അൺഇൻസ്റ്റാൾ ചെയ്യപ്പെട്ട അവസ്ഥയാണെങ്കിൽ പഴയപടിയാക്കാൻ
-if (isAppInstalledStatus) {
-updateToUninstalledState();
-}
+if (isAppInstalledStatus) updateToUninstalledState();
 });
 
 function handleInstallTap() {
 if (basPrompt) {
 basPrompt.prompt();
 basPrompt.userChoice.then((c) => {
-if (c.outcome === 'accepted') {
-updateToInstalledState();
-}
+if (c.outcome === 'accepted') updateToInstalledState();
 basPrompt = null;
 });
 } else {
-// ടെസ്റ്റിംഗിനും ക്രോം അല്ലാത്ത ബ്രൗസറുകൾക്കും വേണ്ടി ഇൻസ്റ്റാൾഡ് സ്റ്റേറ്റ് കാണിക്കാൻ
-updateToInstalledState();
+updateToInstalledState(); // ക്രോം അല്ലാത്തയിടങ്ങളിൽ ടെസ്റ്റ് ചെയ്യാൻ
 }
 }
 
@@ -2643,6 +2702,7 @@ let text = "Save a beautiful icon to your screen\n\n" + url + "\n\nChrome → �
 window.open("https://wa.me/?text=" + encodeURIComponent(text), "_blank");
 }
 </script>
+
 
 </body>
 </html>
