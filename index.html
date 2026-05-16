@@ -613,10 +613,14 @@ a.className = "shop-btn";
 a.href = shop.url;
 a.target = "_blank";
 a.rel = "noopener noreferrer";
-a.innerHTML = '<span class="warning-dot">.</span><img class="shop-logo" src="https://www.google.com/s2/favicons?sz=64&domain_url=' + encodeURIComponent(shop.url) + '"><div class="shop-info notranslate"><b>' + shop.name + '</b></div>';
+
+// ഇവിടെയാണ് ആ രണ്ട് പുതിയ വരികൾ വരുന്നത്
+const dotHTML = !shop.url.includes("tag=") ? '<span class="warning-dot">.</span>' : '';
+a.innerHTML = dotHTML + '<img class="shop-logo" src="https://www.google.com/s2/favicons?sz=64&domain_url=' + encodeURIComponent(shop.url) + '"><div class="shop-info notranslate"><b>' + shop.name + '</b></div>';
+
 container.appendChild(a);
 });
-}
+
 
 function filterShops() {
 let val = document.getElementById("globalSearch").value.toLowerCase();
