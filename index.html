@@ -1,743 +1,89 @@
- <!DOCTYPE html>
-<html lang="ml">
+ <!-- CODE NO:0 START -->
+<!DOCTYPE html>
+<html lang="en">
 <head>
-  <!-- 1) അടിസ്ഥാന head block: page charset, mobile viewport, title -->
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>BAS Charity Shops</title>
-  <meta name="theme-color" content="#000000">
-
-  <!-- 2) പ്രധാന style block: shop UI + balloon UI -->
-  <style>
-    body{
-      background:#000;
-      color:#fff;
-      font-family:sans-serif;
-      margin:0;
-      padding-bottom:80px;
-    }
-
-    #bas{
-      width:96%;
-      max-width:900px;
-      margin:auto;
-      padding:10px;
-    }
-
-    #findShop{
-      width:100%;
-      height:50px;
-      border-radius:10px;
-      border:1px solid #333;
-      background:#111;
-      color:#fff;
-      padding:0 15px;
-      margin-bottom:15px;
-      box-sizing:border-box;
-      font-size:16px;
-    }
-
-    #resetBtn{
-      display:block;
-      background:#111;
-      color:orange;
-      padding:14px;
-      border-radius:10px;
-      text-align:center;
-      margin-bottom:20px;
-      cursor:pointer;
-      font-weight:bold;
-      border:1px solid orange;
-      user-select:none;
-    }
-
-    .btn-grid{
-      display:grid;
-      grid-template-columns:repeat(3,1fr);
-      gap:8px;
-      margin-bottom:20px;
-    }
-
-    .m-btn{
-      background:#161616;
-      color:#eee;
-      border:1px solid #333;
-      padding:12px 5px;
-      border-radius:8px;
-      cursor:pointer;
-      font-weight:bold;
-      font-size:13px;
-    }
-
-    .cat-head{
-      padding:12px;
-      border-radius:8px;
-      margin:25px 0 12px;
-      text-align:center;
-      font-weight:bold;
-      color:#fff;
-      text-transform:uppercase;
-    }
-
-    .shop-card{
-      display:flex;
-      align-items:center;
-      gap:12px;
-      padding:14px;
-      background:#111;
-      border-radius:12px;
-      margin-bottom:10px;
-      text-decoration:none;
-      color:#fff;
-      border:1px solid currentColor;
-      border-left:6px solid orange;
-      transition:.2s;
-    }
-
-    .shop-card:hover{
-      background:#1a1a1a;
-      transform:translateX(5px);
-    }
-
-    .shop-card img{
-      width:38px;
-      height:38px;
-      background:#fff;
-      border-radius:6px;
-      padding:4px;
-      object-fit:contain;
-      flex-shrink:0;
-    }
-
-    .info b{
-      font-size:17px;
-      display:block;
-    }
-
-    .info small{
-      color:#888;
-      font-size:12px;
-    }
-
-    /* 3) Balloon wrapper: ഇടത് വശത്ത് floating helper area */
-    #basBalloonWrap{
-      position:fixed;
-      left:0;
-      bottom:24px;
-      width:260px;
-      height:320px;
-      z-index:99999;
-      pointer-events:none;
-      overflow:visible;
-    }
-
-    /* 4) കൈ മാത്രം: install കഴിഞ്ഞാൽ ഇത് മാത്രം നിലനിൽക്കും */
-    .bas-hand{
-      position:absolute;
-      left:-90px;
-      bottom:0;
-      width:120px;
-      height:140px;
-      opacity:0;
-      transform:translateX(-40px);
-      transition:all .8s ease;
-      pointer-events:none;
-    }
-
-    .bas-hand.show{
-      opacity:1;
-      transform:translateX(0);
-    }
-
-    .bas-hand .palm{
-      position:absolute;
-      bottom:18px;
-      left:26px;
-      width:76px;
-      height:76px;
-      background:linear-gradient(145deg,#f4c9a8,#e6ae84);
-      border-radius:45% 45% 40% 40%;
-      box-shadow:0 8px 20px rgba(0,0,0,.35);
-      transform:rotate(-8deg);
-    }
-
-    .bas-hand .thumb{
-      position:absolute;
-      bottom:54px;
-      left:12px;
-      width:28px;
-      height:52px;
-      background:linear-gradient(145deg,#f4c9a8,#df9f77);
-      border-radius:20px;
-      transform:rotate(-25deg);
-    }
-
-    .bas-hand .finger{
-      position:absolute;
-      width:16px;
-      background:linear-gradient(145deg,#f6cfb2,#e5ae86);
-      border-radius:14px;
-      box-shadow:inset 0 -2px 0 rgba(0,0,0,.08);
-    }
-
-    .bas-hand .f1{height:58px; left:36px; bottom:78px; transform:rotate(-4deg);}
-    .bas-hand .f2{height:68px; left:54px; bottom:84px; transform:rotate(0deg);}
-    .bas-hand .f3{height:64px; left:72px; bottom:80px; transform:rotate(5deg);}
-    .bas-hand .f4{height:52px; left:90px; bottom:70px; transform:rotate(10deg);}
-
-    /* 5) Balloon base */
-    .bas-ball{
-      position:absolute;
-      border-radius:50% 50% 48% 48% / 42% 42% 58% 58%;
-      display:flex;
-      flex-direction:column;
-      align-items:center;
-      justify-content:center;
-      cursor:pointer;
-      pointer-events:auto;
-      box-shadow:
-        inset -8px -8px 20px rgba(0,0,0,0.18),
-        0 10px 28px rgba(0,0,0,0.35);
-      transform:translateY(130%);
-      opacity:0;
-      transition:
-        transform 1.2s cubic-bezier(.18,.89,.32,1.28),
-        opacity .5s ease,
-        background .35s ease,
-        border-color .35s ease;
-    }
-
-    .bas-ball.show{
-      opacity:1;
-      transform:translateY(0);
-    }
-
-    .bas-ball.hide{
-      opacity:0;
-      transform:translateY(140%);
-      pointer-events:none;
-    }
-
-    .bas-ball.floaty{
-      animation-duration:4.2s;
-      animation-iteration-count:infinite;
-      animation-timing-function:ease-in-out;
-    }
-
-    .bas-ball.install-ball{
-      width:116px;
-      height:152px;
-      left:78px;
-      bottom:118px;
-      background:#ffffff;
-      color:#222;
-      animation-name:floatInstall;
-    }
-
-    .bas-ball.save-ball{
-      width:102px;
-      height:132px;
-      left:28px;
-      bottom:22px;
-      background:#2e8b57;
-      color:#fff;
-      animation-name:floatSave;
-    }
-
-    .bas-ball.installed{
-      background:#19b84a;
-      color:#fff;
-      border:2px solid #ffffff;
-    }
-
-    .bas-ball.installed .plusMark{
-      display:inline-flex;
-    }
-
-    .bas-ball.white-reset{
-      background:#ffffff;
-      color:#222;
-      border:0;
-    }
-
-    .bas-sticker{
-      width:44px;
-      height:44px;
-      border-radius:10px;
-      margin-bottom:6px;
-      border:1px solid #ddd;
-      background:#fff;
-      object-fit:contain;
-    }
-
-    .bas-lbl{
-      font-size:11px;
-      font-weight:900;
-      text-align:center;
-      line-height:1.2;
-      padding:0 8px;
-      letter-spacing:.3px;
-    }
-
-    .plusMark{
-      display:none;
-      align-items:center;
-      justify-content:center;
-      margin-top:6px;
-      width:20px;
-      height:20px;
-      border-radius:50%;
-      background:#fff;
-      color:#19b84a;
-      font-weight:900;
-      font-size:15px;
-      line-height:1;
-    }
-
-    .bas-nipple{
-      position:absolute;
-      bottom:-9px;
-      width:18px;
-      height:10px;
-      background:inherit;
-      clip-path:polygon(20% 0, 80% 0, 100% 100%, 0 100%);
-    }
-
-    .bas-str{
-      position:absolute;
-      width:1px;
-      background:rgba(255,255,255,.45);
-      bottom:-1000px;
-      left:50%;
-      height:1000px;
-    }
-
-    @keyframes floatInstall{
-      0%,100%{ transform:translate(0,0) rotate(-3deg); }
-      50%{ transform:translate(26px,18px) rotate(4deg); }
-    }
-
-    @keyframes floatSave{
-      0%,100%{ transform:translate(0,0) rotate(4deg); }
-      50%{ transform:translate(18px,-14px) rotate(-4deg); }
-    }
-
-    @media (max-width: 480px){
-      .btn-grid{ grid-template-columns:repeat(2,1fr); }
-      .info b{ font-size:15px; }
-      #basBalloonWrap{ transform:scale(.92); transform-origin:left bottom; }
-    }
-  </style>
-</head>
-
-<body>
-
-  <!-- 6) Main shop wrapper -->
-  <div id="bas">
-    <input id="findShop" placeholder="Search Shops..." onkeyup="search()">
-    <div id="resetBtn" onclick="resetView()">← Back to All Shops</div>
-    <div class="btn-grid" id="btns"></div>
-    <div id="out"></div>
-  </div>
-
-  <!-- 7) Balloon HTML block -->
-  <div id="basBalloonWrap" aria-hidden="false">
-    <div class="bas-hand" id="basHand">
-      <div class="thumb"></div>
-      <div class="palm"></div>
-      <div class="finger f1"></div>
-      <div class="finger f2"></div>
-      <div class="finger f3"></div>
-      <div class="finger f4"></div>
-    </div>
-
-    <div class="bas-ball install-ball white-reset" id="installBall" onclick="handleInstallTap()" title="Install">
-      <img src="icon-512.png" class="bas-sticker" alt="App Icon" onerror="this.style.display='none'">
-      <div id="statTxt" class="bas-lbl">INSTALL</div>
-      <div class="plusMark" id="plusMark">+</div>
-      <div class="bas-nipple"></div>
-      <div class="bas-str"></div>
-    </div>
-
-    <div class="bas-ball save-ball" id="saveBall" onclick="goSavePhone()" title="Save to Phone">
-      <div class="bas-lbl">SAVE TO<br>PHONE</div>
-      <div class="bas-nipple"></div>
-      <div class="bas-str"></div>
-    </div>
-  </div>
-
-  <!-- 8) Shop data block -->
-  <script>
-    const shops = [
-      {n:"Times Prime", c:"General", country:"India", u:"https://extp.in/ZMd1Nw", d:"timesprime.com", t:"Subscriptions"},
-      {n:"Flipkart", c:"General", country:"India", u:"https://fkrt.co/4qfbAT", d:"flipkart.com", t:"Online Shopping"},
-      {n:"Shopsy", c:"General", country:"India", u:"https://extp.in/Gs6Rb1", d:"shopsy.in", t:"Budget Deals"},
-      {n:"TATA CLiQ", c:"General", country:"India", u:"https://extp.in/xBzdCz", d:"tatacliq.com", t:"Premium Shopping"},
-      {n:"HamaraMall", c:"General", country:"India", u:"https://extp.in/8X1jbY", d:"hamaramall.com", t:"Multi-Brand"},
-      {n:"Zop Multi-Brand", c:"General", country:"India", u:"https://extp.in/IrhoNZ", d:"zopnow.com", t:"Deals"},
-      {n:"Borosil", c:"General", country:"India", u:"https://extp.in/24qA7X", d:"borosil.com", t:"Home & Kitchen"},
-      {n:"Loop Earplugs", c:"General", country:"India", u:"https://extp.in/BB0Xou", d:"loopearplugs.com", t:"Accessories"},
-      {n:"BigRock", c:"General", country:"India", u:"https://extp.in/Nlegt8", d:"bigrock.in", t:"Domains & Hosting"},
-      {n:"Hostinger", c:"General", country:"India", u:"https://extp.in/ftfK2f", d:"hostinger.in", t:"Web Hosting"},
-
-      {n:"Reliance Digital", c:"Electronics", country:"India", u:"https://extp.in/0PgZJ7", d:"reliancedigital.in", t:"Tech Store"},
-      {n:"Realme", c:"Electronics", country:"India", u:"https://extp.in/hnJCyL", d:"realme.com", t:"Official Store"},
-      {n:"OPPO", c:"Electronics", country:"India", u:"https://extp.in/fVoq06", d:"oppo.com", t:"Official Store"},
-      {n:"Croma", c:"Electronics", country:"India", u:"https://extp.in/8qwyol", d:"croma.com", t:"Electronics"},
-      {n:"OnePlus", c:"Electronics", country:"India", u:"https://extp.in/FEEReP", d:"oneplus.in", t:"Smartphones"},
-      {n:"boAt", c:"Electronics", country:"India", u:"https://extp.in/oRxSTk", d:"boat-lifestyle.com", t:"Audio & Wearables"},
-      {n:"HP Store", c:"Electronics", country:"India", u:"https://extp.in/U9ewhY", d:"hp.com", t:"Laptops & PCs"},
-      {n:"Apple (Imagine)", c:"Electronics", country:"India", u:"https://extp.in/SqFm4N", d:"apple.com", t:"Authorised Store"},
-      {n:"Havells", c:"Electronics", country:"India", u:"https://extp.in/S9xPk5", d:"havells.com", t:"Home Appliances"},
-      {n:"Acer", c:"Electronics", country:"India", u:"https://extp.in/VrnWUI", d:"acer.com", t:"Laptops"},
-
-      {n:"Agoda", c:"Travel", country:"India", u:"https://extp.in/IVQGXK", d:"agoda.com", t:"Hotels Worldwide"},
-      {n:"Cleartrip", c:"Travel", country:"India", u:"https://extp.in/MScmZs", d:"cleartrip.com", t:"Flights & Hotels"},
-      {n:"Skyscanner", c:"Travel", country:"India", u:"https://extp.in/OkutuN", d:"skyscanner.co.in", t:"Flight Search"},
-      {n:"Wego Hotels", c:"Travel", country:"India", u:"https://extp.in/p1wwg6", d:"wego.com", t:"Best Prices"},
-      {n:"Cleartrip App", c:"Travel", country:"India", u:"https://extp.in/LK0lCN", d:"cleartrip.com", t:"Mobile Booking"},
-      {n:"Air India Express", c:"Travel", country:"India", u:"https://extp.in/Yt5n0D", d:"airindiaexpress.com", t:"Low-cost Flights"},
-      {n:"Goibibo Hotels", c:"Travel", country:"India", u:"https://extp.in/hI611P", d:"goibibo.com", t:"Hotel Deals"},
-      {n:"Radisson", c:"Travel", country:"India", u:"https://extp.in/NZ4D3c", d:"radissonhotels.com", t:"Premium Hotels"},
-      {n:"Air India", c:"Travel", country:"India", u:"https://extp.in/dglSuK", d:"airindia.com", t:"International Flights"},
-      {n:"Qatar Airways", c:"Travel", country:"India", u:"https://extp.in/j1zDhQ", d:"qatarairways.com", t:"Global Travel"},
-
-      {n:"Ajio", c:"Fashion", country:"India", u:"https://ajiio.co/FB2bjd", d:"ajio.com", t:"Fashion Deals"},
-      {n:"Savana", c:"Fashion", country:"India", u:"https://extp.in/vneaiB", d:"savana.com", t:"Latest Trends"},
-      {n:"Adidas", c:"Fashion", country:"India", u:"https://extp.in/O8an9N", d:"adidas.co.in", t:"Sportswear"},
-      {n:"Snitch", c:"Fashion", country:"India", u:"https://extp.in/9HobPl", d:"snitch.co.in", t:"Men Fashion"},
-      {n:"Bewakoof", c:"Fashion", country:"India", u:"https://extp.in/YTpmLn", d:"bewakoof.com", t:"Casual Wear"},
-      {n:"Nykaa Fashion", c:"Fashion", country:"India", u:"https://extp.in/K4vmPe", d:"nykaafashion.com", t:"Designer Wear"},
-      {n:"Shyaway", c:"Fashion", country:"India", u:"https://extp.in/I17VdZ", d:"shyaway.com", t:"Lingerie"},
-      {n:"Palmonas", c:"Fashion", country:"India", u:"https://extp.in/zLMREw", d:"palmonas.com", t:"Jewellery"},
-      {n:"Tanishq", c:"Fashion", country:"India", u:"https://extp.in/JW39eV", d:"tanishq.co.in", t:"Gold Jewellery"},
-      {n:"Aramya", c:"Fashion", country:"India", u:"https://extp.in/weizVL", d:"aranya.com", t:"Ethnic Wear"},
-
-      {n:"PharmEasy", c:"Health", country:"India", u:"https://extp.in/health1", d:"pharmeasy.in", t:"Online Pharmacy"},
-      {n:"Tata 1mg", c:"Health", country:"India", u:"https://extp.in/health2", d:"1mg.com", t:"Medicines & Lab Tests"},
-      {n:"Netmeds", c:"Health", country:"India", u:"https://extp.in/health3", d:"netmeds.com", t:"Online Pharmacy"},
-      {n:"Apollo Pharmacy", c:"Health", country:"India", u:"https://extp.in/health4", d:"apollopharmacy.in", t:"Medicines"},
-      {n:"Practo", c:"Health", country:"India", u:"https://extp.in/health5", d:"practo.com", t:"Doctor Consultation"},
-      {n:"HealthKart", c:"Health", country:"India", u:"https://extp.in/health6", d:"healthkart.com", t:"Supplements"},
-      {n:"Boldfit", c:"Health", country:"India", u:"https://extp.in/health7", d:"boldfit.com", t:"Fitness Products"},
-      {n:"Wellness Forever", c:"Health", country:"India", u:"https://extp.in/health8", d:"wellnessforever.com", t:"Pharmacy"},
-      {n:"Zandu Care", c:"Health", country:"India", u:"https://extp.in/health9", d:"zanducare.com", t:"Ayurveda"},
-      {n:"MyUpchar", c:"Health", country:"India", u:"https://extp.in/health10", d:"myupchar.com", t:"Health Info & Products"},
-
-      {n:"Dot & Key", c:"Beauty", country:"India", u:"https://extp.in/FLG6iL", d:"dotandkey.com", t:"Skincare"},
-      {n:"Love Beauty & Planet", c:"Beauty", country:"India", u:"https://extp.in/IGrjfb", d:"lovebeautyandplanet.com", t:"Haircare"},
-      {n:"Nykaa", c:"Beauty", country:"India", u:"https://extp.in/BnQJFH", d:"nykaa.com", t:"Beauty Store"},
-      {n:"Clove Oral Care", c:"Beauty", country:"India", u:"https://extp.in/RSLak4", d:"cloveoralcare.com", t:"Dental Care"},
-      {n:"The Man Company", c:"Beauty", country:"India", u:"https://extp.in/JW1fyD", d:"themancompany.com", t:"Men Grooming"},
-      {n:"Lotus Botanicals", c:"Beauty", country:"India", u:"https://extp.in/2vyqbh", d:"lotusbotanicals.com", t:"Ayurvedic"},
-      {n:"Nourish Mantra", c:"Beauty", country:"India", u:"https://extp.in/Gg2Mzw", d:"nourishmantra.com", t:"Natural Beauty"},
-      {n:"The Body Shop", c:"Beauty", country:"India", u:"https://extp.in/Uel1q3", d:"thebodyshop.in", t:"Skincare"},
-      {n:"Swiss Beauty", c:"Beauty", country:"India", u:"https://extp.in/0I5GeF", d:"swissbeauty.in", t:"Cosmetics"},
-      {n:"Sadhev Ayurveda", c:"Beauty", country:"India", u:"https://extp.in/BCljjQ", d:"sadhev.com", t:"Ayurveda"},
-
-      {n:"Airtel Payments Bank", c:"Banking", country:"India", u:"https://extp.in/g0pxj2", d:"airtel.in", t:"Open Account"},
-      {n:"Angel One", c:"Banking", country:"India", u:"https://extp.in/frLCl1", d:"angelone.in", t:"Demat Account"},
-      {n:"Swiggy HDFC Card", c:"Banking", country:"India", u:"https://extp.in/Xl9qHe", d:"hdfcbank.com", t:"Apply Now"},
-      {n:"IndusInd Avios Card", c:"Banking", country:"India", u:"https://extp.in/hj6ArG", d:"indusind.com", t:"Apply Now"},
-      {n:"AyushPay", c:"Banking", country:"India", u:"https://extp.in/XQxoLW", d:"ayushpay.com", t:"Healthcare Finance"},
-      {n:"Marriott Bonvoy HDFC", c:"Banking", country:"India", u:"https://extp.in/cxkWbr", d:"marriott.com", t:"Apply Now"},
-      {n:"Axis MyZone Card", c:"Banking", country:"India", u:"https://extp.in/9myzwo", d:"axisbank.com", t:"Apply Now"},
-      {n:"Navi UPI", c:"Banking", country:"India", u:"https://extp.in/J56J4f", d:"navi.com", t:"UPI Services"},
-      {n:"Upstox", c:"Banking", country:"India", u:"https://extp.in/jrfhBK", d:"upstox.com", t:"Trading Platform"},
-      {n:"Zagg Money", c:"Banking", country:"India", u:"https://extp.in/9zNj2z", d:"zagg.money", t:"UPI Credit"},
-
-      {n:"Amazon UK", c:"General", country:"UK", u:"https://www.amazon.co.uk/?tag=vmmbaslinks03-21", d:"amazon.co.uk", t:"Online Shopping"},
-      {n:"Amazon USA", c:"General", country:"USA", u:"https://www.amazon.com/?tag=vmmbaslinks-20", d:"amazon.com", t:"Online Shopping"},
-      {n:"Amazon Canada", c:"General", country:"Canada", u:"https://www.amazon.ca/?tag=vmmbaslinks06-20", d:"amazon.ca", t:"Online Shopping"},
-      {n:"Amazon UAE", c:"General", country:"UAE", u:"https://www.amazon.ae/?tag=vmmbaslinks01-21", d:"amazon.ae", t:"Online Shopping"},
-      {n:"Amazon Saudi", c:"General", country:"Saudi", u:"https://www.amazon.sa/?tag=vmmbaslinks01-21", d:"amazon.sa", t:"Online Shopping"},
-
-      {n:"Alibaba", c:"Shopping", country:"ALL", u:"https://rzekl.com/g/pm1aev55clcf9d224bea219aa26f6f/", d:"alibaba.com", t:"Shop Now"},
-      {n:"AliExpress", c:"Shopping", country:"ALL", u:"https://rzekl.com/g/1e8d114494cf9d224bea16525dc3e8/", d:"aliexpress.com", t:"Shop Now"},
-      {n:"Boardmix", c:"Tools", country:"ALL", u:"https://axavl.com/g/3tevoaw5qqcf9d224bead12233f6f4/", d:"boardmix.com", t:"Try Now"},
-      {n:"Kama Ayurveda", c:"Beauty", country:"India", u:"https://tjzuh.com/g/yqewe0ii4ccf9d224bea238bfeb32d/", d:"kamaayurveda.com", t:"Shop Now"},
-      {n:"Malabar Gold", c:"Jewellery", country:"India", u:"https://tjzuh.com/g/zcflox2g0ncf9d224bea24725e5aee/", d:"malabargoldanddiamonds.com", t:"Shop Jewellery"},
-      {n:"Bodylab24", c:"Health", country:"ALL", u:"#", d:"bodylab24.com", t:"Fitness Supplements"},
-      {n:"italki", c:"Education", country:"ALL", u:"#", d:"italki.com", t:"Learn Languages Online"},
-
-      {n:"BestBuy", c:"Electronics", country:"USA", u:"#", d:"bestbuy.com", t:"Electronics"},
-      {n:"Expedia", c:"Travel", country:"USA", u:"#", d:"expedia.com", t:"Travel"},
-      {n:"Noon", c:"General", country:"UAE", u:"#", d:"noon.com", t:"Shopping"},
-      {n:"Shopee", c:"General", country:"Malaysia", u:"#", d:"shopee.com.my", t:"Shopping"}
-    ];
-  </script>
-
-  <!-- 9) Category + state + config block -->
-  <script>
-    const cats = [...new Set(shops.map(s => s.c))];
-    const baseColors = ["#2196f3","#e91e63","#9c27b0","#ff5722","#4caf50","#00bcd4","#795548","#607d8b","#3f51b5","#8bc34a","#ffc107","#009688"];
-    const colors = {};
-    cats.forEach((cat, i) => { colors[cat] = baseColors[i % baseColors.length]; });
-
-    let activeCountry = "";
-    let basPrompt = null;
-    let isInstalled = false;
-    let saveBallGone = false;
-
-    /* 10) Balloon timing block: ശേഷം edit ചെയ്യാൻ easy */
-    const balloonTiming = {
-      handFirstAppearSec: 4,
-      installBalloonRiseSec: 6,
-      saveBalloonRiseSec: 7,
-      saveHideAfterSec: 16,
-      greenCelebrateSec: 6
-    };
-  </script>
-
-  <!-- 11) Render/search/filter block -->
-  <script>
-    function render(data){
-      let out = document.getElementById("out");
-      out.innerHTML = "";
-
-      const isIndia = (activeCountry || "").toLowerCase() === "india" || activeCountry === "";
-
-      cats.forEach(cat => {
-        let g = data.filter(s => s.c === cat);
-        if(!g.length) return;
-
-        if(isIndia){
-          out.innerHTML += `<div class="cat-head" style="background:${colors[cat]}">${cat}</div>`;
-        }
-
-        g.forEach(s => {
-          out.innerHTML += `
-            <a class="shop-card" href="${s.u}" target="_blank" rel="noopener noreferrer" style="border-left-color:${colors[cat]}">
-              <img src="https://www.google.com/s2/favicons?domain=${encodeURIComponent(s.d)}&sz=64" alt="${s.n}">
-              <div class="info">
-                <b class="notranslate" translate="no">${s.n}</b>
-                <small>${s.t}</small>
-              </div>
-            </a>
-          `;
-        });
-      });
-    }
-
-    function search(){
-      let v = document.getElementById("findShop").value.toLowerCase();
-      let data = shops;
-
-      if(activeCountry && activeCountry !== "All Countries"){
-        data = data.filter(s =>
-          (s.country && s.country.toLowerCase() === activeCountry.toLowerCase()) ||
-          (s.country && s.country.toLowerCase() === "all")
-        );
-      }
-
-      if(v){
-        data = data.filter(s =>
-          s.n.toLowerCase().includes(v) ||
-          s.t.toLowerCase().includes(v)
-        );
-      }
-
-      render(data);
-    }
-
-    function resetView(){
-      document.getElementById("findShop").value = "";
-      search();
-    }
-
-    function filter(cat){
-      let data = shops.filter(s => s.c === cat);
-
-      if(activeCountry && activeCountry !== "All Countries"){
-        data = data.filter(s =>
-          (s.country && s.country.toLowerCase() === activeCountry.toLowerCase()) ||
-          (s.country && s.country.toLowerCase() === "all")
-        );
-      }
-
-      render(data);
-    }
-
-    function initBtns(){
-      let b = "";
-      cats.forEach(c => {
-        b += `<button class="m-btn" onclick="filter('${c.replace(/'/g, "\\'")}')" style="border-bottom:2px solid ${colors[c]}">${c}</button>`;
-      });
-      document.getElementById("btns").innerHTML = b;
-    }
-
-    function detectUserCountry(){
-      fetch("https://ipapi.co/json/")
-        .then(r => r.json())
-        .then(d => {
-          const map = {
-            "India":"India",
-            "United States":"USA",
-            "United Kingdom":"UK",
-            "United Arab Emirates":"UAE",
-            "Saudi Arabia":"Saudi",
-            "Singapore":"Singapore",
-            "Malaysia":"Malaysia",
-            "Canada":"Canada"
-          };
-          activeCountry = map[d.country_name] || "India";
-          search();
-          initBtns();
-        })
-        .catch(() => {
-          activeCountry = "India";
-          search();
-          initBtns();
-        });
-    }
-  </script>
-
-  <!-- 12) Balloon helper functions block -->
-  <script>
-    const basHand = document.getElementById("basHand");
-    const installBall = document.getElementById("installBall");
-    const saveBall = document.getElementById("saveBall");
-    const statTxt = document.getElementById("statTxt");
-    const plusMark = document.getElementById("plusMark");
-
-    function showHand(){
-      basHand.classList.add("show");
-    }
-
-    function showInstallBall(){
-      if(isInstalled) return;
-      installBall.classList.remove("hide");
-      installBall.classList.add("show","floaty");
-    }
-
-    function showSaveBall(){
-      if(isInstalled || saveBallGone) return;
-      saveBall.classList.remove("hide");
-      saveBall.classList.add("show","floaty");
-    }
-
-    function hideSaveBallForever(){
-      saveBall.classList.remove("show","floaty");
-      saveBall.classList.add("hide");
-      saveBallGone = true;
-    }
-
-    function handOnlyMode(){
-      installBall.classList.remove("show","floaty");
-      installBall.classList.add("hide");
-
-      saveBall.classList.remove("show","floaty");
-      saveBall.classList.add("hide");
-    }
-
-    function resetInstallBalloonToWhite(){
-      isInstalled = false;
-      installBall.classList.remove("installed");
-      installBall.classList.add("white-reset");
-      statTxt.innerText = "INSTALL";
-      plusMark.style.display = "none";
-    }
-
-    function celebrateInstalled(){
-      isInstalled = true;
-      installBall.classList.remove("white-reset");
-      installBall.classList.add("installed","show","floaty");
-      statTxt.innerText = "INSTALLED";
-      plusMark.style.display = "inline-flex";
-
-      saveBall.classList.remove("show","floaty");
-      saveBall.classList.add("hide");
-
-      setTimeout(() => {
-        handOnlyMode();
-      }, balloonTiming.greenCelebrateSec * 1000);
-    }
-
-    function startBalloonSequence(){
-      showHand();
-
-      setTimeout(() => {
-        if(!isInstalled) showInstallBall();
-      }, Math.max(0, (balloonTiming.installBalloonRiseSec - balloonTiming.handFirstAppearSec) * 1000));
-
-      setTimeout(() => {
-        if(!isInstalled) showSaveBall();
-      }, Math.max(0, (balloonTiming.saveBalloonRiseSec - balloonTiming.handFirstAppearSec) * 1000));
-
-      setTimeout(() => {
-        if(!isInstalled) hideSaveBallForever();
-      }, Math.max(0, (balloonTiming.saveHideAfterSec - balloonTiming.handFirstAppearSec) * 1000));
-    }
-
-    function goSavePhone(){
-      const url = location.href;
-      const text = "Save this to phone / Install app:\
-\
-" + url + "\
-\
-Open in Chrome → menu → Add to Home screen / Install app";
-      window.open("https://wa.me/?text=" + encodeURIComponent(text), "_blank");
-    }
-  </script>
-
-  <!-- 13) PWA install logic block -->
-  <script>
-    window.addEventListener("beforeinstallprompt", (e) => {
-      e.preventDefault();
-      basPrompt = e;
-
-      /* uninstall-ിന് direct event ഇല്ല; വീണ്ടും prompt ലഭിച്ചാൽ install വീണ്ടും possible എന്നു assume ചെയ്യുന്നു */
-      if(!isInstalled){
-        resetInstallBalloonToWhite();
-        installBall.classList.remove("hide");
-      }
-    });
-
-    async function handleInstallTap(){
-      if(!basPrompt){
-        alert("Install option Chrome/compatible browser-ിൽ മാത്രം വരാം.");
-        return;
-      }
-
-      try{
-        basPrompt.prompt();
-        const choice = await basPrompt.userChoice;
-
-        if(choice && choice.outcome === "accepted"){
-          celebrateInstalled();
-        }
-      }catch(err){
-        console.log("Install prompt error", err);
-      }
-
-      basPrompt = null;
-    }
-
-    window.addEventListener("appinstalled", () => {
-      celebrateInstalled();
-      basPrompt = null;
-    });
-  </script>
-
-  <!-- 14) Service worker block: sw.js ഉണ്ടായാൽ മാത്രം register ചെയ്യും -->
-  <script>
-    if("serviceWorker" in navigator){
-      window.addEventListener("load", () => {
-        navigator.serviceWorker.register("./sw.js").catch(() => {});
-      });
-    }
-  </script>
-
-  <!-- 15) Main init block -->
-  <script>
-    window.addEventListener("load", () => {
-      detectUserCountry();
-
-      setTimeout(() => {
-        startBalloonSequence();
-      }, balloonTiming.handFirstAppearSec * 1000);
-    });
-  </script>
-
-</body>
-</html>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BAS Charity International</title>
+
+<link rel="manifest" href="manifest.json">
+<link rel="icon" type="image/png" href="icon-192.png">
+<link rel="apple-touch-icon" href="icon-192.png">
+
+<meta name="theme-color" content="#ffffff">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+<!-- CODE NO:0 END -->
+<!-- CODE NO:1 START -->
+<script>
+if ('serviceWorker' in navigator) {
+window.addEventListener('load', () => {
+navigator.serviceWorker.register('sw.js');
+});
+}
+</script>
+
+<style>
+/* CODE NO:1 FIX */
+h1 { color:#fff !important; }
+.malayalam-fix { color:#bbb !important; }
+#dedication-text { color:#bbb !important; font-weight:300; }
+#gallery { display:flex; overflow-x:auto; scroll-behavior:smooth; gap:10px; }
+#gallery::-webkit-scrollbar { display:none; }
+.card { min-width:180px; flex-shrink:0; }
+.card img { width:100%; height:auto; border-radius:10px; display:block; }
+#gallery.zoom { transform:scale(1.05); transition:0.3s; }
+• { box-sizing:border-box; }
+
+body {
+margin:0;
+background:#000;
+font-family:Arial, sans-serif;
+color:#fff;
+overflow-x:hidden;
+font-size:23px;
+}
+<!-- CODE NO:1 END -->
+
+<!-- CODE NO:2 START -->
+<div class="bas-dedication">
+<div id="dedication-text" class="malayalam-fix">
+Dedicated in sacred memory and for the good of each of us,<br>
+our parents, and our other ancestors<br>
+across all the worlds.
+</div>
+</div>
+<!-- CODE NO:2 END -->
+<!-- CODE NO:3 START -->
+<div class="msg-container">
+<div class="question-box">
+<span class="malayalam-text">
+"What if, without spending even one extra penny, at the same price and with the same offer, a purchase made through the BAS Charity International links below could satisfy the hunger of someone in some corner of the world?"
+</span>
+</div>
+<div class="hunger-footer notranslate" translate="no">YOUR PURCHASE SATISFIES A HUNGER</div>
+</div>
+<!-- CODE NO:3 END -->
+
+<!-- CODE NO:4 START -->
+<div class="top-bar">
+<div class="lang-box">
+<div class="lang-title">SELECT LANGUAGE</div>
+</div>
+<div class="lang-buttons">
+<button class="lang-btn en" onclick="resetToEnglish()">English</button>
+<button class="lang-btn hi" onclick="changeLang('hi')">Hindi Language</button>
+<button class="lang-btn ml" onclick="changeLang('ml')">Malayalam</button>
+<button class="lang-btn ar" onclick="changeLang('ar')">Arabic</button>
+<button class="lang-btn ta" onclick="changeLang('ta')">Tamil</button>
+<button class="lang-btn ur" onclick="changeLang('ur')">Urdu</button>
+<button class="lang-btn es" onclick="changeLang('es')">Spanish</button>
+<button class="lang-btn pt" onclick="changeLang('pt')">Portuguese</button>
+</div>
+<div class="google-row">
+🌐 All Languages : <span id="google_translate_element"></span>
+</div>
+</div>
+<!-- CODE NO:4 END -->
