@@ -374,20 +374,22 @@
     </script>
     <script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 
+ 
+/* പ്രധാന കണ്ടെയ്‌നർ */
 <div id="basBalloonWrap">
 <div class="bas-ball white-b" onclick="handleInstallTap()">
 <img src="icon-512.png" class="bas-sticker">
 <div id="statTxt" class="bas-lbl" style="color:#333;">INSTALL</div>
 <div class="bas-nipple"></div>
 <div class="bas-str"></div>
-</div> 
+</div>
 
 <div class="bas-ball blue-b" onclick="goWhatsApp()">
 <div class="bas-lbl" style="color:#fff;">SAVE TO<br>WHATSAPP</div>
 <div class="bas-nipple"></div>
 <div class="bas-str"></div>
 </div>
-</div> 
+</div>
 
 <style>
 #basBalloonWrap {
@@ -402,12 +404,12 @@ pointer-events: none;
 transform: translateY(120%);
 transition: transform 2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 display: block !important;
-} 
+}
 
 /* അവസ്ഥകൾ */
 .state-up { transform: translateY(0%) !important; }
 .state-hide { transform: translateY(120%) !important; }
-.state-rest { transform: translateY(70%) !important; } 
+.state-rest { transform: translateY(70%) !important; }
 
 .bas-ball {
 position: absolute;
@@ -419,7 +421,7 @@ justify-content: center;
 cursor: pointer;
 pointer-events: auto;
 box-shadow: inset -8px -8px 20px rgba(0,0,0,0.4);
-} 
+}
 
 .bas-str {
 position: absolute;
@@ -428,7 +430,7 @@ background: rgba(255,255,255,0.4);
 bottom: -1000px;
 left: 50%;
 height: 1000px;
-} 
+}
 
 .bas-nipple {
 position: absolute;
@@ -437,109 +439,159 @@ width: 18px;
 height: 10px;
 background: inherit;
 clip-path: polygon(20% 0, 80% 0, 100% 100%, 0 100%);
-} 
+}
 
 .white-b {
 width: 120px; height: 160px;
 background: #ffffff;
 bottom: 220px; left: 60px;
-animation: floatW 12s ease-in-out infinite;
-} 
+animation: floatW 25s ease-in-out infinite;
+}
 
 .blue-b {
 width: 105px; height: 135px;
 background: #007bff;
 bottom: 70px; left: 30px;
-animation: floatB 10s ease-in-out infinite;
-} 
+animation: floatB 20s ease-in-out infinite;
+}
 
-.bas-sticker { width: 45px; height: 45px; border-radius: 10px; margin-bottom: 5px; border: 1px solid #ddd; }
-.bas-lbl { font-family: sans-serif; font-size: 11px; font-weight: 900; text-align: center; line-height: 1.2; } 
+.bas-sticker { width: 75px; height: 75px; border-radius: 20px; margin-bottom: 5px; border: 1px solid #ddd; }
+.bas-lbl { font-family: sans-serif; font-size: 11px; font-weight: 900; text-align: center; line-height: 1.2; }
 
 @keyframes floatW {
 0%, 100% { transform: translate(0, 0) rotate(-3deg); }
 50% { transform: translate(35px, 45px) rotate(5deg); }
-} 
+}
 
 @keyframes floatB {
 0%, 100% { transform: translate(0, 0) rotate(4deg); }
 50% { transform: translate(25px, -25px) rotate(-4deg); }
 }
-</style> 
+</style>
 
 <script>
 let basPrompt;
 const wrap = document.getElementById('basBalloonWrap');
-const stat = document.getElementById('statTxt'); 
-
-// പേജ് ലോഡാകുമ്പോൾ മുൻപ് ഇൻസ്റ്റാൾ ചെയ്തിട്ടുണ്ടോ എന്ന് പരിശോധിക്കുന്നു
-window.addEventListener('DOMContentLoaded', () => {
-    if (localStorage.getItem('bas_pwa_installed') === 'true') {
-        stat.innerText = "INSTALLED";
-    }
-});
+const stat = document.getElementById('statTxt');
 
 function initBalloons() {
 // 5 സെക്കൻഡ് കഴിഞ്ഞ് വരുന്നു
 setTimeout(() => {
-wrap.classList.add('state-up'); 
+wrap.classList.add('state-up');
 
 // 15 സെക്കൻഡ് കഴിഞ്ഞ് ഫുൾ ഹൈഡ്
 setTimeout(() => {
-wrap.classList.replace('state-up', 'state-hide'); 
+wrap.classList.replace('state-up', 'state-hide');
 
 // 60 സെക്കൻഡ് കഴിഞ്ഞ് റെസ്റ്റ് (പകുതി)
 setTimeout(() => {
 wrap.classList.replace('state-hide', 'state-rest');
-}, 60000);
+}, 30000);
 }, 15000);
 }, 5000);
-} 
+}
 
 const wake = () => {
 wrap.classList.remove('state-hide', 'state-rest');
 wrap.classList.add('state-up');
 };
 wrap.addEventListener('click', wake);
-wrap.addEventListener('touchstart', wake); 
+wrap.addEventListener('touchstart', wake);
 
-window.addEventListener('load', initBalloons); 
+window.addEventListener('load', initBalloons);
 
 function goWhatsApp(){
 let url = "https://bascharity-56f.pages.dev";
 let text = "Save a beautiful icon to your screen\n\n" + url + "\n\nChrome → ⋮ 3 dot → Save to Screen → Install";
 window.open("https://wa.me/?text=" + encodeURIComponent(text), "_blank");
-} 
+}
 
 window.addEventListener('beforeinstallprompt', (e) => {
 e.preventDefault();
 basPrompt = e;
-}); 
+});
 
 function handleInstallTap() {
-if (localStorage.getItem('bas_pwa_installed') === 'true') {
-    return; // മുൻപ് ഇൻസ്റ്റാൾ ചെയ്തിട്ടുണ്ടെങ്കിൽ ബട്ടൺ ക്ലിക്ക് ചെയ്യുമ്പോൾ ഒന്നും സംഭവിക്കില്ല
-}
 if (basPrompt) {
 basPrompt.prompt();
 basPrompt.userChoice.then((c) => {
-if (c.outcome === 'accepted') {
-    stat.innerText = "INSTALLED";
-    localStorage.setItem('bas_pwa_installed', 'true'); // ലോക്കൽ സ്റ്റോറേജിൽ സേവ് ചെയ്യുന്നു
-}
+if (c.outcome === 'accepted') stat.innerText = "INSTALLED";
 basPrompt = null;
 });
 } else {
 alert("Please use Chrome browser for Install option.");
 }
-} 
+}
 
 window.addEventListener('appinstalled', () => {
 stat.innerText = "INSTALLED";
-localStorage.setItem('bas_pwa_installed', 'true'); // ലോക്കൽ സ്റ്റോറേജിൽ സേവ് ചെയ്യുന്നു
 });
-</script> 
+</script>
+<!-------------------------------->
+<div id="basHandStrip">
+<span class="hand-icon">✋</span>
+<span>SAVE TO PHONE</span>
+</div>
 
-</body>
-</html>
+<style>
+#basHandStrip {
+position: fixed;
+left: 0;
+top: 50%;
+transform: translate(-82%, -50%);
+background: rgba(0,0,0,0.92);
+color: #fff;
+padding: 12px 18px;
+border-radius: 0 18px 18px 0;
+font-family: sans-serif;
+font-weight: bold;
+font-size: 14px;
+z-index: 2147483647;
+display: flex;
+align-items: center;
+gap: 10px;
+white-space: nowrap;
+box-shadow: 4px 4px 18px rgba(0,0,0,0.45);
+transition: transform 0.6s ease;
+pointer-events: none;
+}
 
+#basHandStrip.show {
+transform: translate(0, -50%);
+}
+
+#basHandStrip.hide-part {
+transform: translate(-82%, -50%);
+}
+
+.hand-icon {
+font-size: 20px;
+display: inline-block;
+animation: waveHand 1.2s infinite;
+}
+
+@keyframes waveHand {
+0%, 100% { transform: rotate(0deg); }
+50% { transform: rotate(20deg); }
+}
+</style>
+
+<script>
+(function () {
+const strip = document.getElementById('basHandStrip');
+if (!strip) return;
+
+function showStrip() {
+strip.classList.add('show');
+strip.classList.remove('hide-part');
+
+setTimeout(() => {
+strip.classList.remove('show');
+strip.classList.add('hide-part');
+}, 6000);
+}
+
+setTimeout(showStrip, 3000);
+setInterval(showStrip, 40000);
+})();
+</script>
