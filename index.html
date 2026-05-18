@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ml">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -18,7 +18,7 @@
     <style>
         /* CODE NO:1 FIX */
         h1 { color:#fff !important; }
-        .malayalam-fix { color:#bbb !important; }
+        .english-fix { color:#bbb !important; }
         #dedication-text { color:#bbb !important; font-weight:300; line-height: 1.6; }
         #gallery { display:flex; overflow-x:auto; scroll-behavior:smooth; gap:10px; }
         #gallery::-webkit-scrollbar { display:none; }
@@ -26,7 +26,7 @@
         .card img { width:100%; height:auto; border-radius:10px; display:block; }
         #gallery.zoom { transform:scale(1.05); transition:0.3s; }
         
-        /* FIX: Invalid bullet character changed to asterisk */
+        /* FIX: Invalid bullet point character replaced with asterisk */
         * { box-sizing:border-box; } 
 
         body {
@@ -76,8 +76,7 @@
         .lang-title { background: #b3ecff; color: #000; font-weight: 900; text-align: center; padding: 10px; border-radius: 10px; border: 1px solid #ff9800; border-left: 6px solid #ff9800; margin-bottom: 10px; text-transform: uppercase; }
         .msg-container { width:96%; padding:20px 0; margin: auto; }
         .question-box { margin:0 auto; width:96%; max-width:900px; background:#000; color:#00BFFF; padding:25px; border-radius:12px; border:1px solid #00BFFF; text-align:center; line-height:1.8; }
-        .malayalam-text { font-size:18px; font-weight:500; display:block; }
-        .english-text { font-size:16px; font-weight:400; color:#aaa; display:block; margin-top:10px; font-style:italic; }
+        .english-text { font-size:18px; font-weight:500; display:block; }
         .hunger-footer { text-align:center; color:#FFD700; font-weight:bold; font-size:14px; margin-top:15px; letter-spacing:1px; }
 
         #install-div {
@@ -111,19 +110,11 @@
         </div>
     </div> 
 
+    <!-- DEDICATION TEXT (PURE ENGLISH) -->
     <div class="bas-dedication">
-        <div id="dedication-text" class="malayalam-fix">
-            <div>
-                സർവ്വ ലോകങ്ങളിലുമുള്ള നമ്മൾ ഓരോരുത്തരുടെയും<br>
-                മാതാപിതാക്കളുടെയും മറ്റ് പൂർവ്വികരുടെയും<br>
-                പാവനമായ ഓർമ്മയ്ക്കും നന്മയ്ക്കുമായി<br>
-                സമർപ്പിക്കുന്നു.
-            </div>
-            <br>
-            <div style="font-size: 18px; color: #a5a5a5;">
-                Dedicated to the sacred memory and well-being of our <br>
-                parents and ancestors from all over the world.
-            </div>
+        <div id="dedication-text" class="english-fix">
+            Dedicated to the sacred memory and well-being of our<br>
+            parents and ancestors from all over the world.
         </div>
     </div> 
 
@@ -146,11 +137,9 @@
         </div>
     </div> 
 
+    <!-- MESSAGE BOX (PURE ENGLISH) -->
     <div class="msg-container">
         <div class="question-box">
-            <span class="malayalam-text">
-                "ഒരു പൈസ പോലും അധികം ചിലവാക്കാതെ, അതേ വിലയിൽ, അതേ ഓഫറിൽ താഴെ കാണുന്ന ബാസ് ചാരിറ്റി ഇൻ്റർനാഷണൽ ലിങ്കുകൾ വഴി പർച്ചേസ് ചെയ്യുന്നതിലൂടെ ലോകത്തിന്റെ ഏതെങ്കിലും ഒരു കോണിൽ ഒരാളുടെ വിശപ്പ് അടങ്ങിയാലോ...?"
-            </span>
             <span class="english-text">
                 "What if someone's hunger in some corner of the world is satisfied by purchasing through the BAS Charity International links below, without spending a single extra penny, at the same price, and with the same offers...?"
             </span>
@@ -162,10 +151,11 @@
         <button id="install-btn">Install App</button>
     </div> 
 
+    <!-- SCRIPTS -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script> 
 
     <script>
-        // PWA Install Logic
+        // PWA Install Logic Fix
         let deferredPrompt;
         const installDiv = document.getElementById('install-div');
         const installBtn = document.getElementById('install-btn'); 
@@ -193,7 +183,7 @@
             });
         }
 
-        // Three.js Earth Animation
+        // Three.js Earth Animation (No Duplicate Tags)
         let scene = new THREE.Scene();
         let camera = new THREE.PerspectiveCamera(50, window.innerWidth/340, 0.1, 1000);
         let renderer = new THREE.WebGLRenderer({antialias:true,alpha:true,powerPreference:"high-performance"});
@@ -293,378 +283,5 @@
         },500);
     </script>
     <script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
-</body>
-</html>
-
-color: #fff;
-border: none;
-padding: 12px 24px;
-border-radius: 50px;
-font-size: 16px;
-font-weight: bold;
-box-shadow: 0 4px 15px rgba(0,0,0,0.4);
-cursor: pointer;
-}
-</style>
-
-<div id="install-div">
-<button id="install-btn">Install App</button>
-</div>
-
-<script>
-let deferredPrompt;
-const installDiv = document.getElementById('install-div');
-const installBtn = document.getElementById('install-btn');
-
-// ബ്രൗസറിന്റെ വെള്ള ബോക്സ് തടയാൻ
-window.addEventListener('beforeinstallprompt', (e) => {
-e.preventDefault();
-deferredPrompt = e;
-installDiv.style.display = 'block';
-});
-
-// ബട്ടൺ ക്ലിക്ക് ചെയ്യുമ്പോൾ ഇൻസ്റ്റാൾ ചെയ്യാൻ
-installBtn.addEventListener('click', () => {
-installDiv.style.display = 'none';
-deferredPrompt.prompt();
-deferredPrompt.userChoice.then((choice) => {
-if (choice.outcome === 'accepted') {
-console.log('App Installed');
-}
-deferredPrompt = null;
-});
-});
-
-// സർവീസ് വർക്കർ രജിസ്ട്രേഷൻ
-if ('serviceWorker' in navigator) {
-window.addEventListener('load', () => {
-navigator.serviceWorker.register('sw.js');
-});
-}
-</script>
-
-</head>
-
-<body>
-
-<div class="header-box">
-<div id="logo-space"></div>
-<div class="brand-heading">
-<div class="hunger-message">YOUR PURCHASE SATISFIES A HUNGER</div>
-<h1 class="notranslate" translate="no">BAS CHARITY INTERNATIONAL</h1>
-</div>
-</div>
-
-<div class="bas-dedication">
-<div id="dedication-text" class="malayalam-fix">
-സർവ്വ ലോകങ്ങളിലുമുള്ള നമ്മൾ ഓരോരുത്തരുടെയും<br>
-മാതാപിതാക്കളുടെയും മറ്റ് പൂർവ്വികരുടെയും<br>
-പാവനമായ ഓർമ്മയ്ക്കും നന്മയ്ക്കുമായി<br>
-സമർപ്പിക്കുന്നു.
-</div>
-</div>
-
-<div class="top-bar">
-<div class="lang-box">
-<div class="lang-title">SELECT LANGUAGE</div>
-</div>
-<div class="lang-buttons">
-<button class="lang-btn en" onclick="resetToEnglish()">English</button>
-<button class="lang-btn hi" onclick="changeLang('hi')">Hindi Language</button>
-<button class="lang-btn ml" onclick="changeLang('ml')">Malayalam</button>
-<button class="lang-btn ar" onclick="changeLang('ar')">Arabic</button>
-<button class="lang-btn ta" onclick="changeLang('ta')">Tamil</button>
-<button class="lang-btn ur" onclick="changeLang('ur')">Urdu</button>
-<button class="lang-btn es" onclick="changeLang('es')">Spanish</button>
-<button class="lang-btn pt" onclick="changeLang('pt')">Portuguese</button>
-</div>
-<div class="google-row">
-🌐 All Languages : <span id="google_translate_element"></span>
-</div>
-</div>
-
-<div class="msg-container">
-<div class="question-box">
-<span class="malayalam-text">
-"ഒരു പൈസ പോലും അധികം ചിലവാക്കാതെ, അതേ വിലയിൽ, അതേ ഓഫറിൽ താഴെ കാണുന്ന ബാസ് ചാരിറ്റി ഇൻ്റർനാഷണൽ ലിങ്കുകൾ വഴി പർച്ചേസ് ചെയ്യുന്നതിലൂടെ ലോകത്തിന്റെ ഏതെങ്കിലും ഒരു കോണിൽ ഒരാളുടെ വിശപ്പ് അടങ്ങിയാലോ...?"
-</span>
-</div>
-<div class="hunger-footer notranslate" translate="no">YOUR PURCHASE SATISFIES A HUNGER</div>
-</div>
-
-<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
-
-<script>
-let scene = new THREE.Scene();
-let camera = new THREE.PerspectiveCamera(50, window.innerWidth/340, 0.1, 1000);
-let renderer = new THREE.WebGLRenderer({antialias:true,alpha:true,powerPreference:"high-performance"});
-renderer.setSize(window.innerWidth,340);
-renderer.setPixelRatio(Math.min(window.devicePixelRatio,2));
-document.getElementById('logo-space').appendChild(renderer.domElement);
-
-let ambient = new THREE.AmbientLight(0xffffff,1.2);
-scene.add(ambient);
-
-let loader = new THREE.TextureLoader();
-let earthGroup = new THREE.Group();
-let earth = new THREE.Mesh(
-new THREE.SphereGeometry(2,32,32),
-new THREE.MeshStandardMaterial({
-map:loader.load('https://raw.githubusercontent.com/mrdoob/three.js/master/examples/textures/planets/earth_atmos_2048.jpg'),
-metalness:0.2,
-roughness:0.8
-})
-);
-earthGroup.add(earth);
-
-let canvas=document.createElement('canvas');
-let ctx=canvas.getContext('2d');
-canvas.width=1024;
-canvas.height=256;
-ctx.fillStyle="#FFFFFF";
-ctx.font="Bold 140px Arial";
-ctx.textAlign="center";
-ctx.fillText("BAS",256,160);
-ctx.fillText("BAS",768,160);
-
-let textTexture=new THREE.CanvasTexture(canvas);
-let textMesh=new THREE.Mesh(
-new THREE.CylinderGeometry(2.05,2.05,0.8,64,1,true),
-new THREE.MeshBasicMaterial({map:textTexture,transparent:true,side:THREE.DoubleSide})
-);
-earthGroup.add(textMesh);
-scene.add(earthGroup);
-<!DOCTYPE html>
-<html lang="ml">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>BAS Charity International</title>
-
-<link rel="manifest" href="manifest.json">
-
-<link rel="icon" type="image/png" href="final_app_icon.png">
-<link rel="apple-touch-icon" href="final_app_icon.png">
-
-<meta name="theme-color" content="#ffffff">
-<meta name="apple-mobile-web-app-status-bar-style" content="default">
-
-<link rel="stylesheet" href="style.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
-
-<style>
-/* CODE NO:1 FIX */
-h1 { color:#fff !important; }
-.malayalam-fix { color:#bbb !important; }
-#dedication-text { color:#bbb !important; font-weight:300; }
-#gallery { display:flex; overflow-x:auto; scroll-behavior:smooth; gap:10px; }
-#gallery::-webkit-scrollbar { display:none; }
-.card { min-width:180px; flex-shrink:0; }
-.card img { width:100%; height:auto; border-radius:10px; display:block; }
-#gallery.zoom { transform:scale(1.05); transition:0.3s; }
-• { box-sizing:border-box; }
-
-body {
-margin:0;
-background:#000;
-font-family:Arial, sans-serif;
-color:#fff;
-overflow-x:hidden;
-font-size:23px;
-}
-
-/* GLOBAL TEXT */
-p, span, div { font-size:23px; }
-
-/* ===== LAYOUT FIX (FULL SITE) ===== */
-.bas-dedication, .lang-box, .country-box, .shop-container, .compare-container, .share-container, .mainbox, .info-box, .bas7-wrapper, .trust-container, .peace-wrapper, .vada-wrapper, .vision-wrapper, #bas-mega-portal {
-max-width:900px;
-width:96%;
-margin-left:auto;
-margin-right:auto;
-}
-
-/* ===== HEADER ===== */
-.header-box { display:flex; flex-direction:column; align-items:center; background:#000; }
-#logo-space { width:100%; height:340px; }
-.brand-heading { text-align:center; margin-top:-35px; padding:10px 20px; }
-.hunger-message { font-size:13px; letter-spacing:2px; color:#FFD700; font-weight:bold; text-transform:uppercase; margin-bottom:20px; }
-.brand-heading h1 { font-size:clamp(32px,9vw,65px); letter-spacing:1px; text-transform:uppercase; margin:0; font-weight:1000; -webkit-text-stroke:1.5px white; line-height:1.1; }
-
-/* ===== LANGUAGE ===== */
-.top-bar { background:#111; padding:15px 8px; border-top:1px solid #333; border-bottom:1px solid #333; }
-.lang-buttons { display:grid; grid-template-columns:repeat(4,1fr); gap:10px; max-width:600px; margin:auto; }
-.lang-btn { padding:10px 2px; border:none; border-radius:20px; font-size:14px; font-weight:bold; cursor:pointer; color:#fff; }
-.en { background:#007BFF; }
-.hi { background:#FF9933; color:#000; }
-.ml { background:#00C853; }
-.ar { background:#2E7D32; }
-.ta { background:#C62828; }
-.ur { background:#6A1B9A; }
-.es { background:#F4C430; color:#000; }
-.pt { background:#1B5E20; }
-.google-row { text-align:center; font-size:14px; margin-top:15px; color:#bbb; }
-
-/* DEDICATION & MSG BOX */
-.bas-dedication { text-align:center; margin:10px auto 30px auto; padding:0 20px; }
-.lang-box { margin: 25px auto; padding: 15px; background: #000; border: 1px solid #ff9800; border-radius: 15px; }
-.lang-title { background: #b3ecff; color: #000; font-weight: 900; text-align: center; padding: 10px; border-radius: 10px; border: 1px solid #ff9800; border-left: 6px solid #ff9800; margin-bottom: 10px; text-transform: uppercase; }
-.msg-container { width:96%; padding:20px 0; margin: auto; }
-.question-box { margin:0 auto; width:96%; max-width:900px; background:#000; color:#00BFFF; padding:25px; border-radius:12px; border:1px solid #00BFFF; text-align:center; line-height:1.8; }
-.malayalam-text { font-size:18px; font-weight:500; display:block; }
-.hunger-footer { text-align:center; color:#FFD700; font-weight:bold; font-size:14px; margin-top:15px; letter-spacing:1px; }
-</style>
-</head>
-
-<body>
-
-<div class="header-box">
-<div id="logo-space"></div>
-<div class="brand-heading">
-<div class="hunger-message">YOUR PURCHASE SATISFIES A HUNGER</div>
-<h1 class="notranslate" translate="no">BAS CHARITY INTERNATIONAL</h1>
-</div>
-</div>
-
-<div class="bas-dedication">
-<div id="dedication-text" class="malayalam-fix">
-സർവ്വ ലോകങ്ങളിലുമുള്ള നമ്മൾ ഓരോരുത്തരുടെയും<br>
-മാതാപിതാക്കളുടെയും മറ്റ് പൂർവ്വികരുടെയും<br>
-പാവനമായ ഓർമ്മയ്ക്കും നന്മയ്ക്കുമായി<br>
-സമർപ്പിക്കുന്നു.
-</div>
-</div>
-
-<div class="top-bar">
-<div class="lang-box">
-<div class="lang-title">SELECT LANGUAGE</div>
-</div>
-<div class="lang-buttons">
-<button class="lang-btn en" onclick="resetToEnglish()">English</button>
-<button class="lang-btn hi" onclick="changeLang('hi')">Hindi Language</button>
-<button class="lang-btn ml" onclick="changeLang('ml')">Malayalam</button>
-<button class="lang-btn ar" onclick="changeLang('ar')">Arabic</button>
-<button class="lang-btn ta" onclick="changeLang('ta')">Tamil</button>
-<button class="lang-btn ur" onclick="changeLang('ur')">Urdu</button>
-<button class="lang-btn es" onclick="changeLang('es')">Spanish</button>
-<button class="lang-btn pt" onclick="changeLang('pt')">Portuguese</button>
-</div>
-<div class="google-row">
-🌐 All Languages : <span id="google_translate_element"></span>
-</div>
-</div>
-
-<div class="msg-container">
-<div class="question-box">
-<span class="malayalam-text">
-"ഒരു പൈസ പോലും അധികം ചിലവാക്കാതെ, അതേ വിലയിൽ, അതേ ഓഫറിൽ താഴെ കാണുന്ന ബാസ് ചാരിറ്റി ഇൻ്റർനാഷണൽ ലിങ്കുകൾ വഴി പർച്ചേസ് ചെയ്യുന്നതിലൂടെ ലോകത്തിന്റെ ഏതെങ്കിലും ഒരു കോണിൽ ഒരാളുടെ വിശപ്പ് അടങ്ങിയാലോ...?"
-</span>
-</div>
-<div class="hunger-footer notranslate" translate="no">YOUR PURCHASE SATISFIES A HUNGER</div>
-</div>
-
-<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
-
-<script>
-let scene = new THREE.Scene();
-let camera = new THREE.PerspectiveCamera(50, window.innerWidth/340, 0.1, 1000);
-let renderer = new THREE.WebGLRenderer({antialias:true,alpha:true,powerPreference:"high-performance"});
-renderer.setSize(window.innerWidth,340);
-renderer.setPixelRatio(Math.min(window.devicePixelRatio,2));
-document.getElementById('logo-space').appendChild(renderer.domElement);
-
-let ambient = new THREE.AmbientLight(0xffffff,1.2);
-scene.add(ambient);
-
-let loader = new THREE.TextureLoader();
-let earthGroup = new THREE.Group();
-let earth = new THREE.Mesh(
-new THREE.SphereGeometry(2,32,32),
-new THREE.MeshStandardMaterial({
-map:loader.load('https://raw.githubusercontent.com/mrdoob/three.js/master/examples/textures/planets/earth_atmos_2048.jpg'),
-metalness:0.2,
-roughness:0.8
-})
-);
-earthGroup.add(earth);
-
-let canvas=document.createElement('canvas');
-let ctx=canvas.getContext('2d');
-canvas.width=1024;
-canvas.height=256;
-ctx.fillStyle="#FFFFFF";
-ctx.font="Bold 140px Arial";
-ctx.textAlign="center";
-ctx.fillText("BAS",256,160);
-ctx.fillText("BAS",768,160);
-
-let textTexture=new THREE.CanvasTexture(canvas);
-let textMesh=new THREE.Mesh(
-new THREE.CylinderGeometry(2.05,2.05,0.8,64,1,true),
-new THREE.MeshBasicMaterial({map:textTexture,transparent:true,side:THREE.DoubleSide})
-);
-earthGroup.add(textMesh);
-scene.add(earthGroup);
-
-let moon=new THREE.Mesh(
-new THREE.SphereGeometry(0.35,16,16),
-new THREE.MeshStandardMaterial({color:0xcccccc})
-);
-scene.add(moon);
-
-camera.position.z=8;
-let angle=0;
-let running=true;
-
-function resizeRenderer(){
-const width=document.getElementById("logo-space").clientWidth;
-renderer.setSize(width,340);
-camera.aspect=width/340;
-camera.updateProjectionMatrix();
-}
-
-window.addEventListener("resize",resizeRenderer);
-
-function animate(){
-if(!running) return;
-requestAnimationFrame(animate);
-earthGroup.rotation.y+=0.003;
-angle-=0.01;
-moon.position.x=Math.cos(angle)*4.5;
-moon.position.z=Math.sin(angle)*2.8;
-renderer.render(scene,camera);
-}
-animate();
-
-let observer=new IntersectionObserver(entries=>{
-entries.forEach(entry=>{
-if(entry.isIntersecting){ running=true; animate(); }
-else{ running=false; }
-});
-});
-observer.observe(document.getElementById("logo-space"));
-
-function googleTranslateElementInit(){
-new google.translate.TranslateElement({pageLanguage:'en',autoDisplay:false},'google_translate_element');
-}
-
-function changeLang(langCode){
-let select=document.querySelector('select.goog-te-combo');
-if(select){ select.value=langCode; select.dispatchEvent(new Event('change')); }
-}
-
-function resetToEnglish(){
-let select=document.querySelector('select.goog-te-combo');
-if(select){ select.value='en'; select.dispatchEvent(new Event('change')); }
-}
-
-setInterval(function(){
-const frame=document.querySelector('.goog-te-banner-frame');
-if(frame){ frame.style.display='none'; }
-},500);
-</script>
-<script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit">
-</script>
-
 </body>
 </html>
