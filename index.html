@@ -375,9 +375,9 @@
     <script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 
 <div id="basBalloonWrap" class="notranslate">
-<div class="bas-ball white-b" onclick="handleInstallTap()">
+<div id="installBall" class="bas-ball white-b" onclick="handleInstallTap()">
 <img src="icon-512.png" class="bas-sticker">
-<div id="statTxt" class="bas-lbl" style="color:#333;">INSTALL</div>
+<div id="statTxt" class="bas-lbl">INSTALL</div>
 <div class="bas-nipple"></div>
 <div class="bas-str"></div>
 </div> 
@@ -403,7 +403,7 @@ width: 280px;
 height: 400px;
 z-index: 2147483647;
 pointer-events: none;
-/* തുടക്കത്തിൽ സ്ക്രീനിന് താഴെ ഒളിപ്പിക്കുന്നു */
+/* lifestyle: തുടക്കത്തിൽ സ്ക്രീനിന് താഴെ ഒളിപ്പിക്കുന്നു */
 transform: translateY(120%);
 transition: transform 20s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 display: block !important;
@@ -444,12 +444,26 @@ background: inherit;
 clip-path: polygon(20% 0, 80% 0, 100% 100%, 0 100%);
 } 
 
+/* 1. INSTALL അവസ്ഥയിലുള്ള വെള്ള ബലൂൺ സ്റ്റൈൽ */
 .white-b {
 width: 120px; height: 160px;
 background: #ffffff;
 bottom: 220px; left: 60px;
 animation: floatW 5s ease-in-out infinite;
-} 
+}
+.white-b .bas-lbl {
+color: #adff2f; /* തിളങ്ങുന്ന പച്ചകലർന്ന മഞ്ഞ എഴുത്ത് */
+text-shadow: 1px 1px 2px rgba(0,0,0,0.6);
+}
+
+/* 2. INSTALLED അവസ്ഥയിലുള്ള പച്ചകലർന്ന മഞ്ഞ ബലൂൺ സ്റ്റൈൽ */
+.is-pwa-installed {
+background: #adff2f !important;
+}
+.is-pwa-installed .bas-lbl {
+color: #000000 !important; /* കറുത്ത എഴുത്ത് */
+text-shadow: none !important;
+}
 
 .blue-b {
 width: 105px; height: 135px;
@@ -476,11 +490,18 @@ animation: floatB 20s ease-in-out infinite;
 let basPrompt;
 const wrap = document.getElementById('basBalloonWrap');
 const stat = document.getElementById('statTxt'); 
+const ball = document.getElementById('installBall');
+
+// ഇൻസ്റ്റലേഷൻ അവസ്ഥ മാറുന്നതിനനുസരിച്ച് ബലൂൺ ഡിസൈൻ മാറ്റാനുള്ള ഫങ്ഷൻ
+function setBallToInstalled() {
+    stat.innerText = "INSTALLED";
+    ball.classList.add('is-pwa-installed');
+}
 
 // പേജ് ലോഡാകുമ്പോൾ മുൻപ് ഇൻസ്റ്റാൾ ചെയ്തിട്ടുണ്ടോ എന്ന് പരിശോധിക്കുന്നു
 window.addEventListener('DOMContentLoaded', () => {
     if (localStorage.getItem('bas_pwa_installed') === 'true') {
-        stat.innerText = "INSTALLED";
+        setBallToInstalled();
     }
 });
 
@@ -493,7 +514,7 @@ wrap.classList.add('state-up');
 setTimeout(() => {
 wrap.classList.replace('state-up', 'state-hide'); 
 
-// 60 സെക്കൻഡ് കഴിഞ്ഞ് റെസ്റ്റ് (പകുതി)
+// 30 സെക്കൻഡ് കഴിഞ്ഞ് റെസ്റ്റ് (പകുതി)
 setTimeout(() => {
 wrap.classList.replace('state-hide', 'state-rest');
 }, 30000);
@@ -523,13 +544,13 @@ basPrompt = e;
 
 function handleInstallTap() {
 if (localStorage.getItem('bas_pwa_installed') === 'true') {
-    return; // മുൻപ് ഇൻസ്റ്റാൾ ചെയ്തിട്ടുണ്ടെങ്കിൽ ബട്ടൺ ക്ലിക്ക് ചെയ്യുമ്പോൾ ഒന്നും സംഭവിക്കില്ല
+    return; // മുൻപ് ഇൻസ്റ്റാൾ ചെയ്തിട്ടുണ്ടെങ്കിൽ ബട്ടൺ ക്ലിക്ഷൻ തടയുന്നു
 }
 if (basPrompt) {
 basPrompt.prompt();
 basPrompt.userChoice.then((c) => {
 if (c.outcome === 'accepted') {
-    stat.innerText = "INSTALLED";
+    setBallToInstalled();
     localStorage.setItem('bas_pwa_installed', 'true'); // ലോക്കൽ സ്റ്റോറേജിൽ സേവ് ചെയ്യുന്നു
 }
 basPrompt = null;
@@ -540,9 +561,10 @@ alert("Please use Chrome browser for Install option.");
 } 
 
 window.addEventListener('appinstalled', () => {
-stat.innerText = "INSTALLED";
+setBallToInstalled();
 localStorage.setItem('bas_pwa_installed', 'true'); // ലോക്കൽ സ്റ്റോറേജിൽ സേവ് ചെയ്യുന്നു
 });
 </script>
+
 </body>
 </html>
