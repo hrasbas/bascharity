@@ -1,1 +1,162 @@
- 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BAS Language</title>
+<meta name="google" content="notranslate">
+
+<style>
+body{
+margin:0;
+background:transparent;
+font-family:Arial,sans-serif;
+top:0 !important;
+}
+
+.goog-te-banner-frame.skiptranslate,
+.goog-te-banner-frame{
+display:none !important;
+}
+
+body{
+top:0 !important;
+}
+
+#google_translate_element{
+position:fixed;
+right:14px;
+bottom:14px;
+z-index:2147483647;
+}
+
+.goog-te-combo{
+display:none !important;
+}
+
+#basLangWrap{
+position:fixed;
+right:14px;
+bottom:14px;
+z-index:2147483647;
+width:220px;
+}
+
+#basLangSelect{
+width:100%;
+padding:14px 12px;
+border-radius:14px;
+border:1px solid #ff9800;
+border-left:8px solid #ff9800;
+background:#222;
+color:#fff;
+font-size:16px;
+font-weight:900;
+outline:none;
+cursor:pointer;
+box-shadow:0 8px 25px rgba(0,0,0,0.35);
+}
+
+#basLangSelect option{
+background:#222;
+color:#fff;
+font-weight:700;
+}
+</style>
+</head>
+<body>
+
+<div id="basLangWrap">
+<select id="basLangSelect">
+<option value="">ALL LANGUAGES</option>
+</select>
+</div>
+
+<div id="google_translate_element"></div>
+
+<script>
+let basGoogleReady = false;
+let basBuildDone = false;
+
+function googleTranslateElementInit() {
+try {
+if (window.google && google.translate && google.translate.TranslateElement) {
+new google.translate.TranslateElement(
+{ pageLanguage: 'en', autoDisplay: false },
+'google_translate_element'
+);
+waitForGoogleCombo();
+}
+} catch (e) {
+console.error('Google Translate init error:', e);
+}
+}
+
+function waitForGoogleCombo() {
+let tries = 0;
+const maxTries = 200;
+
+const timer = setInterval(function () {
+try {
+const googleSelect = document.querySelector('#google_translate_element select.goog-te-combo');
+const customSelect = document.getElementById('basLangSelect');
+
+tries++;
+
+if (googleSelect && customSelect && !basBuildDone) {
+basBuildDone = true;
+clearInterval(timer);
+buildLanguageDropdown(googleSelect, customSelect);
+basGoogleReady = true;
+}
+
+if (tries >= maxTries) {
+clearInterval(timer);
+}
+} catch (e) {
+clearInterval(timer);
+console.error('Google combo wait error:', e);
+}
+}, 300);
+}
+
+function buildLanguageDropdown(googleSelect, customSelect) {
+try {
+customSelect.innerHTML = '';
+
+Array.from(googleSelect.options).forEach(function(opt, index) {
+const newOpt = document.createElement('option');
+newOpt.value = opt.value;
+newOpt.textContent = opt.textContent;
+
+if (index === 0 && (!opt.value || opt.value === '')) {
+newOpt.textContent = 'ALL LANGUAGES';
+}
+
+customSelect.appendChild(newOpt);
+});
+
+customSelect.addEventListener('change', function() {
+try {
+const value = this.value;
+if (!googleSelect) return;
+
+googleSelect.value = value;
+googleSelect.dispatchEvent(new Event('change', { bubbles: true }));
+
+if (value === '') {
+googleSelect.dispatchEvent(new Event('change', { bubbles: true }));
+}
+} catch (e) {
+console.error('Language change error:', e);
+}
+});
+} catch (e) {
+console.error('Dropdown build error:', e);
+}
+}
+</script>
+
+<script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+</body>
+</html>
