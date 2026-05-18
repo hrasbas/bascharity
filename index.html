@@ -489,6 +489,21 @@
 </div>
 </div>
 
+<div id="basBalloonWrap">
+<div class="bas-ball white-b" onclick="handleInstallTap()">
+<img src="icon-512.png" class="bas-sticker">
+<div id="statTxt" class="bas-lbl install-rainbow" style="color:#333;">INSTALL</div>
+<div class="bas-nipple"></div>
+<div class="bas-str"></div>
+</div>
+
+<div class="bas-ball blue-b" onclick="goWhatsApp()">
+<div class="bas-lbl" style="color:#fff;">SAVE TO<br>WHATSAPP</div>
+<div class="bas-nipple"></div>
+<div class="bas-str"></div>
+</div>
+</div>
+
 <style>
 #basBalloonWrap {
 position: fixed;
@@ -499,9 +514,8 @@ height: 400px;
 z-index: 2147483647;
 pointer-events: none;
 transform: translateY(120%);
-transition: transform 3.8s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+transition: transform 3.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 display: block !important;
-will-change: transform;
 }
 
 .state-up { transform: translateY(0%) !important; }
@@ -518,7 +532,6 @@ justify-content: center;
 cursor: pointer;
 pointer-events: auto;
 box-shadow: inset -8px -8px 20px rgba(0,0,0,0.4);
-will-change: transform, background;
 }
 
 .bas-str {
@@ -544,7 +557,7 @@ width: 120px; height: 160px;
 background: #ffffff;
 bottom: 220px; left: 60px;
 animation: floatW 18s ease-in-out infinite;
-transition: background 0.6s ease, box-shadow 0.6s ease;
+transition: background 0.5s ease;
 }
 
 .blue-b {
@@ -568,30 +581,28 @@ animation: rainbowMove 5s linear infinite;
 }
 
 .white-b.installed-balloon {
-background: linear-gradient(135deg, #00c853, #00bfa5, #64dd17);
-box-shadow: inset -8px -8px 20px rgba(0,0,0,0.25), 0 0 18px rgba(0,200,83,0.35);
+background: #00c853;
 }
 
 .white-b.installed-balloon .bas-nipple {
-background: linear-gradient(135deg, #00c853, #00bfa5, #64dd17);
+background: #00c853;
 }
 
 .white-b.installed-balloon #statTxt {
-color: #ffffff !important;
--webkit-text-fill-color: #ffffff !important;
+color: #fff !important;
+-webkit-text-fill-color: #fff !important;
 background: none !important;
 animation: none !important;
-text-shadow: 0 1px 2px rgba(0,0,0,0.25);
 }
 
 @keyframes floatW {
 0%, 100% { transform: translate(0, 18px) rotate(-3deg); }
-50% { transform: translate(35px, -28px) rotate(5deg); }
+50% { transform: translate(35px, -18px) rotate(5deg); }
 }
 
 @keyframes floatB {
-0%, 100% { transform: translate(0, 22px) rotate(4deg); }
-50% { transform: translate(25px, -18px) rotate(-4deg); }
+0%, 100% { transform: translate(0, 20px) rotate(4deg); }
+50% { transform: translate(25px, -16px) rotate(-4deg); }
 }
 
 @keyframes rainbowMove {
@@ -604,8 +615,8 @@ text-shadow: 0 1px 2px rgba(0,0,0,0.25);
 let basPrompt = null;
 const wrap = document.getElementById('basBalloonWrap');
 const stat = document.getElementById('statTxt');
-let basBalloonTimers = [];
-let basBalloonInitDone = false;
+let basInitDone = false;
+let basTimers = [];
 
 function isStandaloneInstalled() {
 try {
@@ -617,7 +628,7 @@ return false;
 
 function setInstalledState() {
 try {
-if (!stat || !wrap) return;
+if (!wrap || !stat) return;
 stat.innerText = "INSTALLED";
 stat.classList.remove('install-rainbow');
 stat.style.color = "#fff";
@@ -628,64 +639,55 @@ if (whiteBall) whiteBall.classList.add('installed-balloon');
 
 function setInstallState() {
 try {
-if (!stat || !wrap) return;
+if (!wrap || !stat) return;
 stat.innerText = "INSTALL";
 stat.classList.add('install-rainbow');
-stat.style.color = "#333";
 const whiteBall = wrap.querySelector('.white-b');
 if (whiteBall) whiteBall.classList.remove('installed-balloon');
 } catch (e) {}
 }
 
-function clearBalloonTimers() {
-try {
-basBalloonTimers.forEach(t => clearTimeout(t));
-basBalloonTimers = [];
-} catch (e) {}
+function clearBasTimers() {
+basTimers.forEach(clearTimeout);
+basTimers = [];
 }
 
 function initBalloons() {
 try {
-if (basBalloonInitDone || !wrap) return;
-basBalloonInitDone = true;
-
-clearBalloonTimers();
+if (basInitDone || !wrap) return;
+basInitDone = true;
 
 const t1 = setTimeout(() => {
-if (!wrap) return;
-wrap.classList.remove('state-hide', 'state-rest');
 wrap.classList.add('state-up');
 
 const t2 = setTimeout(() => {
-if (!wrap) return;
-wrap.classList.remove('state-up', 'state-rest');
+wrap.classList.remove('state-up');
 wrap.classList.add('state-hide');
 
 const t3 = setTimeout(() => {
-if (!wrap) return;
-wrap.classList.remove('state-up', 'state-hide');
+wrap.classList.remove('state-hide');
 wrap.classList.add('state-rest');
 }, 60000);
 
-basBalloonTimers.push(t3);
+basTimers.push(t3);
 }, 15000);
 
-basBalloonTimers.push(t2);
+basTimers.push(t2);
 }, 5000);
 
-basBalloonTimers.push(t1);
+basTimers.push(t1);
 } catch (e) {
 console.error('Balloon init error:', e);
 }
 }
 
-const wake = () => {
+function wake() {
 try {
 if (!wrap) return;
 wrap.classList.remove('state-hide', 'state-rest');
 wrap.classList.add('state-up');
 } catch (e) {}
-};
+}
 
 if (wrap) {
 wrap.addEventListener('click', wake, { passive: true });
@@ -700,9 +702,7 @@ setInstalledState();
 setInstallState();
 }
 initBalloons();
-} catch (e) {
-console.error('Load balloon error:', e);
-}
+} catch (e) {}
 });
 
 function goWhatsApp(){
@@ -722,16 +722,9 @@ console.error('WhatsApp open error:', e);
 window.addEventListener('beforeinstallprompt', (e) => {
 try {
 e.preventDefault();
-if (isStandaloneInstalled()) {
-basPrompt = null;
-setInstalledState();
-return;
-}
 basPrompt = e;
-setInstallState();
-} catch (err) {
-console.error('beforeinstallprompt error:', err);
-}
+if (!isStandaloneInstalled()) setInstallState();
+} catch (e2) {}
 });
 
 async function handleInstallTap() {
@@ -740,7 +733,6 @@ if (isStandaloneInstalled()) {
 setInstalledState();
 return;
 }
-
 if (basPrompt) {
 await basPrompt.prompt();
 const c = await basPrompt.userChoice;
@@ -760,21 +752,11 @@ window.addEventListener('appinstalled', () => {
 try {
 basPrompt = null;
 setInstalledState();
-} catch (e) {
-console.error('appinstalled error:', e);
-}
-});
-
-document.addEventListener('visibilitychange', function () {
-try {
-if (!document.hidden && wrap) {
-wrap.classList.remove('state-hide');
-}
 } catch (e) {}
 });
 
 window.addEventListener('beforeunload', function () {
-clearBalloonTimers();
+clearBasTimers();
 });
 </script>
 </body>
