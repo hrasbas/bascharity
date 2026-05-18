@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BAS Charity International</title> 
 
     <link rel="manifest" href="manifest.json">
@@ -16,121 +16,79 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"> 
 
     <style>
-        /* CSS RESET & SCREEN FIT */
-        * { box-sizing: border-box; margin: 0; padding: 0; } 
+        /* CODE NO:1 FIX */
+        h1 { color:#fff !important; }
+        .english-fix { color:#bbb !important; }
+        #dedication-text { color:#bbb !important; font-weight:300; line-height: 1.6; }
+        #gallery { display:flex; overflow-x:auto; scroll-behavior:smooth; gap:10px; }
+        #gallery::-webkit-scrollbar { display:none; }
+        .card { min-width:180px; flex-shrink:0; }
+        .card img { width:100%; height:auto; border-radius:10px; display:block; }
+        #gallery.zoom { transform:scale(1.05); transition:0.3s; }
+        
+        * { box-sizing:border-box; } 
 
         body {
-            background: #000;
-            font-family: Arial, sans-serif;
-            color: #fff;
-            overflow-x: hidden;
-            font-size: 23px; /* 22px-ൽ താഴെ പോകാതിരിക്കാൻ */
+            margin:0;
+            background:#000;
+            font-family:Arial, sans-serif;
+            color:#fff;
+            overflow-x:hidden;
+            font-size:23px;
         } 
 
-        p, span, div, button { font-size: 23px; } 
+        p, span, div { font-size:23px; } 
 
-        /* LAYOUT CONFIGURATION */
-        .bas-dedication, .lang-box, .shop-container, .compare-container, .share-container, .mainbox, .info-box, .trust-container, .msg-container {
-            max-width: 900px;
-            width: 96%;
-            margin-left: auto;
-            margin-right: auto;
+        .bas-dedication, .lang-box, .country-box, .shop-container, .compare-container, .share-container, .mainbox, .info-box, .bas7-wrapper, .trust-container, .peace-wrapper, .vada-wrapper, .vision-wrapper, #bas-mega-portal {
+            max-width:900px;
+            width:96%;
+            margin-left:auto;
+            margin-right:auto;
         } 
 
-        /* HEADER & EARTH SPACE */
-        .header-box { display: flex; flex-direction: column; align-items: center; background: #000; }
-        #logo-space { width: 100%; height: 340px; position: relative; }
-        .brand-heading { text-align: center; margin-top: -35px; padding: 10px 20px; z-index: 10; }
-        .hunger-message { font-size: 23px; letter-spacing: 2px; color: #FFD700; font-weight: bold; text-transform: uppercase; margin-bottom: 20px; }
-        .brand-heading h1 { font-size: clamp(32px, 9vw, 65px); letter-spacing: 1px; text-transform: uppercase; margin: 0; font-weight: 1000; -webkit-text-stroke: 1.5px white; line-height: 1.1; color: #fff; } 
+        .header-box { display:flex; flex-direction:column; align-items:center; background:#000; }
+        #logo-space { width:100%; height:340px; }
+        .brand-heading { text-align:center; margin-top:-35px; padding:10px 20px; }
+        .hunger-message { font-size:13px; letter-spacing:2px; color:#FFD700; font-weight:bold; text-transform:uppercase; margin-bottom:20px; }
+        .brand-heading h1 { font-size:clamp(32px,9vw,65px); letter-spacing:1px; text-transform:uppercase; margin:0; font-weight:1000; -webkit-text-stroke:1.5px white; line-height:1.1; } 
 
-        /* LANGUAGE BAR */
-        .top-bar { background: #111; padding: 15px 8px; border-top: 1px solid #333; border-bottom: 1px solid #333; margin-top: 20px; }
-        .lang-buttons { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; max-width: 600px; margin: auto; }
-        .lang-btn { padding: 14px 5px; border: none; border-radius: 20px; font-weight: bold; cursor: pointer; color: #fff; text-align: center; }
-        .en { background: #007BFF; }
-        .ml { background: #00C853; }
-        .hi { background: #FF9933; color: #000; }
-        .ar { background: #2E7D32; }
-        .ta { background: #C62828; }
-        .ur { background: #6A1B9A; }
-        .es { background: #F4C430; color: #000; }
-        .pt { background: #1B5E20; }
-        .google-row { text-align: center; margin-top: 20px; color: #bbb; } 
+        .top-bar { background:#111; padding:15px 8px; border-top:1px solid #333; border-bottom:1px solid #333; }
+        .lang-buttons { display:grid; grid-template-columns:repeat(4,1fr); gap:10px; max-width:600px; margin:auto; }
+        .lang-btn { padding:10px 2px; border:none; border-radius:20px; font-size:14px; font-weight:bold; cursor:pointer; color:#fff; }
+        .en { background:#007BFF; }
+        .hi { background:#FF9933; color:#000; }
+        .ml { background:#00C853; }
+        .ar { background:#2E7D32; }
+        .ta { background:#C62828; }
+        .ur { background:#6A1B9A; }
+        .es { background:#F4C430; color:#000; }
+        .pt { background:#1B5E20; }
+        .google-row { text-align:center; font-size:14px; margin-top:15px; color:#bbb; } 
 
-        /* DEDICATION & QUESTIONS (STYLING) */
-        .bas-dedication { text-align: center; margin: 30px auto; padding: 0 20px; color: #bbb; font-weight: 300; line-height: 1.6; }
+        .bas-dedication { text-align:center; margin:10px auto 30px auto; padding:0 20px; }
         .lang-box { margin: 25px auto; padding: 15px; background: #000; border: 1px solid #ff9800; border-radius: 15px; }
-        .lang-title { background: #b3ecff; color: #000; font-weight: 900; text-align: center; padding: 12px; border-radius: 10px; border: 1px solid #ff9800; border-left: 6px solid #ff9800; margin-bottom: 10px; text-transform: uppercase; }
-        
-        .msg-container { padding: 20px 0; margin: auto; }
-        .question-box { width: 100%; background: #000; color: #00BFFF; padding: 25px; border-radius: 12px; border: 1px solid #00BFFF; text-align: center; line-height: 1.8; }
-        .hunger-footer { text-align: center; color: #FFD700; font-weight: bold; margin-top: 20px; letter-spacing: 1px; }
+        .lang-title { background: #b3ecff; color: #000; font-weight: 900; text-align: center; padding: 10px; border-radius: 10px; border: 1px solid #ff9800; border-left: 6px solid #ff9800; margin-bottom: 10px; text-transform: uppercase; }
+        .msg-container { width:96%; padding:20px 0; margin: auto; }
+        .question-box { margin:0 auto; width:96%; max-width:900px; background:#000; color:#00BFFF; padding:25px; border-radius:12px; border:1px solid #00BFFF; text-align:center; line-height:1.8; }
+        .english-text { font-size:18px; font-weight:500; display:block; }
+        .hunger-footer { text-align:center; color:#FFD700; font-weight:bold; font-size:14px; margin-top:15px; letter-spacing:1px; }
 
-        /* ===== BALLOON SYSTEM SYSTEM ===== */
-        #basBalloonWrap {
-            position: fixed;
-            bottom: 0;
-            left: 0;
-            width: 280px;
-            height: 400px;
-            z-index: 2147483647;
-            pointer-events: none;
-            transform: translateY(120%);
-            transition: transform 2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-            display: block !important;
-        } 
-
-        .state-up { transform: translateY(0%) !important; }
-        .state-hide { transform: translateY(120%) !important; }
-        .state-rest { transform: translateY(70%) !important; } 
-
-        .bas-ball {
-            position: absolute;
-            border-radius: 50% 50% 50% 50% / 40% 40% 60% 60%;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            cursor: pointer;
-            pointer-events: auto;
-            box-shadow: inset -8px -8px 20px rgba(0,0,0,0.4);
-        } 
-
-        .bas-str { position: absolute; width: 1px; background: rgba(255,255,255,0.4); bottom: -1000px; left: 50%; height: 1000px; } 
-        .bas-nipple { position: absolute; bottom: -10px; width: 18px; height: 10px; background: inherit; clip-path: polygon(20% 0, 80% 0, 100% 100%, 0 100%); } 
-
-        .white-b { width: 120px; height: 160px; background: #ffffff; bottom: 220px; left: 60px; animation: floatW 25s ease-in-out infinite; } 
-        .blue-b { width: 105px; height: 135px; background: #007bff; bottom: 70px; left: 30px; animation: floatB 20s ease-in-out infinite; } 
-
-        .bas-sticker { width: 75px; height: 75px; border-radius: 20px; margin-bottom: 5px; border: 1px solid #ddd; }
-        .bas-lbl { font-family: sans-serif; font-size: 14px; font-weight: 900; text-align: center; line-height: 1.2; } 
-
-        @keyframes floatW {
-            0%, 100% { transform: translate(0, 0) rotate(-3deg); }
-            50% { transform: translate(35px, 45px) rotate(5deg); }
-        } 
-        @keyframes floatB {
-            0%, 100% { transform: translate(0, 0) rotate(4deg); }
-            50% { transform: translate(25px, -25px) rotate(-4deg); }
-        }
-
-        /* PERMANENT FIXED CORNER INSTALL BUTTON */
-        #fixed-install-div {
+        #install-div {
             display: none;
             position: fixed;
-            bottom: 20px;
-            right: 20px;
-            z-index: 2147483646;
+            bottom: 25px;
+            right: 25px;
+            z-index: 10000;
         }
-        #fixed-install-btn {
+        #install-btn {
             background: #ff9800;
             color: #fff;
             border: none;
-            padding: 14px 28px;
+            padding: 12px 24px;
             border-radius: 50px;
+            font-size: 16px;
             font-weight: bold;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.4);
             cursor: pointer;
         }
     </style>
@@ -138,7 +96,6 @@
 
 <body> 
 
-    <!-- HEADER & LOGO AREA -->
     <div class="header-box">
         <div id="logo-space"></div>
         <div class="brand-heading">
@@ -147,256 +104,6 @@
         </div>
     </div> 
 
-    <!-- DEDICATION TEXT (STRUCTURED FOR PERFECT MALAYALAM TRANSLATION) -->
-    <div class="bas-dedication">
-        Dedicated for the pious memory and well-being of each of our parents and ancestors of all the worlds.
-    </div> 
-
-    <!-- LANGUAGE BAR SELECTOR -->
-    <div class="top-bar">
-        <div class="lang-box">
-            <div class="lang-title">SELECT LANGUAGE</div>
-        </div>
-        <div class="lang-buttons">
-            <button class="lang-btn en" onclick="resetToEnglish()">English</button>
-            <button class="lang-btn ml" onclick="changeLang('ml')">Malayalam</button>
-            <button class="lang-btn hi" onclick="changeLang('hi')">Hindi</button>
-            <button class="lang-btn ar" onclick="changeLang('ar')">Arabic</button>
-            <button class="lang-btn ta" onclick="changeLang('ta')">Tamil</button>
-            <button class="lang-btn ur" onclick="changeLang('ur')">Urdu</button>
-            <button class="lang-btn es" onclick="changeLang('es')">Spanish</button>
-            <button class="lang-btn pt" onclick="changeLang('pt')">Portuguese</button>
-        </div>
-        <div class="google-row">
-            🌐 All Languages : <span id="google_translate_element"></span>
-        </div>
-    </div> 
-
-    <!-- QUESTION MESSAGE BOX (STRUCTURED FOR PERFECT MALAYALAM TRANSLATION) -->
-    <div class="msg-container">
-        <div class="question-box">
-            "What if a person's hunger in some corner of the world is appeased by purchasing through the BAS Charity International links seen below, even without spending a single penny extra, at the same price, and with the same offer...?"
-        </div>
-        <div class="hunger-footer notranslate" translate="no">YOUR PURCHASE SATISFIES A HUNGER</div>
-    </div> 
-
-    <!-- ===== BALLOON WRAPPER ===== -->
-    <div id="basBalloonWrap">
-        <div class="bas-ball white-b" onclick="handleInstallTap()">
-            <img src="icon-512.png" class="bas-sticker">
-            <div id="statTxt" class="bas-lbl" style="color:#333;">INSTALL</div>
-            <div class="bas-nipple"></div>
-            <div class="bas-str"></div>
-        </div> 
-
-        <div class="bas-ball blue-b" onclick="goWhatsApp()">
-            <div class="bas-lbl" style="color:#fff;">SAVE TO<br>WHATSAPP</div>
-            <div class="bas-nipple"></div>
-            <div class="bas-str"></div>
-        </div>
-    </div> 
-
-    <!-- PERMANENT CORNER BUTTON (ONLY FOR UNINSTALLED USERS) -->
-    <div id="fixed-install-div">
-        <button id="fixed-install-btn" onclick="handleInstallTap()">Install App</button>
-    </div>
-
-    <!-- SCRIPTS CORE -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script> 
-
-    <script>
-        // BALLOON & APP INSTALL SYSTEM LOGIC
-        let basPrompt;
-        const wrap = document.getElementById('basBalloonWrap');
-        const stat = document.getElementById('statTxt'); 
-        const fixedInstallDiv = document.getElementById('fixed-install-div');
-
-        // Check if already installed via LocalStorage or Display Mode
-        const isStandalone = window.matchMedia('(display-mode: standalone)').matches || window.navigator.standalone === true;
-        if (localStorage.getItem('bas_app_installed') === 'true' || isStandalone) {
-            setAppAsInstalled();
-        }
-
-        function initBalloons() {
-            setTimeout(() => {
-                wrap.classList.add('state-up'); 
-                setTimeout(() => {
-                    wrap.classList.replace('state-up', 'state-hide'); 
-                    setTimeout(() => {
-                        wrap.classList.replace('state-hide', 'state-rest');
-                    }, 30000);
-                }, 15000);
-            }, 5000);
-        } 
-
-        const wake = () => {
-            wrap.classList.remove('state-hide', 'state-rest');
-            wrap.classList.add('state-up');
-        };
-        wrap.addEventListener('click', wake);
-        wrap.addEventListener('touchstart', wake); 
-        window.addEventListener('load', initBalloons); 
-
-        function goWhatsApp(){
-            let url = "https://bascharity-56f.pages.dev";
-            let text = "Save a beautiful icon to your screen\n\n" + url + "\n\nChrome → ⋮ 3 dot → Save to Screen → Install";
-            window.open("https://wa.me/?text=" + encodeURIComponent(text), "_blank");
-        } 
-
-        window.addEventListener('beforeinstallprompt', (e) => {
-            e.preventDefault();
-            basPrompt = e;
-            // If not recorded as installed, show the fixed action button
-            if (localStorage.getItem('bas_app_installed') !== 'true' && !isStandalone) {
-                fixedInstallDiv.style.display = 'block';
-            }
-        }); 
-
-        function handleInstallTap() {
-            if (localStorage.getItem('bas_app_installed') === 'true' || isStandalone) {
-                return; // Guard if already installed
-            }
-            if (basPrompt) {
-                basPrompt.prompt();
-                basPrompt.userChoice.then((c) => {
-                    if (c.outcome === 'accepted') {
-                        setAppAsInstalled();
-                    }
-                    basPrompt = null;
-                });
-            } else {
-                alert("Please use Chrome browser for Install option.");
-            }
-        } 
-
-        window.addEventListener('appinstalled', () => {
-            setAppAsInstalled();
-        });
-
-        function setAppAsInstalled() {
-            localStorage.setItem('bas_app_installed', 'true');
-            if (stat) stat.innerText = "INSTALLED";
-            if (fixedInstallDiv) fixedInstallDiv.style.display = 'none';
-        }
-
-        if ('serviceWorker' in navigator) {
-            window.addEventListener('load', () => {
-                navigator.serviceWorker.register('sw.js').catch(err => console.log('SW error:', err));
-            });
-        }
-
-        // THREE.JS EARTH ANIMATION CORE
-        let scene = new THREE.Scene();
-        let camera = new THREE.PerspectiveCamera(50, window.innerWidth / 340, 0.1, 1000);
-        let renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true, powerPreference: "high-performance" });
-        renderer.setSize(window.innerWidth, 340);
-        renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
-        document.getElementById('logo-space').appendChild(renderer.domElement); 
-
-        let ambient = new THREE.AmbientLight(0xffffff, 1.2);
-        scene.add(ambient); 
-
-        let loader = new THREE.TextureLoader();
-        let earthGroup = new THREE.Group();
-        let earth = new THREE.Mesh(
-            new THREE.SphereGeometry(2, 32, 32),
-            new THREE.MeshStandardMaterial({
-                map: loader.load('https://raw.githubusercontent.com/mrdoob/three.js/master/examples/textures/planets/earth_atmos_2048.jpg'),
-                metalness: 0.2,
-                roughness: 0.8
-            })
-        );
-        earthGroup.add(earth); 
-
-        let canvas = document.createElement('canvas');
-        let ctx = canvas.getContext('2d');
-        canvas.width = 1024;
-        canvas.height = 256;
-        ctx.fillStyle = "#FFFFFF";
-        ctx.font = "Bold 140px Arial";
-        ctx.textAlign = "center";
-        ctx.fillText("BAS", 256, 160);
-        ctx.fillText("BAS", 768, 160); 
-
-        let textTexture = new THREE.CanvasTexture(canvas);
-        let textMesh = new THREE.Mesh(
-            new THREE.CylinderGeometry(2.05, 2.05, 0.8, 64, 1, true),
-            new THREE.MeshBasicMaterial({ map: textTexture, transparent: true, side: THREE.DoubleSide })
-        );
-        earthGroup.add(textMesh);
-        scene.add(earthGroup); 
-
-        let moon = new THREE.Mesh(
-            new THREE.SphereGeometry(0.35, 16, 16),
-            new THREE.MeshStandardMaterial({ color: 0xcccccc })
-        );
-        scene.add(moon); 
-
-        camera.position.z = 8;
-        let angle = 0;
-        let running = true; 
-
-        function resizeRenderer() {
-            const width = document.getElementById("logo-space").clientWidth;
-            renderer.setSize(width, 340);
-            camera.aspect = width / 340;
-            camera.updateProjectionMatrix();
-        } 
-        window.addEventListener("resize", resizeRenderer); 
-
-        function animate() {
-            if (!running) return;
-            requestAnimationFrame(animate);
-            earthGroup.rotation.y += 0.003;
-            angle -= 0.01;
-            moon.position.x = Math.cos(angle) * 4.5;
-            moon.position.z = Math.sin(angle) * 2.8;
-            renderer.render(scene,camera);
-        }
-        animate(); 
-
-        let observer = new IntersectionObserver(entries => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) { running = true; animate(); }
-                else { running = false; }
-            });
-        });
-        observer.observe(document.getElementById("logo-space")); 
-
-        // GOOGLE TRANSLATION SYSTEM
-        function googleTranslateElementInit(){
-            new google.translate.TranslateElement({pageLanguage: 'en', autoDisplay: false}, 'google_translate_element');
-        } 
-        function changeLang(langCode){
-            let select = document.querySelector('select.goog-te-combo');
-            if (select) { select.value = langCode; select.dispatchEvent(new Event('change')); }
-        } 
-        function resetToEnglish(){
-            let select = document.querySelector('select.goog-te-combo');
-            if (select) { select.value = 'en'; select.dispatchEvent(new Event('change')); }
-        } 
-        setInterval(function(){
-            const frame = document.querySelector('.goog-te-banner-frame');
-            if (frame) { frame.style.display = 'none'; }
-        }, 500);
-    </script>
-    <script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
-</body>
-</html>
-
-</head> 
-
-<body> 
-
-    <div class="header-box">
-        <div id="logo-space"></div>
-        <div class="brand-heading">
-            <div class="hunger-message">YOUR PURCHASE SATISFIES A HUNGER</div>
-            <h1 class="notranslate" translate="no">BAS CHARITY INTERNATIONAL</h1>
-        </div>
-    </div> 
-
-    <!-- DEDICATION TEXT (PURE ENGLISH) -->
     <div class="bas-dedication">
         <div id="dedication-text" class="english-fix">
             Dedicated to the sacred memory and well-being of our<br>
@@ -423,7 +130,6 @@
         </div>
     </div> 
 
-    <!-- MESSAGE BOX (PURE ENGLISH) -->
     <div class="msg-container">
         <div class="question-box">
             <span class="english-text">
@@ -434,139 +140,237 @@
     </div> 
 
     <div id="install-div">
-        <button id="install-btn">Install App</button>
+        <button id="install-btn" type="button">Install App</button>
     </div> 
 
-    <!-- SCRIPTS -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script> 
 
     <script>
-        // PWA Install Logic Fix
         let deferredPrompt;
         const installDiv = document.getElementById('install-div');
-        const installBtn = document.getElementById('install-btn'); 
+        const installBtn = document.getElementById('install-btn');
 
         window.addEventListener('beforeinstallprompt', (e) => {
             e.preventDefault();
             deferredPrompt = e;
-            installDiv.style.display = 'block';
-        }); 
+            if (installDiv) installDiv.style.display = 'block';
+        });
 
-        installBtn.addEventListener('click', () => {
-            installDiv.style.display = 'none';
-            deferredPrompt.prompt();
-            deferredPrompt.userChoice.then((choice) => {
-                if (choice.outcome === 'accepted') {
-                    console.log('App Installed');
+        if (installBtn) {
+            installBtn.addEventListener('click', async () => {
+                try {
+                    if (!deferredPrompt) return;
+                    if (installDiv) installDiv.style.display = 'none';
+                    const result = await deferredPrompt.prompt();
+                    if (result && result.outcome === 'accepted') {
+                        console.log('App Installed');
+                    }
+                    deferredPrompt = null;
+                } catch (err) {
+                    deferredPrompt = null;
+                    console.error('Install prompt error:', err);
                 }
-                deferredPrompt = null;
             });
-        }); 
+        }
+
+        window.addEventListener('appinstalled', () => {
+            deferredPrompt = null;
+            if (installDiv) installDiv.style.display = 'none';
+        });
 
         if ('serviceWorker' in navigator) {
             window.addEventListener('load', () => {
-                navigator.serviceWorker.register('sw.js');
+                navigator.serviceWorker.register('sw.js').catch((err) => {
+                    console.error('SW registration failed:', err);
+                });
             });
         }
 
-        // Three.js Earth Animation (No Duplicate Tags)
-        let scene = new THREE.Scene();
-        let camera = new THREE.PerspectiveCamera(50, window.innerWidth/340, 0.1, 1000);
-        let renderer = new THREE.WebGLRenderer({antialias:true,alpha:true,powerPreference:"high-performance"});
-        renderer.setSize(window.innerWidth,340);
-        renderer.setPixelRatio(Math.min(window.devicePixelRatio,2));
-        document.getElementById('logo-space').appendChild(renderer.domElement); 
+        let scene, camera, renderer, ambient, loader, earthGroup, earth, moon, angle = 0, running = true, logoSpace;
 
-        let ambient = new THREE.AmbientLight(0xffffff,1.2);
-        scene.add(ambient); 
+        try {
+            if (window.THREE) {
+                logoSpace = document.getElementById('logo-space');
 
-        let loader = new THREE.TextureLoader();
-        let earthGroup = new THREE.Group();
-        let earth = new THREE.Mesh(
-            new THREE.SphereGeometry(2,32,32),
-            new THREE.MeshStandardMaterial({
-                map:loader.load('https://raw.githubusercontent.com/mrdoob/three.js/master/examples/textures/planets/earth_atmos_2048.jpg'),
-                metalness:0.2,
-                roughness:0.8
-            })
-        );
-        earthGroup.add(earth); 
+                scene = new THREE.Scene();
+                camera = new THREE.PerspectiveCamera(50, window.innerWidth / 340, 0.1, 1000);
+                renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true, powerPreference: "high-performance" });
+                renderer.setSize(window.innerWidth, 340);
+                renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
 
-        let canvas=document.createElement('canvas');
-        let ctx=canvas.getContext('2d');
-        canvas.width=1024;
-        canvas.height=256;
-        ctx.fillStyle="#FFFFFF";
-        ctx.font="Bold 140px Arial";
-        ctx.textAlign="center";
-        ctx.fillText("BAS",256,160);
-        ctx.fillText("BAS",768,160); 
+                if (logoSpace) {
+                    logoSpace.appendChild(renderer.domElement);
+                }
 
-        let textTexture=new THREE.CanvasTexture(canvas);
-        let textMesh=new THREE.Mesh(
-            new THREE.CylinderGeometry(2.05,2.05,0.8,64,1,true),
-            new THREE.MeshBasicMaterial({map:textTexture,transparent:true,side:THREE.DoubleSide})
-        );
-        earthGroup.add(textMesh);
-        scene.add(earthGroup); 
+                ambient = new THREE.AmbientLight(0xffffff, 1.2);
+                scene.add(ambient);
 
-        let moon=new THREE.Mesh(
-            new THREE.SphereGeometry(0.35,16,16),
-            new THREE.MeshStandardMaterial({color:0xcccccc})
-        );
-        scene.add(moon); 
+                loader = new THREE.TextureLoader();
+                earthGroup = new THREE.Group();
 
-        camera.position.z=8;
-        let angle=0;
-        let running=true; 
+                earth = new THREE.Mesh(
+                    new THREE.SphereGeometry(2, 32, 32),
+                    new THREE.MeshStandardMaterial({
+                        map: loader.load(
+                            'https://raw.githubusercontent.com/mrdoob/three.js/master/examples/textures/planets/earth_atmos_2048.jpg',
+                            undefined,
+                            undefined,
+                            function () { console.error('Earth texture failed to load'); }
+                        ),
+                        metalness: 0.2,
+                        roughness: 0.8
+                    })
+                );
+                earthGroup.add(earth);
 
-        function resizeRenderer(){
-            const width=document.getElementById("logo-space").clientWidth;
-            renderer.setSize(width,340);
-            camera.aspect=width/340;
-            camera.updateProjectionMatrix();
-        } 
+                let canvas = document.createElement('canvas');
+                let ctx = canvas.getContext('2d');
+                if (ctx) {
+                    canvas.width = 1024;
+                    canvas.height = 256;
+                    ctx.fillStyle = "#FFFFFF";
+                    ctx.font = "Bold 140px Arial";
+                    ctx.textAlign = "center";
+                    ctx.fillText("BAS", 256, 160);
+                    ctx.fillText("BAS", 768, 160);
 
-        window.addEventListener("resize",resizeRenderer); 
+                    let textTexture = new THREE.CanvasTexture(canvas);
+                    let textMesh = new THREE.Mesh(
+                        new THREE.CylinderGeometry(2.05, 2.05, 0.8, 64, 1, true),
+                        new THREE.MeshBasicMaterial({ map: textTexture, transparent: true, side: THREE.DoubleSide })
+                    );
+                    earthGroup.add(textMesh);
+                }
 
-        function animate(){
-            if(!running) return;
-            requestAnimationFrame(animate);
-            earthGroup.rotation.y+=0.003;
-            angle-=0.01;
-            moon.position.x=Math.cos(angle)*4.5;
-            moon.position.z=Math.sin(angle)*2.8;
-            renderer.render(scene,camera);
+                scene.add(earthGroup);
+
+                moon = new THREE.Mesh(
+                    new THREE.SphereGeometry(0.35, 16, 16),
+                    new THREE.MeshStandardMaterial({ color: 0xcccccc })
+                );
+                scene.add(moon);
+
+                camera.position.z = 8;
+
+                function resizeRenderer() {
+                    try {
+                        const box = document.getElementById("logo-space");
+                        if (!box || !renderer || !camera) return;
+                        const width = box.clientWidth || window.innerWidth;
+                        renderer.setSize(width, 340);
+                        camera.aspect = width / 340;
+                        camera.updateProjectionMatrix();
+                    } catch (e) {
+                        console.error('Resize error:', e);
+                    }
+                }
+
+                window.addEventListener("resize", resizeRenderer);
+
+                function animate() {
+                    if (!running || !renderer || !scene || !camera || !earthGroup || !moon) return;
+                    requestAnimationFrame(animate);
+                    earthGroup.rotation.y += 0.003;
+                    angle -= 0.01;
+                    moon.position.x = Math.cos(angle) * 4.5;
+                    moon.position.z = Math.sin(angle) * 2.8;
+                    renderer.render(scene, camera);
+                }
+                animate();
+
+                if ('IntersectionObserver' in window && logoSpace) {
+                    let observer = new IntersectionObserver(entries => {
+                        entries.forEach(entry => {
+                            if (entry.isIntersecting) {
+                                const wasStopped = !running;
+                                running = true;
+                                if (wasStopped) animate();
+                            } else {
+                                running = false;
+                            }
+                        });
+                    });
+                    observer.observe(logoSpace);
+                }
+
+                if (renderer && renderer.domElement) {
+                    renderer.domElement.addEventListener('webglcontextlost', function (event) {
+                        event.preventDefault();
+                        running = false;
+                        console.error('WebGL context lost');
+                    }, false);
+
+                    renderer.domElement.addEventListener('webglcontextrestored', function () {
+                        running = true;
+                        animate();
+                    }, false);
+                }
+            }
+        } catch (e) {
+            console.error('Three.js init error:', e);
         }
-        animate(); 
 
-        let observer=new IntersectionObserver(entries=>{
-            entries.forEach(entry=>{
-                if(entry.isIntersecting){ running=true; animate(); }
-                else{ running=false; }
-            });
+        function googleTranslateElementInit() {
+            try {
+                if (window.google && google.translate && google.translate.TranslateElement) {
+                    new google.translate.TranslateElement({ pageLanguage: 'en', autoDisplay: false }, 'google_translate_element');
+                }
+            } catch (e) {
+                console.error('Google Translate init error:', e);
+            }
+        }
+
+        function changeLang(langCode) {
+            try {
+                let select = document.querySelector('select.goog-te-combo');
+                if (select) {
+                    select.value = langCode;
+                    select.dispatchEvent(new Event('change'));
+                }
+            } catch (e) {
+                console.error('Language change error:', e);
+            }
+        }
+
+        function resetToEnglish() {
+            try {
+                let select = document.querySelector('select.goog-te-combo');
+                if (select) {
+                    select.value = 'en';
+                    select.dispatchEvent(new Event('change'));
+                }
+            } catch (e) {
+                console.error('Reset language error:', e);
+            }
+        }
+
+        let translateBannerInterval = setInterval(function () {
+            try {
+                const frame = document.querySelector('.goog-te-banner-frame');
+                if (frame) {
+                    frame.style.display = 'none';
+                }
+            } catch (e) {}
+        }, 500);
+
+        document.addEventListener('visibilitychange', function () {
+            if (document.hidden) {
+                running = false;
+            } else {
+                if (renderer && scene && camera && earthGroup && moon) {
+                    const wasStopped = !running;
+                    running = true;
+                    if (wasStopped) animate();
+                }
+            }
         });
-        observer.observe(document.getElementById("logo-space")); 
 
-        // Google Translate Logic
-        function googleTranslateElementInit(){
-            new google.translate.TranslateElement({pageLanguage:'en',autoDisplay:false},'google_translate_element');
-        } 
-
-        function changeLang(langCode){
-            let select=document.querySelector('select.goog-te-combo');
-            if(select){ select.value=langCode; select.dispatchEvent(new Event('change')); }
-        } 
-
-        function resetToEnglish(){
-            let select=document.querySelector('select.goog-te-combo');
-            if(select){ select.value='en'; select.dispatchEvent(new Event('change')); }
-        } 
-
-        setInterval(function(){
-            const frame=document.querySelector('.goog-te-banner-frame');
-            if(frame){ frame.style.display='none'; }
-        },500);
+        window.addEventListener('beforeunload', function () {
+            try {
+                clearInterval(translateBannerInterval);
+                if (renderer) renderer.dispose();
+            } catch (e) {}
+        });
     </script>
     <script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 </body>
