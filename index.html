@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -90,6 +90,99 @@
             font-weight: bold;
             box-shadow: 0 4px 15px rgba(0,0,0,0.4);
             cursor: pointer;
+        }
+
+        #basBalloonWrap {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 280px;
+            height: 400px;
+            z-index: 2147483647;
+            pointer-events: none;
+            transform: translateY(120%);
+            transition: transform 2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            display: block !important;
+        }
+
+        .state-up { transform: translateY(0%) !important; }
+        .state-hide { transform: translateY(120%) !important; }
+        .state-rest { transform: translateY(70%) !important; }
+
+        .bas-ball {
+            position: absolute;
+            border-radius: 50% 50% 50% 50% / 40% 40% 60% 60%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            pointer-events: auto;
+            box-shadow: inset -8px -8px 20px rgba(0,0,0,0.4);
+        }
+
+        .bas-str {
+            position: absolute;
+            width: 1px;
+            background: rgba(255,255,255,0.4);
+            bottom: -1000px;
+            left: 50%;
+            height: 1000px;
+        }
+
+        .bas-nipple {
+            position: absolute;
+            bottom: -10px;
+            width: 18px;
+            height: 10px;
+            background: inherit;
+            clip-path: polygon(20% 0, 80% 0, 100% 100%, 0 100%);
+        }
+
+        .white-b {
+            width: 120px; height: 160px;
+            background: #ffffff;
+            bottom: 220px; left: 60px;
+            animation: floatW 25s ease-in-out infinite;
+            transition: background 0.4s ease;
+        }
+
+        .blue-b {
+            width: 105px; height: 135px;
+            background: #007bff;
+            bottom: 70px; left: 30px;
+            animation: floatB 20s ease-in-out infinite;
+        }
+
+        .bas-sticker { width: 75px; height: 75px; border-radius: 20px; margin-bottom: 5px; border: 1px solid #ddd; }
+        .bas-lbl { font-family: sans-serif; font-size: 11px; font-weight: 900; text-align: center; line-height: 1.2; }
+
+        .install-ready {
+            color: #cddc39 !important;
+            text-shadow: 0 0 6px rgba(205,220,57,0.35);
+        }
+
+        .installed-state {
+            background: #cddc39 !important;
+        }
+
+        .installed-state .bas-nipple {
+            background: #cddc39 !important;
+        }
+
+        .installed-state #statTxt {
+            color: #1f2b00 !important;
+            text-shadow: none !important;
+        }
+
+        @keyframes floatW {
+            0%, 100% { transform: translate(0, 0) rotate(-3deg); }
+            50% { transform: translate(35px, 45px) rotate(5deg); }
+        }
+
+        @keyframes floatB {
+            0%, 100% { transform: translate(0, 0) rotate(4deg); }
+            50% { transform: translate(25px, -25px) rotate(-4deg); }
         }
     </style>
 </head> 
@@ -186,7 +279,7 @@
             });
         }
 
-        let scene, camera, renderer, ambient, loader, earthGroup, earth, moon, angle = 0, running = true, logoSpace;
+        let scene, camera, renderer, ambient, loader, earthGroup, earth, moon, angle = 0, running = true, logoSpace, animateRef = null;
 
         try {
             if (window.THREE) {
@@ -269,7 +362,7 @@
 
                 function animate() {
                     if (!running || !renderer || !scene || !camera || !earthGroup || !moon) return;
-                    requestAnimationFrame(animate);
+                    animateRef = requestAnimationFrame(animate);
                     earthGroup.rotation.y += 0.003;
                     angle -= 0.01;
                     moon.position.x = Math.cos(angle) * 4.5;
@@ -369,234 +462,143 @@
             try {
                 clearInterval(translateBannerInterval);
                 if (renderer) renderer.dispose();
+                if (animateRef) cancelAnimationFrame(animateRef);
             } catch (e) {}
         });
     </script>
     <script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
- <div id="basBalloonWrap">
-<div class="bas-ball white-b" onclick="handleInstallTap()">
-<img src="icon-512.png" class="bas-sticker">
-<div id="statTxt" class="bas-lbl" style="color:#333;">INSTALL</div>
-<div class="bas-nipple"></div>
-<div class="bas-str"></div>
-</div>
 
-<div class="bas-ball blue-b" onclick="goWhatsApp()">
-<div class="bas-lbl" style="color:#fff;">SAVE TO<br>WHATSAPP</div>
-<div class="bas-nipple"></div>
-<div class="bas-str"></div>
-</div>
-</div>
+    <div id="basBalloonWrap">
+        <div class="bas-ball white-b" onclick="handleInstallTap()">
+            <img src="icon-512.png" class="bas-sticker">
+            <div id="statTxt" class="bas-lbl" style="color:#333;">INSTALL</div>
+            <div class="bas-nipple"></div>
+            <div class="bas-str"></div>
+        </div>
 
-<style>
-#basBalloonWrap {
-position: fixed;
-bottom: 0;
-left: 0;
-width: 280px;
-height: 400px;
-z-index: 2147483647;
-pointer-events: none;
-transform: translateY(120%);
-transition: transform 2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-display: block !important;
-}
+        <div class="bas-ball blue-b" onclick="goWhatsApp()">
+            <div class="bas-lbl" style="color:#fff;">SAVE TO<br>WHATSAPP</div>
+            <div class="bas-nipple"></div>
+            <div class="bas-str"></div>
+        </div>
+    </div>
 
-.state-up { transform: translateY(0%) !important; }
-.state-hide { transform: translateY(120%) !important; }
-.state-rest { transform: translateY(70%) !important; }
+    <script>
+        let basPrompt;
+        const wrap = document.getElementById('basBalloonWrap');
+        const stat = document.getElementById('statTxt');
 
-.bas-ball {
-position: absolute;
-border-radius: 50% 50% 50% 50% / 40% 40% 60% 60%;
-display: flex;
-flex-direction: column;
-align-items: center;
-justify-content: center;
-cursor: pointer;
-pointer-events: auto;
-box-shadow: inset -8px -8px 20px rgba(0,0,0,0.4);
-}
+        function basInstallButtonExists() {
+            try {
+                return !!document.querySelector('#install-btn, #installButton, .install-btn, .install-button, [data-install-button]');
+            } catch (e) {
+                return false;
+            }
+        }
 
-.bas-str {
-position: absolute;
-width: 1px;
-background: rgba(255,255,255,0.4);
-bottom: -1000px;
-left: 50%;
-height: 1000px;
-}
+        function basSetInstallView() {
+            try {
+                const whiteBall = document.querySelector('.white-b');
+                if (!stat || !whiteBall) return;
+                stat.innerText = "INSTALL";
+                stat.classList.add('install-ready');
+                whiteBall.classList.remove('installed-state');
+            } catch (e) {}
+        }
 
-.bas-nipple {
-position: absolute;
-bottom: -10px;
-width: 18px;
-height: 10px;
-background: inherit;
-clip-path: polygon(20% 0, 80% 0, 100% 100%, 0 100%);
-}
+        function basSetInstalledView() {
+            try {
+                const whiteBall = document.querySelector('.white-b');
+                if (!stat || !whiteBall) return;
+                stat.innerText = "INSTALLED";
+                stat.classList.remove('install-ready');
+                whiteBall.classList.add('installed-state');
+            } catch (e) {}
+        }
 
-.white-b {
-width: 120px; height: 160px;
-background: #ffffff;
-bottom: 220px; left: 60px;
-animation: floatW 25s ease-in-out infinite;
-transition: background 0.4s ease;
-}
+        function basRefreshBalloonState() {
+            try {
+                if (basInstallButtonExists()) {
+                    basSetInstallView();
+                } else {
+                    basSetInstalledView();
+                }
+            } catch (e) {}
+        }
 
-.blue-b {
-width: 105px; height: 135px;
-background: #007bff;
-bottom: 70px; left: 30px;
-animation: floatB 20s ease-in-out infinite;
-}
+        function initBalloons() {
+            if (!wrap) return;
 
-.bas-sticker { width: 75px; height: 75px; border-radius: 20px; margin-bottom: 5px; border: 1px solid #ddd; }
-.bas-lbl { font-family: sans-serif; font-size: 11px; font-weight: 900; text-align: center; line-height: 1.2; }
+            setTimeout(() => {
+                wrap.classList.add('state-up');
 
-.install-ready {
-color: #cddc39 !important;
-text-shadow: 0 0 6px rgba(205,220,57,0.35);
-}
+                setTimeout(() => {
+                    wrap.classList.replace('state-up', 'state-hide');
 
-.installed-state {
-background: #cddc39 !important;
-}
+                    setTimeout(() => {
+                        wrap.classList.replace('state-hide', 'state-rest');
+                    }, 30000);
+                }, 15000);
+            }, 5000);
+        }
 
-.installed-state .bas-nipple {
-background: #cddc39 !important;
-}
+        const wake = () => {
+            if (!wrap) return;
+            wrap.classList.remove('state-hide', 'state-rest');
+            wrap.classList.add('state-up');
+        };
 
-.installed-state #statTxt {
-color: #1f2b00 !important;
-text-shadow: none !important;
-}
+        if (wrap) {
+            wrap.addEventListener('click', wake, { passive: true });
+            wrap.addEventListener('touchstart', wake, { passive: true });
+        }
 
-@keyframes floatW {
-0%, 100% { transform: translate(0, 0) rotate(-3deg); }
-50% { transform: translate(35px, 45px) rotate(5deg); }
-}
+        window.addEventListener('load', function () {
+            basRefreshBalloonState();
+            initBalloons();
+        });
 
-@keyframes floatB {
-0%, 100% { transform: translate(0, 0) rotate(4deg); }
-50% { transform: translate(25px, -25px) rotate(-4deg); }
-}
-</style>
-
-<script>
-let basPrompt;
-const wrap = document.getElementById('basBalloonWrap');
-const stat = document.getElementById('statTxt');
-
-function basInstallButtonExists() {
-try {
-return !!document.querySelector('#install-btn, #installButton, .install-btn, .install-button, [data-install-button]');
-} catch (e) {
-return false;
-}
-}
-
-function basSetInstallView() {
-try {
-const whiteBall = document.querySelector('.white-b');
-if (!stat || !whiteBall) return;
-stat.innerText = "INSTALL";
-stat.classList.add('install-ready');
-whiteBall.classList.remove('installed-state');
-} catch (e) {}
-}
-
-function basSetInstalledView() {
-try {
-const whiteBall = document.querySelector('.white-b');
-if (!stat || !whiteBall) return;
-stat.innerText = "INSTALLED";
-stat.classList.remove('install-ready');
-whiteBall.classList.add('installed-state');
-} catch (e) {}
-}
-
-function basRefreshBalloonState() {
-try {
-if (basInstallButtonExists()) {
-basSetInstallView();
-} else {
-basSetInstalledView();
-}
-} catch (e) {}
-}
-
-function initBalloons() {
-if (!wrap) return;
-
-setTimeout(() => {
-wrap.classList.add('state-up');
-
-setTimeout(() => {
-wrap.classList.replace('state-up', 'state-hide');
-
-setTimeout(() => {
-wrap.classList.replace('state-hide', 'state-rest');
-}, 30000);
-}, 15000);
-}, 5000);
-}
-
-const wake = () => {
-if (!wrap) return;
-wrap.classList.remove('state-hide', 'state-rest');
-wrap.classList.add('state-up');
-};
-
-if (wrap) {
-wrap.addEventListener('click', wake, { passive: true });
-wrap.addEventListener('touchstart', wake, { passive: true });
-}
-
-window.addEventListener('load', function () {
-basRefreshBalloonState();
-initBalloons();
-});
-
-function goWhatsApp(){
-try {
-let url = "https://bascharity-56f.pages.dev";
-let text = "Save a beautiful icon to your screen
+        function goWhatsApp(){
+            try {
+                let url = "https://bascharity-56f.pages.dev";
+                let text = "Save a beautiful icon to your screen
 
 " + url + "
 
 Chrome → ⋮ 3 dot → Save to Screen → Install";
-window.open("https://wa.me/?text=" + encodeURIComponent(text), "_blank", "noopener,noreferrer");
-} catch (e) {}
-}
+                window.open("https://wa.me/?text=" + encodeURIComponent(text), "_blank", "noopener,noreferrer");
+            } catch (e) {}
+        }
 
-window.addEventListener('beforeinstallprompt', (e) => {
-try {
-e.preventDefault();
-basPrompt = e;
-basSetInstallView();
-} catch (e2) {}
-});
+        window.addEventListener('beforeinstallprompt', (e) => {
+            try {
+                e.preventDefault();
+                basPrompt = e;
+                basSetInstallView();
+                if (installDiv) installDiv.style.display = 'block';
+            } catch (e2) {}
+        });
 
-function handleInstallTap() {
-try {
-if (basPrompt) {
-basPrompt.prompt();
-basPrompt.userChoice.then((c) => {
-if (c && c.outcome === 'accepted') {
-basSetInstalledView();
-}
-basPrompt = null;
-});
-} else {
-basRefreshBalloonState();
-}
-} catch (e) {}
-}
+        function handleInstallTap() {
+            try {
+                if (basPrompt) {
+                    basPrompt.prompt();
+                    basPrompt.userChoice.then((c) => {
+                        if (c && c.outcome === 'accepted') {
+                            basSetInstalledView();
+                        }
+                        basPrompt = null;
+                    });
+                } else {
+                    basRefreshBalloonState();
+                }
+            } catch (e) {}
+        }
 
-window.addEventListener('appinstalled', () => {
-basSetInstalledView();
-});
-</script>
+        window.addEventListener('appinstalled', () => {
+            basSetInstalledView();
+            if (installDiv) installDiv.style.display = 'none';
+        });
+    </script>
 </body>
 </html>
