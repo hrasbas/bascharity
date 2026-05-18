@@ -374,19 +374,28 @@
     </script>
     <script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 
-<div id="basBalloonWrap" class="notranslate">
-<div id="installBall" class="bas-ball white-b" onclick="handleInstallTap()">
-<img src="icon-512.png" class="bas-sticker">
-<div id="statTxt" class="bas-lbl">INSTALL</div>
-<div class="bas-nipple"></div>
-<div class="bas-str"></div>
-</div> 
+    <div id="basBalloonWrap" class="notranslate">
 
-<div class="bas-ball blue-b" onclick="goWhatsApp()">
-<div class="bas-lbl" style="color:#fff;">SAVE TO<br>WHATSAPP</div>
-<div class="bas-nipple"></div>
-<div class="bas-str"></div>
-</div>
+  <div id="ballUninstalled" class="bas-ball white-b" onclick="handleInstallTap()">
+    <img src="icon-512.png" class="bas-sticker">
+    <div class="bas-lbl style-install">INSTALL</div>
+    <div class="bas-nipple"></div>
+    <div class="bas-str"></div>
+  </div> 
+
+  <div id="ballInstalled" class="bas-ball green-yellow-b" onclick="handleInstallTap()" style="display: none;">
+    <img src="icon-512.png" class="bas-sticker">
+    <div class="bas-lbl style-installed">INSTALLED</div>
+    <div class="bas-nipple"></div>
+    <div class="bas-str"></div>
+  </div>
+
+  <div class="bas-ball blue-b" onclick="goWhatsApp()">
+    <div class="bas-lbl" style="color:#fff;">SAVE TO<br>WHATSAPP</div>
+    <div class="bas-nipple"></div>
+    <div class="bas-str"></div>
+  </div>
+
 </div> 
 
 <style>
@@ -443,24 +452,29 @@ background: inherit;
 clip-path: polygon(20% 0, 80% 0, 100% 100%, 0 100%);
 } 
 
-/* 1. INSTALL അവസ്ഥ: വെള്ള ബലൂൺ, തിളങ്ങുന്ന പച്ചകലർന്ന മഞ്ഞ എഴുത്ത് */
+/* വെള്ള ബലൂൺ സ്റ്റൈൽ */
 .white-b {
 width: 120px; height: 160px;
-background: #ffffff !important;
+background: #ffffff;
 bottom: 220px; left: 60px;
 animation: floatW 5s ease-in-out infinite;
 }
-.white-b .bas-lbl {
-color: #adff2f !important; /* പച്ചകലർന്ന മഞ്ഞ എഴുത്ത് */
+/* തിളങ്ങുന്ന പച്ചകലർന്ന മഞ്ഞ എഴുത്ത് */
+.style-install {
+color: #adff2f !important;
 text-shadow: 1px 1px 2px rgba(0,0,0,0.8) !important;
 }
 
-/* 2. INSTALLED അവസ്ഥ: പച്ചകലർന്ന മഞ്ഞ ബലൂൺ, കറുത്ത എഴുത്ത് */
-.is-pwa-installed {
-background: #adff2f !important;
+/* പച്ചകലർന്ന മഞ്ഞ ബലൂൺ സ്റ്റൈൽ */
+.green-yellow-b {
+width: 120px; height: 160px;
+background: #adff2f;
+bottom: 220px; left: 60px;
+animation: floatW 5s ease-in-out infinite;
 }
-.is-pwa-installed .bas-lbl {
-color: #000000 !important; /* കറുത്ത എഴുത്ത് */
+/* കറുത്ത എഴുത്ത് */
+.style-installed {
+color: #000000 !important;
 text-shadow: none !important;
 }
 
@@ -488,22 +502,22 @@ animation: floatB 20s ease-in-out infinite;
 <script>
 let basPrompt;
 const wrap = document.getElementById('basBalloonWrap');
-const stat = document.getElementById('statTxt'); 
-const ball = document.getElementById('installBall');
+const ballUninstalled = document.getElementById('ballUninstalled');
+const ballInstalled = document.getElementById('ballInstalled');
 
-// ഇൻസ്റ്റലേഷൻ അവസ്ഥ മാറിക്കഴിഞ്ഞാൽ ഡിസൈൻ മാറ്റാനുള്ള കൃത്യമായ ഫങ്ഷൻ
-function setBallToInstalled() {
-    stat.innerText = "INSTALLED";
-    ball.classList.remove('white-b'); // വെള്ള സ്റ്റൈൽ മാറ്റുന്നു
-    ball.classList.add('is-pwa-installed'); // പച്ചകലർന്ന മഞ്ഞ സ്റ്റൈൽ നൽകുന്നു
+// അവസ്ഥ അനുസരിച്ച് ബലൂണുകൾ പരസ്പരം മാറ്റാനുള്ള സുരക്ഷിതമായ ഫങ്ഷൻ
+function checkInstallationState() {
+    if (localStorage.getItem('bas_pwa_installed') === 'true') {
+        ballUninstalled.style.display = 'none';
+        ballInstalled.style.display = 'flex';
+    } else {
+        ballUninstalled.style.display = 'flex';
+        ballInstalled.style.display = 'none';
+    }
 }
 
-// പേജ് ലോഡാകുമ്പോൾ ലോക്കൽ സ്റ്റോറേജ് കൃത്യമായി പരിശോധിക്കുന്നു
-window.addEventListener('DOMContentLoaded', () => {
-    if (localStorage.getItem('bas_pwa_installed') === 'true') {
-        setBallToInstalled();
-    }
-});
+// പേജ് ലോഡാകുമ്പോൾ അവസ്ഥ പരിശോധിക്കുന്നു
+window.addEventListener('DOMContentLoaded', checkInstallationState);
 
 function initBalloons() {
 setTimeout(() => {
@@ -539,14 +553,14 @@ basPrompt = e;
 
 function handleInstallTap() {
 if (localStorage.getItem('bas_pwa_installed') === 'true') {
-    return;
+    return; // ഇൻസ്റ്റാൾഡ് ആണെങ്കിൽ ക്ലിക്ക് പ്രവർത്തിക്കില്ല
 }
 if (basPrompt) {
 basPrompt.prompt();
 basPrompt.userChoice.then((c) => {
 if (c.outcome === 'accepted') {
-    setBallToInstalled();
     localStorage.setItem('bas_pwa_installed', 'true');
+    checkInstallationState(); // ബലൂൺ ഉടൻ തന്നെ പച്ചയാക്കുന്നു
 }
 basPrompt = null;
 });
@@ -556,7 +570,9 @@ alert("Please use Chrome browser for Install option.");
 } 
 
 window.addEventListener('appinstalled', () => {
-setBallToInstalled();
-localStorage.setItem('bas_pwa_installed', 'true');
+    localStorage.setItem('bas_pwa_installed', 'true');
+    checkInstallationState();
 });
 </script>
+</body>
+</html>
