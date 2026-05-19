@@ -1113,6 +1113,117 @@ gallery.scrollLeft = 0;
 }
 setInterval(scrollGallery, 20);
 </script>
+<!------------------- info--------------------->
+<style>
+.info-box{
+/* ലാപ്ടോപ്പിൽ 900px വരെ വരാൻ max-width മാറ്റി */
+max-width: 900px;
+width: 96%;
+margin: 30px auto;
+padding: 20px;
+background: #000;
+border: 1px solid #00BFFF;
+border-radius: 12px;
+text-align: center;
+line-height: 1.7;
+box-sizing: border-box;
+}
 
+.info-title{
+font-size: 25px;
+color: #FFD700;
+margin-bottom: 10px;
+font-weight: bold;
+}
+
+.info-text{
+font-size: 25px;
+color: #ccc;
+}
+
+.readmore-btn{
+color: #00BFFF;
+font-size: 26px;
+font-weight: bold;
+cursor: pointer;
+}
+
+.more-text{
+display: none;
+}
+
+.signature{
+margin-top: 15px;
+font-size: 25px;
+color: #FFD700;
+font-weight: bold;
+}
+</style>
+
+<div class="info-box" id="section7">
+<div class="info-title">BAS CHARITY PURPOSE</div>
+<div class="info-text">
+Our mission is to ensure that support reaches those who truly need it.
+Through affiliate partnerships with 50,000+ online shops worldwide,
+a significant portion of the income generated is used for hunger relief
+and similar humanitarian activities.
+</div>
+<br>
+<div class="info-text">
+At present, 100% of the<span class="readmore-btn" id="readBtn" onclick="toggleMore7()">Read More...</span>
+</div>
+
+<div class="more-text" id="moreText">
+<br>
+<div class="info-text">
+affiliate income is directed towards helping people in need.
+In the future, a minimum of 51% or more will always be dedicated to
+charity and hunger relief.
+The remaining portion may be used for platform maintenance, staff support,
+development, and operational expenses ,etc
+</div>
+<br>
+<div class="info-text">
+Many people have expressed their willingness to donate through this platform.
+However, currently we do not accept any donations through this website.
+This may be considered in the future only after obtaining the necessary approvals
+from the Central Government and relevant authorities.
+</div>
+<br>
+<div class="info-text">
+Anyone who wishes to support hunger relief may do so directly through
+our trusted institutions listed below.
+</div>
+<br>
+<div class="info-text">
+The widespread misuse and scams carried out in the name of charity on many
+online platforms inspired us to start this initiative.
+</div>
+<br>
+<div class="info-text">
+In any case, our goal is to ensure that 100% of your donation reaches those
+who truly need it.
+</div>
+<div class="readmore-btn" onclick="toggleMore7()">Less</div>
+</div>
+
+<div class="signature">
+Give your donations only through trusted hands
+</div>
+</div>
+
+<script>
+function toggleMore7() {
+var moreText = document.getElementById("moreText");
+var btnText = document.getElementById("readBtn");
+if (moreText.style.display === "none" || moreText.style.display === "") {
+moreText.style.display = "block";
+btnText.style.display = "none";
+} else {
+moreText.style.display = "none";
+btnText.style.display = "inline";
+}
+}
+</script>
 </body>
 </html>
