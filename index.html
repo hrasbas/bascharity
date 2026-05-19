@@ -467,7 +467,8 @@
         });
     </script>
     <script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
-             <div id="basBalloonWrap" class="notranslate">
+          
+<div id="basBalloonWrap" class="notranslate">
   
   <div id="installBall" class="bas-ball white-b" onclick="handleInstallTap()">
     <img src="icon-512.png" class="bas-sticker">
@@ -504,20 +505,10 @@ display: block !important;
 .state-hide { transform: translateY(120%) !important; }
 .state-rest { transform: translateY(70%) !important; } 
 
+/* ബലൂണിന്റെ ആകൃതി കൃത്യമാക്കാനുള്ള സ്റ്റൈൽ */
 .bas-ball {
 position: absolute;
-border-radius: .bas-ball {
-  position: absolute;
-
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-  pointer-events: auto;
-  box-shadow: inset -8px -8px 20px rgba(0,0,0,0.4);
-}
-
+border-radius: 50% 50% 50% 50% / 40% 40% 60% 60%; 
 display: flex; flex-direction: column; align-items: center; justify-content: center;
 cursor: pointer; pointer-events: auto;
 box-shadow: inset -8px -8px 20px rgba(0,0,0,0.4);
@@ -540,7 +531,10 @@ text-shadow: 1px 1px 2px rgba(0,0,0,0.8) !important;
 
 /* 2. ഇൻസ്റ്റാൾ ബട്ടൺ ഇല്ലാത്തപ്പോൾ: പച്ചകലർന്ന മഞ്ഞ ബലൂൺ + കറുത്ത എഴുത്ത് */
 .is-pwa-installed {
+width: 120px; height: 160px;
 background: #adff2f !important;
+bottom: 220px; left: 60px;
+animation: floatW 5s ease-in-out infinite;
 }
 .is-pwa-installed .bas-lbl {
 color: #000000 !important;
@@ -561,26 +555,22 @@ const wrap = document.getElementById('basBalloonWrap');
 const stat = document.getElementById('statTxt'); 
 const ball = document.getElementById('installBall');
 
-// ബലൂൺ പച്ചയാക്കാനും INSTALLED എന്ന് എഴുതാനുമുള്ള ഫങ്ഷൻ
-function setBallToInstalled() {
-    stat.innerText = "INSTALLED";
-    ball.classList.remove('white-b');
-    ball.classList.add('is-pwa-installed');
-}
-
-// സൈറ്റിൽ ഇൻസ്റ്റാൾ ബട്ടൺ ലഭ്യമാണെങ്കിൽ (വെള്ള ബലൂൺ കാണിക്കും)
+// 1. സൈറ്റിൽ ഇൻസ്റ്റാൾ ബട്ടൺ ഉണ്ടെങ്കിൽ (വെള്ള ബലൂൺ കാണിക്കുന്നു)
 window.addEventListener('beforeinstallprompt', (e) => {
-    e.preventDefault();
+    e.preventDefault(); 
     basPrompt = e;
-}); 
+    stat.innerText = "INSTALL"; 
+    ball.className = "bas-ball white-b";
+});
 
-// ബട്ടൺ കാണാനില്ലെങ്കിൽ (ആപ്പ് ഇൻസ്റ്റാൾഡ് ആണെങ്കിൽ) ബലൂൺ പച്ചയാക്കുന്നു
+// 2. ഇൻസ്റ്റാൾ ബട്ടൺ ഇല്ലെങ്കിൽ (പച്ചകലർന്ന മഞ്ഞ ബലൂൺ കാണിക്കുന്നു)
 window.addEventListener('DOMContentLoaded', () => {
-    setTimeout(() => {
-        if (!basPrompt) {
-            setBallToInstalled(); 
-        }
-    }, 3000); // ബ്രൗസറിന് പരിശോധിക്കാൻ നൽകുന്ന സമയം
+    setTimeout(() => { 
+        if (!basPrompt) { 
+            stat.innerText = "INSTALLED"; 
+            ball.className = "bas-ball is-pwa-installed"; 
+        } 
+    }, 3000); // ബ്രൗസറിന് ലോഡ് ആകാൻ നൽകുന്ന സമയം
 });
 
 function initBalloons() {
@@ -601,16 +591,22 @@ window.open("https://wa.me/?text=" + encodeURIComponent(text), "_blank");
 } 
 
 function handleInstallTap() {
-if (!basPrompt) return;
+if (!basPrompt) return; // ഇൻസ്റ്റാൾഡ് ആണെങ്കിൽ ക്ലിക്ക് പ്രവർത്തിക്കില്ല
 basPrompt.prompt();
 basPrompt.userChoice.then((c) => {
-if (c.outcome === 'accepted') { setBallToInstalled(); }
+if (c.outcome === 'accepted') { 
+    stat.innerText = "INSTALLED"; 
+    ball.className = "bas-ball is-pwa-installed"; 
+}
 basPrompt = null;
 });
 } 
 
-window.addEventListener('appinstalled', () => { setBallToInstalled(); });
+window.addEventListener('appinstalled', () => { 
+    stat.innerText = "INSTALLED"; 
+    ball.className = "bas-ball is-pwa-installed"; 
+});
 </script>
-pt>
+
 </body>
 </html>
