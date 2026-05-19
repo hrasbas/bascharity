@@ -2115,6 +2115,9 @@ clearTimeout(basglobalTimer);
 basglobalTimer=setTimeout(basglobalClose,30000);
 }
 </script>
+
+<-----------------------shope---------------->
+    
 <style>
 body{background:#000;color:#fff;font-family:sans-serif;margin:0;padding-bottom:50px}
 #bas{width:96%;max-width:900px;margin:auto;padding:10px}
@@ -2190,14 +2193,13 @@ const JSON_FILES = [
 "https://pub-168159db07cc407eaa28228eb2520ea5.r2.dev/j2.json"
 ];
 
-// ഫിക്സഡ് ആയി നൽകിയിരിക്കുന്ന 11 കാറ്റഗറികൾ
-const cats = ["General", "Electronics", "Travel", "Fashion", "Health", "Beauty", "Banking", "Shopping", "Tools", "Jewellery", "Education"];
+let fetchedShops = [];
+let activeCountry = "india"; 
+
+// നിങ്ങളുടെ ഒറിജിനൽ കോഡിൽ ഉണ്ടായിരുന്ന അതേ കാറ്റഗറി കളർ സെറ്റപ്പുകൾ
+let cats = [];
 const baseColors = ["#2196f3","#e91e63","#9c27b0","#ff5722","#4caf50","#00bcd4","#795548","#607d8b","#3f51b5","#8bc34a","#ffc107","#009688"];
 const colors = {};
-cats.forEach((cat, i) => { colors[cat] = baseColors[i % baseColors.length]; }); 
-
-let fetchedShops = [];
-let activeCountry = "india"; // കൺട്രി സെലക്ടറിൽ നിന്ന് മാറുന്നതനുസരിച്ച് മാറും
 
 function normalizeCountry(c) {
 c = (c || "").toLowerCase().trim();
@@ -2268,6 +2270,7 @@ data=data.filter(s =>
 render(data);
 } 
 
+// നിങ്ങളുടെ പഴയ ബട്ടൺ കോഡ് (മാറ്റങ്ങളില്ലാതെ)
 function initBtns(){
 let b="";
 cats.forEach(c=>{
@@ -2276,7 +2279,7 @@ b+=`<button class="m-btn" onclick="filter('${c}')" style="border-bottom:2px soli
 document.getElementById("btns").innerHTML=b;
 } 
 
-// ക്ലൗഡ്‌ഫ്ലെയർ ആർ2-വിൽ നിന്നും ഡാറ്റ വലിച്ചെടുക്കാനുള്ള ഫങ്ഷൻ
+// ക്ലൗഡ്‌ഫ്ലെയർ ആർ2-വിൽ നിന്നും ഡാറ്റ വലിച്ച് കാറ്റഗറി ഓട്ടോമാറ്റിക് ആയി തിരിക്കുന്ന ഫങ്ഷൻ
 async function loadShopsFromR2() {
 try {
 await Promise.all(JSON_FILES.map(async (url) => {
@@ -2289,16 +2292,20 @@ fetchedShops.push(...shopsArray);
 }));
 } catch (err) { console.error("Global load error", err); }
 
+// ആർ2 ഫയലിലുള്ള ഷോപ്പുകളിൽ നിന്ന് കാറ്റഗറി ലിസ്റ്റ് ഓട്ടോമാറ്റിക് ആയി ഉണ്ടാക്കുന്നു
+cats = [...new Set(fetchedShops.map(s => s.c))];
+cats.forEach((cat, i) => { colors[cat] = baseColors[i % baseColors.length]; });
+
 search();
 initBtns();
 }
 
 /* ===== INIT ===== */
-// താല്കാലികമായി ലോക്കൽ സ്റ്റോറേജിലെ രാജ്യം എടുക്കുന്നു (കൺട്രി ബോക്സുമായി പിന്നീട് കണക്ട് ചെയ്യാം)
 activeCountry = localStorage.getItem("bas_country") || "india";
 loadShopsFromR2(); 
 
 </script>
+
 
 </body>
 </html>
