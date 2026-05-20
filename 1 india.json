@@ -1,4 +1,4 @@
-[
+ [
   {"id": "01", "n": "Flipkart", "c": "General", "s": "Marketplace", "u": "https://www.flipkart.com", "d": "flipkart.com", "t": "All-in-One", "is_affiliate": false},
   {"id": "02", "n": "Amazon", "c": "General", "s": "All-in-One", "u": "https://amzn.to/3Z9mN9y", "d": "amazon.in", "t": "Mega Store", "is_affiliate": true},
   {"id": "03", "n": "JioMart", "c": "General", "s": "Marketplace", "u": "https://www.jiomart.com", "d": "jiomart.com", "t": "Grocery", "is_affiliate": false},
