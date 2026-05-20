@@ -673,15 +673,7 @@ ball.className = "bas-ball is-pwa-installed";
   <input type="text" id="globalSearch" class="global-search" placeholder="SEARCH SHOPS" onkeyup="filterShops()">
   <div id="shopList"></div>
 </div> 
-
-<div class="compare-box">
-  <button class="compare-btn">COMPARE PRICES</button>
-  <div class="return-note">
-    YOUR PURCHASE SATISFIES A HUNGER <br>
-    <b>When you shop through BAS International Charity, it becomes food for someone in a corner of the world.</b>
-  </div>
-</div>
-
+ 
 <script>
 const JSON_FILES = [
 "https://pub-168159db07cc407eaa28228eb2520ea5.r2.dev/j1.json",
@@ -846,6 +838,174 @@ async function loadShops() {
 document.addEventListener("DOMContentLoaded", () => {
   populateCountries(); 
   loadShops();
+});
+</script>
+<div class="mancode-category-section" style="padding: 15px; background: #000; border-radius: 12px; margin-bottom: 20px;">
+  
+  <button id="backToAllBtn" onclick="mancodeShowAllWithHeadings()" style="width: 100%; max-width: 600px; padding: 14px; margin: 0 auto 15px auto; display: block; font-size: 18px; font-weight: bold; background: #FFD700; color: #111; border: none; border-radius: 8px; cursor: pointer; transition: 0.2s; box-shadow: 0 4px 6px rgba(0,0,0,0.3);">
+    🔙 Back to All (Show by Category Headings)
+  </button>
+
+  <div class="mancode-category-grid">
+    <button class="mancode-cat-btn" onclick="mancodeFilterByCategory('General')">🛒 General</button>
+    <button class="mancode-cat-btn" onclick="mancodeFilterByCategory('Fashion')">👗 Fashion</button>
+    <button class="mancode-cat-btn" onclick="mancodeFilterByCategory('Beauty')">💄 Beauty</button>
+    <button class="mancode-cat-btn" onclick="mancodeFilterByCategory('Electronics')">💻 Tech</button>
+    <button class="mancode-cat-btn" onclick="mancodeFilterByCategory('Health')">💊 Health</button>
+    <button class="mancode-cat-btn" onclick="mancodeFilterByCategory('Travel')">✈️ Travel</button>
+    <button class="mancode-cat-btn" onclick="mancodeFilterByCategory('Grocery')">🍏 Grocery</button>
+    <button class="mancode-cat-btn" onclick="mancodeFilterByCategory('Home & Decor')">🛏️ Home</button>
+    <button class="mancode-cat-btn" onclick="mancodeFilterByCategory('Sports')">⚽ Sports</button>
+    <button class="mancode-cat-btn" onclick="mancodeFilterByCategory('Entertainment')">🎮 Gaming</button>
+  </div>
+</div>
+
+<div id="mancodeShopsContainer" style="margin-top: 20px; padding: 10px; background: #111; border-radius: 10px;">
+  </div>
+
+
+<style>
+  .mancode-category-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+    gap: 12px;
+    margin-top: 10px;
+  }
+  .mancode-cat-btn {
+    padding: 12px 10px;
+    background: #1e1e1e;
+    color: #fff;
+    border: 1px solid #333;
+    border-radius: 8px;
+    font-size: 15px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+    text-align: center;
+  }
+  .mancode-cat-btn:hover {
+    background: #FFD700;
+    color: #000;
+    transform: translateY(-2px);
+    border-color: #FFD700;
+  }
+  .mancode-heading {
+    font-size: 20px;
+    color: #FFD700;
+    margin-top: 30px;
+    margin-bottom: 12px;
+    border-bottom: 2px solid #222;
+    padding-bottom: 6px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+  }
+  .mancode-shop-item {
+    display: block;
+    color: #fff;
+    padding: 12px;
+    margin-bottom: 8px;
+    background: #1a1a1a;
+    border: 1px solid #252525;
+    border-radius: 6px;
+    text-decoration: none;
+    font-size: 18px;
+    transition: 0.2s;
+  }
+  .mancode-shop-item:hover {
+    background: #252525;
+    border-color: #444;
+    padding-left: 18px;
+  }
+</style>
+
+
+<script>
+// യഥാർത്ഥ JSON ഫയലിൽ നിന്നുള്ള ഡാറ്റ (ഒരു ഷോപ്പിന് ഒന്നിലധികം കാറ്റഗറികൾ കൊടുത്തു സെറ്റ് ചെയ്തത്)
+// നിങ്ങളുടെ മെയിൻ ഫയലിൽ ഈ ലിസ്റ്റ് അപ്ഡേറ്റ് ചെയ്താലും കോഡ് കൃത്യമായി വർക്ക് ചെയ്യും
+let mancodeShopsData = [
+  { "n": "Amazon US", "c": ["General", "Electronics", "Fashion", "Home & Decor", "Entertainment"], "u": "https://www.amazon.com", "t": "Mega Online Marketplace" },
+  { "n": "Walmart", "c": ["General", "Grocery", "Home & Decor"], "u": "https://www.walmart.com", "t": "Hypermarket Essentials" },
+  { "n": "Target", "c": ["General", "Fashion", "Home & Decor", "Grocery"], "u": "https://www.target.com", "t": "Lifestyle & Department Store" },
+  { "n": "Best Buy", "c": ["Electronics", "Entertainment"], "u": "https://www.bestbuy.com", "t": "Gadgets & Appliances Store" },
+  { "n": "Nike US", "c": ["Fashion", "Sports"], "u": "https://www.nike.com", "t": "Premium Sportswear & Shoes" },
+  { "n": "Sephora US", "c": ["Beauty", "Health"], "u": "https://www.sephora.com", "t": "Cosmetics & Skincare" },
+  { "n": "Gymshark", "c": ["Fashion", "Sports", "Health"], "u": "https://www.gymshark.com", "t": "Fitness Apparel Store" },
+  { "n": "Booking.com", "c": ["Travel"], "u": "https://www.booking.com", "t": "Hotels & Flight Booking" }
+];
+
+// നമ്മൾ ഫിക്സ് ചെയ്ത 10 സിഗ്നേച്ചർ ഹെഡിംഗുകൾ
+const mancodeCategories = ["General", "Fashion", "Beauty", "Electronics", "Health", "Travel", "Grocery", "Home & Decor", "Sports", "Entertainment"];
+
+// ഫങ്ഷൻ 1: എല്ലാ ഷോപ്പുകളും അവയുടെ Heading സഹിതം കാണിക്കാൻ (Back to All)
+function mancodeShowAllWithHeadings() {
+  const container = document.getElementById("mancodeShopsContainer");
+  if (!container) return;
+  container.innerHTML = ""; // നിലവിലുള്ള പഴയ ലിസ്റ്റ് മാറ്റുന്നു
+
+  mancodeCategories.forEach(category => {
+    // ആ കാറ്റഗറി ഉള്ള ഷോപ്പുകൾ മാത്രം ലൂപ്പ് വഴി കണ്ടെത്തുന്നു
+    let filtered = mancodeShopsData.filter(shop => {
+      if (Array.isArray(shop.c)) {
+        return shop.c.includes(category);
+      }
+      return shop.c === category;
+    });
+
+    // ആ കാറ്റഗറിയിൽ ഷോപ്പുകൾ ഉണ്ടെങ്കിൽ മാത്രം ഹെഡിങ് ബോക്സ് ഉണ്ടാക്കുന്നു
+    if (filtered.length > 0) {
+      let headingDiv = document.createElement("div");
+      headingDiv.className = "mancode-heading";
+      headingDiv.innerText = `=== ${category.toUpperCase()} ===`;
+      container.appendChild(headingDiv);
+
+      // ഹെഡിങ്ങിന് താഴെ ഷോപ്പുകൾ ഓരോന്നായി നൽകുന്നു
+      filtered.forEach(shop => {
+        let shopLink = document.createElement("a");
+        shopLink.className = "mancode-shop-item";
+        shopLink.href = shop.u;
+        shopLink.target = "_blank";
+        shopLink.rel = "noopener noreferrer";
+        shopLink.innerText = `🔗 ${shop.n} — ${shop.t}`;
+        container.appendChild(shopLink);
+      });
+    }
+  });
+}
+
+// ഫങ്ഷൻ 2: ഒരു പ്രത്യേക ബട്ടൺ ക്ലിക്ക് ചെയ്യുമ്പോൾ ഹെഡിങ്സ് ഇല്ലാതെ ആ ഷോപ്പുകൾ മാത്രം കാണിക്കാൻ
+function mancodeFilterByCategory(selectedCategory) {
+  const container = document.getElementById("mancodeShopsContainer");
+  if (!container) return;
+  container.innerHTML = ""; // ലിസ്റ്റ് ക്ലിയർ ചെയ്യുന്നു
+
+  let filtered = mancodeShopsData.filter(shop => {
+    if (Array.isArray(shop.c)) {
+      return shop.c.includes(selectedCategory);
+    }
+    return shop.c === selectedCategory;
+  });
+
+  if (filtered.length === 0) {
+    container.innerHTML = "<p style='color:#888; text-align:center; padding: 20px;'>No shops found in this category.</p>";
+    return;
+  }
+
+  // ഹെഡിങ്സ് ഇല്ലാതെ ലിസ്റ്റ് മാത്രം നിർമ്മിക്കുന്നു
+  filtered.forEach(shop => {
+    let shopLink = document.createElement("a");
+    shopLink.className = "mancode-shop-item";
+    shopLink.href = shop.u;
+    shopLink.target = "_blank";
+    shopLink.rel = "noopener noreferrer";
+    shopLink.innerText = `🔗 ${shop.n} — ${shop.t}`;
+    container.appendChild(shopLink);
+  });
+}
+
+// പേജ് ആദ്യമായി ലോഡ് ചെയ്യുമ്പോൾ തന്നെ ഓട്ടോമാറ്റിക്കായി ഹെഡിങ്ങുകളോടെ ലിസ്റ്റ് വരാൻ
+document.addEventListener("DOMContentLoaded", function() {
+  mancodeShowAllWithHeadings();
 });
 </script>
 
