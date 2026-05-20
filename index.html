@@ -782,6 +782,375 @@ setCountry(saved);
 } 
 
 window.onload = () => { populateCountries(); loadShops(); };
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BAS Mega Portal Engine</title>
+  <style>
+    #bas-mega-portal{
+      width:96%;
+      max-width:900px;
+      margin:auto;
+      font-size:23px;
+    } 
+
+    /* SEARCH */
+    #findShop{
+      width:100%;
+      height:55px;
+      border-radius:12px;
+      border:1px solid #ff9800;
+      background:#1a1a1a;
+      color:#fff;
+      padding:0 15px;
+      margin-bottom:12px;
+      font-size:23px;
+      box-sizing: border-box;
+    } 
+
+    /* CATEGORY BOX */
+    #cat-search-box{
+      border:1px solid #ff9800;
+      border-radius:12px;
+      padding:14px;
+      background:#111;
+      margin-bottom:15px;
+    } 
+
+    /* BUTTON GRID */
+    .btn-grid{
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:10px;
+    } 
+
+    .m-btn{
+      background:#222;
+      color:#fff;
+      border:1px solid #555;
+      padding:14px 5px;
+      border-radius:10px;
+      font-size:20px;
+      font-weight:bold;
+      cursor: pointer;
+    } 
+
+    /* തനിയെ താഴെ ആഡ് ആവുന്ന കാറ്റഗറി ഹെഡിങ് (Same Shape) */
+    #selected-cat-container {
+      margin-top: 10px;
+      margin-bottom: 10px;
+      display: none;
+    }
+    .selected-cat-heading {
+      display: block;
+      text-align: center;
+      padding: 14px 5px;
+      border-radius: 10px;
+      font-size: 20px;
+      font-weight: bold;
+      color: #fff;
+    }
+
+    /* CATEGORY HEAD */
+    .cat-head{
+      padding:14px;
+      border-radius:10px;
+      font-weight:bold;
+      text-align:center;
+      margin:22px 0 10px;
+      font-size:23px;
+    } 
+
+    /* SHOP CARD */
+    .shop-card{
+      position: relative;
+      display:flex;
+      align-items:center;
+      gap:12px;
+      padding:14px;
+      background:#1a1a1a;
+      border-radius:12px;
+      margin-bottom:10px;
+      text-decoration:none;
+      color:#fff;
+      border:1px solid #333;
+    } 
+
+    .shop-card img{
+      width:36px;
+      height:36px;
+      background:#fff;
+      border-radius:6px;
+      padding:2px;
+    } 
+
+    .sl{
+      width:30px;
+      color:#ff9800;
+      font-size:20px;
+      font-weight:bold;
+    } 
+
+    /* Direct Link - Left Top റെഡ് ഡോട്ട് */
+    .direct-dot {
+      position: absolute;
+      top: 6px;
+      left: 6px;
+      width: 8px;
+      height: 8px;
+      background-color: #ff0000;
+      border-radius: 50%;
+      pointer-events: none;
+    }
+
+    /* MORE BUTTON */
+    .more-btn{
+      text-align:center;
+      padding:12px;
+      background:#ffffff;
+      color:#000;
+      border-radius:10px;
+      margin-top:8px;
+      margin-bottom: 15px;
+      font-size:20px;
+      font-weight:bold;
+      cursor: pointer;
+    } 
+
+    /* BACK BUTTON */
+    .reset-link{
+      display:block;
+      text-align:center;
+      margin-top:12px;
+      background:#ff9800;
+      color:#000;
+      padding:12px;
+      border-radius:10px;
+      font-size:20px;
+      font-weight:bold;
+      text-decoration:none;
+      cursor: pointer;
+    }
+  </style> 
+</head>
+<body>
+
+<div id="bas-mega-portal"> 
+
+  <input id="findShop" onkeyup="liveSearch()" placeholder="Search shops..."> 
+
+  <div id="cat-search-box">
+    <div class="btn-grid" id="cat-buttons"></div>
+    <span class="reset-link" onclick="resetCategory()">← Back to All Shops</span>
+  </div> 
+
+  <div id="selected-cat-container"></div>
+
+  <div id="shop-container"></div> 
+
+</div> 
+
+<script>
+const colors={
+  "General":"#2196f3",
+  "Fashion":"#e91e63",
+  "Beauty":"#9c27b0",
+  "Electronics":"#ff5722",
+  "Health":"#4caf50",
+  "Travel":"#00bcd4"
+}; 
+
+let mainOrder=["General","Fashion","Beauty","Electronics","Health","Travel"]; 
+
+let shops = [];
+let activeCategory = null;
+let expandedCategories = {}; 
+
+window.onload = () => {
+  fetch("https://pub-168159db07cc407eaa28228eb2520ea5.r2.dev/1%20india.json")
+    .then(res => res.json())
+    .then(data => {
+      shops = data;
+      
+      // JSON ഫയലിലുള്ള പുതിയ കാറ്റഗറികൾ ഉണ്ടെങ്കിൽ അവയും ലിസ്റ്റിലേക്ക് ആഡ് ചെയ്യുന്നു
+      shops.forEach(shop => {
+        let catName = shop.c || shop.category;
+        if (catName && !mainOrder.includes(catName)) {
+          mainOrder.push(catName);
+        }
+      });
+
+      initButtons();
+      render(shops, false);
+    })
+    .catch(err => {
+      console.error("Error loading JSON:", err);
+    });
+};
+
+/* കാറ്റഗറി ബട്ടണുകൾ ഉണ്ടാക്കുന്നു */
+function initButtons(){
+  let box=document.getElementById("cat-buttons");
+  box.innerHTML=mainOrder.map(c=> {
+    let borderCol = colors[c] || "#666";
+    return `<button class="m-btn" onclick="filterCat('${c}')"
+     style="border-bottom:3px solid ${borderCol}">${c}</button>`;
+  }).join("");
+} 
+
+/* ഫിൽട്ടർ ലോജിക് */
+function filterCat(cat){
+  activeCategory = cat;
+  expandedCategories[cat] = false; 
+  document.getElementById("findShop").value = ""; 
+  
+  let filtered = shops.filter(s => (s.c || s.category) === cat);
+  render(filtered, true);
+} 
+
+/* റീസെറ്റ് ലോജിക് (Back to all shops) */
+function resetCategory() {
+  activeCategory = null;
+  expandedCategories = {};
+  document.getElementById("findShop").value = "";
+  render(shops, false);
+}
+
+/* റെൻഡർ എഞ്ചിൻ */
+function render(data, isFiltered=false){
+  let container=document.getElementById("shop-container");
+  let selectedCatContainer = document.getElementById("selected-cat-container");
+  
+  container.innerHTML=""; 
+
+  if(activeCategory) {
+    selectedCatContainer.style.display = "block";
+    selectedCatContainer.innerHTML = `<div class="selected-cat-heading" style="background:${colors[activeCategory] || '#666'}">${activeCategory}</div>`;
+  } else {
+    selectedCatContainer.style.display = "none";
+    selectedCatContainer.innerHTML = "";
+  }
+
+  let grouped={}; 
+  data.forEach(s=>{
+    let catName = s.c || s.category || "General";
+    if(!grouped[catName]) grouped[catName]=[];
+    grouped[catName].push(s);
+  }); 
+
+  let orderToShow = activeCategory ? [activeCategory] : mainOrder;
+
+  orderToShow.forEach(cat=>{
+    if(grouped[cat]){
+      let col=colors[cat] || "#666"; 
+
+      let head=document.createElement("div");
+      head.className="cat-head";
+      head.style.background=col;
+      head.innerText=cat;
+      container.appendChild(head); 
+
+      let isExpanded = expandedCategories[cat] || false;
+      let totalItems = grouped[cat].length;
+      
+      let maxSearch = document.getElementById("findShop").value.trim() !== "";
+      let limit = (totalItems > 7 && !isExpanded && !maxSearch) ? 7 : totalItems;
+
+      for(let i=0; i<limit; i++) {
+        let s = grouped[cat][i];
+        let card=document.createElement("a");
+        card.className="shop-card";
+        card.href=s.u || s.url;
+        card.target="_blank"; 
+        card.style.borderLeft="6px solid "+col; 
+
+        // 🔥 നിരോധിച്ച സൈറ്റുകൾ ഉണ്ടെങ്കിൽ ക്ലിക്ക് ചെയ്യുമ്പോൾ അലേർട്ട് കാണിക്കാനുള്ള ലോജിക്
+        let domain = s.d || s.domain || "";
+        if(domain.toLowerCase().includes("aliexpress.com")) {
+          card.onclick = (e) => {
+            e.preventDefault();
+            alert("This shop is banned in India. You cannot purchase from here.");
+          };
+        }
+
+        // Direct Link ലോജിക്
+        let isAffiliate = s.is_affiliate !== undefined ? s.is_affiliate : true;
+        let dotHTML = (!isAffiliate || isAffiliate === "false" || isAffiliate === false) ? '<div class="direct-dot"></div>' : '';
+
+        let name = s.n || s.name;
+        let id = s.id || "";
+        let tag = s.t || s.tag || "";
+
+        card.innerHTML=`
+        ${dotHTML}
+        <div class="sl">${id}</div>
+        <img src="https://www.google.com/s2/favicons?domain=${domain}">
+        <div><b>${name}</b><span> ${tag}</span></div>
+        `; 
+
+        container.appendChild(card);
+      }
+
+      if(totalItems > 7 && !maxSearch) {
+        let btn=document.createElement("div");
+        btn.className="more-btn";
+        btn.innerText = isExpanded ? "LESS -" : "MORE +";
+        btn.onclick=()=>toggle(cat);
+        container.appendChild(btn);
+      }
+    }
+  });
+} 
+
+/* MORE / LESS ടോഗിൾ */
+function toggle(cat){
+  expandedCategories[cat] = !expandedCategories[cat];
+  if(activeCategory) {
+    let filtered = shops.filter(s => (s.c || s.category) === activeCategory);
+    render(filtered, true);
+  } else {
+    render(shops, false);
+  }
+} 
+
+/* LIVE SEARCH */
+function liveSearch(){
+  let val=document.getElementById("findShop").value.toLowerCase().trim();
+  if(!val){ 
+    if(activeCategory) {
+      let filtered = shops.filter(s => (s.c || s.category) === activeCategory);
+      render(filtered, true);
+    } else {
+      render(shops, false);
+    }
+    return;
+  } 
+
+  let baseList = activeCategory ? shops.filter(s => (s.c || s.category) === activeCategory) : shops;
+  let f=baseList.filter(s=> (s.n || s.name).toLowerCase().includes(val));
+  render(f, true);
+} 
+
+/* 🔥 COUNTRY SEARCH INTERFACE CONNECTION (General Code Fix) */
+// മുകളിലെ കൺട്രി സെർച്ചിൽ നിന്ന് യൂസർ ടൈപ്പ് ചെയ്യുന്നത് 'india', 'India', 'INDIA' എങ്ങനെയാണെങ്കിലും 
+// അത് ഈ ഫങ്ക്ഷനിലേക്ക് പാസ് ചെയ്താൽ സിസ്റ്റം തനിയെ കേസ് മാറ്റി 100% കൃത്യമായി ഫിൽട്ടർ ചെയ്യും.
+function countrySearchBridge(userCountryInput) {
+  let searchWord = userCountryInput.toLowerCase().trim();
+  
+  let filteredByCountry = shops.filter(s => {
+    // ജിസണിലെ കൺട്രി ഫീൽഡ് എങ്ങനെയാണെങ്കിലും ചെറിയ അക്ഷരമാക്കി മാറ്റി നോക്കുന്നു
+    let shopCountry = (s.country || s.c || "").toLowerCase().trim();
+    return shopCountry === searchWord;
+  });
+  
+  render(filteredByCountry, false);
+}
+</script>
+</body>
+</html>
+
 </script>
 
 </body>
