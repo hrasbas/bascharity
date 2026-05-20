@@ -607,10 +607,6 @@ stat.innerText = "INSTALLED";
 ball.className = "bas-ball is-pwa-installed";
 });
 </script>
-<!----------------- code No:---------------->
-<!----------------- code No:2 ---------------->
-<!-- 1. Country Selector Section -->
-
 <style>
 .country-box { max-width:900px; width:96%; margin:25px auto; padding:15px; background:#000; border:1px solid #ff9800; border-radius:15px; font-family:Arial,sans-serif; }
 .country-title { background:#333; color:#fff; font-weight:900; text-align:center; padding:10px; border-radius:10px; border:1px solid #ff9800; border-left:6px solid #ff9800; margin-bottom:10px; }
@@ -734,7 +730,14 @@ const container = document.getElementById("shopList");
 container.innerHTML = "";
 
 if (crisisCountries.includes(currentCountry)) {
-container.innerHTML = <div style="background:#222; border:2px solid #ff9800; border-radius:15px; padding:25px; text-align:center; color:#fff; margin-top:20px;"&gt; &lt;h3 style="color:#ff9800; text-transform:uppercase;"&gt;Unavailable due to world crisis&lt;/h3&gt; &lt;p style="font-size:18px; line-height:1.6; font-weight:bold; color:#ffeb3b;"&gt; Dear friend, due to current global crisis and restrictions, international shopping platforms have limited services in your region. However, we sincerely pray for the peace and prosperity of your land. May the Almighty remove all obstacles and bring better days soon. &lt;/p&gt; &lt;div style="font-size:30px; margin-top:15px;"&gt;🌍🕊️&lt;/div&gt; &lt;/div>;
+container.innerHTML = `
+<div style="background:#222; border:2px solid #ff9800; border-radius:15px; padding:25px; text-align:center; color:#fff; margin-top:20px;">
+<h3 style="color:#ff9800; text-transform:uppercase;">Unavailable due to world crisis</h3>
+<p style="font-size:18px; line-height:1.6; font-weight:bold; color:#ffeb3b;">
+Dear friend, due to current global crisis and restrictions, international shopping platforms have limited services in your region. However, we sincerely pray for the peace and prosperity of your land. May the Almighty remove all obstacles and bring better days soon.
+</p>
+<div style="font-size:30px; margin-top:15px;">🌍🕊️</div>
+</div>`;
 return;
 }
 
@@ -783,7 +786,6 @@ setCountry(saved);
 
 window.onload = () => { populateCountries(); loadShops(); };
 </script>
-<!-------------------- Compare--------------->
 <style>
 .compare-box{
 background:#000;
@@ -838,7 +840,6 @@ Compare Price on Trusted Sites
 </div>
 </div>
 </div>
-<!----------------------- Share----------------->
 <style>
 .share-container {
 max-width: 900px;
@@ -918,8 +919,6 @@ navigator.clipboard.writeText("https://bascharity.com");
 alert("Link Copied. Share with friends.");
 }
 </script>
-<!------------ impact---------->
-
 <style>
 .mainbox {
 max-width: 900px;
@@ -1109,7 +1108,6 @@ gallery.scrollLeft = 0;
 }
 setInterval(scrollGallery, 20);
 </script>
-<!------------------- info--------------------->
 <style>
 .info-box{
 /* ലാപ്ടോപ്പിൽ 900px വരെ വരാൻ max-width മാറ്റി */
@@ -1311,7 +1309,7 @@ color:#FFD700;
 font-size:14px;
 }
 
-/* ഡെപ്യൂട്ടി ചീഫ് എഞ്ചിനീയറുടെ നോട്ട് സ്റ്റൈൽ */
+/* ഡെപ്യൂട്ടി ചീഫ് എഞ്ചിനീയറുടെ നോっと സ്റ്റൈൽ */
 .officer-note {
 margin-top: 20px;
 padding: 15px;
@@ -1451,8 +1449,24 @@ if(entry.target.id==="section8" && opened8){ toggleBas8(); }
 if(document.getElementById("section7")) observer78.observe(document.getElementById("section7"));
 if(document.getElementById("section8")) observer78.observe(document.getElementById("section8"));
 </script>
-<!-------------------- trusted Institutes------------>
 <style>
+.trust-container{
+max-width:900px; /* Responsive Fix */
+width:96%;
+margin:auto;
+}
+.trust-title{
+background:#000;
+color:#00e676;
+font-weight:900;
+font-size:28px;
+text-align:center;
+padding:20px;
+border-radius:12px;
+margin-bottom:25px;
+border:1px solid #333;
+border-left:6px solid #00e676;
+}
 .trust-container{
 max-width:900px; /* Responsive Fix */
 width:96%;
@@ -1717,20 +1731,6 @@ clearTimeout(timer10);
 timer10=setTimeout(peaceReset10,15000);
 }
 </script>
-
-
-Note
-FIX 1: section8 script-ൽ toggleMore7() function മുമ്പത്തെ part-ിലെ same function-ുമായി duplicate ആണോ check ചെയ്യണം
-FIX 2: Google Drive thumbnail image links later availability check
-FIX 3: trusted institution buttons/div-based onclick later accessibility review
-FIX 4: external links-ൽ target="_blank" ഉള്ളിടത്ത് rel="noopener noreferrer" ചേർക്കുന്നത് better
-FIX 5: personal/family details content final publish before privacy review ചെയ്യണം
-FIX 6: peaceDonate10 section HTML ഉണ്ട് പക്ഷേ direct donate button flow അതിലേക്ക് പോകുന്നില്ല — intentional ആണോ check ചെയ്യണം
-FIX 7: auto-reset timers (15 seconds) user experience later review
-
-
-
-
 
 <style>
 .vada-wrapper {
@@ -2111,6 +2111,5 @@ clearTimeout(basglobalTimer);
 basglobalTimer=setTimeout(basglobalClose,30000);
 }
 </script>
-<!-----------------------shope---------------->
 </body>
 </html>
