@@ -1,492 +1,493 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BAS Charity International</title> 
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BAS Charity International</title>
 
-    <link rel="manifest" href="manifest.json">
-    <link rel="icon" type="image/png" href="final_app_icon.png">
-    <link rel="apple-touch-icon" href="final_app_icon.png"> 
+<link rel="manifest" href="manifest.json">
+<link rel="icon" type="image/png" href="final_app_icon.png">
+<link rel="apple-touch-icon" href="final_app_icon.png">
 
-    <meta name="theme-color" content="#ff9800">
-    <meta name="apple-mobile-web-app-status-bar-style" content="default"> 
+<meta name="theme-color" content="#ff9800">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
 
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"> 
-    <style>
-        /* CODE NO:1 FIX */
-        h1 { color:#fff !important; }
-        .english-fix { color:#bbb !important; }
-        #dedication-text { color:#bbb !important; font-weight:300; line-height: 1.6; }
-        #gallery { display:flex; overflow-x:auto; scroll-behavior:smooth; gap:10px; }
-        #gallery::-webkit-scrollbar { display:none; }
-        .card { min-width:180px; flex-shrink:0; }
-        .card img { width:100%; height:auto; border-radius:10px; display:block; }
-        #gallery.zoom { transform:scale(1.05); transition:0.3s; }
-        
-        * { box-sizing:border-box; } 
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 
-        body {
-            margin:0;
-            background:#000;
-            font-family:Arial, sans-serif;
-            color:#fff;
-            overflow-x:hidden;
-            font-size:23px;
-        } 
+<style>
+/* CODE NO:1 FIX */
+h1 { color:#fff !important; }
+.english-fix { color:#bbb !important; }
+#dedication-text { color:#bbb !important; font-weight:300; line-height: 1.6; }
+#gallery { display:flex; overflow-x:auto; scroll-behavior:smooth; gap:10px; }
+#gallery::-webkit-scrollbar { display:none; }
+.card { min-width:180px; flex-shrink:0; }
+.card img { width:100%; height:auto; border-radius:10px; display:block; }
+#gallery.zoom { transform:scale(1.05); transition:0.3s; }
 
-        p, span, div { font-size:23px; } 
+* { box-sizing:border-box; }
 
-        .bas-dedication, .lang-box, .country-box, .shop-container, .compare-container, .share-container, .mainbox, .info-box, .bas7-wrapper, .trust-container, .peace-wrapper, .vada-wrapper, .vision-wrapper, #bas-mega-portal {
-            max-width:900px;
-            width:96%;
-            margin-left:auto;
-            margin-right:auto;
-        } 
+body {
+margin:0;
+background:#000;
+font-family:Arial, sans-serif;
+color:#fff;
+overflow-x:hidden;
+font-size:23px;
+}
 
-        .header-box { display:flex; flex-direction:column; align-items:center; background:#000; }
-        #logo-space { width:100%; height:340px; }
-        .brand-heading { text-align:center; margin-top:-35px; padding:10px 20px; }
-        .hunger-message { font-size:13px; letter-spacing:2px; color:#FFD700; font-weight:bold; text-transform:uppercase; margin-bottom:20px; }
-        .brand-heading h1 { font-size:clamp(32px,9vw,65px); letter-spacing:1px; text-transform:uppercase; margin:0; font-weight:1000; -webkit-text-stroke:1.5px white; line-height:1.1; } 
+p, span, div { font-size:23px; }
 
-        .top-bar { background:#111; padding:15px 8px; border-top:1px solid #333; border-bottom:1px solid #333; }
-        .lang-buttons { display:grid; grid-template-columns:repeat(4,1fr); gap:10px; max-width:600px; margin:auto; }
-        .lang-btn { padding:10px 2px; border:none; border-radius:20px; font-size:14px; font-weight:bold; cursor:pointer; color:#fff; }
-        .en { background:#007BFF; }
-        .hi { background:#FF9933; color:#000; }
-        .ml { background:#00C853; }
-        .ar { background:#2E7D32; }
-        .ta { background:#C62828; }
-        .ur { background:#6A1B9A; }
-        .es { background:#F4C430; color:#000; }
-        .pt { background:#1B5E20; }
-        .google-row { text-align:center; font-size:14px; margin-top:15px; color:#bbb; } 
+.bas-dedication, .lang-box, .country-box, .shop-container, .compare-container, .share-container, .mainbox, .info-box, .bas7-wrapper, .trust-container, .peace-wrapper, .vada-wrapper, .vision-wrapper, #bas-mega-portal {
+max-width:900px;
+width:96%;
+margin-left:auto;
+margin-right:auto;
+}
 
-        .bas-dedication { text-align:center; margin:10px auto 30px auto; padding:0 20px; }
-        .lang-box { margin: 25px auto; padding: 15px; background: #000; border: 1px solid #ff9800; border-radius: 15px; }
-        .lang-title { background: #b3ecff; color: #000; font-weight: 900; text-align: center; padding: 10px; border-radius: 10px; border: 1px solid #ff9800; border-left: 6px solid #ff9800; margin-bottom: 10px; text-transform: uppercase; }
-        .msg-container { width:96%; padding:20px 0; margin: auto; }
-        .question-box { margin:0 auto; width:96%; max-width:900px; background:#000; color:#00BFFF; padding:25px; border-radius:12px; border:1px solid #00BFFF; text-align:center; line-height:1.8; }
-        .english-text { font-size:18px; font-weight:500; display:block; }
-        .hunger-footer { text-align:center; color:#FFD700; font-weight:bold; font-size:14px; margin-top:15px; letter-spacing:1px; }
+.header-box { display:flex; flex-direction:column; align-items:center; background:#000; }
+#logo-space { width:100%; height:340px; }
+.brand-heading { text-align:center; margin-top:-35px; padding:10px 20px; }
+.hunger-message { font-size:13px; letter-spacing:2px; color:#FFD700; font-weight:bold; text-transform:uppercase; margin-bottom:20px; }
+.brand-heading h1 { font-size:clamp(32px,9vw,65px); letter-spacing:1px; text-transform:uppercase; margin:0; font-weight:1000; -webkit-text-stroke:1.5px white; line-height:1.1; }
 
-        #install-div {
-            display: none;
-            position: fixed;
-            bottom: 25px;
-            right: 25px;
-            z-index: 10000;
-        }
-        #install-btn {
-            background: #ff9800;
-            color: #fff;
-            border: none;
-            padding: 12px 24px;
-            border-radius: 50px;
-            font-size: 16px;
-            font-weight: bold;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.4);
-            cursor: pointer;
-        }
+.top-bar { background:#111; padding:15px 8px; border-top:1px solid #333; border-bottom:1px solid #333; }
+.lang-buttons { display:grid; grid-template-columns:repeat(4,1fr); gap:10px; max-width:600px; margin:auto; }
+.lang-btn { padding:10px 2px; border:none; border-radius:20px; font-size:14px; font-weight:bold; cursor:pointer; color:#fff; }
+.en { background:#007BFF; }
+.hi { background:#FF9933; color:#000; }
+.ml { background:#00C853; }
+.ar { background:#2E7D32; }
+.ta { background:#C62828; }
+.ur { background:#6A1B9A; }
+.es { background:#F4C430; color:#000; }
+.pt { background:#1B5E20; }
+.google-row { text-align:center; font-size:14px; margin-top:15px; color:#bbb; }
 
-        #basBalloonWrap {
-            position: fixed;
-            bottom: 0;
-            left: 0;
-            width: 280px;
-            height: 400px;
-            z-index: 2147483647;
-            pointer-events: none;
-            transform: translateY(120%);
-            transition: transform 2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-            display: block !important;
-        }
+.bas-dedication { text-align:center; margin:10px auto 30px auto; padding:0 20px; }
+.lang-box { margin: 25px auto; padding: 15px; background: #000; border: 1px solid #ff9800; border-radius: 15px; }
+.lang-title { background: #b3ecff; color: #000; font-weight: 900; text-align: center; padding: 10px; border-radius: 10px; border: 1px solid #ff9800; border-left: 6px solid #ff9800; margin-bottom: 10px; text-transform: uppercase; }
+.msg-container { width:96%; padding:20px 0; margin: auto; }
+.question-box { margin:0 auto; width:96%; max-width:900px; background:#000; color:#00BFFF; padding:25px; border-radius:12px; border:1px solid #00BFFF; text-align:center; line-height:1.8; }
+.english-text { font-size:18px; font-weight:500; display:block; }
+.hunger-footer { text-align:center; color:#FFD700; font-weight:bold; font-size:14px; margin-top:15px; letter-spacing:1px; }
 
-        .state-up { transform: translateY(0%) !important; }
-        .state-hide { transform: translateY(120%) !important; }
-        .state-rest { transform: translateY(70%) !important; }
+#install-div {
+display: none;
+position: fixed;
+bottom: 25px;
+right: 25px;
+z-index: 10000;
+}
+#install-btn {
+background: #ff9800;
+color: #fff;
+border: none;
+padding: 12px 24px;
+border-radius: 50px;
+font-size: 16px;
+font-weight: bold;
+box-shadow: 0 4px 15px rgba(0,0,0,0.4);
+cursor: pointer;
+}
 
-        .bas-ball {
-            position: absolute;
-            border-radius: 50% 50% 50% 50% / 40% 40% 60% 60%;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            cursor: pointer;
-            pointer-events: auto;
-            box-shadow: inset -8px -8px 20px rgba(0,0,0,0.4);
-        }
+#basBalloonWrap {
+position: fixed;
+bottom: 0;
+left: 0;
+width: 280px;
+height: 400px;
+z-index: 2147483647;
+pointer-events: none;
+transform: translateY(120%);
+transition: transform 2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+display: block !important;
+}
 
-        .bas-str {
-            position: absolute;
-            width: 1px;
-            background: rgba(255,255,255,0.4);
-            bottom: -1000px;
-            left: 50%;
-            height: 1000px;
-        }
+.state-up { transform: translateY(0%) !important; }
+.state-hide { transform: translateY(120%) !important; }
+.state-rest { transform: translateY(70%) !important; }
 
-        .bas-nipple {
-            position: absolute;
-            bottom: -10px;
-            width: 18px;
-            height: 10px;
-            background: inherit;
-            clip-path: polygon(20% 0, 80% 0, 100% 100%, 0 100%);
-        }
+.bas-ball {
+position: absolute;
+border-radius: 50% 50% 50% 50% / 40% 40% 60% 60%;
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+cursor: pointer;
+pointer-events: auto;
+box-shadow: inset -8px -8px 20px rgba(0,0,0,0.4);
+}
 
-        .white-b {
-            width: 120px; height: 160px;
-            background: #ffffff;
-            bottom: 220px; left: 60px;
-            animation: floatW 25s ease-in-out infinite;
-            transition: background 0.4s ease;
-        }
+.bas-str {
+position: absolute;
+width: 1px;
+background: rgba(255,255,255,0.4);
+bottom: -1000px;
+left: 50%;
+height: 1000px;
+}
 
-        .blue-b {
-            width: 105px; height: 135px;
-            background: #007bff;
-            bottom: 70px; left: 30px;
-            animation: floatB 20s ease-in-out infinite;
-        }
+.bas-nipple {
+position: absolute;
+bottom: -10px;
+width: 18px;
+height: 10px;
+background: inherit;
+clip-path: polygon(20% 0, 80% 0, 100% 100%, 0 100%);
+}
 
-        .bas-sticker { width: 75px; height: 75px; border-radius: 20px; margin-bottom: 5px; border: 1px solid #ddd; }
-        .bas-lbl { font-family: sans-serif; font-size: 11px; font-weight: 900; text-align: center; line-height: 1.2; }
+.white-b {
+width: 120px; height: 160px;
+background: #ffffff;
+bottom: 220px; left: 60px;
+animation: floatW 25s ease-in-out infinite;
+transition: background 0.4s ease;
+}
 
-        .install-ready {
-            color: #cddc39 !important;
-            text-shadow: 0 0 6px rgba(205,220,57,0.35);
-        }
+.blue-b {
+width: 105px; height: 135px;
+background: #007bff;
+bottom: 70px; left: 30px;
+animation: floatB 20s ease-in-out infinite;
+}
 
-        .installed-state {
-            background: #cddc39 !important;
-        }
+.bas-sticker { width: 75px; height: 75px; border-radius: 20px; margin-bottom: 5px; border: 1px solid #ddd; }
+.bas-lbl { font-family: sans-serif; font-size: 11px; font-weight: 900; text-align: center; line-height: 1.2; }
 
-        .installed-state .bas-nipple {
-            background: #cddc39 !important;
-        }
+.install-ready {
+color: #cddc39 !important;
+text-shadow: 0 0 6px rgba(205,220,57,0.35);
+}
 
-        .installed-state #statTxt {
-            color: #1f2b00 !important;
-            text-shadow: none !important;
-        }
+.installed-state {
+background: #cddc39 !important;
+}
 
-        @keyframes floatW {
-            0%, 100% { transform: translate(0, 0) rotate(-3deg); }
-            50% { transform: translate(35px, 45px) rotate(5deg); }
-        }
+.installed-state .bas-nipple {
+background: #cddc39 !important;
+}
 
-        @keyframes floatB {
-            0%, 100% { transform: translate(0, 0) rotate(4deg); }
-            50% { transform: translate(25px, -25px) rotate(-4deg); }
-        }
-    </style>
-</head> 
+.installed-state #statTxt {
+color: #1f2b00 !important;
+text-shadow: none !important;
+}
 
-<body> 
+@keyframes floatW {
+0%, 100% { transform: translate(0, 0) rotate(-3deg); }
+50% { transform: translate(35px, 45px) rotate(5deg); }
+}
 
-    <div class="header-box">
-        <div id="logo-space"></div>
-        <div class="brand-heading">
-            <div class="hunger-message">YOUR PURCHASE SATISFIES A HUNGER</div>
-            <h1 class="notranslate" translate="no">BAS CHARITY INTERNATIONAL</h1>
-        </div>
-    </div> 
+@keyframes floatB {
+0%, 100% { transform: translate(0, 0) rotate(4deg); }
+50% { transform: translate(25px, -25px) rotate(-4deg); }
+}
+</style>
+</head>
 
-    <div class="bas-dedication">
-        <div id="dedication-text" class="english-fix">
-            Dedicated to the sacred memory and well-being of our<br>
-            parents and ancestors from all over the world.
-        </div>
-    </div> 
+<body>
 
-    <div class="top-bar">
-        <div class="lang-box">
-            <div class="lang-title">SELECT LANGUAGE</div>
-        </div>
-        <div class="lang-buttons">
-            <button class="lang-btn en" onclick="resetToEnglish()">English</button>
-            <button class="lang-btn hi" onclick="changeLang('hi')">Hindi Language</button>
-            <button class="lang-btn ml" onclick="changeLang('ml')">Malayalam</button>
-            <button class="lang-btn ar" onclick="changeLang('ar')">Arabic</button>
-            <button class="lang-btn ta" onclick="changeLang('ta')">Tamil</button>
-            <button class="lang-btn ur" onclick="changeLang('ur')">Urdu</button>
-            <button class="lang-btn es" onclick="changeLang('es')">Spanish</button>
-            <button class="lang-btn pt" onclick="changeLang('pt')">Portuguese</button>
-        </div>
-        <div class="google-row">
-            🌐 All Languages : <span id="google_translate_element"></span>
-        </div>
-    </div> 
+<div class="header-box">
+<div id="logo-space"></div>
+<div class="brand-heading">
+<div class="hunger-message">YOUR PURCHASE SATISFIES A HUNGER</div>
+<h1 class="notranslate" translate="no">BAS CHARITY INTERNATIONAL</h1>
+</div>
+</div>
 
-    <div class="msg-container">
-        <div class="question-box">
-            <span class="english-text">
-                "What if someone's hunger in some corner of the world is satisfied by purchasing through the BAS Charity International links below, without spending a single extra penny, at the same price, and with the same offers...?"
-            </span>
-        </div>
-        <div class="hunger-footer notranslate" translate="no">YOUR PURCHASE SATISFIES A HUNGER</div>
-    </div> 
+<div class="bas-dedication">
+<div id="dedication-text" class="english-fix">
+Dedicated to the sacred memory and well-being of our<br>
+parents and ancestors from all over the world.
+</div>
+</div>
 
-    <div id="install-div">
-        <button id="install-btn" type="button">Install App</button>
-    </div> 
+<div class="top-bar">
+<div class="lang-box">
+<div class="lang-title">SELECT LANGUAGE</div>
+</div>
+<div class="lang-buttons">
+<button class="lang-btn en" onclick="resetToEnglish()">English</button>
+<button class="lang-btn hi" onclick="changeLang('hi')">Hindi Language</button>
+<button class="lang-btn ml" onclick="changeLang('ml')">Malayalam</button>
+<button class="lang-btn ar" onclick="changeLang('ar')">Arabic</button>
+<button class="lang-btn ta" onclick="changeLang('ta')">Tamil</button>
+<button class="lang-btn ur" onclick="changeLang('ur')">Urdu</button>
+<button class="lang-btn es" onclick="changeLang('es')">Spanish</button>
+<button class="lang-btn pt" onclick="changeLang('pt')">Portuguese</button>
+</div>
+<div class="google-row">
+🌐 All Languages : <span id="google_translate_element"></span>
+</div>
+</div>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script> 
+<div class="msg-container">
+<div class="question-box">
+<span class="english-text">
+"What if someone's hunger in some corner of the world is satisfied by purchasing through the BAS Charity International links below, without spending a single extra penny, at the same price, and with the same offers...?"
+</span>
+</div>
+<div class="hunger-footer notranslate" translate="no">YOUR PURCHASE SATISFIES A HUNGER</div>
+</div>
 
-    <script>
-        let deferredPrompt;
-        const installDiv = document.getElementById('install-div');
-        const installBtn = document.getElementById('install-btn');
+<div id="install-div">
+<button id="install-btn" type="button">Install App</button>
+</div>
 
-        window.addEventListener('beforeinstallprompt', (e) => {
-            e.preventDefault();
-            deferredPrompt = e;
-            if (installDiv) installDiv.style.display = 'block';
-        });
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
 
-        if (installBtn) {
-            installBtn.addEventListener('click', async () => {
-                try {
-                    if (!deferredPrompt) return;
-                    if (installDiv) installDiv.style.display = 'none';
-                    const result = await deferredPrompt.prompt();
-                    if (result && result.outcome === 'accepted') {
-                        console.log('App Installed');
-                    }
-                    deferredPrompt = null;
-                } catch (err) {
-                    deferredPrompt = null;
-                    console.error('Install prompt error:', err);
-                }
-            });
-        }
+<script>
+let deferredPrompt;
+const installDiv = document.getElementById('install-div');
+const installBtn = document.getElementById('install-btn');
 
-        window.addEventListener('appinstalled', () => {
-            deferredPrompt = null;
-            if (installDiv) installDiv.style.display = 'none';
-        });
+window.addEventListener('beforeinstallprompt', (e) => {
+e.preventDefault();
+deferredPrompt = e;
+if (installDiv) installDiv.style.display = 'block';
+});
 
-        if ('serviceWorker' in navigator) {
-            window.addEventListener('load', () => {
-                navigator.serviceWorker.register('sw.js').catch((err) => {
-                    console.error('SW registration failed:', err);
-                });
-            });
-        }
+if (installBtn) {
+installBtn.addEventListener('click', async () => {
+try {
+if (!deferredPrompt) return;
+if (installDiv) installDiv.style.display = 'none';
+const result = await deferredPrompt.prompt();
+if (result && result.outcome === 'accepted') {
+console.log('App Installed');
+}
+deferredPrompt = null;
+} catch (err) {
+deferredPrompt = null;
+console.error('Install prompt error:', err);
+}
+});
+}
 
-        let scene, camera, renderer, ambient, loader, earthGroup, earth, moon, angle = 0, running = true, logoSpace, animateRef = null;
+window.addEventListener('appinstalled', () => {
+deferredPrompt = null;
+if (installDiv) installDiv.style.display = 'none';
+});
 
-        try {
-            if (window.THREE) {
-                logoSpace = document.getElementById('logo-space');
+if ('serviceWorker' in navigator) {
+window.addEventListener('load', () => {
+navigator.serviceWorker.register('sw.js').catch((err) => {
+console.error('SW registration failed:', err);
+});
+});
+}
 
-                scene = new THREE.Scene();
-                camera = new THREE.PerspectiveCamera(50, window.innerWidth / 340, 0.1, 1000);
-                renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true, powerPreference: "high-performance" });
-                renderer.setSize(window.innerWidth, 340);
-                renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+let scene, camera, renderer, ambient, loader, earthGroup, earth, moon, angle = 0, running = true, logoSpace, animateRef = null;
 
-                if (logoSpace) {
-                    logoSpace.appendChild(renderer.domElement);
-                }
+try {
+if (window.THREE) {
+logoSpace = document.getElementById('logo-space');
 
-                ambient = new THREE.AmbientLight(0xffffff, 1.2);
-                scene.add(ambient);
+scene = new THREE.Scene();
+camera = new THREE.PerspectiveCamera(50, window.innerWidth / 340, 0.1, 1000);
+renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true, powerPreference: "high-performance" });
+renderer.setSize(window.innerWidth, 340);
+renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
 
-                loader = new THREE.TextureLoader();
-                earthGroup = new THREE.Group();
+if (logoSpace) {
+logoSpace.appendChild(renderer.domElement);
+}
 
-                earth = new THREE.Mesh(
-                    new THREE.SphereGeometry(2, 32, 32),
-                    new THREE.MeshStandardMaterial({
-                        map: loader.load(
-                            'https://raw.githubusercontent.com/mrdoob/three.js/master/examples/textures/planets/earth_atmos_2048.jpg',
-                            undefined,
-                            undefined,
-                            function () { console.error('Earth texture failed to load'); }
-                        ),
-                        metalness: 0.2,
-                        roughness: 0.8
-                    })
-                );
-                earthGroup.add(earth);
+ambient = new THREE.AmbientLight(0xffffff, 1.2);
+scene.add(ambient);
 
-                let canvas = document.createElement('canvas');
-                let ctx = canvas.getContext('2d');
-                if (ctx) {
-                    canvas.width = 1024;
-                    canvas.height = 256;
-                    ctx.fillStyle = "#FFFFFF";
-                    ctx.font = "Bold 140px Arial";
-                    ctx.textAlign = "center";
-                    ctx.fillText("BAS", 256, 160);
-                    ctx.fillText("BAS", 768, 160);
+loader = new THREE.TextureLoader();
+earthGroup = new THREE.Group();
 
-                    let textTexture = new THREE.CanvasTexture(canvas);
-                    let textMesh = new THREE.Mesh(
-                        new THREE.CylinderGeometry(2.05, 2.05, 0.8, 64, 1, true),
-                        new THREE.MeshBasicMaterial({ map: textTexture, transparent: true, side: THREE.DoubleSide })
-                    );
-                    earthGroup.add(textMesh);
-                }
+earth = new THREE.Mesh(
+new THREE.SphereGeometry(2, 32, 32),
+new THREE.MeshStandardMaterial({
+map: loader.load(
+'https://raw.githubusercontent.com/mrdoob/three.js/master/examples/textures/planets/earth_atmos_2048.jpg',
+undefined,
+undefined,
+function () { console.error('Earth texture failed to load'); }
+),
+metalness: 0.2,
+roughness: 0.8
+})
+);
+earthGroup.add(earth);
 
-                scene.add(earthGroup);
+let canvas = document.createElement('canvas');
+let ctx = canvas.getContext('2d');
+if (ctx) {
+canvas.width = 1024;
+canvas.height = 256;
+ctx.fillStyle = "#FFFFFF";
+ctx.font = "Bold 140px Arial";
+ctx.textAlign = "center";
+ctx.fillText("BAS", 256, 160);
+ctx.fillText("BAS", 768, 160);
 
-                moon = new THREE.Mesh(
-                    new THREE.SphereGeometry(0.35, 16, 16),
-                    new THREE.MeshStandardMaterial({ color: 0xcccccc })
-                );
-                scene.add(moon);
+let textTexture = new THREE.CanvasTexture(canvas);
+let textMesh = new THREE.Mesh(
+new THREE.CylinderGeometry(2.05, 2.05, 0.8, 64, 1, true),
+new THREE.MeshBasicMaterial({ map: textTexture, transparent: true, side: THREE.DoubleSide })
+);
+earthGroup.add(textMesh);
+}
 
-                camera.position.z = 8;
+scene.add(earthGroup);
 
-                function resizeRenderer() {
-                    try {
-                        const box = document.getElementById("logo-space");
-                        if (!box || !renderer || !camera) return;
-                        const width = box.clientWidth || window.innerWidth;
-                        renderer.setSize(width, 340);
-                        camera.aspect = width / 340;
-                        camera.updateProjectionMatrix();
-                    } catch (e) {
-                        console.error('Resize error:', e);
-                    }
-                }
+moon = new THREE.Mesh(
+new THREE.SphereGeometry(0.35, 16, 16),
+new THREE.MeshStandardMaterial({ color: 0xcccccc })
+);
+scene.add(moon);
 
-                window.addEventListener("resize", resizeRenderer);
+camera.position.z = 8;
 
-                function animate() {
-                    if (!running || !renderer || !scene || !camera || !earthGroup || !moon) return;
-                    animateRef = requestAnimationFrame(animate);
-                    earthGroup.rotation.y += 0.003;
-                    angle -= 0.01;
-                    moon.position.x = Math.cos(angle) * 4.5;
-                    moon.position.z = Math.sin(angle) * 2.8;
-                    renderer.render(scene, camera);
-                }
-                animate();
+function resizeRenderer() {
+try {
+const box = document.getElementById("logo-space");
+if (!box || !renderer || !camera) return;
+const width = box.clientWidth || window.innerWidth;
+renderer.setSize(width, 340);
+camera.aspect = width / 340;
+camera.updateProjectionMatrix();
+} catch (e) {
+console.error('Resize error:', e);
+}
+}
 
-                if ('IntersectionObserver' in window && logoSpace) {
-                    let observer = new IntersectionObserver(entries => {
-                        entries.forEach(entry => {
-                            if (entry.isIntersecting) {
-                                const wasStopped = !running;
-                                running = true;
-                                if (wasStopped) animate();
-                            } else {
-                                running = false;
-                            }
-                        });
-                    });
-                    observer.observe(logoSpace);
-                }
+window.addEventListener("resize", resizeRenderer);
 
-                if (renderer && renderer.domElement) {
-                    renderer.domElement.addEventListener('webglcontextlost', function (event) {
-                        event.preventDefault();
-                        running = false;
-                        console.error('WebGL context lost');
-                    }, false);
+function animate() {
+if (!running || !renderer || !scene || !camera || !earthGroup || !moon) return;
+animateRef = requestAnimationFrame(animate);
+earthGroup.rotation.y += 0.003;
+angle -= 0.01;
+moon.position.x = Math.cos(angle) * 4.5;
+moon.position.z = Math.sin(angle) * 2.8;
+renderer.render(scene, camera);
+}
+animate();
 
-                    renderer.domElement.addEventListener('webglcontextrestored', function () {
-                        running = true;
-                        animate();
-                    }, false);
-                }
-            }
-        } catch (e) {
-            console.error('Three.js init error:', e);
-        }
+if ('IntersectionObserver' in window && logoSpace) {
+let observer = new IntersectionObserver(entries => {
+entries.forEach(entry => {
+if (entry.isIntersecting) {
+const wasStopped = !running;
+running = true;
+if (wasStopped) animate();
+} else {
+running = false;
+}
+});
+});
+observer.observe(logoSpace);
+}
 
-        function googleTranslateElementInit() {
-            try {
-                if (window.google && google.translate && google.translate.TranslateElement) {
-                    new google.translate.TranslateElement({ pageLanguage: 'en', autoDisplay: false }, 'google_translate_element');
-                }
-            } catch (e) {
-                console.error('Google Translate init error:', e);
-            }
-        }
+if (renderer && renderer.domElement) {
+renderer.domElement.addEventListener('webglcontextlost', function (event) {
+event.preventDefault();
+running = false;
+console.error('WebGL context lost');
+}, false);
 
-        function changeLang(langCode) {
-            try {
-                let select = document.querySelector('select.goog-te-combo');
-                if (select) {
-                    select.value = langCode;
-                    select.dispatchEvent(new Event('change'));
-                }
-            } catch (e) {
-                console.error('Language change error:', e);
-            }
-        }
+renderer.domElement.addEventListener('webglcontextrestored', function () {
+running = true;
+animate();
+}, false);
+}
+}
+} catch (e) {
+console.error('Three.js init error:', e);
+}
 
-        function resetToEnglish() {
-            try {
-                let select = document.querySelector('select.goog-te-combo');
-                if (select) {
-                    select.value = 'en';
-                    select.dispatchEvent(new Event('change'));
-                }
-            } catch (e) {
-                console.error('Reset language error:', e);
-            }
-        }
+function googleTranslateElementInit() {
+try {
+if (window.google && google.translate && google.translate.TranslateElement) {
+new google.translate.TranslateElement({ pageLanguage: 'en', autoDisplay: false }, 'google_translate_element');
+}
+} catch (e) {
+console.error('Google Translate init error:', e);
+}
+}
 
-        let translateBannerInterval = setInterval(function () {
-            try {
-                const frame = document.querySelector('.goog-te-banner-frame');
-                if (frame) {
-                    frame.style.display = 'none';
-                }
-            } catch (e) {}
-        }, 500);
+function changeLang(langCode) {
+try {
+let select = document.querySelector('select.goog-te-combo');
+if (select) {
+select.value = langCode;
+select.dispatchEvent(new Event('change'));
+}
+} catch (e) {
+console.error('Language change error:', e);
+}
+}
 
-        document.addEventListener('visibilitychange', function () {
-            if (document.hidden) {
-                running = false;
-            } else {
-                if (renderer && scene && camera && earthGroup && moon) {
-                    const wasStopped = !running;
-                    running = true;
-                    if (wasStopped) animate();
-                }
-            }
-        });
+function resetToEnglish() {
+try {
+let select = document.querySelector('select.goog-te-combo');
+if (select) {
+select.value = 'en';
+select.dispatchEvent(new Event('change'));
+}
+} catch (e) {
+console.error('Reset language error:', e);
+}
+}
 
-        window.addEventListener('beforeunload', function () {
-            try {
-                clearInterval(translateBannerInterval);
-                if (renderer) renderer.dispose();
-                if (animateRef) cancelAnimationFrame(animateRef);
-            } catch (e) {}
-        });
-    </script>
-    <script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
-          
+let translateBannerInterval = setInterval(function () {
+try {
+const frame = document.querySelector('.goog-te-banner-frame');
+if (frame) {
+frame.style.display = 'none';
+}
+} catch (e) {}
+}, 500);
+
+document.addEventListener('visibilitychange', function () {
+if (document.hidden) {
+running = false;
+} else {
+if (renderer && scene && camera && earthGroup && moon) {
+const wasStopped = !running;
+running = true;
+if (wasStopped) animate();
+}
+}
+});
+
+window.addEventListener('beforeunload', function () {
+try {
+clearInterval(translateBannerInterval);
+if (renderer) renderer.dispose();
+if (animateRef) cancelAnimationFrame(animateRef);
+} catch (e) {}
+});
+</script>
+<script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
 <div id="basBalloonWrap" class="notranslate">
-  
-  <div id="installBall" class="bas-ball white-b" onclick="handleInstallTap()">
-    <img src="icon-512.png" class="bas-sticker">
-    <div id="statTxt" class="bas-lbl">INSTALL</div>
-    <div class="bas-nipple"></div>
-    <div class="bas-str"></div>
-  </div> 
 
-  <div class="bas-ball blue-b" onclick="goWhatsApp()">
-    <div class="bas-lbl" style="color:#fff;">SAVE TO<br>WHATSAPP</div>
-    <div class="bas-nipple"></div>
-    <div class="bas-str"></div>
-  </div>
+<div id="installBall" class="bas-ball white-b" onclick="handleInstallTap()">
+<img src="icon-512.png" class="bas-sticker">
+<div id="statTxt" class="bas-lbl">INSTALL</div>
+<div class="bas-nipple"></div>
+<div class="bas-str"></div>
+</div>
 
-</div> 
+<div class="bas-ball blue-b" onclick="goWhatsApp()">
+<div class="bas-lbl" style="color:#fff;">SAVE TO<br>WHATSAPP</div>
+<div class="bas-nipple"></div>
+<div class="bas-str"></div>
+</div>
+
+</div>
 
 <style>
 body {
-    padding-bottom: 160px !important;
+padding-bottom: 160px !important;
 }
 
 #basBalloonWrap {
@@ -498,23 +499,23 @@ pointer-events: none;
 transform: translateY(120%);
 transition: transform 10s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 display: block !important;
-} 
+}
 
 .state-up { transform: translateY(0%) !important; }
 .state-hide { transform: translateY(120%) !important; }
-.state-rest { transform: translateY(70%) !important; } 
+.state-rest { transform: translateY(70%) !important; }
 
 /* ബലൂണിന്റെ ആകൃതി കൃത്യമാക്കാനുള്ള സ്റ്റൈൽ */
 .bas-ball {
 position: absolute;
-border-radius: 50% 50% 50% 50% / 40% 40% 60% 60%; 
+border-radius: 50% 50% 50% 50% / 40% 40% 60% 60%;
 display: flex; flex-direction: column; align-items: center; justify-content: center;
 cursor: pointer; pointer-events: auto;
 box-shadow: inset -8px -8px 20px rgba(0,0,0,0.4);
-} 
+}
 
-.bas-str { position: absolute; width: 1px; background: rgba(255,255,255,0.4); bottom: -1000px; left: 50%; height: 1000px; } 
-.bas-nipple { position: absolute; bottom: -10px; width: 18px; height: 10px; background: inherit; clip-path: polygon(20% 0, 80% 0, 100% 100%, 0 100%); } 
+.bas-str { position: absolute; width: 1px; background: rgba(255,255,255,0.4); bottom: -1000px; left: 50%; height: 1000px; }
+.bas-nipple { position: absolute; bottom: -10px; width: 18px; height: 10px; background: inherit; clip-path: polygon(20% 0, 80% 0, 100% 100%, 0 100%); }
 
 /* 1. ഇൻസ്റ്റാൾ ബട്ടൺ ഉള്ളപ്പോൾ: വെള്ള ബലൂൺ + പച്ചകലർന്ന മഞ്ഞ എഴുത്ത് */
 .white-b {
@@ -540,89 +541,75 @@ color: #000000 !important;
 text-shadow: none !important;
 }
 
-.blue-b { width: 105px; height: 135px; background: #007bff; bottom: 70px; left: 30px; animation: floatB 20s ease-in-out infinite; } 
+.blue-b { width: 105px; height: 135px; background: #007bff; bottom: 70px; left: 30px; animation: floatB 20s ease-in-out infinite; }
 .bas-sticker { width: 75px; height: 75px; border-radius: 20px; margin-bottom: 5px; border: 1px solid #ddd; }
-.bas-lbl { font-family: sans-serif; font-size: 15px; font-weight: 900; text-align: center; line-height: 1.2; } 
+.bas-lbl { font-family: sans-serif; font-size: 15px; font-weight: 900; text-align: center; line-height: 1.2; }
 
-@keyframes floatW { 0%, 100% { transform: translate(0, 0) rotate(-3deg); } 50% { transform: translate(35px, 45px) rotate(5deg); } } 
+@keyframes floatW { 0%, 100% { transform: translate(0, 0) rotate(-3deg); } 50% { transform: translate(35px, 45px) rotate(5deg); } }
 @keyframes floatB { 0%, 100% { transform: translate(0, 0) rotate(4deg); } 50% { transform: translate(25px, -25px) rotate(-4deg); } }
-</style> 
+</style>
 
 <script>
 let basPrompt;
 const wrap = document.getElementById('basBalloonWrap');
-const stat = document.getElementById('statTxt'); 
+const stat = document.getElementById('statTxt');
 const ball = document.getElementById('installBall');
 
 // 1. സൈറ്റിൽ ഇൻസ്റ്റാൾ ബട്ടൺ ഉണ്ടെങ്കിൽ (വെള്ള ബലൂൺ കാണിക്കുന്നു)
 window.addEventListener('beforeinstallprompt', (e) => {
-    e.preventDefault(); 
-    basPrompt = e;
-    stat.innerText = "INSTALL"; 
-    ball.className = "bas-ball white-b";
+e.preventDefault();
+basPrompt = e;
+stat.innerText = "INSTALL";
+ball.className = "bas-ball white-b";
 });
 
 // 2. ഇൻസ്റ്റാൾ ബട്ടൺ ഇല്ലെങ്കിൽ (പച്ചകലർന്ന മഞ്ഞ ബലൂൺ കാണിക്കുന്നു)
 window.addEventListener('DOMContentLoaded', () => {
-    setTimeout(() => { 
-        if (!basPrompt) { 
-            stat.innerText = "INSTALLED"; 
-            ball.className = "bas-ball is-pwa-installed"; 
-        } 
-    }, 3000); // ബ്രൗസറിന് ലോഡ് ആകാൻ നൽകുന്ന സമയം
+setTimeout(() => {
+if (!basPrompt) {
+stat.innerText = "INSTALLED";
+ball.className = "bas-ball is-pwa-installed";
+}
+}, 3000); // ബ്രൗസറിന് ലോഡ് ആകാൻ നൽകുന്ന സമയം
 });
 
 function initBalloons() {
 setTimeout(() => {
-wrap.classList.add('state-up'); 
-setTimeout(() => { wrap.classList.replace('state-up', 'state-hide'); 
+wrap.classList.add('state-up');
+setTimeout(() => { wrap.classList.replace('state-up', 'state-hide');
 setTimeout(() => { wrap.classList.replace('state-hide', 'state-rest'); }, 30000); }, 15000); }, 5000);
-} 
+}
 
 const wake = () => { wrap.classList.remove('state-hide', 'state-rest'); wrap.classList.add('state-up'); };
-wrap.addEventListener('click', wake); wrap.addEventListener('touchstart', wake); 
-window.addEventListener('load', initBalloons); 
+wrap.addEventListener('click', wake); wrap.addEventListener('touchstart', wake);
+window.addEventListener('load', initBalloons);
 
 function goWhatsApp(){
 let url = "https://bascharity-56f.pages.dev";
 let text = "Save a beautiful icon to your screen\n\n" + url + "\n\nChrome → ⋮ 3 dot → Save to Screen → Install";
 window.open("https://wa.me/?text=" + encodeURIComponent(text), "_blank");
-} 
+}
 
 function handleInstallTap() {
 if (!basPrompt) return; // ഇൻസ്റ്റാൾഡ് ആണെങ്കിൽ ക്ലിക്ക് പ്രവർത്തിക്കില്ല
 basPrompt.prompt();
 basPrompt.userChoice.then((c) => {
-if (c.outcome === 'accepted') { 
-    stat.innerText = "INSTALLED"; 
-    ball.className = "bas-ball is-pwa-installed"; 
+if (c.outcome === 'accepted') {
+stat.innerText = "INSTALLED";
+ball.className = "bas-ball is-pwa-installed";
 }
 basPrompt = null;
 });
-} 
+}
 
-window.addEventListener('appinstalled', () => { 
-    stat.innerText = "INSTALLED"; 
-    ball.className = "bas-ball is-pwa-installed"; 
+window.addEventListener('appinstalled', () => {
+stat.innerText = "INSTALLED";
+ball.className = "bas-ball is-pwa-installed";
 });
 </script>
 <!----------------- code No:---------------->
 <!----------------- code No:2 ---------------->
 <!-- 1. Country Selector Section -->
- 
-       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
-
-<style>
-body {
-background-color: #000;
-color: #fff;
-margin: 0;
-padding: 10px;
-font-family: Arial, sans-serif;
-}
-</style>
-</head>
-<body>
 
 <style>
 .country-box { max-width:900px; width:96%; margin:25px auto; padding:15px; background:#000; border:1px solid #ff9800; border-radius:15px; font-family:Arial,sans-serif; }
@@ -796,8 +783,11 @@ setCountry(saved);
 
 window.onload = () => { populateCountries(); loadShops(); };
 </script>
-          
-<!------------------- Compare--------------->
+
+</body>
+</html>
+
+<!-------------------- Compare--------------->
 <style>
 .compare-box{
 background:#000;
@@ -852,7 +842,7 @@ Compare Price on Trusted Sites
 </div>
 </div>
 </div>
-    <!----------------------- Share----------------->
+<!----------------------- Share----------------->
 <style>
 .share-container {
 max-width: 900px;
@@ -863,21 +853,21 @@ background: #000;
 border: 1px solid #00BFFF;
 border-radius: 12px;
 text-align: center;
-} 
+}
 
 .share-text {
 font-size: 22px;
 line-height: 1.7;
 color: #fff;
 margin-bottom: 20px;
-} 
+}
 
 .share-grid {
 display: grid;
 grid-template-columns: repeat(5, 1fr);
 gap: 10px;
 margin-top: 15px;
-} 
+}
 
 .share-grid a {
 display: flex;
@@ -889,12 +879,12 @@ background: #111;
 border-radius: 10px;
 border: 1px solid #333;
 text-decoration: none;
-} 
+}
 
 .share-grid a:hover {
 transform: scale(1.08);
 transition: 0.2s;
-} 
+}
 
 .share-sign {
 margin-top: 20px;
@@ -905,7 +895,7 @@ font-weight: bold;
 letter-spacing: 2px;
 font-size: 16px;
 }
-</style> 
+</style>
 
 <div class="share-container">
 <p class="share-text">
@@ -913,7 +903,7 @@ Even if you are not buying anything right now, you can still support this charit
 <br><br>Simply share this page with your friends and groups.
 <br><br>When someone purchases through these links, most of the income helps provide food for a hungry person somewhere in the world.
 <br><br>Through your share, you and your parents become part of this act of kindness.
-</p> 
+</p>
 
 <div class="share-grid">
 <a href="https://api.whatsapp.com/send?text=https://bascharity.com" target="_blank"><i class="fab fa-whatsapp" style="color:#25D366"></i></a>
@@ -921,10 +911,10 @@ Even if you are not buying anything right now, you can still support this charit
 <a href="https://telegram.me/share/url?url=https://bascharity.com" target="_blank"><i class="fab fa-telegram" style="color:#0088cc"></i></a>
 <a href="https://twitter.com/intent/tweet?url=https://bascharity.com" target="_blank"><svg width="20" height="20" viewBox="0 0 24 24" fill="#ffffff" style="vertical-align:middle;"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></a>
 <a href="javascript:void(0)" onclick="copyLink()"><i class="fas fa-link" style="color:#FFD700"></i></a>
-</div> 
+</div>
 
 <div class="share-sign">YOUR PURCHASE SATISFIES A HUNGER</div>
-</div> 
+</div>
 
 <script>
 function copyLink() {
@@ -945,19 +935,19 @@ border-radius: 15px;
 background: #050505;
 box-sizing: border-box;
 text-align: center;
-} 
+}
 
 .mainbox h1 {
 color: #ff4500;
 font-size: clamp(24px, 8vw, 36px);
 margin-top: 0;
-} 
+}
 
 .sub {
 color: #aaa;
 font-size: clamp(16px, 5vw, 22px);
 margin-bottom: 20px;
-} 
+}
 
 .impact {
 width: 100%;
@@ -967,19 +957,19 @@ padding: 20px;
 border: 2px solid #555;
 background: #111;
 box-sizing: border-box;
-} 
+}
 
 .amount {
 display: flex;
 justify-content: center;
 align-items: center;
 gap: 10px;
-} 
+}
 
 .rs {
 font-size: 36px;
 color: #00ff00;
-} 
+}
 
 .counter {
 font-size: 44px;
@@ -987,13 +977,13 @@ color: #00ff00;
 border: 2px solid #333;
 padding: 5px 12px;
 background: #000;
-} 
+}
 
 .till {
 color: #ff4500;
 font-size: 16px;
 margin-top: 8px;
-} 
+}
 
 .gallery {
 display: flex;
@@ -1005,7 +995,7 @@ width: 100%;
 position: relative;
 box-sizing: border-box;
 scroll-behavior: auto !important;
-} 
+}
 
 .card {
 min-width: 280px;
@@ -1021,27 +1011,27 @@ transition: transform 0.4s ease, z-index 0.4s;
 cursor: pointer;
 position: relative;
 flex-shrink: 0;
-} 
+}
 
 .card.zoom-active {
 transform: scale(2);
 z-index: 100;
 border-color: #00ff00;
 box-shadow: 0 0 20px rgba(0,255,0,0.5);
-} 
+}
 
 .card img {
 width: 100%;
 height: 100%;
 object-fit: contain;
-} 
+}
 
 .rotate { transform: rotate(-90deg); }
-</style> 
+</style>
 
 <div class="mainbox">
 <h1>IMPACT</h1>
-<div class="sub">Amount Distributed for Hunger Relief & Food Support</div> 
+<div class="sub">Amount Distributed for Hunger Relief & Food Support</div>
 
 <div class="impact">
 <div class="amount">
@@ -1050,21 +1040,21 @@ object-fit: contain;
 <div class="rs">/-</div>
 </div>
 <div class="till">TILL TODAY</div>
-</div> 
+</div>
 
-<div class="gallery" id="gallery"></div> 
+<div class="gallery" id="gallery"></div>
 
 <div style="margin-top:10px; font-size:16px; color:#bbb; line-height:1.6; text-align:center;">
 Updated weekly/monthly.<br>
 Affiliate income may take 2–3 months to reflect after purchase.<br>
 Your direct donations are not included in this impact.
 </div>
-</div> 
+</div>
 
 <script>
 let count = 0;
 let target = 27000;
-let counterElement = document.getElementById("counter"); 
+let counterElement = document.getElementById("counter");
 
 function runCounter() {
 if (count < target) {
@@ -1074,7 +1064,7 @@ counterElement.innerText = count.toString().padStart(7, "0");
 setTimeout(runCounter, 120);
 }
 }
-runCounter(); 
+runCounter();
 
 const photos = [
 "https://pub-168159db07cc407eaa28228eb2520ea5.r2.dev/1.jpg",
@@ -1085,7 +1075,7 @@ const photos = [
 "https://pub-168159db07cc407eaa28228eb2520ea5.r2.dev/p3.jpg",
 ];
 
-const gallery = document.getElementById("gallery"); 
+const gallery = document.getElementById("gallery");
 
 function loadImages() {
 photos.forEach((src, i) => {
@@ -1098,19 +1088,19 @@ setTimeout(() => {
 this.classList.remove("zoom-active");
 scrolling = true;
 }, 4000);
-}; 
+};
 
 let img = document.createElement("img");
 if (i < 2) { img.className = "rotate"; }
-img.src = src; 
+img.src = src;
 
 card.appendChild(img);
 gallery.appendChild(card);
 });
-} 
+}
 
 loadImages();
-loadImages(); 
+loadImages();
 
 let scrolling = true;
 function scrollGallery() {
@@ -1242,7 +1232,7 @@ max-width:900px; /* Responsive Fix */
 width:96%;
 margin:30px auto;
 font-family:Arial,sans-serif;
-} 
+}
 
 .bas7-box{
 background:#1a1a1a;
@@ -1251,46 +1241,46 @@ border:1px solid #333;
 border-left:6px solid #e91e63;
 overflow:hidden;
 color:#fff;
-} 
+}
 
 .bas7-header{
 padding:18px;
 text-align:center;
 background:#111;
 border-bottom:1px solid #333;
-} 
+}
 
 .title-main{
 margin:0;
 font-size:22px;
 font-weight:900;
 color:#FFD700;
-} 
+}
 
 .title-name{
 margin:8px 0 0;
 font-size:20px;
 font-weight:800;
-} 
+}
 
 .title-sub{
 margin:5px 0 0;
 font-size:16px;
-} 
+}
 
 .bas7-slider{
 width:100%;
 height:420px;
 overflow:hidden;
 background:#000;
-} 
+}
 
 .bas7-slider img{
 width:100%;
 height:100%;
 object-fit:cover;
 transition:opacity .8s;
-} 
+}
 
 .bas7-content{
 padding:18px;
@@ -1298,11 +1288,11 @@ font-size:20px;
 line-height:1.7;
 color:#ccc;
 text-align:justify;
-} 
+}
 
 .bas8-more{
 display:none;
-} 
+}
 
 .bas8-toggle{
 color:#39FF14;
@@ -1311,7 +1301,7 @@ font-weight:bold;
 font-size:18px;
 display:block;
 margin-top:15px;
-} 
+}
 
 .bas7-quote{
 margin:15px;
@@ -1344,7 +1334,7 @@ font-size: 18px;
 font-weight: bold;
 color: #FFD700;
 }
-</style> 
+</style>
 
 <div class="bas7-wrapper" id="section8">
 <div class="bas7-box">
@@ -1352,21 +1342,21 @@ color: #FFD700;
 <h2 class="title-main">VISIONARY FOUNDER</h2>
 <h2 class="title-name">Mohammed M. Basheer (BAS)</h2>
 <h3 class="title-sub">Retired Assistant Engineer, KSEB</h3>
-</div> 
+</div>
 
 <div class="bas7-slider">
 <img id="bas7Img" src="https://drive.google.com/thumbnail?id=1keyWL0GF-HysweqAYntVaS-vB_fwZj_H&sz=w1000">
-</div> 
+</div>
 
 <div class="bas7-content">
 <p>
 Mohammed M. Basheer brings over four decades of dedicated professional and social
 expertise to this mission.
-</p> 
+</p>
 
 <p>
 A Retired Assistant Engineer from KSEB, his career is marked by
-20 years of <span id="bas8Dots">...</span> 
+20 years of <span id="bas8Dots">...</span>
 
 <span class="bas8-more" id="bas8More">
 exemplary service in the power sector.
@@ -1381,7 +1371,7 @@ He is supported by his family, including his wife Rasheena K H
 (High School Teacher – English, Govt. Girl's High School,
 Perumbavoor) and children Alif Bayan (Oman), Amna Bayan (Qatar),
 Azeem Ahmed (Oman) and son-in-law Anees Ameer (Qatar Naval Force).
-</span> 
+</span>
 
 <span class="bas8-toggle" onclick="toggleBas8()" id="bas8Btn">More Details</span>
 </p>
@@ -1393,11 +1383,11 @@ Azeem Ahmed (Oman) and son-in-law Anees Ameer (Qatar Naval Force).
 </div>
 </div>
 
-</div> 
+</div>
 
 <div class="bas7-quote">"YOUR PURCHASE SATISFIES A HUNGER"</div>
 </div>
-</div> 
+</div>
 
 <script>
 /* SECTION 7 (Required for Observer) */
@@ -1414,7 +1404,7 @@ more.style.display="block";
 btn.innerText="";
 opened7=true;
 }
-} 
+}
 
 /* SECTION 8 */
 let opened8=false;
@@ -1433,7 +1423,7 @@ dots.style.display="none";
 btn.innerText="Less Details";
 opened8=true;
 }
-} 
+}
 
 /* IMAGE SLIDER */
 const bas7Images=[ 
@@ -1441,7 +1431,7 @@ const bas7Images=[
 "https://drive.google.com/thumbnail?id=1KdZnPqKlSOXAFY-Lu2FU41B1n7sWtt85&sz=w1000"
 ];
 let bas7Index=0;
-const bas7Img=document.getElementById("bas7Img"); 
+const bas7Img=document.getElementById("bas7Img");
 
 setInterval(function(){
 bas7Img.style.opacity=0;
@@ -1450,7 +1440,7 @@ bas7Index=(bas7Index+1)%bas7Images.length;
 bas7Img.src=bas7Images[bas7Index];
 bas7Img.style.opacity=1;
 },800);
-},5000); 
+},5000);
 
 /* AUTO RESET */
 const observer78=new IntersectionObserver(entries=>{
@@ -1460,7 +1450,7 @@ if(entry.target.id==="section7" && opened7){ toggleMore7(); }
 if(entry.target.id==="section8" && opened8){ toggleBas8(); }
 }
 });
-},{threshold:0}); 
+},{threshold:0});
 
 if(document.getElementById("section7")) observer78.observe(document.getElementById("section7"));
 if(document.getElementById("section8")) observer78.observe(document.getElementById("section8"));
@@ -1731,6 +1721,20 @@ clearTimeout(timer10);
 timer10=setTimeout(peaceReset10,15000);
 }
 </script>
+
+
+Note
+FIX 1: section8 script-ൽ toggleMore7() function മുമ്പത്തെ part-ിലെ same function-ുമായി duplicate ആണോ check ചെയ്യണം
+FIX 2: Google Drive thumbnail image links later availability check
+FIX 3: trusted institution buttons/div-based onclick later accessibility review
+FIX 4: external links-ൽ target="_blank" ഉള്ളിടത്ത് rel="noopener noreferrer" ചേർക്കുന്നത് better
+FIX 5: personal/family details content final publish before privacy review ചെയ്യണം
+FIX 6: peaceDonate10 section HTML ഉണ്ട് പക്ഷേ direct donate button flow അതിലേക്ക് പോകുന്നില്ല — intentional ആണോ check ചെയ്യണം
+FIX 7: auto-reset timers (15 seconds) user experience later review
+
+
+
+
 
 <style>
 .vada-wrapper {
@@ -2111,6 +2115,197 @@ clearTimeout(basglobalTimer);
 basglobalTimer=setTimeout(basglobalClose,30000);
 }
 </script>
-<!-----------------------shope---------------->
+
+<-----------------------shope---------------->
+
+<style>
+body{background:#000;color:#fff;font-family:sans-serif;margin:0;padding-bottom:50px}
+#bas{width:96%;max-width:900px;margin:auto;padding:10px}
+#findShop{
+width:100%;height:50px;border-radius:10px;
+border:1px solid #333;background:#111;color:#fff;
+padding:0 15px;margin-bottom:15px;box-sizing:border-box;
+font-size: 16px;
+}
+#resetBtn{
+display:block;background:#111;color:orange;
+padding:14px;border-radius:10px;text-align:center;
+margin-bottom:20px;cursor:pointer;font-weight:bold;
+border:1px solid orange;
+}
+.btn-grid{
+display:grid;grid-template-columns:repeat(3,1fr);
+gap:8px;margin-bottom:20px
+}
+.m-btn{
+background:#161616;color:#eee;
+border:1px solid #333;padding:12px 5px;
+border-radius:8px;cursor:pointer;
+font-weight:bold;font-size:13px;
+}
+.cat-head{
+padding:12px;border-radius:8px;
+margin:25px 0 12px;text-align:center;
+font-weight:bold;color:#fff;text-transform:uppercase;
+}
+.shop-card{
+display:flex;align-items:center;gap:12px;
+padding:14px;background:#111;border-radius:12px;
+margin-bottom:10px;text-decoration:none;color:#fff;
+border:1px solid currentColor;
+border-left:6px solid orange;
+transition:.2s;
+}
+.shop-card:hover{background:#1a1a1a;transform:translateX(5px)}
+.shop-card img{
+width:38px;height:38px;background:#fff;
+border-radius:6px;padding:4px;object-fit:contain;
+}
+.sl{color:orange;font-weight:bold;width:25px;font-size:14px}
+.info b{font-size:17px;display:block}
+.info small{color:#888;font-size:12px}
+
+/* Responsive adjustment for small screens */
+@media (max-width: 480px) {
+.btn-grid { grid-template-columns: repeat(2, 1fr); }
+.info b { font-size: 15px; }
+}
+</style>
+</head>
+
+<body>
+<div id="bas">
+
+<input id="findShop" placeholder="Search Shops..." onkeyup="search()">
+<div id="resetBtn" onclick="resetView()">← Back to All Shops</div>
+<div class="btn-grid" id="btns"></div>
+
+<div id="out"></div>
+
+</div>
+
+<script>
+
+/* ===== CONFIGURATION ===== */
+// ആർ2 ക്ലൗഡ് ഫയലുകളുടെ പബ്ലിക് ലിങ്കുകൾ ഇവിടെ നൽകാം
+const JSON_FILES = [
+"https://pub-168159db07cc407eaa28228eb2520ea5.r2.dev/j1.json",
+"https://pub-168159db07cc407eaa28228eb2520ea5.r2.dev/j2.json"
+];
+
+let fetchedShops = [];
+let activeCountry = "india";
+
+// നിങ്ങളുടെ ഒറിജിനൽ കോഡിൽ ഉണ്ടായിരുന്ന അതേ കാറ്റഗറി കളർ സെറ്റപ്പുകൾ
+let cats = [];
+const baseColors = ["#2196f3","#e91e63","#9c27b0","#ff5722","#4caf50","#00bcd4","#795548","#607d8b","#3f51b5","#8bc34a","#ffc107","#009688"];
+const colors = {};
+
+function normalizeCountry(c) {
+c = (c || "").toLowerCase().trim();
+if (c === "saudi arabia" || c === "saudi") return "saudi";
+if (c === "united states" || c === "usa") return "usa";
+if (c === "united arab emirates" || c === "uae") return "uae";
+if (c === "united kingdom" || c === "uk") return "uk";
+return c;
+}
+
+/* ===== CORE FUNCTIONS ===== */
+function render(data){
+let out=document.getElementById("out");
+out.innerHTML="";
+const isIndia = (activeCountry || "").toLowerCase()==="india" || activeCountry==="";
+
+cats.forEach(cat=>{
+let g=data.filter(s=>s.c===cat);
+if(!g.length) return;
+
+if(isIndia){
+out.innerHTML+=<div class="cat-head" style="background:${colors[cat]}">${cat}&lt;/div>;
+}
+
+g.forEach(s=>{
+out.innerHTML+=<a class="shop-card" href="${s.u}" target="_blank" style="border-left-color:${colors[cat]}"&gt; &lt;img src="https://www.google.com/s2/favicons?sz=64&domain=${s.d || 'google.com'}">
+<div class="info">
+<b class="notranslate" translate="no">${s.n}&lt;/b&gt; &lt;small&gt;${s.t}</small>
+</div>
+</a>`;
+});
+});
+}
+
+function search(){
+let v=document.getElementById("findShop").value.toLowerCase();
+let data=fetchedShops;
+
+if(activeCountry && activeCountry!=="All Countries"){
+data=data.filter(s =>
+(s.country && normalizeCountry(s.country)===normalizeCountry(activeCountry)) ||
+(s.country && s.country.toLowerCase()==="all")
+);
+}
+
+if(v){
+data=data.filter(s =>
+s.n.toLowerCase().includes(v) ||
+s.t.toLowerCase().includes(v)
+);
+}
+render(data);
+}
+
+function resetView(){
+document.getElementById("findShop").value="";
+search();
+}
+
+function filter(cat){
+let data=fetchedShops.filter(s=>s.c===cat);
+if(activeCountry && activeCountry!=="All Countries"){
+data=data.filter(s =>
+(s.country && normalizeCountry(s.country)===normalizeCountry(activeCountry)) ||
+(s.country && s.country.toLowerCase()==="all")
+);
+}
+render(data);
+}
+
+// നിങ്ങളുടെ പഴയ ബട്ടൺ കോഡ് (മാറ്റങ്ങളില്ലാതെ)
+function initBtns(){
+let b="";
+cats.forEach(c=>{
+b+=<button class="m-btn" onclick="filter('${c}')" style="border-bottom:2px solid  {c}</button>`;
+});
+document.getElementById("btns").innerHTML=b;
+}
+
+// ക്ലൗഡ്‌ഫ്ലെയർ ആർ2-വിൽ നിന്നും ഡാറ്റ വലിച്ച് കാറ്റഗറി ഓട്ടോമാറ്റിക് ആയി തിരിക്കുന്ന ഫങ്ഷൻ
+async function loadShopsFromR2() {
+try {
+await Promise.all(JSON_FILES.map(async (url) => {
+try {
+const response = await fetch(url);
+const data = await response.json();
+const shopsArray = Array.isArray(data) ? data : (data.shops || []);
+fetchedShops.push(...shopsArray);
+} catch (e) { console.error("Error loading file: " + url); }
+}));
+} catch (err) { console.error("Global load error", err); }
+
+// ആർ2 ഫയലിലുള്ള ഷോപ്പുകളിൽ നിന്ന് കാറ്റഗറി ലിസ്റ്റ് ഓട്ടോമാറ്റിക് ആയി ഉണ്ടാക്കുന്നു
+cats = [...new Set(fetchedShops.map(s => s.c))];
+cats.forEach((cat, i) => { colors[cat] = baseColors[i % baseColors.length]; });
+
+search();
+initBtns();
+}
+
+/* ===== INIT ===== */
+activeCountry = localStorage.getItem("bas_country") || "india";
+loadShopsFromR2();
+
+</script>
+
+
 </body>
 </html>
