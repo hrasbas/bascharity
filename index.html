@@ -2341,7 +2341,7 @@ const colors={
 <!-----------------------JSON------------------------>
 // നിങ്ങൾ നിശ്ചയിച്ച 10 പ്രധാന ഇൻഡിപെൻഡന്റ് കാറ്റഗറികൾ
  
-  // നിങ്ങൾ നിശ്ചയിച്ച 10 പ്രധാന ഇൻഡിപെൻഡന്റ് കാറ്റഗറികൾ
+// നിങ്ങൾ നിശ്ചയിച്ച 10 പ്രധാന ഇൻഡിപെൻഡന്റ് കാറ്റഗറികൾ
 let mainOrder=["General","Fashion","Beauty","Electronics","Health","Travel","Grocery","Home & Decor","Sports","Entertainment"]; 
 
 let shops = [];
@@ -2349,8 +2349,11 @@ let activeCategory = null;
 let expandedCategories = {}; 
 let currentFetchController = null;
 
+// ഏത് അക്ഷരത്തിൽ വന്നാലും ലിങ്ക് കിട്ടാൻ വേണ്ടി വലിയ അക്ഷരത്തിലും ചെറിയ അക്ഷരത്തിലും നൽകുന്നു
 const countryLinks = {
   "india": "https://pub-168159db07cc407eaa28228eb2520ea5.r2.dev/1india.json",
+  "india": "https://pub-168159db07cc407eaa28228eb2520ea5.r2.dev/1india.json",
+  "usa": "https://pub-168159db07cc407eaa28228eb2520ea5.r2.dev/2usa.json",
   "usa": "https://pub-168159db07cc407eaa28228eb2520ea5.r2.dev/2usa.json"
 };
 
@@ -2361,11 +2364,11 @@ window.onload = () => {
 function loadCountryData(countryName) {
   if (!countryName) return;
 
-  // സ്പേസ് കളഞ്ഞ് ഏത് രീതിയിൽ വരുന്ന അക്ഷരങ്ങളെയും ചെറിയ അക്ഷരത്തിലേക്ക് മാറ്റുന്നു
+  // സ്പേസ് കളഞ്ഞ് ചെറിയ അക്ഷരത്തിലേക്ക് മാറ്റുന്നു
   const formattedCountry = countryName.trim().toLowerCase();
   
-  // സെലക്ട് ചെയ്ത രാജ്യത്തിന്റെ ലിങ്ക് മാത്രം ലിസ്റ്റിൽ നിന്നും എടുക്കുന്നു
-  const activeJsonUrl = countryLinks[formattedCountry];
+  // ചെറിയ അക്ഷരത്തിലുള്ള കീ ഉണ്ടോ എന്ന് നോക്കുന്നു, ഇല്ലെങ്കിൽ നേരിട്ട് നോക്കുന്നു
+  const activeJsonUrl = countryLinks[formattedCountry] || countryLinks[countryName.trim()];
   if (!activeJsonUrl) return;
 
   if (currentFetchController) {
@@ -2582,7 +2585,8 @@ function liveSearch(){
 
 /* COUNTRY SEARCH INTERFACE CONNECTION */
 function countrySearchBridge(userCountryInput) {
-  let searchWord = userCountryInput.toLowerCase().trim();
+  if (!userCountryInput) return;
+  let searchWord = userCountryInput.trim();
   loadCountryData(searchWord);
 }
 </script>
