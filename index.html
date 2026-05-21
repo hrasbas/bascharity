@@ -2573,12 +2573,7 @@ function countrySearchBridge(userCountryInput) {
 // ഒരു സമയം ഒരു Country മാത്രം Active ആയിരിക്കുമ്പോൾ അതിൻ്റെ JSON ഫയൽ മാത്രമേ തുറക്കാവൂ!
 // =========================================================================
 
-const countryLinks = {
-    "india": "https://pub-168159db07cc407eaa28228eb2520ea5.r2.dev/1india.json",
-    "usa": "https://pub-168159db07cc407eaa28228eb2520ea5.r2.dev/2usa.json"
-};
-
-function loadCountryData(countryName) {
+ function loadCountryData(countryName) {
     const activeJsonUrl = countryLinks[countryName]; 
     if (!activeJsonUrl) return;
 
