@@ -2340,20 +2340,42 @@ const colors={
 }; 
 <!-----------------------JSON------------------------>
 // നിങ്ങൾ നിശ്ചയിച്ച 10 പ്രധാന ഇൻഡിപെൻഡന്റ് കാറ്റഗറികൾ
+ 
+<!-----------------------JSON------------------------>
+// നിങ്ങൾ നിശ്ചയിച്ച 10 പ്രധാന ഇൻഡിപെൻഡന്റ് കാറ്റഗറികൾ
 let mainOrder=["General","Fashion","Beauty","Electronics","Health","Travel","Grocery","Home & Decor","Sports","Entertainment"]; 
 
 let shops = [];
 let activeCategory = null;
 let expandedCategories = {}; 
+let currentFetchController = null;
+
+const countryLinks = {
+  "india": "https://pub-168159db07cc407eaa28228eb2520ea5.r2.dev/1india.json",
+  "usa": "https://pub-168159db07cc407eaa28228eb2520ea5.r2.dev/2usa.json"
+};
 
 window.onload = () => {
-  fetch("https://pub-168159db07cc407eaa28228eb2520ea5.r2.dev/1india.json",
-"https://pub-168159db07cc407eaa28228eb2520ea5.r2.dev/2usa.json"); 
+  loadCountryData("india");
+};
 
+function loadCountryData(countryName) {
+  const activeJsonUrl = countryLinks[countryName];
+  if (!activeJsonUrl) return;
+
+  if (currentFetchController) {
+    currentFetchController.abort();
+  }
+
+  currentFetchController = new AbortController();
+
+  fetch(activeJsonUrl, { signal: currentFetchController.signal })
     .then(res => res.json())
     .then(data => {
-      shops = data;
-      
+      shops = Array.isArray(data) ? data : [];
+      activeCategory = null;
+      expandedCategories = {};
+
       // JSON ഫയലിൽ പുതിയ കാറ്റഗറികൾ സ്വയം കണ്ടുപിടിക്കുമ്പോൾ ലിസ്റ്റിലേക്ക് ആഡ് ചെയ്യാനുള്ള ലോജിക്
       shops.forEach(shop => {
         let catField = shop.c || shop.category;
@@ -2376,9 +2398,11 @@ window.onload = () => {
       render(shops, false);
     })
     .catch(err => {
-      console.error("Error loading JSON:", err);
+      if (err.name !== "AbortError") {
+        console.error("Error loading JSON:", err);
+      }
     });
-};
+}
 
 /* 10 സിഗ്നേച്ചർ കാറ്റഗറി ബട്ടണുകൾ നിർമ്മിക്കുന്നു */
 function initButtons(){
@@ -2554,43 +2578,8 @@ function liveSearch(){
 /* COUNTRY SEARCH INTERFACE CONNECTION */
 function countrySearchBridge(userCountryInput) {
   let searchWord = userCountryInput.toLowerCase().trim();
-  
-  let filteredByCountry = shops.filter(s => {
-    let shopCountry = (s.country || s.c || "").toLowerCase().trim();
-    return shopCountry === searchWord;
-  });
-  
-  render(filteredByCountry, false);
-}
-
- // =========================================================================
-// പ്രധാനപ്പെട്ട നിർദ്ദേശം (COMMENT):
-// ഒരു സമയം ഒരു Country മാത്രം Active ആയിരിക്കുമ്പോൾ അതിൻ്റെ JSON ഫയൽ മാത്രമേ തുറക്കാവൂ!
-// =========================================================================
-
-// =========================================================================
-// പ്രധാനപ്പെട്ട നിർദ്ദേശം (COMMENT):
-// ഒരു സമയം ഒരു Country മാത്രം Active ആയിരിക്കുമ്പോൾ അതിൻ്റെ JSON ഫയൽ മാത്രമേ തുറക്കാവൂ!
-// =========================================================================
-
- const countryLinks = {
-    "india": "https://pub-168159db07cc407eaa28228eb2520ea5.r2.dev/1india.json",
-    "usa": "https://pub-168159db07cc407eaa28228eb2520ea5.r2.dev/2usa.json"
-};
-
-function loadCountryData(countryName) {
-    const activeJsonUrl = countryLinks[countryName];
-    if (!activeJsonUrl) return;
-
-    fetch(activeJsonUrl)
-        .then(response => response.json())
-        .then(data => {
-            displayButtons(data);
-        })
-        .catch(error => console.error("Error:", error);
-}
-
-</script>
+  loadCountryData(searchWord);
+}>
 </body>
 </html>
 
