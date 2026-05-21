@@ -2341,8 +2341,7 @@ const colors={
 <!-----------------------JSON------------------------>
 // നിങ്ങൾ നിശ്ചയിച്ച 10 പ്രധാന ഇൻഡിപെൻഡന്റ് കാറ്റഗറികൾ
  
-<!-----------------------JSON------------------------>
-// നിങ്ങൾ നിശ്ചയിച്ച 10 പ്രധാന ഇൻഡിപെൻഡന്റ് കാറ്റഗറികൾ
+  // നിങ്ങൾ നിശ്ചയിച്ച 10 പ്രധാന ഇൻഡിപെൻഡന്റ് കാറ്റഗറികൾ
 let mainOrder=["General","Fashion","Beauty","Electronics","Health","Travel","Grocery","Home & Decor","Sports","Entertainment"]; 
 
 let shops = [];
@@ -2360,7 +2359,13 @@ window.onload = () => {
 };
 
 function loadCountryData(countryName) {
-  const activeJsonUrl = countryLinks[countryName];
+  if (!countryName) return;
+
+  // സ്പേസ് കളഞ്ഞ് ഏത് രീതിയിൽ വരുന്ന അക്ഷരങ്ങളെയും ചെറിയ അക്ഷരത്തിലേക്ക് മാറ്റുന്നു
+  const formattedCountry = countryName.trim().toLowerCase();
+  
+  // സെലക്ട് ചെയ്ത രാജ്യത്തിന്റെ ലിങ്ക് മാത്രം ലിസ്റ്റിൽ നിന്നും എടുക്കുന്നു
+  const activeJsonUrl = countryLinks[formattedCountry];
   if (!activeJsonUrl) return;
 
   if (currentFetchController) {
@@ -2579,7 +2584,9 @@ function liveSearch(){
 function countrySearchBridge(userCountryInput) {
   let searchWord = userCountryInput.toLowerCase().trim();
   loadCountryData(searchWord);
-}>
+}
+</script>
+
 </body>
 </html>
 
