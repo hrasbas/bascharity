@@ -2377,35 +2377,41 @@ let activeCategory = null;
 let expandedCategories = {}; 
 let currentFetchController = null;
 <!-----------------------JSON------------------------>
-     // 200 രാജ്യങ്ങൾക്കായുള്ള പുതിയ ലിങ്കുകൾ മാത്രം ഇവിടെ കോമ (,) ഇട്ട് താഴേക്ക് ചേർക്കുക
+            // 200 രാജ്യങ്ങൾക്കായുള്ള പുതിയ ലിങ്കുകൾ മാത്രം ഇവിടെ ചേർക്കുക
 const countryLinks = {
   // ഇന്ത്യ, യുഎസ്എ ലിങ്കുകൾ നീക്കം ചെയ്തു
 };
 
+// വെബ്‌സൈറ്റ് ലോഡ് ചെയ്യുമ്പോൾ തന്നെ മുകളിലെ ലിസ്റ്റിലെ ആദ്യത്തെ ഫയൽ (ഇന്ത്യ) ഓട്ടോമാറ്റിക് ലോഡ് ചെയ്യും
+window.onload = () => {
+  if (typeof JSON_FILES !== 'undefined' && JSON_FILES.length > 0) {
+    fetchData(JSON_FILES[0]);
+  } else {
+    fetchData("https://pub-168159db07cc407eaa28228eb2520ea5.r2.dev/1india.json");
+  }
+};
+
 function loadCountryData(countryName) {
   if (!countryName) return;
-
-  // സ്പേസ് കളഞ്ഞ് ചെറിയ അക്ഷരത്തിലേക്ക് മാറ്റുന്നു
   const formattedCountry = countryName.trim().toLowerCase();
-  
-  // ചെറിയ അക്ഷരത്തിലുള്ള കീ ഉണ്ടോ എന്ന് നോക്കുന്നു, ഇല്ലെങ്കിൽ നേരിട്ട് നോക്കുന്നു
   const activeJsonUrl = countryLinks[formattedCountry] || countryLinks[countryName.trim()];
   if (!activeJsonUrl) return;
+  fetchData(activeJsonUrl);
+}
 
-  if (currentFetchController) {
+function fetchData(url) {
+  if (typeof currentFetchController !== 'undefined' && currentFetchController) {
     currentFetchController.abort();
   }
-
   currentFetchController = new AbortController();
 
-  fetch(activeJsonUrl, { signal: currentFetchController.signal })
+  fetch(url, { signal: currentFetchController.signal })
     .then(res => res.json())
     .then(data => {
       shops = Array.isArray(data) ? data : [];
       activeCategory = null;
       expandedCategories = {};
 
-      // JSON ഫയലിൽ പുതിയ കാറ്റഗറികൾ സ്വയം കണ്ടുപിടിക്കുമ്പോൾ ലിസ്റ്റിലേക്ക് ആഡ് ചെയ്യാനുള്ള ലോജിക്
       shops.forEach(shop => {
         let catField = shop.c || shop.category;
         if (catField) {
@@ -2433,7 +2439,6 @@ function loadCountryData(countryName) {
     });
 }
 
-/* 10 സിഗ്നേച്ചർ കാറ്റഗറി ബട്ടണുകൾ നിർമ്മിക്കുന്നു */
 function initButtons(){
   let box=document.getElementById("cat-buttons");
   if(!box) return;
@@ -2444,31 +2449,28 @@ function initButtons(){
   }).join("");
 } 
 
-/* ഫിൽട്ടർ ലോജിക് (ഒരു ഷോപ്പിന് ഒന്നിലധികം കാറ്റഗറികൾ Array രൂപത്തിൽ വന്നാലും വർക്ക് ചെയ്യും) */
 function filterCat(cat){
   activeCategory = cat;
   expandedCategories[cat] = false; 
-  document.getElementById("findShop").value = ""; 
+  let searchInput = document.getElementById("findShop");
+  if(searchInput) searchInput.value = ""; 
   
   let filtered = shops.filter(s => {
     let catField = s.c || s.category;
-    if (Array.isArray(catField)) {
-      return catField.includes(cat);
-    }
+    if (Array.isArray(catField)) return catField.includes(cat);
     return catField === cat;
   });
   render(filtered, true);
 } 
 
-/* റീസെറ്റ് ലോജിക് (Back to all shops - Headings സഹിതം കാണിക്കാൻ) */
 function resetCategory() {
   activeCategory = null;
   expandedCategories = {};
-  document.getElementById("findShop").value = "";
+  let searchInput = document.getElementById("findShop");
+  if(searchInput) searchInput.value = "";
   render(shops, false);
 }
 
-/* റെൻഡർ എഞ്ചിൻ (Array കാറ്റഗറി ലോജിക് പൂർണ്ണമായി സപ്പോർട്ട് ചെയ്യുന്നു) */
 function render(data, isFiltered=false){
   let container=document.getElementById("shop-container");
   let selectedCatContainer = document.getElementById("selected-cat-container");
@@ -2484,17 +2486,13 @@ function render(data, isFiltered=false){
     selectedCatContainer.innerHTML = "";
   }
 
-  // ഷോപ്പുകളെ അവയുടെ കാറ്റഗറികൾക്ക് അനുസരിച്ച് ഗ്രൂപ്പ് ചെയ്യുന്നു (Array ഗ്രൂപ്പിംഗ് ലോജിക്)
   let grouped={}; 
   data.forEach(s=>{
     let catField = s.c || s.category || "General";
     if (Array.isArray(catField)) {
       catField.forEach(cName => {
         if(!grouped[cName]) grouped[cName]=[];
-        // ഡ്യൂപ്ലിക്കേഷൻ ഒഴിവാക്കാൻ
-        if(!grouped[cName].includes(s)) {
-          grouped[cName].push(s);
-        }
+        if(!grouped[cName].includes(s)) grouped[cName].push(s);
       });
     } else {
       if(!grouped[catField]) grouped[catField]=[];
@@ -2507,7 +2505,6 @@ function render(data, isFiltered=false){
   orderToShow.forEach(cat=>{
     if(grouped[cat] && grouped[cat].length > 0){
       let col=colors[cat] || "#666"; 
-
       let head=document.createElement("div");
       head.className="cat-head";
       head.style.background=col;
@@ -2516,8 +2513,8 @@ function render(data, isFiltered=false){
 
       let isExpanded = expandedCategories[cat] || false;
       let totalItems = grouped[cat].length;
-      
-      let maxSearch = document.getElementById("findShop").value.trim() !== "";
+      let searchInput = document.getElementById("findShop");
+      let maxSearch = (searchInput && searchInput.value.trim() !== "");
       let limit = (totalItems > 7 && !isExpanded && !maxSearch) ? 7 : totalItems;
 
       for(let i=0; i<limit; i++) {
@@ -2540,13 +2537,11 @@ function render(data, isFiltered=false){
         let id = s.id || "";
         let tag = s.t || s.tag || "";
 
-        // റെഡ് ഡോട്ടുകൾ പൂർണ്ണമായി ഒഴിവാക്കിയ സാധാ ഡിസൈൻ
         card.innerHTML=`
         <div class="sl">${id}</div>
         <img src="https://www.google.com/s2/favicons?domain=${domain}">
         <div><b>${name}</b><span> ${tag}</span></div>
         `; 
-
         container.appendChild(card);
       }
 
@@ -2561,7 +2556,6 @@ function render(data, isFiltered=false){
   });
 } 
 
-/* MORE / LESS ടോഗിൾ */
 function toggle(cat){
   expandedCategories[cat] = !expandedCategories[cat];
   if(activeCategory) {
@@ -2576,9 +2570,9 @@ function toggle(cat){
   }
 } 
 
-/* LIVE SEARCH */
 function liveSearch(){
-  let val=document.getElementById("findShop").value.toLowerCase().trim();
+  let searchInput = document.getElementById("findShop");
+  let val = searchInput ? searchInput.value.toLowerCase().trim() : "";
   if(!val){ 
     if(activeCategory) {
       let filtered = shops.filter(s => {
@@ -2603,7 +2597,6 @@ function liveSearch(){
   render(f, true);
 } 
 
-/* COUNTRY SEARCH INTERFACE CONNECTION */
 function countrySearchBridge(userCountryInput) {
   if (!userCountryInput) return;
   let searchWord = userCountryInput.trim();
