@@ -2377,16 +2377,9 @@ let activeCategory = null;
 let expandedCategories = {}; 
 let currentFetchController = null;
 <!-----------------------JSON------------------------>
-// ഏത് അക്ഷരത്തിൽ വന്നാലും ലിങ്ക് കിട്ടാൻ വേണ്ടി വലിയ അക്ഷരത്തിലും ചെറിയ അക്ഷരത്തിലും നൽകുന്നു
+     // 200 രാജ്യങ്ങൾക്കായുള്ള പുതിയ ലിങ്കുകൾ മാത്രം ഇവിടെ കോമ (,) ഇട്ട് താഴേക്ക് ചേർക്കുക
 const countryLinks = {
-  "india": "https://pub-168159db07cc407eaa28228eb2520ea5.r2.dev/1india.json",
-  "india": "https://pub-168159db07cc407eaa28228eb2520ea5.r2.dev/1india.json",
-  "usa": "https://pub-168159db07cc407eaa28228eb2520ea5.r2.dev/2usa.json",
-  "usa": "https://pub-168159db07cc407eaa28228eb2520ea5.r2.dev/2usa.json"
-};
-
-window.onload = () => {
-  loadCountryData("india");
+  // ഇന്ത്യ, യുഎസ്എ ലിങ്കുകൾ നീക്കം ചെയ്തു
 };
 
 function loadCountryData(countryName) {
@@ -2443,6 +2436,7 @@ function loadCountryData(countryName) {
 /* 10 സിഗ്നേച്ചർ കാറ്റഗറി ബട്ടണുകൾ നിർമ്മിക്കുന്നു */
 function initButtons(){
   let box=document.getElementById("cat-buttons");
+  if(!box) return;
   box.innerHTML=mainOrder.map(c=> {
     let borderCol = colors[c] || "#666";
     return `<button class="m-btn" onclick="filterCat('${c}')"
@@ -2479,12 +2473,13 @@ function render(data, isFiltered=false){
   let container=document.getElementById("shop-container");
   let selectedCatContainer = document.getElementById("selected-cat-container");
   
+  if(!container) return;
   container.innerHTML=""; 
 
-  if(activeCategory) {
+  if(activeCategory && selectedCatContainer) {
     selectedCatContainer.style.display = "block";
     selectedCatContainer.innerHTML = `<div class="selected-cat-heading" style="background:${colors[activeCategory] || '#666'}">${activeCategory}</div>`;
-  } else {
+  } else if(selectedCatContainer) {
     selectedCatContainer.style.display = "none";
     selectedCatContainer.innerHTML = "";
   }
@@ -2541,15 +2536,12 @@ function render(data, isFiltered=false){
           };
         }
 
-        let isAffiliate = s.is_affiliate !== undefined ? s.is_affiliate : true;
-        let dotHTML = (!isAffiliate || isAffiliate === "false" || isAffiliate === false) ? '<div class="direct-dot"></div>' : '';
-
         let name = s.n || s.name;
         let id = s.id || "";
         let tag = s.t || s.tag || "";
 
+        // റെഡ് ഡോട്ടുകൾ പൂർണ്ണമായി ഒഴിവാക്കിയ സാധാ ഡിസൈൻ
         card.innerHTML=`
-        ${dotHTML}
         <div class="sl">${id}</div>
         <img src="https://www.google.com/s2/favicons?domain=${domain}">
         <div><b>${name}</b><span> ${tag}</span></div>
@@ -2617,6 +2609,7 @@ function countrySearchBridge(userCountryInput) {
   let searchWord = userCountryInput.trim();
   loadCountryData(searchWord);
 }
+
 </script>
 
 </body>
