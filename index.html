@@ -1672,4 +1672,213 @@ clearTimeout(timer9);
 timer9=setTimeout(reset9,15000);
 }
 </script>
+<style>
+.peace-wrapper{
+max-width:900px; /* Responsive Fix */
+width:96%;
+margin:30px auto;
+}
+.peace-box{
+background:#1a1a1a;
+padding:22px;
+border-radius:12px;
+border:1px solid #333;
+border-left:6px solid #e91e63;
+color:#fff;
+margin-bottom:20px;
+}
+.peace-box h1{ font-size:26px; margin-bottom:12px; }
+.peace-sub{ font-size:22px; color:#4fc3f7; margin-bottom:14px; display:block; font-weight:700; }
+.peace-box p{ font-size:22px; line-height:1.7; color:#ccc; }
+.peace-btn-row{ display:flex; gap:10px; margin-top:20px; }
+.peace-btn{ padding:16px; border-radius:10px; font-weight:800; cursor:pointer; font-size:22px; text-align:center; }
+.peace-btn-details{ background:#8b0000; color:#fff; flex:1; }
+.peace-section{ display:none; }
+.peace-card{ background:#111; padding:16px; border-radius:10px; border:1px solid #333; margin-bottom:14px; font-size:22px; line-height:1.7; border-left:4px solid #00e676; }
+.peace-link{ display:inline-block; margin-top:10px; padding:12px 18px; background:#00c853; color:#000; border-radius:10px; font-weight:bold; text-decoration:none; font-size:22px; }
+.peace-back{ margin-top:20px; background:#333; color:#fff; padding:14px; border-radius:10px; text-align:center; cursor:pointer; font-weight:bold; font-size:22px; }
+</style>
+
+<div class="peace-wrapper">
+<div class="peace-box">
+<h1>Peace Valley – Kothamangalam</h1>
+<span class="peace-sub"> Charitable Care Institution </span>
+<p>
+A humanitarian institution providing shelter, medical care, rehabilitation and daily support for the needy and vulnerable.
+</p>
+
+<div class="peace-btn-row">
+<div class="peace-btn peace-btn-details" onclick="peaceDetails10()">Details</div>
+<a class="peace-link" href="https://peacevalley.org.in/donation/" target="_blank">
+Donate Directly ➜
+<br><span style="font-size:18px;">(Global)</span>
+</a>
+</div>
+
+<div id="peaceDetails10" class="peace-section">
+<div class="peace-box">
+<h1>About Peace Valley</h1>
+<div class="peace-card">
+Peace Valley Charitable Trust in Kothamangalam provides long-term shelter, food, medical care and rehabilitation support.
+</div>
+<div class="peace-card">
+Visit official website for full information.<br>
+<a class="peace-link" href="https://peacevalley.org.in/" target="_blank">Visit Website</a>
+</div>
+<div class="peace-back" onclick="peaceReset10()">BACK</div>
+</div>
+</div>
+
+<div id="peaceDonate10" class="peace-section">
+<div class="peace-box">
+<h1>Support Categories</h1>
+<div class="peace-card">
+<b>Food and Daily Care</b><br>
+Providing nutritious meals and daily essentials.<br>
+<a class="peace-link" href="https://peacevalley.org.in/donation/" target="_blank">Donate Directly</a>
+</div>
+<div class="peace-back" onclick="peaceReset10()">BACK</div>
+</div>
+</div>
+</div>
+</div>
+
+<script>
+let timer10;
+function peaceDetails10(){
+document.getElementById("peaceDetails10").style.display="block";
+document.getElementById("peaceDonate10").style.display="none";
+window.scrollBy({top:200, behavior:"smooth"});
+startTimer10();
+}
+function peaceReset10(){
+document.getElementById("peaceDetails10").style.display="none";
+document.getElementById("peaceDonate10").style.display="none";
+clearTimeout(timer10);
+}
+function startTimer10(){
+clearTimeout(timer10);
+timer10=setTimeout(peaceReset10,15000);
+}
+</script>
+
+<style>
+.vada-wrapper {
+max-width: 900px;
+width:96%;
+margin: 30px auto;
+}
+.vada-box {
+background: #1a1a1a;
+padding: 22px;
+border-radius: 12px;
+border: 1px solid #333;
+border-left: 6px solid #e53935;
+color: #fff;
+margin-bottom: 20px;
+}
+.vada-box h1 { font-size: 26px; margin-bottom: 10px; }
+.vada-box h2 { font-size: 22px; color: #ffd54f; margin-bottom: 12px; }
+.vada-box p { font-size: 22px; line-height: 1.7; color: #ccc; }
+.vada-btn-row { display: flex; gap: 10px; margin-top: 20px; }
+.vada-btn {
+padding: 16px;
+border-radius: 10px;
+font-size: 22px;
+font-weight: bold;
+text-align: center;
+cursor: pointer;
+display: flex;
+align-items: center;
+justify-content: center;
+flex-direction: column;
+}
+.vada-details { background: #b71c1c; color: #fff; flex: 1; }
+.vada-donate { background: #0b5e20; color: #fff; flex: 2; }
+.vada-section { display: none; }
+.vada-card {
+background: #111;
+padding: 18px;
+border-radius: 10px;
+border: 1px solid #333;
+margin-bottom: 14px;
+font-size: 22px;
+line-height: 1.7;
+border-left: 4px solid #00e676;
+}
+.vada-back {
+margin-top: 20px;
+background: #333;
+color: #fff;
+padding: 14px;
+border-radius: 10px;
+text-align: center;
+cursor: pointer;
+font-weight: bold;
+font-size: 22px;
+}
+</style>
+
+<div class="vada-wrapper">
+<div class="vada-box">
+<h1>Vadanappally Orphanage</h1>
+<p>A charitable institution dedicated to the care, protection and upbringing of orphaned and destitute children through education, shelter and moral support.</p>
+<div class="vada-btn-row">
+<div class="vada-btn vada-details" onclick="vadaDetails11()">Details</div>
+<div class="vada-btn vada-donate" onclick="vadaDonate11()">
+Donate Directly→
+<span style="font-size:18px;">(India Only)</span>
+</div>
+</div>
+</div>
+
+<div id="vadaDetails11" class="vada-section">
+<div class="vada-box">
+<h2>About Vadanappally Orphanage</h2>
+<div class="vada-card">Vadanappally Orphanage Committee is a community-based charitable organisation functioning in Thrissur district, Kerala. The institution provides shelter, education and emotional care for orphaned and vulnerable children.</div>
+<div class="vada-card">Their activities focus on long-term child welfare, education support and social upliftment.</div>
+<div class="vada-back" onclick="vadaReset11()">BACK</div>
+</div>
+</div>
+
+<div id="vadaDonate11" class="vada-section">
+<div class="vada-box">
+<h2>Support Their Work</h2>
+<div class="vada-card"><b>Orphan Care & Shelter</b><br>Providing food, clothing, accommodation and daily care for orphaned children.</div>
+<div class="vada-card"><b>Education Support</b><br>Schooling, books, uniforms and guidance to help children build a better future.</div>
+<div class="vada-card">
+<b>Bank Details</b><br><br>
+A/c Name : VATANAPPALLY ORPHANAGE COMMITTEE<br><br>
+A/c No : 917020025053101<br>Bank : Axis Bank<br>Branch : Vatanappally, Thrissur<br>IFSC : UTIB0003224<br><br>
+A/c No : 10532244438<br>Bank : SBI<br>Branch : Vatanappally, Thrissur<br>IFSC : SBIN0008683
+</div>
+<div class="vada-back" onclick="vadaReset11()">BACK</div>
+</div>
+</div>
+</div>
+
+<script>
+let timer11;
+function vadaDetails11(){
+document.getElementById("vadaDetails11").style.display="block";
+document.getElementById("vadaDonate11").style.display="none";
+scrollTopSmooth("vadaDetails11");
+startTimer11();
+}
+function vadaDonate11(){
+document.getElementById("vadaDetails11").style.display="none";
+document.getElementById("vadaDonate11").style.display="block";
+scrollTopSmooth("vadaDonate11");
+startTimer11();
+}
+function vadaReset11(){
+document.getElementById("vadaDetails11").style.display="none";
+document.getElementById("vadaDonate11").style.display="none";
+clearTimeout(timer11);
+}
+function startTimer11(){
+clearTimeout(timer11);
+timer11=setTimeout(vadaReset11,20000);
+}
+</script>
 
