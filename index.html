@@ -610,7 +610,7 @@ ball.className = "bas-ball is-pwa-installed";
 <!----------------- code No:---------------->
 <!----------------- code No:2 ---------------->
 <!-- 1. Country Selector Section -->
-<style>
+  <style>
 .country-box { max-width:900px; width:96%; margin:25px auto; padding:15px; background:#000; border:1px solid #ff9800; border-radius:15px; font-family:Arial,sans-serif; }
 .country-title { background:#333; color:#fff; font-weight:900; text-align:center; padding:10px; border-radius:10px; border:1px solid #ff9800; border-left:6px solid #ff9800; margin-bottom:10px; }
 .country-grid { display:grid; grid-template-columns:repeat(2, 1fr); gap:8px; }
@@ -684,7 +684,7 @@ const JSON_FILES = [
 "https://pub-168159db07cc407eaa28228eb2520ea5.r2.dev/j12.json",
 "https://pub-168159db07cc407eaa28228eb2520ea5.r2.dev/j13.json",
 "https://pub-168159db07cc407eaa28228eb2520ea5.r2.dev/j14.json",
-"https://pub-168159db07cc407eaa28228eb2520ea5.r2.dev/j15.json",
+"https://pub-168159db07cc407eaa28228lesb2520ea5.r2.dev/j15.json",
 "https://pub-168159db07cc407eaa28228eb2520ea5.r2.dev/j16.json",
 "https://pub-168159db07cc407eaa28228eb2520ea5.r2.dev/j17.json",
 "https://pub-168159db07cc407eaa28228eb2520ea5.r2.dev/j18.json",
@@ -692,6 +692,13 @@ const JSON_FILES = [
 "https://pub-168159db07cc407eaa28228eb2520ea5.r2.dev/j20.json",
 "https://pub-168159db07cc407eaa28228eb2520ea5.r2.dev/j21.json"
 ]; 
+
+// 🔽 200 രാജ്യങ്ങളിലെ പുതിയ 200 ഷോപ്പുകൾക്കുള്ള ലിങ്ക് ഒബ്ജക്റ്റ്
+const countryLinks = {
+  "india": "https://pub-168159db07cc407eaa28228eb2520ea5.r2.dev/1india.json",
+  "usa": "https://pub-168159db07cc407eaa28228eb2520ea5.r2.dev/2usa.json"
+  // കൂടുതൽ രാജ്യങ്ങളുടെ ലിങ്കുകൾ ഭാവിയിൽ ഇതേ രീതിയിൽ കോമ (,) ഇട്ട് താഴേക്ക് ചേർക്കാം
+};
 
 let countryShops = {};
 let currentCountry = "india";
@@ -720,6 +727,7 @@ function normalizeCountry(c) {
   return c;
 } 
 
+// 🎯 നിങ്ങളുടെ പ്രധാന ഫങ്ഷൻ - രണ്ട് സെക്ഷനെയും ഒരേസമയം മാറ്റുന്നു
 function setCountry(country, btn) {
   if (!country) return;
   currentCountry = normalizeCountry(country);
@@ -743,7 +751,14 @@ function setCountry(country, btn) {
 
   document.getElementById("shopCountryTitle").innerText = "SHOP ON " + currentCountry.toUpperCase() + " SHOPS";
   document.getElementById("globalSearch").value = "";
+  
+  // 1. മുകളിലെ 21 JSON സെക്ഷൻ റെൻഡർ ചെയ്യുന്നു
   renderShops(countryShops[currentCountry] || []);
+
+  // 2. താഴത്തെ 200 രാജ്യങ്ങൾക്കായുള്ള ലോജിക് ഒരേ സമയം പ്രവർത്തിക്കുന്നു
+  if (typeof loadCountryData === "function") {
+    loadCountryData(currentCountry);
+  }
 } 
 
 function renderShops(list, isSearching = false) {
@@ -800,7 +815,6 @@ async function loadShops() {
   const container = document.getElementById("shopList");
   if(container) container.innerHTML = "<p style='color:#fff; text-align:center; padding:20px;'>LOADING SHOPS...</p>";
 
-  // Promise.all മാറ്റി ഓരോ ഫയലും ഒന്നിനു പുറകെ ഒന്നായി തനിയെ ഫെച്ച് ചെയ്യുന്നു
   for (const url of JSON_FILES) {
     try {
       const response = await fetch(url);
@@ -829,11 +843,25 @@ async function loadShops() {
   setCountry(saved);
 } 
 
+// 🔽 താഴത്തെ സെക്ഷനിലേക്ക് വേണ്ടി നിങ്ങൾ ആവശ്യപ്പെട്ട പുതിയ ഫങ്ഷൻ ലിങ്ക് കണക്ഷൻ
+function loadCountryData(countryName) {
+  let cleanName = normalizeCountry(countryName);
+  let targetLink = countryLinks[cleanName];
+  
+  if (targetLink) {
+    // ദാ ഇവിടെയാണ് താഴത്തെ പുതിയ 200 ഷോപ്പുകളുടെ ഫെച്ചിംഗ് നടക്കുന്നത്.
+    // ഫയൽ ലിങ്ക് ലഭിച്ചാൽ താഴെയുള്ള സെക്ഷനിലെ കാർഡുകൾ ലോഡ് ചെയ്യാനുള്ള ലോജിക് ഇവിടെ എഴുതാം.
+    console.log("താഴത്തെ സെക്ഷനായി ലോഡ് ചെയ്യുന്ന പുതിയ ലിങ്ക്: ", targetLink);
+  }
+}
+
 document.addEventListener("DOMContentLoaded", () => {
   populateCountries(); 
   loadShops();
 });
 </script>
+</body>
+</html>
 
  <!-------------------- Compare--------------->
 <style>
