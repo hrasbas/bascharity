@@ -1,0 +1,16 @@
+{
+  "country": "uae",
+  "code": "ae",
+  "shops": [
+    { "name": "Amazon UAE", "url": "https://www.amazon.ae" },
+    { "name": "Noon", "url": "https://www.noon.com" },
+    { "name": "Sharaf DG", "url": "https://www.sharafdg.com" },
+    { "name": "Namshi", "url": "https://www.namshi.com" },
+    { "name": "Carrefour UAE", "url": "https://www.carrefouruae.com" },
+    { "name": "Lulu Webstore", "url": "https://www.luluhypermarket.com" },
+    { "name": "Jumbo Electronics", "url": "https://www.jumbo.ae" },
+    { "name": "OurShopee", "url": "https://www.ourshopee.com" },
+    { "name": "Splash Fashions", "url": "https://www.splashfashions.com" },
+    { "name": "Desertcart UAE", "url": "https://www.desertcart.ae" }
+  ]
+}
