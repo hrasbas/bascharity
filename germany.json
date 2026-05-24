@@ -1,0 +1,16 @@
+{
+  "country": "germany",
+  "code": "de",
+  "shops": [
+    { "name": "Amazon Germany", "url": "https://www.amazon.de" },
+    { "name": "Zalando", "url": "https://www.zalando.de" },
+    { "name": "Otto", "url": "https://www.otto.de" },
+    { "name": "MediaMarkt", "url": "https://www.mediamarkt.de" },
+    { "name": "Saturn", "url": "https://www.saturn.de" },
+    { "name": "Lidl", "url": "https://www.lidl.de" },
+    { "name": "Tchibo", "url": "https://www.tchibo.de" },
+    { "name": "About You", "url": "https://www.aboutyou.de" },
+    { "name": "Notebooksbilliger", "url": "https://www.notebooksbilliger.de" },
+    { "name": "Bonprix", "url": "https://www.bonprix.de" }
+  ]
+}
