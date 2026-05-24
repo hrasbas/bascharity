@@ -1,0 +1,16 @@
+{
+  "country": "south africa",
+  "code": "za",
+  "shops": [
+    { "name": "Takealot", "url": "https://www.takealot.com" },
+    { "name": "Superbalist", "url": "https://superbalist.com" },
+    { "name": "Zando", "url": "https://www.zando.co.za" },
+    { "name": "Makro", "url": "https://www.makro.co.za" },
+    { "name": "Woolworths SA", "url": "https://www.woolworths.co.za" },
+    { "name": "Bidorbuy", "url": "https://www.bidorbuy.co.za" },
+    { "name": "Clicks", "url": "https://www.clicks.co.za" },
+    { "name": "Pick n Pay", "url": "https://www.pnp.co.za" },
+    { "name": "Mr Price", "url": "https://www.mrprice.com" },
+    { "name": "Loot.co.za", "url": "https://www.loot.co.za" }
+  ]
+}
