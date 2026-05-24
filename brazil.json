@@ -1,0 +1,16 @@
+{
+  "country": "brazil",
+  "code": "br",
+  "shops": [
+    { "name": "Mercado Livre", "url": "https://www.mercadolivre.com.br" },
+    { "name": "Americanas", "url": "https://www.americanas.com.br" },
+    { "name": "Magalu", "url": "https://www.magazineluiza.com.br" },
+    { "name": "Amazon Brazil", "url": "https://www.amazon.com.br" },
+    { "name": "Casas Bahia", "url": "https://www.casasbahia.com.br" },
+    { "name": "Netshoes", "url": "https://www.netshoes.com.br" },
+    { "name": "Shopee Brazil", "url": "https://shopee.com.br" },
+    { "name": "Submarino", "url": "https://www.submarino.com.br" },
+    { "name": "Centauro", "url": "https://www.centauro.com.br" },
+    { "name": "Dafiti", "url": "https://www.dafiti.com.br" }
+  ]
+}
