@@ -1,0 +1,16 @@
+{
+  "country": "france",
+  "code": "fr",
+  "shops": [
+    { "name": "Amazon France", "url": "https://www.amazon.fr" },
+    { "name": "Cdiscount", "url": "https://www.cdiscount.com" },
+    { "name": "Veepee", "url": "https://www.veepee.fr" },
+    { "name": "Fnac", "url": "https://www.fnac.com" },
+    { "name": "La Redoute", "url": "https://www.laredoute.fr" },
+    { "name": "Darty", "url": "https://www.darty.com" },
+    { "name": "Decathlon France", "url": "https://www.decathlon.fr" },
+    { "name": "Auchan", "url": "https://www.auchan.fr" },
+    { "name": "Carrefour France", "url": "https://www.carrefour.fr" },
+    { "name": "ManoMano", "url": "https://www.manomano.fr" }
+  ]
+}
