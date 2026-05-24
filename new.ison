@@ -1,0 +1,16 @@
+{
+  "country": "new zealand",
+  "code": "nz",
+  "shops": [
+    { "name": "Trade Me", "url": "https://www.trademe.co.nz" },
+    { "name": "The Warehouse", "url": "https://www.thewarehouse.co.nz" },
+    { "name": "Mighty Ape", "url": "https://www.mightyape.co.nz" },
+    { "name": "Amazon Australia (NZ)", "url": "https://www.amazon.com.au" },
+    { "name": "Kogan NZ", "url": "https://www.kogan.com/nz/" },
+    { "name": "Noel Leeming", "url": "https://www.noelleeming.co.nz" },
+    { "name": "JB Hi-Fi NZ", "url": "https://www.jbhifi.co.nz" },
+    { "name": "Countdown", "url": "https://www.countdown.co.nz" },
+    { "name": "Kathmandu NZ", "url": "https://www.kathmandu.co.nz" },
+    { "name": "Briscoes", "url": "https://www.briscoes.co.nz" }
+  ]
+}
