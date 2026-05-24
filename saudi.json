@@ -1,0 +1,16 @@
+{
+  "country": "saudi arabia",
+  "code": "sa",
+  "shops": [
+    { "name": "Amazon Saudi", "url": "https://www.amazon.sa" },
+    { "name": "Noon KSA", "url": "https://www.noon.com/saudi-en/" },
+    { "name": "Jarir Bookstore", "url": "https://www.jarir.com" },
+    { "name": "Extra", "url": "https://www.extra.com" },
+    { "name": "Xcite KSA", "url": "https://www.xcite.com.sa" },
+    { "name": "Ounass", "url": "https://www.ounass.com.sa" },
+    { "name": "Nice One", "url": "https://niceonesa.com" },
+    { "name": "Golden Scent", "url": "https://www.goldenscent.com" },
+    { "name": "Sivvi", "url": "https://www.sivvi.com" },
+    { "name": "Ubuy Saudi", "url": "https://www.ubuy.com.sa" }
+  ]
+}
