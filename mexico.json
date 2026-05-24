@@ -1,0 +1,16 @@
+{
+  "country": "mexico",
+  "code": "mx",
+  "shops": [
+    { "name": "Mercado Libre Mexico", "url": "https://www.mercadolibre.com.mx" },
+    { "name": "Amazon Mexico", "url": "https://www.amazon.com.mx" },
+    { "name": "Walmart Mexico", "url": "https://www.walmart.com.mx" },
+    { "name": "Coppel", "url": "https://www.coppel.com" },
+    { "name": "Liverpool", "url": "https://www.liverpool.com.mx" },
+    { "name": "Linio Mexico", "url": "https://www.linio.com.mx" },
+    { "name": "Sears Mexico", "url": "https://www.sears.com.mx" },
+    { "name": "Elektra", "url": "https://www.elektra.mx" },
+    { "name": "Palacio de Hierro", "url": "https://www.elpalaciodehierro.com" },
+    { "name": "Home Depot Mexico", "url": "https://www.homedepot.com.mx" }
+  ]
+}
