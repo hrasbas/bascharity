@@ -1,0 +1,16 @@
+{
+  "country": "netherlands",
+  "code": "nl",
+  "shops": [
+    { "name": "Bol.com", "url": "https://www.bol.com" },
+    { "name": "Amazon Netherlands", "url": "https://www.amazon.nl" },
+    { "name": "Coolblue", "url": "https://www.coolblue.nl" },
+    { "name": "Albert Heijn", "url": "https://www.ah.nl" },
+    { "name": "Wehkamp", "url": "https://www.wehkamp.nl" },
+    { "name": "Zalando NL", "url": "https://www.zalando.nl" },
+    { "name": "MediaMarkt NL", "url": "https://www.mediamarkt.nl" },
+    { "name": "Marktplaats", "url": "https://www.marktplaats.nl" },
+    { "name": "Jumbo Supermarkten", "url": "https://www.jumbo.com" },
+    { "name": "Beslist.nl", "url": "https://www.beslist.nl" }
+  ]
+}
