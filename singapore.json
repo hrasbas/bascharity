@@ -1,0 +1,16 @@
+{
+  "country": "singapore",
+  "code": "sg",
+  "shops": [
+    { "name": "Lazada Singapore", "url": "https://www.lazada.sg" },
+    { "name": "Shopee Singapore", "url": "https://shopee.sg" },
+    { "name": "Amazon Singapore", "url": "https://www.amazon.sg" },
+    { "name": "Qoo10", "url": "https://www.qoo10.sg" },
+    { "name": "Carousell Singapore", "url": "https://www.carousell.sg" },
+    { "name": "RedMart", "url": "https://redmart.lazada.sg" },
+    { "name": "Zalora Singapore", "url": "https://www.zalora.sg" },
+    { "name": "FairPrice", "url": "https://www.fairprice.com.sg" },
+    { "name": "Courts Singapore", "url": "https://www.courts.com.sg" },
+    { "name": "Harvey Norman SG", "url": "https://www.harveynorman.com.sg" }
+  ]
+}
