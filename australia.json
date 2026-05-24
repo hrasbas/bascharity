@@ -1,0 +1,16 @@
+{
+  "country": "australia",
+  "code": "au",
+  "shops": [
+    { "name": "Amazon Australia", "url": "https://www.amazon.com.au" },
+    { "name": "JB Hi-Fi", "url": "https://www.jbhifi.com.au" },
+    { "name": "The Iconic", "url": "https://www.theiconic.com.au" },
+    { "name": "Catch", "url": "https://www.catch.com.au" },
+    { "name": "Kogan", "url": "https://www.kogan.com" },
+    { "name": "Woolworths", "url": "https://www.woolworths.com.au" },
+    { "name": "Coles", "url": "https://www.coles.com.au" },
+    { "name": "Kmart Australia", "url": "https://www.kmart.com.au" },
+    { "name": "Target Australia", "url": "https://www.target.com.au" },
+    { "name": "Bunnings", "url": "https://www.bunnings.com.au" }
+  ]
+}
