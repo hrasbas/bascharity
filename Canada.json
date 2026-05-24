@@ -1,0 +1,16 @@
+{
+  "country": "canada",
+  "code": "ca",
+  "shops": [
+    { "name": "Amazon Canada", "url": "https://www.amazon.ca" },
+    { "name": "Canadian Tire", "url": "https://www.canadiantire.ca" },
+    { "name": "Hudson's Bay", "url": "https://www.thebay.com" },
+    { "name": "Best Buy Canada", "url": "https://www.bestbuy.ca" },
+    { "name": "Sport Chek", "url": "https://www.sportchek.ca" },
+    { "name": "Indigo", "url": "https://www.chapters.indigo.ca" },
+    { "name": "Lululemon Canada", "url": "https://shop.lululemon.com" },
+    { "name": "Roots", "url": "https://www.roots.com" },
+    { "name": "Ssense", "url": "https://www.ssense.com" },
+    { "name": "Shoppers Drug Mart", "url": "https://www.shoppersdrugmart.ca" }
+  ]
+}
