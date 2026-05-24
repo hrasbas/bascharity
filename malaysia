@@ -1,0 +1,16 @@
+{
+  "country": "malaysia",
+  "code": "my",
+  "shops": [
+    { "name": "Lazada Malaysia", "url": "https://www.lazada.com.my" },
+    { "name": "Shopee Malaysia", "url": "https://shopee.com.my" },
+    { "name": "PG Mall", "url": "https://pgmall.my" },
+    { "name": "Zalora Malaysia", "url": "https://www.zalora.com.my" },
+    { "name": "Carousell Malaysia", "url": "https://www.carousell.com.my" },
+    { "name": "Mudah.my", "url": "https://www.mudah.my" },
+    { "name": "Taobao Malaysia", "url": "https://world.taobao.com" },
+    { "name": "PrestoMall", "url": "https://www.prestomall.com" },
+    { "name": "Decathlon Malaysia", "url": "https://www.decathlon.my" },
+    { "name": "Watsons Malaysia", "url": "https://www.watsons.com.my" }
+  ]
+}
