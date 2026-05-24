@@ -1,0 +1,16 @@
+{
+  "country": "turkey",
+  "code": "tr",
+  "shops": [
+    { "name": "Trendyol", "url": "https://www.trendyol.com" },
+    { "name": "Hepsiburada", "url": "https://www.hepsiburada.com" },
+    { "name": "n11", "url": "https://www.n11.com" },
+    { "name": "GittiGidiyor", "url": "https://www.gittigidiyor.com" },
+    { "name": "Amazon Turkey", "url": "https://www.amazon.com.tr" },
+    { "name": "Migros Sanal Market", "url": "https://www.migros.com.tr" },
+    { "name": "Teknosa", "url": "https://www.teknosa.com" },
+    { "name": "Vatan Bilgisayar", "url": "https://www.vatanbilgisayar.com" },
+    { "name": "Morhipo", "url": "https://www.morhipo.com" },
+    { "name": "Boyner", "url": "https://www.boyner.com.tr" }
+  ]
+}
