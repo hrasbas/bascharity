@@ -1,0 +1,16 @@
+{
+  "country": "india",
+  "code": "in",
+  "shops": [
+    { "name": "Amazon India", "url": "https://www.amazon.in?tag=vmmbaslinks-21" },
+    { "name": "Flipkart", "url": "https://extp.in/frLCl1" },
+    { "name": "Myntra", "url": "https://extp.in/Xl9qHe" },
+    { "name": "Nykaa", "url": "https://extp.in/hj6ArG" },
+    { "name": "Tata CLiQ", "url": "https://extp.in/XQxoLW" },
+    { "name": "Reliance Digital", "url": "https://extp.in/cxkWbr" },
+    { "name": "Croma", "url": "https://extp.in/9myzwo" },
+    { "name": "Ajio", "url": "https://extp.in/J56J4f" },
+    { "name": "JioMart", "url": "https://extp.in/jrfhBK" },
+    { "name": "Shopsy", "url": "https://extp.in/9zNj2z" }
+  ]
+}
