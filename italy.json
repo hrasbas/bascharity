@@ -1,0 +1,16 @@
+{
+  "country": "italy",
+  "code": "it",
+  "shops": [
+    { "name": "Amazon Italy", "url": "https://www.amazon.it" },
+    { "name": "eBay Italy", "url": "https://www.ebay.it" },
+    { "name": "Zalando Italy", "url": "https://www.zalando.it" },
+    { "name": "MediaWorld", "url": "https://www.mediaworld.it" },
+    { "name": "Unieuro", "url": "https://www.unieuro.it" },
+    { "name": "ePRICE", "url": "https://www.eprice.it" },
+    { "name": "Yoox", "url": "https://www.yoox.com" },
+    { "name": "Esselunga", "url": "https://www.esselunga.it" },
+    { "name": "Asos Italy", "url": "https://www.asos.com/it/" },
+    { "name": "ManoMano Italy", "url": "https://www.manomano.it" }
+  ]
+}
