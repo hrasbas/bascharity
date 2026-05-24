@@ -1,0 +1,16 @@
+{
+  "country": "spain",
+  "code": "es",
+  "shops": [
+    { "name": "Amazon Spain", "url": "https://www.amazon.es" },
+    { "name": "El Corte Inglés", "url": "https://www.elcorteingles.es" },
+    { "name": "PcComponentes", "url": "https://www.pccomponentes.com" },
+    { "name": "Aliexpress Spain", "url": "https://es.aliexpress.com" },
+    { "name": "Zara Spain", "url": "https://www.zara.com/es/" },
+    { "name": "MediaMarkt Spain", "url": "https://www.mediamarkt.es" },
+    { "name": "Carrefour Spain", "url": "https://www.carrefour.es" },
+    { "name": "Veepee Spain", "url": "https://www.veepee.es" },
+    { "name": "ManoMano Spain", "url": "https://www.manomano.es" },
+    { "name": "Decathlon Spain", "url": "https://www.decathlon.es" }
+  ]
+}
