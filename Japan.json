@@ -1,0 +1,16 @@
+{
+  "country": "japan",
+  "code": "jp",
+  "shops": [
+    { "name": "Amazon Japan", "url": "https://www.amazon.co.jp" },
+    { "name": "Rakuten", "url": "https://www.rakuten.co.jp" },
+    { "name": "Yahoo Shopping JP", "url": "https://shopping.yahoo.co.jp" },
+    { "name": "Mercari", "url": "https://www.mercari.com/jp/" },
+    { "name": "Uniqlo Japan", "url": "https://www.uniqlo.com/jp/" },
+    { "name": "Zozotown", "url": "https://zozo.jp" },
+    { "name": "Yodobashi Camera", "url": "https://www.yodobashi.com" },
+    { "name": "Bic Camera", "url": "https://www.biccamera.com" },
+    { "name": "DMM.com", "url": "https://www.dmm.com" },
+    { "name": "Lohaco", "url": "https://lohaco.jp" }
+  ]
+}
