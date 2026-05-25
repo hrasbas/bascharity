@@ -2268,6 +2268,156 @@ basglobalTimer=setTimeout(basglobalClose,30000);
 }
 
 </script>
+
+ // 1. OFFICIAL MASTER CATEGORY LIST (100% OTHU NOKKIYATHU)
+const MASTER_CATEGORIES = [
+  "General", "Electronics", "Fashion", "Grocery", "Travel", 
+  "Entertainment", "Sports", "Beauty", "Home", "Health", "Automotive"
+];
+
+// 2. LIVE OFFICIAL JSON LINKS MAPPING
+const REGIONAL_LINKS = {
+  "31": "https://pub-168159db07cc407eaa28228eb2520ea5.r2.dev/31.json",
+  "32": "https://pub-168159db07cc407eaa28228eb2520ea5.r2.dev/32.json",
+  "33": "https://pub-168159db07cc407eaa28228eb2520ea5.r2.dev/33.json"
+};
+
+// ഇവിടെ നിങ്ങളുടെ കൺട്രി കോഡ് നമ്പർ മാത്രം മാറ്റിയാൽ മതി (ഉദാഹരണത്തിന്: "31", "32", അല്ലെങ്കിൽ "33")
+const CURRENT_COUNTRY_CODE = "31"; 
+
+// ലിങ്ക് മാപ്പിംഗിൽ ഉണ്ടെങ്കിൽ അത് എടുക്കും, ഇല്ലെങ്കിൽ ലോക്കൽ ഫയൽ ബാക്കപ്പായി ഉപയോഗിക്കും
+const JSON_URL = REGIONAL_LINKS[CURRENT_COUNTRY_CODE] || `${CURRENT_COUNTRY_CODE}.json`;
+
+let allShops = [];
+let filteredShops = [];
+let displayedCount = 0;
+const ITEMS_PER_PAGE = 12; 
+
+// സിസ്റ്റം ലോഡ് ചെയ്യുമ്പോൾ തന്നെ റൺ ആകുന്ന ഫങ്ഷൻ
+async function initCountrySystem() {
+  // എപ്പോഴും 11 ബട്ടണുകൾ സൈറ്റിൽ ആദ്യം തന്നെ നിർമ്മിച്ച് വെക്കുന്നു (ഡിസൈൻ നഷ്ടപ്പെടില്ല)
+  buildStaticButtons();
+
+  try {
+    const response = await fetch(JSON_URL);
+    if (!response.ok) throw new Error('JSON ഫയൽ കണ്ടെത്താൻ കഴിഞ്ഞില്ല');
+    const data = await response.json();
+    
+    // പൊതുവിവരങ്ങൾ ഉണ്ടെങ്കിൽ അത് മാറ്റുന്നു
+    if(data.countryInfo) {
+      document.getElementById('country-title').innerText = data.countryInfo.name || "Country Directory";
+      document.getElementById('country-details').innerText = data.countryInfo.details || "";
+    }
+
+    allShops = data.shops || [];
+    filteredShops = allShops;
+    renderShopsChunk(true);
+    setupLazyLoading();
+
+  } catch (error) {
+    // ഫയൽ ലോഡ് ആയില്ലെങ്കിലും ബട്ടണുകൾ നഷ്ടപ്പെടില്ല, കടകളുടെ സ്ഥാനത്ത് മാത്രം ഈ മെസ്സേജ് വരും
+    console.warn('System Backup Activated:', error);
+    document.getElementById('country-title').innerText = "Country Directory";
+    document.getElementById('country-details').innerText = "Premium shopping options and local services listing for this region.";
+    document.getElementById('shops-list-container').innerHTML = `
+      <div style="grid-column: 1/-1; text-align: center; padding: 40px; color: #666; font-weight: bold;">
+        Verified shops are being updated for this country. Please check back shortly.
+      </div>
+    `;
+    document.getElementById('lazy-loading-trigger').innerText = '';
+  }
+}
+
+// 11 ബട്ടണുകൾ ഒരേ ഒപ്പ് ശൈലിയിൽ സ്ഥിരമായി നിർമ്മിക്കുന്ന സിസ്റ്റം
+function buildStaticButtons() {
+  const container = document.getElementById('category-buttons-container');
+  container.innerHTML = '';
+
+  // 'All' ബട്ടൺ
+  const allBtn = document.createElement('button');
+  allBtn.innerText = 'All Shops';
+  allBtn.className = 'category-btn active';
+  allBtn.onclick = () => filterSystem('All', allBtn);
+  container.appendChild(allBtn);
+
+  // 11 ഔദ്യോഗിക കാറ്റഗറി ബട്ടണുകൾ സ്ഥിരമായി നിർമ്മിക്കുന്നു
+  MASTER_CATEGORIES.forEach(category => {
+    const btn = document.createElement('button');
+    btn.innerText = category;
+    btn.className = 'category-btn';
+    btn.onclick = () => filterSystem(category, btn);
+    container.appendChild(btn);
+  });
+}
+
+// ഫിൽട്ടറിംഗ് സിസ്റ്റം
+function filterSystem(category, clickedButton) {
+  document.querySelectorAll('.category-btn').forEach(b => b.classList.remove('active'));
+  clickedButton.classList.add('active');
+
+  if (allShops.length === 0) return; // കടകൾ ലോഡ് ആയിട്ടില്ലെങ്കിൽ ഫിൽട്ടർ വർക്ക് ആകില്ല
+
+  filteredShops = category === 'All' 
+    ? allShops 
+    : allShops.filter(shop => shop.c === category);
+
+  renderShopsChunk(true);
+}
+
+// കടകൾ കാണിക്കുന്ന ഭാഗം (Lazy Loading)
+function renderShopsChunk(isNewFilter = false) {
+  const container = document.getElementById('shops-list-container');
+  if (isNewFilter) {
+    container.innerHTML = '';
+    displayedCount = 0;
+  }
+
+  const nextChunk = filteredShops.slice(displayedCount, displayedCount + ITEMS_PER_PAGE);
+  
+  if (nextChunk.length === 0 && isNewFilter) {
+    container.innerHTML = `
+      <div style="grid-column: 1/-1; text-align: center; padding: 30px; color: #888;">
+        No shops registered under this specific category yet.
+      </div>
+    `;
+    document.getElementById('lazy-loading-trigger').innerText = '';
+    return;
+  }
+
+  nextChunk.forEach(shop => {
+    const verifiedCategory = MASTER_CATEGORIES.includes(shop.c) ? shop.c : "General";
+    const card = document.createElement('div');
+    card.className = 'shop-card';
+    card.innerHTML = `
+      <h3>${shop.name}</h3>
+      <p>${shop.tag || 'Verified Global Partner Store'}</p>
+      <a href="${shop.url}" target="_blank" class="visit-btn">Visit ${verifiedCategory} Shop</a>
+    `;
+    container.appendChild(card);
+  });
+
+  displayedCount += nextChunk.length;
+
+  const trigger = document.getElementById('lazy-loading-trigger');
+  if (displayedCount >= filteredShops.length) {
+    trigger.innerText = 'All verified shops loaded.';
+  } else {
+    trigger.innerText = 'Scroll down to discover more stores...';
+  }
+}
+
+function setupLazyLoading() {
+  const observer = new IntersectionObserver((entries) => {
+    if (entries[0].isIntersecting && displayedCount < filteredShops.length) {
+      renderShopsChunk(false);
+    }
+  }, { rootMargin: '100px' });
+
+  observer.observe(document.getElementById('lazy-loading-trigger'));
+}
+
+window.onload = initCountrySystem;
+
 </body>
 </html>
 
