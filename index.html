@@ -955,6 +955,372 @@ document.addEventListener("DOMContentLoaded", () => {
 loadShops();
 });
 </script>
+<style>
+.compare-box{
+background:#000;
+border:1px solid #00BFFF;
+border-radius:12px;
+padding:20px;
+text-align:center;
+line-height:1.6;
+} 
+
+.compare-btn{
+width:96%;
+padding:14px;
+border-radius:10px;
+border:none;
+font-weight:bold;
+font-size: 22px;
+background:#00BFFF;
+color:#000;
+cursor:pointer;
+margin-bottom:15px;
+} 
+
+.return-note{
+font-size:22px;
+color:#fff;
+text-align:center;
+} 
+
+.return-note b{
+color:#FFD700;
+font-size:16px;
+}
+</style> 
+
+<div class="compare-container">
+<div class="compare-box">
+<button class="compare-btn" onclick="window.open('https://www.google.com/shopping','_blank')">
+Compare Price on Trusted Sites
+</button> 
+
+<div class="return-note">
+<b>വില താരതമ്യം ചെയ്ത് തിരിച്ചു വരണേ...</b>
+<br><br>
+<span>
+വ്യത്യസ്ത ഷോപ്പുകളിൽ ഏറ്റവും കുറഞ്ഞ വില കണ്ടെത്തി,
+അതേ ഷോപ്പിൽ നിന്ന് അതേ ഓഫറിൽ
+മുകളിലെ ലിങ്കുകൾ വഴി വാങ്ങുമ്പോൾ
+നിങ്ങളും ഈ ചാരിറ്റിയുടെ ഭാഗമാകുന്നു —
+അതുവഴി വിശക്കുന്ന ഒരു വയറിന് ആശ്വാസമാകുന്നു. നന്ദി.
+</span>
+</div>
+</div>
+</div>
+<style>
+.share-container {
+max-width: 900px;
+width: 96%;
+margin: 25px auto;
+padding: 20px;
+background: #000;
+border: 1px solid #00BFFF;
+border-radius: 12px;
+text-align: center;
+} 
+
+.share-text {
+font-size: 22px;
+line-height: 1.7;
+color: #fff;
+margin-bottom: 20px;
+} 
+
+.share-grid {
+display: grid;
+grid-template-columns: repeat(5, 1fr);
+gap: 10px;
+margin-top: 15px;
+} 
+
+.share-grid a {
+display: flex;
+align-items: center;
+justify-content: center;
+font-size: 22px;
+height: 50px;
+background: #111;
+border-radius: 10px;
+border: 1px solid #333;
+text-decoration: none;
+} 
+
+.share-grid a:hover {
+transform: scale(1.08);
+transition: 0.2s;
+} 
+
+.share-sign {
+margin-top: 20px;
+padding-top: 15px;
+border-top: 1px solid #333;
+color: #FFD700;
+font-weight: bold;
+letter-spacing: 2px;
+font-size: 16px;
+}
+</style> 
+
+<div class="share-container">
+<p class="share-text">
+Even if you are not buying anything right now, you can still support this charity mission.
+<br><br>Simply share this page with your friends and groups.
+<br><br>When someone purchases through these links, most of the income helps provide food for a hungry person somewhere in the world.
+<br><br>Through your share, you and your parents become part of this act of kindness.
+</p> 
+
+<div class="share-grid">
+<a href="https://api.whatsapp.com/send?text=https://bascharity.com" target="_blank"><i class="fab fa-whatsapp" style="color:#25D366"></i></a>
+<a href="https://www.facebook.com/sharer/sharer.php?u=https://bascharity.com" target="_blank"><i class="fab fa-facebook" style="color:#1877F2"></i></a>
+<a href="https://telegram.me/share/url?url=https://bascharity.com" target="_blank"><i class="fab fa-telegram" style="color:#0088cc"></i></a>
+<a href="https://twitter.com/intent/tweet?url=https://bascharity.com" target="_blank"><svg width="20" height="20" viewBox="0 0 24 24" fill="#ffffff" style="vertical-align:middle;"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></a>
+<a href="javascript:void(0)" onclick="copyLink()"><i class="fas fa-link" style="color:#FFD700"></i></a>
+</div> 
+
+<div class="share-sign">YOUR PURCHASE SATISFIES A HUNGER ®</div>
+</div> 
+
+<script>
+function copyLink() {
+navigator.clipboard.writeText("https://bascharity.com");
+alert("Link Copied. Share with friends.");
+}
+</script>
+<style>
+.mainbox {
+max-width: 900px;
+width: 96%;
+margin: 20px auto;
+padding: 25px 15px;
+border: 2px solid #ff4500;
+border-radius: 15px;
+background: #050505;
+box-sizing: border-box;
+text-align: center;
+} 
+
+.mainbox h1 {
+color: #ff4500;
+font-size: clamp(24px, 8vw, 36px);
+margin-top: 0;
+} 
+
+.sub {
+color: #aaa;
+font-size: clamp(16px, 5vw, 22px);
+margin-bottom: 20px;
+} 
+
+.impact {
+width: 100%;
+max-width: 420px;
+margin: auto;
+padding: 20px;
+border: 2px solid #555;
+background: #111;
+box-sizing: border-box;
+} 
+
+.amount {
+display: flex;
+justify-content: center;
+align-items: center;
+gap: 10px;
+} 
+
+.rs {
+font-size: 36px;
+color: #00ff00;
+} 
+
+.counter {
+font-size: 44px;
+color: #00ff00;
+border: 2px solid #333;
+padding: 5px 12px;
+background: #000;
+} 
+
+.till {
+color: #ff4500;
+font-size: 16px;
+margin-top: 8px;
+} 
+
+.gallery {
+display: flex;
+overflow: hidden;
+gap: 20px;
+padding: 40px 20px;
+margin: 25px auto;
+width: 100%;
+position: relative;
+box-sizing: border-box;
+scroll-behavior: auto !important;
+} 
+
+.card {
+min-width: 280px;
+height: 230px;
+border: 3px solid #ff4500;
+display: flex;
+align-items: center;
+justify-content: center;
+background: #000;
+border-radius: 10px;
+overflow: hidden;
+transition: transform 0.4s ease, z-index 0.4s;
+cursor: pointer;
+position: relative;
+flex-shrink: 0;
+} 
+
+.card.zoom-active {
+transform: scale(2);
+z-index: 100;
+border-color: #00ff00;
+box-shadow: 0 0 20px rgba(0,255,0,0.5);
+} 
+
+.card img {
+width: 100%;
+height: 100%;
+object-fit: contain;
+} 
+
+.rotate { transform: rotate(-90deg); }
+</style> 
+
+<div class="mainbox">
+<h1>IMPACT</h1>
+<div class="sub">Amount Distributed for Hunger Relief & Food Support</div> 
+
+<div class="impact">
+<div class="amount">
+<div class="rs">Rs</div>
+<div class="counter" id="counter">0000000</div>
+<div class="rs">/-</div>
+</div>
+<div class="till">TILL TODAY</div>
+</div> 
+
+<div class="gallery" id="gallery"></div> 
+
+<div style="margin-top:10px; font-size:16px; color:#bbb; line-height:1.6; text-align:center;">
+Updated weekly/monthly.<br>
+Affiliate income may take 2–3 months to reflect after purchase.<br>
+Your direct donations are not included in this impact.
+</div>
+</div> 
+
+<script>
+let count = 0;
+let target = 27000;
+let counterElement = document.getElementById("counter"); 
+
+function runCounter() {
+if (count < target) {
+count += 250;
+if (count > target) count = target;
+counterElement.innerText = count.toString().padStart(7, "0");
+setTimeout(runCounter, 120); 
+}
+}
+runCounter(); 
+
+const photos = [
+"https://pub-168159db07cc407eaa28228eb2520ea5.r2.dev/1.jpg",
+"https://pub-168159db07cc407eaa28228eb2520ea5.r2.dev/p1.jpg",
+"https://pub-168159db07cc407eaa28228eb2520ea5.r2.dev/2.jpg",
+"https://pub-168159db07cc407eaa28228eb2520ea5.r2.dev/p2.jpg",
+"https://pub-168159db07cc407eaa28228eb2520ea5.r2.dev/3.jpg",
+"https://pub-168159db07cc407eaa28228eb2520ea5.r2.dev/p3.jpg",
+]; 
+
+const gallery = document.getElementById("gallery"); 
+
+function loadImages() {
+photos.forEach((src, i) => {
+let card = document.createElement("div");
+card.className = "card";
+card.onclick = function() {
+scrolling = false;
+this.classList.add("zoom-active");
+setTimeout(() => {
+this.classList.remove("zoom-active");
+scrolling = true;
+}, 4000);
+}; 
+
+let img = document.createElement("img");
+if (i < 2) { img.className = "rotate"; }
+img.src = src; 
+
+card.appendChild(img);
+gallery.appendChild(card);
+});
+} 
+
+loadImages();
+loadImages(); 
+
+let scrolling = true;
+function scrollGallery() {
+if (scrolling) {
+gallery.scrollLeft += 1.5;
+if (gallery.scrollLeft >= (gallery.scrollWidth / 2)) {
+gallery.scrollLeft = 0;
+}
+}
+}
+setInterval(scrollGallery, 20);
+</script>
+<style>
+.info-box{
+max-width: 900px;
+width: 96%;
+margin: 30px auto;
+padding: 20px;
+background: #000;
+border: 1px solid #00BFFF;
+border-radius: 12px;
+text-align: center;
+line-height: 1.7;
+box-sizing: border-box;
+} 
+
+.info-title{
+font-size: 25px;
+color: #FFD700;
+margin-bottom: 10px;
+font-weight: bold;
+} 
+
+.info-text{
+font-size: 25px;
+color: #ccc;
+} 
+
+.readmore-btn{
+color: #00BFFF;
+font-size: 26px;
+font-weight: bold;
+cursor: pointer;
+} 
+
+.more-text{
+display: none;
+} 
+
+.signature{
+margin-top: 15px;
+font-size: 25px;
+color: #FFD700;
+font-weight: bold;
+}
+</style>
 
 </body>
 </html>
