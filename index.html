@@ -1009,7 +1009,85 @@ Compare Price on Trusted Sites
 അതുവഴി വിശക്കുന്ന ഒരു വയറിന് ആശ്വാസമാകുന്നു. നന്ദി.
 </span>
 </div>
+<!----------------------- Share----------------->
+<style>
+.share-container {
+max-width: 900px;
+width: 96%;
+margin: 25px auto;
+padding: 20px;
+background: #000;
+border: 1px solid #00BFFF;
+border-radius: 12px;
+text-align: center;
+}
+
+.share-text {
+font-size: 22px;
+line-height: 1.7;
+color: #fff;
+margin-bottom: 20px;
+}
+
+.share-grid {
+display: grid;
+grid-template-columns: repeat(5, 1fr);
+gap: 10px;
+margin-top: 15px;
+}
+
+.share-grid a {
+display: flex;
+align-items: center;
+justify-content: center;
+font-size: 22px;
+height: 50px;
+background: #111;
+border-radius: 10px;
+border: 1px solid #333;
+text-decoration: none;
+}
+
+.share-grid a:hover {
+transform: scale(1.08);
+transition: 0.2s;
+}
+
+.share-sign {
+margin-top: 20px;
+padding-top: 15px;
+border-top: 1px solid #333;
+color: #FFD700;
+font-weight: bold;
+letter-spacing: 2px;
+font-size: 16px;
+}
+</style>
+
+<div class="share-container">
+<p class="share-text">
+Even if you are not buying anything right now, you can still support this charity mission.
+<br><br>Simply share this page with your friends and groups.
+<br><br>When someone purchases through these links, most of the income helps provide food for a hungry person somewhere in the world.
+<br><br>Through your share, you and your parents become part of this act of kindness.
+</p>
+
+<div class="share-grid">
+<a href="https://api.whatsapp.com/send?text=https://bascharity.com" target="_blank"><i class="fab fa-whatsapp" style="color:#25D366"></i></a>
+<a href="https://www.facebook.com/sharer/sharer.php?u=https://bascharity.com" target="_blank"><i class="fab fa-facebook" style="color:#1877F2"></i></a>
+<a href="https://telegram.me/share/url?url=https://bascharity.com" target="_blank"><i class="fab fa-telegram" style="color:#0088cc"></i></a>
+<a href="https://twitter.com/intent/tweet?url=https://bascharity.com" target="_blank"><svg width="20" height="20" viewBox="0 0 24 24" fill="#ffffff" style="vertical-align:middle;"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></a>
+<a href="javascript:void(0)" onclick="copyLink()"><i class="fas fa-link" style="color:#FFD700"></i></a>
 </div>
+
+<div class="share-sign">YOUR PURCHASE SATISFIES A HUNGER</div>
 </div>
+
+<script>
+function copyLink() {
+navigator.clipboard.writeText("https://bascharity.com");
+alert("Link Copied. Share with friends.");
+}
+</script>
 </body>
 </html>
