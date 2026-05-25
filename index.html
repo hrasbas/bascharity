@@ -2266,63 +2266,7 @@ function resetTimer(){
 clearTimeout(basglobalTimer);
 basglobalTimer=setTimeout(basglobalClose,30000);
 }
-</script>
- <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Global Directory - Premium Country System</title>
-  <style>
-    /* 1. BUTTONS SIGNATURE STYLE (CSS) */
-    .category-btn, .visit-btn {
-      display: inline-block;
-      padding: 10px 20px;
-      font-family: 'Arial', sans-serif;
-      font-size: 14px;
-      font-weight: 600;
-      text-transform: capitalize;
-      text-align: center;
-      text-decoration: none;
-      border: 2px solid #0056b3;
-      border-radius: 4px;
-      background-color: #ffffff;
-      color: #0056b3;
-      cursor: pointer;
-      transition: all 0.3s ease;
-      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
-      margin: 5px;
-    }
 
-    .category-btn:hover, .category-btn.active, .visit-btn:hover {
-      background-color: #0056b3;
-      color: #ffffff;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-      transform: translateY(-1px);
-    }
-
-    /* Layout Styles */
-    body { font-family: Arial, sans-serif; margin: 20px; background-color: #f8f9fa; color: #333; }
-    #country-general-info { background: #fff; padding: 20px; border-radius: 6px; margin-bottom: 20px; box-shadow: 0 2px 5px rgba(0,0,0,0.05); }
-    #category-buttons-container { margin-bottom: 20px; padding: 10px 0; border-bottom: 1px solid #ddd; }
-    #shops-list-container { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 20px; }
-    .shop-card { background: #fff; padding: 20px; border-radius: 6px; box-shadow: 0 2px 5px rgba(0,0,0,0.05); border-left: 4px solid #0056b3; }
-    .shop-card h3 { margin-top: 0; color: #111; }
-    .shop-card p { font-size: 13px; color: #666; min-height: 40px; }
-    .loading-trigger { text-align: center; padding: 20px; font-weight: bold; color: #888; width: 100%; }
-  </style>
-</head>
-<body>
-
-  <div id="country-general-info">
-    <h2 id="country-title">Loading Country...</h2>
-    <p id="country-details">Please wait while fetching general information.</p>
-  </div>
-
-  <div id="category-buttons-container"></div>
-
-  <div id="shops-list-container"></div>
-  <div id="lazy-loading-trigger" class="loading-trigger"></div>
 </script>
 </body>
 </html>
