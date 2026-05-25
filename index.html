@@ -835,12 +835,8 @@ activeBtn.classList.add("active");
 
 const dropdown = document.getElementById("countryDropdown");
 if (dropdown) {
-if (countries.map(c => c.toLowerCase()).includes(currentCountry)) {
-dropdown.value = currentCountry;
-} else {
 dropdown.selectedIndex = 0;
 }
-} 
 
 document.getElementById("shopCountryTitle").innerText = "SHOP ON " + currentCountry.toUpperCase() + " SHOPS";
 document.getElementById("globalSearch").value = ""; 
