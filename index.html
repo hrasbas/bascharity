@@ -1622,5 +1622,271 @@ if(entry.target.id==="section8" && opened8){ toggleBas8(); }
 if(document.getElementById("section7")) observer78.observe(document.getElementById("section7"));
 if(document.getElementById("section8")) observer78.observe(document.getElementById("section8"));
 </script>
+ <!-------------------- trusted Institutes------------>
+<style>
+.trust-container{
+max-width:900px; /* Responsive Fix */
+width:96%;
+margin:auto;
+}
+.trust-title{
+background:#000;
+color:#00e676;
+font-weight:900;
+font-size:28px;
+text-align:center;
+padding:20px;
+border-radius:12px;
+margin-bottom:25px;
+border:1px solid #333;
+border-left:6px solid #00e676;
+}
+.trust-box{
+background:#1a1a1a;
+padding:22px;
+border-radius:12px;
+border:1px solid #333;
+border-left:6px solid #e91e63;
+margin-bottom:20px;
+}
+.trust-box h1{
+font-size:26px;
+margin-bottom:10px;
+color:#fff;
+}
+.trust-sub{
+font-size:22px;
+color:#4fc3f7;
+margin-bottom:15px;
+display:block;
+}
+.trust-box p{
+font-size:22px;
+color:#ddd;
+line-height:1.7;
+}
+.btn-row{
+display:flex;
+gap:10px;
+margin-top:20px;
+}
+.trust-btn{
+padding:16px;
+border-radius:10px;
+font-size:22px;
+font-weight:bold;
+text-align:center;
+cursor:pointer;
+display:flex;
+align-items:center;
+justify-content:center;
+flex-direction: column;
+}
+.btn-red{ background:#8b0000; color:#fff; flex:1; }
+.btn-green{ background:#006400; color:#fff; flex:2; }
+.inner-card{
+background:#111;
+padding:18px;
+border-radius:10px;
+border:1px solid #333;
+margin-top:15px;
+font-size:22px;
+line-height:1.7;
+border-left:4px solid #00e676;
+color:#fff;
+}
+.sub-view{display:none;}
+.back-btn{
+margin-top:20px;
+background:#333;
+color:#fff;
+padding:14px;
+border-radius:10px;
+text-align:center;
+font-size:22px;
+font-weight:bold;
+cursor:pointer;
+}
+</style>
+
+<div class="trust-container">
+<div class="trust-title"> OUR TRUSTED INSTITUTIONS </div>
+
+<div class="trust-box">
+<h1>Guidance India Education and Charitable Trust</h1>
+<span class="trust-sub"> Paracode Rehabilitation Project </span>
+
+<p>
+A rehabilitation initiative focusing on pain and palliative care, orphan support, ration aid, education assistance, de addiction awareness and sustainable welfare.
+</p>
+
+<div class="btn-row">
+<div class="trust-btn btn-red" onclick="showDetails9()">DETAILS</div>
+<div class="trust-btn btn-green" onclick="showDonate9()">
+Donate Directly→
+<span style="font-size:18px;">(India Only)</span>
+</div>
+</div>
+
+<div id="details9" class="sub-view">
+<div class="trust-box">
+<h1>Project Details</h1>
+<div class="inner-card">
+The Paracode Rehabilitation Project supports individuals and families through pain and palliative care, orphan care, ration distribution, education support and rehabilitation awareness.
+</div>
+<div class="inner-card">
+Even a small daily contribution can relieve hunger and bring dignity to lives in need.
+</div>
+<div class="back-btn" onclick="reset9()">BACK</div>
+</div>
+</div>
+
+<div id="donate9" class="sub-view">
+<div class="trust-box">
+<h1>Donation Categories</h1>
+<div class="inner-card">
+<b>Pain and Palliative Care</b><br>
+Medical support, medicines and comfort care.
+</div>
+<div class="inner-card">
+<b>Orphan Support</b><br>
+Food, shelter, education and basic needs.
+</div>
+<div class="inner-card">
+<b>Building Fund Contribution - Sustainable Income (Sadaqa Jaria)</b>
+<br><br>
+1 sq.ft - Rs 1500<br>
+100 sq.ft - Rs 150000
+<br><br>
+One Flat Sponsorship - Rs 1500000<br>
+Total Project - Rs 7500000
+</div>
+<div class="inner-card">
+<b>Bank Transfer Details</b><br><br>
+Account Name : Guidance India Education and Charitable Trust<br>
+Account Number : 10350200008909<br>
+IFSC : FDRL0001035<br>
+Federal Bank Kizhakkambalam Branch
+</div>
+<div class="back-btn" onclick="reset9()">BACK</div>
+</div>
+</div>
+</div>
+</div>
+
+<script>
+let timer9;
+function showDetails9(){
+document.getElementById("details9").style.display="block";
+document.getElementById("donate9").style.display="none";
+window.scrollBy({top:200, behavior:"smooth"});
+startTimer9();
+}
+function showDonate9(){
+document.getElementById("details9").style.display="none";
+document.getElementById("donate9").style.display="block";
+window.scrollBy({top:200, behavior:"smooth"});
+startTimer9();
+}
+function reset9(){
+document.getElementById("details9").style.display="none";
+document.getElementById("donate9").style.display="none";
+clearTimeout(timer9);
+}
+function startTimer9(){
+clearTimeout(timer9);
+timer9=setTimeout(reset9,15000);
+}
+</script>
+
+<style>
+.peace-wrapper{
+max-width:900px; /* Responsive Fix */
+width:96%;
+margin:30px auto;
+}
+.peace-box{
+background:#1a1a1a;
+padding:22px;
+border-radius:12px;
+border:1px solid #333;
+border-left:6px solid #e91e63;
+color:#fff;
+margin-bottom:20px;
+}
+.peace-box h1{ font-size:26px; margin-bottom:12px; }
+.peace-sub{ font-size:22px; color:#4fc3f7; margin-bottom:14px; display:block; font-weight:700; }
+.peace-box p{ font-size:22px; line-height:1.7; color:#ccc; }
+.peace-btn-row{ display:flex; gap:10px; margin-top:20px; }
+.peace-btn{ padding:16px; border-radius:10px; font-weight:800; cursor:pointer; font-size:22px; text-align:center; }
+.peace-btn-details{ background:#8b0000; color:#fff; flex:1; }
+.peace-section{ display:none; }
+.peace-card{ background:#111; padding:16px; border-radius:10px; border:1px solid #333; margin-bottom:14px; font-size:22px; line-height:1.7; border-left:4px solid #00e676; }
+.peace-link{ display:inline-block; margin-top:10px; padding:12px 18px; background:#00c853; color:#000; border-radius:10px; font-weight:bold; text-decoration:none; font-size:22px; }
+.peace-back{ margin-top:20px; background:#333; color:#fff; padding:14px; border-radius:10px; text-align:center; cursor:pointer; font-weight:bold; font-size:22px; }
+</style>
+
+<div class="peace-wrapper">
+<div class="peace-box">
+<h1>Peace Valley – Kothamangalam</h1>
+<span class="peace-sub"> Charitable Care Institution </span>
+<p>
+A humanitarian institution providing shelter, medical care, rehabilitation and daily support for the needy and vulnerable.
+</p>
+
+<div class="peace-btn-row">
+<div class="peace-btn peace-btn-details" onclick="peaceDetails10()">Details</div>
+<a class="peace-link" href="https://peacevalley.org.in/donation/" target="_blank">
+Donate Directly ➜
+<br><span style="font-size:18px;">(Global)</span>
+</a>
+</div>
+
+<div id="peaceDetails10" class="peace-section">
+<div class="peace-box">
+<h1>About Peace Valley</h1>
+<div class="peace-card">
+Peace Valley Charitable Trust in Kothamangalam provides long-term shelter, food, medical care and rehabilitation support.
+</div>
+<div class="peace-card">
+Visit official website for full information.<br>
+<a class="peace-link" href="https://peacevalley.org.in/" target="_blank">Visit Website</a>
+</div>
+<div class="peace-back" onclick="peaceReset10()">BACK</div>
+</div>
+</div>
+
+<div id="peaceDonate10" class="peace-section">
+<div class="peace-box">
+<h1>Support Categories</h1>
+<div class="peace-card">
+<b>Food and Daily Care</b><br>
+Providing nutritious meals and daily essentials.<br>
+<a class="peace-link" href="https://peacevalley.org.in/donation/" target="_blank">Donate Directly</a>
+</div>
+<div class="peace-back" onclick="peaceReset10()">BACK</div>
+</div>
+</div>
+</div>
+</div>
+
+<script>
+let timer10;
+function peaceDetails10(){
+document.getElementById("peaceDetails10").style.display="block";
+document.getElementById("peaceDonate10").style.display="none";
+window.scrollBy({top:200, behavior:"smooth"});
+startTimer10();
+}
+function peaceReset10(){
+document.getElementById("peaceDetails10").style.display="none";
+document.getElementById("peaceDonate10").style.display="none";
+clearTimeout(timer10);
+}
+function startTimer10(){
+clearTimeout(timer10);
+timer10=setTimeout(peaceReset10,15000);
+}
+</script>
 </body>
 </html>
