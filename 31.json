@@ -1,0 +1,134 @@
+{
+  "countryInfo": {
+    "name": "Afghanistan Shops",
+    "details": "Verified premium online services, trusted retail outlets, and essential digital platforms available across Afghanistan."
+  },
+  "shops": [
+    {
+      "id": 1,
+      "name": "Aladin Afghanistan",
+      "tag": "Leading online retail shopping marketplace for daily essentials.",
+      "url": "https://www.aladini.al",
+      "c": "General"
+    },
+    {
+      "id": 2,
+      "name": "Azizi Kart",
+      "tag": "Trusted Afghan online store for lifestyle, clothing, and household goods.",
+      "url": "https://azizikart.com",
+      "c": "General"
+    },
+    {
+      "id": 3,
+      "name": "Baazar.af",
+      "tag": "Comprehensive local e-commerce platform for various consumer items.",
+      "url": "https://baazar.af",
+      "c": "General"
+    },
+    {
+      "id": 4,
+      "name": "Afghan Cyber Electronics",
+      "tag": "Premium digital gadgets, laptops, and verified electronic accessories.",
+      "url": "https://www.neptun.al",
+      "c": "Electronics"
+    },
+    {
+      "id": 5,
+      "name": "Kabul Computer",
+      "tag": "Reliable hub for computers, smartphones, network equipment, and tech repair.",
+      "url": "https://kabulcomputer.com",
+      "c": "Electronics"
+    },
+    {
+      "id": 6,
+      "name": "Zarsam Tech",
+      "tag": "Verified retailer for authentic smart devices, software licenses, and IT goods.",
+      "url": "https://zarsam.com",
+      "c": "Electronics"
+    },
+    {
+      "id": 7,
+      "name": "Kabul Fashion Hub",
+      "tag": "Authentic local apparel, global clothing brands, and footwear.",
+      "url": "https://www.zara.com",
+      "c": "Fashion"
+    },
+    {
+      "id": 8,
+      "name": "Afghan Traditional Clothing",
+      "tag": "Authentic and premium handmade traditional cultural outfits and attire.",
+      "url": "https://example.com/afghan-fashion",
+      "c": "Fashion"
+    },
+    {
+      "id": 9,
+      "name": "Pamir Grocery Mart",
+      "tag": "Fresh organic products, daily staples, and verified supermarket items.",
+      "url": "https://example.com/grocery",
+      "c": "Grocery"
+    },
+    {
+      "id": 10,
+      "name": "Kabul Supermarket Online",
+      "tag": "Leading grocery platform for swift home delivery of foodstuffs and daily needs.",
+      "url": "https://example.com/kabul-supermarket",
+      "c": "Grocery"
+    },
+    {
+      "id": 11,
+      "name": "Aryana Travel Logistics",
+      "tag": "Verified international flight booking and regional tour assistance.",
+      "url": "https://example.com/travel",
+      "c": "Travel"
+    },
+    {
+      "id": 12,
+      "name": "Kam Air Official",
+      "tag": "Book verified domestic and international flights directly via Afghanistan's premier airline.",
+      "url": "https://www.kamair.com",
+      "c": "Travel"
+    },
+    {
+      "id": 13,
+      "name": "Bakhtar Media Stream",
+      "tag": "Digital entertainment, local networks, and online streaming services.",
+      "url": "https://example.com/entertainment",
+      "c": "Entertainment"
+    },
+    {
+      "id": 14,
+      "name": "Khind Sport House",
+      "tag": "Genuine sports equipment, athletic wear, and fitness accessories.",
+      "url": "https://example.com/sports",
+      "c": "Sports"
+    },
+    {
+      "id": 15,
+      "name": "Saffron Beauty Care",
+      "tag": "Organic cosmetics, skincare goods, and premium wellness essentials.",
+      "url": "https://example.com/beauty",
+      "c": "Beauty"
+    },
+    {
+      "id": 16,
+      "name": "Khorasan Home Decor",
+      "tag": "Premium home appliances, kitchen tools, and authentic interior design items.",
+      "url": "https://example.com/home",
+      "c": "Home"
+    },
+    {
+      "id": 17,
+      "name": "Ibn Sina Digital Health",
+      "tag": "Verified medical supplies, digital healthcare consultations, and wellness support.",
+      "url": "https://example.com/health",
+      "c": "Health"
+    },
+    {
+      "id": 18,
+      "name": "Kabul Automotive Parts",
+      "tag": "Genuine vehicle accessories, machinery parts, and automotive tools.",
+      "url": "https://example.com/automotive",
+      "c": "Automotive"
+    }
+  ]
+}
