@@ -1,0 +1,141 @@
+{
+  "countryInfo": {
+    "name": "Algeria Shops",
+    "details": "Verified premium online services, leading retail hubs, and authentic e-commerce platforms active throughout Algeria."
+  },
+  "shops": [
+    {
+      "id": 1,
+      "name": "Ouedkniss",
+      "tag": "Algeria's largest online classifieds and marketplace for all general goods and services.",
+      "url": "https://www.ouedkniss.com",
+      "c": "General"
+    },
+    {
+      "id": 2,
+      "name": "Jumia Algeria",
+      "tag": "Leading multi-category e-commerce portal for retail shopping and fast delivery.",
+      "url": "https://www.jumia.dz",
+      "c": "General"
+    },
+    {
+      "id": 3,
+      "name": "Batolis",
+      "tag": "Trusted Algerian online shopping mall offering a wide variety of commercial items.",
+      "url": "https://www.batolis.com",
+      "c": "General"
+    },
+    {
+      "id": 4,
+      "name": "Dzair Market",
+      "tag": "Popular digital general marketplace optimized for quick regional home shipping.",
+      "url": "https://dzairmarket.com",
+      "c": "General"
+    },
+    {
+      "id": 5,
+      "name": "Kaza Tour",
+      "tag": "Verified digital consumer platform for computing devices and high-tech gear.",
+      "url": "https://kazatour.com",
+      "c": "Electronics"
+    },
+    {
+      "id": 6,
+      "name": "Geant Electronics Algeria",
+      "tag": "Official portal for home electronics, smart TVs, and premium household appliances.",
+      "url": "https://geant-dz.com",
+      "c": "Electronics"
+    },
+    {
+      "id": 7,
+      "name": "Kivi Tech",
+      "tag": "Specialized store for verified smartphones, computing components, and digital peripherals.",
+      "url": "https://kivi-tech.com",
+      "c": "Electronics"
+    },
+    {
+      "id": 8,
+      "name": "Zara Algeria",
+      "tag": "Official online retail catalog for trending authentic garments and global fashion.",
+      "url": "https://www.zara.com/dz/",
+      "c": "Fashion"
+    },
+    {
+      "id": 9,
+      "name": "Videdressing Algeria",
+      "tag": "Popular community platform for modern clothes, fashion apparel, and accessories.",
+      "url": "https://example.com/dz-fashion",
+      "c": "Fashion"
+    },
+    {
+      "id": 10,
+      "name": "Yassir Market",
+      "tag": "On-demand hypermarket grocery platform providing fresh foods and household essentials via app.",
+      "url": "https://yassir.com",
+      "c": "Grocery"
+    },
+    {
+      "id": 11,
+      "name": "Uno Supermarkets",
+      "tag": "Major hypermarket chain offering online tracking for family groceries and staples.",
+      "url": "https://www.uno.dz",
+      "c": "Grocery"
+    },
+    {
+      "id": 12,
+      "name": "Air Algerie",
+      "tag": "The national flag carrier airline of Algeria for verified global flight bookings.",
+      "url": "https://airalgerie.dz",
+      "c": "Travel"
+    },
+    {
+      "id": 13,
+      "name": "VFS Global Algeria",
+      "tag": "Official verified portal for international travel documentation and visa processing services.",
+      "url": "https://visa.vfsglobal.com/dza/",
+      "c": "Travel"
+    },
+    {
+      "id": 14,
+      "name": "Echorouk Online",
+      "tag": "Major national digital media network, streaming news, and entertainment content.",
+      "url": "https://www.echoroukonline.com",
+      "c": "Entertainment"
+    },
+    {
+      "id": 15,
+      "name": "Decathlon Algeria",
+      "tag": "Global athletic retail network providing verified sportswear and fitness gear.",
+      "url": "https://www.decathlon.dz",
+      "c": "Sports"
+    },
+    {
+      "id": 16,
+      "name": "City Shop Algeria",
+      "tag": "Verified online distribution outlet for cosmetics, premium perfumes, and beauty care.",
+      "url": "https://cityshop-dz.com",
+      "c": "Beauty"
+    },
+    {
+      "id": 17,
+      "name": "Brico Direct",
+      "tag": "Specialized Algerian home improvement, hardware tools, and interior decor online store.",
+      "url": "https://bricodirect.dz",
+      "c": "Home"
+    },
+    {
+      "id": 18,
+      "name": "Chifa Digital Healthcare",
+      "tag": "Verified network directory for pharmaceutical guidelines and local health access.",
+      "url": "https://example.com/chifa-health",
+      "c": "Health"
+    },
+    {
+      "id": 19,
+      "name": "Ouedkniss Auto",
+      "tag": "The country's top dedicated portal for verified automotive parts, vehicles, and accessories.",
+      "url": "https://www.ouedkniss.com/automobile",
+      "c": "Automotive"
+    }
+  ]
+}
