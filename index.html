@@ -2196,56 +2196,6 @@ basglobalTimer=setTimeout(basglobalClose,30000);
 }
 </script>
   
-    container.innerHTML = '';
-    displayedCount = 0;
-  }
-
-  const nextChunk = filteredShops.slice(displayedCount, displayedCount + ITEMS_PER_PAGE);
-  
-  if (nextChunk.length === 0 && isNewFilter) {
-    container.innerHTML = `
-      <div style="grid-column: 1/-1; text-align: center; padding: 30px; color: #888;">
-        No shops registered under this specific category yet.
-      </div>
-    `;
-    document.getElementById('lazy-loading-trigger').innerText = '';
-    return;
-  }
-
-  nextChunk.forEach(shop => {
-    const verifiedCategory = MASTER_CATEGORIES.includes(shop.c) ? shop.c : "General";
-    const card = document.createElement('div');
-    card.className = 'shop-card';
-    card.innerHTML = `
-      <h3>${shop.name}</h3>
-      <p>${shop.tag || 'Verified Global Partner Store'}</p>
-      <a href="${shop.url}" target="_blank" class="visit-btn">Visit ${verifiedCategory} Shop</a>
-    `;
-    container.appendChild(card);
-  });
-
-  displayedCount += nextChunk.length;
-
-  const trigger = document.getElementById('lazy-loading-trigger');
-  if (displayedCount >= filteredShops.length) {
-    trigger.innerText = 'All verified shops loaded.';
-  } else {
-    trigger.innerText = 'Scroll down to discover more stores...';
-  }
-}
-
-function setupLazyLoading() {
-  const observer = new IntersectionObserver((entries) => {
-    if (entries[0].isIntersecting && displayedCount < filteredShops.length) {
-      renderShopsChunk(false);
-    }
-  }, { rootMargin: '100px' });
-
-  observer.observe(document.getElementById('lazy-loading-trigger'));
-}
-
-window.onload = initCountrySystem;
-</script>
 </body>
 </html>
 
