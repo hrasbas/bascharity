@@ -853,64 +853,30 @@ renderShops(countryShops[currentCountry] || []);
 // പ്യുവർ ഡയറക്ട് ലിങ്ക് ആണോ എന്ന് കണ്ടെത്തുന്ന സുരക്ഷാ ഫങ്ക്ഷൻ
 // ലിങ്കിൽ മറ്റ് കോഡുകളോ ചിഹ്നങ്ങളോ അക്ഷരങ്ങളോ ഉണ്ടാകാൻ പാടില്ല
 function isPureDirectLink(urlStr) {
-try {
-const urlObj = new URL(urlStr);
-// പ്രമുഖ സൈറ്റുകളുടെ അഫിലിയേറ്റ് പാരാമീറ്ററുകൾ ഉണ്ടോ എന്ന് ചെക്ക് ചെയ്യുന്നു
-const hasAffiliateParams = urlObj.searchParams.has('tag') || 
-   urlObj.searchParams.has('affid') || 
-   urlObj.searchParams.has('affiliate') || 
-   urlObj.searchParams.has('utm_source');
-   
-if (hasAffiliateParams) return false; 
-
-// ക്വറി പാരാമീറ്ററുകളോ അധിക ചിഹ്നങ്ങളോ ഇല്ലാത്ത ക്ലീൻ ലിങ്ക് ആണെങ്കിൽ ട്രൂ റിട്ടേൺ ചെയ്യും
-return true;
-} catch(e) {
-return false;
+  try {
+    const urlObj = new URL(urlStr);
+    let cleanPath = urlObj.pathname;
+    if (cleanPath.endsWith('/')) {
+      cleanPath = cleanPath.slice(0, -1);
+    }
+    const hasExtraCharacters = cleanPath.trim() !== "" || (urlObj.search && urlObj.search.trim() !== "");
+    if (hasExtraCharacters) {
+      return false;
+    }
+    return true;
+  } catch(e) {
+    return false;
+  }
 }
-}
 
-function renderShops(list, isSearching = false) {
-const container = document.getElementById("shopList");
-if(!container) return;
-container.innerHTML = ""; 
-
-if (crisisCountries.includes(currentCountry)) {
-container.innerHTML = '<div style="background:#222; border:2px solid #ff9800; border-radius:15px; padding:25px; text-align:center; color:#fff; margin-top:20px;"> <h3 style="color:#ff9800; text-transform:uppercase;">Unavailable due to world crisis</h3> <p style="font-size:18px; line-height:1.6; font-weight:bold; color:#ffeb3b;"> Dear friend, due to current global crisis and restrictions, international shopping platforms have limited services in your region. However, we sincerely pray for the peace and prosperity of your land. May the Almighty remove all obstacles and bring better days soon. </p> <div style="font-size:30px; margin-top:15px;">🌍🕊️</div> </div>';
-return;
-} 
-
-if (!list || list.length === 0) {
-if (isSearching) {
-container.innerHTML = "<p style='color:#ff9800; text-align:center; padding:20px; font-weight:bold;'>NO SHOPS FOUND MATCHING YOUR SEARCH</p>";
-} else {
-container.innerHTML = "<p style='color:#fff; text-align:center; padding:20px;'>IN PROGRESS FOR " + currentCountry.toUpperCase() + "...</p>";
-}
-return;
-} 
-
-list.forEach(shop => {
-const a = document.createElement("a");
-a.className = "shop-btn";
-a.href = shop.url;
-a.target = "_blank";
-a.rel = "noopener noreferrer"; 
-
-let domain = shop.url;
-try {
-domain = new URL(shop.url).hostname;
-} catch(e) {} 
-
-// ഡോട്ട് ലേബൽ നിർമ്മിക്കുന്നു
 const dotSpan = document.createElement("span");
 dotSpan.className = "warning-dot";
 dotSpan.innerText = "."; 
 
-// ഡയറക്ട് ലിങ്ക് നിയമം അനുസരിച്ച് മാത്രം ഡോട്ട് ഡിസ്‌പ്ലേ ചെയ്യിക്കുന്നു
 if (isPureDirectLink(shop.url)) {
-dotSpan.style.display = "block";
+  dotSpan.style.display = "block";
 } else {
-dotSpan.style.display = "none";
+  dotSpan.style.display = "none";
 } 
 
 a.appendChild(dotSpan); 
@@ -924,7 +890,8 @@ img.src = "https://www.google.com/s2/favicons?sz=64&domain_url=" + encodeURIComp
 a.appendChild(img); 
 
 const infoDiv = document.createElement("div");
-infoDiv.className = "shop-info"; 
+infoDiv.className = "shop-info";
+
 
 // ഷോപ്പ് നെയിംസ് മാത്രം ട്രാൻസ്ലേഷൻ ലോക്ക് ചെയ്യുന്നു (translate="no")
 const b = document.createElement("b");
