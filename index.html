@@ -382,7 +382,7 @@ console.error('Resize error:', e);
 
 window.addEventListener("resize", resizeRenderer); 
 
-// നിർത്താതെ 3D ഗ്ലോബും ചന്ദ്രനും ആനിമേറ്റ് ചെയ്ത് കറക്കാനുള്ള ലൂപ്പ് ഫംഗ്ഷൻ
+// ನಿರ್ಥಾದೆ 3D ഗ്ലോബും ചന്ദ്രനും ആനിമേറ്റ് ചെയ്ത് കറക്കാനുള്ള ലൂപ്പ് ഫംഗ്ഷൻ
 function animate() {
 if (!running || !renderer || !scene || !camera || !earthGroup || !moon) return;
 animateRef = requestAnimationFrame(animate);
@@ -498,8 +498,7 @@ if (animateRef) cancelAnimationFrame(animateRef);
 });
 </script>
 <script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit">
-                        <!-------No:4------->
-</script>
+                        </script>
  <div id="basBalloonWrap" class="notranslate"> 
 
 <div id="installBall" class="bas-ball white-b" onclick="handleInstallTap()">
@@ -851,18 +850,86 @@ renderShops(countryShops[currentCountry] || []);
 } 
 
 // പ്യുവർ ഡയറക്ട് ലിങ്ക് ആണോ എന്ന് കണ്ടെത്തുന്ന സുരക്ഷാ ഫങ്ക്ഷൻ
-// ലിങ്കിൽ മറ്റ് കോഡുകളോ ചിഹ്നങ്ങളോ അക്ഷരങ്ങളോ ഉണ്ടാകാൻ പാടില്ല
+function isPureDirectLink(urlStr) {
+  try {
+    if (!urlStr) return true;
+    const indiaShops = ['flipkart', 'meesho', 'myntra', 'ajio'];
+    const isIndiaShop = indiaShops.some(shopName => urlStr.toLowerCase().includes(shopName));
+    const hasCountryCode = urlStr.includes('l_co=') || urlStr.includes('_co=');
+    const hasAffiliateKeywords = urlStr.includes('affid') || urlStr.includes('tag') || urlStr.includes('affiliate') || urlStr.includes('/affi/') || urlStr.includes('expe');
 
+    if (isIndiaShop || hasCountryCode || hasAffiliateKeywords) {
+      return false;
+    }
+    return true;
+  } catch (e) {
+    return true;
+  }
+}
 
-// ഷോപ്പ് നെയിംസ് മാത്രം ട്രാൻസ്ലേഷൻ ലോക്ക് ചെയ്യുന്നു (translate="no")
-const b = document.createElement("b");
-b.setAttribute("translate", "no");
-b.innerText = shop.name; 
+function renderShops(shopsList, isSearching = false) {
+  const container = document.getElementById("shopList");
+  if (!container) return;
+  container.innerHTML = "";
 
-infoDiv.appendChild(b);
-a.appendChild(infoDiv);
-container.appendChild(a);
-});
+  if (shopsList.length === 0) {
+    container.innerHTML = "<p style='color:#ff5252; text-align:center; padding:20px;'>NO SHOPS FOUND</p>";
+    return;
+  }
+
+  // സാധാരണ സമയങ്ങളിൽ ടോപ്പ് 10 ഷോപ്പുകൾ മാത്രം കാണിക്കുക, സെർച്ച് ചെയ്യുമ്പോൾ എല്ലാം കാണിക്കുക
+  const listToRender = isSearching ? shopsList : shopsList.slice(0, 10);
+
+  listToRender.forEach(shop => {
+    if (!shop || !shop.url) return;
+
+    const a = document.createElement("a");
+    a.className = "shop-btn";
+    a.href = shop.url;
+    a.target = "_blank";
+
+    let domain = "";
+    try {
+      domain = new URL(shop.url).hostname;
+    } catch (e) {
+      domain = shop.url;
+    }
+
+    const dotSpan = document.createElement("span");
+    dotSpan.className = "warning-dot";
+    dotSpan.innerText = ".";
+
+    try {
+      if (isPureDirectLink(shop.url)) {
+        dotSpan.style.display = "block";
+      } else {
+        dotSpan.style.display = "none";
+      }
+    } catch (e) {
+      dotSpan.style.display = "none";
+    }
+    a.appendChild(dotSpan);
+
+    const img = document.createElement("img");
+    img.className = "shop-logo";
+    img.width = 42;
+    img.height = 42;
+    img.alt = shop.name;
+    img.src = "https://www.google.com/s2/favicons?sz=64&domain_url=" + encodeURIComponent(domain);
+    a.appendChild(img);
+
+    const infoDiv = document.createElement("div");
+    infoDiv.className = "shop-info";
+
+    // ഷോപ്പ് നെയിംസ് മാത്രം ട്രാൻസ്ലേഷൻ ലോക്ക് ചെയ്യുന്നു (translate="no")
+    const b = document.createElement("b");
+    b.setAttribute("translate", "no");
+    b.innerText = shop.name; 
+
+    infoDiv.appendChild(b);
+    a.appendChild(infoDiv);
+    container.appendChild(a);
+  });
 } 
 
 function filterShops() {
@@ -884,7 +951,6 @@ loadShops();
 });
 </script>
 
-<!-------------------- Compare--------------->
 <style>
 .compare-box{
 background:#000;
@@ -937,7 +1003,6 @@ Compare Price on Trusted Sites
 അതുവഴി വിശക്കുന്ന ഒരു വയറിന് ആശ്വാസമാകുന്നു. നന്ദി.
 </span>
 </div>
-<!----------------------- Share----------------->
 <style>
 .share-container {
 max-width: 900px;
@@ -1017,9 +1082,7 @@ navigator.clipboard.writeText("https://bascharity.com");
 alert("Link Copied. Share with friends.");
 }
 </script>
- <!------------ impact---------->
-
-<style>
+ <style>
 .mainbox {
 max-width: 900px;
 width: 96%;
@@ -1208,8 +1271,7 @@ gallery.scrollLeft = 0;
 }
 setInterval(scrollGallery, 20);
 </script>
- <!------------------- info--------------------->
-<style>
+ <style>
 .info-box{
 /* ലാപ്ടോപ്പിൽ 900px വരെ വരാൻ max-width മാറ്റി */
 max-width: 900px;
@@ -1550,12 +1612,23 @@ if(entry.target.id==="section8" && opened8){ toggleBas8(); }
 if(document.getElementById("section7")) observer78.observe(document.getElementById("section7"));
 if(document.getElementById("section8")) observer78.observe(document.getElementById("section8"));
 </script>
- <!-------------------- trusted Institutes------------>
-<style>
+ <style>
 .trust-container{
 max-width:900px; /* Responsive Fix */
 width:96%;
 margin:auto;
+}
+.trust-title{
+background:#000;
+color:#00e676;
+font-weight:900;
+font-size:28px;
+text-align:center;
+padding:20px;
+border-radius:12px;
+margin-bottom:25px;
+border:1px solid #333;
+border-left:6px solid #00e676;
 }
 .trust-title{
 background:#000;
@@ -1592,6 +1665,23 @@ display:block;
 font-size:22px;
 color:#ddd;
 line-height:1.7;
+}
+.btn-row{
+display:flex;
+gap:10px;
+margin-top:20px;
+}
+.trust-btn{
+padding:16px;
+border-radius:10px;
+font-size:22px;
+font-weight:bold;
+text-align:center;
+cursor:pointer;
+display:flex;
+align-items:center;
+justify-content:center;
+flex-direction: column;
 }
 .btn-row{
 display:flex;
@@ -2025,7 +2115,7 @@ Donate Directly⇒
 <span style="font-size:18px;">(Global)</span>
 </a>
 </div>
-</div>
+</div> 
 
 <div id="visionDetails12" class="vision-section">
 <div class="vision-box">
@@ -2197,4 +2287,3 @@ basglobalTimer=setTimeout(basglobalClose,30000);
 </script>
 </body>
 </html>
-
