@@ -850,35 +850,7 @@ renderShops(countryShops[currentCountry] || []);
 } 
 
 // പ്യുവർ ഡയറക്ട് ലിങ്ക് ആണോ എന്ന് കണ്ടെത്തുന്ന സുരക്ഷാ ഫങ്ക്ഷൻ
-function isPureDirectLink(urlStr) {
-  try {
-    if (!urlStr) return true;
-    const indiaShops = ['flipkart', 'meesho', 'myntra', 'ajio'];
-    const isIndiaShop = indiaShops.some(shopName => urlStr.toLowerCase().includes(shopName));
-    const hasCountryCode = urlStr.includes('l_co=') || urlStr.includes('_co=');
-    const hasAffiliateKeywords = urlStr.includes('affid') || urlStr.includes('tag') || urlStr.includes('affiliate') || urlStr.includes('/affi/') || urlStr.includes('expe');
-
-    if (isIndiaShop || hasCountryCode || hasAffiliateKeywords) {
-      return false;
-    }
-    return true;
-  } catch (e) {
-    return true;
-  }
-}
-
-function renderShops(shopsList, isSearching = false) {
-  const container = document.getElementById("shopList");
-  if (!container) return;
-  container.innerHTML = "";
-
-  if (shopsList.length === 0) {
-    container.innerHTML = "<p style='color:#ff5252; text-align:center; padding:20px;'>NO SHOPS FOUND</p>";
-    return;
-  }
-
-  // സാധാരണ സമയങ്ങളിൽ ടോപ്പ് 10 ഷോപ്പുകൾ മാത്രം കാണിക്കുക, സെർച്ച് ചെയ്യുമ്പോൾ എല്ലാം കാണിക്കുക
- // പ്യുവർ ഡയറക്ട് ലിങ്ക് ആണോ എന്ന് കണ്ടെത്തുന്ന സുരക്ഷാ ഫങ്ക്ഷൻ
+     // പ്യുവർ ഡയറക്ട് ലിങ്ക് ആണോ എന്ന് കണ്ടെത്തുന്ന സുരക്ഷാ ഫങ്ക്ഷൻ
 function isPureDirectLink(urlStr) {
   try {
     if (!urlStr) return true;
@@ -912,10 +884,12 @@ function renderShops(shopsList, isSearching = false) {
   listToRender.forEach(shop => {
     if (!shop || !shop.url) return;
 
+    // ബോക്സിന്റെ പൊസിഷൻ കൃത്യമാക്കാൻ
     const a = document.createElement("a");
     a.className = "shop-btn";
     a.href = shop.url;
     a.target = "_blank";
+    a.style.position = "relative"; 
 
     let domain = "";
     try {
@@ -927,9 +901,17 @@ function renderShops(shopsList, isSearching = false) {
     const dotSpan = document.createElement("span");
     dotSpan.className = "warning-dot";
     dotSpan.innerText = ".";
+    
+    // ഡോട്ട് ഇടത് വശത്ത് മുകളിൽ വരാനുള്ള ഡിസൈൻ നേരിട്ട് നൽകുന്നു
+    dotSpan.style.position = "absolute";
+    dotSpan.style.top = "2px";
+    dotSpan.style.left = "5px";
+    dotSpan.style.fontSize = "24px";
+    dotSpan.style.fontWeight = "bold";
+    dotSpan.style.lineHeight = "1";
 
     try {
-      // ഡയറക്ട് ലിങ്ക് ആണെങ്കിൽ ഡോട്ട് കാണിക്കില്ല (none), അഫിലിയേറ്റ് ലിങ്ക് ആണെങ്കിൽ കാണിക്കും (block)
+      // ഡയറക്ട് ലിങ്ക് ആണെങ്കിൽ ഡോട്ട് പൂർണ്ണമായി മറയ്ക്കുന്നു, അല്ലാത്തവയ്ക്ക് കാണിക്കുന്നു
       if (isPureDirectLink(shop.url)) {
         dotSpan.style.display = "none";
       } else {
@@ -979,6 +961,7 @@ await setCountry(saved);
 document.addEventListener("DOMContentLoaded", () => {
 loadShops();
 });
+
 </script>
 <style>
 .compare-box{
