@@ -855,17 +855,23 @@ renderShops(countryShops[currentCountry] || []);
 function isPureDirectLink(urlStr) {
   try {
     const urlObj = new URL(urlStr);
-    let cleanPath = urlObj.pathname;
-    if (cleanPath.endsWith('/')) {
-      cleanPath = cleanPath.slice(0, -1);
-    }
-    const hasExtraCharacters = cleanPath.trim() !== "" || (urlObj.search && urlObj.search.trim() !== "");
-    if (hasExtraCharacters) {
+    
+    // ലിങ്കിൽ കൺട്രി കോഡോ മറ്റ് അഫിലിയേറ്റ് തിരിച്ചറിയൽ വാക്കുകളോ ഉണ്ടോ എന്ന് നോക്കുന്നു
+    const hasCountryCode = urlStr.includes('l_co=') || urlStr.includes('_co=');
+    const hasQueryParams = urlObj.search && urlObj.search.trim() !== "";
+    const hasAffiliateKeywords = urlStr.includes('affid') || 
+                                 urlStr.includes('tag') || 
+                                 urlStr.includes('affiliate') || 
+                                 urlStr.includes('/affi/') || 
+                                 urlStr.includes('expe');
+
+    // കൺട്രി കോഡോ മറ്റ് എക്സ്ട്രാ പാരാമീറ്ററുകളോ ഉണ്ടെങ്കിൽ ഡോട്ട് കാണിക്കില്ല (False)
+    if (hasCountryCode || hasQueryParams || hasAffiliateKeywords) {
       return false;
     }
     return true;
   } catch(e) {
-    return false;
+    return true;
   }
 }
 
