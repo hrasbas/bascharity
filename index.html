@@ -950,47 +950,6 @@ document.addEventListener("DOMContentLoaded", () => {
 loadShops();
 });
 </script>
-<style> 
-/* ഷോപ്പ് ബോക്സിന്റെ അടിസ്ഥാന ഡിസൈൻ */
-.shop-box {
-    position: relative; /* ഡോട്ട് കൃത്യമായി കോർണറിൽ നിൽക്കാൻ ഇത് നിർബന്ധമാണ് */
-}
-
-/* ഇടത് വശത്ത് മുകളിൽ വരാവുന്ന ഡോട്ടിന്റെ ഫുൾ ഡിസൈൻ */
-.shop-box .corner-indicator {
-    position: absolute;
-    top: 2px;
-    left: 5px;
-    font-size: 24px;
-    font-weight: bold;
-    line-height: 1;
-    display: block; /* സാധാരണയായി ഡോട്ട് കാണിക്കും */
-}
-
-/* ഡയറക്ട് ലിങ്ക് (www. ഉള്ളത്) ആണെങ്കിൽ ആ ബോക്സിലെ ഡോട്ട് മാത്രം വേണ്ടെന്ന് വെക്കുന്നു */
-.shop-box:has(a[href*="www."]) .corner-indicator {
-    display: none;
-}
- /* ==================== തുടക്കം (Starting) ==================== */
-.shop-box .corner-indicator::before {
-    content: ".";
-    position: absolute;
-    top: 2px;
-    left: 5px;
-    font-size: 24px;
-    font-weight: bold;
-    line-height: 1;
-}
-/* ============================================================ */
-
-
-/* ==================== അവസാനം (Finishing) ==================== */
-.shop-box:has(a[href*="www."]) .corner-indicator::before {
-    display: none;
-}
-/* ============================================================ */
-
- </style>
 
 <style>
 .compare-box{
