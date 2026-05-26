@@ -852,41 +852,51 @@ renderShops(countryShops[currentCountry] || []);
 
 // പ്യുവർ ഡയറക്ട് ലിങ്ക് ആണോ എന്ന് കണ്ടെത്തുന്ന സുരക്ഷാ ഫങ്ക്ഷൻ
 // ലിങ്കിൽ മറ്റ് കോഡുകളോ ചിഹ്നങ്ങളോ അക്ഷരങ്ങളോ ഉണ്ടാകാൻ പാടില്ല
+// 1. ലിങ്ക് പ്യുവർ ആണോ എന്ന് നോക്കുന്ന ഫങ്ഷൻ (ഇന്ത്യൻ സൈറ്റുകളിൽ ഡോട്ട് ഒഴിവാക്കാൻ)
 function isPureDirectLink(urlStr) {
   try {
-    const urlObj = new URL(urlStr);
+    if (!urlStr) return true;
     
-    // ലിങ്കിൽ കൺട്രി കോഡോ മറ്റ് അഫിലിയേറ്റ് തിരിച്ചറിയൽ വാക്കുകളോ ഉണ്ടോ എന്ന് നോക്കുന്നു
+    // ഇന്ത്യയിലെ പ്രധാന ഷോപ്പുകളുടെ പേരുകൾ
+    const indiaShops = ['flipkart', 'meesho', 'myntra', 'ajio'];
+    const isIndiaShop = indiaShops.some(shopName => urlStr.toLowerCase().includes(shopName));
+    
+    // വിദേശ രാജ്യങ്ങളുടെ അഫിലിയേറ്റ് അടയാളങ്ങൾ
     const hasCountryCode = urlStr.includes('l_co=') || urlStr.includes('_co=');
-    const hasQueryParams = urlObj.search && urlObj.search.trim() !== "";
     const hasAffiliateKeywords = urlStr.includes('affid') || 
                                  urlStr.includes('tag') || 
                                  urlStr.includes('affiliate') || 
                                  urlStr.includes('/affi/') || 
                                  urlStr.includes('expe');
 
-    // കൺട്രി കോഡോ മറ്റ് എക്സ്ട്രാ പാരാമീറ്ററുകളോ ഉണ്ടെങ്കിൽ ഡോട്ട് കാണിക്കില്ല (False)
-    if (hasCountryCode || hasQueryParams || hasAffiliateKeywords) {
-      return false;
+    if (isIndiaShop || hasCountryCode || hasAffiliateKeywords) {
+      return false; // ഡോട്ട് കാണിക്കില്ല
     }
-    return true;
-  } catch(e) {
+    return true; // ഡോട്ട് കാണിക്കും
+  } catch (e) {
     return true;
   }
 }
 
+// 2. ഡോട്ട് സ്പാൻ ഉണ്ടാക്കുന്ന ഭാഗം
 const dotSpan = document.createElement("span");
 dotSpan.className = "warning-dot";
 dotSpan.innerText = "."; 
 
-if (isPureDirectLink(shop.url)) {
-  dotSpan.style.display = "block";
-} else {
-  dotSpan.style.display = "none";
-} 
+// പൂർണ്ണമായ സുരക്ഷാ കവചം (ഇത് കാരണം മുകളിലെ ഒരു ഷോപ്പും ലോഡ് ആകാതിരിക്കില്ല)
+try {
+  if (isPureDirectLink(shop.url)) {
+    dotSpan.style.display = "block";
+  } else {
+    dotSpan.style.display = "none";
+  }
+} catch (e) {
+  dotSpan.style.display = "none"; 
+}
 
 a.appendChild(dotSpan); 
 
+// 3. ലോഗോ ഇമേജ് ഉണ്ടാക്കുന്ന ഭാഗം
 const img = document.createElement("img");
 img.className = "shop-logo";
 img.width = 42;
@@ -895,8 +905,10 @@ img.alt = shop.name;
 img.src = "https://www.google.com/s2/favicons?sz=64&domain_url=" + encodeURIComponent(domain);
 a.appendChild(img); 
 
+// 4. ഷോപ്പ് ഇൻഫോ ഡിവിഷൻ
 const infoDiv = document.createElement("div");
 infoDiv.className = "shop-info";
+
 
 
 // ഷോപ്പ് നെയിംസ് മാത്രം ട്രാൻസ്ലേഷൻ ലോക്ക് ചെയ്യുന്നു (translate="no")
