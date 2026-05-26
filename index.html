@@ -878,6 +878,35 @@ function renderShops(shopsList, isSearching = false) {
   }
 
   // സാധാരണ സമയങ്ങളിൽ ടോപ്പ് 10 ഷോപ്പുകൾ മാത്രം കാണിക്കുക, സെർച്ച് ചെയ്യുമ്പോൾ എല്ലാം കാണിക്കുക
+ // പ്യുവർ ഡയറക്ട് ലിങ്ക് ആണോ എന്ന് കണ്ടെത്തുന്ന സുരക്ഷാ ഫങ്ക്ഷൻ
+function isPureDirectLink(urlStr) {
+  try {
+    if (!urlStr) return true;
+    const indiaShops = ['flipkart', 'meesho', 'myntra', 'ajio'];
+    const isIndiaShop = indiaShops.some(shopName => urlStr.toLowerCase().includes(shopName));
+    const hasCountryCode = urlStr.includes('l_co=') || urlStr.includes('_co=');
+    const hasAffiliateKeywords = urlStr.includes('affid') || urlStr.includes('tag') || urlStr.includes('affiliate') || urlStr.includes('/affi/') || urlStr.includes('expe');
+
+    if (isIndiaShop || hasCountryCode || hasAffiliateKeywords) {
+      return false;
+    }
+    return true;
+  } catch (e) {
+    return true;
+  }
+}
+
+function renderShops(shopsList, isSearching = false) {
+  const container = document.getElementById("shopList");
+  if (!container) return;
+  container.innerHTML = "";
+
+  if (shopsList.length === 0) {
+    container.innerHTML = "<p style='color:#ff5252; text-align:center; padding:20px;'>NO SHOPS FOUND</p>";
+    return;
+  }
+
+  // സാധാരണ സമയങ്ങളിൽ ടോപ്പ് 10 ഷോപ്പുകൾ മാത്രം കാണിക്കുക, സെർച്ച് ചെയ്യുമ്പോൾ എല്ലാം കാണിക്കുക
   const listToRender = isSearching ? shopsList : shopsList.slice(0, 10);
 
   listToRender.forEach(shop => {
@@ -900,13 +929,14 @@ function renderShops(shopsList, isSearching = false) {
     dotSpan.innerText = ".";
 
     try {
+      // ഡയറക്ട് ലിങ്ക് ആണെങ്കിൽ ഡോട്ട് കാണിക്കില്ല (none), അഫിലിയേറ്റ് ലിങ്ക് ആണെങ്കിൽ കാണിക്കും (block)
       if (isPureDirectLink(shop.url)) {
-        dotSpan.style.display = "block";
-      } else {
         dotSpan.style.display = "none";
+      } else {
+        dotSpan.style.display = "block";
       }
     } catch (e) {
-      dotSpan.style.display = "none";
+      dotSpan.style.display = "block";
     }
     a.appendChild(dotSpan);
 
@@ -950,7 +980,6 @@ document.addEventListener("DOMContentLoaded", () => {
 loadShops();
 });
 </script>
-
 <style>
 .compare-box{
 background:#000;
