@@ -2234,8 +2234,9 @@ clearTimeout(basglobalTimer);
 basglobalTimer=setTimeout(basglobalClose,30000);
 }
 </script>
- <script>
- // 1. OFFICIAL MASTER CATEGORY LIST (100% OTHU NOKKIYATHU)
+  
+  <script>
+// 1. OFFICIAL MASTER CATEGORY LIST (100% OTHU NOKKIYATHU)
 const MASTER_CATEGORIES = [
   "General", "Electronics", "Fashion", "Grocery", "Travel", 
   "Entertainment", "Sports", "Beauty", "Home", "Health", "Automotive"
@@ -2248,20 +2249,21 @@ const REGIONAL_LINKS = {
   "33": "https://pub-168159db07cc407eaa28228eb2520ea5.r2.dev/33.json"
 };
 
-// ഇവിടെ നിങ്ങളുടെ കൺട്രി കോഡ് നമ്പർ മാത്രം മാറ്റിയാൽ മതി (ഉദാഹരണത്തിന്: "31", "32", അല്ലെങ്കിൽ "33")
+// ഇവിടെ നിങ്ങളുടെ കൺട്രി കോഡ് നമ്പർ മാത്രം മാറ്റുക (ഉദാഹരണത്തിന്: "31", "32", അല്ലെങ്കിൽ "33")
 const CURRENT_COUNTRY_CODE = "31"; 
 
-// ലിങ്ക് മാപ്പിംഗിൽ ഉണ്ടെങ്കിൽ അത് എടുക്കും, ഇല്ലെങ്കിൽ ലോക്കൽ ഫയൽ ബാക്കപ്പായി ഉപയോഗിക്കും
-const JSON_URL = REGIONAL_LINKS[CURRENT_COUNTRY_CODE] || `${CURRENT_COUNTRY_CODE}.json`;
+// കാഷെ പ്രശ്നം ഒഴിവാക്കാൻ ലിങ്കിനൊപ്പം തനിയെ ടൈംസ്റ്റാമ്പ് (Cache Buster) ചേർക്കുന്ന സിസ്റ്റം
+const BASE_URL = REGIONAL_LINKS[CURRENT_COUNTRY_CODE] || `${CURRENT_COUNTRY_CODE}.json`;
+const JSON_URL = `${BASE_URL}?t=${new Date().getTime()}`;
 
 let allShops = [];
 let filteredShops = [];
 let displayedCount = 0;
 const ITEMS_PER_PAGE = 12; 
 
-// സിസ്റ്റം ലോഡ് ചെയ്യുമ്പോൾ തന്നെ റൺ ആകുന്ന ഫങ്ഷൻ
+// സിസ്റ്റം ലോഡ് ചെയ്യുമ്പോൾ റൺ ആകുന്ന ഫങ്ഷൻ
 async function initCountrySystem() {
-  // എപ്പോഴും 11 ബട്ടണുകൾ സൈറ്റിൽ ആദ്യം തന്നെ നിർമ്മിച്ച് വെക്കുന്നു (ഡിസൈൻ നഷ്ടപ്പെടില്ല)
+  // എപ്പോഴും 11 ബട്ടണുകൾ സൈറ്റിൽ ആദ്യം തന്നെ നിർമ്മിച്ച് വെക്കുന്നു
   buildStaticButtons();
 
   try {
@@ -2269,9 +2271,8 @@ async function initCountrySystem() {
     if (!response.ok) throw new Error('JSON ഫയൽ കണ്ടെത്താൻ കഴിഞ്ഞില്ല');
     const data = await response.json();
     
-    // പൊതുവിവരങ്ങൾ ഉണ്ടെങ്കിൽ അത് മാറ്റുന്നു
     if(data.countryInfo) {
-      document.getElementById('country-title').innerText = data.countryInfo.name || "Country Directory";
+      document.getElementById('country-title').innerText = data.countryInfo.name || `Country ${CURRENT_COUNTRY_CODE} Directory`;
       document.getElementById('country-details').innerText = data.countryInfo.details || "";
     }
 
@@ -2281,9 +2282,9 @@ async function initCountrySystem() {
     setupLazyLoading();
 
   } catch (error) {
-    // ഫയൽ ലോഡ് ആയില്ലെങ്കിലും ബട്ടണുകൾ നഷ്ടപ്പെടില്ല, കടകളുടെ സ്ഥാനത്ത് മാത്രം ഈ മെസ്സേജ് വരും
     console.warn('System Backup Activated:', error);
-    document.getElementById('country-title').innerText = "Country Directory";
+    // ഫയൽ ലോഡ് ആയില്ലെങ്കിൽ ബാക്കപ്പായി ആ രാജ്യത്തിന്റെ കോഡ് നമ്പർ ടൈറ്റിലിൽ കാണിക്കും
+    document.getElementById('country-title').innerText = `Country ${CURRENT_COUNTRY_CODE} Directory`;
     document.getElementById('country-details').innerText = "Premium shopping options and local services listing for this region.";
     document.getElementById('shops-list-container').innerHTML = `
       <div style="grid-column: 1/-1; text-align: center; padding: 40px; color: #666; font-weight: bold;">
@@ -2294,7 +2295,7 @@ async function initCountrySystem() {
   }
 }
 
-// 11 ബട്ടണുകൾ ഒരേ ഒപ്പ് ശൈലിയിൽ സ്ഥിരമായി നിർമ്മിക്കുന്ന സിസ്റ്റം
+// 11 ബട്ടണുകൾ സ്ഥിരമായി നിർമ്മിക്കുന്ന സിസ്റ്റം
 function buildStaticButtons() {
   const container = document.getElementById('category-buttons-container');
   container.innerHTML = '';
@@ -2306,7 +2307,7 @@ function buildStaticButtons() {
   allBtn.onclick = () => filterSystem('All', allBtn);
   container.appendChild(allBtn);
 
-  // 11 ഔദ്യോഗിക കാറ്റഗറി ബട്ടണുകൾ സ്ഥിരമായി നിർമ്മിക്കുന്നു
+  // 11 ഔദ്യോഗിക കാറ്റഗറി ബട്ടണുകൾ
   MASTER_CATEGORIES.forEach(category => {
     const btn = document.createElement('button');
     btn.innerText = category;
@@ -2321,7 +2322,7 @@ function filterSystem(category, clickedButton) {
   document.querySelectorAll('.category-btn').forEach(b => b.classList.remove('active'));
   clickedButton.classList.add('active');
 
-  if (allShops.length === 0) return; // കടകൾ ലോഡ് ആയിട്ടില്ലെങ്കിൽ ഫിൽട്ടർ വർക്ക് ആകില്ല
+  if (allShops.length === 0) return; 
 
   filteredShops = category === 'All' 
     ? allShops 
@@ -2384,6 +2385,7 @@ function setupLazyLoading() {
 
 window.onload = initCountrySystem;
 </script>
+
 </body>
 </html>
 
