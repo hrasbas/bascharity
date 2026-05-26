@@ -2298,6 +2298,9 @@ basglobalTimer=setTimeout(basglobalClose,30000);
 }
 </script>
 <style>
+ 
+ 
+<style>
 #bas-mega-portal{
 width:96%;
 max-width:900px;
@@ -2328,7 +2331,7 @@ background:#111;
 margin-bottom:15px;
 }
 
-/* BUTTON GRID */
+/* BUTTON GRID - 10 BUTTONS (Grid Adjusted) */
 .btn-grid{
 display:grid;
 grid-template-columns:repeat(3,1fr);
@@ -2344,9 +2347,13 @@ border-radius:10px;
 font-size:20px;
 font-weight:bold;
 cursor: pointer;
+transition: 0.2s;
+}
+.m-btn:hover {
+background: #333;
 }
 
-/* തനിയെ താഴെ ആഡ് ആവുന്ന കാറ്റഗറി ഹെഡിങ് (Same Shape) */
+/* തനിയെ താഴെ ആഡ് ആവുന്ന കാറ്റഗറി ഹെഡിങ് */
 #selected-cat-container {
 margin-top: 10px;
 margin-bottom: 10px;
@@ -2428,19 +2435,23 @@ font-weight:bold;
 cursor: pointer;
 }
 
-/* BACK BUTTON */
+/* BACK BUTTON (LONG BUTTON) */
 .reset-link{
 display:block;
 text-align:center;
-margin-top:12px;
+margin-bottom:15px;
 background:#ff9800;
 color:#000;
-padding:12px;
+padding:14px;
 border-radius:10px;
-font-size:20px;
+font-size:21px;
 font-weight:bold;
 text-decoration:none;
 cursor: pointer;
+transition: 0.2s;
+}
+.reset-link:hover {
+background: #e08600;
 }
 </style>
 </head>
@@ -2451,8 +2462,9 @@ cursor: pointer;
 <input id="findShop" onkeyup="liveSearch()" placeholder="Search shops...">
 
 <div id="cat-search-box">
+<span class="reset-link" onclick="resetCategory()">🔙 Back to All Shops</span>
+
 <div class="btn-grid" id="cat-buttons"></div>
-<span class="reset-link" onclick="resetCategory()">← Back to All Shops</span>
 </div>
 
 <div id="selected-cat-container"></div>
@@ -2462,16 +2474,22 @@ cursor: pointer;
 </div>
 
 <script>
+// 11 സിഗ്നേച്ചർ കാറ്റഗറികൾക്കുള്ള കളർ കോഡിംഗ് (All ബട്ടൺ ഉൾപ്പെടെ പുതിയവ ചേർത്തു)
 const colors={
 "General":"#2196f3",
 "Fashion":"#e91e63",
 "Beauty":"#9c27b0",
 "Electronics":"#ff5722",
 "Health":"#4caf50",
-"Travel":"#00bcd4"
+"Travel":"#00bcd4",
+"Grocery":"#8bc34a",
+"Home & Decor":"#ff9800",
+"Sports":"#009688",
+"Entertainment":"#673ab7"
 };
 
-let mainOrder=["General","Fashion","Beauty","Electronics","Health","Travel"];
+// നിങ്ങൾ നിശ്ചയിച്ച 10 പ്രധാന ഇൻഡിപെൻഡന്റ് കാറ്റഗറികൾ
+let mainOrder=["General","Fashion","Beauty","Electronics","Health","Travel","Grocery","Home & Decor","Sports","Entertainment"];
 
 let shops = [];
 let activeCategory = null;
@@ -2483,11 +2501,21 @@ fetch("https://pub-168159db07cc407eaa28228eb2520ea5.r2.dev/1%20india.json")
 .then(data => {
 shops = data;
 
-// JSON ഫയലിലുള്ള പുതിയ കാറ്റഗറികൾ ഉണ്ടെങ്കിൽ അവയും ലിസ്റ്റിലേക്ക് ആഡ് ചെയ്യുന്നു
+// JSON ഫയലിൽ പുതിയ കാറ്റഗറികൾ സ്വയം കണ്ടുപിടിക്കുമ്പോൾ ലിസ്റ്റിലേക്ക് ആഡ് ചെയ്യാനുള്ള ലോജിക്
 shops.forEach(shop => {
-let catName = shop.c || shop.category;
-if (catName && !mainOrder.includes(catName)) {
-mainOrder.push(catName);
+let catField = shop.c || shop.category;
+if (catField) {
+if (Array.isArray(catField)) {
+catField.forEach(cName => {
+if (cName && !mainOrder.includes(cName)) {
+mainOrder.push(cName);
+}
+});
+} else {
+if (!mainOrder.includes(catField)) {
+mainOrder.push(catField);
+}
+}
 }
 });
 
@@ -2499,7 +2527,7 @@ console.error("Error loading JSON:", err);
 });
 };
 
-/* കാറ്റഗറി ബട്ടണുകൾ ഉണ്ടാക്കുന്നു */
+/* 10 സിഗ്നേച്ചർ കാറ്റഗറി ബട്ടണുകൾ നിർമ്മിക്കുന്നു */
 function initButtons(){
 let box=document.getElementById("cat-buttons");
 box.innerHTML=mainOrder.map(c=> {
@@ -2509,17 +2537,23 @@ style="border-bottom:3px solid ${borderCol}"&gt;${c}</button>`;
 }).join("");
 }
 
-/* ഫിൽട്ടർ ലോജിക് */
+/* ഫിൽട്ടർ ലോജിക് (ഒരു ഷോപ്പിന് ഒന്നിലധികം കാറ്റഗറികൾ Array രൂപത്തിൽ വന്നാലും വർക്ക് ചെയ്യും) */
 function filterCat(cat){
 activeCategory = cat;
 expandedCategories[cat] = false;
 document.getElementById("findShop").value = "";
 
-let filtered = shops.filter(s => (s.c || s.category) === cat);
+let filtered = shops.filter(s => {
+let catField = s.c || s.category;
+if (Array.isArray(catField)) {
+return catField.includes(cat);
+}
+return catField === cat;
+});
 render(filtered, true);
 }
 
-/* റീസെറ്റ് ലോജിക് (Back to all shops) */
+/* റീസെറ്റ് ലോജിക് (Back to all shops - Headings സഹിതം കാണിക്കാൻ) */
 function resetCategory() {
 activeCategory = null;
 expandedCategories = {};
@@ -2527,7 +2561,7 @@ document.getElementById("findShop").value = "";
 render(shops, false);
 }
 
-/* റെൻഡർ എഞ്ചിൻ */
+/* റെൻഡർ എഞ്ചിൻ (Array കാറ്റഗറി ലോജിക് പൂർണ്ണമായി സപ്പോർട്ട് ചെയ്യുന്നു) */
 function render(data, isFiltered=false){
 let container=document.getElementById("shop-container");
 let selectedCatContainer = document.getElementById("selected-cat-container");
@@ -2542,17 +2576,28 @@ selectedCatContainer.style.display = "none";
 selectedCatContainer.innerHTML = "";
 }
 
+// ഷോപ്പുകളെ അവയുടെ കാറ്റഗറികൾക്ക് അനുസരിച്ച് ഗ്രൂപ്പ് ചെയ്യുന്നു (Array ഗ്രൂപ്പിംഗ് ലോജിക്)
 let grouped={};
 data.forEach(s=>{
-let catName = s.c || s.category || "General";
-if(!grouped[catName]) grouped[catName]=[];
-grouped[catName].push(s);
+let catField = s.c || s.category || "General";
+if (Array.isArray(catField)) {
+catField.forEach(cName => {
+if(!grouped[cName]) grouped[cName]=[];
+// ഡ്യൂപ്ലിക്കേഷൻ ഒഴിവാക്കാൻ
+if(!grouped[cName].includes(s)) {
+grouped[cName].push(s);
+}
+});
+} else {
+if(!grouped[catField]) grouped[catField]=[];
+grouped[catField].push(s);
+}
 });
 
 let orderToShow = activeCategory ? [activeCategory] : mainOrder;
 
 orderToShow.forEach(cat=>{
-if(grouped[cat]){
+if(grouped[cat] && grouped[cat].length > 0){
 let col=colors[cat] || "#666";
 
 let head=document.createElement("div");
@@ -2575,7 +2620,6 @@ card.href=s.u || s.url;
 card.target="_blank";
 card.style.borderLeft="6px solid "+col;
 
-// 🔥 നിരോധിച്ച സൈറ്റുകൾ ഉണ്ടെങ്കിൽ ക്ലിക്ക് ചെയ്യുമ്പോൾ അലേർട്ട് കാണിക്കാനുള്ള ലോജിക്
 let domain = s.d || s.domain || "";
 if(domain.toLowerCase().includes("aliexpress.com")) {
 card.onclick = (e) => {
@@ -2584,7 +2628,6 @@ alert("This shop is banned in India. You cannot purchase from here.");
 };
 }
 
-// Direct Link ലോജിക്
 let isAffiliate = s.is_affiliate !== undefined ? s.is_affiliate : true;
 let dotHTML = (!isAffiliate || isAffiliate === "false" || isAffiliate === false) ? '<div class="direct-dot"></div>' : '';
 
@@ -2615,7 +2658,11 @@ container.appendChild(btn);
 function toggle(cat){
 expandedCategories[cat] = !expandedCategories[cat];
 if(activeCategory) {
-let filtered = shops.filter(s => (s.c || s.category) === activeCategory);
+let filtered = shops.filter(s => {
+let catField = s.c || s.category;
+if (Array.isArray(catField)) return catField.includes(activeCategory);
+return catField === activeCategory;
+});
 render(filtered, true);
 } else {
 render(shops, false);
@@ -2627,7 +2674,11 @@ function liveSearch(){
 let val=document.getElementById("findShop").value.toLowerCase().trim();
 if(!val){
 if(activeCategory) {
-let filtered = shops.filter(s => (s.c || s.category) === activeCategory);
+let filtered = shops.filter(s => {
+let catField = s.c || s.category;
+if (Array.isArray(catField)) return catField.includes(activeCategory);
+return catField === activeCategory;
+});
 render(filtered, true);
 } else {
 render(shops, false);
@@ -2635,19 +2686,21 @@ render(shops, false);
 return;
 }
 
-let baseList = activeCategory ? shops.filter(s => (s.c || s.category) === activeCategory) : shops;
+let baseList = activeCategory ? shops.filter(s => {
+let catField = s.c || s.category;
+if (Array.isArray(catField)) return catField.includes(activeCategory);
+return catField === activeCategory;
+}) : shops;
+
 let f=baseList.filter(s=> (s.n || s.name).toLowerCase().includes(val));
 render(f, true);
 }
 
-/* 🔥 COUNTRY SEARCH INTERFACE CONNECTION (General Code Fix) */
-// മുകളിലെ കൺട്രി സെർച്ചിൽ നിന്ന് യൂസർ ടൈപ്പ് ചെയ്യുന്നത് 'india', 'India', 'INDIA' എങ്ങനെയാണെങ്കിലും
-// അത് ഈ ഫങ്ക്ഷനിലേക്ക് പാസ് ചെയ്താൽ സിസ്റ്റം തനിയെ കേസ് മാറ്റി 100% കൃത്യമായി ഫിൽട്ടർ ചെയ്യും.
+/* COUNTRY SEARCH INTERFACE CONNECTION */
 function countrySearchBridge(userCountryInput) {
 let searchWord = userCountryInput.toLowerCase().trim();
 
 let filteredByCountry = shops.filter(s => {
-// ജിസണിലെ കൺട്രി ഫീൽഡ് എങ്ങനെയാണെങ്കിലും ചെറിയ അക്ഷരമാക്കി മാറ്റി നോക്കുന്നു
 let shopCountry = (s.country || s.c || "").toLowerCase().trim();
 return shopCountry === searchWord;
 });
