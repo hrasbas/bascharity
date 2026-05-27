@@ -2341,11 +2341,12 @@ if(target) target.scrollIntoView({ behavior:"smooth", block:"start" });
 }
 </script>
 <!------------------Catogaryshops-------->
+ 
 <style>
 #bas-category-portal {
 max-width:900px;
 width:96%;
-margin:50px auto;
+margin:30px auto;
 font-family:Arial,sans-serif;
 box-sizing: border-box;
 font-size:23px;
@@ -2505,6 +2506,29 @@ animation: spin 1s linear infinite;
   <div id="selected-cat-container"></div> 
   <div id="shop-container"></div> 
 </div>
+
+<script>
+/* മുകളിലെ മെയിൻ എൻജിൻ സ്ക്രിപ്റ്റ് ലോഡ് ആയിക്കഴിഞ്ഞാൽ 
+  ഈ കാറ്റഗറി ബോക്സ് തനിയെ അപ്ഡേറ്റ് ആകാൻ വേണ്ടിയുള്ള സിസ്റ്റം
+*/
+function checkAndLoadBottomPortal() {
+  if (typeof currentTopCountry !== 'undefined') {
+    let savedCountry = localStorage.getItem("bas_country") || currentTopCountry || "india";
+    if (typeof countrySearchBridge === 'function') {
+      countrySearchBridge(savedCountry);
+    }
+  } else {
+    setTimeout(checkAndLoadBottomPortal, 300);
+  }
+}
+
+// പേജ് ലോഡ് ആകുമ്പോഴും മാറ്റങ്ങൾ വരുമ്പോഴും സിസ്റ്റം റൺ ചെയ്യും
+if (document.readyState === "complete" || document.readyState === "interactive") {
+  setTimeout(checkAndLoadBottomPortal, 300);
+} else {
+  window.addEventListener("DOMContentLoaded", checkAndLoadBottomPortal);
+}
+</script>
 
 </body>
 </html>
