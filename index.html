@@ -2069,33 +2069,215 @@ if(target) target.scrollIntoView({ behavior:"smooth", block:"start" });
 }
 </script>
 <!------------------Catogaryshops-------->
+<style>
+/* മെഗാ പോർട്ടൽ ബോക്സിന്റെ പൊതുവായ വലിപ്പം */
+#bas-mega-portal {
+width:96%;
+max-width:900px;
+margin:auto;
+font-size:23px;
+}
+
+/* സെർച്ച് ബാറിന്റെ ഡിസൈൻ നിയമങ്ങൾ */
+#findShop {
+width:100%;
+height:55px;
+border-radius:12px;
+border:1px solid #ff9800;
+background:#1a1a1a;
+color:#fff;
+padding:0 15px;
+margin-bottom:12px;
+font-size:23px;
+box-sizing: border-box;
+}
+
+/* കാറ്റഗറി സെർച്ച് ബോക്സിന്റെ പശ്ചാത്തലം */
+#cat-search-box {
+border:1px solid #ff9800;
+border-radius:12px;
+padding:14px;
+background:#111;
+margin-bottom:15px;
+}
+
+/* കാറ്റഗറി ബട്ടണുകൾ ഒരു വരിയിൽ 3 എണ്ണം വീതം കാണിക്കാനുള്ള ഗ്രിഡ് */
+.btn-grid {
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:10px;
+}
+
+/* ഓരോ കാറ്റഗറി ബട്ടണുകളുടെയും സ്റ്റൈൽ */
+.m-btn {
+background:#222;
+color:#fff;
+border:1px solid #555;
+padding:14px 5px;
+border-radius:10px;
+font-size:20px;
+font-weight:bold;
+cursor: pointer;
+transition: 0.2s;
+}
+.m-btn:hover {
+background: #333;
+}
+
+/* ബട്ടൺ ക്ലിക്ക് ചെയ്യുമ്പോൾ താഴെ തെളിയുന്ന കാറ്റഗറി ഹെഡിങ് */
+#selected-cat-container {
+margin-top: 10px;
+margin-bottom: 10px;
+display: none;
+}
+.selected-cat-heading {
+display: block;
+text-align: center;
+padding: 14px 5px;
+border-radius: 10px;
+font-size: 20px;
+font-weight: bold;
+color: #fff;
+}
+
+/* കടകൾക്ക് മുകളിലുള്ള പൊതുവായ കാറ്റഗറി തലക്കെട്ടുകളുടെ സ്റ്റൈൽ */
+.cat-head {
+padding:14px;
+border-radius:10px;
+font-weight:bold;
+text-align:center;
+margin:22px 0 10px;
+font-size:23px;
+}
+
+/* ഷോപ്പ് ലിസ്റ്റുകളുടെയും ബട്ടണുകളുടെയും പൊതുവായ സ്റ്റൈൽ */
+.shop-card, .shop-btn {
+position: relative;
+display:flex;
+align-items:center;
+gap:12px;
+padding:14px;
+background:#1a1a1a;
+border-radius:12px;
+margin-bottom:10px;
+text-decoration:none;
+color:#fff;
+border:1px solid #ff9800;
+border-left:6px solid #ff9800;
+cursor:pointer;
+}
+
+.shop-card img, .shop-logo {
+width:36px;
+height:36px;
+background:#fff;
+border-radius:6px;
+padding:2px;
+object-fit:contain;
+margin-right: 5px;
+}
+
+/* ഷോപ്പുകളുടെ സീരിയൽ നമ്പർ സ്റ്റൈൽ */
+.sl {
+width:30px;
+color:#ff9800;
+font-size:20px;
+font-weight:bold;
+}
+
+/* അഫിലിയേറ്റ് ലിങ്ക് തിരിച്ചറിയാനുള്ള ഇടതുവശത്തെ ചെറിയ ഡോട്ട് സ്റ്റൈൽ */
+.warning-dot {
+position: absolute;
+top: 2px;
+left: 5px;
+color: #fff;
+font-size: 14px;
+z-index: 10;
+font-weight: bold;
+}
+
+/* ലിസ്റ്റുകൾ കൂടുതൽ കാണിക്കാനുള്ള മോർ ബട്ടൺ സ്റ്റൈൽ */
+.more-btn {
+text-align:center;
+padding:12px;
+background:#ffffff;
+color:#000;
+border-radius:10px;
+margin-top:8px;
+margin-bottom: 15px;
+font-size:20px;
+font-weight:bold;
+cursor: pointer;
+}
+
+/* തിരികെ എല്ലാ ഷോപ്പുകളിലേക്കും പോകാനുള്ള ലോങ് ഓറഞ്ച് ബട്ടൺ */
+.reset-link {
+display:block;
+text-align:center;
+margin-bottom:15px;
+background:#ff9800;
+color:#000;
+padding:14px;
+border-radius:10px;
+font-size:21px;
+font-weight:bold;
+text-decoration:none;
+cursor: pointer;
+transition: 0.2s;
+}
+.reset-link:hover {
+background: #e08600;
+}
+</style>
+
+<div id="bas-mega-portal">
+
+  <input id="findShop" onkeyup="liveSearch()" placeholder="Search shops...">
+
+  <div id="cat-search-box">
+    <span class="reset-link" onclick="resetCategory()">🔙 Back to All Shops</span>
+    <div class="btn-grid" id="cat-buttons"></div>
+  </div>
+
+  <div id="selected-cat-container"></div>
+
+  <div id="shop-container"></div>
+
+</div>
+
 <script>
-// ആർ2 കാറ്റഗറി ഫയലുകളുടെ കൃത്യമായ ലിങ്കുകൾ (ഇത് ഇവിടെ നിർബന്ധമാണ്)
+/* ===== CONFIGURATION & VARIABLES ===== */
+// ആർ2 ക്ലൗഡ് ഫയലുകളുടെ പബ്ലിക് ലിങ്കുകൾ
 const JSON_FILES = [
 "https://pub-168159db07cc407eaa28228eb2520ea5.r2.dev/31.json",
 "https://pub-168159db07cc407eaa28228eb2520ea5.r2.dev/32.json",
 "https://pub-168159db07cc407eaa28228eb2520ea5.r2.dev/33.json"
 ];
 
-let countryShops = {};
-let currentCountry = "india";
+// കാറ്റഗറികൾക്കുള്ള കളർ കോഡിംഗ്
+const colors = {
+"General":"#2196f3",
+"Fashion":"#e91e63",
+"Beauty":"#9c27b0",
+"Electronics":"#ff5722",
+"Health":"#4caf50",
+"Travel":"#00bcd4",
+"Grocery":"#8bc34a",
+"Home & Decor":"#ff9800",
+"Sports":"#009688",
+"Entertainment":"#673ab7"
+};
+
+let mainOrder = ["General","Fashion","Beauty","Electronics","Health","Travel","Grocery","Home & Decor","Sports","Entertainment"];
+let shops = [];
+let activeCategory = null;
+let expandedCategories = {};
+let activeCountry = "india";
+
 const crisisCountries = ["afghanistan", "belarus", "cuba", "iran", "libya", "myanmar", "north korea", "palestine", "russia", "somalia", "south sudan", "sudan", "syria", "venezuela", "yemen"];
 
-const countries = ["Afghanistan","Albania","Algeria","Andorra","Angola","Argentina","Armenia","Australia","Austria","Azerbaijan","Bahamas","Bahrain","Bangladesh","Barbados","Belarus","Belgium","Belize","Benin","Bhutan","Bolivia","Bosnia","Botswana","Brazil","Brunei","Bulgaria","Burkina Faso","Burundi","Cambodia","Cameroon","Canada","Cape Verde","Chad","Chile","China","Colombia","Comoros","Congo","Costa Rica","Croatia","Cuba","Cyprus","Denmark","Djibouti","Dominica","Dominican Republic","Ecuador","Egypt","El Salvador","Equatorial Guinea","Eritrea","Estonia","Ethiopia","Fiji","Finland","France","Gabon","Gambia","Georgia","Germany","Ghana","Greece","Grenada","Guatemala","Guinea","Guyana","Haiti","Honduras","Hungary","Iceland","India","Indonesia","Iran","Iraq","Ireland","Israel","Italy","Jamaica","Japan","Jordan","Kazakhstan","Kenya","Kiribati","Kuwait","Kyrgyzstan","Laos","Latvia","Lebanon","Lesotho","Liberia","Libya","Liechtenstein","Lithuania","Luxembourg","Madagascar","Malawi","Malaysia","Maldives","Mali","Malta","Marshall Islands","Mauritania","Mauritius","Mexico","Micronesia","Moldova","Monaco","Mongolia","Montenegro","Morocco","Mozambique","Myanmar","Namibia","Nauru","Nepal","Netherlands","New Zealand","Nicaragua","Niger","Nigeria","North Korea","North Macedonia","Norway","Oman","Pakistan","Palau","Palestine","Panama","Papua New Guinea","Paraguay","Peru","Philippines","Poland","Portugal","Qatar","Romania","Russia","Rwanda","Saint Kitts and Nevis","Saint Lucia","Saint Vincent","Samoa","San Marino","Sao Tome and Principe","Saudi Arabia","Senegal","Serbia","Seychelles","Sierra Leone","Singapore","Slovakia","Slovenia","Solomon Islands","Somalia","South Africa","South Korea","South Sudan","Spain","Sri Lanka","Sudan","Suriname","Sweden","Switzerland","Syria","Taiwan","Tajikistan","Tanzania","Thailand","Timor-Leste","Togo","Tonga","Trinidad and Tobago","Tunisia","Turkey","Turkmenistan","Tuvalu","Uganda","Ukraine","United Arab Emirates","United Kingdom","United States","Uruguay","Uzbekistan","Vanuatu","Vatican City","Venezuela","Vietnam","Yemen","Zambia","Zimbabwe"];
-
-function populateCountries() {
-const select = document.getElementById("countryDropdown");
-if(!select) return;
-select.innerHTML = '<option value="" disabled selected>SEARCH ALL COUNTRIES</option>';
-countries.forEach(c => {
-let opt = document.createElement("option");
-opt.value = c.toLowerCase();
-opt.text = c.toUpperCase();
-select.add(opt);
-});
-}
-
-function normalizeCountry(c) {
+/* രാജ്യങ്ങളുടെ പേര് ഒരേ ഫോർമാറ്റിലേക്ക് മാറ്റുന്ന നോർമലൈസേഷൻ ഫങ്ഷൻ */
+function normalizeCountryName(c) {
 c = (c || "").toLowerCase().trim();
 if (c === "saudi arabia" || c === "saudi") return "saudi";
 if (c === "united states" || c === "usa") return "usa";
@@ -2104,136 +2286,267 @@ if (c === "united kingdom" || c === "uk") return "uk";
 return c;
 }
 
-// ഡയറക്ട് ലിങ്ക് ഒഴികെയുള്ളവയ്ക്ക് ഡോട്ട് നൽകാനുള്ള കണ്ടീഷൻ
+/* പേജിലെ ലോക്കൽ സ്റ്റോറേജിൽ നിന്നും കൺട്രി കണ്ടെത്തുന്നു */
+function getSelectedCountry() {
+try {
+const saved = localStorage.getItem("bas_country") || "india";
+return normalizeCountryName(saved);
+} catch(e) {
+return "india";
+}
+}
+
+/* യുആർഎല്ലിൽ നിന്നും ഡൊമൈൻ നെയിം മാത്രം വേർതിരിച്ചെടുക്കുന്ന ഫങ്ഷൻ */
+function getDomainFromUrl(shop) {
+let raw = shop.url || shop.u || "";
+raw = String(raw).trim();
+if(!raw) return "";
+try {
+if(!/^https?:\/\//i.test(raw)) raw = "https://" + raw;
+return new URL(raw).hostname;
+} catch(e) {
+return raw.replace(/^https?:\/\//i, "").split("/")[0];
+}
+}
+
+/* ഗൂഗിൾ ഫെവിക്കോൺ സർവീസ് ലിങ്ക് */
+function getFaviconUrl(shop) {
+const domain = getDomainFromUrl(shop);
+if(!domain) return "";
+return "https://www.google.com/s2/favicons?domain=" + encodeURIComponent(domain) + "&sz=64";
+}
+
+/* ഡയറക്ട് ലിങ്ക് ആണോ അഫിലിയേറ്റ് ലിങ്ക് ആണോ എന്ന് വേർതിരിക്കുന്ന സുരക്ഷാ ലോജിക് */
 function isDirectLink(shop) {
 const v = shop.is_affiliate;
 if (v === undefined || v === null || v === "") return false;
-if (v === false) return true;
-if (String(v).toLowerCase() === "false") return true;
-if (String(v).toLowerCase() === "0") return true;
-if (String(v).toLowerCase() === "direct") return true;
+if (v === false || String(v).toLowerCase() === "false" || String(v).toLowerCase() === "0" || String(v).toLowerCase() === "direct") return true;
 return false;
 }
 
-function setCountry(country, btn) {
-if (!country) return;
-currentCountry = normalizeCountry(country);
-localStorage.setItem("bas_country", currentCountry);
-
-document.querySelectorAll(".country-btn").forEach(b => b.classList.remove("active"));
-
-const activeBtn = btn || document.querySelector(".country-btn[data-country='"+currentCountry+"']");
-if (activeBtn) {
-activeBtn.classList.add("active");
+/* സെലക്ട് ചെയ്ത രാജ്യത്തിന് അനുസൃതമായി ഷോപ്പുകളെ ഫിൽട്ടർ ചെയ്യുന്നു */
+function getCountryFilteredShops(list) {
+if (!activeCountry) return list;
+return list.filter(shop => {
+let cField = normalizeCountryName(shop.country || shop.cn || "");
+return cField === activeCountry;
+});
 }
 
-const dropdown = document.getElementById("countryDropdown");
-if (dropdown) {
-if (countries.map(c => c.toLowerCase()).includes(currentCountry)) {
-dropdown.value = currentCountry;
+/* പേജ് ലോഡ് ആകുമ്പോൾ ആർ2 ജെയ്‌സൺ ഫയലുകൾ ബാക്ക്ഗ്രൗണ്ടിൽ ലോഡ് ചെയ്യുന്നു */
+window.addEventListener('load', async () => {
+try {
+let merged = [];
+for (const url of JSON_FILES) {
+try {
+const res = await fetch(url);
+if (!res.ok) continue;
+const data = await res.json();
+const arr = Array.isArray(data) ? data : (data.shops || []);
+merged = merged.concat(arr);
+} catch(e) { console.error("Fetch skipped for: " + url); }
+}
+
+shops = merged;
+activeCountry = getSelectedCountry();
+
+// പുതിയ കാറ്റഗറികൾ ജെയ്‌സണിൽ ഉണ്ടെങ്കിൽ ലിസ്റ്റിലേക്ക് ആഡ് ചെയ്യും
+shops.forEach(shop => {
+let catField = shop.category || shop.c;
+if (catField) {
+if (Array.isArray(catField)) {
+catField.forEach(cName => { if (cName && !mainOrder.includes(cName)) mainOrder.push(cName); });
 } else {
-dropdown.selectedIndex = 0;
+if (!mainOrder.includes(catField)) mainOrder.push(catField);
 }
 }
+});
 
-document.getElementById("shopCountryTitle").innerText = "SHOP ON " + currentCountry.toUpperCase() + " SHOPS";
-document.getElementById("globalSearch").value = "";
+initButtons();
+render(getCountryFilteredShops(shops), false);
+} catch(err) {
+console.error("Global JSON Load Error:", err);
+}
+});
 
-// കാറ്റഗറി സെക്ഷനിലേക്ക് രാജ്യത്തിന്റെ വിവരം കൈമാറുന്നു
-if (typeof countrySearchBridge === "function") {
-countrySearchBridge(currentCountry);
+/* 10 സിഗ്നേച്ചർ കാറ്റഗറി ബട്ടണുകൾ നിർമ്മിക്കുന്ന ഫങ്ഷൻ */
+function initButtons() {
+let box = document.getElementById("cat-buttons");
+if(!box) return;
+box.innerHTML = mainOrder.map(c => {
+let borderCol = colors[c] || "#666";
+return `<button class="m-btn" onclick="filterCat('${String(c).replace(/'/g, "\\'")}')" style="border-bottom:3px solid ${borderCol}">${c}</button>`;
+}).join("");
 }
 
-renderShops(countryShops[currentCountry] || []);
+/* കാറ്റഗറി ഫിൽട്ടർ ലോജിക് */
+function filterCat(cat) {
+activeCategory = cat;
+expandedCategories[cat] = false;
+document.getElementById("findShop").value = "";
+
+let filtered = getCountryFilteredShops(shops).filter(s => {
+let catField = s.category || s.c;
+return Array.isArray(catField) ? catField.includes(cat) : catField === cat;
+});
+render(filtered, true);
 }
 
-function renderShops(list, isSearching = false) {
-const container = document.getElementById("shopList");
+/* റീസെറ്റ് ലോജിക് (Back to all shops) */
+function resetCategory() {
+activeCategory = null;
+expandedCategories = {};
+document.getElementById("findShop").value = "";
+activeCountry = getSelectedCountry();
+render(getCountryFilteredShops(shops), false);
+}
+
+/* ഷോപ്പ് കാർഡുകളും തലക്കെട്ടുകളും സ്ക്രീനിൽ കാണിക്കുന്ന പ്രധാന റെൻഡർ എൻജിൻ */
+function render(data, isFiltered = false) {
+let container = document.getElementById("shop-container");
+let selectedCatContainer = document.getElementById("selected-cat-container");
+
 if(!container) return;
 container.innerHTML = "";
 
-if (crisisCountries.includes(currentCountry)) {
+if (crisisCountries.includes(activeCountry)) {
 container.innerHTML = `<div style="background:#222; border:2px solid #ff9800; border-radius:15px; padding:25px; text-align:center; color:#fff; margin-top:20px;"> <h3 style="color:#ff9800; text-transform:uppercase;">Unavailable due to world crisis</h3> <p style="font-size:18px; line-height:1.6; font-weight:bold; color:#ffeb3b;"> Dear friend, due to current global crisis and restrictions, international shopping platforms have limited services in your region. However, we sincerely pray for the peace and prosperity of your land. May the Almighty remove all obstacles and bring better days soon. </p> <div style="font-size:30px; margin-top:15px;">🌍🕊️</div> </div>`;
 return;
 }
 
-if (!list || list.length === 0) {
-if (isSearching) {
-container.innerHTML = "<p style='color:#ff9800; text-align:center; padding:20px; font-weight:bold;'>NO SHOPS FOUND MATCHING YOUR SEARCH</p>";
+if(activeCategory) {
+if(selectedCatContainer) {
+selectedCatContainer.style.display = "block";
+selectedCatContainer.innerHTML = `<div class="selected-cat-heading" style="background:${colors[activeCategory] || '#666'}">${activeCategory}</div>`;
+}
 } else {
-container.innerHTML = "<p style='color:#fff; text-align:center; padding:20px;'>IN PROGRESS FOR " + currentCountry.toUpperCase() + "...</p>";
+if(selectedCatContainer) {
+selectedCatContainer.style.display = "none";
+selectedCatContainer.innerHTML = "";
+}
+}
+
+if (!data || data.length === 0) {
+container.innerHTML = "<p style='color:#fff; text-align:center; padding:20px;'>IN PROGRESS FOR " + activeCountry.toUpperCase() + "...</p>";
+return;
+}
+
+let grouped = {};
+data.forEach(s => {
+let catField = s.category || s.c || "General";
+if (Array.isArray(catField)) {
+catField.forEach(cName => {
+if(!grouped[cName]) grouped[cName] = [];
+if(!grouped[cName].includes(s)) grouped[cName].push(s);
+});
+} else {
+if(!grouped[catField]) grouped[catField] = [];
+grouped[catField].push(s);
+}
+});
+
+let orderToShow = activeCategory ? [activeCategory] : mainOrder;
+
+orderToShow.forEach(cat => {
+if(grouped[cat] && grouped[cat].length > 0) {
+let col = colors[cat] || "#666";
+
+let head = document.createElement("div");
+head.className = "cat-head";
+head.style.background = col;
+head.innerText = cat;
+container.appendChild(head);
+
+let isExpanded = expandedCategories[cat] || false;
+let totalItems = grouped[cat].length;
+let maxSearch = document.getElementById("findShop").value.trim() !== "";
+let limit = (totalItems > 20 && !isExpanded && !maxSearch) ? 20 : totalItems;
+
+for(let i=0; i<limit; i++) {
+let s = grouped[cat][i];
+let card = document.createElement("a");
+card.className = "shop-card";
+card.href = s.url || s.u || "#";
+card.target = "_blank";
+card.rel = "noopener noreferrer";
+
+// ഡയറക്ട് ലിങ്ക് ഒഴികെയുള്ള എല്ലാത്തിനും ഇടതുവശത്ത് മുകളിൽ ഡോട്ട് (.) നൽകുന്നു
+let dotHTML = isDirectLink(s) ? "" : '<span class="warning-dot">.</span>';
+
+let name = s.name || s.n || "";
+let id = s.id || "";
+let tag = s.tag || s.t || "";
+let icon = getFaviconUrl(s);
+
+card.innerHTML = `
+${dotHTML}
+<div class="sl">${id}</div>
+<img src="${icon}" class="shop-logo" alt="${String(name).replace(/"/g, '&quot;')}">
+<div><b>${name}</b><br><span style="font-size:14px;color:#ffb74d;">${tag}</span></div>
+`;
+
+container.appendChild(card);
+}
+
+if(totalItems > 20 && !maxSearch) {
+let btn = document.createElement("div");
+btn.className = "more-btn";
+btn.innerText = isExpanded ? "LESS -" : "MORE +";
+btn.onclick = () => toggle(cat);
+container.appendChild(btn);
+}
+}
+});
+}
+
+/* MORE / LESS ടോഗിൾ */
+function toggle(cat) {
+expandedCategories[cat] = !expandedCategories[cat];
+if(activeCategory) {
+let filtered = getCountryFilteredShops(shops).filter(s => {
+let catField = s.category || s.c;
+return Array.isArray(catField) ? catField.includes(activeCategory) : catField === activeCategory;
+});
+render(filtered, true);
+} else {
+render(getCountryFilteredShops(shops), false);
+}
+}
+
+/* LIVE SEARCH */
+function liveSearch() {
+let val = document.getElementById("findShop").value.toLowerCase().trim();
+if(!val) {
+if(activeCategory) {
+let filtered = getCountryFilteredShops(shops).filter(s => {
+let catField = s.category || s.c;
+return Array.isArray(catField) ? catField.includes(activeCategory) : catField === activeCategory;
+});
+render(filtered, true);
+} else {
+render(getCountryFilteredShops(shops), false);
 }
 return;
 }
 
-list.forEach(shop => {
-const a = document.createElement("a");
-a.className = "shop-btn";
-a.href = shop.url || shop.u || "#";
-a.target = "_blank";
-a.rel = "noopener noreferrer";
+let baseList = activeCategory ? getCountryFilteredShops(shops).filter(s => {
+let catField = s.category || s.c;
+return Array.isArray(catField) ? catField.includes(activeCategory) : catField === activeCategory;
+}) : getCountryFilteredShops(shops);
 
-let domain = shop.url || shop.u || "";
-try {
-domain = new URL(domain).hostname;
-} catch(e) {}
-
-// ഡയറക്ട് ലിങ്ക് ഒഴികെയുള്ള എല്ലാ ലിങ്കുകൾക്കും ഇടതുവശത്ത് മുകളിൽ ഡോട്ട് (.) നൽകുന്നു
-let dotHTML = isDirectLink(shop) ? "" : '<span class="warning-dot">.</span>';
-
-a.innerHTML = dotHTML + '<img class="shop-logo" width="42" height="42" alt="' + (shop.name || shop.n) + '" src="https://www.google.com/s2/favicons?sz=64&domain=' + encodeURIComponent(domain) + '"><div class="shop-info notranslate"><b>' + (shop.name || shop.n) + '</b></div>';
-container.appendChild(a);
-});
+let f = baseList.filter(s => String(s.name || s.n).toLowerCase().includes(val));
+render(f, true);
 }
 
-function filterShops() {
-let val = document.getElementById("globalSearch").value.toLowerCase().trim();
-if (countryShops[currentCountry]) {
-const filtered = countryShops[currentCountry].filter(s => String(s.name || s.n).toLowerCase().includes(val));
-renderShops(filtered, val.length > 0);
+/* കൺട്രി സെലക്ഷൻ ബോക്സിൽ നിന്ന് ഈ കാറ്റഗറി സിസ്റ്റത്തിലേക്ക് കണക്ട് ചെയ്യുന്ന മെയിൻ ബ്രിഡ്ജ് ഫങ്ഷൻ */
+function countrySearchBridge(userCountryInput) {
+activeCountry = normalizeCountryName(userCountryInput);
+activeCategory = null;
+expandedCategories = {};
+let inputField = document.getElementById("findShop");
+if(inputField) inputField.value = "";
+render(getCountryFilteredShops(shops), false);
 }
-}
-
-async function loadShops() {
-const container = document.getElementById("shopList");
-if(container) container.innerHTML = "<p style='color:#fff; text-align:center; padding:20px;'>LOADING SHOPS...</p>";
-
-// ജെയ്‌സൺ റീഡിങ് ലോജിക് നിങ്ങളുടെ ആർ2 ഫയലുകളുടെ ഘടനയ്ക്ക് അനുസരിച്ച് കൃത്യമാക്കിയിട്ടുണ്ട്
-for (const url of JSON_FILES) {
-try {
-const response = await fetch(url);
-if (!response.ok) continue;
-
-const data = await response.json();
-const shopsArray = Array.isArray(data) ? data : (data.shops || []);
-
-shopsArray.forEach(s => {
-if (s) {
-let countryField = s.country || s.cn || "";
-if (countryField) {
-let c = normalizeCountry(countryField);
-if (!countryShops[c]) countryShops[c] = [];
-
-const isDuplicate = countryShops[c].some(existingShop => (existingShop.name || existingShop.n) === (s.name || s.n) || (existingShop.url || existingShop.u) === (s.url || s.u));
-if (!isDuplicate) {
-countryShops[c].push(s);
-}
-}
-}
-});
-} catch (e) {
-console.error("Fetch skipped for: " + url);
-}
-}
-
-let saved = localStorage.getItem("bas_country") || "india";
-setCountry(saved);
-}
-
-document.addEventListener("DOMContentLoaded", () => {
-populateCountries();
-loadShops();
-});
 </script>
 
 </body>
