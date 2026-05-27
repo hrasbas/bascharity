@@ -2341,18 +2341,15 @@ if(target) target.scrollIntoView({ behavior:"smooth", block:"start" });
 }
 </script>
 <!------------------Catogaryshops-------->
-  
 <style>
-#bas-mega-portal {
-width:96%;
+#bas-category-portal {
 max-width:900px;
-margin:25px auto;
-font-family: Arial, sans-serif;
-font-size:23px;
+width:96%;
+margin:50px auto;
+font-family:Arial,sans-serif;
 box-sizing: border-box;
+font-size:23px;
 } 
-
-/* SEARCH BAR */
 #findShop {
 width:100%;
 height:55px;
@@ -2367,8 +2364,6 @@ box-sizing: border-box;
 text-align: center;
 font-weight: bold;
 } 
-
-/* CATEGORY BOX */
 #cat-search-box {
 border:1px solid #ff9800;
 border-radius:12px;
@@ -2376,14 +2371,11 @@ padding:14px;
 background:#111;
 margin-bottom:15px;
 } 
-
-/* BUTTON GRID */
 .btn-grid {
 display:grid;
 grid-template-columns:repeat(3,1fr);
 gap:10px;
 } 
-
 .m-btn {
 background:#222;
 color:#fff;
@@ -2396,8 +2388,6 @@ cursor: pointer;
 text-transform: uppercase;
 transition: 0.2s;
 } 
-
-/* ആക്റ്റീവ് കാറ്റഗറി ഹെഡിങ് */
 #selected-cat-container {
 margin-top: 10px;
 margin-bottom: 10px;
@@ -2413,8 +2403,6 @@ font-weight: bold;
 color: #fff;
 text-transform: uppercase;
 } 
-
-/* CATEGORY SECTION HEAD */
 .cat-head {
 padding:14px;
 border-radius:10px;
@@ -2425,8 +2413,6 @@ font-size:23px;
 color: #fff;
 text-transform: uppercase;
 } 
-
-/* SHOP CARD DESIGN */
 .shop-card {
 position: relative;
 display:flex;
@@ -2441,7 +2427,6 @@ color:#fff;
 border:1px solid #333;
 cursor: pointer;
 } 
-
 .shop-card img {
 width:36px;
 height:36px;
@@ -2451,15 +2436,12 @@ padding:2px;
 object-fit: contain;
 margin-right: 5px;
 } 
-
 .sl {
 width:30px;
 color:#ff9800;
 font-size:20px;
 font-weight:bold;
 } 
-
-/* അഫിലിയേറ്റ് ലിങ്കുകൾക്ക് മാത്രം വരാനുള്ള ഡോട്ട് (.) */
 .bottom-affiliate-dot {
 position: absolute;
 top: 2px;
@@ -2469,8 +2451,6 @@ font-size: 14px;
 z-index: 10;
 font-weight: bold;
 } 
-
-/* MORE / LESS BUTTON */
 .more-btn {
 text-align:center;
 padding:12px;
@@ -2483,8 +2463,6 @@ font-size:20px;
 font-weight:bold;
 cursor: pointer;
 } 
-
-/* BACK BUTTON */
 .reset-link {
 display:block;
 text-align:center;
@@ -2498,306 +2476,35 @@ font-weight:bold;
 text-decoration:none;
 cursor: pointer;
 }
-
-/* ലേസി ലോഡിങ് അനിമേഷൻ */
 .bottom-lazy-loader {
 text-align: center;
-padding: 20px;
+padding: 30px;
 color: #ff9800;
-font-size: 20px;
+font-size: 22px;
 font-weight: bold;
 display: none;
 }
 .bottom-spinner {
 margin: 10px auto;
-width: 35px;
-height: 35px;
+width: 40px;
+height: 40px;
 border: 4px solid #333;
 border-top: 4px solid #ff9800;
 border-radius: 50%;
-animation: bottomSpin 1s linear infinite;
-}
-@keyframes bottomSpin {
-0% { transform: rotate(0deg); }
-100% { transform: rotate(360deg); }
+animation: spin 1s linear infinite;
 }
 </style>
 
-<div id="bas-mega-portal"> 
-
+<div id="bas-category-portal"> 
   <input id="findShop" onkeyup="liveSearch()" placeholder="Search shops..."> 
-
   <div id="cat-search-box">
     <div class="btn-grid" id="cat-buttons"></div>
     <span class="reset-link" onclick="resetCategory()">← Back to All Shops</span>
   </div> 
-
-  <div id="bottomLazyLoader" class="bottom-lazy-loader">
-    <div class="bottom-spinner"></div>
-    LOADING CATEGORIZED SHOPS...
-  </div>
-
+  <div id="bottomLazyLoader" class="bottom-lazy-loader"><div class="bottom-spinner"></div>LOADING CATEGORIZED SHOPS...</div>
   <div id="selected-cat-container"></div> 
   <div id="shop-container"></div> 
-
-</div> 
-
-<script>
-/* ===== CONFIGURATION & SCALABLE LOGIC ===== */
-// ഭാവിയിൽ എത്ര ജെയ്‌സൺ ഫയലുകൾ വേണമെങ്കിലും ഈ ലിസ്റ്റിലേക്ക് ധൈര്യമായി ആഡ് ചെയ്യാം
-const CATEGORY_JSON_FILES = [
-"https://pub-168159db07cc407eaa28228eb2520ea5.r2.dev/31.json",
-"https://pub-168159db07cc407eaa28228eb2520ea5.r2.dev/32.json",
-"https://pub-168159db07cc407eaa28228eb2520ea5.r2.dev/33.json"
-];
-
-const categoryColors = {
-"General": "#2196f3",
-"Fashion": "#e91e63",
-"Beauty": "#9c27b0",
-"Electronics": "#ff5722",
-"Health": "#4caf50",
-"Travel": "#00bcd4"
-}; 
-
-let dynamicCategoriesOrder = ["General", "Fashion", "Beauty", "Electronics", "Health", "Travel"]; 
-let loadedBottomCountryMap = {}; 
-let activeCategory = null;
-let expandedCategories = {}; 
-let currentSelectedCountry = "india";
-
-function cleanBottomCountryName(c) {
-c = (c || "").toLowerCase().trim();
-if (c === "saudi arabia" || c === "saudi") return "saudi";
-if (c === "united states" || c === "usa") return "usa";
-if (c === "united arab emirates" || c === "uae") return "uae";
-if (c === "united kingdom" || c === "uk") return "uk";
-return c;
-}
-
-/* ഡയറക്ട് ലിങ്ക് പൂർണ്ണമായി തിരിച്ചറിയാനുള്ള ലോജിക് */
-function isDirectLink(shop) {
-const aff = shop.is_affiliate;
-if (aff === undefined || aff === null || aff === "") return false;
-if (aff === false || String(aff).toLowerCase() === "false" || String(aff).toLowerCase() === "0" || String(aff).toLowerCase() === "direct") return true;
-return false;
-}
-
-/* 🛑 മുകളിലെ കൺട്രി പോർട്ടലുമായി ബന്ധിപ്പിക്കുന്ന ഭദ്രമായ ബ്രിഡ്ജ് */
-async function countrySearchBridge(userCountryInput) {
-currentSelectedCountry = cleanBottomCountryName(userCountryInput);
-activeCategory = null;
-expandedCategories = {};
-const searchInput = document.getElementById("findShop");
-if (searchInput) searchInput.value = "";
-
-if (!loadedBottomCountryMap[currentSelectedCountry]) {
-await fetchCategorizedShops(currentSelectedCountry);
-} else {
-updateCategoriesList();
-renderCategorizedShops();
-}
-}
-
-/* ജെയ്‌സൺ ഫയലുകൾ തകര്ച്ചകളില്ലാതെ സുരക്ഷിതമായി ഓൺ-ഡിമാൻഡ് ആയി ലോഡ് ചെയ്യുന്നു */
-async function fetchCategorizedShops(targetCountry) {
-const container = document.getElementById("shop-container");
-const loader = document.getElementById("bottomLazyLoader");
-if(container) container.innerHTML = "";
-if(loader) loader.style.display = "block"; 
-
-loadedBottomCountryMap[targetCountry] = [];
-
-for (const url of CATEGORY_JSON_FILES) {
-try {
-const response = await fetch(url);
-if (!response.ok) continue; // ഫയൽ ലഭ്യമല്ലെങ്കിൽ തനിയെ അടുത്തതിലേക്ക് പോകും (Fail-Safe)
-const data = await response.json();
-const shopsArray = Array.isArray(data) ? data : (data.shops || []); 
-
-shopsArray.forEach(s => {
-if (s && s.country) {
-let c = cleanBottomCountryName(s.country);
-if (c === targetCountry) {
-const isDuplicate = loadedBottomCountryMap[targetCountry].some(exist => exist.name === s.name || exist.url === s.url);
-if (!isDuplicate) {
-loadedBottomCountryMap[targetCountry].push(s);
-}
-}
-}
-});
-} catch (e) {
-console.error("Fail-safe activated. Skipped file: " + url);
-}
-} 
-
-if(loader) loader.style.display = "none"; 
-updateCategoriesList();
-renderCategorizedShops();
-}
-
-/* ജെയ്‌സണിലുള്ള പുതിയ കാറ്റഗറികൾ തനിയെ സിസ്റ്റം തിരിച്ചറിയുന്നു */
-function updateCategoriesList() {
-let currentShops = loadedBottomCountryMap[currentSelectedCountry] || [];
-currentShops.forEach(shop => {
-let catName = shop.c || shop.category || "General";
-if (catName && !dynamicCategoriesOrder.includes(catName)) {
-dynamicCategoriesOrder.push(catName);
-}
-}); 
-initCategoryButtons();
-}
-
-function initCategoryButtons() {
-let box = document.getElementById("cat-buttons");
-if(!box) return;
-box.innerHTML = dynamicCategoriesOrder.map(c => {
-let borderCol = categoryColors[c] || "#666";
-return `<button class="m-btn" onclick="filterCategoryClick('${c}')" style="border-bottom:3px solid ${borderCol}">${c}</button>`;
-}).join("");
-} 
-
-function filterCategoryClick(cat) {
-activeCategory = cat;
-expandedCategories[cat] = false;
-const searchInput = document.getElementById("findShop");
-if (searchInput) searchInput.value = ""; 
-renderCategorizedShops();
-} 
-
-function resetCategory() {
-activeCategory = null;
-expandedCategories = {};
-const searchInput = document.getElementById("findShop");
-if (searchInput) searchInput.value = "";
-renderCategorizedShops();
-} 
-
-/* 20 ഷോപ്പുകൾ ലിമിറ്റ് വെച്ചുള്ള ഫൈനൽ റെൻഡർ എഞ്ചിൻ */
-function renderCategorizedShops() {
-let container = document.getElementById("shop-container");
-let selectedCatContainer = document.getElementById("selected-cat-container"); 
-if(!container) return;
-
-container.innerHTML = ""; 
-
-if(activeCategory) {
-if(selectedCatContainer) {
-selectedCatContainer.style.display = "block";
-selectedCatContainer.innerHTML = `<div class="selected-cat-heading" style="background:${categoryColors[activeCategory] || '#666'}">${activeCategory}</div>`;
-}
-} else {
-if(selectedCatContainer) {
-selectedCatContainer.style.display = "none";
-selectedCatContainer.innerHTML = "";
-}
-} 
-
-let fullList = loadedBottomCountryMap[currentSelectedCountry] || [];
-
-let searchVal = document.getElementById("findShop") ? document.getElementById("findShop").value.toLowerCase().trim() : "";
-if (searchVal !== "") {
-fullList = fullList.filter(s => (s.n || s.name || "").toLowerCase().includes(searchVal));
-}
-
-if (activeCategory) {
-fullList = fullList.filter(s => (s.c || s.category || "General") === activeCategory);
-}
-
-if (fullList.length === 0) {
-container.innerHTML = "<p style='color:#ff9800; text-align:center; padding:20px; font-weight:bold;'>NO CATEGORIZED SHOPS AVAILABLE</p>";
-return;
-}
-
-let grouped = {};
-fullList.forEach(s => {
-let catName = s.c || s.category || "General";
-if(!grouped[catName]) grouped[catName] = [];
-grouped[catName].push(s);
-}); 
-
-let orderToShow = activeCategory ? [activeCategory] : dynamicCategoriesOrder; 
-
-orderToShow.forEach(cat => {
-if(grouped[cat] && grouped[cat].length > 0) {
-let col = categoryColors[cat] || "#666"; 
-
-let head = document.createElement("div");
-head.className = "cat-head";
-head.style.background = col;
-head.innerText = cat;
-container.appendChild(head); 
-
-let isExpanded = expandedCategories[cat] || false;
-let totalItems = grouped[cat].length; 
-let isSearching = searchVal !== "";
-
-// കൃത്യമായി 20 ഷോപ്പുകൾക്ക് ശേഷം മാത്രം MORE + ബട്ടൺ വരാനുള്ള ലിമിറ്റ് ലോജിക്
-let limit = (totalItems > 20 && !isExpanded && !isSearching) ? 20 : totalItems; 
-
-for(let i = 0; i < limit; i++) {
-let s = grouped[cat][i];
-let card = document.createElement("a");
-card.className = "shop-card";
-card.href = s.u || s.url || "#";
-card.target = "_blank";
-card.rel = "noopener noreferrer";
-card.style.borderLeft = "6px solid " + col; 
-
-let domain = s.d || s.domain || "";
-if(domain.toLowerCase().includes("aliexpress.com")) {
-card.onclick = (e) => {
-e.preventDefault();
-alert("This shop is banned in India. You cannot purchase from here.");
-};
-} 
-
-// ഡയറക്ട് ലിങ്കിന് ഡോട്ട് ഉണ്ടാകില്ല. അഫിലിയേറ്റ് ലിങ്കിന് മാത്രം ഇടതുവശത്ത് ഡോട്ട് വരും
-let dotHTML = isDirectLink(s) ? '' : '<span class="bottom-affiliate-dot">.</span>'; 
-
-let name = s.n || s.name || "";
-let id = s.id || "";
-let tag = s.t || s.tag || ""; 
-let rawUrl = s.u || s.url || "";
-let cleanDomain = rawUrl.replace(/^https?:\/\//i, "").split("/")[0];
-let favicon = "https://www.google.com/s2/favicons?domain=" + encodeURIComponent(cleanDomain) + "&sz=64";
-
-card.innerHTML = `
-${dotHTML}
-<div class="sl">${id}</div>
-<img alt="${name}" src="${favicon}">
-<div><b>${name}</b><br><span style="font-size:14px;color:#ffb74d;">${tag}</span></div>
-`; 
-
-container.appendChild(card);
-} 
-
-// 20 കടകൾക്ക് മുകളിൽ വന്നാൽ കാണിക്കുന്ന MORE / LESS ബട്ടൺ
-if(totalItems > 20 && !isSearching) {
-let btn = document.createElement("div");
-btn.className = "more-btn";
-btn.innerText = isExpanded ? "LESS -" : "MORE +";
-btn.onclick = () => toggleCategoryExpand(cat);
-container.appendChild(btn);
-}
-}
-});
-} 
-
-function toggleCategoryExpand(cat) {
-expandedCategories[cat] = !expandedCategories[cat];
-renderCategorizedShops();
-} 
-
-function liveSearch() {
-renderCategorizedShops();
-} 
-
-document.addEventListener("DOMContentLoaded", () => {
-let initialCountry = localStorage.getItem("bas_country") || "india";
-countrySearchBridge(initialCountry);
-});
-</script>
+</div>
 
 </body>
 </html>
