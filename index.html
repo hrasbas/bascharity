@@ -2069,17 +2069,20 @@ if(target) target.scrollIntoView({ behavior:"smooth", block:"start" });
 }
 </script>
 <!------------------Catogaryshops-------->
- 
 <script>
-// ആഗോള വേരിയബിളുകളും ക്രിസിസ് രാജ്യങ്ങളുടെ ലിസ്റ്റും
+// ആർ2 കാറ്റഗറി ഫയലുകളുടെ കൃത്യമായ ലിങ്കുകൾ (ഇത് ഇവിടെ നിർബന്ധമാണ്)
+const JSON_FILES = [
+"https://pub-168159db07cc407eaa28228eb2520ea5.r2.dev/31.json",
+"https://pub-168159db07cc407eaa28228eb2520ea5.r2.dev/32.json",
+"https://pub-168159db07cc407eaa28228eb2520ea5.r2.dev/33.json"
+];
+
 let countryShops = {};
 let currentCountry = "india";
 const crisisCountries = ["afghanistan", "belarus", "cuba", "iran", "libya", "myanmar", "north korea", "palestine", "russia", "somalia", "south sudan", "sudan", "syria", "venezuela", "yemen"];
 
-// ഡൗൺലോഡ് ലിസ്റ്റിൽ കാണിക്കേണ്ട ലോക രാജ്യങ്ങളുടെ പേരുകൾ
 const countries = ["Afghanistan","Albania","Algeria","Andorra","Angola","Argentina","Armenia","Australia","Austria","Azerbaijan","Bahamas","Bahrain","Bangladesh","Barbados","Belarus","Belgium","Belize","Benin","Bhutan","Bolivia","Bosnia","Botswana","Brazil","Brunei","Bulgaria","Burkina Faso","Burundi","Cambodia","Cameroon","Canada","Cape Verde","Chad","Chile","China","Colombia","Comoros","Congo","Costa Rica","Croatia","Cuba","Cyprus","Denmark","Djibouti","Dominica","Dominican Republic","Ecuador","Egypt","El Salvador","Equatorial Guinea","Eritrea","Estonia","Ethiopia","Fiji","Finland","France","Gabon","Gambia","Georgia","Germany","Ghana","Greece","Grenada","Guatemala","Guinea","Guyana","Haiti","Honduras","Hungary","Iceland","India","Indonesia","Iran","Iraq","Ireland","Israel","Italy","Jamaica","Japan","Jordan","Kazakhstan","Kenya","Kiribati","Kuwait","Kyrgyzstan","Laos","Latvia","Lebanon","Lesotho","Liberia","Libya","Liechtenstein","Lithuania","Luxembourg","Madagascar","Malawi","Malaysia","Maldives","Mali","Malta","Marshall Islands","Mauritania","Mauritius","Mexico","Micronesia","Moldova","Monaco","Mongolia","Montenegro","Morocco","Mozambique","Myanmar","Namibia","Nauru","Nepal","Netherlands","New Zealand","Nicaragua","Niger","Nigeria","North Korea","North Macedonia","Norway","Oman","Pakistan","Palau","Palestine","Panama","Papua New Guinea","Paraguay","Peru","Philippines","Poland","Portugal","Qatar","Romania","Russia","Rwanda","Saint Kitts and Nevis","Saint Lucia","Saint Vincent","Samoa","San Marino","Sao Tome and Principe","Saudi Arabia","Senegal","Serbia","Seychelles","Sierra Leone","Singapore","Slovakia","Slovenia","Solomon Islands","Somalia","South Africa","South Korea","South Sudan","Spain","Sri Lanka","Sudan","Suriname","Sweden","Switzerland","Syria","Taiwan","Tajikistan","Tanzania","Thailand","Timor-Leste","Togo","Tonga","Trinidad and Tobago","Tunisia","Turkey","Turkmenistan","Tuvalu","Uganda","Ukraine","United Arab Emirates","United Kingdom","United States","Uruguay","Uzbekistan","Vanuatu","Vatican City","Venezuela","Vietnam","Yemen","Zambia","Zimbabwe"];
 
-/* സെലക്ട് ബോക്സിലേക്ക് രാജ്യങ്ങളുടെ ലിസ്റ്റ് സ്വയം ആഡ് ചെയ്യുന്ന ഫങ്ഷൻ */
 function populateCountries() {
 const select = document.getElementById("countryDropdown");
 if(!select) return;
@@ -2092,7 +2095,6 @@ select.add(opt);
 });
 }
 
-/* രാജ്യങ്ങളുടെ പേര് ഒരേ ഫോർമാറ്റിലേക്ക് മാറ്റുന്ന സുരക്ഷാ ലോജിക് */
 function normalizeCountry(c) {
 c = (c || "").toLowerCase().trim();
 if (c === "saudi arabia" || c === "saudi") return "saudi";
@@ -2102,7 +2104,7 @@ if (c === "united kingdom" || c === "uk") return "uk";
 return c;
 }
 
-/* ഡയറക്ട് ലിങ്ക് ആണോ അഫിലിയേറ്റ് ലിങ്ക് ആണോ എന്ന് വേർതിരിക്കുന്ന ഫങ്ഷൻ */
+// ഡയറക്ട് ലിങ്ക് ഒഴികെയുള്ളവയ്ക്ക് ഡോട്ട് നൽകാനുള്ള കണ്ടീഷൻ
 function isDirectLink(shop) {
 const v = shop.is_affiliate;
 if (v === undefined || v === null || v === "") return false;
@@ -2113,7 +2115,6 @@ if (String(v).toLowerCase() === "direct") return true;
 return false;
 }
 
-/* ഒരു രാജ്യം സെലക്ട് ചെയ്യുമ്പോൾ പേജിൽ വരുത്തേണ്ട മാറ്റങ്ങൾ */
 function setCountry(country, btn) {
 if (!country) return;
 currentCountry = normalizeCountry(country);
@@ -2138,7 +2139,7 @@ dropdown.selectedIndex = 0;
 document.getElementById("shopCountryTitle").innerText = "SHOP ON " + currentCountry.toUpperCase() + " SHOPS";
 document.getElementById("globalSearch").value = "";
 
-// കാറ്റഗറി ഫയലിലേക്ക് പുതിയ രാജ്യം മാറിയ വിവരം കൈമാറുന്നു
+// കാറ്റഗറി സെക്ഷനിലേക്ക് രാജ്യത്തിന്റെ വിവരം കൈമാറുന്നു
 if (typeof countrySearchBridge === "function") {
 countrySearchBridge(currentCountry);
 }
@@ -2146,19 +2147,16 @@ countrySearchBridge(currentCountry);
 renderShops(countryShops[currentCountry] || []);
 }
 
-/* ഷോപ്പുകൾ സ്ക്രീനിൽ കാണിക്കുന്ന പ്രധാന റെൻഡറിങ് എൻജിൻ */
 function renderShops(list, isSearching = false) {
 const container = document.getElementById("shopList");
 if(!container) return;
 container.innerHTML = "";
 
-// ക്രിസിസ് ബാധിത രാജ്യങ്ങൾക്കുള്ള പ്രത്യേക അലേർട്ട് മെസ്സേജ്
 if (crisisCountries.includes(currentCountry)) {
 container.innerHTML = `<div style="background:#222; border:2px solid #ff9800; border-radius:15px; padding:25px; text-align:center; color:#fff; margin-top:20px;"> <h3 style="color:#ff9800; text-transform:uppercase;">Unavailable due to world crisis</h3> <p style="font-size:18px; line-height:1.6; font-weight:bold; color:#ffeb3b;"> Dear friend, due to current global crisis and restrictions, international shopping platforms have limited services in your region. However, we sincerely pray for the peace and prosperity of your land. May the Almighty remove all obstacles and bring better days soon. </p> <div style="font-size:30px; margin-top:15px;">🌍🕊️</div> </div>`;
 return;
 }
 
-// കടകൾ ഒന്നും കണ്ടെത്തിയില്ലെങ്കിൽ കാണിക്കേണ്ട മെസ്സേജ്
 if (!list || list.length === 0) {
 if (isSearching) {
 container.innerHTML = "<p style='color:#ff9800; text-align:center; padding:20px; font-weight:bold;'>NO SHOPS FOUND MATCHING YOUR SEARCH</p>";
@@ -2168,7 +2166,6 @@ container.innerHTML = "<p style='color:#fff; text-align:center; padding:20px;'>I
 return;
 }
 
-// ഓരോ കടകളും ലിസ്റ്റിലേക്ക് ആഡ് ചെയ്യുന്ന ലൂപ്പ്
 list.forEach(shop => {
 const a = document.createElement("a");
 a.className = "shop-btn";
@@ -2189,7 +2186,6 @@ container.appendChild(a);
 });
 }
 
-/* യൂസർ ടൈപ്പ് ചെയ്യുമ്പോൾ കടകൾ ഫിൽട്ടർ ചെയ്യാനുള്ള ലൈവ് സെർച്ച് */
 function filterShops() {
 let val = document.getElementById("globalSearch").value.toLowerCase().trim();
 if (countryShops[currentCountry]) {
@@ -2198,14 +2194,12 @@ renderShops(filtered, val.length > 0);
 }
 }
 
-/* ബാക്ക്ഗ്രൗണ്ടിൽ നിന്നും ജെയ്‌സൺ ഫയലുകൾ ഓരോന്നായി ലോഡ് ചെയ്യുന്ന ഫങ്ഷൻ */
 async function loadShops() {
 const container = document.getElementById("shopList");
 if(container) container.innerHTML = "<p style='color:#fff; text-align:center; padding:20px;'>LOADING SHOPS...</p>";
 
-const targetFiles = (typeof CATEGORY_JSON_FILES !== "undefined") ? CATEGORY_JSON_FILES : [];
-
-for (const url of targetFiles) {
+// ജെയ്‌സൺ റീഡിങ് ലോജിക് നിങ്ങളുടെ ആർ2 ഫയലുകളുടെ ഘടനയ്ക്ക് അനുസരിച്ച് കൃത്യമാക്കിയിട്ടുണ്ട്
+for (const url of JSON_FILES) {
 try {
 const response = await fetch(url);
 if (!response.ok) continue;
@@ -2236,7 +2230,6 @@ let saved = localStorage.getItem("bas_country") || "india";
 setCountry(saved);
 }
 
-/* പേജ് ലോഡ് ആയിക്കഴിഞ്ഞാൽ റൺ ചെയ്യേണ്ട പ്രധാന ലിസണർ */
 document.addEventListener("DOMContentLoaded", () => {
 populateCountries();
 loadShops();
