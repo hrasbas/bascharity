@@ -651,8 +651,6 @@ ball.className = "bas-ball is-pwa-installed";
 </script>
  <!------------country---------------->
  <!-- 1. Country Selector Section -->
- 
- 
  <style>
 .top-country-box, .top-shop-container {
 max-width:900px;
@@ -842,7 +840,7 @@ animation: spin 1s linear infinite;
   <div id="topShopList"></div>
 </div>
 
-  <script>
+<script>
 const TOP_JSON_FILES = [
 "https://pub-168159db07cc407eaa28228eb2520ea5.r2.dev/1.json",
 "https://pub-168159db07cc407eaa28228eb2520ea5.r2.dev/2.json",
@@ -875,7 +873,6 @@ if (c === "united arab emirates" || c === "uae") return "uae";
 if (c === "united kingdom" || c === "uk") return "uk";
 return c;
 } 
-
 function isDirectLink(shop) {
 const aff = shop.is_affiliate;
 if (aff === undefined || aff === null || aff === "") return false;
@@ -963,7 +960,6 @@ a.innerHTML = '<span class="top-warning-dot">.</span><img class="top-shop-logo" 
 container.appendChild(a);
 });
 } 
-
 function filterTopShops() {
 let val = document.getElementById("topGlobalSearch").value.toLowerCase().trim();
 if (loadedTopShopsMap[currentTopCountry]) {
