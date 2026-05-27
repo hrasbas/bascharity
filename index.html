@@ -651,7 +651,10 @@ ball.className = "bas-ball is-pwa-installed";
 </script>
  <!------------country---------------->
  <!-- 1. Country Selector Section -->
- <style>
+ 
+ 
+<style>
+/* പൊതുവായ കണ്ടെയനർ ബോക്സുകൾ */
 .top-country-box, .top-shop-container {
 max-width:900px;
 width:96%;
@@ -659,6 +662,8 @@ margin:25px auto;
 font-family:Arial,sans-serif;
 box-sizing: border-box;
 }
+
+/* കൺട്രി ബട്ടൺ ബോക്സിന്റെ ഡിസൈൻ */
 .top-country-box { 
 padding:15px; 
 background:#000; 
@@ -699,6 +704,8 @@ transition: 0.2s;
 background:#ff9800; 
 color:#000; 
 }
+
+/* ഓൾ കൺട്രി സെർച്ച് ഡ്രോപ്പ്ഡൗൺ */
 .top-all-country select { 
 width:100%; 
 padding:15px; 
@@ -714,6 +721,8 @@ margin-top:12px;
 text-align-last:center; 
 text-transform:uppercase; 
 }
+
+/* ഷോപ്പ് കൺട്രി ഹെഡിങ് ബോക്സ് */
 .top-title-box { 
 background:#000; 
 border-radius:14px; 
@@ -736,6 +745,8 @@ margin-top:6px;
 font-size:13px; 
 color:#ffb74d; 
 }
+
+/* ഗ്ലോബൽ സെർച്ച് ബാർ */
 .top-global-search { 
 width:100%; 
 padding:18px; 
@@ -750,6 +761,8 @@ box-sizing:border-box;
 text-align:center; 
 font-weight:bold; 
 } 
+
+/* പ്രധാന 10 ഷോപ്പ് ബട്ടണുകളുടെ സ്റ്റൈലുകൾ */
 .top-shop-card {
 position: relative;
 display:flex;
@@ -778,6 +791,8 @@ margin-right: 12px;
 font-size:20px; 
 display:block; 
 }
+
+/* അഫിലിയേറ്റ് ലിങ്കുകൾക്കുള്ള ഇടതുവശത്തെ ഡോട്ട് (.) */
 .top-warning-dot { 
 position: absolute; 
 top: 2px; 
@@ -786,6 +801,8 @@ color: #fff;
 font-size: 14px; 
 z-index: 10; 
 }
+
+/* ലേസി ലോഡിങ് സ്ക്രീൻ സ്റ്റൈൽ */
 .lazy-loader {
 text-align: center;
 padding: 30px;
@@ -836,36 +853,61 @@ animation: spin 1s linear infinite;
     <span>(Shops & items categorised at the end of the site)</span>
   </div>
   <input type="text" id="topGlobalSearch" class="top-global-search" placeholder="SEARCH SHOPS" onkeyup="filterTopShops()">
-  <div id="topLazyLoader" class="lazy-loader"><div class="lazy-spinner"></div>LOADING SHOPS...</div>
+  
+  <div id="topLazyLoader" class="lazy-loader">
+    <div class="lazy-spinner"></div>
+    LOADING SHOPS...
+  </div>
+  
   <div id="topShopList"></div>
 </div>
 
+
 <script>
+/* ===== CONFIGURATION & LAZY LOADING LOGIC ===== */
 const TOP_JSON_FILES = [
-"https://pub-168159db07cc407eaa28228eb2520ea5.r2.dev/1.json",
-"https://pub-168159db07cc407eaa28228eb2520ea5.r2.dev/2.json",
-"https://pub-168159db07cc407eaa28228eb2520ea5.r2.dev/3.json",
-"https://pub-168159db07cc407eaa28228eb2520ea5.r2.dev/4.json",
-"https://pub-168159db07cc407eaa28228eb2520ea5.r2.dev/5.json",
-"https://pub-168159db07cc407eaa28228eb2520ea5.r2.dev/6.json",
-"https://pub-168159db07cc407eaa28228eb2520ea5.r2.dev/7.json",
-"https://pub-168159db07cc407eaa28228eb2520ea5.r2.dev/8.json",
-"https://pub-168159db07cc407eaa28228eb2520ea5.r2.dev/9.json",
-"https://pub-168159db07cc407eaa28228eb2520ea5.r2.dev/10.json",
-"https://pub-168159db07cc407eaa28228eb2520ea5.r2.dev/11.json",
-"https://pub-168159db07cc407eaa28228eb2520ea5.r2.dev/12.json",
-"https://pub-168159db07cc407eaa28228eb2520ea5.r2.dev/13.json",
-"https://pub-168159db07cc407eaa28228eb2520ea5.r2.dev/14.json",
-"https://pub-168159db07cc407eaa28228eb2520ea5.r2.dev/15.json",
-"https://pub-168159db07cc407eaa28228eb2520ea5.r2.dev/16.json",
-"https://pub-168159db07cc407eaa28228eb2520ea5.r2.dev/17.json",
-"https://pub-168159db07cc407eaa28228eb2520ea5.r2.dev/18.json",
-"https://pub-168159db07cc407eaa28228eb2520ea5.r2.dev/19.json",
-"https://pub-168159db07cc407eaa28228eb2520ea5.r2.dev/20.json",
-"https://pub-168159db07cc407eaa28228eb2520ea5.r2.dev/21.json"
-];
- 
-function cleanCountryName(c) {
+"https://pub-168159db07cc407eaa28228eb2520ea5.r2.dev/j1.json",
+"https://pub-168159db07cc407eaa28228eb2520ea5.r2.dev/j2.json",
+"https://pub-168159db07cc407eaa28228eb2520ea5.r2.dev/j3.json",
+"https://pub-168159db07cc407eaa28228eb2520ea5.r2.dev/j4.json",
+"https://pub-168159db07cc407eaa28228eb2520ea5.r2.dev/j5.json",
+"https://pub-168159db07cc407eaa28228eb2520ea5.r2.dev/j6.json",
+"https://pub-168159db07cc407eaa28228eb2520ea5.r2.dev/j7.json",
+"https://pub-168159db07cc407eaa28228eb2520ea5.r2.dev/j8.json",
+"https://pub-168159db07cc407eaa28228eb2520ea5.r2.dev/j9.json",
+"https://pub-168159db07cc407eaa28228eb2520ea5.r2.dev/j10.json",
+"https://pub-168159db07cc407eaa28228eb2520ea5.r2.dev/j11.json",
+"https://pub-168159db07cc407eaa28228eb2520ea5.r2.dev/j12.json",
+"https://pub-168159db07cc407eaa28228eb2520ea5.r2.dev/j13.json",
+"https://pub-168159db07cc407eaa28228eb2520ea5.r2.dev/j14.json",
+"https://pub-168159db07cc407eaa28228eb2520ea5.r2.dev/j15.json",
+"https://pub-168159db07cc407eaa28228eb2520ea5.r2.dev/j16.json",
+"https://pub-168159db07cc407eaa28228eb2520ea5.r2.dev/j17.json",
+"https://pub-168159db07cc407eaa28228eb2520ea5.r2.dev/j18.json",
+"https://pub-168159db07cc407eaa28228eb2520ea5.r2.dev/j19.json",
+"https://pub-168159db07cc407eaa28228eb2520ea5.r2.dev/j20.json",
+"https://pub-168159db07cc407eaa28228eb2520ea5.r2.dev/j21.json"
+]; 
+
+let loadedTopShopsMap = {}; // ലോഡ് ചെയ്ത കടകൾ സൂക്ഷിക്കാൻ
+let currentTopCountry = "india";
+
+const topCrisisCountries = ["afghanistan", "belarus", "cuba", "iran", "libya", "myanmar", "north korea", "palestine", "russia", "somalia", "south sudan", "sudan", "syria", "venezuela", "yemen"]; 
+const topAllCountriesList = ["Afghanistan","Albania","Algeria","Andorra","Angola","Argentina","Armenia","Australia","Austria","Azerbaijan","Bahamas","Bahrain","Bangladesh","Barbados","Belarus","Belgium","Belize","Benin","Bhutan","Bolivia","Bosnia","Botswana","Brazil","Brunei","Bulgaria","Burkina Faso","Burundi","Cambodia","Cameroon","Canada","Cape Verde","Chad","Chile","China","Colombia","Comoros","Congo","Costa Rica","Croatia","Cuba","Cyprus","Denmark","Djibouti","Dominica","Dominican Republic","Ecuador","Egypt","El Salvador","Equatorial Guinea","Eritrea","Estonia","Ethiopia","Fiji","Finland","France","Gabon","Gambia","Georgia","Germany","Ghana","Greece","Grenada","Guatemala","Guinea","Guyana","Haiti","Honduras","Hungary","Iceland","India","Indonesia","Iran","Iraq","Ireland","Israel","Italy","Jamaica","Japan","Jordan","Kazakhstan","Kenya","Kiribati","Kuwait","Kyrgyzstan","Laos","Latvia","Lebanon","Lesotho","Liberia","Libya","Liechtenstein","Lithuania","Luxembourg","Madagascar","Malawi","Malaysia","Maldives","Mali","Malta","Marshall Islands","Mauritania","Mauritius","Mexico","Micronesia","Moldova","Monaco","Mongolia","Montenegro","Morocco","Mozambique","Myanmar","Namibia","Nauru","Nepal","Netherlands","New Zealand","Nicaragua","Niger","Nigeria","North Korea","North Macedonia","Norway","Oman","Pakistan","Palau","Palestine","Panama","Papua New Guinea","Paraguay","Peru","Philippines","Poland","Portugal","Qatar","Romania","Russia","Rwanda","Saint Kitts and Nevis","Saint Lucia","Saint Vincent","Samoa","San Marino","Sao Tome and Principe","Saudi Arabia","Senegal","Serbia","Seychelles","Sierra Leone","Singapore","Slovakia","Slovenia","Solomon Islands","Somalia","South Africa","South Korea","South Sudan","Spain","Sri Lanka","Sudan","Suriname","Sweden","Switzerland","Syria","Taiwan","Tajikistan","Tanzania","Thailand","Timor-Leste","Togo","Tonga","Trinidad and Tobago","Tunisia","Turkey","Turkmenistan","Tuvalu","Uganda","Ukraine","United Arab Emirates","United Kingdom","United States","Uruguay","Uzbekistan","Vanuatu","Vatican City","Venezuela","Vietnam","Yemen","Zambia","Zimbabwe"]; 
+
+function populateTopCountries() {
+const select = document.getElementById("topCountryDropdown");
+if(!select) return;
+select.innerHTML = '<option value="" disabled selected>SEARCH ALL COUNTRIES</option>';
+topAllCountriesList.forEach(c => {
+let opt = document.createElement("option");
+opt.value = c.toLowerCase();
+opt.text = c.toUpperCase();
+select.add(opt);
+});
+} 
+
+function cleanTopCountryName(c) {
 c = (c || "").toLowerCase().trim();
 if (c === "saudi arabia" || c === "saudi") return "saudi";
 if (c === "united states" || c === "usa") return "usa";
@@ -873,35 +915,30 @@ if (c === "united arab emirates" || c === "uae") return "uae";
 if (c === "united kingdom" || c === "uk") return "uk";
 return c;
 } 
-function isDirectLink(shop) {
-const aff = shop.is_affiliate;
-if (aff === undefined || aff === null || aff === "") return false;
-if (aff === false || String(aff).toLowerCase() === "false" || String(aff).toLowerCase() === "0" || String(aff).toLowerCase() === "direct") return true;
-return false;
-}
 
+/* ഓൺ-ഡിമാൻഡ് ലേസി ലോഡിങ് ഫങ്ഷൻ */
 async function setTopCountry(country, btn) {
 if (!country) return;
-currentTopCountry = cleanCountryName(country);
+currentTopCountry = cleanTopCountryName(country);
 localStorage.setItem("bas_country", currentTopCountry); 
-  
 
 document.querySelectorAll(".top-country-btn").forEach(b => b.classList.remove("active")); 
 const activeBtn = btn || document.querySelector(".top-country-btn[data-country='"+currentTopCountry+"']");
 if (activeBtn) activeBtn.classList.add("active");
 
 const dropdown = document.getElementById("topCountryDropdown");
-if (dropdown && topAllCountriesList.map(c => c.toLowerCase()).includes(currentTopCountry)) {
+if (dropdown) {
+if (topAllCountriesList.map(c => c.toLowerCase()).includes(currentTopCountry)) {
 dropdown.value = currentTopCountry;
+} else {
+dropdown.selectedIndex = 0;
+}
 } 
 
-if(document.getElementById("topShopCountryTitle")) {
 document.getElementById("topShopCountryTitle").innerText = "SHOP ON " + currentTopCountry.toUpperCase() + " SHOPS";
-}
-if(document.getElementById("topGlobalSearch")) document.getElementById("topGlobalSearch").value = "";
+document.getElementById("topGlobalSearch").value = "";
 
-countrySearchBridge(currentTopCountry);
-
+// ഈ കൺട്രിയിലെ ഡാറ്റ മുൻപ് ലോഡ് ചെയ്തിട്ടില്ലെങ്കിൽ മാത്രം ഫെച്ച് ചെയ്യുന്നു
 if (!loadedTopShopsMap[currentTopCountry]) {
 await fetchShopsForCountry(currentTopCountry);
 } else {
@@ -909,11 +946,13 @@ renderTopShops(loadedTopShopsMap[currentTopCountry] || []);
 }
 } 
 
+/* തിരഞ്ഞെടുത്ത രാജ്യത്തെ ഫയലുകൾ മാത്രം ലോഡ് ചെയ്യുന്ന പ്രക്രിയ */
 async function fetchShopsForCountry(targetCountry) {
 const container = document.getElementById("topShopList");
 const loader = document.getElementById("topLazyLoader");
 if(container) container.innerHTML = "";
-if(loader) loader.style.display = "block"; 
+if(loader) loader.style.display = "block"; // ലോഡിങ് കാണിക്കുന്നു
+
 loadedTopShopsMap[targetCountry] = [];
 
 for (const url of TOP_JSON_FILES) {
@@ -922,193 +961,84 @@ const response = await fetch(url);
 if (!response.ok) continue; 
 const data = await response.json();
 const shopsArray = Array.isArray(data) ? data : (data.shops || []); 
+
 shopsArray.forEach(s => {
-if (s && s.country && cleanCountryName(s.country) === targetCountry) {
-if (!loadedTopShopsMap[targetCountry].some(exist => exist.name === s.name || exist.url === s.url)) {
+if (s && s.country) {
+let c = cleanTopCountryName(s.country);
+if (c === targetCountry) {
+const isDuplicate = loadedTopShopsMap[targetCountry].some(exist => exist.name === s.name || exist.url === s.url);
+if (!isDuplicate) {
 loadedTopShopsMap[targetCountry].push(s);
 }
 }
+}
 });
-} catch (e) {}
+} catch (e) {
+console.error("Fetch skipped for URL: " + url);
+}
 } 
-if(loader) loader.style.display = "none"; 
+
+if(loader) loader.style.display = "none"; // ലോഡിങ് മറയ്ക്കുന്നു
 renderTopShops(loadedTopShopsMap[targetCountry] || []);
 }
 
+/* 10 ഷോപ്പുകൾ മാത്രം സ്ക്രീനിൽ കാണിക്കുന്ന റെൻഡർ ലോജിക് */
 function renderTopShops(list, isSearching = false) {
 const container = document.getElementById("topShopList");
 if(!container) return;
 container.innerHTML = ""; 
 
 if (topCrisisCountries.includes(currentTopCountry)) {
-container.innerHTML = `<div style="background:#222; border:2px solid #ff9800; border-radius:15px; padding:25px; text-align:center; color:#fff; margin-top:20px;"> <h3 style="color:#ff9800; text-transform:uppercase;">Unavailable due to world crisis</h3> <p style="font-size:18px; line-height:1.6; font-weight:bold; color:#ffeb3b;"> Dear friend, due to current global crisis and restrictions, international shopping platforms have limited services in your region. May the Almighty remove all obstacles and bring better days soon. </p> </div>`;
+container.innerHTML = `<div style="background:#222; border:2px solid #ff9800; border-radius:15px; padding:25px; text-align:center; color:#fff; margin-top:20px;"> <h3 style="color:#ff9800; text-transform:uppercase;">Unavailable due to world crisis</h3> <p style="font-size:18px; line-height:1.6; font-weight:bold; color:#ffeb3b;"> Dear friend, due to current global crisis and restrictions, international shopping platforms have limited services in your region. However, we sincerely pray for the peace and prosperity of your land. May the Almighty remove all obstacles and bring better days soon. </p> <div style="font-size:30px; margin-top:15px;">🌍🕊️</div> </div>`;
 return;
 } 
 
 if (!list || list.length === 0) {
-container.innerHTML = isSearching ? "<p style='color:#ff9800; text-align:center; padding:20px; font-weight:bold;'>NO SHOPS FOUND</p>" : "<p style='color:#fff; text-align:center; padding:20px;'>IN PROGRESS FOR " + currentTopCountry.toUpperCase() + "...</p>";
+if (isSearching) {
+container.innerHTML = "<p style='color:#ff9800; text-align:center; padding:20px; font-weight:bold;'>NO SHOPS FOUND MATCHING YOUR SEARCH</p>";
+} else {
+container.innerHTML = "<p style='color:#fff; text-align:center; padding:20px;'>IN PROGRESS FOR " + currentTopCountry.toUpperCase() + "...</p>";
+}
 return;
 } 
 
-list.slice(0, 10).forEach(shop => {
+// ആദ്യത്തെ 10 ഷോപ്പുകൾ മാത്രം എടുക്കുന്നു (Limit 10)
+let itemsToShow = list.slice(0, 10);
+
+itemsToShow.forEach(shop => {
 const a = document.createElement("a");
 a.className = "top-shop-card";
-a.href = shop.url || "#"; a.target = "_blank"; a.rel = "noopener noreferrer"; 
+a.href = shop.url || "#";
+a.target = "_blank";
+a.rel = "noopener noreferrer"; 
+
 let domain = shop.url || "";
-try { domain = new URL(shop.url).hostname; } catch(e) { domain = domain.replace(/^https?:\/\//i, "").split("/")[0]; } 
-a.innerHTML = '<span class="top-warning-dot">.</span><img class="top-shop-logo" alt="' + shop.name + '" src="https://www.google.com/s2/favicons?domain=' + encodeURIComponent(domain) + '&sz=64"><div class="top-shop-info notranslate"><b>' + shop.name + '</b></div>';
+try {
+domain = new URL(shop.url).hostname;
+} catch(e) {
+domain = domain.replace(/^https?:\/\//i, "").split("/")[0];
+} 
+
+// സിന്റാക്സ് പിഴവുകളെല്ലാം തിരുത്തിയ പെർഫെക്റ്റ് HTML String വരി
+a.innerHTML = '<span class="top-warning-dot">.</span><img class="top-shop-logo" alt="' + shop.name + '" src="https://www.google.com/s2/favicons?sz=64&domain=' + encodeURIComponent(domain) + '"><div class="top-shop-info notranslate"><b>' + shop.name + '</b></div>';
 container.appendChild(a);
 });
 } 
+
+/* ലൈവ് സെർച്ച് ഫങ്ഷൻ */
 function filterTopShops() {
 let val = document.getElementById("topGlobalSearch").value.toLowerCase().trim();
 if (loadedTopShopsMap[currentTopCountry]) {
 const filtered = loadedTopShopsMap[currentTopCountry].filter(s => String(s.name).toLowerCase().includes(val));
 renderTopShops(filtered, val.length > 0);
 }
-}
-
-async function countrySearchBridge(userCountryInput) {
-activeCategory = null; expandedCategories = {};
-if (document.getElementById("findShop")) document.getElementById("findShop").value = "";
-if (!loadedBottomCountryMap[currentTopCountry]) {
-await fetchCategorizedShops(currentTopCountry);
-} else {
-updateCategoriesList(); renderCategorizedShops();
-}
-}
-
-async function fetchCategorizedShops(targetCountry) {
-const container = document.getElementById("shop-container");
-const loader = document.getElementById("bottomLazyLoader");
-if(container) container.innerHTML = "";
-if(loader) loader.style.display = "block"; 
-loadedBottomCountryMap[targetCountry] = [];
-
-for (const url of CATEGORY_JSON_FILES) {
-try {
-const response = await fetch(url);
-if (!response.ok) continue; 
-const data = await response.json();
-const shopsArray = Array.isArray(data) ? data : (data.shops || []); 
-shopsArray.forEach(s => {
-if (s && s.country && cleanCountryName(s.country) === targetCountry) {
-if (!loadedBottomCountryMap[targetCountry].some(exist => exist.name === s.name || exist.url === s.url)) {
-loadedBottomCountryMap[targetCountry].push(s);
-}
-}
-});
-} catch (e) {}
-} 
-if(loader) loader.style.display = "none"; 
-updateCategoriesList(); renderCategorizedShops();
-}
-
-function updateCategoriesList() {
-let currentShops = loadedBottomCountryMap[currentTopCountry] || [];
-currentShops.forEach(shop => {
-let catName = shop.c || shop.category || "General";
-if (catName && !dynamicCategoriesOrder.includes(catName)) dynamicCategoriesOrder.push(catName);
-}); 
-initCategoryButtons();
-}
-
-function initCategoryButtons() {
-let box = document.getElementById("cat-buttons");
-if(!box) return;
-box.innerHTML = dynamicCategoriesOrder.map(c => {
-return `<button class="m-btn" onclick="filterCategoryClick('${c}')" style="border-bottom:3px solid ${categoryColors[c] || '#666'}">${c}</button>`;
-}).join("");
 } 
 
-function filterCategoryClick(cat) {
-activeCategory = cat; expandedCategories[cat] = false;
-if (document.getElementById("findShop")) document.getElementById("findShop").value = ""; 
-renderCategorizedShops();
-} 
-
-function resetCategory() {
-activeCategory = null; expandedCategories = {};
-if (document.getElementById("findShop")) document.getElementById("findShop").value = "";
-renderCategorizedShops();
-} 
-
-function renderCategorizedShops() {
-let container = document.getElementById("shop-container");
-let selectedCatContainer = document.getElementById("selected-cat-container"); 
-if(!container) return;
-container.innerHTML = ""; 
-
-if(activeCategory && selectedCatContainer) {
-selectedCatContainer.style.display = "block";
-selectedCatContainer.innerHTML = `<div class="selected-cat-heading" style="background:${categoryColors[activeCategory] || '#666'}">${activeCategory}</div>`;
-} else if(selectedCatContainer) {
-selectedCatContainer.style.display = "none";
-}
-
-let fullList = loadedBottomCountryMap[currentTopCountry] || [];
-let searchVal = document.getElementById("findShop") ? document.getElementById("findShop").value.toLowerCase().trim() : "";
-if (searchVal !== "") fullList = fullList.filter(s => (s.n || s.name || "").toLowerCase().includes(searchVal));
-if (activeCategory) fullList = fullList.filter(s => (s.c || s.category || "General") === activeCategory);
-
-if (fullList.length === 0) {
-container.innerHTML = "<p style='color:#ff9800; text-align:center; padding:20px; font-weight:bold;'>NO SHOPS AVAILABLE</p>";
-return;
-}
-
-let grouped = {};
-fullList.forEach(s => {
-let catName = s.c || s.category || "General";
-if(!grouped[catName]) grouped[catName] = [];
-grouped[catName].push(s);
-}); 
-
-(activeCategory ? [activeCategory] : dynamicCategoriesOrder).forEach(cat => {
-if(grouped[cat] && grouped[cat].length > 0) {
-let col = categoryColors[cat] || "#666"; 
-let head = document.createElement("div");
-head.className = "cat-head"; head.style.background = col; head.innerText = cat;
-container.appendChild(head); 
-
-let isExpanded = expandedCategories[cat] || false;
-let totalItems = grouped[cat].length; 
-let isSearching = searchVal !== "";
-let limit = (totalItems > 20 && !isExpanded && !isSearching) ? 20 : totalItems; 
-
-for(let i = 0; i < limit; i++) {
-let s = grouped[cat][i];
-let card = document.createElement("a");
-card.className = "shop-card"; card.href = s.u || s.url || "#"; card.target = "_blank"; card.rel = "noopener noreferrer";
-card.style.borderLeft = "6px solid " + col; 
-
-let rawUrl = s.u || s.url || "";
-let cleanDomain = rawUrl.replace(/^https?:\/\//i, "").split("/")[0];
-if(cleanDomain.toLowerCase().includes("aliexpress.com")) {
-card.onclick = (e) => { e.preventDefault(); alert("Banned in India."); };
-} 
-
-let dotHTML = isDirectLink(s) ? '' : '<span class="bottom-affiliate-dot">.</span>'; 
-card.innerHTML = `${dotHTML}<div class="sl">${s.id || ""}</div><img alt="" src="https://www.google.com/s2/favicons?domain=${encodeURIComponent(cleanDomain)}&sz=64"><div><b>${s.n || s.name || ""}</b><br><span style="font-size:14px;color:#ffb74d;">${s.t || s.tag || ""}</span></div>`; 
-container.appendChild(card);
-} 
-
-if(totalItems > 20 && !isSearching) {
-let btn = document.createElement("div");
-btn.className = "more-btn"; btn.innerText = isExpanded ? "LESS -" : "MORE +";
-btn.onclick = () => { expandedCategories[cat] = !expandedCategories[cat]; renderCategorizedShops(); };
-container.appendChild(btn);
-}
-}
-});
-} 
-
-function liveSearch() { renderCategorizedShops(); } 
-
-window.addEventListener("load", () => {
-  populateTopCountries();
-  setTimeout(() => {
-    setTopCountry(localStorage.getItem("bas_country") || "india");
-  }, 500);
+/* തുടക്കത്തിൽ കൺട്രി മാത്രം സെറ്റ് ചെയ്യുന്നു */
+document.addEventListener("DOMContentLoaded", () => {
+populateTopCountries();
+let saved = localStorage.getItem("bas_country") || "india";
+setTopCountry(saved);
 });
 </script>
 <style>
