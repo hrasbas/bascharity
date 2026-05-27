@@ -842,7 +842,306 @@ animation: spin 1s linear infinite;
   <div id="topShopList"></div>
 </div>
 
-  
+  <script>
+const TOP_JSON_FILES = [
+"https://pub-168159db07cc407eaa28228eb2520ea5.r2.dev/1.json",
+"https://pub-168159db07cc407eaa28228eb2520ea5.r2.dev/2.json",
+"https://pub-168159db07cc407eaa28228eb2520ea5.r2.dev/3.json",
+"https://pub-168159db07cc407eaa28228eb2520ea5.r2.dev/4.json",
+"https://pub-168159db07cc407eaa28228eb2520ea5.r2.dev/5.json",
+"https://pub-168159db07cc407eaa28228eb2520ea5.r2.dev/6.json",
+"https://pub-168159db07cc407eaa28228eb2520ea5.r2.dev/7.json",
+"https://pub-168159db07cc407eaa28228eb2520ea5.r2.dev/8.json",
+"https://pub-168159db07cc407eaa28228eb2520ea5.r2.dev/9.json",
+"https://pub-168159db07cc407eaa28228eb2520ea5.r2.dev/10.json",
+"https://pub-168159db07cc407eaa28228eb2520ea5.r2.dev/11.json",
+"https://pub-168159db07cc407eaa28228eb2520ea5.r2.dev/12.json",
+"https://pub-168159db07cc407eaa28228eb2520ea5.r2.dev/13.json",
+"https://pub-168159db07cc407eaa28228eb2520ea5.r2.dev/14.json",
+"https://pub-168159db07cc407eaa28228eb2520ea5.r2.dev/15.json",
+"https://pub-168159db07cc407eaa28228eb2520ea5.r2.dev/16.json",
+"https://pub-168159db07cc407eaa28228eb2520ea5.r2.dev/17.json",
+"https://pub-168159db07cc407eaa28228eb2520ea5.r2.dev/18.json",
+"https://pub-168159db07cc407eaa28228eb2520ea5.r2.dev/19.json",
+"https://pub-168159db07cc407eaa28228eb2520ea5.r2.dev/20.json",
+"https://pub-168159db07cc407eaa28228eb2520ea5.r2.dev/21.json"
+];
+
+const CATEGORY_JSON_FILES = [
+"https://pub-168159db07cc407eaa28228eb2520ea5.r2.dev/31.json",
+"https://pub-168159db07cc407eaa28228eb2520ea5.r2.dev/32.json",
+"https://pub-168159db07cc407eaa28228eb2520ea5.r2.dev/33.json"
+];
+
+const categoryColors = { "General": "#2196f3", "Fashion": "#e91e63", "Beauty": "#9c27b0", "Electronics": "#ff5722", "Health": "#4caf50", "Travel": "#00bcd4" }; 
+const topCrisisCountries = ["afghanistan", "belarus", "cuba", "iran", "libya", "myanmar", "north korea", "palestine", "russia", "somalia", "south sudan", "sudan", "syria", "venezuela", "yemen"]; 
+const topAllCountriesList = ["Afghanistan","Albania","Algeria","Andorra","Angola","Argentina","Armenia","Australia","Austria","Azerbaijan","Bahamas","Bahrain","Bangladesh","Barbados","Belarus","Belgium","Belize","Benin","Bhutan","Bolivia","Bosnia","Botswana","Brazil","Brunei","Bulgaria","Burkina Faso","Burundi","Cambodia","Cameroon","Canada","Cape Verde","Chad","Chile","China","Colombia","Comoros","Congo","Costa Rica","Croatia","Cuba","Cyprus","Denmark","Djibouti","Dominica","Dominican Republic","Ecuador","Egypt","El Salvador","Equatorial Guinea","Eritrea","Estonia","Ethiopia","Fiji","Finland","France","Gabon","Gambia","Georgia","Germany","Ghana","Greece","Grenada","Guatemala","Guinea","Guyana","Haiti","Honduras","Hungary","Iceland","India","Indonesia","Iran","Iraq","Ireland","Israel","Italy","Jamaica","Japan","Jordan","Kazakhstan","Kenya","Kiribati","Kuwait","Kyrgyzstan","Laos","Latvia","Lebanon","Lesotho","Liberia","Libya","Liechtenstein","Lithuania","Luxembourg","Madagascar","Malawi","Malaysia","Maldives","Mali","Malta","Marshall Islands","Mauritania","Mauritius","Mexico","Micronesia","Moldova","Monaco","Mongolia","Montenegro","Morocco","Mozambique","Myanmar","Namibia","Nauru","Nepal","Netherlands","New Zealand","Nicaragua","Niger","Nigeria","North Korea","North Macedonia","Norway","Oman","Pakistan","Palau","Palestine","Panama","Papua New Guinea","Paraguay","Peru","Philippines","Poland","Portugal","Qatar","Romania","Russia","Rwanda","Saint Kitts and Nevis","Saint Lucia","Saint Vincent","Samoa","San Marino","Sao Tome and Principe","Saudi Arabia","Senegal","Serbia","Seychelles","Sierra Leone","Singapore","Slovakia","Slovenia","Solomon Islands","Somalia","South Africa","South Korea","South Sudan","Spain","Sri Lanka","Sudan","Suriname","Sweden","Switzerland","Syria","Taiwan","Tajikistan","Tanzania","Thailand","Timor-Leste","Togo","Tonga","Trinidad and Tobago","Tunisia","Turkey","Turkmenistan","Tuvalu","Uganda","Ukraine","United Arab Emirates","United Kingdom","United States","Uruguay","Uzbekistan","Vanuatu","Vatican City","Venezuela","Vietnam","Yemen","Zambia","Zimbabwe"]; 
+
+let loadedTopShopsMap = {}; 
+let currentTopCountry = "india";
+let dynamicCategoriesOrder = ["General", "Fashion", "Beauty", "Electronics", "Health", "Travel"]; 
+let loadedBottomCountryMap = {}; 
+let activeCategory = null;
+let expandedCategories = {};
+
+function populateTopCountries() {
+const select = document.getElementById("topCountryDropdown");
+if(!select) return;
+select.innerHTML = '<option value="" disabled selected>SEARCH ALL COUNTRIES</option>';
+topAllCountriesList.forEach(c => {
+let opt = document.createElement("option");
+opt.value = c.toLowerCase();
+opt.text = c.toUpperCase();
+select.add(opt);
+});
+} 
+
+function cleanCountryName(c) {
+c = (c || "").toLowerCase().trim();
+if (c === "saudi arabia" || c === "saudi") return "saudi";
+if (c === "united states" || c === "usa") return "usa";
+if (c === "united arab emirates" || c === "uae") return "uae";
+if (c === "united kingdom" || c === "uk") return "uk";
+return c;
+} 
+
+function isDirectLink(shop) {
+const aff = shop.is_affiliate;
+if (aff === undefined || aff === null || aff === "") return false;
+if (aff === false || String(aff).toLowerCase() === "false" || String(aff).toLowerCase() === "0" || String(aff).toLowerCase() === "direct") return true;
+return false;
+}
+
+async function setTopCountry(country, btn) {
+if (!country) return;
+currentTopCountry = cleanCountryName(country);
+localStorage.setItem("bas_country", currentTopCountry); 
+
+document.querySelectorAll(".top-country-btn").forEach(b => b.classList.remove("active")); 
+const activeBtn = btn || document.querySelector(".top-country-btn[data-country='"+currentTopCountry+"']");
+if (activeBtn) activeBtn.classList.add("active");
+
+const dropdown = document.getElementById("topCountryDropdown");
+if (dropdown && topAllCountriesList.map(c => c.toLowerCase()).includes(currentTopCountry)) {
+dropdown.value = currentTopCountry;
+} 
+
+if(document.getElementById("topShopCountryTitle")) {
+document.getElementById("topShopCountryTitle").innerText = "SHOP ON " + currentTopCountry.toUpperCase() + " SHOPS";
+}
+if(document.getElementById("topGlobalSearch")) document.getElementById("topGlobalSearch").value = "";
+
+countrySearchBridge(currentTopCountry);
+
+if (!loadedTopShopsMap[currentTopCountry]) {
+await fetchShopsForCountry(currentTopCountry);
+} else {
+renderTopShops(loadedTopShopsMap[currentTopCountry] || []);
+}
+} 
+
+async function fetchShopsForCountry(targetCountry) {
+const container = document.getElementById("topShopList");
+const loader = document.getElementById("topLazyLoader");
+if(container) container.innerHTML = "";
+if(loader) loader.style.display = "block"; 
+loadedTopShopsMap[targetCountry] = [];
+
+for (const url of TOP_JSON_FILES) {
+try {
+const response = await fetch(url);
+if (!response.ok) continue; 
+const data = await response.json();
+const shopsArray = Array.isArray(data) ? data : (data.shops || []); 
+shopsArray.forEach(s => {
+if (s && s.country && cleanCountryName(s.country) === targetCountry) {
+if (!loadedTopShopsMap[targetCountry].some(exist => exist.name === s.name || exist.url === s.url)) {
+loadedTopShopsMap[targetCountry].push(s);
+}
+}
+});
+} catch (e) {}
+} 
+if(loader) loader.style.display = "none"; 
+renderTopShops(loadedTopShopsMap[targetCountry] || []);
+}
+
+function renderTopShops(list, isSearching = false) {
+const container = document.getElementById("topShopList");
+if(!container) return;
+container.innerHTML = ""; 
+
+if (topCrisisCountries.includes(currentTopCountry)) {
+container.innerHTML = `<div style="background:#222; border:2px solid #ff9800; border-radius:15px; padding:25px; text-align:center; color:#fff; margin-top:20px;"> <h3 style="color:#ff9800; text-transform:uppercase;">Unavailable due to world crisis</h3> <p style="font-size:18px; line-height:1.6; font-weight:bold; color:#ffeb3b;"> Dear friend, due to current global crisis and restrictions, international shopping platforms have limited services in your region. May the Almighty remove all obstacles and bring better days soon. </p> </div>`;
+return;
+} 
+
+if (!list || list.length === 0) {
+container.innerHTML = isSearching ? "<p style='color:#ff9800; text-align:center; padding:20px; font-weight:bold;'>NO SHOPS FOUND</p>" : "<p style='color:#fff; text-align:center; padding:20px;'>IN PROGRESS FOR " + currentTopCountry.toUpperCase() + "...</p>";
+return;
+} 
+
+list.slice(0, 10).forEach(shop => {
+const a = document.createElement("a");
+a.className = "top-shop-card";
+a.href = shop.url || "#"; a.target = "_blank"; a.rel = "noopener noreferrer"; 
+let domain = shop.url || "";
+try { domain = new URL(shop.url).hostname; } catch(e) { domain = domain.replace(/^https?:\/\//i, "").split("/")[0]; } 
+a.innerHTML = '<span class="top-warning-dot">.</span><img class="top-shop-logo" alt="' + shop.name + '" src="https://www.google.com/s2/favicons?domain=' + encodeURIComponent(domain) + '&sz=64"><div class="top-shop-info notranslate"><b>' + shop.name + '</b></div>';
+container.appendChild(a);
+});
+} 
+
+function filterTopShops() {
+let val = document.getElementById("topGlobalSearch").value.toLowerCase().trim();
+if (loadedTopShopsMap[currentTopCountry]) {
+const filtered = loadedTopShopsMap[currentTopCountry].filter(s => String(s.name).toLowerCase().includes(val));
+renderTopShops(filtered, val.length > 0);
+}
+}
+
+async function countrySearchBridge(userCountryInput) {
+activeCategory = null; expandedCategories = {};
+if (document.getElementById("findShop")) document.getElementById("findShop").value = "";
+if (!loadedBottomCountryMap[currentTopCountry]) {
+await fetchCategorizedShops(currentTopCountry);
+} else {
+updateCategoriesList(); renderCategorizedShops();
+}
+}
+
+async function fetchCategorizedShops(targetCountry) {
+const container = document.getElementById("shop-container");
+const loader = document.getElementById("bottomLazyLoader");
+if(container) container.innerHTML = "";
+if(loader) loader.style.display = "block"; 
+loadedBottomCountryMap[targetCountry] = [];
+
+for (const url of CATEGORY_JSON_FILES) {
+try {
+const response = await fetch(url);
+if (!response.ok) continue; 
+const data = await response.json();
+const shopsArray = Array.isArray(data) ? data : (data.shops || []); 
+shopsArray.forEach(s => {
+if (s && s.country && cleanCountryName(s.country) === targetCountry) {
+if (!loadedBottomCountryMap[targetCountry].some(exist => exist.name === s.name || exist.url === s.url)) {
+loadedBottomCountryMap[targetCountry].push(s);
+}
+}
+});
+} catch (e) {}
+} 
+if(loader) loader.style.display = "none"; 
+updateCategoriesList(); renderCategorizedShops();
+}
+
+function updateCategoriesList() {
+let currentShops = loadedBottomCountryMap[currentTopCountry] || [];
+currentShops.forEach(shop => {
+let catName = shop.c || shop.category || "General";
+if (catName && !dynamicCategoriesOrder.includes(catName)) dynamicCategoriesOrder.push(catName);
+}); 
+initCategoryButtons();
+}
+
+function initCategoryButtons() {
+let box = document.getElementById("cat-buttons");
+if(!box) return;
+box.innerHTML = dynamicCategoriesOrder.map(c => {
+return `<button class="m-btn" onclick="filterCategoryClick('${c}')" style="border-bottom:3px solid ${categoryColors[c] || '#666'}">${c}</button>`;
+}).join("");
+} 
+
+function filterCategoryClick(cat) {
+activeCategory = cat; expandedCategories[cat] = false;
+if (document.getElementById("findShop")) document.getElementById("findShop").value = ""; 
+renderCategorizedShops();
+} 
+
+function resetCategory() {
+activeCategory = null; expandedCategories = {};
+if (document.getElementById("findShop")) document.getElementById("findShop").value = "";
+renderCategorizedShops();
+} 
+
+function renderCategorizedShops() {
+let container = document.getElementById("shop-container");
+let selectedCatContainer = document.getElementById("selected-cat-container"); 
+if(!container) return;
+container.innerHTML = ""; 
+
+if(activeCategory && selectedCatContainer) {
+selectedCatContainer.style.display = "block";
+selectedCatContainer.innerHTML = `<div class="selected-cat-heading" style="background:${categoryColors[activeCategory] || '#666'}">${activeCategory}</div>`;
+} else if(selectedCatContainer) {
+selectedCatContainer.style.display = "none";
+}
+
+let fullList = loadedBottomCountryMap[currentTopCountry] || [];
+let searchVal = document.getElementById("findShop") ? document.getElementById("findShop").value.toLowerCase().trim() : "";
+if (searchVal !== "") fullList = fullList.filter(s => (s.n || s.name || "").toLowerCase().includes(searchVal));
+if (activeCategory) fullList = fullList.filter(s => (s.c || s.category || "General") === activeCategory);
+
+if (fullList.length === 0) {
+container.innerHTML = "<p style='color:#ff9800; text-align:center; padding:20px; font-weight:bold;'>NO SHOPS AVAILABLE</p>";
+return;
+}
+
+let grouped = {};
+fullList.forEach(s => {
+let catName = s.c || s.category || "General";
+if(!grouped[catName]) grouped[catName] = [];
+grouped[catName].push(s);
+}); 
+
+(activeCategory ? [activeCategory] : dynamicCategoriesOrder).forEach(cat => {
+if(grouped[cat] && grouped[cat].length > 0) {
+let col = categoryColors[cat] || "#666"; 
+let head = document.createElement("div");
+head.className = "cat-head"; head.style.background = col; head.innerText = cat;
+container.appendChild(head); 
+
+let isExpanded = expandedCategories[cat] || false;
+let totalItems = grouped[cat].length; 
+let isSearching = searchVal !== "";
+let limit = (totalItems > 20 && !isExpanded && !isSearching) ? 20 : totalItems; 
+
+for(let i = 0; i < limit; i++) {
+let s = grouped[cat][i];
+let card = document.createElement("a");
+card.className = "shop-card"; card.href = s.u || s.url || "#"; card.target = "_blank"; card.rel = "noopener noreferrer";
+card.style.borderLeft = "6px solid " + col; 
+
+let rawUrl = s.u || s.url || "";
+let cleanDomain = rawUrl.replace(/^https?:\/\//i, "").split("/")[0];
+if(cleanDomain.toLowerCase().includes("aliexpress.com")) {
+card.onclick = (e) => { e.preventDefault(); alert("Banned in India."); };
+} 
+
+let dotHTML = isDirectLink(s) ? '' : '<span class="bottom-affiliate-dot">.</span>'; 
+card.innerHTML = `${dotHTML}<div class="sl">${s.id || ""}</div><img alt="" src="https://www.google.com/s2/favicons?domain=${encodeURIComponent(cleanDomain)}&sz=64"><div><b>${s.n || s.name || ""}</b><br><span style="font-size:14px;color:#ffb74d;">${s.t || s.tag || ""}</span></div>`; 
+container.appendChild(card);
+} 
+
+if(totalItems > 20 && !isSearching) {
+let btn = document.createElement("div");
+btn.className = "more-btn"; btn.innerText = isExpanded ? "LESS -" : "MORE +";
+btn.onclick = () => { expandedCategories[cat] = !expandedCategories[cat]; renderCategorizedShops(); };
+container.appendChild(btn);
+}
+}
+});
+} 
+
+function liveSearch() { renderCategorizedShops(); } 
+
+window.addEventListener("load", () => {
+  populateTopCountries();
+  setTimeout(() => {
+    setTopCountry(localStorage.getItem("bas_country") || "india");
+  }, 500);
+});
 </script>
 <style>
 .compare-box{
