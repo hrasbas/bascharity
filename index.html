@@ -883,10 +883,7 @@ if (aff === false || String(aff).toLowerCase() === "false" || String(aff).toLowe
 return false;
 }
 
-async function setTopCountry(country, btn) {
-if (!country) return;
-currentTopCountry = cleanCountryName(country);
-localStorage.setItem("bas_country", currentTopCountry); 
+
   
 // താഴത്തെ ഭാഗത്തേക്ക് മാറ്റങ്ങൾ അറിയിക്കുന്ന ഫങ്ഷൻ റൺ ചെയ്യുന്നു
 countrySearchBridge(currentTopCountry);
