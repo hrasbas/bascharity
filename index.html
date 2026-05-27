@@ -651,7 +651,7 @@ ball.className = "bas-ball is-pwa-installed";
 </script>
  <!------------country---------------->
  <!-- 1. Country Selector Section -->
-<style>
+   <style>
 .country-box { max-width:900px; width:96%; margin:25px auto; padding:15px; background:#000; border:1px solid #ff9800; border-radius:15px; font-family:Arial,sans-serif; }
 .country-title { background:#333; color:#fff; font-weight:900; text-align:center; padding:10px; border-radius:10px; border:1px solid #ff9800; border-left:6px solid #ff9800; margin-bottom:10px; }
 .country-grid { display:grid; grid-template-columns:repeat(2, 1fr); gap:8px; }
@@ -710,7 +710,6 @@ ball.className = "bas-ball is-pwa-installed";
 </div>
 
 <script>
- <script>
 const JSON_FILES = [
 "https://pub-168159db07cc407eaa28228eb2520ea5.r2.dev/1.json",
 "https://pub-168159db07cc407eaa28228eb2520ea5.r2.dev/2.json",
@@ -735,29 +734,16 @@ const JSON_FILES = [
 "https://pub-168159db07cc407eaa28228eb2520ea5.r2.dev/21.json"
 ];
 
+
 let countryShops = {};
 let currentCountry = "india";
 const crisisCountries = ["afghanistan", "belarus", "cuba", "iran", "libya", "myanmar", "north korea", "palestine", "russia", "somalia", "south sudan", "sudan", "syria", "venezuela", "yemen"];
 
 const countries = ["Afghanistan","Albania","Algeria","Andorra","Angola","Argentina","Armenia","Australia","Austria","Azerbaijan","Bahamas","Bahrain","Bangladesh","Barbados","Belarus","Belgium","Belize","Benin","Bhutan","Bolivia","Bosnia","Botswana","Brazil","Brunei","Bulgaria","Burkina Faso","Burundi","Cambodia","Cameroon","Canada","Cape Verde","Chad","Chile","China","Colombia","Comoros","Congo","Costa Rica","Croatia","Cuba","Cyprus","Denmark","Djibouti","Dominica","Dominican Republic","Ecuador","Egypt","El Salvador","Equatorial Guinea","Eritrea","Estonia","Ethiopia","Fiji","Finland","France","Gabon","Gambia","Georgia","Germany","Ghana","Greece","Grenada","Guatemala","Guinea","Guyana","Haiti","Honduras","Hungary","Iceland","India","Indonesia","Iran","Iraq","Ireland","Israel","Italy","Jamaica","Japan","Jordan","Kazakhstan","Kenya","Kiribati","Kuwait","Kyrgyzstan","Laos","Latvia","Lebanon","Lesotho","Liberia","Libya","Liechtenstein","Lithuania","Luxembourg","Madagascar","Malawi","Malaysia","Maldives","Mali","Malta","Marshall Islands","Mauritania","Mauritius","Mexico","Micronesia","Moldova","Monaco","Mongolia","Montenegro","Morocco","Mozambique","Myanmar","Namibia","Nauru","Nepal","Netherlands","New Zealand","Nicaragua","Niger","Nigeria","North Korea","North Macedonia","Norway","Oman","Pakistan","Palau","Palestine","Panama","Papua New Guinea","Paraguay","Peru","Philippines","Poland","Portugal","Qatar","Romania","Russia","Rwanda","Saint Kitts and Nevis","Saint Lucia","Saint Vincent","Samoa","San Marino","Sao Tome and Principe","Saudi Arabia","Senegal","Serbia","Seychelles","Sierra Leone","Singapore","Slovakia","Slovenia","Solomon Islands","Somalia","South Africa","South Korea","South Sudan","Spain","Sri Lanka","Sudan","Suriname","Sweden","Switzerland","Syria","Taiwan","Tajikistan","Tanzania","Thailand","Timor-Leste","Togo","Tonga","Trinidad and Tobago","Tunisia","Turkey","Turkmenistan","Tuvalu","Uganda","Ukraine","United Arab Emirates","United Kingdom","United States","Uruguay","Uzbekistan","Vanuatu","Vatican City","Venezuela","Vietnam","Yemen","Zambia","Zimbabwe"];
 
-function safeGetStorage(key, fallbackValue) {
-try {
-return localStorage.getItem(key) || fallbackValue;
-} catch (e) {
-return fallbackValue;
-}
-}
-
-function safeSetStorage(key, value) {
-try {
-localStorage.setItem(key, value);
-} catch (e) {}
-}
-
 function populateCountries() {
 const select = document.getElementById("countryDropdown");
-if (!select) return;
+if(!select) return;
 select.innerHTML = '<option value="" disabled selected>SEARCH ALL COUNTRIES</option>';
 countries.forEach(c => {
 let opt = document.createElement("option");
@@ -768,7 +754,7 @@ select.add(opt);
 }
 
 function normalizeCountry(c) {
-c = String(c || "").toLowerCase().trim();
+c = (c || "").toLowerCase().trim();
 if (c === "saudi arabia" || c === "saudi") return "saudi";
 if (c === "united states" || c === "usa") return "usa";
 if (c === "united arab emirates" || c === "uae") return "uae";
@@ -778,14 +764,15 @@ return c;
 
 function setCountry(country, btn) {
 if (!country) return;
-
 currentCountry = normalizeCountry(country);
-safeSetStorage("bas_country", currentCountry);
+localStorage.setItem("bas_country", currentCountry);
 
 document.querySelectorAll(".country-btn").forEach(b => b.classList.remove("active"));
 
-const activeBtn = btn || document.querySelector(".country-btn[data-country='" + currentCountry + "']");
-if (activeBtn) activeBtn.classList.add("active");
+const activeBtn = btn || document.querySelector(".country-btn[data-country='"+currentCountry+"']");
+if (activeBtn) {
+activeBtn.classList.add("active");
+}
 
 const dropdown = document.getElementById("countryDropdown");
 if (dropdown) {
@@ -796,35 +783,22 @@ dropdown.selectedIndex = 0;
 }
 }
 
-const title = document.getElementById("shopCountryTitle");
-if (title) title.innerText = "SHOP ON " + currentCountry.toUpperCase() + " SHOPS";
-
-const search = document.getElementById("globalSearch");
-if (search) search.value = "";
-
+document.getElementById("shopCountryTitle").innerText = "SHOP ON " + currentCountry.toUpperCase() + " SHOPS";
+document.getElementById("globalSearch").value = "";
 renderShops(countryShops[currentCountry] || []);
-
-if (typeof countrySearchBridge === "function") countrySearchBridge(currentCountry);
 }
 
 function renderShops(list, isSearching = false) {
 const container = document.getElementById("shopList");
-if (!container) return;
+if(!container) return;
 container.innerHTML = "";
 
 if (crisisCountries.includes(currentCountry)) {
-container.innerHTML = `
-<div style="background:#222; border:2px solid #ff9800; border-radius:15px; padding:25px; text-align:center; color:#fff; margin-top:20px;">
-<h3 style="color:#ff9800; text-transform:uppercase;">Unavailable due to world crisis</h3>
-<p style="font-size:18px; line-height:1.6; font-weight:bold; color:#ffeb3b;">
-Dear friend, due to current global crisis and restrictions, international shopping platforms have limited services in your region. However, we sincerely pray for the peace and prosperity of your land. May the Almighty remove all obstacles and bring better days soon.
-</p>
-<div style="font-size:30px; margin-top:15px;">🌍🕊️</div>
-</div>`;
+container.innerHTML = <div style="background:#222; border:2px solid #ff9800; border-radius:15px; padding:25px; text-align:center; color:#fff; margin-top:20px;"&gt; &lt;h3 style="color:#ff9800; text-transform:uppercase;"&gt;Unavailable due to world crisis&lt;/h3&gt; &lt;p style="font-size:18px; line-height:1.6; font-weight:bold; color:#ffeb3b;"&gt; Dear friend, due to current global crisis and restrictions, international shopping platforms have limited services in your region. However, we sincerely pray for the peace and prosperity of your land. May the Almighty remove all obstacles and bring better days soon. &lt;/p&gt; &lt;div style="font-size:30px; margin-top:15px;"&gt;🌍🕊️&lt;/div&gt; &lt;/div>;
 return;
 }
 
-if (!Array.isArray(list) || list.length === 0) {
+if (!list || list.length === 0) {
 if (isSearching) {
 container.innerHTML = "<p style='color:#ff9800; text-align:center; padding:20px; font-weight:bold;'>NO SHOPS FOUND MATCHING YOUR SEARCH</p>";
 } else {
@@ -834,8 +808,6 @@ return;
 }
 
 list.forEach(shop => {
-if (!shop || !shop.url || !shop.name) return;
-
 const a = document.createElement("a");
 a.className = "shop-btn";
 a.href = shop.url;
@@ -845,65 +817,60 @@ a.rel = "noopener noreferrer";
 let domain = shop.url;
 try {
 domain = new URL(shop.url).hostname;
-} catch (e) {}
+} catch(e) {}
 
-a.innerHTML = '<span class="warning-dot">.</span><img class="shop-logo" width="42" height="42" alt="' + String(shop.name).replace(/"/g, '&quot;') + '" src="https://www.google.com/s2/favicons?sz=64&domain_url=' + encodeURIComponent(domain) + '"><div class="shop-info notranslate"><b>' + String(shop.name) + '</b></div>';
+a.innerHTML = '<span class="warning-dot">.</span><img class="shop-logo" width="42" height="42" alt="' + shop.name + '" src="https://www.google.com/s2/favicons?sz=64&domain_url=' + encodeURIComponent(domain) + '"><div class="shop-info notranslate"><b>' + shop.name + '</b></div>';
 container.appendChild(a);
 });
 }
 
 function filterShops() {
-const input = document.getElementById("globalSearch");
-const val = input ? input.value.toLowerCase().trim() : "";
-
+let val = document.getElementById("globalSearch").value.toLowerCase().trim();
 if (countryShops[currentCountry]) {
-const filtered = countryShops[currentCountry].filter(s =>
-s && s.name && String(s.name).toLowerCase().includes(val)
-);
+const filtered = countryShops[currentCountry].filter(s => String(s.name).toLowerCase().includes(val));
 renderShops(filtered, val.length > 0);
 }
 }
 
 async function loadShops() {
 const container = document.getElementById("shopList");
-if (container) container.innerHTML = "<p style='color:#fff; text-align:center; padding:20px;'>LOADING SHOPS...</p>";
+if(container) container.innerHTML = "<p style='color:#fff; text-align:center; padding:20px;'>LOADING SHOPS...</p>";
 
+// Promise.all മാറ്റി ഓരോ ഫയലും ഒന്നിനു പുറകെ ഒന്നായി തനിയെ ഫെച്ച് ചെയ്യുന്നു
 for (const url of JSON_FILES) {
 try {
 const response = await fetch(url);
 if (!response.ok) continue;
 
 const data = await response.json();
-const shopsArray = Array.isArray(data) ? data : (Array.isArray(data.shops) ? data.shops : []);
+const shopsArray = Array.isArray(data) ? data : (data.shops || []);
 
 shopsArray.forEach(s => {
 if (s && s.country) {
-const c = normalizeCountry(s.country);
+let c = normalizeCountry(s.country);
 if (!countryShops[c]) countryShops[c] = [];
 
-const isDuplicate = countryShops[c].some(existingShop =>
-existingShop.name === s.name || existingShop.url === s.url
-);
-
+const isDuplicate = countryShops[c].some(existingShop => existingShop.name === s.name || existingShop.url === s.url);
 if (!isDuplicate) {
 countryShops[c].push(s);
 }
 }
 });
 } catch (e) {
-console.error("Fetch skipped for:", url);
+console.error("Fetch skipped for: " + url);
 }
 }
 
-const saved = safeGetStorage("bas_country", "india");
+let saved = localStorage.getItem("bas_country") || "india";
 setCountry(saved);
 }
 
-document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener("DOMContentLoaded", () => {
 populateCountries();
 loadShops();
 });
 </script>
+
 <style>
 .compare-box{
 background:#000;
