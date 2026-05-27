@@ -2162,7 +2162,7 @@ if(target) target.scrollIntoView({ behavior:"smooth", block:"start" });
 </script>
 <!------------------Catogaryshops-------->
  
- <style>
+  <style>
 #bas-mega-portal{
 width:96%;
 max-width:900px;
@@ -2262,6 +2262,7 @@ height:36px;
 background:#fff;
 border-radius:6px;
 padding:2px;
+object-fit:contain;
 }
 
 .sl{
@@ -2269,6 +2270,18 @@ width:30px;
 color:#ff9800;
 font-size:20px;
 font-weight:bold;
+}
+
+/* Affiliate Link - Left Top white dot */
+.affiliate-dot {
+position: absolute;
+top: 6px;
+left: 6px;
+width: 8px;
+height: 8px;
+background-color: #ffffff;
+border-radius: 50%;
+pointer-events: none;
 }
 
 /* MORE BUTTON */
@@ -2347,6 +2360,86 @@ let mainOrder=["General","Fashion","Beauty","Electronics","Health","Travel","Gro
 let shops = [];
 let activeCategory = null;
 let expandedCategories = {};
+let activeCountry = "";
+
+function normalizeCountryName(value){
+return String(value || "")
+.toLowerCase()
+.trim()
+.replace(/s+/g, " ");
+}
+
+function getSelectedCountry(){
+try{
+if(typeof currentCountry !== "undefined" && currentCountry){
+return normalizeCountryName(currentCountry);
+}
+}catch(e){}
+
+try{
+if(typeof selectedCountry !== "undefined" && selectedCountry){
+return normalizeCountryName(selectedCountry);
+}
+}catch(e){}
+
+try{
+if(window.currentCountry){
+return normalizeCountryName(window.currentCountry);
+}
+}catch(e){}
+
+try{
+if(window.selectedCountry){
+return normalizeCountryName(window.selectedCountry);
+}
+}catch(e){}
+
+try{
+const saved = localStorage.getItem("bas_country") || localStorage.getItem("selectedCountry") || "";
+return normalizeCountryName(saved);
+}catch(e){
+return "";
+}
+}
+
+function getShopCountry(shop){
+return normalizeCountryName(shop.country || shop.country_name || shop.cn || "");
+}
+
+function getDomainFromUrl(shop){
+let raw = shop.u || shop.url || shop.d || shop.domain || "";
+raw = String(raw || "").trim();
+if(!raw) return "";
+try{
+if(!/^https?:///i.test(raw)){
+raw = "https://" + raw;
+}
+return new URL(raw).hostname;
+}catch(e){
+return String(shop.d || shop.domain || "").replace(/^https?:///i, "").split("/")[0];
+}
+}
+
+function getFaviconUrl(shop){
+const domain = getDomainFromUrl(shop);
+if(!domain) return "";
+return "https://www.google.com/s2/favicons?domain=" + encodeURIComponent(domain) + "&sz=64";
+}
+
+function isDirectLink(shop){
+const v = shop.is_affiliate;
+if(v === undefined || v === null || v === "") return false;
+if(v === false) return true;
+if(String(v).toLowerCase() === "false") return true;
+if(String(v).toLowerCase() === "0") return true;
+if(String(v).toLowerCase() === "direct") return true;
+return false;
+}
+
+function getCountryFilteredShops(list){
+if(!activeCountry) return list;
+return list.filter(shop => getShopCountry(shop) === activeCountry);
+}
 
 window.onload = async () => {
 try {
@@ -2361,6 +2454,7 @@ merged = merged.concat(arr);
 }
 
 shops = merged;
+activeCountry = getSelectedCountry();
 
 // JSON ഫയലിൽ പുതിയ കാറ്റഗറികൾ സ്വയം കണ്ടുപിടിക്കുമ്പോൾ ലിസ്റ്റിലേക്ക് ആഡ് ചെയ്യാനുള്ള ലോജിക്
 shops.forEach(shop => {
@@ -2381,7 +2475,7 @@ mainOrder.push(catField);
 });
 
 initButtons();
-render(shops, false);
+render(getCountryFilteredShops(shops), false);
 } catch(err) {
 console.error("Error loading JSON:", err);
 }
@@ -2402,7 +2496,7 @@ activeCategory = cat;
 expandedCategories[cat] = false;
 document.getElementById("findShop").value = "";
 
-let filtered = shops.filter(s => {
+let filtered = getCountryFilteredShops(shops).filter(s => {
 let catField = s.c || s.category;
 if (Array.isArray(catField)) {
 return catField.includes(cat);
@@ -2417,7 +2511,8 @@ function resetCategory() {
 activeCategory = null;
 expandedCategories = {};
 document.getElementById("findShop").value = "";
-render(shops, false);
+activeCountry = getSelectedCountry();
+render(getCountryFilteredShops(shops), false);
 }
 
 /* റെൻഡർ എഞ്ചിൻ (Array കാറ്റഗറി ലോജിക് പൂർണ്ണമായി സപ്പോർട്ട് ചെയ്യുന്നു) */
@@ -2468,7 +2563,7 @@ let isExpanded = expandedCategories[cat] || false;
 let totalItems = grouped[cat].length;
 
 let maxSearch = document.getElementById("findShop").value.trim() !== "";
-let limit = (totalItems > 7 && !isExpanded && !maxSearch) ? 7 : totalItems;
+let limit = (totalItems > 20 && !isExpanded && !maxSearch) ? 20 : totalItems;
 
 for(let i=0; i<limit; i++) {
 let s = grouped[cat][i];
@@ -2476,9 +2571,10 @@ let card=document.createElement("a");
 card.className="shop-card";
 card.href=s.u || s.url || "#";
 card.target="_blank";
+card.rel="noopener noreferrer";
 card.style.borderLeft="6px solid "+col;
 
-let domain = s.d || s.domain || "";
+let domain = getDomainFromUrl(s);
 if((domain || "").toLowerCase().includes("aliexpress.com")) {
 card.onclick = (e) => {
 e.preventDefault();
@@ -2486,20 +2582,24 @@ alert("This shop is banned in India. You cannot purchase from here.");
 };
 }
 
+let affiliateDotHTML = isDirectLink(s) ? "" : '<div class="affiliate-dot"></div>';
+
 let name = s.n || s.name || "";
 let id = s.id || "";
 let tag = s.t || s.tag || "";
+let icon = getFaviconUrl(s);
 
 card.innerHTML = `
+${affiliateDotHTML}
 <div class="sl">${id}</div>
-<img src="https://www.google.com/s2/favicons?sz=64&domain_url=${encodeURIComponent(domain)}" alt="${String(name).replace(/"/g, '&quot;')}">
+<img src="${icon}" alt="${String(name).replace(/"/g, '&quot;')}">
 <div><b>${name}</b><br><span>${tag}</span></div>
 `;
 
 container.appendChild(card);
 }
 
-if(totalItems > 7 && !maxSearch) {
+if(totalItems > 20 && !maxSearch) {
 let btn=document.createElement("div");
 btn.className="more-btn";
 btn.innerText = isExpanded ? "LESS -" : "MORE +";
@@ -2514,14 +2614,14 @@ container.appendChild(btn);
 function toggle(cat){
 expandedCategories[cat] = !expandedCategories[cat];
 if(activeCategory) {
-let filtered = shops.filter(s => {
+let filtered = getCountryFilteredShops(shops).filter(s => {
 let catField = s.c || s.category;
 if (Array.isArray(catField)) return catField.includes(activeCategory);
 return catField === activeCategory;
 });
 render(filtered, true);
 } else {
-render(shops, false);
+render(getCountryFilteredShops(shops), false);
 }
 }
 
@@ -2530,23 +2630,23 @@ function liveSearch(){
 let val=document.getElementById("findShop").value.toLowerCase().trim();
 if(!val){
 if(activeCategory) {
-let filtered = shops.filter(s => {
+let filtered = getCountryFilteredShops(shops).filter(s => {
 let catField = s.c || s.category;
 if (Array.isArray(catField)) return catField.includes(activeCategory);
 return catField === activeCategory;
 });
 render(filtered, true);
 } else {
-render(shops, false);
+render(getCountryFilteredShops(shops), false);
 }
 return;
 }
 
-let baseList = activeCategory ? shops.filter(s => {
+let baseList = activeCategory ? getCountryFilteredShops(shops).filter(s => {
 let catField = s.c || s.category;
 if (Array.isArray(catField)) return catField.includes(activeCategory);
 return catField === activeCategory;
-}) : shops;
+}) : getCountryFilteredShops(shops);
 
 let f=baseList.filter(s=> String(s.n || s.name || "").toLowerCase().includes(val));
 render(f, true);
@@ -2554,14 +2654,11 @@ render(f, true);
 
 /* COUNTRY SEARCH INTERFACE CONNECTION */
 function countrySearchBridge(userCountryInput) {
-let searchWord = String(userCountryInput || "").toLowerCase().trim();
-
-let filteredByCountry = shops.filter(s => {
-let shopCountry = String(s.country || "").toLowerCase().trim();
-return shopCountry === searchWord;
-});
-
-render(filteredByCountry, false);
+activeCountry = normalizeCountryName(userCountryInput);
+activeCategory = null;
+expandedCategories = {};
+document.getElementById("findShop").value = "";
+render(getCountryFilteredShops(shops), false);
 }
 </script>
 </body>
