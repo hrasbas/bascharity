@@ -944,7 +944,10 @@ await fetchShopsForCountry(currentTopCountry);
 } else {
 renderTopShops(loadedTopShopsMap[currentTopCountry] || []);
 }
-} 
+} /* BLOCK 2 COUPLING */
+if (typeof updateBottomCategoryShops === "function") {
+updateBottomCategoryShops(currentTopCountry);
+}
 
 /* തിരഞ്ഞെടുത്ത രാജ്യത്തെ ഫയലുകൾ മാത്രം ലോഡ് ചെയ്യുന്ന പ്രക്രിയ */
 async function fetchShopsForCountry(targetCountry) {
