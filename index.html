@@ -2498,12 +2498,20 @@ LOADING CATEGORY SHOPS...
 
 </div>
 
+ 
+ 
+ 
+
+<!-- =========================================================
+BOTTOM BLOCK
+MODERN CATEGORY SYSTEM
+========================================================= -->
+
 <script>
 /* =========================================================
-BLOCK 2 JAVASCRIPT
+CATEGORY COLORS
 ========================================================= */
 
-/* CATEGORY COLORS */
 const colors = {
 "General":"#2196f3",
 "Fashion":"#e91e63",
@@ -2517,7 +2525,10 @@ const colors = {
 "Entertainment":"#673ab7"
 };
 
-/* DEFAULT ORDER */
+/* =========================================================
+DEFAULT CATEGORY ORDER
+========================================================= */
+
 let mainOrder = [
 "General",
 "Fashion",
@@ -2531,28 +2542,42 @@ let mainOrder = [
 "Entertainment"
 ];
 
-/* COUNTRY JSON MAP */
+/* =========================================================
+COUNTRY JSON MAP
+========================================================= */
+
 const COUNTRY_JSON_MAP = {
-india:"https://pub-168159db07cc407eaa28228eb2520ea5.r2.dev/31.json",
-usa:"https://pub-168159db07cc407eaa28228eb2520ea5.r2.dev/32.json",
-uk:"https://pub-168159db07cc407eaa28228eb2520ea5.r2.dev/33.json"
+
+afghanistan:
+"https://pub-168159db07cc407eaa28228eb2520ea5.r2.dev/31.json",
+
+albania:
+"https://pub-168159db07cc407eaa28228eb2520ea5.r2.dev/32.json",
+
+algeria:
+"https://pub-168159db07cc407eaa28228eb2520ea5.r2.dev/33.json"
+
 };
 
-/* GLOBAL VARIABLES */
+/* =========================================================
+GLOBAL VARIABLES
+========================================================= */
+
 let shops = [];
 let activeCategory = null;
 let expandedCategories = {};
 let loadedCountryCache = {};
-let currentBottomCountry = "india";
+let currentBottomCountry = "afghanistan";
 
 /* =========================================================
-INIT
+AUTO INIT
 ========================================================= */
 
 document.addEventListener("DOMContentLoaded", () => {
 
 const savedCountry =
-localStorage.getItem("bas_country") || "india";
+localStorage.getItem("bas_country") ||
+"afghanistan";
 
 updateBottomCategoryShops(savedCountry);
 
@@ -2560,7 +2585,6 @@ updateBottomCategoryShops(savedCountry);
 
 /* =========================================================
 COUNTRY COUPLING FUNCTION
-TOP BLOCK WILL CALL THIS
 ========================================================= */
 
 async function updateBottomCategoryShops(country){
@@ -2572,17 +2596,25 @@ country = country.toLowerCase().trim();
 currentBottomCountry = country;
 
 activeCategory = null;
+
 expandedCategories = {};
 
 document.getElementById("findShop").value = "";
 
-const loader = document.getElementById("bottomLoader");
-const container = document.getElementById("shop-container");
+const loader =
+document.getElementById("bottomLoader");
+
+const container =
+document.getElementById("shop-container");
 
 container.innerHTML = "";
+
 loader.style.display = "block";
 
-/* CACHE HIT */
+/* =========================================================
+CACHE
+========================================================= */
+
 if(loadedCountryCache[country]){
 
 shops = loadedCountryCache[country];
@@ -2594,34 +2626,48 @@ prepareCategories();
 render(shops,false);
 
 return;
+
 }
 
-/* JSON URL */
-const jsonURL = COUNTRY_JSON_MAP[country];
+/* =========================================================
+JSON URL
+========================================================= */
+
+const jsonURL =
+COUNTRY_JSON_MAP[country];
 
 if(!jsonURL){
 
 loader.style.display = "none";
 
 container.innerHTML =
-'<div class="empty-msg">SHOPS COMING SOON FOR ' +
+'<div class="empty-msg">' +
+'SHOPS COMING SOON FOR ' +
 country.toUpperCase() +
 '</div>';
 
 return;
+
 }
+
+/* =========================================================
+FETCH JSON
+========================================================= */
 
 try{
 
-const response = await fetch(jsonURL);
+const response =
+await fetch(jsonURL);
 
 if(!response.ok){
 throw new Error("JSON LOAD FAILED");
 }
 
-const data = await response.json();
+const data =
+await response.json();
 
-shops = Array.isArray(data)
+shops =
+Array.isArray(data)
 ? data
 : (data.shops || []);
 
@@ -2637,7 +2683,9 @@ render(shops,false);
 console.error(err);
 
 container.innerHTML =
-'<div class="empty-msg">FAILED TO LOAD SHOPS</div>';
+'<div class="empty-msg">' +
+'FAILED TO LOAD SHOPS' +
+'</div>';
 
 }
 
@@ -2646,7 +2694,7 @@ loader.style.display = "none";
 }
 
 /* =========================================================
-AUTO CATEGORY DETECTION
+AUTO CATEGORY DETECT
 ========================================================= */
 
 function prepareCategories(){
@@ -2676,7 +2724,9 @@ if(Array.isArray(catField)){
 catField.forEach(cat => {
 
 if(cat && !mainOrder.includes(cat)){
+
 mainOrder.push(cat);
+
 }
 
 });
@@ -2684,7 +2734,9 @@ mainOrder.push(cat);
 }else{
 
 if(catField && !mainOrder.includes(catField)){
+
 mainOrder.push(catField);
+
 }
 
 }
@@ -2704,7 +2756,8 @@ function initButtons(){
 const box =
 document.getElementById("cat-buttons");
 
-box.innerHTML = mainOrder.map(cat => {
+box.innerHTML =
+mainOrder.map(cat => {
 
 const borderCol =
 colors[cat] || "#666";
@@ -2735,7 +2788,8 @@ expandedCategories[cat] = false;
 
 document.getElementById("findShop").value = "";
 
-const filtered = shops.filter(shop => {
+const filtered =
+shops.filter(shop => {
 
 const catField =
 shop.c ||
@@ -2743,7 +2797,9 @@ shop.category ||
 "General";
 
 if(Array.isArray(catField)){
+
 return catField.includes(cat);
+
 }
 
 return catField === cat;
@@ -2755,7 +2811,7 @@ render(filtered,true);
 }
 
 /* =========================================================
-RESET
+RESET CATEGORY
 ========================================================= */
 
 function resetCategory(){
@@ -2779,35 +2835,11 @@ function render(data,isFiltered=false){
 const container =
 document.getElementById("shop-container");
 
-const selectedCatContainer =
-document.getElementById("selected-cat-container");
-
 container.innerHTML = "";
 
-/* SELECTED CATEGORY HEADING */
-
-if(activeCategory){
-
-selectedCatContainer.style.display = "block";
-
-selectedCatContainer.innerHTML = `
-<div
-class="selected-cat-heading"
-style="background:${colors[activeCategory] || "#666"}"
->
-${activeCategory}
-</div>
-`;
-
-}else{
-
-selectedCatContainer.style.display = "none";
-
-selectedCatContainer.innerHTML = "";
-
-}
-
-/* GROUPING */
+/* =========================================================
+GROUP SHOPS
+========================================================= */
 
 const grouped = {};
 
@@ -2844,25 +2876,34 @@ grouped[catField].push(shop);
 
 });
 
-/* ORDER */
+/* =========================================================
+ORDER
+========================================================= */
 
 const orderToShow =
 activeCategory
 ? [activeCategory]
 : mainOrder;
 
-/* LOOP */
+/* =========================================================
+LOOP
+========================================================= */
 
 orderToShow.forEach(cat => {
 
-if(!grouped[cat] || grouped[cat].length === 0){
+if(!grouped[cat] ||
+grouped[cat].length === 0){
 return;
 }
 
 const col =
 colors[cat] || "#666";
 
-/* HEADING */
+/* =========================================================
+CATEGORY HEAD
+========================================================= */
+
+if(!activeCategory){
 
 const head =
 document.createElement("div");
@@ -2875,7 +2916,11 @@ head.innerText = cat;
 
 container.appendChild(head);
 
-/* LIMIT */
+}
+
+/* =========================================================
+LIMIT
+========================================================= */
 
 const isExpanded =
 expandedCategories[cat] || false;
@@ -2890,15 +2935,20 @@ document
 .trim() !== "";
 
 const limit =
-(totalItems > 7 && !isExpanded && !searching)
-? 7
+(totalItems > 20 &&
+!isExpanded &&
+!searching)
+? 20
 : totalItems;
 
-/* SHOP LOOP */
+/* =========================================================
+SHOP LOOP
+========================================================= */
 
 for(let i=0; i<limit; i++){
 
-const shop = grouped[cat][i];
+const shop =
+grouped[cat][i];
 
 const card =
 document.createElement("a");
@@ -2941,20 +2991,22 @@ domain = "";
 
 }
 
-/* AFFILIATE */
+/* =========================================================
+AFFILIATE DOT
+========================================================= */
 
 const isAffiliate =
 shop.is_affiliate === true ||
 shop.is_affiliate === "true";
 
-/* DOT */
-
 const dotHTML =
-!isAffiliate
+isAffiliate
 ? '<div class="direct-dot">.</div>'
 : "";
 
-/* NAME */
+/* =========================================================
+NAME
+========================================================= */
 
 const name =
 shop.n ||
@@ -2974,7 +3026,9 @@ const id =
 shop.id ||
 (i + 1);
 
-/* CARD HTML */
+/* =========================================================
+CARD HTML
+========================================================= */
 
 card.innerHTML = `
 ${dotHTML}
@@ -3003,9 +3057,11 @@ container.appendChild(card);
 
 }
 
-/* MORE BUTTON */
+/* =========================================================
+MORE BUTTON
+========================================================= */
 
-if(totalItems > 7 && !searching){
+if(totalItems > 20 && !searching){
 
 const btn =
 document.createElement("div");
@@ -3025,12 +3081,16 @@ container.appendChild(btn);
 
 });
 
-/* EMPTY */
+/* =========================================================
+EMPTY
+========================================================= */
 
 if(container.innerHTML.trim() === ""){
 
 container.innerHTML =
-'<div class="empty-msg">NO SHOPS FOUND</div>';
+'<div class="empty-msg">' +
+'NO SHOPS FOUND' +
+'</div>';
 
 }
 
@@ -3055,7 +3115,9 @@ shop.c ||
 shop.category;
 
 if(Array.isArray(catField)){
+
 return catField.includes(activeCategory);
+
 }
 
 return catField === activeCategory;
@@ -3085,8 +3147,6 @@ document
 .toLowerCase()
 .trim();
 
-/* EMPTY SEARCH */
-
 if(!val){
 
 if(activeCategory){
@@ -3099,7 +3159,9 @@ shop.c ||
 shop.category;
 
 if(Array.isArray(catField)){
+
 return catField.includes(activeCategory);
+
 }
 
 return catField === activeCategory;
@@ -3118,7 +3180,9 @@ return;
 
 }
 
-/* BASE LIST */
+/* =========================================================
+BASE LIST
+========================================================= */
 
 const baseList =
 activeCategory
@@ -3129,7 +3193,9 @@ shop.c ||
 shop.category;
 
 if(Array.isArray(catField)){
+
 return catField.includes(activeCategory);
+
 }
 
 return catField === activeCategory;
@@ -3137,7 +3203,9 @@ return catField === activeCategory;
 })
 : shops;
 
-/* FILTER */
+/* =========================================================
+FILTER
+========================================================= */
 
 const filtered =
 baseList.filter(shop => {
@@ -3157,24 +3225,6 @@ render(filtered,true);
 
 }
 </script>
-
-<!-- =========================================================
-COUPLING LINE
-ADD THIS INSIDE BLOCK 1
-INSIDE setTopCountry()
-
-AFTER:
-renderTopShops(...)
-
-ADD:
-------------------------------------------------------------
-
-if (typeof updateBottomCategoryShops === "function") {
-updateBottomCategoryShops(currentTopCountry);
-}
-
-------------------------------------------------------------
-========================================================= -->
 </body>
   </html>
 
