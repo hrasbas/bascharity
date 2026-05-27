@@ -916,7 +916,10 @@ return c;
 async function setTopCountry(country, btn) {
 if (!country) return;
 currentTopCountry = cleanTopCountryName(country);
-localStorage.setItem("bas_country", currentTopCountry); 
+localStorage.setItem("bas_country", currentTopCountry); if (window.countrySearchBridge) {
+  window.countrySearchBridge(currentTopCountry);
+}
+
 
 document.querySelectorAll(".top-country-btn").forEach(b => b.classList.remove("active")); 
 const activeBtn = btn || document.querySelector(".top-country-btn[data-country='"+currentTopCountry+"']");
