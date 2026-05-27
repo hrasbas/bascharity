@@ -886,8 +886,7 @@ const TOP_JSON_FILES = [
 "https://pub-168159db07cc407eaa28228eb2520ea5.r2.dev/j20.json",
 "https://pub-168159db07cc407eaa28228eb2520ea5.r2.dev/j21.json"
 ]; 
-
-let loadedTopShopsMap = {}; // ലോഡ് ചെയ്ത കടകൾ സൂക്ഷിക്കാൻ
+let loadedTopShopsMap = {}; 
 let currentTopCountry = "india";
 
 const topCrisisCountries = ["afghanistan", "belarus", "cuba", "iran", "libya", "myanmar", "north korea", "palestine", "russia", "somalia", "south sudan", "sudan", "syria", "venezuela", "yemen"]; 
@@ -914,7 +913,6 @@ if (c === "united kingdom" || c === "uk") return "uk";
 return c;
 } 
 
-/* ഓൺ-ഡിമാൻഡ് ലേസി ലോഡിങ് ഫങ്ഷൻ */
 async function setTopCountry(country, btn) {
 if (!country) return;
 currentTopCountry = cleanTopCountryName(country);
@@ -936,20 +934,23 @@ dropdown.selectedIndex = 0;
 document.getElementById("topShopCountryTitle").innerText = "SHOP ON " + currentTopCountry.toUpperCase() + " SHOPS";
 document.getElementById("topGlobalSearch").value = "";
 
-// ഈ കൺട്രിയിലെ ഡാറ്റ മുൻപ് ലോഡ് ചെയ്തിട്ടില്ലെങ്കിൽ മാത്രം ഫെച്ച് ചെയ്യുന്നു
+// ഈ രണ്ട് വരികളാണ് താഴത്തെ കാറ്റഗറി സിസ്റ്റത്തിലേക്ക് തത്സമയം മെസ്സേജ് എത്തിക്കുന്നത് (പാലം)
+if (window.countrySearchBridge) {
+  window.countrySearchBridge(currentTopCountry);
+}
+
 if (!loadedTopShopsMap[currentTopCountry]) {
-await fetchShopsForCountry(currentTopCountry);
+  await fetchShopsForCountry(currentTopCountry);
 } else {
-renderTopShops(loadedTopShopsMap[currentTopCountry] || []);
+  renderTopShops(loadedTopShopsMap[currentTopCountry] || []);
 }
 } 
 
-/* തിരഞ്ഞെടുത്ത രാജ്യത്തെ ഫയലുകൾ മാത്രം ലോഡ് ചെയ്യുന്ന പ്രക്രിയ */
 async function fetchShopsForCountry(targetCountry) {
 const container = document.getElementById("topShopList");
 const loader = document.getElementById("topLazyLoader");
 if(container) container.innerHTML = "";
-if(loader) loader.style.display = "block"; // ലോഡിങ് കാണിക്കുന്നു
+if(loader) loader.style.display = "block"; 
 
 loadedTopShopsMap[targetCountry] = [];
 
@@ -976,11 +977,10 @@ console.error("Fetch skipped for URL: " + url);
 }
 } 
 
-if(loader) loader.style.display = "none"; // ലോഡിങ് മറയ്ക്കുന്നു
+if(loader) loader.style.display = "none"; 
 renderTopShops(loadedTopShopsMap[targetCountry] || []);
 }
 
-/* 10 ഷോപ്പുകൾ മാത്രം സ്ക്രീനിൽ കാണിക്കുന്ന റെൻഡർ ലോജിക് */
 function renderTopShops(list, isSearching = false) {
 const container = document.getElementById("topShopList");
 if(!container) return;
@@ -1000,7 +1000,6 @@ container.innerHTML = "<p style='color:#fff; text-align:center; padding:20px;'>I
 return;
 } 
 
-// ആദ്യത്തെ 10 ഷോപ്പുകൾ മാത്രം എടുക്കുന്നു (Limit 10)
 let itemsToShow = list.slice(0, 10);
 
 itemsToShow.forEach(shop => {
@@ -1017,13 +1016,11 @@ domain = new URL(shop.url).hostname;
 domain = domain.replace(/^https?:\/\//i, "").split("/")[0];
 } 
 
-// സിന്റാക്സ് പിഴവുകളെല്ലാം തിരുത്തിയ പെർഫെക്റ്റ് HTML String വരി
-a.innerHTML = '<span class="top-warning-dot">.</span><img class="top-shop-logo" alt="' + shop.name + '" src="https://www.google.com/s2/favicons?sz=64&domain=' + encodeURIComponent(domain) + '"><div class="top-shop-info notranslate"><b>' + shop.name + '</b></div>';
+a.innerHTML = '<span class="top-warning-dot">.</span><img class="top-shop-logo" alt="' + shop.name + '" src="https://www.google.com/s2/favicons?domain=' + encodeURIComponent(domain) + '&sz=64"><div class="top-shop-info notranslate"><b>' + shop.name + '</b></div>';
 container.appendChild(a);
 });
 } 
 
-/* ലൈവ് സെർച്ച് ഫങ്ഷൻ */
 function filterTopShops() {
 let val = document.getElementById("topGlobalSearch").value.toLowerCase().trim();
 if (loadedTopShopsMap[currentTopCountry]) {
@@ -1032,7 +1029,6 @@ renderTopShops(filtered, val.length > 0);
 }
 } 
 
-/* തുടക്കത്തിൽ കൺട്രി മാത്രം സെറ്റ് ചെയ്യുന്നു */
 document.addEventListener("DOMContentLoaded", () => {
 populateTopCountries();
 let saved = localStorage.getItem("bas_country") || "india";
