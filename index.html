@@ -865,29 +865,31 @@ animation: spin 1s linear infinite;
 
 <script>
 /* ===== CONFIGURATION & LAZY LOADING LOGIC ===== */
-const TOP_JSON_FILES = [
-"https://pub-168159db07cc407eaa28228eb2520ea5.r2.dev/j1.json",
-"https://pub-168159db07cc407eaa28228eb2520ea5.r2.dev/j2.json",
-"https://pub-168159db07cc407eaa28228eb2520ea5.r2.dev/j3.json",
-"https://pub-168159db07cc407eaa28228eb2520ea5.r2.dev/j4.json",
-"https://pub-168159db07cc407eaa28228eb2520ea5.r2.dev/j5.json",
-"https://pub-168159db07cc407eaa28228eb2520ea5.r2.dev/j6.json",
-"https://pub-168159db07cc407eaa28228eb2520ea5.r2.dev/j7.json",
-"https://pub-168159db07cc407eaa28228eb2520ea5.r2.dev/j8.json",
-"https://pub-168159db07cc407eaa28228eb2520ea5.r2.dev/j9.json",
-"https://pub-168159db07cc407eaa28228eb2520ea5.r2.dev/j10.json",
-"https://pub-168159db07cc407eaa28228eb2520ea5.r2.dev/j11.json",
-"https://pub-168159db07cc407eaa28228eb2520ea5.r2.dev/j12.json",
-"https://pub-168159db07cc407eaa28228eb2520ea5.r2.dev/j13.json",
-"https://pub-168159db07cc407eaa28228eb2520ea5.r2.dev/j14.json",
-"https://pub-168159db07cc407eaa28228eb2520ea5.r2.dev/j15.json",
-"https://pub-168159db07cc407eaa28228eb2520ea5.r2.dev/j16.json",
-"https://pub-168159db07cc407eaa28228eb2520ea5.r2.dev/j17.json",
-"https://pub-168159db07cc407eaa28228eb2520ea5.r2.dev/j18.json",
-"https://pub-168159db07cc407eaa28228eb2520ea5.r2.dev/j19.json",
-"https://pub-168159db07cc407eaa28228eb2520ea5.r2.dev/j20.json",
-"https://pub-168159db07cc407eaa28228eb2520ea5.r2.dev/j21.json"
-]; 
+const TOP_JSON_FILES_SAFE = [
+
+"https://pub-168159db07cc407eaa28228eb2520ea5.r2.dev/1.json",
+"https://pub-168159db07cc407eaa28228eb2520ea5.r2.dev/2.json",
+"https://pub-168159db07cc407eaa28228eb2520ea5.r2.dev/3.json",
+"https://pub-168159db07cc407eaa28228eb2520ea5.r2.dev/4.json",
+"https://pub-168159db07cc407eaa28228eb2520ea5.r2.dev/5.json",
+"https://pub-168159db07cc407eaa28228eb2520ea5.r2.dev/6.json",
+"https://pub-168159db07cc407eaa28228eb2520ea5.r2.dev/7.json",
+"https://pub-168159db07cc407eaa28228eb2520ea5.r2.dev/8.json",
+"https://pub-168159db07cc407eaa28228eb2520ea5.r2.dev/9.json",
+"https://pub-168159db07cc407eaa28228eb2520ea5.r2.dev/10.json",
+"https://pub-168159db07cc407eaa28228eb2520ea5.r2.dev/11.json",
+"https://pub-168159db07cc407eaa28228eb2520ea5.r2.dev/12.json",
+"https://pub-168159db07cc407eaa28228eb2520ea5.r2.dev/13.json",
+"https://pub-168159db07cc407eaa28228eb2520ea5.r2.dev/14.json",
+"https://pub-168159db07cc407eaa28228eb2520ea5.r2.dev/15.json",
+"https://pub-168159db07cc407eaa28228eb2520ea5.r2.dev/16.json",
+"https://pub-168159db07cc407eaa28228eb2520ea5.r2.dev/17.json",
+"https://pub-168159db07cc407eaa28228eb2520ea5.r2.dev/18.json",
+"https://pub-168159db07cc407eaa28228eb2520ea5.r2.dev/19.json",
+"https://pub-168159db07cc407eaa28228eb2520ea5.r2.dev/20.json",
+"https://pub-168159db07cc407eaa28228eb2520ea5.r2.dev/21.json"
+
+];
 
 let loadedTopShopsMap = {}; // ലോഡ് ചെയ്ത കടകൾ സൂക്ഷിക്കാൻ
 let currentTopCountry = "india";
