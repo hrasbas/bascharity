@@ -1993,7 +1993,7 @@ const target = document.getElementById(el);
 if(target) target.scrollIntoView({ behavior:"smooth", block:"start" });
 }
 </script>
-<!------------------Catogaryshops-------->
+<!------------------Catogaryshop---------------->
 
 <style>
 #bas-mega-portal{
@@ -2142,7 +2142,7 @@ cursor: pointer;
 </div> 
 
 <script>
-// നിങ്ങൾ പറഞ്ഞ ആ 3 ഫയലുകൾ മാത്രം ഇവിടെ കൃത്യമായി കണക്ട് ചെയ്തിട്ടുണ്ട്
+// നിങ്ങൾ തന്ന ആ 3 ഫയലുകൾ മാത്രം
 const JSON_FILES = [
 "https://pub-168159db07cc407eaa28228eb2520ea5.r2.dev/31.json",
 "https://pub-168159db07cc407eaa28228eb2520ea5.r2.dev/32.json",
@@ -2165,7 +2165,7 @@ let allLoadedShops = [];
 let currentCountryShops = []; 
 let activeCategory = null;
 let expandedCategories = {}; 
-let currentCountry = "india";
+let currentCountry = "";
 
 function normalizeCountry(c) {
 c = (c || "").toLowerCase().trim();
@@ -2176,7 +2176,7 @@ if (c === "united kingdom" || c === "uk") return "uk";
 return c;
 }
 
-// 3 ജിസൺ യുആർഎല്ലും ഒന്നിച്ച് ഫെച്ച് ചെയ്ത് കണക്ട് ചെയ്യുന്ന ഭാഗം
+// 3 ജിസൺ ഫയലുകൾ ലോഡ് ചെയ്യുന്ന മെയിൻ ഫങ്ക്ഷൻ
 async function loadAllJsonFiles() {
 allLoadedShops = [];
 
@@ -2188,7 +2188,7 @@ const data = await response.json();
 const shopsArray = Array.isArray(data) ? data : (data.shops || []); 
 
 shopsArray.forEach(s => {
-if (s && (s.country || s.c)) {
+if (s) {
 allLoadedShops.push(s);
 }
 });
@@ -2197,11 +2197,26 @@ console.error("Fetch failed for: " + url);
 }
 } 
 
-let savedCountry = localStorage.getItem("bas_country") || "india";
+// ലോക്കൽ സ്റ്റോറേജിൽ രാജ്യം ഉണ്ടോ എന്ന് നോക്കുന്നു
+let savedCountry = localStorage.getItem("bas_country");
+if (savedCountry) {
 filterShopsByCountry(savedCountry);
+} else {
+// രാജ്യം സെലക്ട് ചെയ്തിട്ടില്ലെങ്കിൽ ബ്ലാങ്ക് ആകാതെ എല്ലാ ഷോപ്പുകളും കാറ്റഗറിയും തനിയെ വരും
+currentCountryShops = [...allLoadedShops];
+mainOrder = [...defaultCategories];
+currentCountryShops.forEach(shop => {
+let catName = shop.c || shop.category;
+if (catName && !mainOrder.includes(catName)) {
+mainOrder.push(catName);
+}
+});
+initButtons();
+render(currentCountryShops, false);
+}
 }
 
-// കൺട്രി സെലക്ടറിലേക്ക് Coupling ചെയ്യുന്ന മെത്തേഡ്
+// കൺട്രി സെലക്ടറിൽ നിന്ന് രാജ്യം മാറുമ്പോൾ കണക്ട് ആകുന്ന ഭാഗം
 function filterShopsByCountry(countryName) {
 currentCountry = normalizeCountry(countryName);
 activeCategory = null;
@@ -2215,7 +2230,7 @@ return cName === currentCountry;
 
 mainOrder = [...defaultCategories];
 
-// Shops കൾ നോക്കി ഓട്ടോമാറ്റിക് ആയി കാറ്റഗറി നിർമ്മിക്കുന്നു (10/11 ബട്ടണുകൾ വരും)
+// പുതിയ രാജ്യത്തിനനുസരിച്ച് ഓട്ടോമാറ്റിക് കാറ്റഗറി നിർമ്മാണം
 currentCountryShops.forEach(shop => {
 let catName = shop.c || shop.category;
 if (catName && !mainOrder.includes(catName)) {
@@ -2277,7 +2292,6 @@ if(!grouped[catName]) grouped[catName]=[];
 grouped[catName].push(s);
 }); 
 
-// സെലക്ട് ചെയ്താൽ ഹെഡിങ് താഴെ നിന്ന് നേരെ മുകളിലേക്ക് കയറി വരും
 let orderToShow = activeCategory ? [activeCategory] : mainOrder; 
 
 orderToShow.forEach(cat=>{
@@ -2305,14 +2319,14 @@ card.target="_blank";
 card.style.borderLeft="6px solid "+col; 
 
 let domain = s.d || s.domain || "";
-if(domain.toLowerCase().includes("aliexpress.com")) {
+if(currentCountry === "india" && domain.toLowerCase().includes("aliexpress.com")) {
 card.onclick = (e) => {
 e.preventDefault();
 alert("This shop is banned in India. You cannot purchase from here.");
 };
 } 
 
-// Affiliate അല്ലാത്തവയ്ക്ക് (.) റെഡ് ഡോട്ട് ഇടുന്നു
+// Affiliate അല്ലാത്തവയ്ക്ക് റെഡ് ഡോട്ട്
 let isAffiliate = s.is_affiliate !== undefined ? s.is_affiliate : true;
 let dotHTML = (!isAffiliate || isAffiliate === "false" || isAffiliate === false) ? '<div class="direct-dot"></div>' : ''; 
 
@@ -2370,12 +2384,13 @@ let f=baseList.filter(s=> (s.n || s.name || "").toLowerCase().includes(val));
 render(f, true);
 } 
 
-/* 🔥 COUNTRY SELECTOR COUPLING BRIDGE */
+/* 🔥 COUNTRY SELECTOR COUPLING BRIDGE (ഇതാണ് കൺട്രി മാറ്റുമ്പോൾ വർക്കാകുന്ന ബ്രിഡ്ജ്) */
 function countrySearchBridge(userCountryInput) {
 if(!userCountryInput) return;
 filterShopsByCountry(userCountryInput);
 }
 </script>
+
 
 </body>
 </html>
