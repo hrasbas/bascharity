@@ -651,248 +651,352 @@ ball.className = "bas-ball is-pwa-installed";
 </script>
  <!------------country---------------->
  <!-- 1. Country Selector Section -->
+ 
+<style>
+#bas-mega-portal{
+width:96%;
+max-width:900px;
+margin:auto;
+font-size:23px;
+} 
 
-     <style>
-        :root {
-            --primary-color: #2563eb;
-            --bg-light: #f8fafc;
-            --card-bg: #ffffff;
-            --text-main: #1e293b;
-            --border-color: #e2e8f0;
-        }
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-            background-color: var(--bg-light);
-            margin: 0;
-            padding: 15px;
-            color: var(--text-main);
-        }
-        
-        /* Country Picker Styling */
-        .country-section {
-            background: var(--card-bg);
-            border-radius: 12px;
-            padding: 15px;
-            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
-            margin-bottom: 20px;
-        }
-        .country-title {
-            font-size: 1.1rem;
-            font-weight: 700;
-            margin-bottom: 10px;
-        }
-        .country-select {
-            width: 100%;
-            padding: 12px;
-            border: 2px solid var(--border-color);
-            border-radius: 8px;
-            font-size: 1rem;
-            outline: none;
-            background-color: #fff;
-            transition: border-color 0.2s;
-        }
-        .country-select:focus {
-            border-color: var(--primary-color);
-        }
-        .country-info-box {
-            margin-top: 10px;
-            font-size: 0.9rem;
-            color: #64748b;
-            line-height: 1.4;
-        }
+/* SEARCH */
+#findShop{
+width:100%;
+height:55px;
+border-radius:12px;
+border:1px solid #ff9800;
+background:#1a1a1a;
+color:#fff;
+padding:0 15px;
+margin-bottom:12px;
+font-size:23px;
+box-sizing: border-box;
+} 
 
-        /* Top 10 Dynamic Section (Coupled with Category) */
-        .top-shops-container {
-            margin-bottom: 25px;
-        }
-        .section-header {
-            font-size: 1.2rem;
-            font-weight: 700;
-            margin-bottom: 12px;
-            color: var(--primary-color);
-            display: flex;
-            align-items: center;
-            gap: 8px;
-        }
-        .top-shops-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
-            gap: 12px;
-        }
-        
-        /* Clean Shop Card: No Essay, Logo + Name Only */
-        .shop-card-mini {
-            background: var(--card-bg);
-            border: 1px solid var(--border-color);
-            border-radius: 10px;
-            padding: 12px;
-            text-align: center;
-            text-decoration: none;
-            color: var(--text-main);
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            gap: 8px;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.02);
-            transition: transform 0.2s, box-shadow 0.2s;
-        }
-        .shop-card-mini:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 4px 8px rgba(0,0,0,0.06);
-        }
-        .shop-logo-mini {
-            width: 32px;
-            height: 32px;
-            border-radius: 6px;
-            object-fit: contain;
-            background: #f1f5f9;
-        }
-        .shop-name-mini {
-            font-size: 0.85rem;
-            font-weight: 600;
-            white-space: nowrap;
-            overflow: hidden;
-            text-overflow: ellipsis;
-            width: 100%;
-        }
-    </style>
+/* CATEGORY BOX */
+#cat-search-box{
+border:1px solid #ff9800;
+border-radius:12px;
+padding:14px;
+background:#111;
+margin-bottom:15px;
+} 
+
+/* BUTTON GRID */
+.btn-grid{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:10px;
+} 
+
+.m-btn{
+background:#222;
+color:#fff;
+border:1px solid #555;
+padding:14px 5px;
+border-radius:10px;
+font-size:20px;
+font-weight:bold;
+cursor: pointer;
+} 
+
+/* തനിയെ താഴെ ആഡ് ആവുന്ന കാറ്റഗറി ഹെഡിങ് (Same Shape) */
+#selected-cat-container {
+margin-top: 10px;
+margin-bottom: 10px;
+display: none;
+}
+.selected-cat-heading {
+display: block;
+text-align: center;
+padding: 14px 5px;
+border-radius: 10px;
+font-size: 20px;
+font-weight: bold;
+color: #fff;
+} 
+
+/* CATEGORY HEAD */
+.cat-head{
+padding:14px;
+border-radius:10px;
+font-weight:bold;
+text-align:center;
+margin:22px 0 10px;
+font-size:23px;
+} 
+
+/* SHOP CARD */
+.shop-card{
+position: relative;
+display:flex;
+align-items:center;
+gap:12px;
+padding:14px;
+background:#1a1a1a;
+border-radius:12px;
+margin-bottom:10px;
+text-decoration:none;
+color:#fff;
+border:1px solid #333;
+} 
+
+.shop-card img{
+width:36px;
+height:36px;
+background:#fff;
+border-radius:6px;
+padding:2px;
+} 
+
+.sl{
+width:30px;
+color:#ff9800;
+font-size:20px;
+font-weight:bold;
+} 
+
+/* Direct Link - Left Top റെഡ് ഡോട്ട് */
+.direct-dot {
+position: absolute;
+top: 6px;
+left: 6px;
+width: 8px;
+height: 8px;
+background-color: #ff0000;
+border-radius: 50%;
+pointer-events: none;
+} 
+
+/* MORE BUTTON */
+.more-btn{
+text-align:center;
+padding:12px;
+background:#ffffff;
+color:#000;
+border-radius:10px;
+margin-top:8px;
+margin-bottom: 15px;
+font-size:20px;
+font-weight:bold;
+cursor: pointer;
+} 
+
+/* BACK BUTTON */
+.reset-link{
+display:block;
+text-align:center;
+margin-top:12px;
+background:#ff9800;
+color:#000;
+padding:12px;
+border-radius:10px;
+font-size:20px;
+font-weight:bold;
+text-decoration:none;
+cursor: pointer;
+}
+</style>
 </head>
-<body>
+<body> 
 
-    <div class="country-section">
-        <div class="country-title">Select Country</div>
-        <select id="countryPicker" class="country-select" onchange="handleCountryChange()">
-            <option value="afghanistan">Afghanistan</option>
-            <option value="albania">Albania</option>
-            <option value="algeria" selected>Algeria</option>
-        </select>
-        <div id="countryDetails" class="country-info-box">Loading country data...</div>
-    </div>
+<div id="bas-mega-portal"> 
 
-    <div class="top-shops-container">
-        <div class="section-header">
-            <span>Top Featured <span id="currentCategoryLabel">General</span> Shops</span>
-        </div>
-        <div id="topShopsGrid" class="top-shops-grid">
-            </div>
-    </div>
+<input id="findShop" onkeyup="liveSearch()" placeholder="Search shops..."> 
 
-    <script>
-        // Global variables for configuration and data state
-        const countryUrls = {
-            "afghanistan": "https://pub-168159db07cc407eaa28228eb2520ea5.r2.dev/31.json",
-            "albania": "https://pub-168159db07cc407eaa28228eb2520ea5.r2.dev/32.json",
-            "algeria": "https://pub-168159db07cc407eaa28228eb2520ea5.r2.dev/33.json"
-        };
+<div id="cat-search-box">
+<div class="btn-grid" id="cat-buttons"></div>
+<span class="reset-link" onclick="resetCategory()">← Back to All Shops</span>
+</div> 
 
-        let currentShopsData = [];
-        let selectedCategory = "General"; // Default starting category
+<div id="selected-cat-container"></div> 
 
-        // Initialize App with Default Country: Algeria
-        window.addEventListener('DOMContentLoaded', () => {
-            fetchCountryData("algeria");
-        });
+<div id="shop-container"></div> 
 
-        // Fetch JSON for selected country
-        function fetchCountryData(countryKey) {
-            const url = countryUrls[countryKey];
-            if (!url) return;
+</div> 
 
-            document.getElementById('countryDetails').innerText = "Updating premium list...";
+<script>
+const colors={
+"General":"#2196f3",
+"Fashion":"#e91e63",
+"Beauty":"#9c27b0",
+"Electronics":"#ff5722",
+"Health":"#4caf50",
+"Travel":"#00bcd4"
+}; 
 
-            fetch(url)
-                .then(response => response.json())
-                .then(data => {
-                    currentShopsData = data.shops || [];
-                    
-                    // Render country information heading
-                    if (data.countryInfo) {
-                        document.getElementById('countryDetails').innerHTML = 
-                            `<strong>${data.countryInfo.name}:</strong> ${data.countryInfo.details}`;
-                    }
+let mainOrder=["General","Fashion","Beauty","Electronics","Health","Travel"]; 
 
-                    // Trigger the top coupled render loop
-                    updateTopCoupledShops();
+let shops = [];
+let activeCategory = null;
+let expandedCategories = {}; 
 
-                    // Bridge execution connection to trigger Lazy Loading section update (Part 2 Bridge)
-                    if (typeof updateMainLazyListing === "function") {
-                        updateMainLazyListing(currentShopsData, false);
-                    }
-                })
-                .catch(err => {
-                    console.error("Error loading json source:", err);
-                    document.getElementById('countryDetails').innerText = "Failed to load store list.";
-                });
-        }
+window.onload = () => {
+fetch("https://pub-168159db07cc407eaa28228eb2520ea5.r2.dev/33.json")
+.then(res => res.json())
+.then(data => {
+shops = data.shops || data; 
 
-        // Dropdown tracking handler
-        function handleCountryChange() {
-            const selectEl = document.getElementById('countryPicker');
-            fetchCountryData(selectEl.value);
-        }
+shops.forEach(shop => {
+let catName = shop.c || shop.category;
+if (catName && !mainOrder.includes(catName)) {
+mainOrder.push(catName);
+}
+}); 
 
-        // TOP 10 COUPLING LOGIC: Filters current selected country items by category and isolates top 10
-        function updateTopCoupledShops() {
-            document.getElementById('currentCategoryLabel').innerText = selectedCategory;
-            
-            // Filter global country list against active category mapping
-            const filtered = currentShopsData.filter(item => {
-                let catField = item.c || item.category || "General";
-                if (Array.isArray(catField)) {
-                    return catField.some(c => c.toLowerCase() === selectedCategory.toLowerCase());
-                }
-                return catField.toLowerCase() === selectedCategory.toLowerCase();
-            });
+initButtons();
+render(shops, false);
+})
+.catch(err => {
+console.error("Error loading JSON:", err);
+});
+}; 
 
-            // Isolate Top 10 items strictly
-            const top10 = filtered.slice(0, 10);
-            renderTopSectionGrid(top10);
-        }
+/* കാറ്റഗറി ബട്ടണുകൾ ഉണ്ടാക്കുന്നു */
+function initButtons(){
+let box=document.getElementById("cat-buttons");
+box.innerHTML=mainOrder.map(c=> {
+let borderCol = colors[c] || "#666";
+return `<button class="m-btn" onclick="filterCat('${c}')"
+style="border-bottom:3px solid ${borderCol}">${c}</button>`;
+}).join("");
+} 
 
-        // Render target system for mini clean cards
-        function renderTopSectionGrid(shopList) {
-            const container = document.getElementById('topShopsGrid');
-            container.innerHTML = "";
+/* ഫിൽട്ടർ ലോജിക് */
+function filterCat(cat){
+activeCategory = cat;
+expandedCategories[cat] = false;
+document.getElementById("findShop").value = ""; 
 
-            if (shopList.length === 0) {
-                container.innerHTML = "<div style='grid-column: 1/-1; font-size:0.9rem; color:#94a3b8; text-align:center; padding:10px;'>No verified shops in this category.</div>";
-                return;
-            }
+let filtered = shops.filter(s => (s.c || s.category) === cat);
+render(filtered, true);
+} 
 
-            shopList.forEach(shop => {
-                const card = document.createElement('a');
-                card.className = 'shop-card-mini';
-                card.href = shop.url || '#';
-                card.target = '_blank';
+/* റീസെറ്റ് ലോജിക് (Back to all shops) */
+function resetCategory() {
+activeCategory = null;
+expandedCategories = {};
+document.getElementById("findShop").value = "";
+render(shops, false);
+} 
 
-                // Extract domain to parse dynamic Google Favicon provider API
-                let domain = "";
-                try {
-                    domain = new URL(shop.url).hostname;
-                } catch(e) {
-                    domain = "example.com";
-                }
-                const faviconUrl = `https://www.google.com/s2/favicons?sz=64&domain=${domain}`;
+/* റെൻഡർ എഞ്ചിൻ */
+function render(data, isFiltered=false){
+let container=document.getElementById("shop-container");
+let selectedCatContainer = document.getElementById("selected-cat-container"); 
 
-                // Clean view layout: strictly logo and name only (No description/essay structure)
-                card.innerHTML = `
-                    <img class="shop-logo-mini" src="${faviconUrl}" alt="${shop.n || shop.name}" onerror="this.src='https://cdn-icons-png.flaticon.com/512/869/869687.png'">
-                    <div class="shop-name-mini">${shop.n || shop.name}</div>
-                `;
+container.innerHTML=""; 
 
-                container.appendChild(card);
-            });
-        }
+if(activeCategory) {
+selectedCatContainer.style.display = "block";
+selectedCatContainer.innerHTML = `<div class="selected-cat-heading" style="background:${colors[activeCategory] || '#666'}">${activeCategory}</div>`;
+} else {
+selectedCatContainer.style.display = "none";
+selectedCatContainer.innerHTML = "";
+} 
 
-        // External coupling hook triggered when lower category buttons are pushed
-        function changeCategoryCoupling(newCategory) {
-            selectedCategory = newCategory;
-            updateTopCoupledShops();
-        }
+let grouped={};
+data.forEach(s=>{
+let catName = s.c || s.category || "General";
+if(!grouped[catName]) grouped[catName]=[];
+grouped[catName].push(s);
+}); 
 
-</body>
-</html>
+let orderToShow = activeCategory ? [activeCategory] : mainOrder; 
+
+orderToShow.forEach(cat=>{
+if(grouped[cat]){
+let col=colors[cat] || "#666"; 
+
+let head=document.createElement("div");
+head.className="cat-head";
+head.style.background=col;
+head.innerText=cat;
+container.appendChild(head); 
+
+let isExpanded = expandedCategories[cat] || false;
+let totalItems = grouped[cat].length; 
+
+let maxSearch = document.getElementById("findShop").value.trim() !== "";
+let limit = (totalItems > 7 && !isExpanded && !maxSearch) ? 7 : totalItems; 
+
+for(let i=0; i<limit; i++) {
+let s = grouped[cat][i];
+let card=document.createElement("a");
+card.className="shop-card";
+card.href=s.u || s.url;
+card.target="_blank";
+card.style.borderLeft="6px solid "+col; 
+
+let domain = s.d || s.domain || "";
+try { domain = new URL(s.u || s.url).hostname; } catch(e) {}
+let faviconUrl = `https://www.google.com/s2/favicons?sz=64&domain=${domain}`;
+
+if(domain.toLowerCase().includes("aliexpress.com")) {
+card.onclick = (e) => {
+e.preventDefault();
+alert("This shop is banned. You cannot purchase from here.");
+};
+} 
+
+let isAffiliate = s.is_affiliate !== undefined ? s.is_affiliate : true;
+let dotHTML = (!isAffiliate || isAffiliate === "false" || isAffiliate === false) ? '<div class="direct-dot"></div>' : ''; 
+
+let name = s.n || s.name;
+let id = s.id || "";
+let tag = s.t || s.tag || ""; 
+
+card.innerHTML=`${dotHTML}
+<img src="${faviconUrl}" onerror="this.src='https://cdn-icons-png.flaticon.com/512/869/869687.png'">
+<div class="sl">${id}</div>
+<div><b>${name}</b><br><span style="color:#aaa;font-size:18px;">${tag}</span></div>
+`; 
+
+container.appendChild(card);
+} 
+
+if(totalItems > 7 && !maxSearch) {
+let btn=document.createElement("div");
+btn.className="more-btn";
+btn.innerText = isExpanded ? "LESS -" : "MORE +";
+btn.onclick=()=>toggle(cat);
+container.appendChild(btn);
+}
+}
+});
+} 
+
+/* MORE / LESS ടോഗിൾ */
+function toggle(cat){
+expandedCategories[cat] = !expandedCategories[cat];
+if(activeCategory) {
+let filtered = shops.filter(s => (s.c || s.category) === activeCategory);
+render(filtered, true);
+} else {
+render(shops, false);
+}
+} 
+
+/* LIVE SEARCH */
+function liveSearch(){
+let val=document.getElementById("findShop").value.toLowerCase().trim();
+if(!val){
+if(activeCategory) {
+let filtered = shops.filter(s => (s.c || s.category) === activeCategory);
+render(filtered, true);
+} else {
+render(shops, false);
+}
+return;
+} 
+
+let baseList = activeCategory ? shops.filter(s => (s.c || s.category) === activeCategory) : shops;
+let f=baseList.filter(s=> (s.n || s.name).toLowerCase().includes(val));
+render(f, true);
+}
+</script>
+
 <style>
 .compare-box{
 background:#000;
