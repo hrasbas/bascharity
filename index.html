@@ -651,16 +651,8 @@ ball.className = "bas-ball is-pwa-installed";
 </script>
  <!------------country---------------->
  <!-- 1. Country Selector Section -->
- 
- 
- 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Global Premium Shops</title>
-    <style>
+
+     <style>
         :root {
             --primary-color: #2563eb;
             --bg-light: #f8fafc;
@@ -2100,455 +2092,290 @@ if(target) target.scrollIntoView({ behavior:"smooth", block:"start" });
 </script>
 <!------------------Catogaryshops-------->
  
- <!-- =========================================================
-BLOCK 2
-CATEGORY + JSON LOADER + SHOP RENDERER
-PASTE BELOW BLOCK 1
-========================================================= -->
-
-<script>
-
-/* =========================================================
-CATEGORY COLORS
-========================================================= */
-
-const colors = {
-"General":"#2196f3",
-"Fashion":"#e91e63",
-"Beauty":"#9c27b0",
-"Electronics":"#ff5722",
-"Health":"#4caf50",
-"Travel":"#00bcd4",
-"Grocery":"#8bc34a",
-"Home":"#ff9800",
-"Sports":"#009688",
-"Entertainment":"#673ab7",
-"Automotive":"#795548"
-};
-
-/* =========================================================
-COUNTRY JSON MAP
-========================================================= */
-
-const COUNTRY_JSON_MAP = {
-
-afghanistan:
-"https://pub-168159db07cc407eaa28228eb2520ea5.r2.dev/31.json",
-
-albania:
-"https://pub-168159db07cc407eaa28228eb2520ea5.r2.dev/32.json",
-
-algeria:
-"https://pub-168159db07cc407eaa28228eb2520ea5.r2.dev/33.json"
-
-};
-
-/* =========================================================
-DEFAULT CATEGORY ORDER
-========================================================= */
-
-let mainOrder = [
-"General",
-"Fashion",
-"Beauty",
-"Electronics",
-"Health",
-"Travel",
-"Grocery",
-"Home",
-"Sports",
-"Entertainment",
-"Automotive"
-];
-
-/* =========================================================
-GLOBAL VARIABLES
-========================================================= */
-
-let shops = [];
-let activeCategory = null;
-let loadedCountryCache = {};
-let currentBottomCountry = "afghanistan";
-
-/* =========================================================
-AUTO INIT
-========================================================= */
-
-document.addEventListener("DOMContentLoaded",()=>{
-
-const saved =
-localStorage.getItem("bas_country")
-|| "afghanistan";
-
-updateBottomCategoryShops(saved);
-
-});
-
-/* =========================================================
-LOAD COUNTRY
-========================================================= */
-
-async function updateBottomCategoryShops(country){
-
-country =
-(country || "")
-.toLowerCase()
-.trim();
-
-if(!COUNTRY_JSON_MAP[country]) return;
-
-currentBottomCountry = country;
-
-activeCategory = null;
-
-document.getElementById("findShop").value = "";
-
-const container =
-document.getElementById("shop-container");
-
-container.innerHTML =
-"<div class='empty-msg'>LOADING...</div>";
-
-if(loadedCountryCache[country]){
-
-shops =
-loadedCountryCache[country];
-
-prepareCategories();
-
-render(shops);
-
-return;
-
-}
-
-try{
-
-const res =
-await fetch(
-COUNTRY_JSON_MAP[country]
-);
-
-const data =
-await res.json();
-
-shops =
-data.shops || [];
-
-loadedCountryCache[country] =
-shops;
-
-prepareCategories();
-
-render(shops);
-
-}catch(err){
-
-console.error(err);
-
-container.innerHTML =
-"<div class='empty-msg'>FAILED TO LOAD SHOPS</div>";
-
-}
-
-}
-
-/* =========================================================
-AUTO CATEGORY DETECT
-========================================================= */
-
-function prepareCategories(){
-
-let detected = [
-"General",
-"Fashion",
-"Beauty",
-"Electronics",
-"Health",
-"Travel",
-"Grocery",
-"Home",
-"Sports",
-"Entertainment",
-"Automotive"
-];
-
-shops.forEach(shop=>{
-
-const cat =
-shop.c || "General";
-
-if(
-!detected.includes(cat)
-){
-
-detected.push(cat);
-
-}
-
-});
-
-mainOrder = detected;
-
-initButtons();
-
-}
-
-/* =========================================================
-CATEGORY BUTTONS
-========================================================= */
-
-function initButtons(){
-
-const box =
-document.getElementById(
-"cat-buttons"
-);
-
-box.innerHTML = "";
-
-mainOrder.forEach(cat=>{
-
-const btn =
-document.createElement("button");
-
-btn.className =
-"m-btn";
-
-btn.innerText =
-cat;
-
-btn.style.borderBottom =
-"3px solid " +
-(colors[cat] || "#666");
-
-btn.onclick =
-()=>filterCat(cat);
-
-box.appendChild(btn);
-
-});
-
-}
-
-/* =========================================================
-FILTER CATEGORY
-========================================================= */
-
-function filterCat(cat){
-
-activeCategory = cat;
-
-document.getElementById(
-"findShop"
-).value = "";
-
-const filtered =
-shops.filter(shop=>
-
-(shop.c || "General")
-=== cat
-
-);
-
-render(filtered);
-
-}
-
-/* =========================================================
-RESET
-========================================================= */
-
-function resetCategory(){
-
-activeCategory = null;
-
-document.getElementById(
-"findShop"
-).value = "";
-
-render(shops);
-
-}
-
-/* =========================================================
-RENDER
-========================================================= */
-
-function render(data){
-
-const container =
-document.getElementById(
-"shop-container"
-);
-
-container.innerHTML = "";
-
-const grouped = {};
-
-data.forEach(shop=>{
-
-const cat =
-shop.c || "General";
-
-if(!grouped[cat]){
-
-grouped[cat] = [];
-
-}
-
-grouped[cat].push(shop);
-
-});
-
-const order =
-activeCategory
-? [activeCategory]
-: mainOrder;
-
-order.forEach(cat=>{
-
-if(
-!grouped[cat]
-||
-grouped[cat].length===0
-){
-return;
-}
-
-const head =
-document.createElement("div");
-
-head.className =
-"cat-head";
-
-head.style.background =
-colors[cat] || "#666";
-
-head.innerText =
-cat;
-
-container.appendChild(head);
-
-grouped[cat].forEach(shop=>{
-
-let domain="";
-
-try{
-
-domain =
-new URL(
-shop.url
-).hostname;
-
-}catch(e){}
-
-const card =
-document.createElement("a");
-
-card.className =
-"shop-card";
-
-card.href =
-shop.url || "#";
-
-card.target =
-"_blank";
-
-card.rel =
-"noopener noreferrer";
-
-card.style.borderLeft =
-"6px solid " +
-(colors[cat] || "#666");
-
-card.innerHTML = `
-
-<div class="direct-dot">.</div>
-
-<div class="sl">
-${shop.id || ""}
-</div>
-
-<img
-loading="lazy"
-src="https://www.google.com/s2/favicons?sz=64&domain=${domain}"
-alt="${shop.name}"
->
-
-<div class="shop-info notranslate">
-
-<b>${shop.name}</b>
-
-<span>${shop.tag || ""}</span>
-
-</div>
-
-`;
-
-container.appendChild(card);
-
-});
-
-});
-
-}
-
-/* =========================================================
-LIVE SEARCH
-========================================================= */
-
-function liveSearch(){
-
-const val =
-document
-.getElementById("findShop")
-.value
-.toLowerCase()
-.trim();
-
-if(!val){
-
-if(activeCategory){
-
-filterCat(activeCategory);
-
-}else{
-
-render(shops);
-
-}
-
-return;
-
-}
-
-const base =
-activeCategory
-
-? shops.filter(shop=>
-
-(shop.c || "")
-=== activeCategory
-
-)
-
-: shops;
-
-const filtered =
-base.filter(shop=>
-
-(shop.name || "")
-.toLowerCase()
-.includes(val)
-
-);
-
-render(filtered);
-
-}
-
-</script>
+    <style>
+        /* Part 2 Styles */
+        .live-search-container {
+            margin: 20px 0 15px 0;
+        }
+        .search-input {
+            width: 100%;
+            padding: 12px;
+            border: 2px solid var(--border-color);
+            border-radius: 8px;
+            font-size: 1rem;
+            box-sizing: border-box;
+            outline: none;
+        }
+        .search-input:focus {
+            border-color: var(--primary-color);
+        }
+
+        /* Category Selector Chips */
+        .category-scroll-box {
+            display: flex;
+            gap: 10px;
+            overflow-x: auto;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+            scrollbar-width: none; /* Firefox */
+        }
+        .category-scroll-box::-webkit-scrollbar {
+            display: none; /* Chrome, Safari, Opera */
+        }
+        .cat-chip {
+            padding: 8px 16px;
+            background: #e2e8f0;
+            color: #475569;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            cursor: pointer;
+            white-space: nowrap;
+            transition: all 0.2s;
+            border: none;
+        }
+        .cat-chip.active {
+            background: var(--primary-color);
+            color: #ffffff;
+        }
+
+        /* Main Shops Grid (Lazy Loading List) */
+        .main-shops-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+            gap: 15px;
+            margin-bottom: 30px;
+        }
+        
+        /* Clean Listing Card: No Essay, Logo + Name Only */
+        .shop-card-main {
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            padding: 15px;
+            text-align: center;
+            text-decoration: none;
+            color: var(--text-main);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.02);
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        .shop-card-main:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 5px 12px rgba(0,0,0,0.08);
+        }
+        .shop-logo-main {
+            width: 48px;
+            height: 48px;
+            border-radius: 8px;
+            object-fit: contain;
+            background: #f1f5f9;
+        }
+        .shop-name-main {
+            font-size: 0.95rem;
+            font-weight: 700;
+            word-break: break-word;
+            line-height: 1.2;
+        }
+
+        /* Loading Indicator */
+        .lazy-loading-trigger {
+            text-align: center;
+            padding: 15px;
+            font-size: 0.9rem;
+            color: #94a3b8;
+            font-weight: 500;
+        }
+    </style>
+
+    <div class="live-search-container">
+        <input type="text" id="findShopInput" class="search-input" placeholder="Search shops by name..." oninput="handleLiveSearch()">
+    </div>
+
+    <div class="category-scroll-box" id="categoryChipsBox">
+        <button class="cat-chip active" onclick="selectCategoryChip('General')">General</button>
+        <button class="cat-chip" onclick="selectCategoryChip('Electronics')">Electronics</button>
+        <button class="cat-chip" onclick="selectCategoryChip('Fashion')">Fashion</button>
+        <button class="cat-chip" onclick="selectCategoryChip('Grocery')">Grocery</button>
+        <button class="cat-chip" onclick="selectCategoryChip('Travel')">Travel</button>
+        <button class="cat-chip" onclick="selectCategoryChip('Entertainment')">Entertainment</button>
+        <button class="cat-chip" onclick="selectCategoryChip('Sports')">Sports</button>
+        <button class="cat-chip" onclick="selectCategoryChip('Beauty')">Beauty</button>
+        <button class="cat-chip" onclick="selectCategoryChip('Home')">Home</button>
+        <button class="cat-chip" onclick="selectCategoryChip('Health')">Health</button>
+        <button class="cat-chip" onclick="selectCategoryChip('Automotive')">Automotive</button>
+    </div>
+
+    <div id="mainShopsGrid" class="main-shops-grid">
+        </div>
+
+    <div id="lazyLoadTrigger" class="lazy-loading-trigger"></div>
+
+    <script>
+        // Lazy Loading Configuration State
+        let filteredShopsPool = []; // Full pool of active filtered items
+        let displayedCount = 0;
+        const itemsPerPage = 20; // Number of shops to load at a time while scrolling
+        let lazyLoaderObserver = null;
+
+        // Bridge Execution Connector: Called from Part 1 when country JSON is pulled
+        function updateMainLazyListing(newShopsData, isSearchMode = false) {
+            // Clear current input if it's a fresh country switch
+            if (!isSearchMode) {
+                document.getElementById('findShopInput').value = "";
+            }
+
+            // Apply category filtering if not in direct keyword search mode
+            if (!isSearchMode) {
+                filteredShopsPool = currentShopsData.filter(item => {
+                    let catField = item.c || item.category || "General";
+                    if (Array.isArray(catField)) {
+                        return catField.some(c => c.toLowerCase() === selectedCategory.toLowerCase());
+                    }
+                    return catField.toLowerCase() === selectedCategory.toLowerCase();
+                });
+            } else {
+                filteredShopsPool = newShopsData;
+            }
+
+            // Reset dynamic lazy counts and container
+            displayedCount = 0;
+            document.getElementById('mainShopsGrid').innerHTML = "";
+            
+            // Render first page immediately
+            loadNextShopsBatch();
+
+            // Re-initialize intersection scroll tracking setup
+            initIntersectionObserver();
+        }
+
+        // Category Selection Chip Handler (Couples with Top 10)
+        function selectCategoryChip(chipValue) {
+            // Update CSS Active states
+            const chips = document.querySelectorAll('.cat-chip');
+            chips.forEach(btn => {
+                if (btn.innerText.toLowerCase() === chipValue.toLowerCase()) {
+                    btn.classList.add('active');
+                } else {
+                    btn.classList.remove('active');
+                }
+            });
+
+            // Trigger Coupling to Part 1 Top Grid
+            changeCategoryCoupling(chipValue);
+
+            // Re-render Lower Lazy List Grid matching choice
+            updateMainLazyListing(currentShopsData, false);
+        }
+
+        // Lazy Loading Loop batch appender
+        function loadNextShopsBatch() {
+            const container = document.getElementById('mainShopsGrid');
+            const endLimit = Math.min(displayedCount + itemsPerPage, filteredShopsPool.length);
+            
+            if (displayedCount >= filteredShopsPool.length && filteredShopsPool.length > 0) {
+                document.getElementById('lazyLoadTrigger').innerText = "All verified shops loaded.";
+                return;
+            }
+
+            if (filteredShopsPool.length === 0) {
+                container.innerHTML = "<div style='grid-column:1/-1; text-align:center; color:#94a3b8; padding:30px; font-size:0.95rem;'>No stores found matching your selection.</div>";
+                document.getElementById('lazyLoadTrigger').innerText = "";
+                return;
+            }
+
+            document.getElementById('lazyLoadTrigger').innerText = "Loading more premium stores...";
+
+            for (let i = displayedCount; i < endLimit; i++) {
+                const shop = filteredShopsPool[i];
+                const card = document.createElement('a');
+                card.className = 'shop-card-main';
+                card.href = shop.url || '#';
+                card.target = '_blank';
+
+                let domain = "";
+                try {
+                    domain = new URL(shop.url).hostname;
+                } catch(e) {
+                    domain = "example.com";
+                }
+                const faviconUrl = `https://www.google.com/s2/favicons?sz=64&domain=${domain}`;
+
+                // Clean layout structure: Favicon + Name Only (No Essay/Description text)
+                card.innerHTML = `
+                    <img class="shop-logo-main" src="${faviconUrl}" alt="${shop.n || shop.name}" onerror="this.src='https://cdn-icons-png.flaticon.com/512/869/869687.png'">
+                    <div class="shop-name-main">${shop.n || shop.name}</div>
+                `;
+                container.appendChild(card);
+            }
+
+            displayedCount = endLimit;
+
+            if (displayedCount >= filteredShopsPool.length) {
+                document.getElementById('lazyLoadTrigger').innerText = "All verified shops loaded.";
+            }
+        }
+
+        // Setup Infinite Scroll Intersection Tracker
+        function initIntersectionObserver() {
+            if (lazyLoaderObserver) {
+                lazyLoaderObserver.disconnect();
+            }
+
+            const targetEl = document.getElementById('lazyLoadTrigger');
+            
+            lazyLoaderObserver = new IntersectionObserver((entries) => {
+                if (entries[0].isIntersecting && displayedCount < filteredShopsPool.length) {
+                    loadNextShopsBatch();
+                }
+            }, {
+                rootMargin: '150px' // Pre-fetch before user hits the exact bottom
+            });
+
+            lazyLoaderObserver.observe(targetEl);
+        }
+
+        // Live Search Handler
+        function handleLiveSearch() {
+            const query = document.getElementById('findShopInput').value.toLowerCase().trim();
+            
+            // Base list calculation dependent on selection mode
+            let basePool = currentShopsData.filter(item => {
+                let catField = item.c || item.category || "General";
+                if (Array.isArray(catField)) {
+                    return catField.some(c => c.toLowerCase() === selectedCategory.toLowerCase());
+                }
+                return catField.toLowerCase() === selectedCategory.toLowerCase();
+            });
+
+            if (!query) {
+                // If empty search, return to standard category filter listing pool
+                updateMainLazyListing(currentShopsData, false);
+                return;
+            }
+
+            // Keyword filtering algorithm execution
+            const matchedShops = basePool.filter(shop => {
+                const nameStr = (shop.n || shop.name || "").toLowerCase();
+                return nameStr.includes(query);
+            });
+
+            // Render matched search results via pool refresh
+            updateMainLazyListing(matchedShops, true);
+        }
+
+        // Connect Part 1 integration trigger back into the script loop runtime
+        // This makes sure Part 2 updates instantly on first load
+        setTimeout(() => {
+            if(currentShopsData.length > 0) {
+                updateMainLazyListing(currentShopsData, false);
+            }
+        }, 300);
+    </script>
 </body>
   </html>
 
