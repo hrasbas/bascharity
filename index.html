@@ -1994,7 +1994,12 @@ if(target) target.scrollIntoView({ behavior:"smooth", block:"start" });
 }
 </script>
 <!------------------Catogaryshops-------->
-
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BAS Mega Portal Engine</title>
 <style>
 #bas-mega-portal{
 width:96%;
@@ -2142,6 +2147,13 @@ cursor: pointer;
 </div> 
 
 <script>
+// നിങ്ങൾ പറഞ്ഞ ആ 3 ഫയലുകൾ മാത്രം ഇവിടെ കൃത്യമായി കണക്ട് ചെയ്തിട്ടുണ്ട്
+const JSON_FILES = [
+"https://pub-168159db07cc407eaa28228eb2520ea5.r2.dev/31.json",
+"https://pub-168159db07cc407eaa28228eb2520ea5.r2.dev/32.json",
+"https://pub-168159db07cc407eaa28228eb2520ea5.r2.dev/33.json"
+];
+
 const colors={
 "General":"#2196f3",
 "Fashion":"#e91e63",
@@ -2151,62 +2163,83 @@ const colors={
 "Travel":"#00bcd4"
 }; 
 
-// അടിസ്ഥാന ഡിഫോൾട്ട് കാറ്റഗറികൾ
 let defaultCategories = ["General","Fashion","Beauty","Electronics","Health","Travel"];
 let mainOrder = [...defaultCategories]; 
 
-let shops = [];
+let allLoadedShops = []; 
+let currentCountryShops = []; 
 let activeCategory = null;
 let expandedCategories = {}; 
+let currentCountry = "india";
 
-// മെയിൻ ലോഡിങ് ഫങ്ക്ഷൻ (കൺട്രി പേര് അനുസരിച്ച് ഫയൽ മാറ്റുന്നു)
-function loadShopsByCountry(countryName) {
-let normalized = (countryName || "india").toLowerCase().trim();
-
-// ആർ.2 ഡെവ് യുആർഎൽ ഡൈനാമിക് ആക്കി മാറ്റിയിരിക്കുന്നു
-let jsonUrl = `https://pub-168159db07cc407eaa28228eb2520ea5.r2.dev/1%20${normalized}.json`;
-
-let container = document.getElementById("shop-container");
-if(container) container.innerHTML = "<p style='color:#fff; text-align:center; font-size:20px; padding:20px;'>Loading Shops...</p>";
-
-fetch(jsonUrl)
-.then(res => res.json())
-.then(data => {
-shops = data; 
-
-// ഫ്രഷ് ആയി കാറ്റഗറി ലിസ്റ്റ് റീസെറ്റ് ചെയ്യുന്നു
-mainOrder = [...defaultCategories];
-
-// JSON ഫയലിലുള്ള പുതിയ കാറ്റഗറികൾ (10 ഓ 11 ഓ എത്രയുണ്ടെങ്കിലും) ഓട്ടോമാറ്റിക്കായി കണ്ടെത്തി ആഡ് ചെയ്യുന്നു
-shops.forEach(shop => {
-let catName = shop.c || shop.category;
-if (catName && !mainOrder.includes(catName)) {
-mainOrder.push(catName);
+function normalizeCountry(c) {
+c = (c || "").toLowerCase().trim();
+if (c === "saudi arabia" || c === "saudi") return "saudi";
+if (c === "united states" || c === "usa") return "usa";
+if (c === "united arab emirates" || c === "uae") return "uae";
+if (c === "united kingdom" || c === "uk") return "uk";
+return c;
 }
-}); 
 
+// 3 ജിസൺ യുആർഎല്ലും ഒന്നിച്ച് ഫെച്ച് ചെയ്ത് കണക്ട് ചെയ്യുന്ന ഭാഗം
+async function loadAllJsonFiles() {
+allLoadedShops = [];
+
+for (const url of JSON_FILES) {
+try {
+const response = await fetch(url);
+if (!response.ok) continue; 
+const data = await response.json();
+const shopsArray = Array.isArray(data) ? data : (data.shops || []); 
+
+shopsArray.forEach(s => {
+if (s && (s.country || s.c)) {
+allLoadedShops.push(s);
+}
+});
+} catch (e) {
+console.error("Fetch failed for: " + url);
+}
+} 
+
+let savedCountry = localStorage.getItem("bas_country") || "india";
+filterShopsByCountry(savedCountry);
+}
+
+// കൺട്രി സെലക്ടറിലേക്ക് Coupling ചെയ്യുന്ന മെത്തേഡ്
+function filterShopsByCountry(countryName) {
+currentCountry = normalizeCountry(countryName);
 activeCategory = null;
 expandedCategories = {};
 document.getElementById("findShop").value = "";
 
-initButtons();
-render(shops, false);
-})
-.catch(err => {
-console.error("Error loading JSON for country:", normalized, err);
-if(container) container.innerHTML = `<p style='color:#ff9800; text-align:center; font-size:18px; padding:20px;'>In progress for ${normalized.toUpperCase()}...</p>`;
+currentCountryShops = allLoadedShops.filter(s => {
+let cName = normalizeCountry(s.country || s.c);
+return cName === currentCountry;
 });
+
+mainOrder = [...defaultCategories];
+
+// Shops കൾ നോക്കി ഓട്ടോമാറ്റിക് ആയി കാറ്റഗറി നിർമ്മിക്കുന്നു (10/11 ബട്ടണുകൾ വരും)
+currentCountryShops.forEach(shop => {
+let catName = shop.c || shop.category;
+if (catName && !mainOrder.includes(catName)) {
+mainOrder.push(catName);
+}
+});
+
+initButtons();
+render(currentCountryShops, false);
 }
 
-// വിൻഡോ ആദ്യമായി ലോഡ് ചെയ്യുമ്പോൾ ഡിഫോൾട്ട് ആയി ലോക്കൽ സ്റ്റോറേജിലുള്ള രാജ്യം ലോഡ് ചെയ്യും
 window.onload = () => {
-let initialCountry = localStorage.getItem("bas_country") || "india";
-loadShopsByCountry(initialCountry);
+loadAllJsonFiles();
 }; 
 
-/* കാറ്റഗറി ബട്ടണുകൾ ഉണ്ടാക്കുന്നു */
+/* കാറ്റഗറി ബട്ടണുകൾ നിർമ്മിക്കുന്നു */
 function initButtons(){
 let box=document.getElementById("cat-buttons");
+if(!box) return;
 box.innerHTML=mainOrder.map(c=> {
 let borderCol = colors[c] || "#666";
 return `<button class="m-btn" onclick="filterCat('${c}')" style="border-bottom:3px solid ${borderCol}">${c}</button>`;
@@ -2219,22 +2252,28 @@ activeCategory = cat;
 expandedCategories[cat] = false;
 document.getElementById("findShop").value = ""; 
 
-let filtered = shops.filter(s => (s.c || s.category) === cat);
+let filtered = currentCountryShops.filter(s => (s.c || s.category) === cat);
 render(filtered, true);
 } 
 
-/* റീസെറ്റ് ലോജിക് (Back to all shops) */
+/* റീസെറ്റ് ലോജിക് */
 function resetCategory() {
 activeCategory = null;
 expandedCategories = {};
 document.getElementById("findShop").value = "";
-render(shops, false);
+render(currentCountryShops, false);
 } 
 
 /* റെൻഡർ എഞ്ചിൻ */
 function render(data, isFiltered=false){
 let container=document.getElementById("shop-container");
+if(!container) return;
 container.innerHTML=""; 
+
+if(data.length === 0) {
+container.innerHTML = `<p style='color:#ff9800; text-align:center; font-size:18px; padding:20px;'>IN PROGRESS FOR ${currentCountry.toUpperCase()}...</p>`;
+return;
+}
 
 let grouped={};
 data.forEach(s=>{
@@ -2243,7 +2282,7 @@ if(!grouped[catName]) grouped[catName]=[];
 grouped[catName].push(s);
 }); 
 
-// ഒരു കാറ്റഗറി തിരഞ്ഞെടുത്താൽ ആ ഹെഡിങ് മാത്രം താഴെ നിന്ന് മുകളിലേക്ക് കയറി വരും
+// സെലക്ട് ചെയ്താൽ ഹെഡിങ് താഴെ നിന്ന് നേരെ മുകളിലേക്ക് കയറി വരും
 let orderToShow = activeCategory ? [activeCategory] : mainOrder; 
 
 orderToShow.forEach(cat=>{
@@ -2270,7 +2309,6 @@ card.href=s.u || s.url;
 card.target="_blank";
 card.style.borderLeft="6px solid "+col; 
 
-// 🔥 നിരോധിച്ച സൈറ്റുകൾ ഉണ്ടെങ്കിൽ ക്ലിക്ക് ചെയ്യുമ്പോൾ അലേർട്ട് കാണിക്കാനുള്ള ലോജിക്
 let domain = s.d || s.domain || "";
 if(domain.toLowerCase().includes("aliexpress.com")) {
 card.onclick = (e) => {
@@ -2279,7 +2317,7 @@ alert("This shop is banned in India. You cannot purchase from here.");
 };
 } 
 
-// Direct Link (Affiliate false ആണെങ്കിൽ റെഡ് ഡോട്ട് ഇടുന്നു)
+// Affiliate അല്ലാത്തവയ്ക്ക് (.) റെഡ് ഡോട്ട് ഇടുന്നു
 let isAffiliate = s.is_affiliate !== undefined ? s.is_affiliate : true;
 let dotHTML = (!isAffiliate || isAffiliate === "false" || isAffiliate === false) ? '<div class="direct-dot"></div>' : ''; 
 
@@ -2312,10 +2350,10 @@ container.appendChild(btn);
 function toggle(cat){
 expandedCategories[cat] = !expandedCategories[cat];
 if(activeCategory) {
-let filtered = shops.filter(s => (s.c || s.category) === activeCategory);
+let filtered = currentCountryShops.filter(s => (s.c || s.category) === activeCategory);
 render(filtered, true);
 } else {
-render(shops, false);
+render(currentCountryShops, false);
 }
 } 
 
@@ -2324,26 +2362,26 @@ function liveSearch(){
 let val=document.getElementById("findShop").value.toLowerCase().trim();
 if(!val){
 if(activeCategory) {
-let filtered = shops.filter(s => (s.c || s.category) === activeCategory);
+let filtered = currentCountryShops.filter(s => (s.c || s.category) === activeCategory);
 render(filtered, true);
 } else {
-render(shops, false);
+render(currentCountryShops, false);
 }
 return;
 } 
 
-let baseList = activeCategory ? shops.filter(s => (s.c || s.category) === activeCategory) : shops;
+let baseList = activeCategory ? currentCountryShops.filter(s => (s.c || s.category) === activeCategory) : currentCountryShops;
 let f=baseList.filter(s=> (s.n || s.name || "").toLowerCase().includes(val));
 render(f, true);
 } 
 
-/* 🔥 COUNTRY SEARCH INTERFACE COUPLING BRIDGE */
-// കൺട്രി സെലക്ടറിൽ നിന്നും വരുന്ന രാജ്യത്തിന്റെ പേര് സ്വീകരിച്ച് പുതിയ JSON ഫയൽ ലോഡ് ചെയ്യുന്നു
+/* 🔥 COUNTRY SELECTOR COUPLING BRIDGE */
 function countrySearchBridge(userCountryInput) {
 if(!userCountryInput) return;
-loadShopsByCountry(userCountryInput);
+filterShopsByCountry(userCountryInput);
 }
 </script>
+
 </body>
 </html>
 
