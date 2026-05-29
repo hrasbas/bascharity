@@ -653,374 +653,254 @@ ball.className = "bas-ball is-pwa-installed";
  <!-- 1. Country Selector Section -->
  
  
-<!-- =========================================================
-BLOCK 1
-COUNTRY SELECTOR + TOP SHOPS
-REPLACE OLD COUNTRY BLOCK WITH THIS
-========================================================= -->
-
-<div class="top-country-box">
-
-<div class="top-country-title">
-SELECT COUNTRY
-</div>
-
-<div class="top-country-grid">
-
-<button class="top-country-btn active"
-onclick="setTopCountry('afghanistan',this)">
-Afghanistan
-</button>
-
-<button class="top-country-btn"
-onclick="setTopCountry('albania',this)">
-Albania
-</button>
-
-<button class="top-country-btn"
-onclick="setTopCountry('algeria',this)">
-Algeria
-</button>
-
-</div>
-
-<div class="top-all-country">
-
-<select id="topCountryDropdown"
-onchange="setTopCountry(this.value)">
-
-<option value="afghanistan">
-Afghanistan
-</option>
-
-<option value="albania">
-Albania
-</option>
-
-<option value="algeria">
-Algeria
-</option>
-
-</select>
-
-</div>
-
-</div>
-
-
-<div class="top-shop-container">
-
-<div class="top-title-box">
-
-<h2 id="topShopCountryTitle">
-SHOP ON AFGHANISTAN SHOPS
-</h2>
-
-<span>
-Top trusted shops
-</span>
-
-</div>
-
-<input
-type="text"
-id="topGlobalSearch"
-class="top-global-search"
-placeholder="SEARCH SHOPS"
-onkeyup="filterTopShops()"
->
-
-<div id="topShopList"></div>
-
-</div>
-
-
-<script>
-
-/* =========================================================
-TOP JSON MAP
-========================================================= */
-
-const TOP_COUNTRY_JSON = {
-
-afghanistan:
-"https://pub-168159db07cc407eaa28228eb2520ea5.r2.dev/31.json",
-
-albania:
-"https://pub-168159db07cc407eaa28228eb2520ea5.r2.dev/32.json",
-
-algeria:
-"https://pub-168159db07cc407eaa28228eb2520ea5.r2.dev/33.json"
-
-};
-
-
-/* =========================================================
-CACHE
-========================================================= */
-
-let topCountryCache = {};
-let topCurrentShops = [];
-
-
-/* =========================================================
-INIT
-========================================================= */
-
-document.addEventListener("DOMContentLoaded",()=>{
-
-const saved =
-localStorage.getItem("bas_country")
-|| "afghanistan";
-
-setTopCountry(saved);
-
-});
-
-
-/* =========================================================
-COUNTRY SELECT
-========================================================= */
-
-async function setTopCountry(country,btn){
-
-country =
-(country || "")
-.toLowerCase()
-.trim();
-
-if(!TOP_COUNTRY_JSON[country]) return;
-
-localStorage.setItem(
-"bas_country",
-country
-);
-
-/* ACTIVE BUTTON */
-
-document
-.querySelectorAll(".top-country-btn")
-.forEach(x =>
-x.classList.remove("active")
-);
-
-if(btn){
-
-btn.classList.add("active");
-
-}else{
-
-document
-.querySelectorAll(".top-country-btn")
-.forEach(x=>{
-
-if(
-x.textContent
-.toLowerCase()
-.trim() === country
-){
-
-x.classList.add("active");
-
-}
-
-});
-
-}
-
-/* DROPDOWN */
-
-document.getElementById(
-"topCountryDropdown"
-).value = country;
-
-/* TITLE */
-
-document.getElementById(
-"topShopCountryTitle"
-).innerText =
-"SHOP ON " +
-country.toUpperCase() +
-" SHOPS";
-
-/* LOAD TOP SHOPS */
-
-await loadTopShops(country);
-
-/* COUPLING TO CATEGORY BLOCK */
-
-if(
-typeof updateBottomCategoryShops
-=== "function"
-){
-
-updateBottomCategoryShops(country);
-
-}
-
-}
-
-
-/* =========================================================
-LOAD TOP SHOPS
-========================================================= */
-
-async function loadTopShops(country){
-
-if(topCountryCache[country]){
-
-topCurrentShops =
-topCountryCache[country];
-
-renderTopShops(
-topCurrentShops
-);
-
-return;
-
-}
-
-try{
-
-const res =
-await fetch(
-TOP_COUNTRY_JSON[country]
-);
-
-const data =
-await res.json();
-
-const shops =
-(data.shops || [])
-.slice(0,5);   /* SAMPLE */
-
-topCountryCache[country] =
-shops;
-
-topCurrentShops =
-shops;
-
-renderTopShops(shops);
-
-}catch(err){
-
-console.error(err);
-
-document.getElementById(
-"topShopList"
-).innerHTML =
-"<div style='padding:20px;text-align:center'>FAILED TO LOAD SHOPS</div>";
-
-}
-
-}
-
-
-/* =========================================================
-RENDER TOP SHOPS
-========================================================= */
-
-function renderTopShops(list){
-
-const box =
-document.getElementById(
-"topShopList"
-);
-
-box.innerHTML = "";
-
-list.forEach(shop=>{
-
-let domain="";
-
-try{
-
-domain =
-new URL(shop.url)
-.hostname;
-
-}catch(e){}
-
-const card =
-document.createElement("a");
-
-card.className =
-"top-shop-card";
-
-card.href =
-shop.url || "#";
-
-card.target =
-"_blank";
-
-card.rel =
-"noopener noreferrer";
-
-card.innerHTML = `
-
-<div class="top-warning-dot">.</div>
-
-<img
-class="top-shop-logo"
-loading="lazy"
-src="https://www.google.com/s2/favicons?sz=64&domain=${domain}"
-alt="${shop.name}"
->
-
-<div class="top-shop-info">
-
-<b>${shop.name}</b>
-
-</div>
-
-`;
-
-box.appendChild(card);
-
-});
-
-}
-
-
-/* =========================================================
-SEARCH
-========================================================= */
-
-function filterTopShops(){
-
-const val =
-document
-.getElementById(
-"topGlobalSearch"
-)
-.value
-.toLowerCase()
-.trim();
-
-if(!val){
-
-renderTopShops(
-topCurrentShops
-);
-
-return;
-
-}
-
-const filtered =
-topCurrentShops.filter(shop=>
-
-(shop.name || "")
-.toLowerCase()
-.includes(val)
-
-);
-
-renderTopShops(filtered);
-
-}
-
-</script>
+ 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Global Premium Shops</title>
+    <style>
+        :root {
+            --primary-color: #2563eb;
+            --bg-light: #f8fafc;
+            --card-bg: #ffffff;
+            --text-main: #1e293b;
+            --border-color: #e2e8f0;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            background-color: var(--bg-light);
+            margin: 0;
+            padding: 15px;
+            color: var(--text-main);
+        }
+        
+        /* Country Picker Styling */
+        .country-section {
+            background: var(--card-bg);
+            border-radius: 12px;
+            padding: 15px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+            margin-bottom: 20px;
+        }
+        .country-title {
+            font-size: 1.1rem;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+        .country-select {
+            width: 100%;
+            padding: 12px;
+            border: 2px solid var(--border-color);
+            border-radius: 8px;
+            font-size: 1rem;
+            outline: none;
+            background-color: #fff;
+            transition: border-color 0.2s;
+        }
+        .country-select:focus {
+            border-color: var(--primary-color);
+        }
+        .country-info-box {
+            margin-top: 10px;
+            font-size: 0.9rem;
+            color: #64748b;
+            line-height: 1.4;
+        }
+
+        /* Top 10 Dynamic Section (Coupled with Category) */
+        .top-shops-container {
+            margin-bottom: 25px;
+        }
+        .section-header {
+            font-size: 1.2rem;
+            font-weight: 700;
+            margin-bottom: 12px;
+            color: var(--primary-color);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .top-shops-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+            gap: 12px;
+        }
+        
+        /* Clean Shop Card: No Essay, Logo + Name Only */
+        .shop-card-mini {
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 10px;
+            padding: 12px;
+            text-align: center;
+            text-decoration: none;
+            color: var(--text-main);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.02);
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        .shop-card-mini:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.06);
+        }
+        .shop-logo-mini {
+            width: 32px;
+            height: 32px;
+            border-radius: 6px;
+            object-fit: contain;
+            background: #f1f5f9;
+        }
+        .shop-name-mini {
+            font-size: 0.85rem;
+            font-weight: 600;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="country-section">
+        <div class="country-title">Select Country</div>
+        <select id="countryPicker" class="country-select" onchange="handleCountryChange()">
+            <option value="afghanistan">Afghanistan</option>
+            <option value="albania">Albania</option>
+            <option value="algeria" selected>Algeria</option>
+        </select>
+        <div id="countryDetails" class="country-info-box">Loading country data...</div>
+    </div>
+
+    <div class="top-shops-container">
+        <div class="section-header">
+            <span>Top Featured <span id="currentCategoryLabel">General</span> Shops</span>
+        </div>
+        <div id="topShopsGrid" class="top-shops-grid">
+            </div>
+    </div>
+
+    <script>
+        // Global variables for configuration and data state
+        const countryUrls = {
+            "afghanistan": "https://pub-168159db07cc407eaa28228eb2520ea5.r2.dev/31.json",
+            "albania": "https://pub-168159db07cc407eaa28228eb2520ea5.r2.dev/32.json",
+            "algeria": "https://pub-168159db07cc407eaa28228eb2520ea5.r2.dev/33.json"
+        };
+
+        let currentShopsData = [];
+        let selectedCategory = "General"; // Default starting category
+
+        // Initialize App with Default Country: Algeria
+        window.addEventListener('DOMContentLoaded', () => {
+            fetchCountryData("algeria");
+        });
+
+        // Fetch JSON for selected country
+        function fetchCountryData(countryKey) {
+            const url = countryUrls[countryKey];
+            if (!url) return;
+
+            document.getElementById('countryDetails').innerText = "Updating premium list...";
+
+            fetch(url)
+                .then(response => response.json())
+                .then(data => {
+                    currentShopsData = data.shops || [];
+                    
+                    // Render country information heading
+                    if (data.countryInfo) {
+                        document.getElementById('countryDetails').innerHTML = 
+                            `<strong>${data.countryInfo.name}:</strong> ${data.countryInfo.details}`;
+                    }
+
+                    // Trigger the top coupled render loop
+                    updateTopCoupledShops();
+
+                    // Bridge execution connection to trigger Lazy Loading section update (Part 2 Bridge)
+                    if (typeof updateMainLazyListing === "function") {
+                        updateMainLazyListing(currentShopsData, false);
+                    }
+                })
+                .catch(err => {
+                    console.error("Error loading json source:", err);
+                    document.getElementById('countryDetails').innerText = "Failed to load store list.";
+                });
+        }
+
+        // Dropdown tracking handler
+        function handleCountryChange() {
+            const selectEl = document.getElementById('countryPicker');
+            fetchCountryData(selectEl.value);
+        }
+
+        // TOP 10 COUPLING LOGIC: Filters current selected country items by category and isolates top 10
+        function updateTopCoupledShops() {
+            document.getElementById('currentCategoryLabel').innerText = selectedCategory;
+            
+            // Filter global country list against active category mapping
+            const filtered = currentShopsData.filter(item => {
+                let catField = item.c || item.category || "General";
+                if (Array.isArray(catField)) {
+                    return catField.some(c => c.toLowerCase() === selectedCategory.toLowerCase());
+                }
+                return catField.toLowerCase() === selectedCategory.toLowerCase();
+            });
+
+            // Isolate Top 10 items strictly
+            const top10 = filtered.slice(0, 10);
+            renderTopSectionGrid(top10);
+        }
+
+        // Render target system for mini clean cards
+        function renderTopSectionGrid(shopList) {
+            const container = document.getElementById('topShopsGrid');
+            container.innerHTML = "";
+
+            if (shopList.length === 0) {
+                container.innerHTML = "<div style='grid-column: 1/-1; font-size:0.9rem; color:#94a3b8; text-align:center; padding:10px;'>No verified shops in this category.</div>";
+                return;
+            }
+
+            shopList.forEach(shop => {
+                const card = document.createElement('a');
+                card.className = 'shop-card-mini';
+                card.href = shop.url || '#';
+                card.target = '_blank';
+
+                // Extract domain to parse dynamic Google Favicon provider API
+                let domain = "";
+                try {
+                    domain = new URL(shop.url).hostname;
+                } catch(e) {
+                    domain = "example.com";
+                }
+                const faviconUrl = `https://www.google.com/s2/favicons?sz=64&domain=${domain}`;
+
+                // Clean view layout: strictly logo and name only (No description/essay structure)
+                card.innerHTML = `
+                    <img class="shop-logo-mini" src="${faviconUrl}" alt="${shop.n || shop.name}" onerror="this.src='https://cdn-icons-png.flaticon.com/512/869/869687.png'">
+                    <div class="shop-name-mini">${shop.n || shop.name}</div>
+                `;
+
+                container.appendChild(card);
+            });
+        }
+
+        // External coupling hook triggered when lower category buttons are pushed
+        function changeCategoryCoupling(newCategory) {
+            selectedCategory = newCategory;
+            updateTopCoupledShops();
+        }
+
+</body>
+</html>
 <style>
 .compare-box{
 background:#000;
