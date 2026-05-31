@@ -653,42 +653,488 @@ ball.className = "bas-ball is-pwa-installed";
  <!-- 1. Country Selector Section -->
              
  <div class="country-box">
+  <div class="country-title">SELECT COUNTRY</div>
+  <div class="country-btns" id="countryButtons"></div>
 
-<div class="country-title">
-COUNTRY SELECTION
-</div>
+  <div class="all-country">
+    <select id="countryDropdown"></select>
+  </div>
 
-<div class="country-grid">
-<div class="country-btn" data-country="india" onclick="setCountry('india', this)">India</div>
-<div class="country-btn" data-country="usa" onclick="setCountry('usa', this)">USA</div>
-<div class="country-btn" data-country="japan" onclick="setCountry('japan', this)">Japan</div>
-<div class="country-btn" data-country="saudi" onclick="setCountry('saudi', this)">Saudi</div>
-<div class="country-btn" data-country="iran" onclick="setCountry('iran', this)">Iran</div>
-<div class="country-btn" data-country="uk" onclick="setCountry('uk', this)">UK</div>
-<div class="country-btn" data-country="canada" onclick="setCountry('canada', this)">Canada</div>
-<div class="country-btn" data-country="uae" onclick="setCountry('uae', this)">UAE</div>
-<div class="country-btn" data-country="qatar" onclick="setCountry('qatar', this)">Qatar</div>
-<div class="country-btn" data-country="oman" onclick="setCountry('oman', this)">Oman</div>
+  <div id="selectedCountryBtn" class="selected-country-btn">SELECTED COUNTRY / INDIA</div>
 </div>
 
-<div style="width:100%;margin-top:12px;background:#333;color:#fff;padding:14px;border-radius:12px;border:1px solid #ff9800;border-left:8px solid #ff9800;text-align:center;box-sizing:border-box;">
-<div style="font-size:12px;color:#ffb74d;font-weight:bold;text-transform:uppercase;">
-Selected Country
-</div>
-<div id="selectedCountryName" style="font-size:22px;font-weight:900;margin-top:3px;">
-India
-</div>
-</div>
-
-<div class="all-country">
-<select id="countryDropdown" onchange="setCountry(this.value)">
-<option value="" disabled selected>
-SEARCH ALL COUNTRIES ▼
-</option>
-</select>
+<div class="shop-container">
+  <div class="shop-title-box">
+    <h2 id="shopCountryTitle">SHOP ON INDIA SHOPS</h2>
+    <span>TOP 10 SHOPS</span>
+  </div>
+  <div id="topShopList" class="shop-grid"></div>
 </div>
 
+<div id="bas-mega-portal" style="width:96%;max-width:900px;margin:auto;font-size:23px;">
+  <input id="findShop" onkeyup="liveSearch()" placeholder="Search shops..." style="width:100%;height:55px;border-radius:12px;border:1px solid #ff9800;background:#1a1a1a;color:#fff;padding:0 15px;margin-bottom:12px;font-size:23px;box-sizing:border-box;">
+
+  <div id="cat-search-box" style="border:1px solid #ff9800;border-radius:12px;padding:14px;background:#111;margin-bottom:15px;">
+    <div class="btn-grid" id="cat-buttons" style="display:grid;grid-template-columns:repeat(3,1fr);gap:10px;"></div>
+    <span class="reset-link" onclick="resetCategory()" style="display:block;text-align:center;margin-top:12px;background:#ff9800;color:#000;padding:12px;border-radius:10px;font-size:20px;font-weight:bold;text-decoration:none;cursor:pointer;">← Back to All Shops</span>
+  </div>
+
+  <div id="selected-cat-container" style="margin-top:10px;margin-bottom:10px;display:none;"></div>
+
+  <div class="shop-container">
+    <div class="shop-title-box">
+      <h2 id="allShopTitle">ALL INDIA SHOPS</h2>
+      <span>ALL SHOPS BY CATEGORY</span>
+    </div>
+  </div>
+
+  <div id="shop-container"></div>
 </div>
+
+<style>
+.country-btns{
+display:grid;
+grid-template-columns:repeat(5,1fr);
+gap:8px;
+margin-bottom:12px;
+}
+.country-btn{
+background:#222;
+color:#fff;
+border:1px solid #555;
+padding:12px 6px;
+border-radius:10px;
+font-size:15px;
+font-weight:bold;
+cursor:pointer;
+text-transform:uppercase;
+}
+.country-btn.active{
+background:#ff9800;
+color:#000;
+border-color:#ff9800;
+}
+.m-btn{
+background:#222;
+color:#fff;
+border:1px solid #555;
+padding:14px 5px;
+border-radius:10px;
+font-size:20px;
+font-weight:bold;
+cursor:pointer;
+}
+.selected-cat-heading{
+display:block;
+text-align:center;
+padding:14px 5px;
+border-radius:10px;
+font-size:20px;
+font-weight:bold;
+color:#fff;
+}
+.cat-head{
+padding:14px;
+border-radius:10px;
+font-weight:bold;
+text-align:center;
+margin:22px 0 10px;
+font-size:23px;
+}
+.shop-card{
+position:relative;
+display:flex;
+align-items:center;
+gap:12px;
+padding:14px;
+background:#1a1a1a;
+border-radius:12px;
+margin-bottom:10px;
+text-decoration:none;
+color:#fff;
+border:1px solid #333;
+}
+.shop-card img{
+width:36px;
+height:36px;
+background:#fff;
+border-radius:6px;
+padding:2px;
+}
+.sl{
+width:30px;
+color:#ff9800;
+font-size:20px;
+font-weight:bold;
+}
+.affiliate-dot{
+position:absolute;
+top:6px;
+left:6px;
+color:#fff;
+font-size:22px;
+font-weight:bold;
+line-height:1;
+pointer-events:none;
+}
+.more-btn{
+text-align:center;
+padding:12px;
+background:#ffffff;
+color:#000;
+border-radius:10px;
+margin-top:8px;
+margin-bottom:15px;
+font-size:20px;
+font-weight:bold;
+cursor:pointer;
+}
+@media (max-width:700px){
+.country-btns{grid-template-columns:repeat(2,1fr);}
+}
+</style>
+
+<script>
+const countries = [
+"Afghanistan","Albania","Algeria","Andorra","Angola","Argentina","Armenia","Australia","Austria","Azerbaijan",
+"Bahamas","Bahrain","Bangladesh","Barbados","Belarus","Belgium","Belize","Benin","Bhutan","Bolivia",
+"Bosnia","Botswana","Brazil","Brunei","Bulgaria","Burkina Faso","Burundi","Cambodia","Cameroon","Canada",
+"Cape Verde","Chad","Chile","China","Colombia","Comoros","Congo","Costa Rica","Croatia","Cuba",
+"Cyprus","Denmark","Djibouti","Dominica","Dominican Republic","Ecuador","Egypt","El Salvador","Equatorial Guinea","Eritrea",
+"Estonia","Ethiopia","Fiji","Finland","France","Gabon","Gambia","Georgia","Germany","Ghana",
+"Greece","Grenada","Guatemala","Guinea","Guyana","Haiti","Honduras","Hungary","Iceland","India",
+"Indonesia","Iran","Iraq","Ireland","Israel","Italy","Jamaica","Japan","Jordan","Kazakhstan",
+"Kenya","Kiribati","Kuwait","Kyrgyzstan","Laos","Latvia","Lebanon","Lesotho","Liberia","Libya",
+"Liechtenstein","Lithuania","Luxembourg","Madagascar","Malawi","Malaysia","Maldives","Mali","Malta","Marshall Islands",
+"Mauritania","Mauritius","Mexico","Micronesia","Moldova","Monaco","Mongolia","Montenegro","Morocco","Mozambique",
+"Myanmar","Namibia","Nauru","Nepal","Netherlands","New Zealand","Nicaragua","Niger","Nigeria","North Korea",
+"North Macedonia","Norway","Oman","Pakistan","Palau","Palestine","Panama","Papua New Guinea","Paraguay","Peru",
+"Philippines","Poland","Portugal","Qatar","Romania","Russia","Rwanda","Saint Kitts and Nevis","Saint Lucia","Saint Vincent",
+"Samoa","San Marino","Sao Tome and Principe","Saudi Arabia","Senegal","Serbia","Seychelles","Sierra Leone","Singapore","Slovakia",
+"Slovenia","Solomon Islands","Somalia","South Africa","South Korea","South Sudan","Spain","Sri Lanka","Sudan","Suriname",
+"Sweden","Switzerland","Syria","Taiwan","Tajikistan","Tanzania","Thailand","Timor-Leste","Togo","Tonga",
+"Trinidad and Tobago","Tunisia","Turkey","Turkmenistan","Tuvalu","Uganda","Ukraine","United Arab Emirates","United Kingdom","United States",
+"Uruguay","Uzbekistan","Vanuatu","Vatican City","Venezuela","Vietnam","Yemen","Zambia","Zimbabwe"
+];
+
+const topButtonCountries = [
+"India","United States","United Kingdom","Canada","Australia","Germany","France","Italy","Japan","United Arab Emirates"
+];
+
+const colors = {
+"General":"#2196f3",
+"Fashion":"#e91e63",
+"Beauty":"#9c27b0",
+"Electronics":"#ff5722",
+"Health":"#4caf50",
+"Travel":"#00bcd4"
+};
+
+const COUNTRY_JSON_MAP = {
+  india: "https://pub-168159db07cc407eaa28228eb2520ea5.r2.dev/1.json"
+};
+
+let shops = [];
+let currentCountry = "india";
+let activeCategory = null;
+let expandedCategories = {};
+let mainOrder = ["General","Fashion","Beauty","Electronics","Health","Travel"];
+
+function normalizeCountry(name){
+  return String(name || "").trim().toLowerCase();
+}
+
+function safeText(v){
+  return String(v || "").trim();
+}
+
+function getShopUrl(s){
+  return safeText(s.u || s.url || "#");
+}
+
+function getShopName(s){
+  return safeText(s.n || s.name || "SHOP");
+}
+
+function getShopCategory(s){
+  return safeText(s.c || s.category || "General");
+}
+
+function getShopFeatured(s){
+  return Number(s.f || 0);
+}
+
+function getShopDomain(s){
+  const raw = getShopUrl(s);
+  try { return new URL(raw).hostname; } catch(e){ return safeText(s.d || s.domain || raw); }
+}
+
+function hasAffiliateDot(s){
+  return safeText(s.a) !== "";
+}
+
+function buildCountryDropdown(){
+  const select = document.getElementById("countryDropdown");
+  select.innerHTML = '<option value="">SEARCH ALL COUNTRIES</option>';
+  countries.forEach(country => {
+    const option = document.createElement("option");
+    option.value = normalizeCountry(country);
+    option.textContent = country.toUpperCase();
+    select.appendChild(option);
+  });
+  select.value = "india";
+  select.addEventListener("change", function(){
+    if(this.value) setCountry(this.value);
+  });
+}
+
+function buildCountryButtons(){
+  const wrap = document.getElementById("countryButtons");
+  wrap.innerHTML = "";
+  topButtonCountries.forEach(country => {
+    const btn = document.createElement("button");
+    btn.className = "country-btn";
+    btn.type = "button";
+    btn.dataset.country = normalizeCountry(country);
+    btn.textContent = country.toUpperCase();
+    btn.onclick = function(){ setCountry(normalizeCountry(country)); };
+    wrap.appendChild(btn);
+  });
+}
+
+function setActiveButton(country){
+  document.querySelectorAll(".country-btn").forEach(btn => btn.classList.remove("active"));
+  const activeBtn = document.querySelector('.country-btn[data-country="' + country + '"]');
+  if(activeBtn) activeBtn.classList.add("active");
+}
+
+function createTopShopCard(shop){
+  const url = getShopUrl(shop);
+  const name = getShopName(shop);
+  const category = getShopCategory(shop);
+  const domain = getShopDomain(shop);
+  const dotHTML = hasAffiliateDot(shop) ? '<span class="affiliate-dot">.</span>' : '';
+
+  const a = document.createElement("a");
+  a.className = "shop-btn";
+  a.href = url || "#";
+  a.target = "_blank";
+  a.rel = "noopener noreferrer";
+  a.innerHTML =
+    dotHTML +
+    '<img class="shop-logo" width="42" height="42" alt="' + name.replace(/"/g,'&quot;') + '" src="https://www.google.com/s2/favicons?sz=64&domain_url=' + encodeURIComponent(domain) + '">' +
+    '<div class="shop-info"><b>' + name + '</b><small>' + category + '</small></div>';
+  return a;
+}
+
+function renderTopShops(data){
+  const container = document.getElementById("topShopList");
+  container.innerHTML = "";
+
+  const topTen = (data || [])
+    .filter(s => getShopFeatured(s) >= 1 && getShopFeatured(s) <= 10)
+    .sort((a,b) => getShopFeatured(a) - getShopFeatured(b))
+    .slice(0,10);
+
+  if(!topTen.length){
+    container.innerHTML = "<p style='color:#fff;text-align:center;padding:20px;'>NO TOP 10 SHOPS FOUND</p>";
+    return;
+  }
+
+  topTen.forEach(shop => container.appendChild(createTopShopCard(shop)));
+}
+
+function rebuildCategoryOrder(){
+  mainOrder = ["General","Fashion","Beauty","Electronics","Health","Travel"];
+  shops.forEach(shop => {
+    const cat = getShopCategory(shop);
+    if(cat && !mainOrder.includes(cat)) mainOrder.push(cat);
+  });
+}
+
+function initButtons(){
+  const box = document.getElementById("cat-buttons");
+  box.innerHTML = mainOrder.map(c => {
+    const borderCol = colors[c] || "#666";
+    return `<button class="m-btn" onclick="filterCat('${c.replace(/'/g, "\\'")}')" style="border-bottom:3px solid ${borderCol}">${c}</button>`;
+  }).join("");
+}
+
+function filterCat(cat){
+  activeCategory = cat;
+  expandedCategories[cat] = false;
+  document.getElementById("findShop").value = "";
+  const filtered = shops.filter(s => getShopCategory(s) === cat);
+  renderCategoryShops(filtered, true);
+}
+
+function resetCategory(){
+  activeCategory = null;
+  expandedCategories = {};
+  document.getElementById("findShop").value = "";
+  renderCategoryShops(shops, false);
+}
+
+function createCategoryCard(s, col, i){
+  const card = document.createElement("a");
+  card.className = "shop-card";
+  card.href = getShopUrl(s);
+  card.target = "_blank";
+  card.rel = "noopener noreferrer";
+  card.style.borderLeft = "6px solid " + col;
+
+  const domain = getShopDomain(s);
+  const name = getShopName(s);
+  const tag = safeText(s.t || s.tag || "");
+  const dotHTML = hasAffiliateDot(s) ? '<span class="affiliate-dot">.</span>' : '';
+
+  if(domain.toLowerCase().includes("aliexpress.com")){
+    card.onclick = (e) => {
+      e.preventDefault();
+      alert("This shop is banned in India. You cannot purchase from here.");
+    };
+  }
+
+  card.innerHTML =
+    dotHTML +
+    '<div class="sl">' + (i + 1) + '.</div>' +
+    '<img src="https://www.google.com/s2/favicons?sz=64&domain_url=' + encodeURIComponent(domain) + '">' +
+    '<div><b>' + name + '</b><br><span style="font-size:14px;color:#bbb;">' + tag + '</span></div>';
+
+  return card;
+}
+
+function renderCategoryShops(data, isFiltered=false){
+  const container = document.getElementById("shop-container");
+  const selectedCatContainer = document.getElementById("selected-cat-container");
+  container.innerHTML = "";
+
+  if(activeCategory){
+    selectedCatContainer.style.display = "block";
+    selectedCatContainer.innerHTML = '<div class="selected-cat-heading" style="background:' + (colors[activeCategory] || '#666') + '">' + activeCategory + '</div>';
+  } else {
+    selectedCatContainer.style.display = "none";
+    selectedCatContainer.innerHTML = "";
+  }
+
+  const grouped = {};
+  data.forEach(s => {
+    const catName = getShopCategory(s);
+    if(!grouped[catName]) grouped[catName] = [];
+    grouped[catName].push(s);
+  });
+
+  const orderToShow = activeCategory ? [activeCategory] : mainOrder;
+
+  orderToShow.forEach(cat => {
+    if(grouped[cat] && grouped[cat].length){
+      const col = colors[cat] || "#666";
+
+      const head = document.createElement("div");
+      head.className = "cat-head";
+      head.style.background = col;
+      head.innerText = cat;
+      container.appendChild(head);
+
+      const isExpanded = expandedCategories[cat] || false;
+      const totalItems = grouped[cat].length;
+      const maxSearch = document.getElementById("findShop").value.trim() !== "";
+      const limit = (totalItems > 7 && !isExpanded && !maxSearch) ? 7 : totalItems;
+
+      for(let i = 0; i < limit; i++){
+        container.appendChild(createCategoryCard(grouped[cat][i], col, i));
+      }
+
+      if(totalItems > 7 && !maxSearch){
+        const btn = document.createElement("div");
+        btn.className = "more-btn";
+        btn.innerText = isExpanded ? "LESS -" : "MORE +";
+        btn.onclick = () => toggle(cat);
+        container.appendChild(btn);
+      }
+    }
+  });
+}
+
+function toggle(cat){
+  expandedCategories[cat] = !expandedCategories[cat];
+  if(activeCategory){
+    const filtered = shops.filter(s => getShopCategory(s) === activeCategory);
+    renderCategoryShops(filtered, true);
+  } else {
+    renderCategoryShops(shops, false);
+  }
+}
+
+function liveSearch(){
+  const val = document.getElementById("findShop").value.toLowerCase().trim();
+
+  if(!val){
+    if(activeCategory){
+      const filtered = shops.filter(s => getShopCategory(s) === activeCategory);
+      renderCategoryShops(filtered, true);
+    } else {
+      renderCategoryShops(shops, false);
+    }
+    return;
+  }
+
+  const baseList = activeCategory ? shops.filter(s => getShopCategory(s) === activeCategory) : shops;
+  const filtered = baseList.filter(s => getShopName(s).toLowerCase().includes(val));
+  renderCategoryShops(filtered, true);
+}
+
+async function loadCountryShops(country){
+  document.getElementById("topShopList").innerHTML = "<p style='color:#fff;text-align:center;padding:20px;'>LOADING TOP 10 SHOPS...</p>";
+  document.getElementById("shop-container").innerHTML = "<p style='color:#fff;text-align:center;padding:20px;'>LOADING ALL SHOPS...</p>";
+
+  try{
+    const url = COUNTRY_JSON_MAP[country];
+    if(!url){
+      shops = [];
+      rebuildCategoryOrder();
+      initButtons();
+      renderTopShops([]);
+      renderCategoryShops([], false);
+      document.getElementById("shop-container").innerHTML = "<p style='color:#ff9800;text-align:center;padding:20px;'>JSON NOT ADDED YET FOR " + country.toUpperCase() + "</p>";
+      return;
+    }
+
+    const response = await fetch(url);
+    const data = await response.json();
+    shops = Array.isArray(data) ? data : (Array.isArray(data.shops) ? data.shops : []);
+
+    rebuildCategoryOrder();
+    initButtons();
+    activeCategory = null;
+    expandedCategories = {};
+    document.getElementById("findShop").value = "";
+
+    renderTopShops(shops);
+    renderCategoryShops(shops, false);
+  } catch(error){
+    console.error(error);
+    document.getElementById("topShopList").innerHTML = "<p style='color:#ff9800;text-align:center;padding:20px;'>ERROR LOADING TOP 10 SHOPS</p>";
+    document.getElementById("shop-container").innerHTML = "<p style='color:#ff9800;text-align:center;padding:20px;'>ERROR LOADING ALL SHOPS</p>";
+  }
+}
+
+function setCountry(country){
+  currentCountry = normalizeCountry(country || "india");
+  document.getElementById("countryDropdown").value = currentCountry;
+  document.getElementById("selectedCountryBtn").textContent = "SELECTED COUNTRY / " + currentCountry.toUpperCase();
+  document.getElementById("shopCountryTitle").textContent = "SHOP ON " + currentCountry.toUpperCase() + " SHOPS";
+  document.getElementById("allShopTitle").textContent = "ALL " + currentCountry.toUpperCase() + " SHOPS";
+  setActiveButton(currentCountry);
+  loadCountryShops(currentCountry);
+}
+
+document.addEventListener("DOMContentLoaded", function(){
+  buildCountryDropdown();
+  buildCountryButtons();
+  setCountry("india");
+});
+</script>
 <style>
 .compare-box{
 background:#000;
