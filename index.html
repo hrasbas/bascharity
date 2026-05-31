@@ -803,16 +803,17 @@ setCountry(saved);
 } 
 
 // നിങ്ങളുടെ FEATURED SHOPS ലോജിക് പുതിയ വേരിയബിളിലേക്ക് കണക്ട് ചെയ്ത് ഫിൽട്ടർ ചെയ്യുന്ന ഭാഗം
-function filterShopsByCountryAndCategory(countryName) {
-let countryShops = allShops.filter(s => {
-let cName = normalizeCountry(s.country || s.c);
-return cName === countryName;
-});
+function filterShopsByCountryAndCategory() {
 
-// നിങ്ങൾ നൽകിയ ലോജിക് (f വാല്യൂ 1 മുതൽ 10 വരെയുള്ള ഷോപ്പുകൾ ഫിൽട്ടർ ചെയ്യുന്നു)
-const featured = countryShops.filter(
-s => Number(s.f) >= 1 && Number(s.f) <= 10
+const featured =
+allShops.filter(
+s => Number(s.f) >= 1 &&
+     Number(s.f) <= 10
 );
+
+displayFeaturedShops(featured);
+
+}
 
 // നിങ്ങളുടെ ഒറിജിനൽ Shop Box ഡിസൈനിലേക്ക് ഡാറ്റ എത്തിക്കുന്നു
 displayFeaturedShops(featured);
