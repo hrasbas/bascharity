@@ -848,13 +848,149 @@ document.addEventListener("DOMContentLoaded", () => {
 populateCountries();
 loadShops();
 });
+
+  <style>
+.country-box { max-width:900px; width:96%; margin:25px auto; padding:15px; background:#000; border:1px solid #ff9800; border-radius:15px; font-family:Arial,sans-serif; }
+.country-title { background:#333; color:#fff; font-weight:900; text-align:center; padding:10px; border-radius:10px; border:1px solid #ff9800; border-left:6px solid #ff9800; margin-bottom:10px; }
+.country-grid { display:grid; grid-template-columns:repeat(2, 1fr); gap:8px; }
+.country-btn { background:#333; color:#fff; padding:10px; text-align:center; border-radius:10px; border:1px solid #ff9800; border-left:6px solid #ff9800; font-weight:bold; cursor:pointer; }
+.country-btn.active { background:#ff9800; color:#000; }
+.all-country select { width:100%; padding:15px; border-radius:12px; border:1px solid #ff9800; border-left:8px solid #ff9800; background:#333; color:#fff; font-weight:900; font-size:18px; cursor:pointer; margin-top:12px; text-align-last:center; text-transform:uppercase; }
+
+/* FEATURED SHOPS STYLE */
+.featured-container { max-width:900px; width:96%; margin:20px auto; padding:15px; }
+.featured-title-box { background:#000; border-radius:14px; padding:15px; border:1px solid #ff9800; border-left:8px solid #ff9800; text-align:center; margin-bottom: 15px; }
+.featured-title-box h3 { margin:0; font-size:22px; font-weight:900; color:#ff9800; text-transform:uppercase; }
+.shop-btn { position:relative; display:flex; align-items:center; background:#1a1a1a; border-radius:12px; padding:12px; margin-bottom:10px; text-decoration:none; color:#fff; border:1px solid #ff9800; border-left:6px solid #ff9800; cursor:pointer; }
+.warning-dot { position:absolute; top:2px; left:5px; color:#fff; font-size:14px; z-index: 10; }
+.shop-info b { font-size:20px; display:block; }
+</style>
+
+<div class="country-box">
+<div class="country-title">SELECT COUNTRY</div>
+<div class="country-grid">
+<div class="country-btn" data-country="afghanistan" onclick="setCountry('afghanistan', this)">Afghanistan</div>
+</div>
+<div class="all-country">
+<select id="countryDropdown" onchange="setCountry(this.value, null)">
+<option value="" disabled selected>SEARCH ALL COUNTRIES</option>
+</select>
+</div>
+</div>
+
+<div class="featured-container">
+<div class="featured-title-box">
+<h3 id="shopCountryTitle">FEATURED SHOPS (AFGHANISTAN)</h3>
+</div>
+<div id="featuredShopList"></div>
+</div>
+
+<script>
+const JSON_FILES = ["https://pub-168159db07cc407eaa28228eb2520ea5.r2.dev/1.json"];
+const countries = ["afghanistan"];
+let countryShops = {};
+let currentCountry = "afghanistan"; 
+
+function populateCountries() {
+const select = document.getElementById("countryDropdown");
+if(!select) return;
+select.innerHTML = '<option value="" disabled selected>SEARCH ALL COUNTRIES</option>';
+countries.forEach(c => {
+let opt = document.createElement("option");
+opt.value = c;
+opt.text = c.toUpperCase();
+select.add(opt);
+});
+}
+
+function normalizeCountry(c) {
+return String(c || "").toLowerCase().trim();
+}
+
+function setCountry(country, btn) {
+if (!country) return;
+currentCountry = normalizeCountry(country);
+
+document.querySelectorAll(".country-btn").forEach(b => b.classList.remove("active"));
+const activeBtn = btn || document.querySelector(".country-btn[data-country='"+currentCountry+"']");
+if (activeBtn) activeBtn.classList.add("active");
+
+const dropdown = document.getElementById("countryDropdown");
+if (dropdown) dropdown.value = currentCountry;
+
+document.getElementById("shopCountryTitle").innerText = "FEATURED SHOPS (" + currentCountry.toUpperCase() + ")";
+renderFeaturedShops(countryShops[currentCountry] || []);
+}
+
+// f1 മുതൽ f10 വരെയുള്ള ഷോപ്പുകൾ മാത്രം ഫിൽട്ടർ ചെയ്ത് കാണിക്കുന്ന ഫംഗ്ഷൻ
+function renderFeaturedShops(list) {
+const container = document.getElementById("featuredShopList");
+if(!container) return;
+container.innerHTML = "";
+
+// കൺട്രി മാച്ച് ചെയ്യുന്ന ഷോപ്പുകളിൽ നിന്നും f1 മുതൽ f10 വരെയുള്ളവ മാത്രം എടുക്കുന്നു
+const featuredList = list.filter(shop => {
+let fid = shop.f_id || shop.fid || "";
+if (fid) {
+let num = parseInt(fid.replace(/[^0-9]/g, ''), 10);
+return num >= 1 && num <= 10;
+}
+return false;
+});
+
+if (featuredList.length === 0) {
+container.innerHTML = "<p style='color:#fff; text-align:center; padding:20px;'>NO FEATURED SHOPS (F1-F10) FOUND FOR " + currentCountry.toUpperCase() + "...</p>";
+return;
+}
+
+// f1, f2, f3 ക്രമത്തിൽ സോർട്ട് ചെയ്യുന്നു
+featuredList.sort((a, b) => {
+let numA = parseInt((a.f_id || a.fid || "").replace(/[^0-9]/g, ''), 10);
+let numB = parseInt((b.f_id || b.fid || "").replace(/[^0-9]/g, ''), 10);
+return numA - numB;
+});
+
+featuredList.forEach(shop => {
+const a = document.createElement("a");
+a.className = "shop-btn";
+a.href = shop.url || shop.u;
+a.target = "_blank";
+let name = shop.name || shop.n;
+a.innerHTML = '<span class="warning-dot">.</span><div class="shop-info notranslate"><b>' + name + '</b></div>';
+container.appendChild(a);
+});
+}
+
+async function loadShops() {
+for (const url of JSON_FILES) {
+try {
+const response = await fetch(url);
+if (!response.ok) continue;
+const data = await response.json();
+const shopsArray = Array.isArray(data) ? data : (data.shops || []);
+
+shopsArray.forEach(s => {
+if (s) {
+let c = normalizeCountry(s.country);
+if (!countryShops[c]) countryShops[c] = [];
+countryShops[c].push(s);
+}
+});
+} catch (e) {
+console.error("Fetch failed: ", e);
+}
+}
+setCountry("afghanistan");
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+populateCountries();
+loadShops();
+});
 </script>
 
-</body>
-</html>
+</script>
 
-
-  
 <style>
 .compare-box{
 background:#000;
