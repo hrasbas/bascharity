@@ -651,153 +651,393 @@ ball.className = "bas-ball is-pwa-installed";
 </script>
  <!------------country---------------->
  <!-- 1. Country Selector Section -->
-  
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
+        * {
             margin: 0;
-            padding: 20px;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         }
+
+        body {
+            background-color: #f0f4f8;
+            padding: 25px;
+            color: #2c3e50;
+        }
+
         .container {
             max-width: 1200px;
             margin: 0 auto;
         }
-        /* കൺട്രീ ബോക്സ് സ്റ്റൈൽ */
-        .country-box {
+
+        header {
+            text-align: center;
+            margin-bottom: 30px;
             background: #fff;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-            margin-bottom: 20px;
-            border-left: 5px solid #007bff;
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
         }
-        .country-box h1 {
-            margin: 0 0 10px 0;
+
+        h1 {
+            color: #1a365d;
+            font-size: 26px;
+            margin-bottom: 8px;
             text-transform: capitalize;
-            color: #333;
         }
-        .country-box p {
-            margin: 0;
-            color: #666;
+
+        p.subtitle {
+            color: #718096;
+            font-size: 15px;
         }
-        /* ഷോപ്പുകൾ വരാനുള്ള ഗ്രിഡ് ലേഔട്ട് */
+
+        /* Country Selection Box */
+        .country-box-container {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 35px;
+        }
+
+        .country-select-box {
+            background: #fff;
+            padding: 18px 30px;
+            border-radius: 50px;
+            box-shadow: 0 10px 25px rgba(52, 152, 219, 0.15);
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            border: 2px solid #3182ce;
+        }
+
+        .country-select-box label {
+            font-weight: bold;
+            color: #2b6cb0;
+            font-size: 16px;
+        }
+
+        .country-select-box select {
+            padding: 8px 20px;
+            font-size: 16px;
+            border-radius: 25px;
+            border: 1px solid #cbd5e0;
+            outline: none;
+            cursor: pointer;
+            background-color: #fff;
+            font-weight: 500;
+            color: #4a5568;
+            transition: border 0.2s;
+        }
+
+        .country-select-box select:focus {
+            border-color: #3182ce;
+        }
+
+        /* Section Styling */
+        .section-title {
+            margin: 30px 0 20px 0;
+            color: #1a365d;
+            font-size: 22px;
+            font-weight: 700;
+            border-left: 6px solid #4a5568;
+            padding-left: 12px;
+        }
+
+        /* Signature Color for Featured Section */
+        .featured-title {
+            border-left-color: #38a169; /* Signature Green */
+            color: #22543d;
+        }
+
+        /* Responsive Grid Box */
         .shops-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-            gap: 20px;
-            margin-bottom: 30px;
+            grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+            gap: 25px;
+            margin-bottom: 40px;
         }
-        /* ഓരോ ഷോപ്പ് ബോക്സിന്റെയും ഡിസൈൻ */
-        .shop-box {
+
+        /* Standard Shop Box Style */
+        .shop-card {
             background: #fff;
-            padding: 15px;
-            border-radius: 6px;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
-            border: 1px solid #ddd;
-            transition: transform 0.2s;
+            border-radius: 12px;
+            padding: 25px 20px;
+            text-align: center;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.03);
+            transition: all 0.3s ease;
+            position: relative;
+            border-top: 5px solid #2b6cb0; /* Signature Blue for normal shops */
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            height: 200px;
         }
-        .shop-box:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+
+        .shop-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 20px rgba(0,0,0,0.08);
         }
-        .shop-box a {
-            text-decoration: none;
-            color: inherit;
+
+        /* Featured Shop Box (With Signature Green) */
+        .shop-card.featured {
+            border-top: 5px solid #38a169; /* Signature Green */
+            background: #f7fafc;
+            box-shadow: 0 4px 15px rgba(56, 161, 105, 0.1);
         }
-        .shop-box h3 {
-            margin: 0 0 8px 0;
-            color: #007bff;
-            text-transform: capitalize;
+
+        .shop-card.featured:hover {
+            box-shadow: 0 12px 25px rgba(56, 161, 105, 0.2);
         }
-        .shop-box p {
-            margin: 0 0 10px 0;
-            font-size: 0.9em;
-            color: #555;
-        }
-        .category {
-            display: inline-block;
-            background: #e9ecef;
-            color: #495057;
-            padding: 3px 8px;
-            border-radius: 4px;
-            font-size: 0.8em;
+
+        /* Top Badge for Featured */
+        .featured-badge {
+            position: absolute;
+            top: -12px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: #38a169;
+            color: white;
+            font-size: 11px;
+            padding: 3px 12px;
+            border-radius: 20px;
             font-weight: bold;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            letter-spacing: 0.5px;
         }
-        .section-title {
-            font-size: 1.5em;
-            color: #333;
-            margin: 20px 0 10px 0;
-            border-bottom: 2px solid #ddd;
-            padding-bottom: 5px;
+
+        /* Icon & Name Styling inside the box */
+        .shop-info-wrapper {
+            margin-bottom: 10px;
+        }
+
+        .shop-icon {
+            font-size: 32px;
+            margin-bottom: 8px;
+            display: block;
+        }
+
+        .shop-name {
+            font-size: 19px;
+            font-weight: 700;
+            color: #2d3748;
+            text-transform: capitalize;
+            margin-bottom: 6px;
+            line-height: 1.3;
+        }
+
+        .shop-category {
+            display: inline-block;
+            background: #edf2f7;
+            color: #4a5568;
+            font-size: 11px;
+            padding: 2px 8px;
+            border-radius: 4px;
+            text-transform: uppercase;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+        }
+
+        /* Button Link */
+        .shop-link {
+            display: block;
+            background: #2b6cb0;
+            color: #fff;
+            text-decoration: none;
+            padding: 10px 15px;
+            border-radius: 8px;
+            font-size: 14px;
+            font-weight: 600;
+            transition: background 0.2s;
+            margin-top: auto;
+        }
+
+        .shop-link:hover {
+            background: #2c5282;
+        }
+
+        /* Green Button for Featured Shop Box */
+        .shop-card.featured .shop-link {
+            background: #38a169;
+        }
+        .shop-card.featured .shop-link:hover {
+            background: #2f855a;
+        }
+
+        .no-data {
+            text-align: center;
+            grid-column: 1 / -1;
+            padding: 40px;
+            color: #a0aec0;
+            background: #fff;
+            border-radius: 12px;
+            font-size: 16px;
         }
     </style>
 </head>
 <body>
 
 <div class="container">
-    <div class="country-box">
-        <h1 id="country-name">Loading Country...</h1>
-        <p id="country-details">Please wait...</p>
+
+    <header>
+        <h1 id="country-heading">Shops Directory</h1>
+        <p class="subtitle" id="country-details">Please select a country from the dropdown below to explore platforms.</p>
+    </header>
+
+    <div class="country-box-container">
+        <div class="country-select-box">
+            <label for="country-dropdown">Choose Country:</label>
+            <select id="country-dropdown" onchange="loadCountryData()">
+                <option value="">-- Select --</option>
+                <option value="afghanistan">Afghanistan</option>
+            </select>
+        </div>
     </div>
 
-    <div class="section-title">Featured Shops (Top 10)</div>
-    <div id="featured-shops-container" class="shops-grid"></div>
+    <div id="featured-section" style="display: none;">
+        <div class="section-title featured-title">⭐ Featured Platforms (ഫീച്ചേർഡ് ഷോപ്പുകൾ)</div>
+        <div class="shops-grid" id="featured-shops-container"></div>
+    </div>
+
+    <div id="all-shops-section" style="display: none;">
+        <div class="section-title">🌐 General Services (മറ്റ് സേവനങ്ങൾ)</div>
+        <div class="shops-grid" id="all-shops-container"></div>
+    </div>
+
 </div>
 
 <script>
-// കൺട്രി വിവരങ്ങളും 10 ഫീച്ചേർഡ് ഷോപ്പുകളും മാത്രമുള്ള ജാവാസ്ക്രിപ്റ്റ് ഡാറ്റ
-const jsonData = {
-   "countryinfo": {     
-     "name": "afghanistan shops",     
-     "details": "verified local shops global services and essential platforms"   
-   },   
-   "shops": [     
-     { "id": "1.1", "n": "aseel", "u": "https://aseelapp.com", "a": "", "c": "general", "d": "aseelapp.com", "f": 1 },
-     { "id": "1.2", "n": "azizi kart", "u": "https://azizikart.com", "a": "", "c": "general", "d": "azizikart.com", "f": 2 },
-     { "id": "1.3", "n": "baazar af", "u": "https://baazar.af", "a": "", "c": "general", "d": "baazar.af", "f": 3 },
-     { "id": "1.4", "n": "kabul computer", "u": "https://kabulcomputer.com", "a": "", "c": "electronics", "d": "kabulcomputer.com", "f": 4 },
-     { "id": "1.5", "n": "zarsam tech", "u": "https://zarsam.com", "a": "", "c": "electronics", "d": "zarsam.com", "f": 5 },
-     { "id": "1.6", "n": "kam air", "u": "https://www.kamair.com", "a": "", "c": "travel", "d": "kamair.com", "f": 6 },
-     { "id": "1.7", "n": "afghan wireless", "u": "https://www.afghan-wireless.com", "a": "", "c": "telecom", "d": "afghan-wireless.com", "f": 7 },
-     { "id": "1.8", "n": "roshan", "u": "https://www.roshan.af", "a": "", "c": "telecom", "d": "roshan.af", "f": 8 },
-     { "id": "1.9", "n": "etisalat afghanistan", "u": "https://www.etisalat.af", "a": "", "c": "telecom", "d": "etisalat.af", "f": 9 },
-     { "id": "1.10", "n": "salaam network", "u": "https://salaam.af", "a": "", "c": "telecom", "d": "salaam.af", "f": 10 }
-   ]
-};
-
-// ഡാറ്റ പേജിലേക്ക് ലോഡ് ചെയ്യാനുള്ള ഫങ്ഷൻ
-function loadDashboard(data) {
-    // കൺട്രി ഇൻഫോ ഡിസ്പ്ലേ ചെയ്യുന്നു
-    document.getElementById('country-name').innerText = data.countryinfo.name;
-    document.getElementById('country-details').innerText = data.countryinfo.details;
-
-    const featuredContainer = document.getElementById('featured-shops-container');
-    featuredContainer.innerHTML = '';
-
-    // 10 ഫീച്ചേർഡ് ഷോപ്പുകൾ മാത്രം ലൂപ്പ് ചെയ്ത് ഡിസ്പ്ലേ ചെയ്യുന്നു
-    data.shops.forEach(shop => {
-        if (shop.f && shop.f >= 1 && shop.f <= 10) {
-            const shopHTML = `
-                <div class="shop-box">
-                    <a href="${shop.u}" target="_blank">
-                        <h3>${shop.n}</h3>
-                        <p>${shop.d}</p>
-                        <span class="category">${shop.c}</span>
-                    </a>
-                </div>
-            `;
-            featuredContainer.innerHTML += shopHTML;
-        }
-    });
+// കാറ്റഗറിക്ക് അനുസരിച്ച് ഓട്ടോമാറ്റിക് ഐക്കൺ നൽകാനുള്ള ഫംഗ്ഷൻ
+function getCategoryIcon(category) {
+    const icons = {
+        "general": "🛍️",
+        "electronics": "💻",
+        "travel": "✈️",
+        "telecom": "📱",
+        "technology": "⚙️",
+        "services": "🛠️",
+        "finance": "💳",
+        "entertainment": "🎬",
+        "media": "📰",
+        "sports": "🏏",
+        "grocery": "🍏"
+    };
+    return icons[category.toLowerCase()] || "🏪"; // ഡെഫോൾട്ട് ഐക്കൺ
 }
 
-// പേേജ് ലോഡ് ആകുമ്പോൾ ഫങ്ഷൻ പ്രവർത്തിപ്പിക്കുന്നു
-window.onload = function() {
-    loadDashboard(jsonData);
+// നിങ്ങളുടെ പുതിയ ഡാറ്റ
+const database = {
+    "afghanistan": {
+        "countryinfo": {
+            "name": "afghanistan shops",
+            "details": "verified local shops, global services and essential platforms"
+        },
+        "shops": [
+            {"id": "1.1", "n": "aseel", "u": "https://aseelapp.com", "a": "", "c": "general", "d": "aseelapp.com", "f": 1},
+            {"id": "1.2", "n": "azizi kart", "u": "https://azizikart.com", "a": "", "c": "general", "d": "azizikart.com", "f": 2},
+            {"id": "1.3", "n": "baazar af", "u": "https://baazar.af", "a": "", "c": "general", "d": "baazar.af", "f": 3},
+            {"id": "1.4", "n": "kabul computer", "u": "https://kabulcomputer.com", "a": "", "c": "electronics", "d": "kabulcomputer.com", "f": 4},
+            {"id": "1.5", "n": "zarsam tech", "u": "https://zarsam.com", "a": "", "c": "electronics", "d": "zarsam.com", "f": 5},
+            {"id": "1.6", "n": "kam air", "u": "https://www.kamair.com", "a": "", "c": "travel", "d": "kamair.com", "f": 6},
+            {"id": "1.7", "n": "afghan wireless", "u": "https://www.afghan-wireless.com", "a": "", "c": "telecom", "d": "afghan-wireless.com", "f": 7},
+            {"id": "1.8", "n": "roshan", "u": "https://www.roshan.af", "a": "", "c": "telecom", "d": "roshan.af", "f": 8},
+            {"id": "1.9", "n": "etisalat afghanistan", "u": "https://www.etisalat.af", "a": "", "c": "telecom", "d": "etisalat.af", "f": 9},
+            {"id": "1.10", "n": "salaam network", "u": "https://salaam.af", "a": "", "c": "telecom", "d": "salaam.af", "f": 10},
+            {"id": "1.11", "n": "amazon", "u": "https://www.amazon.com", "a": "", "c": "general", "d": "amazon.com"},
+            {"id": "1.12", "n": "ebay", "u": "https://www.ebay.com", "a": "", "c": "general", "d": "ebay.com"},
+            {"id": "1.13", "n": "aliexpress", "u": "https://www.aliexpress.com", "a": "", "c": "general", "d": "aliexpress.com"},
+            {"id": "1.14", "n": "booking", "u": "https://www.booking.com", "a": "", "c": "travel", "d": "booking.com"},
+            {"id": "1.15", "n": "agoda", "u": "https://www.agoda.com", "a": "", "c": "travel", "d": "agoda.com"}
+        ]
+    }
 };
-</script>
 
+// Dropdown Work ചെയ്യുന്ന ഫംഗ്ഷൻ
+function loadCountryData() {
+    const selectedCountry = document.getElementById("country-dropdown").value;
+    
+    const heading = document.getElementById("country-heading");
+    const details = document.getElementById("country-details");
+    const featuredSection = document.getElementById("featured-section");
+    const allShopsSection = document.getElementById("all-shops-section");
+    
+    const featuredContainer = document.getElementById("featured-shops-container");
+    const allShopsContainer = document.getElementById("all-shops-container");
+
+    // മുൻപ് ലോഡ് ചെയ്തവ ക്ലിയർ ചെയ്യുക
+    featuredContainer.innerHTML = "";
+    allShopsContainer.innerHTML = "";
+
+    if (!selectedCountry || !database[selectedCountry]) {
+        heading.innerText = "Shops Directory";
+        details.innerText = "Please select a country from the dropdown below to explore platforms.";
+        featuredSection.style.display = "none";
+        allShopsSection.style.display = "none";
+        return;
+    }
+
+    const countryData = database[selectedCountry];
+    heading.innerText = countryData.countryinfo.name;
+    details.innerText = countryData.countryinfo.details;
+
+    const allShops = countryData.shops;
+
+    // 10 ഫീച്ചേർഡ് ഷോപ്പുകൾ മാത്രം ഫിൽട്ടർ ചെയ്യുന്നു (f <= 10)
+    const featuredShops = allShops
+        .filter(shop => shop.hasOwnProperty('f') && shop.f !== null && shop.f !== "")
+        .sort((a, b) => a.f - b.f)
+        .slice(0, 10);
+
+    // സാധാരണ ഷോപ്പുകൾ
+    const regularShops = allShops.filter(shop => !shop.hasOwnProperty('f') || shop.f === null || shop.f === "");
+
+    // ഫീച്ചേർഡ് ബോക്സുകൾ നിർമ്മിക്കുന്നു
+    if (featuredShops.length > 0) {
+        featuredSection.style.display = "block";
+        featuredShops.forEach(shop => {
+            const icon = getCategoryIcon(shop.c);
+            const card = document.createElement("div");
+            card.className = "shop-card featured";
+            card.innerHTML = `
+                <span class="featured-badge">RANK ${shop.f}</span>
+                <div class="shop-info-wrapper">
+                    <span class="shop-icon">${icon}</span>
+                    <div class="shop-name">${shop.n}</div>
+                    <div class="shop-category">${shop.c}</div>
+                </div>
+                <a href="${shop.u}" target="_blank" class="shop-link">Visit Website</a>
+            `;
+            featuredContainer.appendChild(card);
+        });
+    } else {
+        featuredSection.style.display = "none";
+    }
+
+    // സാധാരണ ബോക്സുകൾ നിർമ്മിക്കുന്നു
+    if (regularShops.length > 0) {
+        allShopsSection.style.display = "block";
+        regularShops.forEach(shop => {
+            const icon = getCategoryIcon(shop.c);
+            const card = document.createElement("div");
+            card.className = "shop-card";
+            card.innerHTML = `
+                <div class="shop-info-wrapper">
+                    <span class="shop-icon">${icon}</span>
+                    <div class="shop-name">${shop.n}</div>
+                    <div class="shop-category">${shop.c}</div>
+                </div>
+                <a href="${shop.u}" target="_blank" class="shop-link">Visit Website</a>
+            `;
+            allShopsContainer.appendChild(card);
+        });
+    } else {
+        if(featuredShops.length === 0) {
+            allShopsSection.style.display = "block";
+            allShopsContainer.innerHTML = `<div class="no-data">No services listed for this area.</div>`;
+        } else {
+            allShopsSection.style.display = "none";
+        }
+    }
+}
+</script>
 <style>
 .compare-box{
 background:#000;
