@@ -675,6 +675,124 @@ ball.className = "bas-ball is-pwa-installed";
 .return-note{ font-size:22px; color:#fff; text-align:center; }
 .return-note b{ color:#FFD700; font-size:16px; }
 </style>
+  <div class="country-box">
+
+    <div class="country-title">
+        COUNTRY SELECTION
+    </div>
+
+    <input
+        type="text"
+        id="countrySearch"
+        placeholder="🔍 SEARCH COUNTRY"
+        onkeyup="filterCountries()"
+        style="
+        width:100%;
+        padding:15px;
+        border-radius:12px;
+        border:1px solid #ff9800;
+        border-left:8px solid #ff9800;
+        background:#333;
+        color:#fff;
+        font-size:18px;
+        box-sizing:border-box;
+        margin-bottom:10px;
+        ">
+
+    <select
+        id="countryDropdown"
+        onchange="setCountry(this.value)"
+        style="
+        width:100%;
+        padding:15px;
+        border-radius:12px;
+        border:1px solid #ff9800;
+        border-left:8px solid #ff9800;
+        background:#333;
+        color:#fff;
+        font-size:18px;
+        box-sizing:border-box;
+        ">
+    </select>
+
+</div>
+
+<script>
+
+function populateCountries() {
+
+    const select =
+    document.getElementById(
+        "countryDropdown"
+    );
+
+    select.innerHTML = "";
+
+    countries.forEach(country => {
+
+        const option =
+        document.createElement(
+            "option"
+        );
+
+        option.value =
+        country.toLowerCase();
+
+        option.textContent =
+        country;
+
+        select.appendChild(
+            option
+        );
+
+    });
+
+}
+
+function filterCountries() {
+
+    const search =
+    document.getElementById(
+        "countrySearch"
+    ).value.toLowerCase();
+
+    const select =
+    document.getElementById(
+        "countryDropdown"
+    );
+
+    select.innerHTML = "";
+
+    countries
+    .filter(country =>
+        country
+        .toLowerCase()
+        .includes(search)
+    )
+    .forEach(country => {
+
+        const option =
+        document.createElement(
+            "option"
+        );
+
+        option.value =
+        country.toLowerCase();
+
+        option.textContent =
+        country;
+
+        select.appendChild(
+            option
+        );
+
+    });
+
+}
+
+populateCountries();
+
+</script>
 </head>
 <body>
 
