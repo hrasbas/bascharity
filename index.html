@@ -741,6 +741,21 @@ if (c === "united kingdom" || c === "uk") return "uk";
 return c;
 }
 
+
+
+function selectCountry(country){
+
+   selectedCountry = country;
+
+   document.getElementById(
+      "selected-country"
+   ).textContent = country;
+
+   loadFeaturedShops(country);
+}
+
+
+  
 function setCountry(country, btn) {
 if (!country) return;
 currentCountry = normalizeCountry(country);
@@ -988,8 +1003,14 @@ populateCountries();
 loadShops();
 });
 </script>
-
-</script>
+  
+<script>
+const featured =
+shops.filter(
+   s => Number(s.f) >= 1 &&
+        Number(s.f) <= 10
+);
+  </script>
 
 <style>
 .compare-box{
