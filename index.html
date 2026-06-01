@@ -809,7 +809,8 @@ function populateCountries() {
 
 populateCountries();
   
-alert(countries.length);
+const select = document.getElementById("countryDropdown");
+alert(select.options.length);
 function normalizeCountry(c) {
 c = (c || "").toLowerCase().trim();
 if (c === "saudi arabia" || c === "saudi") return "saudi";
