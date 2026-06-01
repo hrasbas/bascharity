@@ -650,8 +650,7 @@ ball.className = "bas-ball is-pwa-installed";
 </script>
  <!------------country---------------->
  <!-- 1. Country Selector Section -->
-          
-                <style>
+     <style>
 .country-box { max-width:900px; width:96%; margin:25px auto; padding:15px; background:#000; border:1px solid #ff9800; border-radius:15px; font-family:Arial,sans-serif; }
 .country-title { background:#333; color:#fff; font-weight:900; text-align:center; padding:10px; border-radius:10px; border:1px solid #ff9800; border-left:6px solid #ff9800; margin-bottom:10px; }
 .country-grid { display:grid; grid-template-columns:repeat(2, 1fr); gap:8px; }
@@ -709,112 +708,50 @@ ball.className = "bas-ball is-pwa-installed";
 <div id="shopList"></div>
 </div>
 
-<div class="compare-box">
-<button class="compare-btn">COMPARE PRICES</button>
-<div class="return-note">
-YOUR PURCHASE SATISFIES A HUNGER <br>
-<b>When you shop through BAS International Charity, it becomes food for someone in a corner of the world.</b>
-</div>
-</div>
-
 <script>
 const JSON_FILES = [
-"https://pub-168159db07cc407eaa28228eb2520ea5.r2.dev/j1.json",
-"https://pub-168159db07cc407eaa28228eb2520ea5.r2.dev/j2.json",
-"https://pub-168159db07cc407eaa28228eb2520ea5.r2.dev/j3.json",
-"https://pub-168159db07cc407eaa28228eb2520ea5.r2.dev/j4.json",
-"https://pub-168159db07cc407eaa28228eb2520ea5.r2.dev/j5.json",
-"https://pub-168159db07cc407eaa28228eb2520ea5.r2.dev/j6.json",
-"https://pub-168159db07cc407eaa28228eb2520ea5.r2.dev/j7.json",
-"https://pub-168159db07cc407eaa28228eb2520ea5.r2.dev/j8.json",
-"https://pub-168159db07cc407eaa28228eb2520ea5.r2.dev/j9.json",
-"https://pub-168159db07cc407eaa28228eb2520ea5.r2.dev/j10.json",
-"https://pub-168159db07cc407eaa28228eb2520ea5.r2.dev/j11.json",
-"https://pub-168159db07cc407eaa28228eb2520ea5.r2.dev/j12.json",
-"https://pub-168159db07cc407eaa28228eb2520ea5.r2.dev/j13.json",
-"https://pub-168159db07cc407eaa28228eb2520ea5.r2.dev/j14.json",
-"https://pub-168159db07cc407eaa28228eb2520ea5.r2.dev/j15.json",
-"https://pub-168159db07cc407eaa28228eb2520ea5.r2.dev/j16.json",
-"https://pub-168159db07cc407eaa28228eb2520ea5.r2.dev/j17.json",
-"https://pub-168159db07cc407eaa28228eb2520ea5.r2.dev/j18.json",
-"https://pub-168159db07cc407eaa28228eb2520ea5.r2.dev/j19.json",
-"https://pub-168159db07cc407eaa28228eb2520ea5.r2.dev/j20.json",
-"https://pub-168159db07cc407eaa28228eb2520ea5.r2.dev/j21.json"
+"https://pub-168159db07cc407eaa28228eb2520ea5.r2.dev/1.json",
+"https://pub-168159db07cc407eaa28228eb2520ea5.r2.dev/2.json",
+"https://pub-168159db07cc407eaa28228eb2520ea5.r2.dev/3.json",
+"https://pub-168159db07cc407eaa28228eb2520ea5.r2.dev/4.json",
+"https://pub-168159db07cc407eaa28228eb2520ea5.r2.dev/5.json",
+"https://pub-168159db07cc407eaa28228eb2520ea5.r2.dev/6.json",
+"https://pub-168159db07cc407eaa28228eb2520ea5.r2.dev/7.json",
+"https://pub-168159db07cc407eaa28228eb2520ea5.r2.dev/8.json",
+"https://pub-168159db07cc407eaa28228eb2520ea5.r2.dev/9.json",
+"https://pub-168159db07cc407eaa28228eb2520ea5.r2.dev/10.json",
+"https://pub-168159db07cc407eaa28228eb2520ea5.r2.dev/11.json",
+"https://pub-168159db07cc407eaa28228eb2520ea5.r2.dev/12.json",
+"https://pub-168159db07cc407eaa28228eb2520ea5.r2.dev/13.json",
+"https://pub-168159db07cc407eaa28228eb2520ea5.r2.dev/14.json",
+"https://pub-168159db07cc407eaa28228eb2520ea5.r2.dev/15.json",
+"https://pub-168159db07cc407eaa28228eb2520ea5.r2.dev/16.json",
+"https://pub-168159db07cc407eaa28228eb2520ea5.r2.dev/17.json",
+"https://pub-168159db07cc407eaa28228eb2520ea5.r2.dev/18.json",
+"https://pub-168159db07cc407eaa28228eb2520ea5.r2.dev/19.json",
+"https://pub-168159db07cc407eaa28228eb2520ea5.r2.dev/20.json",
+"https://pub-168159db07cc407eaa28228eb2520ea5.r2.dev/21.json"
 ];
+
 
 let countryShops = {};
 let currentCountry = "india";
 const crisisCountries = ["afghanistan", "belarus", "cuba", "iran", "libya", "myanmar", "north korea", "palestine", "russia", "somalia", "south sudan", "sudan", "syria", "venezuela", "yemen"];
 
-const countries = ["Afghanistan","Albania","Algeria","Andorra",
-                   "Angola","Argentina","Armenia","Australia",
-                   "Austria","Azerbaijan","Bahamas","Bahrain",
-                   "Bangladesh","Barbados","Belarus","Belgium",
-                   "Belize","Benin","Bhutan","Bolivia","Bosnia",
-                   "Botswana","Brazil","Brunei","Bulgaria",
-                   "Burkina Faso","Burundi","Cambodia","Cameroon",
-                   "Canada","Cape Verde","Chad","Chile","China",
-                   "Colombia","Comoros","Congo","Costa Rica",
-                   "Croatia","Cuba","Cyprus","Denmark","Djibouti",
-                   "Dominica","Dominican Republic","Ecuador",
-                   "Egypt","El Salvador","Equatorial Guinea",
-                   "Eritrea","Estonia","Ethiopia","Fiji","Finland",
-                   "France","Gabon","Gambia","Georgia","Germany",
-                   "Ghana","Greece","Grenada","Guatemala","Guinea",
-                   "Guyana","Haiti","Honduras","Hungary","Iceland",
-                   "India","Indonesia","Iran","Iraq","Ireland","Israel",
-                   "Italy","Jamaica","Japan","Jordan","Kazakhstan",
-                   "Kenya","Kiribati","Kuwait","Kyrgyzstan","Laos",
-                   "Latvia","Lebanon","Lesotho","Liberia","Libya",
-                   "Liechtenstein","Lithuania","Luxembourg","Madagascar",
-                   "Malawi","Malaysia","Maldives","Mali","Malta",
-                   "Marshall Islands","Mauritania","Mauritius",
-                   "Mexico","Micronesia","Moldova","Monaco","Mongolia",
-                   "Montenegro","Morocco","Mozambique","Myanmar","Namibia",
-                   "Nauru","Nepal","Netherlands","New Zealand",
-                   "Nicaragua","Niger","Nigeria","North Korea",
-                   "North Macedonia","Norway","Oman","Pakistan",
-                   "Palau","Palestine","Panama","Papua New Guinea",
-                   "Paraguay","Peru","Philippines","Poland","Portugal","Qatar","Romania","Russia","Rwanda","Saint Kitts and Nevis","Saint Lucia","Saint Vincent","Samoa","San Marino","Sao Tome and Principe","Saudi Arabia","Senegal","Serbia","Seychelles","Sierra Leone","Singapore","Slovakia","Slovenia","Solomon Islands","Somalia","South Africa","South Korea","South Sudan","Spain","Sri Lanka","Sudan","Suriname","Sweden","Switzerland","Syria","Taiwan","Tajikistan","Tanzania","Thailand","Timor-Leste","Togo","Tonga","Trinidad and Tobago","Tunisia","Turkey","Turkmenistan","Tuvalu","Uganda","Ukraine","United Arab Emirates","United Kingdom","United States","Uruguay","Uzbekistan","Vanuatu","Vatican City","Venezuela","Vietnam",
-                   "Yemen","Zambia","Zimbabwe"];
-
-<select id="countryDropdown">
-<option value="" disabled selected>
-SEARCH ALL COUNTRIES
-
+const countries = ["Afghanistan","Albania","Algeria","Andorra","Angola","Argentina","Armenia","Australia","Austria","Azerbaijan","Bahamas","Bahrain","Bangladesh","Barbados","Belarus","Belgium","Belize","Benin","Bhutan","Bolivia","Bosnia","Botswana","Brazil","Brunei","Bulgaria","Burkina Faso","Burundi","Cambodia","Cameroon","Canada","Cape Verde","Chad","Chile","China","Colombia","Comoros","Congo","Costa Rica","Croatia","Cuba","Cyprus","Denmark","Djibouti","Dominica","Dominican Republic","Ecuador","Egypt","El Salvador","Equatorial Guinea","Eritrea","Estonia","Ethiopia","Fiji","Finland","France","Gabon","Gambia","Georgia","Germany","Ghana","Greece","Grenada","Guatemala","Guinea","Guyana","Haiti","Honduras","Hungary","Iceland","India","Indonesia","Iran","Iraq","Ireland","Israel","Italy","Jamaica","Japan","Jordan","Kazakhstan","Kenya","Kiribati","Kuwait","Kyrgyzstan","Laos","Latvia","Lebanon","Lesotho","Liberia","Libya","Liechtenstein","Lithuania","Luxembourg","Madagascar","Malawi","Malaysia","Maldives","Mali","Malta","Marshall Islands","Mauritania","Mauritius","Mexico","Micronesia","Moldova","Monaco","Mongolia","Montenegro","Morocco","Mozambique","Myanmar","Namibia","Nauru","Nepal","Netherlands","New Zealand","Nicaragua","Niger","Nigeria","North Korea","North Macedonia","Norway","Oman","Pakistan","Palau","Palestine","Panama","Papua New Guinea","Paraguay","Peru","Philippines","Poland","Portugal","Qatar","Romania","Russia","Rwanda","Saint Kitts and Nevis","Saint Lucia","Saint Vincent","Samoa","San Marino","Sao Tome and Principe","Saudi Arabia","Senegal","Serbia","Seychelles","Sierra Leone","Singapore","Slovakia","Slovenia","Solomon Islands","Somalia","South Africa","South Korea","South Sudan","Spain","Sri Lanka","Sudan","Suriname","Sweden","Switzerland","Syria","Taiwan","Tajikistan","Tanzania","Thailand","Timor-Leste","Togo","Tonga","Trinidad and Tobago","Tunisia","Turkey","Turkmenistan","Tuvalu","Uganda","Ukraine","United Arab Emirates","United Kingdom","United States","Uruguay","Uzbekistan","Vanuatu","Vatican City","Venezuela","Vietnam","Yemen","Zambia","Zimbabwe"];
 
 function populateCountries() {
-
-    const select =
-    document.getElementById(
-        "countryDropdown"
-    );
-
-    countries.forEach(country => {
-
-        const option =
-        document.createElement(
-            "option"
-        );
-
-        option.value =
-        country.toLowerCase();
-
-        option.textContent =
-        country;
-
-        select.appendChild(
-            option
-        );
-
-    });
-
+const select = document.getElementById("countryDropdown");
+if(!select) return;
+select.innerHTML = '<option value="" disabled selected>SEARCH ALL COUNTRIES</option>';
+countries.forEach(c => {
+let opt = document.createElement("option");
+opt.value = c.toLowerCase();
+opt.text = c.toUpperCase();
+select.add(opt);
+});
 }
 
-populateCountries();
-
-const select = document.getElementById("countryDropdown");
-alert(select.options.length);
 function normalizeCountry(c) {
 c = (c || "").toLowerCase().trim();
 if (c === "saudi arabia" || c === "saudi") return "saudi";
@@ -931,8 +868,9 @@ document.addEventListener("DOMContentLoaded", () => {
 populateCountries();
 loadShops();
 });
-  
 </script>
+     
+
 <style>
 .compare-box{
 background:#000;
