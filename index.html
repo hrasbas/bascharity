@@ -650,8 +650,6 @@ ball.className = "bas-ball is-pwa-installed";
 </script>
  <!------------country---------------->
  <!-- 1. Country Selector Section -->
-              
-
           
                 <style>
 .country-box { max-width:900px; width:96%; margin:25px auto; padding:15px; background:#000; border:1px solid #ff9800; border-radius:15px; font-family:Arial,sans-serif; }
@@ -783,33 +781,7 @@ const countries = ["Afghanistan","Albania","Algeria","Andorra",
 <select id="countryDropdown">
 <option value="" disabled selected>
 SEARCH ALL COUNTRIES
-</option>
-</select>
 
-<script>
-
-const countries = [
-"Afghanistan",
-"Albania",
-"Algeria",
-"Australia",
-"Canada",
-"France",
-"Germany",
-"India",
-"Iran",
-"Iraq",
-"Japan",
-"Kuwait",
-"Oman",
-"Qatar",
-"Saudi Arabia",
-"UAE",
-"UK",
-"USA",
-"Yemen",
-"Zimbabwe"
-];
 
 function populateCountries() {
 
@@ -841,9 +813,6 @@ function populateCountries() {
 
 populateCountries();
 
-</script>
-
-  
 const select = document.getElementById("countryDropdown");
 alert(select.options.length);
 function normalizeCountry(c) {
