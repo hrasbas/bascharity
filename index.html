@@ -2194,7 +2194,7 @@ if(target) target.scrollIntoView({ behavior:"smooth", block:"start" });
 }
 </script>
 <!------------------Catogaryshop---------------->
-
+ 
 <style>
 #bas-mega-portal{
 width:96%;
@@ -2214,8 +2214,7 @@ color:#fff;
 padding:0 15px;
 margin-bottom:12px;
 font-size:23px;
-box-sizing:border-box;
-outline:none;
+box-sizing: border-box;
 }
 
 /* CATEGORY BOX */
@@ -2227,7 +2226,7 @@ background:#111;
 margin-bottom:15px;
 }
 
-/* BUTTON GRID */
+/* BUTTON GRID - 10 BUTTONS (Grid Adjusted) */
 .btn-grid{
 display:grid;
 grid-template-columns:repeat(3,1fr);
@@ -2242,7 +2241,27 @@ padding:14px 5px;
 border-radius:10px;
 font-size:20px;
 font-weight:bold;
-cursor:pointer;
+cursor: pointer;
+transition: 0.2s;
+}
+.m-btn:hover {
+background: #333;
+}
+
+/* തനിയെ താഴെ ആഡ് ആവുന്ന കാറ്റഗറി ഹെഡിങ് */
+#selected-cat-container {
+margin-top: 10px;
+margin-bottom: 10px;
+display: none;
+}
+.selected-cat-heading {
+display: block;
+text-align: center;
+padding: 14px 5px;
+border-radius: 10px;
+font-size: 20px;
+font-weight: bold;
+color: #fff;
 }
 
 /* CATEGORY HEAD */
@@ -2253,12 +2272,11 @@ font-weight:bold;
 text-align:center;
 margin:22px 0 10px;
 font-size:23px;
-color:#fff;
 }
 
 /* SHOP CARD */
 .shop-card{
-position:relative;
+position: relative;
 display:flex;
 align-items:center;
 gap:12px;
@@ -2277,7 +2295,6 @@ height:36px;
 background:#fff;
 border-radius:6px;
 padding:2px;
-flex-shrink:0;
 }
 
 .sl{
@@ -2285,37 +2302,18 @@ width:30px;
 color:#ff9800;
 font-size:20px;
 font-weight:bold;
-flex-shrink:0;
 }
 
-.shop-main{
-display:flex;
-flex-direction:column;
-min-width:0;
-}
-
-.shop-name{
-font-weight:bold;
-word-break:break-word;
-}
-
-.shop-tag{
-font-size:15px;
-color:#ffb74d;
-display:block;
-word-break:break-word;
-}
-
-/* Affiliate dot only */
-.aff-dot{
-position:absolute;
-top:6px;
-left:6px;
-color:#ff0000;
-font-size:18px;
-font-weight:bold;
-line-height:1;
-pointer-events:none;
+/* Direct Link - Left Top റെഡ് ഡോട്ട് */
+.direct-dot {
+position: absolute;
+top: 6px;
+left: 6px;
+width: 8px;
+height: 8px;
+background-color: #ff0000;
+border-radius: 50%;
+pointer-events: none;
 }
 
 /* MORE BUTTON */
@@ -2326,38 +2324,29 @@ background:#ffffff;
 color:#000;
 border-radius:10px;
 margin-top:8px;
-margin-bottom:15px;
+margin-bottom: 15px;
 font-size:20px;
 font-weight:bold;
-cursor:pointer;
+cursor: pointer;
 }
 
-/* BACK BUTTON */
+/* BACK BUTTON (LONG BUTTON) */
 .reset-link{
 display:block;
 text-align:center;
-margin-top:12px;
+margin-bottom:15px;
 background:#ff9800;
 color:#000;
-padding:12px;
+padding:14px;
 border-radius:10px;
-font-size:20px;
+font-size:21px;
 font-weight:bold;
 text-decoration:none;
-cursor:pointer;
+cursor: pointer;
+transition: 0.2s;
 }
-
-@media (max-width:600px){
-#bas-mega-portal,
-#findShop,
-.cat-head{
-font-size:18px;
-}
-.m-btn,
-.more-btn,
-.reset-link{
-font-size:17px;
-}
+.reset-link:hover {
+background: #e08600;
 }
 </style>
 </head>
@@ -2365,319 +2354,254 @@ font-size:17px;
 
 <div id="bas-mega-portal">
 
-<input id="findShop" type="text" placeholder="Search shops...">
+<input id="findShop" onkeyup="liveSearch()" placeholder="Search shops...">
 
 <div id="cat-search-box">
+<span class="reset-link" onclick="resetCategory()">🔙 Back to All Shops</span>
+
 <div class="btn-grid" id="cat-buttons"></div>
-<span class="reset-link" id="resetBtn">← Back to All Shops</span>
 </div>
+
+<div id="selected-cat-container"></div>
 
 <div id="shop-container"></div>
 
 </div>
 
 <script>
-const JSON_FILES = [
-"https://pub-168159db07cc407eaa28228eb2520ea5.r2.dev/1.json",
-"https://pub-168159db07cc407eaa28228eb2520ea5.r2.dev/32.json",
-"https://pub-168159db07cc407eaa28228eb2520ea5.r2.dev/33.json"
-];
-
-const colors = {
+// 11 സിഗ്നേച്ചർ കാറ്റഗറികൾക്കുള്ള കളർ കോഡിംഗ് (All ബട്ടൺ ഉൾപ്പെടെ പുതിയവ ചേർത്തു)
+const colors={
 "General":"#2196f3",
 "Fashion":"#e91e63",
 "Beauty":"#9c27b0",
 "Electronics":"#ff5722",
 "Health":"#4caf50",
-"Travel":"#00bcd4"
+"Travel":"#00bcd4",
+"Grocery":"#8bc34a",
+"Home & Decor":"#ff9800",
+"Sports":"#009688",
+"Entertainment":"#673ab7"
 };
 
-const defaultCategories = ["General","Fashion","Beauty","Electronics","Health","Travel"];
+// നിങ്ങൾ നിശ്ചയിച്ച 10 പ്രധാന ഇൻഡിപെൻഡന്റ് കാറ്റഗറികൾ
+let mainOrder=["General","Fashion","Beauty","Electronics","Health","Travel","Grocery","Home & Decor","Sports","Entertainment"];
 
-let allLoadedShops = [];
-let currentCountryShops = [];
+let shops = [];
 let activeCategory = null;
 let expandedCategories = {};
-let mainOrder = [...defaultCategories];
-let currentCountry = "";
 
-function normalizeCountry(c){
-c = String(c || "").toLowerCase().trim();
-if (c === "saudi arabia" || c === "saudi") return "saudi";
-if (c === "united states" || c === "usa") return "usa";
-if (c === "united arab emirates" || c === "uae") return "uae";
-if (c === "united kingdom" || c === "uk") return "uk";
-return c;
-}
+window.onload = () => {
+fetch("https://pub-168159db07cc407eaa28228eb2520ea5.r2.dev/1%20india.json")
+.then(res => res.json())
+.then(data => {
+shops = data;
 
-function escapeHtml(str){
-return String(str || "")
-.replace(/&/g, "&amp;")
-.replace(/</g, "&lt;")
-.replace(/>/g, "&gt;")
-.replace(/"/g, "&quot;")
-.replace(/'/g, "&#39;");
-}
-
-function getCategoryName(shop){
-return shop.c || shop.category || "General";
-}
-
-function getShopUrl(shop){
-return shop.u || shop.url || "#";
-}
-
-function getShopName(shop){
-return shop.n || shop.name || "";
-}
-
-function getShopTag(shop){
-return shop.t || shop.tag || "";
-}
-
-function getShopId(shop, index){
-return shop.id || (index + 1);
-}
-
-function getShopDomain(shop){
-if (shop.d || shop.domain) return String(shop.d || shop.domain);
-try {
-return new URL(getShopUrl(shop)).hostname;
-} catch (e) {
-return "";
-}
-}
-
-function isAffiliateShop(shop){
-const value = shop.is_affiliate;
-if (value === false || value === "false" || value === 0 || value === "0") return false;
-return true;
-}
-
-function prepareCategories(list){
-mainOrder = [...defaultCategories];
-list.forEach(shop => {
-const catName = getCategoryName(shop);
-if (catName && !mainOrder.includes(catName)) {
-mainOrder.push(catName);
+// JSON ഫയലിൽ പുതിയ കാറ്റഗറികൾ സ്വയം കണ്ടുപിടിക്കുമ്പോൾ ലിസ്റ്റിലേക്ക് ആഡ് ചെയ്യാനുള്ള ലോജിക്
+shops.forEach(shop => {
+let catField = shop.c || shop.category;
+if (catField) {
+if (Array.isArray(catField)) {
+catField.forEach(cName => {
+if (cName && !mainOrder.includes(cName)) {
+mainOrder.push(cName);
 }
 });
+} else {
+if (!mainOrder.includes(catField)) {
+mainOrder.push(catField);
 }
-
-async function loadAllJsonFiles(){
-const container = document.getElementById("shop-container");
-container.innerHTML = "<p style='color:#fff; text-align:center; padding:20px;'>Loading shops...</p>";
-
-allLoadedShops = [];
-
-for (const url of JSON_FILES) {
-try {
-const response = await fetch(url);
-if (!response.ok) continue;
-
-const data = await response.json();
-const shopsArray = Array.isArray(data) ? data : (Array.isArray(data.shops) ? data.shops : []);
-
-shopsArray.forEach(shop => {
-if (shop && (shop.u || shop.url) && (shop.n || shop.name)) {
-allLoadedShops.push(shop);
+}
 }
 });
-} catch (e) {
-console.error("Fetch failed for:", url);
-}
-}
 
-currentCountryShops = [...allLoadedShops];
-prepareCategories(currentCountryShops);
 initButtons();
-render(currentCountryShops, false);
-}
-
-function filterShopsByCountry(countryName){
-currentCountry = normalizeCountry(countryName);
-activeCategory = null;
-expandedCategories = {};
-document.getElementById("findShop").value = "";
-
-currentCountryShops = allLoadedShops.filter(shop => {
-const countryValue = normalizeCountry(shop.country);
-return countryValue === currentCountry;
+render(shops, false);
+})
+.catch(err => {
+console.error("Error loading JSON:", err);
 });
+};
 
-prepareCategories(currentCountryShops);
-initButtons();
-render(currentCountryShops, false);
-}
-
+/* 10 സിഗ്നേച്ചർ കാറ്റഗറി ബട്ടണുകൾ നിർമ്മിക്കുന്നു */
 function initButtons(){
-const box = document.getElementById("cat-buttons");
-if (!box) return;
-
-box.innerHTML = mainOrder.map(cat => {
-const borderCol = colors[cat] || "#666";
-return `<button type="button" class="m-btn" data-cat="${escapeHtml(cat)}" style="border-bottom:3px solid ${borderCol}">${escapeHtml(cat)}</button>`;
+let box=document.getElementById("cat-buttons");
+box.innerHTML=mainOrder.map(c=> {
+let borderCol = colors[c] || "#666";
+return <button class="m-btn" onclick="filterCat('${c}')"
+style="border-bottom:3px solid ${borderCol}"&gt;${c}</button>`;
 }).join("");
-
-box.querySelectorAll(".m-btn").forEach(btn => {
-btn.addEventListener("click", function(){
-filterCat(this.getAttribute("data-cat"));
-});
-});
 }
 
+/* ഫിൽട്ടർ ലോജിക് (ഒരു ഷോപ്പിന് ഒന്നിലധികം കാറ്റഗറികൾ Array രൂപത്തിൽ വന്നാലും വർക്ക് ചെയ്യും) */
 function filterCat(cat){
 activeCategory = cat;
 expandedCategories[cat] = false;
 document.getElementById("findShop").value = "";
 
-const filtered = currentCountryShops.filter(shop => getCategoryName(shop) === cat);
+let filtered = shops.filter(s => {
+let catField = s.c || s.category;
+if (Array.isArray(catField)) {
+return catField.includes(cat);
+}
+return catField === cat;
+});
 render(filtered, true);
 }
 
-function resetCategory(){
+/* റീസെറ്റ് ലോജിക് (Back to all shops - Headings സഹിതം കാണിക്കാൻ) */
+function resetCategory() {
 activeCategory = null;
 expandedCategories = {};
 document.getElementById("findShop").value = "";
-render(currentCountryShops, false);
+render(shops, false);
 }
 
-function render(data, isFiltered = false){
-const container = document.getElementById("shop-container");
-if (!container) return;
+/* റെൻഡർ എഞ്ചിൻ (Array കാറ്റഗറി ലോജിക് പൂർണ്ണമായി സപ്പോർട്ട് ചെയ്യുന്നു) */
+function render(data, isFiltered=false){
+let container=document.getElementById("shop-container");
+let selectedCatContainer = document.getElementById("selected-cat-container");
 
-container.innerHTML = "";
+container.innerHTML="";
 
-if (!Array.isArray(data) || data.length === 0) {
-container.innerHTML = `<p style="color:#ff9800; text-align:center; font-size:18px; padding:20px;">${currentCountry ? "IN PROGRESS FOR " + currentCountry.toUpperCase() + "..." : "NO SHOPS AVAILABLE..."}</p>`;
-return;
+if(activeCategory) {
+selectedCatContainer.style.display = "block";
+selectedCatContainer.innerHTML = <div class="selected-cat-heading" style="background:${colors[activeCategory] || '#666'}">${activeCategory}&lt;/div>;
+} else {
+selectedCatContainer.style.display = "none";
+selectedCatContainer.innerHTML = "";
 }
 
-const grouped = {};
-data.forEach(shop => {
-const catName = getCategoryName(shop);
-if (!grouped[catName]) grouped[catName] = [];
-grouped[catName].push(shop);
+// ഷോപ്പുകളെ അവയുടെ കാറ്റഗറികൾക്ക് അനുസരിച്ച് ഗ്രൂപ്പ് ചെയ്യുന്നു (Array ഗ്രൂപ്പിംഗ് ലോജിക്)
+let grouped={};
+data.forEach(s=>{
+let catField = s.c || s.category || "General";
+if (Array.isArray(catField)) {
+catField.forEach(cName => {
+if(!grouped[cName]) grouped[cName]=[];
+// ഡ്യൂപ്ലിക്കേഷൻ ഒഴിവാക്കാൻ
+if(!grouped[cName].includes(s)) {
+grouped[cName].push(s);
+}
+});
+} else {
+if(!grouped[catField]) grouped[catField]=[];
+grouped[catField].push(s);
+}
 });
 
-const orderToShow = activeCategory ? [activeCategory] : mainOrder;
-const searchActive = document.getElementById("findShop").value.trim() !== "";
+let orderToShow = activeCategory ? [activeCategory] : mainOrder;
 
-orderToShow.forEach(cat => {
-if (!grouped[cat] || grouped[cat].length === 0) return;
+orderToShow.forEach(cat=>{
+if(grouped[cat] && grouped[cat].length > 0){
+let col=colors[cat] || "#666";
 
-const col = colors[cat] || "#666";
-
-const head = document.createElement("div");
-head.className = "cat-head";
-head.style.background = col;
-head.textContent = cat;
+let head=document.createElement("div");
+head.className="cat-head";
+head.style.background=col;
+head.innerText=cat;
 container.appendChild(head);
 
-const totalItems = grouped[cat].length;
-const isExpanded = expandedCategories[cat] || false;
-const limit = (totalItems > 7 && !isExpanded && !searchActive) ? 7 : totalItems;
+let isExpanded = expandedCategories[cat] || false;
+let totalItems = grouped[cat].length;
 
-for (let i = 0; i < limit; i++) {
-const shop = grouped[cat][i];
-const url = getShopUrl(shop);
-const name = getShopName(shop);
-const tag = getShopTag(shop);
-const id = getShopId(shop, i);
-const domain = getShopDomain(shop);
-const affiliate = isAffiliateShop(shop);
+let maxSearch = document.getElementById("findShop").value.trim() !== "";
+let limit = (totalItems > 7 && !isExpanded && !maxSearch) ? 7 : totalItems;
 
-const card = document.createElement("a");
-card.className = "shop-card";
-card.href = url;
-card.target = "_blank";
-card.rel = "noopener noreferrer";
-card.style.borderLeft = "6px solid " + col;
+for(let i=0; i<limit; i++) {
+let s = grouped[cat][i];
+let card=document.createElement("a");
+card.className="shop-card";
+card.href=s.u || s.url;
+card.target="_blank";
+card.style.borderLeft="6px solid "+col;
 
-if (currentCountry === "india" && domain.toLowerCase().includes("aliexpress.com")) {
-card.addEventListener("click", function(e){
+let domain = s.d || s.domain || "";
+if(domain.toLowerCase().includes("aliexpress.com")) {
+card.onclick = (e) => {
 e.preventDefault();
 alert("This shop is banned in India. You cannot purchase from here.");
-});
+};
 }
 
-const dotHTML = affiliate ? '<div class="aff-dot">( . )</div>' : '';
-const favUrl = `https://www.google.com/s2/favicons?domain=${encodeURIComponent(domain || url)}&sz=64`;
+let isAffiliate = s.is_affiliate !== undefined ? s.is_affiliate : true;
+let dotHTML = (!isAffiliate || isAffiliate === "false" || isAffiliate === false) ? '<div class="direct-dot"></div>' : '';
 
-card.innerHTML = `
-${dotHTML}
-<div class="sl">${escapeHtml(id)}</div>
-<img src="${favUrl}" alt="${escapeHtml(name)}" loading="lazy" width="36" height="36">
-<div class="shop-main">
-<span class="shop-name">${escapeHtml(name)}</span>
-${tag ? `<span class="shop-tag">${escapeHtml(tag)}</span>` : ""}
-</div>
+let name = s.n || s.name;
+let id = s.id || "";
+let tag = s.t || s.tag || "";
+
+card.innerHTML=${dotHTML}
+<div class="sl"> {domain}">
+<div><b> {tag}</span></div>
 `;
 
 container.appendChild(card);
 }
 
-if (totalItems > 7 && !searchActive) {
-const btn = document.createElement("div");
-btn.className = "more-btn";
-btn.textContent = isExpanded ? "LESS -" : "MORE +";
-btn.addEventListener("click", function(){
-toggle(cat);
-});
+if(totalItems > 7 && !maxSearch) {
+let btn=document.createElement("div");
+btn.className="more-btn";
+btn.innerText = isExpanded ? "LESS -" : "MORE +";
+btn.onclick=()=>toggle(cat);
 container.appendChild(btn);
 }
+}
 });
 }
 
+/* MORE / LESS ടോഗിൾ */
 function toggle(cat){
 expandedCategories[cat] = !expandedCategories[cat];
-
-if (activeCategory) {
-const filtered = currentCountryShops.filter(shop => getCategoryName(shop) === activeCategory);
+if(activeCategory) {
+let filtered = shops.filter(s => {
+let catField = s.c || s.category;
+if (Array.isArray(catField)) return catField.includes(activeCategory);
+return catField === activeCategory;
+});
 render(filtered, true);
 } else {
-render(currentCountryShops, false);
+render(shops, false);
 }
 }
 
+/* LIVE SEARCH */
 function liveSearch(){
-const val = document.getElementById("findShop").value.toLowerCase().trim();
-
-if (!val) {
-if (activeCategory) {
-const filtered = currentCountryShops.filter(shop => getCategoryName(shop) === activeCategory);
+let val=document.getElementById("findShop").value.toLowerCase().trim();
+if(!val){
+if(activeCategory) {
+let filtered = shops.filter(s => {
+let catField = s.c || s.category;
+if (Array.isArray(catField)) return catField.includes(activeCategory);
+return catField === activeCategory;
+});
 render(filtered, true);
 } else {
-render(currentCountryShops, false);
+render(shops, false);
 }
 return;
 }
 
-const baseList = activeCategory
-? currentCountryShops.filter(shop => getCategoryName(shop) === activeCategory)
-: currentCountryShops;
+let baseList = activeCategory ? shops.filter(s => {
+let catField = s.c || s.category;
+if (Array.isArray(catField)) return catField.includes(activeCategory);
+return catField === activeCategory;
+}) : shops;
 
-const filtered = baseList.filter(shop =>
-getShopName(shop).toLowerCase().includes(val)
-);
-
-render(filtered, true);
+let f=baseList.filter(s=> (s.n || s.name).toLowerCase().includes(val));
+render(f, true);
 }
 
-function countrySearchBridge(userCountryInput){
-if (!userCountryInput) return;
-filterShopsByCountry(userCountryInput);
-}
+/* COUNTRY SEARCH INTERFACE CONNECTION */
+function countrySearchBridge(userCountryInput) {
+let searchWord = userCountryInput.toLowerCase().trim();
 
-document.addEventListener("DOMContentLoaded", function(){
-document.getElementById("findShop").addEventListener("input", liveSearch);
-document.getElementById("resetBtn").addEventListener("click", resetCategory);
-loadAllJsonFiles();
+let filteredByCountry = shops.filter(s => {
+let shopCountry = (s.country || s.c || "").toLowerCase().trim();
+return shopCountry === searchWord;
 });
-</script>
 
+render(filteredByCountry, false);
+}
+</script>
 </body>
 </html>
-
-
-
