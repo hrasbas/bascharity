@@ -1025,7 +1025,7 @@ ball.className = "bas-ball is-pwa-installed";
     <input type="text" id="globalSearch" class="global-search" placeholder="Search 1000+ Shops" onkeyup="filterShops()">
     <div id="shopList"></div>
 </div>
-
+<script>
 
 const countryShops = {
     india: [
@@ -1177,6 +1177,10 @@ window.addEventListener("load", function() {
     let saved = localStorage.getItem("bas_country") || "india";
     setCountry(saved);
 });
+
+if(typeof countrySearchBridge === "function"){
+countrySearchBridge(country);
+}
 </script>
 
 <style>
@@ -2752,10 +2756,6 @@ card.innerHTML=${dotHTML}
 `;
 
 container.appendChild(card);
-}
-<script>
-if(typeof countrySearchBridge === "function"){
-countrySearchBridge(country);
 }
 
 if(totalItems > 7 && !maxSearch) {
