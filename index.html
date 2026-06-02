@@ -1171,20 +1171,54 @@ loadCountryJson(33);
 }
 
 }
-}
 function renderShops(list) {
-    const container = document.getElementById("shopList");
-    container.innerHTML = "";
-    if (!list) return;
-    list.forEach(function(shop) {
-        const a = document.createElement("a");
-        a.className = "shop-btn";
-        a.href = shop.link;
-        a.target = "_blank";
-        a.innerHTML = '<img class="shop-logo" src="' + shop.logo + '">' +
-            '<div class="shop-info notranslate" translate="no"><b>' + shop.name + '</b></div>';
-        container.appendChild(a);
-    });
+
+const container =
+document.getElementById("shopList");
+
+container.innerHTML = "";
+
+if (!list || list.length === 0) {
+
+container.innerHTML =
+"<div style='padding:20px;text-align:center'>No shops found</div>";
+
+return;
+
+}
+
+list.forEach(function(shop) {
+
+const a = document.createElement("a");
+
+a.className = "shop-btn";
+
+a.href = shop.u || "#";
+
+a.target = "_blank";
+
+a.innerHTML =
+
+'<img class="shop-logo" src="https://www.google.com/s2/favicons?sz=64&domain=' +
+
+(shop.d || "") +
+
+'">' +
+
+'<div class="shop-info notranslate" translate="no">' +
+
+'<b>' +
+
+(shop.n || "Shop") +
+
+'</b>' +
+
+'</div>';
+
+container.appendChild(a);
+
+});
+
 }
 
 function filterShops() {
