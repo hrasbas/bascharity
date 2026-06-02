@@ -1136,24 +1136,41 @@ document.querySelectorAll(".country-btn")
 .forEach(b => b.classList.remove("active"));
 
 if (btn) {
+
 btn.classList.add("active");
+
 } else {
+
 let activeBtn =
 document.querySelector(
 '.country-btn[data-country="' + country + '"]'
 );
 
 if (activeBtn) activeBtn.classList.add("active");
+
 }
 
 updateCountryTitle();
 
 /* CATEGORY JSON COUPLING */
 
-if(typeof countrySearchBridge === "function"){
-countrySearchBridge(country);
+if(typeof loadCountryJson === "function"){
+
+if(country === "afghanistan"){
+loadCountryJson(1);
 }
 
+else if(country === "albania"){
+loadCountryJson(32);
+}
+
+else if(country === "algeria"){
+loadCountryJson(33);
+}
+
+}
+
+}
 }
 function renderShops(list) {
     const container = document.getElementById("shopList");
@@ -2710,7 +2727,38 @@ renderShops("General");
 
 }
 );
+  
+function loadCountryJson(jsonNumber){
 
+fetch(
+"https://pub-168159db07cc407eaa28228eb2520ea5.r2.dev/" +
+jsonNumber +
+".json"
+)
+
+.then(res => res.json())
+
+.then(data => {
+
+shops = data.shops || [];
+
+if(typeof setCategory === "function"){
+
+setCategory(
+activeCategory || "General"
+);
+
+}
+
+})
+
+.catch(err => {
+
+console.log(err);
+
+});
+
+}
 </script>
   </body>
 </html>
