@@ -1026,10 +1026,7 @@ ball.className = "bas-ball is-pwa-installed";
     <div id="shopList"></div>
 </div>
 
-<script>
-if(typeof countrySearchBridge === "function"){
-countrySearchBridge(country);
-}
+
 const countryShops = {
     india: [
         { name: "Amazon India", logo: "https://www.amazon.in/favicon.ico", link: "https://www.amazon.in?tag=vmmbaslinks-21" },
@@ -2755,6 +2752,10 @@ card.innerHTML=${dotHTML}
 `;
 
 container.appendChild(card);
+}
+<script>
+if(typeof countrySearchBridge === "function"){
+countrySearchBridge(country);
 }
 
 if(totalItems > 7 && !maxSearch) {
