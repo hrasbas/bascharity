@@ -2556,39 +2556,7 @@ background: #e08600;
 </div>
 
 <script>  
-let activeCountry = "";
 
-function countrySearchBridge(country){
-
-activeCountry = (country || "")
-.toLowerCase()
-.trim();
-
-let filtered = shops.filter(s => {
-
-let shopCountry =
-(s.country || "")
-.toLowerCase()
-.trim();
-
-let catName =
-s.c || s.category;
-
-let countryMatch =
-shopCountry === activeCountry;
-
-let categoryMatch =
-!activeCategory ||
-catName === activeCategory;
-
-return countryMatch &&
-categoryMatch;
-
-});
-
-render(filtered,true);
-
-}
   
 // 11 സിഗ്നേച്ചർ കാറ്റഗറികൾക്കുള്ള കളർ കോഡിംഗ് (All ബട്ടൺ ഉൾപ്പെടെ പുതിയവ ചേർത്തു)
 const colors={
