@@ -2629,19 +2629,21 @@ card.style.textDecoration = "none";
 
 card.innerHTML =
 
-"<div style='font-size:18px;font-weight:bold'>"
+'<img src="https://www.google.com/s2/favicons?sz=64&domain=' +
 
-+ (shop.n || "Shop")
+(shop.d || "") +
 
-+ "</div>";
+'" style="width:42px;height:42px;background:#fff;border-radius:8px;padding:3px;margin-right:12px;">' +
 
-container.appendChild(card);
+'<div>' +
 
-});
+'<div style="font-size:20px;font-weight:bold;">' +
 
-});
+(shop.n || "Shop") +
 
-}
+'</div>' +
+
+'</div>';
 
 function setCategory(category,btn){
 
