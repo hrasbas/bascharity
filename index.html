@@ -2566,8 +2566,13 @@ SEARCH ALL CATEGORIES ▼
 </div>
 
 <div class="shop-box" id="shopContainer">
+  </div>
+<!---------+JSON LINK--------->
+  
+<script>
 
-JSON LINK GAP
+/* window.onload code */
+
 window.onload = () => {
 
 fetch("https://pub-168159db07cc407eaa28228eb2520ea5.r2.dev/1.json")
@@ -2598,19 +2603,32 @@ initButtons();
 
 render(shops,false);
 
-})
-
-.catch(err => {
-
-console.error(err);
-
 });
 
 };
-</div>
 
-</div>
 
+/* filterCat code */
+
+function filterCat(cat){
+
+activeCategory = cat;
+
+expandedCategories[cat] = false;
+
+document.getElementById("findShop").value = "";
+
+let filtered = shops.filter(s => {
+
+return (s.category || s.c) === cat;
+
+});
+
+render(filtered,true);
+
+}
+
+</script>
 <script>
 
 let activeCategory="General";
