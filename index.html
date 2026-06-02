@@ -2569,8 +2569,10 @@ SEARCH ALL CATEGORIES ▼
   </div>
 <!---------+JSON LINK--------->
   
+ 
 <script>
-  alert("SCRIPT START");
+
+alert("SCRIPT START");
 
 let shops = [];
 let activeCategory = "General";
@@ -2584,12 +2586,10 @@ container.innerHTML = "Loading...";
 
 fetch("https://pub-168159db07cc407eaa28228eb2520ea5.r2.dev/1.json")
 
-  .then(res => {
+.then(res => {
 alert("FETCH OK");
 return res.json();
 })
-
-.then(res => res.json())
 
 .then(data => {
 
@@ -2611,6 +2611,7 @@ container.innerHTML =
 "<div style='padding:20px;text-align:center'>No shops found</div>";
 
 return;
+
 }
 
 container.innerHTML = "";
@@ -2650,6 +2651,23 @@ card.innerHTML =
 '</div>' +
 
 '</div>';
+
+container.appendChild(card);
+
+});
+
+})
+
+.catch(err => {
+
+container.innerHTML =
+"<div style='padding:20px;text-align:center'>JSON ERROR</div>";
+
+console.log(err);
+
+});
+
+}
 
 function setCategory(category,btn){
 
@@ -2694,7 +2712,6 @@ renderShops("General");
 );
 
 </script>
-
   </body>
 </html>
 
