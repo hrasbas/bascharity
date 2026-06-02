@@ -1127,7 +1127,9 @@ const countryShops = {
 };
 
 function setCountry(country, btn) {
-    if (country === "") return;
+if(typeof countrySearchBridge === "function"){
+countrySearchBridge(country);
+}
     localStorage.setItem("bas_country", country);
 
     document.querySelectorAll(".country-btn").forEach(b => b.classList.remove("active"));
@@ -1178,9 +1180,8 @@ window.addEventListener("load", function() {
     setCountry(saved);
 });
 
-if(typeof countrySearchBridge === "function"){
-countrySearchBridge(country);
-}
+
+  
 </script>
 
 <style>
