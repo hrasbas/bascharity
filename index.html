@@ -2575,7 +2575,39 @@ const colors={
 
 // നിങ്ങൾ നിശ്ചയിച്ച 10 പ്രധാന ഇൻഡിപെൻഡന്റ് കാറ്റഗറികൾ
 let mainOrder=["General","Fashion","Beauty","Electronics","Health","Travel","Grocery","Home & Decor","Sports","Entertainment"];
+let activeCountry = "";
 
+function countrySearchBridge(country){
+
+activeCountry = (country || "")
+.toLowerCase()
+.trim();
+
+let filtered = shops.filter(s => {
+
+let shopCountry =
+(s.country || "")
+.toLowerCase()
+.trim();
+
+let catName =
+s.c || s.category;
+
+let countryMatch =
+shopCountry === activeCountry;
+
+let categoryMatch =
+!activeCategory ||
+catName === activeCategory;
+
+return countryMatch &&
+categoryMatch;
+
+});
+
+render(filtered,true);
+
+}
 let shops = [];
 let activeCategory = null;
 let expandedCategories = {};
