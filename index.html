@@ -2740,8 +2740,76 @@ renderShops("General");
 
 }
 );
-
 function loadCountryJson(jsonNumber){
+
+fetch(
+"https://pub-168159db07cc407eaa28228eb2520ea5.r2.dev/" +
+jsonNumber +
+".json"
+)
+
+.then(res => res.json())
+
+.then(data => {
+
+shops = data.shops || [];
+
+/* AUTO CATEGORY BUTTONS */
+
+let categories = [];
+
+shops.forEach(shop => {
+
+let cat =
+(shop.c || shop.category || "").trim();
+
+if(cat && !categories.includes(cat)){
+categories.push(cat);
+}
+
+});
+
+let btnBox =
+document.querySelector(".btn-grid");
+
+btnBox.innerHTML = "";
+
+categories.forEach(cat => {
+
+let btn =
+document.createElement("button");
+
+btn.className = "cat-btn";
+
+btn.innerText = cat;
+
+btn.onclick = function(){
+
+setCategory(cat,this);
+
+};
+
+btnBox.appendChild(btn);
+
+});
+
+/* FIRST CATEGORY AUTO SELECT */
+
+if(categories.length > 0){
+
+setCategory(categories[0]);
+
+}
+
+})
+
+.catch(err => {
+
+console.log(err);
+
+});
+
+}
 
 currentJson = jsonNumber;
 
