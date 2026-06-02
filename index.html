@@ -1026,97 +1026,7 @@ ball.className = "bas-ball is-pwa-installed";
     <div id="shopList"></div>
 </div>
 <script>
-                      <option value="singapore">Singapore</option>
-            <option value="malaysia">Malaysia</option>
-            <option value="indonesia">Indonesia</option>
-            <option value="thailand">Thailand</option>
-            <option value="philippines">Philippines</option>
-            <option value="qatar">Qatar</option>
-            <option value="kuwait">Kuwait</option>
-            <option value="oman">Oman</option>
-            <option value="bahrain">Bahrain</option>
-            <option value="netherlands">Netherlands</option>
-            <option value="sweden">Sweden</option>
-            <option value="poland">Poland</option>
-            <option value="italy">Italy</option>
-            <option value="spain">Spain</option>
-            <option value="newzealand">New Zealand</option>
-        </select>
-    </div>
-</div>
-
-<style>
-.shop-container{
-    max-width:900px;
-    width: 96%;
-    margin:20px auto;
-    padding:15px;
-}
-.shop-title-box{
-    background:#000;
-    border-radius:14px;
-    padding:20px;
-    border:1px solid #ff9800;
-    border-left:8px solid #ff9800;
-}
-
-.shop-title-box h2{
-    margin:0;
-    font-size:26px;
-    font-weight:900;
-    color:#fff;
-}
-
-.shop-title-box span{
-    display:block;
-    margin-top:6px;
-    font-size:13px;
-    color:#ffb74d;
-}
-
-.global-search{
-    width:96%;
-    padding:18px;
-    border-radius:12px;
-    border:3px solid #00e5ff;
-    background:#111;
-    color:#fff;
-    font-size:20px;
-    margin-top:15px;
-    margin-bottom:12px;
-}
-.shop-btn{
-    display:flex;
-    align-items:center;
-    background:#1a1a1a;
-    border-radius:12px;
-    padding:12px;
-    margin-bottom:10px;
-    text-decoration:none;
-    color:#fff;
-    border:1px solid #ff9800;
-    border-left:6px solid #ff9800;
-}
-
-.shop-logo{
-    width:42px;
-    height:42px;
-    border-radius:8px;
-    margin-right:12px;
-    background:#fff;
-    object-fit:contain;
-    padding:3px;
-}
-
-.shop-info b{
-    font-size:20px;
-    display:block;
-}
-</style>
-
-<div class="shop-container">
-  
- <script>
+          
 const countryShops = {
     india: [
         { name: "Amazon India", logo: "https://www.amazon.in/favicon.ico", link: "https://www.amazon.in?tag=vmmbaslinks-21" },
@@ -1245,8 +1155,6 @@ countrySearchBridge(country);
 }
 
 }
-
-
 function renderShops(list) {
     const container = document.getElementById("shopList");
     container.innerHTML = "";
@@ -1284,48 +1192,6 @@ window.addEventListener("load", function() {
     setCountry(saved);
 });
 </script>
-
-function renderShops(list) {
-    const container = document.getElementById("shopList");
-    container.innerHTML = "";
-    if (!list) return;
-    list.forEach(function(shop) {
-        const a = document.createElement("a");
-        a.className = "shop-btn";
-        a.href = shop.link;
-        a.target = "_blank";
-        a.innerHTML = '<img class="shop-logo" src="' + shop.logo + '">' +
-            '<div class="shop-info notranslate" translate="no"><b>' + shop.name + '</b></div>';
-        container.appendChild(a);
-    });
-}
-
-function filterShops() {
-    let value = document.getElementById("globalSearch").value.toLowerCase();
-    let country = localStorage.getItem("bas_country") || "india";
-    let shops = countryShops[country] || countryShops["india"];
-    const filtered = shops.filter(function(s) {
-        return s.name.toLowerCase().includes(value);
-    });
-    renderShops(filtered);
-}
-
-function updateCountryTitle() {
-    let country = localStorage.getItem("bas_country") || "india";
-    document.getElementById("shopCountryTitle").innerText = "Shop on " + country.toUpperCase() + " Shops";
-    let shops = countryShops[country] || countryShops["india"];
-    renderShops(shops);
-}
-
-window.addEventListener("load", function() {
-    let saved = localStorage.getItem("bas_country") || "india";
-    setCountry(saved);
-});
-
-
-  
-</script>
-
 <style>
 .compare-box{
 background:#000;
