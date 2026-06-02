@@ -2848,6 +2848,35 @@ activeCategory || "General"
 );
 
 }
+  /* 🔥 കൺട്രിയും കാറ്റഗറിയും തമ്മിൽ ബന്ധിപ്പിക്കുന്ന പ്രധാന ഫങ്ക്ഷൻ
+  ഡ്രോപ്പ്ഡൗണിൽ നിന്ന് രാജ്യം മാറുമ്പോൾ ഈ ഫങ്ക്ഷൻ പ്രവർത്തിക്കും
+*/
+function setCountry(countryValue) {
+    if (countryValue) {
+        // 1. മുകളിലെ കൺട്രി ഡ്രോപ്പ്ഡൗൺ ബോക്സ് സെലക്ട് ചെയ്ത് വാല്യൂ മാറ്റുന്നു
+        const countryDropdown = document.getElementById("country-dropdown");
+        if (countryDropdown) {
+            countryDropdown.value = countryValue;
+        }
+        
+        // 2. സെലക്ട് ചെയ്ത രാജ്യത്തെ ഷോപ്പുകൾ മാത്രം ഫിൽട്ടർ ചെയ്യുന്നു
+        let searchWord = countryValue.toLowerCase().trim();
+        let filteredByCountry = shops.filter(s => {
+            let shopCountry = (s.country || s.c || "").toLowerCase().trim();
+            return shopCountry === searchWord;
+        });
+
+        // 3. ആ രാജ്യത്തെ ഷോപ്പുകളെ കാറ്റഗറി തിരിച്ച് കാണിക്കാൻ റെൻഡർ എഞ്ചിനിലേക്ക് വിടുന്നു
+        // ഇവിടെ activeCategory നിലവിൽ ഉണ്ടെങ്കിൽ അത് മാത്രം കാണിക്കും, ഇല്ലെങ്കിൽ എല്ലാ കാറ്റഗറിയും കാണിക്കും
+        if (activeCategory) {
+            let filteredByBoth = filteredByCountry.filter(s => (s.c || s.category) === activeCategory);
+            render(filteredByBoth, true);
+        } else {
+            render(filteredByCountry, false);
+        }
+    }
+}
+
 
 </script>
   </body>
