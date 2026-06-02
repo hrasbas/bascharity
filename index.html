@@ -2647,11 +2647,10 @@ function initButtons(){
 let box=document.getElementById("cat-buttons");
 box.innerHTML=mainOrder.map(c=> {
 let borderCol = colors[c] || "#666";
-return <button class="m-btn" onclick="filterCat('${c}')"
-style="border-bottom:3px solid ${borderCol}"&gt;${c}</button>`;
+return `<button class="m-btn" onclick="filterCat('${c}')"
+style="border-bottom:3px solid ${borderCol}">${c}</button>`;
 }).join("");
 }
-
 /* ഫിൽട്ടർ ലോജിക് (ഒരു ഷോപ്പിന് ഒന്നിലധികം കാറ്റഗറികൾ Array രൂപത്തിൽ വന്നാലും വർക്ക് ചെയ്യും) */
 function filterCat(cat){
 activeCategory = cat;
