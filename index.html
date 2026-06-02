@@ -2749,20 +2749,7 @@ b => b.classList.remove("active")
 
 if(btn){
 btn.classList.add("active");
-}
-
-let filtered = shops.filter(shop => {
-
-let cat =
-(shop.c || "").toLowerCase();
-
-return cat === category.toLowerCase();
-
-});
-
-renderShops(filtered);
-
-}
+renderShops(category);
 
 document.getElementById(
 "categoryDropdown"
