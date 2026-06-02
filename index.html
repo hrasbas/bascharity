@@ -2586,13 +2586,13 @@ SEARCH ALL CATEGORIES ▼
   </div>
 <!---------+JSON LINK--------->
   
- 
 <script>
 
 alert("SCRIPT START");
 
 let shops = [];
 let activeCategory = "General";
+let currentJson = 1;
 
 function renderShops(category){
 
@@ -2601,7 +2601,11 @@ document.getElementById("shopContainer");
 
 container.innerHTML = "Loading...";
 
-fetch("https://pub-168159db07cc407eaa28228eb2520ea5.r2.dev/1.json")
+fetch(
+"https://pub-168159db07cc407eaa28228eb2520ea5.r2.dev/" +
+currentJson +
+".json"
+)
 
 .then(res => {
 alert("FETCH OK");
@@ -2635,9 +2639,18 @@ container.innerHTML = "";
 
 filtered.forEach(shop => {
 
+let shopName =
+shop.n || shop.name || "Shop";
+
+let shopUrl =
+shop.u || shop.url || "#";
+
+let shopDomain =
+shop.d || new URL(shopUrl).hostname;
+
 let card = document.createElement("a");
 
-card.href = shop.u || "#";
+card.href = shopUrl;
 
 card.target = "_blank";
 
@@ -2655,7 +2668,7 @@ card.innerHTML =
 
 '<img src="https://www.google.com/s2/favicons?sz=64&domain=' +
 
-(shop.d || "") +
+shopDomain +
 
 '" style="width:42px;height:42px;background:#fff;border-radius:8px;padding:3px;margin-right:12px;">' +
 
@@ -2663,7 +2676,7 @@ card.innerHTML =
 
 '<div style="font-size:20px;font-weight:bold;">' +
 
-(shop.n || "Shop") +
+shopName +
 
 '</div>' +
 
@@ -2727,38 +2740,17 @@ renderShops("General");
 
 }
 );
-  
+
 function loadCountryJson(jsonNumber){
 
-fetch(
-"https://pub-168159db07cc407eaa28228eb2520ea5.r2.dev/" +
-jsonNumber +
-".json"
-)
+currentJson = jsonNumber;
 
-.then(res => res.json())
-
-.then(data => {
-
-shops = data.shops || [];
-
-if(typeof setCategory === "function"){
-
-setCategory(
+renderShops(
 activeCategory || "General"
 );
 
 }
 
-})
-
-.catch(err => {
-
-console.log(err);
-
-});
-
-}
 </script>
   </body>
 </html>
