@@ -2571,9 +2571,15 @@ SEARCH ALL CATEGORIES ▼
   
 <script>
 
-/* window.onload code */
+let shops = [];
+let activeCategory = "General";
 
-window.onload = () => {
+function renderShops(category){
+
+const container =
+document.getElementById("shopContainer");
+
+container.innerHTML = "Loading...";
 
 fetch("https://pub-168159db07cc407eaa28228eb2520ea5.r2.dev/1.json")
 
@@ -2583,77 +2589,104 @@ fetch("https://pub-168159db07cc407eaa28228eb2520ea5.r2.dev/1.json")
 
 shops = data.shops || [];
 
-shops.forEach(shop => {
+let filtered = shops.filter(shop => {
 
-let catName = shop.c || shop.category;
+let cat =
+(shop.c || shop.category || "")
+.toLowerCase();
 
-catName =
-catName.charAt(0).toUpperCase() +
-catName.slice(1).toLowerCase();
+return cat === category.toLowerCase();
 
-if(!mainOrder.includes(catName)){
-mainOrder.push(catName);
+});
+
+if(filtered.length === 0){
+
+container.innerHTML =
+"<div style='padding:20px;text-align:center'>No shops found</div>";
+
+return;
 }
 
-shop.category = catName;
+container.innerHTML = "";
+
+filtered.forEach(shop => {
+
+let card = document.createElement("a");
+
+card.href = shop.u || "#";
+
+card.target = "_blank";
+
+card.style.display = "flex";
+card.style.alignItems = "center";
+card.style.padding = "12px";
+card.style.marginBottom = "10px";
+card.style.background = "#1a1a1a";
+card.style.borderRadius = "10px";
+card.style.borderLeft = "6px solid #ff9800";
+card.style.color = "#fff";
+card.style.textDecoration = "none";
+
+card.innerHTML =
+
+"<div style='font-size:18px;font-weight:bold'>"
+
++ (shop.n || "Shop")
+
++ "</div>";
+
+container.appendChild(card);
 
 });
 
-initButtons();
-
-render(shops,false);
-
 });
-
-};
-
-
-/* filterCat code */
-
-function filterCat(cat){
-
-activeCategory = cat;
-
-expandedCategories[cat] = false;
-
-document.getElementById("findShop").value = "";
-
-let filtered = shops.filter(s => {
-
-return (s.category || s.c) === cat;
-
-});
-
-render(filtered,true);
 
 }
-
-</script>
-<script>
-
-let activeCategory="General";
 
 function setCategory(category,btn){
 
-activeCategory=category;
+activeCategory = category;
 
 document.getElementById(
 "selectedCategory"
-).innerText=category;
+).innerText = category;
 
 document.querySelectorAll(
 ".cat-btn"
 ).forEach(
-b=>b.classList.remove("active")
+b => b.classList.remove("active")
 );
 
 if(btn){
 btn.classList.add("active");
 }
 
+renderShops(category);
+
 }
+
+document.getElementById(
+"categoryDropdown"
+).addEventListener(
+"change",
+function(){
+
+setCategory(this.value);
+
+}
+);
+
+window.addEventListener(
+"load",
+function(){
+
+renderShops("General");
+
+}
+);
 
 </script>
 
-</body>
+  </body>
 </html>
+
