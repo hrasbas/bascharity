@@ -2751,7 +2751,16 @@ if(btn){
 btn.classList.add("active");
 }
 
-renderShops(category);
+let filtered = shops.filter(shop => {
+
+let cat =
+(shop.c || "").toLowerCase();
+
+return cat === category.toLowerCase();
+
+});
+
+renderShops(filtered);
 
 }
 
