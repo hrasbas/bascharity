@@ -1,0 +1,8003 @@
+[{
+id:1,
+n:"amazon canada",
+c:"general",
+u:"https://www.amazon.ca",
+a:""
+},
+
+{
+id:2,
+n:"walmart canada",
+c:"general",
+u:"https://www.walmart.ca",
+a:""
+},
+
+{
+id:3,
+n:"canadian tire",
+c:"general",
+u:"https://www.canadiantire.ca",
+a:""
+},
+
+{
+id:4,
+n:"best buy canada",
+c:"electronics",
+u:"https://www.bestbuy.ca",
+a:""
+},
+
+{
+id:5,
+n:"costco canada",
+c:"general",
+u:"https://www.costco.ca",
+a:""
+},
+
+{
+id:6,
+n:"the bay",
+c:"fashion",
+u:"https://www.thebay.com",
+a:""
+},
+
+{
+id:7,
+n:"staples canada",
+c:"office",
+u:"https://www.staples.ca",
+a:""
+},
+
+{
+id:8,
+n:"home depot canada",
+c:"home",
+u:"https://www.homedepot.ca",
+a:""
+},
+
+{
+id:9,
+n:"rona",
+c:"home",
+u:"https://www.rona.ca",
+a:""
+},
+
+{
+id:10,
+n:"ikea canada",
+c:"home",
+u:"https://www.ikea.com/ca",
+a:""
+},
+
+{
+id:11,
+n:"indigo",
+c:"books",
+u:"https://www.indigo.ca",
+a:""
+},
+
+{
+id:12,
+n:"sport chek",
+c:"sports",
+u:"https://www.sportchek.ca",
+a:""
+},
+
+{
+id:13,
+n:"visions electronics",
+c:"electronics",
+u:"https://www.visions.ca",
+a:""
+},
+
+{
+id:14,
+n:"petsmart canada",
+c:"pets",
+u:"https://www.petsmart.ca",
+a:""
+},
+
+{
+id:15,
+n:"shoppers drug mart",
+c:"beauty",
+u:"https://www.shoppersdrugmart.ca",
+a:""
+},
+
+{
+id:16,
+n:"london drugs",
+c:"general",
+u:"https://www.londondrugs.com",
+a:""
+},
+
+{
+id:17,
+n:"well ca",
+c:"health",
+u:"https://well.ca",
+a:""
+},
+
+{
+id:18,
+n:"simons",
+c:"fashion",
+u:"https://www.simons.ca",
+a:""
+},
+
+{
+id:19,
+n:"marks",
+c:"fashion",
+u:"https://www.marks.com",
+a:""
+},
+
+{
+id:20,
+n:"memory express",
+c:"electronics",
+u:"https://www.memoryexpress.com",
+a:""
+},
+{
+id:21,
+n:"canadacomputers",
+c:"electronics",
+u:"https://www.canadacomputers.com",
+a:""
+},
+
+{
+id:22,
+n:"real canadian superstore",
+c:"general",
+u:"https://www.realcanadiansuperstore.ca",
+a:""
+},
+
+{
+id:23,
+n:"loblaws",
+c:"general",
+u:"https://www.loblaws.ca",
+a:""
+},
+
+{
+id:24,
+n:"no frills",
+c:"general",
+u:"https://www.nofrills.ca",
+a:""
+},
+
+{
+id:25,
+n:"freshco",
+c:"general",
+u:"https://www.freshco.com",
+a:""
+},
+
+{
+id:26,
+n:"metro canada",
+c:"general",
+u:"https://www.metro.ca",
+a:""
+},
+
+{
+id:27,
+n:"sobeys",
+c:"general",
+u:"https://www.sobeys.com",
+a:""
+},
+
+{
+id:28,
+n:"save on foods",
+c:"general",
+u:"https://www.saveonfoods.com",
+a:""
+},
+
+{
+id:29,
+n:"long and mcquade",
+c:"electronics",
+u:"https://www.long-mcquade.com",
+a:""
+},
+
+{
+id:30,
+n:"source canada",
+c:"electronics",
+u:"https://www.thesource.ca",
+a:""
+},
+
+{
+id:31,
+n:"michaels canada",
+c:"home",
+u:"https://canada.michaels.com",
+a:""
+},
+
+{
+id:32,
+n:"party city canada",
+c:"gifts",
+u:"https://www.partycity.ca",
+a:""
+},
+
+{
+id:33,
+n:"structube",
+c:"home",
+u:"https://www.structube.com",
+a:""
+},
+
+{
+id:34,
+n:"bouclair",
+c:"home",
+u:"https://www.bouclair.com",
+a:""
+},
+
+{
+id:35,
+n:"sleep country",
+c:"home",
+u:"https://www.sleepcountry.ca",
+a:""
+},
+
+{
+id:36,
+n:"leons",
+c:"home",
+u:"https://www.leons.ca",
+a:""
+},
+
+{
+id:37,
+n:"the brick",
+c:"home",
+u:"https://www.thebrick.com",
+a:""
+},
+
+{
+id:38,
+n:"atmosphere",
+c:"sports",
+u:"https://www.atmosphere.ca",
+a:""
+},
+
+{
+id:39,
+n:"mec",
+c:"sports",
+u:"https://www.mec.ca",
+a:""
+},
+
+{
+id:40,
+n:"giant tiger",
+c:"general",
+u:"https://www.gianttiger.com",
+a:""
+},
+{
+id:41,
+n:"amazon canada deals",
+c:"general",
+u:"https://www.amazon.ca",
+a:""
+},
+
+{
+id:42,
+n:"dollarama",
+c:"general",
+u:"https://www.dollarama.com",
+a:""
+},
+
+{
+id:43,
+n:"bulk barn",
+c:"food",
+u:"https://www.bulkbarn.ca",
+a:""
+},
+
+{
+id:44,
+n:"wellwise",
+c:"health",
+u:"https://www.wellwise.ca",
+a:""
+},
+
+{
+id:45,
+n:"chapters indigo",
+c:"books",
+u:"https://www.indigo.ca",
+a:""
+},
+
+{
+id:46,
+n:"sporting life",
+c:"sports",
+u:"https://www.sportinglife.ca",
+a:""
+},
+
+{
+id:47,
+n:"running room",
+c:"sports",
+u:"https://www.runningroom.com",
+a:""
+},
+
+{
+id:48,
+n:"sail",
+c:"sports",
+u:"https://www.sail.ca",
+a:""
+},
+
+{
+id:49,
+n:"lululemon canada",
+c:"fashion",
+u:"https://shop.lululemon.com",
+a:""
+},
+
+{
+id:50,
+n:"roots canada",
+c:"fashion",
+u:"https://www.roots.com",
+a:""
+},
+
+{
+id:51,
+n:"aritzia",
+c:"fashion",
+u:"https://www.aritzia.com",
+a:""
+},
+
+{
+id:52,
+n:"garage clothing",
+c:"fashion",
+u:"https://www.garageclothing.com",
+a:""
+},
+
+{
+id:53,
+n:"reitmans",
+c:"fashion",
+u:"https://www.reitmans.com",
+a:""
+},
+
+{
+id:54,
+n:"rw and co",
+c:"fashion",
+u:"https://www.rw-co.com",
+a:""
+},
+
+{
+id:55,
+n:"la vie en rose",
+c:"fashion",
+u:"https://www.lavieenrose.com",
+a:""
+},
+
+{
+id:56,
+n:"urban barn",
+c:"home",
+u:"https://www.urbanbarn.com",
+a:""
+},
+
+{
+id:57,
+n:"eq3",
+c:"home",
+u:"https://www.eq3.com",
+a:""
+},
+
+{
+id:58,
+n:"jysk canada",
+c:"home",
+u:"https://www.jysk.ca",
+a:""
+},
+
+{
+id:59,
+n:"home hardware",
+c:"home",
+u:"https://www.homehardware.ca",
+a:""
+},
+
+{
+id:60,
+n:"princess auto",
+c:"tools",
+u:"https://www.princessauto.com",
+a:""
+},
+{
+id:61,
+n:"fabricland canada",
+c:"home",
+u:"https://www.fabricland.ca",
+a:""
+},
+
+{
+id:62,
+n:"bed bath and beyond canada",
+c:"home",
+u:"https://www.bedbathandbeyond.ca",
+a:""
+},
+
+{
+id:63,
+n:"visions",
+c:"electronics",
+u:"https://www.visions.ca",
+a:""
+},
+
+{
+id:64,
+n:"factory direct",
+c:"electronics",
+u:"https://www.factorydirect.ca",
+a:""
+},
+
+{
+id:65,
+n:"newegg canada",
+c:"electronics",
+u:"https://www.newegg.ca",
+a:""
+},
+
+{
+id:66,
+n:"pc canada",
+c:"electronics",
+u:"https://www.pc-canada.com",
+a:""
+},
+
+{
+id:67,
+n:"best buy marketplace",
+c:"electronics",
+u:"https://www.bestbuy.ca",
+a:""
+},
+
+{
+id:68,
+n:"toys r us canada",
+c:"kids",
+u:"https://www.toysrus.ca",
+a:""
+},
+
+{
+id:69,
+n:"mastermind toys",
+c:"kids",
+u:"https://www.mastermindtoys.com",
+a:""
+},
+
+{
+id:70,
+n:"babies r us canada",
+c:"kids",
+u:"https://www.babiesrus.ca",
+a:""
+},
+
+{
+id:71,
+n:"sephora canada",
+c:"beauty",
+u:"https://www.sephora.com/ca",
+a:""
+},
+
+{
+id:72,
+n:"mac cosmetics canada",
+c:"beauty",
+u:"https://www.maccosmetics.ca",
+a:""
+},
+
+{
+id:73,
+n:"bath and body works canada",
+c:"beauty",
+u:"https://www.bathandbodyworks.com",
+a:""
+},
+
+{
+id:74,
+n:"wellwise by shoppers",
+c:"health",
+u:"https://www.wellwise.ca",
+a:""
+},
+
+{
+id:75,
+n:"canadian protein",
+c:"health",
+u:"https://canadianprotein.com",
+a:""
+},
+
+{
+id:76,
+n:"supplement source",
+c:"health",
+u:"https://supplementsource.ca",
+a:""
+},
+
+{
+id:77,
+n:"pet valu",
+c:"pets",
+u:"https://www.petvalu.ca",
+a:""
+},
+
+{
+id:78,
+n:"rens pets",
+c:"pets",
+u:"https://www.renspets.com",
+a:""
+},
+
+{
+id:79,
+n:"global pet foods",
+c:"pets",
+u:"https://globalpetfoods.com",
+a:""
+},
+
+{
+id:80,
+n:"peavey mart",
+c:"tools",
+u:"https://www.peaveymart.com",
+a:""
+},
+{
+id:81,
+n:"marks work warehouse",
+c:"fashion",
+u:"https://www.marks.com",
+a:""
+},
+
+{
+id:82,
+n:"old navy canada",
+c:"fashion",
+u:"https://oldnavy.gapcanada.ca",
+a:""
+},
+
+{
+id:83,
+n:"gap canada",
+c:"fashion",
+u:"https://www.gapcanada.ca",
+a:""
+},
+
+{
+id:84,
+n:"banana republic canada",
+c:"fashion",
+u:"https://bananarepublic.gapcanada.ca",
+a:""
+},
+
+{
+id:85,
+n:"h and m canada",
+c:"fashion",
+u:"https://www2.hm.com/en_ca",
+a:""
+},
+
+{
+id:86,
+n:"uniqlo canada",
+c:"fashion",
+u:"https://www.uniqlo.com/ca",
+a:""
+},
+
+{
+id:87,
+n:"zara canada",
+c:"fashion",
+u:"https://www.zara.com/ca",
+a:""
+},
+
+{
+id:88,
+n:"hudsons bay",
+c:"fashion",
+u:"https://www.thebay.com",
+a:""
+},
+
+{
+id:89,
+n:"softmoc",
+c:"fashion",
+u:"https://www.softmoc.com",
+a:""
+},
+
+{
+id:90,
+n:"browns shoes",
+c:"fashion",
+u:"https://www.brownsshoes.com",
+a:""
+},
+
+{
+id:91,
+n:"sporting life online",
+c:"sports",
+u:"https://www.sportinglife.ca",
+a:""
+},
+
+{
+id:92,
+n:"pro hockey life",
+c:"sports",
+u:"https://www.prohockeylife.com",
+a:""
+},
+
+{
+id:93,
+n:"golftown",
+c:"sports",
+u:"https://www.golftown.com",
+a:""
+},
+
+{
+id:94,
+n:"bike depot",
+c:"sports",
+u:"https://www.bikedepot.com",
+a:""
+},
+
+{
+id:95,
+n:"altitude sports",
+c:"sports",
+u:"https://www.altitude-sports.com",
+a:""
+},
+
+{
+id:96,
+n:"book outlet",
+c:"books",
+u:"https://bookoutlet.ca",
+a:""
+},
+
+{
+id:97,
+n:"scholastic canada",
+c:"books",
+u:"https://www.scholastic.ca",
+a:""
+},
+
+{
+id:98,
+n:"coles books",
+c:"books",
+u:"https://www.indigo.ca",
+a:""
+},
+
+{
+id:99,
+n:"lee valley tools",
+c:"tools",
+u:"https://www.leevalley.com",
+a:""
+},
+
+{
+id:100,
+n:"kms tools",
+c:"tools",
+u:"https://www.kmstools.com",
+a:""
+},
+{
+id:101,
+n:"uline canada",
+c:"office",
+u:"https://www.uline.ca",
+a:""
+},
+
+{
+id:102,
+n:"grand and toy",
+c:"office",
+u:"https://www.grandandtoy.com",
+a:""
+},
+
+{
+id:103,
+n:"bureau en gros",
+c:"office",
+u:"https://www.bureauengros.com",
+a:""
+},
+
+{
+id:104,
+n:"monoprice canada",
+c:"electronics",
+u:"https://www.monoprice.com",
+a:""
+},
+
+{
+id:105,
+n:"dell canada",
+c:"electronics",
+u:"https://www.dell.com/en-ca",
+a:""
+},
+
+{
+id:106,
+n:"hp canada",
+c:"electronics",
+u:"https://www.hp.com/ca-en",
+a:""
+},
+
+{
+id:107,
+n:"lenovo canada",
+c:"electronics",
+u:"https://www.lenovo.com/ca",
+a:""
+},
+
+{
+id:108,
+n:"apple canada",
+c:"electronics",
+u:"https://www.apple.com/ca",
+a:""
+},
+
+{
+id:109,
+n:"samsung canada",
+c:"electronics",
+u:"https://www.samsung.com/ca",
+a:""
+},
+
+{
+id:110,
+n:"microsoft canada",
+c:"electronics",
+u:"https://www.microsoft.com/en-ca",
+a:""
+},
+
+{
+id:111,
+n:"source for sports",
+c:"sports",
+u:"https://www.sourceforsports.ca",
+a:""
+},
+
+{
+id:112,
+n:"hockey monkey canada",
+c:"sports",
+u:"https://www.hockeymonkey.ca",
+a:""
+},
+
+{
+id:113,
+n:"tennis giant",
+c:"sports",
+u:"https://www.tennisgiant.com",
+a:""
+},
+
+{
+id:114,
+n:"canadian outdoor equipment",
+c:"sports",
+u:"https://www.canadianoutdoorequipment.com",
+a:""
+},
+
+{
+id:115,
+n:"muttart pet",
+c:"pets",
+u:"https://www.muttartpet.com",
+a:""
+},
+
+{
+id:116,
+n:"petmax",
+c:"pets",
+u:"https://www.petmax.ca",
+a:""
+},
+
+{
+id:117,
+n:"homes alive pets",
+c:"pets",
+u:"https://www.homesalive.ca",
+a:""
+},
+
+{
+id:118,
+n:"natures fare",
+c:"health",
+u:"https://www.naturesfare.com",
+a:""
+},
+
+{
+id:119,
+n:"healthy planet canada",
+c:"health",
+u:"https://www.healthyplanetcanada.com",
+a:""
+},
+
+{
+id:120,
+n:"national sports",
+c:"sports",
+u:"https://www.nationalsports.com",
+a:""
+},
+{
+id:121,
+n:"costco business centre",
+c:"general",
+u:"https://www.costcobusinesscentre.ca",
+a:""
+},
+
+{
+id:122,
+n:"tandt supermarket",
+c:"general",
+u:"https://www.tntsupermarket.com",
+a:""
+},
+
+{
+id:123,
+n:"farm boy",
+c:"general",
+u:"https://www.farmboy.ca",
+a:""
+},
+
+{
+id:124,
+n:"food basics",
+c:"general",
+u:"https://www.foodbasics.ca",
+a:""
+},
+
+{
+id:125,
+n:"co op canada",
+c:"general",
+u:"https://www.co-op.crs",
+a:""
+},
+
+{
+id:126,
+n:"nations fresh foods",
+c:"general",
+u:"https://www.nationsfreshfoods.ca",
+a:""
+},
+
+{
+id:127,
+n:"canuck tools",
+c:"tools",
+u:"https://www.canucktools.ca",
+a:""
+},
+
+{
+id:128,
+n:"atlas tools",
+c:"tools",
+u:"https://www.atlastools.com",
+a:""
+},
+
+{
+id:129,
+n:"busy bee tools",
+c:"tools",
+u:"https://www.busybeetools.com",
+a:""
+},
+
+{
+id:130,
+n:"federated tool",
+c:"tools",
+u:"https://www.federatedtool.com",
+a:""
+},
+
+{
+id:131,
+n:"visions flyer",
+c:"electronics",
+u:"https://www.visions.ca",
+a:""
+},
+
+{
+id:132,
+n:"asus canada",
+c:"electronics",
+u:"https://www.asus.com/ca-en",
+a:""
+},
+
+{
+id:133,
+n:"acer canada",
+c:"electronics",
+u:"https://www.acer.com/ca-en",
+a:""
+},
+
+{
+id:134,
+n:"canon canada",
+c:"electronics",
+u:"https://www.canon.ca",
+a:""
+},
+
+{
+id:135,
+n:"nikon canada",
+c:"electronics",
+u:"https://www.nikon.ca",
+a:""
+},
+
+{
+id:136,
+n:"logitech canada",
+c:"electronics",
+u:"https://www.logitech.com/en-ca",
+a:""
+},
+
+{
+id:137,
+n:"steelseries canada",
+c:"gaming",
+u:"https://steelseries.com",
+a:""
+},
+
+{
+id:138,
+n:"razer canada",
+c:"gaming",
+u:"https://www.razer.com/ca-en",
+a:""
+},
+
+{
+id:139,
+n:"corsair canada",
+c:"gaming",
+u:"https://www.corsair.com/ca",
+a:""
+},
+
+{
+id:140,
+n:"xbox canada",
+c:"gaming",
+u:"https://www.xbox.com/en-CA",
+a:""
+},
+{
+id:141,
+n:"playstation canada",
+c:"gaming",
+u:"https://www.playstation.com/en-ca",
+a:""
+},
+
+{
+id:142,
+n:"nintendo canada",
+c:"gaming",
+u:"https://www.nintendo.com/en-ca",
+a:""
+},
+
+{
+id:143,
+n:"epic games canada",
+c:"gaming",
+u:"https://store.epicgames.com",
+a:""
+},
+
+{
+id:144,
+n:"steam canada",
+c:"gaming",
+u:"https://store.steampowered.com",
+a:""
+},
+
+{
+id:145,
+n:"gamestop canada",
+c:"gaming",
+u:"https://www.gamestop.ca",
+a:""
+},
+
+{
+id:146,
+n:"eb games canada",
+c:"gaming",
+u:"https://www.gamestop.ca",
+a:""
+},
+
+{
+id:147,
+n:"canadas wonderland shop",
+c:"gifts",
+u:"https://www.canadaswonderland.com",
+a:""
+},
+
+{
+id:148,
+n:"hallmark canada",
+c:"gifts",
+u:"https://www.hallmark.ca",
+a:""
+},
+
+{
+id:149,
+n:"giftcraft",
+c:"gifts",
+u:"https://www.giftcraft.com",
+a:""
+},
+
+{
+id:150,
+n:"avon canada",
+c:"beauty",
+u:"https://www.avon.ca",
+a:""
+},
+
+{
+id:151,
+n:"the body shop canada",
+c:"beauty",
+u:"https://www.thebodyshop.com/en-ca",
+a:""
+},
+
+{
+id:152,
+n:"clinique canada",
+c:"beauty",
+u:"https://www.clinique.ca",
+a:""
+},
+
+{
+id:153,
+n:"estee lauder canada",
+c:"beauty",
+u:"https://www.esteelauder.ca",
+a:""
+},
+
+{
+id:154,
+n:"kiehls canada",
+c:"beauty",
+u:"https://www.kiehls.ca",
+a:""
+},
+
+{
+id:155,
+n:"wellwise health",
+c:"health",
+u:"https://www.wellwise.ca",
+a:""
+},
+
+{
+id:156,
+n:"popeyes supplements canada",
+c:"health",
+u:"https://www.popeyesonline.com",
+a:""
+},
+
+{
+id:157,
+n:"gnc canada",
+c:"health",
+u:"https://www.gnc.ca",
+a:""
+},
+
+{
+id:158,
+n:"vita health",
+c:"health",
+u:"https://www.vitahealth.ca",
+a:""
+},
+
+{
+id:159,
+n:"nutrition house",
+c:"health",
+u:"https://www.nutritionhouse.com",
+a:""
+},
+
+{
+id:160,
+n:"canadian health food association",
+c:"health",
+u:"https://www.chfa.ca",
+a:""
+},
+ {
+id:161,
+n:"canuck place gifts",
+c:"gifts",
+u:"https://www.canuckplace.org",
+a:""
+},
+
+{
+id:162,
+n:"snuggle bugz",
+c:"kids",
+u:"https://www.snugglebugz.ca",
+a:""
+},
+
+{
+id:163,
+n:"west coast kids",
+c:"kids",
+u:"https://www.westcoastkids.ca",
+a:""
+},
+
+{
+id:164,
+n:"clement",
+c:"kids",
+u:"https://www.clement.ca",
+a:""
+},
+
+{
+id:165,
+n:"millymook canada",
+c:"kids",
+u:"https://www.millymookanddozer.com",
+a:""
+},
+
+{
+id:166,
+n:"lego canada",
+c:"kids",
+u:"https://www.lego.com/en-ca",
+a:""
+},
+
+{
+id:167,
+n:"build a bear canada",
+c:"kids",
+u:"https://www.buildabear.ca",
+a:""
+},
+
+{
+id:168,
+n:"chapters kids",
+c:"kids",
+u:"https://www.indigo.ca",
+a:""
+},
+
+{
+id:169,
+n:"wayfair canada",
+c:"home",
+u:"https://www.wayfair.ca",
+a:""
+},
+
+{
+id:170,
+n:"article",
+c:"home",
+u:"https://www.article.com",
+a:""
+},
+
+{
+id:171,
+n:"candace and basil",
+c:"home",
+u:"https://www.candb.ca",
+a:""
+},
+
+{
+id:172,
+n:"homesense canada",
+c:"home",
+u:"https://www.homesense.ca",
+a:""
+},
+
+{
+id:173,
+n:"sleep factory",
+c:"home",
+u:"https://www.sleepfactory.com",
+a:""
+},
+
+{
+id:174,
+n:"endy",
+c:"home",
+u:"https://www.endy.com",
+a:""
+},
+
+{
+id:175,
+n:"silk and snow",
+c:"home",
+u:"https://www.silkandsnow.com",
+a:""
+},
+
+{
+id:176,
+n:"structube furniture",
+c:"home",
+u:"https://www.structube.com",
+a:""
+},
+
+{
+id:177,
+n:"furniture ca",
+c:"home",
+u:"https://www.furniture.ca",
+a:""
+},
+
+{
+id:178,
+n:"wolf circus",
+c:"jewelry",
+u:"https://www.wolfcircus.com",
+a:""
+},
+
+{
+id:179,
+n:"mejuri",
+c:"jewelry",
+u:"https://mejuri.com",
+a:""
+},
+
+{
+id:180,
+n:"peoples jewellers",
+c:"jewelry",
+u:"https://www.peoplesjewellers.com",
+a:""
+},
+{
+id:181,
+n:"michael hill canada",
+c:"jewelry",
+u:"https://www.michaelhill.ca",
+a:""
+},
+
+{
+id:182,
+n:"birks",
+c:"jewelry",
+u:"https://www.maisonbirks.com",
+a:""
+},
+
+{
+id:183,
+n:"spence diamonds",
+c:"jewelry",
+u:"https://www.spencediamonds.com",
+a:""
+},
+
+{
+id:184,
+n:"pandora canada",
+c:"jewelry",
+u:"https://ca.pandora.net",
+a:""
+},
+
+{
+id:185,
+n:"ben moss",
+c:"jewelry",
+u:"https://www.benmoss.com",
+a:""
+},
+
+{
+id:186,
+n:"hudsons bay marketplace",
+c:"general",
+u:"https://www.thebay.com",
+a:""
+},
+
+{
+id:187,
+n:"wellwise by shoppers home health",
+c:"health",
+u:"https://www.wellwise.ca",
+a:""
+},
+
+{
+id:188,
+n:"mountain equipment company",
+c:"sports",
+u:"https://www.mec.ca",
+a:""
+},
+
+{
+id:189,
+n:"decathlon canada",
+c:"sports",
+u:"https://www.decathlon.ca",
+a:""
+},
+
+{
+id:190,
+n:"under armour canada",
+c:"sports",
+u:"https://www.underarmour.ca",
+a:""
+},
+
+{
+id:191,
+n:"adidas canada",
+c:"fashion",
+u:"https://www.adidas.ca",
+a:""
+},
+
+{
+id:192,
+n:"nike canada",
+c:"fashion",
+u:"https://www.nike.com/ca",
+a:""
+},
+
+{
+id:193,
+n:"puma canada",
+c:"fashion",
+u:"https://ca.puma.com",
+a:""
+},
+
+{
+id:194,
+n:"new balance canada",
+c:"fashion",
+u:"https://www.newbalance.ca",
+a:""
+},
+
+{
+id:195,
+n:"foot locker canada",
+c:"fashion",
+u:"https://www.footlocker.ca",
+a:""
+},
+
+{
+id:196,
+n:"ssense",
+c:"fashion",
+u:"https://www.ssense.com",
+a:""
+},
+
+{
+id:197,
+n:"frank and oak",
+c:"fashion",
+u:"https://www.frankandoak.com",
+a:""
+},
+
+{
+id:198,
+n:"joe fresh",
+c:"fashion",
+u:"https://www.joefresh.com",
+a:""
+},
+
+{
+id:199,
+n:"moores",
+c:"fashion",
+u:"https://www.mooresclothing.ca",
+a:""
+},
+
+{
+id:200,
+n:"tommy gun's original barbershop",
+c:"beauty",
+u:"https://ca.tommyguns.com",
+a:""
+},
+
+{
+id:201,
+n:"canadian appliance source",
+c:"home",
+u:"https://www.canadianappliance.ca",
+a:""
+},
+
+{
+id:202,
+n:"trail appliances",
+c:"home",
+u:"https://www.trailappliances.com",
+a:""
+},
+
+{
+id:203,
+n:"goemans appliances",
+c:"home",
+u:"https://www.goemans.com",
+a:""
+},
+
+{
+id:204,
+n:"appliance canada",
+c:"home",
+u:"https://www.appliancecanada.com",
+a:""
+},
+
+{
+id:205,
+n:"home depot decor",
+c:"home",
+u:"https://www.homedepot.ca",
+a:""
+},
+
+{
+id:206,
+n:"lowes canada",
+c:"home",
+u:"https://www.lowes.ca",
+a:""
+},
+
+{
+id:207,
+n:"reno depot",
+c:"home",
+u:"https://www.renodepot.com",
+a:""
+},
+
+{
+id:208,
+n:"castle building centres",
+c:"home",
+u:"https://castle.ca",
+a:""
+},
+
+{
+id:209,
+n:"timber mart",
+c:"home",
+u:"https://www.timbermart.ca",
+a:""
+},
+
+{
+id:210,
+n:"bmr canada",
+c:"home",
+u:"https://www.bmr.ca",
+a:""
+},
+
+{
+id:211,
+n:"vistek",
+c:"electronics",
+u:"https://www.vistek.ca",
+a:""
+},
+
+{
+id:212,
+n:"henrys",
+c:"electronics",
+u:"https://www.henrys.com",
+a:""
+},
+
+{
+id:213,
+n:"gibby's electronics",
+c:"electronics",
+u:"https://gibbyselectronicsupermarket.ca",
+a:""
+},
+
+{
+id:214,
+n:"electronics for less",
+c:"electronics",
+u:"https://www.electronicsforless.ca",
+a:""
+},
+
+{
+id:215,
+n:"directdial",
+c:"electronics",
+u:"https://www.directdial.com",
+a:""
+},
+
+{
+id:216,
+n:"vuugo",
+c:"electronics",
+u:"https://www.vuugo.com",
+a:""
+},
+
+{
+id:217,
+n:"pc canada online",
+c:"electronics",
+u:"https://www.pc-canada.com",
+a:""
+},
+
+{
+id:218,
+n:"mi4canada",
+c:"electronics",
+u:"https://www.mi4canada.com",
+a:""
+},
+
+{
+id:219,
+n:"brother canada",
+c:"electronics",
+u:"https://www.brother.ca",
+a:""
+},
+
+{
+id:220,
+n:"epson canada",
+c:"electronics",
+u:"https://epson.ca",
+a:""
+},
+{
+id:221,
+n:"xerox canada",
+c:"electronics",
+u:"https://www.xerox.ca",
+a:""
+},
+
+{
+id:222,
+n:"lg canada",
+c:"electronics",
+u:"https://www.lg.com/ca",
+a:""
+},
+
+{
+id:223,
+n:"sony canada",
+c:"electronics",
+u:"https://www.sony.ca",
+a:""
+},
+
+{
+id:224,
+n:"panasonic canada",
+c:"electronics",
+u:"https://www.panasonic.com/ca",
+a:""
+},
+
+{
+id:225,
+n:"bose canada",
+c:"electronics",
+u:"https://www.bose.ca",
+a:""
+},
+
+{
+id:226,
+n:"jbl canada",
+c:"electronics",
+u:"https://ca.jbl.com",
+a:""
+},
+
+{
+id:227,
+n:"anker canada",
+c:"electronics",
+u:"https://www.anker.com/ca",
+a:""
+},
+
+{
+id:228,
+n:"belkin canada",
+c:"electronics",
+u:"https://www.belkin.com/ca",
+a:""
+},
+
+{
+id:229,
+n:"garmin canada",
+c:"electronics",
+u:"https://www.garmin.com/en-CA",
+a:""
+},
+
+{
+id:230,
+n:"fitbit canada",
+c:"health",
+u:"https://www.fitbit.com/global/ca",
+a:""
+},
+
+{
+id:231,
+n:"rogers",
+c:"electronics",
+u:"https://www.rogers.com",
+a:""
+},
+
+{
+id:232,
+n:"bell canada",
+c:"electronics",
+u:"https://www.bell.ca",
+a:""
+},
+
+{
+id:233,
+n:"telus",
+c:"electronics",
+u:"https://www.telus.com",
+a:""
+},
+
+{
+id:234,
+n:"freedom mobile",
+c:"electronics",
+u:"https://www.freedommobile.ca",
+a:""
+},
+
+{
+id:235,
+n:"fido",
+c:"electronics",
+u:"https://www.fido.ca",
+a:""
+},
+
+{
+id:236,
+n:"koodo",
+c:"electronics",
+u:"https://www.koodomobile.com",
+a:""
+},
+
+{
+id:237,
+n:"virgin plus canada",
+c:"electronics",
+u:"https://www.virginplus.ca",
+a:""
+},
+
+{
+id:238,
+n:"public mobile",
+c:"electronics",
+u:"https://publicmobile.ca",
+a:""
+},
+
+{
+id:239,
+n:"videotron",
+c:"electronics",
+u:"https://www.videotron.com",
+a:""
+},
+
+{
+id:240,
+n:"shaw direct",
+c:"electronics",
+u:"https://www.shawdirect.ca",
+a:""
+},
+{
+id:241,
+n:"eastlink",
+c:"electronics",
+u:"https://www.eastlink.ca",
+a:""
+},
+
+{
+id:242,
+n:"sasktel",
+c:"electronics",
+u:"https://www.sasktel.com",
+a:""
+},
+
+{
+id:243,
+n:"videotron mobile",
+c:"electronics",
+u:"https://www.videotron.com",
+a:""
+},
+
+{
+id:244,
+n:"xplore",
+c:"electronics",
+u:"https://www.xplore.ca",
+a:""
+},
+
+{
+id:245,
+n:"teksavvy",
+c:"electronics",
+u:"https://www.teksavvy.com",
+a:""
+},
+
+{
+id:246,
+n:"start ca",
+c:"electronics",
+u:"https://www.start.ca",
+a:""
+},
+
+{
+id:247,
+n:"primus canada",
+c:"electronics",
+u:"https://primus.ca",
+a:""
+},
+
+{
+id:248,
+n:"cancom",
+c:"electronics",
+u:"https://www.can-com.com",
+a:""
+},
+
+{
+id:249,
+n:"stacksocial canada",
+c:"electronics",
+u:"https://stacksocial.com",
+a:""
+},
+
+{
+id:250,
+n:"cdw canada",
+c:"electronics",
+u:"https://www.cdw.ca",
+a:""
+},
+
+{
+id:251,
+n:"softchoice",
+c:"electronics",
+u:"https://www.softchoice.com",
+a:""
+},
+
+{
+id:252,
+n:"insight canada",
+c:"electronics",
+u:"https://ca.insight.com",
+a:""
+},
+
+{
+id:253,
+n:"tigerdirect canada",
+c:"electronics",
+u:"https://www.tigerdirect.com",
+a:""
+},
+
+{
+id:254,
+n:"geek squad canada",
+c:"electronics",
+u:"https://www.bestbuy.ca",
+a:""
+},
+
+{
+id:255,
+n:"ubreakifix canada",
+c:"electronics",
+u:"https://www.ubreakifix.com",
+a:""
+},
+
+{
+id:256,
+n:"dollar tree canada",
+c:"general",
+u:"https://www.dollartreecanada.com",
+a:""
+},
+
+{
+id:257,
+n:"showcase canada",
+c:"general",
+u:"https://ca.shopatshowcase.com",
+a:""
+},
+
+{
+id:258,
+n:"miniso canada",
+c:"general",
+u:"https://miniso-ca.com",
+a:""
+},
+
+{
+id:259,
+n:"osl retail services",
+c:"electronics",
+u:"https://oslrs.com",
+a:""
+},
+
+{
+id:260,
+n:"costco optical canada",
+c:"health",
+u:"https://www.costco.ca",
+a:""
+},
+{
+id:261,
+n:"cleo canada",
+c:"fashion",
+u:"https://www.cleo.ca",
+a:""
+},
+
+{
+id:262,
+n:"bootlegger",
+c:"fashion",
+u:"https://www.bootlegger.com",
+a:""
+},
+
+{
+id:263,
+n:"suzy shier",
+c:"fashion",
+u:"https://suzyshier.com",
+a:""
+},
+
+{
+id:264,
+n:"le chateau",
+c:"fashion",
+u:"https://www.lechateau.com",
+a:""
+},
+
+{
+id:265,
+n:"northern reflections",
+c:"fashion",
+u:"https://www.northernreflections.com",
+a:""
+},
+
+{
+id:266,
+n:"laura canada",
+c:"fashion",
+u:"https://www.laura.ca",
+a:""
+},
+
+{
+id:267,
+n:"cleo and ricki's",
+c:"fashion",
+u:"https://www.cleo.ca",
+a:""
+},
+
+{
+id:268,
+n:"hudsons bay men",
+c:"fashion",
+u:"https://www.thebay.com",
+a:""
+},
+
+{
+id:269,
+n:"sporting life outlet",
+c:"sports",
+u:"https://www.sportinglife.ca",
+a:""
+},
+
+{
+id:270,
+n:"skiis and biikes",
+c:"sports",
+u:"https://skiisandbiikes.com",
+a:""
+},
+
+{
+id:271,
+n:"cyclepath",
+c:"sports",
+u:"https://www.cyclepath.ca",
+a:""
+},
+
+{
+id:272,
+n:"fresh air experience",
+c:"sports",
+u:"https://www.freshairexp.com",
+a:""
+},
+
+{
+id:273,
+n:"escape sports",
+c:"sports",
+u:"https://www.escapesports.ca",
+a:""
+},
+
+{
+id:274,
+n:"book warehouse",
+c:"books",
+u:"https://www.bookwarehouse.ca",
+a:""
+},
+
+{
+id:275,
+n:"mcnally robinson",
+c:"books",
+u:"https://www.mcnallyrobinson.com",
+a:""
+},
+
+{
+id:276,
+n:"book city",
+c:"books",
+u:"https://bookcity.ca",
+a:""
+},
+
+{
+id:277,
+n:"audible canada",
+c:"books",
+u:"https://www.audible.ca",
+a:""
+},
+
+{
+id:278,
+n:"kobo canada",
+c:"books",
+u:"https://www.kobo.com/ca",
+a:""
+},
+
+{
+id:279,
+n:"lee valley garden",
+c:"home",
+u:"https://www.leevalley.com",
+a:""
+},
+
+{
+id:280,
+n:"canadian woodworking",
+c:"tools",
+u:"https://canadianwoodworking.com",
+a:""
+},
+{
+id:281,
+n:"busy bee woodworking",
+c:"tools",
+u:"https://www.busybeetools.com",
+a:""
+},
+
+{
+id:282,
+n:"kbc tools canada",
+c:"tools",
+u:"https://www.kbctools.ca",
+a:""
+},
+
+{
+id:283,
+n:"bc fasteners",
+c:"tools",
+u:"https://bcfasteners.com",
+a:""
+},
+
+{
+id:284,
+n:"mississauga hardware",
+c:"tools",
+u:"https://www.mississaugahardware.com",
+a:""
+},
+
+{
+id:285,
+n:"atlas machinery",
+c:"tools",
+u:"https://www.atlas-machinery.com",
+a:""
+},
+
+{
+id:286,
+n:"uline canada supplies",
+c:"office",
+u:"https://www.uline.ca",
+a:""
+},
+
+{
+id:287,
+n:"basics office products",
+c:"office",
+u:"https://www.basics.com",
+a:""
+},
+
+{
+id:288,
+n:"staples preferred",
+c:"office",
+u:"https://www.staples.ca",
+a:""
+},
+
+{
+id:289,
+n:"officemovepro",
+c:"office",
+u:"https://www.officemovepro.com",
+a:""
+},
+
+{
+id:290,
+n:"print three",
+c:"office",
+u:"https://www.print3.ca",
+a:""
+},
+
+{
+id:291,
+n:"vistaprint canada",
+c:"office",
+u:"https://www.vistaprint.ca",
+a:""
+},
+
+{
+id:292,
+n:"moo canada",
+c:"office",
+u:"https://www.moo.com/ca",
+a:""
+},
+
+{
+id:293,
+n:"fedex office canada",
+c:"office",
+u:"https://www.fedex.com/en-ca",
+a:""
+},
+
+{
+id:294,
+n:"purolator store",
+c:"services",
+u:"https://www.purolator.com",
+a:""
+},
+
+{
+id:295,
+n:"canada post",
+c:"services",
+u:"https://www.canadapost-postescanada.ca",
+a:""
+},
+
+{
+id:296,
+n:"ups canada",
+c:"services",
+u:"https://www.ups.com/ca",
+a:""
+},
+
+{
+id:297,
+n:"dhl canada",
+c:"services",
+u:"https://www.dhl.com/ca-en",
+a:""
+},
+
+{
+id:298,
+n:"fedex canada",
+c:"services",
+u:"https://www.fedex.com/en-ca",
+a:""
+},
+
+{
+id:299,
+n:"loomis express",
+c:"services",
+u:"https://www.loomisexpress.com",
+a:""
+},
+
+{
+id:300,
+n:"canpar express",
+c:"services",
+u:"https://www.canpar.com",
+a:""
+},
+{
+id:301,
+n:"pure later canada",
+c:"services",
+u:"https://www.purolator.com",
+a:""
+},
+
+{
+id:302,
+n:"shiptime",
+c:"services",
+u:"https://www.shiptime.com",
+a:""
+},
+
+{
+id:303,
+n:"chit chats",
+c:"services",
+u:"https://chitchats.com",
+a:""
+},
+
+{
+id:304,
+n:"netparcel",
+c:"services",
+u:"https://www.netparcel.com",
+a:""
+},
+
+{
+id:305,
+n:"freightcom",
+c:"services",
+u:"https://www.freightcom.com",
+a:""
+},
+
+{
+id:306,
+n:"shopify canada",
+c:"services",
+u:"https://www.shopify.com/ca",
+a:""
+},
+
+{
+id:307,
+n:"lightspeed canada",
+c:"services",
+u:"https://www.lightspeedhq.com",
+a:""
+},
+
+{
+id:308,
+n:"moneris",
+c:"services",
+u:"https://www.moneris.com",
+a:""
+},
+
+{
+id:309,
+n:"square canada",
+c:"services",
+u:"https://squareup.com/ca",
+a:""
+},
+
+{
+id:310,
+n:"helcim",
+c:"services",
+u:"https://www.helcim.com",
+a:""
+},
+
+{
+id:311,
+n:"petro canada",
+c:"automotive",
+u:"https://www.petro-canada.ca",
+a:""
+},
+
+{
+id:312,
+n:"esso canada",
+c:"automotive",
+u:"https://www.esso.ca",
+a:""
+},
+
+{
+id:313,
+n:"shell canada",
+c:"automotive",
+u:"https://www.shell.ca",
+a:""
+},
+
+{
+id:314,
+n:"husky canada",
+c:"automotive",
+u:"https://www.myhusky.ca",
+a:""
+},
+
+{
+id:315,
+n:"ultramar",
+c:"automotive",
+u:"https://www.ultramar.ca",
+a:""
+},
+
+{
+id:316,
+n:"fountain tire",
+c:"automotive",
+u:"https://www.fountaintire.com",
+a:""
+},
+
+{
+id:317,
+n:"kal tire",
+c:"automotive",
+u:"https://www.kaltire.com",
+a:""
+},
+
+{
+id:318,
+n:"mr lube",
+c:"automotive",
+u:"https://www.mrlube.com",
+a:""
+},
+
+{
+id:319,
+n:"partsource",
+c:"automotive",
+u:"https://www.partsource.ca",
+a:""
+},
+
+{
+id:320,
+n:"napa canada",
+c:"automotive",
+u:"https://www.napacanada.com",
+a:""
+},
+
+{
+id:321,
+n:"carquest canada",
+c:"automotive",
+u:"https://www.carquest.com",
+a:""
+},
+
+{
+id:322,
+n:"lordco",
+c:"automotive",
+u:"https://www.lordco.com",
+a:""
+},
+
+{
+id:323,
+n:"auto value canada",
+c:"automotive",
+u:"https://www.autovalue.com",
+a:""
+},
+
+{
+id:324,
+n:"canadian tire auto",
+c:"automotive",
+u:"https://www.canadiantire.ca",
+a:""
+},
+
+{
+id:325,
+n:"ok tire",
+c:"automotive",
+u:"https://www.oktire.com",
+a:""
+},
+
+{
+id:326,
+n:"speedy glass",
+c:"automotive",
+u:"https://www.speedyglass.ca",
+a:""
+},
+
+{
+id:327,
+n:"uniglass plus",
+c:"automotive",
+u:"https://www.uniglassplus.com",
+a:""
+},
+
+{
+id:328,
+n:"auto trader canada",
+c:"automotive",
+u:"https://www.autotrader.ca",
+a:""
+},
+
+{
+id:329,
+n:"clutch canada",
+c:"automotive",
+u:"https://www.clutch.ca",
+a:""
+},
+
+{
+id:330,
+n:"carpages",
+c:"automotive",
+u:"https://www.carpages.ca",
+a:""
+},
+
+{
+id:331,
+n:"rv canada",
+c:"automotive",
+u:"https://www.rvcanada.com",
+a:""
+},
+
+{
+id:332,
+n:"camping world canada",
+c:"automotive",
+u:"https://www.campingworld.com",
+a:""
+},
+
+{
+id:333,
+n:"sail outdoors",
+c:"sports",
+u:"https://www.sail.ca",
+a:""
+},
+
+{
+id:334,
+n:"cabelas canada",
+c:"sports",
+u:"https://www.cabelas.ca",
+a:""
+},
+
+{
+id:335,
+n:"bass pro shops canada",
+c:"sports",
+u:"https://www.basspro.com",
+a:""
+},
+
+{
+id:336,
+n:"woods canada",
+c:"sports",
+u:"https://www.woods.ca",
+a:""
+},
+
+{
+id:337,
+n:"outdoor gear canada",
+c:"sports",
+u:"https://www.outdoorgearcanada.com",
+a:""
+},
+
+{
+id:338,
+n:"vpo canada",
+c:"sports",
+u:"https://vpo.ca",
+a:""
+},
+
+{
+id:339,
+n:"thelasthunt",
+c:"sports",
+u:"https://www.thelasthunt.com",
+a:""
+},
+
+{
+id:340,
+n:"marks workwearhouse",
+c:"fashion",
+u:"https://www.marks.com",
+a:""
+},
+{
+id:341,
+n:"lammles canada",
+c:"fashion",
+u:"https://www.lammles.com",
+a:""
+},
+
+{
+id:342,
+n:"mackage",
+c:"fashion",
+u:"https://www.mackage.com",
+a:""
+},
+
+{
+id:343,
+n:"canada goose",
+c:"fashion",
+u:"https://www.canadagoose.com",
+a:""
+},
+
+{
+id:344,
+n:"moose knuckles",
+c:"fashion",
+u:"https://www.mooseknucklescanada.com",
+a:""
+},
+
+{
+id:345,
+n:"sorel canada",
+c:"fashion",
+u:"https://www.sorelfootwear.ca",
+a:""
+},
+
+{
+id:346,
+n:"aldo canada",
+c:"fashion",
+u:"https://www.aldoshoes.com",
+a:""
+},
+
+{
+id:347,
+n:"call it spring",
+c:"fashion",
+u:"https://www.callitspring.com",
+a:""
+},
+
+{
+id:348,
+n:"sport chek outlet",
+c:"sports",
+u:"https://www.sportchek.ca",
+a:""
+},
+
+{
+id:349,
+n:"oakley canada",
+c:"sports",
+u:"https://www.oakley.com/en-ca",
+a:""
+},
+
+{
+id:350,
+n:"columbia canada",
+c:"sports",
+u:"https://www.columbiasportswear.ca",
+a:""
+},
+
+{
+id:351,
+n:"north face canada",
+c:"sports",
+u:"https://www.thenorthface.com/en-ca",
+a:""
+},
+
+{
+id:352,
+n:"patagonia canada",
+c:"sports",
+u:"https://www.patagonia.ca",
+a:""
+},
+
+{
+id:353,
+n:"arc teryx",
+c:"sports",
+u:"https://arcteryx.com/ca",
+a:""
+},
+
+{
+id:354,
+n:"marmot canada",
+c:"sports",
+u:"https://www.marmot.com",
+a:""
+},
+
+{
+id:355,
+n:"icebreaker canada",
+c:"sports",
+u:"https://www.icebreaker.com",
+a:""
+},
+
+{
+id:356,
+n:"rei canada",
+c:"sports",
+u:"https://www.rei.com",
+a:""
+},
+
+{
+id:357,
+n:"book manager",
+c:"books",
+u:"https://www.bookmanager.com",
+a:""
+},
+
+{
+id:358,
+n:"goodminds",
+c:"books",
+u:"https://goodminds.com",
+a:""
+},
+
+{
+id:359,
+n:"indigenous reflections",
+c:"books",
+u:"https://www.indigenousreflections.ca",
+a:""
+},
+
+{
+id:360,
+n:"university of toronto press",
+c:"books",
+u:"https://utorontopress.com",
+a:""
+},
+
+{
+id:361,
+n:"scholars choice",
+c:"education",
+u:"https://www.scholarschoice.ca",
+a:""
+},
+
+{
+id:362,
+n:"teacher supply source",
+c:"education",
+u:"https://www.teachersupplysource.ca",
+a:""
+},
+
+{
+id:363,
+n:"campus bookstore",
+c:"education",
+u:"https://www.campusbookstore.com",
+a:""
+},
+
+{
+id:364,
+n:"pearson canada",
+c:"education",
+u:"https://www.pearson.com/en-ca",
+a:""
+},
+
+{
+id:365,
+n:"mcgraw hill canada",
+c:"education",
+u:"https://www.mheducation.ca",
+a:""
+},
+
+{
+id:366,
+n:"oxford university press canada",
+c:"education",
+u:"https://global.oup.com",
+a:""
+},
+
+{
+id:367,
+n:"canadian geographic store",
+c:"education",
+u:"https://canadiangeographic.ca",
+a:""
+},
+
+{
+id:368,
+n:"mastermind learning",
+c:"education",
+u:"https://www.mastermindtoys.com",
+a:""
+},
+
+{
+id:369,
+n:"lego education canada",
+c:"education",
+u:"https://education.lego.com",
+a:""
+},
+
+{
+id:370,
+n:"stemfinity canada",
+c:"education",
+u:"https://stemfinity.com",
+a:""
+},
+
+{
+id:371,
+n:"artizia men",
+c:"fashion",
+u:"https://www.aritzia.com",
+a:""
+},
+
+{
+id:372,
+n:"roots outlet",
+c:"fashion",
+u:"https://www.roots.com",
+a:""
+},
+
+{
+id:373,
+n:"simons outlet",
+c:"fashion",
+u:"https://www.simons.ca",
+a:""
+},
+
+{
+id:374,
+n:"la vie en rose outlet",
+c:"fashion",
+u:"https://www.lavieenrose.com",
+a:""
+},
+
+{
+id:375,
+n:"frank and oak outlet",
+c:"fashion",
+u:"https://www.frankandoak.com",
+a:""
+},
+
+{
+id:376,
+n:"mejuri canada",
+c:"jewelry",
+u:"https://mejuri.com",
+a:""
+},
+
+{
+id:377,
+n:"blue nile canada",
+c:"jewelry",
+u:"https://www.bluenile.com",
+a:""
+},
+
+{
+id:378,
+n:"peoples outlet",
+c:"jewelry",
+u:"https://www.peoplesjewellers.com",
+a:""
+},
+
+{
+id:379,
+n:"birks jewellery",
+c:"jewelry",
+u:"https://www.maisonbirks.com",
+a:""
+},
+
+{
+id:380,
+n:"pandora outlet canada",
+c:"jewelry",
+u:"https://ca.pandora.net",
+a:""
+},
+ {
+id:381,
+n:"brilliant earth canada",
+c:"jewelry",
+u:"https://www.brilliantearth.com",
+a:""
+},
+
+{
+id:382,
+n:"mappins",
+c:"jewelry",
+u:"https://www.mappins.com",
+a:""
+},
+
+{
+id:383,
+n:"ann louise jewellers",
+c:"jewelry",
+u:"https://www.annlouise.ca",
+a:""
+},
+
+{
+id:384,
+n:"ben moss jewellery",
+c:"jewelry",
+u:"https://www.benmoss.com",
+a:""
+},
+
+{
+id:385,
+n:"charmed aroma",
+c:"gifts",
+u:"https://charmedaroma.com",
+a:""
+},
+
+{
+id:386,
+n:"giftbasketcanada",
+c:"gifts",
+u:"https://www.giftbasketcanada.com",
+a:""
+},
+
+{
+id:387,
+n:"canada flowers",
+c:"gifts",
+u:"https://www.canadaflowers.ca",
+a:""
+},
+
+{
+id:388,
+n:"baskits",
+c:"gifts",
+u:"https://baskits.com",
+a:""
+},
+
+{
+id:389,
+n:"gift tree canada",
+c:"gifts",
+u:"https://www.gifttree.com",
+a:""
+},
+
+{
+id:390,
+n:"1 800 flowers canada",
+c:"gifts",
+u:"https://www.1800flowers.com",
+a:""
+},
+
+{
+id:391,
+n:"floraqueen canada",
+c:"gifts",
+u:"https://www.floraqueen.com",
+a:""
+},
+
+{
+id:392,
+n:"teleflora canada",
+c:"gifts",
+u:"https://www.teleflora.com",
+a:""
+},
+
+{
+id:393,
+n:"pet valu online",
+c:"pets",
+u:"https://www.petvalu.ca",
+a:""
+},
+
+{
+id:394,
+n:"petland canada",
+c:"pets",
+u:"https://www.petland.ca",
+a:""
+},
+
+{
+id:395,
+n:"big al's",
+c:"pets",
+u:"https://bigals.ca",
+a:""
+},
+
+{
+id:396,
+n:"angelfins",
+c:"pets",
+u:"https://angelfins.ca",
+a:""
+},
+
+{
+id:397,
+n:"canadian pet connection",
+c:"pets",
+u:"https://www.canadianpetconnection.ca",
+a:""
+},
+
+{
+id:398,
+n:"homes alive online",
+c:"pets",
+u:"https://www.homesalive.ca",
+a:""
+},
+
+{
+id:399,
+n:"rens pets online",
+c:"pets",
+u:"https://www.renspets.com",
+a:""
+},
+
+{
+id:400,
+n:"pet smart canada online",
+c:"pets",
+u:"https://www.petsmart.ca",
+a:""
+},
+{
+id:401,
+n:"petplanet canada",
+c:"pets",
+u:"https://www.petplanet.ca",
+a:""
+},
+
+{
+id:402,
+n:"canadian tire pets",
+c:"pets",
+u:"https://www.canadiantire.ca",
+a:""
+},
+
+{
+id:403,
+n:"pet food canada",
+c:"pets",
+u:"https://www.petfoodcanada.com",
+a:""
+},
+
+{
+id:404,
+n:"healthybud",
+c:"pets",
+u:"https://healthybud.co",
+a:""
+},
+
+{
+id:405,
+n:"earth rated",
+c:"pets",
+u:"https://www.earthrated.com",
+a:""
+},
+
+{
+id:406,
+n:"well ca health",
+c:"health",
+u:"https://well.ca",
+a:""
+},
+
+{
+id:407,
+n:"vitamart canada",
+c:"health",
+u:"https://www.vitamart.ca",
+a:""
+},
+
+{
+id:408,
+n:"national nutrition",
+c:"health",
+u:"https://www.nationalnutrition.ca",
+a:""
+},
+
+{
+id:409,
+n:"canprev",
+c:"health",
+u:"https://canprev.ca",
+a:""
+},
+
+{
+id:410,
+n:"jamieson vitamins",
+c:"health",
+u:"https://www.jamiesonvitamins.com",
+a:""
+},
+
+{
+id:411,
+n:"webber naturals",
+c:"health",
+u:"https://www.webbernaturals.com",
+a:""
+},
+
+{
+id:412,
+n:"sisuu",
+c:"health",
+u:"https://www.sisu.com",
+a:""
+},
+
+{
+id:413,
+n:"natural factors",
+c:"health",
+u:"https://naturalfactors.com",
+a:""
+},
+
+{
+id:414,
+n:"organika",
+c:"health",
+u:"https://organika.com",
+a:""
+},
+
+{
+id:415,
+n:"genuine health",
+c:"health",
+u:"https://genuinehealth.ca",
+a:""
+},
+
+{
+id:416,
+n:"nature's fare markets",
+c:"health",
+u:"https://www.naturesfare.com",
+a:""
+},
+
+{
+id:417,
+n:"healthy planet",
+c:"health",
+u:"https://www.healthyplanetcanada.com",
+a:""
+},
+
+{
+id:418,
+n:"body energy club",
+c:"health",
+u:"https://bodyenergyclub.com",
+a:""
+},
+
+{
+id:419,
+n:"popeyes supplements",
+c:"health",
+u:"https://www.popeyesonline.com",
+a:""
+},
+
+{
+id:420,
+n:"supplement king canada",
+c:"health",
+u:"https://www.supplementking.ca",
+a:""
+},
+{
+id:421,
+n:"canadian protein online",
+c:"health",
+u:"https://canadianprotein.com",
+a:""
+},
+
+{
+id:422,
+n:"allmax nutrition",
+c:"health",
+u:"https://allmaxnutrition.com",
+a:""
+},
+
+{
+id:423,
+n:"atp lab",
+c:"health",
+u:"https://atplab.com",
+a:""
+},
+
+{
+id:424,
+n:"progressive supplements",
+c:"health",
+u:"https://www.progressivenutritional.com",
+a:""
+},
+
+{
+id:425,
+n:"iron vegan",
+c:"health",
+u:"https://ironvegan.ca",
+a:""
+},
+
+{
+id:426,
+n:"vega canada",
+c:"health",
+u:"https://myvega.ca",
+a:""
+},
+
+{
+id:427,
+n:"leanfit",
+c:"health",
+u:"https://leanfit.com",
+a:""
+},
+
+{
+id:428,
+n:"prairie naturals",
+c:"health",
+u:"https://prairienaturals.ca",
+a:""
+},
+
+{
+id:429,
+n:"smart solutions",
+c:"health",
+u:"https://smartsolutions.com",
+a:""
+},
+
+{
+id:430,
+n:"new roots herbal",
+c:"health",
+u:"https://www.newrootsherbal.com",
+a:""
+},
+
+{
+id:431,
+n:"sleep country online",
+c:"home",
+u:"https://www.sleepcountry.ca",
+a:""
+},
+
+{
+id:432,
+n:"casper canada",
+c:"home",
+u:"https://casper.com",
+a:""
+},
+
+{
+id:433,
+n:"douglas canada",
+c:"home",
+u:"https://www.douglas.ca",
+a:""
+},
+
+{
+id:434,
+n:"logan and cove",
+c:"home",
+u:"https://www.loganandcove.ca",
+a:""
+},
+
+{
+id:435,
+n:"silk and snow furniture",
+c:"home",
+u:"https://www.silkandsnow.com",
+a:""
+},
+
+{
+id:436,
+n:"endy mattresses",
+c:"home",
+u:"https://www.endy.com",
+a:""
+},
+
+{
+id:437,
+n:"eq3 furniture",
+c:"home",
+u:"https://www.eq3.com",
+a:""
+},
+
+{
+id:438,
+n:"urban barn furniture",
+c:"home",
+u:"https://www.urbanbarn.com",
+a:""
+},
+
+{
+id:439,
+n:"bouclair home",
+c:"home",
+u:"https://www.bouclair.com",
+a:""
+},
+
+{
+id:440,
+n:"wayfair canada furniture",
+c:"home",
+u:"https://www.wayfair.ca",
+a:""
+},
+{
+id:441,
+n:"article furniture",
+c:"home",
+u:"https://www.article.com",
+a:""
+},
+
+{
+id:442,
+n:"must societe",
+c:"home",
+u:"https://mustsociete.com",
+a:""
+},
+
+{
+id:443,
+n:"mobilia",
+c:"home",
+u:"https://mobilia.ca",
+a:""
+},
+
+{
+id:444,
+n:"crate and barrel canada",
+c:"home",
+u:"https://www.crateandbarrel.ca",
+a:""
+},
+
+{
+id:445,
+n:"pottery barn canada",
+c:"home",
+u:"https://www.potterybarn.ca",
+a:""
+},
+
+{
+id:446,
+n:"west elm canada",
+c:"home",
+u:"https://www.westelm.ca",
+a:""
+},
+
+{
+id:447,
+n:"restoration hardware canada",
+c:"home",
+u:"https://rh.com",
+a:""
+},
+
+{
+id:448,
+n:"sur la table canada",
+c:"home",
+u:"https://www.surlatable.com",
+a:""
+},
+
+{
+id:449,
+n:"kitchen stuff plus",
+c:"home",
+u:"https://www.kitchenstuffplus.com",
+a:""
+},
+
+{
+id:450,
+n:"stokes canada",
+c:"home",
+u:"https://www.stokesstores.com",
+a:""
+},
+
+{
+id:451,
+n:"decor rest",
+c:"home",
+u:"https://decor-rest.com",
+a:""
+},
+
+{
+id:452,
+n:"mustang survival",
+c:"sports",
+u:"https://mustangsurvival.com",
+a:""
+},
+
+{
+id:453,
+n:"woods outdoor",
+c:"sports",
+u:"https://www.woods.ca",
+a:""
+},
+
+{
+id:454,
+n:"yakima canada",
+c:"sports",
+u:"https://yakima.com",
+a:""
+},
+
+{
+id:455,
+n:"thule canada",
+c:"sports",
+u:"https://www.thule.com/en-ca",
+a:""
+},
+
+{
+id:456,
+n:"black diamond canada",
+c:"sports",
+u:"https://www.blackdiamondequipment.com",
+a:""
+},
+
+{
+id:457,
+n:"salomon canada",
+c:"sports",
+u:"https://www.salomon.com/en-ca",
+a:""
+},
+
+{
+id:458,
+n:"merrell canada",
+c:"sports",
+u:"https://www.merrell.com/CA",
+a:""
+},
+
+{
+id:459,
+n:"keen canada",
+c:"sports",
+u:"https://www.keenfootwear.ca",
+a:""
+},
+
+{
+id:460,
+n:"helly hansen canada",
+c:"sports",
+u:"https://www.hellyhansen.com",
+a:""
+},
+{
+id:461,
+n:"mec marketplace",
+c:"sports",
+u:"https://www.mec.ca",
+a:""
+},
+
+{
+id:462,
+n:"sporting life canada",
+c:"sports",
+u:"https://www.sportinglife.ca",
+a:""
+},
+
+{
+id:463,
+n:"decathlon online canada",
+c:"sports",
+u:"https://www.decathlon.ca",
+a:""
+},
+
+{
+id:464,
+n:"hockey experts",
+c:"sports",
+u:"https://www.hockeyexperts.com",
+a:""
+},
+
+{
+id:465,
+n:"cycling avenue",
+c:"sports",
+u:"https://www.cyclingavenue.com",
+a:""
+},
+
+{
+id:466,
+n:"play it again sports canada",
+c:"sports",
+u:"https://www.playitagainsports.com",
+a:""
+},
+
+{
+id:467,
+n:"golf avenue",
+c:"sports",
+u:"https://www.golfavenue.ca",
+a:""
+},
+
+{
+id:468,
+n:"golf town online",
+c:"sports",
+u:"https://www.golftown.com",
+a:""
+},
+
+{
+id:469,
+n:"hockey monkey online",
+c:"sports",
+u:"https://www.hockeymonkey.ca",
+a:""
+},
+
+{
+id:470,
+n:"source for sports online",
+c:"sports",
+u:"https://www.sourceforsports.ca",
+a:""
+},
+
+{
+id:471,
+n:"long and mcquade music",
+c:"music",
+u:"https://www.long-mcquade.com",
+a:""
+},
+
+{
+id:472,
+n:"cosmo music",
+c:"music",
+u:"https://cosmomusic.ca",
+a:""
+},
+
+{
+id:473,
+n:"steves music",
+c:"music",
+u:"https://www.stevesmusic.com",
+a:""
+},
+
+{
+id:474,
+n:"tom lee music",
+c:"music",
+u:"https://www.tomleemusic.ca",
+a:""
+},
+
+{
+id:475,
+n:"lauzon music",
+c:"music",
+u:"https://www.lauzonmusic.com",
+a:""
+},
+
+{
+id:476,
+n:"archambault",
+c:"music",
+u:"https://www.archambault.ca",
+a:""
+},
+
+{
+id:477,
+n:"amazon music canada",
+c:"music",
+u:"https://music.amazon.ca",
+a:""
+},
+
+{
+id:478,
+n:"best buy music gear",
+c:"music",
+u:"https://www.bestbuy.ca",
+a:""
+},
+
+{
+id:479,
+n:"roland canada",
+c:"music",
+u:"https://www.roland.com/ca",
+a:""
+},
+
+{
+id:480,
+n:"yamaha canada",
+c:"music",
+u:"https://ca.yamaha.com",
+a:""
+},
+{
+id:481,
+n:"fender canada",
+c:"music",
+u:"https://www.fender.com",
+a:""
+},
+
+{
+id:482,
+n:"gibson canada",
+c:"music",
+u:"https://www.gibson.com",
+a:""
+},
+
+{
+id:483,
+n:"sweetwater canada",
+c:"music",
+u:"https://www.sweetwater.com",
+a:""
+},
+
+{
+id:484,
+n:"reverb canada",
+c:"music",
+u:"https://reverb.com",
+a:""
+},
+
+{
+id:485,
+n:"kijiji canada",
+c:"general",
+u:"https://www.kijiji.ca",
+a:""
+},
+
+{
+id:486,
+n:"etsy canada",
+c:"gifts",
+u:"https://www.etsy.com/ca",
+a:""
+},
+
+  
+{
+id:487,
+n:"redbubble canada",
+c:"gifts",
+u:"https://www.redbubble.com",
+a:""
+},
+
+{
+id:488,
+n:"society6 canada",
+c:"gifts",
+u:"https://society6.com",
+a:""
+},
+
+{
+id:489,
+n:"vistaprint gifts",
+c:"gifts",
+u:"https://www.vistaprint.ca",
+a:""
+},
+
+{
+id:490,
+n:"personalization mall canada",
+c:"gifts",
+u:"https://www.personalizationmall.com",
+a:""
+},
+
+{
+id:491,
+n:"indigo gifts",
+c:"gifts",
+u:"https://www.indigo.ca",
+a:""
+},
+
+{
+id:492,
+n:"hallmark gifts canada",
+c:"gifts",
+u:"https://www.hallmark.ca",
+a:""
+},
+
+{
+id:493,
+n:"rocky mountain soap",
+c:"beauty",
+u:"https://www.rockymountainsoap.com",
+a:""
+},
+
+{
+id:494,
+n:"cake beauty",
+c:"beauty",
+u:"https://www.cakebeauty.com",
+a:""
+},
+
+{
+id:495,
+n:"bite beauty",
+c:"beauty",
+u:"https://www.bitebeauty.com",
+a:""
+},
+
+{
+id:496,
+n:"mac canada online",
+c:"beauty",
+u:"https://www.maccosmetics.ca",
+a:""
+},
+
+{
+id:497,
+n:"sephora online canada",
+c:"beauty",
+u:"https://www.sephora.com/ca",
+a:""
+},
+
+{
+id:498,
+n:"the ordinary canada",
+c:"beauty",
+u:"https://theordinary.com",
+a:""
+},
+
+{
+id:499,
+n:"deciem",
+c:"beauty",
+u:"https://deciem.com",
+a:""
+},
+
+{
+id:500,
+n:"shopper plus",
+c:"general",
+u:"https://www.shopperplus.ca",
+a:""
+},
+{
+id:501,
+n:"123ink canada",
+c:"office",
+u:"https://www.123ink.ca",
+a:""
+},
+
+{
+id:502,
+n:"primecables",
+c:"electronics",
+u:"https://www.primecables.ca",
+a:""
+},
+
+{
+id:503,
+n:"living ca",
+c:"home",
+u:"https://www.living.ca",
+a:""
+},
+
+{
+id:504,
+n:"factory direct online",
+c:"electronics",
+u:"https://www.factorydirect.ca",
+a:""
+},
+
+{
+id:505,
+n:"shop4ca",
+c:"general",
+u:"https://www.shop4ca.com",
+a:""
+},
+
+{
+id:506,
+n:"openbox canada",
+c:"electronics",
+u:"https://openbox.ca",
+a:""
+},
+
+{
+id:507,
+n:"refurbio",
+c:"electronics",
+u:"https://www.refurbio.com",
+a:""
+},
+
+{
+id:508,
+n:"surplus by design",
+c:"electronics",
+u:"https://surplusbydesign.com",
+a:""
+},
+
+{
+id:509,
+n:"second life mac",
+c:"electronics",
+u:"https://www.secondlifemac.com",
+a:""
+},
+
+{
+id:510,
+n:"apple refurbished canada",
+c:"electronics",
+u:"https://www.apple.com/ca/shop/refurbished",
+a:""
+},
+
+{
+id:511,
+n:"canuck audio mart",
+c:"electronics",
+u:"https://www.canuckaudiomart.com",
+a:""
+},
+
+{
+id:512,
+n:"audio excellence canada",
+c:"electronics",
+u:"https://www.audioexcellence.ca",
+a:""
+},
+
+{
+id:513,
+n:"bay bloor radio",
+c:"electronics",
+u:"https://baybloorradio.com",
+a:""
+},
+
+{
+id:514,
+n:"electronics for less online",
+c:"electronics",
+u:"https://www.electronicsforless.ca",
+a:""
+},
+
+{
+id:515,
+n:"summit hifi",
+c:"electronics",
+u:"https://www.summithifi.com",
+a:""
+},
+
+{
+id:516,
+n:"headfoneshop",
+c:"electronics",
+u:"https://headfoneshop.com",
+a:""
+},
+
+{
+id:517,
+n:"charleswood music",
+c:"music",
+u:"https://www.charleswoodmusic.com",
+a:""
+},
+
+{
+id:518,
+n:"acclaim sound and lighting",
+c:"music",
+u:"https://acclaimsoundandlighting.com",
+a:""
+},
+
+{
+id:519,
+n:"quest music store",
+c:"music",
+u:"https://www.questmusicstore.com",
+a:""
+},
+
+{
+id:520,
+n:"remenyi house of music",
+c:"music",
+u:"https://remenyihouseofmusic.com",
+a:""
+},
+{
+id:521,
+n:"cosmo music online",
+c:"music",
+u:"https://cosmomusic.ca",
+a:""
+},
+
+{
+id:522,
+n:"drumland canada",
+c:"music",
+u:"https://drumland.com",
+a:""
+},
+
+{
+id:523,
+n:"l and m guitars",
+c:"music",
+u:"https://www.long-mcquade.com",
+a:""
+},
+
+{
+id:524,
+n:"axe music",
+c:"music",
+u:"https://www.axemusic.com",
+a:""
+},
+
+{
+id:525,
+n:"moog audio",
+c:"music",
+u:"https://moogaudio.com",
+a:""
+},
+
+{
+id:526,
+n:"nightlife electronics",
+c:"electronics",
+u:"https://nightlife-electronics.com",
+a:""
+},
+
+{
+id:527,
+n:"canadian hubsan",
+c:"electronics",
+u:"https://www.canadianhubsan.com",
+a:""
+},
+
+{
+id:528,
+n:"rotor village canada",
+c:"electronics",
+u:"https://www.rotorvillage.ca",
+a:""
+},
+
+{
+id:529,
+n:"dr drone",
+c:"electronics",
+u:"https://www.drdrone.ca",
+a:""
+},
+
+{
+id:530,
+n:"great hobbies",
+c:"electronics",
+u:"https://www.greathobbies.com",
+a:""
+},
+
+{
+id:531,
+n:"henrys cameras",
+c:"electronics",
+u:"https://www.henrys.com",
+a:""
+},
+
+{
+id:532,
+n:"vistek canada online",
+c:"electronics",
+u:"https://www.vistek.ca",
+a:""
+},
+
+{
+id:533,
+n:"the camera store",
+c:"electronics",
+u:"https://thecamerastore.com",
+a:""
+},
+
+{
+id:534,
+n:"downtown camera",
+c:"electronics",
+u:"https://downtowncamera.com",
+a:""
+},
+
+{
+id:535,
+n:"bh photo canada",
+c:"electronics",
+u:"https://www.bhphotovideo.com",
+a:""
+},
+
+{
+id:536,
+n:"adorama canada",
+c:"electronics",
+u:"https://www.adorama.com",
+a:""
+},
+
+{
+id:537,
+n:"gopro canada",
+c:"electronics",
+u:"https://gopro.com/en/ca",
+a:""
+},
+
+{
+id:538,
+n:"dji canada",
+c:"electronics",
+u:"https://www.dji.com/ca",
+a:""
+},
+
+{
+id:539,
+n:"insta360 canada",
+c:"electronics",
+u:"https://www.insta360.com",
+a:""
+},
+
+{
+id:540,
+n:"moment canada",
+c:"electronics",
+u:"https://www.shopmoment.com",
+a:""
+},
+{
+id:541,
+n:"best buy business canada",
+c:"electronics",
+u:"https://www.bestbuy.ca",
+a:""
+},
+
+{
+id:542,
+n:"memory express online",
+c:"electronics",
+u:"https://www.memoryexpress.com",
+a:""
+},
+
+{
+id:543,
+n:"canada computers online",
+c:"electronics",
+u:"https://www.canadacomputers.com",
+a:""
+},
+
+{
+id:544,
+n:"newegg business canada",
+c:"electronics",
+u:"https://www.newegg.ca",
+a:""
+},
+
+{
+id:545,
+n:"microcad computer",
+c:"electronics",
+u:"https://www.microcad.ca",
+a:""
+},
+
+{
+id:546,
+n:"direct dial online",
+c:"electronics",
+u:"https://www.directdial.com",
+a:""
+},
+
+{
+id:547,
+n:"cdw government canada",
+c:"electronics",
+u:"https://www.cdw.ca",
+a:""
+},
+
+{
+id:548,
+n:"softchoice marketplace",
+c:"electronics",
+u:"https://www.softchoice.com",
+a:""
+},
+
+{
+id:549,
+n:"insight canada online",
+c:"electronics",
+u:"https://ca.insight.com",
+a:""
+},
+
+{
+id:550,
+n:"zones canada",
+c:"electronics",
+u:"https://www.zones.com",
+a:""
+},
+
+{
+id:551,
+n:"rogers business",
+c:"electronics",
+u:"https://www.rogers.com",
+a:""
+},
+
+{
+id:552,
+n:"bell business",
+c:"electronics",
+u:"https://www.bell.ca",
+a:""
+},
+
+{
+id:553,
+n:"telus business",
+c:"electronics",
+u:"https://www.telus.com",
+a:""
+},
+
+{
+id:554,
+n:"shaw business",
+c:"electronics",
+u:"https://business.shaw.ca",
+a:""
+},
+
+{
+id:555,
+n:"videotron business",
+c:"electronics",
+u:"https://business.videotron.com",
+a:""
+},
+
+{
+id:556,
+n:"xplore business",
+c:"electronics",
+u:"https://www.xplore.ca",
+a:""
+},
+
+{
+id:557,
+n:"teksavvy internet",
+c:"electronics",
+u:"https://www.teksavvy.com",
+a:""
+},
+
+{
+id:558,
+n:"eastlink business",
+c:"electronics",
+u:"https://www.eastlink.ca",
+a:""
+},
+
+{
+id:559,
+n:"sasktel business",
+c:"electronics",
+u:"https://www.sasktel.com",
+a:""
+},
+
+{
+id:560,
+n:"freedom mobile online",
+c:"electronics",
+u:"https://www.freedommobile.ca",
+a:""
+},
+{
+id:561,
+n:"public mobile online",
+c:"electronics",
+u:"https://publicmobile.ca",
+a:""
+},
+
+{
+id:562,
+n:"koodo mobile",
+c:"electronics",
+u:"https://www.koodomobile.com",
+a:""
+},
+
+{
+id:563,
+n:"fido online",
+c:"electronics",
+u:"https://www.fido.ca",
+a:""
+},
+
+{
+id:564,
+n:"virgin plus online",
+c:"electronics",
+u:"https://www.virginplus.ca",
+a:""
+},
+
+{
+id:565,
+n:"lucky mobile",
+c:"electronics",
+u:"https://www.luckymobile.ca",
+a:""
+},
+
+{
+id:566,
+n:"chatr mobile",
+c:"electronics",
+u:"https://www.chatrwireless.com",
+a:""
+},
+
+{
+id:567,
+n:"pc mobile",
+c:"electronics",
+u:"https://www.pcmobile.ca",
+a:""
+},
+
+{
+id:568,
+n:"petro canada mobility",
+c:"electronics",
+u:"https://mobility.petro-canada.ca",
+a:""
+},
+
+{
+id:569,
+n:"zoomer wireless",
+c:"electronics",
+u:"https://www.zoomerwireless.ca",
+a:""
+},
+
+{
+id:570,
+n:"cityfone",
+c:"electronics",
+u:"https://www.cityfone.net",
+a:""
+},
+
+{
+id:571,
+n:"wealthsimple",
+c:"finance",
+u:"https://www.wealthsimple.com",
+a:""
+},
+
+{
+id:572,
+n:"questrade",
+c:"finance",
+u:"https://www.questrade.com",
+a:""
+},
+
+{
+id:573,
+n:"qtrade direct investing",
+c:"finance",
+u:"https://www.qtrade.ca",
+a:""
+},
+
+{
+id:574,
+n:"interactive brokers canada",
+c:"finance",
+u:"https://www.interactivebrokers.ca",
+a:""
+},
+
+{
+id:575,
+n:"td direct investing",
+c:"finance",
+u:"https://www.td.com",
+a:""
+},
+
+{
+id:576,
+n:"rbc direct investing",
+c:"finance",
+u:"https://www.rbcdirectinvesting.com",
+a:""
+},
+
+{
+id:577,
+n:"bmo investorline",
+c:"finance",
+u:"https://www.bmo.com",
+a:""
+},
+
+{
+id:578,
+n:"cibc investors edge",
+c:"finance",
+u:"https://www.investorsedge.cibc.com",
+a:""
+},
+
+{
+id:579,
+n:"scotia itrade",
+c:"finance",
+u:"https://www.scotiaitrade.com",
+a:""
+},
+
+{
+id:580,
+n:"national bank direct brokerage",
+c:"finance",
+u:"https://nbdb.ca",
+a:""
+},
+
+{
+id:581,
+n:"eq bank",
+c:"finance",
+u:"https://www.eqbank.ca",
+a:""
+},
+
+{
+id:582,
+n:"simplii financial",
+c:"finance",
+u:"https://www.simplii.com",
+a:""
+},
+
+{
+id:583,
+n:"tangerine",
+c:"finance",
+u:"https://www.tangerine.ca",
+a:""
+},
+
+{
+id:584,
+n:"koho",
+c:"finance",
+u:"https://www.koho.ca",
+a:""
+},
+
+{
+id:585,
+n:"neo financial",
+c:"finance",
+u:"https://www.neofinancial.com",
+a:""
+},
+
+{
+id:586,
+n:"wealth one bank",
+c:"finance",
+u:"https://www.wealthonebankofcanada.com",
+a:""
+},
+
+{
+id:587,
+n:"motive financial",
+c:"finance",
+u:"https://www.motivefinancial.com",
+a:""
+},
+
+{
+id:588,
+n:"oaken financial",
+c:"finance",
+u:"https://www.oaken.com",
+a:""
+},
+
+{
+id:589,
+n:"peoples trust",
+c:"finance",
+u:"https://www.peoplestrust.com",
+a:""
+},
+
+{
+id:590,
+n:"canadian western bank",
+c:"finance",
+u:"https://www.cwb.com",
+a:""
+},
+
+{
+id:591,
+n:"air canada",
+c:"travel",
+u:"https://www.aircanada.com",
+a:""
+},
+
+{
+id:592,
+n:"westjet",
+c:"travel",
+u:"https://www.westjet.com",
+a:""
+},
+
+{
+id:593,
+n:"porter airlines",
+c:"travel",
+u:"https://www.flyporter.com",
+a:""
+},
+
+{
+id:594,
+n:"air transat",
+c:"travel",
+u:"https://www.airtransat.com",
+a:""
+},
+
+{
+id:595,
+n:"sunwing",
+c:"travel",
+u:"https://www.sunwing.ca",
+a:""
+},
+
+{
+id:596,
+n:"flair airlines",
+c:"travel",
+u:"https://www.flyflair.com",
+a:""
+},
+
+{
+id:597,
+n:"via rail canada",
+c:"travel",
+u:"https://www.viarail.ca",
+a:""
+},
+
+{
+id:598,
+n:"rocky mountaineer",
+c:"travel",
+u:"https://www.rockymountaineer.com",
+a:""
+},
+
+{
+id:599,
+n:"expedia canada",
+c:"travel",
+u:"https://www.expedia.ca",
+a:""
+},
+
+{
+id:600,
+n:"booking canada",
+c:"travel",
+u:"https://www.booking.com",
+a:""
+},
+{
+id:601,
+n:"hotels com canada",
+c:"travel",
+u:"https://ca.hotels.com",
+a:""
+},
+
+{
+id:602,
+n:"agoda canada",
+c:"travel",
+u:"https://www.agoda.com",
+a:""
+},
+
+{
+id:603,
+n:"tripadvisor canada",
+c:"travel",
+u:"https://www.tripadvisor.ca",
+a:""
+},
+
+{
+id:604,
+n:"airbnb canada",
+c:"travel",
+u:"https://www.airbnb.ca",
+a:""
+},
+
+{
+id:605,
+n:"vrbo canada",
+c:"travel",
+u:"https://www.vrbo.com/en-ca",
+a:""
+},
+
+{
+id:606,
+n:"redtag ca",
+c:"travel",
+u:"https://www.redtag.ca",
+a:""
+},
+
+{
+id:607,
+n:"selloffvacations",
+c:"travel",
+u:"https://www.selloffvacations.com",
+a:""
+},
+
+{
+id:608,
+n:"itravel2000",
+c:"travel",
+u:"https://www.itravel2000.com",
+a:""
+},
+
+{
+id:609,
+n:"flight centre canada",
+c:"travel",
+u:"https://www.flightcentre.ca",
+a:""
+},
+
+{
+id:610,
+n:"costco travel canada",
+c:"travel",
+u:"https://www.costcotravel.ca",
+a:""
+},
+
+{
+id:611,
+n:"enterprise canada",
+c:"travel",
+u:"https://www.enterprise.ca",
+a:""
+},
+
+{
+id:612,
+n:"budget canada",
+c:"travel",
+u:"https://www.budget.ca",
+a:""
+},
+
+{
+id:613,
+n:"avis canada",
+c:"travel",
+u:"https://www.avis.ca",
+a:""
+},
+
+{
+id:614,
+n:"hertz canada",
+c:"travel",
+u:"https://www.hertz.ca",
+a:""
+},
+
+{
+id:615,
+n:"discount car and truck rentals",
+c:"travel",
+u:"https://www.discountcar.com",
+a:""
+},
+
+{
+id:616,
+n:"driving force",
+c:"travel",
+u:"https://www.drivingforce.ca",
+a:""
+},
+
+{
+id:617,
+n:"uhaul canada",
+c:"travel",
+u:"https://www.uhaul.com",
+a:""
+},
+
+{
+id:618,
+n:"park n fly canada",
+c:"travel",
+u:"https://www.parknfly.ca",
+a:""
+},
+
+{
+id:619,
+n:"caa travel",
+c:"travel",
+u:"https://www.caa.ca",
+a:""
+},
+
+{
+id:620,
+n:"go transit",
+c:"travel",
+u:"https://www.gotransit.com",
+a:""
+},
+{
+id:621,
+n:"via rail vacations",
+c:"travel",
+u:"https://www.viarail.ca",
+a:""
+},
+
+{
+id:622,
+n:"orbitz canada",
+c:"travel",
+u:"https://www.orbitz.com",
+a:""
+},
+
+{
+id:623,
+n:"kayak canada",
+c:"travel",
+u:"https://www.ca.kayak.com",
+a:""
+},
+
+{
+id:624,
+n:"skyscanner canada",
+c:"travel",
+u:"https://www.skyscanner.ca",
+a:""
+},
+
+{
+id:625,
+n:"travelocity canada",
+c:"travel",
+u:"https://www.travelocity.ca",
+a:""
+},
+
+{
+id:626,
+n:"hostelworld canada",
+c:"travel",
+u:"https://www.hostelworld.com",
+a:""
+},
+
+{
+id:627,
+n:"marriott canada",
+c:"travel",
+u:"https://www.marriott.com",
+a:""
+},
+
+{
+id:628,
+n:"hilton canada",
+c:"travel",
+u:"https://www.hilton.com",
+a:""
+},
+
+{
+id:629,
+n:"hyatt canada",
+c:"travel",
+u:"https://www.hyatt.com",
+a:""
+},
+
+{
+id:630,
+n:"fairmont hotels",
+c:"travel",
+u:"https://www.fairmont.com",
+a:""
+},
+
+{
+id:631,
+n:"best western canada",
+c:"travel",
+u:"https://www.bestwestern.com",
+a:""
+},
+
+{
+id:632,
+n:"choice hotels canada",
+c:"travel",
+u:"https://www.choicehotels.com",
+a:""
+},
+
+{
+id:633,
+n:"sandman hotels",
+c:"travel",
+u:"https://www.sandmanhotels.com",
+a:""
+},
+
+{
+id:634,
+n:"coast hotels",
+c:"travel",
+u:"https://www.coasthotels.com",
+a:""
+},
+
+{
+id:635,
+n:"days inn canada",
+c:"travel",
+u:"https://www.daysinn.ca",
+a:""
+},
+
+{
+id:636,
+n:"canadian affair",
+c:"travel",
+u:"https://www.canadianaffair.com",
+a:""
+},
+
+{
+id:637,
+n:"tourism canada store",
+c:"travel",
+u:"https://travel.destinationcanada.com",
+a:""
+},
+
+{
+id:638,
+n:"parks canada shop",
+c:"travel",
+u:"https://parks.canada.ca",
+a:""
+},
+
+{
+id:639,
+n:"mountain equipment outlet",
+c:"sports",
+u:"https://www.mec.ca",
+a:""
+},
+
+{
+id:640,
+n:"altitude sports outlet",
+c:"sports",
+u:"https://www.altitude-sports.com",
+a:""
+},
+{
+id:641,
+n:"sport chek online",
+c:"sports",
+u:"https://www.sportchek.ca",
+a:""
+},
+
+{
+id:642,
+n:"running room online",
+c:"sports",
+u:"https://www.runningroom.com",
+a:""
+},
+
+{
+id:643,
+n:"pro hockey life online",
+c:"sports",
+u:"https://www.prohockeylife.com",
+a:""
+},
+
+{
+id:644,
+n:"source for sports hockey",
+c:"sports",
+u:"https://www.sourceforsports.ca",
+a:""
+},
+
+{
+id:645,
+n:"golf town canada online",
+c:"sports",
+u:"https://www.golftown.com",
+a:""
+},
+
+{
+id:646,
+n:"tennis giant online",
+c:"sports",
+u:"https://www.tennisgiant.com",
+a:""
+},
+
+{
+id:647,
+n:"bike depot online",
+c:"sports",
+u:"https://www.bikedepot.com",
+a:""
+},
+
+{
+id:648,
+n:"skiis and biikes online",
+c:"sports",
+u:"https://skiisandbiikes.com",
+a:""
+},
+
+{
+id:649,
+n:"cabelas online canada",
+c:"sports",
+u:"https://www.cabelas.ca",
+a:""
+},
+
+{
+id:650,
+n:"bass pro shops online",
+c:"sports",
+u:"https://www.basspro.com",
+a:""
+},
+
+{
+id:651,
+n:"canadian outdoor equipment online",
+c:"sports",
+u:"https://www.canadianoutdoorequipment.com",
+a:""
+},
+
+{
+id:652,
+n:"vpo outdoors",
+c:"sports",
+u:"https://vpo.ca",
+a:""
+},
+
+{
+id:653,
+n:"the last hunt outlet",
+c:"sports",
+u:"https://www.thelasthunt.com",
+a:""
+},
+
+{
+id:654,
+n:"arc teryx canada online",
+c:"sports",
+u:"https://arcteryx.com/ca",
+a:""
+},
+
+{
+id:655,
+n:"patagonia online canada",
+c:"sports",
+u:"https://www.patagonia.ca",
+a:""
+},
+
+{
+id:656,
+n:"salomon online canada",
+c:"sports",
+u:"https://www.salomon.com/en-ca",
+a:""
+},
+
+{
+id:657,
+n:"black diamond online",
+c:"sports",
+u:"https://www.blackdiamondequipment.com",
+a:""
+},
+
+{
+id:658,
+n:"mustang survival online",
+c:"sports",
+u:"https://mustangsurvival.com",
+a:""
+},
+
+{
+id:659,
+n:"thule online canada",
+c:"sports",
+u:"https://www.thule.com/en-ca",
+a:""
+},
+
+{
+id:660,
+n:"yakima online canada",
+c:"sports",
+u:"https://yakima.com",
+a:""
+},
+{
+id:661,
+n:"under armour online canada",
+c:"sports",
+u:"https://www.underarmour.ca",
+a:""
+},
+
+{
+id:662,
+n:"adidas online canada",
+c:"fashion",
+u:"https://www.adidas.ca",
+a:""
+},
+
+{
+id:663,
+n:"nike online canada",
+c:"fashion",
+u:"https://www.nike.com/ca",
+a:""
+},
+
+{
+id:664,
+n:"puma online canada",
+c:"fashion",
+u:"https://ca.puma.com",
+a:""
+},
+
+{
+id:665,
+n:"new balance online canada",
+c:"fashion",
+u:"https://www.newbalance.ca",
+a:""
+},
+
+{
+id:666,
+n:"foot locker online canada",
+c:"fashion",
+u:"https://www.footlocker.ca",
+a:""
+},
+
+{
+id:667,
+n:"softmoc online",
+c:"fashion",
+u:"https://www.softmoc.com",
+a:""
+},
+
+{
+id:668,
+n:"browns shoes online",
+c:"fashion",
+u:"https://www.brownsshoes.com",
+a:""
+},
+
+{
+id:669,
+n:"aldo shoes canada",
+c:"fashion",
+u:"https://www.aldoshoes.com",
+a:""
+},
+
+{
+id:670,
+n:"call it spring online",
+c:"fashion",
+u:"https://www.callitspring.com",
+a:""
+},
+
+{
+id:671,
+n:"roots online canada",
+c:"fashion",
+u:"https://www.roots.com",
+a:""
+},
+
+{
+id:672,
+n:"aritzia online",
+c:"fashion",
+u:"https://www.aritzia.com",
+a:""
+},
+
+{
+id:673,
+n:"simons online canada",
+c:"fashion",
+u:"https://www.simons.ca",
+a:""
+},
+
+{
+id:674,
+n:"ssense online",
+c:"fashion",
+u:"https://www.ssense.com",
+a:""
+},
+
+{
+id:675,
+n:"frank and oak online",
+c:"fashion",
+u:"https://www.frankandoak.com",
+a:""
+},
+
+{
+id:676,
+n:"laura online canada",
+c:"fashion",
+u:"https://www.laura.ca",
+a:""
+},
+
+{
+id:677,
+n:"cleo online canada",
+c:"fashion",
+u:"https://www.cleo.ca",
+a:""
+},
+
+{
+id:678,
+n:"suzy shier online",
+c:"fashion",
+u:"https://suzyshier.com",
+a:""
+},
+
+{
+id:679,
+n:"bootlegger online",
+c:"fashion",
+u:"https://www.bootlegger.com",
+a:""
+},
+
+{
+id:680,
+n:"northern reflections online",
+c:"fashion",
+u:"https://www.northernreflections.com",
+a:""
+},
+{
+id:681,
+n:"old navy online canada",
+c:"fashion",
+u:"https://oldnavy.gapcanada.ca",
+a:""
+},
+
+{
+id:682,
+n:"gap online canada",
+c:"fashion",
+u:"https://www.gapcanada.ca",
+a:""
+},
+
+{
+id:683,
+n:"banana republic canada online",
+c:"fashion",
+u:"https://bananarepublic.gapcanada.ca",
+a:""
+},
+
+{
+id:684,
+n:"h and m online canada",
+c:"fashion",
+u:"https://www2.hm.com/en_ca",
+a:""
+},
+
+{
+id:685,
+n:"uniqlo online canada",
+c:"fashion",
+u:"https://www.uniqlo.com/ca",
+a:""
+},
+
+{
+id:686,
+n:"zara online canada",
+c:"fashion",
+u:"https://www.zara.com/ca",
+a:""
+},
+
+{
+id:687,
+n:"lululemon online canada",
+c:"fashion",
+u:"https://shop.lululemon.com",
+a:""
+},
+
+{
+id:688,
+n:"joe fresh online",
+c:"fashion",
+u:"https://www.joefresh.com",
+a:""
+},
+
+{
+id:689,
+n:"moores online",
+c:"fashion",
+u:"https://www.mooresclothing.ca",
+a:""
+},
+
+{
+id:690,
+n:"canada goose online",
+c:"fashion",
+u:"https://www.canadagoose.com",
+a:""
+},
+
+{
+id:691,
+n:"mackage online",
+c:"fashion",
+u:"https://www.mackage.com",
+a:""
+},
+
+{
+id:692,
+n:"moose knuckles online",
+c:"fashion",
+u:"https://www.mooseknucklescanada.com",
+a:""
+},
+
+{
+id:693,
+n:"sorel online canada",
+c:"fashion",
+u:"https://www.sorelfootwear.ca",
+a:""
+},
+
+{
+id:694,
+n:"mejuri online",
+c:"jewelry",
+u:"https://mejuri.com",
+a:""
+},
+
+{
+id:695,
+n:"maison birks online",
+c:"jewelry",
+u:"https://www.maisonbirks.com",
+a:""
+},
+
+{
+id:696,
+n:"michael hill online canada",
+c:"jewelry",
+u:"https://www.michaelhill.ca",
+a:""
+},
+
+{
+id:697,
+n:"spence diamonds online",
+c:"jewelry",
+u:"https://www.spencediamonds.com",
+a:""
+},
+
+{
+id:698,
+n:"pandora online canada",
+c:"jewelry",
+u:"https://ca.pandora.net",
+a:""
+},
+
+{
+id:699,
+n:"blue nile online canada",
+c:"jewelry",
+u:"https://www.bluenile.com",
+a:""
+},
+
+{
+id:700,
+n:"brilliant earth online",
+c:"jewelry",
+u:"https://www.brilliantearth.com",
+a:""
+},
+
+{
+id:701,
+n:"peoples jewellers online",
+c:"jewelry",
+u:"https://www.peoplesjewellers.com",
+a:""
+},
+
+{
+id:702,
+n:"ben moss online",
+c:"jewelry",
+u:"https://www.benmoss.com",
+a:""
+},
+
+{
+id:703,
+n:"ann louise online",
+c:"jewelry",
+u:"https://www.annlouise.ca",
+a:""
+},
+
+{
+id:704,
+n:"mappins online",
+c:"jewelry",
+u:"https://www.mappins.com",
+a:""
+},
+
+{
+id:705,
+n:"giftbasket canada online",
+c:"gifts",
+u:"https://www.giftbasketcanada.com",
+a:""
+},
+
+{
+id:706,
+n:"baskits online",
+c:"gifts",
+u:"https://baskits.com",
+a:""
+},
+
+{
+id:707,
+n:"canada flowers online",
+c:"gifts",
+u:"https://www.canadaflowers.ca",
+a:""
+},
+
+{
+id:708,
+n:"teleflora canada online",
+c:"gifts",
+u:"https://www.teleflora.com",
+a:""
+},
+
+{
+id:709,
+n:"floraqueen online",
+c:"gifts",
+u:"https://www.floraqueen.com",
+a:""
+},
+
+{
+id:710,
+n:"charmed aroma online",
+c:"gifts",
+u:"https://charmedaroma.com",
+a:""
+},
+
+{
+id:711,
+n:"etsy canada online",
+c:"gifts",
+u:"https://www.etsy.com/ca",
+a:""
+},
+
+{
+id:712,
+n:"redbubble online",
+c:"gifts",
+u:"https://www.redbubble.com",
+a:""
+},
+
+{
+id:713,
+n:"society6 online",
+c:"gifts",
+u:"https://society6.com",
+a:""
+},
+
+{
+id:714,
+n:"indigo gifts online",
+c:"gifts",
+u:"https://www.indigo.ca",
+a:""
+},
+
+{
+id:715,
+n:"hallmark online canada",
+c:"gifts",
+u:"https://www.hallmark.ca",
+a:""
+},
+
+{
+id:716,
+n:"pet valu canada online",
+c:"pets",
+u:"https://www.petvalu.ca",
+a:""
+},
+
+{
+id:717,
+n:"rens pets canada online",
+c:"pets",
+u:"https://www.renspets.com",
+a:""
+},
+
+{
+id:718,
+n:"global pet foods online",
+c:"pets",
+u:"https://globalpetfoods.com",
+a:""
+},
+
+{
+id:719,
+n:"homes alive pets online",
+c:"pets",
+u:"https://www.homesalive.ca",
+a:""
+},
+
+{
+id:720,
+n:"petland canada online",
+c:"pets",
+u:"https://www.petland.ca",
+a:""
+},
+{
+id:721,
+n:"pet smart online canada",
+c:"pets",
+u:"https://www.petsmart.ca",
+a:""
+},
+
+{
+id:722,
+n:"big als online",
+c:"pets",
+u:"https://bigals.ca",
+a:""
+},
+
+{
+id:723,
+n:"angelfins online",
+c:"pets",
+u:"https://angelfins.ca",
+a:""
+},
+
+{
+id:724,
+n:"canadian pet connection online",
+c:"pets",
+u:"https://www.canadianpetconnection.ca",
+a:""
+},
+
+{
+id:725,
+n:"petplanet online canada",
+c:"pets",
+u:"https://www.petplanet.ca",
+a:""
+},
+
+{
+id:726,
+n:"pet food canada online",
+c:"pets",
+u:"https://www.petfoodcanada.com",
+a:""
+},
+
+{
+id:727,
+n:"healthybud pets",
+c:"pets",
+u:"https://healthybud.co",
+a:""
+},
+
+{
+id:728,
+n:"earth rated online",
+c:"pets",
+u:"https://www.earthrated.com",
+a:""
+},
+
+{
+id:729,
+n:"well ca online",
+c:"health",
+u:"https://well.ca",
+a:""
+},
+
+{
+id:730,
+n:"vitamart online",
+c:"health",
+u:"https://www.vitamart.ca",
+a:""
+},
+
+{
+id:731,
+n:"national nutrition online",
+c:"health",
+u:"https://www.nationalnutrition.ca",
+a:""
+},
+
+{
+id:732,
+n:"canprev online",
+c:"health",
+u:"https://canprev.ca",
+a:""
+},
+
+{
+id:733,
+n:"jamieson online",
+c:"health",
+u:"https://www.jamiesonvitamins.com",
+a:""
+},
+
+{
+id:734,
+n:"webber naturals online",
+c:"health",
+u:"https://www.webbernaturals.com",
+a:""
+},
+
+{
+id:735,
+n:"sisu vitamins",
+c:"health",
+u:"https://www.sisu.com",
+a:""
+},
+
+{
+id:736,
+n:"natural factors online",
+c:"health",
+u:"https://naturalfactors.com",
+a:""
+},
+
+{
+id:737,
+n:"organika online",
+c:"health",
+u:"https://organika.com",
+a:""
+},
+
+{
+id:738,
+n:"genuine health online",
+c:"health",
+u:"https://genuinehealth.ca",
+a:""
+},
+
+{
+id:739,
+n:"body energy club online",
+c:"health",
+u:"https://bodyenergyclub.com",
+a:""
+},
+
+{
+id:740,
+n:"supplement king online",
+c:"health",
+u:"https://www.supplementking.ca",
+a:""
+},
+{
+id:741,
+n:"canadian protein store",
+c:"health",
+u:"https://canadianprotein.com",
+a:""
+},
+
+{
+id:742,
+n:"allmax nutrition online",
+c:"health",
+u:"https://allmaxnutrition.com",
+a:""
+},
+
+{
+id:743,
+n:"atp lab online",
+c:"health",
+u:"https://atplab.com",
+a:""
+},
+
+{
+id:744,
+n:"progressive nutrition online",
+c:"health",
+u:"https://www.progressivenutritional.com",
+a:""
+},
+
+{
+id:745,
+n:"iron vegan online",
+c:"health",
+u:"https://ironvegan.ca",
+a:""
+},
+
+{
+id:746,
+n:"vega online canada",
+c:"health",
+u:"https://myvega.ca",
+a:""
+},
+
+{
+id:747,
+n:"leanfit online",
+c:"health",
+u:"https://leanfit.com",
+a:""
+},
+
+{
+id:748,
+n:"prairie naturals online",
+c:"health",
+u:"https://prairienaturals.ca",
+a:""
+},
+
+{
+id:749,
+n:"new roots herbal online",
+c:"health",
+u:"https://www.newrootsherbal.com",
+a:""
+},
+
+{
+id:750,
+n:"healthy planet online",
+c:"health",
+u:"https://www.healthyplanetcanada.com",
+a:""
+},
+
+{
+id:751,
+n:"casper canada online",
+c:"home",
+u:"https://casper.com",
+a:""
+},
+
+{
+id:752,
+n:"douglas mattress canada",
+c:"home",
+u:"https://www.douglas.ca",
+a:""
+},
+
+{
+id:753,
+n:"logan and cove online",
+c:"home",
+u:"https://www.loganandcove.ca",
+a:""
+},
+
+{
+id:754,
+n:"silk and snow online",
+c:"home",
+u:"https://www.silkandsnow.com",
+a:""
+},
+
+{
+id:755,
+n:"endy online canada",
+c:"home",
+u:"https://www.endy.com",
+a:""
+},
+
+{
+id:756,
+n:"eq3 online furniture",
+c:"home",
+u:"https://www.eq3.com",
+a:""
+},
+
+{
+id:757,
+n:"urban barn online",
+c:"home",
+u:"https://www.urbanbarn.com",
+a:""
+},
+
+{
+id:758,
+n:"bouclair online",
+c:"home",
+u:"https://www.bouclair.com",
+a:""
+},
+
+{
+id:759,
+n:"wayfair furniture canada",
+c:"home",
+u:"https://www.wayfair.ca",
+a:""
+},
+
+{
+id:760,
+n:"article furniture online",
+c:"home",
+u:"https://www.article.com",
+a:""
+},
+{
+id:761,
+n:"mobilia online",
+c:"home",
+u:"https://mobilia.ca",
+a:""
+},
+
+{
+id:762,
+n:"must societe online",
+c:"home",
+u:"https://mustsociete.com",
+a:""
+},
+
+{
+id:763,
+n:"crate and barrel online canada",
+c:"home",
+u:"https://www.crateandbarrel.ca",
+a:""
+},
+
+{
+id:764,
+n:"pottery barn online canada",
+c:"home",
+u:"https://www.potterybarn.ca",
+a:""
+},
+
+{
+id:765,
+n:"west elm online canada",
+c:"home",
+u:"https://www.westelm.ca",
+a:""
+},
+
+{
+id:766,
+n:"restoration hardware online",
+c:"home",
+u:"https://rh.com",
+a:""
+},
+
+{
+id:767,
+n:"kitchen stuff plus online",
+c:"home",
+u:"https://www.kitchenstuffplus.com",
+a:""
+},
+
+{
+id:768,
+n:"stokes online canada",
+c:"home",
+u:"https://www.stokesstores.com",
+a:""
+},
+
+{
+id:769,
+n:"canadian appliance source online",
+c:"home",
+u:"https://www.canadianappliance.ca",
+a:""
+},
+
+{
+id:770,
+n:"trail appliances online",
+c:"home",
+u:"https://www.trailappliances.com",
+a:""
+},
+
+{
+id:771,
+n:"goemans appliances online",
+c:"home",
+u:"https://www.goemans.com",
+a:""
+},
+
+{
+id:772,
+n:"appliance canada online",
+c:"home",
+u:"https://www.appliancecanada.com",
+a:""
+},
+
+{
+id:773,
+n:"rona online canada",
+c:"home",
+u:"https://www.rona.ca",
+a:""
+},
+
+{
+id:774,
+n:"reno depot online",
+c:"home",
+u:"https://www.renodepot.com",
+a:""
+},
+
+{
+id:775,
+n:"home hardware online",
+c:"home",
+u:"https://www.homehardware.ca",
+a:""
+},
+
+{
+id:776,
+n:"castle building centres online",
+c:"home",
+u:"https://castle.ca",
+a:""
+},
+
+{
+id:777,
+n:"timber mart online",
+c:"home",
+u:"https://www.timbermart.ca",
+a:""
+},
+
+{
+id:778,
+n:"bmr online canada",
+c:"home",
+u:"https://www.bmr.ca",
+a:""
+},
+
+{
+id:779,
+n:"ikea canada online",
+c:"home",
+u:"https://www.ikea.com/ca",
+a:""
+},
+
+{
+id:780,
+n:"jysk online canada",
+c:"home",
+u:"https://www.jysk.ca",
+a:""
+},
+
+{
+id:781,
+n:"leons online canada",
+c:"home",
+u:"https://www.leons.ca",
+a:""
+},
+
+{
+id:782,
+n:"the brick online",
+c:"home",
+u:"https://www.thebrick.com",
+a:""
+},
+
+{
+id:783,
+n:"structube online",
+c:"home",
+u:"https://www.structube.com",
+a:""
+},
+
+{
+id:784,
+n:"sleep country mattresses",
+c:"home",
+u:"https://www.sleepcountry.ca",
+a:""
+},
+
+{
+id:785,
+n:"homesense canada online",
+c:"home",
+u:"https://www.homesense.ca",
+a:""
+},
+
+{
+id:786,
+n:"costco home canada",
+c:"home",
+u:"https://www.costco.ca",
+a:""
+},
+
+{
+id:787,
+n:"walmart home canada",
+c:"home",
+u:"https://www.walmart.ca",
+a:""
+},
+
+{
+id:788,
+n:"amazon home canada",
+c:"home",
+u:"https://www.amazon.ca",
+a:""
+},
+
+{
+id:789,
+n:"shoppers drug mart online",
+c:"beauty",
+u:"https://www.shoppersdrugmart.ca",
+a:""
+},
+
+{
+id:790,
+n:"london drugs online",
+c:"beauty",
+u:"https://www.londondrugs.com",
+a:""
+},
+
+{
+id:791,
+n:"sephora canada online",
+c:"beauty",
+u:"https://www.sephora.com/ca",
+a:""
+},
+
+{
+id:792,
+n:"the body shop online canada",
+c:"beauty",
+u:"https://www.thebodyshop.com/en-ca",
+a:""
+},
+
+{
+id:793,
+n:"clinique online canada",
+c:"beauty",
+u:"https://www.clinique.ca",
+a:""
+},
+
+{
+id:794,
+n:"estee lauder online canada",
+c:"beauty",
+u:"https://www.esteelauder.ca",
+a:""
+},
+
+{
+id:795,
+n:"kiehls online canada",
+c:"beauty",
+u:"https://www.kiehls.ca",
+a:""
+},
+
+{
+id:796,
+n:"rocky mountain soap online",
+c:"beauty",
+u:"https://www.rockymountainsoap.com",
+a:""
+},
+
+{
+id:797,
+n:"cake beauty online",
+c:"beauty",
+u:"https://www.cakebeauty.com",
+a:""
+},
+
+{
+id:798,
+n:"the ordinary online canada",
+c:"beauty",
+u:"https://theordinary.com",
+a:""
+},
+
+{
+id:799,
+n:"deciem online",
+c:"beauty",
+u:"https://deciem.com",
+a:""
+},
+
+{
+id:800,
+n:"avon canada online",
+c:"beauty",
+u:"https://www.avon.ca",
+a:""
+},
+{
+id:801,
+n:"mac cosmetics online canada",
+c:"beauty",
+u:"https://www.maccosmetics.ca",
+a:""
+},
+
+{
+id:802,
+n:"bath and body works online canada",
+c:"beauty",
+u:"https://www.bathandbodyworks.com",
+a:""
+},
+
+{
+id:803,
+n:"wellwise online",
+c:"health",
+u:"https://www.wellwise.ca",
+a:""
+},
+
+{
+id:804,
+n:"gnc online canada",
+c:"health",
+u:"https://www.gnc.ca",
+a:""
+},
+
+{
+id:805,
+n:"vita health online",
+c:"health",
+u:"https://www.vitahealth.ca",
+a:""
+},
+
+{
+id:806,
+n:"nutrition house online",
+c:"health",
+u:"https://www.nutritionhouse.com",
+a:""
+},
+
+{
+id:807,
+n:"popeyes supplements online",
+c:"health",
+u:"https://www.popeyesonline.com",
+a:""
+},
+
+{
+id:808,
+n:"healthy planet supplements",
+c:"health",
+u:"https://www.healthyplanetcanada.com",
+a:""
+},
+
+{
+id:809,
+n:"natures fare online",
+c:"health",
+u:"https://www.naturesfare.com",
+a:""
+},
+
+{
+id:810,
+n:"canadian health food association",
+c:"health",
+u:"https://www.chfa.ca",
+a:""
+},
+
+{
+id:811,
+n:"lego canada online",
+c:"kids",
+u:"https://www.lego.com/en-ca",
+a:""
+},
+
+{
+id:812,
+n:"toys r us online canada",
+c:"kids",
+u:"https://www.toysrus.ca",
+a:""
+},
+
+{
+id:813,
+n:"mastermind toys online",
+c:"kids",
+u:"https://www.mastermindtoys.com",
+a:""
+},
+
+{
+id:814,
+n:"babies r us online canada",
+c:"kids",
+u:"https://www.babiesrus.ca",
+a:""
+},
+
+{
+id:815,
+n:"snuggle bugz online",
+c:"kids",
+u:"https://www.snugglebugz.ca",
+a:""
+},
+
+{
+id:816,
+n:"west coast kids online",
+c:"kids",
+u:"https://www.westcoastkids.ca",
+a:""
+},
+
+{
+id:817,
+n:"clement online",
+c:"kids",
+u:"https://www.clement.ca",
+a:""
+},
+
+{
+id:818,
+n:"build a bear canada online",
+c:"kids",
+u:"https://www.buildabear.ca",
+a:""
+},
+
+{
+id:819,
+n:"chapters kids online",
+c:"kids",
+u:"https://www.indigo.ca",
+a:""
+},
+
+{
+id:820,
+n:"scholars choice online",
+c:"education",
+u:"https://www.scholarschoice.ca",
+a:""
+},
+
+{
+id:821,
+n:"teacher supply source online",
+c:"education",
+u:"https://www.teachersupplysource.ca",
+a:""
+},
+
+{
+id:822,
+n:"pearson canada online",
+c:"education",
+u:"https://www.pearson.com/en-ca",
+a:""
+},
+
+{
+id:823,
+n:"mcgraw hill canada online",
+c:"education",
+u:"https://www.mheducation.ca",
+a:""
+},
+
+{
+id:824,
+n:"oxford university press online",
+c:"education",
+u:"https://global.oup.com",
+a:""
+},
+
+{
+id:825,
+n:"canadian geographic store online",
+c:"education",
+u:"https://canadiangeographic.ca",
+a:""
+},
+
+{
+id:826,
+n:"lego education online",
+c:"education",
+u:"https://education.lego.com",
+a:""
+},
+
+{
+id:827,
+n:"stemfinity online",
+c:"education",
+u:"https://stemfinity.com",
+a:""
+},
+
+{
+id:828,
+n:"university of toronto press online",
+c:"education",
+u:"https://utorontopress.com",
+a:""
+},
+
+{
+id:829,
+n:"book outlet online",
+c:"books",
+u:"https://bookoutlet.ca",
+a:""
+},
+
+{
+id:830,
+n:"indigo books online",
+c:"books",
+u:"https://www.indigo.ca",
+a:""
+},
+
+{
+id:831,
+n:"kobo books canada",
+c:"books",
+u:"https://www.kobo.com/ca",
+a:""
+},
+
+{
+id:832,
+n:"audible canada online",
+c:"books",
+u:"https://www.audible.ca",
+a:""
+},
+
+{
+id:833,
+n:"mcnally robinson online",
+c:"books",
+u:"https://www.mcnallyrobinson.com",
+a:""
+},
+
+{
+id:834,
+n:"book city online",
+c:"books",
+u:"https://bookcity.ca",
+a:""
+},
+
+{
+id:835,
+n:"scholastic canada online",
+c:"books",
+u:"https://www.scholastic.ca",
+a:""
+},
+
+{
+id:836,
+n:"goodminds online",
+c:"books",
+u:"https://goodminds.com",
+a:""
+},
+
+{
+id:837,
+n:"indigenous reflections online",
+c:"books",
+u:"https://www.indigenousreflections.ca",
+a:""
+},
+
+{
+id:838,
+n:"amazon books canada",
+c:"books",
+u:"https://www.amazon.ca/books-used-books-textbooks",
+a:""
+},
+
+{
+id:839,
+n:"chapters online",
+c:"books",
+u:"https://www.indigo.ca",
+a:""
+},
+
+{
+id:840,
+n:"coles books online",
+c:"books",
+u:"https://www.indigo.ca",
+a:""
+},
+{
+id:841,
+n:"campus bookstore online",
+c:"education",
+u:"https://www.campusbookstore.com",
+a:""
+},
+
+{
+id:842,
+n:"mastermind learning online",
+c:"education",
+u:"https://www.mastermindtoys.com",
+a:""
+},
+
+{
+id:843,
+n:"canada post online",
+c:"services",
+u:"https://www.canadapost-postescanada.ca",
+a:""
+},
+
+{
+id:844,
+n:"purolator online",
+c:"services",
+u:"https://www.purolator.com",
+a:""
+},
+
+{
+id:845,
+n:"ups canada online",
+c:"services",
+u:"https://www.ups.com/ca",
+a:""
+},
+
+{
+id:846,
+n:"fedex canada online",
+c:"services",
+u:"https://www.fedex.com/en-ca",
+a:""
+},
+
+{
+id:847,
+n:"dhl canada online",
+c:"services",
+u:"https://www.dhl.com/ca-en",
+a:""
+},
+
+{
+id:848,
+n:"canpar online",
+c:"services",
+u:"https://www.canpar.com",
+a:""
+},
+
+{
+id:849,
+n:"loomis express online",
+c:"services",
+u:"https://www.loomisexpress.com",
+a:""
+},
+
+{
+id:850,
+n:"chit chats online",
+c:"services",
+u:"https://chitchats.com",
+a:""
+},
+
+{
+id:851,
+n:"netparcel online",
+c:"services",
+u:"https://www.netparcel.com",
+a:""
+},
+
+{
+id:852,
+n:"freightcom online",
+c:"services",
+u:"https://www.freightcom.com",
+a:""
+},
+
+{
+id:853,
+n:"shopify canada online",
+c:"services",
+u:"https://www.shopify.com/ca",
+a:""
+},
+
+{
+id:854,
+n:"lightspeed online",
+c:"services",
+u:"https://www.lightspeedhq.com",
+a:""
+},
+
+{
+id:855,
+n:"moneris online",
+c:"services",
+u:"https://www.moneris.com",
+a:""
+},
+
+{
+id:856,
+n:"square canada online",
+c:"services",
+u:"https://squareup.com/ca",
+a:""
+},
+
+{
+id:857,
+n:"helcim online",
+c:"services",
+u:"https://www.helcim.com",
+a:""
+},
+
+{
+id:858,
+n:"grand and toy online",
+c:"office",
+u:"https://www.grandandtoy.com",
+a:""
+},
+
+{
+id:859,
+n:"staples canada online",
+c:"office",
+u:"https://www.staples.ca",
+a:""
+},
+
+{
+id:860,
+n:"uline canada online",
+c:"office",
+u:"https://www.uline.ca",
+a:""
+},
+{
+id:861,
+n:"123ink online",
+c:"office",
+u:"https://www.123ink.ca",
+a:""
+},
+
+{
+id:862,
+n:"vistaprint canada online",
+c:"office",
+u:"https://www.vistaprint.ca",
+a:""
+},
+
+{
+id:863,
+n:"moo canada online",
+c:"office",
+u:"https://www.moo.com/ca",
+a:""
+},
+
+{
+id:864,
+n:"print three online",
+c:"office",
+u:"https://www.print3.ca",
+a:""
+},
+
+{
+id:865,
+n:"fedex office canada online",
+c:"office",
+u:"https://www.fedex.com/en-ca",
+a:""
+},
+
+{
+id:866,
+n:"basics office products online",
+c:"office",
+u:"https://www.basics.com",
+a:""
+},
+
+{
+id:867,
+n:"cdw canada online",
+c:"electronics",
+u:"https://www.cdw.ca",
+a:""
+},
+
+{
+id:868,
+n:"softchoice online",
+c:"electronics",
+u:"https://www.softchoice.com",
+a:""
+},
+
+{
+id:869,
+n:"insight canada marketplace",
+c:"electronics",
+u:"https://ca.insight.com",
+a:""
+},
+
+{
+id:870,
+n:"zones canada online",
+c:"electronics",
+u:"https://www.zones.com",
+a:""
+},
+
+{
+id:871,
+n:"wealthsimple online",
+c:"finance",
+u:"https://www.wealthsimple.com",
+a:""
+},
+
+{
+id:872,
+n:"questrade online",
+c:"finance",
+u:"https://www.questrade.com",
+a:""
+},
+
+{
+id:873,
+n:"qtrade online",
+c:"finance",
+u:"https://www.qtrade.ca",
+a:""
+},
+
+{
+id:874,
+n:"interactive brokers canada online",
+c:"finance",
+u:"https://www.interactivebrokers.ca",
+a:""
+},
+
+{
+id:875,
+n:"td direct investing online",
+c:"finance",
+u:"https://www.td.com",
+a:""
+},
+
+{
+id:876,
+n:"rbc direct investing online",
+c:"finance",
+u:"https://www.rbcdirectinvesting.com",
+a:""
+},
+
+{
+id:877,
+n:"bmo investorline online",
+c:"finance",
+u:"https://www.bmo.com",
+a:""
+},
+
+{
+id:878,
+n:"cibc investors edge online",
+c:"finance",
+u:"https://www.investorsedge.cibc.com",
+a:""
+},
+
+{
+id:879,
+n:"scotia itrade online",
+c:"finance",
+u:"https://www.scotiaitrade.com",
+a:""
+},
+
+{
+id:880,
+n:"national bank direct brokerage online",
+c:"finance",
+u:"https://nbdb.ca",
+a:""
+},
+{
+id:881,
+n:"eq bank online",
+c:"finance",
+u:"https://www.eqbank.ca",
+a:""
+},
+
+{
+id:882,
+n:"simplii financial online",
+c:"finance",
+u:"https://www.simplii.com",
+a:""
+},
+
+{
+id:883,
+n:"tangerine online",
+c:"finance",
+u:"https://www.tangerine.ca",
+a:""
+},
+
+{
+id:884,
+n:"koho online",
+c:"finance",
+u:"https://www.koho.ca",
+a:""
+},
+
+{
+id:885,
+n:"neo financial online",
+c:"finance",
+u:"https://www.neofinancial.com",
+a:""
+},
+
+{
+id:886,
+n:"oaken financial online",
+c:"finance",
+u:"https://www.oaken.com",
+a:""
+},
+
+{
+id:887,
+n:"motive financial online",
+c:"finance",
+u:"https://www.motivefinancial.com",
+a:""
+},
+
+{
+id:888,
+n:"peoples trust online",
+c:"finance",
+u:"https://www.peoplestrust.com",
+a:""
+},
+
+{
+id:889,
+n:"canadian western bank online",
+c:"finance",
+u:"https://www.cwb.com",
+a:""
+},
+
+{
+id:890,
+n:"wealth one bank online",
+c:"finance",
+u:"https://www.wealthonebankofcanada.com",
+a:""
+},
+
+{
+id:891,
+n:"air canada online",
+c:"travel",
+u:"https://www.aircanada.com",
+a:""
+},
+
+{
+id:892,
+n:"westjet online",
+c:"travel",
+u:"https://www.westjet.com",
+a:""
+},
+
+{
+id:893,
+n:"porter airlines online",
+c:"travel",
+u:"https://www.flyporter.com",
+a:""
+},
+
+{
+id:894,
+n:"air transat online",
+c:"travel",
+u:"https://www.airtransat.com",
+a:""
+},
+
+{
+id:895,
+n:"flair airlines online",
+c:"travel",
+u:"https://www.flyflair.com",
+a:""
+},
+
+{
+id:896,
+n:"via rail online",
+c:"travel",
+u:"https://www.viarail.ca",
+a:""
+},
+
+{
+id:897,
+n:"rocky mountaineer online",
+c:"travel",
+u:"https://www.rockymountaineer.com",
+a:""
+},
+
+{
+id:898,
+n:"expedia canada online",
+c:"travel",
+u:"https://www.expedia.ca",
+a:""
+},
+
+{
+id:899,
+n:"booking canada online",
+c:"travel",
+u:"https://www.booking.com",
+a:""
+},
+
+{
+id:900,
+n:"airbnb canada online",
+c:"travel",
+u:"https://www.airbnb.ca",
+a:""
+},
+{
+id:901,
+n:"vrbo canada online",
+c:"travel",
+u:"https://www.vrbo.com/en-ca",
+a:""
+},
+
+{
+id:902,
+n:"tripadvisor canada online",
+c:"travel",
+u:"https://www.tripadvisor.ca",
+a:""
+},
+
+{
+id:903,
+n:"hotels com canada online",
+c:"travel",
+u:"https://ca.hotels.com",
+a:""
+},
+
+{
+id:904,
+n:"agoda canada online",
+c:"travel",
+u:"https://www.agoda.com",
+a:""
+},
+
+{
+id:905,
+n:"kayak canada online",
+c:"travel",
+u:"https://www.ca.kayak.com",
+a:""
+},
+
+{
+id:906,
+n:"skyscanner canada online",
+c:"travel",
+u:"https://www.skyscanner.ca",
+a:""
+},
+
+{
+id:907,
+n:"travelocity canada online",
+c:"travel",
+u:"https://www.travelocity.ca",
+a:""
+},
+
+{
+id:908,
+n:"flight centre canada online",
+c:"travel",
+u:"https://www.flightcentre.ca",
+a:""
+},
+
+{
+id:909,
+n:"costco travel online",
+c:"travel",
+u:"https://www.costcotravel.ca",
+a:""
+},
+
+{
+id:910,
+n:"redtag vacations",
+c:"travel",
+u:"https://www.redtag.ca",
+a:""
+},
+
+{
+id:911,
+n:"selloff vacations online",
+c:"travel",
+u:"https://www.selloffvacations.com",
+a:""
+},
+
+{
+id:912,
+n:"itravel2000 online",
+c:"travel",
+u:"https://www.itravel2000.com",
+a:""
+},
+
+{
+id:913,
+n:"enterprise rent a car canada",
+c:"travel",
+u:"https://www.enterprise.ca",
+a:""
+},
+
+{
+id:914,
+n:"budget car rental canada",
+c:"travel",
+u:"https://www.budget.ca",
+a:""
+},
+
+{
+id:915,
+n:"avis canada online",
+c:"travel",
+u:"https://www.avis.ca",
+a:""
+},
+
+{
+id:916,
+n:"hertz canada online",
+c:"travel",
+u:"https://www.hertz.ca",
+a:""
+},
+
+{
+id:917,
+n:"discount car rental online",
+c:"travel",
+u:"https://www.discountcar.com",
+a:""
+},
+
+{
+id:918,
+n:"uhaul canada online",
+c:"travel",
+u:"https://www.uhaul.com",
+a:""
+},
+
+{
+id:919,
+n:"park n fly online",
+c:"travel",
+u:"https://www.parknfly.ca",
+a:""
+},
+
+{
+id:920,
+n:"caa travel online",
+c:"travel",
+u:"https://www.caa.ca",
+a:""
+},
+{
+id:921,
+n:"go transit online",
+c:"travel",
+u:"https://www.gotransit.com",
+a:""
+},
+
+{
+id:922,
+n:"parks canada online",
+c:"travel",
+u:"https://parks.canada.ca",
+a:""
+},
+
+{
+id:923,
+n:"destination canada",
+c:"travel",
+u:"https://travel.destinationcanada.com",
+a:""
+},
+
+{
+id:924,
+n:"fairmont online",
+c:"travel",
+u:"https://www.fairmont.com",
+a:""
+},
+
+{
+id:925,
+n:"marriott canada online",
+c:"travel",
+u:"https://www.marriott.com",
+a:""
+},
+
+{
+id:926,
+n:"hilton canada online",
+c:"travel",
+u:"https://www.hilton.com",
+a:""
+},
+
+{
+id:927,
+n:"hyatt canada online",
+c:"travel",
+u:"https://www.hyatt.com",
+a:""
+},
+
+{
+id:928,
+n:"best western canada online",
+c:"travel",
+u:"https://www.bestwestern.com",
+a:""
+},
+
+{
+id:929,
+n:"choice hotels canada online",
+c:"travel",
+u:"https://www.choicehotels.com",
+a:""
+},
+
+{
+id:930,
+n:"sandman hotels online",
+c:"travel",
+u:"https://www.sandmanhotels.com",
+a:""
+},
+
+{
+id:931,
+n:"coast hotels online",
+c:"travel",
+u:"https://www.coasthotels.com",
+a:""
+},
+
+{
+id:932,
+n:"days inn canada online",
+c:"travel",
+u:"https://www.daysinn.ca",
+a:""
+},
+
+{
+id:933,
+n:"rogers online",
+c:"electronics",
+u:"https://www.rogers.com",
+a:""
+},
+
+{
+id:934,
+n:"bell online",
+c:"electronics",
+u:"https://www.bell.ca",
+a:""
+},
+
+{
+id:935,
+n:"telus online",
+c:"electronics",
+u:"https://www.telus.com",
+a:""
+},
+
+{
+id:936,
+n:"videotron online",
+c:"electronics",
+u:"https://www.videotron.com",
+a:""
+},
+
+{
+id:937,
+n:"eastlink online",
+c:"electronics",
+u:"https://www.eastlink.ca",
+a:""
+},
+
+{
+id:938,
+n:"sasktel online",
+c:"electronics",
+u:"https://www.sasktel.com",
+a:""
+},
+
+{
+id:939,
+n:"xplore online",
+c:"electronics",
+u:"https://www.xplore.ca",
+a:""
+},
+
+{
+id:940,
+n:"teksavvy online",
+c:"electronics",
+u:"https://www.teksavvy.com",
+a:""
+},
+{
+id:941,
+n:"freedom mobile online canada",
+c:"electronics",
+u:"https://www.freedommobile.ca",
+a:""
+},
+
+{
+id:942,
+n:"fido canada online",
+c:"electronics",
+u:"https://www.fido.ca",
+a:""
+},
+
+{
+id:943,
+n:"koodo online canada",
+c:"electronics",
+u:"https://www.koodomobile.com",
+a:""
+},
+
+{
+id:944,
+n:"public mobile online canada",
+c:"electronics",
+u:"https://publicmobile.ca",
+a:""
+},
+
+{
+id:945,
+n:"virgin plus online canada",
+c:"electronics",
+u:"https://www.virginplus.ca",
+a:""
+},
+
+{
+id:946,
+n:"lucky mobile online",
+c:"electronics",
+u:"https://www.luckymobile.ca",
+a:""
+},
+
+{
+id:947,
+n:"chatr mobile online",
+c:"electronics",
+u:"https://www.chatrwireless.com",
+a:""
+},
+
+{
+id:948,
+n:"zoomer wireless online",
+c:"electronics",
+u:"https://www.zoomerwireless.ca",
+a:""
+},
+
+{
+id:949,
+n:"cityfone online",
+c:"electronics",
+u:"https://www.cityfone.net",
+a:""
+},
+
+{
+id:950,
+n:"pc mobile online",
+c:"electronics",
+u:"https://www.pcmobile.ca",
+a:""
+},
+
+{
+id:951,
+n:"apple canada online",
+c:"electronics",
+u:"https://www.apple.com/ca",
+a:""
+},
+
+{
+id:952,
+n:"samsung canada online",
+c:"electronics",
+u:"https://www.samsung.com/ca",
+a:""
+},
+
+{
+id:953,
+n:"microsoft canada online",
+c:"electronics",
+u:"https://www.microsoft.com/en-ca",
+a:""
+},
+
+{
+id:954,
+n:"dell canada online",
+c:"electronics",
+u:"https://www.dell.com/en-ca",
+a:""
+},
+
+{
+id:955,
+n:"hp canada online",
+c:"electronics",
+u:"https://www.hp.com/ca-en",
+a:""
+},
+
+{
+id:956,
+n:"lenovo canada online",
+c:"electronics",
+u:"https://www.lenovo.com/ca",
+a:""
+},
+
+{
+id:957,
+n:"asus canada online",
+c:"electronics",
+u:"https://www.asus.com/ca-en",
+a:""
+},
+
+{
+id:958,
+n:"acer canada online",
+c:"electronics",
+u:"https://www.acer.com/ca-en",
+a:""
+},
+
+{
+id:959,
+n:"lg canada online",
+c:"electronics",
+u:"https://www.lg.com/ca",
+a:""
+},
+
+{
+id:960,
+n:"sony canada online",
+c:"electronics",
+u:"https://www.sony.ca",
+a:""
+},
+{
+id:961,
+n:"panasonic canada online",
+c:"electronics",
+u:"https://www.panasonic.com/ca",
+a:""
+},
+
+{
+id:962,
+n:"canon canada online",
+c:"electronics",
+u:"https://www.canon.ca",
+a:""
+},
+
+{
+id:963,
+n:"nikon canada online",
+c:"electronics",
+u:"https://www.nikon.ca",
+a:""
+},
+
+{
+id:964,
+n:"epson canada online",
+c:"electronics",
+u:"https://epson.ca",
+a:""
+},
+
+{
+id:965,
+n:"brother canada online",
+c:"electronics",
+u:"https://www.brother.ca",
+a:""
+},
+
+{
+id:966,
+n:"bose canada online",
+c:"electronics",
+u:"https://www.bose.ca",
+a:""
+},
+
+{
+id:967,
+n:"jbl canada online",
+c:"electronics",
+u:"https://ca.jbl.com",
+a:""
+},
+
+{
+id:968,
+n:"anker canada online",
+c:"electronics",
+u:"https://www.anker.com/ca",
+a:""
+},
+
+{
+id:969,
+n:"belkin canada online",
+c:"electronics",
+u:"https://www.belkin.com/ca",
+a:""
+},
+
+{
+id:970,
+n:"garmin canada online",
+c:"electronics",
+u:"https://www.garmin.com/en-CA",
+a:""
+},
+
+{
+id:971,
+n:"fitbit canada online",
+c:"health",
+u:"https://www.fitbit.com/global/ca",
+a:""
+},
+
+{
+id:972,
+n:"gopro canada online",
+c:"electronics",
+u:"https://gopro.com/en/ca",
+a:""
+},
+
+{
+id:973,
+n:"dji canada online",
+c:"electronics",
+u:"https://www.dji.com/ca",
+a:""
+},
+
+{
+id:974,
+n:"insta360 canada online",
+c:"electronics",
+u:"https://www.insta360.com",
+a:""
+},
+
+{
+id:975,
+n:"logitech canada online",
+c:"electronics",
+u:"https://www.logitech.com/en-ca",
+a:""
+},
+
+{
+id:976,
+n:"corsair canada online",
+c:"gaming",
+u:"https://www.corsair.com/ca",
+a:""
+},
+
+{
+id:977,
+n:"razer canada online",
+c:"gaming",
+u:"https://www.razer.com/ca-en",
+a:""
+},
+
+{
+id:978,
+n:"steelseries canada online",
+c:"gaming",
+u:"https://steelseries.com",
+a:""
+},
+
+{
+id:979,
+n:"xbox canada online",
+c:"gaming",
+u:"https://www.xbox.com/en-CA",
+a:""
+},
+
+{
+id:980,
+n:"playstation canada online",
+c:"gaming",
+u:"https://www.playstation.com/en-ca",
+a:""
+},
+{
+id:981,
+n:"nintendo canada online",
+c:"gaming",
+u:"https://www.nintendo.com/en-ca",
+a:""
+},
+
+{
+id:982,
+n:"steam canada online",
+c:"gaming",
+u:"https://store.steampowered.com",
+a:""
+},
+
+{
+id:983,
+n:"epic games canada online",
+c:"gaming",
+u:"https://store.epicgames.com",
+a:""
+},
+
+{
+id:984,
+n:"gamestop canada online",
+c:"gaming",
+u:"https://www.gamestop.ca",
+a:""
+},
+
+{
+id:985,
+n:"canada computers gaming",
+c:"gaming",
+u:"https://www.canadacomputers.com",
+a:""
+},
+
+{
+id:986,
+n:"memory express gaming",
+c:"gaming",
+u:"https://www.memoryexpress.com",
+a:""
+},
+
+{
+id:987,
+n:"best buy gaming canada",
+c:"gaming",
+u:"https://www.bestbuy.ca",
+a:""
+},
+
+{
+id:988,
+n:"newegg gaming canada",
+c:"gaming",
+u:"https://www.newegg.ca",
+a:""
+},
+
+{
+id:989,
+n:"primecables canada",
+c:"electronics",
+u:"https://www.primecables.ca",
+a:""
+},
+
+{
+id:990,
+n:"shopper plus canada",
+c:"general",
+u:"https://www.shopperplus.ca",
+a:""
+},
+
+{
+id:991,
+n:"kijiji online canada",
+c:"general",
+u:"https://www.kijiji.ca",
+a:""
+},
+
+{
+id:992,
+n:"dollarama online",
+c:"general",
+u:"https://www.dollarama.com",
+a:""
+},
+
+{
+id:993,
+n:"giant tiger online",
+c:"general",
+u:"https://www.gianttiger.com",
+a:""
+},
+
+{
+id:994,
+n:"real canadian superstore online",
+c:"general",
+u:"https://www.realcanadiansuperstore.ca",
+a:""
+},
+
+{
+id:995,
+n:"loblaws online",
+c:"general",
+u:"https://www.loblaws.ca",
+a:""
+},
+
+{
+id:996,
+n:"metro online canada",
+c:"general",
+u:"https://www.metro.ca",
+a:""
+},
+
+{
+id:997,
+n:"sobeys online",
+c:"general",
+u:"https://www.sobeys.com",
+a:""
+},
+
+{
+id:998,
+n:"freshco online",
+c:"general",
+u:"https://www.freshco.com",
+a:""
+},
+
+{
+id:999,
+n:"save on foods online",
+c:"general",
+u:"https://www.saveonfoods.com",
+a:""
+},
+
+{
+id:1000,
+n:"canadian tire online",
+c:"general",
+u:"https://www.canadiantire.ca",
+a:""
+}
+] ;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
