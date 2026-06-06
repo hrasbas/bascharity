@@ -650,6 +650,257 @@ ball.className = "bas-ball is-pwa-installed";
 </script>
  <!------------country---------------->
  <!-- 1. Country Selector Section -->
+<!-- COUNTRY BOX START -->
+
+<style>
+.country-box{
+max-width:900px;
+width:96%;
+margin:25px auto;
+padding:15px;
+background:#000;
+border:1px solid #ff9800;
+border-radius:15px;
+}
+
+.country-title{
+background:#333;
+color:#fff;
+font-weight:900;
+text-align:center;
+padding:10px;
+border-radius:10px;
+border:1px solid #ff9800;
+border-left:6px solid #ff9800;
+margin-bottom:10px;
+}
+
+.country-grid{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:8px;
+}
+
+.country-btn{
+background:#333;
+color:#fff;
+padding:12px;
+text-align:center;
+border-radius:10px;
+border:1px solid #ff9800;
+border-left:6px solid #ff9800;
+font-weight:bold;
+cursor:pointer;
+}
+
+.country-btn.active{
+background:#ff9800;
+color:#000;
+}
+
+.country-search{
+margin-top:10px;
+}
+
+.country-search select{
+width:100%;
+padding:12px;
+background:#333;
+color:#fff;
+border-radius:10px;
+border:1px solid #ff9800;
+border-left:6px solid #ff9800;
+font-weight:bold;
+}
+
+.shop-container{
+max-width:900px;
+width:96%;
+margin:20px auto;
+padding:15px;
+background:#000;
+border:1px solid #ff9800;
+border-radius:15px;
+}
+
+.shop-card{
+display:flex;
+align-items:center;
+gap:12px;
+padding:12px;
+margin-bottom:10px;
+background:#111;
+border-radius:10px;
+border-left:6px solid #ff9800;
+text-decoration:none;
+color:#fff;
+}
+
+.shop-card img{
+width:32px;
+height:32px;
+}
+
+.shop-name{
+font-size:18px;
+font-weight:bold;
+}
+</style>
+
+<div class="country-box">
+
+<div class="country-title">
+SELECT COUNTRY
+</div>
+
+<div class="country-grid">
+
+<div class="country-btn active"
+onclick="setCountry('uae',this)">
+UAE
+</div>
+
+<div class="country-btn"
+onclick="setCountry('uk',this)">
+UK
+</div>
+
+<div class="country-btn"
+onclick="setCountry('usa',this)">
+USA
+</div>
+
+</div>
+
+<div class="country-search">
+
+<select id="countryDropdown">
+
+<option value="">all countries</option>
+
+<option value="uae">united arab emirates</option>
+<option value="uk">united kingdom</option>
+<option value="usa">united states</option>
+
+</select>
+
+</div>
+
+</div>
+
+<div id="shopContainer" class="shop-container">
+loading...
+</div>
+
+<script>
+
+let activeCountry = "uae";
+
+function setCountry(country,btn){
+
+activeCountry = country;
+
+document
+.querySelectorAll(".country-btn")
+.forEach(b=>b.classList.remove("active"));
+
+if(btn){
+btn.classList.add("active");
+}
+
+renderCountryShops();
+}
+
+document
+.getElementById("countryDropdown")
+.addEventListener("change",function(){
+
+if(this.value){
+
+activeCountry = this.value;
+
+renderCountryShops();
+
+}
+
+});
+
+function renderCountryShops(){
+
+const box =
+document.getElementById("shopContainer");
+
+if(typeof shops==="undefined"){
+
+box.innerHTML="shops not found";
+
+return;
+
+}
+
+let filtered =
+shops.filter(shop => {
+
+let name =
+(shop.n || "")
+.toLowerCase();
+
+return name.includes(activeCountry);
+
+});
+
+filtered = filtered.slice(0,10);
+
+if(filtered.length===0){
+
+box.innerHTML =
+"No shops found";
+
+return;
+
+}
+
+box.innerHTML = "";
+
+filtered.forEach(shop=>{
+
+let domain = "";
+
+try{
+domain =
+new URL(shop.u).hostname;
+}catch(e){}
+
+box.innerHTML += `
+
+<a class="shop-card"
+href="${shop.u}"
+target="_blank">
+
+<img src="https://www.google.com/s2/favicons?domain=${domain}&sz=64">
+
+<div class="shop-name">
+${shop.n}
+</div>
+
+</a>
+
+`;
+
+});
+
+}
+
+window.addEventListener("load",function(){
+
+setTimeout(renderCountryShops,300);
+
+});
+
+</script>
+
+<!-- COUNTRY BOX END -->
+
   <style>
 .compare-box{
 background:#000;
