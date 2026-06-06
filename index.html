@@ -2182,23 +2182,76 @@ select category
 </div>
 
 <script>
-let activeCategory = "";
+  <script>
 
-function setCategory(category,btn){
+function renderShops(){
 
-activeCategory = category;
+const container = document.getElementById("shopContainer");
 
-document
-.querySelectorAll(".category-btn")
-.forEach(b=>b.classList.remove("active"));
+let filtered = shops.filter(shop => {
 
-if(btn){
-btn.classList.add("active");
+const countryMatch =
+!activeCountry ||
+(shop.a && shop.a.toLowerCase() === activeCountry);
+
+const categoryMatch =
+!activeCategory ||
+(shop.c && shop.c.toLowerCase() === activeCategory);
+
+return countryMatch && categoryMatch;
+
+});
+
+filtered = filtered.slice(0,10);
+
+container.innerHTML = "";
+
+if(filtered.length === 0){
+container.innerHTML =
+"<div style='padding:20px;text-align:center'>no shops found</div>";
+return;
 }
 
-renderShops();
+filtered.forEach(shop=>{
+
+const card = document.createElement("a");
+
+card.href = shop.u;
+card.target = "_blank";
+
+card.style.display = "flex";
+card.style.alignItems = "center";
+card.style.padding = "12px";
+card.style.marginBottom = "10px";
+card.style.background = "#111";
+card.style.borderRadius = "10px";
+card.style.borderLeft = "6px solid #ff9800";
+card.style.color = "#fff";
+card.style.textDecoration = "none";
+
+let domain = "";
+
+try{
+domain = new URL(shop.u).hostname;
+}catch(e){}
+
+card.innerHTML =
+'<img src="https://www.google.com/s2/favicons?domain='
++ domain +
+'" style="width:40px;height:40px;margin-right:12px;background:#fff;border-radius:8px;padding:4px;">'
++
+'<div style="font-size:20px;font-weight:bold;">'
++ shop.n +
+'</div>';
+
+container.appendChild(card);
+
+});
+
 }
+
 </script>
+
 
   </body>
 </html>
