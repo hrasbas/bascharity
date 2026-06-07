@@ -1146,7 +1146,15 @@ ${host}
 
 });
 
-}
+ currentCountry=country;
+
+document.getElementById(
+"selectedCountryBox"
+).innerHTML=
+"Selected Country - "+
+country.toUpperCase();
+
+renderCategory("all");}
 
 /* ================================================= */
 /* SL NO 35 : USER COUNTRY DETECT */
@@ -2726,34 +2734,7 @@ ${host}
 /* SL NO 55 : CONNECT COUNTRY SECTION */
 /* ================================================= */
 
-const oldRenderCountry=
-renderCountry;
-
-renderCountry=
-function(country){
-
-currentCountry=
-country;
-
-document
-.getElementById(
-"selectedCountryBox"
-)
-.innerHTML=
-"Selected Country - "
-+
-country.toUpperCase();
-
-oldRenderCountry(
-country
-);
-
-renderCategory(
-"all"
-);
-
-};
-
+ 
 /* ================================================= */
 /* SL NO 56 : DEFAULT CATEGORY */
 /* ================================================= */
