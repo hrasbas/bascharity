@@ -651,233 +651,15 @@ ball.className = "bas-ball is-pwa-installed";
  <!------------country---------------->
  <!-- 1. Country Selector Section -->
 <!-- COUNTRY BOX START -->
-<style>
-
-/* ================================================= */
-/* SL NO 1 : BODY */
-/* ================================================= */
-
-body{
-margin:0;
-padding:15px;
-background:#f4f6fb;
-font-family:Arial,sans-serif;
-}
-
-/* ================================================= */
-/* SL NO 2 : MAIN WRAPPER */
-/* ================================================= */
-
-.country-wrap{
-max-width:1200px;
-margin:auto;
-}
-
-/* ================================================= */
-/* SL NO 3 : COUNTRY BOX */
-/* ================================================= */
-
-.country-box{
-background:#ffffff;
-border-radius:22px;
-padding:22px;
-box-shadow:0 2px 10px rgba(0,0,0,.08);
-margin-bottom:20px;
-}
-
-/* ================================================= */
-/* SL NO 4 : SIGNATURE TITLE */
-/* ================================================= */
-
-.country-title{
-font-size:22px;
-font-weight:700;
-margin-bottom:15px;
-color:#0f172a;
-}
-
-/* ================================================= */
-/* SL NO 5 : COUNTRY SEARCH */
-/* ================================================= */
-
-#countrySearch{
-width:100%;
-height:54px;
-border:2px solid #dbe3ef;
-border-radius:14px;
-padding:0 15px;
-font-size:16px;
-outline:none;
-box-sizing:border-box;
-margin-bottom:15px;
-}
-
-/* ================================================= */
-/* SL NO 6 : COUNTRY BUTTON AREA */
-/* ================================================= */
-
-.country-buttons{
-display:flex;
-flex-wrap:wrap;
-gap:8px;
-margin-bottom:15px;
-}
-
-/* ================================================= */
-/* SL NO 7 : COUNTRY BUTTON */
-/* ================================================= */
-
-.country-btn{
-border:none;
-cursor:pointer;
-padding:10px 14px;
-border-radius:999px;
-font-size:14px;
-font-weight:600;
-background:#eef2ff;
-color:#4338ca;
-}
-
-/* ================================================= */
-/* SL NO 8 : ACTIVE BUTTON */
-/* ================================================= */
-
-.country-btn.active{
-background:#4338ca;
-color:#fff;
-}
-
-/* ================================================= */
-/* SL NO 9 : ALL COUNTRY DROPDOWN */
-/* ================================================= */
-
-#allCountries{
-width:100%;
-height:54px;
-border:2px solid #e2a100;
-border-radius:14px;
-padding:0 15px;
-font-size:16px;
-outline:none;
-background:#fff;
-margin-bottom:20px;
-}
-
-/* ================================================= */
-/* SL NO 10 : FEATURED SHOPS AREA */
-/* ================================================= */
-
-.featured-shops{
-display:grid;
-grid-template-columns:repeat(auto-fill,minmax(260px,1fr));
-gap:12px;
-}
-
-/* ================================================= */
-/* SL NO 11 : SHOP BOX */
-/* ================================================= */
-
-.shop-card{
-position:relative;
-background:#fff;
-border-left:5px solid #4338ca;
-border-radius:16px;
-padding:14px;
-min-height:74px;
-box-shadow:0 2px 8px rgba(0,0,0,.08);
-}
-
-/* ================================================= */
-/* SL NO 12 : AFFILIATE DOT */
-/* ================================================= */
-
-.shop-dot{
-position:absolute;
-top:8px;
-left:8px;
-font-size:8px;
-color:#fff;
-text-shadow:0 0 4px #000;
-}
-
-/* ================================================= */
-/* SL NO 13 : SHOP HEADER */
-/* ================================================= */
-
-.shop-head{
-display:flex;
-align-items:center;
-gap:8px;
-}
-
-/* ================================================= */
-/* SL NO 14 : FAVICON */
-/* ================================================= */
-
-.shop-favicon{
-width:18px;
-height:18px;
-}
-
-/* ================================================= */
-/* SL NO 15 : SHOP NAME */
-/* ================================================= */
-
-.shop-name{
-font-size:15px;
-font-weight:700;
-color:#111827;
-}
-
-/* ================================================= */
-/* SL NO 16 : SHOP URL */
-/* ================================================= */
-
-.shop-url{
-font-size:12px;
-margin-top:6px;
-word-break:break-all;
-}
-
-/* ================================================= */
-/* SL NO 17 : GAP SECTION */
-/* ================================================= */
-
-.gap-section{
-margin-top:20px;
-background:#fff;
-padding:30px;
-border-radius:20px;
-border:2px dashed #cbd5e1;
-text-align:center;
-font-size:18px;
-font-weight:600;
-color:#64748b;
-}
-
-</style>
-</head>
-
-<body>
-
+ 
 <!-- ================================================= -->
-<!-- SL NO 18 : COUNTRY WRAP -->
-<!-- ================================================= -->
-
-<div class="country-wrap">
-
-<!-- ================================================= -->
-<!-- SL NO 19 : COUNTRY BOX -->
+<!-- PART 1 : COUNTRY SECTION -->
 <!-- ================================================= -->
 
 <div class="country-box">
 
-<div class="country-title">
-Country Search
-</div>
-
 <!-- ================================================= -->
-<!-- SL NO 20 : COUNTRY SEARCH -->
+<!-- COUNTRY SEARCH -->
 <!-- ================================================= -->
 
 <input
@@ -887,50 +669,145 @@ placeholder="Search Country..."
 >
 
 <!-- ================================================= -->
-<!-- SL NO 21 : COUNTRY BUTTONS -->
+<!-- COUNTRY BUTTONS -->
 <!-- ================================================= -->
 
-<div
-class="country-buttons"
-id="countryButtons">
-</div>
+<div id="countryButtons"></div>
 
 <!-- ================================================= -->
-<!-- SL NO 22 : ALL COUNTRIES DROPDOWN -->
+<!-- ALL COUNTRIES DROPDOWN -->
 <!-- ================================================= -->
 
 <select id="allCountries">
-<option value="">Search All Countries</option>
+<option value="">All Countries</option>
 </select>
 
 <!-- ================================================= -->
-<!-- SL NO 23 : FEATURED SHOPS -->
+<!-- FEATURED SHOPS -->
 <!-- ================================================= -->
 
-<div
-class="featured-shops"
-id="featuredShops">
-</div>
+<div id="featuredShops"></div>
 
 </div>
 
-<!-- ================================================= -->
-<!-- SL NO 24 : GAP SECTION -->
-<!-- ================================================= -->
+<style>
 
-<div class="gap-section">
-Message / Impact / Gallery / Etc
-</div>
+/* ================================================= */
+/* COUNTRY BOX */
+/* ================================================= */
 
-</div>
-  <!-- ================================================= -->
-<!-- SL NO 25 : JAVASCRIPT START -->
-<!-- ================================================= -->
+.country-box{
+background:#fff;
+padding:20px;
+border-radius:20px;
+box-shadow:0 2px 8px rgba(0,0,0,.08);
+}
+
+/* ================================================= */
+/* COUNTRY SEARCH */
+/* ================================================= */
+
+#countrySearch{
+width:100%;
+height:50px;
+border:2px solid #ddd;
+border-radius:12px;
+padding:0 12px;
+margin-bottom:12px;
+box-sizing:border-box;
+}
+
+/* ================================================= */
+/* COUNTRY BUTTONS */
+/* ================================================= */
+
+#countryButtons{
+display:flex;
+flex-wrap:wrap;
+gap:8px;
+margin-bottom:12px;
+}
+
+.countryBtn{
+border:none;
+padding:10px 14px;
+border-radius:999px;
+cursor:pointer;
+background:#eef2ff;
+font-weight:600;
+}
+
+.countryBtn.active{
+background:#4338ca;
+color:#fff;
+}
+
+/* ================================================= */
+/* DROPDOWN */
+/* ================================================= */
+
+#allCountries{
+width:100%;
+height:50px;
+border:2px solid #ddd;
+border-radius:12px;
+padding:0 12px;
+margin-bottom:16px;
+}
+
+/* ================================================= */
+/* FEATURED SHOPS */
+/* ================================================= */
+
+#featuredShops{
+display:grid;
+grid-template-columns:repeat(auto-fill,minmax(220px,1fr));
+gap:10px;
+}
+
+/* ================================================= */
+/* SHOP CARD */
+/* ================================================= */
+
+.shopCard{
+position:relative;
+background:#fff;
+border-left:5px solid #4338ca;
+border-radius:14px;
+padding:14px;
+box-shadow:0 2px 8px rgba(0,0,0,.08);
+}
+
+.shopDot{
+position:absolute;
+left:8px;
+top:6px;
+font-size:8px;
+color:#fff;
+text-shadow:0 0 3px #000;
+}
+
+.shopHead{
+display:flex;
+align-items:center;
+gap:8px;
+}
+
+.shopFav{
+width:18px;
+height:18px;
+}
+
+.shopName{
+font-weight:700;
+}
+
+</style>
 
 <script>
 
 /* ================================================= */
-/* SL NO 26 : FIXED 10 COUNTRY BUTTONS */
+/* FIXED 10 COUNTRIES */
 /* ================================================= */
 
 const fixedCountries=[
@@ -947,19 +824,7 @@ const fixedCountries=[
 ];
 
 /* ================================================= */
-/* SL NO 27 : ALL COUNTRIES DROPDOWN */
-/* ================================================= */
-
-const allCountries=[
-"india","usa","uk","uae","canada","australia",
-"germany","france","saudi arabia","singapore",
-"italy","spain","japan","china","malaysia",
-"qatar","oman","kuwait","bahrain","pakistan",
-"bangladesh","nepal","sri lanka","south africa"
-];
-
-/* ================================================= */
-/* SL NO 28 : SAMPLE SHOP DATA */
+/* SAMPLE DATA */
 /* ================================================= */
 
 const countryShops={
@@ -974,30 +839,24 @@ usa:[
 
 uk:[
 {n:"amazon uk",c:"general",u:"https://www.amazon.co.uk",a:""},
-{n:"argos",c:"general",u:"https://www.argos.co.uk",a:""},
-{n:"currys",c:"electronics",u:"https://www.currys.co.uk",a:""},
-{n:"john lewis",c:"general",u:"https://www.johnlewis.com",a:""},
-{n:"tesco",c:"general",u:"https://www.tesco.com",a:""}
+{n:"argos",c:"general",u:"https://www.argos.co.uk",a:""}
 ],
 
 uae:[
 {n:"amazon uae",c:"general",u:"https://www.amazon.ae",a:""},
-{n:"noon",c:"general",u:"https://www.noon.com",a:""},
-{n:"carrefour uae",c:"general",u:"https://www.carrefouruae.com",a:""},
-{n:"lulu hypermarket",c:"general",u:"https://www.luluhypermarket.com",a:""},
-{n:"sharaf dg",c:"electronics",u:"https://uae.sharafdg.com",a:""}
+{n:"noon",c:"general",u:"https://www.noon.com",a:""}
 ]
 
 };
 
 /* ================================================= */
-/* SL NO 29 : ELEMENTS */
+/* ELEMENTS */
 /* ================================================= */
 
 const countryButtons=
 document.getElementById("countryButtons");
 
-const allCountriesSelect=
+const allCountries=
 document.getElementById("allCountries");
 
 const featuredShops=
@@ -1007,23 +866,22 @@ const countrySearch=
 document.getElementById("countrySearch");
 
 /* ================================================= */
-/* SL NO 30 : COUNTRY BUTTONS RENDER */
+/* COUNTRY BUTTONS */
 /* ================================================= */
-document.getElementById("selectedCountryBox").innerHTML=
-"Selected Country - " + country.toUpperCase();
+
 fixedCountries.forEach(country=>{
 
 const btn=document.createElement("button");
 
-btn.className="country-btn";
+btn.className="countryBtn";
 
 btn.textContent=country;
 
 btn.onclick=()=>{
 
 document
-.querySelectorAll(".country-btn")
-.forEach(b=>b.classList.remove("active"));
+.querySelectorAll(".countryBtn")
+.forEach(x=>x.classList.remove("active"));
 
 btn.classList.add("active");
 
@@ -1036,10 +894,10 @@ countryButtons.appendChild(btn);
 });
 
 /* ================================================= */
-/* SL NO 31 : COUNTRY DROPDOWN RENDER */
+/* DROPDOWN */
 /* ================================================= */
 
-allCountries.forEach(country=>{
+fixedCountries.forEach(country=>{
 
 const option=
 document.createElement("option");
@@ -1048,24 +906,18 @@ option.value=country;
 
 option.textContent=country;
 
-allCountriesSelect.appendChild(option);
+allCountries.appendChild(option);
 
 });
 
-/* ================================================= */
-/* SL NO 32 : DROPDOWN CHANGE */
-/* ================================================= */
+allCountries.onchange=()=>{
 
-allCountriesSelect.onchange=()=>{
-
-renderCountry(
-allCountriesSelect.value
-);
+renderCountry(allCountries.value);
 
 };
 
 /* ================================================= */
-/* SL NO 33 : COUNTRY SEARCH */
+/* SEARCH */
 /* ================================================= */
 
 countrySearch.addEventListener(
@@ -1076,7 +928,7 @@ const value=
 this.value.toLowerCase();
 
 document
-.querySelectorAll(".country-btn")
+.querySelectorAll(".countryBtn")
 .forEach(btn=>{
 
 btn.style.display=
@@ -1094,7 +946,7 @@ btn.textContent
 );
 
 /* ================================================= */
-/* SL NO 34 : RENDER SHOPS */
+/* RENDER COUNTRY */
 /* ================================================= */
 
 function renderCountry(country){
@@ -1102,42 +954,35 @@ function renderCountry(country){
 featuredShops.innerHTML="";
 
 const shops=
-countryShops[country]||[];
+(countryShops[country]||[])
+.slice(0,10);
 
-shops
-.slice(0,10)
-.forEach(shop=>{
+shops.forEach(shop=>{
 
 let host="";
 
 try{
-
 host=
 new URL(shop.u).hostname;
-
 }catch(e){}
 
 featuredShops.innerHTML+=`
 
-<div class="shop-card">
+<div class="shopCard">
 
-<div class="shop-dot">•</div>
+<div class="shopDot">•</div>
 
-<div class="shop-head">
+<div class="shopHead">
 
 <img
-class="shop-favicon"
+class="shopFav"
 src="https://www.google.com/s2/favicons?domain=${host}&sz=64"
 >
 
-<div class="shop-name">
+<div class="shopName">
 ${shop.n}
 </div>
 
-</div>
-
-<div class="shop-url">
-${host}
 </div>
 
 </div>
@@ -1146,43 +991,22 @@ ${host}
 
 });
 
- currentCountry=country;
-
-document.getElementById(
-"selectedCountryBox"
-).innerHTML=
-"Selected Country - "+
-country.toUpperCase();
-
-renderCategory("all");}
-
-/* ================================================= */
-/* SL NO 35 : USER COUNTRY DETECT */
-/* ================================================= */
-
-let defaultCountry="usa";
-
-/* ================================================= */
-/* SL NO 36 : DEFAULT LOAD */
-/* ================================================= */
-
-renderCountry(defaultCountry);
-
-const firstButton=
-document.querySelector(".country-btn");
-
-if(firstButton){
-
-firstButton.classList.add("active");
-
 }
 
+/* ================================================= */
+/* DEFAULT */
+/* ================================================= */
+
+renderCountry("usa");
+
 </script>
+ 
+ 
+  
 
 <!-- ================================================= -->
 <!-- SL NO 37 : HTML END -->
 <!-- ================================================= -->
-
 
   <style>
 .compare-box{
