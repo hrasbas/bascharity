@@ -930,6 +930,258 @@ Message / Impact / Gallery / Etc
 </div>
 
 </div>
+  <!-- ================================================= -->
+<!-- SL NO 25 : JAVASCRIPT START -->
+<!-- ================================================= -->
+
+<script>
+
+/* ================================================= */
+/* SL NO 26 : FIXED 10 COUNTRY BUTTONS */
+/* ================================================= */
+
+const fixedCountries=[
+"india",
+"usa",
+"uk",
+"uae",
+"canada",
+"australia",
+"germany",
+"france",
+"saudi arabia",
+"singapore"
+];
+
+/* ================================================= */
+/* SL NO 27 : ALL COUNTRIES DROPDOWN */
+/* ================================================= */
+
+const allCountries=[
+"india","usa","uk","uae","canada","australia",
+"germany","france","saudi arabia","singapore",
+"italy","spain","japan","china","malaysia",
+"qatar","oman","kuwait","bahrain","pakistan",
+"bangladesh","nepal","sri lanka","south africa"
+];
+
+/* ================================================= */
+/* SL NO 28 : SAMPLE SHOP DATA */
+/* ================================================= */
+
+const countryShops={
+
+usa:[
+{n:"amazon",c:"general",u:"https://www.amazon.com",a:""},
+{n:"apple",c:"electronics",u:"https://www.apple.com",a:""},
+{n:"best buy",c:"electronics",u:"https://www.bestbuy.com",a:""},
+{n:"costco",c:"general",u:"https://www.costco.com",a:""},
+{n:"ebay",c:"general",u:"https://www.ebay.com",a:""}
+],
+
+uk:[
+{n:"amazon uk",c:"general",u:"https://www.amazon.co.uk",a:""},
+{n:"argos",c:"general",u:"https://www.argos.co.uk",a:""},
+{n:"currys",c:"electronics",u:"https://www.currys.co.uk",a:""},
+{n:"john lewis",c:"general",u:"https://www.johnlewis.com",a:""},
+{n:"tesco",c:"general",u:"https://www.tesco.com",a:""}
+],
+
+uae:[
+{n:"amazon uae",c:"general",u:"https://www.amazon.ae",a:""},
+{n:"noon",c:"general",u:"https://www.noon.com",a:""},
+{n:"carrefour uae",c:"general",u:"https://www.carrefouruae.com",a:""},
+{n:"lulu hypermarket",c:"general",u:"https://www.luluhypermarket.com",a:""},
+{n:"sharaf dg",c:"electronics",u:"https://uae.sharafdg.com",a:""}
+]
+
+};
+
+/* ================================================= */
+/* SL NO 29 : ELEMENTS */
+/* ================================================= */
+
+const countryButtons=
+document.getElementById("countryButtons");
+
+const allCountriesSelect=
+document.getElementById("allCountries");
+
+const featuredShops=
+document.getElementById("featuredShops");
+
+const countrySearch=
+document.getElementById("countrySearch");
+
+/* ================================================= */
+/* SL NO 30 : COUNTRY BUTTONS RENDER */
+/* ================================================= */
+
+fixedCountries.forEach(country=>{
+
+const btn=document.createElement("button");
+
+btn.className="country-btn";
+
+btn.textContent=country;
+
+btn.onclick=()=>{
+
+document
+.querySelectorAll(".country-btn")
+.forEach(b=>b.classList.remove("active"));
+
+btn.classList.add("active");
+
+renderCountry(country);
+
+};
+
+countryButtons.appendChild(btn);
+
+});
+
+/* ================================================= */
+/* SL NO 31 : COUNTRY DROPDOWN RENDER */
+/* ================================================= */
+
+allCountries.forEach(country=>{
+
+const option=
+document.createElement("option");
+
+option.value=country;
+
+option.textContent=country;
+
+allCountriesSelect.appendChild(option);
+
+});
+
+/* ================================================= */
+/* SL NO 32 : DROPDOWN CHANGE */
+/* ================================================= */
+
+allCountriesSelect.onchange=()=>{
+
+renderCountry(
+allCountriesSelect.value
+);
+
+};
+
+/* ================================================= */
+/* SL NO 33 : COUNTRY SEARCH */
+/* ================================================= */
+
+countrySearch.addEventListener(
+"input",
+function(){
+
+const value=
+this.value.toLowerCase();
+
+document
+.querySelectorAll(".country-btn")
+.forEach(btn=>{
+
+btn.style.display=
+btn.textContent
+.toLowerCase()
+.includes(value)
+?
+"inline-block"
+:
+"none";
+
+});
+
+}
+);
+
+/* ================================================= */
+/* SL NO 34 : RENDER SHOPS */
+/* ================================================= */
+
+function renderCountry(country){
+
+featuredShops.innerHTML="";
+
+const shops=
+countryShops[country]||[];
+
+shops
+.slice(0,10)
+.forEach(shop=>{
+
+let host="";
+
+try{
+
+host=
+new URL(shop.u).hostname;
+
+}catch(e){}
+
+featuredShops.innerHTML+=`
+
+<div class="shop-card">
+
+<div class="shop-dot">•</div>
+
+<div class="shop-head">
+
+<img
+class="shop-favicon"
+src="https://www.google.com/s2/favicons?domain=${host}&sz=64"
+>
+
+<div class="shop-name">
+${shop.n}
+</div>
+
+</div>
+
+<div class="shop-url">
+${host}
+</div>
+
+</div>
+
+`;
+
+});
+
+}
+
+/* ================================================= */
+/* SL NO 35 : USER COUNTRY DETECT */
+/* ================================================= */
+
+let defaultCountry="usa";
+
+/* ================================================= */
+/* SL NO 36 : DEFAULT LOAD */
+/* ================================================= */
+
+renderCountry(defaultCountry);
+
+const firstButton=
+document.querySelector(".country-btn");
+
+if(firstButton){
+
+firstButton.classList.add("active");
+
+}
+
+</script>
+
+<!-- ================================================= -->
+<!-- SL NO 37 : HTML END -->
+<!-- ================================================= -->
+
+
   <style>
 .compare-box{
 background:#000;
