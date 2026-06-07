@@ -1016,7 +1016,8 @@ document.getElementById("countrySearch");
 /* ================================================= */
 /* SL NO 30 : COUNTRY BUTTONS RENDER */
 /* ================================================= */
-
+document.getElementById("selectedCountryBox").innerHTML=
+"Selected Country - " + country.toUpperCase();
 fixedCountries.forEach(country=>{
 
 const btn=document.createElement("button");
