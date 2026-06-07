@@ -651,13 +651,6 @@ ball.className = "bas-ball is-pwa-installed";
  <!------------country---------------->
  <!-- 1. Country Selector Section -->
 <!-- COUNTRY BOX START -->
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Country Section</title>
-
 <style>
 
 /* ================================================= */
@@ -2382,156 +2375,398 @@ if(target) target.scrollIntoView({ behavior:"smooth", block:"start" });
 </script>
   <!-- PART 2 : CATEGORY -->
 
+ <!-- ================================================= -->
+<!-- SELECTED COUNTRY -->
+<!-- ================================================= -->
+
+<div id="selectedCountryBox">
+Selected Country - USA
+</div>
+
 <style>
-.category-box{
-max-width:900px;
-width:96%;
-margin:25px auto;
-padding:15px;
-background:#000;
-border:1px solid #ff9800;
-border-radius:15px;
+
+#selectedCountryBox{
+margin-top:20px;
+margin-bottom:15px;
+padding:14px 18px;
+background:#ffffff;
+border-left:5px solid #4338ca;
+border-radius:12px;
+font-size:18px;
+font-weight:700;
+color:#111827;
+box-shadow:0 2px 8px rgba(0,0,0,.08);
 }
 
-.category-title{
-background:#333;
-color:#fff;
-font-weight:900;
-text-align:center;
-padding:10px;
-border-radius:10px;
-border:1px solid #ff9800;
-border-left:6px solid #ff9800;
-margin-bottom:10px;
-}
-
-.category-grid{
-display:grid;
-grid-template-columns:repeat(2,1fr);
-gap:8px;
-}
-
-.category-btn{
-background:#333;
-color:#fff;
-padding:10px;
-text-align:center;
-border-radius:10px;
-border:1px solid #ff9800;
-border-left:6px solid #ff9800;
-font-weight:bold;
-cursor:pointer;
-}
-
-.category-btn.active{
-background:#ff9800;
-color:#000;
-}
 </style>
+  
+ <!-- ================================================= -->
+<!-- PART 2 : CATEGORY SECTION -->
+<!-- ================================================= -->
 
-<div class="category-box">
+<!-- ================================================= -->
+<!-- SL NO 38 : CATEGORY BOX -->
+<!-- ================================================= -->
 
-<div class="category-title">
-select category
+<div class="country-box">
+
+<!-- ================================================= -->
+<!-- SL NO 39 : CATEGORY SEARCH HEADING -->
+<!-- ================================================= -->
+
+<div class="country-title">
+Category Search
 </div>
 
-<div class="category-grid">
+<!-- ================================================= -->
+<!-- SL NO 40 : CATEGORY SEARCH -->
+<!-- ================================================= -->
 
-<div class="category-btn" onclick="setCategory('general',this)">general</div>
+<input
+id="categorySearch"
+type="text"
+placeholder="Search Category..."
+>
 
-<div class="category-btn" onclick="setCategory('fashion',this)">fashion</div>
+<!-- ================================================= -->
+<!-- SL NO 41 : CATEGORY BUTTONS -->
+<!-- ================================================= -->
 
-<div class="category-btn" onclick="setCategory('beauty',this)">beauty</div>
+<div
+class="country-buttons"
+id="categoryButtons">
+</div>
 
-<div class="category-btn" onclick="setCategory('electronics',this)">electronics</div>
+<!-- ================================================= -->
+<!-- SL NO 42 : ALL CATEGORY DROPDOWN -->
+<!-- ================================================= -->
 
-<div class="category-btn" onclick="setCategory('health',this)">health</div>
+<select id="allCategories">
 
-<div class="category-btn" onclick="setCategory('travel',this)">travel</div>
+<option value="">
+Search All Categories
+</option>
 
-<div class="category-btn" onclick="setCategory('food',this)">food</div>
+</select>
 
-<div class="category-btn" onclick="setCategory('books',this)">books</div>
+<!-- ================================================= -->
+<!-- SL NO 43 : CATEGORY HEADING -->
+<!-- ================================================= -->
 
-<div class="category-btn" onclick="setCategory('sports',this)">sports</div>
+<div
+id="categoryHeading"
+style="
+margin-top:18px;
+margin-bottom:12px;
+font-size:20px;
+font-weight:700;
+color:#111827;
+">
+ALL
+</div>
 
-<div class="category-btn" onclick="setCategory('more',this)">more</div>
+<!-- ================================================= -->
+<!-- SL NO 44 : CATEGORY SHOPS -->
+<!-- ================================================= -->
 
+<div
+class="featured-shops"
+id="categoryShops">
 </div>
 
 </div>
+
+<!-- ================================================= -->
+<!-- SL NO 45 : CATEGORY EXTRA CSS -->
+<!-- ================================================= -->
+
+<style>
+  
+#categorySearch{
+width:100%;
+height:54px;
+border:2px solid #dbe3ef;
+border-radius:14px;
+padding:0 15px;
+font-size:16px;
+outline:none;
+box-sizing:border-box;
+margin-bottom:15px;
+}
+
+.category-active{
+background:#059669 !important;
+color:#fff !important;
+}
+
+</style>
+  
+<!-- ================================================= -->
+<!-- SL NO 46 : CATEGORY SCRIPT START -->
+<!-- ================================================= -->
 
 <script>
-  <script>
 
-function renderShops(){
+/* ================================================= */
+/* SL NO 47 : CATEGORY LIST */
+/* ================================================= */
 
-const container = document.getElementById("shopContainer");
+const categories=[
+"all",
+"general",
+"electronics",
+"fashion",
+"home",
+"beauty",
+"kids",
+"sports",
+"travel",
+"books",
+"health"
+];
 
-let filtered = shops.filter(shop => {
+/* ================================================= */
+/* SL NO 48 : CURRENT COUNTRY */
+/* ================================================= */
 
-const countryMatch =
-!activeCountry ||
-(shop.a && shop.a.toLowerCase() === activeCountry);
+let currentCountry="usa";
 
-const categoryMatch =
-!activeCategory ||
-(shop.c && shop.c.toLowerCase() === activeCategory);
+/* ================================================= */
+/* SL NO 49 : CATEGORY ELEMENTS */
+/* ================================================= */
 
-return countryMatch && categoryMatch;
+const categoryButtons=
+document.getElementById("categoryButtons");
+
+const allCategories=
+document.getElementById("allCategories");
+
+const categorySearch=
+document.getElementById("categorySearch");
+
+const categoryHeading=
+document.getElementById("categoryHeading");
+
+const categoryShops=
+document.getElementById("categoryShops");
+
+/* ================================================= */
+/* SL NO 50 : CATEGORY BUTTONS */
+/* ================================================= */
+
+categories.forEach(cat=>{
+
+const btn=
+document.createElement("button");
+
+btn.className="country-btn";
+
+btn.textContent=cat;
+
+btn.onclick=()=>{
+
+document
+.querySelectorAll(
+"#categoryButtons .country-btn"
+)
+.forEach(x=>
+x.classList.remove("category-active")
+);
+
+btn.classList.add(
+"category-active"
+);
+
+renderCategory(cat);
+
+};
+
+categoryButtons
+.appendChild(btn);
 
 });
 
-filtered = filtered.slice(0,10);
+/* ================================================= */
+/* SL NO 51 : CATEGORY DROPDOWN */
+/* ================================================= */
 
-container.innerHTML = "";
+categories.forEach(cat=>{
 
-if(filtered.length === 0){
-container.innerHTML =
-"<div style='padding:20px;text-align:center'>no shops found</div>";
-return;
+const option=
+document.createElement("option");
+
+option.value=cat;
+
+option.textContent=cat;
+
+allCategories
+.appendChild(option);
+
+});
+
+/* ================================================= */
+/* SL NO 52 : DROPDOWN CHANGE */
+/* ================================================= */
+
+allCategories.onchange=()=>{
+
+renderCategory(
+allCategories.value
+);
+
+};
+
+/* ================================================= */
+/* SL NO 53 : CATEGORY SEARCH */
+/* ================================================= */
+
+categorySearch
+.addEventListener(
+"input",
+function(){
+
+const value=
+this.value.toLowerCase();
+
+document
+.querySelectorAll(
+"#categoryButtons .country-btn"
+)
+.forEach(btn=>{
+
+btn.style.display=
+btn.textContent
+.toLowerCase()
+.includes(value)
+?
+"inline-block"
+:
+"none";
+
+});
+
+}
+);
+
+/* ================================================= */
+/* SL NO 54 : CATEGORY RENDER */
+/* ================================================= */
+
+function renderCategory(cat){
+
+categoryHeading
+.innerHTML=
+cat.toUpperCase();
+
+categoryShops
+.innerHTML="";
+
+let shops=
+countryShops[
+currentCountry
+]||[];
+
+if(cat!=="all"){
+
+shops=
+shops.filter(
+s=>s.c===cat
+);
+
 }
 
-filtered.forEach(shop=>{
+shops.forEach(shop=>{
 
-const card = document.createElement("a");
-
-card.href = shop.u;
-card.target = "_blank";
-
-card.style.display = "flex";
-card.style.alignItems = "center";
-card.style.padding = "12px";
-card.style.marginBottom = "10px";
-card.style.background = "#111";
-card.style.borderRadius = "10px";
-card.style.borderLeft = "6px solid #ff9800";
-card.style.color = "#fff";
-card.style.textDecoration = "none";
-
-let domain = "";
+let host="";
 
 try{
-domain = new URL(shop.u).hostname;
+
+host=
+new URL(
+shop.u
+).hostname;
+
 }catch(e){}
 
-card.innerHTML =
-'<img src="https://www.google.com/s2/favicons?domain='
-+ domain +
-'" style="width:40px;height:40px;margin-right:12px;background:#fff;border-radius:8px;padding:4px;">'
-+
-'<div style="font-size:20px;font-weight:bold;">'
-+ shop.n +
-'</div>';
+categoryShops
+.innerHTML+=`
 
-container.appendChild(card);
+<div class="shop-card">
+
+<div class="shop-dot">
+•
+</div>
+
+<div class="shop-head">
+
+<img
+class="shop-favicon"
+src="https://www.google.com/s2/favicons?domain=${host}&sz=64"
+>
+
+<div class="shop-name">
+${shop.n}
+</div>
+
+</div>
+
+<div class="shop-url">
+${host}
+</div>
+
+</div>
+
+`;
 
 });
 
 }
+
+/* ================================================= */
+/* SL NO 55 : CONNECT COUNTRY SECTION */
+/* ================================================= */
+
+const oldRenderCountry=
+renderCountry;
+
+renderCountry=
+function(country){
+
+currentCountry=
+country;
+
+document
+.getElementById(
+"selectedCountryBox"
+)
+.innerHTML=
+"Selected Country - "
++
+country.toUpperCase();
+
+oldRenderCountry(
+country
+);
+
+renderCategory(
+"all"
+);
+
+};
+
+/* ================================================= */
+/* SL NO 56 : DEFAULT CATEGORY */
+/* ================================================= */
+
+renderCategory(
+"all"
+);
 
 </script>
 
+<!-- ================================================= -->
+<!-- SL NO 57 : CATEGORY SCRIPT END -->
+<!-- ================================================= -->
 
   </body>
 </html>
