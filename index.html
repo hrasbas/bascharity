@@ -990,7 +990,15 @@ ${shop.n}
 `;
 
 });
+currentCountry=country;
 
+document.getElementById(
+"selectedCountryBox"
+).innerHTML=
+"Selected Country - "+
+country.toUpperCase();
+
+renderCategory("all");
 }
 
 /* ================================================= */
@@ -2232,26 +2240,29 @@ box-shadow:0 2px 8px rgba(0,0,0,.08);
 
 </style>
   
- <!-- ================================================= -->
+ 
+ 
+<!-- ================================================= -->
 <!-- PART 2 : CATEGORY SECTION -->
+<!-- Paste BELOW Country Section -->
 <!-- ================================================= -->
 
 <!-- ================================================= -->
-<!-- SL NO 38 : CATEGORY BOX -->
+<!-- SELECTED COUNTRY -->
+<!-- ================================================= -->
+
+<div id="selectedCountryBox">
+Selected Country - USA
+</div>
+
+<!-- ================================================= -->
+<!-- CATEGORY BOX -->
 <!-- ================================================= -->
 
 <div class="country-box">
 
 <!-- ================================================= -->
-<!-- SL NO 39 : CATEGORY SEARCH HEADING -->
-<!-- ================================================= -->
-
-<div class="country-title">
-Category Search
-</div>
-
-<!-- ================================================= -->
-<!-- SL NO 40 : CATEGORY SEARCH -->
+<!-- CATEGORY SEARCH -->
 <!-- ================================================= -->
 
 <input
@@ -2261,86 +2272,130 @@ placeholder="Search Category..."
 >
 
 <!-- ================================================= -->
-<!-- SL NO 41 : CATEGORY BUTTONS -->
+<!-- CATEGORY BUTTONS -->
 <!-- ================================================= -->
 
-<div
-class="country-buttons"
-id="categoryButtons">
-</div>
+<div id="categoryButtons"></div>
 
 <!-- ================================================= -->
-<!-- SL NO 42 : ALL CATEGORY DROPDOWN -->
+<!-- CATEGORY DROPDOWN -->
 <!-- ================================================= -->
 
 <select id="allCategories">
-
-<option value="">
-Search All Categories
-</option>
-
+<option value="">All Categories</option>
 </select>
 
 <!-- ================================================= -->
-<!-- SL NO 43 : CATEGORY HEADING -->
+<!-- CATEGORY HEADING -->
 <!-- ================================================= -->
 
-<div
-id="categoryHeading"
-style="
-margin-top:18px;
-margin-bottom:12px;
-font-size:20px;
-font-weight:700;
-color:#111827;
-">
+<div id="categoryHeading">
 ALL
 </div>
 
 <!-- ================================================= -->
-<!-- SL NO 44 : CATEGORY SHOPS -->
+<!-- CATEGORY SHOPS -->
 <!-- ================================================= -->
 
-<div
-class="featured-shops"
-id="categoryShops">
-</div>
+<div id="categoryShops"></div>
 
 </div>
-
-<!-- ================================================= -->
-<!-- SL NO 45 : CATEGORY EXTRA CSS -->
-<!-- ================================================= -->
 
 <style>
-  
-#categorySearch{
-width:100%;
-height:54px;
-border:2px solid #dbe3ef;
-border-radius:14px;
-padding:0 15px;
-font-size:16px;
-outline:none;
-box-sizing:border-box;
-margin-bottom:15px;
+
+/* ================================================= */
+/* SELECTED COUNTRY */
+/* ================================================= */
+
+#selectedCountryBox{
+margin:20px 0 15px;
+padding:14px 18px;
+background:#fff;
+border-left:5px solid #4338ca;
+border-radius:12px;
+font-size:18px;
+font-weight:700;
+box-shadow:0 2px 8px rgba(0,0,0,.08);
 }
 
-.category-active{
-background:#059669 !important;
-color:#fff !important;
+/* ================================================= */
+/* CATEGORY SEARCH */
+/* ================================================= */
+
+#categorySearch{
+width:100%;
+height:50px;
+border:2px solid #ddd;
+border-radius:12px;
+padding:0 12px;
+margin-bottom:12px;
+box-sizing:border-box;
+}
+
+/* ================================================= */
+/* CATEGORY BUTTONS */
+/* ================================================= */
+
+#categoryButtons{
+display:flex;
+flex-wrap:wrap;
+gap:8px;
+margin-bottom:12px;
+}
+
+.categoryBtn{
+border:none;
+padding:10px 14px;
+border-radius:999px;
+cursor:pointer;
+background:#ecfdf5;
+font-weight:600;
+}
+
+.categoryBtn.active{
+background:#059669;
+color:#fff;
+}
+
+/* ================================================= */
+/* CATEGORY DROPDOWN */
+/* ================================================= */
+
+#allCategories{
+width:100%;
+height:50px;
+border:2px solid #ddd;
+border-radius:12px;
+padding:0 12px;
+margin-bottom:16px;
+}
+
+/* ================================================= */
+/* CATEGORY HEADING */
+/* ================================================= */
+
+#categoryHeading{
+font-size:20px;
+font-weight:700;
+margin-bottom:12px;
+}
+
+/* ================================================= */
+/* CATEGORY SHOPS */
+/* ================================================= */
+
+#categoryShops{
+display:grid;
+grid-template-columns:repeat(auto-fill,minmax(220px,1fr));
+gap:10px;
 }
 
 </style>
-  
-<!-- ================================================= -->
-<!-- SL NO 46 : CATEGORY SCRIPT START -->
-<!-- ================================================= -->
 
 <script>
 
 /* ================================================= */
-/* SL NO 47 : CATEGORY LIST */
+/* CATEGORY LIST */
 /* ================================================= */
 
 const categories=[
@@ -2358,23 +2413,23 @@ const categories=[
 ];
 
 /* ================================================= */
-/* SL NO 48 : CURRENT COUNTRY */
+/* CURRENT COUNTRY */
 /* ================================================= */
 
 let currentCountry="usa";
 
 /* ================================================= */
-/* SL NO 49 : CATEGORY ELEMENTS */
+/* ELEMENTS */
 /* ================================================= */
 
 const categoryButtons=
 document.getElementById("categoryButtons");
 
-const allCategories=
-document.getElementById("allCategories");
-
 const categorySearch=
 document.getElementById("categorySearch");
+
+const allCategoriesSelect=
+document.getElementById("allCategories");
 
 const categoryHeading=
 document.getElementById("categoryHeading");
@@ -2383,43 +2438,35 @@ const categoryShops=
 document.getElementById("categoryShops");
 
 /* ================================================= */
-/* SL NO 50 : CATEGORY BUTTONS */
+/* CATEGORY BUTTONS */
 /* ================================================= */
 
 categories.forEach(cat=>{
 
-const btn=
-document.createElement("button");
+const btn=document.createElement("button");
 
-btn.className="country-btn";
+btn.className="categoryBtn";
 
 btn.textContent=cat;
 
 btn.onclick=()=>{
 
 document
-.querySelectorAll(
-"#categoryButtons .country-btn"
-)
-.forEach(x=>
-x.classList.remove("category-active")
-);
+.querySelectorAll(".categoryBtn")
+.forEach(x=>x.classList.remove("active"));
 
-btn.classList.add(
-"category-active"
-);
+btn.classList.add("active");
 
 renderCategory(cat);
 
 };
 
-categoryButtons
-.appendChild(btn);
+categoryButtons.appendChild(btn);
 
 });
 
 /* ================================================= */
-/* SL NO 51 : CATEGORY DROPDOWN */
+/* CATEGORY DROPDOWN */
 /* ================================================= */
 
 categories.forEach(cat=>{
@@ -2431,29 +2478,27 @@ option.value=cat;
 
 option.textContent=cat;
 
-allCategories
-.appendChild(option);
+allCategoriesSelect.appendChild(option);
 
 });
 
 /* ================================================= */
-/* SL NO 52 : DROPDOWN CHANGE */
+/* CATEGORY DROPDOWN CHANGE */
 /* ================================================= */
 
-allCategories.onchange=()=>{
+allCategoriesSelect.onchange=()=>{
 
 renderCategory(
-allCategories.value
+allCategoriesSelect.value
 );
 
 };
 
 /* ================================================= */
-/* SL NO 53 : CATEGORY SEARCH */
+/* CATEGORY SEARCH */
 /* ================================================= */
 
-categorySearch
-.addEventListener(
+categorySearch.addEventListener(
 "input",
 function(){
 
@@ -2461,9 +2506,7 @@ const value=
 this.value.toLowerCase();
 
 document
-.querySelectorAll(
-"#categoryButtons .country-btn"
-)
+.querySelectorAll(".categoryBtn")
 .forEach(btn=>{
 
 btn.style.display=
@@ -2481,28 +2524,24 @@ btn.textContent
 );
 
 /* ================================================= */
-/* SL NO 54 : CATEGORY RENDER */
+/* CATEGORY RENDER */
 /* ================================================= */
 
 function renderCategory(cat){
 
-categoryHeading
-.innerHTML=
+categoryHeading.innerHTML=
 cat.toUpperCase();
 
-categoryShops
-.innerHTML="";
+categoryShops.innerHTML="";
 
 let shops=
-countryShops[
-currentCountry
-]||[];
-shops=shops.slice(10);
+countryShops[currentCountry]||[];
+
 if(cat!=="all"){
 
 shops=
 shops.filter(
-s=>s.c===cat
+shop=>shop.c===cat
 );
 
 }
@@ -2512,38 +2551,27 @@ shops.forEach(shop=>{
 let host="";
 
 try{
-
 host=
-new URL(
-shop.u
-).hostname;
-
+new URL(shop.u).hostname;
 }catch(e){}
 
-categoryShops
-.innerHTML+=`
+categoryShops.innerHTML+=`
 
-<div class="shop-card">
+<div class="shopCard">
 
-<div class="shop-dot">
-•
-</div>
+<div class="shopDot">•</div>
 
-<div class="shop-head">
+<div class="shopHead">
 
 <img
-class="shop-favicon"
+class="shopFav"
 src="https://www.google.com/s2/favicons?domain=${host}&sz=64"
 >
 
-<div class="shop-name">
+<div class="shopName">
 ${shop.n}
 </div>
 
-</div>
-
-<div class="shop-url">
-${host}
 </div>
 
 </div>
@@ -2555,17 +2583,33 @@ ${host}
 }
 
 /* ================================================= */
-/* SL NO 55 : CONNECT COUNTRY SECTION */
+/* MODIFY PART 1 FUNCTION */
+/* ================================================= */
+/*
+renderCountry(country)
+function-ന്റെ അവസാനം
+ഈ 3 lines ചേർക്കുക
+*/
+
+/*
+
+currentCountry=country;
+
+document.getElementById(
+"selectedCountryBox"
+).innerHTML=
+"Selected Country - "+
+country.toUpperCase();
+
+renderCategory("all");
+
+*/
+
+/* ================================================= */
+/* DEFAULT */
 /* ================================================= */
 
- 
-/* ================================================= */
-/* SL NO 56 : DEFAULT CATEGORY */
-/* ================================================= */
-
-renderCategory(
-"all"
-);
+renderCategory("all");
 
 </script>
 
