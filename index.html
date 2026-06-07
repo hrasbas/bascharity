@@ -754,7 +754,18 @@ border-radius:12px;
 padding:0 12px;
 margin-bottom:16px;
 }
-
+  
+#shopOnCountry{
+margin:15px 0;
+padding:14px;
+background:#4338ca;
+color:#fff;
+text-align:center;
+font-size:20px;
+font-weight:700;
+border-radius:12px;
+}
+  
 /* ================================================= */
 /* FEATURED SHOPS */
 /* ================================================= */
@@ -803,31 +814,7 @@ font-weight:700;
 }
 
 </style>
-  
- <!-- ================================================= -->
-<!-- SELECTED COUNTRY -->
-<!-- ================================================= -->
 
-<div id="selectedCountryBox">
-Selected Country - USA
-</div>
-
-<style>
-
-#selectedCountryBox{
-margin-top:20px;
-margin-bottom:15px;
-padding:14px 18px;
-background:#ffffff;
-border-left:5px solid #4338ca;
-border-radius:12px;
-font-size:18px;
-font-weight:700;
-color:#111827;
-box-shadow:0 2px 8px rgba(0,0,0,.08);
-}
-
-</style>
   
 <script>
 
@@ -1023,7 +1010,10 @@ try{
 host=
 new URL(shop.u).hostname;
 }catch(e){}
-
+  
+<div id="shopOnCountry">
+SHOP ON USA
+</div>
 featuredShops.innerHTML+=`
 
 <div class="shopCard">
@@ -2283,7 +2273,31 @@ if(target) target.scrollIntoView({ behavior:"smooth", block:"start" });
  <!-- ================================================= -->
 <!-- SELECTED COUNTRY -->
 <!-- ================================================= -->
+  
+ <!-- ================================================= -->
+<!-- SELECTED COUNTRY -->
+<!-- ================================================= -->
 
+<div id="selectedCountryBox">
+Selected Country - USA
+</div>
+
+<style>
+
+#selectedCountryBox{
+margin-top:20px;
+margin-bottom:15px;
+padding:14px 18px;
+background:#ffffff;
+border-left:5px solid #4338ca;
+border-radius:12px;
+font-size:18px;
+font-weight:700;
+color:#111827;
+box-shadow:0 2px 8px rgba(0,0,0,.08);
+}
+
+</style>
 <!-- ================================================= -->
 <!-- CATEGORY BOX -->
 <!-- ================================================= -->
