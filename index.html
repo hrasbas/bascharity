@@ -2507,6 +2507,23 @@ renderCategory(
 allCategoriesSelect.value
 );
 
+document
+.querySelectorAll(".categoryBtn")
+.forEach(btn=>{
+
+btn.classList.remove("active");
+
+if(
+btn.textContent.toLowerCase()===
+allCategoriesSelect.value.toLowerCase()
+){
+btn.classList.add("active");
+}
+
+});
+
+allCategoriesSelect.selectedIndex=0;
+
 };
 
 /* ================================================= */
