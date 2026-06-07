@@ -990,7 +990,26 @@ btn.textContent
 
 function renderCountry(country){
 
-featuredShops.innerHTML="";
+featuredShops.innerHTML="";allCountries.onchange=()=>{
+
+renderCountry(allCountries.value);
+
+document
+.querySelectorAll(".countryBtn")
+.forEach(btn=>{
+
+btn.classList.remove("active");
+
+if(
+btn.textContent.toLowerCase()===
+allCountries.value.toLowerCase()
+){
+btn.classList.add("active");
+}
+
+});
+
+};
 
 const shops=
 (countryShops[country]||[])
