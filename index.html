@@ -941,6 +941,20 @@ renderCountry(allCountries.value);
 
 };
 
+  document
+.querySelectorAll(".countryBtn")
+.forEach(btn=>{
+
+btn.classList.remove("active");
+
+if(
+btn.textContent===allCountries.value
+){
+btn.classList.add("active");
+}
+
+});
+
 /* ================================================= */
 /* SEARCH */
 /* ================================================= */
