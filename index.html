@@ -2706,23 +2706,33 @@ categoryButtons.appendChild(btn);
 
 });
 
-/* ================================================= */
-/* CATEGORY DROPDOWN */
-/* ================================================= */
+const allCategoriesList=[
+"all",
+...new Set(
+Object.values(countryShops)
+.flat()
+.map(shop=>shop.c)
+)
+];
 
-categories.forEach(cat=>{
+allCategoriesSelect.innerHTML=
+'<option value="all">ALL CATEGORIES</option>';
+
+allCategoriesList
+.filter(cat=>cat!=="all")
+.forEach(cat=>{
 
 const option=
 document.createElement("option");
 
 option.value=cat;
 
-option.textContent=cat;
+option.textContent=
+cat.toUpperCase();
 
 allCategoriesSelect.appendChild(option);
 
 });
-
 /* ================================================= */
 /* CATEGORY DROPDOWN CHANGE */
 /* ================================================= */
