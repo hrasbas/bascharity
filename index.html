@@ -908,6 +908,38 @@ countryButtons.appendChild(btn);
 /* ================================================= */
 /* DROPDOWN */
 /* ================================================= */
+ 
+/* ================================================= /
+/ COUNTRY BUTTONS /
+/ ================================================= */
+
+fixedCountries.forEach(country=>{
+
+const btn=document.createElement("button");
+
+btn.className="countryBtn";
+
+btn.textContent=country;
+
+btn.onclick=()=>{
+
+document
+.querySelectorAll(".countryBtn")
+.forEach(x=>x.classList.remove("active"));
+
+btn.classList.add("active");
+
+renderCountry(country);
+
+};
+
+countryButtons.appendChild(btn);
+
+});
+
+/* ================================================= /
+/ DROPDOWN /
+/ ================================================= */
 
 fixedCountries.forEach(country=>{
 
@@ -926,25 +958,28 @@ allCountries.onchange=()=>{
 
 renderCountry(allCountries.value);
 
-};
-
-  document
+document
 .querySelectorAll(".countryBtn")
 .forEach(btn=>{
 
 btn.classList.remove("active");
 
 if(
-btn.textContent===allCountries.value
+btn.textContent.toLowerCase()===
+allCountries.value.toLowerCase()
 ){
 btn.classList.add("active");
 }
 
 });
 
-/* ================================================= */
-/* SEARCH */
-/* ================================================= */
+allCountries.selectedIndex=0;
+
+};
+
+/* ================================================= /
+/ SEARCH /
+/ ================================================= */
 
 countrySearch.addEventListener(
 "input",
@@ -971,32 +1006,13 @@ btn.textContent
 }
 );
 
-/* ================================================= */
-/* RENDER COUNTRY */
-/* ================================================= */
+/* ================================================= /
+/ RENDER COUNTRY /
+/ ================================================= */
 
 function renderCountry(country){
 
-featuredShops.innerHTML="";allCountries.onchange=()=>{
-
-renderCountry(allCountries.value);
-
-document
-.querySelectorAll(".countryBtn")
-.forEach(btn=>{
-
-btn.classList.remove("active");
-
-if(
-btn.textContent.toLowerCase()===
-allCountries.value.toLowerCase()
-){
-btn.classList.add("active");
-}
-
-});
-}
-  
+featuredShops.innerHTML="";
 
 const shops=
 (countryShops[country]||[])
@@ -1010,48 +1026,42 @@ try{
 host=
 new URL(shop.u).hostname;
 }catch(e){}
-  
-<div id="shopOnCountry">
-SHOP ON USA
-</div>
+
 featuredShops.innerHTML+=`
 
-<div class="shopCard">
-
-<div class="shopDot">•</div>
-
-<div class="shopHead">
-
-<img
+<div class="shopCard"><div class="shopDot">•</div><div class="shopHead"><img
 class="shopFav"
 src="https://www.google.com/s2/favicons?domain=${host}&sz=64"
->
+
+«»
 
 <div class="shopName">
 ${shop.n}
-</div>
-
-</div>
-
-</div>
-
-`;
+</div></div></div>`;
 
 });
-currentCountry=country;
 
+if(typeof currentCountry!=="undefined"){
+currentCountry=country;
+}
+
+if(document.getElementById("selectedCountryBox")){
 document.getElementById(
 "selectedCountryBox"
 ).innerHTML=
 "Selected Country - "+
 country.toUpperCase();
+}
 
+if(typeof renderCategory==="function"){
 renderCategory("all");
 }
 
-/* ================================================= */
-/* DEFAULT */
-/* ================================================= */
+}
+
+/* ================================================= /
+/ DEFAULT /
+/ ================================================= */
 
 renderCountry("usa");
 
