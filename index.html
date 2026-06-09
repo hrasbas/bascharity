@@ -798,11 +798,9 @@ box-shadow:0 2px 8px rgba(0,0,0,.08);
 position:absolute;
 left:8px;
 top:6px;
-font-size:8px;
-color:#fff;
-text-shadow:0 0 3px #000;
+font-size:20px;
+color:#000;
 }
-
 .shopHead{
 display:flex;
 align-items:center;
@@ -1218,8 +1216,7 @@ new URL(shop.u).hostname;
 }catch(e){}
 
 featuredShops.innerHTML+=`
-
-<div class="shopCard"><div class="shopDot">•</div><div class="shopHead"><img
+<div class="shopCard"><div class="shopDot">${!shop.a||shop.a.trim()===""?".":""}</div><div class="shopHead"><img
 class="shopFav"
 src="https://www.google.com/s2/favicons?domain=${host}&sz=64"
 
