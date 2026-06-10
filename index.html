@@ -2814,6 +2814,8 @@ categoryShops.innerHTML="";
 let shops=
 countryShops[currentCountry]||[];
 
+let visibleCount = 25;  
+
 if(cat!=="all"){
 
 shops=
@@ -2823,7 +2825,7 @@ shop=>shop.c===cat
 
 }
 
-shops.forEach(shop=>{
+shops.slice(0, visibleCount).forEach(shop=>{
 
 let host="";
 
@@ -2854,7 +2856,20 @@ ${shop.n}
 `;
 
 });
+window.onscroll = () => {
 
+if(
+window.innerHeight + window.scrollY >=
+document.body.offsetHeight - 500
+){
+
+visibleCount += 25;
+
+renderCategory(cat);
+
+}
+
+};
 }
 
 /* ================================================= */
