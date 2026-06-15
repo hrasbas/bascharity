@@ -18617,7 +18617,19 @@ renderCategory("all");
 / ================================================= */
 
 renderCountry("usa");
+document.querySelectorAll(".country-btn")
+.forEach(btn=>{
 
+btn.onclick=()=>{
+
+const country=
+btn.classList[1];
+
+renderCountry(country);
+
+};
+
+});
 </script>
  
  
