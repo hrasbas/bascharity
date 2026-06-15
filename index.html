@@ -692,8 +692,102 @@ placeholder="Search Country..."
 
 <select id="allCountries">
 <option value="">All Countries</option>
+
 </select>
-<div id="shopOnCountry">
+
+<!-- COUNTRY BUTTON SECTION -->
+
+<div class="long-box">SELECT COUNTRY</div>
+
+<div class="country-grid">
+
+<div class="country-btn india">🇮🇳 INDIA</div>
+<div class="country-btn usa">🇺🇸 USA</div>
+<div class="country-btn uk">🇬🇧 UK</div>
+
+<div class="country-btn uae">🇦🇪 UAE</div>
+<div class="country-btn saudi">🇸🇦 SAUDI</div>
+<div class="country-btn canada">🇨🇦 CANADA</div>
+
+<div class="country-btn australia">🇦🇺 AUSTRALIA</div>
+<div class="country-btn germany">🇩🇪 GERMANY</div>
+<div class="country-btn france">🇫🇷 FRANCE</div>
+
+</div>
+
+<select class="country-select">
+<option>SEARCH ALL COUNTRIES ▼</option>
+</select>
+
+<div class="long-box">SHOP ON INDIA</div>
+
+<style>
+.long-box{
+  width:96%;
+  max-width:900px;
+  margin:0 auto 12px auto;
+  background:#5a5a5a;
+  border:2px solid #dfe6eb;
+  border-radius:14px;
+  padding:14px 8px;
+  text-align:center;
+  color:#fff;
+  font-size:16px;
+  font-weight:800;
+  box-sizing:border-box;
+  box-shadow:0 0 8px rgba(223,230,235,.35);
+}
+
+.country-grid{
+  width:96%;
+  max-width:900px;
+  margin:auto;
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:10px;
+}
+
+.country-btn{
+  background:#4a4a4a;
+  border:1px solid #666;
+  border-radius:14px;
+  padding:14px 8px;
+  color:#fff;
+  font-size:16px;
+  font-weight:800;
+  text-align:center;
+}
+
+.india{border-left:6px solid #FF9933;}
+.usa{border-left:6px solid #2196F3;}
+.uk{border-left:6px solid #E91E63;}
+.uae{border-left:6px solid #00C853;}
+.saudi{border-left:6px solid #4CAF50;}
+.canada{border-left:6px solid #F44336;}
+.australia{border-left:6px solid #FFC107;}
+.germany{border-left:6px solid #9C27B0;}
+.france{border-left:6px solid #3F51B5;}
+
+.country-select{
+  width:96%;
+  max-width:900px;
+  display:block;
+  margin:12px auto;
+  background:#5a5a5a;
+  color:#fff;
+  border:2px solid #dfe6eb;
+  border-radius:14px;
+  padding:14px 8px;
+  font-size:16px;
+  font-weight:800;
+  text-align:center;
+  text-align-last:center;
+  box-sizing:border-box;
+  box-shadow:0 0 8px rgba(223,230,235,.35);
+}
+</style>  
+  
+  <div id="shopOnCountry">
 SHOP ON USA
 </div>
   
