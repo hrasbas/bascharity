@@ -664,74 +664,6 @@ ball.className = "bas-ball is-pwa-installed";
  <!-- 1. Country Selector Section -->
 <!-- COUNTRY BOX START -->
  
-<!-- ================================================= -->
-<!-- PART 1 : COUNTRY SECTION -->
-<!-- ================================================= -->
-
-<div class="country-box">
-  
-<div style="display:none">
-
-<input
-id="countrySearch"
-type="text"
-placeholder="Search Country..."
->
-
-<div id="countryButtons"></div>
-
-<select id="allCountries">
-<option value="">All Countries</option>
-</select>
-
-</div>
-<!-- ================================================= -->
-<!-- COUNTRY SEARCH -->
-<!-- ================================================= -->
-
- 
-<!-- COUNTRY BUTTON SECTION -->
-
-<div class="long-box">SELECT COUNTRY</div>
-
-<div class="country-grid">
-
-<div class="country-btn india">🇮🇳 INDIA</div>
-<div class="country-btn usa">🇺🇸 USA</div>
-<div class="country-btn uk">🇬🇧 UK</div>
-
-<div class="country-btn uae">🇦🇪 UAE</div>
-<div class="country-btn saudi">🇸🇦 SAUDI</div>
-<div class="country-btn canada">🇨🇦 CANADA</div>
-
-<div class="country-btn australia">🇦🇺 AUSTRALIA</div>
-<div class="country-btn germany">🇩🇪 GERMANY</div>
-<div class="country-btn france">🇫🇷 FRANCE</div>
-
-</div>
-
-<select class="country-select">
-<option>SEARCH ALL COUNTRIES ▼</option>
-</select>
-
-<div class="long-box">SHOP ON INDIA</div>
-
-<style>
-.long-box{
-  width:96%;
-  max-width:900px;
-  margin:0 auto 12px auto;
-  background:#5a5a5a;
-  border:2px solid #dfe6eb;
-  border-radius:14px;
-  padding:14px 8px;
-  text-align:center;
-  color:#fff;
-  font-size:16px;
-  font-weight:800;
-  box-sizing:border-box;
-  box-shadow:0 0 8px rgba(223,230,235,.35);
-}
 
 .country-grid{
   width:96%;
@@ -18683,7 +18615,21 @@ renderCategory("all");
 /* ================================================= /
 / DEFAULT /
 / ================================================= */
+document
+.querySelectorAll(".country-btn")
+.forEach(btn=>{
 
+btn.onclick=()=>{
+
+const country=
+btn.classList[1]
+.replace("saudi","saudi arabia");
+
+renderCountry(country);
+
+};
+
+});
 renderCountry("usa");
 
 </script>
