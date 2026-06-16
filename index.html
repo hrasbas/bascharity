@@ -777,7 +777,29 @@ onclick="renderCountry('australia')">AUSTRALIA</button>
 SHOP ON USA
 </div>
   
- 
+ <script>
+
+/* COUNTRY BUTTON MASTER SYSTEM */
+
+document.querySelectorAll(".country-btn").forEach(btn=>{
+
+btn.onclick=function(){
+
+/* OVERRIDE ANY PREVIOUS COLOUR */
+
+document.querySelectorAll(".country-btn").forEach(x=>{
+x.style.color="#fff";
+x.classList.remove("active");
+});
+
+this.classList.add("active");
+this.style.color="#00ff66";
+
+};
+
+});
+
+</script>
   
 <!-- ================================================= -->
 <!-- FEATURED SHOPS -->
