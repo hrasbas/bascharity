@@ -18569,10 +18569,7 @@ btn.textContent
 }
 );
   
-document.querySelectorAll(".country-btn")
-.forEach(x=>x.classList.remove("active"));
 
-btn.classList.add("active");
 /* ================================================= /
 / RENDER COUNTRY /
 / ================================================= */
@@ -18649,6 +18646,10 @@ document.querySelectorAll(".countri-btn")
 .forEach(btn=>{
 
 btn.onclick=()=>{
+  document.querySelectorAll(".country-btn")
+.forEach(x=>x.classList.remove("active"));
+
+btn.classList.add("active");
 
 const country=
 btn.classList[1];
@@ -18669,6 +18670,9 @@ renderCountry(country);
 <!-- ================================================= -->
 
   <style>
+.country-btn.active{
+color:#00ff66;
+}
 .compare-box{
 background:#000;
 border:1px solid #00BFFF;
