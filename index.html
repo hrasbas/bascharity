@@ -782,9 +782,9 @@ SHOP ON USA
 
 </div>
 
-  <script>
+<script>
 /* =======================================================
-   MAIN COUNTRY & FEATURED SHOPS SYSTEM (CORRECTED)
+   MAIN COUNTRY & FEATURED SHOPS SYSTEM (STABLE VERSION)
    ======================================================= */
 
 // 1. പേജിലെ എല്ലാ എലമെന്റുകളും പൂർണ്ണമായി ലോഡ് ആയ ശേഷം മാത്രം റൺ ചെയ്യാൻ
@@ -799,14 +799,14 @@ document.addEventListener("DOMContentLoaded", () => {
     // [എന്തിനാണ് ഈ വരി]: എല്ലാ കൺട്രി ബട്ടണുകളിലേക്കും ക്ലിക്ക് ഇവന്റ് കണക്ട് ചെയ്യാൻ
     document.querySelectorAll(".countri-btn").forEach(btn => {
         btn.onclick = () => {
-            // ബട്ടണിന്റെ രണ്ടാമത്തെ ക്ലാസ്സിൽ നിന്നാണ് രാജ്യത്തിന്റെ പേര് എടുക്കുന്നത് (eg: india, usa)
-            const country = btn.classList[1]; 
+            // ബട്ടണിലെ അക്ഷരങ്ങൾ നേരിട്ട് എടുക്കുന്നു (eg: "INDIA", "USA")
+            const countryText = btn.textContent.trim().toLowerCase();
             
-            // ലോക്കൽ സ്റ്റോറേജിലേക്ക് യൂസർ തിരഞ്ഞെടുത്ത രാജ്യം സേവ് ചെയ്യുന്നു
-            localStorage.setItem("selectedCountry", country);
+            // ലോക്കൽ സ്റ്റോറേജിലേക്ക് യൂസർ തിരഞ്ഞെടുത്ത രാജ്യം കൃത്യമായി സേവ് ചെയ്യുന്നു
+            localStorage.setItem("selectedCountry", countryText);
             
             // ആ രാജ്യത്തെ ഷോപ്പുകളും പച്ച വെളിച്ചവും റൺ ചെയ്യുന്നു
-            renderCountry(country);
+            renderCountry(countryText);
         };
     });
 });
@@ -816,10 +816,10 @@ if (document.getElementById("allCountries")) {
     document.getElementById("allCountries").onchange = function() {
         if (this.value) {
             // ഡ്രോപ്പ്ഡൗണിൽ സെലക്ട് ചെയ്ത രാജ്യം ലോക്കൽ സ്റ്റോറേജിൽ സേവ് ചെയ്യുന്നു
-            localStorage.setItem("selectedCountry", this.value);
+            localStorage.setItem("selectedCountry", this.value.toLowerCase());
             
             // ആ രാജ്യത്തെ ഷോപ്പുകളും പച്ച വെളിച്ചവും റൺ ചെയ്യുന്നു
-            renderCountry(this.value);
+            renderCountry(this.value.toLowerCase());
             
             // ഡ്രോപ്പ്ഡൗൺ വീണ്ടും ഡിഫോൾട്ട് അവസ്ഥയിലേക്ക് മാറ്റുന്നു
             this.selectedIndex = 0;
@@ -830,6 +830,12 @@ if (document.getElementById("allCountries")) {
 // 3. കൺട്രിയും പച്ച വെളിച്ചവും ഷോപ്പുകളും റെൻഡർ ചെയ്യുന്ന പ്രധാന ഫങ്ക്ഷൻ
 function renderCountry(country) {
     if (!country) return;
+    
+    // സുരക്ഷിതത്വത്തിന് വേണ്ടി രാജ്യത്തിന്റെ പേര് എപ്പോഴും ചെറിയ അക്ഷരത്തിലാക്കുന്നു
+    const pureCountry = country.trim().toLowerCase();
+
+    // എപ്പോഴും കറക്റ്റ് രാജ്യം തന്നെ ലോക്കൽ സ്റ്റോറേജിൽ ഉണ്ടെന്ന് ഉറപ്പാക്കുന്നു
+    localStorage.setItem("selectedCountry", pureCountry);
 
     const featuredShopsDiv = document.getElementById("featuredShops");
     const shopOnTxt = document.getElementById("shopOnCountry");
@@ -838,17 +844,19 @@ function renderCountry(country) {
     // ---------------------------------------------------
     // പച്ച വെളിച്ചം കത്താനുള്ള ലോജിക് (BUTTONS & DROPDOWN SYNC)
     // ---------------------------------------------------
-    // [എന്തിനാണ് ഈ വരി]: ആദ്യം എല്ലാ ബട്ടണുകളുടെയും പച്ച നിറം മാറ്റി വെള്ളയാക്കി റീസെറ്റ് ചെയ്യാൻ
+    // [എന്തിനാണ് ഈ വരി]: സി.എസ്.എസ് സ്റ്റൈലുകൾ തടസ്സം നിൽക്കാതിരിക്കാൻ !important വെച്ച് എല്ലാ ബട്ടണുകളും വെള്ളയാക്കി റീസെറ്റ് ചെയ്യാൻ
     document.querySelectorAll(".countri-btn").forEach(x => {
-        x.style.color = "#fff";
+        x.style.setProperty("color", "#ffffff", "important");
         x.classList.remove("active");
     });
 
-    // [എന്തിനാണ് ഈ വരി]: സെലക്ട് ചെയ്ത രാജ്യത്തിന് മുകളിൽ ബട്ടൺ ഉണ്ടെങ്കിൽ അതിനെ മാത്രം കൃത്യമായി പച്ചയാക്കാൻ
+    // [എന്തിനാണ് ഈ വരി]: സെലക്ട് ചെയ്ത രാജ്യത്തിന്റെ പേരും ബട്ടണിലെ ടെക്സ്റ്റും ഒത്തുനോക്കി അതിനെ മാത്രം പച്ചയാക്കാൻ
     document.querySelectorAll(".countri-btn").forEach(btn => {
-        if (btn.textContent.toLowerCase() === country.toLowerCase() || btn.classList.contains(country)) {
+        const btnText = btn.textContent.trim().toLowerCase();
+        if (btnText === pureCountry || btn.classList.contains(pureCountry)) {
             btn.classList.add("active");
-            btn.style.color = "#00ff66"; // ബട്ടണിൽ പച്ച വെളിച്ചം കത്തുന്നു
+            // !important വെച്ച് ബട്ടണിലെ അക്ഷരങ്ങൾ കടുംപച്ചയാക്കുന്നു
+            btn.style.setProperty("color", "#00ff66", "important"); 
         }
     });
 
@@ -857,12 +865,12 @@ function renderCountry(country) {
     // ---------------------------------------------------
     // [എന്തിനാണ് ഈ വരി]: SHOP ON COUNTRY ബോക്സ് നിർബന്ധമായും പച്ച നിറത്തിൽ കാണിക്കാൻ
     if (shopOnTxt) {
-        shopOnTxt.innerHTML = "SHOP ON " + country.toUpperCase();
-        shopOnTxt.style.color = "#00ff66"; // ഹെഡിംഗ് പച്ചയാക്കുന്നു
+        shopOnTxt.innerHTML = "SHOP ON " + pureCountry.toUpperCase();
+        shopOnTxt.style.setProperty("color", "#00ff66", "important"); // ഹെഡിംഗ് പച്ചയാക്കുന്നു
     }
 
     if (selectedBox) {
-        selectedBox.innerHTML = "Selected Country - " + country.toUpperCase();
+        selectedBox.innerHTML = "Selected Country - " + pureCountry.toUpperCase();
     }
 
     // ---------------------------------------------------
@@ -872,7 +880,7 @@ function renderCountry(country) {
         featuredShopsDiv.innerHTML = ""; // പഴയ ലിസ്റ്റ് ക്ലിയർ ചെയ്യുന്നു
         
         // [എന്തിനാണ് ഈ വരി]: ഡാറ്റാബേസിൽ നിന്ന് കൃത്യമായി ആദ്യത്തെ 10 ഷോപ്പുകൾ മാത്രം മുറിച്ചെടുക്കാൻ (.slice(0,10))
-        const shops = (typeof countryShops !== 'undefined' && countryShops[country] || []).slice(0, 10);
+        const shops = (typeof countryShops !== 'undefined' && countryShops[pureCountry] || []).slice(0, 10);
         
         shops.forEach(shop => {
             let host = "";
@@ -891,7 +899,7 @@ function renderCountry(country) {
 
     // ഗ്ലോബൽ വേരിയബിൾ ഉണ്ടെങ്കിൽ അപ്ഡേറ്റ് ചെയ്യാൻ
     if (typeof currentCountry !== "undefined") {
-        currentCountry = country;
+        currentCountry = pureCountry;
     }
 }
 
@@ -905,6 +913,7 @@ if (document.getElementById("countrySearch")) {
     });
 }
 </script>
+ 
 
 
 <style>
