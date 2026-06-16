@@ -18568,7 +18568,11 @@ btn.textContent
 
 }
 );
+  
+document.querySelectorAll(".country-btn")
+.forEach(x=>x.classList.remove("active"));
 
+btn.classList.add("active");
 /* ================================================= /
 / RENDER COUNTRY /
 / ================================================= */
