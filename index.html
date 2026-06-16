@@ -798,6 +798,26 @@ this.style.color="#00ff66";
 };
 
 });
+ </script>
+<script>
+
+document.querySelectorAll(".country-btn").forEach(btn=>{
+
+btn.addEventListener("click",function(){
+
+document.querySelectorAll(".country-btn").forEach(x=>{
+x.style.color="#fff";
+x.classList.remove("active");
+});
+
+this.classList.add("active");
+this.style.color="#00ff66";
+
+});
+
+});
+
+   
 
 </script>
   
