@@ -18674,7 +18674,10 @@ renderCategory("all");
 / DEFAULT /
 / ================================================= */
 
-renderCountry("usa");
+const savedCountry =
+localStorage.getItem("selectedCountry") || "india";
+
+renderCountry(savedCountry);
 document.querySelectorAll(".countri-btn")
 .forEach(btn=>{
 
@@ -18686,6 +18689,10 @@ btn.classList.add("active");
 
 const country=
 btn.classList[1];
+ localStorage.setItem(
+"selectedCountry",
+country
+);
 
 renderCountry(country);
   
