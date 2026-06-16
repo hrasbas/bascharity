@@ -782,138 +782,44 @@ SHOP ON USA
 
 </div>
 
-<script>
-/* =======================================================
-   MAIN COUNTRY & FEATURED SHOPS SYSTEM (STABLE VERSION)
-   ======================================================= */
-
-// 1. പേജിലെ എല്ലാ എലമെന്റുകളും പൂർണ്ണമായി ലോഡ് ആയ ശേഷം മാത്രം റൺ ചെയ്യാൻ
+         
+   <script>
 document.addEventListener("DOMContentLoaded", () => {
-    
-    // [എന്തിനാണ് ഈ വരി]: യൂസർ മുൻപ് നോക്കി ക്ലോസ് ചെയ്ത രാജ്യം ഉണ്ടോ എന്ന് നോക്കാൻ, ഇല്ലെങ്കിൽ ഡിഫോൾട്ട് 'india' എടുക്കും
     const savedCountry = localStorage.getItem("selectedCountry") || "india";
-    
-    // [എന്തിനാണ് ഈ വരി]: പേജ് തുറക്കുമ്പോൾ തന്നെ ആ ഡിഫോൾട്ട് രാജ്യത്തെ സിസ്റ്റത്തിലേക്ക് ലോഡ് ചെയ്യാൻ
     renderCountry(savedCountry);
-    
-    // [എന്തിനാണ് ഈ വരി]: എല്ലാ കൺട്രി ബട്ടണുകളിലേക്കും ക്ലിക്ക് ഇവന്റ് കണക്ട് ചെയ്യാൻ
-    document.querySelectorAll(".countri-btn").forEach(btn => {
-        btn.onclick = () => {
-            // ബട്ടണിലെ അക്ഷരങ്ങൾ നേരിട്ട് എടുക്കുന്നു (eg: "INDIA", "USA")
-            const countryText = btn.textContent.trim().toLowerCase();
-            
-            // ലോക്കൽ സ്റ്റോറേജിലേക്ക് യൂസർ തിരഞ്ഞെടുത്ത രാജ്യം കൃത്യമായി സേവ് ചെയ്യുന്നു
-            localStorage.setItem("selectedCountry", countryText);
-            
-            // ആ രാജ്യത്തെ ഷോപ്പുകളും പച്ച വെളിച്ചവും റൺ ചെയ്യുന്നു
-            renderCountry(countryText);
-        };
-    });
 });
 
-// 2. ഡ്രോപ്പ്ഡൗൺ വഴി രാജ്യം മാറ്റുമ്പോൾ വർക്ക് ചെയ്യാനുള്ള ലോജിക്
-if (document.getElementById("allCountries")) {
-    document.getElementById("allCountries").onchange = function() {
-        if (this.value) {
-            // ഡ്രോപ്പ്ഡൗണിൽ സെലക്ട് ചെയ്ത രാജ്യം ലോക്കൽ സ്റ്റോറേജിൽ സേവ് ചെയ്യുന്നു
-            localStorage.setItem("selectedCountry", this.value.toLowerCase());
-            
-            // ആ രാജ്യത്തെ ഷോപ്പുകളും പച്ച വെളിച്ചവും റൺ ചെയ്യുന്നു
-            renderCountry(this.value.toLowerCase());
-            
-            // ഡ്രോപ്പ്ഡൗൺ വീണ്ടും ഡിഫോൾട്ട് അവസ്ഥയിലേക്ക് മാറ്റുന്നു
-            this.selectedIndex = 0;
-        }
-    };
-}
-
-// 3. കൺട്രിയും പച്ച വെളിച്ചവും ഷോപ്പുകളും റെൻഡർ ചെയ്യുന്ന പ്രധാന ഫങ്ക്ഷൻ
 function renderCountry(country) {
-    if (!country) return;
-    
-    // സുരക്ഷിതത്വത്തിന് വേണ്ടി രാജ്യത്തിന്റെ പേര് എപ്പോഴും ചെറിയ അക്ഷരത്തിലാക്കുന്നു
     const pureCountry = country.trim().toLowerCase();
-
-    // എപ്പോഴും കറക്റ്റ് രാജ്യം തന്നെ ലോക്കൽ സ്റ്റോറേജിൽ ഉണ്ടെന്ന് ഉറപ്പാക്കുന്നു
-    localStorage.setItem("selectedCountry", pureCountry);
-
-    const featuredShopsDiv = document.getElementById("featuredShops");
-    const shopOnTxt = document.getElementById("shopOnCountry");
-    const selectedBox = document.getElementById("selectedCountryBox");
-
-    // ---------------------------------------------------
-    // പച്ച വെളിച്ചം കത്താനുള്ള ലോജിക് (BUTTONS & DROPDOWN SYNC)
-    // ---------------------------------------------------
-    // [എന്തിനാണ് ഈ വരി]: സി.എസ്.എസ് സ്റ്റൈലുകൾ തടസ്സം നിൽക്കാതിരിക്കാൻ !important വെച്ച് എല്ലാ ബട്ടണുകളും വെള്ളയാക്കി റീസെറ്റ് ചെയ്യാൻ
-    document.querySelectorAll(".countri-btn").forEach(x => {
-        x.style.setProperty("color", "#ffffff", "important");
-        x.classList.remove("active");
-    });
-
-    // [എന്തിനാണ് ഈ വരി]: സെലക്ട് ചെയ്ത രാജ്യത്തിന്റെ പേരും ബട്ടണിലെ ടെക്സ്റ്റും ഒത്തുനോക്കി അതിനെ മാത്രം പച്ചയാക്കാൻ
+    
     document.querySelectorAll(".countri-btn").forEach(btn => {
         const btnText = btn.textContent.trim().toLowerCase();
-        if (btnText === pureCountry || btn.classList.contains(pureCountry)) {
+        
+        if (btnText === pureCountry) {
+            btn.style.setProperty("color", "#00ff66", "important");
             btn.classList.add("active");
-            // !important വെച്ച് ബട്ടണിലെ അക്ഷരങ്ങൾ കടുംപച്ചയാക്കുന്നു
-            btn.style.setProperty("color", "#00ff66", "important"); 
+        } else {
+            btn.style.setProperty("color", "#ffffff", "important");
+            btn.classList.remove("active");
         }
     });
 
-    // ---------------------------------------------------
-    // ഹെഡിംഗ് പച്ചയാക്കാനുള്ള ലോജിക്
-    // ---------------------------------------------------
-    // [എന്തിനാണ് ഈ വരി]: SHOP ON COUNTRY ബോക്സ് നിർബന്ധമായും പച്ച നിറത്തിൽ കാണിക്കാൻ
-    if (shopOnTxt) {
-        shopOnTxt.innerHTML = "SHOP ON " + pureCountry.toUpperCase();
-        shopOnTxt.style.setProperty("color", "#00ff66", "important"); // ഹെഡിംഗ് പച്ചയാക്കുന്നു
-    }
-
-    if (selectedBox) {
-        selectedBox.innerHTML = "Selected Country - " + pureCountry.toUpperCase();
-    }
-
-    // ---------------------------------------------------
-    // ആദ്യത്തെ 10 FEATURED SHOPS മാത്രം കാണിക്കാനുള്ള ലോജിക്
-    // ---------------------------------------------------
-    if (featuredShopsDiv) {
-        featuredShopsDiv.innerHTML = ""; // പഴയ ലിസ്റ്റ് ക്ലിയർ ചെയ്യുന്നു
-        
-        // [എന്തിനാണ് ഈ വരി]: ഡാറ്റാബേസിൽ നിന്ന് കൃത്യമായി ആദ്യത്തെ 10 ഷോപ്പുകൾ മാത്രം മുറിച്ചെടുക്കാൻ (.slice(0,10))
-        const shops = (typeof countryShops !== 'undefined' && countryShops[pureCountry] || []).slice(0, 10);
-        
-        shops.forEach(shop => {
-            let host = "";
-            try { host = new URL(shop.u).hostname; } catch(e) {}
-            
-            featuredShopsDiv.innerHTML += `
-                <a href="${shop.u}" target="_blank" class="shopCard">
-                    <div class="shopDot">${!shop.a || shop.a.trim()==="" ? "." : ""}</div>
-                    <div class="shopHead">
-                        <img class="shopFav" src="https://www.google.com/s2/favicons?domain=${host}&sz=64"/>
-                        <div class="shopName notranslate" translate="no">${shop.n}</div>
-                    </div>
-                </a>`;
-        });
-    }
-
-    // ഗ്ലോബൽ വേരിയബിൾ ഉണ്ടെങ്കിൽ അപ്ഡേറ്റ് ചെയ്യാൻ
-    if (typeof currentCountry !== "undefined") {
-        currentCountry = pureCountry;
-    }
+    localStorage.setItem("selectedCountry", pureCountry);
+    loadShops(pureCountry);
 }
 
-// 4. കൺട്രി സെർച്ച് ബോക്സ് വർക്ക് ചെയ്യാനുള്ള ലോജിക്
-if (document.getElementById("countrySearch")) {
-    document.getElementById("countrySearch").addEventListener("input", function() {
-        const value = this.value.toLowerCase();
-        document.querySelectorAll(".countri-btn").forEach(btn => {
-            btn.style.display = btn.textContent.toLowerCase().includes(value) ? "inline-block" : "none";
-        });
+function loadShops(country) {
+    const featuredShopsDiv = document.getElementById("featuredShops");
+    if (!featuredShopsDiv) return;
+    
+    featuredShopsDiv.innerHTML = "";
+    const shops = (typeof countryShops !== 'undefined' && countryShops[country] || []).slice(0, 10);
+    
+    shops.forEach(shop => {
+        featuredShopsDiv.innerHTML += `<a href="${shop.u}">${shop.n}</a>`;
     });
 }
 </script>
- 
 
 
 <style>
