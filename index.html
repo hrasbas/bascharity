@@ -18508,30 +18508,6 @@ document.getElementById("countrySearch");
 / COUNTRY BUTTONS /
 / ================================================= */
 
-fixedCountries.forEach(country=>{
-
-const btn=document.createElement("button");
-
-btn.className="countryBtn";
-
-btn.textContent=country;
-
-btn.onclick=()=>{
-
-document
-.querySelectorAll(".countryBtn")
-.forEach(x=>x.classList.remove("active"));
-
-btn.classList.add("active");
-
-renderCountry(country);
-
-};
-
-countryButtons.appendChild(btn);
-
-});
-
 /* ================================================= /
 / DROPDOWN /
 / ================================================= */
