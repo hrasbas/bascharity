@@ -20337,19 +20337,7 @@ renderCategory("all");
 
 </script>
 
-
-  <style>
-/* മുകളിലുള്ള പഴയ കൺട്രി എലമെന്റുകളെ ഇൻആക്റ്റീവ് ആക്കുന്നു */
-body *:not(.country-box):not(.country-box *) .country-btn,
-body *:not(.country-box):not(.country-box *) .country-grid,
-body *:not(.country-box):not(.country-box *) #shopOnCountry,
-body *:not(.country-box):not(.country-box *) #allCountries {
-    display: none !important;
-    opacity: 0 !important;
-    pointer-events: none !important;
-}
-</style>
-
+         
 <div class="country-box">
     <div id="selectedCountryBox">Selected Country - INDIA</div>
     
@@ -20378,11 +20366,20 @@ body *:not(.country-box):not(.country-box *) #allCountries {
 </div>
 
 <style>
+/* പഴയ ഡ്യൂപ്ലിക്കേറ്റ് കൺട്രി ബട്ടണുകളെ മാത്രം ഇൻആക്റ്റീവ് ആക്കാനുള്ള തിരുത്തിയ സുരക്ഷിത ലോജിക് */
+body .country-btn:not(.country-box .country-btn),
+body .country-grid:not(.country-box .country-grid),
+body #shopOnCountry:not(.country-box #shopOnCountry),
+body #allCountries:not(.country-box #allCountries) {
+    display: none !important;
+}
+
 .country-box {
     background: #fff;
     padding: 20px;
     border-radius: 20px;
     box-shadow: 0 2px 8px rgba(0,0,0,.08);
+    margin-top: 20px;
 }
 #selectedCountryBox {
     margin-bottom: 15px;
@@ -20398,40 +20395,41 @@ body *:not(.country-box):not(.country-box *) #allCountries {
 .country-grid {
     width: 96%;
     max-width: 900px;
-    margin: auto;
+    margin: 12px auto;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 10px;
 }
 /* SIGNATURE SQUARE BUTTON MODEL */
 .country-btn {
-    background: #4a4a4a;
-    border: 1px solid #666;
-    border-radius: 4px; 
-    padding: 14px 8px;
-    color: #fff;
-    font-size: 16px;
-    font-weight: 800;
-    text-align: center;
-    cursor: pointer;
-    transition: all 0.2s ease;
+    background: #4a4a4a !important;
+    border: 1px solid #666 !important;
+    border-radius: 4px !important; 
+    padding: 14px 8px !important;
+    color: #fff !important;
+    font-size: 16px !important;
+    font-weight: 800 !important;
+    text-align: center !important;
+    cursor: pointer !important;
+    display: block;
+    width: 100%;
 }
 /* കൺട്രി ബോർഡറുകൾ */
-.india { border-left: 6px solid #FF9933; }
-.usa { border-left: 6px solid #2196F3; }
-.uk { border-left: 6px solid #E91E63; }
-.uae { border-left: 6px solid #00C853; }
-.saudi { border-left: 6px solid #4CAF50; }
-.canada { border-left: 6px solid #F44336; }
-.australia { border-left: 6px solid #FFC107; }
-.germany { border-left: 6px solid #9C27B0; }
-.france { border-left: 6px solid #3F51B5; }
+.india { border-left: 6px solid #FF9933 !important; }
+.usa { border-left: 6px solid #2196F3 !important; }
+.uk { border-left: 6px solid #E91E63 !important; }
+.uae { border-left: 6px solid #00C853 !important; }
+.saudi { border-left: 6px solid #4CAF50 !important; }
+.canada { border-left: 6px solid #F44336 !important; }
+.australia { border-left: 6px solid #FFC107 !important; }
+.germany { border-left: 6px solid #9C27B0 !important; }
+.france { border-left: 6px solid #3F51B5 !important; }
 
 /* ആക്റ്റീവ് ആകുമ്പോൾ ബട്ടണിലെ അക്ഷരങ്ങൾ പച്ചയാകാൻ */
 .country-btn.active {
     color: #00ff66 !important;
-    border-color: #00ff66;
-    background: #333333;
+    border-color: #00ff66 !important;
+    background: #333333 !important;
 }
 .country-select, #allCountries, #countrySearch {
     width: 96%;
@@ -20490,42 +20488,35 @@ const allCountriesSelect = document.getElementById("allCountries");
 const featuredShopsDiv = document.getElementById("featuredShops");
 const countrySearchInput = document.getElementById("countrySearch");
 
-fixedCountries.forEach(country => {
-    const option = document.createElement("option");
-    option.value = country;
-    option.textContent = country.toUpperCase();
-    allCountriesSelect.appendChild(option);
-});
+if (allCountriesSelect && allCountriesSelect.options.length <= 1) {
+    fixedCountries.forEach(country => {
+        const option = document.createElement("option");
+        option.value = country;
+        option.textContent = country.toUpperCase();
+        allCountriesSelect.appendChild(option);
+    });
+}
 
 function renderCountry(country) {
     if (!country) return;
     
     localStorage.setItem("selectedCountry", country);
     
-    // കൺട്രി ബട്ടണുകൾ ഒന്നടങ്കം മാറ്റി ക്ലിക്ക് ചെയ്തത് മാത്രം പച്ചയാക്കുന്നു
-    document.querySelectorAll(".country-btn").forEach(btn => {
+    // ഈ ബോക്സിനുള്ളിലെ കൺട്രി ബട്ടണുകൾ മാത്രം പച്ചയാക്കുന്നു
+    document.querySelectorAll(".country-box .country-btn").forEach(btn => {
         btn.classList.remove("active");
         btn.style.color = "#fff"; 
         
         if (btn.textContent.toLowerCase() === country.toLowerCase()) {
             btn.classList.add("active");
-            btn.style.color = "#00ff66"; // ബട്ടൺ പച്ച കളർ
+            btn.style.color = "#00ff66"; 
         }
     });
 
-    // പഴയ ക്ലാസ്സ് ഉപയോഗിക്കുന്ന മറ്റ് കൺട്രി ബട്ടണുകൾ ഉണ്ടെങ്കിൽ അവയും പച്ചയാക്കുന്നു
-    document.querySelectorAll(".countri-btn").forEach(btn => {
-        btn.classList.remove("active");
-        if (btn.textContent.toLowerCase() === country.toLowerCase()) {
-            btn.classList.add("active");
-        }
-    });
-
-    // SHOP ON ഹെഡിംഗും അക്ഷരങ്ങളും പച്ചയാക്കുന്നു
     const shopOnTxt = document.getElementById("shopOnCountry");
     if (shopOnTxt) {
         shopOnTxt.innerHTML = "SHOP ON " + country.toUpperCase();
-        shopOnTxt.style.color = "#00ff66"; // ഹെഡിംഗ് പച്ച കളർ
+        shopOnTxt.style.color = "#00ff66"; 
     }
 
     const selectedBox = document.getElementById("selectedCountryBox");
@@ -20533,282 +20524,53 @@ function renderCountry(country) {
         selectedBox.innerHTML = "Selected Country - " + country.toUpperCase();
     }
 
-    featuredShopsDiv.innerHTML = "";
-    const shops = (typeof countryShops !== 'undefined' && countryShops[country] || []).slice(0, 10);
-    
-    shops.forEach(shop => {
-        let host = "";
-        try { host = new URL(shop.u).hostname; } catch(e) {}
+    if (featuredShopsDiv) {
+        featuredShopsDiv.innerHTML = "";
+        const shops = (typeof countryShops !== 'undefined' && countryShops[country] || []).slice(0, 10);
         
-        featuredShopsDiv.innerHTML += `
-            <a href="${shop.u}" target="_blank" class="shopCard">
-                <div class="shopDot">${!shop.a || shop.a.trim()==="" ? "." : ""}</div>
-                <div class="shopHead">
-                    <img class="shopFav" src="https://www.google.com/s2/favicons?domain=${host}&sz=64"/>
-                    <div class="shopName notranslate" translate="no">${shop.n}</div>
-                </div>
-            </a>`;
-    });
+        shops.forEach(shop => {
+            let host = "";
+            try { host = new URL(shop.u).hostname; } catch(e) {}
+            
+            featuredShopsDiv.innerHTML += `
+                <a href="${shop.u}" target="_blank" class="shopCard">
+                    <div class="shopDot">${!shop.a || shop.a.trim()==="" ? "." : ""}</div>
+                    <div class="shopHead">
+                        <img class="shopFav" src="https://www.google.com/s2/favicons?domain=${host}&sz=64"/>
+                        <div class="shopName notranslate" translate="no">${shop.n}</div>
+                    </div>
+                </a>`;
+        });
+    }
 
     if (typeof renderCategory === "function") {
         renderCategory("all");
     }
 }
 
-allCountriesSelect.onchange = function() {
-    if (this.value) {
-        renderCountry(this.value);
-        this.selectedIndex = 0;
-    }
-};
+if (allCountriesSelect) {
+    allCountriesSelect.onchange = function() {
+        if (this.value) {
+            renderCountry(this.value);
+            this.selectedIndex = 0;
+        }
+    };
+}
 
-countrySearchInput.addEventListener("input", function() {
-    const value = this.value.toLowerCase();
-    document.querySelectorAll(".country-btn").forEach(btn => {
-        btn.style.display = btn.textContent.toLowerCase().includes(value) ? "inline-block" : "none";
+if (countrySearchInput) {
+    countrySearchInput.addEventListener("input", function() {
+        const value = this.value.toLowerCase();
+        document.querySelectorAll(".country-box .country-btn").forEach(btn => {
+            btn.style.display = btn.textContent.toLowerCase().includes(value) ? "block" : "none";
+        });
     });
-});
+}
 
 document.addEventListener("DOMContentLoaded", () => {
     const savedCountry = localStorage.getItem("selectedCountry") || "india";
     renderCountry(savedCountry);
 });
 </script>
- <style>
-/* മുകളിലുള്ള പഴയ കൺട്രി എലമെന്റുകളെ ഇൻആക്റ്റീവ് ആക്കുന്നു */
-body *:not(.country-box):not(.country-box *) .country-btn,
-body *:not(.country-box):not(.country-box *) .country-grid,
-body *:not(.country-box):not(.country-box *) #shopOnCountry,
-body *:not(.country-box):not(.country-box *) #allCountries {
-    display: none !important;
-    opacity: 0 !important;
-    pointer-events: none !important;
-}
-</style>
 
-<div class="country-box">
-    <div id="selectedCountryBox">Selected Country - INDIA</div>
-    
-    <div class="country-select">SELECT COUNTRY</div>
-    
-    <div class="country-grid">
-        <button class="country-btn india" onclick="renderCountry('india')">INDIA</button>
-        <button class="country-btn usa" onclick="renderCountry('usa')">USA</button>
-        <button class="country-btn uk" onclick="renderCountry('uk')">UK</button>
-        <button class="country-btn uae" onclick="renderCountry('uae')">UAE</button>
-        <button class="country-btn saudi" onclick="renderCountry('saudi arabia')">SAUDI ARABIA</button>
-        <button class="country-btn canada" onclick="renderCountry('canada')">CANADA</button>
-        <button class="country-btn germany" onclick="renderCountry('germany')">GERMANY</button>
-        <button class="country-btn france" onclick="renderCountry('france')">FRANCE</button>
-        <button class="country-btn australia" onclick="renderCountry('australia')">AUSTRALIA</button>
-    </div>
-
-    <input id="countrySearch" type="text" placeholder="Search Country...">
-    
-    <select id="allCountries" class="country-select">
-        <option value="">SEARCH ALL COUNTRIES ▼</option>
-    </select>
-    
-    <div id="shopOnCountry">SHOP ON INDIA</div>
-    <div id="featuredShops"></div>
-</div>
-
-<style>
-.country-box {
-    background: #fff;
-    padding: 20px;
-    border-radius: 20px;
-    box-shadow: 0 2px 8px rgba(0,0,0,.08);
-}
-#selectedCountryBox {
-    margin-bottom: 15px;
-    padding: 14px 18px;
-    background: #ffffff;
-    border-left: 5px solid #4338ca;
-    border-radius: 12px;
-    font-size: 18px;
-    font-weight: 700;
-    color: #111827;
-    box-shadow: 0 2px 8px rgba(0,0,0,.08);
-}
-.country-grid {
-    width: 96%;
-    max-width: 900px;
-    margin: auto;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 10px;
-}
-/* SIGNATURE SQUARE BUTTON MODEL */
-.country-btn {
-    background: #4a4a4a;
-    border: 1px solid #666;
-    border-radius: 4px; 
-    padding: 14px 8px;
-    color: #fff;
-    font-size: 16px;
-    font-weight: 800;
-    text-align: center;
-    cursor: pointer;
-    transition: all 0.2s ease;
-}
-/* കൺട്രി ബോർഡറുകൾ */
-.india { border-left: 6px solid #FF9933; }
-.usa { border-left: 6px solid #2196F3; }
-.uk { border-left: 6px solid #E91E63; }
-.uae { border-left: 6px solid #00C853; }
-.saudi { border-left: 6px solid #4CAF50; }
-.canada { border-left: 6px solid #F44336; }
-.australia { border-left: 6px solid #FFC107; }
-.germany { border-left: 6px solid #9C27B0; }
-.france { border-left: 6px solid #3F51B5; }
-
-/* ആക്റ്റീവ് ആകുമ്പോൾ ബട്ടണിലെ അക്ഷരങ്ങൾ പച്ചയാകാൻ */
-.country-btn.active {
-    color: #00ff66 !important;
-    border-color: #00ff66;
-    background: #333333;
-}
-.country-select, #allCountries, #countrySearch {
-    width: 96%;
-    max-width: 900px;
-    display: block;
-    margin: 12px auto;
-    background: #5a5a5a;
-    color: #fff;
-    border: 2px solid #dfe6eb;
-    border-radius: 12px;
-    padding: 14px 8px;
-    font-size: 16px;
-    font-weight: 800;
-    text-align: center;
-    text-align-last: center;
-    box-sizing: border-box;
-}
-#countrySearch {
-    background: #fff;
-    color: #000;
-    border: 2px solid #ddd;
-}
-#shopOnCountry {
-    width: 96%;
-    margin: 12px auto;
-    padding: 14px;
-    background: #5a5a5a;
-    border: 2px solid #dfe6eb;
-    color: #fff;
-    text-align: center;
-    font-size: 20px;
-    font-weight: 700;
-    border-radius: 12px;
-}
-#featuredShops {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
-    gap: 10px;
-    margin-top: 15px;
-}
-.shopCard {
-    position: relative;
-    background: #fff;
-    border-left: 5px solid #4338ca;
-    border-radius: 14px;
-    padding: 14px;
-    box-shadow: 0 2px 8px rgba(0,0,0,.08);
-    text-decoration: none;
-    color: #000;
-}
-</style>
-
-<script>
-const fixedCountries = ["india", "usa", "uk", "uae", "canada", "australia", "germany", "france", "saudi arabia"];
-const allCountriesSelect = document.getElementById("allCountries");
-const featuredShopsDiv = document.getElementById("featuredShops");
-const countrySearchInput = document.getElementById("countrySearch");
-
-fixedCountries.forEach(country => {
-    const option = document.createElement("option");
-    option.value = country;
-    option.textContent = country.toUpperCase();
-    allCountriesSelect.appendChild(option);
-});
-
-function renderCountry(country) {
-    if (!country) return;
-    
-    localStorage.setItem("selectedCountry", country);
-    
-    // കൺട്രി ബട്ടണുകൾ ഒന്നടങ്കം മാറ്റി ക്ലിക്ക് ചെയ്തത് മാത്രം പച്ചയാക്കുന്നു
-    document.querySelectorAll(".country-btn").forEach(btn => {
-        btn.classList.remove("active");
-        btn.style.color = "#fff"; 
-        
-        if (btn.textContent.toLowerCase() === country.toLowerCase()) {
-            btn.classList.add("active");
-            btn.style.color = "#00ff66"; // ബട്ടൺ പച്ച കളർ
-        }
-    });
-
-    // പഴയ ക്ലാസ്സ് ഉപയോഗിക്കുന്ന മറ്റ് കൺട്രി ബട്ടണുകൾ ഉണ്ടെങ്കിൽ അവയും പച്ചയാക്കുന്നു
-    document.querySelectorAll(".countri-btn").forEach(btn => {
-        btn.classList.remove("active");
-        if (btn.textContent.toLowerCase() === country.toLowerCase()) {
-            btn.classList.add("active");
-        }
-    });
-
-    // SHOP ON ഹെഡിംഗും അക്ഷരങ്ങളും പച്ചയാക്കുന്നു
-    const shopOnTxt = document.getElementById("shopOnCountry");
-    if (shopOnTxt) {
-        shopOnTxt.innerHTML = "SHOP ON " + country.toUpperCase();
-        shopOnTxt.style.color = "#00ff66"; // ഹെഡിംഗ് പച്ച കളർ
-    }
-
-    const selectedBox = document.getElementById("selectedCountryBox");
-    if (selectedBox) {
-        selectedBox.innerHTML = "Selected Country - " + country.toUpperCase();
-    }
-
-    featuredShopsDiv.innerHTML = "";
-    const shops = (typeof countryShops !== 'undefined' && countryShops[country] || []).slice(0, 10);
-    
-    shops.forEach(shop => {
-        let host = "";
-        try { host = new URL(shop.u).hostname; } catch(e) {}
-        
-        featuredShopsDiv.innerHTML += `
-            <a href="${shop.u}" target="_blank" class="shopCard">
-                <div class="shopDot">${!shop.a || shop.a.trim()==="" ? "." : ""}</div>
-                <div class="shopHead">
-                    <img class="shopFav" src="https://www.google.com/s2/favicons?domain=${host}&sz=64"/>
-                    <div class="shopName notranslate" translate="no">${shop.n}</div>
-                </div>
-            </a>`;
-    });
-
-    if (typeof renderCategory === "function") {
-        renderCategory("all");
-    }
-}
-
-allCountriesSelect.onchange = function() {
-    if (this.value) {
-        renderCountry(this.value);
-        this.selectedIndex = 0;
-    }
-};
-
-countrySearchInput.addEventListener("input", function() {
-    const value = this.value.toLowerCase();
-    document.querySelectorAll(".country-btn").forEach(btn => {
-        btn.style.display = btn.textContent.toLowerCase().includes(value) ? "inline-block" : "none";
-    });
-});
-
-document.addEventListener("DOMContentLoaded", () => {
-    const savedCountry = localStorage.getItem("selectedCountry") || "india";
-    renderCountry(savedCountry);
-});
-</script>
 </body>
 </html>
