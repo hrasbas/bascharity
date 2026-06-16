@@ -781,9 +781,6 @@ SHOP ON USA
 
 /* COUNTRY BUTTON MASTER SYSTEM */
 
-document.querySelectorAll(".country-btn").forEach(btn=>{
-
-btn.onclick=function(){
 
 /* OVERRIDE ANY PREVIOUS COLOUR */
 
@@ -799,27 +796,7 @@ this.style.color="#00ff66";
 
 });
  </script>
-<script>
 
-document.querySelectorAll(".country-btn").forEach(btn=>{
-
-btn.addEventListener("click",function(){
-
-document.querySelectorAll(".country-btn").forEach(x=>{
-x.style.color="#fff";
-x.classList.remove("active");
-});
-
-this.classList.add("active");
-this.style.color="#00ff66";
-
-});
-
-});
-
-   
-
-</script>
   
 <!-- ================================================= -->
 <!-- FEATURED SHOPS -->
