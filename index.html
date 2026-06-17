@@ -802,16 +802,16 @@ function renderCountry(country) {
     document.querySelectorAll(".country-btn").forEach(btn => {
         const btnText = btn.textContent.trim().toLowerCase();
         if (btnText === pureCountry || (btnText === "saudi arabia" && pureCountry === "saudi arabia")) {
-            btn.style.setProperty("color", "#00ff66", "important");
+            btn.style.color = "#00ff66";
         } else {
-            btn.style.setProperty("color", "#ffffff", "important");
+            btn.style.color = "#ffffff";
         }
     });
 
     const shopBtn = document.getElementById("shopOnCountry");
     if (shopBtn) {
         const displayCountry = country.toUpperCase();
-        shopBtn.innerHTML = `SHOP ON <span style="color: #00ff66 !important;">${displayCountry}</span>`;
+        shopBtn.innerHTML = `SHOP ON <span style="color: #00ff66;">${displayCountry}</span>`;
     }
 
     localStorage.setItem("selectedCountry", pureCountry);
@@ -833,7 +833,6 @@ function loadShops(country) {
     });
 }
 </script>
-
 
 <style>
 
