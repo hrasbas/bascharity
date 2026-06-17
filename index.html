@@ -788,6 +788,32 @@ document.addEventListener("DOMContentLoaded", () => {
     const savedCountry = localStorage.getItem("selectedCountry") || "india";
     renderCountry(savedCountry);
 
+    // പേജിലുള്ള എല്ലാ ബട്ടണുകൾക്കും ഒരേപോലെ ക്ലിക്ക് ഇവന്റ് നൽകുന്നു
+    document.querySelectorAll(".country-btn").forEach(btn => {
+        btn.addEventListener("click", function() {
+            // വിത്യാസമില്ലാതെ എല്ലാ ബട്ടണുകളുടെയും കളർ ആദ്യം വെള്ളയാക്കുന്നു
+            document.querySelectorAll(".country-btn").forEach(b => {
+                b.style.cssText = "color: #ffffff !important;";
+            });
+            
+            // ക്ലിക്ക് ചെയ്ത ബട്ടണിന് മാത്രം ഉടൻ തന്നെ പച്ച കളർ നൽകുന്നു
+            this.style.cssText = "color: #00ff66 !important;";
+            
+            // ക്ലിക്ക് ചെയ്ത ബട്ടണിലെ ടെക്സ്റ്റ് എടുക്കുന്നു
+            const countryText = this.textContent.trim().toLowerCase();
+            localStorage.setItem("selectedCountry", countryText);
+            
+            if (typeof loadShops === 'function') {
+                loadShops(countryText);
+            }
+            
+            const shopBtn = document.getElementById("shopOnCountry");
+            if (shopBtn) {
+                shopBtn.innerHTML = `SHOP ON <span style="color: #00ff66 !important;">${countryText.toUpperCase()}</span>`;
+            }
+        });
+    });
+
     const selectEl = document.getElementById("allCountries");
     if (selectEl) {
         selectEl.addEventListener("change", (e) => {
@@ -797,42 +823,53 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 function renderCountry(country) {
+    if (!country) return;
     const pureCountry = country.trim().toLowerCase();
     
+    // പേജ് ലോഡ് ചെയ്യുമ്പോൾ എല്ലാ ബട്ടണുകളും ഒരേപോലെ മാറ്റാൻ
     document.querySelectorAll(".country-btn").forEach(btn => {
         const btnText = btn.textContent.trim().toLowerCase();
-        if (btnText === pureCountry || (btnText === "saudi arabia" && pureCountry === "saudi arabia")) {
-            btn.style.color = "#00ff66";
+        if (btnText.includes(pureCountry) || pureCountry.includes(btnText)) {
+            btn.style.cssText = "color: #00ff66 !important;";
         } else {
-            btn.style.color = "#ffffff";
+            btn.style.cssText = "color: #ffffff !important;";
         }
     });
 
     const shopBtn = document.getElementById("shopOnCountry");
     if (shopBtn) {
-        const displayCountry = country.toUpperCase();
-        shopBtn.innerHTML = `SHOP ON <span style="color: #00ff66;">${displayCountry}</span>`;
+        shopBtn.innerHTML = `SHOP ON <span style="color: #00ff66 !important;">${pureCountry.toUpperCase()}</span>`;
     }
 
     localStorage.setItem("selectedCountry", pureCountry);
     
-    if (typeof loadShops === 'function') {
-        loadShops(pureCountry);
+    try {
+        if (typeof loadShops === 'function') {
+            loadShops(pureCountry);
+        }
+    } catch (err) {
+        console.log("Error loading shops:", err);
     }
 }
 
 function loadShops(country) {
-    const featuredShopsDiv = document.getElementById("featuredShops");
-    if (!featuredShopsDiv) return;
-    
-    featuredShopsDiv.innerHTML = "";
-    const shops = (typeof countryShops !== 'undefined' && countryShops[country] || []).slice(0, 10);
-    
-    shops.forEach(shop => {
-        featuredShopsDiv.innerHTML += `<a href="${shop.u}">${shop.n}</a>`;
-    });
+    try {
+        const featuredShopsDiv = document.getElementById("featuredShops");
+        if (!featuredShopsDiv) return;
+        
+        featuredShopsDiv.innerHTML = "";
+        if (typeof countryShops !== 'undefined' && countryShops[country]) {
+            const shops = countryShops[country].slice(0, 10);
+            shops.forEach(shop => {
+                featuredShopsDiv.innerHTML += `<a href="${shop.u}">${shop.n}</a>`;
+            });
+        }
+    } catch (err) {
+        console.log("Error in loadShops:", err);
+    }
 }
 </script>
+
 
 <style>
 
