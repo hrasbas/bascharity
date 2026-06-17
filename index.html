@@ -795,7 +795,7 @@ SHOP ON USA
   color:#000 !important;
 }
 </style>
- }<script>
+ <script>
 window.addEventListener("load", () => {
     const selectEl = document.getElementById("allCountries");
     if (selectEl) {
@@ -808,8 +808,8 @@ window.addEventListener("load", () => {
         selectEl.appendChild(defaultOption);
 
         // താഴെയുള്ള AllCountriesList-ൽ നിന്നുള്ള രാജ്യങ്ങൾ ഡ്രോപ്പ്ഡൗണിലേക്ക് കയറ്റുന്നു
-        if (typeof AllCountriesList !== 'undefined') {
-            AllCountriesList.forEach(country => {
+        if (typeof allCountriesList !== 'undefined') {
+    allCountriesList.forEach(country => {
                 const option = document.createElement("option");
                 option.value = country;
                 option.textContent = country.toUpperCase();
@@ -883,42 +883,33 @@ function loadShops(country) {
     
     featuredShopsDiv.innerHTML = "";
     
-    if (typeof CountryShops !== 'undefined' && CountryShops[country]) {
-        const shops = CountryShops[country].slice(0, 10);
-        shops.forEach(shop => {
-            featuredShopsDiv.innerHTML += `<a href="${shop.u}" target="_blank">${shop.n}</a>`;
-        });
-    }
+    if (typeof countryShops !== 'undefined' && countryShops[country]) {
+
+    const shops = countryShops[country].slice(0,10);
+
+    shops.forEach(shop => {
+
+        featuredShopsDiv.innerHTML += `
+        <div class="shopCard">
+            <div class="shopName">${shop.n}</div>
+
+            <a href="${shop.u}"
+               target="_blank"
+               rel="noopener">
+               VISIT SHOP
+            </a>
+        </div>
+        `;
+
+    });
+
 }
 
 // ==========================================
 // 🛑 താങ്കൾ തന്ന രണ്ട് അറേകളുടെ തുടക്കം ഇതാ 🛑
 // ==========================================
 
-const AllCountriesList = [
-    "india",
-    "usa",
-    "uk",
-    "uae",
-    "canada",
-    "australia",
-    "saudi arabia"
-    // 🔽 താങ്കളുടെ ബാക്കി 200+ രാജ്യങ്ങൾ ഇതിനുള്ളിൽ താഴേക്ക് കോമ ഇട്ട് ചേർത്തോളൂ...
-];
-
-const CountryShops = {
-    "singapore": [
-        { id: 1, n: "amazon singapore", c: "general", u: "https://www.amazon.sg", a: "" },
-        { id: 2, n: "shopee singapore", c: "general", u: "https://shopee.sg", a: "" }
-        // 🔽 സിംഗപ്പൂരിലെ ബാക്കി ഷോപ്പുകൾ ഇവിടെ വരും...
-    ],
-    "india": [
-        { id: 1, n: "amazon india", c: "general", u: "https://www.amazon.in", a: "" },
-        { id: 2, n: "flipkart", c: "general", u: "https://www.flipkart.com", a: "" }
-        // 🔽 ഇന്ത്യയിലെ ബാക്കി ഷോപ്പുകൾ ഇവിടെ വരും...
-    ]
-    // 🔽 ബാക്കി രാജ്യങ്ങൾ ഇതേ ഫോർമാറ്റിൽ താഴേക്ക് ഫിറ്റ് ചെയ്തോളൂ...
-};
+ 
 </script>
 
 
