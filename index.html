@@ -781,13 +781,12 @@ SHOP ON USA
 <div id="featuredShops"></div>
 
 </div>
- 
 <script>
 document.addEventListener("DOMContentLoaded", () => {
     const savedCountry = localStorage.getItem("selectedCountry") || "india";
     renderCountry(savedCountry);
 
-    // മുകളിലെ ബട്ടണുകൾ ഞെക്കുമ്പോൾ ഡ്രോപ്പ്ഡൗണും കളറും സിങ്ക് ആകാൻ
+    // മുകളിലെ ബട്ടണുകൾ ഞെക്കുമ്പോൾ ഉള്ള സിങ്ക് ഓപ്പറേഷൻ
     document.querySelectorAll(".country-btn").forEach(btn => {
         if (btn.id === "shopOnCountry") return; 
         
@@ -797,11 +796,13 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     });
 
-    // ഡ്രോപ്പ്ഡൗൺ ബോക്സിൽ രാജ്യം മാറ്റുമ്പോൾ മുകളിലെ ബട്ടണിലേക്ക് കളർ സിങ്ക് ആകാൻ
+    // ഡ്രോപ്പ്ഡൗൺ ബോക്സിൽ രാജ്യം മാറ്റുമ്പോൾ കളർ ഓപ്പറേഷൻ കൃത്യമായി സിങ്ക് ചെയ്യാൻ
     const selectEl = document.getElementById("allCountries");
     if (selectEl) {
         selectEl.addEventListener("change", (e) => {
-            if (e.target.value) renderCountry(e.target.value);
+            if (e.target.value) {
+                renderCountry(e.target.value); 
+            }
         });
     }
 });
@@ -810,27 +811,26 @@ function renderCountry(country) {
     if (!country) return;
     const pureCountry = country.trim().toLowerCase();
     
-    // ഡ്രോപ്പ്ഡൗൺ വാല്യൂ ബട്ടണുകളുമായി സിങ്ക് ചെയ്യുന്നു
+    // ഡ്രോപ്പ്ഡൗൺ ബോക്സിന്റെ വാല്യൂ സിങ്ക് ചെയ്യുന്നു
     const selectEl = document.getElementById("allCountries");
     if (selectEl) {
         selectEl.value = pureCountry;
     }
 
-    // [COLOR SYNC]: ഡ്രോപ്പ്ഡൗണിൽ നിന്ന് വരുന്ന പേരും ബട്ടണിലെ പേരും ഒരേപോലെ സിങ്ക് ചെയ്ത് കളർ മാറ്റുന്നു
+    // കളർ മാറ്റുന്ന ഓപ്പറേഷൻ സിങ്ക് (താങ്കളുടെ ഒറിജിനൽ കണ്ടീഷൻ അതേപടി)
     document.querySelectorAll(".country-btn").forEach(btn => {
         if (btn.id === "shopOnCountry") return; 
         
         const btnText = btn.textContent.trim().toLowerCase();
         
-        // ഇവിടെ പേര് ഏത് രീതിയിൽ വന്നാലും (ഉദാഹരണത്തിന്: usa, uae) അത് കൃത്യമായി സിങ്ക് ചെയ്ത് പച്ച കളർ നൽകും
-        if (btnText === pureCountry || btnText.includes(pureCountry) || pureCountry.includes(btnText) || (btnText === "saudi arabia" && pureCountry === "saudi arabia")) {
+        if (btnText === pureCountry || (btnText === "saudi arabia" && pureCountry === "saudi arabia")) {
             btn.style.color = "#00ff66";
         } else {
             btn.style.color = "#ffffff";
         }
     });
 
-    // താഴെയുള്ള വലിയ ഷോപ്പ് ബോക്സ് (SHOP ON COUNTRY) ഒരു മാറ്റവുമില്ലാതെ നിലനിൽക്കും
+    // താഴെയുള്ള വലിയ ഷോപ്പ് ബോക്സ് (SHOP ON COUNTRY)
     const shopBtn = document.getElementById("shopOnCountry");
     if (shopBtn) {
         const displayCountry = country.toUpperCase();
@@ -855,6 +855,7 @@ function loadShops(country) {
     }
 }
 </script>
+
 
 <style>
 
