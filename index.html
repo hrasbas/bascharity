@@ -783,29 +783,42 @@ SHOP ON USA
 </div>
 
          
-   <script>
+<script>
 document.addEventListener("DOMContentLoaded", () => {
     const savedCountry = localStorage.getItem("selectedCountry") || "india";
     renderCountry(savedCountry);
+
+    const selectEl = document.getElementById("allCountries");
+    if (selectEl) {
+        selectEl.addEventListener("change", (e) => {
+            if (e.target.value) renderCountry(e.target.value);
+        });
+    }
 });
 
 function renderCountry(country) {
     const pureCountry = country.trim().toLowerCase();
     
-    document.querySelectorAll(".countri-btn").forEach(btn => {
+    document.querySelectorAll(".country-btn").forEach(btn => {
         const btnText = btn.textContent.trim().toLowerCase();
-        
-        if (btnText === pureCountry) {
+        if (btnText === pureCountry || (btnText === "saudi arabia" && pureCountry === "saudi arabia")) {
             btn.style.setProperty("color", "#00ff66", "important");
-            btn.classList.add("active");
         } else {
             btn.style.setProperty("color", "#ffffff", "important");
-            btn.classList.remove("active");
         }
     });
 
+    const shopBtn = document.getElementById("shopOnCountry");
+    if (shopBtn) {
+        const displayCountry = country.toUpperCase();
+        shopBtn.innerHTML = `SHOP ON <span style="color: #00ff66 !important;">${displayCountry}</span>`;
+    }
+
     localStorage.setItem("selectedCountry", pureCountry);
-    loadShops(pureCountry);
+    
+    if (typeof loadShops === 'function') {
+        loadShops(pureCountry);
+    }
 }
 
 function loadShops(country) {
