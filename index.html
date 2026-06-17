@@ -795,19 +795,21 @@ SHOP ON USA
   color:#000 !important;
 }
 </style>
+ }
+
 <script>
-document.addEventListener("DOMContentLoaded", () => {
+window.addEventListener("load", () => {
     const selectEl = document.getElementById("allCountries");
     if (selectEl) {
-        selectEl.innerHTML = ""; // പഴയത് ക്ലിയർ ചെയ്യുന്നു
+        selectEl.innerHTML = ""; 
         
-        // ഡ്രോപ്പ്ഡൗണിന്റെ മുകളിൽ സ്ഥിരമായി കാണിക്കാൻ ആദ്യത്തെ ഓപ്ഷൻ ചേർക്കുന്നു
+        // ഡ്രോപ്പ്ഡൗണിന്റെ മുകളിൽ സ്ഥിരമായി "SELECT ALL COUNTRIES 🔽" നിർത്തുന്നു
         const defaultOption = document.createElement("option");
         defaultOption.value = "";
         defaultOption.textContent = "SELECT ALL COUNTRIES 🔽";
         selectEl.appendChild(defaultOption);
 
-        // താങ്കളുടെ വലിയ അറേയിലുള്ള (allCountriesList) മുഴുവൻ രാജ്യങ്ങളും ഡ്രോപ്പ്ഡൗണിലേക്ക് കയറ്റുന്നു
+        // താഴെയുള്ള വലിയ അറേയിൽ (allCountriesList) നിന്നുള്ള രാജ്യങ്ങൾ മാത്രം ഡ്രോപ്പ്ഡൗണിലേക്ക് കയറ്റുന്നു
         if (typeof allCountriesList !== 'undefined') {
             allCountriesList.forEach(country => {
                 const option = document.createElement("option");
@@ -818,11 +820,11 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     }
 
-    // പേജ് ലോഡ് ചെയ്യുമ്പോൾ നേരത്തെ സേവ് ചെയ്ത രാജ്യം ലോഡ് ചെയ്യുന്നു
+    // പേജ് ആദ്യം ലോഡ് ചെയ്യുമ്പോൾ നേരത്തെ സേവ് ചെയ്ത രാജ്യം ഉണ്ടെങ്കിൽ അതിന്റെ ഷോപ്പുകൾ മാത്രം വിളിക്കുന്നു
     const savedCountry = localStorage.getItem("selectedCountry") || "india";
     renderCountry(savedCountry);
 
-    // മുകളിലെ ബട്ടണുകൾ ഞെക്കുമ്പോൾ ഉള്ള സിങ്ക്
+    // മുകളിലെ ബട്ടണുകൾ ഞെക്കുമ്പോൾ സെലക്ട് ചെയ്ത രാജ്യത്തിന്റെ ഷോപ്പുകൾ മാത്രം വിളിക്കാനുള്ള സിങ്ക്
     document.querySelectorAll(".country-btn").forEach(btn => {
         if (btn.id === "shopOnCountry" || btn.getAttribute("id") === "shopOnCountry") return; 
         
@@ -832,7 +834,7 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     });
 
-    // ഡ്രോപ്പ്ഡൗൺ ബോക്സിൽ രാജ്യം മാറ്റുമ്പോൾ ഉള്ള സിങ്ക്
+    // ഡ്രോപ്പ്ഡൗൺ ബോക്സിൽ രാജ്യം സെലക്ട് ചെയ്യുമ്പോൾ അതിന്റെ ഷോപ്പുകൾ മാത്രം വിളിക്കാനുള്ള സിങ്ക്
     if (selectEl) {
         selectEl.addEventListener("change", (e) => {
             if (e.target.value) {
@@ -852,7 +854,7 @@ function renderCountry(country) {
         selectEl.value = ""; 
     }
 
-    // താങ്കൾ നൽകിയ .active ക്ലാസ്സ് ഉപയോഗിച്ച് കളർ ഓപ്പറേഷൻ സിങ്ക് ചെയ്യുന്നു
+    // സെലക്ട് ചെയ്ത ബട്ടണിന് മാത്രം പച്ച കളർ (.active) നൽകുന്നു
     document.querySelectorAll(".country-btn").forEach(btn => {
         if (btn.id === "shopOnCountry" || btn.getAttribute("id") === "shopOnCountry") return; 
         
@@ -865,7 +867,7 @@ function renderCountry(country) {
         }
     });
 
-    // താങ്കൾ നൽകിയ .active-shop ക്ലാസ്സ് ഉപയോഗിച്ച് വലിയ ഷോപ്പ് ബോക്സിന്റെ കളർ സിങ്ക് ചെയ്യുന്നു
+    // സെലക്ട് ചെയ്ത രാജ്യത്തിന്റെ പേര് വലിയ ഷോപ്പ് ബോക്സിൽ കാണിക്കുന്നു
     const shopBtn = document.getElementById("shopOnCountry");
     if (shopBtn) {
         const displayCountry = country.toUpperCase();
@@ -875,25 +877,25 @@ function renderCountry(country) {
 
     localStorage.setItem("selectedCountry", pureCountry);
     
-    // ഷോപ്പുകൾ ലോഡ് ചെയ്യാനും താഴെയുള്ള കാറ്റഗറി ബന്ധിപ്പിക്കാനും ഉള്ള ഫങ്ക്ഷൻ റൺ ചെയ്യുന്നു
+    // [CRITICAL FILTER]: സെലക്ട് ചെയ്ത രാജ്യത്തിന്റെ ഷോപ്പുകൾ മാത്രം ഫിൽട്ടർ ചെയ്ത് വിളിക്കുന്നു
     loadShops(pureCountry);
 }
 
-// താങ്കളുടെ ഒറിജിനൽ വലിയ ഡാറ്റയിൽ നിന്നും കൃത്യം 10 ഷോപ്പുകൾ മാത്രം ബോക്സിലേക്ക് വലിച്ചെടുക്കുന്നു
+// സെലക്ട് ചെയ്യുന്ന രാജ്യത്തിന്റെ ഷോപ്പുകൾ മാത്രം താഴേക്ക് വിളിക്കുന്ന ഫങ്ക്ഷൻ
 function loadShops(country) {
     const featuredShopsDiv = document.getElementById("featuredShops");
     if (!featuredShopsDiv) return;
     
     featuredShopsDiv.innerHTML = "";
     
-    // താങ്കളുടെ ഒറിജിനൽ countryShops അറ ഉണ്ടോ എന്ന് ഉറപ്പുവരുത്തുന്നു
+    // താഴെ കിടക്കുന്ന താങ്കളുടെ ഒറിജിനൽ countryShops അറേയിൽ ഈ രാജ്യം ഉണ്ടോ എന്ന് മാത്രം നോക്കുന്നു
     if (typeof countryShops !== 'undefined' && countryShops[country]) {
         
-        // താങ്കൾ തന്ന ഘടനയിൽ നിന്നും (.slice(0, 10)) ആദ്യത്തെ 10 ഷോപ്പുകൾ മാത്രം മുറിച്ചെടുക്കുന്നു
+        // ആ രാജ്യത്തിന്റെ ലിസ്റ്റിൽ നിന്നുള്ള ആദ്യത്തെ 10 ഷോപ്പുകൾ മാത്രം കൃത്യമായി മുറിച്ചെടുക്കുന്നു
         const shops = countryShops[country].slice(0, 10);
         
         shops.forEach(shop => {
-            // താങ്കളുടെ പഴയ ഒറിജിനൽ ബോക്സ് ലിങ്ക് ഡിസൈൻ (Target blank ലോഡ് ചെയ്യുന്നു)
+            // സെലക്ട് ചെയ്ത രാജ്യത്തിന്റെ ഷോപ്പുകൾ മാത്രം ബോക്സ് ഡിസൈനിൽ പേജിലേക്ക് കയറുന്നു
             featuredShopsDiv.innerHTML += `<a href="${shop.u}" target="_blank">${shop.n}</a>`;
         });
     }
