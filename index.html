@@ -781,6 +781,21 @@ SHOP ON USA
 <div id="featuredShops"></div>
 
 </div>
+ <style>
+.country-btn.active{
+  background:#00ff66 !important;
+  color:#000 !important;
+  border-color:#00ff66 !important;
+}
+#shopOnCountry.active-shop{
+  background:#00ff66 !important;
+  color:#000 !important;
+}
+#shopOnCountry.active-shop span{
+  color:#000 !important;
+}
+</style>
+
 <script>
 document.addEventListener("DOMContentLoaded", () => {
     const savedCountry = localStorage.getItem("selectedCountry") || "india";
@@ -788,17 +803,14 @@ document.addEventListener("DOMContentLoaded", () => {
 
     document.querySelectorAll(".country-btn").forEach(btn => {
         btn.addEventListener("click", function() {
-            const countryText = this.textContent.trim().toLowerCase();
-            renderCountry(countryText);
+            renderCountry(this.textContent.trim().toLowerCase());
         });
     });
 
     const selectEl = document.getElementById("allCountries");
     if (selectEl) {
         selectEl.addEventListener("change", (e) => {
-            if (e.target.value) {
-                renderCountry(e.target.value);
-            }
+            if (e.target.value) renderCountry(e.target.value);
         });
     }
 });
@@ -808,30 +820,21 @@ function renderCountry(country) {
     const pureCountry = country.trim().toLowerCase();
 
     const selectEl = document.getElementById("allCountries");
-    if (selectEl) {
-        selectEl.value = pureCountry;
-    }
+    if (selectEl) selectEl.value = pureCountry;
+
+    document.querySelectorAll(".country-btn").forEach(btn => btn.classList.remove("active"));
 
     document.querySelectorAll(".country-btn").forEach(btn => {
         const btnText = btn.textContent.trim().toLowerCase();
-
         if (btnText === pureCountry || (btnText === "saudi arabia" && pureCountry === "saudi arabia")) {
-            btn.style.background = "#00ff66";
-            btn.style.color = "#000000";
-            btn.style.borderColor = "#00ff66";
-        } else {
-            btn.style.background = "#4a4a4a";
-            btn.style.color = "#ffffff";
-            btn.style.borderColor = "#666";
+            btn.classList.add("active");
         }
     });
 
     const shopBtn = document.getElementById("shopOnCountry");
     if (shopBtn) {
-        const displayCountry = country.toUpperCase();
-        shopBtn.style.background = "#00ff66";
-        shopBtn.style.color = "#000000";
-        shopBtn.innerHTML = `SHOP ON <span style="color:#000000;font-weight:700;">${displayCountry}</span>`;
+        shopBtn.classList.add("active-shop");
+        shopBtn.innerHTML = `SHOP ON <span>${country.toUpperCase()}</span>`;
     }
 
     localStorage.setItem("selectedCountry", pureCountry);
