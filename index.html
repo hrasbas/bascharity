@@ -781,44 +781,23 @@ SHOP ON USA
 <div id="featuredShops"></div>
 
 </div>
-
+ 
 <script>
 document.addEventListener("DOMContentLoaded", () => {
     const savedCountry = localStorage.getItem("selectedCountry") || "india";
     renderCountry(savedCountry);
 
-    // മുകളിലെ ചെറിയ രാജ്യങ്ങളുടെ ബട്ടണുകൾക്ക് മാത്രം ക്ലിക്ക് ഇവന്റ് നൽകുന്നു
+    // 1. മുകളിലെ ബട്ടണുകൾ ഞെക്കുമ്പോൾ വർക്ക് ചെയ്യാനായി ചേർത്തത്
     document.querySelectorAll(".country-btn").forEach(btn => {
-        // താഴെയുള്ള വലിയ ഷോപ്പ് ബോക്സ് ബട്ടൺ ആണെങ്കിൽ അതിനെ ഒഴിവാക്കുന്നു
-        if (btn.id === "shopOnCountry") return;
-
+        if (btn.id === "shopOnCountry") return; // വലിയ ബോക്സിനെ ബാധിക്കാതിരിക്കാൻ
+        
         btn.addEventListener("click", function() {
-            // മുകളിലെ ചെറിയ ബട്ടണുകളുടെ കളർ മാത്രം വിത്യാസമില്ലാതെ വെള്ളയാക്കുന്നു
-            document.querySelectorAll(".country-btn").forEach(b => {
-                if (b.id !== "shopOnCountry") {
-                    b.style.cssText = "color: #ffffff !important;";
-                }
-            });
-            
-            // ക്ലിക്ക് ചെയ്ത ചെറിയ ബട്ടണിന് മാത്രം പച്ച കളർ നൽകുന്നു
-            this.style.cssText = "color: #00ff66 !important;";
-            
             const countryText = this.textContent.trim().toLowerCase();
-            localStorage.setItem("selectedCountry", countryText);
-            
-            if (typeof loadShops === 'function') {
-                loadShops(countryText);
-            }
-            
-            // താഴെയുള്ള വലിയ ഷോപ്പ് ബോക്സിന്റെ ടെക്സ്റ്റും കളറും നിലനിർത്തുന്നു
-            const shopBtn = document.getElementById("shopOnCountry");
-            if (shopBtn) {
-                shopBtn.innerHTML = `SHOP ON <span style="color: #00ff66 !important;">${countryText.toUpperCase()}</span>`;
-            }
+            renderCountry(countryText);
         });
     });
 
-    // ഡ്രോപ്പ്ഡൗൺ ലിസ്റ്റ് (Dropdown) മാറുമ്പോൾ ഉള്ളത്
+    // 2. താങ്കളുടെ ഒറിജിനൽ ഡ്രോപ്പ്ഡൗൺ ഇവന്റ് (ഇതിൽ ഒരു മാറ്റവും വരുത്തിയിട്ടില്ല)
     const selectEl = document.getElementById("allCountries");
     if (selectEl) {
         selectEl.addEventListener("change", (e) => {
@@ -831,53 +810,44 @@ function renderCountry(country) {
     if (!country) return;
     const pureCountry = country.trim().toLowerCase();
     
-    // ഡ്രോപ്പ്ഡൗണിൽ സെലക്ട് ചെയ്യുമ്പോൾ മുകളിലെ ശരിയായ ബട്ടൺ കണ്ടെത്തി പച്ചയാക്കുന്നു
+    // 3. താങ്കളുടെ ഒറിജിനൽ ബട്ടൺ ലൂപ്പ് (വലിയ ബോക്സിനെ ഒഴിവാക്കാൻ ഒരു ലൈൻ മാത്രം ചേർത്തു)
     document.querySelectorAll(".country-btn").forEach(btn => {
-        if (btn.id === "shopOnCountry") return; // വലിയ ബോക്സിനെ ബാധിക്കില്ല
+        if (btn.id === "shopOnCountry") return; 
         
         const btnText = btn.textContent.trim().toLowerCase();
-        if (btnText === pureCountry || btnText.includes(pureCountry) || pureCountry.includes(btnText)) {
-            btn.style.cssText = "color: #00ff66 !important;";
+        
+        if (btnText === pureCountry || (btnText === "saudi arabia" && pureCountry === "saudi arabia")) {
+            btn.style.color = "#00ff66";
         } else {
-            btn.style.cssText = "color: #ffffff !important;";
+            btn.style.color = "#ffffff";
         }
     });
 
-    // താഴെയുള്ള വലിയ ഷോപ്പ് ബോക്സ് കൃത്യമായി നിലനിർത്തുന്നു
+    // 4. താങ്കളുടെ ഒറിജിനൽ വലിയ ഷോപ്പ് ബോക്സ് (SHOP ON COUNTRY)
     const shopBtn = document.getElementById("shopOnCountry");
     if (shopBtn) {
-        shopBtn.innerHTML = `SHOP ON <span style="color: #00ff66 !important;">${pureCountry.toUpperCase()}</span>`;
+        const displayCountry = country.toUpperCase();
+        shopBtn.innerHTML = `SHOP ON <span style="color: #00ff66;">${displayCountry}</span>`;
     }
 
     localStorage.setItem("selectedCountry", pureCountry);
-    
-    try {
-        if (typeof loadShops === 'function') {
-            loadShops(pureCountry);
-        }
-    } catch (err) {
-        console.log("Error loading shops:", err);
-    }
+    loadShops(pureCountry);
 }
 
 function loadShops(country) {
-    try {
-        const featuredShopsDiv = document.getElementById("featuredShops");
-        if (!featuredShopsDiv) return;
-        
-        featuredShopsDiv.innerHTML = "";
-        if (typeof countryShops !== 'undefined' && countryShops[country]) {
-            const shops = countryShops[country].slice(0, 10);
-            shops.forEach(shop => {
-                featuredShopsDiv.innerHTML += `<a href="${shop.u}">${shop.n}</a>`;
-            });
-        }
-    } catch (err) {
-        console.log("Error in loadShops:", err);
+    const featuredShopsDiv = document.getElementById("featuredShops");
+    if (!featuredShopsDiv) return;
+    
+    featuredShopsDiv.innerHTML = "";
+    
+    if (countryShops[country]) {
+        const shops = countryShops[country].slice(0, 10);
+        shops.forEach(shop => {
+            featuredShopsDiv.innerHTML += `<a href="${shop.u}">${shop.n}</a>`;
+        });
     }
 }
 </script>
-
 
 <style>
 
