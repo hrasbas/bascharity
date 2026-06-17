@@ -665,285 +665,325 @@ ball.className = "bas-ball is-pwa-installed";
 <!-- ================================================= -->
 <!-- COUNTRY BOX START -->
 <!-- ================================================= -->
-
-<style>
-
-.country-grid{
-width:96%;
-max-width:900px;
-margin:auto;
-display:grid;
-grid-template-columns:repeat(3,1fr);
-gap:10px;
-}
-
-.country-btn{
-background:#4a4a4a;
-border:1px solid #666;
-border-radius:14px;
-padding:14px 8px;
-color:#fff;
-font-size:16px;
-font-weight:800;
-text-align:center;
-cursor:pointer;
-}
-
-.india{border-left:6px solid #FF9933;}
-.usa{border-left:6px solid #2196F3;}
-.uk{border-left:6px solid #E91E63;}
-.uae{border-left:6px solid #00C853;}
-.saudi{border-left:6px solid #4CAF50;}
-.canada{border-left:6px solid #F44336;}
-.germany{border-left:6px solid #9C27B0;}
-.france{border-left:6px solid #3F51B5;}
-.australia{border-left:6px solid #FFC107;}
-
-.country-select{
-width:96%;
-max-width:900px;
-display:block;
-margin:12px auto;
-background:#5a5a5a;
-color:#fff;
-border:2px solid #dfe6eb;
-border-radius:14px;
-padding:14px 8px;
-font-size:16px;
-font-weight:800;
-text-align:center;
-text-align-last:center;
-box-sizing:border-box;
-}
-
-#shopOnCountry{
-width:96%;
-margin:12px auto;
-padding:14px;
-background:#5a5a5a;
-border:2px solid #dfe6eb;
-color:#fff;
-text-align:center;
-font-size:20px;
-font-weight:700;
-border-radius:12px;
-}
-
-#featuredShops{
-display:grid;
-grid-template-columns:repeat(auto-fill,minmax(220px,1fr));
-gap:10px;
-}
-
-.shopCard{
-position:relative;
-background:#fff;
-border-left:5px solid #4338ca;
-border-radius:14px;
-padding:14px;
-box-shadow:0 2px 8px rgba(0,0,0,.08);
-text-decoration:none;
-color:#000;
-}
-
-.shopHead{
-display:flex;
-align-items:center;
-gap:8px;
-}
-
-.shopFav{
-width:18px;
-height:18px;
-}
-
-.shopName{
-font-weight:700;
-}
-
-.shopDot{
-position:absolute;
-left:8px;
-top:6px;
-font-size:20px;
-color:#000;
-}
-
-</style>
-
-<div class="country-grid">
-
-<button class="country-btn india">INDIA</button>
-<button class="country-btn usa">USA</button>
-<button class="country-btn uk">UK</button>
-<button class="country-btn uae">UAE</button>
-<button class="country-btn saudi">SAUDI ARABIA</button>
-<button class="country-btn canada">CANADA</button>
-<button class="country-btn germany">GERMANY</button>
-<button class="country-btn france">FRANCE</button>
-<button class="country-btn australia">AUSTRALIA</button>
-
-</div>
-
-<select id="allCountries" class="country-select">
-<option value="">SEARCH ALL COUNTRIES ▼</option>
-</select>
-
-<div id="shopOnCountry">
-SHOP ON <span style="color:#00ff66;">INDIA</span>
-</div>
-
-<div id="featuredShops"></div>
-
-<script>
-
-/* DROPDOWN FILL */
-
-allCountriesList.forEach(country=>{
-
-const option=document.createElement("option");
-
-option.value=country;
-
-option.textContent=
-country.toUpperCase();
-
-allCountries.appendChild(option);
-
-});
-
-/* COUNTRY */
-
-function renderCountry(country){
-
-if(!country)return;
-
-country=
-country.toLowerCase().trim();
-
-document
-.querySelectorAll(".country-btn")
-.forEach(btn=>{
-
-btn.style.color=
-btn.textContent
-.toLowerCase()
-.trim()===country
-?
-"#00ff66"
-:
-"#ffffff";
-
-});
-
-allCountries.value=
-country;
-
-document
-.getElementById("shopOnCountry")
-.innerHTML=
-`SHOP ON
-<span style="color:#00ff66;">
-${country.toUpperCase()}
-</span>`;
-
-localStorage.setItem(
-"selectedCountry",
-country
-);
-
-featuredShops.innerHTML="";
-
-const shops=
-(countryShops[country]||[])
-.slice(0,10);
-
-shops.forEach(shop=>{
-
-let host="";
-
-try{
-host=
-new URL(shop.u)
-.hostname;
-}catch(e){}
-
-featuredShops.innerHTML+=`
-
-<a href="${shop.u}"
-target="_blank"
-class="shopCard">
-
-<div class="shopDot">
-${(!shop.a||shop.a==="")
-?"."
-:""}
-</div>
-
-<div class="shopHead">
-
-<img
-class="shopFav"
-src="https://www.google.com/s2/favicons?domain=${host}&sz=64">
-
-<div class="shopName notranslate"
-translate="no">
-${shop.n}
-</div>
-
-</div>
-
-</a>
-
-`;
-
-});
-
-}
-
-/* BUTTON CLICK */
-
-document
-.querySelectorAll(".country-btn")
-.forEach(btn=>{
-
-btn.onclick=()=>{
-
-renderCountry(
-btn.textContent
-.toLowerCase()
-.trim()
-);
-
-};
-
-});
-
-/* DROPDOWN */
-
-allCountries.onchange=()=>{
-
-if(allCountries.value){
-
-renderCountry(
-allCountries.value
-);
-
-}
-
-};
-
-/* DEFAULT */
-
-const savedCountry=
-localStorage.getItem(
-"selectedCountry"
-)||"india";
-
-renderCountry(savedCountry);
-
-
-
+  
+ <!-- 1. Country Selector Section -->  
+<!-- COUNTRY BOX START -->  
+ <style>  
+  
+.country-grid{  
+  width:96%;  
+  max-width:900px;  
+  margin:auto;  
+  display:grid;  
+  grid-template-columns:repeat(3,1fr);  
+  gap:10px;  
+}  
+  
+.country-btn{  
+  background:#4a4a4a;  
+  border:1px solid #666;  
+  border-radius:14px;  
+  padding:14px 8px;  
+  color:#fff;  
+  font-size:16px;  
+  font-weight:800;  
+  text-align:center;  
+}  
+  
+.india{border-left:6px solid #FF9933;}  
+.usa{border-left:6px solid #2196F3;}  
+.uk{border-left:6px solid #E91E63;}  
+.uae{border-left:6px solid #00C853;}  
+.saudi{border-left:6px solid #4CAF50;}  
+.canada{border-left:6px solid #F44336;}  
+.australia{border-left:6px solid #FFC107;}  
+.germany{border-left:6px solid #9C27B0;}  
+.france{border-left:6px solid #3F51B5;}  
+  
+.country-select{  
+  width:96%;  
+  max-width:900px;  
+  display:block;  
+  margin:12px auto;  
+  background:#5a5a5a;  
+  color:#fff;  
+  border:2px solid #dfe6eb;  
+  border-radius:14px;  
+  padding:14px 8px;  
+  font-size:16px;  
+  font-weight:800;  
+  text-align:center;  
+  text-align-last:center;  
+  box-sizing:border-box;  
+  box-shadow:0 0 8px rgba(223,230,235,.35);  
+}  
+</style>    
+   
+ <div id="countryButtons"></div>  
+    
+  
+<!-- NEW COUNTRY GRID -->  
+   
+  
+  <div class="country-select">  
+SELECT COUNTRY  
+</div>  
+    
+<div class="country-grid">  
+  
+  
+<button class="country-btn india"  
+onclick="renderCountry('india')">INDIA</button>  
+  
+<button class="country-btn usa"  
+onclick="renderCountry('usa')">USA</button>  
+  
+<button class="country-btn uk"  
+onclick="renderCountry('uk')">UK</button>  
+  
+<button class="country-btn uae"  
+onclick="renderCountry('uae')">UAE</button>  
+  
+  
+ <button class="country-btn saudi"  
+onclick="renderCountry('saudi arabia')">SAUDI ARABIA</button>  
+  
+  
+<button class="country-btn canada"  
+onclick="renderCountry('canada')">CANADA</button>  
+  
+  
+<button class="country-btn germany"  
+onclick="renderCountry('germany')">GERMANY</button>  
+  
+<button class="country-btn france"  
+onclick="renderCountry('france')">FRANCE</button>  
+  
+  
+<button class="country-btn australia"  
+onclick="renderCountry('australia')">AUSTRALIA</button>  
+  
+  
+</div>  
+  
+    
+<select id="allCountries" class="country-select">  
+<option value="">SEARCH ALL COUNTRIES ▼</option>  
+</select>  
+    
+<div id="shopOnCountry">  
+SHOP ON USA  
+</div>  
+  
+  
+  
+  
+    
+<!-- ================================================= -->  
+<!-- FEATURED SHOPS -->  
+<!-- ================================================= -->  
+  
+<div id="featuredShops"></div>  
+  
+</div>  
+ <style>  
+.country-btn.active{  
+  background:#00ff66 !important;  
+  color:#000 !important;  
+  border-color:#00ff66 !important;  
+}  
+#shopOnCountry.active-shop{  
+  background:#00ff66 !important;  
+  color:#000 !important;  
+}  
+#shopOnCountry.active-shop span{  
+  color:#000 !important;  
+}  
+</style>  
+   
+           
+  
+<script>  
+document.addEventListener("DOMContentLoaded", () => {  
+    const savedCountry = localStorage.getItem("selectedCountry") || "india";  
+    renderCountry(savedCountry);  
+  
+    // 1. മുകളിലെ ബട്ടണുകൾ ഞെക്കുമ്പോൾ വർക്ക് ചെയ്യാനായി ചേർത്തത്  
+    document.querySelectorAll(".country-btn").forEach(btn => {  
+        if (btn.id === "shopOnCountry") return; // വലിയ ബോക്സിനെ ബാധിക്കാതിരിക്കാൻ  
+          
+        btn.addEventListener("click", function() {  
+            const countryText = this.textContent.trim().toLowerCase();  
+            renderCountry(countryText);  
+        });  
+    });  
+  
+    // 2. താങ്കളുടെ ഒറിജിനൽ ഡ്രോപ്പ്ഡൗൺ ഇവന്റ് (ഇതിൽ ഒരു മാറ്റവും വരുത്തിയിട്ടില്ല)  
+    const selectEl = document.getElementById("allCountries");  
+    if (selectEl) {  
+        selectEl.addEventListener("change", (e) => {  
+            if (e.target.value) renderCountry(e.target.value);  
+        });  
+    }  
+});  
+  
+function renderCountry(country) {  
+    if (!country) return;  
+    const pureCountry = country.trim().toLowerCase();  
+      
+    // 3. താങ്കളുടെ ഒറിജിനൽ ബട്ടൺ ലൂപ്പ് (വലിയ ബോക്സിനെ ഒഴിവാക്കാൻ ഒരു ലൈൻ മാത്രം ചേർത്തു)  
+    document.querySelectorAll(".country-btn").forEach(btn => {  
+        if (btn.id === "shopOnCountry") return;   
+          
+        const btnText = btn.textContent.trim().toLowerCase();  
+          
+        if (btnText === pureCountry || (btnText === "saudi arabia" && pureCountry === "saudi arabia")) {  
+            btn.style.color = "#00ff66";  
+        } else {  
+            btn.style.color = "#ffffff";  
+        }  
+    });  
+  
+    // 4. താങ്കളുടെ ഒറിജിനൽ വലിയ ഷോപ്പ് ബോക്സ് (SHOP ON COUNTRY)  
+    const shopBtn = document.getElementById("shopOnCountry");  
+    if (shopBtn) {  
+        const displayCountry = country.toUpperCase();  
+        shopBtn.innerHTML = `SHOP ON <span style="color: #00ff66;">${displayCountry}</span>`;  
+    }  
+  
+    localStorage.setItem("selectedCountry", pureCountry);  
+    loadShops(pureCountry);  
+}  
+  
+function loadShops(country) {  
+    const featuredShopsDiv = document.getElementById("featuredShops");  
+    if (!featuredShopsDiv) return;  
+      
+    featuredShopsDiv.innerHTML = "";  
+      
+    if (countryShops[country]) {  
+        const shops = countryShops[country].slice(0, 10);  
+        shops.forEach(shop => {  
+            featuredShopsDiv.innerHTML += `<a href="${shop.u}">${shop.n}</a>`;  
+        });  
+    }  
+}  
+</script>  
+  
+   
+/* ================================================= */  
+  
+<style>  
+    
+.country-box{  
+background:#fff;  
+padding:20px;  
+border-radius:20px;  
+box-shadow:0 2px 8px rgba(0,0,0,.08);  
+}  
+  
+/* ================================================= */  
+/* COUNTRY SEARCH */  
+/* ================================================= */  
+  
+#countrySearch{  
+width:96%;  
+height:50px;  
+border:2px solid #ddd;  
+border-radius:12px;  
+padding:0 12px;  
+margin-bottom:12px;  
+box-sizing:border-box;  
+}  
+  
+/* ================================================= */  
+/* COUNTRY BUTTONS */   
+/* ================================================= */  
+  
+#countryButtons{  
+display:flex;  
+flex-wrap:wrap;  
+gap:8px;  
+margin-bottom:12px;  
+}  
+  
+  
+  
+  
+/* ================================================= */  
+/* DROPDOWN */  
+/* ================================================= */  
+  
+#allCountries{  
+width:96%;  
+height:50px;  
+    
+border:2px solid #ddd;  
+border-radius:12px;  
+padding:0 12px;  
+margin-bottom:16px;  
+}  
+    
+#shopOnCountry{  
+width:96%;  
+margin:12px auto;  
+padding:14px;  
+background:#5a5a5a;  
+border:2px solid #dfe6eb;  
+color:#fff;  
+text-align:center;  
+font-size:20px;  
+font-weight:700;  
+border-radius:12px;  
+}  
+    
+/* ================================================= */  
+/* FEATURED SHOPS */  
+/* ================================================= */  
+  
+#featuredShops{  
+display:grid;  
+grid-template-columns:repeat(auto-fill,minmax(220px,1fr));  
+gap:10px;  
+}  
+  
+/* ================================================= */  
+/* SHOP CARD */  
+/* ================================================= */  
+  
+.shopCard{  
+position:relative;  
+background:#fff;  
+border-left:5px solid #4338ca;  
+border-radius:14px;  
+padding:14px;  
+box-shadow:0 2px 8px rgba(0,0,0,.08);  
+}  
+  
+.shopDot{  
+position:absolute;  
+left:8px;  
+top:6px;  
+font-size:20px;  
+color:#000;  
+}  
+.shopHead{  
+display:flex;  
+align-items:center;  
+gap:8px;  
+}  
+  
+.shopFav{  
+width:18px;  
+height:18px;  
+}  
+  
+.shopName{  
+font-weight:700;  
+}  
+  
+</style>  
+  
 <!-- ================================================= -->
 <!-- COUNTRY BOX END -->
 <!-- ================================================= -->
