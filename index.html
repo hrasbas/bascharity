@@ -795,121 +795,71 @@ SHOP ON USA
   color:#000 !important;
 }
 </style>
-   
- <script>
-/* ================================================= */
-/* ELEMENTS */
-/* ================================================= */
+ 
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+    // 1. പേജ് ലോഡ് ചെയ്യുമ്പോൾ നേരത്തെ സേവ് ചെയ്ത രാജ്യം ഉണ്ടെങ്കിൽ അത് എടുക്കുന്നു
+    const savedCountry = localStorage.getItem("selectedCountry") || "india";
+    renderCountry(savedCountry);
 
-const countryButtons=document.getElementById("countryButtons");
-const allCountries=document.getElementById("allCountries");
-const featuredShops=document.getElementById("featuredShops");
-const countrySearch=document.getElementById("countrySearch");
+    // 2. മുകളിലെ രാജ്യങ്ങളുടെ ബട്ടണുകൾ ഞെക്കുമ്പോൾ ഉള്ള സിങ്ക് ഓപ്പറേഷൻ
+    document.querySelectorAll(".country-btn").forEach(btn => {
+        if (btn.id === "shopOnCountry" || btn.getAttribute("id") === "shopOnCountry") return; 
+        
+        btn.addEventListener("click", function() {
+            const countryText = this.textContent.trim().toLowerCase();
+            renderCountry(countryText);
+        });
+    });
 
-/* ================================================= */
-/* DROPDOWN */
-/* ================================================= */
-
-allCountriesList.forEach(country=>{
-const option=document.createElement("option");
-option.value=country;
-option.textContent=country;
-allCountries.appendChild(option);
+    // 3. ഡ്രോപ്പ്ഡൗൺ ബോക്സിൽ രാജ്യം മാറ്റുമ്പോൾ കളർ ഓപ്പറേഷൻ കൃത്യമായി സിങ്ക് ചെയ്യാൻ
+    const selectEl = document.getElementById("allCountries");
+    if (selectEl) {
+        selectEl.addEventListener("change", (e) => {
+            if (e.target.value) {
+                renderCountry(e.target.value); 
+            }
+        });
+    }
 });
 
-allCountries.onchange=()=>{
-renderCountry(allCountries.value);
+function renderCountry(country) {
+    if (!country) return;
+    const pureCountry = country.trim().toLowerCase();
+    
+    // 4. ഡ്രോപ്പ്ഡൗൺ ബോക്സിന്റെ വാല്യൂ ബട്ടൺ ക്ലിക്കിനൊപ്പം സിങ്ക് ചെയ്യുന്നു
+    const selectEl = document.getElementById("allCountries");
+    if (selectEl) {
+        selectEl.value = pureCountry;
+    }
 
-document.querySelectorAll(".country-btn").forEach(btn=>{
-btn.classList.remove("active");
-if(btn.textContent.toLowerCase()===allCountries.value.toLowerCase()){
-btn.classList.add("active");
+    // 5. താങ്കൾ നൽകിയ .active ക്ലാസ്സ് ഉപയോഗിച്ച് കളർ ഓപ്പറേഷൻ സിങ്ക് ചെയ്യുന്നു
+    document.querySelectorAll(".country-btn").forEach(btn => {
+        if (btn.id === "shopOnCountry" || btn.getAttribute("id") === "shopOnCountry") return; 
+        
+        const btnText = btn.textContent.trim().toLowerCase();
+        
+        if (btnText === pureCountry || btnText.includes(pureCountry) || pureCountry.includes(btnText) || (btnText === "saudi arabia" && pureCountry === "saudi arabia")) {
+            btn.classList.add("active"); // താങ്കളുടെ സ്റ്റൈലിലെ പച്ച കളർ വരുന്നു
+        } else {
+            btn.classList.remove("active"); // ബാക്കി ബട്ടണുകൾ പഴയപടിയാകുന്നു
+        }
+    });
+
+    // 6. താങ്കൾ നൽകിയ .active-shop ക്ലാസ്സ് ഉപയോഗിച്ച് വലിയ ഷോപ്പ് ബോക്സിന്റെ കളർ സിങ്ക് ചെയ്യുന്നു
+    const shopBtn = document.getElementById("shopOnCountry");
+    if (shopBtn) {
+        const displayCountry = country.toUpperCase();
+        shopBtn.innerHTML = `SHOP ON <span>${displayCountry}</span>`;
+        shopBtn.classList.add("active-shop"); // വലിയ ബോക്സ് പച്ചയാകുന്നു
+    }
+
+    localStorage.setItem("selectedCountry", pureCountry);
+    
+    if (typeof loadShops === 'function') {
+        loadShops(pureCountry);
+    }
 }
-});
-
-allCountries.selectedIndex=0;
-};
-
-/* ================================================= */
-/* SEARCH */
-/* ================================================= */
-
-countrySearch.addEventListener("input",function(){
-const value=this.value.toLowerCase();
-
-document.querySelectorAll(".country-btn").forEach(btn=>{
-btn.style.display=btn.textContent.toLowerCase().includes(value)?"inline-block":"none";
-});
-});
-
-/* ================================================= */
-/* RENDER COUNTRY */
-/* ================================================= */
-
-function renderCountry(country){
-if(!country) return;
-
-featuredShops.innerHTML="";
-
-const shops=(countryShops[country]||[]).slice(0,10);
-
-shops.forEach(shop=>{
-let host="";
-try{host=new URL(shop.u).hostname;}catch(e){}
-
-featuredShops.innerHTML+=`
-<a href="${shop.u}" target="_blank" class="shopCard">
-<div class="shopDot">${!shop.a || shop.a.trim()==="" ? "." : ""}</div>
-<div class="shopHead">
-<img class="shopFav" src="https://www.google.com/s2/favicons?domain=${host}&sz=64"/>
-<div class="shopName notranslate" translate="no">${shop.n}</div>
-</div>
-</a>
-`;
-});
-
-document.querySelectorAll(".country-btn").forEach(btn=>{
-btn.classList.remove("active");
-if(btn.textContent.trim().toLowerCase()===country.trim().toLowerCase()){
-btn.classList.add("active");
-}
-});
-
-const shopBtn=document.getElementById("shopOnCountry");
-if(shopBtn){
-shopBtn.classList.add("active-shop");
-shopBtn.innerHTML="SHOP ON <span>"+country.toUpperCase()+"</span>";
-}
-
-if(typeof currentCountry!=="undefined"){
-currentCountry=country;
-}
-
-if(document.getElementById("selectedCountryBox")){
-document.getElementById("selectedCountryBox").innerHTML="Selected Country - "+country.toUpperCase();
-}
-
-if(typeof renderCategory==="function"){
-renderCategory("all");
-}
-
-localStorage.setItem("selectedCountry",country);
-}
-
-/* ================================================= */
-/* DEFAULT */
-/* ================================================= */
-
-const savedCountry=localStorage.getItem("selectedCountry") || "india";
-renderCountry(savedCountry);
-
-document.querySelectorAll(".country-btn").forEach(btn=>{
-btn.onclick=()=>{
-const country=btn.classList[1];
-localStorage.setItem("selectedCountry",country);
-renderCountry(country);
-};
-});
 </script>
 
  
