@@ -795,87 +795,30 @@ SHOP ON USA
   color:#000 !important;
 }
 </style>
-         <script>
-// 1. താങ്കളുടെ മുഴുവൻ രാജ്യങ്ങളുടെ ലിസ്റ്റ് (ഇവിടെ എത്ര രാജ്യങ്ങൾ വേണമെങ്കിലും ഇനി ചേർക്കാം)
-const allCountriesList = ["india", "usa", "uk", "canada", "uae", "saudi arabia", "australia"];
-
-// 2. ഓരോ രാജ്യത്തിനും താഴെയുള്ള 10 പ്രമുഖ ഷോപ്പുകൾ കണക്ട് ചെയ്യുന്ന ഡാറ്റാബേസ്
-// (ഇതിലെ അഫിലിയേറ്റ് ലിങ്കുകളും ഷോപ്പ് പേരുകളും താങ്കൾക്ക് മാറ്റാം)
-const countryShops = {
-    "india": [
-        { n: "Amazon India", u: "https://amazon.in" },
-        { n: "Flipkart", u: "https://flipkart.com" },
-        { n: "Myntra", u: "https://myntra.com" },
-        { n: "Ajio", u: "https://ajio.com" },
-        { n: "Meesho", u: "https://meesho.com" },
-        { n: "Tata CLIQ", u: "https://tatacliq.com" },
-        { n: "Reliance Digital", u: "https://reliancedigital.in" },
-        { n: "Croma", u: "https://croma.com" },
-        { n: "Nykaa", u: "https://nykaa.com" },
-        { n: "BigBasket", u: "https://bigbasket.com" }
-    ],
-    "usa": [
-        { n: "Amazon USA", u: "https://amazon.com" },
-        { n: "Walmart", u: "https://walmart.com" },
-        { n: "eBay", u: "https://ebay.com" },
-        { n: "Target", u: "https://target.com" },
-        { n: "Best Buy", u: "https://bestbuy.com" },
-        { n: "Macy's", u: "https://macys.com" },
-        { n: "Home Depot", u: "https://homedepot.com" },
-        { n: "Costco", u: "https://costco.com" },
-        { n: "Wayfair", u: "https://wayfair.com" },
-        { n: "Etsy", u: "https://etsy.com" }
-    ],
-    "uae": [
-        { n: "Amazon UAE", u: "https://amazon.ae" },
-        { n: "Noon UAE", u: "https://noon.com/uae-en/" },
-        { n: "Carrefour UAE", u: "https://carrefouruae.com" },
-        { n: "Sharaf DG", u: "https://uae.sharafdg.com" },
-        { n: "Namshi", u: "https://namshi.com/uae-en/" },
-        { n: "Splash Fashions", u: "https://splashfashions.com" },
-        { n: "Lulu Hypermarket", u: "https://luluhypermarket.com" },
-        { n: "Brands For Less", u: "https://brandsforless.com" },
-        { n: "Kibsons", u: "https://kibsons.com" },
-        { n: "Desertcart UAE", u: "https://uae.desertcart.com" }
-    ],
-    "saudi arabia": [
-        { n: "Amazon KSA", u: "https://amazon.sa" },
-        { n: "Noon KSA", u: "https://noon.com/saudi-en/" },
-        { n: "Jarir Bookstore", u: "https://jarir.com" },
-        { n: "Extra KSA", u: "https://extra.com" },
-        { n: "Namshi KSA", u: "https://namshi.com/saudi-en/" },
-        { n: "Carrefour KSA", u: "https://carrefourksa.com" },
-        { n: "Centerpoint", u: "https://centrepointstores.com" },
-        { n: "X-cite KSA", u: "https://xcite.com.sa" },
-        { n: "Nice One", u: "https://niceone.com" },
-        { n: "Golden Scent", u: "https://goldenscent.com" }
-    ]
-    // ബാക്കി രാജ്യങ്ങളുടെ ഷോപ്പുകൾ ഇതേ രീതിയിൽ താഴേക്ക് ചേർക്കാം...
-};
-
+<script>
 document.addEventListener("DOMContentLoaded", () => {
     const selectEl = document.getElementById("allCountries");
     if (selectEl) {
         selectEl.innerHTML = ""; // പഴയത് ക്ലിയർ ചെയ്യുന്നു
         
-        // [FIXED MAIN VALUE]: ഡ്രോപ്പ്ഡൗണിന്റെ മുകളിൽ സ്ഥിരമായി കാണിക്കാൻ ആദ്യത്തെ ഓപ്ഷൻ ചേർക്കുന്നു
+        // ഡ്രോപ്പ്ഡൗണിന്റെ മുകളിൽ സ്ഥിരമായി കാണിക്കാൻ ആദ്യത്തെ ഓപ്ഷൻ ചേർക്കുന്നു
         const defaultOption = document.createElement("option");
         defaultOption.value = "";
         defaultOption.textContent = "SELECT ALL COUNTRIES 🔽";
-        defaultOption.disabled = false;
-        defaultOption.selected = true;
         selectEl.appendChild(defaultOption);
 
-        // ലിസ്റ്റിലുള്ള ബാക്കി രാജ്യങ്ങൾ ഡ്രോപ്പ്ഡൗണിലേക്ക് കയറ്റുന്നു
-        allCountriesList.forEach(country => {
-            const option = document.createElement("option");
-            option.value = country;
-            option.textContent = country.toUpperCase();
-            selectEl.appendChild(option);
-        });
+        // താങ്കളുടെ വലിയ അറേയിലുള്ള (allCountriesList) മുഴുവൻ രാജ്യങ്ങളും ഡ്രോപ്പ്ഡൗണിലേക്ക് കയറ്റുന്നു
+        if (typeof allCountriesList !== 'undefined') {
+            allCountriesList.forEach(country => {
+                const option = document.createElement("option");
+                option.value = country;
+                option.textContent = country.toUpperCase();
+                selectEl.appendChild(option);
+            });
+        }
     }
 
-    // പേജ് ലോഡ് ചെയ്യുമ്പോൾ നേരത്തെ സേവ് ചെയ്ത രാജ്യം ഉണ്ടെങ്കിൽ അത് ലോഡ് ചെയ്യുന്നു
+    // പേജ് ലോഡ് ചെയ്യുമ്പോൾ നേരത്തെ സേവ് ചെയ്ത രാജ്യം ലോഡ് ചെയ്യുന്നു
     const savedCountry = localStorage.getItem("selectedCountry") || "india";
     renderCountry(savedCountry);
 
@@ -903,7 +846,7 @@ function renderCountry(country) {
     if (!country) return;
     const pureCountry = country.trim().toLowerCase();
     
-    // മുകളിലെ ബട്ടൺ ഞെക്കിയാലും ഡ്രോപ്പ്ഡൗണിലെ വാല്യൂ മാറാതെ "SELECT ALL COUNTRIES 🔽" എന്ന് തന്നെ സ്ഥിരമായി നിർത്തുന്നു
+    // ഡ്രോപ്പ്ഡൗണിലെ വാല്യൂ മാറാതെ "SELECT ALL COUNTRIES 🔽" എന്ന് തന്നെ സ്ഥിരമായി നിർത്തുന്നു
     const selectEl = document.getElementById("allCountries");
     if (selectEl) {
         selectEl.value = ""; 
@@ -931,20 +874,26 @@ function renderCountry(country) {
     }
 
     localStorage.setItem("selectedCountry", pureCountry);
+    
+    // ഷോപ്പുകൾ ലോഡ് ചെയ്യാനും താഴെയുള്ള കാറ്റഗറി ബന്ധിപ്പിക്കാനും ഉള്ള ഫങ്ക്ഷൻ റൺ ചെയ്യുന്നു
     loadShops(pureCountry);
 }
 
-// 10 പ്രമുഖ ഷോപ്പുകൾ പേജിൽ കൃത്യമായി കാണിക്കാനുള്ള ഫങ്ക്ഷൻ
+// താങ്കളുടെ ഒറിജിനൽ വലിയ ഡാറ്റയിൽ നിന്നും കൃത്യം 10 ഷോപ്പുകൾ മാത്രം ബോക്സിലേക്ക് വലിച്ചെടുക്കുന്നു
 function loadShops(country) {
     const featuredShopsDiv = document.getElementById("featuredShops");
     if (!featuredShopsDiv) return;
     
     featuredShopsDiv.innerHTML = "";
     
+    // താങ്കളുടെ ഒറിജിനൽ countryShops അറ ഉണ്ടോ എന്ന് ഉറപ്പുവരുത്തുന്നു
     if (typeof countryShops !== 'undefined' && countryShops[country]) {
-        // കൃത്യം 10 ഷോപ്പുകൾ മാത്രം മുറിച്ച് എടുക്കുന്നു
+        
+        // താങ്കൾ തന്ന ഘടനയിൽ നിന്നും (.slice(0, 10)) ആദ്യത്തെ 10 ഷോപ്പുകൾ മാത്രം മുറിച്ചെടുക്കുന്നു
         const shops = countryShops[country].slice(0, 10);
+        
         shops.forEach(shop => {
+            // താങ്കളുടെ പഴയ ഒറിജിനൽ ബോക്സ് ലിങ്ക് ഡിസൈൻ (Target blank ലോഡ് ചെയ്യുന്നു)
             featuredShopsDiv.innerHTML += `<a href="${shop.u}" target="_blank">${shop.n}</a>`;
         });
     }
