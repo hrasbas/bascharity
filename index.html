@@ -797,12 +797,27 @@ SHOP ON USA
 </style>
  
 <script>
+// താങ്കളുടെ രാജ്യങ്ങളുടെ ലിസ്റ്റ് (ഡ്രോപ്പ്ഡൗണിൽ വരാൻ)
+const allCountriesList = ["india", "usa", "uk", "canada", "uae", "saudi arabia"];
+
 document.addEventListener("DOMContentLoaded", () => {
-    // 1. പേജ് ലോഡ് ചെയ്യുമ്പോൾ നേരത്തെ സേവ് ചെയ്ത രാജ്യം ഉണ്ടെങ്കിൽ അത് എടുക്കുന്നു
+    // 1. ഡ്രോപ്പ്ഡൗൺ ബോക്സിലേക്ക് രാജ്യങ്ങൾ ഓട്ടോമാറ്റിക് ആയി കയറ്റുന്നു (ഡിലീറ്റ് ആയ ഭാഗം)
+    const selectEl = document.getElementById("allCountries");
+    if (selectEl) {
+        selectEl.innerHTML = ""; // പഴയത് ക്ലിയർ ചെയ്യാൻ
+        allCountriesList.forEach(country => {
+            const option = document.createElement("option");
+            option.value = country;
+            option.textContent = country.toUpperCase();
+            selectEl.appendChild(option);
+        });
+    }
+
+    // 2. പേജ് ലോഡ് ചെയ്യുമ്പോൾ നേരത്തെ സേവ് ചെയ്ത രാജ്യം എടുക്കുന്നു
     const savedCountry = localStorage.getItem("selectedCountry") || "india";
     renderCountry(savedCountry);
 
-    // 2. മുകളിലെ രാജ്യങ്ങളുടെ ബട്ടണുകൾ ഞെക്കുമ്പോൾ ഉള്ള സിങ്ക് ഓപ്പറേഷൻ
+    // 3. മുകളിലെ ബട്ടണുകൾ ഞെക്കുമ്പോൾ ഉള്ള സിങ്ക്
     document.querySelectorAll(".country-btn").forEach(btn => {
         if (btn.id === "shopOnCountry" || btn.getAttribute("id") === "shopOnCountry") return; 
         
@@ -812,8 +827,7 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     });
 
-    // 3. ഡ്രോപ്പ്ഡൗൺ ബോക്സിൽ രാജ്യം മാറ്റുമ്പോൾ കളർ ഓപ്പറേഷൻ കൃത്യമായി സിങ്ക് ചെയ്യാൻ
-    const selectEl = document.getElementById("allCountries");
+    // 4. ഡ്രോപ്പ്ഡൗൺ ബോക്സിൽ രാജ്യം മാറ്റുമ്പോൾ ഉള്ള സിങ്ക്
     if (selectEl) {
         selectEl.addEventListener("change", (e) => {
             if (e.target.value) {
@@ -827,37 +841,49 @@ function renderCountry(country) {
     if (!country) return;
     const pureCountry = country.trim().toLowerCase();
     
-    // 4. ഡ്രോപ്പ്ഡൗൺ ബോക്സിന്റെ വാല്യൂ ബട്ടൺ ക്ലിക്കിനൊപ്പം സിങ്ക് ചെയ്യുന്നു
+    // ഡ്രോപ്പ്ഡൗൺ ബോക്സിന്റെ വാല്യൂ സിങ്ക് ചെയ്യുന്നു
     const selectEl = document.getElementById("allCountries");
     if (selectEl) {
         selectEl.value = pureCountry;
     }
 
-    // 5. താങ്കൾ നൽകിയ .active ക്ലാസ്സ് ഉപയോഗിച്ച് കളർ ഓപ്പറേഷൻ സിങ്ക് ചെയ്യുന്നു
+    // താങ്കൾ നൽകിയ .active ക്ലാസ്സ് ഉപയോഗിച്ച് കളർ ഓപ്പറേഷൻ സിങ്ക് ചെയ്യുന്നു
     document.querySelectorAll(".country-btn").forEach(btn => {
         if (btn.id === "shopOnCountry" || btn.getAttribute("id") === "shopOnCountry") return; 
         
         const btnText = btn.textContent.trim().toLowerCase();
         
         if (btnText === pureCountry || btnText.includes(pureCountry) || pureCountry.includes(btnText) || (btnText === "saudi arabia" && pureCountry === "saudi arabia")) {
-            btn.classList.add("active"); // താങ്കളുടെ സ്റ്റൈലിലെ പച്ച കളർ വരുന്നു
+            btn.classList.add("active");
         } else {
-            btn.classList.remove("active"); // ബാക്കി ബട്ടണുകൾ പഴയപടിയാകുന്നു
+            btn.classList.remove("active");
         }
     });
 
-    // 6. താങ്കൾ നൽകിയ .active-shop ക്ലാസ്സ് ഉപയോഗിച്ച് വലിയ ഷോപ്പ് ബോക്സിന്റെ കളർ സിങ്ക് ചെയ്യുന്നു
+    // താങ്കൾ നൽകിയ .active-shop ക്ലാസ്സ് ഉപയോഗിച്ച് വലിയ ഷോപ്പ് ബോക്സിന്റെ കളർ സിങ്ക് ചെയ്യുന്നു
     const shopBtn = document.getElementById("shopOnCountry");
     if (shopBtn) {
         const displayCountry = country.toUpperCase();
         shopBtn.innerHTML = `SHOP ON <span>${displayCountry}</span>`;
-        shopBtn.classList.add("active-shop"); // വലിയ ബോക്സ് പച്ചയാകുന്നു
+        shopBtn.classList.add("active-shop");
     }
 
     localStorage.setItem("selectedCountry", pureCountry);
+    loadShops(pureCountry);
+}
+
+// 5. ഷോപ്പുകൾ ലോഡ് ചെയ്യാനുള്ള ഫങ്ക്ഷൻ (ഡിലീറ്റ് ആയ ഭാഗം)
+function loadShops(country) {
+    const featuredShopsDiv = document.getElementById("featuredShops");
+    if (!featuredShopsDiv) return;
     
-    if (typeof loadShops === 'function') {
-        loadShops(pureCountry);
+    featuredShopsDiv.innerHTML = "";
+    
+    if (typeof countryShops !== 'undefined' && countryShops[country]) {
+        const shops = countryShops[country].slice(0, 10);
+        shops.forEach(shop => {
+            featuredShopsDiv.innerHTML += `<a href="${shop.u}">${shop.n}</a>`;
+        });
     }
 }
 </script>
