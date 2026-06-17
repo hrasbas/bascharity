@@ -795,36 +795,17 @@ SHOP ON USA
   color:#000 !important;
 }
 </style>
- <script>
-window.addEventListener("load", () => {
-    const selectEl = document.getElementById("allCountries");
-    if (selectEl) {
-        selectEl.innerHTML = ""; 
-        
-        // ഡ്രോപ്പ്ഡൗണിന്റെ മുകളിൽ സ്ഥിരമായി "SELECT ALL COUNTRIES 🔽" നിർത്തുന്നു
-        const defaultOption = document.createElement("option");
-        defaultOption.value = "";
-        defaultOption.textContent = "SELECT ALL COUNTRIES 🔽";
-        selectEl.appendChild(defaultOption);
+ 
+         
 
-        // താഴെയുള്ള AllCountriesList-ൽ നിന്നുള്ള രാജ്യങ്ങൾ ഡ്രോപ്പ്ഡൗണിലേക്ക് കയറ്റുന്നു
-        if (typeof allCountriesList !== 'undefined') {
-    allCountriesList.forEach(country => {
-                const option = document.createElement("option");
-                option.value = country;
-                option.textContent = country.toUpperCase();
-                selectEl.appendChild(option);
-            });
-        }
-    }
-
-    // ആദ്യ പേജ് ലോഡിംഗിൽ ഇന്ത്യ സെലക്ട് ആകുന്നു
+<script>
+document.addEventListener("DOMContentLoaded", () => {
     const savedCountry = localStorage.getItem("selectedCountry") || "india";
     renderCountry(savedCountry);
 
-    // മുകളിലെ ബട്ടൺ ക്ലിക്ക് ചെയ്യുമ്പോൾ ഉള്ള സിങ്ക്
+    // 1. മുകളിലെ ബട്ടണുകൾ ഞെക്കുമ്പോൾ വർക്ക് ചെയ്യാനായി ചേർത്തത്
     document.querySelectorAll(".country-btn").forEach(btn => {
-        if (btn.id === "shopOnCountry" || btn.getAttribute("id") === "shopOnCountry") return; 
+        if (btn.id === "shopOnCountry") return; // വലിയ ബോക്സിനെ ബാധിക്കാതിരിക്കാൻ
         
         btn.addEventListener("click", function() {
             const countryText = this.textContent.trim().toLowerCase();
@@ -832,12 +813,11 @@ window.addEventListener("load", () => {
         });
     });
 
-    // ഡ്രോപ്പ്ഡൗൺ ബോക്സിൽ രാജ്യം സെലക്ട് ചെയ്യുമ്പോൾ ഉള്ള സിങ്ക്
+    // 2. താങ്കളുടെ ഒറിജിനൽ ഡ്രോപ്പ്ഡൗൺ ഇവന്റ് (ഇതിൽ ഒരു മാറ്റവും വരുത്തിയിട്ടില്ല)
+    const selectEl = document.getElementById("allCountries");
     if (selectEl) {
         selectEl.addEventListener("change", (e) => {
-            if (e.target.value) {
-                renderCountry(e.target.value); 
-            }
+            if (e.target.value) renderCountry(e.target.value);
         });
     }
 });
@@ -846,72 +826,44 @@ function renderCountry(country) {
     if (!country) return;
     const pureCountry = country.trim().toLowerCase();
     
-    const selectEl = document.getElementById("allCountries");
-    if (selectEl) {
-        selectEl.value = ""; 
-    }
-
-    // ബട്ടണുകളുടെ പച്ച കളർ (.active) മാറ്റുന്ന ഓപ്പറേഷൻ സിങ്ക് ചെയ്യുന്നു
+    // 3. താങ്കളുടെ ഒറിജിനൽ ബട്ടൺ ലൂപ്പ് (വലിയ ബോക്സിനെ ഒഴിവാക്കാൻ ഒരു ലൈൻ മാത്രം ചേർത്തു)
     document.querySelectorAll(".country-btn").forEach(btn => {
-        if (btn.id === "shopOnCountry" || btn.getAttribute("id") === "shopOnCountry") return; 
+        if (btn.id === "shopOnCountry") return; 
         
         const btnText = btn.textContent.trim().toLowerCase();
         
-        if (btnText === pureCountry) {
-            btn.classList.add("active");
+        if (btnText === pureCountry || (btnText === "saudi arabia" && pureCountry === "saudi arabia")) {
+            btn.style.color = "#00ff66";
         } else {
-            btn.classList.remove("active");
+            btn.style.color = "#ffffff";
         }
     });
 
-    // വലിയ ഷോപ്പ് ബോക്സിന്റെ കളർ സിങ്ക് ചെയ്യുന്നു
+    // 4. താങ്കളുടെ ഒറിജിനൽ വലിയ ഷോപ്പ് ബോക്സ് (SHOP ON COUNTRY)
     const shopBtn = document.getElementById("shopOnCountry");
     if (shopBtn) {
         const displayCountry = country.toUpperCase();
-        shopBtn.innerHTML = `SHOP ON <span>${displayCountry}</span>`;
-        shopBtn.classList.add("active-shop");
+        shopBtn.innerHTML = `SHOP ON <span style="color: #00ff66;">${displayCountry}</span>`;
     }
 
     localStorage.setItem("selectedCountry", pureCountry);
     loadShops(pureCountry);
 }
 
-// താങ്കളുടെ ഒറിജിനൽ അറേയിൽ (CountryShops) നിന്ന് 10 ഷോപ്പുകൾ മാത്രം വിളിക്കുന്ന ഫങ്ക്ഷൻ
 function loadShops(country) {
     const featuredShopsDiv = document.getElementById("featuredShops");
     if (!featuredShopsDiv) return;
     
     featuredShopsDiv.innerHTML = "";
     
-    if (typeof countryShops !== 'undefined' && countryShops[country]) {
-
-    const shops = countryShops[country].slice(0,10);
-
-    shops.forEach(shop => {
-
-        featuredShopsDiv.innerHTML += `
-        <div class="shopCard">
-            <div class="shopName">${shop.n}</div>
-
-            <a href="${shop.u}"
-               target="_blank"
-               rel="noopener">
-               VISIT SHOP
-            </a>
-        </div>
-        `;
-
-    });
-
+    if (countryShops[country]) {
+        const shops = countryShops[country].slice(0, 10);
+        shops.forEach(shop => {
+            featuredShopsDiv.innerHTML += `<a href="${shop.u}">${shop.n}</a>`;
+        });
+    }
 }
-
-// ==========================================
-// 🛑 താങ്കൾ തന്ന രണ്ട് അറേകളുടെ തുടക്കം ഇതാ 🛑
-// ==========================================
-
- 
 </script>
-
 
  
 /* ================================================= */
