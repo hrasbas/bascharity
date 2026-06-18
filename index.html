@@ -18612,7 +18612,7 @@ allCountries.onchange=()=>{
 renderCountry(allCountries.value);
 
 document
-.querySelectorAll(".countri-btn")
+.querySelectorAll(".country-btn")
 .forEach(btn=>{
 
 btn.classList.remove("active");
@@ -18642,7 +18642,7 @@ const value=
 this.value.toLowerCase();
 
 document
-.querySelectorAll(".countri-btn")
+.querySelectorAll(".country-btn")
 .forEach(btn=>{
 
 btn.style.display=
@@ -18735,7 +18735,7 @@ const savedCountry =
 localStorage.getItem("selectedCountry") || "india";
 
 renderCountry(savedCountry);
-document.querySelectorAll(".countri-btn")
+document.querySelectorAll(".country-btn")
 .forEach(btn=>{
 
 btn.onclick=()=>{
