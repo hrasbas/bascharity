@@ -727,6 +727,72 @@ color:#00ff66;
 }
 
 </style>
+
+  <script>
+
+const selectBox =
+document.getElementById("allCountries");
+
+const shopsBox =
+document.getElementById("featuredShops");
+
+/* DROPDOWN */
+
+selectBox.innerHTML =
+'<option value="">SEARCH ALL COUNTRIES</option>';
+
+allCountriesList.forEach(country => {
+
+  const option =
+  document.createElement("option");
+
+  option.value = country;
+  option.textContent = country;
+
+  selectBox.appendChild(option);
+
+});
+
+/* SHOPS */
+
+function loadCountry(country){
+
+  shopsBox.innerHTML = "";
+
+  if(!countryShops[country]) return;
+
+  countryShops[country]
+  .slice(0,10)
+  .forEach(shop => {
+
+    shopsBox.innerHTML += `
+      <a href="${shop.u}"
+         target="_blank"
+         class="shopCard">
+         ${shop.n}
+      </a>
+    `;
+
+  });
+
+}
+
+/* DROPDOWN CHANGE */
+
+selectBox.addEventListener(
+"change",
+function(){
+
+  loadCountry(this.value);
+
+}
+);
+
+/* DEFAULT */
+
+loadCountry("india");
+
+</script>
  
  <div id="countryButtons"></div>
   
