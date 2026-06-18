@@ -18739,38 +18739,6 @@ renderCountry(savedCountry);
 document.querySelectorAll(".country-btn")
 .forEach(btn=>{
 
-btn.onclick=()=>{
-  document.querySelectorAll(".country-btn")
-.forEach(x=>x.classList.remove("active"));
-
-btn.classList.add("active");
-
-const country=
-btn.classList[1];
- localStorage.setItem(
-"selectedCountry",
-country
-);
-
-renderCountry(country);
-  
-
-};
-  
-allCountries.value = country;
-
-document.querySelectorAll(".country-btn").forEach(btn => {
-
-  btn.classList.remove("active");
-
-  if (
-    btn.textContent.trim().toLowerCase() ===
-    country.toLowerCase()
-  ) {
-    btn.classList.add("active");
-  }
-
-});
  
 </script>
  
