@@ -797,81 +797,93 @@ SHOP ON USA
 <div id="featuredShops"></div>
 
 </div>
+<!-- COUNTRY HTML -->
+
+<select id="allCountries">
+<option value="">SELECT COUNTRY</option>
+</select>
+
+<h3 id="shopOnCountry">
+SHOP ON INDIA
+</h3>
+
+<div id="featuredShops"></div>
+
 <script>
-document.addEventListener("DOMContentLoaded", () => {
-    const savedCountry = localStorage.getItem("selectedCountry") || "india";
-    renderCountry(savedCountry);
 
-    // മുകളിലെ ബട്ടണുകൾ ഞെക്കുമ്പോൾ ഉള്ള സിങ്ക് ഓപ്പറേഷൻ
-    document.querySelectorAll(".country-btn").forEach(btn => {
-        if (btn.id === "shopOnCountry") return; 
-        
-        btn.addEventListener("click", function() {
-            const countryText = this.textContent.trim().toLowerCase();
-            renderCountry(countryText);
-        });
-    });
+/* DROPDOWN */
 
-    // ഡ്രോപ്പ്ഡൗൺ ബോക്സിൽ രാജ്യം മാറ്റുമ്പോൾ കളർ ഓപ്പറേഷൻ കൃത്യമായി സിങ്ക് ചെയ്യാൻ
-    const selectEl = document.getElementById("allCountries");
-    if (selectEl) {
-        selectEl.addEventListener("change", (e) => {
-            if (e.target.value) {
-                renderCountry(e.target.value); 
-            }
-        });
-    }
+const selectBox =
+document.getElementById("allCountries");
+
+const shopsBox =
+document.getElementById("featuredShops");
+
+selectBox.innerHTML =
+'<option value="">SELECT COUNTRY</option>';
+
+allCountriesList.forEach(country=>{
+
+const option =
+document.createElement("option");
+
+option.value = country;
+option.textContent = country;
+
+selectBox.appendChild(option);
+
 });
 
-function renderCountry(country) {
-    if (!country) return;
-    const pureCountry = country.trim().toLowerCase();
-    
-    // ഡ്രോപ്പ്ഡൗൺ ബോക്സിന്റെ വാല്യൂ സിങ്ക് ചെയ്യുന്നു
-    const selectEl = document.getElementById("allCountries");
-    if (selectEl) {
-        selectEl.value = pureCountry;
-    }
 
-    // കളർ മാറ്റുന്ന ഓപ്പറേഷൻ സിങ്ക് (താങ്കളുടെ ഒറിജിനൽ കണ്ടീഷൻ അതേപടി)
-    document.querySelectorAll(".country-btn").forEach(btn => {
-        if (btn.id === "shopOnCountry") return; 
-        
-        const btnText = btn.textContent.trim().toLowerCase();
-        
-        if (btnText === pureCountry || (btnText === "saudi arabia" && pureCountry === "saudi arabia")) {
-            btn.style.color = "#00ff66";
-        } else {
-            btn.style.color = "#ffffff";
-        }
-    });
+/* SHOP LOAD */
 
-    // താഴെയുള്ള വലിയ ഷോപ്പ് ബോക്സ് (SHOP ON COUNTRY)
-    const shopBtn = document.getElementById("shopOnCountry");
-    if (shopBtn) {
-        const displayCountry = country.toUpperCase();
-        shopBtn.innerHTML = `SHOP ON <span style="color: #00ff66;">${displayCountry}</span>`;
-    }
+function loadCountry(country){
 
-    localStorage.setItem("selectedCountry", pureCountry);
-    loadShops(pureCountry);
+document.getElementById(
+"shopOnCountry"
+).textContent =
+"SHOP ON " +
+country.toUpperCase();
+
+shopsBox.innerHTML = "";
+
+if(!countryShops[country]) return;
+
+countryShops[country]
+.forEach(shop=>{
+
+shopsBox.innerHTML += `
+<a href="${shop.u}"
+target="_blank"
+class="shopCard">
+${shop.n}
+</a>
+`;
+
+});
+
 }
 
-function loadShops(country) {
-    const featuredShopsDiv = document.getElementById("featuredShops");
-    if (!featuredShopsDiv) return;
-    
-    featuredShopsDiv.innerHTML = "";
-    
-    if (countryShops[country]) {
-        const shops = countryShops[country].slice(0, 10);
-        shops.forEach(shop => {
-            featuredShopsDiv.innerHTML += `<a href="${shop.u}">${shop.n}</a>`;
-        });
-    }
+
+/* DROPDOWN CHANGE */
+
+selectBox.addEventListener(
+"change",
+function(){
+
+if(this.value){
+loadCountry(this.value);
 }
+
+}
+);
+
+
+/* DEFAULT */
+
+loadCountry("india");
+
 </script>
-
 
 <style>
 
