@@ -18755,6 +18755,28 @@ renderCountry(country);
   
 
 };
+  <script>
+
+/* BUTTON → DROPDOWN SYNC */
+
+allCountries.value = country;
+
+/* DROPDOWN → BUTTON SYNC */
+
+document.querySelectorAll(".country-btn")
+.forEach(btn=>{
+
+btn.classList.remove("active");
+
+if(
+btn.textContent.trim().toLowerCase() ===
+country.toLowerCase()
+){
+btn.classList.add("active");
+}
+
+});
+
 
 });
 </script>
