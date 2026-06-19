@@ -958,45 +958,167 @@ gap:10px;
   display:grid;
   grid-template-columns:1fr;
   gap:10px;
-.shopCard{
-  background:#1a1a1a;
-  border-radius:12px;
-  padding:10px;
-  margin-bottom:8px;
-
-  display:flex;
-  align-items:center;
-
-  text-decoration:none;
-  color:#fff;
-
-  width:96%;
-  max-width:900px;
-  margin-left:auto;
-  margin-right:auto;
-
-  border:1px solid #333;
+<style>
+#featuredShops {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    width: 90%;
+    max-width: 900px;
+    margin: 0 auto;
 }
 
-.shopFav{
-  width:42px;
-  height:42px;
-
-  background:#fff;
-  border-radius:8px;
-
-  margin-right:12px;
-
-  object-fit:contain;
-  padding:2px;
-  box-sizing:border-box;
+/* സ്ക്രീൻഷോട്ടിലെ സിഗ്നേച്ചർ കളർ ബോർഡറുള്ള ഷോപ്പ് കാർഡ് ഡിസൈൻ */
+.bas-shop-card {
+    display: flex;
+    align-items: center;
+    background-color: #151515; /* ഡാർക്ക് ബാക്ക്ഗ്രൗണ്ട് */
+    border-radius: 12px;
+    padding: 12px 16px;
+    text-decoration: none;
+    color: #ffffff;
+    transition: transform 0.2s, background-color 0.2s;
+    
+    /* ഇടതുവശത്ത് സിഗ്നേച്ചർ കളർ ഗ്രേഡിയന്റ് ബോർഡർ വരാൻ */
+    border-left: 5px solid transparent;
+    border-image: linear-gradient(to bottom, #ff9900, #ff5500) 1;
 }
 
-.shopName{
-  font-size:15px;
-  font-weight:700;
-  color:#fff;
+.bas-shop-card:hover {
+    background-color: #1f1f1f;
+    transform: translateY(-2px);
 }
+
+/* ഷോപ്പ് ലോഗോ സെറ്റിംഗ്സ് */
+.bas-shop-logo {
+    width: 45px;
+    height: 45px;
+    border-radius: 8px;
+    object-fit: cover;
+    margin-right: 15px;
+    background-color: #ffffff; /* ലോഗോകൾ തെളിഞ്ഞു കാണാൻ */
+}
+
+/* ഷോപ്പ് ഡീറ്റെയിൽസ് ടെക്സ്റ്റ് */
+.bas-shop-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.bas-shop-name {
+    font-size: 16px;
+    font-weight: 700;
+    color: #ffffff;
+    margin-bottom: 2px;
+}
+
+.bas-shop-sub {
+    font-size: 12px;
+    color: #aaaaaa;
+}
+</style>
+
+<script>
+window.addEventListener("load", () => {
+    const selectEl = document.getElementById("allCountries");
+    if (selectEl) {
+        selectEl.innerHTML = ""; 
+        
+        const defaultOption = document.createElement("option");
+        defaultOption.value = "";
+        defaultOption.textContent = "SELECT ALL COUNTRIES 🔽";
+        selectEl.appendChild(defaultOption);
+
+        if (typeof AllCountriesList !== 'undefined') {
+            AllCountriesList.forEach(country => {
+                const option = document.createElement("option");
+                option.value = country;
+                option.textContent = country.toUpperCase();
+                selectEl.appendChild(option);
+            });
+        }
+    }
+
+    const savedCountry = localStorage.getItem("selectedCountry") || "india";
+    renderCountry(savedCountry);
+
+    document.querySelectorAll(".country-btn").forEach(btn => {
+        if (btn.id === "shopOnCountry" || btn.getAttribute("id") === "shopOnCountry") return; 
+        
+        btn.addEventListener("click", function() {
+            const countryText = this.textContent.trim().toLowerCase();
+            renderCountry(countryText);
+        });
+    });
+
+    if (selectEl) {
+        selectEl.addEventListener("change", (e) => {
+            if (e.target.value) {
+                renderCountry(e.target.value); 
+            }
+        });
+    }
+});
+
+function renderCountry(country) {
+    if (!country) return;
+    const pureCountry = country.trim().toLowerCase();
+    
+    const selectEl = document.getElementById("allCountries");
+    if (selectEl) {
+        selectEl.value = ""; 
+    }
+
+    document.querySelectorAll(".country-btn").forEach(btn => {
+        if (btn.id === "shopOnCountry" || btn.getAttribute("id") === "shopOnCountry") return; 
+        
+        const btnText = btn.textContent.trim().toLowerCase();
+        
+        if (btnText === pureCountry) {
+            btn.classList.add("active");
+        } else {
+            btn.classList.remove("active");
+        }
+    });
+
+    const shopBtn = document.getElementById("shopOnCountry");
+    if (shopBtn) {
+        const displayCountry = country.toUpperCase();
+        shopBtn.innerHTML = `SHOP ON <span>${displayCountry}</span>`;
+        shopBtn.classList.add("active-shop");
+    }
+
+    localStorage.setItem("selectedCountry", pureCountry);
+    loadShops(pureCountry);
+}
+
+// [UPDATED]: താങ്കൾ തന്ന പുതിയ സ്ക്രീൻഷോട്ടിലെ ലോഗോ, പേര്, സിഗ്നേച്ചർ കളറോട് കൂടിയ കാർഡ് നിർമ്മിക്കുന്ന ഫങ്ക്ഷൻ
+function loadShops(country) {
+    const featuredShopsDiv = document.getElementById("featuredShops");
+    if (!featuredShopsDiv) return;
+    
+    featuredShopsDiv.innerHTML = "";
+    
+    if (typeof CountryShops !== 'undefined' && CountryShops[country]) {
+        // ഒറിജിനൽ അറേയിൽ നിന്ന് കൃത്യം 10 ഷോപ്പുകൾ മാത്രം എടുക്കുന്നു
+        const shops = CountryShops[country].slice(0, 10);
+        
+        shops.forEach(shop => {
+            // താങ്കൾ ആവശ്യപ്പെട്ടതുപോലെ ബട്ടൺ ലിങ്ക്, ലോഗോ ഇമേജ്, പേര്, സിഗ്നേച്ചർ ബോർഡർ എല്ലാം ചേർത്ത കാർഡ് സ്ട്രക്ചർ
+            featuredShopsDiv.innerHTML += `
+                <a href="${shop.u}" target="_blank" class="bas-shop-card">
+                    <img src="${shop.a || 'https://via.placeholder.com/45'}" alt="${shop.n}" class="bas-shop-logo" onerror="this.src='https://via.placeholder.com/45';">
+                    <div class="bas-shop-info">
+                        <span class="bas-shop-name">${shop.n.toUpperCase()}</span>
+                        <span class="bas-shop-sub">Check today's offer</span>
+                    </div>
+                </a>
+            `;
+        });
+    }
+}
+
+
   </style>
   
   <script>
