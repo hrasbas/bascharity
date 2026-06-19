@@ -950,55 +950,225 @@ border-radius:12px;
 /* ================================================= */
 /* FEATURED SHOPS */
 /* ================================================= */
+<div id="featuredShops"></div>
 
-.shop-list{
-  display:flex;
-  flex-direction:column;
-  gap:10px;
+</div> <style>
+#featuredShops {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    width: 90%;
+    max-width: 900px;
+    margin: 20px auto;
+    padding: 0;
 }
 
-.shop-card{
-  display:flex;
-  align-items:center;
-  gap:12px;
-
-  width:96%;
-  max-width:900px;
-  margin:0 auto;
-
-  text-decoration:none;
-  color:#fff;
-
-  background:#151515;
-  border:1px solid #333;
-  border-radius:12px;
-  padding:12px;
-  min-height:72px;
-
-  box-sizing:border-box;
+/* ഇടതുവശത്ത് ഗ്രേഡിയന്റ് ബോർഡർ ഉള്ള താങ്കളുടെ ഒറിജിനൽ പക്കാ ഡാർക്ക് കാർഡ് ബോക്സ് */
+.bas-shop-card {
+    display: flex !important;
+    align-items: center !important;
+    background-color: #1a1a1a !important;
+    border-radius: 10px !important;
+    padding: 14px 16px !important;
+    text-decoration: none !important;
+    color: #ffffff !important;
+    box-sizing: border-box !important;
+    width: 100% !important;
+    border-left: 5px solid transparent !important;
+    border-image: linear-gradient(to bottom, #ff9900, #ff5500) 1 !important;
 }
 
-.shop-icon{
-  width:56px;
-  height:56px;
-
-  background:#fff;
-  border-radius:8px;
-
-  object-fit:contain;
-  flex:0 0 56px;
+/* ഷോപ്പ് ഐക്കൺ ലോഗോ സ്റ്റൈൽ */
+.bas-shop-logo {
+    width: 42px !important;
+    height: 42px !important;
+    border-radius: 8px !important;
+    object-fit: cover !important;
+    margin-right: 16px !important;
+    display: block !important;
 }
 
-.shop-name{
-  flex:1;
-  text-align:left;
+/* ഐക്കണിന് നേരെ കൃത്യമായി വരാനുള്ള ഇൻഫോ ബോക്സ് */
+.bas-shop-info {
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: center !important;
+}
 
-  font-size:18px;
-  font-weight:700;
-  line-height:1.2;
+/* 쇼പ്പ് പേര് */
+.bas-shop-name {
+    font-size: 16px !important;
+    font-weight: 700 !important;
+    color: #ffffff !important;
+    text-transform: uppercase !important;
+}
 
-  color:#fff;
-}2;
+/* സബ് ടെക്സ്റ്റ് */
+.bas-shop-sub {
+    font-size: 12px !important;
+    color: #aaaaaa !important;
+    margin-top: 2px !important;
+}
+</style>
+
+<script>
+// താങ്കൾ നൽകിയ ഒഫിഷ്യൽ അറേകൾ ഇവിടെ ബന്ധിപ്പിച്ചു
+const allCountriesList = ["india","usa","uk","uae","saudi arabia","canada","germany","france","australia"];
+
+const countryShops = {
+  india: [
+    {n:"Amazon India", u:"https://www.amazon.in"},
+    {n:"Flipkart", u:"https://www.flipkart.com"},
+    {n:"Myntra", u:"https://www.myntra.com"}
+  ],
+  usa: [
+    {n:"Amazon USA", u:"https://www.amazon.com"},
+    {n:"Walmart USA", u:"https://www.walmart.com"},
+    {n:"Best Buy", u:"https://www.bestbuy.com"}
+  ],
+  uk: [
+    {n:"Amazon UK", u:"https://www.amazon.co.uk"},
+    {n:"Tesco", u:"https://www.tesco.com"},
+    {n:"ASOS", u:"https://www.asos.com"}
+  ],
+  uae: [
+    {n:"Amazon UAE", u:"https://www.amazon.ae"},
+    {n:"Noon", u:"https://www.noon.com"},
+    {n:"Carrefour UAE", u:"https://www.carrefouruae.com"}
+  ],
+  "saudi arabia": [
+    {n:"Amazon Saudi", u:"https://www.amazon.sa"},
+    {n:"Noon Saudi", u:"https://www.noon.com/saudi-ar"},
+    {n:"Jarir", u:"https://www.jarir.com"}
+  ],
+  canada: [
+    {n:"Amazon Canada", u:"https://www.amazon.ca"},
+    {n:"Walmart Canada", u:"https://www.walmart.ca"},
+    {n:"Best Buy Canada", u:"https://www.bestbuy.ca"}
+  ],
+  germany: [
+    {n:"Amazon Germany", u:"https://www.amazon.de"},
+    {n:"Zalando", u:"https://www.zalando.de"},
+    {n:"MediaMarkt", u:"https://www.mediamarkt.de"}
+  ],
+  france: [
+    {n:"Amazon France", u:"https://www.amazon.fr"},
+    {n:"Cdiscount", u:"https://www.cdiscount.com"},
+    {n:"Fnac", u:"https://www.fnac.com"}
+  ],
+  australia: [
+    {n:"Amazon Australia", u:"https://www.amazon.com.au"},
+    {n:"Kmart", u:"https://www.kmart.com.au"},
+    {n:"JB Hi-Fi", u:"https://www.jbhifi.com.au"}
+  ]
+};
+
+// പേജ് ലോഡ് ചെയ്യുമ്പോൾ റൺ ചെയ്യേണ്ട പ്രധാന കാര്യങ്ങൾ
+document.addEventListener("DOMContentLoaded", () => {
+    const selectEl = document.getElementById("allCountries");
+    if (selectEl) {
+        selectEl.innerHTML = ""; 
+        
+        const defaultOption = document.createElement("option");
+        defaultOption.value = "";
+        defaultOption.textContent = "SELECT ALL COUNTRIES 🔽";
+        selectEl.appendChild(defaultOption);
+
+        if (typeof allCountriesList !== 'undefined') {
+            allCountriesList.forEach(country => {
+                const option = document.createElement("option");
+                option.value = country;
+                option.textContent = country.toUpperCase();
+                selectEl.appendChild(option);
+            });
+        }
+    }
+
+    const savedCountry = localStorage.getItem("selectedCountry") || "india";
+    renderCountry(savedCountry);
+
+    // മുകളിലെ 9 ബട്ടണുകൾ ഞെക്കുമ്പോൾ ഉള്ള സിങ്ക് ഓപ്പറേഷൻ
+    document.querySelectorAll(".country-btn").forEach(btn => {
+        if (btn.id === "shopOnCountry" || btn.getAttribute("id") === "shopOnCountry") return; 
+        
+        btn.addEventListener("click", function() {
+            const countryText = this.textContent.trim().toLowerCase();
+            renderCountry(countryText);
+        });
+    });
+
+    // ഡ്രോപ്പ്ഡൗൺ ലിസ്റ്റിൽ രാജ്യം മാറ്റുമ്പോൾ ഉള്ള സിങ്ക് ഓപ്പറേഷൻ
+    if (selectEl) {
+        selectEl.addEventListener("change", (e) => {
+            if (e.target.value) {
+                renderCountry(e.target.value); 
+            }
+        });
+    }
+});
+
+// രാജ്യം സെലക്ട് ചെയ്യുമ്പോൾ ഉള്ള കളർ മാറ്റവും ഡ്രോപ്പ്ഡൗൺ സിങ്കും
+function renderCountry(country) {
+    if (!country) return;
+    const pureCountry = country.trim().toLowerCase();
+    
+    const selectEl = document.getElementById("allCountries");
+    if (selectEl) {
+        selectEl.value = ""; 
+    }
+
+    // ബട്ടണുകളുടെ കളർ പച്ചയാക്കി മാറ്റുന്ന ഭാഗം
+    document.querySelectorAll(".country-btn").forEach(btn => {
+        if (btn.id === "shopOnCountry" || btn.getAttribute("id") === "shopOnCountry") return; 
+        
+        const btnText = btn.textContent.trim().toLowerCase();
+        if (btnText === pureCountry) {
+            btn.style.color = "#00ff66";
+        } else {
+            btn.style.color = "#ffffff";
+        }
+    });
+
+    // SHOP ON COUNTRY ബട്ടൺ അപ്ഡേറ്റ് ചെയ്യുന്നു
+    const shopBtn = document.getElementById("shopOnCountry");
+    if (shopBtn) {
+        const displayCountry = country.toUpperCase();
+        shopBtn.innerHTML = `SHOP ON <span style="color: #00ff66;">${displayCountry}</span>`;
+    }
+
+    localStorage.setItem("selectedCountry", pureCountry);
+    loadShops(pureCountry);
+}
+
+// അറേയുമായി ബന്ധിപ്പിച്ച് ഐക്കണും ഷോപ്പ് നെയിമും സിഗ്നേച്ചർ ബോർഡറും നൽകുന്ന ഫങ്ക്ഷൻ
+function loadShops(country) {
+    const featuredShopsDiv = document.getElementById("featuredShops");
+    if (!featuredShopsDiv) return;
+    
+    featuredShopsDiv.innerHTML = "";
+    
+    if (typeof countryShops !== 'undefined' && countryShops[country]) {
+        const shops = countryShops[country];
+        
+        shops.forEach(shop => {
+            // യുആർഎല്ലിൽ നിന്ന് ഡൊമെയ്ൻ മാത്രം എടുത്ത് ക്ലിയർബിറ്റ് വഴി ഓട്ടോമാറ്റിക്കായി ലോഗോ കൊണ്ടുവരുന്നു
+            const domain = shop.u.replace('https://', '').replace('www.', '').split('/')[0];
+            const logoUrl = `https://logo.clearbit.com/${domain}`;
+            
+            featuredShopsDiv.innerHTML += `
+                <a href="${shop.u}" target="_blank" class="bas-shop-card">
+                    <img src="${logoUrl}" alt="${shop.n}" class="bas-shop-logo" onerror="this.src='https://via.placeholder.com/42';">
+                    <div class="bas-shop-info">
+                        <span class="bas-shop-name">${shop.n.toUpperCase()}</span>
+                        <span class="bas-shop-sub">Check today's offer</span>
+                    </div>
+                </a>
+            `;
+        });
+    }
+}
+</script>
+
 }
   </style>
   <script>
