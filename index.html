@@ -945,54 +945,61 @@ border-radius:12px;
 /* FEATURED SHOPS */
 /* ================================================= */
 
- .shopCard{
-  position:relative;
-  background:#1a1a1a;
-
-  border-radius:12px;
-  padding:12px;
-  display:flex;
-  align-items:center;
-  gap:14px;
-
+.shopCard{
   width:96%;
   max-width:900px;
   margin:0 auto 10px auto;
 
-  text-decoration:none;
-  box-sizing:border-box;
+  display:flex;
+  align-items:center;
+  gap:12px;
 
+  background:#151515;
   border:1px solid #333;
-  min-height:82px;
+  border-radius:12px;
+  padding:12px;
+
+  text-decoration:none;
+  color:#fff;
+  box-sizing:border-box;
 }
 
-.shopCard:nth-child(10n+1){border-left:6px solid #ff9900;}
-.shopCard:nth-child(10n+2){border-left:6px solid #2874f0;}
-.shopCard:nth-child(10n+3){border-left:6px solid #1428a0;}
-.shopCard:nth-child(10n+4){border-left:6px solid #fe3f6c;}
-.shopCard:nth-child(10n+5){border-left:6px solid #003087;}
-.shopCard:nth-child(10n+6){border-left:6px solid #da1c5c;}
-.shopCard:nth-child(10n+7){border-left:6px solid #ed1c24;}
-.shopCard:nth-child(10n+8){border-left:6px solid #00e9bf;}
-.shopCard:nth-child(10n+9){border-left:6px solid #fc2779;}
-.shopCard:nth-child(10n+10){border-left:6px solid #9c27b0;}
+.shopCard:nth-child(10n+1){border-left:5px solid #ff9900;}
+.shopCard:nth-child(10n+2){border-left:5px solid #2874f0;}
+.shopCard:nth-child(10n+3){border-left:5px solid #1428a0;}
+.shopCard:nth-child(10n+4){border-left:5px solid #fe3f6c;}
+.shopCard:nth-child(10n+5){border-left:5px solid #003087;}
+.shopCard:nth-child(10n+6){border-left:5px solid #da1c5c;}
+.shopCard:nth-child(10n+7){border-left:5px solid #ed1c24;}
+.shopCard:nth-child(10n+8){border-left:5px solid #00e9bf;}
+.shopCard:nth-child(10n+9){border-left:5px solid #fc2779;}
+.shopCard:nth-child(10n+10){border-left:5px solid #9c27b0;}
 
 .shopFav{
-  width:60px;
-  height:60px;
+  width:42px;
+  height:42px;
+
   background:#fff;
   border-radius:8px;
   padding:2px;
-  object-fit:contain;
-  flex-shrink:0;
+
+  object-fit:cover;
+  flex:0 0 42px;
+
   box-sizing:border-box;
+}
+
+.shopInfo{
+  flex:1;
+  display:flex;
+  align-items:center;
 }
 
 .shopName{
   flex:1;
   text-align:left;
 
-  font-size:18px;
+  font-size:15px;
   font-weight:700;
   color:#fff;
   line-height:1.2;
