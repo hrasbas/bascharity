@@ -954,6 +954,8 @@ gap:10px;
 /* ================================================= */
 /* SHOP CARD */
  <script>
+ 
+    <script>
 window.addEventListener("load", () => {
     const selectEl = document.getElementById("allCountries");
     if (selectEl) {
@@ -964,9 +966,11 @@ window.addEventListener("load", () => {
         defaultOption.textContent = "SELECT ALL COUNTRIES 🔽";
         selectEl.appendChild(defaultOption);
 
-        // താങ്കളുടെ ഒറിജിനൽ അറേയിൽ (AllCountriesList) നിന്ന് രാജ്യങ്ങൾ ഡ്രോപ്പ്ഡൗണിലേക്ക് കയറ്റുന്നു
-        if (typeof AllCountriesList !== 'undefined') {
-            AllCountriesList.forEach(country => {
+        // സുരക്ഷിതമായി അറേയുടെ പേര് കണ്ടുപിടിക്കുന്ന ഭാഗം
+        const currentCountriesList = (typeof AllCountriesList !== 'undefined') ? AllCountriesList : ((typeof allCountriesList !== 'undefined') ? allCountriesList : []);
+
+        if (currentCountriesList && currentCountriesList.length > 0) {
+            currentCountriesList.forEach(country => {
                 const option = document.createElement("option");
                 option.value = country;
                 option.textContent = country.toUpperCase();
@@ -1028,19 +1032,20 @@ function renderCountry(country) {
     loadShops(pureCountry);
 }
 
-// താങ്കൾ തന്ന ഒറിജിനൽ സിംഗിൾ ലൈൻ ഡിസൈൻ മാത്രം അടങ്ങുന്ന ഫങ്ക്ഷൻ
 function loadShops(country) {
     const featuredShopsDiv = document.getElementById("shops");
     if (!featuredShopsDiv) return;
     
     featuredShopsDiv.innerHTML = "";
     
-    // താങ്കളുടെ ഒറിജിനൽ അറേ പേര് (CountryShops) വെച്ച് ഡാറ്റ എടുക്കുന്നു
-    if (typeof CountryShops !== 'undefined' && CountryShops[country]) {
-        const shops = CountryShops[country].slice(0, 10);
+    // അറേയുടെ പേര് CountryShops എന്നാണെങ്കിലും countryShops എന്നാണെങ്കിലും സിസ്റ്റം തനിയെ അഡ്രസ്സ് ചെയ്യും
+    const currentCountryShops = (typeof CountryShops !== 'undefined') ? CountryShops : ((typeof countryShops !== 'undefined') ? countryShops : null);
+    
+    if (currentCountryShops && currentCountryShops[country]) {
+        const shops = currentCountryShops[country].slice(0, 10);
         
         shops.forEach(shop => {
-            // എന്റെ വക മാറ്റങ്ങൾ ഒന്നും ഇല്ലാത്ത, താങ്കളുടെ അതേ ഒറിജിനൽ ഒറ്റ വരി ടാഗ്
+            // താങ്കളുടെ ഒറിജിനൽ പക്കാ ഡിസൈൻ ടാഗ്
             featuredShopsDiv.innerHTML += `
                 <a href="${shop.u}" target="_blank">
                     <img src="${shop.a}">
@@ -1052,7 +1057,6 @@ function loadShops(country) {
 }
 </script>
 
- 
 
 <script>
 window.addEventListener("load", () => {
