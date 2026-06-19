@@ -948,169 +948,55 @@ border-radius:12px;
 
 </div>
 
-<script>
-document.addEventListener("DOMContentLoaded", () => {
-    const selectEl = document.getElementById("allCountries");
-    if (selectEl) {
-        selectEl.innerHTML = ""; 
-        
-        const defaultOption = document.createElement("option");
-        defaultOption.value = "";
-        defaultOption.textContent = "SELECT ALL COUNTRIES 🔽";
-        selectEl.appendChild(defaultOption);
+ .shopCard{
+  position:relative;
+  background:#1a1a1a;
 
-        // GitHub ഫയലിലെ 'allCountriesList' കൃത്യമായി കണക്ട് ചെയ്യുന്നു
-        if (typeof allCountriesList !== 'undefined') {
-            allCountriesList.forEach(country => {
-                const option = document.createElement("option");
-                option.value = country;
-                option.textContent = country.toUpperCase();
-                selectEl.appendChild(option);
-            });
-        }
-    }
+  border-radius:12px;
+  padding:12px;
+  display:flex;
+  align-items:center;
+  gap:14px;
 
-    const savedCountry = localStorage.getItem("selectedCountry") || "india";
-    renderCountry(savedCountry);
+  width:96%;
+  max-width:900px;
+  margin:0 auto 10px auto;
 
-    // മുകളിലെ ബട്ടണുകൾ ഞെക്കുമ്പോൾ ഉള്ള സിങ്ക് ഓപ്പറേഷൻ
-    document.querySelectorAll(".country-btn").forEach(btn => {
-        if (btn.id === "shopOnCountry" || btn.getAttribute("id") === "shopOnCountry") return; 
-        
-        btn.addEventListener("click", function() {
-            const countryText = this.textContent.trim().toLowerCase();
-            renderCountry(countryText);
-        });
-    });
+  text-decoration:none;
+  box-sizing:border-box;
 
-    // ഡ്രോപ്പ്ഡൗൺ ബോക്സിൽ രാജ്യം മാറ്റുമ്പോൾ കളർ ഓപ്പറേഷൻ കൃത്യമായി സിങ്ക് ചെയ്യാൻ
-    if (selectEl) {
-        selectEl.addEventListener("change", (e) => {
-            if (e.target.value) {
-                renderCountry(e.target.value); 
-            }
-        });
-    }
-});
-
-function renderCountry(country) {
-    if (!country) return;
-    const pureCountry = country.trim().toLowerCase();
-    
-    // ഡ്രോപ്പ്ഡൗൺ ബോക്സിന്റെ വാല്യൂ സിങ്ക് ചെയ്യുന്നു
-    const selectEl = document.getElementById("allCountries");
-    if (selectEl) {
-        selectEl.value = ""; 
-    }
-
-    // കളർ മാറ്റുന്ന ഓപ്പറേഷൻ സിങ്ക് (താങ്കളുടെ ഒറിജിനൽ കണ്ടീഷൻ അതേപടി)
-    document.querySelectorAll(".country-btn").forEach(btn => {
-        if (btn.id === "shopOnCountry" || btn.getAttribute("id") === "shopOnCountry") return; 
-        
-        const btnText = btn.textContent.trim().toLowerCase();
-        
-        if (btnText === pureCountry || (btnText === "saudi arabia" && pureCountry === "saudi arabia")) {
-            btn.style.color = "#00ff66";
-        } else {
-            btn.style.color = "#ffffff";
-        }
-    });
-
-    // താഴെയുള്ള വലിയ ഷോപ്പ് ബോക്സ് (SHOP ON COUNTRY)
-    const shopBtn = document.getElementById("shopOnCountry");
-    if (shopBtn) {
-        const displayCountry = country.toUpperCase();
-        shopBtn.innerHTML = `SHOP ON <span>${displayCountry}</span>`;
-        shopBtn.classList.add("active-shop");
-    }
-
-    localStorage.setItem("selectedCountry", pureCountry);
-    loadShops(pureCountry);
+  border:1px solid #333;
+  min-height:82px;
 }
 
-// [FIXED] - താങ്കളുടെ ആവശ്യപ്രകാരം സിംഗിൾ ലൈനിൽ പക്കാ സിഗ്നേച്ചർ കാർഡ് നിർമ്മിക്കുന്ന ഫങ്ക്ഷൻ
-function loadShops(country) {
-    // ഐഡി കൃത്യമായി #featuredShops എന്ന് ഫിക്സ് ചെയ്തു
-    const featuredShopsDiv = document.getElementById("featuredShops");
-    if (!featuredShopsDiv) return;
-    
-    featuredShopsDiv.innerHTML = "";
-    
-    // GitHub ഫയലിലെ 'countryShops' അഡ്രസ്സ് കൃത്യമായി സിങ്ക് ചെയ്തു
-    if (typeof countryShops !== 'undefined' && countryShops[country]) {
-        const shops = countryShops[country].slice(0, 10);
-        
-        shops.forEach(shop => {
-            // ലോഗോയും പേരും സബ് ടെക്സ്റ്റും അടങ്ങിയ പക്കാ ഒറ്റ വരി ഡിസൈൻ
-            featuredShopsDiv.innerHTML += `
-                <a href="${shop.u}" target="_blank" class="bas-shop-card">
-                    <img src="${shop.a || 'https://via.placeholder.com/42'}" alt="${shop.n}" class="bas-shop-logo" onerror="this.src='https://via.placeholder.com/42';">
-                    <div class="bas-shop-info">
-                        <span class="bas-shop-name">${shop.n.toUpperCase()}</span>
-                        <span class="bas-shop-sub">Check today's offer</span>
-                    </div>
-                </a>
-            `;
-        });
-    }
+.shopCard:nth-child(10n+1){border-left:6px solid #ff9900;}
+.shopCard:nth-child(10n+2){border-left:6px solid #2874f0;}
+.shopCard:nth-child(10n+3){border-left:6px solid #1428a0;}
+.shopCard:nth-child(10n+4){border-left:6px solid #fe3f6c;}
+.shopCard:nth-child(10n+5){border-left:6px solid #003087;}
+.shopCard:nth-child(10n+6){border-left:6px solid #da1c5c;}
+.shopCard:nth-child(10n+7){border-left:6px solid #ed1c24;}
+.shopCard:nth-child(10n+8){border-left:6px solid #00e9bf;}
+.shopCard:nth-child(10n+9){border-left:6px solid #fc2779;}
+.shopCard:nth-child(10n+10){border-left:6px solid #9c27b0;}
+
+.shopFav{
+  width:60px;
+  height:60px;
+  background:#fff;
+  border-radius:8px;
+  padding:2px;
+  object-fit:contain;
+  flex-shrink:0;
+  box-sizing:border-box;
 }
 
-
-<style>
-#featuredShops {
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
-    width: 90%;
-    max-width: 900px;
-    margin: 20px auto;
-    padding: 0;
+.shopName{
+  font-size:20px;
+  font-weight:700;
+  color:#ffffff;
+  line-height:1.2;
 }
-
-/* ഒറിജിനൽ മോഡലിലുള്ള സിംഗിൾ ലൈൻ ഗ്രേഡിയന്റ് ബോർഡർ കാർഡ് */
-.bas-shop-card {
-    display: flex;
-    align-items: center;
-    background-color: #1a1a1a;
-    border-radius: 10px;
-    padding: 14px 16px;
-    text-decoration: none;
-    color: #ffffff;
-    box-sizing: border-box;
-    width: 100%;
-    
-    border-left: 5px solid transparent;
-    border-image: linear-gradient(to bottom, #ff9900, #ff5500) 1;
-}
-
-.bas-shop-logo {
-    width: 42px;
-    height: 42px;
-    border-radius: 8px;
-    object-fit: cover;
-    margin-right: 16px;
-    display: block;
-}
-
-.bas-shop-info {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-
-.bas-shop-name {
-    font-size: 16px;
-    font-weight: 700;
-    color: #ffffff;
-    margin: 0 0 2px 0;
-}
-
-.bas-shop-sub {
-    font-size: 12px;
-    color: #aaaaaa;
-    margin: 0;
-}
-</style>
   
   <script>
 
