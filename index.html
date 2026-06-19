@@ -944,18 +944,12 @@ border-radius:12px;
 /* ================================================= */
 /* FEATURED SHOPS */
 /* ================================================= */
+<div id="featuredShops"></div>
 
-#featuredShops{
-display:grid;
-grid-template-columns:repeat(auto-fill,minmax(220px,1fr));
-gap:10px;
-}
+</div>
 
-/* ================================================= */
-/* SHOP CARD */
- <script>
 <script>
-window.addEventListener("load", () => {
+document.addEventListener("DOMContentLoaded", () => {
     const selectEl = document.getElementById("allCountries");
     if (selectEl) {
         selectEl.innerHTML = ""; 
@@ -979,6 +973,7 @@ window.addEventListener("load", () => {
     const savedCountry = localStorage.getItem("selectedCountry") || "india";
     renderCountry(savedCountry);
 
+    // മുകളിലെ ബട്ടണുകൾ ഞെക്കുമ്പോൾ ഉള്ള സിങ്ക് ഓപ്പറേഷൻ
     document.querySelectorAll(".country-btn").forEach(btn => {
         if (btn.id === "shopOnCountry" || btn.getAttribute("id") === "shopOnCountry") return; 
         
@@ -988,6 +983,7 @@ window.addEventListener("load", () => {
         });
     });
 
+    // ഡ്രോപ്പ്ഡൗൺ ബോക്സിൽ രാജ്യം മാറ്റുമ്പോൾ കളർ ഓപ്പറേഷൻ കൃത്യമായി സിങ്ക് ചെയ്യാൻ
     if (selectEl) {
         selectEl.addEventListener("change", (e) => {
             if (e.target.value) {
@@ -1001,23 +997,26 @@ function renderCountry(country) {
     if (!country) return;
     const pureCountry = country.trim().toLowerCase();
     
+    // ഡ്രോപ്പ്ഡൗൺ ബോക്സിന്റെ വാല്യൂ സിങ്ക് ചെയ്യുന്നു
     const selectEl = document.getElementById("allCountries");
     if (selectEl) {
         selectEl.value = ""; 
     }
 
+    // കളർ മാറ്റുന്ന ഓപ്പറേഷൻ സിങ്ക് (താങ്കളുടെ ഒറിജിനൽ കണ്ടീഷൻ അതേപടി)
     document.querySelectorAll(".country-btn").forEach(btn => {
         if (btn.id === "shopOnCountry" || btn.getAttribute("id") === "shopOnCountry") return; 
         
         const btnText = btn.textContent.trim().toLowerCase();
         
-        if (btnText === pureCountry) {
-            btn.classList.add("active");
+        if (btnText === pureCountry || (btnText === "saudi arabia" && pureCountry === "saudi arabia")) {
+            btn.style.color = "#00ff66";
         } else {
-            btn.classList.remove("active");
+            btn.style.color = "#ffffff";
         }
     });
 
+    // താഴെയുള്ള വലിയ ഷോപ്പ് ബോക്സ് (SHOP ON COUNTRY)
     const shopBtn = document.getElementById("shopOnCountry");
     if (shopBtn) {
         const displayCountry = country.toUpperCase();
@@ -1029,9 +1028,10 @@ function renderCountry(country) {
     loadShops(pureCountry);
 }
 
-// 🛑 താങ്കളുടെ ആവശ്യപ്രകാരം സിംഗിൾ ലൈനിൽ പക്കാ സിഗ്നേച്ചർ കാർഡ് നിർമ്മിക്കുന്ന ഫങ്ക്ഷൻ 🛑
+// [FIXED] - താങ്കളുടെ ആവശ്യപ്രകാരം സിംഗിൾ ലൈനിൽ പക്കാ സിഗ്നേച്ചർ കാർഡ് നിർമ്മിക്കുന്ന ഫങ്ക്ഷൻ
 function loadShops(country) {
-    const featuredShopsDiv = document.getElementById("shops");
+    // ഐഡി കൃത്യമായി #featuredShops എന്ന് ഫിക്സ് ചെയ്തു
+    const featuredShopsDiv = document.getElementById("featuredShops");
     if (!featuredShopsDiv) return;
     
     featuredShopsDiv.innerHTML = "";
@@ -1041,7 +1041,7 @@ function loadShops(country) {
         const shops = countryShops[country].slice(0, 10);
         
         shops.forEach(shop => {
-            // താങ്കൾ ആവശ്യപ്പെട്ട ഒറ്റ വരി ഡിസൈനിലുള്ള ലോഗോയും പേരും സബ് ടെക്സ്റ്റും
+            // ലോഗോയും പേരും സബ് ടെക്സ്റ്റും അടങ്ങിയ പക്കാ ഒറ്റ വരി ഡിസൈൻ
             featuredShopsDiv.innerHTML += `
                 <a href="${shop.u}" target="_blank" class="bas-shop-card">
                     <img src="${shop.a || 'https://via.placeholder.com/42'}" alt="${shop.n}" class="bas-shop-logo" onerror="this.src='https://via.placeholder.com/42';">
@@ -1056,8 +1056,61 @@ function loadShops(country) {
 }
 </script>
 
+<style>
+#featuredShops {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    width: 90%;
+    max-width: 900px;
+    margin: 20px auto;
+    padding: 0;
+}
 
-  </style>
+/* ഒറിജിനൽ മോഡലിലുള്ള സിംഗിൾ ലൈൻ ഗ്രേഡിയന്റ് ബോർഡർ കാർഡ് */
+.bas-shop-card {
+    display: flex;
+    align-items: center;
+    background-color: #1a1a1a;
+    border-radius: 10px;
+    padding: 14px 16px;
+    text-decoration: none;
+    color: #ffffff;
+    box-sizing: border-box;
+    width: 100%;
+    
+    border-left: 5px solid transparent;
+    border-image: linear-gradient(to bottom, #ff9900, #ff5500) 1;
+}
+
+.bas-shop-logo {
+    width: 42px;
+    height: 42px;
+    border-radius: 8px;
+    object-fit: cover;
+    margin-right: 16px;
+    display: block;
+}
+
+.bas-shop-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.bas-shop-name {
+    font-size: 16px;
+    font-weight: 700;
+    color: #ffffff;
+    margin: 0 0 2px 0;
+}
+
+.bas-shop-sub {
+    font-size: 12px;
+    color: #aaaaaa;
+    margin: 0;
+}
+</style>
   
   <script>
 
