@@ -953,70 +953,7 @@ gap:10px;
 
 /* ================================================= */
 /* SHOP CARD */
-/* ================================================= */
-#featuredShops{
-<style>
-/* ഷോപ്പ് കാർഡുകൾ കിടക്കുന്ന പ്രധാന ബോക്സ് */
-#featuredShops {
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
-    width: 90%;
-    max-width: 900px;
-    margin: 20px auto;
-    padding: 0;
-}
-
-/* താങ്കൾ തന്ന മോഡൽ സ്ക്രീൻഷോട്ടിലെ അതേ സിഗ്നേച്ചർ ബോർഡറുള്ള ഷോപ്പ് കാർഡ് */
-.bas-shop-card {
-    display: flex;
-    align-items: center;
-    background-color: #1a1a1a; /* ഡാർക്ക് കാർഡ് ബാക്ക്ഗ്രൗണ്ട് */
-    border-radius: 10px;
-    padding: 14px 16px;
-    text-decoration: none;
-    color: #ffffff;
-    box-sizing: border-box;
-    width: 100%;
-    
-    /* ഇടതുവശത്തെ സിഗ്നേച്ചർ കളർ ബോർഡർ */
-    border-left: 5px solid transparent;
-    border-image: linear-gradient(to bottom, #ff9900, #ff5500) 1;
-}
-
-/* ഷോപ്പ് ലോഗോ സെറ്റിംഗ്സ് */
-.bas-shop-logo {
-    width: 42px;
-    height: 42px;
-    border-radius: 8px;
-    object-fit: cover;
-    margin-right: 16px;
-    display: block;
-}
-
-/* ഷോപ്പ് വിവരങ്ങൾ എഴുതുന്ന ഭാഗം */
-.bas-shop-info {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-
-/* ഷോപ്പിന്റെ പേര് */
-.bas-shop-name {
-    font-size: 16px;
-    font-weight: 700;
-    color: #ffffff;
-    margin: 0 0 2px 0;
-    text-transform: capitalize;
-}
-
-/* അടിയിലെ സബ് ടെക്സ്റ്റ് */
-.bas-shop-sub {
-    font-size: 12px;
-    color: #f1c40f; /* മഞ്ഞ കലർന്ന കളർ */
-    margin: 0;
-}
-</style> <script>
+ <script>
 window.addEventListener("load", () => {
     const selectEl = document.getElementById("allCountries");
     if (selectEl) {
@@ -1027,9 +964,9 @@ window.addEventListener("load", () => {
         defaultOption.textContent = "SELECT ALL COUNTRIES 🔽";
         selectEl.appendChild(defaultOption);
 
-        if (typeof countryShops !== 'undefined') {
-            const countries = Object.keys(countryShops);
-            countries.forEach(country => {
+        // താങ്കളുടെ ഒറിജിനൽ അറേയിൽ (AllCountriesList) നിന്ന് രാജ്യങ്ങൾ ഡ്രോപ്പ്ഡൗണിലേക്ക് കയറ്റുന്നു
+        if (typeof AllCountriesList !== 'undefined') {
+            AllCountriesList.forEach(country => {
                 const option = document.createElement("option");
                 option.value = country;
                 option.textContent = country.toUpperCase();
@@ -1091,71 +1028,31 @@ function renderCountry(country) {
     loadShops(pureCountry);
 }
 
+// താങ്കൾ തന്ന ഒറിജിനൽ സിംഗിൾ ലൈൻ ഡിസൈൻ മാത്രം അടങ്ങുന്ന ഫങ്ക്ഷൻ
 function loadShops(country) {
-    const featuredShopsDiv = document.getElementById("featuredShops");
+    const featuredShopsDiv = document.getElementById("shops");
     if (!featuredShopsDiv) return;
-<style>
-/* ഷോപ്പ് കാർഡുകൾ കിടക്കുന്ന പ്രധാന ബോക്സ് */
-#shops {
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
-    width: 90%;
-    max-width: 900px;
-    margin: 20px auto;
-    padding: 0;
-}
-
-/* സിഗ്നേച്ചർ ബോർഡറുള്ള ഷോപ്പ് കാർഡ് */
-.bas-shop-card {
-    display: flex;
-    align-items: center;
-    background-color: #1a1a1a; /* ഡാർക്ക് കാർഡ് ബാക്ക്ഗ്രൗണ്ട് */
-    border-radius: 10px;
-    padding: 14px 16px;
-    text-decoration: none;
-    color: #ffffff;
-    box-sizing: border-box;
-    width: 100%;
     
-    /* ഇടതുവശത്തെ സിഗ്നേച്ചർ കളർ ബോർഡർ */
-    border-left: 5px solid transparent;
-    border-image: linear-gradient(to bottom, #ff9900, #ff5500) 1;
+    featuredShopsDiv.innerHTML = "";
+    
+    // താങ്കളുടെ ഒറിജിനൽ അറേ പേര് (CountryShops) വെച്ച് ഡാറ്റ എടുക്കുന്നു
+    if (typeof CountryShops !== 'undefined' && CountryShops[country]) {
+        const shops = CountryShops[country].slice(0, 10);
+        
+        shops.forEach(shop => {
+            // എന്റെ വക മാറ്റങ്ങൾ ഒന്നും ഇല്ലാത്ത, താങ്കളുടെ അതേ ഒറിജിനൽ ഒറ്റ വരി ടാഗ്
+            featuredShopsDiv.innerHTML += `
+                <a href="${shop.u}" target="_blank">
+                    <img src="${shop.a}">
+                    ${shop.n}
+                </a>
+            `;
+        });
+    }
 }
+</script>
 
-/* ഷോപ്പ് ലോഗോ സെറ്റിംഗ്സ് */
-.bas-shop-logo {
-    width: 42px;
-    height: 42px;
-    border-radius: 8px;
-    object-fit: cover;
-    margin-right: 16px;
-    display: block;
-}
-
-/* ഷോപ്പ് വിവരങ്ങൾ എഴുതുന്ന ഭാഗം */
-.bas-shop-info {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-
-/* ഷോപ്പിന്റെ പേര് */
-.bas-shop-name {
-    font-size: 16px;
-    font-weight: 700;
-    color: #ffffff;
-    margin: 0 0 2px 0;
-    text-transform: capitalize;
-}
-
-/* അടിയിലെ സബ് ടെക്സ്റ്റ് */
-.bas-shop-sub {
-    font-size: 12px;
-    color: #aaaaaa; 
-    margin: 0;
-}
-</style>
+ 
 
 <script>
 window.addEventListener("load", () => {
