@@ -958,18 +958,57 @@ gap:10px;
   display:grid;
   grid-template-columns:1fr;
   gap:10px;
-.container { max-width: 480px; margin: auto; padding: 15px; }
-        .shop-header { background: #FFD700; color: #000; padding: 14px; border-radius: 12px; font-weight: 900; font-size: 20px; margin-bottom: 12px; text-align: center; }
-        .search { width: 100%; padding: 12px; border-radius: 10px; border: 1px solid #333; background: #1a1a1a; color: white; font-size: 15px; margin-bottom: 12px; box-sizing: border-box; }
-        .shop { background: #1a1a1a; border-radius: 12px; padding: 10px; margin-bottom: 8px; display: flex; align-items: center; text-decoration: none; color: #fff; border: 1px solid #333; }
-        .logo { width: 42px; height: 42px; background: #fff; border-radius: 8px; margin-right: 12px; object-fit: contain; padding: 2px; box-sizing: border-box; }
-        .info { text-align: left; }
-        .info b { font-size: 15px; display: block; }
-        .info span { font-size: 11px; color: #FFD700; }
-        .amz{border-left:5px solid #ff9900} .fk{border-left:5px solid #2874f0} .sam{border-left:5px solid #1428a0}
-        .myn{border-left:5px solid #fe3f6c} .jio{border-left:5px solid #003087} .tata{border-left:5px solid #da1c5c}
-        .rel{border-left:5px solid #ed1c24} .croma{border-left:5px solid #00e9bf} .nyk{border-left:5px solid #fc2779} .shp{border-left:5px solid #9c27b0}
+.shopCard{
+  position:relative;
+  background:#1a1a1a;
+  border-radius:12px;
+  padding:12px;
+  margin:0 auto 8px auto;
 
+  width:96%;
+  max-width:900px;
+  min-height:84px;
+
+  display:flex;
+  align-items:center;
+
+  text-decoration:none;
+  box-sizing:border-box;
+
+  border:1px solid #333;
+}
+
+.shopCard:nth-child(10n+1){border-left:6px solid #ff9900;}
+.shopCard:nth-child(10n+2){border-left:6px solid #2874f0;}
+.shopCard:nth-child(10n+3){border-left:6px solid #1428a0;}
+.shopCard:nth-child(10n+4){border-left:6px solid #fe3f6c;}
+.shopCard:nth-child(10n+5){border-left:6px solid #003087;}
+.shopCard:nth-child(10n+6){border-left:6px solid #da1c5c;}
+.shopCard:nth-child(10n+7){border-left:6px solid #ed1c24;}
+.shopCard:nth-child(10n+8){border-left:6px solid #00e9bf;}
+.shopCard:nth-child(10n+9){border-left:6px solid #fc2779;}
+.shopCard:nth-child(10n+10){border-left:6px solid #9c27b0;}
+
+.shopFav{
+  width:60px;
+  height:60px;
+  background:#fff;
+  border-radius:8px;
+  padding:2px;
+  object-fit:contain;
+  flex-shrink:0;
+  box-sizing:border-box;
+}
+
+.shopName{
+  margin-left:14px;
+  font-size:20px;
+  font-weight:700;
+  color:#fff;
+  white-space:nowrap;
+  overflow:hidden;
+  text-overflow:ellipsis;
+}
   </style>
   
   <script>
