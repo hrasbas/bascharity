@@ -960,45 +960,54 @@ gap:10px;
   gap:10px;
 }
 .shopCard{
+  position:relative;
+  background:#1a1a1a;
+
+  border-radius:12px;
+  padding:12px;
+  display:flex;
+  align-items:center;
+  gap:14px;
+
   width:96%;
   max-width:900px;
   margin:0 auto 10px auto;
 
-  background:#6b6b6b;
-  border:1px solid rgba(255,255,255,.35);
+  text-decoration:none;
+  box-sizing:border-box;
 
-  border-radius:14px;
-  padding:14px;
-  display:flex;
-  align-items:center;
-  gap:16px;
+  border:1px solid #333;
+  min-height:82px;
+}
 
+.shopCard:nth-child(10n+1){border-left:6px solid #ff9900;}
+.shopCard:nth-child(10n+2){border-left:6px solid #2874f0;}
+.shopCard:nth-child(10n+3){border-left:6px solid #1428a0;}
+.shopCard:nth-child(10n+4){border-left:6px solid #fe3f6c;}
+.shopCard:nth-child(10n+5){border-left:6px solid #003087;}
+.shopCard:nth-child(10n+6){border-left:6px solid #da1c5c;}
+.shopCard:nth-child(10n+7){border-left:6px solid #ed1c24;}
+.shopCard:nth-child(10n+8){border-left:6px solid #00e9bf;}
+.shopCard:nth-child(10n+9){border-left:6px solid #fc2779;}
+.shopCard:nth-child(10n+10){border-left:6px solid #9c27b0;}
+
+.shopFav{
+  width:60px;
+  height:60px;
+  background:#fff;
+  border-radius:8px;
+  padding:2px;
+  object-fit:contain;
+  flex-shrink:0;
   box-sizing:border-box;
 }
 
-.shopCard:nth-child(10n+1){border-left:8px solid #00C853;}
-.shopCard:nth-child(10n+2){border-left:8px solid #2196F3;}
-.shopCard:nth-child(10n+3){border-left:8px solid #F44336;}
-.shopCard:nth-child(10n+4){border-left:8px solid #FF9800;}
-.shopCard:nth-child(10n+5){border-left:8px solid #9C27B0;}
-.shopCard:nth-child(10n+6){border-left:8px solid #00BCD4;}
-.shopCard:nth-child(10n+7){border-left:8px solid #E91E63;}
-.shopCard:nth-child(10n+8){border-left:8px solid #FFC107;}
-.shopCard:nth-child(10n+9){border-left:8px solid #009688;}
-.shopCard:nth-child(10n+10){border-left:8px solid #795548;}
-
-.shopFav{
-  width:56px;
-  height:56px;
-  object-fit:contain;
-  flex-shrink:0;
-}
 .shopName{
   font-size:20px;
   font-weight:700;
-  color:#fff;
+  color:#ffffff;
+  line-height:1.2;
 }
-  </style>
   <script>
 
 /* ================================================= */
