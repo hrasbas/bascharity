@@ -952,15 +952,17 @@ border-radius:12px;
 /* ================================================= */
 <div id="featuredShops"></div>
 
-</div> <style>
+</div>   
+ 
+<style>
 #featuredShops {
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
-    width: 90%;
-    max-width: 900px;
-    margin: 20px auto;
-    padding: 0;
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 12px !important;
+    width: 90% !important;
+    max-width: 900px !important;
+    margin: 20px auto !important;
+    padding: 0 !important;
 }
 
 /* ഇടതുവശത്ത് ഗ്രേഡിയന്റ് ബോർഡർ ഉള്ള താങ്കളുടെ ഒറിജിനൽ പക്കാ ഡാർക്ക് കാർഡ് ബോക്സ് */
@@ -988,14 +990,14 @@ border-radius:12px;
     display: block !important;
 }
 
-/* ഐക്കണിന് നേരെ കൃത്യമായി വരാനുള്ള ഇൻഫോ ബോക്സ് */
+/* ഐക്കണത്തിന് നേരെ കൃത്യമായി വരാനുള്ള ഇൻഫോ ബോക്സ് */
 .bas-shop-info {
     display: flex !important;
     flex-direction: column !important;
     justify-content: center !important;
 }
 
-/* 쇼പ്പ് പേര് */
+/* ഷോപ്പ് പേര് */
 .bas-shop-name {
     font-size: 16px !important;
     font-weight: 700 !important;
@@ -1012,58 +1014,6 @@ border-radius:12px;
 </style>
 
 <script>
-// താങ്കൾ നൽകിയ ഒഫിഷ്യൽ അറേകൾ ഇവിടെ ബന്ധിപ്പിച്ചു
-const allCountriesList = ["india","usa","uk","uae","saudi arabia","canada","germany","france","australia"];
-
-const countryShops = {
-  india: [
-    {n:"Amazon India", u:"https://www.amazon.in"},
-    {n:"Flipkart", u:"https://www.flipkart.com"},
-    {n:"Myntra", u:"https://www.myntra.com"}
-  ],
-  usa: [
-    {n:"Amazon USA", u:"https://www.amazon.com"},
-    {n:"Walmart USA", u:"https://www.walmart.com"},
-    {n:"Best Buy", u:"https://www.bestbuy.com"}
-  ],
-  uk: [
-    {n:"Amazon UK", u:"https://www.amazon.co.uk"},
-    {n:"Tesco", u:"https://www.tesco.com"},
-    {n:"ASOS", u:"https://www.asos.com"}
-  ],
-  uae: [
-    {n:"Amazon UAE", u:"https://www.amazon.ae"},
-    {n:"Noon", u:"https://www.noon.com"},
-    {n:"Carrefour UAE", u:"https://www.carrefouruae.com"}
-  ],
-  "saudi arabia": [
-    {n:"Amazon Saudi", u:"https://www.amazon.sa"},
-    {n:"Noon Saudi", u:"https://www.noon.com/saudi-ar"},
-    {n:"Jarir", u:"https://www.jarir.com"}
-  ],
-  canada: [
-    {n:"Amazon Canada", u:"https://www.amazon.ca"},
-    {n:"Walmart Canada", u:"https://www.walmart.ca"},
-    {n:"Best Buy Canada", u:"https://www.bestbuy.ca"}
-  ],
-  germany: [
-    {n:"Amazon Germany", u:"https://www.amazon.de"},
-    {n:"Zalando", u:"https://www.zalando.de"},
-    {n:"MediaMarkt", u:"https://www.mediamarkt.de"}
-  ],
-  france: [
-    {n:"Amazon France", u:"https://www.amazon.fr"},
-    {n:"Cdiscount", u:"https://www.cdiscount.com"},
-    {n:"Fnac", u:"https://www.fnac.com"}
-  ],
-  australia: [
-    {n:"Amazon Australia", u:"https://www.amazon.com.au"},
-    {n:"Kmart", u:"https://www.kmart.com.au"},
-    {n:"JB Hi-Fi", u:"https://www.jbhifi.com.au"}
-  ]
-};
-
-// പേജ് ലോഡ് ചെയ്യുമ്പോൾ റൺ ചെയ്യേണ്ട പ്രധാന കാര്യങ്ങൾ
 document.addEventListener("DOMContentLoaded", () => {
     const selectEl = document.getElementById("allCountries");
     if (selectEl) {
@@ -1074,6 +1024,7 @@ document.addEventListener("DOMContentLoaded", () => {
         defaultOption.textContent = "SELECT ALL COUNTRIES 🔽";
         selectEl.appendChild(defaultOption);
 
+        // താങ്കളുടെ ഫയലിലെ വലിയ 'allCountriesList' ഇവിടെ നേരിട്ട് ബന്ധിപ്പിച്ചു
         if (typeof allCountriesList !== 'undefined') {
             allCountriesList.forEach(country => {
                 const option = document.createElement("option");
@@ -1087,7 +1038,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const savedCountry = localStorage.getItem("selectedCountry") || "india";
     renderCountry(savedCountry);
 
-    // മുകളിലെ 9 ബട്ടണുകൾ ഞെക്കുമ്പോൾ ഉള്ള സിങ്ക് ഓപ്പറേഷൻ
+    // മുകളിലെ ബട്ടണുകൾ ഞെക്കുമ്പോൾ ഉള്ള സിങ്ക് ഓപ്പറേഷൻ
     document.querySelectorAll(".country-btn").forEach(btn => {
         if (btn.id === "shopOnCountry" || btn.getAttribute("id") === "shopOnCountry") return; 
         
@@ -1097,7 +1048,7 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     });
 
-    // ഡ്രോപ്പ്ഡൗൺ ലിസ്റ്റിൽ രാജ്യം മാറ്റുമ്പോൾ ഉള്ള സിങ്ക് ഓപ്പറേഷൻ
+    // ഡ്രോപ്പ്ഡൗൺ ബോക്സിൽ രാജ്യം മാറ്റുമ്പോൾ ഉള്ള സിങ്ക് ഓപ്പറേഷൻ
     if (selectEl) {
         selectEl.addEventListener("change", (e) => {
             if (e.target.value) {
@@ -1107,7 +1058,6 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 });
 
-// രാജ്യം സെലക്ട് ചെയ്യുമ്പോൾ ഉള്ള കളർ മാറ്റവും ഡ്രോപ്പ്ഡൗൺ സിങ്കും
 function renderCountry(country) {
     if (!country) return;
     const pureCountry = country.trim().toLowerCase();
@@ -1117,7 +1067,7 @@ function renderCountry(country) {
         selectEl.value = ""; 
     }
 
-    // ബട്ടണുകളുടെ കളർ പച്ചയാക്കി മാറ്റുന്ന ഭാഗം
+    // സെലക്ട് ചെയ്യുന്ന രാജ്യത്തിന്റെ ബട്ടൺ കളർ പച്ചയാക്കുന്ന ഭാഗം
     document.querySelectorAll(".country-btn").forEach(btn => {
         if (btn.id === "shopOnCountry" || btn.getAttribute("id") === "shopOnCountry") return; 
         
@@ -1129,7 +1079,7 @@ function renderCountry(country) {
         }
     });
 
-    // SHOP ON COUNTRY ബട്ടൺ അപ്ഡേറ്റ് ചെയ്യുന്നു
+    // SHOP ON COUNTRY ബട്ടൺ ടെക്സ്റ്റ് അപ്ഡേറ്റ് ചെയ്യുന്നു
     const shopBtn = document.getElementById("shopOnCountry");
     if (shopBtn) {
         const displayCountry = country.toUpperCase();
@@ -1140,21 +1090,26 @@ function renderCountry(country) {
     loadShops(pureCountry);
 }
 
-// അറേയുമായി ബന്ധിപ്പിച്ച് ഐക്കണും ഷോപ്പ് നെയിമും സിഗ്നേച്ചർ ബോർഡറും നൽകുന്ന ഫങ്ക്ഷൻ
+// താങ്കളുടെ വലിയ 'countryShops' ഒബ്ജക്റ്റിൽ നിന്ന് ഡാറ്റ വലിക്കുന്ന മെയിൻ ഫങ്ക്ഷൻ
 function loadShops(country) {
     const featuredShopsDiv = document.getElementById("featuredShops");
     if (!featuredShopsDiv) return;
     
     featuredShopsDiv.innerHTML = "";
     
+    // താങ്കളുടെ ഫയലിലെ 'countryShops' അറേ ഇവിടെ കൃത്യമായി കണക്ട് ചെയ്തു
     if (typeof countryShops !== 'undefined' && countryShops[country]) {
         const shops = countryShops[country];
         
         shops.forEach(shop => {
-            // യുആർഎല്ലിൽ നിന്ന് ഡൊമെയ്ൻ മാത്രം എടുത്ത് ക്ലിയർബിറ്റ് വഴി ഓട്ടോമാറ്റിക്കായി ലോഗോ കൊണ്ടുവരുന്നു
-            const domain = shop.u.replace('https://', '').replace('www.', '').split('/')[0];
-            const logoUrl = `https://logo.clearbit.com/${domain}`;
+            // യുആർഎല്ലിൽ നിന്ന് ലോഗോ ഐക്കണുകൾ ഓട്ടോമാറ്റിക്കായി കണ്ടുപിടിക്കുന്ന സിസ്റ്റം
+            let logoUrl = shop.a;
+            if (!logoUrl || logoUrl === "") {
+                const domain = shop.u.replace('https://', '').replace('www.', '').split('/')[0];
+                logoUrl = `https://logo.clearbit.com/${domain}`;
+            }
             
+            // സ്ക്രീൻഷോട്ടിൽ കണ്ട ആ ജാവാസ്ക്രിപ്റ്റ് ടെക്സ്റ്റ് എറർ പൂർണ്ണമായി ഫിക്സ് ചെയ്ത് നിർമ്മിച്ച കാർഡ്
             featuredShopsDiv.innerHTML += `
                 <a href="${shop.u}" target="_blank" class="bas-shop-card">
                     <img src="${logoUrl}" alt="${shop.n}" class="bas-shop-logo" onerror="this.src='https://via.placeholder.com/42';">
@@ -1168,6 +1123,7 @@ function loadShops(country) {
     }
 }
 </script>
+
 
 }
   </style>
