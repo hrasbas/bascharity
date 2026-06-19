@@ -1094,11 +1094,153 @@ function renderCountry(country) {
 function loadShops(country) {
     const featuredShopsDiv = document.getElementById("featuredShops");
     if (!featuredShopsDiv) return;
+<style>
+/* ഷോപ്പ് കാർഡുകൾ കിടക്കുന്ന പ്രധാന ബോക്സ് */
+#shops {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    width: 90%;
+    max-width: 900px;
+    margin: 20px auto;
+    padding: 0;
+}
+
+/* സിഗ്നേച്ചർ ബോർഡറുള്ള ഷോപ്പ് കാർഡ് */
+.bas-shop-card {
+    display: flex;
+    align-items: center;
+    background-color: #1a1a1a; /* ഡാർക്ക് കാർഡ് ബാക്ക്ഗ്രൗണ്ട് */
+    border-radius: 10px;
+    padding: 14px 16px;
+    text-decoration: none;
+    color: #ffffff;
+    box-sizing: border-box;
+    width: 100%;
+    
+    /* ഇടതുവശത്തെ സിഗ്നേച്ചർ കളർ ബോർഡർ */
+    border-left: 5px solid transparent;
+    border-image: linear-gradient(to bottom, #ff9900, #ff5500) 1;
+}
+
+/* ഷോപ്പ് ലോഗോ സെറ്റിംഗ്സ് */
+.bas-shop-logo {
+    width: 42px;
+    height: 42px;
+    border-radius: 8px;
+    object-fit: cover;
+    margin-right: 16px;
+    display: block;
+}
+
+/* ഷോപ്പ് വിവരങ്ങൾ എഴുതുന്ന ഭാഗം */
+.bas-shop-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* ഷോപ്പിന്റെ പേര് */
+.bas-shop-name {
+    font-size: 16px;
+    font-weight: 700;
+    color: #ffffff;
+    margin: 0 0 2px 0;
+    text-transform: capitalize;
+}
+
+/* അടിയിലെ സബ് ടെക്സ്റ്റ് */
+.bas-shop-sub {
+    font-size: 12px;
+    color: #aaaaaa; 
+    margin: 0;
+}
+</style>
+
+<script>
+window.addEventListener("load", () => {
+    const selectEl = document.getElementById("allCountries");
+    if (selectEl) {
+        selectEl.innerHTML = ""; 
+        
+        const defaultOption = document.createElement("option");
+        defaultOption.value = "";
+        defaultOption.textContent = "SELECT ALL COUNTRIES 🔽";
+        selectEl.appendChild(defaultOption);
+
+        if (typeof CountryShops !== 'undefined') {
+            const countries = Object.keys(CountryShops);
+            countries.forEach(country => {
+                const option = document.createElement("option");
+                option.value = country;
+                option.textContent = country.toUpperCase();
+                selectEl.appendChild(option);
+            });
+        }
+    }
+
+    const savedCountry = localStorage.getItem("selectedCountry") || "india";
+    renderCountry(savedCountry);
+
+    document.querySelectorAll(".country-btn").forEach(btn => {
+        if (btn.id === "shopOnCountry" || btn.getAttribute("id") === "shopOnCountry") return; 
+        
+        btn.addEventListener("click", function() {
+            const countryText = this.textContent.trim().toLowerCase();
+            renderCountry(countryText);
+        });
+    });
+
+    if (selectEl) {
+        selectEl.addEventListener("change", (e) => {
+            if (e.target.value) {
+                renderCountry(e.target.value); 
+            }
+        });
+    }
+});
+
+function renderCountry(country) {
+    if (!country) return;
+    const pureCountry = country.trim().toLowerCase();
+    
+    const selectEl = document.getElementById("allCountries");
+    if (selectEl) {
+        selectEl.value = ""; 
+    }
+
+    document.querySelectorAll(".country-btn").forEach(btn => {
+        if (btn.id === "shopOnCountry" || btn.getAttribute("id") === "shopOnCountry") return; 
+        
+        const btnText = btn.textContent.trim().toLowerCase();
+        
+        if (btnText === pureCountry) {
+            btn.classList.add("active");
+        } else {
+            btn.classList.remove("active");
+        }
+    });
+
+    const shopBtn = document.getElementById("shopOnCountry");
+    if (shopBtn) {
+        const displayCountry = country.toUpperCase();
+        shopBtn.innerHTML = `SHOP ON <span>${displayCountry}</span>`;
+        shopBtn.classList.add("active-shop");
+    }
+
+    localStorage.setItem("selectedCountry", pureCountry);
+    loadShops(pureCountry);
+}
+
+function loadShops(country) {
+    // ഇവിടെയും ഐഡി #shops എന്ന് കൃത്യമായി മാറ്റിയിട്ടുണ്ട്
+    const featuredShopsDiv = document.getElementById("shops");
+    if (!featuredShopsDiv) return;
     
     featuredShopsDiv.innerHTML = "";
     
-    if (typeof countryShops !== 'undefined' && countryShops[country]) {
-        const shops = countryShops[country].slice(0, 10);
+    if (typeof CountryShops !== 'undefined' && CountryShops[country]) {
+        const shops = CountryShops[country].slice(0, 10);
         
         shops.forEach(shop => {
             featuredShopsDiv.innerHTML += `
@@ -1113,11 +1255,7 @@ function loadShops(country) {
         });
     }
 }
-</script> ```
-
-ഇപ്പോൾ ടാഗുകൾ പരസ്പരം കൂട്ടിക്കുഴയാതെ കൃത്യമായി വേർതിരിഞ്ഞു നിൽക്കുന്നുണ്ട്. ഇത് ഫയലിൽ അപ്‌ഡേറ്റ് ചെയ്താൽ കാർഡുകൾ പഴയതുപോലെ ചിതറിപ്പോകാതെ കൃത്യമായ ലേഔട്ടിൽ കാണാൻ സാധിക്കും ബാസ്.
-
-അല്ലാഹു എല്ലാവർക്കും എല്ലാത്തിലും ബർക്കത്ത് ചെയ്യട്ടെ
+</script>
 
 <script>
 window.addEventListener("load", () => {
