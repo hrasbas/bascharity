@@ -957,41 +957,51 @@ gap:10px;
 
 .shopCard{
   position:relative;
-  background:#fff;
-  border-left:5px solid #4338ca;
+  background:#5f5f5f;
+
   border-radius:14px;
-  padding:14px;
-  box-shadow:0 2px 8px rgba(0,0,0,.08);
+  padding:14px 16px;
+
+  display:flex;
+  align-items:center;
+  gap:14px;
 
   width:96%;
   max-width:900px;
   margin:0 auto 10px auto;
+
+  border:1px solid rgba(255,255,255,.20);
+  box-shadow:0 2px 8px rgba(0,0,0,.15);
+
+  text-decoration:none;
+  min-height:68px;
+  box-sizing:border-box;
 }
 
-.shopDot{
-position:absolute;
-left:8px;
-top:6px;
-font-size:20px;
-color:#000;
-}
-.shopHead{
-display:flex;
-align-items:center;
-gap:8px;
-}
+.shopCard:nth-child(10n+1){border-left:8px solid #00C853;}
+.shopCard:nth-child(10n+2){border-left:8px solid #2196F3;}
+.shopCard:nth-child(10n+3){border-left:8px solid #F44336;}
+.shopCard:nth-child(10n+4){border-left:8px solid #FF9800;}
+.shopCard:nth-child(10n+5){border-left:8px solid #9C27B0;}
+.shopCard:nth-child(10n+6){border-left:8px solid #00BCD4;}
+.shopCard:nth-child(10n+7){border-left:8px solid #E91E63;}
+.shopCard:nth-child(10n+8){border-left:8px solid #FFC107;}
+.shopCard:nth-child(10n+9){border-left:8px solid #009688;}
+.shopCard:nth-child(10n+10){border-left:8px solid #795548;}
 
 .shopFav{
-  width:32px;
-  height:32px;
+  width:36px;
+  height:36px;
+  object-fit:contain;
+  flex-shrink:0;
 }
 
 .shopName{
-font-weight:700;
+  font-size:18px;
+  font-weight:700;
+  color:#ffffff;
+  line-height:1.2;
 }
-
-</style>
-
   
 <script>
 
