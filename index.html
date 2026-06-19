@@ -954,110 +954,6 @@ gap:10px;
 /* ================================================= */
 /* SHOP CARD */
  <script>
- 
-    <script>
-window.addEventListener("load", () => {
-    const selectEl = document.getElementById("allCountries");
-    if (selectEl) {
-        selectEl.innerHTML = ""; 
-        
-        const defaultOption = document.createElement("option");
-        defaultOption.value = "";
-        defaultOption.textContent = "SELECT ALL COUNTRIES 🔽";
-        selectEl.appendChild(defaultOption);
-
-        // സുരക്ഷിതമായി അറേയുടെ പേര് കണ്ടുപിടിക്കുന്ന ഭാഗം
-        const currentCountriesList = (typeof AllCountriesList !== 'undefined') ? AllCountriesList : ((typeof allCountriesList !== 'undefined') ? allCountriesList : []);
-
-        if (currentCountriesList && currentCountriesList.length > 0) {
-            currentCountriesList.forEach(country => {
-                const option = document.createElement("option");
-                option.value = country;
-                option.textContent = country.toUpperCase();
-                selectEl.appendChild(option);
-            });
-        }
-    }
-
-    const savedCountry = localStorage.getItem("selectedCountry") || "india";
-    renderCountry(savedCountry);
-
-    document.querySelectorAll(".country-btn").forEach(btn => {
-        if (btn.id === "shopOnCountry" || btn.getAttribute("id") === "shopOnCountry") return; 
-        
-        btn.addEventListener("click", function() {
-            const countryText = this.textContent.trim().toLowerCase();
-            renderCountry(countryText);
-        });
-    });
-
-    if (selectEl) {
-        selectEl.addEventListener("change", (e) => {
-            if (e.target.value) {
-                renderCountry(e.target.value); 
-            }
-        });
-    }
-});
-
-function renderCountry(country) {
-    if (!country) return;
-    const pureCountry = country.trim().toLowerCase();
-    
-    const selectEl = document.getElementById("allCountries");
-    if (selectEl) {
-        selectEl.value = ""; 
-    }
-
-    document.querySelectorAll(".country-btn").forEach(btn => {
-        if (btn.id === "shopOnCountry" || btn.getAttribute("id") === "shopOnCountry") return; 
-        
-        const btnText = btn.textContent.trim().toLowerCase();
-        
-        if (btnText === pureCountry) {
-            btn.classList.add("active");
-        } else {
-            btn.classList.remove("active");
-        }
-    });
-
-    const shopBtn = document.getElementById("shopOnCountry");
-    if (shopBtn) {
-        const displayCountry = country.toUpperCase();
-        shopBtn.innerHTML = `SHOP ON <span>${displayCountry}</span>`;
-        shopBtn.classList.add("active-shop");
-    }
-
-    localStorage.setItem("selectedCountry", pureCountry);
-    loadShops(pureCountry);
-}
-
-function loadShops(country) {
-    const featuredShopsDiv = document.getElementById("shops");
-    if (!featuredShopsDiv) return;
-    
-    featuredShopsDiv.innerHTML = "";
-    
-    // അറേയുടെ പേര് CountryShops എന്നാണെങ്കിലും countryShops എന്നാണെങ്കിലും സിസ്റ്റം തനിയെ അഡ്രസ്സ് ചെയ്യും
-    const currentCountryShops = (typeof CountryShops !== 'undefined') ? CountryShops : ((typeof countryShops !== 'undefined') ? countryShops : null);
-    
-    if (currentCountryShops && currentCountryShops[country]) {
-        const shops = currentCountryShops[country].slice(0, 10);
-        
-        shops.forEach(shop => {
-            // താങ്കളുടെ ഒറിജിനൽ പക്കാ ഡിസൈൻ ടാഗ്
-            featuredShopsDiv.innerHTML += `
-                <a href="${shop.u}" target="_blank">
-                    <img src="${shop.a}">
-                    ${shop.n}
-                </a>
-            `;
-        });
-    }
-}
-</script>
-
-
 <script>
 window.addEventListener("load", () => {
     const selectEl = document.getElementById("allCountries");
@@ -1069,9 +965,9 @@ window.addEventListener("load", () => {
         defaultOption.textContent = "SELECT ALL COUNTRIES 🔽";
         selectEl.appendChild(defaultOption);
 
-        if (typeof CountryShops !== 'undefined') {
-            const countries = Object.keys(CountryShops);
-            countries.forEach(country => {
+        // GitHub ഫയലിലെ 'allCountriesList' കൃത്യമായി കണക്ട് ചെയ്യുന്നു
+        if (typeof allCountriesList !== 'undefined') {
+            allCountriesList.forEach(country => {
                 const option = document.createElement("option");
                 option.value = country;
                 option.textContent = country.toUpperCase();
@@ -1133,121 +1029,22 @@ function renderCountry(country) {
     loadShops(pureCountry);
 }
 
+// 🛑 താങ്കളുടെ ആവശ്യപ്രകാരം സിംഗിൾ ലൈനിൽ പക്കാ സിഗ്നേച്ചർ കാർഡ് നിർമ്മിക്കുന്ന ഫങ്ക്ഷൻ 🛑
 function loadShops(country) {
-    // ഇവിടെയും ഐഡി #shops എന്ന് കൃത്യമായി മാറ്റിയിട്ടുണ്ട്
     const featuredShopsDiv = document.getElementById("shops");
     if (!featuredShopsDiv) return;
     
     featuredShopsDiv.innerHTML = "";
     
-    if (typeof CountryShops !== 'undefined' && CountryShops[country]) {
-        const shops = CountryShops[country].slice(0, 10);
+    // GitHub ഫയലിലെ 'countryShops' അഡ്രസ്സ് കൃത്യമായി സിങ്ക് ചെയ്തു
+    if (typeof countryShops !== 'undefined' && countryShops[country]) {
+        const shops = countryShops[country].slice(0, 10);
         
         shops.forEach(shop => {
+            // താങ്കൾ ആവശ്യപ്പെട്ട ഒറ്റ വരി ഡിസൈനിലുള്ള ലോഗോയും പേരും സബ് ടെക്സ്റ്റും
             featuredShopsDiv.innerHTML += `
                 <a href="${shop.u}" target="_blank" class="bas-shop-card">
                     <img src="${shop.a || 'https://via.placeholder.com/42'}" alt="${shop.n}" class="bas-shop-logo" onerror="this.src='https://via.placeholder.com/42';">
-                    <div class="bas-shop-info">
-                        <h4 class="bas-shop-name">${shop.n}</h4>
-                        <p class="bas-shop-sub">Check today's offer</p>
-                    </div>
-                </a>
-            `;
-        });
-    }
-}
-</script>
-
-<script>
-window.addEventListener("load", () => {
-    const selectEl = document.getElementById("allCountries");
-    if (selectEl) {
-        selectEl.innerHTML = ""; 
-        
-        const defaultOption = document.createElement("option");
-        defaultOption.value = "";
-        defaultOption.textContent = "SELECT ALL COUNTRIES 🔽";
-        selectEl.appendChild(defaultOption);
-
-        if (typeof AllCountriesList !== 'undefined') {
-            AllCountriesList.forEach(country => {
-                const option = document.createElement("option");
-                option.value = country;
-                option.textContent = country.toUpperCase();
-                selectEl.appendChild(option);
-            });
-        }
-    }
-
-    const savedCountry = localStorage.getItem("selectedCountry") || "india";
-    renderCountry(savedCountry);
-
-    document.querySelectorAll(".country-btn").forEach(btn => {
-        if (btn.id === "shopOnCountry" || btn.getAttribute("id") === "shopOnCountry") return; 
-        
-        btn.addEventListener("click", function() {
-            const countryText = this.textContent.trim().toLowerCase();
-            renderCountry(countryText);
-        });
-    });
-
-    if (selectEl) {
-        selectEl.addEventListener("change", (e) => {
-            if (e.target.value) {
-                renderCountry(e.target.value); 
-            }
-        });
-    }
-});
-
-function renderCountry(country) {
-    if (!country) return;
-    const pureCountry = country.trim().toLowerCase();
-    
-    const selectEl = document.getElementById("allCountries");
-    if (selectEl) {
-        selectEl.value = ""; 
-    }
-
-    document.querySelectorAll(".country-btn").forEach(btn => {
-        if (btn.id === "shopOnCountry" || btn.getAttribute("id") === "shopOnCountry") return; 
-        
-        const btnText = btn.textContent.trim().toLowerCase();
-        
-        if (btnText === pureCountry) {
-            btn.classList.add("active");
-        } else {
-            btn.classList.remove("active");
-        }
-    });
-
-    const shopBtn = document.getElementById("shopOnCountry");
-    if (shopBtn) {
-        const displayCountry = country.toUpperCase();
-        shopBtn.innerHTML = `SHOP ON <span>${displayCountry}</span>`;
-        shopBtn.classList.add("active-shop");
-    }
-
-    localStorage.setItem("selectedCountry", pureCountry);
-    loadShops(pureCountry);
-}
-
-// [UPDATED]: താങ്കൾ തന്ന പുതിയ സ്ക്രീൻഷോട്ടിലെ ലോഗോ, പേര്, സിഗ്നേച്ചർ കളറോട് കൂടിയ കാർഡ് നിർമ്മിക്കുന്ന ഫങ്ക്ഷൻ
-function loadShops(country) {
-    const featuredShopsDiv = document.getElementById("featuredShops");
-    if (!featuredShopsDiv) return;
-    
-    featuredShopsDiv.innerHTML = "";
-    
-    if (typeof CountryShops !== 'undefined' && CountryShops[country]) {
-        // ഒറിജിനൽ അറേയിൽ നിന്ന് കൃത്യം 10 ഷോപ്പുകൾ മാത്രം എടുക്കുന്നു
-        const shops = CountryShops[country].slice(0, 10);
-        
-        shops.forEach(shop => {
-            // താങ്കൾ ആവശ്യപ്പെട്ടതുപോലെ ബട്ടൺ ലിങ്ക്, ലോഗോ ഇമേജ്, പേര്, സിഗ്നേച്ചർ ബോർഡർ എല്ലാം ചേർത്ത കാർഡ് സ്ട്രക്ചർ
-            featuredShopsDiv.innerHTML += `
-                <a href="${shop.u}" target="_blank" class="bas-shop-card">
-                    <img src="${shop.a || 'https://via.placeholder.com/45'}" alt="${shop.n}" class="bas-shop-logo" onerror="this.src='https://via.placeholder.com/45';">
                     <div class="bas-shop-info">
                         <span class="bas-shop-name">${shop.n.toUpperCase()}</span>
                         <span class="bas-shop-sub">Check today's offer</span>
@@ -1257,8 +1054,8 @@ function loadShops(country) {
         });
     }
 }
-
 </script>
+
 
   </style>
   
