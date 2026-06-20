@@ -663,7 +663,8 @@ ball.className = "bas-ball is-pwa-installed";
  <!------------country---------------->
  <!-- 1. Country Selector Section -->
 <!-- COUNTRY BOX START -->
-<style>
+  
+ <style>
 *{box-sizing:border-box}
 body{margin:0;background:#000;color:#fff;font-family:Arial,sans-serif;padding:12px}
 .country-box{width:96%;max-width:900px;margin:auto;padding:0}
@@ -677,7 +678,6 @@ body{margin:0;background:#000;color:#fff;font-family:Arial,sans-serif;padding:12
 #shopOnCountry .green{color:#00ff66}
 #featuredShops{width:96%;max-width:900px;margin:12px auto 0;display:flex;flex-direction:column;gap:10px}
 .shopCard{background:#2b2b2b;border:1px solid #c0c0c0;border-left:8px solid #00c853;border-radius:14px;padding:12px 14px;display:flex;align-items:center;gap:12px;min-height:72px;text-decoration:none;box-shadow:0 2px 10px rgba(0,0,0,.25)}
-.shopCard:nth-child(10n+1){border-left-color:#00C853}.shopCard:nth-child(10n+2){border-left-color:#2196F3}.shopCard:nth-child(10n+3){border-left-color:#F44336}.shopCard:nth-child(10n+4){border-left-color:#FF9800}.shopCard:nth-child(10n+5){border-left-color:#9C27B0}.shopCard:nth-child(10n+6){border-left-color:#00BCD4}.shopCard:nth-child(10n+7){border-left-color:#E91E63}.shopCard:nth-child(10n+8){border-left-color:#FFC107}.shopCard:nth-child(10n+9){border-left-color:#009688}.shopCard:nth-child(10n+10){border-left-color:#795548}
 .shopDot{width:18px;flex:0 0 18px;color:#fff;font-weight:900;text-align:center;margin-right:2px}
 .shopFav{width:42px;height:42px;object-fit:contain;flex:0 0 42px;border-radius:8px;background:#fff}
 .shopName{flex:1;color:#fff;font-size:17px;font-weight:800;line-height:1.2;text-align:left}
@@ -708,11 +708,11 @@ body{margin:0;background:#000;color:#fff;font-family:Arial,sans-serif;padding:12
 </div>
 
 <script>
-window.allCountriesList = window.allCountriesList || [
+window.allCountriesList = [
   "india","usa","uk","uae","saudi arabia","canada","germany","france","australia","singapore","malaysia"
 ];
 
-window.countryShops = window.countryShops || {
+window.countryShops = {
   india: [
     { n: "amazon india", u: "https://www.amazon.in" },
     { n: "flipkart", u: "https://www.flipkart.com" },
@@ -778,23 +778,9 @@ window.allCountriesList.forEach(country => {
   allCountries.appendChild(option);
 });
 
-function renderCountry(country){
-  if(!country) return;
-  const pureCountry = country.trim().toLowerCase();
-  allCountries.value = pureCountry;
-
-  document.querySelectorAll(".country-btn").forEach(btn => {
-    btn.classList.toggle("active", (btn.dataset.country || btn.textContent).trim().toLowerCase() === pureCountry);
-  });
-
-  document.getElementById("shopOnCountry").innerHTML = 'SHOP ON <span class="green">' + pureCountry.toUpperCase() + '</span>';
-  localStorage.setItem("selectedCountry", pureCountry);
-  loadShops(pureCountry);
-}
-
 function loadShops(country){
   featuredShops.innerHTML = "";
-  const shops = (window.countryShops[country] || []).slice(0,10);
+  const shops = window.countryShops[country] || [];
 
   shops.forEach(shop => {
     let host = "";
@@ -811,6 +797,20 @@ function loadShops(country){
   });
 }
 
+function renderCountry(country){
+  if(!country) return;
+  const pureCountry = country.trim().toLowerCase();
+  allCountries.value = pureCountry;
+
+  document.querySelectorAll(".country-btn").forEach(btn => {
+    btn.classList.toggle("active", (btn.dataset.country || btn.textContent).trim().toLowerCase() === pureCountry);
+  });
+
+  document.getElementById("shopOnCountry").innerHTML = 'SHOP ON <span class="green">' + pureCountry.toUpperCase() + '</span>';
+  localStorage.setItem("selectedCountry", pureCountry);
+  loadShops(pureCountry);
+}
+
 allCountries.onchange = function(){
   if(this.value) renderCountry(this.value);
 };
@@ -820,7 +820,7 @@ document.querySelectorAll(".country-btn").forEach(btn => {
 });
 
 renderCountry(localStorage.getItem("selectedCountry") || "india");
-</script>>
+</script>
 <style>
 /* ================================================= */
 /* FIXED 10 COUNTRIES */
