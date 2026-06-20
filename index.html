@@ -663,8 +663,8 @@ ball.className = "bas-ball is-pwa-installed";
  <!------------country---------------->
  <!-- 1. Country Selector Section -->
 <!-- COUNTRY BOX START -->
-  
- <style>
+ 
+<style>
 *{box-sizing:border-box}
 body{margin:0;background:#000;color:#fff;font-family:Arial,sans-serif;padding:12px}
 .country-box{width:96%;max-width:900px;margin:auto;padding:0}
@@ -779,22 +779,19 @@ window.allCountriesList.forEach(country => {
 });
 
 function loadShops(country){
-  featuredShops.innerHTML = "";
-  const shops = window.countryShops[country] || [];
-
-  shops.forEach(shop => {
+  const shops = (window.countryShops[country] || []).slice(0, 10);
+  featuredShops.innerHTML = shops.map(shop => {
     let host = "";
     try { host = new URL(shop.u).hostname; } catch(e) {}
     const iconUrl = "https://www.google.com/s2/favicons?domain=" + host + "&sz=64";
-
-    featuredShops.innerHTML += `
+    return `
       <a href="${shop.u}" target="_blank" class="shopCard">
         <span class="shopDot">.</span>
         <img class="shopFav" src="${iconUrl}" alt="">
         <span class="shopName notranslate" translate="no">${shop.n}</span>
       </a>
     `;
-  });
+  }).join("");
 }
 
 function renderCountry(country){
