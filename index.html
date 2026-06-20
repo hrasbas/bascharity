@@ -663,6 +663,22 @@ ball.className = "bas-ball is-pwa-installed";
  <!------------country---------------->
  <!-- 1. Country Selector Section -->
 <!-- COUNTRY BOX START -->
+ 
+ 
+
+
+
+
+<!-- ================================================= -->
+<!-- FEATURED SHOPS -->
+<!-- ================================================= -->
+
+
+ 
+
+
+
+<!-- COUNTRY BOX START -->
 <style>
 
 .country-grid{
@@ -714,24 +730,17 @@ box-shadow:0 0 8px rgba(223,230,235,.35);
 }
 </style>
 
-
-
-<style>
-
-.country-btn.active{
-color:#00ff66;
-}
-
-#shopOnCountry{
-color:#00ff66;
-}
-
-</style>
-
 <div id="countryButtons"></div>
 
 
 <!-- NEW COUNTRY GRID -->
+<script>
+document.querySelectorAll(".country-btn")
+.forEach(x=>x.classList.remove("active"));
+
+btn.classList.add("active");
+
+</script>
 
 
 <div class="country-select">
@@ -784,6 +793,31 @@ onclick="renderCountry('australia')">AUSTRALIA</button>
 SHOP ON USA
 </div>
 
+<script>
+
+<script>
+
+/* COUNTRY BUTTON MASTER SYSTEM */
+
+document.querySelectorAll(".country-btn").forEach(btn=>{
+
+btn.onclick=function(){
+
+/* OVERRIDE ANY PREVIOUS COLOUR */
+
+document.querySelectorAll(".country-btn").forEach(x=>{
+x.style.color="#fff";
+x.classList.remove("active");
+});
+
+this.classList.add("active");
+this.style.color="#00ff66";
+
+};
+
+});
+
+</script>
 
 
 
@@ -792,88 +826,9 @@ SHOP ON USA
 <!-- FEATURED SHOPS -->
 <!-- ================================================= -->
 
-
 <div id="featuredShops"></div>
 
-<a class="shop-card" href=" {iconUrl}" alt="">
-<span class="shop-name">$`{shop.n}</span>
-</a>
-
 </div>
-<script>
-document.addEventListener("DOMContentLoaded", () => {
-const savedCountry = localStorage.getItem("selectedCountry") || "india";
-renderCountry(savedCountry);
-
-// മുകളിലെ ബട്ടണുകൾ ഞെക്കുമ്പോൾ ഉള്ള സിങ്ക് ഓപ്പറേഷൻ
-document.querySelectorAll(".country-btn").forEach(btn => {
-if (btn.id === "shopOnCountry") return;
-
-btn.addEventListener("click", function() {
-const countryText = this.textContent.trim().toLowerCase();
-renderCountry(countryText);
-});
-});
-
-// ഡ്രോപ്പ്ഡൗൺ ബോക്സിൽ രാജ്യം മാറ്റുമ്പോൾ കളർ ഓപ്പറേഷൻ കൃത്യമായി സിങ്ക് ചെയ്യാൻ
-const selectEl = document.getElementById("allCountries");
-if (selectEl) {
-selectEl.addEventListener("change", (e) => {
-if (e.target.value) {
-renderCountry(e.target.value);
-}
-});
-}
-});
-
-function renderCountry(country) {
-if (!country) return;
-const pureCountry = country.trim().toLowerCase();
-
-// ഡ്രോപ്പ്ഡൗൺ ബോക്സിന്റെ വാല്യൂ സിങ്ക് ചെയ്യുന്നു
-const selectEl = document.getElementById("allCountries");
-if (selectEl) {
-selectEl.value = pureCountry;
-}
-
-// കളർ മാറ്റുന്ന ഓപ്പറേഷൻ സിങ്ക് (താങ്കളുടെ ഒറിജിനൽ കണ്ടീഷൻ അതേപടി)
-document.querySelectorAll(".country-btn").forEach(btn => {
-if (btn.id === "shopOnCountry") return;
-
-const btnText = btn.textContent.trim().toLowerCase();
-
-if (btnText === pureCountry || (btnText === "saudi arabia" && pureCountry === "saudi arabia")) {
-btn.style.color = "#00ff66";
-} else {
-btn.style.color = "#ffffff";
-}
-});
-
-// താഴെയുള്ള വലിയ ഷോപ്പ് ബോക്സ് (SHOP ON COUNTRY)
-const shopBtn = document.getElementById("shopOnCountry");
-if (shopBtn) {
-const displayCountry = country.toUpperCase();
-shopBtn.innerHTML = SHOP ON &lt;span style="color: #00ff66;"&gt;${displayCountry}</span>`;
-}
-
-localStorage.setItem("selectedCountry", pureCountry);
-loadShops(pureCountry);
-}
-
-function loadShops(country) {
-const featuredShopsDiv = document.getElementById("featuredShops");
-if (!featuredShopsDiv) return;
-
-featuredShopsDiv.innerHTML = "";
-
-if (countryShops[country]) {
-const shops = countryShops[country].slice(0, 10);
-shops.forEach(shop => {
-featuredShopsDiv.innerHTML += <a href="${shop.u}">${shop.n}&lt;/a>;
-});
-}
-}
-</script>
 
 <style>
 
@@ -948,70 +903,57 @@ border-radius:12px;
 /* ================================================= /
 / FEATURED SHOPS /
 / ================================================= */
-<div id="featuredShops"></div>
-
-</div>
 
 #featuredShops{
 display:grid;
-grid-template-columns:1fr;
+grid-template-columns:repeat(auto-fill,minmax(220px,1fr));
 gap:10px;
 }
 
- 
- .shopCard{
-  position:relative;
-  background:#1a1a1a;
-  border-radius:12px;
-  padding:12px;
-  margin:0 auto 8px auto;
+/* ================================================= /
+/ SHOP CARD /
+/ ================================================= */
 
-  width:96%;
-  max-width:900px;
-  min-height:84px;
-
-  display:flex;
-  align-items:center;
-
-  text-decoration:none;
-  box-sizing:border-box;
-
-  border:1px solid #333;
+.shopCard{
+position:relative;
+background:#fff;
+border-left:5px solid #4338ca;
+border-radius:14px;
+padding:14px;
+box-shadow:0 2px 8px rgba(0,0,0,.08);
 }
 
-.shopCard:nth-child(10n+1){border-left:6px solid #ff9900;}
-.shopCard:nth-child(10n+2){border-left:6px solid #2874f0;}
-.shopCard:nth-child(10n+3){border-left:6px solid #1428a0;}
-.shopCard:nth-child(10n+4){border-left:6px solid #fe3f6c;}
-.shopCard:nth-child(10n+5){border-left:6px solid #003087;}
-.shopCard:nth-child(10n+6){border-left:6px solid #da1c5c;}
-.shopCard:nth-child(10n+7){border-left:6px solid #ed1c24;}
-.shopCard:nth-child(10n+8){border-left:6px solid #00e9bf;}
-.shopCard:nth-child(10n+9){border-left:6px solid #fc2779;}
-.shopCard:nth-child(10n+10){border-left:6px solid #9c27b0;}
+.shopDot{
+position:absolute;
+left:8px;
+top:6px;
+font-size:20px;
+color:#000;
+}
+.shopHead{
+display:flex;
+align-items:center;
+gap:8px;
+}
 
 .shopFav{
-  width:60px;
-  height:60px;
-  background:#fff;
-  border-radius:8px;
-  padding:2px;
-  object-fit:contain;
-  flex-shrink:0;
-  box-sizing:border-box;
+width:18px;
+height:18px;
 }
 
 .shopName{
-  margin-left:14px;
-  font-size:20px;
-  font-weight:700;
-  color:#fff;
-  white-space:nowrap;
-  overflow:hidden;
-  text-overflow:ellipsis;
+font-weight:700;
 }
-  </style>
-<style>
+
+</style>
+
+
+<script>
+
+/* ================================================= /
+/ FIXED 10 COUNTRIES /
+/ ================================================= */
+ 
 /* ================================================= */
 /* FIXED 10 COUNTRIES */
 /* ================================================= */
