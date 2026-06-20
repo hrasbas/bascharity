@@ -702,77 +702,66 @@ body{margin:0;background:#000;color:#fff;font-family:Arial,sans-serif;padding:12
   </select>
 
   <div id="shopOnCountry">SHOP ON <span class="green">USA</span></div>
-
   <div id="featuredShops"></div>
 </div>
 
 <script>
-
-window.allCountriesList = window.allCountriesList || [
+const allCountriesList = [
   "india","usa","uk","uae","saudi arabia","canada","germany","france","australia","singapore","malaysia"
 ];
 
-window.countryShops = const countryShops || {
+const countryShops = {
   india: [
-    { id:1, n:"amazon india", c:"general", u:"https://www.amazon.in", a:"" },
-    { id:2, n:"flipkart", c:"general", u:"https://www.flipkart.com", a:"" },
-    { id:3, n:"myntra", c:"fashion", u:"https://www.myntra.com", a:"" }
+    { id: 1, n: "amazon india", c: "general", u: "https://www.amazon.in", a: "" },
+    { id: 2, n: "flipkart", c: "general", u: "https://www.flipkart.com", a: "" },
+    { id: 3, n: "myntra", c: "fashion", u: "https://www.myntra.com", a: "" }
   ],
   usa: [
-    { id:1, n:"amazon usa", c:"general", u:"https://www.amazon.com", a:"" },
-    { id:2, n:"walmart", c:"general", u:"https://www.walmart.com", a:"" },
-    { id:3, n:"target", c:"general", u:"https://www.target.com", a:"" }
+    { id: 1, n: "amazon usa", c: "general", u: "https://www.amazon.com", a: "" },
+    { id: 2, n: "walmart", c: "general", u: "https://www.walmart.com", a: "" },
+    { id: 3, n: "target", c: "general", u: "https://www.target.com", a: "" }
   ],
   uk: [
-    { id:1, n:"amazon uk", c:"general", u:"https://www.amazon.co.uk", a:"" },
-    { id:2, n:"argos", c:"general", u:"https://www.argos.co.uk", a:"" },
-    { id:3, n:"tesco", c:"general", u:"https://www.tesco.com", a:"" }
+    { id: 1, n: "amazon uk", c: "general", u: "https://www.amazon.co.uk", a: "" },
+    { id: 2, n: "argos", c: "general", u: "https://www.argos.co.uk", a: "" },
+    { id: 3, n: "tesco", c: "general", u: "https://www.tesco.com", a: "" }
   ],
   uae: [
-    { id:1, n:"amazon uae", c:"general", u:"https://www.amazon.ae", a:"" },
-    { id:2, n:"noon", c:"general", u:"https://www.noon.com", a:"" },
-    { id:3, n:"carrefour uae", c:"general", u:"https://www.carrefouruae.com", a:"" }
+    { id: 1, n: "amazon uae", c: "general", u: "https://www.amazon.ae", a: "" },
+    { id: 2, n: "noon", c: "general", u: "https://www.noon.com", a: "" },
+    { id: 3, n: "carrefour uae", c: "general", u: "https://www.carrefouruae.com", a: "" }
   ],
   "saudi arabia": [
-    { id:1, n:"amazon saudi", c:"general", u:"https://www.amazon.sa", a:"" },
-    { id:2, n:"noon sa", c:"general", u:"https://www.noon.com/saudi-en", a:"" },
-    { id:3, n:"carrefour sa", c:"general", u:"https://www.carrefourksa.com", a:"" }
+    { id: 1, n: "amazon saudi", c: "general", u: "https://www.amazon.sa", a: "" },
+    { id: 2, n: "noon sa", c: "general", u: "https://www.noon.com/saudi-en", a: "" },
+    { id: 3, n: "carrefour sa", c: "general", u: "https://www.carrefourksa.com", a: "" }
   ],
   canada: [
-    { id:1, n:"amazon canada", c:"general", u:"https://www.amazon.ca", a:"" },
-    { id:2, n:"walmart canada", c:"general", u:"https://www.walmart.ca", a:"" },
-    { id:3, n:"best buy canada", c:"electronics", u:"https://www.bestbuy.ca", a:"" }
+    { id: 1, n: "amazon canada", c: "general", u: "https://www.amazon.ca", a: "" },
+    { id: 2, n: "walmart canada", c: "general", u: "https://www.walmart.ca", a: "" },
+    { id: 3, n: "best buy canada", c: "electronics", u: "https://www.bestbuy.ca", a: "" }
   ],
   germany: [
-    { id:1, n:"amazon germany", c:"general", u:"https://www.amazon.de", a:"" },
-    { id:2, n:"otto", c:"general", u:"https://www.otto.de", a:"" },
-    { id:3, n:"mediamarkt", c:"electronics", u:"https://www.mediamarkt.de", a:"" }
+    { id: 1, n: "amazon germany", c: "general", u: "https://www.amazon.de", a: "" },
+    { id: 2, n: "otto", c: "general", u: "https://www.otto.de", a: "" },
+    { id: 3, n: "mediamarkt", c: "electronics", u: "https://www.mediamarkt.de", a: "" }
   ],
   france: [
-    { id:1, n:"amazon france", c:"general", u:"https://www.amazon.fr", a:"" },
-    { id:2, n:"cdiscount", c:"general", u:"https://www.cdiscount.com", a:"" },
-    { id:3, n:"fnac", c:"electronics", u:"https://www.fnac.com", a:"" }
+    { id: 1, n: "amazon france", c: "general", u: "https://www.amazon.fr", a: "" },
+    { id: 2, n: "cdiscount", c: "general", u: "https://www.cdiscount.com", a: "" },
+    { id: 3, n: "fnac", c: "electronics", u: "https://www.fnac.com", a: "" }
   ],
   australia: [
-    { id:1, n:"amazon australia", c:"general", u:"https://www.amazon.com.au", a:"" },
-    { id:2, n:"ebay australia", c:"general", u:"https://www.ebay.com.au", a:"" },
-    { id:3, n:"woolworths", c:"general", u:"https://www.woolworths.com.au", a:"" }
-  ],
-  singapore: [
-    { id:1, n:"amazon singapore", c:"general", u:"https://www.amazon.sg", a:"" },
-    { id:2, n:"shopee singapore", c:"general", u:"https://shopee.sg", a:"" },
-    { id:3, n:"lazada singapore", c:"general", u:"https://www.lazada.sg", a:"" }
-  ],
-  malaysia: [
-    { id:1, n:"lazada malaysia", c:"general", u:"https://www.lazada.com.my", a:"" },
-    { id:2, n:"shopee malaysia", c:"general", u:"https://shopee.com.my", a:"" }
+    { id: 1, n: "amazon australia", c: "general", u: "https://www.amazon.com.au", a: "" },
+    { id: 2, n: "ebay australia", c: "general", u: "https://www.ebay.com.au", a: "" },
+    { id: 3, n: "woolworths", c: "general", u: "https://www.woolworths.com.au", a: "" }
   ]
 };
 
 const allCountries = document.getElementById("allCountries");
 const featuredShops = document.getElementById("featuredShops");
 
-window.allCountriesList.forEach(country => {
+allCountriesList.forEach(country => {
   const option = document.createElement("option");
   option.value = country;
   option.textContent = country.toUpperCase();
@@ -780,11 +769,11 @@ window.allCountriesList.forEach(country => {
 });
 
 function loadShops(country){
-  const shops = (window.countryShops[country] || []).slice(0, 10);
-  featuredShops.innerHTML = shops.map((shop, i) => {
+  const shops = (countryShops[country] || []).slice(0, 10);
+  featuredShops.innerHTML = shops.map(shop => {
     let host = "";
     try { host = new URL(shop.u).hostname; } catch(e) {}
-    const iconUrl = "https://www.google.com/s2/favicons?domain=" + host + "&sz=64";
+    const iconUrl = shop.a && shop.a.trim() ? shop.a : "https://www.google.com/s2/favicons?domain=" + host + "&sz=64";
     return `
       <a href="${shop.u}" target="_blank" class="shopCard">
         <img class="shopFav" src="${iconUrl}" alt="">
@@ -821,7 +810,6 @@ document.querySelectorAll(".country-btn").forEach(btn => {
 });
 
 renderCountry(localStorage.getItem("selectedCountry") || "india");
-
 </script>
 <style>
 /* ================================================= */
