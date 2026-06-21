@@ -18436,14 +18436,13 @@ function loadShops(country) {
     try { host = new URL(shop.u).hostname; } catch (e) {}
     const iconUrl = "https://www.google.com/s2/favicons?domain=" + host + "&sz=64";
 
-    featuredShops.innerHTML += `
-      <a href="${shop.u}" target="_blank" class="shopCard">
-        <div class="shopDot">.</div>
-        <div class="shopHead">
-          <img class="shopFav" src="${iconUrl}" alt="">
-          <div class="shopName notranslate" translate="no">${shop.n}</div>
-        </div>
-      </a>
+featuredShops.innerHTML += `
+  <a href="${shop.u}" target="_blank" class="shopCard">
+    <div class="shopDot">.</div>
+    <img class="shopFav" src="${iconUrl}" alt="">
+    <div class="shopName notranslate" translate="no">${shop.n}</div>
+  </a>
+
     `;
   });
 }
