@@ -19946,7 +19946,10 @@ function setCountry(country){
   selectedCountryBox.style.color = "#00ff66";
   currentCategory = "all";
   document.querySelectorAll(".categoryBtn").forEach(btn => btn.classList.remove("active"));
-  renderCategory("cat");
+  renderCategory("all");
+  document.getElementById("selectedCountryBox").innerHTML =
+"SELECTED COUNTRY - <span style='color:#00ff66'>" +
+country.toUpperCase() + "</span>";
 }
 
 setupCategoryButtons();
