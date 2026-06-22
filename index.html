@@ -18456,9 +18456,11 @@ function attachLazyLoadEvent() {
 
 document.addEventListener("DOMContentLoaded", () => {
     allCountries.value = "";
+categoryShops.innerHTML = "";
 
-    const savedCountry = localStorage.getItem("selectedCountry") || "india";
-    renderCountry(savedCountry);
+currentCountry = localStorage.getItem("selectedCountry") || "india"; // ഈ വരി മാത്രം ചേർക്കുക
+let shops = countryShops[currentCountry] || [];
+
     attachLazyLoadEvent();
 
     document.querySelectorAll(".country-btn").forEach(btn => {
