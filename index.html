@@ -18409,13 +18409,13 @@ function renderCountry(country) {
     if (typeof countryShops !== 'undefined') {
         currentCountryShops = countryShops[pureCountry] || [];
     } else {
-        currentCountryShops = [];
-    }
+        currentCountryShops = countryShops[pureCountry] || [];
+featuredShops.innerHTML = "";
+displayedShopsCount = 0;
+loadMoreShops();
+
     
-    featuredShops.innerHTML = "";
-    displayedShopsCount = 0;
     
-    loadMoreShops(); 
 }
 
 
