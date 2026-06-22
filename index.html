@@ -19897,12 +19897,20 @@ function setupCategoryDropdown(){
   };
 }
 
-categorySearch.addEventListener("input", function(){
-  const value = this.value.toLowerCase();
+
+categorySearch.addEventListener("input", function () {
+  const value = this.value.toLowerCase().trim();
+
   document.querySelectorAll(".categoryBtn").forEach(btn => {
-    btn.style.display = btn.textContent.toLowerCase().includes(value) ? "inline-block" : "none";
+    btn.style.display = "inline-block";
+  });
+
+  document.querySelectorAll("#categoryShops .shopCard").forEach(card => {
+    const text = card.innerText.toLowerCase();
+    card.style.display = text.includes(value) ? "flex" : "none";
   });
 });
+
 
 function renderCategory(cat){
   const displayName = cat === "all" ? "ALL" : cat.toUpperCase();
