@@ -19911,6 +19911,24 @@ categorySearch.addEventListener("input", function () {
   });
 });
 
+let visibleCount = 12;
+let currentCategory = "all";
+let loadingMore = false;
+
+function loadMoreVisible() {
+  if (loadingMore) return;
+  loadingMore = true;
+  visibleCount += 12;
+  renderCategory(currentCategory);
+  loadingMore = false;
+}
+
+window.addEventListener("scroll", () => {
+  if (window.innerHeight + window.scrollY >= document.body.offsetHeight - 500) {
+    loadMoreVisible();
+  }
+});
+  
 
 function renderCategory(cat){
   const displayName = cat === "all" ? "ALL" : cat.toUpperCase();
@@ -19943,7 +19961,7 @@ function setCountry(country){
   selectedCountryBox.style.color = "#00ff66";
   currentCategory = "all";
   document.querySelectorAll(".categoryBtn").forEach(btn => btn.classList.remove("active"));
-  renderCategory("all");
+  renderCategory("cat");
 }
 
 setupCategoryButtons();
