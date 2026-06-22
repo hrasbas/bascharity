@@ -18381,7 +18381,6 @@ if (Array.isArray(allCountriesList)) {
         allCountries.appendChild(option);
     });
 }
-
 function renderCountry(country) {
     if (!country) return;
     const pureCountry = country.trim().toLowerCase();
@@ -18407,13 +18406,18 @@ function renderCountry(country) {
 
     localStorage.setItem("selectedCountry", pureCountry);
     
-    currentCountryShops = countryShops[pureCountry] || [];
+    if (typeof countryShops !== 'undefined') {
+        currentCountryShops = countryShops[pureCountry] || [];
+    } else {
+        currentCountryShops = [];
+    }
     
     featuredShops.innerHTML = "";
     displayedShopsCount = 0;
     
     loadMoreShops(); 
 }
+
 
 function loadMoreShops() {
     if (displayedShopsCount >= currentCountryShops.length) return;
