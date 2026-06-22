@@ -19921,43 +19921,70 @@ categorySearch.addEventListener("input", function () {
 function renderCategory(cat){
   const displayName = cat === "all" ? "ALL" : cat.toUpperCase();
   categoryHeading.textContent = displayName;
-  categoryShops.innerHTML = "";
 
   let shops = countryShops[currentCountry] || [];
   if(cat !== "all") shops = shops.filter(shop => shop.c === cat);
 
-  shops.forEach((shop, index) => {
-    let host = "";
-    try { host = new URL(shop.u).hostname; } catch(e) {}
+  lazyRender(
+    shops,
+    categoryShops,
+    (shop) => {
+      let host = "";
+      try { host = new URL(shop.u).hostname; } catch(e) {}
 
-    const leftColor = colorSet[index % 10];
-    categoryShops.innerHTML += `
-      <a href="${shop.u}" target="_blank" class="shopCard" style="border-left-color:${leftColor}">
-        <div class="shopDot">•</div>
-        <div class="shopHead">
-          <img class="shopFav" src="https://www.google.com/s2/favicons?domain=${host}&sz=64">
-          <div class="shopName" translate="no">${shop.n}</div>
-        </div>
-      </a>
-    `;
-  });
+      return `
+        <a href="${shop.u}" target="_blank" class="shopCard">
+          <div class="shopDot">•</div>
+          <div class="shopHead">
+            <img class="shopFav" src="https://www.google.com/s2/favicons?domain=${host}&sz=64">
+            <div class="shopName" translate="no">${shop.n}</div>
+          </div>
+        </a>
+      `;
+    }
+  );
 }
 
 function setCountry(country){
   currentCountry = country;
-  selectedCountryBox.textContent = "SELECTED COUNTRY - " + country.toUpperCase();
-  selectedCountryBox.style.color = "#00ff66";
+  selectedCountryBox.innerHTML =
+    "SELECTED COUNTRY - <span style='color:#00ff66'>" +
+    country.toUpperCase() + "</span>";
+
   currentCategory = "all";
   document.querySelectorAll(".categoryBtn").forEach(btn => btn.classList.remove("active"));
   renderCategory("all");
-  document.getElementById("selectedCountryBox").innerHTML =
-"SELECTED COUNTRY - <span style='color:#00ff66'>" +
-country.toUpperCase() + "</span>";
 }
 
 setupCategoryButtons();
 setupCategoryDropdown();
 setCountry("india");
-</script>
+
+const LOAD_COUNT = 10;
+
+function lazyRender(list, container, createCard){
+  const visible = Number(container.dataset.visible || LOAD_COUNT);
+
+  container.innerHTML = "";
+
+  list.slice(0, visible).forEach(item=>{
+    container.insertAdjacentHTML("beforeend", createCard(item));
+  });
+
+  if(list.length > visible){
+    let loader = document.createElement("div");
+    loader.style.height = "1px";
+    container.appendChild(loader);
+
+    new IntersectionObserver(entries=>{
+      if(entries[0].isIntersecting){
+        container.dataset.visible = visible + LOAD_COUNT;
+        lazyRender(list, container, createCard);
+      }
+    },{rootMargin:"300px"}).observe(loader);
+  }
+}
+ </script>
+  
 </body>
 </html>
