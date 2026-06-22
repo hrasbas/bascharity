@@ -18360,6 +18360,9 @@ function renderCountry(country) {
   const pureCountry = country.trim().toLowerCase();
   setCountry(country);
 
+document.getElementById("allCountries").selectedIndex = 0;
+  
+
   allCountries.value = pureCountry;
   allCountries.classList.toggle("green-select", !!pureCountry);
 
