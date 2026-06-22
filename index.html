@@ -19911,23 +19911,7 @@ categorySearch.addEventListener("input", function () {
   });
 });
 
-let visibleCount = 10;
-let currentCategory = "all";
-let loadingMore = false;
 
-function loadMoreVisible() {
-  if (loadingMore) return;
-  loadingMore = true;
-  visibleCount += 12;
-  renderCategory(currentCategory);
-  loadingMore = false;
-}
-
-window.addEventListener("scroll", () => {
-  if (window.innerHeight + window.scrollY >= document.body.offsetHeight - 500) {
-    loadMoreVisible();
-  }
-});
   
 
 function renderCategory(cat){
