@@ -19974,8 +19974,8 @@ function renderCategory(cat){
   const displayName = cat === "all" ? "ALL" : cat.toUpperCase();
   categoryHeading.textContent = displayName;
   categoryShops.innerHTML = "";
+let shops = countryShops[pureCountry] || [];
 
-  let shops = countryShops[currentCountry] || [];
   if(cat !== "all") shops = shops.filter(shop => shop.c === cat);
 
   shops.forEach((shop, index) => {
