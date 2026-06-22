@@ -19624,433 +19624,275 @@ if(target) target.scrollIntoView({ behavior:"smooth", block:"start" });
 }
 </script>
   <!-- PART 2 : CATEGORY -->
-
- 
- 
 <!-- ================================================= -->
 <!-- PART 2 : CATEGORY SECTION -->
-<!-- Paste BELOW Country Section -->
-<!-- ================================================= -->
-
- <!-- ================================================= -->
-<!-- SELECTED COUNTRY -->
-<!-- ================================================= -->
-  
- <!-- ================================================= -->
-<!-- SELECTED COUNTRY -->
 <!-- ================================================= -->
 
 <div id="selectedCountryBox">
-Selected Country - USA
+  Selected Country - USA
 </div>
 
 <style>
-
 #selectedCountryBox{
-margin-top:20px;
-margin-bottom:15px;
-padding:14px 18px;
-background:#ffffff;
-border-left:5px solid #4338ca;
-border-radius:12px;
-font-size:18px;
-font-weight:700;
-color:#111827;
-box-shadow:0 2px 8px rgba(0,0,0,.08);
+  margin-top:20px;
+  margin-bottom:15px;
+  padding:14px 18px;
+  background:#ffffff;
+  border-left:5px solid #4338ca;
+  border-radius:12px;
+  font-size:18px;
+  font-weight:700;
+  color:#111827;
+  box-shadow:0 2px 8px rgba(0,0,0,.08);
 }
 
-</style>
-<!-- ================================================= -->
-<!-- CATEGORY BOX -->
-<!-- ================================================= -->
-
-<div class="country-box">
-
-<!-- ================================================= -->
-<!-- CATEGORY SEARCH -->
-<!-- ================================================= -->
-
-<input
-id="categorySearch"
-type="text"
-placeholder="Search Category..."
->
-
-<!-- ================================================= -->
-<!-- CATEGORY BUTTONS -->
-<!-- ================================================= -->
-
-<div id="categoryButtons"></div>
-
-<!-- ================================================= -->
-<!-- CATEGORY DROPDOWN -->
-<!-- ================================================= -->
-
-<select id="allCategories">
-<option value="">All Categories</option>
-</select>
-
-<!-- ================================================= -->
-<!-- CATEGORY HEADING -->
-<!-- ================================================= -->
-
-<div id="categoryHeading">
-ALL
-</div>
-
-<!-- ================================================= -->
-<!-- CATEGORY SHOPS -->
-<!-- ================================================= -->
-
-<div id="categoryShops"></div>
-
-</div>
-
-<style>
-
-
-/* ================================================= */
 /* CATEGORY SEARCH */
-/* ================================================= */
-
 #categorySearch{
-width:100%;
-height:50px;
-border:2px solid #ddd;
-border-radius:12px;
-padding:0 12px;
-margin-bottom:12px;
-box-sizing:border-box;
+  width:100%;
+  height:50px;
+  border:2px solid #ddd;
+  border-radius:12px;
+  padding:0 12px;
+  margin-bottom:12px;
+  box-sizing:border-box;
 }
 
-/* ================================================= */
-/* CATEGORY BUTTONS */
-/* ================================================= */
-
+/* CATEGORY BUTTONS - Match Country Buttons */
 #categoryButtons{
-display:flex;
-flex-wrap:wrap;
-gap:8px;
-margin-bottom:12px;
+  display:flex;
+  flex-wrap:wrap;
+  gap:10px;
+  margin-bottom:12px;
 }
 
 .categoryBtn{
-border:none;
-padding:10px 14px;
-border-radius:999px;
-cursor:pointer;
-background:#ecfdf5;
-font-weight:600;
+  background:#4a4a4a;
+  border:1px solid #666;
+  border-radius:14px;
+  padding:14px 8px;
+  color:#fff;
+  font-size:16px;
+  font-weight:800;
+  text-align:center;
+  cursor:pointer;
+  border-left-width:6px;
 }
 
 .categoryBtn.active{
-background:#059669;
-color:#fff;
+  color:#00ff66;
+  border-left-color:#00ff66;
 }
 
-/* ================================================= */
 /* CATEGORY DROPDOWN */
-/* ================================================= */
-
 #allCategories{
-width:100%;
-height:50px;
-border:2px solid #ddd;
-border-radius:12px;
-padding:0 12px;
-margin-bottom:16px;
+  width:100%;
+  height:50px;
+  border:2px solid #ddd;
+  border-radius:12px;
+  padding:0 12px;
+  margin-bottom:16px;
 }
 
-  
-/* ================================================= */
 /* CATEGORY HEADING */
-/* ================================================= */
-
-/* ================================================= */
-/* CATEGORY HEADING */
-/* ================================================= */
-
 #categoryHeading{
-margin:15px 0;
-padding:12px;
-background:#059669;
-color:#fff;
-font-size:20px;
-font-weight:700;
-text-align:center;
-border-radius:12px;
+  margin:15px 0;
+  padding:12px;
+  background:#059669;
+  color:#fff;
+  font-size:20px;
+  font-weight:700;
+  text-align:center;
+  border-radius:12px;
 }
-/* ================================================= */
-/* CATEGORY SHOPS */
-/* ================================================= */
 
+/* CATEGORY SHOPS - 1 row 2 shops */
 #categoryShops{
-display:grid;
-grid-template-columns:repeat(auto-fill,minmax(220px,1fr));
-gap:10px;
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:10px;
 }
 
+/* Shop Card_colors_matching above */
+.shopCard{
+  background:#2b2b2b;
+  border:1px solid #c0c0c0;
+  border-left:8px solid #00C853;
+  border-radius:14px;
+  padding:14px 16px;
+  display:flex;
+  align-items:center;
+  gap:12px;
+  min-height:78px;
+  text-decoration:none;
+  box-shadow:0 2px 10px rgba(0,0,0,.25)
+}
+
+.shopCard:nth-child(10n+1){border-left-color:#00C853}
+.shopCard:nth-child(10n+2){border-left-color:#2196F3}
+.shopCard:nth-child(10n+3){border-left-color:#F44336}
+.shopCard:nth-child(10n+4){border-left-color:#FF9800}
+.shopCard:nth-child(10n+5){border-left-color:#9C27B0}
+.shopCard:nth-child(10n+6){border-left-color:#00BCD4}
+.shopCard:nth-child(10n+7){border-left-color:#E91E63}
+.shopCard:nth-child(10n+8){border-left-color:#FFC107}
+.shopCard:nth-child(10n+9){border-left-color:#009688}
+.shopCard:nth-child(10n+10){border-left-color:#795548}
+
+.shopDot{
+  width:18px;
+  flex:0 0 18px;
+  color:#fff;
+  font-weight:900;
+  text-align:center;
+  font-size:20px;
+  line-height:1
+}
+
+.shopFav{
+  width:42px;
+  height:42px;
+  object-fit:contain;
+  flex:0 0 42px;
+  border-radius:8px;
+  background:#fff
+}
+
+.shopName{
+  flex:1;
+  color:#fff;
+  font-size:30px;
+  font-weight:800;
+  line-height:1.2;
+  text-align:left
+}
 </style>
 
+<div class="country-box">
+  <input id="categorySearch" type="text" placeholder="Search Category...">
+  <div id="categoryButtons"></div>
+  <select id="allCategories">
+    <option value="">All Categories</option>
+  </select>
+  <div id="categoryHeading">ALL</div>
+  <div id="categoryShops"></div>
+</div>
+
 <script>
-
-/* ================================================= */
 /* CATEGORY LIST */
-/* ================================================= */
-
 const categories=[
-"all",
-"general",
-"electronics",
-"fashion",
-"home",
-"beauty",
-"kids",
-"sports",
-"travel",
-"books",
-"health"
+  "all",
+  "general",
+  "electronics",
+  "fashion",
+  "home",
+  "beauty",
+  "kids",
+  "sports",
+  "travel",
+  "books",
+  "health"
 ];
 
-/* ================================================= */
 /* CURRENT COUNTRY */
-/* ================================================= */
-
 let currentCountry="usa";
-  let visibleCount = 25;
+let visibleCount = 25;
 
-/* ================================================= */
 /* ELEMENTS */
-/* ================================================= */
+const categoryButtons = document.getElementById("categoryButtons");
+const categorySearch = document.getElementById("categorySearch");
+const allCategoriesSelect = document.getElementById("allCategories");
+const categoryHeading = document.getElementById("categoryHeading");
+const categoryShops = document.getElementById("categoryShops");
 
-const categoryButtons=
-document.getElementById("categoryButtons");
-
-const categorySearch=
-document.getElementById("categorySearch");
-
-const allCategoriesSelect=
-document.getElementById("allCategories");
-
-const categoryHeading=
-document.getElementById("categoryHeading");
-
-const categoryShops=
-document.getElementById("categoryShops");
-
-/* ================================================= */
 /* CATEGORY BUTTONS */
-/* ================================================= */
-
 categories.forEach(cat=>{
-
-const btn=document.createElement("button");
-
-btn.className="categoryBtn";
-
-btn.textContent=cat;
-
-btn.onclick=()=>{
-
-document
-.querySelectorAll(".categoryBtn")
-.forEach(x=>x.classList.remove("active"));
-
-btn.classList.add("active");
-
-renderCategory(cat);
-
-};
-
-categoryButtons.appendChild(btn);
-
+  const btn = document.createElement("button");
+  btn.className = "categoryBtn";
+  btn.textContent = cat.toUpperCase();
+  btn.onclick = ()=>{
+    document.querySelectorAll(".categoryBtn").forEach(x=>x.classList.remove("active"));
+    btn.classList.add("active");
+    renderCategory(cat);
+  };
+  categoryButtons.appendChild(btn);
 });
 
-const allCategoriesList=[
-"all",
-...new Set(
-Object.values(countryShops)
-.flat()
-.map(shop=>shop.c)
-)
+/* ALL CATEGORIES DROPDOWN */
+const allCategoriesList = [
+  "all",
+  ...new Set(Object.values(countryShops).flat().map(shop=>shop.c))
 ];
 
-allCategoriesSelect.innerHTML=
-'<option value="all">ALL CATEGORIES</option>';
-
-allCategoriesList
-.filter(cat=>cat!=="all")
-.forEach(cat=>{
-
-const option=
-document.createElement("option");
-
-option.value=cat;
-
-option.textContent=
-cat.toUpperCase();
-
-allCategoriesSelect.appendChild(option);
-
+allCategoriesSelect.innerHTML = '<option value="all">ALL CATEGORIES</option>';
+allCategoriesList.filter(cat=>cat!=="all").forEach(cat=>{
+  const option = document.createElement("option");
+  option.value = cat;
+  option.textContent = cat.toUpperCase();
+  allCategoriesSelect.appendChild(option);
 });
-/* ================================================= */
+
 /* CATEGORY DROPDOWN CHANGE */
-/* ================================================= */
-
-allCategoriesSelect.onchange=()=>{
-
-renderCategory(
-allCategoriesSelect.value
-);
-
-document
-.querySelectorAll(".categoryBtn")
-.forEach(btn=>{
-
-btn.classList.remove("active");
-
-if(
-btn.textContent.toLowerCase()===
-allCategoriesSelect.value.toLowerCase()
-){
-btn.classList.add("active");
-}
-
-});
-
-allCategoriesSelect.selectedIndex=0;
-
+allCategoriesSelect.onchange = ()=>{
+  renderCategory(allCategoriesSelect.value);
+  document.querySelectorAll(".categoryBtn").forEach(btn=>{
+    btn.classList.remove("active");
+    if(btn.textContent.toLowerCase() === allCategoriesSelect.value.toLowerCase()){
+      btn.classList.add("active");
+    }
+  });
+  allCategoriesSelect.selectedIndex = 0;
 };
 
-/* ================================================= */
 /* CATEGORY SEARCH */
-/* ================================================= */
-
-categorySearch.addEventListener(
-"input",
-function(){
-
-const value=
-this.value.toLowerCase();
-
-document
-.querySelectorAll(".categoryBtn")
-.forEach(btn=>{
-
-btn.style.display=
-btn.textContent
-.toLowerCase()
-.includes(value)
-?
-"inline-block"
-:
-"none";
-
+categorySearch.addEventListener("input", function(){
+  const value = this.value.toLowerCase();
+  document.querySelectorAll(".categoryBtn").forEach(btn=>{
+    btn.style.display = btn.textContent.toLowerCase().includes(value) ? "inline-block" : "none";
+  });
 });
 
-}
-);
-
-/* ================================================= */
 /* CATEGORY RENDER */
-/* ================================================= */
-
 function renderCategory(cat){
-
-categoryHeading.innerHTML=
-cat.toUpperCase();
-
-categoryShops.innerHTML="";
-
-let shops=
-countryShops[currentCountry]||[];
-
-if(cat!=="all"){
-
-shops=
-shops.filter(
-shop=>shop.c===cat
-);
-
+  categoryHeading.innerHTML = cat.toUpperCase();
+  categoryShops.innerHTML = "";
+  
+  let shops = countryShops[currentCountry] || [];
+  
+  if(cat !== "all"){
+    shops = shops.filter(shop=>shop.c === cat);
+  }
+  
+  shops.slice(0, visibleCount).forEach(shop=>{
+    let host = "";
+    try{ host = new URL(shop.u).hostname; }catch(e){}
+    
+    categoryShops.innerHTML += `
+      <a href="${shop.u}" target="_blank" class="shopCard">
+        <div class="shopDot">•</div>
+        <div class="shopHead">
+          <img class="shopFav" src="https://www.google.com/s2/favicons?domain=${host}&sz=64">
+          <div class="shopName" translate="no">${shop.n}</div>
+        </div>
+      </a>
+    `;
+  });
+  
+  window.onscroll = ()=>{
+    if(window.innerHeight + window.scrollY >= document.body.offsetHeight - 500){
+      visibleCount += 10;
+      renderCategory(cat);
+    }
+  };
 }
 
-shops.slice(0, visibleCount).forEach(shop=>{
-
-let host="";
-
-try{
-host=
-new URL(shop.u).hostname;
-}catch(e){}
-
-categoryShops.innerHTML+=`
-
-<a href="${shop.u}" target="_blank" class="shopCard">
-<div class="shopDot">•</div>
-<div class="shopHead">
-
-<img
-class="shopFav"
-src="https://www.google.com/s2/favicons?domain=${host}&sz=64"
->
-
-<div class="shopName" translate="no">
-${shop.n}
-</div>
-</div>
-
-</a>
-
-`;
-
-});
-window.onscroll = () => {
-
-if(
-window.innerHeight + window.scrollY >=
-document.body.offsetHeight - 500
-){
-
-visibleCount += 10;
-
-renderCategory(cat);
-
-}
-
-};
-}
-
-/* ================================================= */
-/* MODIFY PART 1 FUNCTION */
-/* ================================================= */
-/*
-renderCountry(country)
-function-ന്റെ അവസാനം
-ഈ 3 lines ചേർക്കുക
-*/
-
-/*
-
-currentCountry=country;
-
-document.getElementById(
-"selectedCountryBox"
-).innerHTML=
-"Selected Country - "+
-country.toUpperCase();
-
+/* MODIFY PART 1 renderCountry FUNCTION */
+/* renderCountry(country) function-ന്റെ അവസാനം ഈ 3 lines ചേർക്കുക */
+currentCountry = country;
+document.getElementById("selectedCountryBox").innerHTML = "Selected Country - " + country.toUpperCase();
 renderCategory("all");
 
-*/
-
-/* ================================================= */
 /* DEFAULT */
-/* ================================================= */
-
 renderCategory("all");
-
 </script>
-         
- 
 </body>
 </html>
