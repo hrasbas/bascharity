@@ -18359,6 +18359,7 @@ allCountriesList.forEach(country => {
 function renderCountry(country) {
   if (!country) return;
   const pureCountry = country.trim().toLowerCase();
+  setCountry(country);
 
   allCountries.value = pureCountry;
   allCountries.classList.toggle("green-select", !!pureCountry);
