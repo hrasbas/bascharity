@@ -18344,9 +18344,14 @@ usa:[{i:1, n:"amazon", c:"general", u:"https://www.amazon.com", a:"" }, { i:2, n
 
 
 
-
 const allCountries = document.getElementById("allCountries");
 const featuredShops = document.getElementById("featuredShops");
+const selectedCountryBox = document.getElementById("selectedCountryBox");
+const shopBtn = document.getElementById("shopOnCountry");
+
+let currentCountry = (localStorage.getItem("selectedCountry") || "india").trim().toLowerCase();
+let visibleCount = 10;
+let loadingMore = false;
 
 allCountriesList.forEach(country => {
   const option = document.createElement("option");
@@ -18355,8 +18360,7 @@ allCountriesList.forEach(country => {
   allCountries.appendChild(option);
 });
 
-function renderCountry(country) {
-  if (!country) return;
+function updateCountryUI(country) {
   const pureCountry = country.trim().toLowerCase();
 
   allCountries.value = pureCountry;
@@ -18366,38 +18370,63 @@ function renderCountry(country) {
     btn.classList.toggle("active", btn.textContent.trim().toLowerCase() === pureCountry);
   });
 
-  const shopBtn = document.getElementById("shopOnCountry");
+  if (selectedCountryBox) {
+    selectedCountryBox.innerHTML = `SELECTED COUNTRY - <span class="green">${pureCountry.toUpperCase()}</span>`;
+  }
+
   if (shopBtn) {
     shopBtn.innerHTML = `SHOP ON <span class="green">${pureCountry.toUpperCase()}</span>`;
   }
 
   localStorage.setItem("selectedCountry", pureCountry);
-  loadShops(pureCountry);
+  currentCountry = pureCountry;
 }
 
-function loadShops(country) {
-  featuredShops.innerHTML = "";
-  const shops = (countryShops[country] || []).slice(0, 10);
+function loadShops(country, reset = false) {
+  const all = countryShops[country] || [];
+  const shops = all.slice(0, visibleCount);
 
+  if (reset) featuredShops.innerHTML = "";
+
+  featuredShops.innerHTML = "";
   shops.forEach(shop => {
     let host = "";
     try { host = new URL(shop.u).hostname; } catch (e) {}
     const iconUrl = "https://www.google.com/s2/favicons?domain=" + host + "&sz=64";
 
-featuredShops.innerHTML += `
-  <a href="${shop.u}" target="_blank" class="shopCard">
-    <div class="shopDot">.</div>
-    <img class="shopFav" src="${iconUrl}" alt="">
-    <div class="shopName notranslate" translate="no">${shop.n}</div>
-  </a>
-
+    featuredShops.innerHTML += `
+      <a href="${shop.u}" target="_blank" class="shopCard">
+        <div class="shopDot">.</div>
+        <img class="shopFav" src="${iconUrl}" alt="">
+        <div class="shopName notranslate" translate="no">${shop.n}</div>
+      </a>
     `;
   });
 }
 
+function renderCountry(country) {
+  if (!country) return;
+  const pureCountry = country.trim().toLowerCase();
+  visibleCount = 10;
+  updateCountryUI(pureCountry);
+  loadShops(pureCountry, true);
+}
+
+window.addEventListener("scroll", () => {
+  if (window.innerHeight + window.scrollY < document.body.offsetHeight - 500) return;
+  if (loadingMore) return;
+
+  const total = (countryShops[currentCountry] || []).length;
+  if (visibleCount >= total) return;
+
+  loadingMore = true;
+  visibleCount += 10;
+  loadShops(currentCountry, true);
+  loadingMore = false;
+});
+
 document.addEventListener("DOMContentLoaded", () => {
-  const savedCountry = localStorage.getItem("selectedCountry") || "india";
-  renderCountry(savedCountry);
+  renderCountry(currentCountry);
 
   document.querySelectorAll(".country-btn").forEach(btn => {
     btn.addEventListener("click", function() {
@@ -18409,19 +18438,6 @@ document.addEventListener("DOMContentLoaded", () => {
     if (e.target.value) renderCountry(e.target.value);
   });
 });
-</script>
-
-
-
-
-
- 
- 
-  
-
-<!-- ================================================= -->
-<!-- SL NO 37 : HTML END -->
-<!-- ================================================= -->
 
   <style>
 .country-btn.active{
