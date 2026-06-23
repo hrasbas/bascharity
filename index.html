@@ -18292,46 +18292,42 @@ allCountriesList.forEach(country => {
   allCountries.appendChild(option);  
 });  
   
+// 1. കൺട്രി ബട്ടൺ ഞെക്കുമ്പോൾ റൺ ആകുന്ന ഫങ്ക്ഷൻ
 function renderCountry(country) {  
   if (!country) return;  
   const pureCountry = country.trim().toLowerCase();  
   
-  // 1. ഡ്രോപ്പ്ഡൗൺ വാല്യൂവും കളറും മാറ്റുന്നു
-  const countrySelect = document.getElementById("allCountries");  
-  if (countrySelect) {  
-    countrySelect.value = pureCountry;  
-    countrySelect.classList.toggle("green-select", !!pureCountry);  
-  }  
-  
-  // 2. കൺട്രി ബട്ടണുകൾ ആക്ടീവ് ആക്കുന്നു (പച്ച കളർ വരാൻ)
-  document.querySelectorAll(".country-btn").forEach(btn => {  
-    let btnText = btn.textContent.trim().toLowerCase();
-    if (btnText === "saudi arabia") btnText = "saudi arabia";
-    
-    // ബട്ടൺ ടെക്സ്റ്റും സെലക്ട് ചെയ്ത രാജ്യവും ഒന്നാണെങ്കിൽ ആക്റ്റീവ് ആക്കും
-    btn.classList.toggle("active", btnText === pureCountry);  
-  });  
-  
-  // 3. മുകളിലെ SHOP ON ടെക്സ്റ്റ് മാറ്റുന്നു
+  // മുകളിലെ SHOP ON ടെക്സ്റ്റ് മാറ്റുന്നു
   const shopBtn = document.getElementById("shopOnCountry");  
   if (shopBtn) {  
     shopBtn.innerHTML = `SHOP ON <span class="green">${pureCountry.toUpperCase()}</span>`;  
   }  
   
-  // 4. ലോക്കൽ സ്റ്റോറേജ് സേവ്
+  // ഡ്രോപ്പ്ഡൗൺ വാല്യൂവും കളറും മാറ്റുന്നു
+  const countrySelect = document.getElementById("allCountries");  
+  if (countrySelect) {  
+    countrySelect.value = pureCountry;  
+    countrySelect.classList.toggle("green-select", true);  
+  }  
+  
+  // ബട്ടണുകളുടെ പച്ച കളർ മാറ്റുന്നു
+  updateButtonStyles(pureCountry);
+  
+  // ലോക്കൽ സ്റ്റോറേജ് & ഷോപ്പുകൾ
   localStorage.setItem("selectedCountry", pureCountry);  
-  
-  // 5. താഴെ ഷോപ്പുകൾ ലോഡ് ചെയ്യാൻ
-  if (typeof loadShops === "function") {  
-    loadShops(pureCountry);  
-  }  
-  
-  // 6. കാറ്റഗറി സിങ്കിങ്  
-  if (typeof changeCountry === "function") {  
-    changeCountry(pureCountry);  
-  }  
+  if (typeof loadShops === "function") loadShops(pureCountry);  
+  if (typeof changeCountry === "function") changeCountry(pureCountry);  
 }  
 
+// 2. ബട്ടണുകളുടെ കളർ മാത്രം മാറ്റാനുള്ള ഫങ്ക്ഷൻ
+function updateButtonStyles(pureCountry) {
+  document.querySelectorAll(".country-btn").forEach(btn => {  
+    const btnText = btn.textContent.trim().toLowerCase();  
+    btn.classList.toggle("active", btnText === pureCountry);  
+  });  
+}
+
+// 3. ഷോപ്പുകൾ താഴെ ലോഡ് ചെയ്യുന്ന ഫങ്ക്ഷൻ
 function loadShops(country) {  
   const featuredShops = document.getElementById("featuredShops");  
   if (!featuredShops) return;  
@@ -18353,6 +18349,7 @@ function loadShops(country) {
   });  
 }  
 
+// 4. പേജ് ലോഡ് ചെയ്യുമ്പോൾ ഡ്രോപ്പ്ഡൗൺ ലിങ്ക് ചെയ്യുന്നത്
 document.addEventListener("DOMContentLoaded", () => {  
   const savedCountry = localStorage.getItem("selectedCountry") || "india";  
   renderCountry(savedCountry);  
@@ -18361,8 +18358,10 @@ document.addEventListener("DOMContentLoaded", () => {
   const countrySelect = document.getElementById("allCountries");  
   if (countrySelect) {  
     countrySelect.addEventListener("change", e => {  
-      if (e.target.value) {  
-        renderCountry(e.target.value);  
+      const selected = e.target.value;
+      if (selected) {  
+        // ഇവിടെ നമ്മൾ മുകളിലെ ടെക്സ്റ്റും കളറും താഴെ ഷോപ്പും ഒന്നിച്ച് മാറ്റുന്നു
+        renderCountry(selected);
       }  
     });  
   }  
