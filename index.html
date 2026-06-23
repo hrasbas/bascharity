@@ -18296,29 +18296,45 @@ function renderCountry(country) {
   if (!country) return;  
   const pureCountry = country.trim().toLowerCase();  
   
-  allCountries.value = "";  
-  allCountries.classList.toggle("green-select", !!pureCountry);  
-  
-  document.querySelectorAll(".country-btn").forEach(btn => {  
-    btn.classList.toggle("active", btn.textContent.trim().toLowerCase() === pureCountry);  
+allCountries.value = pureCountry;  
+allCountries.classList.toggle(
+  "green-select", 
+  !!pureCountry
+);  
+
+document
+  .querySelectorAll(".country-btn")
+  .forEach(btn => {  
+    btn.classList.toggle(
+      "active", 
+      btn.textContent
+        .trim()
+        .toLowerCase() === pureCountry
+    );  
   });  
-  
-  const shopBtn = document.getElementById("shopOnCountry");  
-  if (shopBtn) {  
-    shopBtn.innerHTML = `SHOP ON <span class="green">${pureCountry.toUpperCase()}</span>`;  
-  }  
-  
-   
-if (window.changeCountry) {
-    changeCountry(pureCountry);
-  }
-}
-  
-  // രണ്ടാമത്തെ കാറ്റഗറി സെക്ഷനുമായി പക്കാ സിങ്ക് ചെയ്യാൻ ഇവിടെ മാറ്റം വരുത്തിയിട്ടുണ്ട് ബാസ്  
-  if (typeof changeCountry === "function") {  
-    changeCountry(pureCountry);  
-  }  
+
+const shopBtn = document
+  .getElementById("shopOnCountry");  
+if (shopBtn) {  
+  shopBtn.innerHTML = `SHOP ON 
+    <span class="green">
+      ${pureCountry.toUpperCase()}
+    </span>`;  
 }  
+
+localStorage.setItem(
+  "selectedCountry", 
+  pureCountry
+);  
+
+// പോയ ഷോപ്പുകൾ തിരികെ വരാൻ ഇത് നിർബന്ധമാണ്:
+loadShops(pureCountry);  
+
+// കാറ്റഗറി സിങ്ക് ചെയ്യാൻ ഇത് മാത്രം മതി:
+if (typeof changeCountry === "function") {
+  changeCountry(pureCountry);
+}
+
   
 function loadShops(country) {  
   featuredShops.innerHTML = "";  
