@@ -19968,7 +19968,11 @@ function setCountry(country){
 
 setupCategoryButtons();
 setupCategoryDropdown();
-setCountry("india");
+
+setCountry(
+  localStorage.getItem("selectedCountry")
+  || "india"
+);
 </script>
 </body>
 </html>
