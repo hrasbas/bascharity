@@ -18312,10 +18312,12 @@ function renderCountry(country) {
   loadShops(pureCountry);  
   
   // രണ്ടാമത്തെ കാറ്റഗറി സെക്ഷനുമായി പക്കാ സിങ്ക് ചെയ്യാൻ ഇവിടെ മാറ്റം വരുത്തിയിട്ടുണ്ട് ബാസ്  
-  if (typeof changeCountry === "function") {  
-    changeCountry(pureCountry);  
-  }  
-}  
+  setTimeout(() => {
+    if (typeof changeCountry === "function") {  
+      changeCountry(pureCountry);  
+    }  
+  }, 50);
+}
   
 function loadShops(country) {  
   featuredShops.innerHTML = "";  
