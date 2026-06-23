@@ -18303,13 +18303,13 @@ function renderCountry(country) {
     countrySelect.classList.toggle("green-select", !!pureCountry);  
   }  
   
-  // 2. കൺട്രി ബട്ടണുകൾ ആക്ടീവ് ആക്കുന്നു (കളർ മാറ്റം)
+  // 2. കൺട്രി ബട്ടണുകൾ ആക്ടീവ് ആക്കുന്നു (പച്ച കളർ വരാൻ)
   document.querySelectorAll(".country-btn").forEach(btn => {  
-    const btnText = btn.textContent.trim().toLowerCase();  
-    // സൗദി അറേബ്യ സ്പെഷ്യൽ ചെക്ക്
-    const isMatch = btnText === pureCountry || 
-      (btnText === "saudi arabia" && pureCountry === "saudi arabia");  
-    btn.classList.toggle("active", isMatch);  
+    let btnText = btn.textContent.trim().toLowerCase();
+    if (btnText === "saudi arabia") btnText = "saudi arabia";
+    
+    // ബട്ടൺ ടെക്സ്റ്റും സെലക്ട് ചെയ്ത രാജ്യവും ഒന്നാണെങ്കിൽ ആക്റ്റീവ് ആക്കും
+    btn.classList.toggle("active", btnText === pureCountry);  
   });  
   
   // 3. മുകളിലെ SHOP ON ടെക്സ്റ്റ് മാറ്റുന്നു
@@ -18357,7 +18357,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const savedCountry = localStorage.getItem("selectedCountry") || "india";  
   renderCountry(savedCountry);  
   
-  // ഡ്രോപ്പ്ഡൗൺ മാറുമ്പോൾ എല്ലാം സിങ്ക് ആകാൻ
+  // ഡ്രോപ്പ്ഡൗൺ മാറുമ്പോൾ ബട്ടണും മുകളിലെ ഷോപ്പും മാറാൻ
   const countrySelect = document.getElementById("allCountries");  
   if (countrySelect) {  
     countrySelect.addEventListener("change", e => {  
