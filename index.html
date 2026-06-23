@@ -19922,11 +19922,11 @@ function changeCountry(countryName) {
     currentCountry = countryName.toLowerCase().trim();
     
     // കാറ്റഗറി "ALL" ലോട്ട് റീസെറ്റ് ചെയ്ത് ഷോപ്പുകൾ കാണിക്കുന്നു
-    renderCategory("all");
+    renderCategory("cat");
 }
 
 // 2. പുതിയ ലളിതമായ റെൻഡർ കാറ്റഗറി ഫങ്ക്ഷൻ
-function renderCategory(all)ഫങ്ക്ഷൻ {
+function renderCategory(Cat)ഫങ്ക്ഷൻ {
     const displayName = cat === "all" ? "ALL" : cat.toUpperCase();
     categoryHeading.textContent = displayName;
     categoryShops.innerHTML = "";
