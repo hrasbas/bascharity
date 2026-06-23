@@ -19925,7 +19925,7 @@ function changeCountry(countryName) {
 }
 
 // 2. പുതിയ ലളിതമായ റെൻഡർ കാറ്റഗറി ഫങ്ക്ഷൻ
-function renderCategory(cat) {
+function renderCategory(all)ഫങ്ക്ഷൻ {
     const displayName = cat === "all" ? "ALL" : cat.toUpperCase();
     categoryHeading.textContent = displayName;
     categoryShops.innerHTML = "";
@@ -19962,7 +19962,7 @@ function setCountry(country){
   selectedCountryBox.style.color = "#00ff66";
   currentCategory = "all";
   document.querySelectorAll(".categoryBtn").forEach(btn => btn.classList.remove("active"));
-  renderCategory("cat");
+  renderCategory("all");
 }
 
 setupCategoryButtons();
