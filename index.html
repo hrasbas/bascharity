@@ -18308,8 +18308,11 @@ function renderCountry(country) {
     shopBtn.innerHTML = `SHOP ON <span class="green">${pureCountry.toUpperCase()}</span>`;  
   }  
   
-  localStorage.setItem("selectedCountry", pureCountry);  
-  loadShops(pureCountry);  
+   
+if (window.changeCountry) {
+    changeCountry(pureCountry);
+  }
+}
   
   // രണ്ടാമത്തെ കാറ്റഗറി സെക്ഷനുമായി പക്കാ സിങ്ക് ചെയ്യാൻ ഇവിടെ മാറ്റം വരുത്തിയിട്ടുണ്ട് ബാസ്  
   if (typeof changeCountry === "function") {  
