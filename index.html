@@ -18292,9 +18292,19 @@ allCountriesList.forEach(country => {
   allCountries.appendChild(option);  
 });  
   
+/*function renderCountry(country) {  
+  if (!country) return;  
+  const pureCountry = country.trim().toLowerCase();*/
+
 function renderCountry(country) {  
   if (!country) return;  
   const pureCountry = country.trim().toLowerCase();  
+  
+  // പണ്ടാരം പിടിച്ച ആ കോംപ്ലിക്കേഷൻ മാറ്റി, സിംപിളായി പരസ്പരം സിങ്ക് ചെയ്യാൻ ഇത് മാത്രം മതി:
+  allCountries.value = ["india","usa","uk","uae","saudi arabia","canada","germany","france","australia"].includes(pureCountry) ? "" : pureCountry;
+  allCountries.classList.toggle("green-select", allCountries.value !== "");
+
+ 
   
   allCountries.value = "";  
   allCountries.classList.toggle("green-select", !!pureCountry);  
