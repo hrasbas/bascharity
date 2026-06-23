@@ -19839,7 +19839,8 @@ if(target) target.scrollIntoView({ behavior:"smooth", block:"start" });
 </style>
 
 <script>
-let currentCountry = "india";
+let currentCountry =
+localStorage.getItem("selectedCountry") || "india";
 let visibleCount = 100;
 let currentCategory = "all";
 
