@@ -19574,331 +19574,400 @@ if(target) target.scrollIntoView({ behavior:"smooth", block:"start" });
  
  <!-- ================================================= -->
 <!-- PART 2 : CATEGORY SECTION -->
-<!-- ================================================= -->
- <!-- ============================= -->
-<!-- PART 2 : CATEGORY SECTION -->
-<!-- ============================= -->
+ 
+<div id="selectedCountryBox">SELECTED COUNTRY - INDIA</div>  
+<div id="categoryCountry">SHOP ON <span class="green">INDIA</span></div>  
 
-<div id="selectedCountryBox">SELECTED COUNTRY - INDIA</div>
-
-<div class="country-box">
-  <input id="categorySearch" type="text" placeholder="SEARCH SHOPE">
-
-  <div class="section-label">SELECT CATOGARY</div>
-  <div id="categoryButtons" class="category-grid"></div>
-
-  <select id="allCategories">
-    <option value="all">SELECT ALL CATO GARIES</option>
-  </select>
-
-  <div id="categoryHeading">ALL</div>
-
-  <div id="categoryShops"></div>
-</div>
-
-<style>
-#selectedCountryBox{
-  width:100%;
-  max-width:900px;
-  margin:14px auto 10px;
-  padding:14px 16px;
-  background:#3f3f3f;
-  border:1px solid #8a8a8a;
-  border-radius:12px;
-  color:#00ff66;
-  font-size:18px;
-  font-weight:800;
-  text-align:center;
-  box-sizing:border-box;
-}
-
-.country-box{
-  width:96%;
-  max-width:900px;
-  margin:0 auto 18px;
-  padding:14px;
-  border:1px solid #3a3a3a;
-  border-radius:16px;
-  background:#111;
-  color:#fff;
-  font-family:Arial,sans-serif;
-  box-sizing:border-box;
-}
-
-#categorySearch{
-  width:100%;
-  height:48px;
-  border:1px solid #666;
-  border-radius:12px;
-  padding:0 14px;
-  margin-bottom:12px;
-  background:#fff;
-  color:#111;
-  font-size:16px;
-  box-sizing:border-box;
-}
-
-.section-label{
-  width:100%;
-  background:#3f3f3f;
-  border:1px solid #8a8a8a;
-  border-radius:12px;
-  color:#fff;
-  font-size:18px;
-  font-weight:800;
-  text-align:center;
-  padding:12px 10px;
-  margin-bottom:12px;
-  box-sizing:border-box;
-}
-
-.category-grid{
-  display:grid;
-  grid-template-columns:repeat(3,1fr);
-  gap:10px;
-  margin-bottom:12px;
-}
-
-.categoryBtn{
-  background:#4a4a4a;
-  border:1px solid #666;
-  border-left-width:6px;
-  border-radius:14px;
-  padding:14px 8px;
-  color:#fff;
-  font-size:15px;
-  font-weight:800;
-  text-align:center;
-  cursor:pointer;
-  min-height:50px;
-}
-
-.categoryBtn.active{
-  color:#00ff66;
-}
-
-.categoryBtn:nth-child(1){border-left-color:#FF9933;}
-.categoryBtn:nth-child(2){border-left-color:#2196F3;}
-.categoryBtn:nth-child(3){border-left-color:#E91E63;}
-.categoryBtn:nth-child(4){border-left-color:#00C853;}
-.categoryBtn:nth-child(5){border-left-color:#4CAF50;}
-.categoryBtn:nth-child(6){border-left-color:#F44336;}
-.categoryBtn:nth-child(7){border-left-color:#9C27B0;}
-.categoryBtn:nth-child(8){border-left-color:#3F51B5;}
-.categoryBtn:nth-child(9){border-left-color:#FFC107;}
-.categoryBtn:nth-child(10){border-left-color:#009688;}
-.categoryBtn:nth-child(11){border-left-color:#795548;}
-.categoryBtn:nth-child(12){border-left-color:#FF5722;}
-
-#allCategories{
-  width:100%;
-  height:48px;
-  border:1px solid #666;
-  border-radius:12px;
-  padding:0 12px;
-  margin-bottom:12px;
-  background:#4a4a4a;
-  color:#fff;
-  font-size:16px;
-  font-weight:800;
-  box-sizing:border-box;
-}
-
-#categoryHeading{
-  margin:10px 0 14px;
-  padding:12px;
-  background:#4a4a4a;
-  border:1px solid #8a8a8a;
-  border-radius:12px;
-  color:#00ff66;
-  font-size:20px;
-  font-weight:800;
-  text-align:center;
-  text-transform:uppercase;
-}
-
-#categoryShops{
-  display:flex;
-  flex-direction:column;
-  gap:10px;
-}
-
-.shopCard{
-  background:#2b2b2b;
-  border:1px solid #c0c0c0;
-  border-left:8px solid #00C853;
-  border-radius:14px;
-  padding:14px 16px;
-  display:flex;
-  align-items:center;
-  gap:12px;
-  min-height:78px;
-  text-decoration:none;
-  box-shadow:0 2px 10px rgba(0,0,0,.25);
-  box-sizing:border-box;
-}
-
-.shopCard:nth-child(10n+1){border-left-color:#00C853;}
-.shopCard:nth-child(10n+2){border-left-color:#2196F3;}
-.shopCard:nth-child(10n+3){border-left-color:#F44336;}
-.shopCard:nth-child(10n+4){border-left-color:#FF9800;}
-.shopCard:nth-child(10n+5){border-left-color:#9C27B0;}
-.shopCard:nth-child(10n+6){border-left-color:#00BCD4;}
-.shopCard:nth-child(10n+7){border-left-color:#E91E63;}
-.shopCard:nth-child(10n+8){border-left-color:#FFC107;}
-.shopCard:nth-child(10n+9){border-left-color:#009688;}
-.shopCard:nth-child(10n+10){border-left-color:#795548;}
-
-.shopDot{
-  width:18px;
-  flex:0 0 18px;
-  color:#fff;
-  font-weight:900;
-  text-align:center;
-  font-size:20px;
-  line-height:1;
-}
-
-.shopFav{
-  width:42px;
-  height:42px;
-  object-fit:contain;
-  flex:0 0 42px;
-  border-radius:8px;
-  background:#fff;
-}
-
-.shopName{
-  flex:1;
-  color:#fff;
-  font-size:28px;
-  font-weight:800;
-  line-height:1.2;
-  text-align:left;
-}
-
-.shopHead{
-  display:flex;
-  align-items:center;
-  gap:12px;
-  width:100%;
-}
-</style>
-
-<script>
-let currentCountry = "india";
-let visibleCount = 100;
-let currentCategory = "all";
-
-const categories = [
-  "general","electronics","fashion","home","beauty","kids",
-  "sports","travel","books","health","food","services"
-];
-
-const categoryButtons = document.getElementById("categoryButtons");
-const categorySearch = document.getElementById("categorySearch");
-const allCategoriesSelect = document.getElementById("allCategories");
-const categoryHeading = document.getElementById("categoryHeading");
-const categoryShops = document.getElementById("categoryShops");
-const selectedCountryBox = document.getElementById("selectedCountryBox");
-
-const colorSet = [
-  "#00C853","#2196F3","#F44336","#FF9800","#9C27B0",
-  "#00BCD4","#E91E63","#FFC107","#009688","#795548"
-];
-
-function setupCategoryButtons(){
-  categoryButtons.innerHTML = "";
-  categories.forEach((cat, i) => {
-    const btn = document.createElement("button");
-    btn.className = "categoryBtn";
-    btn.textContent = cat.toUpperCase();
-    btn.style.borderLeftColor = colorSet[i % 10];
-    btn.onclick = () => {
-      document.querySelectorAll(".categoryBtn").forEach(x => x.classList.remove("active"));
-      btn.classList.add("active");
-      currentCategory = cat;
-      renderCategory(cat);
-    };
-    categoryButtons.appendChild(btn);
-  });
-}
-
-function setupCategoryDropdown(){
-  const uniqueCats = [...new Set(Object.values(countryShops).flat().map(s => s.c))];
-  allCategoriesSelect.innerHTML = '<option value="all">SELECT ALL CATO GARIES</option>';
-  uniqueCats.forEach(cat => {
-    const opt = document.createElement("option");
-    opt.value = cat;
-    opt.textContent = cat.toUpperCase();
-    allCategoriesSelect.appendChild(opt);
-  });
-
-  allCategoriesSelect.onchange = () => {
-    currentCategory = allCategoriesSelect.value;
-    document.querySelectorAll(".categoryBtn").forEach(btn => {
-      btn.classList.remove("active");
-      if (btn.textContent.toLowerCase() === currentCategory.toLowerCase()) btn.classList.add("active");
-    });
-    renderCategory(currentCategory);
-    allCategoriesSelect.selectedIndex = 0;
-  };
-}
-
-
-categorySearch.addEventListener("input", function () {
-  const value = this.value.toLowerCase().trim();
-
-  document.querySelectorAll(".categoryBtn").forEach(btn => {
-    btn.style.display = "inline-block";
-  });
-
-  document.querySelectorAll("#categoryShops .shopCard").forEach(card => {
-    const text = card.innerText.toLowerCase();
-    card.style.display = text.includes(value) ? "flex" : "none";
-  });
-});
-
-
+<div class="country-box">  
+  <input id="categorySearch" type="text" placeholder="SEARCH SHOPE">    
+  <div class="section-label">SELECT CATOGARY</div>  
+  <div id="categoryButtons" class="category-grid"></div>    
   
+  <select id="allCategories">  
+    <option value="all">SELECT ALL CATO GARIES</option>  
+  </select>    
+  
+  <div id="categoryHeading">ALL</div>    
+  <div id="categoryShops"></div>  
+</div>  
 
-function renderCategory(cat){
-  const displayName = cat === "all" ? "ALL" : cat.toUpperCase();
-  categoryHeading.textContent = displayName;
-  categoryShops.innerHTML = "";
+<style>  
+#selectedCountryBox{  
+  width:100%;  
+  max-width:900px;  
+  margin:14px auto 10px;  
+  padding:14px 16px;  
+  background:#3f3f3f;  
+  border:1px solid #8a8a8a;  
+  border-radius:12px;  
+  color:#00ff66;  
+  font-size:18px;  
+  font-weight:800;  
+  text-align:center;  
+  box-sizing:border-box;  
+}  
+  
+.country-box{  
+  width:96%;  
+  max-width:900px;  
+  margin:0 auto 18px;  
+  padding:14px;  
+  border:1px solid #3a3a3a;  
+  border-radius:16px;  
+  background:#111;  
+  color:#fff;  
+  font-family:Arial,sans-serif;  
+  box-sizing:border-box;  
+}  
+  
+#categorySearch{  
+  width:100%;  
+  height:48px;  
+  border:1px solid #666;  
+  border-radius:12px;  
+  padding:0 14px;  
+  margin-bottom:12px;  
+  background:#fff;  
+  color:#111;  
+  font-size:16px;  
+  box-sizing:border-box;  
+}  
+  
+.section-label{  
+  width:100%;  
+  background:#3f3f3f;  
+  border:1px solid #8a8a8a;  
+  border-radius:12px;  
+  color:#fff;  
+  font-size:18px;  
+  font-weight:800;  
+  text-align:center;  
+  padding:12px 10px;  
+  margin-bottom:12px;  
+  box-sizing:border-box;  
+}  
+  
+.category-grid{  
+  display:grid;  
+  grid-template-columns:repeat(3,1fr);  
+  gap:10px;  
+  margin-bottom:12px;  
+}  
+  
+.categoryBtn{  
+  background:#4a4a4a;  
+  border:1px solid #666;  
+  border-left-width:6px;  
+  border-radius:14px;  
+  padding:14px 8px;  
+  color:#fff;  
+  font-size:15px;  
+  font-weight:800;  
+  text-align:center;  
+  cursor:pointer;  
+  min-height:50px;  
+}  
+  
+.categoryBtn.active{  
+  color:#00ff66;  
+}  
+  
+.categoryBtn:nth-child(1){border-left-color:#FF9933;}  
+.categoryBtn:nth-child(2){border-left-color:#2196F3;}  
+.categoryBtn:nth-child(3){border-left-color:#E91E63;}  
+.categoryBtn:nth-child(4){border-left-color:#00C853;}  
+.categoryBtn:nth-child(5){border-left-color:#4CAF50;}  
+.categoryBtn:nth-child(6){border-left-color:#F44336;}  
+.categoryBtn:nth-child(7){border-left-color:#9C27B0;}  
+.categoryBtn:nth-child(8){border-left-color:#3F51B5;}  
+.categoryBtn:nth-child(9){border-left-color:#FFC107;}  
+.categoryBtn:nth-child(10){border-left-color:#009688;}  
+.categoryBtn:nth-child(11){border-left-color:#795548;}  
+.categoryBtn:nth-child(12){border-left-color:#FF5722;}  
+  
+#allCategories{  
+  width:100%;  
+  height:48px;  
+  border:1px solid #666;  
+  border-radius:12px;  
+  padding:0 12px;  
+  margin-bottom:12px;  
+  background:#4a4a4a;  
+  color:#fff;  
+  font-size:16px;  
+  font-weight:800;  
+  box-sizing:border-box;  
+}  
+  
+#categoryHeading{  
+  margin:10px 0 14px;  
+  padding:12px;  
+  background:#4a4a4a;  
+  border:1px solid #8a8a8a;  
+  border-radius:12px;  
+  color:#00ff66;  
+  font-size:20px;  
+  font-weight:800;  
+  text-align:center;  
+  text-transform:uppercase;  
+  display: flex;  
+  justify-content: center;  
+  align-items: center;  
+  gap: 15px;  
+}  
 
-  let shops = countryShops[currentCountry] || [];
-  if(cat !== "all") shops = shops.filter(shop => shop.c === cat);
+.back-all-btn {  
+  background: #ff3b30;  
+  color: #fff;  
+  border: none;  
+  padding: 6px 12px;  
+  border-radius: 6px;  
+  font-size: 12px;  
+  cursor: pointer;  
+  font-weight: bold;  
+}  
+  
+#categoryShops{  
+  display:flex;  
+  flex-direction:column;  
+  gap:10px;  
+}  
+  
+.shopCard{  
+  background:#2b2b2b;  
+  border:1px solid #c0c0c0;  
+  border-left:8px solid #00C853;  
+  border-radius:14px;  
+  padding:14px 16px;  
+  display:flex;  
+  align-items:center;  
+  gap:12px;  
+  min-height:78px;  
+  text-decoration:none;  
+  box-shadow:0 2px 10px rgba(0,0,0,.25);  
+  box-sizing:border-box;  
+}  
+  
+.shopCard:nth-child(10n+1){border-left-color:#00C853;}  
+.shopCard:nth-child(10n+2){border-left-color:#2196F3;}  
+.shopCard:nth-child(10n+3){border-left-color:#F44336;}  
+.shopCard:nth-child(10n+4){border-left-color:#FF9800;}  
+.shopCard:nth-child(10n+5){border-left-color:#9C27B0;}  
+.shopCard:nth-child(10n+6){border-left-color:#00BCD4;}  
+.shopCard:nth-child(10n+7){border-left-color:#E91E63;}  
+.shopCard:nth-child(10n+8){border-left-color:#FFC107;}  
+.shopCard:nth-child(10n+9){border-left-color:#009688;}  
+.shopCard:nth-child(10n+10){border-left-color:#795548;}  
+  
+.shopDot{  
+  width:18px;  
+  flex:0 0 18px;  
+  color:#555; /* താങ്കൾ ആവശ്യപ്പെട്ട പ്രകാരം ലൈറ്റ് ഗ്രേ കളർ നമുക്ക് മാത്രം കാണാൻ */  
+  font-weight:900;  
+  text-align:center;  
+  font-size:20px;  
+  line-height:1;  
+}  
+  
+.shopFav{  
+  width:42px;  
+  height:42px;  
+  object-fit:contain;  
+  flex:0 0 42px;  
+  border-radius:8px;  
+  background:#fff;  
+}  
+  
+.shopName{  
+  flex:1;  
+  color:#fff;  
+  font-size:28px;  
+  font-weight:800;  
+  line-height:1.2;  
+  text-align:left;  
+}  
+  
+.shopHead{  
+  display:flex;  
+  align-items:center;  
+  gap:12px;  
+  width:100%;  
+}  
+</style>  
 
-  shops.forEach((shop, index) => {
-    let host = "";
-    try { host = new URL(shop.u).hostname; } catch(e) {}
+<script>  
+let currentCountry = localStorage.getItem("selectedCountry") || "india";  
+let currentCategory = "all";  
+let resetTimer = null;  
+  
+const categories = [  
+  "general","electronics","fashion","home","beauty","kids",  
+  "sports","travel","books","health","food","services"  
+];  
+  
+const categoryButtons = document.getElementById("categoryButtons");  
+const categorySearch = document.getElementById("categorySearch");  
+const allCategoriesSelect = document.getElementById("allCategories");  
+const categoryHeading = document.getElementById("categoryHeading");  
+const categoryShops = document.getElementById("categoryShops");  
+const selectedCountryBox = document.getElementById("selectedCountryBox");  
+const categoryCountry = document.getElementById("categoryCountry");  
+  
+const colorSet = [  
+  "#00C853","#2196F3","#F44336","#FF9800","#9C27B0",  
+  "#00BCD4","#E91E63","#FFC107","#009688","#795548"  
+];  
 
-    const leftColor = colorSet[index % 10];
-    categoryShops.innerHTML += `
-      <a href="${shop.u}" target="_blank" class="shopCard" style="border-left-color:${leftColor}">
-        <div class="shopDot">•</div>
-        <div class="shopHead">
-          <img class="shopFav" src="https://www.google.com/s2/favicons?domain=${host}&sz=64">
-          <div class="shopName" translate="no">${shop.n}</div>
-        </div>
-      </a>
-    `;
-  });
-}
+// ഇൻ-ആക്റ്റിവിറ്റി ടൈംഔട്ട് റീസെറ്റ് ലോജിക്ക് (3 മിനിറ്റ് ഉപയോഗിച്ചില്ലെങ്കിൽ തനിയെ ALL ലോട്ട് മാറും)  
+function startInactivityTimer() {  
+  clearTimeout(resetTimer);  
+  resetTimer = setTimeout(() => {  
+    if (currentCategory !== "all") {  
+      triggerBackToAll();  
+    }  
+  }, 180000); // 3 മിനിറ്റ് (180000ms)  
+}  
+  
+function setupCategoryButtons(){  
+  categoryButtons.innerHTML = "";  
+  categories.forEach((cat, i) => {  
+    const btn = document.createElement("button");  
+    btn.className = "categoryBtn";  
+    btn.textContent = cat.toUpperCase();  
+    btn.style.borderLeftColor = colorSet[i % 10];  
+    btn.onclick = () => {  
+      document.querySelectorAll(".categoryBtn").forEach(x => x.classList.remove("active"));  
+      btn.classList.add("active");  
+      currentCategory = cat;  
+      renderCategory(cat);  
+      startInactivityTimer();  
+    };  
+    categoryButtons.appendChild(btn);  
+  });  
+}  
+  
+function setupCategoryDropdown(){  
+  allCategoriesSelect.innerHTML = '<option value="all">SELECT ALL CATO GARIES</option>';  
+  categories.forEach(cat => {  
+    const opt = document.createElement("option");  
+    opt.value = cat;  
+    opt.textContent = cat.toUpperCase();  
+    allCategoriesSelect.appendChild(opt);  
+  });  
+  
+  allCategoriesSelect.onchange = () => {  
+    if(allCategoriesSelect.value === "all") return;  
+    currentCategory = allCategoriesSelect.value;  
+    document.querySelectorAll(".categoryBtn").forEach(btn => {  
+      btn.classList.remove("active");  
+      if (btn.textContent.toLowerCase() === currentCategory.toLowerCase()) btn.classList.add("active");  
+    });  
+    renderCategory(currentCategory);  
+    allCategoriesSelect.value = "all"; // ഡ്രോപ്പ്ഡൗൺ ടെക്സ്റ്റ് സ്ഥിരമായി അങ്ങനെ തന്നെ നിർത്തുന്നു  
+    startInactivityTimer();  
+  };  
+}  
+  
+categorySearch.addEventListener("input", function () {  
+  const value = this.value.toLowerCase().trim();  
+  startInactivityTimer();  
+  
+  if (value === "") {  
+    renderCategory(currentCategory);  
+    return;  
+  }  
+  
+  let allShopsOfCountry = countryShops[currentCountry] || [];  
+  let filtered = allShopsOfCountry.filter(shop => shop.n.toLowerCase().includes(value));  
+  
+  categoryHeading.innerHTML = `SEARCH RESULTS (${filtered.length}) <button class="back-all-btn" onclick="triggerBackToAll()">BACK TO ALL</button>`;  
+  categoryShops.innerHTML = "";  
+  
+  filtered.forEach((shop, index) => {  
+    createShopCard(shop, index);  
+  });  
+});  
 
-function setCountry(country){
-  currentCountry = country;
-  selectedCountryBox.textContent = "SELECTED COUNTRY - " + country.toUpperCase();
-  selectedCountryBox.style.color = "#00ff66";
-  currentCategory = "all";
-  document.querySelectorAll(".categoryBtn").forEach(btn => btn.classList.remove("active"));
-  renderCategory("cat");
-}
+// PART 1 (Country Section) മാറുമ്പോൾ ഈ ഫങ്ക്ഷനെയാണ് വിളിക്കേണ്ടത്  
+function changeCountry(countryName) {  
+    currentCountry = countryName.toLowerCase().trim();  
+    if(selectedCountryBox) selectedCountryBox.textContent = "SELECTED COUNTRY - " + currentCountry.toUpperCase();  
+    if(categoryCountry) categoryCountry.innerHTML = `SHOP ON <span class="green">${currentCountry.toUpperCase()}</span>`;  
+    renderCategory(currentCategory);  
+}  
 
-setupCategoryButtons();
-setupCategoryDropdown();
-setCountry("india");
+function triggerBackToAll() {  
+  currentCategory = "all";  
+  document.querySelectorAll(".categoryBtn").forEach(x => x.classList.remove("active"));  
+  categorySearch.value = "";  
+  renderCategory("all");  
+}  
+  
+function renderCategory(cat) {  
+    const isAll = cat === "all";  
+    categoryHeading.innerHTML = isAll ? "ALL" : `${cat.toUpperCase()} <button class="back-all-btn" onclick="triggerBackToAll()">BACK TO ALL</button>`;  
+    categoryShops.innerHTML = "";  
+  
+    let shops = countryShops[currentCountry] || [];  
+      
+    if (!isAll) {  
+        shops = shops.filter(shop => shop.c === cat);  
+    }  
+  
+    if(shops.length === 0) {  
+      categoryShops.innerHTML = "<div style='text-align:center;padding:20px;color:#888;'>No shops found!</div>";  
+      return;  
+    }  
+
+    // ബാച്ച് വൈസ് ലോഡിംഗ് + Lazy Loading ഇൻഫോഴ്‌സ്‌മെന്റ്  
+    shops.forEach((shop, index) => {  
+        createShopCard(shop, index);  
+    });  
+}  
+
+function createShopCard(shop, index) {  
+    let host = "";  
+    try { host = new URL(shop.u).hostname; } catch(e) {}  
+    const leftColor = colorSet[index % 10];  
+    
+    const card = document.createElement("a");  
+    card.href = shop.u;  
+    card.target = "_blank";  
+    card.className = "shopCard";  
+    card.style.borderLeftColor = leftColor;  
+    
+    // ഫാവിക്കോണുകൾക്ക് Lazy loading ബിൽറ്റ്-ഇൻ ആയി നൽകുന്നു  
+    card.innerHTML = `  
+        <div class="shopDot">.</div>  
+        <div class="shopHead">  
+            <img class="shopFav" src="https://www.google.com/s2/favicons?domain=${host}&sz=64" loading="lazy" alt="">  
+            <div class="shopName" translate="no">${shop.n}</div>  
+        </div>  
+    `;  
+    categoryShops.appendChild(card);  
+}  
+  
+function setCountry(country){  
+  currentCountry = country.toLowerCase().trim();  
+  if(selectedCountryBox) selectedCountryBox.textContent = "SELECTED COUNTRY - " + currentCountry.toUpperCase();  
+  if(categoryCountry) categoryCountry.innerHTML = `SHOP ON <span class="green">${currentCountry.toUpperCase()}</span>`;  
+  triggerBackToAll();  
+}  
+  
+document.addEventListener("DOMContentLoaded", () => {  
+  setupCategoryButtons();  
+  setupCategoryDropdown();  
+  
+  // ലോക്കൽ സ്റ്റോറേജിൽ പഴയ രാജ്യം ഉണ്ടെങ്കിൽ അത് സിങ്ക് ചെയ്യുന്നു  
+  const saved = localStorage.getItem("selectedCountry") || "india";  
+  setCountry(saved);  
+  
+  // അതത് സമയം വിൻഡോയിൽ ഉള്ള ഗ്ലോബൽ ചേഞ്ചുകൾ നിരീക്ഷിക്കാൻ  
+  window.renderCountry = function(c) {  
+     setCountry(c);  
+  };  
+});  
 </script>
+
 </body>
 </html>
