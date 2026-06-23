@@ -18338,7 +18338,7 @@ function loadShops(country) {
   });  
 }  
   
-document.addEventListener("DOMContentLoaded", () => {  
+/*document.addEventListener("DOMContentLoaded", () => {  
   const savedCountry = localStorage.getItem("selectedCountry") || "india";  
   renderCountry(savedCountry);  
   
@@ -18356,7 +18356,29 @@ document.addEventListener("DOMContentLoaded", () => {
       }  
     }  
   });  
-});  
+});*/
+
+ document.addEventListener("DOMContentLoaded", () => {  
+  const savedCountry = localStorage.getItem("selectedCountry") || "india";  
+  
+  // 1. കൺട്രി ബട്ടണുകളുടെ ക്ലിക്ക് ഇവന്റുകൾ ബൈൻഡ് ചെയ്യുന്നു
+  document.querySelectorAll(".country-btn").forEach(btn => {  
+    btn.addEventListener("click", function() {  
+      renderCountry(this.textContent.trim().toLowerCase());  
+    });  
+  });  
+  
+  // 2. ഡ്രോപ്പ്ഡൗൺ മാറുമ്പോൾ വർക്ക് ചെയ്യാനുള്ള ഇവന്റ്
+  allCountries.addEventListener("change", e => {  
+    if (e.target.value) {  
+      renderCountry(e.target.value);  
+    }  
+  });  
+
+  // 3. പേജ് ഓൺ ആകുമ്പോൾ ആദ്യമായി റൺ ചെയ്യുന്നു
+  renderCountry(savedCountry);  
+});
+
 </script>
 
 
