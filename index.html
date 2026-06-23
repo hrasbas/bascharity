@@ -18298,14 +18298,14 @@ function renderCountry(country) {
     .trim()
     .toLowerCase();  
   
-  // 1. ഡ്രോപ്പ്ഡൗൺ വാല്യൂ മാറ്റുന്നു
+  // 1. ഡ്രോപ്പ്ഡൗൺ മാറ്റുന്നു
   allCountries.value = pureCountry;  
   allCountries.classList.toggle(
     "green-select", 
     !!pureCountry
   );  
   
-  // 2. കൺട്രി ബട്ടണുകൾ സിങ്ക് ചെയ്യുന്നു
+  // 2. ബട്ടണുകൾ മാറ്റുന്നു
   document
     .querySelectorAll(".country-btn")
     .forEach(btn => {  
@@ -18317,7 +18317,7 @@ function renderCountry(country) {
       );  
     });  
   
-  // 3. ബട്ടൺ ടെക്സ്റ്റ് മാറ്റുന്നു
+  // 3. ബട്ടൺ ടെക്സ്റ്റ്
   const shopBtn = document
     .getElementById("shopOnCountry");  
   if (shopBtn) {  
@@ -18327,37 +18327,21 @@ function renderCountry(country) {
       </span>`;  
   }  
   
-  // 4. ലോക്കൽ സ്റ്റോറേജ് സേവ് ചെയ്യുന്നു
+  // 4. ലോക്കൽ സ്റ്റോറേജ്
   localStorage.setItem(
     "selectedCountry", 
     pureCountry
   );  
   
-  // 5. ഷോപ്പുകൾ വരാൻ ഇത് നിർബന്ധമാണ്
+  // 5. ഷോപ്പുകൾ വരാൻ
   loadShops(pureCountry);  
   
-  // 6. കാറ്റഗറി സിങ്കിങ് ഇവിടെ നടക്കും
+  // 6. കാറ്റഗറി സിങ്കിങ്
   if (typeof changeCountry === "function") {
     changeCountry(pureCountry);
   }
 }
 
-const shopBtn = document
-  .getElementById("shopOnCountry");  
-if (shopBtn) {  
-  shopBtn.innerHTML = `SHOP ON 
-    <span class="green">
-      ${pureCountry.toUpperCase()}
-    </span>`;  
-}  
-
-localStorage.setItem(
-  "selectedCountry", 
-  pureCountry
-);  
-
-// പോയ ഷോപ്പുകൾ തിരികെ വരാൻ ഇത് നിർബന്ധമാണ്:
-loadShops(pureCountry);  
 
 // കാറ്റഗറി സിങ്ക് ചെയ്യാൻ ഇത് മാത്രം മതി:
 if (typeof changeCountry === "function") {
