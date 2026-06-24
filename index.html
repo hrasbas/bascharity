@@ -18296,7 +18296,31 @@ allCountriesList.forEach(country => {
   if (!country) return;  
   let pureCountry = country.trim().toLowerCase();  
 
-  function renderCountry(country) {  
+function renderCountry(country) {  
+  if (!country) return;  
+  const pureCountry = country.trim().toLowerCase();  
+  
+  // 1. മുകളിലെ SHOP ON ടെക്സ്റ്റ് മാറ്റുന്നു (പശ ഇളക്കുന്നു)
+  const shopBtn = document.getElementById("shopOnCountry");  
+  if (shopBtn) {  
+    shopBtn.innerHTML = `SHOP ON <span class="green">${pureCountry.toUpperCase()}</span>`;  
+  }  
+  
+  // 2. ബട്ടണുകളുടെ പച്ച കളർ മാറ്റുന്നു
+  document.querySelectorAll(".country-btn").forEach(btn => {  
+    const btnText = btn.textContent.trim().toLowerCase();  
+    btn.classList.toggle("active", btnText === pureCountry);  
+  });  
+
+  // 3. താഴത്തെ ഷോപ്പുകളും ഇതിനൊപ്പം കണക്ട് ചെയ്യുന്നു
+  if (typeof loadShops === "function") {
+    loadShops(pureCountry);
+  }
+}
+
+  
+
+ /* function renderCountry(country) {  
   if (!country) return;  
   const pureCountry = country.trim().toLowerCase();  
   
@@ -18311,7 +18335,7 @@ allCountriesList.forEach(country => {
     const btnText = btn.textContent.trim().toLowerCase();  
     btn.classList.toggle("active", btnText === pureCountry);  
   });  
-}
+}*/
 
   
   // സൗദി അറേബ്യ സ്പെഷ്യൽ ചെക്ക് (പേരിലെ വ്യത്യാസം പരിഹരിക്കാൻ)
