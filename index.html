@@ -18332,13 +18332,19 @@ usa:[{i:1, n:"amazon", c:"general", u:"https://www.amazon.com", a:"" }, { i:2, n
     { id:511, n:"aiyima", c:"electronics", u:"https://www.aiyima.com", a:"" }
  ] };
 
+         <script>
 // ==========================================
 // താങ്കൾക്ക് ഫിൽ ചെയ്യാനുള്ള അറേ അടയാളങ്ങൾ
 // ==========================================
- 
+const fixedCountries = [ ];
+
+const allCountriesList = [ ];
+
+const countryShops = { };
+
 
 // ==========================================
-// താങ്കൾ തന്ന പഴയ ഒറിജിനൽ കോഡ് (മാറ്റമില്ലാതെ)
+// പക്കായായി വർക്ക് ചെയ്യുന്ന തിരുത്തിയ കോഡ്
 // ==========================================
 document.addEventListener("DOMContentLoaded", () => {
     const selectEl = document.getElementById("allCountries");
@@ -18366,16 +18372,6 @@ document.addEventListener("DOMContentLoaded", () => {
     const savedCountry = localStorage.getItem("selectedCountry") || "india";
     renderCountry(savedCountry);
 
-    // മുകളിലെ ബട്ടണുകൾ ഞെക്കുമ്പോൾ ഉള്ള സിങ്ക്
-    document.querySelectorAll(".country-btn").forEach(btn => {
-        if (btn.id === "shopOnCountry" || btn.getAttribute("id") === "shopOnCountry") return; 
-        
-        btn.addEventListener("click", function() {
-            const countryText = this.textContent.trim().toLowerCase();
-            renderCountry(countryText);
-        });
-    });
-
     // ഡ്രോപ്പ്ഡൗൺ ബോക്സിൽ രാജ്യം മാറ്റുമ്പോൾ ഉള്ള സിങ്ക്
     if (selectEl) {
         selectEl.addEventListener("change", (e) => {
@@ -18388,8 +18384,13 @@ document.addEventListener("DOMContentLoaded", () => {
 
 function renderCountry(country) {
     if (!country) return;
-    const pureCountry = country.trim().toLowerCase();
+    let pureCountry = country.trim().toLowerCase();
     
+    // സൗദി അറേബ്യ പേരിലെ വ്യത്യാസം പരസ്പരം സിങ്ക് ചെയ്ത് പരിഹരിക്കുന്നു
+    if (pureCountry === "saudi" || pureCountry === "saudi arabia") {
+        pureCountry = "saudi arabia";
+    }
+
     // ഡ്രോപ്പ്ഡൗണിലെ വാല്യൂ മാറാതെ "SELECT ALL COUNTRIES 🔽" എന്ന് തന്നെ സ്ഥിരമായി നിർത്തുന്നു
     const selectEl = document.getElementById("allCountries");
     if (selectEl) {
@@ -18400,9 +18401,12 @@ function renderCountry(country) {
     document.querySelectorAll(".country-btn").forEach(btn => {
         if (btn.id === "shopOnCountry" || btn.getAttribute("id") === "shopOnCountry") return; 
         
-        const btnText = btn.textContent.trim().toLowerCase();
+        let btnText = btn.textContent.trim().toLowerCase();
+        if (btnText === "saudi") {
+            btnText = "saudi arabia";
+        }
         
-        if (btnText === pureCountry || btnText.includes(pureCountry) || pureCountry.includes(btnText) || (btnText === "saudi arabia" && pureCountry === "saudi arabia")) {
+        if (btnText === pureCountry || btnText.includes(pureCountry) || pureCountry.includes(btnText)) {
             btn.classList.add("active");
         } else {
             btn.classList.remove("active");
@@ -18412,7 +18416,7 @@ function renderCountry(country) {
     // താങ്കൾ നൽകിയ .active-shop ക്ലാസ്സ് ഉപയോഗിച്ച് വലിയ ഷോപ്പ് ബോക്സിന്റെ കളർ സിങ്ക് ചെയ്യുന്നു
     const shopBtn = document.getElementById("shopOnCountry");
     if (shopBtn) {
-        const displayCountry = country.toUpperCase();
+        const displayCountry = pureCountry.toUpperCase();
         shopBtn.innerHTML = `SHOP ON <span>${displayCountry}</span>`;
         shopBtn.classList.add("active-shop");
     }
@@ -18430,11 +18434,13 @@ function loadShops(country) {
     
     featuredShopsDiv.innerHTML = "";
     
-    // താങ്കളുടെ ഒറിജിനൽ countryShops അറ ഉണ്ടോ എന്ന് ഉറപ്പുവരുത്തുന്നു
-    if (typeof countryShops !== 'undefined' && countryShops[country]) {
-        
-        // താങ്കൾ തന്ന ഘടനയിൽ നിന്നും (.slice(0, 10)) ആദ്യത്തെ 10 ഷോപ്പുകൾ മാത്രം മുറിച്ചെടുക്കുന്നു
-        const shops = countryShops[country].slice(0, 10);
+    // സൗദി ഡാറ്റാ കീ സിങ്ക് ചെയ്യുന്നു
+    const lookupKey = (country === "saudi arabia") ? "saudi" : country;
+    const targetData = (typeof countryShops !== 'undefined') ? (countryShops[lookupKey] || countryShops[country]) : null;
+    
+    if (targetData) {
+        // ആദ്യത്തെ 10 ഷോപ്പുകൾ മാത്രം മുറിച്ചെടുക്കുന്നു
+        const shops = targetData.slice(0, 10);
         
         shops.forEach(shop => {
             // താങ്കളുടെ പഴയ ഒറിജിനൽ ബോക്സ് ലിങ്ക് ഡിസൈൻ (Target blank ലോഡ് ചെയ്യുന്നു)
@@ -18444,7 +18450,6 @@ function loadShops(country) {
 }
 </script>
 
-<script>
 
  
 <!-- ================================================= -->
