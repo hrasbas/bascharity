@@ -681,7 +681,7 @@ ball.className = "bas-ball is-pwa-installed";
 .shopFav{width:42px;height:42px;object-fit:contain;flex:0 0 42px;border-radius:8px;background:#fff}  
 .shopName{flex:1;color:#fff;font-size:30px;font-weight:800;line-height:1.2;text-align:left}  
   
-/* Shop Icon + Button */  
+/* shop icon + button */  
 .shop-button-container{display:inline-flex;align-items:center;position:relative}  
 .shop-icon{font-size:50px!important;width:50px!important;height:50px!important;display:flex;align-items:center;justify-content:center;position:absolute;left:0;top:0;z-index:10}  
 .shop-button{padding:15px 30px;font-size:16px;background-color:blue;color:white;border:none;margin-left:50px;cursor:pointer;position:relative}  
@@ -18282,13 +18282,12 @@ usa:[{i:1, n:"amazon", c:"general", u:"https://www.amazon.com", a:"" }, { i:2, n
  ] };
   
  
-
 const allCountries = document.getElementById("allCountries");  
 const featuredShops = document.getElementById("featuredShops");  
   
 allCountriesList.forEach(country => {  
   const option = document.createElement("option");  
-  option.value = country;  
+  option.value = country.trim().toLowerCase();  
   option.textContent = country.toUpperCase();  
   allCountries.appendChild(option);  
 });  
@@ -18297,37 +18296,37 @@ function renderCountry(country) {
   if (!country) return;  
   let pureCountry = country.trim().toLowerCase();  
   
-  // സൗദി അറേബ്യ സ്പെഷ്യൽ ചെക്ക് (പേരിലെ വ്യത്യാസം പരിഹരിക്കാൻ)
   if (pureCountry === "saudi" || pureCountry === "saudi arabia") {
     pureCountry = "saudi arabia";
   }
 
-  // 1. മുകളിലെ shop on ബട്ടൺ ടെക്സ്റ്റ് മാറ്റുന്നു
+  // 1. shop on ടെക്സ്റ്റും പച്ച കളറും മാറ്റുന്നു
   const shopBtn = document.getElementById("shopOnCountry");  
   if (shopBtn) {  
     shopBtn.innerHTML = `shop on <span class="green">${pureCountry.toUpperCase()}</span>`;  
   }  
   
-  // 2. ഡ്രോപ്പ്ഡൗൺ വാല്യൂവും പച്ച കളറും മാറ്റുന്നു
+  // 2. ഡ്രോപ്പ്ഡൗൺ വാല്യൂവും പച്ച കളറും സിങ്ക് ചെയ്യുന്നു
   const countrySelect = document.getElementById("allCountries");  
   if (countrySelect) {  
     countrySelect.value = pureCountry;  
     countrySelect.classList.add("green-select");  
   }  
   
-  // 3. കൺട്രി ബട്ടണുകളുടെ പച്ച കളർ മാറ്റുന്നു (സ്റ്റക്ക് ആകില്ല)
+  // 3. കൺട്രി ബട്ടണുകളുടെ ആക്റ്റീവ് പച്ച കളർ മാറ്റുന്നു
   document.querySelectorAll(".country-btn").forEach(btn => {  
-    const btnText = btn.textContent.trim().toLowerCase();  
+    let btnText = btn.textContent.trim().toLowerCase();  
+    if (btnText === "saudi" || btnText === "saudi arabia") {
+      btnText = "saudi arabia";
+    }
     btn.classList.toggle("active", btnText === pureCountry);  
   });  
   
   // 4. ലോക്കൽ സ്റ്റോറേജ് സേവ്
   localStorage.setItem("selectedCountry", pureCountry);  
   
-  // 5. താഴെ ഷോപ്പുകൾ ലോഡ് ചെയ്യാൻ
-  if (typeof loadShops === "function") {  
-    loadShops(pureCountry);  
-  }  
+  // 5. താഴെ ഷോപ്പുകൾ ലോഡ് ചെയ്യാൻ വിളിക്കുന്നു
+  loadShops(pureCountry);  
   
   // 6. കാറ്റഗറി സിങ്കിങ്  
   if (typeof changeCountry === "function") {  
@@ -18340,7 +18339,6 @@ function loadShops(country) {
   if (!featuredShops) return;  
   featuredShops.innerHTML = "";  
   
-  // ഇവിടെയും സൗദി ചെക്ക് കൃത്യമാക്കുന്നു
   const lookupKey = (country === "saudi arabia") ? "saudi" : country;
   const shops = (countryShops[lookupKey] || countryShops[country] || []).slice(0, 10);  
   
@@ -18373,6 +18371,7 @@ document.addEventListener("DOMContentLoaded", () => {
   }  
 });
 </script>
+
  
 <!-- ================================================= -->
 <!-- SL NO 37 : HTML END -->
