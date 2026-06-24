@@ -18295,30 +18295,33 @@ allCountriesList.forEach(country => {
  function renderCountry(country) {  
   if (!country) return;  
   let pureCountry = country.trim().toLowerCase();  
-
 function renderCountry(country) {  
   if (!country) return;  
   const pureCountry = country.trim().toLowerCase();  
   
-  // 1. മുകളിലെ SHOP ON ടെക്സ്റ്റ് മാറ്റുന്നു (പശ ഇളക്കുന്നു)
+  // 1. മുകളിലെ SHOP ON ടെക്സ്റ്റ് മാറ്റുന്നു
   const shopBtn = document.getElementById("shopOnCountry");  
   if (shopBtn) {  
     shopBtn.innerHTML = `SHOP ON <span class="green">${pureCountry.toUpperCase()}</span>`;  
   }  
   
-  // 2. ബട്ടണുകളുടെ പച്ച കളർ മാറ്റുന്നു
+  // 2. യുകെ-യിലെ പശ ഇളക്കി, പുതിയ രാജ്യത്തിന് മാത്രം പച്ച കളർ നൽകുന്നു
   document.querySelectorAll(".country-btn").forEach(btn => {  
     const btnText = btn.textContent.trim().toLowerCase();  
-    btn.classList.toggle("active", btnText === pureCountry);  
+    // ആദ്യം എല്ലാ ബട്ടണുകളിൽ നിന്നും പച്ച കളർ (active class) പൂർണ്ണമായി നീക്കുന്നു
+    btn.classList.remove("active");
+    // അതിനുശേഷം നമ്മൾ ഞെക്കിയ രാജ്യത്തിന് മാത്രം പച്ച കളർ കൊടുക്കുന്നു
+    if (btnText === pureCountry) {
+      btn.classList.add("active");
+    }
   });  
 
-  // 3. താഴത്തെ ഷോപ്പുകളും ഇതിനൊപ്പം കണക്ട് ചെയ്യുന്നു
+  // 3. താഴത്തെ ഷോപ്പുകളും ഇതിനൊപ്പം സിങ്ക് ചെയ്യുന്നു
   if (typeof loadShops === "function") {
     loadShops(pureCountry);
   }
 }
 
-  
 
  /* function renderCountry(country) {  
   if (!country) return;  
