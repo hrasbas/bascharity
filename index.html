@@ -665,6 +665,8 @@ ball.className = "bas-ball is-pwa-installed";
 <!-- COUNTRY BOX START -->
 <style>  
 .country-board{width:96%;max-width:900px;margin:14px auto;padding:14px;border:1px solid #cfcfcf;border-radius:16px;background:#111;color:#fff;font-family:Arial,sans-serif}  
+<style>  
+.country-board{width:96%;max-width:900px;margin:14px auto;padding:14px;border:1px solid #cfcfcf;border-radius:16px;background:#111;color:#fff;font-family:Arial,sans-serif}  
 .country-title{width:100%;background:#4a4a4a;color:#fff;border:2px solid #dfe6eb;border-radius:14px;padding:14px 8px;text-align:center;font-size:16px;font-weight:800;margin-bottom:12px}  
 .country-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-bottom:12px}  
 .country-btn{background:#4a4a4a;border:1px solid #666;border-radius:14px;padding:14px 8px;color:#fff;font-size:16px;font-weight:800;text-align:center;cursor:pointer;border-left-width:6px}  
@@ -703,11 +705,13 @@ ball.className = "bas-ball is-pwa-installed";
   <select id="allCountries">  
     <option value="">SEARCH / SELECT ALL COUNTRIES ▼</option>  
   </select>  
-  <div id="shopOnCountry">shop on usa</div>  
+  <div id="shopOnCountry">shop on india</div>  
   <div id="featuredShops"></div>  
 </div>
 
 <script>
+ 
+
 
 /* ================================================= */
 /* FIXED 10 COUNTRIES */
@@ -18281,13 +18285,13 @@ usa:[{i:1, n:"amazon", c:"general", u:"https://www.amazon.com", a:"" }, { i:2, n
     { id:511, n:"aiyima", c:"electronics", u:"https://www.aiyima.com", a:"" }
  ] };
   
- 
-const allCountries = document.getElementById("allCountries");  
+ const allCountries = document.getElementById("allCountries");  
 const featuredShops = document.getElementById("featuredShops");  
   
 allCountriesList.forEach(country => {  
   const option = document.createElement("option");  
-  option.value = country.trim().toLowerCase();  
+  // താങ്കൾ തന്ന ഒറിജിനൽ വാല്യൂ സെറ്റിങ് (ഒരു മാറ്റവുമില്ല)
+  option.value = country;  
   option.textContent = country.toUpperCase();  
   allCountries.appendChild(option);  
 });  
@@ -18296,11 +18300,12 @@ function renderCountry(country) {
   if (!country) return;  
   let pureCountry = country.trim().toLowerCase();  
   
+  // സൗദി സിങ്കിങ് കറക്റ്റ് ചെയ്യാൻ
   if (pureCountry === "saudi" || pureCountry === "saudi arabia") {
     pureCountry = "saudi arabia";
   }
 
-  // 1. shop on ടെക്സ്റ്റും പച്ച കളറും മാറ്റുന്നു
+  // 1. മുകളിലെ shop on ടെക്സ്റ്റ് മാറ്റുന്നു
   const shopBtn = document.getElementById("shopOnCountry");  
   if (shopBtn) {  
     shopBtn.innerHTML = `shop on <span class="green">${pureCountry.toUpperCase()}</span>`;  
@@ -18309,7 +18314,9 @@ function renderCountry(country) {
   // 2. ഡ്രോപ്പ്ഡൗൺ വാല്യൂവും പച്ച കളറും സിങ്ക് ചെയ്യുന്നു
   const countrySelect = document.getElementById("allCountries");  
   if (countrySelect) {  
-    countrySelect.value = pureCountry;  
+    // ഡ്രോപ്പ്ഡൗൺ ലിസ്റ്റിലെ കൃത്യമായ പേരുമായി മാച്ച് ചെയ്യുന്നു
+    const foundCountry = allCountriesList.find(c => c.trim().toLowerCase() === pureCountry);
+    countrySelect.value = foundCountry || pureCountry;  
     countrySelect.classList.add("green-select");  
   }  
   
@@ -18325,7 +18332,7 @@ function renderCountry(country) {
   // 4. ലോക്കൽ സ്റ്റോറേജ് സേവ്
   localStorage.setItem("selectedCountry", pureCountry);  
   
-  // 5. താഴെ ഷോപ്പുകൾ ലോഡ് ചെയ്യാൻ വിളിക്കുന്നു
+  // 5. താഴെ 10 ഷോപ്പുകൾ ലോഡ് ചെയ്യാൻ വിളിക്കുന്നു
   loadShops(pureCountry);  
   
   // 6. കാറ്റഗറി സിങ്കിങ്  
@@ -18339,7 +18346,12 @@ function loadShops(country) {
   if (!featuredShops) return;  
   featuredShops.innerHTML = "";  
   
-  const lookupKey = (country === "saudi arabia") ? "saudi" : country;
+  let lookupKey = country;
+  if (country === "saudi arabia") {
+    lookupKey = "saudi";
+  }
+  
+  // അറേയിൽ നിന്ന് കൃത്യം 10 ഷോപ്പുകൾ ഫിൽട്ടർ ചെയ്യുന്നു
   const shops = (countryShops[lookupKey] || countryShops[country] || []).slice(0, 10);  
   
   shops.forEach(shop => {  
@@ -18358,7 +18370,16 @@ function loadShops(country) {
 }  
 
 document.addEventListener("DOMContentLoaded", () => {  
-  const savedCountry = localStorage.getItem("selectedCountry") || "india";  
+  let savedCountry = localStorage.getItem("selectedCountry") || "india";  
+  
+  // നമ്മൾ ലിസ്റ്റിൽ നിന്ന് ഒഴിവാക്കിയ പഴയ രാജ്യം ബ്രൗസർ മെമ്മറിയിൽ ഉണ്ടെങ്കിൽ ഓട്ടോമാറ്റിക്കായി 'india' ആക്കും
+  const validButtons = ["india", "usa", "uk", "uae", "saudi", "saudi arabia", "canada", "germany", "france", "australia"];
+  const isValidDropdown = allCountriesList.some(c => c.trim().toLowerCase() === savedCountry);
+  
+  if (!validButtons.includes(savedCountry) && !isValidDropdown) {
+    savedCountry = "india";
+  }
+
   renderCountry(savedCountry);  
   
   const countrySelect = document.getElementById("allCountries");  
@@ -18371,6 +18392,8 @@ document.addEventListener("DOMContentLoaded", () => {
   }  
 });
 </script>
+
+<script>
 
  
 <!-- ================================================= -->
