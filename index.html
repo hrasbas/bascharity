@@ -663,9 +663,20 @@ ball.className = "bas-ball is-pwa-installed";
  <!------------country---------------->
  <!-- 1. Country Selector Section -->
 <!-- COUNTRY BOX START -->
-<style>  
+
+<style>
+/* ബലൂൺ പോലെ ചെറുതായി കറങ്ങാനും പൊങ്ങാനും ഉള്ള ആനിമേഷൻ */
+@keyframes float-anim {
+0%, 100% { transform: translateY(0) rotate(0deg); }
+50% { transform: translateY(-10px) rotate(2deg); }
+}
+
+/* ക്ലിക്ക് ചെയ്യുമ്പോൾ ഉള്ള എഫക്ട് */
+#floating-selector div:active {
+transform: scale(0.9);
+}
+
 .country-board{width:96%;max-width:900px;margin:14px auto;padding:14px;border:1px solid #cfcfcf;border-radius:16px;background:#111;color:#fff;font-family:Arial,sans-serif}  
-<style>  
 .country-board{width:96%;max-width:900px;margin:14px auto;padding:14px;border:1px solid #cfcfcf;border-radius:16px;background:#111;color:#fff;font-family:Arial,sans-serif}  
 .country-title{width:100%;background:#4a4a4a;color:#fff;border:2px solid #dfe6eb;border-radius:14px;padding:14px 8px;text-align:center;font-size:16px;font-weight:800;margin-bottom:12px}  
 .country-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-bottom:12px}  
@@ -747,24 +758,9 @@ animation: float-anim 3s ease-in-out infinite 1.5s;">
 
 </div>
 
-<style>
-/* ബലൂൺ പോലെ ചെറുതായി കറങ്ങാനും പൊങ്ങാനും ഉള്ള ആനിമേഷൻ */
-@keyframes float-anim {
-0%, 100% { transform: translateY(0) rotate(0deg); }
-50% { transform: translateY(-10px) rotate(2deg); }
-}
-
-/* ക്ലിക്ക് ചെയ്യുമ്പോൾ ഉള്ള എഫക്ട് */
-#floating-selector div:active {
-transform: scale(0.9);
-}
-</style>
 
 <script>
- 
-
-
-/* ================================================= */
+ /* ================================================= */
 /* FIXED 10 COUNTRIES */
 /* ================================================= */
 const fixedCountries=[
@@ -18339,12 +18335,7 @@ usa:[{i:1, n:"amazon", c:"general", u:"https://www.amazon.com", a:"" }, { i:2, n
 // ==========================================
 // താങ്കൾക്ക് ഫിൽ ചെയ്യാനുള്ള അറേ അടയാളങ്ങൾ
 // ==========================================
-const fixedCountries = [ ];
-
-const allCountriesList = [ ];
-
-const countryShops = { };
-
+ 
 
 // ==========================================
 // താങ്കൾ തന്ന പഴയ ഒറിജിനൽ കോഡ് (മാറ്റമില്ലാതെ)
