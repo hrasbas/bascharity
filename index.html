@@ -18295,6 +18295,24 @@ allCountriesList.forEach(country => {
  function renderCountry(country) {  
   if (!country) return;  
   let pureCountry = country.trim().toLowerCase();  
+
+  function renderCountry(country) {  
+  if (!country) return;  
+  const pureCountry = country.trim().toLowerCase();  
+  
+  // 1. മുകളിലെ SHOP ON ടെക്സ്റ്റ് മാറ്റുന്നു
+  const shopBtn = document.getElementById("shopOnCountry");  
+  if (shopBtn) {  
+    shopBtn.innerHTML = `SHOP ON <span class="green">${pureCountry.toUpperCase()}</span>`;  
+  }  
+  
+  // 2. ബട്ടണുകളുടെ പച്ച കളർ മാറ്റുന്നു
+  document.querySelectorAll(".country-btn").forEach(btn => {  
+    const btnText = btn.textContent.trim().toLowerCase();  
+    btn.classList.toggle("active", btnText === pureCountry);  
+  });  
+}
+
   
   // സൗദി അറേബ്യ സ്പെഷ്യൽ ചെക്ക് (പേരിലെ വ്യത്യാസം പരിഹരിക്കാൻ)
   if (pureCountry === "saudi" || pureCountry === "saudi arabia") {
