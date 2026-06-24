@@ -18402,6 +18402,23 @@ function loadShops(country) {
   });  
 }  
 
+  // പേജ് ലോഡ് ചെയ്യുമ്പോൾ സംഭവിക്കേണ്ട കാര്യങ്ങൾ
+document.addEventListener("DOMContentLoaded", () => {  
+  // യുകെ-ക്ക് പകരം ഡിഫോൾട്ടായി ഇന്ത്യയോ ലോക്കൽ സ്റ്റോറേജിൽ ഉള്ളതോ എടുക്കുന്നു
+  const savedCountry = localStorage.getItem("selectedCountry") || "india";  
+  renderCountry(savedCountry);  
+  
+  // ഡ്രോപ്പ്ഡൗൺ മാറുമ്പോൾ മാറാൻ
+  const countrySelect = document.getElementById("allCountries");  
+  if (countrySelect) {  
+    countrySelect.addEventListener("change", e => {  
+      if (e.target.value) {  
+        renderCountry(e.target.value);  
+      }  
+    });  
+  }  
+});
+
 document.addEventListener("DOMContentLoaded", () => {  
   const savedCountry = localStorage.getItem("selectedCountry") || "india";  
   renderCountry(savedCountry);  
