@@ -708,52 +708,6 @@ ball.className = "bas-ball is-pwa-installed";
   <div id="featuredShops"></div>
 </div>
     
- 
-<div onclick="document.querySelector('.lang-box').scrollIntoView({behavior: 'smooth'})"
-style="background: linear-gradient(135deg, #FF5722, #E64A19);
-color: white;
-padding: 15px 20px;
-border-radius: 50px;
-cursor: pointer;
-font-weight: bold;
-box-shadow: 0 10px 20px rgba(0,0,0,0.3);
-display: flex;
-align-items: center;
-gap: 10px;
-animation: float-anim 3s ease-in-out infinite;">
-<span style="font-size: 20px;">🌐</span> <span>ഭാഷ മാറ്റുക</span>
-</div>
-
-<div onclick="document.querySelector('.country-box').scrollIntoView({behavior: 'smooth'})"
-style="background: linear-gradient(135deg, #2196F3, #1976D2);
-color: white;
-padding: 15px 20px;
-border-radius: 50px;
-cursor: pointer;
-font-weight: bold;
-box-shadow: 0 10px 20px rgba(0,0,0,0.3);
-display: flex;
-align-items: center;
-gap: 10px;
-animation: float-anim 3s ease-in-out infinite 1.5s;">
-<span style="font-size: 20px;">📍</span> <span>രാജ്യം മാറ്റുക</span>
-</div>
-
-</div>
-
-<style>
-/* ബലൂൺ പോലെ ചെറുതായി കറങ്ങാനും പൊങ്ങാനും ഉള്ള ആനിമേഷൻ */
-@keyframes float-anim {
-0%, 100% { transform: translateY(0) rotate(0deg); }
-50% { transform: translateY(-10px) rotate(2deg); }
-}
-
-/* ക്ലിക്ക് ചെയ്യുമ്പോൾ ഉള്ള എഫക്ട് */
-#floating-selector div:active {
-transform: scale(0.9);
-}
-</style>
- 
 <script>
 
 /* ================================================= */
@@ -19610,6 +19564,117 @@ const target = document.getElementById(el);
 if(target) target.scrollIntoView({ behavior:"smooth", block:"start" });
 }
 </script>
+
+
+</script>
+
+<div id="bas-charity-total-dark-info" style="
+font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+line-height: 1.8;
+color: #eeeeee;
+background-color: #121212; /* Full Black Background */
+border: 1px solid #333333;
+border-radius: 15px;
+max-width: 900px;
+margin: 25px auto;
+box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+box-sizing: border-box;
+width: 96%;
+overflow: hidden;
+">
+
+<div style="padding: 35px 25px;">
+
+<div style="margin-bottom: 40px; text-align: center;">
+<h2 style="color: #2ecc71; border-bottom: 3px solid #27ae60; display: inline-block; padding-bottom: 8px; margin-bottom: 15px; letter-spacing: 1px;">TRANSPARENCY & LEGAL DISCLOSURES</h2>
+<p style="font-weight: bold; color: #27ae60; font-size: 1.15em; margin: 15px 0;">"YOUR PURCHASE SATISFIES A HUNGER"</p>
+<p style="text-align: justify; color: #cccccc; font-size: 0.98em;">
+<strong>BAS Charity International</strong> acts as a bridge between global commerce and humanitarian aid. Our mission is to ensure that support reaches those who truly need it through affiliate partnerships with <strong>50,000+ online shops</strong> worldwide.
+</p>
+</div>
+
+<div style="background: linear-gradient(135deg, #1a1a1a 0%, #252525 100%); padding: 25px; border-radius: 12px; margin-bottom: 35px; border-left: 8px solid #27ae60;">
+<h3 style="color: #2ecc71; margin-top: 0; font-size: 1.25em;">Financial Governance</h3>
+<p><strong>Initially, 100% of the affiliate income</strong> generated through this platform was dedicated entirely to hunger relief. As we scale, a <strong>minimum of 51% or more</strong> will always be strictly dedicated to these noble causes.</p>
+<p style="font-style: italic; color: #999999; font-size: 0.95em; margin-bottom: 0;">The remaining portion is utilized for platform maintenance, technical development, staff support, and operational expenses to ensure long-term sustainability.</p>
+</div>
+
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 25px; margin-bottom: 35px;">
+<div style="padding: 0 10px;">
+<h3 style="color: #3498db; border-left: 4px solid #3498db; padding-left: 12px; margin-bottom: 12px; font-size: 1.15em;">Privacy Commitment</h3>
+<p style="font-size: 0.93em; text-align: justify; color: #bbbbbb;">
+We value your digital safety. <strong>BAS Charity International</strong> does not collect or store your personal financial information. When you click the <strong>above links</strong>, your transaction happens directly on the official retailer's secure website.
+</p>
+</div>
+<div style="padding: 0 10px;">
+<h3 style="color: #f39c12; border-left: 4px solid #f39c12; padding-left: 12px; margin-bottom: 12px; font-size: 1.15em;">Affiliate Disclosure</h3>
+<p style="font-size: 0.93em; text-align: justify; color: #bbbbbb;">
+Shopping through the <strong>above links</strong> costs you <strong>nothing extra</strong>. The retailers pay a commission to us, which we use for our humanitarian missions to fight hunger and help those in need.
+</p>
+</div>
+</div>
+
+<div style="margin-bottom: 10px; padding: 20px; border: 2px solid #c0392b; border-radius: 12px; background-color: #1a0d0d; text-align: center;">
+<h3 style="color: #e74c3c; margin-top: 0; font-size: 1.15em;">Direct Donations Notice</h3>
+<p style="font-weight: 500; margin-bottom: 8px;">Currently, we <strong>do not accept any direct donations</strong> through this website.</p>
+<p style="font-size: 0.92em; color: #888888; font-weight: bold; letter-spacing: 0.5px;">"Give your donations only through trusted hands."</p>
+</div>
+
+</div>
+
+<div style="text-align: center; background-color: #0a0a0a; color: #ffffff; padding: 35px 20px; border-top: 1px solid #222222;">
+<p style="font-size: 1.1em; color: #2ecc71; margin: 0;"><strong>Contact:</strong> <a href="mailto:support@bascharity.com" style="color: #27ae60; text-decoration: none; font-weight: bold; border-bottom: 1px dashed #27ae60;">support@bascharity.com</a> | Kerala, India</p>
+<p style="font-size: 0.85em; color: #666666; margin-top: 20px; letter-spacing: 1px;">&copy; 2026 BAS Charity International. All Rights Reserved.</p>
+</div>
+</div>
+<div id="floating-selector" style="position: fixed; bottom: 30px; right: 20px; display: flex; flex-direction: column; gap: 15px; z-index: 9999;">
+
+<div onclick="document.querySelector('.lang-box').scrollIntoView({behavior: 'smooth'})"
+style="background: linear-gradient(135deg, #FF5722, #E64A19);
+color: white;
+padding: 15px 20px;
+border-radius: 50px;
+cursor: pointer;
+font-weight: bold;
+box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+display: flex;
+align-items: center;
+gap: 10px;
+animation: float-anim 3s ease-in-out infinite;">
+<span style="font-size: 20px;">🌐</span> <span>ഭാഷ മാറ്റുക</span>
+</div>
+
+<div onclick="document.querySelector('.country-box').scrollIntoView({behavior: 'smooth'})"
+style="background: linear-gradient(135deg, #2196F3, #1976D2);
+color: white;
+padding: 15px 20px;
+border-radius: 50px;
+cursor: pointer;
+font-weight: bold;
+box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+display: flex;
+align-items: center;
+gap: 10px;
+animation: float-anim 3s ease-in-out infinite 1.5s;">
+<span style="font-size: 20px;">📍</span> <span>രാജ്യം മാറ്റുക</span>
+</div>
+
+</div>
+
+<style>
+/* ബലൂൺ പോലെ ചെറുതായി കറങ്ങാനും പൊങ്ങാനും ഉള്ള ആനിമേഷൻ */
+@keyframes float-anim {
+0%, 100% { transform: translateY(0) rotate(0deg); }
+50% { transform: translateY(-10px) rotate(2deg); }
+}
+
+/* ക്ലിക്ക് ചെയ്യുമ്പോൾ ഉള്ള എഫക്ട് */
+#floating-selector div:active {
+transform: scale(0.9);
+}
+</style>
+
+ 
   <!-- PART 2 : CATEGORY -->
 <!-- ================================================= -->
 <!-- PART 2 : CATEGORY SECTION -->
