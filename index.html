@@ -18319,6 +18319,9 @@ function renderCountry(country) {
   if (typeof loadShops === "function") {
     loadShops(pureCountry);
   }
+  if (typeof setCountry === "function") {
+    setCountry(pureCountry);
+}
 }
 
 
