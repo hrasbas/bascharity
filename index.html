@@ -20155,46 +20155,46 @@ document.addEventListener("DOMContentLoaded", () => {
      setCountry(c);  
   };  
 });  
-  // 1. ആദ്യത്തെ 10 ഷോപ്പുകൾ മുകളിലെ സെക്ഷനിൽ കാണിക്കാനുള്ള കോഡ്
-const featuredContainer = document.getElementById('featured-container'); // മുകളിലെ ബോക്സ്
-const topTenShops = omanShops.slice(0, 10); // ആദ്യത്തെ 10 എണ്ണം എടുക്കുന്നു
+    <script src="oman.js"></script>
 
-topTenShops.forEach(shop => {
-    featuredContainer.innerHTML += `
-        <div class="shop-box">
-            <h3 class="shop-name">🛒 ${shop.name}</h3>
-            <p class="shop-info"><strong>location:</strong> ${shop.location}</p>
-        </div>
-    `;
-});
+    <script>
+        // HTML-ൽ ഡാറ്റ കാണിക്കേണ്ട സ്ഥലങ്ങൾ സെലക്ട് ചെയ്യുന്നു
+        const featuredContainer = document.getElementById('featured-container'); // മുകളിലെ ഭാഗം
+        const calogoryContainer = document.getElementById('category-container'); // താഴത്തെ ഭാഗം
 
-// 2. ബാക്കി ഷോപ്പുകൾ താഴെ കാറ്റഗറി അനുസരിച്ച് കാണിക്കാനുള്ള കോഡ്
-const calogoryContainer = document.getElementById('category-container'); // താഴത്തെ ബോക്സ്
+        // മുകളിലെ ഭാഗത്തേക്ക് ആദ്യത്തെ 10 ഷോപ്പുകൾ വലിച്ച് ലിസ്റ്റ് ചെയ്യുന്നു
+        const topTenShops = omanShops.slice(0, 10);
+        topTenShops.forEach(shop => {
+            featuredContainer.innerHTML += `
+                <div class="shop-box">
+                    <h3 class="shop-name">🛒 ${shop.name}</h3>
+                    <p class="shop-info"><strong>location:</strong> ${shop.location}</p>
+                </div>
+            `;
+        });
 
-// ഈ ഫങ്ഷൻ ബട്ടൺ ക്ലിക്ക് ചെയ്യുമ്പോൾ വർക്ക് ചെയ്യും
-function showShopsByCalogory(selectedCalogory) {
-    calogoryContainer.innerHTML = ""; // പഴയ ലിസ്റ്റ് മാറ്റാൻ
-    
-    // എല്ലാ ഷോപ്പുകളും കാണിക്കണോ അതോ തിരഞ്ഞെടുത്ത കാറ്റഗറി മാത്രമാണോ എന്ന് നോക്കുന്നു
-    const filteredShops = selectedCalogory === 'all' 
-        ? omanShops 
-        : omanShops.filter(shop => shop.calogory === selectedCalogory);
+        // താഴത്തെ ഭാഗത്തേക്ക് കാറ്റഗറി അനുസരിച്ച് വലിച്ച് ലിസ്റ്റ് ചെയ്യാനുള്ള ഫങ്ഷൻ
+        function showShopsByCalogory(selectedCalogory) {
+            calogoryContainer.innerHTML = ""; // പഴയ ലിസ്റ്റ് മാറ്റാൻ
+            
+            const filteredShops = selectedCalogory === 'all' 
+                ? omanShops 
+                : omanShops.filter(shop => shop.calogory === selectedCalogory);
 
-    filteredShops.forEach(shop => {
-        calogoryContainer.innerHTML += `
-            <div class="shop-box">
-                <h3 class="shop-name">🛍️ ${shop.name}</h3>
-                <p class="shop-info"><strong>location:</strong> ${shop.location}</p>
-            </div>
-        `;
-    });
-}
+            filteredShops.forEach(shop => {
+                calogoryContainer.innerHTML += `
+                    <div class="shop-box">
+                        <h3 class="shop-name">🛍️ ${shop.name}</h3>
+                        <p class="shop-info"><strong>location:</strong> ${shop.location}</p>
+                    </div>
+                `;
+            });
+        }
 
-// പേജ് ആദ്യം തുറക്കുമ്പോൾ തന്നെ താഴെ എല്ലാ ഷോപ്പുകളും കാണിക്കാൻ ഇത് സഹായിക്കും
-showShopsByCalogory('all');
+        // പേജ് തുറക്കുമ്പോൾ തന്നെ താഴെ എല്ലാ ഷോപ്പുകളും കാണിക്കാൻ ഇത് റൺ ചെയ്യുന്നു
+        showShopsByCalogory('all');
+  </script>
 
- 
-</script>
 
 </body>
 </html>
