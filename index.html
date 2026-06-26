@@ -18410,7 +18410,7 @@ function loadShops(country) {
 
     featuredShops.innerHTML += `
       <a href="${shop.u}" target="_blank" class="shopCard" style="border-left-color:${leftColor}">
-        <div class="shopDot">.</div>
+        <div class="shopDot">${(shop.a || "").trim() ? "" : "."}</div>
         <img class="shopFav" src="https://www.google.com/s2/favicons?domain=${host}&sz=64" alt="">
         <div class="shopName notranslate" translate="no">${shop.n}</div>
       </a>
@@ -20126,7 +20126,7 @@ function createShopCard(shop, index) {
     
     // ഫാവിക്കോണുകൾക്ക് Lazy loading ബിൽറ്റ്-ഇൻ ആയി നൽകുന്നു  
     card.innerHTML = `  
-        <div class="shopDot">.</div>  
+        <div class="shopDot">${(shop.a || "").trim() ? "" : "."}</div>
         <div class="shopHead">  
             <img class="shopFav" src="https://www.google.com/s2/favicons?domain=${host}&sz=64" loading="lazy" alt="">  
             <div class="shopName" translate="no">${shop.n}</div>  
