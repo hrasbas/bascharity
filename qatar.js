@@ -540,7 +540,7 @@ countryShops.qatar = [
   { id: 498, n: "star pharmacy", c: "pharmacy", u: "https://starpharmacy.qa", a: "" },
   { id: 499, n: "moon pharmacy", c: "pharmacy", u: "https://moonpharmacy.qa", a: "" },
   { id: 500, n: "sun pharmacy", c: "pharmacy", u: "https://sunpharmacy.qa", a: "" }
-);
+];
 
 
   
