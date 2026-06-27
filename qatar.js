@@ -255,9 +255,9 @@ countryShops.qatar = [
   { id: 237, n: "dunkin qatar", c: "dessert", u: "https://dunkin.qa", a: "" },
   { id: 238, n: "starbucks qatar", c: "cafe", u: "https://starbucks.qa", a: "" },
   { id: 239, n: "tim hortons qatar", c: "cafe", u: "https://timhortons.qa", a: "" },
-  { id: 240, n: "caribou coffee", c: "cafe", u: "https://cariboucoffee.qa", a: "" },
+  { id: 240, n: "caribou coffee", c: "cafe", u: "https://cariboucoffee.qa", a: "" }
 
-
+];
 
   
 
