@@ -1,5 +1,5 @@
  countryShops.qatar = [
-  const qatar = [
+ 
   { id: 1, n: "aksyr al-hyah pharmacy", u: "https://www.mallofqatar.com.qa/en/shopping-list", a: "" },
   { id: 2, n: "al fanar", u: "https://www.abusidramall.com/all-stores/", a: "" },
   { id: 3, n: "al khushi abayat", u: "https://www.abusidramall.com/all-stores/", a: "" },
