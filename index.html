@@ -20103,9 +20103,9 @@ function renderCategory(cat) {
   
     let shops = countryShops[currentCountry] || [];  
       
-    if (!isAll) {  
-        shops = shops.filter(shop => shop.c === cat);  
-    }  
+if (!isAll) {
+    shops = shops.filter(shop => shop.c.toLowerCase().includes(cat.toLowerCase()));
+}
   
     if(shops.length === 0) {  
       categoryShops.innerHTML = "<div style='text-align:center;padding:20px;color:#888;'>No shops found!</div>";  
