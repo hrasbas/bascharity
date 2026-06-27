@@ -1,6 +1,5 @@
 countryShops.kuwait = [
-
-   { id: 101, n: "sultan center", c: "food", "electronics", "general", u: "https://sultan-center.com", a: "" },
+{ id: 101, n: "sultan center", c: "food", "electronics", "general", u: "https://sultan-center.com", a: "" },
   { id: 102, n: "x-cite", c: "electronics", "appliances", "general", u: "https://xcite.com", a: "" },
   { id: 103, n: "alghanim electronics", c: "electronics", "home", "general", u: "https://alghanim.com", a: "" },
   { id: 104, n: "boots pharmacy", c: "health", "beauty", "general", u: "https://kw.boots.com", a: "" },
