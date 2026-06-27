@@ -28,5 +28,42 @@ countryShops.qatar = [
   { id: 27, n: "jarir bookstore", c: "stationery", u: "https://www.jarir.com", a: "" },
   { id: 28, n: "virgin megastore", c: "electronics", u: "https://www.virginmegastore.qa", a: "" },
   { id: 29, n: "extra qatar", c: "electronics", u: "https://www.extra.com", a: "" },
-  { id: 30, n: "e-max qatar", c: "electronics", u: "https://www.emaxme.com", a: "" }
+  { id: 30, n: "e-max qatar", c: "electronics", u: "https://www.emaxme.com", a: "" },
+
+
+
+  { id: 31, n: "al jazeera perfume", c: "fragrances", u: "https://aljazeeraperfumes.com", a: "" },
+  { id: 32, n: "ajmal perfumes", c: "fragrances", u: "https://ajmalperfume.com", a: "" },
+  { id: 33, n: "rasasi perfumes", c: "fragrances", u: "https://rasasi.com", a: "" },
+  { id: 34, n: "ansar gallery", c: "department store", u: "https://ansargallery.com", a: "" },
+  { id: 35, n: "ramez shopping center", c: "department store", u: "https://ramez.net", a: "" },
+  { id: 36, n: "max fashion", c: "clothing", u: "https://www.maxfashion.com", a: "" },
+  { id: 37, n: "lifestyle qatar", c: "home decor", u: "https://lifestyleshops.com", a: "" },
+  { id: 38, n: "home centre", c: "furniture", u: "https://www.homecentre.com", a: "" },
+  { id: 39, n: "ikea qatar", c: "furniture", u: "https://www.ikea.com/qa", a: "" },
+  { id: 40, n: "centrepoint qatar", c: "fashion", u: "https://www.centrepointstores.com", a: "" },
+  { id: 41, n: "sephora qatar", c: "cosmetics", u: "https://www.sephora.qa", a: "" },
+  { id: 42, n: "bath and body works", c: "cosmetics", u: "https://www.bathandbodyworks.com.qa", a: "" },
+  { id: 43, n: "boots pharmacy", c: "pharmacy", u: "https://me.boots.com", a: "" },
+  { id: 44, n: "pharmacy 1", c: "pharmacy", u: "https://pharmacy1.net", a: "" },
+  { id: 45, n: "al jaber opticians", c: "optics", u: "https://aljaberopticians.com", a: "" },
+  { id: 46, n: "magrabi optical", c: "optics", u: "https://magrabi.com", a: "" },
+  { id: 47, n: "techno blue", c: "electronics", u: "https://technoblue.com.qa", a: "" },
+  { id: 48, n: "starlink qatar", c: "electronics", u: "https://starlink.qa", a: "" },
+  { id: 49, n: "al naqeeb optics", c: "optics", u: "https://alnaqeeboptics.com", a: "" },
+  { id: 50, n: "gulf colours", c: "photography", u: "https://gulfcolours.com", a: "" },
+  { id: 51, n: "qatar airways duty free", c: "shopping", u: "https://www.qatardutyfree.com", a: "" },
+  { id: 52, n: "al mana jewelry", c: "jewelry", u: "https://almanajewellery.com", a: "" },
+  { id: 53, n: "damas jewellery", c: "jewelry", u: "https://damasjewellery.com", a: "" },
+  { id: 54, n: "joyalukkas qatar", c: "jewelry", u: "https://joyalukkas.qa", a: "" },
+  { id: 55, n: "malabar gold and diamonds", c: "jewelry", u: "https://malabargoldanddiamonds.com", a: "" },
+  { id: 56, n: "sky jewellery", c: "jewelry", u: "https://skyjewellery.com", a: "" },
+  { id: 57, n: "blue salon", c: "luxury fashion", u: "https://bluesalon.com", a: "" },
+  { id: 58, n: "paris gallery", c: "luxury fashion", u: "https://parisgallery.com", a: "" },
+  { id: 59, n: "al tawasol", c: "supermarket", u: "https://altawasol.com", a: "" },
+  { id: 60, n: "k-mart qatar", c: "supermarket", u: "https://kmart.qa", a: "" }
 ];
+
+
+
+
