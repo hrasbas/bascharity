@@ -50,3 +50,4 @@ countryShops.kuwait = [
   { id: 148, n: "taw9eel", c: "food", "essentials", "general", u: "https://taw9eel.com", a: "" },
   { id: 149, n: "floward", c: "gifts", "flowers", "general", u: "https://floward.com", a: "" },
   { id: 150, n: "fnp kuwait", c: "gifts", "flowers", "general", u: "https://fnp.kw", a: "" }
+   ];
