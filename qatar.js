@@ -502,7 +502,7 @@
   { id: 449, n: "twenty one beauty and spa", c: "general, spa, beauty, wellness", u: "https://www.abusidramall.com/all-stores/", a: "" },
   { id: 450, n: "v eye p optics", c: "general, optics, eyewear, services", u: "https://www.abusidramall.com/all-stores/", a: "" },
 
-  countryShops.qatar = [
+  
   { id: 451, n: "i connect", c: "general, telecom, electronics, accessories", u: "https://www.abusidramall.com/all-stores/", a: "" },
   { id: 452, n: "iris optics", c: "general, optics, eyewear, services", u: "https://www.abusidramall.com/all-stores/", a: "" },
   { id: 453, n: "k corner", c: "general, fashion, kids, clothing", u: "https://www.abusidramall.com/all-stores/", a: "" },
