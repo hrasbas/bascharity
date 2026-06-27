@@ -1,5 +1,4 @@
-var countryShops = {
-  qatar: [
+countryShops.qatar = [
   { id: 1, n: "shop name 1", c: "category 1", u: "https://shop1.qa", a: "" },
   { id: 2, n: "shop name 2", c: "category 2", u: "https://shop2.qa", a: "" },
   { id: 3, n: "shop name 3", c: "category 3", u: "https://shop3.qa", a: "" },
@@ -500,5 +499,5 @@ var countryShops = {
   { id: 498, n: "shop name 498", c: "category 498", u: "https://shop498.qa", a: "" },
   { id: 499, n: "shop name 499", c: "category 499", u: "https://shop499.qa", a: "" },
   { id: 500, n: "shop name 500", c: "category 500", u: "https://shop500.qa", a: "" }
-  ]
-};
+  ];
+
