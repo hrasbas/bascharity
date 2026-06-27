@@ -1,5 +1,5 @@
 countryShops.kuwait = [
- countryShops.kuwait = [
+ 
   { 
     id: 101, 
     n: "sultan center", 
