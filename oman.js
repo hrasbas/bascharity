@@ -534,7 +534,5 @@ countryShops.oman = [
   { id: 498, n: "asics musannah running footwear", c: "fashion", u: "https://www.asics.com/om/en-om", a: "" },
   { id: 499, n: "puma musannah sportswear mall", c: "fashion", u: "https://ae.puma.com/om/en", a: "" },
   { id: 500, n: "reebok musannah sneakers online", c: "fashion", u: "https://www.reebok.com.om", a: "" }
-    ]
-};
+    ];
 
-export default omanShops;
