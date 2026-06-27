@@ -1,5 +1,5 @@
  countryShops.qatar = [
-  const qatar = [
+ 
   { id: 1, n: "aksyr al-hyah pharmacy", u: "https://www.abusidramall.com/all-stores/", loc: "mezzanine floor", c: "pharmacy", i: "https://favicon.im/www.abusidramall.com", p: "", a: "" },
   { id: 2, n: "al fanar", u: "https://www.abusidramall.com/all-stores/", loc: "ground floor", c: "restaurant", i: "https://favicon.im/www.abusidramall.com", p: "", a: "" },
   { id: 3, n: "al khushi abayat", u: "https://www.abusidramall.com/all-stores/", loc: "ground floor", c: "fashion", i: "https://favicon.im/www.abusidramall.com", p: "", a: "" },
