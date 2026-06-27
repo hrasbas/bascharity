@@ -1,5 +1,4 @@
-const countryShops = {
-  oman: [
+countryShops.oman = [
   // Part 1
   { id: 1, n: "lulu hypermarket muscat", c: "grocery, general, electronics", u: "https://www.luluhypermarket.com", a: "" },
   { id: 2, n: "carrefour muscat city centre", c: "grocery, general, electronics", u: "https://www.carrefouroman.com", a: "" },
