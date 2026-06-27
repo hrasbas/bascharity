@@ -258,8 +258,7 @@ countryShops.qatar = [
   { id: 240, n: "caribou coffee", c: "cafe", u: "https://cariboucoffee.qa", a: "" },
 
 
-// qatar.js (continuing from 241)
-countryShops.qatar.push(
+
   { id: 241, n: "zaatar w zeit", c: "restaurant", u: "https://zaatarwzeit.net", a: "" },
   { id: 242, n: "applebee's qatar", c: "restaurant", u: "https://applebees.qa", a: "" },
   { id: 243, n: "p.f. chang's qatar", c: "restaurant", u: "https://pfchangs.com/qa", a: "" },
@@ -293,8 +292,7 @@ countryShops.qatar.push(
 
 
   
-// qatar.js (continuing from 271)
-countryShops.qatar.push(
+
   { id: 271, n: "al muna supermarket", c: "supermarket", u: "https://almunagroup.com", a: "" },
   { id: 272, n: "doha oasis mall", c: "mall", u: "https://dohaoasis.qa", a: "" },
   { id: 273, n: "tawar mall", c: "mall", u: "https://tawarmall.qa", a: "" },
@@ -327,8 +325,7 @@ countryShops.qatar.push(
   { id: 300, n: "gulf mall services", c: "services", u: "https://gulfmallqatar.com", a: "" },
 
   
-// qatar.js (continuing from 301)
-countryShops.qatar.push(
+
   { id: 301, n: "al mulla plaza", c: "retail", u: "https://almullaplaza.qa", a: "" },
   { id: 302, n: "jumbo electronics", c: "electronics", u: "https://jumboqatar.com", a: "" },
   { id: 303, n: "pro tech", c: "electronics", u: "https://protech.qa", a: "" },
@@ -362,8 +359,7 @@ countryShops.qatar.push(
 
 
 
-// qatar.js (continuing from 331)
-countryShops.qatar.push(
+
   { id: 331, n: "hm qatar", c: "fashion", u: "https://hm.com/qa", a: "" },
   { id: 332, n: "zara qatar", c: "fashion", u: "https://zara.com/qa", a: "" },
   { id: 333, n: "bershka qatar", c: "fashion", u: "https://bershka.com/qa", a: "" },
@@ -396,8 +392,7 @@ countryShops.qatar.push(
   { id: 360, n: "optica qatar", c: "optics", u: "https://optica.net", a: "" },
 
 
-// qatar.js (continuing from 361)
-countryShops.qatar.push(
+
   { id: 361, n: "damas jewellery qatar", c: "jewelry", u: "https://damasjewellery.com", a: "" },
   { id: 362, n: "joyalukkas jewellery qatar", c: "jewelry", u: "https://joyalukkas.qa", a: "" },
   { id: 363, n: "malabar gold qatar", c: "jewelry", u: "https://malabargoldanddiamonds.com", a: "" },
@@ -429,8 +424,7 @@ countryShops.qatar.push(
   { id: 389, n: "mcdonalds restaurant qatar", c: "restaurant", u: "https://mcdonalds.com/qa", a: "" },
   { id: 390, n: "baskin robbins qatar", c: "dessert", u: "https://baskinrobbins.qa", a: "" },
 
-  // qatar.js (continuing from 391)
-countryShops.qatar.push(
+  
   { id: 391, n: "dunkin donuts qatar", c: "dessert", u: "https://dunkin.qa", a: "" },
   { id: 392, n: "starbucks coffee qatar", c: "cafe", u: "https://starbucks.qa", a: "" },
   { id: 393, n: "tim hortons qatar", c: "cafe", u: "https://timhortons.qa", a: "" },
@@ -463,6 +457,93 @@ countryShops.qatar.push(
   { id: 420, n: "viva cafe qatar", c: "cafe", u: "https://vivacafe.qa", a: "" },
 
 
+  { id: 421, n: "shake it qatar", c: "beverages", u: "https://shakeit.qa", a: "" },
+  { id: 422, n: "juicery qatar", c: "beverages", u: "https://juicery.qa", a: "" },
+  { id: 423, n: "al jaber watches qatar", c: "watches", u: "https://aljaberwatches.com", a: "" },
+  { id: 424, n: "rivoli shop qatar", c: "watches", u: "https://rivoligroup.com", a: "" },
+  { id: 425, n: "hour choice qatar", c: "watches", u: "https://hourchoice.com", a: "" },
+  { id: 426, n: "aldo accessories qatar", c: "fashion", u: "https://aldoshoes.com.qa", a: "" },
+  { id: 427, n: "charles and keith qatar", c: "fashion", u: "https://charleskeith.com/qa", a: "" },
+  { id: 428, n: "bath and body works qatar", c: "personal care", u: "https://bathandbodyworks.com.qa", a: "" },
+  { id: 429, n: "the body shop qatar", c: "personal care", u: "https://thebodyshop.qa", a: "" },
+  { id: 430, n: "loccitane qatar", c: "cosmetics", u: "https://loccitane.qa", a: "" },
+  { id: 431, n: "faces qatar", c: "cosmetics", u: "https://faces.com/qa", a: "" },
+  { id: 432, n: "ajmal perfumes qatar", c: "fragrances", u: "https://ajmalperfume.com", a: "" },
+  { id: 433, n: "arabian oud qatar", c: "fragrances", u: "https://arabianoud.com", a: "" },
+  { id: 434, n: "gant qatar", c: "fashion", u: "https://gant.com", a: "" },
+  { id: 435, n: "tommy hilfiger qatar", c: "fashion", u: "https://tommy.com", a: "" },
+  { id: 436, n: "polo ralph lauren qatar", c: "fashion", u: "https://ralphlauren.com", a: "" },
+  { id: 437, n: "timberland qatar", c: "fashion", u: "https://timberland.com", a: "" },
+  { id: 438, n: "nike store qatar", c: "sportswear", u: "https://nike.com", a: "" },
+  { id: 439, n: "adidas store qatar", c: "sportswear", u: "https://adidas.com", a: "" },
+  { id: 440, n: "puma store qatar", c: "sportswear", u: "https://puma.com", a: "" },
+  { id: 441, n: "under armour qatar", c: "sportswear", u: "https://underarmour.qa", a: "" },
+  { id: 442, n: "go sport qatar", c: "sportswear", u: "https://gosportme.com", a: "" },
+  { id: 443, n: "damask furniture qatar", c: "furniture", u: "https://damask.qa", a: "" },
+  { id: 444, n: "marina home interiors qatar", c: "furniture", u: "https://marinahomeinteriors.com", a: "" },
+  { id: 445, n: "west elm qatar", c: "furniture", u: "https://westelm.me", a: "" },
+  { id: 446, n: "pottery barn qatar", c: "furniture", u: "https://potterybarn.me", a: "" },
+  { id: 447, n: "crate and barrel qatar", c: "furniture", u: "https://crateandbarrel.me", a: "" },
+  { id: 448, n: "pan emirates qatar", c: "furniture", u: "https://panemirates.com", a: "" },
+  { id: 449, n: "virgin megastore qatar", c: "electronics", u: "https://virginmegastore.qa", a: "" },
+  { id: 450, n: "jarir bookstore qatar", c: "stationery", u: "https://jarir.com/qa", a: "" },
+
+
+  
+  { id: 451, n: "gulf colours qatar", c: "electronics", u: "https://gulfcolours.com", a: "" },
+  { id: 452, n: "samsung brand shop qatar", c: "electronics", u: "https://samsung.com/qa", a: "" },
+  { id: 453, n: "sony centre qatar", c: "electronics", u: "https://sony.com/qa", a: "" },
+  { id: 454, n: "lg brand shop qatar", c: "electronics", u: "https://lg.com/qa", a: "" },
+  { id: 455, n: "sharaf dg qatar", c: "electronics", u: "https://dohasooq.com", a: "" },
+  { id: 456, n: "e-max qatar", c: "electronics", u: "https://emaxme.com", a: "" },
+  { id: 457, n: "qatar tech", c: "electronics", u: "https://qatartech.qa", a: "" },
+  { id: 458, n: "alif bookshop", c: "books", u: "https://alifstores.com", a: "" },
+  { id: 459, n: "jarir bookstore", c: "books", u: "https://jarir.com/qa", a: "" },
+  { id: 460, n: "qatar national library shop", c: "books", u: "https://qnl.qa", a: "" },
+  { id: 461, n: "white corner", c: "electronics", u: "https://whitecorner.qa", a: "" },
+  { id: 462, n: "tech zone", c: "electronics", u: "https://techzone.qa", a: "" },
+  { id: 463, n: "gadget express", c: "electronics", u: "https://gadgetexpress.qa", a: "" },
+  { id: 464, n: "mobile store", c: "electronics", u: "https://mobilestore.qa", a: "" },
+  { id: 465, n: "computer shop", c: "electronics", u: "https://computershop.qa", a: "" },
+  { id: 466, n: "al jaber optics", c: "optics", u: "https://aljaberopticians.com", a: "" },
+  { id: 467, n: "magrabi optics", c: "optics", u: "https://magrabi.com", a: "" },
+  { id: 468, n: "optica eye care", c: "optics", u: "https://optica.net", a: "" },
+  { id: 469, n: "vision express", c: "optics", u: "https://visionexpress.me", a: "" },
+  { id: 470, n: "yateem opticians", c: "optics", u: "https://yateemoptician.com", a: "" },
+  { id: 471, n: "al razi pharmacy", c: "pharmacy", u: "https://alrazi.qa", a: "" },
+  { id: 472, n: "khalifa pharmacy", c: "pharmacy", u: "https://khalifapharmacy.qa", a: "" },
+  { id: 473, n: "wellcare pharmacy", c: "pharmacy", u: "https://wellcaregroup.com", a: "" },
+  { id: 474, n: "boots pharmacy qatar", c: "pharmacy", u: "https://boots.com", a: "" },
+  { id: 475, n: "kulud pharmacy", c: "pharmacy", u: "https://kuludpharmacy.com", a: "" },
+  { id: 476, n: "supercare pharmacy", c: "pharmacy", u: "https://supercare.qa", a: "" },
+  { id: 477, n: "life pharmacy qatar", c: "pharmacy", u: "https://life-me.com", a: "" },
+  { id: 478, n: "al dawaa pharmacy", c: "pharmacy", u: "https://aldawaa.com", a: "" },
+  { id: 479, n: "qatar pharmacy", c: "pharmacy", u: "https://qatarpharmacy.qa", a: "" },
+  { id: 480, n: "modern pharmacy", c: "pharmacy", u: "https://modernpharmacy.qa", a: "" },
+  { id: 481, n: "doha pharmacy", c: "pharmacy", u: "https://dohapharmacy.qa", a: "" },
+  { id: 482, n: "city pharmacy", c: "pharmacy", u: "https://citypharmacy.qa", a: "" },
+  { id: 483, n: "al watan pharmacy", c: "pharmacy", u: "https://alwatanpharmacy.qa", a: "" },
+  { id: 484, n: "al hilal pharmacy", c: "pharmacy", u: "https://alhilalpharmacy.qa", a: "" },
+  { id: 485, n: "al sadd pharmacy", c: "pharmacy", u: "https://alsaddpharmacy.qa", a: "" },
+  { id: 486, n: "al rayyan pharmacy", c: "pharmacy", u: "https://alrayyanpharmacy.qa", a: "" },
+  { id: 487, n: "al wakra pharmacy", c: "pharmacy", u: "https://alwakrapharmacy.qa", a: "" },
+  { id: 488, n: "al khor pharmacy", c: "pharmacy", u: "https://alkhorpharmacy.qa", a: "" },
+  { id: 489, n: "doha clinic pharmacy", c: "pharmacy", u: "https://dohaclinic.com", a: "" },
+  { id: 490, n: "al ahli pharmacy", c: "pharmacy", u: "https://ahlihospital.com", a: "" },
+  { id: 491, n: "care n cure pharmacy", c: "pharmacy", u: "https://carencure.qa", a: "" },
+  { id: 492, n: "medicare pharmacy", c: "pharmacy", u: "https://medicare.qa", a: "" },
+  { id: 493, n: "prime pharmacy", c: "pharmacy", u: "https://primepharmacy.qa", a: "" },
+  { id: 494, n: "global pharmacy", c: "pharmacy", u: "https://globalpharmacy.qa", a: "" },
+  { id: 495, n: "royal pharmacy", c: "pharmacy", u: "https://royalpharmacy.qa", a: "" },
+  { id: 496, n: "gold pharmacy", c: "pharmacy", u: "https://goldpharmacy.qa", a: "" },
+  { id: 497, n: "elite pharmacy", c: "pharmacy", u: "https://elitepharmacy.qa", a: "" },
+  { id: 498, n: "star pharmacy", c: "pharmacy", u: "https://starpharmacy.qa", a: "" },
+  { id: 499, n: "moon pharmacy", c: "pharmacy", u: "https://moonpharmacy.qa", a: "" },
+  { id: 500, n: "sun pharmacy", c: "pharmacy", u: "https://sunpharmacy.qa", a: "" }
+);
+
+
+  
   
 
 
