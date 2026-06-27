@@ -313,7 +313,7 @@ countryShops.kuwait = [
   { id: 299, n: "pizza hut - the avenues", c: "food, dining, general", u: "https://pizzahut.com.kw", a: "" },
   { id: 300, n: "starbucks - al kout", c: "food, cafe, general", u: "https://starbucks.com.kw", a: "" },
 
-Count
+
   { id: 301, n: "al-osra - hawally", c: "food, supermarket, general", u: "https://osra.com.kw", a: "" },
   { id: 302, n: "sultan center - fahaheel", c: "supermarket, food, general", u: "https://sultan-center.com", a: "" },
   { id: 303, n: "city centre - jahra", c: "supermarket, electronics, home", u: "https://citycentre.com.kw", a: "" },
@@ -365,7 +365,7 @@ Count
   { id: 349, n: "pizza hut - marina mall", c: "food, dining, general", u: "https://pizzahut.com.kw", a: "" },
   { id: 350, n: "starbucks - 360 mall", c: "food, cafe, general", u: "https://starbucks.com.kw", a: "" },
 
-CountryShops.kuwait = [
+
   { id: 351, n: "al-osra - salmiya", c: "food, supermarket, general", u: "https://osra.com.kw", a: "" },
   { id: 352, n: "sultan center - shuwaikh", c: "supermarket, food, general", u: "https://sultan-center.com", a: "" },
   { id: 353, n: "city centre - fahaheel", c: "supermarket, electronics, home", u: "https://citycentre.com.kw", a: "" },
@@ -469,7 +469,7 @@ CountryShops.kuwait = [
   { id: 449, n: "pizza hut - salmiya", c: "food, dining, general", u: "https://pizzahut.com.kw", a: "" },
   { id: 450, n: "starbucks - marina mall", c: "food, cafe, general", u: "https://starbucks.com.kw", a: "" },
 
-Count
+
   { id: 451, n: "al-osra - fahaheel", c: "food, supermarket, general", u: "https://osra.com.kw", a: "" },
   { id: 452, n: "sultan center - salmiya", c: "supermarket, food, general", u: "https://sultan-center.com", a: "" },
   { id: 453, n: "city centre - al rai", c: "supermarket, electronics, home", u: "https://citycentre.com.kw", a: "" },
