@@ -1,4 +1,4 @@
-countryShops.bahrain = [
+countryShops.bahrain = [ 
   { id: 1, n: "lulu hypermarket - juffair", c: "supermarket, food, general", u: "https://luluhypermarket.com", a: "" },
   { id: 2, n: "carrefour - city centre bahrain", c: "supermarket, food, general", u: "https://carrefourbahrain.com", a: "" },
   { id: 3, n: "alosra supermarket - amwaj", c: "supermarket, food, general", u: "https://alosraonline.com", a: "" },
