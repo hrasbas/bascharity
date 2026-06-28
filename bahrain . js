@@ -49,4 +49,5 @@ countryShops.bahrain = [
   { id: 48, n: "bahrain cinema - city centre", c: "entertainment, cinema, general", u: "https://cineco.com.bh", a: "" },
   { id: 49, n: "magic planet - city centre", c: "kids, entertainment, general", u: "https://magicplanetmena.com", a: "" },
   { id: 50, n: "al jazira supermarket - zinj", c: "supermarket, food, general", u: "https://aljazira.bh", a: "" }
-  ];
+  ]console.log(countryShops.bahrain.length);
+
