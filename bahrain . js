@@ -48,4 +48,5 @@ countryShops.bahrain = [
   { id: 47, n: "west elm", c: "furniture, home, general", u: "https://westelm.com.kw", a: "" },
   { id: 48, n: "pottery barn", c: "furniture, decor, general", u: "https://potterybarn.com.kw", a: "" },
   { id: 49, n: "bath & body works", c: "beauty, fragrance, general", u: "https://bathandbodyworks.com.kw", a: "" },
-  { id: 50, n: "victoria secret", c: "fashion, lingerie, general", u: "https://victoriassecret.com.kw", a: "" },
+  { id: 50, n: "victoria secret", c: "fashion, lingerie, general", u: "https://victoriassecret.com.kw", a: "" }
+];
