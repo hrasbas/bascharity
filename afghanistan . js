@@ -1,12 +1,6 @@
-countryShops.albania = [
-  { id: 1, n: "tirana central market", c: "general, food", u: "https://tiramarket.al", a: "" },
-  { id: 2, n: "albania tech hub", c: "electronics", u: "https://albtech.al", a: "" },
-  { id: 3, n: "durres fashion corner", c: "fashion", u: "https://durresfashion.al", a: "" },
-  { id: 4, n: "shkoder books", c: "stationery, books", u: "https://shkoderbooks.al", a: "" },
-  { id: 5, n: "vlora seafood mart", c: "food, retail", u: "https://vlorafood.al", a: "" },
-  { id: 6, n: "elbasan home decor", c: "furniture, home", u: "https://elbasanhome.al", a: "" },
-  { id: 7, n: "fier electronics", c: "electronics", u: "https://fierelec.al", a: "" },
-  { id: 8, n: "korca coffee house", c: "cafe, food", u: "https://korcacafe.al", a: "" },
-  { id: 9, n: "berat craft store", c: "arts, gifts", u: "https://beratcraft.al", a: "" },
-  { id: 10, n: "lushnje super store", c: "general, retail", u: "https://lushnjestore.al", a: "" }
+// afghanistan
+countryshops.afghanistan = [
+  { id: 1, n: "finest supermarket", c: "general", u: "https://finest.af", a: "" },
+  { id: 2, n: "golbahar center", c: "general", u: "https://golbahar.af", a: "" },
+  { id: 3, n: "city walk mall", c: "general", u: "https://citywalk.af", a: "" }
 ];
