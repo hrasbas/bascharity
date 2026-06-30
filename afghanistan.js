@@ -1,5 +1,5 @@
 // afghanistan
-countryshops.afghanistan = [
+countryShops.afghanistan = [
   { id: 1, n: "finest supermarket", c: "general", u: "https://finest.af", a: "" },
   { id: 2, n: "golbahar center", c: "general", u: "https://golbahar.af", a: "" },
   { id: 3, n: "city walk mall", c: "general", u: "https://citywalk.af", a: "" }
