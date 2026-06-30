@@ -1,4 +1,4 @@
- countryShops.afghanistan = [
+ countryShops.afghanistan = [ 
   {
     id: 1,
     n: "E-Tohfa",
