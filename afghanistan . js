@@ -1,23 +1,12 @@
- // അഫ്ഗാനിസ്ഥാൻ (Afghanistan)
 countryShops.afghanistan = [
   { id: 1, n: "finest supermarket", c: "general, food", u: "https://finest.af", a: "" },
   { id: 2, n: "golbahar center", c: "general, fashion, electronics", u: "https://golbaharcenter.com", a: "" },
-  // ... (ഇവിടെ 50 വരെ ഷോപ്പുകൾ)
-  { id: 50, n: "kabul fashion house", c: "general, fashion", u: "https://fashionhouse.af", a: "" }
-];
-
-// ബഹ്‌റൈൻ (Bahrain)
-countryShops.bahrain = [
-  { id: 1, n: "city centre bahrain", c: "general, retail, fashion", u: "https://citycentrebahrain.com", a: "" },
-  { id: 2, n: "seef mall", c: "general, fashion, cinema", u: "https://seefmall.com.bh", a: "" },
-  { id: 3, n: "avenues bahrain", c: "general, fashion, food", u: "https://theavenuesbahrain.com", a: "" },
-  { id: 4, n: "luluhypermarket bh", c: "general, food, electronics", u: "https://luluhypermarket.com", a: "" },
-  { id: 5, n: "carrefour bahrain", c: "general, food", u: "https://carrefourbahrain.com", a: "" },
-  { id: 6, n: "dragon city bahrain", c: "general, electronics, home", u: "https://dragoncitybahrain.com", a: "" },
-  { id: 7, n: "bahrain duty free", c: "general, luxury", u: "https://bdutyfree.com", a: "" },
-  { id: 8, n: "juffair mall", c: "general, retail", u: "https://juffairmall.com", a: "" },
-  { id: 9, n: "modamall bahrain", c: "fashion, luxury", u: "https://modamall.com", a: "" },
-  { id: 10, n: "al raya mall", c: "general, retail", a: "" },
-  // ... (തുടർന്ന് 50 വരെ ഷോപ്പുകൾ)
-  { id: 50, n: "manama electronics", c: "electronics", u: "https://manamaelec.bh", a: "" }
+  { id: 3, n: "city walk mall", c: "general, fashion, books", u: "https://citywalk.af", a: "" },
+  { id: 4, n: "azizi bank", c: "general, finance", u: "https://azizibank.af", a: "" },
+  { id: 5, n: "roshan telecom", c: "general, mobile, electronics", u: "https://roshan.af", a: "" },
+  { id: 6, n: "awcc", c: "general, mobile, electronics", u: "https://afghan-wireless.com", a: "" },
+  { id: 7, n: "mtn afghanistan", c: "general, mobile, electronics", u: "https://mtn.com.af", a: "" },
+  { id: 8, n: "etisalat afghanistan", c: "general, mobile, electronics", u: "https://etisalat.af", a: "" },
+  { id: 9, n: "salaam telecom", c: "general, mobile", u: "https://salaam.af", a: "" },
+  { id: 10, n: "afghan market", c: "general, retail, food", u: "https://afghanmarket.af", a: "" }
 ];
