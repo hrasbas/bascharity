@@ -18359,12 +18359,10 @@ usa:[{i:1, n:"amazon", c:"general", u:"https://www.amazon.com", a:"" }, { i:2, n
  </script>
  
 
-
 <script type="module">
 const allCountries = document.getElementById("allCountries");
 const featuredShops = document.getElementById("featuredShops");
 
- 
 allCountriesList.forEach(country => {
   const option = document.createElement("option");
   option.value = country;
@@ -18375,12 +18373,13 @@ allCountriesList.forEach(country => {
 let countryCache = {};
 
 async function getCountryShops(country) {
-  if (country === "india") return countryShops.india || [];
-  if (!countryCache[country]) {
-    const mod = await import(`./${country}.js`);
-    countryCache[country] = mod.default || mod.countryShops || mod.shops || [];
+  const pureCountry = country.trim().toLowerCase();
+  if (pureCountry === "india") return countryShops.india || [];
+  if (!countryCache[pureCountry]) {
+    const mod = await import(`./${pureCountry}.js`);
+    countryCache[pureCountry] = mod.default || mod.countryShops || mod.shops || [];
   }
-  return countryCache[country];
+  return countryCache[pureCountry];
 }
 
 function setSelectedCountry(country) {
@@ -18413,7 +18412,7 @@ function renderCountry(country) {
 
 async function loadShops(country) {
   featuredShops.innerHTML = "";
-  const shops = (await getCountryShops(country)).slice(0, 5);
+  const shops = (await getCountryShops(country)).slice(0, 10);
 
   shops.forEach((shop, index) => {
     let host = "";
