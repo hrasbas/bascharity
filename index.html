@@ -18607,7 +18607,7 @@ function renderCountry(country) {
 
 function loadShops(country) {
   featuredShops.innerHTML = "";
-  const shops = (countryShops[country] || []).slice(0, 10);
+  const shops = (countryShops[country] || []).slice(0, 5);
 
   shops.forEach((shop, index) => {
     let host = "";
