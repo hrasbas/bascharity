@@ -726,11 +726,155 @@ countryShops.albania = [
 
 { id: 375, n: "Air Albania Stadium Store", c: "general, sports, merchandise, football", u: "https://airalbaniastadium.al", a: "" },
 
+{ id: 376, n: "Maritim Hotel Plaza Tirana", c: "general, hotel, travel, accommodation", u: "https://maritim.plazatirana.com", a: "" },
 
+{ id: 377, n: "Tirana International Hotel", c: "general, hotel, travel, accommodation", u: "https://tiranainternational.com", a: "" },
 
+{ id: 378, n: "Best Western Arc Hotel", c: "general, hotel, travel, accommodation", u: "https://www.bestwestern.com", a: "" },
 
+{ id: 379, n: "VH Eurostar Tirana Hotel", c: "general, hotel, travel, accommodation", u: "https://eurostarhotel.al", a: "" },
 
+{ id: 380, n: "Hotel Mondial", c: "general, hotel, travel, accommodation", u: "https://hotelmondial.al", a: "" },
 
+{ id: 381, n: "Mak Albania Hotel", c: "general, hotel, travel, accommodation", u: "https://www.makalbania.com", a: "" },
+
+{ id: 382, n: "Xheko Imperial Hotel", c: "general, hotel, travel, accommodation", u: "https://xheko-imperial.com", a: "" },
+
+{ id: 383, n: "Lot Boutique Hotel", c: "general, hotel, travel, accommodation", u: "https://lothotel.al", a: "" },
+
+{ id: 384, n: "Albania Rafting Group", c: "general, travel, adventure, tours", u: "https://www.albaniarafting.com", a: "" },
+
+{ id: 385, n: "Visit Albania", c: "general, travel, tourism, guide", u: "https://www.visit-albania.com", a: "" },
+
+{ id: 386, n: "National Tourism Agency", c: "general, tourism, travel, information", u: "https://akt.gov.al", a: "" },
+
+{ id: 387, n: "Go Albania", c: "general, travel, tours, holidays", u: "https://goalbania.al", a: "" },
+
+{ id: 388, n: "Albania Explorer", c: "general, travel, tours, adventure", u: "https://albaniaexplorer.com", a: "" },
+
+{ id: 389, n: "RentPoint", c: "general, car rental, travel, transport", u: "https://rentpoint.al", a: "" },
+
+{ id: 390, n: "Eurocar Rentals", c: "general, car rental, transport, travel", u: "https://eurocar.al", a: "" },
+
+{ id: 391, n: "Speed Taxi", c: "general, taxi, transport, travel", u: "https://speedtaxi.al", a: "" },
+
+{ id: 392, n: "City Taxi Albania", c: "general, taxi, transport, travel", u: "https://citytaxi.al", a: "" },
+
+{ id: 393, n: "Albanian Railways", c: "general, railway, transport, travel", u: "https://hekurudha.al", a: "" },
+
+{ id: 394, n: "Port of Durres", c: "general, shipping, logistics, transport", u: "https://www.durresport.al", a: "" },
+
+{ id: 395, n: "Porto Romano Port", c: "general, shipping, logistics, transport", u: "https://www.durresport.al", a: "" },
+
+{ id: 396, n: "Vodafone Business Albania", c: "general, telecom, internet, business", u: "https://www.vodafone.al", a: "" },
+
+{ id: 397, n: "ONE Business", c: "general, telecom, internet, business", u: "https://www.one.al", a: "" },
+
+{ id: 398, n: "ALBtelecom Business", c: "general, telecom, internet, business", u: "https://www.albtelecom.al", a: "" },
+
+{ id: 399, n: "Kastrati Hotels", c: "general, hotel, tourism, hospitality", u: "https://kastrati.al", a: "" },
+
+{ id: 400, n: "Balfin Real Estate", c: "general, real estate, property, business", u: "https://balfin.al", a: "" },
+
+{ id: 401, n: "e-Albania", c: "general, government, public services, documents", u: "https://e-albania.al", a: "" },
+
+{ id: 402, n: "Albanian Customs", c: "general, customs, import, export", u: "https://dogana.gov.al", a: "" },
+
+{ id: 403, n: "Albanian Tax Administration", c: "general, tax, finance, government", u: "https://tatime.gov.al", a: "" },
+
+{ id: 404, n: "National Business Center", c: "general, business, registration, government", u: "https://qkb.gov.al", a: "" },
+
+{ id: 405, n: "Albanian Investment Development Agency", c: "general, business, investment, trade", u: "https://aida.gov.al", a: "" },
+
+{ id: 406, n: "Albanian Road Authority", c: "general, transport, roads, government", u: "https://arrsh.gov.al", a: "" },
+
+{ id: 407, n: "OSHEE", c: "general, electricity, utility, payments", u: "https://oshee.al", a: "" },
+
+{ id: 408, n: "OST", c: "general, electricity, energy, utility", u: "https://ost.al", a: "" },
+
+{ id: 409, n: "UKT Tirana", c: "general, water, utility, payments", u: "https://ukt.al", a: "" },
+
+{ id: 410, n: "Albgaz", c: "general, gas, energy, utility", u: "https://albgaz.al", a: "" },
+
+{ id: 411, n: "National Environment Agency", c: "general, environment, government, services", u: "https://akm.gov.al", a: "" },
+
+{ id: 412, n: "National Employment Agency", c: "general, jobs, employment, careers", u: "https://akpa.gov.al", a: "" },
+
+{ id: 413, n: "University Hospital Center Mother Teresa", c: "general, hospital, medical, health", u: "https://qsut.gov.al", a: "" },
+
+{ id: 414, n: "Regional Hospital Durres", c: "general, hospital, medical, health", u: "https://spitalidurres.gov.al", a: "" },
+
+{ id: 415, n: "Regional Hospital Shkoder", c: "general, hospital, medical, health", u: "https://spitalishkoder.gov.al", a: "" },
+
+{ id: 416, n: "Regional Hospital Vlore", c: "general, hospital, medical, health", u: "https://spitalivlore.gov.al", a: "" },
+
+{ id: 417, n: "Regional Hospital Fier", c: "general, hospital, medical, health", u: "https://spitalifier.gov.al", a: "" },
+
+{ id: 418, n: "Albanian Red Cross", c: "general, charity, emergency, health", u: "https://kksh.org.al", a: "" },
+
+{ id: 419, n: "UNICEF Albania", c: "general, charity, children, education", u: "https://www.unicef.org/albania", a: "" },
+
+{ id: 420, n: "UNDP Albania", c: "general, development, community, services", u: "https://www.undp.org/albania", a: "" },
+
+{ id: 421, n: "Booking.com", c: "general, hotels, travel, tourism", u: "https://www.booking.com", a: "" },
+
+{ id: 422, n: "Airbnb", c: "general, hotels, apartments, travel", u: "https://www.airbnb.com", a: "" },
+
+{ id: 423, n: "Agoda", c: "general, hotels, travel, booking", u: "https://www.agoda.com", a: "" },
+
+{ id: 424, n: "Trip.com", c: "general, travel, hotels, flights", u: "https://www.trip.com", a: "" },
+
+{ id: 425, n: "Skyscanner", c: "general, travel, flights, booking", u: "https://www.skyscanner.com", a: "" },
+
+{ id: 426, n: "Expedia", c: "general, travel, hotels, flights, vacation", u: "https://www.expedia.com", a: "" },
+
+{ id: 427, n: "Hotels.com", c: "general, hotels, travel, booking", u: "https://www.hotels.com", a: "" },
+
+{ id: 428, n: "Vrbo", c: "general, travel, holiday homes, accommodation", u: "https://www.vrbo.com", a: "" },
+
+{ id: 429, n: "Rentalcars.com", c: "general, travel, car rental, transport", u: "https://www.rentalcars.com", a: "" },
+
+{ id: 430, n: "Bolt", c: "general, taxi, transport, mobility", u: "https://bolt.eu", a: "" },
+
+{ id: 431, n: "Omio", c: "general, travel, bus, train, flights", u: "https://www.omio.com", a: "" },
+
+{ id: 432, n: "Rome2Rio", c: "general, travel, transport, route planner", u: "https://www.rome2rio.com", a: "" },
+
+{ id: 433, n: "FlixBus", c: "general, travel, bus, tickets", u: "https://www.flixbus.com", a: "" },
+
+{ id: 434, n: "MSC Cruises", c: "general, travel, cruise, holidays", u: "https://www.msccruises.com", a: "" },
+
+{ id: 435, n: "Costa Cruises", c: "general, travel, cruise, holidays", u: "https://www.costacruises.com", a: "" },
+
+{ id: 436, n: "Tirana East Gate", c: "general, shopping, mall, fashion, food", u: "https://teg.al", a: "" },
+
+{ id: 437, n: "QTU Shopping Center", c: "general, shopping, mall, fashion, food", u: "https://qtu.al", a: "" },
+
+{ id: 438, n: "Toptani Shopping Center", c: "general, shopping, mall, fashion, restaurants", u: "https://toptani.com.al", a: "" },
+
+{ id: 439, n: "Ring Center", c: "general, shopping, mall, fashion, entertainment", u: "https://ringcenter.al", a: "" },
+
+{ id: 440, n: "Albanian Chamber of Commerce", c: "general, business, trade, services", u: "https://uccial.al", a: "" },
+
+{ id: 441, n: "AADF", c: "general, business, development, community", u: "https://aadf.org", a: "" },
+
+{ id: 442, n: "AlbChrome", c: "general, industry, mining, business", u: "https://albchrome.al", a: "" },
+
+{ id: 443, n: "Kurum International", c: "general, industry, steel, business", u: "https://kurum.al", a: "" },
+
+{ id: 444, n: "Albtelecom Business", c: "general, telecom, internet, business", u: "https://albtelecom.al", a: "" },
+
+{ id: 445, n: "Vodafone Business", c: "general, telecom, internet, business", u: "https://vodafone.al", a: "" },
+
+{ id: 446, n: "ONE Business", c: "general, telecom, internet, business", u: "https://one.al", a: "" },
+
+{ id: 447, n: "DHL Express Albania", c: "general, courier, logistics, shipping", u: "https://www.dhl.com", a: "" },
+
+{ id: 448, n: "FedEx Albania", c: "general, courier, logistics, shipping", u: "https://www.fedex.com", a: "" },
+
+{ id: 449, n: "UPS Albania", c: "general, courier, logistics, shipping", u: "https://www.ups.com", a: "" },
+
+{ id: 450, n: "Aramex", c: "general, courier, logistics, shipping", u: "https://www.aramex.com", a: "" },
 
 
 
