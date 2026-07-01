@@ -1,4 +1,4 @@
-countryShops.antigua and barbuda = [
+countryShops.antigua_and_barbuda = [
 { id: 1, n: "Epicurean Fine Foods", c: "general, supermarket, grocery, food", u: "https://www.epicureanantigua.com", a: "" },
 
 { id: 2, n: "First Choice Supermarket", c: "general, supermarket, grocery, food", u: "https://firstchoicesupermarket.com", a: "" },
