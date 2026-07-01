@@ -846,6 +846,4 @@ countryShops.algeria = [
 
 { id: 425, n: "Discover Algeria", c: "general, travel, tourism", u: "https://discoveralgeria.com", a: "" },
 
-
-
 ];
