@@ -797,13 +797,4 @@ countryShops.andorra = [
 
 { id: 400, n: "Visit Andorra Maps", c: "general, maps, tourism, travel", u: "https://visitandorra.com", a: "" },
 
-
-
-
-
-
-
-
-
-
 ];
