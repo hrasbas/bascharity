@@ -18357,9 +18357,7 @@ usa:[{i:1, n:"amazon", c:"general", u:"https://www.amazon.com", a:"" }, { i:2, n
  ] };
 
  </script>
- 
-
-<script type="module">
+ <script type="module">
 const allCountries = document.getElementById("allCountries");
 const featuredShops = document.getElementById("featuredShops");
 
@@ -18373,18 +18371,29 @@ allCountriesList.forEach(country => {
 let countryCache = {};
 
 async function getCountryShops(country) {
-  const pureCountry = country.trim().toLowerCase();
-  if (pureCountry === "india") return countryShops.india || [];
-  if (!countryCache[pureCountry]) {
-    const mod = await import(`./${pureCountry}.js`);
-    countryCache[pureCountry] = mod.default || mod.countryShops || mod.shops || [];
+  const pureCountry = String(country || "").trim().toLowerCase();
+  if (!pureCountry) return [];
+
+  if (pureCountry === "india") {
+    return (window.countryShops && window.countryShops.india) ? window.countryShops.india : [];
   }
+
+  if (!countryCache[pureCountry]) {
+    try {
+      const mod = await import(`./${pureCountry}.js`);
+      countryCache[pureCountry] = mod.default || mod.countryShops || mod.shops || [];
+    } catch (e) {
+      console.error("Country file load failed:", pureCountry, e);
+      countryCache[pureCountry] = [];
+    }
+  }
+
   return countryCache[pureCountry];
 }
 
 function setSelectedCountry(country) {
-  if (!country) return;
-  const pureCountry = country.trim().toLowerCase();
+  const pureCountry = String(country || "").trim().toLowerCase();
+  if (!pureCountry) return;
 
   allCountries.value = pureCountry;
   allCountries.classList.add("green-select");
@@ -18399,7 +18408,7 @@ function setSelectedCountry(country) {
   }
 
   localStorage.setItem("selectedCountry", pureCountry);
-  loadShops(pureCountry);
+  loadFeaturedShops(pureCountry);
 
   if (typeof changeCountry === "function") {
     changeCountry(pureCountry);
@@ -18410,9 +18419,14 @@ function renderCountry(country) {
   setSelectedCountry(country);
 }
 
-async function loadShops(country) {
+async function loadFeaturedShops(country) {
   featuredShops.innerHTML = "";
   const shops = (await getCountryShops(country)).slice(0, 10);
+
+  if (!shops.length) {
+    featuredShops.innerHTML = `<div class="shopCard">No shops found</div>`;
+    return;
+  }
 
   shops.forEach((shop, index) => {
     let host = "";
