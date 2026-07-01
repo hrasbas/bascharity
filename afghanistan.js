@@ -33,7 +33,7 @@ n: "Afghan Fashion",
 c: "fashion, clothing, women, men, kids, jewellery, gifts",
 u: "https://afghanfashion.com",
 a: ""
-}
+},
 
 { id: 6, n: "Click.af", c: "general, marketplace, shopping, electronics, mobile, fashion, home, beauty, kids, books", u: "https://click.af", a: "" },
 
