@@ -549,14 +549,302 @@ countryShops.algeria = [
 
 { id: 275, n: "Port of Oran", c: "general, port, shipping, logistics", u: "https://www.epo.dz", a: "" },
 
+{ id: 276, n: "Hyproc Shipping", c: "general, shipping, logistics, maritime", u: "https://www.hyproc.dz", a: "" },
 
+{ id: 277, n: "Air Express Algeria", c: "general, airlines, cargo, logistics", u: "http://www.airexpressdz.com", a: "" },
 
+{ id: 278, n: "SNTF", c: "general, railway, transport, travel", u: "https://www.sntf.dz", a: "" },
 
+{ id: 279, n: "ETUSA", c: "general, bus, transport, public transport", u: "https://www.etusa.dz", a: "" },
 
+{ id: 280, n: "Cosider Travaux Publics", c: "general, construction, engineering, infrastructure", u: "https://www.cosider-groupe.dz", a: "" },
 
+{ id: 281, n: "Cosider Promotion", c: "general, real estate, housing, construction", u: "https://www.cosider-groupe.dz", a: "" },
 
+{ id: 282, n: "Saidal Distribution", c: "general, pharmacy, medicine, healthcare", u: "https://www.saidalgroup.dz", a: "" },
 
+{ id: 283, n: "Clinica Group", c: "general, healthcare, medical, clinic", u: "https://clinica.dz", a: "" },
 
+{ id: 284, n: "Alliance Travel", c: "general, travel, tourism, holidays", u: "https://alliancetravel.dz", a: "" },
+
+{ id: 285, n: "Club Med Algeria", c: "general, travel, holidays, resorts", u: "https://www.clubmed.com", a: "" },
+
+{ id: 286, n: "Turkish Airlines Holidays", c: "general, travel, flights, holidays", u: "https://www.turkishairlines.com", a: "" },
+
+{ id: 287, n: "Mobilis Store", c: "general, telecom, mobile, accessories", u: "https://www.mobilis.dz", a: "" },
+
+{ id: 288, n: "Ooredoo Store", c: "general, telecom, mobile, accessories", u: "https://www.ooredoo.dz", a: "" },
+
+{ id: 289, n: "Djezzy Store", c: "general, telecom, mobile, accessories", u: "https://www.djezzy.dz", a: "" },
+
+{ id: 290, n: "Condor Mall", c: "general, electronics, appliances, mobile", u: "https://www.condor.dz", a: "" },
+
+{ id: 291, n: "IRIS Electronics", c: "general, electronics, televisions, appliances", u: "https://iris.dz", a: "" },
+
+{ id: 292, n: "Bomare Store", c: "general, electronics, appliances, home", u: "https://www.bomarecompany.com", a: "" },
+
+{ id: 293, n: "Ardis Hyper", c: "general, supermarket, grocery, food", u: "https://ardis.dz", a: "" },
+
+{ id: 294, n: "UNO Market", c: "general, supermarket, grocery, food", u: "https://uno.dz", a: "" },
+
+{ id: 295, n: "Ouedkniss Auto", c: "general, marketplace, vehicles, automotive", u: "https://www.ouedkniss.com", a: "" },
+
+{ id: 296, n: "Ouedkniss Real Estate", c: "general, marketplace, real estate, property", u: "https://www.ouedkniss.com", a: "" },
+
+{ id: 297, n: "Jumia Food", c: "general, food, grocery, marketplace", u: "https://www.jumia.dz", a: "" },
+
+{ id: 298, n: "Yassir Market", c: "general, grocery, food, delivery", u: "https://yassir.com", a: "" },
+
+{ id: 299, n: "Naftal Services", c: "general, fuel, automotive, services", u: "https://www.naftal.dz", a: "" },
+
+{ id: 300, n: "Bab Ezzouar Shopping Mall", c: "general, shopping, mall, fashion, food", u: "http://www.babezzouar-dz.com", a: "" },
+{ id: 301, n: "Tassili Travail Aérien", c: "general, aviation, logistics, charter", u: "https://www.tassiliairlines.dz", a: "" },
+
+{ id: 302, n: "Port of Bejaia", c: "general, port, shipping, logistics", u: "https://www.portdebejaia.dz", a: "" },
+
+{ id: 303, n: "Port of Annaba", c: "general, port, shipping, logistics", u: "https://www.annabaport.com", a: "" },
+
+{ id: 304, n: "Port of Skikda", c: "general, port, shipping, logistics", u: "https://www.skikdaport.dz", a: "" },
+
+{ id: 305, n: "Sonatrach Aval", c: "general, energy, petroleum, industry", u: "https://sonatrach.com", a: "" },
+
+{ id: 306, n: "Sonelgaz Distribution", c: "general, electricity, gas, utility", u: "https://www.sonelgaz.dz", a: "" },
+
+{ id: 307, n: "Naftal Car Services", c: "general, fuel, automotive, services", u: "https://www.naftal.dz", a: "" },
+
+{ id: 308, n: "Algérie Télécom Space", c: "general, telecom, internet, fiber", u: "https://www.algerietelecom.dz", a: "" },
+
+{ id: 309, n: "Mobilis eShop", c: "general, telecom, mobile, accessories", u: "https://www.mobilis.dz", a: "" },
+
+{ id: 310, n: "Ooredoo eShop", c: "general, telecom, mobile, accessories", u: "https://www.ooredoo.dz", a: "" },
+
+{ id: 311, n: "Djezzy eShop", c: "general, telecom, mobile, accessories", u: "https://www.djezzy.dz", a: "" },
+
+{ id: 312, n: "Alliance Travel Services", c: "general, travel, holidays, tourism", u: "https://alliancetravel.dz", a: "" },
+
+{ id: 313, n: "Hotel Sheraton Annaba", c: "general, hotel, travel, accommodation", u: "https://www.marriott.com", a: "" },
+
+{ id: 314, n: "AZ Hotels Kouba", c: "general, hotel, travel, accommodation", u: "https://azhotels.dz", a: "" },
+
+{ id: 315, n: "Hotel Les Zianides", c: "general, hotel, travel, accommodation", u: "https://leszianides.com", a: "" },
+
+{ id: 316, n: "Ouedkniss Immobilier", c: "general, real estate, property, marketplace", u: "https://www.ouedkniss.com", a: "" },
+
+{ id: 317, n: "Ouedkniss Emploi", c: "general, jobs, careers, marketplace", u: "https://www.ouedkniss.com", a: "" },
+
+{ id: 318, n: "Jumia Express", c: "general, ecommerce, logistics, delivery", u: "https://www.jumia.dz", a: "" },
+
+{ id: 319, n: "Condor Service", c: "general, electronics, appliances, support", u: "https://www.condor.dz", a: "" },
+
+{ id: 320, n: "IRIS Service Center", c: "general, electronics, appliances, support", u: "https://iris.dz", a: "" },
+
+{ id: 321, n: "Cevital Agro", c: "general, food, agriculture, grocery", u: "https://www.cevital.com", a: "" },
+
+{ id: 322, n: "Soummam Distribution", c: "general, dairy, food, distribution", u: "https://www.soummam.dz", a: "" },
+
+{ id: 323, n: "Ifri Distribution", c: "general, beverages, water, distribution", u: "https://ifri-dz.com", a: "" },
+
+{ id: 324, n: "Hamoud Boualem Store", c: "general, beverages, food, soft drinks", u: "https://hamoud-boualem.dz", a: "" },
+
+{ id: 325, n: "Benhamadi Group", c: "general, electronics, industry, technology", u: "https://benhamadi.com", a: "" },
+
+{ id: 326, n: "Aigle Azur Services", c: "general, travel, airline services", u: "https://www.aigleazur.com", a: "" },
+
+{ id: 327, n: "Air Cairo Algeria", c: "general, airlines, travel, flights", u: "https://aircairo.com", a: "" },
+
+{ id: 328, n: "Nouvelair", c: "general, airlines, travel, flights", u: "https://www.nouvelair.com", a: "" },
+
+{ id: 329, n: "Tunisair", c: "general, airlines, travel, flights", u: "https://www.tunisair.com", a: "" },
+
+{ id: 330, n: "ASL Airlines", c: "general, airlines, cargo, logistics", u: "https://www.aslairlines.fr", a: "" },
+
+{ id: 331, n: "SNTV", c: "general, bus, transport, travel", u: "https://www.sntv.dz", a: "" },
+
+{ id: 332, n: "EMA", c: "general, metro, transport, travel", u: "https://www.metroalger.dz", a: "" },
+
+{ id: 333, n: "Algiers Metro", c: "general, metro, transport, public transport", u: "https://www.metroalger.dz", a: "" },
+
+{ id: 334, n: "Algiers Tramway", c: "general, tramway, transport, public transport", u: "https://www.setram.dz", a: "" },
+
+{ id: 335, n: "Oran Tramway", c: "general, tramway, transport, public transport", u: "https://www.setram.dz", a: "" },
+
+{ id: 336, n: "Constantine Tramway", c: "general, tramway, transport, public transport", u: "https://www.setram.dz", a: "" },
+
+{ id: 337, n: "Setif Tramway", c: "general, tramway, transport, public transport", u: "https://www.setram.dz", a: "" },
+
+{ id: 338, n: "Al Salam Bank Algeria", c: "general, banking, finance, islamic banking", u: "https://www.alsalamalgeria.com", a: "" },
+
+{ id: 339, n: "Gulf Bank Algeria", c: "general, banking, finance", u: "https://www.agb.dz", a: "" },
+
+{ id: 340, n: "BNP Paribas El Djazaïr", c: "general, banking, finance, business", u: "https://www.bnpparibas.dz", a: "" },
+
+{ id: 341, n: "Arab Leasing Corporation", c: "general, finance, leasing, business", u: "https://www.alc.dz", a: "" },
+
+{ id: 342, n: "CNAC", c: "general, employment, insurance, government", u: "https://www.cnac.dz", a: "" },
+
+{ id: 343, n: "ANEM", c: "general, employment, jobs, government", u: "https://www.anem.dz", a: "" },
+
+{ id: 344, n: "Algerian Red Crescent", c: "general, charity, emergency, health", u: "https://www.cra.dz", a: "" },
+
+{ id: 345, n: "UNICEF Algeria", c: "general, charity, children, health", u: "https://www.unicef.org/algeria", a: "" },
+
+{ id: 346, n: "UNDP Algeria", c: "general, development, community, services", u: "https://www.undp.org/algeria", a: "" },
+
+{ id: 347, n: "SOS Villages d'Enfants Algérie", c: "general, charity, children, community", u: "https://www.sosve.org", a: "" },
+
+{ id: 348, n: "Algeria Post EMS", c: "general, post, courier, express", u: "https://www.poste.dz", a: "" },
+
+{ id: 349, n: "Yassir Express", c: "general, delivery, courier, food", u: "https://yassir.com", a: "" },
+
+{ id: 350, n: "Temtem Delivery", c: "general, delivery, taxi, food", u: "https://temtem.one", a: "" },
+{ id: 351, n: "University Hospital Center of Oran", c: "general, hospital, medical, healthcare", u: "https://chu-oran.dz", a: "" },
+
+{ id: 352, n: "University Hospital Center of Constantine", c: "general, hospital, medical, healthcare", u: "https://chu-constantine.dz", a: "" },
+
+{ id: 353, n: "University Hospital Center of Tizi Ouzou", c: "general, hospital, medical, healthcare", u: "https://chu-tiziouzou.dz", a: "" },
+
+{ id: 354, n: "University Hospital Center of Annaba", c: "general, hospital, medical, healthcare", u: "https://chu-annaba.dz", a: "" },
+
+{ id: 355, n: "University Hospital Center of Blida", c: "general, hospital, medical, healthcare", u: "https://chu-blida.dz", a: "" },
+
+{ id: 356, n: "CNAS eServices", c: "general, health, insurance, online services", u: "https://www.cnas.dz", a: "" },
+
+{ id: 357, n: "CASNOS eServices", c: "general, insurance, business, online services", u: "https://www.casnos.dz", a: "" },
+
+{ id: 358, n: "AADL", c: "general, housing, real estate, government", u: "https://www.aadl.com.dz", a: "" },
+
+{ id: 359, n: "AADL 3", c: "general, housing, real estate, government", u: "https://www.aadl.dz", a: "" },
+
+{ id: 360, n: "Algérie Télécom Payment", c: "general, telecom, internet, bill payment", u: "https://www.algerietelecom.dz", a: "" },
+
+{ id: 361, n: "Mobilis Recharge", c: "general, telecom, mobile, recharge", u: "https://www.mobilis.dz", a: "" },
+
+{ id: 362, n: "Djezzy Recharge", c: "general, telecom, mobile, recharge", u: "https://www.djezzy.dz", a: "" },
+
+{ id: 363, n: "Ooredoo Recharge", c: "general, telecom, mobile, recharge", u: "https://www.ooredoo.dz", a: "" },
+
+{ id: 364, n: "Sonelgaz ePayment", c: "general, electricity, utility, bill payment", u: "https://www.sonelgaz.dz", a: "" },
+
+{ id: 365, n: "Algérienne des Eaux ePayment", c: "general, water, utility, bill payment", u: "https://www.ade.dz", a: "" },
+
+{ id: 366, n: "Naftal Stations", c: "general, fuel, automotive, gas stations", u: "https://www.naftal.dz", a: "" },
+
+{ id: 367, n: "Ouedkniss Jobs", c: "general, jobs, careers, recruitment", u: "https://www.ouedkniss.com", a: "" },
+
+{ id: 368, n: "Emploitic", c: "general, jobs, careers, recruitment", u: "https://www.emploitic.com", a: "" },
+
+{ id: 369, n: "Emploi Partner", c: "general, jobs, recruitment, careers", u: "https://www.emploipartner.com", a: "" },
+
+{ id: 370, n: "Tayara Algeria", c: "general, marketplace, shopping, vehicles, property", u: "https://www.tayara.dz", a: "" },
+
+{ id: 371, n: "Algérie Market Place", c: "general, marketplace, shopping, ecommerce", u: "https://algeriemarket.com", a: "" },
+
+{ id: 372, n: "Royal Tulip Skikda", c: "general, hotel, travel, accommodation", u: "https://www.goldentulip.com", a: "" },
+
+{ id: 373, n: "Hotel El Mountazah", c: "general, hotel, travel, accommodation", u: "https://hotelelmountazah.com", a: "" },
+
+{ id: 374, n: "Touring Club Algeria", c: "general, travel, tourism, roadside assistance", u: "https://www.touring.dz", a: "" },
+
+{ id: 375, n: "MTA Travel", c: "general, travel, tours, holidays", u: "https://mta.dz", a: "" },
+{ id: 376, n: "Hotel Mercure Alger Aéroport", c: "general, hotel, travel, accommodation", u: "https://all.accor.com", a: "" },
+
+{ id: 377, n: "Hotel Ibis Alger Aéroport", c: "general, hotel, travel, accommodation", u: "https://all.accor.com", a: "" },
+
+{ id: 378, n: "Best Western Plus Oran", c: "general, hotel, travel, accommodation", u: "https://www.bestwestern.com", a: "" },
+
+{ id: 379, n: "Golden Tulip Opera Alger", c: "general, hotel, travel, accommodation", u: "https://www.goldentulip.com", a: "" },
+
+{ id: 380, n: "Hotel Atlantis Akbou", c: "general, hotel, travel, accommodation", u: "https://atlantishotels.dz", a: "" },
+
+{ id: 381, n: "Ministry of Health Algeria", c: "general, health, medical, government", u: "https://www.sante.gov.dz", a: "" },
+
+{ id: 382, n: "Ministry of Tourism Algeria", c: "general, tourism, travel, government", u: "https://www.mta.gov.dz", a: "" },
+
+{ id: 383, n: "Ministry of Transport Algeria", c: "general, transport, travel, government", u: "https://www.mt.gov.dz", a: "" },
+
+{ id: 384, n: "National Agency for Employment", c: "general, jobs, employment, government", u: "https://www.anem.dz", a: "" },
+
+{ id: 385, n: "National Social Security Fund", c: "general, insurance, healthcare, government", u: "https://www.cnas.dz", a: "" },
+
+{ id: 386, n: "Algeria Telecom Space", c: "general, telecom, internet, technology", u: "https://www.algerietelecom.dz", a: "" },
+
+{ id: 387, n: "Mobilis Business", c: "general, telecom, mobile, business", u: "https://www.mobilis.dz", a: "" },
+
+{ id: 388, n: "Ooredoo Business", c: "general, telecom, mobile, business", u: "https://www.ooredoo.dz", a: "" },
+
+{ id: 389, n: "Djezzy Business", c: "general, telecom, mobile, business", u: "https://www.djezzy.dz", a: "" },
+
+{ id: 390, n: "AutoBip Occasions", c: "general, automotive, used cars, marketplace", u: "https://www.autobip.com", a: "" },
+
+{ id: 391, n: "Ouedkniss Immobilier", c: "general, real estate, property, marketplace", u: "https://www.ouedkniss.com", a: "" },
+
+{ id: 392, n: "Ouedkniss Auto", c: "general, automotive, vehicles, marketplace", u: "https://www.ouedkniss.com", a: "" },
+
+{ id: 393, n: "Jumia Express", c: "general, ecommerce, logistics, delivery", u: "https://www.jumia.dz", a: "" },
+
+{ id: 394, n: "Yassir Market", c: "general, food, grocery, delivery", u: "https://yassir.com", a: "" },
+
+{ id: 395, n: "Yassir Food", c: "general, food, restaurant, delivery", u: "https://yassir.com", a: "" },
+
+{ id: 396, n: "Numilog Algeria", c: "general, books, ebooks, education", u: "https://www.numilog.com", a: "" },
+
+{ id: 397, n: "National Library of Algeria", c: "general, books, library, education", u: "https://www.bnalgeria.dz", a: "" },
+
+{ id: 398, n: "Algerian Red Crescent", c: "general, charity, emergency, health", u: "https://www.cra.dz", a: "" },
+
+{ id: 399, n: "SOS Children's Villages Algeria", c: "general, charity, children, community", u: "https://www.sosve.org", a: "" },
+
+{ id: 400, n: "UNICEF Algeria", c: "general, charity, children, health", u: "https://www.unicef.org/algeria", a: "" },
+
+{ id: 401, n: "Algérie Market", c: "general, marketplace, shopping, ecommerce", u: "https://algeriemarket.com", a: "" },
+
+{ id: 402, n: "Dzair Daily", c: "general, news, media, information", u: "https://www.dzairdaily.com", a: "" },
+
+{ id: 403, n: "El Watan", c: "general, news, media", u: "https://elwatan.com", a: "" },
+
+{ id: 404, n: "Echorouk", c: "general, news, media", u: "https://www.echoroukonline.com", a: "" },
+
+{ id: 405, n: "Ennahar", c: "general, news, media", u: "https://www.ennaharonline.com", a: "" },
+
+{ id: 406, n: "Liberté", c: "general, news, media", u: "https://www.liberte-algerie.com", a: "" },
+
+{ id: 407, n: "El Moudjahid", c: "general, news, media", u: "https://www.elmoudjahid.com", a: "" },
+
+{ id: 408, n: "APS", c: "general, news, media, government", u: "https://www.aps.dz", a: "" },
+
+{ id: 409, n: "Radio Algérienne", c: "general, radio, media", u: "https://www.radioalgerie.dz", a: "" },
+
+{ id: 410, n: "ENTV", c: "general, television, media", u: "https://www.entv.dz", a: "" },
+
+{ id: 411, n: "Djezair Shop", c: "general, marketplace, electronics, fashion", u: "https://djezairshop.com", a: "" },
+
+{ id: 412, n: "GuideDZ", c: "general, business, directory, services", u: "https://guidedz.com", a: "" },
+
+{ id: 413, n: "Algeria Business Directory", c: "general, business, directory", u: "https://algeriabusinessdirectory.com", a: "" },
+
+{ id: 414, n: "Yellow Pages Algeria", c: "general, business, directory", u: "https://www.yellowpages.dz", a: "" },
+
+{ id: 415, n: "Auto Utilitaire", c: "general, automotive, vehicles", u: "https://autoutilitaire.dz", a: "" },
+
+{ id: 416, n: "MOTO DZ", c: "general, motorcycles, automotive", u: "https://motodz.com", a: "" },
+
+{ id: 417, n: "Deco Home Algeria", c: "general, furniture, home, decor", u: "https://decohome.dz", a: "" },
+
+{ id: 418, n: "Electro DZ", c: "general, electronics, appliances", u: "https://electrodz.com", a: "" },
+
+{ id: 419, n: "Beauty DZ", c: "general, beauty, cosmetics", u: "https://beautydz.com", a: "" },
+
+{ id: 420, n: "Pharma DZ", c: "general, pharmacy, health", u: "https://pharmadz.dz", a: "" },
+
+{ id: 421, n: "Algeria Tourism", c: "general, travel, tourism", u: "https://www.algeria.com", a: "" },
+
+{ id: 422, n: "Visit Algeria", c: "general, travel, tourism", u: "https://www.visitalgeria.dz", a: "" },
+
+{ id: 423, n: "Travel DZ", c: "general, travel, holidays", u: "https://traveldz.com", a: "" },
+
+{ id: 424, n: "Algeria Guide", c: "general, travel, information", u: "https://algeriaguide.com", a: "" },
+
+{ id: 425, n: "Discover Algeria", c: "general, travel, tourism", u: "https://discoveralgeria.com", a: "" },
 
 
 
