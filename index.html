@@ -18357,10 +18357,14 @@ usa:[{i:1, n:"amazon", c:"general", u:"https://www.amazon.com", a:"" }, { i:2, n
  ] };
 
  </script>
-<script type="module">
+ 
+ 
+
+
+ <script>
+
 const allCountries = document.getElementById("allCountries");
 const featuredShops = document.getElementById("featuredShops");
-const categoryShops = document.getElementById("categoryShops");
 
 allCountriesList.forEach(country => {
   const option = document.createElement("option");
@@ -18369,96 +18373,9 @@ allCountriesList.forEach(country => {
   allCountries.appendChild(option);
 });
 
-let countryCache = {};
-
-function pickArray(data) {
-  if (Array.isArray(data)) return data;
-  if (data && Array.isArray(data.default)) return data.default;
-  if (data && Array.isArray(data.countryShops)) return data.countryShops;
-  if (data && Array.isArray(data.shops)) return data.shops;
-  if (data && Array.isArray(data.data)) return data.data;
-  if (data && data.india && Array.isArray(data.india)) return data.india;
-  return [];
-}
-
-async function loadCountryData(country) {
-  const pureCountry = String(country || "").trim().toLowerCase();
-  if (!pureCountry) return [];
-
-  if (countryCache[pureCountry]) return countryCache[pureCountry];
-
-  let shops = [];
-
-  if (pureCountry === "india") {
-    shops = pickArray(window.countryShops?.india || window.countryShops);
-  } else {
-    try {
-      const mod = await import(`./${pureCountry}.js`);
-      shops = pickArray(mod);
-    } catch (e1) {
-      try {
-        const res = await fetch(`./${pureCountry}.json`);
-        if (res.ok) {
-          const json = await res.json();
-          shops = pickArray(json);
-        }
-      } catch (e2) {
-        shops = [];
-      }
-    }
-  }
-
-  countryCache[pureCountry] = shops;
-  return shops;
-}
-
-function getShopUrl(shop) {
-  return shop.u || shop.url || shop.link || "";
-}
-
-function getShopName(shop) {
-  return shop.n || shop.name || shop.title || "";
-}
-
-function getShopAccent(shop) {
-  return shop.a || shop.accent || "";
-}
-
-function renderCards(container, shops, limit = null) {
-  if (!container) return;
-
-  const list = limit ? shops.slice(0, limit) : shops;
-  container.innerHTML = "";
-
-  if (!list.length) {
-    container.innerHTML = `<div class="shopCard">No shops found</div>`;
-    return;
-  }
-
-  list.forEach((shop, index) => {
-    const url = getShopUrl(shop);
-    const name = getShopName(shop);
-    const accent = getShopAccent(shop);
-
-    let host = "";
-    try { host = new URL(url).hostname; } catch (e) {}
-
-    const colors = ["#00C853","#2196F3","#F44336","#FF9800","#9C27B0","#00BCD4","#E91E63","#FFC107","#009688","#795548"];
-    const leftColor = colors[index % colors.length];
-
-    container.innerHTML += `
-      <a href="${url}" target="_blank" class="shopCard" style="border-left-color:${leftColor}">
-        <div class="shopDot">${(accent || "").trim() ? "" : "."}</div>
-        <img class="shopFav" src="https://www.google.com/s2/favicons?domain=${host}&sz=64" alt="">
-        <div class="shopName notranslate" translate="no">${name}</div>
-      </a>
-    `;
-  });
-}
-
 function setSelectedCountry(country) {
-  const pureCountry = String(country || "").trim().toLowerCase();
-  if (!pureCountry) return;
+  if (!country) return;
+  const pureCountry = country.trim().toLowerCase();
 
   allCountries.value = pureCountry;
   allCountries.classList.add("green-select");
@@ -18473,21 +18390,36 @@ function setSelectedCountry(country) {
   }
 
   localStorage.setItem("selectedCountry", pureCountry);
-  loadCountrySections(pureCountry);
+  loadShops(pureCountry);
 
   if (typeof changeCountry === "function") {
     changeCountry(pureCountry);
   }
 }
 
-async function loadCountrySections(country) {
-  const shops = await loadCountryData(country);
-  renderCards(featuredShops, shops, 10);
-  renderCards(categoryShops, shops, null);
-}
-
 function renderCountry(country) {
   setSelectedCountry(country);
+}
+
+function loadShops(country) {
+  featuredShops.innerHTML = "";
+  const shops = (countryShops[country] || []).slice(0, 5);
+
+  shops.forEach((shop, index) => {
+    let host = "";
+    try { host = new URL(shop.u).hostname; } catch (e) {}
+
+    const colors = ["#00C853","#2196F3","#F44336","#FF9800","#9C27B0","#00BCD4","#E91E63","#FFC107","#009688","#795548"];
+    const leftColor = colors[index % colors.length];
+
+    featuredShops.innerHTML += `
+      <a href="${shop.u}" target="_blank" class="shopCard" style="border-left-color:${leftColor}">
+        <div class="shopDot">${(shop.a || "").trim() ? "" : "."}</div>
+        <img class="shopFav" src="https://www.google.com/s2/favicons?domain=${host}&sz=64" alt="">
+        <div class="shopName notranslate" translate="no">${shop.n}</div>
+      </a>
+    `;
+  });
 }
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -18501,14 +18433,12 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   allCountries.addEventListener("change", e => {
-    if (e.target.value) setSelectedCountry(e.target.value);
+    if (e.target.value) {
+      setSelectedCountry(e.target.value);
+    }
   });
 });
 </script>
-<!-- ================================================= -->
-<!-- SL NO 37 : HTML END -->
-<!-- ================================================= -->
-
   <style>
 .country-btn.active{
 color:#00ff66;
