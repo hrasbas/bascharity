@@ -18397,13 +18397,36 @@ function setSelectedCountry(country) {
   }
 }
 
-function renderCountry(country) {
-  setSelectedCountry(country);
-}
+function renderCountry(country){
+    setSelectedCountry(country);
 
+    if(country !== "india"){
+        loadCountryJS(country);
+        return;
+    }
+
+    loadShops(country);
+}
+loadCountryJS(country);
+
+
+  const loadedCountries = {};
+
+function loadCountryJS(country) {
+    if (loadedCountries[country]) return;
+
+    const s = document.createElement("script");
+    s.src = country.replace(/\s+/g, "-") + ".js";
+    s.onload = () => {
+        loadedCountries[country] = true;
+        loadShops(country);
+    };
+    document.body.appendChild(s);
+}
+  
 function loadShops(country) {
   featuredShops.innerHTML = "";
-  const shops = (countryShops[country] || []).slice(0, 5);
+  const shops = (countryShops[country] || []).slice(0, 10);
 
   shops.forEach((shop, index) => {
     let host = "";
@@ -18413,7 +18436,7 @@ function loadShops(country) {
     const leftColor = colors[index % colors.length];
 
     featuredShops.innerHTML += `
-      <a href="${shop.u}" target="_blank" class="shopCard" style="border-left-color:${leftColor}">
+        <a href="${shop.u}" target="_blank" class="shopCard" style="border-left-color:${leftColor}">
         <div class="shopDot">${(shop.a || "").trim() ? "" : "."}</div>
         <img class="shopFav" src="https://www.google.com/s2/favicons?domain=${host}&sz=64" alt="">
         <div class="shopName notranslate" translate="no">${shop.n}</div>
