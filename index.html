@@ -18386,24 +18386,20 @@ function setSelectedCountry(country) {
   }
 
   localStorage.setItem("selectedCountry", pureCountry);
-  loadShops(pureCountry);
+  if (pureCountry === "india") {
+    loadShops(pureCountry);
+} else {
+    loadCountryJS(pureCountry);
+}
 
   if (typeof changeCountry === "function") {
     changeCountry(pureCountry);
   }
 }
 
-function renderCountry(country){
+function renderCountry(country) {
     setSelectedCountry(country);
-
-    if(country !== "india"){
-        loadCountryJS(country);
-        return;
-    }
-
-    loadShops(country);
-}
-loadCountryJS(country);
+} 
 
 
   const loadedCountries = {};
