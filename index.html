@@ -18566,9 +18566,10 @@ usa:[{i:1, n:"amazon", c:"general", u:"https://www.amazon.com", a:"" }, { i:2, n
 <script src="new_caledonia.js"></script>--->
   <script>
 
-const allCountries = document.getElementById("allCountries");
+ const allCountries = document.getElementById("allCountries");
 const featuredShops = document.getElementById("featuredShops");
 
+// 1. ഡ്രോപ്പ്ഡൗണിലേക്ക് രാജ്യങ്ങൾ നിറയ്ക്കുന്നു
 allCountriesList.forEach(country => {
   const option = document.createElement("option");
   option.value = country;
@@ -18576,6 +18577,7 @@ allCountriesList.forEach(country => {
   allCountries.appendChild(option);
 });
 
+// 2. രാജ്യം സെലക്ട് ചെയ്യുമ്പോൾ വർക്കാകുന്ന പ്രധാന ഫങ്ഷൻ
 function setSelectedCountry(country) {
   if (!country) return;
   const pureCountry = country.trim().toLowerCase();
@@ -18594,6 +18596,7 @@ function setSelectedCountry(country) {
 
   localStorage.setItem("selectedCountry", pureCountry);
   
+  // 🟢 ഇന്ത്യ ആണെങ്കിൽ ലോക്കൽ ഡാറ്റ എടുക്കും, മറ്റുള്ളവ ഗിറ്റ്ഹബ്ബിൽ നിന്ന് വലിയ്ക്കും
   if (pureCountry === "india") {
       loadShops(countryShops["india"]);
   } else {
@@ -18609,7 +18612,7 @@ function renderCountry(country) {
   setSelectedCountry(country);
 }
 
-// 🟢 ഗിറ്റ്ഹബ്ബിൽ നിന്ന് മാത്രം ഫയലുകൾ വലിച്ചെടുക്കുന്ന ഫങ്ഷൻ
+// 🟢 ഗിറ്റ്ഹബ്ബിൽ നിന്ന് എക്സ്റ്റേണൽ ഫയൽ വലിച്ചെടുക്കാനുള്ള ഫങ്ഷൻ
 function fetchExternalCountryJS(countryName) {
     featuredShops.innerHTML = "<div style='text-align:center;font-weight:bold;color:#ff9800;padding:20px;'>Loading Shops...</div>";
     
@@ -18618,21 +18621,22 @@ function fetchExternalCountryJS(countryName) {
 
     const script = document.createElement("script");
     script.id = "dynamic-country-script";
-    // ⚠️ ശ്രദ്ധിക്കുക: താഴെയുള്ള ലിങ്കിലെ 'yourusername' ഉം 'repo' ഉം നിന്റെ ഗിറ്റ്ഹബ്ബ് വിവരങ്ങൾ വെച്ച് മാറ്റണം
-    script.src = `https://yourusername.github.io/repo/${countryName}.js`;
+    // ⚠️ ഇവിടെ 'hrasbas' എന്ന നിന്റെ യൂസർനെയിമും 'bascharity' എന്ന റെപ്പോസിറ്ററി പേരും കറക്റ്റ് ആയി കൊടുത്തിട്ടുണ്ട്
+    script.src = `https://hrasbas.github.io/bascharity/${countryName}.js`;
     
     script.onload = function() {
+        // ഫയൽ ലോഡ് ആയിക്കഴിഞ്ഞാൽ ഡാറ്റ എടുത്ത് ലോഡ് ചെയ്യുന്നു
         const shopsData = countryShops[countryName];
         loadShops(shopsData);
     };
 
     script.onerror = function() {
-        featuredShops.innerHTML = "<div style='text-align:center;color:red;font-weight:bold;padding:20px;'>Shop Data Not Found!</div>";
+        featuredShops.innerHTML = "<div style='text-align:center;color:red;font-weight:bold;padding:20px;'>Shop Data Not Found on GitHub!</div>";
     };
     document.body.appendChild(script);
 }
 
-// 🟢 നിന്റെ പഴയ ലോജിക് അനുസരിച്ച് വെറും ഷോപ്പുകൾ മാത്രം വരിവരിയായി കാണിക്കുന്ന ഫങ്ഷൻ
+// 🟢 ഷോപ്പുകൾ പേജിൽ കാണിക്കുന്ന നിന്റെ ഒറിജിനൽ ഫങ്ഷൻ
 function loadShops(shopsArray) {
   featuredShops.innerHTML = "";
   if (!shopsArray || shopsArray.length === 0) {
@@ -18640,7 +18644,6 @@ function loadShops(shopsArray) {
       return;
   }
 
-  // നിന്റെ പഴയ ലോജിക് അനുസരിച്ച് ആദ്യത്തെ 10 എണ്ണത്തിന്റെ കളർ തിരിച്ചു കാണിക്കുന്നു
   shopsArray.forEach((shop, index) => {
     let host = "";
     try { host = new URL(shop.u).hostname; } catch (e) {}
@@ -18658,6 +18661,7 @@ function loadShops(shopsArray) {
   });
 }
 
+// 3. പേജ് ലോഡ് ആകുമ്പോൾ ആദ്യം റൺ ആകേണ്ട ഭാഗം
 document.addEventListener("DOMContentLoaded", () => {
   const savedCountry = localStorage.getItem("selectedCountry") || "india";
   setSelectedCountry(savedCountry);
@@ -18674,8 +18678,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 });
-</script>
-<!-- ================================================= -->
+  </script>
 <!-- SL NO 37 : HTML END -->
 <!-- ================================================= -->
 
