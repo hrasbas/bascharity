@@ -1009,8 +1009,10 @@ const allCountriesList=[
 "new caledonia"
 ];
 
+</script>
 
-
+<script>
+const countryShops={
 india: [
 
 {
@@ -8984,9 +8986,9 @@ u:"https://lambdalabs.com",
 a:""
 }];
 
+</script>
 
-
-
+<script>
 <script src="guam.js"></script>
 <script src="new_caledonia.js"></script>--->
   <script>
