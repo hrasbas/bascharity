@@ -9034,58 +9034,40 @@ function setSelectedCountry(country) {
 
 function renderCountry(country) {
   setSelectedCountry(country);
-}function fetchExternalCountryJS(countryName) {
+}
+   function fetchExternalCountryJS(countryName) {
     featuredShops.innerHTML = "<div style='text-align:center;font-weight:bold;color:#ff9800;padding:20px;'>Loading Shops...</div>";
     
-    // 1. പഴയ സ്ക്രിപ്റ്റ് ഉണ്ടെങ്കിൽ അത് പേജിൽ നിന്ന് കളയുന്നു
     const oldScript = document.getElementById("dynamic-country-script");
     if (oldScript) oldScript.remove();
 
-    // 2. പുതിയ സ്ക്രിപ്റ്റ് ടാഗ് ഉണ്ടാക്കുന്നു
     const script = document.createElement("script");
     script.id = "dynamic-country-script";
-    
-    // 3. നിന്റെ ഗിറ്റ്ഹബ് ലിങ്കിൽ നിന്ന് കറക്റ്റ് ഫയൽ എടുക്കുന്നു
     script.src = `https://hrasbas.github.io/bascharity/${countryName}.js`;
     
-    // 4. ഗിറ്റ്ഹബ് ഫയൽ വിജയകരമായി ലോഡ് ആയിക്കഴിഞ്ഞാൽ റൺ ആകുന്നു
     script.onload = function() {
-        // വിൻഡോയിൽ countryShops ഉണ്ടോ എന്ന് നോക്കി കൃത്യമായി ഡാറ്റ എടുക്കുന്നു
         if (window.countryShops && window.countryShops[countryName]) {
             const shopsData = window.countryShops[countryName];
-            loadShops(shopsData); // നിന്റെ ഒറിജിനൽ ലോഡ് ഫങ്ഷനിലേക്ക് ഡാറ്റ കൊടുക്കുന്നു
+            loadShops(shopsData); 
         } else {
             featuredShops.innerHTML = "<div style='text-align:center;color:red;font-weight:bold;padding:20px;'>Data Format Error!</div>";
         }
     };
 
-    // 5. ഫയൽ കിട്ടിയില്ലെങ്കിലോ ലിങ്ക് മാറിയാലോ കാണിക്കേണ്ടത്
     script.onerror = function() {
         featuredShops.innerHTML = "<div style='text-align:center;color:red;font-weight:bold;padding:20px;'>Shop Data Not Found on GitHub!</div>";
     };
     
-    // 6. ഈ സ്ക്രിപ്റ്റ് ബോഡിയിലേക്ക് കയറ്റുന്നു
     document.body.appendChild(script);
 }
 
-    
-    // 6. ഈ സ്ക്രിപ്റ്റ് ബോഡിയിലേക്ക് കയറ്റുന്നു
-    document.body.appendChild(script);
-}
-
-    
-    // 6. ഈ സ്ക്രിപ്റ്റ് ബോഡിയിലേക്ക് കയറ്റുന്നു
-    document.body.appendChild(script);
-}
-
-
-// 🟢 ഷോപ്പുകൾ പേജിൽ കാണിക്കുന്ന നിന്റെ ഒറിജിനൽ ഫങ്ഷൻ
 function loadShops(shopsArray) {
-  featuredShops.innerHTML = "";
-  if (!shopsArray || shopsArray.length === 0) {
-      featuredShops.innerHTML = "<div style='text-align:center;color:#aaa;padding:20px;'>No Shops Available!</div>";
-      return;
-  }
+    featuredShops.innerHTML = "";
+    if (!shopsArray || shopsArray.length === 0) {
+        featuredShops.innerHTML = "<div style='text-align:center;font-weight:bold;padding:20px;'>No shops available for this country.</div>";
+        return;
+    }
+
 
   shopsArray.forEach((shop, index) => {
     let host = "";
