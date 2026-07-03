@@ -9036,39 +9036,34 @@ function renderCountry(country) {
   setSelectedCountry(country);
 }
    function fetchExternalCountryJS(countryName) {
-   function fetchExternalCountryJS(countryName) {
-    // 1. ഫയലിൽ ഓൾറെഡി ആ രാജ്യത്തിന്റെ ഡാറ്റ ഉണ്ടെങ്കിൽ അത് നേരിട്ട് ലോഡ് ചെയ്യുന്നു (ഇന്ത്യ ഉൾപ്പെടെയുള്ളവ)
-    if (window.countryShops && window.countryShops[countryName] && countryName !== "afghanistan" && countryName !== "albania") {
-        loadShops(window.countryShops[countryName]);
+
+    // India മാത്രം HTML-ൽ
+    if (countryName === "india") {
+        loadShops(countryName);
         return;
     }
 
-    featuredShops.innerHTML = "<div style='text-align:center;font-weight:bold;color:#ff9800;padding:20px;'>Loading Shops...</div>";
-    
-    // 2. പഴയ സ്ക്രിപ്റ്റ് ഉണ്ടെങ്കിൽ അത് പേജിൽ നിന്ന് മാറ്റുന്നു
-    const oldScript = document.getElementById("dynamic-country-script");
-    if (oldScript) oldScript.remove();
+    // ഇതിനകം ലോഡ് ചെയ്തിട്ടുണ്ടോ?
+    if (window.countryShops && window.countryShops[countryName]) {
+        loadShops(countryName);
+        return;
+    }
 
-    // 3. അവസാനത്തെ 4 രാജ്യങ്ങൾക്കായി (Afghanistan മുതലായവ) സ്ക്രിപ്റ്റ് ടാഗ് ഉണ്ടാക്കുന്നു
+    const old = document.getElementById("dynamic-country-script");
+    if (old) old.remove();
+
     const script = document.createElement("script");
     script.id = "dynamic-country-script";
-    script.src = `./${countryName}.js`;
-    
-    // 4. ഫയൽ ലോഡ് ആയിക്കഴിഞ്ഞാൽ റൺ ആകുന്നു
-    script.onload = function() {
-        if (window.countryShops && window.countryShops[countryName]) {
-            const shopsData = window.countryShops[countryName];
-            loadShops(shopsData); 
-        } else {
-            featuredShops.innerHTML = "<div style='text-align:center;color:red;font-weight:bold;padding:20px;'>Data Format Error!</div>";
-        }
+    script.src = countryName.replace(/\s+/g, "_") + ".js";
+
+    script.onload = function () {
+        loadShops(countryName);
     };
 
-    // 5. ഫയൽ ഉണ്ടാക്കി വെച്ചിട്ടില്ലെങ്കിൽ കാണിക്കേണ്ട മെസ്സേജ്
-    script.onerror = function() {
-        featuredShops.innerHTML = `<div style='text-align:center;color:red;font-weight:bold;padding:20px;'>Shop Data For ${countryName.toUpperCase()} Not Found!</div>`;
+    script.onerror = function () {
+        featuredShops.innerHTML = "Country file not found";
     };
-    
+
     document.body.appendChild(script);
 }
 
