@@ -9020,21 +9020,8 @@ function setSelectedCountry(country) {
 
   localStorage.setItem("selectedCountry", pureCountry);
   
-  // 🟢 ഇന്ത്യ ആണെങ്കിൽ ലോക്കൽ ഡാറ്റ എടുക്കും, മറ്റുള്ളവ ഗിറ്റ്ഹബ്ബിൽ നിന്ന് വലിയ്ക്കും
-  if (pureCountry === "india") {
-      loadShops(countryShops["india"]);
-  } else {
-      fetchExternalCountryJS(pureCountry);
-  }
+  
 
-  if (typeof changeCountry === "function") {
-    changeCountry(pureCountry);
-  }
-}
-
-function renderCountry(country) {
-  setSelectedCountry(country);
-}
 // 🟢 ഇന്ത്യ ആണെങ്കിൽ ലോക്കൽ ഡാറ്റ, മറ്റുള്ളവ .js ഫയലിൽ നിന്ന്
 if (pureCountry === "india") {
     loadShops(countryShops["india"]);
@@ -9084,6 +9071,7 @@ function fetchExternalCountryJS(countryName) {
 }
 
 function loadShops(shopsArray) {
+
     featuredShops.innerHTML = "";
 
     if (!shopsArray || shopsArray.length === 0) {
@@ -9091,6 +9079,38 @@ function loadShops(shopsArray) {
             "<div style='text-align:center;font-weight:bold;padding:20px;'>No shops available for this country.</div>";
         return;
     }
+
+    const colors = [
+        "#00C853","#2196F3","#F44336","#FF9800","#9C27B0",
+        "#00BCD4","#E91E63","#FFC107","#009688","#795548"
+    ];
+
+    shopsArray.slice(0,10).forEach((shop,index)=>{
+
+        let host="";
+        try{
+            host=new URL(shop.u).hostname;
+        }catch(e){}
+
+        featuredShops.innerHTML += `
+        <a href="${shop.u}" target="_blank"
+           class="shopCard"
+           style="border-left-color:${colors[index%10]}">
+
+            <div class="shopDot">${(shop.a||"").trim()?"":"."}</div>
+
+            <img class="shopFav"
+                 src="https://www.google.com/s2/favicons?domain=${host}&sz=64"
+                 loading="lazy">
+
+            <div class="shopName notranslate" translate="no">
+                ${shop.n}
+            </div>
+
+        </a>`;
+    });
+
+}
 
 
 
