@@ -1,7 +1,7 @@
 
 
 
-countryShops.australia = [ 
+countryShops.australia = [
   { id:1, n:"amazon australia", c:"general", u:"https://www.amazon.com.au", a:"" },
 { id:2, n:"ebay australia", c:"general", u:"https://www.ebay.com.au", a:"" },
 { id:3, n:"woolworths", c:"general", u:"https://www.woolworths.com.au", a:"" } ,
