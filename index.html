@@ -9038,7 +9038,6 @@ function setSelectedCountry(country) {
 function renderCountry(country) {
   setSelectedCountry(country);
 }
-
 function fetchExternalCountryJS(countryName) {
     featuredShops.innerHTML = "<div style='text-align:center;font-weight:bold;color:#ff9800;padding:20px;'>Loading Shops...</div>";
     
@@ -9063,6 +9062,11 @@ function fetchExternalCountryJS(countryName) {
     script.onerror = function() {
         featuredShops.innerHTML = "<div style='text-align:center;color:red;font-weight:bold;padding:20px;'>Shop Data Not Found on GitHub!</div>";
     };
+    
+    // 6. ഈ സ്ക്രിപ്റ്റ് ബോഡിയിലേക്ക് കയറ്റുന്നു
+    document.body.appendChild(script);
+}
+
     
     // 6. ഈ സ്ക്രിപ്റ്റ് ബോഡിയിലേക്ക് കയറ്റുന്നു
     document.body.appendChild(script);
