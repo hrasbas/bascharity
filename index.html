@@ -9036,6 +9036,7 @@ function renderCountry(country) {
   setSelectedCountry(country);
 }
    function fetchExternalCountryJS(countryName) {
+   function fetchExternalCountryJS(countryName) {
     // 1. ഫയലിൽ ഓൾറെഡി ആ രാജ്യത്തിന്റെ ഡാറ്റ ഉണ്ടെങ്കിൽ അത് നേരിട്ട് ലോഡ് ചെയ്യുന്നു (ഇന്ത്യ ഉൾപ്പെടെയുള്ളവ)
     if (window.countryShops && window.countryShops[countryName] && countryName !== "afghanistan" && countryName !== "albania") {
         loadShops(window.countryShops[countryName]);
@@ -9077,6 +9078,7 @@ function loadShops(shopsArray) {
         featuredShops.innerHTML = "<div style='text-align:center;font-weight:bold;padding:20px;'>No shops available for this country.</div>";
         return;
     }
+
 
 
 // 3. പേജ് ലോഡ് ആകുമ്പോൾ ആദ്യം റൺ ആകേണ്ട ഭാഗം
