@@ -9037,8 +9037,7 @@ function setSelectedCountry(country) {
 
 function renderCountry(country) {
   setSelectedCountry(country);
-}
-function fetchExternalCountryJS(countryName) {
+}function fetchExternalCountryJS(countryName) {
     featuredShops.innerHTML = "<div style='text-align:center;font-weight:bold;color:#ff9800;padding:20px;'>Loading Shops...</div>";
     
     // 1. പഴയ സ്ക്രിപ്റ്റ് ഉണ്ടെങ്കിൽ അത് പേജിൽ നിന്ന് കളയുന്നു
@@ -9054,14 +9053,24 @@ function fetchExternalCountryJS(countryName) {
     
     // 4. ഗിറ്റ്ഹബ് ഫയൽ വിജയകരമായി ലോഡ് ആയിക്കഴിഞ്ഞാൽ റൺ ആകുന്നു
     script.onload = function() {
-        const shopsData = countryShops[countryName];
-        loadShops(shopsData); // നിന്റെ ഒറിജിനൽ ലോഡ് ഫങ്ഷനിലേക്ക് ഡാറ്റ കൊടുക്കുന്നു
+        // വിൻഡോയിൽ countryShops ഉണ്ടോ എന്ന് നോക്കി കൃത്യമായി ഡാറ്റ എടുക്കുന്നു
+        if (window.countryShops && window.countryShops[countryName]) {
+            const shopsData = window.countryShops[countryName];
+            loadShops(shopsData); // നിന്റെ ഒറിജിനൽ ലോഡ് ഫങ്ഷനിലേക്ക് ഡാറ്റ കൊടുക്കുന്നു
+        } else {
+            featuredShops.innerHTML = "<div style='text-align:center;color:red;font-weight:bold;padding:20px;'>Data Format Error!</div>";
+        }
     };
 
     // 5. ഫയൽ കിട്ടിയില്ലെങ്കിലോ ലിങ്ക് മാറിയാലോ കാണിക്കേണ്ടത്
     script.onerror = function() {
         featuredShops.innerHTML = "<div style='text-align:center;color:red;font-weight:bold;padding:20px;'>Shop Data Not Found on GitHub!</div>";
     };
+    
+    // 6. ഈ സ്ക്രിപ്റ്റ് ബോഡിയിലേക്ക് കയറ്റുന്നു
+    document.body.appendChild(script);
+}
+
     
     // 6. ഈ സ്ക്രിപ്റ്റ് ബോഡിയിലേക്ക് കയറ്റുന്നു
     document.body.appendChild(script);
