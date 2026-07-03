@@ -9035,17 +9035,33 @@ function setSelectedCountry(country) {
 function renderCountry(country) {
   setSelectedCountry(country);
 }
-   function fetchExternalCountryJS(countryName) {
+// 🟢 ഇന്ത്യ ആണെങ്കിൽ ലോക്കൽ ഡാറ്റ, മറ്റുള്ളവ .js ഫയലിൽ നിന്ന്
+if (pureCountry === "india") {
+    loadShops(countryShops["india"]);
+} else {
+    fetchExternalCountryJS(pureCountry);
+}
+
+if (typeof changeCountry === "function") {
+    changeCountry(pureCountry);
+}
+}
+
+function renderCountry(country) {
+    setSelectedCountry(country);
+}
+
+function fetchExternalCountryJS(countryName) {
 
     // India മാത്രം HTML-ൽ
     if (countryName === "india") {
-        loadShops(countryName);
+        loadShops(countryShops["india"]);
         return;
     }
 
-    // ഇതിനകം ലോഡ് ചെയ്തിട്ടുണ്ടോ?
+    // ഇതിനകം ലോഡ് ചെയ്തിട്ടുണ്ടെങ്കിൽ വീണ്ടും JS ലോഡ് ചെയ്യേണ്ട
     if (window.countryShops && window.countryShops[countryName]) {
-        loadShops(countryName);
+        loadShops(countryShops[countryName]);
         return;
     }
 
@@ -9057,7 +9073,7 @@ function renderCountry(country) {
     script.src = countryName.replace(/\s+/g, "_") + ".js";
 
     script.onload = function () {
-        loadShops(countryName);
+        loadShops(countryShops[countryName]);
     };
 
     script.onerror = function () {
@@ -9069,8 +9085,10 @@ function renderCountry(country) {
 
 function loadShops(shopsArray) {
     featuredShops.innerHTML = "";
+
     if (!shopsArray || shopsArray.length === 0) {
-        featuredShops.innerHTML = "<div style='text-align:center;font-weight:bold;padding:20px;'>No shops available for this country.</div>";
+        featuredShops.innerHTML =
+            "<div style='text-align:center;font-weight:bold;padding:20px;'>No shops available for this country.</div>";
         return;
     }
 
