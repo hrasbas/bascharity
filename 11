@@ -661,3 +661,353 @@ ball.className = "bas-ball is-pwa-installed";
 });
 </script>
 
+<!-- COUNTRY BOX START -->
+
+  <style>
+.country-board{width:96%;max-width:900px;margin:14px auto;padding:14px;border:1px solid #cfcfcf;border-radius:16px;background:#111;color:#fff;font-family:Arial,sans-serif}
+.country-title{width:100%;background:#4a4a4a;color:#fff;border:2px solid #dfe6eb;border-radius:14px;padding:14px 8px;text-align:center;font-size:16px;font-weight:800;margin-bottom:12px}
+.country-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-bottom:12px}
+.country-btn{background:#4a4a4a;border:1px solid #666;border-radius:14px;padding:14px 8px;color:#fff;font-size:16px;font-weight:800;text-align:center;cursor:pointer;border-left-width:6px}
+.country-btn.active{color:#00ff66}
+.india{border-left-color:#FF9933}.usa{border-left-color:#2196F3}.uk{border-left-color:#E91E63}.uae{border-left-color:#00C853}.saudi{border-left-color:#4CAF50}.canada{border-left-color:#F44336}.germany{border-left-color:#9C27B0}.france{border-left-color:#3F51B5}.australia{border-left-color:#FFC107}
+#allCountries{width:100%;background:#5a5a5a;color:#fff;border:2px solid #dfe6eb;border-radius:14px;padding:14px 8px;font-size:16px;font-weight:800;text-align:center;text-align-last:center;margin-bottom:12px}
+#allCountries.green-select{color:#00ff66}
+#shopOnCountry{width:100%;padding:14px 8px;background:#5a5a5a;border:2px solid #dfe6eb;border-radius:14px;text-align:center;font-size:18px;font-weight:800;color:#fff;margin-bottom:12px}
+#shopOnCountry .green{color:#00ff66}
+#featuredShops{display:flex;flex-direction:column;gap:10px}
+.shopCard{background:#2b2b2b;border:1px solid #c0c0c0;border-left:8px solid #00C853;border-radius:14px;padding:14px 16px;display:flex;align-items:center;gap:12px;min-height:78px;text-decoration:none;box-shadow:0 2px 10px rgba(0,0,0,.25)}
+.shopCard:nth-child(10n+1){border-left-color:#00C853}.shopCard:nth-child(10n+2){border-left-color:#2196F3}.shopCard:nth-child(10n+3){border-left-color:#F44336}.shopCard:nth-child(10n+4){border-left-color:#FF9800}.shopCard:nth-child(10n+5){border-left-color:#9C27B0}.shopCard:nth-child(10n+6){border-left-color:#00BCD4}.shopCard:nth-child(10n+7){border-left-color:#E91E63}.shopCard:nth-child(10n+8){border-left-color:#FFC107}.shopCard:nth-child(10n+9){border-left-color:#009688}.shopCard:nth-child(10n+10){border-left-color:#795548}
+.shopDot{width:18px;flex:0 0 18px;color:#fff;font-weight:900;text-align:center;font-size:20px;line-height:1}
+.shopFav{width:42px;height:42px;object-fit:contain;flex:0 0 42px;border-radius:8px;background:#fff}
+.shopName{flex:1;color:#fff;font-size:30px;font-weight:800;line-height:1.2;text-align:left}
+.shop-button-container{display:inline-flex;align-items:center;position:relative}
+.shop-icon{font-size:50px!important;width:50px!important;height:50px!important;display:flex;align-items:center;justify-content:center;position:absolute;left:0;top:0;z-index:10}
+.shop-button{padding:15px 30px;font-size:16px;background-color:blue;color:white;border:none;margin-left:50px;cursor:pointer;position:relative}
+</style>
+
+<div class="country-board">
+  <div class="country-title">SELECT COUNTRY</div>
+  <div class="country-grid">
+    <button class="country-btn india" onclick="renderCountry('india')">INDIA</button>
+    <button class="country-btn usa" onclick="renderCountry('usa')">USA</button>
+    <button class="country-btn uk" onclick="renderCountry('uk')">UK</button>
+    <button class="country-btn uae" onclick="renderCountry('uae')">UAE</button>
+    <button class="country-btn saudi" onclick="renderCountry('saudi arabia')">SAUDI ARABIA</button>
+    <button class="country-btn canada" onclick="renderCountry('canada')">CANADA</button>
+    <button class="country-btn germany" onclick="renderCountry('germany')">GERMANY</button>
+    <button class="country-btn france" onclick="renderCountry('france')">FRANCE</button>
+    <button class="country-btn australia" onclick="renderCountry('australia')">AUSTRALIA</button>
+  </div>
+
+  <select id="allCountries">
+    <option value="">SEARCH / SELECT ALL COUNTRIES ▼</option>
+  </select>
+
+  <div id="shopOnCountry">SHOP ON INDIA</div>
+  <div id="featuredShops"></div>
+</div>
+
+<div id="basCompleteWrapper" style="width: 96%; max-width: 900px; margin: 20px auto; font-family: 'Segoe UI', Roboto, sans-serif; color: #fff; text-align: center; border: 3px solid #ff9800; padding: 50px 40px; border-radius: 28px; background: #111111; box-shadow: 0 20px 50px rgba(255, 152, 0, 0.15);">
+
+    <div id="basMainDisplay" style="width: 100%;">
+        
+        <img src="icon-512.png" alt="BAS CHARITY" onclick="handleInstallTap()" style="width: 150px; height: 150px; margin: 0 auto 35px; border-radius: 34px; display: block; cursor: pointer; border: 4px solid #fff; box-shadow: 0 15px 35px rgba(255, 152, 0, 0.4); transition: transform 0.2s; object-fit: cover;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
+
+        <h1 style="font-size: 42px; color: #ff9800; margin-bottom: 35px; font-weight: bold; line-height: 1.3;">Why Should You Install This Icon?</h1>
+
+        <div style="text-align: left; font-size: 26px; font-weight: bold; line-height: 2.2; margin-bottom: 35px; padding-left: 20px;">
+            <div><span style="color: #ff9800; margin-right: 15px;">•</span> <b>Uses Zero Phone Memory & Storage</b></div>
+            <div><span style="color: #ff9800; margin-right: 15px;">•</span> <b>Works Exactly Like an Original App</b></div>
+            <div><span style="color: #ff9800; margin-right: 15px;">•</span> <b>Compare Prices Easily & Save Money</b></div>
+            <div><span style="color: #ff9800; margin-right: 15px;">•</span> <b>Participate in Charity at Zero Cost</b></div>
+        </div>
+
+        <div onclick="basOpenFullPage()" style="color: #00ff00; font-size: 28px; font-weight: bold; cursor: pointer; text-decoration: underline; display: inline-block;">More....</div>
+    </div>
+
+    <div id="basFullInfoPage" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: #0d0d0d; padding: 40px 30px; overflow-y: auto; text-align: left; z-index: 999999;" onmousemove="basResetIdleTimer()" onscroll="basResetIdleTimer()" onclick="basResetIdleTimer()" ontouchstart="basResetIdleTimer()">
+        <div style="max-width: 900px; margin: 0 auto; padding-bottom: 50px;">
+            
+            <div style="font-size: 38px; color: #ff9800; font-weight: bold; margin-bottom: 30px; border-bottom: 2px solid #333; padding-bottom: 15px;">🌟 Full Specifications</div> 
+
+            <ul style="list-style: none; margin-bottom: 35px; padding: 0;">
+                <li style="font-size: 25px; line-height: 1.7; margin-bottom: 25px; color: #e0e0e0;"><strong style="color: #ff9800;">1. Zero Phone Memory:</strong> Built as a lightweight shortcut replacement for thousands of high-memory shopping applications without slowing down your phone.</li>
+                <li style="font-size: 25px; line-height: 1.7; margin-bottom: 25px; color: #e0e0e0;"><strong style="color: #ff9800;">2. Real App Experience:</strong> Stays on your mobile home screen seamlessly and opens up just like a dedicated premium native application.</li>
+                <li style="font-size: 25px; line-height: 1.7; margin-bottom: 25px; color: #e0e0e0;"><strong style="color: #ff9800;">3. Smart Price Comparison:</strong> Compare items instantly across global shopping sites and find the lowest guaranteed price online.</li>
+                <li style="font-size: 25px; line-height: 1.7; margin-bottom: 25px; color: #e0e0e0;"><strong style="color: #ff9800;">4. Global Marketplace Access:</strong> Surf across global directory stores spanning over 200 countries in all localized international languages.</li>
+                <li style="font-size: 25px; line-height: 1.7; margin-bottom: 25px; color: #e0e0e0;"><strong style="color: #ff9800;">5. Global Trade Culture:</strong> Explore products, localized pricing structures, and regional retail trends directly from your screen.</li>
+                <li style="font-size: 25px; line-height: 1.7; margin-bottom: 25px; color: #e0e0e0;"><strong style="color: #ff9800;">6. Complete Security Guard:</strong> Avoid scam donation traps and identify verified humanitarian platforms directly to extend support.</li>
+                <li style="font-size: 25px; line-height: 1.7; margin-bottom: 25px; color: #e0e0e0;"><strong style="color: #ff9800;">7. Premium Utility Gift:</strong> Share this zero-cost utility application directly with friends and family to involve them in smart savings.</li>
+            </ul> 
+
+            <div style="background: #0e2713; border: 2px solid #00ff00; padding: 35px; border-radius: 20px; margin-bottom: 35px; text-align: center;">
+                <div style="font-size: 26px; color: #00ff00; font-weight: bold; margin-bottom: 15px;">YOUR PURCHASE SATISFIES A HUNGER ®</div>
+                <div style="font-size: 25px; color: #fff; line-height: 1.6;">
+                    Your routine everyday shopping directly provides meals to those suffering in distant corners without requiring any extra donation expenses from your pockets. This is the greatest charity of livelihood dedicated to the eternal souls of our departed ancestors and loved ones.
+                </div>
+                <div style="margin-top: 25px; font-size: 25px; color: #ffc107; font-weight: bold; line-height: 1.5;">
+                    * Bank charge exempted. Please direct transfer the combined monthly balance of 30/- once every month to eliminate banking dynamic service fees.
+                </div>
+                <div style="color: #ff5722; font-weight: bold; margin-top: 15px; font-size: 25px;">
+                    "Provide assistance exclusively to highly verified and trusted channels."
+                </div> 
+                <div style="text-align: left; margin-top: 25px; border-top: 2px dashed #555; padding-top: 20px; font-size: 22px; color: #ccc; line-height: 1.6;">
+                    <b style="color: #00ff00;">🌍 International Remittances:</b><br>
+                    To secure bank charge exemption benefits globally, kindly route consolidated payments via specialized digital channels like Wise, Remitly, Instarem, or directly via native NRI/NRO linked UPI apps.
+                </div>
+            </div> 
+
+            <button onclick="basCloseFullPage()" style="background: #ff9800; color: #000; padding: 15px 45px; border-radius: 30px; font-size: 26px; font-weight: bold; border: none; cursor: pointer; display: block; margin: 30px auto 0;">Back</button>
+        </div>
+    </div>
+
+    <script>
+        let basIdleTimer; 
+        function basOpenFullPage() {
+            document.getElementById('basFullInfoPage').style.display = 'block';
+            document.getElementById('basMainDisplay').style.display = 'none';
+            basResetIdleTimer();
+        } 
+        function basCloseFullPage() {
+            clearTimeout(basIdleTimer);
+            document.getElementById('basFullInfoPage').style.display = 'none';
+            document.getElementById('basMainDisplay').style.display = 'block';
+        } 
+        function basResetIdleTimer() {
+            clearTimeout(basIdleTimer);
+            basIdleTimer = setTimeout(basCloseFullPage, 35000);
+        }
+    </script>
+</div>
+
+  
+<script>
+ 
+/* ================================================= */
+/* FIXED 10 COUNTRIES */
+/* ================================================= */
+const fixedCountries=[
+"india",
+"usa",
+"uk",
+"uae",
+"canada",
+"australia",
+"germany",
+"france",
+"saudi arabia"
+];
+
+
+
+const allCountriesList=[
+"afghanistan",
+"albania",
+"algeria",
+"andorra",
+"angola",
+"antigua_and_barbuda",
+"argentina",
+"armenia",
+"australia",
+"austria",
+"azerbaijan",
+"bahamas",
+"bahrain",
+"bangladesh",
+"barbados",
+"belarus",
+"belgium",
+"belize",
+"benin",
+"bhutan",
+"bolivia",
+"bosnia and herzegovina",
+"botswana",
+"brazil",
+"brunei",
+"bulgaria",
+"burkina faso",
+"burundi",
+"cabo verde",
+"cambodia",
+"cameroon",
+"canada",
+"central african republic",
+"chad",
+"chile",
+"china",
+"colombia",
+"comoros",
+"congo",
+"costa rica",
+"cote d'ivoire",
+"croatia",
+"cuba",
+"cyprus",
+"czechia",
+"democratic republic of the congo",
+"denmark",
+"djibouti",
+"dominica",
+"dominican republic",
+"ecuador",
+"egypt",
+"el salvador",
+"equatorial guinea",
+"eritrea",
+"estonia",
+"eswatini",
+"ethiopia",
+"fiji",
+"finland",
+"france",
+"gabon",
+"gambia",
+"georgia",
+"germany",
+"ghana",
+"greece",
+"grenada",
+"guatemala",
+"guinea",
+"guinea-bissau",
+"guyana",
+"haiti",
+"honduras",
+"hungary",
+"iceland",
+"india",
+"indonesia",
+"iran",
+"iraq",
+"ireland",
+"israel",
+"italy",
+"jamaica",
+"japan",
+"jordan",
+"kazakhstan",
+"kenya",
+"kiribati",
+"kuwait",
+"kyrgyzstan",
+"laos",
+"latvia",
+"lebanon",
+"lesotho",
+"liberia",
+"libya",
+"liechtenstein",
+"lithuania",
+"luxembourg",
+"madagascar",
+"malawi",
+"malaysia",
+"maldives",
+"mali",
+"malta",
+"marshall islands",
+"mauritania",
+"mauritius",
+"mexico",
+"micronesia",
+"moldova",
+"monaco",
+"mongolia",
+"montenegro",
+"morocco",
+"mozambique",
+"myanmar",
+"namibia",
+"nauru",
+"nepal",
+"netherlands",
+"new zealand",
+"nicaragua",
+"niger",
+"nigeria",
+"north korea",
+"north macedonia",
+"norway",
+"oman",
+"pakistan",
+"palau",
+"panama",
+"papua new guinea",
+"paraguay",
+"peru",
+"philippines",
+"poland",
+"portugal",
+"qatar",
+"romania",
+"russia",
+"rwanda",
+"saint kitts and nevis",
+"saint lucia",
+"saint vincent and the grenadines",
+"samoa",
+"san marino",
+"sao tome and principe",
+"saudi arabia",
+"senegal",
+"serbia",
+"seychelles",
+"sierra leone",
+"singapore",
+"slovakia",
+"slovenia",
+"solomon islands",
+"somalia",
+"south africa",
+"south korea",
+"south sudan",
+"spain",
+"sri lanka",
+"sudan",
+"suriname",
+"sweden",
+"switzerland",
+"syria",
+"tajikistan",
+"tanzania",
+"thailand",
+"timor-leste",
+"togo",
+"tonga",
+"trinidad and tobago",
+"tunisia",
+"turkey",
+"turkmenistan",
+"tuvalu",
+"uganda",
+"ukraine",
+"united arab emirates",
+"united kingdom",
+"united states",
+"uruguay",
+"uzbekistan",
+"vanuatu",
+"venezuela",
+"vietnam",
+"yemen",
+"zambia",
+"zimbabwe",
+"cook islands",
+"niue",
+"palestine",
+"kosovo",
+"taiwan",
+"vatican city",
+"hong kong",
+"macau",
+"greenland",
+"faroe islands",
+"puerto rico",
+"guam",
+"new caledonia"
+];
+
+
+
