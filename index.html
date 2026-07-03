@@ -9036,15 +9036,24 @@ function renderCountry(country) {
   setSelectedCountry(country);
 }
    function fetchExternalCountryJS(countryName) {
+    // 1. ഫയലിൽ ഓൾറെഡി ആ രാജ്യത്തിന്റെ ഡാറ്റ ഉണ്ടെങ്കിൽ അത് നേരിട്ട് ലോഡ് ചെയ്യുന്നു (ഇന്ത്യ ഉൾപ്പെടെയുള്ളവ)
+    if (window.countryShops && window.countryShops[countryName] && countryName !== "afghanistan" && countryName !== "albania") {
+        loadShops(window.countryShops[countryName]);
+        return;
+    }
+
     featuredShops.innerHTML = "<div style='text-align:center;font-weight:bold;color:#ff9800;padding:20px;'>Loading Shops...</div>";
     
+    // 2. പഴയ സ്ക്രിപ്റ്റ് ഉണ്ടെങ്കിൽ അത് പേജിൽ നിന്ന് മാറ്റുന്നു
     const oldScript = document.getElementById("dynamic-country-script");
     if (oldScript) oldScript.remove();
 
+    // 3. അവസാനത്തെ 4 രാജ്യങ്ങൾക്കായി (Afghanistan മുതലായവ) സ്ക്രിപ്റ്റ് ടാഗ് ഉണ്ടാക്കുന്നു
     const script = document.createElement("script");
     script.id = "dynamic-country-script";
-    script.src = `https://hrasbas.github.io/bascharity/${countryName}.js`;
+    script.src = `./${countryName}.js`;
     
+    // 4. ഫയൽ ലോഡ് ആയിക്കഴിഞ്ഞാൽ റൺ ആകുന്നു
     script.onload = function() {
         if (window.countryShops && window.countryShops[countryName]) {
             const shopsData = window.countryShops[countryName];
@@ -9054,8 +9063,9 @@ function renderCountry(country) {
         }
     };
 
+    // 5. ഫയൽ ഉണ്ടാക്കി വെച്ചിട്ടില്ലെങ്കിൽ കാണിക്കേണ്ട മെസ്സേജ്
     script.onerror = function() {
-        featuredShops.innerHTML = "<div style='text-align:center;color:red;font-weight:bold;padding:20px;'>Shop Data Not Found on GitHub!</div>";
+        featuredShops.innerHTML = `<div style='text-align:center;color:red;font-weight:bold;padding:20px;'>Shop Data For ${countryName.toUpperCase()} Not Found!</div>`;
     };
     
     document.body.appendChild(script);
@@ -9068,23 +9078,6 @@ function loadShops(shopsArray) {
         return;
     }
 
-
-  shopsArray.forEach((shop, index) => {
-    let host = "";
-    try { host = new URL(shop.u).hostname; } catch (e) {}
-
-    const colors = ["#00C853","#2196F3","#F44336","#FF9800","#9C27B0","#00BCD4","#E91E63","#FFC107","#009688","#795548"];
-    const leftColor = colors[index % colors.length];
-
-    featuredShops.innerHTML += `
-      <a href="${shop.u}" target="_blank" class="shopCard" style="border-left-color:${leftColor}">
-        <div class="shopDot">${(shop.a || "").trim() ? "" : "."}</div>
-        <img class="shopFav" src="https://www.google.com/s2/favicons?domain=${host}&sz=64" alt="">
-        <div class="shopName notranslate" translate="no">${shop.n}</div>
-      </a>
-    `;
-  });
-}
 
 // 3. പേജ് ലോഡ് ആകുമ്പോൾ ആദ്യം റൺ ആകേണ്ട ഭാഗം
 document.addEventListener("DOMContentLoaded", () => {
