@@ -8984,85 +8984,96 @@ c:"ai",
 u:"https://lambdalabs.com",
 a:""
 }]; -->
-
-
-<script>
-
- const allCountries = document.getElementById("allCountries");
+  <script>
+const allCountries = document.getElementById("allCountries");
 const featuredShops = document.getElementById("featuredShops");
 
-// 1. ഡ്രോപ്പ്ഡൗണിലേക്ക് രാജ്യങ്ങൾ നിറയ്ക്കുന്നു
+const loadedCountries = {};
+
+// Dropdown നിറയ്ക്കുന്നു
 allCountriesList.forEach(country => {
-  const option = document.createElement("option");
-  option.value = country;
-  option.textContent = country.toUpperCase();
-  allCountries.appendChild(option);
+    const option = document.createElement("option");
+    option.value = country;
+    option.textContent = country.toUpperCase();
+    allCountries.appendChild(option);
 });
 
-// 2. രാജ്യം സെലക്ട് ചെയ്യുമ്പോൾ വർക്കാകുന്ന പ്രധാന ഫങ്ഷൻ
+// രാജ്യം തിരഞ്ഞെടുക്കുന്നു
 function setSelectedCountry(country) {
-  if (!country) return;
-  const pureCountry = country.trim().toLowerCase();
 
-  allCountries.value = pureCountry;
-  allCountries.classList.add("green-select");
+    if (!country) return;
 
-  document.querySelectorAll(".country-btn").forEach(btn => {
-    btn.classList.toggle("active", btn.textContent.trim().toLowerCase() === pureCountry);
-  });
+    const pureCountry = country.trim().toLowerCase();
 
-  const shopBtn = document.getElementById("shopOnCountry");
-  if (shopBtn) {
-    shopBtn.innerHTML = `SHOP ON <span class="green">${pureCountry.toUpperCase()}</span>`;
-  }
+    allCountries.value = pureCountry;
+    allCountries.classList.add("green-select");
 
-  localStorage.setItem("selectedCountry", pureCountry);
-  
-  
+    document.querySelectorAll(".country-btn").forEach(btn => {
+        btn.classList.toggle(
+            "active",
+            btn.textContent.trim().toLowerCase() === pureCountry
+        );
+    });
 
-// 🟢 ഇന്ത്യ ആണെങ്കിൽ ലോക്കൽ ഡാറ്റ, മറ്റുള്ളവ .js ഫയലിൽ നിന്ന്
-if (pureCountry === "india") {
-    loadShops(countryShops["india"]);
-} else {
+    const shopBtn = document.getElementById("shopOnCountry");
+
+    if (shopBtn) {
+        shopBtn.innerHTML =
+            `SHOP ON <span class="green">${pureCountry.toUpperCase()}</span>`;
+    }
+
+    localStorage.setItem("selectedCountry", pureCountry);
+
     fetchExternalCountryJS(pureCountry);
-}
 
-if (typeof changeCountry === "function") {
-    changeCountry(pureCountry);
-}
+    if (typeof changeCountry === "function") {
+        changeCountry(pureCountry);
+    }
 }
 
 function renderCountry(country) {
     setSelectedCountry(country);
-}
+}   // ← ഈ } വിട്ടുപോയിരുന്നു
 
 function fetchExternalCountryJS(countryName) {
 
-    // India മാത്രം HTML-ൽ
-    if (countryName === "india") {
-        loadShops(countryShops["india"]);
-        return;
-    }
-
-    // ഇതിനകം ലോഡ് ചെയ്തിട്ടുണ്ടെങ്കിൽ വീണ്ടും JS ലോഡ് ചെയ്യേണ്ട
-    if (window.countryShops && window.countryShops[countryName]) {
+    if (loadedCountries[countryName]) {
         loadShops(countryShops[countryName]);
         return;
     }
 
-    const old = document.getElementById("dynamic-country-script");
-    if (old) old.remove();
+    if (window.countryShops && window.countryShops[countryName]) {
+        loadedCountries[countryName] = true;
+        loadShops(countryShops[countryName]);
+        return;
+    }
+
+    featuredShops.innerHTML =
+        "<div style='text-align:center;padding:20px;color:#ff9800;font-weight:bold;'>Loading Shops...</div>";
+
+    const oldScript = document.getElementById("dynamic-country-script");
+    if (oldScript) oldScript.remove();
 
     const script = document.createElement("script");
     script.id = "dynamic-country-script";
-    script.src = countryName.replace(/\s+/g, "_") + ".js";
+    script.src = "./" + countryName.replace(/\s+/g, "_") + ".js";
 
     script.onload = function () {
-        loadShops(countryShops[countryName]);
+
+        loadedCountries[countryName] = true;
+
+        if (window.countryShops && window.countryShops[countryName]) {
+            loadShops(countryShops[countryName]);
+        } else {
+            featuredShops.innerHTML =
+                "<div style='text-align:center;padding:20px;color:red;'>No Shop Data</div>";
+        }
+
     };
 
     script.onerror = function () {
-        featuredShops.innerHTML = "Country file not found";
+        featuredShops.innerHTML =
+            "<div style='text-align:center;padding:20px;color:red;'>Country File Not Found</div>";
     };
 
     document.body.appendChild(script);
@@ -9074,7 +9085,7 @@ function loadShops(shopsArray) {
 
     if (!shopsArray || shopsArray.length === 0) {
         featuredShops.innerHTML =
-            "<div style='text-align:center;font-weight:bold;padding:20px;'>No shops available for this country.</div>";
+            "<div style='text-align:center;font-weight:bold;padding:20px;'>No shops available.</div>";
         return;
     }
 
@@ -9091,44 +9102,49 @@ function loadShops(shopsArray) {
         }catch(e){}
 
         featuredShops.innerHTML += `
-        <a href="${shop.u}" target="_blank"
-           class="shopCard"
-           style="border-left-color:${colors[index%10]}">
+<a href="${shop.u}" target="_blank"
+class="shopCard"
+style="border-left-color:${colors[index%10]}">
 
-            <div class="shopDot">${(shop.a||"").trim()?"":"."}</div>
+<div class="shopDot">${(shop.a||"").trim() ? "" : "."}</div>
 
-            <img class="shopFav"
-                 src="https://www.google.com/s2/favicons?domain=${host}&sz=64"
-                 loading="lazy">
+<img class="shopFav"
+src="https://www.google.com/s2/favicons?domain=${host}&sz=64"
+loading="lazy">
 
-            <div class="shopName notranslate" translate="no">
-                ${shop.n}
-            </div>
+<div class="shopName notranslate" translate="no">
+${shop.n}
+</div>
 
-        </a>`;
+</a>`;
     });
 
+    if (typeof changeCountry === "function") {
+        changeCountry(allCountries.value);
+    }
 }
 
-
-
-// 3. പേജ് ലോഡ് ആകുമ്പോൾ ആദ്യം റൺ ആകേണ്ട ഭാഗം
 document.addEventListener("DOMContentLoaded", () => {
-  const savedCountry = localStorage.getItem("selectedCountry") || "india";
-  setSelectedCountry(savedCountry);
 
-  document.querySelectorAll(".country-btn").forEach(btn => {
-    btn.addEventListener("click", function() {
-      setSelectedCountry(this.textContent.trim().toLowerCase());
+    const savedCountry =
+        localStorage.getItem("selectedCountry") || "afghanistan";
+
+    setSelectedCountry(savedCountry);
+
+    document.querySelectorAll(".country-btn").forEach(btn => {
+        btn.addEventListener("click", function () {
+            setSelectedCountry(this.textContent.trim().toLowerCase());
+        });
     });
-  });
 
-  allCountries.addEventListener("change", e => {
-    if (e.target.value) {
-      setSelectedCountry(e.target.value);
-    }
-  });
+    allCountries.addEventListener("change", e => {
+        if (e.target.value) {
+            setSelectedCountry(e.target.value);
+        }
+    });
+
 });
+ 
   </script>
 <!-- SL NO 37 : HTML END -->
 <!-- ================================================= -->
