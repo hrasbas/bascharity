@@ -956,9 +956,9 @@ n:"hopscotch",
 c:"baby",
 u:"https://www.hopscotch.in",
 a:""
-}];
+},
 
-/*{
+{
 i:151,
 n:"mothercare",
 c:"baby",
@@ -2310,8 +2310,10 @@ n:"physics wallah",
 c:"education",
 u:"https://www.pw.live",
 a:""
-},
-{
+}];
+
+  
+/*{
 i:321,
 n:"microsoft 365",
 c:"services",
