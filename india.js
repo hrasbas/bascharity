@@ -118,7 +118,7 @@ n:"croma",
 c:"electronics",
 u:"https://www.croma.com",
 a:"https://extp.in/8qwyol"
-}
+},
 
 {
 i:16,
