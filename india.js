@@ -118,9 +118,9 @@ n:"croma",
 c:"electronics",
 u:"https://www.croma.com",
 a:"https://extp.in/8qwyol"
-}];
+}
 
-/*{
+{
 i:16,
 n:"oneplus",
 c:"electronics",
@@ -1354,9 +1354,9 @@ n:"oziva",
 c:"health",
 u:"https://www.oziva.in",
 a:""
-},
+}];
 
-{
+/*{
 i:201,
 n:"fast&up",
 c:"health",
