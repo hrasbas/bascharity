@@ -9058,19 +9058,23 @@ function fetchExternalCountryJS(countryName) {
     const script = document.createElement("script");
     script.id = "dynamic-country-script";
     script.src = "./" + countryName.replace(/\s+/g, "_") + ".js";
+script.onload = function () {
 
-    script.onload = function () {
+    loadedCountries[countryName] = true;
 
-        loadedCountries[countryName] = true;
+    if (window.countryShops && window.countryShops[countryName]) {
 
-        if (window.countryShops && window.countryShops[countryName]) {
-            loadShops(countryShops[countryName]);
-        } else {
-            featuredShops.innerHTML =
-                "<div style='text-align:center;padding:20px;color:red;'>No Shop Data</div>";
-        }
+        loadShops(countryShops[countryName]);
 
-    };
+        allCountries.selectedIndex = 0;
+
+    } else {
+
+        featuredShops.innerHTML =
+            "<div style='text-align:center;padding:20px;color:red;'>No Shop Data</div>";
+    }
+
+};
 
     script.onerror = function () {
         featuredShops.innerHTML =
@@ -9145,7 +9149,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
 });
- allCountries.selectedIndex = 0;
+  
   </script>
 <!-- SL NO 37 : HTML END -->
 <!-- ================================================= -->
