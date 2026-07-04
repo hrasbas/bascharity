@@ -5978,9 +5978,9 @@ n:"sulekha",
 c:"business",
 u:"https://www.sulekha.com",
 a:""
-},
+}];
 
-{
+/*{
 i:751,
 n:"yellow pages",
 c:"business",
@@ -7972,5 +7972,5 @@ n:"lambda",
 c:"ai",
 u:"https://lambdalabs.com",
 a:""
-}];
+}];*/
 
