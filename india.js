@@ -2310,10 +2310,10 @@ n:"physics wallah",
 c:"education",
 u:"https://www.pw.live",
 a:""
-}];
+},
 
   
-/*{
+{
 i:321,
 n:"microsoft 365",
 c:"services",
@@ -7972,5 +7972,5 @@ n:"lambda",
 c:"ai",
 u:"https://lambdalabs.com",
 a:""
-}];*/
+}];
 
