@@ -1,6 +1,4 @@
 
-
-alert("Australia JS Loaded");
 countryShops.australia = [
   { id:1, n:"amazon australia", c:"general", u:"https://www.amazon.com.au", a:"" },
 { id:2, n:"ebay australia", c:"general", u:"https://www.ebay.com.au", a:"" },
@@ -509,4 +507,4 @@ countryShops.australia = [
 { id:498, n:"platypus shoes", c:"fashion", u:"https://www.platypusshoes.com.au", a:"" },
 { id:499, n:"the athletes foot", c:"fashion", u:"https://www.theathletesfoot.com.au", a:"" },
 { id:500, n:"academy brand", c:"fashion", u:"https://academybrand.com", a:"" }
-],
+];
