@@ -227,7 +227,5 @@ u:"https://www.cleartrip.com/",
 d:"official cleartrip travel booking platform offering flights, hotels, buses, holiday packages, travel activities and mobile booking services across india and worldwide.",
 k:"cleartrip app, cleartrip india, flight booking, hotel booking, holiday packages, travel app, bus booking, travel platform",
 a:"https://extp.in/LK0lCN"
-},
-
-
+}
 ];
