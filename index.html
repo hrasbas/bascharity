@@ -9066,7 +9066,7 @@ script.onload = function () {
 
         loadShops(countryShops[countryName]);
 
-        //allCountries.selectedIndex = 0;
+        allCountries.selectedIndex = 0;
 
     } else {
 
@@ -9141,12 +9141,12 @@ document.addEventListener("DOMContentLoaded", () => {
             setSelectedCountry(this.textContent.trim().toLowerCase());
         });
     });
-
-    allCountries.addEventListener("change", e => {
-        if (e.target.value) {
-            setSelectedCountry(e.target.value);
-        }
-    });
+allCountries.addEventListener("change", e => {
+    if (e.target.value) {
+        setSelectedCountry(e.target.value);
+        allCountries.selectedIndex = 0;
+    }
+});
 
 });
   
