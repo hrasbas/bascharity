@@ -55,7 +55,6 @@ k:"zop, zop multi-brand, zopnow, online shopping india, marketplace, electronics
 a:"https://extp.in/IrhoNZ"
 },
 {
-{
 i:7,
 n:"borosil",
 c:"electronics,mobile phones,smartphones,tablets,laptops,desktop computers,computer accessories,printers,networking,cameras,audio,headphones,speakers,smart home,gaming,video games,software,office supplies,stationery,books,ebooks,movies,music,toys,baby products,kids,fashion,men's clothing,women's clothing,kids clothing,shoes,bags,luggage,watches,jewellery,beauty,cosmetics,personal care,health,pharmacy,medical supplies,fitness,sports,outdoor,camping,cycling,automotive,motorcycle,car accessories,tools,hardware,home,home decor,furniture,kitchen,kitchen appliances,home appliances,lighting,garden,plants,pet supplies,food,beverages,organic products,gifts,gift cards,flowers,party supplies,craft supplies,art supplies,sewing,fabrics,industrial supplies,electrical supplies,safety equipment,collectibles,luxury products,eco friendly,digital products,marketplace",
