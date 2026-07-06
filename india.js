@@ -10,7 +10,6 @@ k:"amazon india, amazon, online shopping india, marketplace, electronics, mobile
 a:"https://www.amazon.in/?tag=vmmbaslinks-21"
 },
 {
-{
 i:2,
 n:"flipkart",
 c:"electronics,mobile phones,smartphones,tablets,laptops,desktop computers,computer accessories,printers,networking,cameras,audio,headphones,speakers,smart home,gaming,video games,software,office supplies,stationery,books,ebooks,movies,music,toys,baby products,kids,fashion,men's clothing,women's clothing,kids clothing,shoes,bags,luggage,watches,jewellery,beauty,cosmetics,personal care,health,pharmacy,medical supplies,fitness,sports,outdoor,camping,cycling,automotive,motorcycle,car accessories,tools,hardware,home,home decor,furniture,kitchen,kitchen appliances,home appliances,lighting,garden,plants,pet supplies,grocery,food,beverages,organic products,gifts,gift cards,flowers,party supplies,craft supplies,art supplies,sewing,fabrics,industrial supplies,electrical supplies,safety equipment,musical instruments,collectibles,luxury products,eco friendly,wholesale,digital products,subscription services,marketplace",
