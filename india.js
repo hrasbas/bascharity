@@ -198,14 +198,7 @@ c:"travel_hotels",
 u:"https://www.wego.com",
 a:"https://extp.in/p1wwg6"
 },
-{
-i:25,
-n:"wego hotels",
-c:"travel_hotels",
-u:"https://www.wego.com",
-a:"https://extp.in/p1wwg6"
-},
-
+ 
 {
 i:26,
 n:"air india express",
