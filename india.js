@@ -1695,7 +1695,1007 @@ u:"https://www.eurekaforbes.com",
 d:"Eureka Forbes offers water purifiers, vacuum cleaners, air purifiers and home cleaning solutions.",
 k:"eureka forbes, water purifiers, vacuum cleaners, air purifiers, home cleaning",
 a:""
-}  
+},
+ 
+{
+i:171,
+n:"prestige",
+c:"home_kitchen,home_furniture",
+u:"https://www.prestigexclusive.in",
+d:"Prestige offers pressure cookers, cookware, gas stoves, kitchen appliances and home utility products for Indian kitchens.",
+k:"prestige, pressure cooker, cookware, gas stove, kitchen appliances, indian kitchen, home utility",
+a:""
+},
+
+{
+i:172,
+n:"wonderchef",
+c:"home_kitchen,home_furniture",
+u:"https://www.wonderchef.com",
+d:"Wonderchef offers designer cookware, kitchen appliances and bakeware created in collaboration with Chef Sanjeev Kapoor.",
+k:"wonderchef, designer cookware, kitchen appliances, bakeware, sanjeev kapoor, premium kitchen",
+a:""
+},
+
+{
+i:173,
+n:"milton",
+c:"home_kitchen,home_furniture",
+u:"https://www.milton.in",
+d:"Milton offers insulated bottles, tiffins, casseroles, storage containers and homeware products for everyday use.",
+k:"milton, insulated bottles, tiffins, casseroles, storage containers, homeware, lunch boxes",
+a:""
+},
+
+{
+i:174,
+n:"cello",
+c:"home_kitchen,home_furniture",
+u:"https://www.cello.in",
+d:"Cello offers plastic and stainless steel homeware including bottles, storage, kitchenware, furniture and houseware products.",
+k:"cello, homeware, plastic bottles, kitchenware, storage, furniture, houseware",
+a:""
+},
+
+{
+i:175,
+n:"tupperware india",
+c:"home_kitchen,home_furniture",
+u:"https://www.tupperwareindia.com",
+d:"Tupperware India offers premium food storage containers, lunch boxes, kitchenware and serving products for home and on-the-go use.",
+k:"tupperware india, food storage, containers, lunch boxes, kitchenware, serving products",
+a:""
+},
+
+{
+i:176,
+n:"instamart",
+c:"grocery_daily,restaurants_food,health_pharmacy,beauty_personalcare,home_kitchen",
+u:"https://www.instamart.com",
+d:"Swiggy Instamart is a quick-delivery platform for groceries, snacks, kitchen essentials, personal care and basic health products.",
+k:"instamart, swiggy instamart, quick grocery delivery, snacks, kitchen essentials, personal care, health products",
+a:""
+},
+
+{
+i:177,
+n:"starquik",
+c:"grocery_daily,restaurants_food,health_pharmacy,beauty_personalcare,home_kitchen",
+u:"https://www.starquik.com",
+d:"StarQuik is a Tata-owned online grocery service offering daily essentials, fresh produce, packaged foods and household items.",
+k:"starquik, online grocery, tata grocery, daily essentials, fresh produce, packaged foods, household items",
+a:""
+},
+
+{
+i:178,
+n:"natures basket",
+c:"grocery_daily,restaurants_food,health_pharmacy,beauty_personalcare,home_kitchen",
+u:"https://www.naturesbasket.co.in",
+d:"Nature’s Basket is a gourmet grocery store offering imported foods, organic products, fresh produce and delicatessen items.",
+k:"natures basket, gourmet grocery, imported foods, organic products, fresh produce, delicatessen",
+a:""
+},
+
+{
+i:179,
+n:"dmart",
+c:"grocery_daily,restaurants_food,home_kitchen,home_furniture,beauty_personalcare,health_pharmacy,footwear_bags,fashion_men,fashion_women,kids_school,toys_gifts",
+u:"https://www.dmart.in",
+d:"DMart is a value supermarket chain offering groceries, household items, basic homeware, personal care, clothing, footwear and toys at low prices.",
+k:"dmart, supermarket, discount grocery, household items, clothing, footwear, toys, value retail",
+a:""
+},
+
+{
+i:180,
+n:"licious",
+c:"grocery_daily,restaurants_food,health_pharmacy",
+u:"https://www.licious.in",
+d:"Licious is an online meat and seafood delivery service offering fresh, ready-to-cook and ready-to-eat non-vegetarian products.",
+k:"licious, meat delivery, seafood, fresh chicken, ready to cook, non veg, online butcher",
+a:""
+},
+
+{
+i:181,
+n:"freshtohome",
+c:"grocery_daily,restaurants_food,health_pharmacy",
+u:"https://www.freshtohome.com",
+d:"FreshToHome offers preservative-free meat, seafood and ready-to-cook products delivered directly from farms and fisheries.",
+k:"freshtohome, fresh meat, seafood, preservative free, farm to home, ready to cook",
+a:""
+},
+
+{
+i:182,
+n:"tendercuts",
+c:"grocery_daily,restaurants_food,health_pharmacy",
+u:"https://www.tendercuts.in",
+d:"TenderCuts is an online meat brand offering fresh chicken, mutton, seafood and marinated products delivered to home.",
+k:"tendercuts, fresh meat, chicken, mutton, seafood, marinated products, meat delivery",
+a:""
+},
+
+{
+i:183,
+n:"country delight",
+c:"grocery_daily,restaurants_food,health_pharmacy,beauty_personalcare",
+u:"https://www.countrydelight.in",
+d:"Country Delight delivers fresh milk, dairy products, staples and breakfast essentials directly from farms to consumers.",
+k:"country delight, fresh milk, dairy products, farm fresh, staples, breakfast essentials",
+a:""
+},
+
+{
+i:184,
+n:"amul",
+c:"grocery_daily,restaurants_food",
+u:"https://www.amul.com",
+d:"Amul is India’s leading dairy brand offering milk, butter, cheese, ice cream, paneer and packaged food products.",
+k:"amul, dairy brand, milk, butter, cheese, ice cream, paneer, packaged foods",
+a:""
+},
+
+{
+i:185,
+n:"haldirams",
+c:"grocery_daily,restaurants_food",
+u:"https://www.haldirams.com",
+d:"Haldiram’s offers Indian snacks, sweets, namkeens, ready-to-eat meals and restaurant food across India and abroad.",
+k:"haldirams, indian snacks, namkeen, sweets, ready to eat, restaurant food",
+a:""
+},
+
+{
+i:186,
+n:"bikano",
+c:"grocery_daily,restaurants_food",
+u:"https://www.bikano.com",
+d:"Bikano offers packaged Indian snacks, namkeens, sweets and ready foods for retail and gifting.",
+k:"bikano, indian snacks, namkeen, sweets, packaged foods, gifting",
+a:""
+},
+
+{
+i:187,
+n:"id fresh food",
+c:"grocery_daily,restaurants_food",
+u:"https://www.idfreshfood.com",
+d:"iD Fresh Food offers ready batter, parotas, chapatis, curd and fresh convenience foods made with minimal ingredients.",
+k:"id fresh food, dosa batter, idli batter, parota, chapati, fresh convenience food",
+a:""
+},
+
+{
+i:188,
+n:"mcdonalds india",
+c:"restaurants_food",
+u:"https://www.mcdonaldsindia.com",
+d:"McDonald’s India is a quick service restaurant chain offering burgers, fries, wraps, beverages and combo meals.",
+k:"mcdonalds india, burgers, fries, fast food, quick service restaurant, combo meals",
+a:""
+},
+
+{
+i:189,
+n:"dominos",
+c:"restaurants_food",
+u:"https://www.dominos.co.in",
+d:"Domino’s India offers pizzas, sides, desserts and online ordering with home delivery across major cities.",
+k:"dominos india, pizza delivery, pizzas, garlic bread, fast food, online ordering",
+a:""
+},
+
+{
+i:190,
+n:"pizza hut",
+c:"restaurants_food",
+u:"https://www.pizzahut.co.in",
+d:"Pizza Hut India is a pizza restaurant chain offering pan pizzas, sides, pasta and dine-in or delivery options.",
+k:"pizza hut india, pizzas, pan pizza, sides, dine in, delivery",
+a:""
+},
+
+{
+i:191,
+n:"burger king",
+c:"restaurants_food",
+u:"https://www.burgerking.in",
+d:"Burger King India offers flame-grilled burgers, fries, sides and combo meals through dine-in and delivery.",
+k:"burger king india, flame grilled burgers, fast food, fries, combo meals",
+a:""
+},
+
+{
+i:192,
+n:"subway",
+c:"restaurants_food",
+u:"https://www.subway.com",
+d:"Subway India offers made-to-order sandwiches, subs, salads and wraps with customizable ingredients.",
+k:"subway india, sandwiches, subs, salads, wraps, customizable fast food",
+a:""
+},
+
+{
+i:193,
+n:"starbucks india",
+c:"restaurants_food",
+u:"https://www.starbucks.in",
+d:"Starbucks India offers handcrafted coffees, beverages, bakery items and café food in a premium café setting.",
+k:"starbucks india, coffee, beverages, bakery items, cafe, premium coffee shop",
+a:""
+},
+
+{
+i:194,
+n:"cafe coffee day",
+c:"restaurants_food",
+u:"https://www.cafecoffeeday.com",
+d:"Café Coffee Day is an Indian café chain serving coffees, beverages, snacks and light meals.",
+k:"cafe coffee day, ccd, coffee, cafe, beverages, snacks, indian coffee chain",
+a:""
+},
+
+{
+i:195,
+n:"chaayos",
+c:"restaurants_food",
+u:"https://www.chaayos.com",
+d:"Chaayos is a chai café chain offering customizable teas, snacks and Indian comfort food in a modern setting.",
+k:"chaayos, chai cafe, customizable tea, snacks, indian comfort food",
+a:""
+},
+
+{
+i:196,
+n:"chai point",
+c:"restaurants_food",
+u:"https://www.chai-point.com",
+d:"Chai Point offers freshly brewed tea, beverages and snacks through cafés, delivery and office dispensers.",
+k:"chai point, tea delivery, chai cafe, beverages, office dispensers, snacks",
+a:""
+},
+
+{
+i:197,
+n:"cult fit",
+c:"sports_fitness,health_pharmacy,software_services",
+u:"https://www.cult.fit",
+d:"Cult Fit is a fitness and wellness platform offering workout classes, gyms, online sessions, mental wellness and health services.",
+k:"cult fit, fitness classes, gyms, online workouts, wellness, health services, fitness app",
+a:""
+},
+
+{
+i:198,
+n:"muscleblaze",
+c:"health_pharmacy,sports_fitness",
+u:"https://www.muscleblaze.com",
+d:"MuscleBlaze offers sports nutrition including whey proteins, gainers, pre-workouts and supplements for bodybuilding and fitness.",
+k:"muscleblaze, whey protein, sports nutrition, gainers, pre workout, fitness supplements",
+a:""
+},
+
+{
+i:199,
+n:"myprotein india",
+c:"health_pharmacy,sports_fitness",
+u:"https://www.myprotein.in",
+d:"Myprotein India offers protein powders, sports supplements, snacks and nutrition products for fitness enthusiasts.",
+k:"myprotein india, protein powder, sports supplements, fitness nutrition, protein snacks",
+a:""
+},
+
+{
+i:200,
+n:"oziva",
+c:"health_pharmacy,sports_fitness",
+u:"https://www.oziva.in",
+d:"Oziva offers clean nutrition including plant-based protein, vitamins, herbs and wellness supplements.",
+k:"oziva, plant protein, clean nutrition, vitamins, herbal supplements, wellness",
+a:""
+},
+
+{
+i:201,
+n:"fast&up",
+c:"health_pharmacy,sports_fitness",
+u:"https://www.fastandup.in",
+d:"Fast&Up offers effervescent supplements for energy, hydration, immunity, sports performance and daily wellness.",
+k:"fast&up, effervescent supplements, energy, hydration, immunity, sports nutrition",
+a:""
+},
+
+{
+i:202,
+n:"bookmyshow",
+c:"entertainment",
+u:"https://www.bookmyshow.com",
+d:"BookMyShow is an online ticketing platform for movies, events, concerts, sports and live shows in India.",
+k:"bookmyshow, movie tickets, event booking, concerts, sports events, online ticketing",
+a:""
+},
+
+{
+i:203,
+n:"ticketnew",
+c:"entertainment",
+u:"https://www.ticketnew.com",
+d:"TicketNew offers online movie ticket booking for cinemas across multiple cities in India.",
+k:"ticketnew, movie tickets, cinema booking, online ticketing, films",
+a:""
+},
+
+{
+i:204,
+n:"makemytrip",
+c:"travel_hotels",
+u:"https://www.makemytrip.com",
+d:"MakeMyTrip is a leading travel portal for flight tickets, hotel bookings, holiday packages and bus bookings.",
+k:"makemytrip, flight booking, hotel booking, holiday packages, bus tickets, online travel",
+a:""
+},
+
+{
+i:205,
+n:"yatra",
+c:"travel_hotels",
+u:"https://www.yatra.com",
+d:"Yatra is an online travel agency offering flights, hotels, holidays, trains and bus bookings.",
+k:"yatra, travel agency, flight tickets, hotel deals, holiday packages, bus booking",
+a:""
+},
+
+{
+i:206,
+n:"easemytrip",
+c:"travel_hotels",
+u:"https://www.easemytrip.com",
+d:"EaseMyTrip offers discounted flight tickets, hotel bookings, holidays and bus reservations online.",
+k:"easemytrip, cheap flights, hotel booking, holiday deals, bus tickets, online travel",
+a:""
+},
+
+{
+i:207,
+n:"ixigo",
+c:"travel_hotels",
+u:"https://www.ixigo.com",
+d:"Ixigo is a travel app and site offering bookings and comparisons for trains, flights, buses and hotels.",
+k:"ixigo, travel app, train booking, flight search, bus booking, hotel comparison",
+a:""
+},
+
+{
+i:208,
+n:"redbus",
+c:"travel_hotels",
+u:"https://www.redbus.in",
+d:"redBus is an online platform for bus ticket booking across routes in India and selected international destinations.",
+k:"redbus, bus tickets, online bus booking, travel booking, bus routes",
+a:""
+},
+
+{
+i:209,
+n:"abhibus",
+c:"travel_hotels",
+u:"https://www.abhibus.com",
+d:"AbhiBus offers bus ticket booking, travel passes and related services across Indian routes.",
+k:"abhibus, bus booking, bus tickets, travel passes, online bus reservation",
+a:""
+},
+
+{
+i:210,
+n:"oyo",
+c:"travel_hotels",
+u:"https://www.oyorooms.com",
+d:"OYO Rooms is a budget hotel network offering standardized stays, rooms and homes across cities.",
+k:"oyo rooms, budget hotels, standardized stays, oyo hotels, oyo homes",
+a:""
+},
+
+{
+i:211,
+n:"booking.com",
+c:"travel_hotels",
+u:"https://www.booking.com",
+d:"Booking.com is a global travel platform for booking hotels, apartments, resorts and stays worldwide.",
+k:"booking.com, hotel booking, apartments, resorts, stays, global travel site",
+a:""
+},
+
+{
+i:212,
+n:"hostelworld",
+c:"travel_hotels",
+u:"https://www.hostelworld.com",
+d:"Hostelworld is a booking site focused on hostels, budget stays and backpacker accommodation worldwide.",
+k:"hostelworld, hostel booking, budget accommodation, backpacker stays, dorms",
+a:""
+},
+
+{
+i:213,
+n:"airbnb",
+c:"travel_hotels",
+u:"https://www.airbnb.co.in",
+d:"Airbnb India offers homestays, apartments, unique stays and experiences hosted by local hosts.",
+k:"airbnb india, homestays, apartments, unique stays, local experiences, vacation rentals",
+a:""
+},
+
+{
+i:214,
+n:"hotstar",
+c:"entertainment",
+u:"https://www.hotstar.com",
+d:"Disney+ Hotstar is a streaming platform offering movies, TV shows, sports, originals and live cricket in India.",
+k:"hotstar, disney+ hotstar, streaming, movies, tv shows, sports, live cricket",
+a:""
+},
+
+{
+i:215,
+n:"zee5",
+c:"entertainment",
+u:"https://www.zee5.com",
+d:"ZEE5 is an OTT platform offering Indian TV shows, movies, originals and regional content.",
+k:"zee5, ott platform, indian tv shows, movies, web series, regional content",
+a:""
+},
+
+{
+i:216,
+n:"sonyliv",
+c:"entertainment",
+u:"https://www.sonyliv.com",
+d:"SonyLIV is a streaming service offering Sony network shows, movies, live sports and originals.",
+k:"sonyliv, streaming, sony shows, live sports, movies, originals",
+a:""
+},
+
+{
+i:217,
+n:"discovery plus",
+c:"entertainment",
+u:"https://www.discoveryplus.in",
+d:"Discovery Plus India offers documentaries, reality shows and factual entertainment from Discovery’s channels.",
+k:"discovery plus india, documentaries, reality shows, factual entertainment, streaming",
+a:""
+},
+
+{
+i:218,
+n:"sunnxt",
+c:"entertainment",
+u:"https://www.sunnxt.com",
+d:"Sun NXT is a regional OTT app streaming South Indian movies, TV shows and live channels.",
+k:"sunnxt, south indian movies, regional ott, tv shows, live channels, tamil, telugu",
+a:""
+},
+
+{
+i:219,
+n:"manorama max",
+c:"entertainment",
+u:"https://www.manoramamax.com",
+d:"Manorama Max is a Malayalam OTT platform streaming Manorama TV shows, news and regional content.",
+k:"manorama max, malayalam ott, manorama shows, regional content, tv and news",
+a:""
+},
+
+{
+i:220,
+n:"udemy",
+c:"education_courses",
+u:"https://www.udemy.com",
+d:"Udemy is an online learning platform offering video courses across programming, business, design and personal development.",
+k:"udemy, online courses, programming, business skills, design, self learning, video classes",
+a:""
+},
+
+{
+i:221,
+n:"coursera",
+c:"education_courses",
+u:"https://www.coursera.org",
+d:"Coursera offers online courses, specializations and degrees from universities and companies worldwide.",
+k:"coursera, university courses, online degrees, specializations, certificates, e-learning",
+a:""
+},
+
+{
+i:222,
+n:"unacademy",
+c:"education_courses",
+u:"https://www.unacademy.com",
+d:"Unacademy is an Indian edtech platform offering live classes and courses for competitive exams and school/college learning.",
+k:"unacademy, live classes, competitive exams, test prep, indian edtech, learning app",
+a:""
+},
+
+{
+i:223,
+n:"byjus",
+c:"education_courses",
+u:"https://www.byjus.com",
+d:"BYJU'S offers interactive learning programs and courses for school students and exam preparation.",
+k:"byjus, interactive learning, school courses, exam prep, online education, kids learning",
+a:""
+},
+
+{
+i:224,
+n:"upgrad",
+c:"education_courses",
+u:"https://www.upgrad.com",
+d:"upGrad offers online higher education programs, degrees and certifications in technology, management and data fields.",
+k:"upgrad, online degrees, certifications, higher education, technology courses, management, data science",
+a:""
+},
+
+{
+i:225,
+n:"simplilearn",
+c:"education_courses",
+u:"https://www.simplilearn.com",
+d:"Simplilearn offers professional certification courses in digital marketing, data, cloud, cybersecurity and project management.",
+k:"simplilearn, professional courses, certifications, digital marketing, data science, cloud computing",
+a:""
+},
+
+{
+i:226,
+n:"inox movies",
+c:"entertainment",
+u:"https://www.inoxmovies.com",
+d:"INOX Movies is a multiplex cinema chain offering movie screenings and online ticket booking.",
+k:"inox movies, multiplex, cinema, movie tickets, online booking, theatres",
+a:""
+},
+
+{
+i:227,
+n:"pvr cinemas",
+c:"entertainment",
+u:"https://www.pvrcinemas.com",
+d:"PVR Cinemas is a leading multiplex chain in India offering premium movie experiences and online ticketing.",
+k:"pvr cinemas, multiplex, movie theatre, premium cinema, online tickets",
+a:""
+},
+
+{
+i:228,
+n:"kfc india",
+c:"restaurants_food",
+u:"https://online.kfc.co.in",
+d:"KFC India is a fast food chain known for fried chicken buckets, burgers, rice bowls and combo meals.",
+k:"kfc india, fried chicken, fast food, chicken buckets, burgers, combo meals",
+a:""
+},
+
+{
+i:229,
+n:"cafecoffeeday",
+c:"restaurants_food",
+u:"https://www.cafecoffeeday.com",
+d:"CafeCoffeeDay is an Indian café chain serving coffees, beverages, snacks and light meals.",
+k:"cafecoffeeday, ccd cafe, coffee, beverages, snacks, cafe chain",
+a:""
+},
+
+{
+i:230,
+n:"chaayos tea",
+c:"restaurants_food",
+u:"https://www.chaayos.com",
+d:"Chaayos Tea is a chai-focused café concept offering customized teas, snacks and quick bites.",
+k:"chaayos tea, chai cafe, customizable tea, snacks, beverages",
+a:""
+},
+
+{
+i:231,
+n:"chai point",
+c:"restaurants_food",
+u:"https://www.chai-point.com",
+d:"Chai Point serves freshly brewed chai, coffee, beverages and snacks via cafes and delivery.",
+k:"chai point india, chai, beverages, snacks, tea delivery, cafes",
+a:""
+},
+
+{
+i:232,
+n:"noon",
+c:"electronics,mobiles,computers,home_kitchen,home_furniture,fashion_men,fashion_women,kids_school,footwear_bags,beauty_personalcare,health_pharmacy,grocery_daily,restaurants_food,sports_fitness,toys_gifts,travel_hotels,education_courses,software_services,business_b2b",
+u:"https://www.noon.com",
+d:"Noon is a Middle East-based online marketplace offering electronics, fashion, beauty, home, grocery and more across multiple categories.",
+k:"noon, online marketplace, electronics, fashion, beauty, home, grocery, middle east shopping",
+a:""
+},
+
+{
+i:233,
+n:"shopclues",
+c:"electronics,mobiles,computers,home_kitchen,home_furniture,fashion_men,fashion_women,kids_school,footwear_bags,beauty_personalcare,health_pharmacy,grocery_daily,restaurants_food,sports_fitness,toys_gifts,travel_hotels,education_courses,software_services,business_b2b",
+u:"https://www.shopclues.com",
+d:"ShopClues is an Indian e-commerce site offering budget-friendly deals on electronics, fashion, home goods and general merchandise.",
+k:"shopclues, budget deals, online shopping, electronics, fashion, home goods, indian marketplace",
+a:""
+},
+
+{
+i:234,
+n:"snapdeal",
+c:"electronics,mobiles,computers,home_kitchen,home_furniture,fashion_men,fashion_women,kids_school,footwear_bags,beauty_personalcare,health_pharmacy,grocery_daily,restaurants_food,sports_fitness,toys_gifts,travel_hotels,education_courses,software_services,business_b2b",
+u:"https://www.snapdeal.com",
+d:"Snapdeal is an online marketplace offering discounted products across electronics, fashion, home and lifestyle categories.",
+k:"snapdeal, online marketplace, discounts, electronics, fashion, home, lifestyle",
+a:""
+},
+
+{
+i:235,
+n:"home shop 18",
+c:"electronics,mobiles,computers,home_kitchen,home_furniture,fashion_men,fashion_women,kids_school,footwear_bags,beauty_personalcare,health_pharmacy,grocery_daily,restaurants_food,sports_fitness,toys_gifts,travel_hotels,education_courses,software_services,business_b2b",
+u:"https://www.homeshop18.com",
+d:"HomeShop18 is a home shopping and e-commerce brand offering electronics, home products, fashion and general merchandise.",
+k:"homeshop18, home shopping, tv shopping, online shopping, electronics, home products, fashion",
+a:""
+},
+
+{
+i:236,
+n:"hamleys india",
+c:"kids_school,toys_gifts",
+u:"https://www.hamleys.in",
+d:"Hamleys India is a toy store chain offering branded toys, games, soft toys and kids’ gifts.",
+k:"hamleys india, toy store, toys, games, soft toys, kids gifts",
+a:""
+},
+
+{
+i:237,
+n:"babyhug",
+c:"kids_school",
+u:"https://www.babyhug.in",
+d:"Babyhug offers clothing, footwear, accessories and essentials for babies and toddlers.",
+k:"babyhug, baby clothing, toddler wear, kids footwear, baby essentials",
+a:""
+},
+
+{
+i:238,
+n:"kidbea",
+c:"kids_school",
+u:"https://www.kidbea.com",
+d:"Kidbea offers organic and comfortable clothing for babies and kids with focus on skin-friendly fabrics.",
+k:"kidbea, organic kids clothing, baby wear, comfortable fabrics, kids fashion",
+a:""
+},
+
+{
+i:239,
+n:"supples",
+c:"kids_school",
+u:"https://www.supples.com",
+d:"Supples offers baby diapers, wipes and essentials for infant hygiene and care.",
+k:"supples, baby diapers, wipes, infant care, baby essentials, hygiene products",
+a:""
+},
+
+{
+i:240,
+n:"kidstuff",
+c:"kids_school",
+u:"https://www.kidstuff.in",
+d:"Kidstuff offers toys, games, stationery and kids’ activity products.",
+k:"kidstuff, toys, games, kids stationery, activity products, childrens items",
+a:""
+},
+
+{
+i:241,
+n:"campus shoes",
+c:"footwear_bags",
+u:"https://www.campusshoes.com",
+d:"Campus Shoes offers sports shoes, casual footwear and sneakers for men, women and kids.",
+k:"campus shoes, sports footwear, casual shoes, sneakers, mens shoes, womens shoes, kids shoes",
+a:""
+},
+
+{
+i:242,
+n:"red chief",
+c:"footwear_bags",
+u:"https://www.redchief.in",
+d:"Red Chief is a footwear brand offering leather shoes, boots and casual footwear for men.",
+k:"red chief, leather shoes, mens footwear, boots, casual shoes",
+a:""
+},
+
+{
+i:243,
+n:"paragon",
+c:"footwear_bags",
+u:"https://www.paragonfootwear.com",
+d:"Paragon Footwear offers affordable slippers, sandals, shoes and school footwear across India.",
+k:"paragon footwear, slippers, sandals, budget footwear, school shoes, indian brand",
+a:""
+},
+
+{
+i:244,
+n:"khadims",
+c:"footwear_bags",
+u:"https://www.khadims.com",
+d:"Khadim’s is a footwear brand offering sandals, slippers, shoes and casual footwear for families.",
+k:"khadims, family footwear, sandals, slippers, shoes, casual wear",
+a:""
+},
+
+{
+i:245,
+n:"louis philippe",
+c:"fashion_men",
+u:"https://www.louisphilippe.abfrl.in",
+d:"Louis Philippe offers premium menswear including formal shirts, suits, trousers and smart casuals.",
+k:"louis philippe, mens formal wear, shirts, suits, trousers, premium menswear",
+a:""
+},
+
+{
+i:246,
+n:"van heusen",
+c:"fashion_men",
+u:"https://www.vanheusenindia.com",
+d:"Van Heusen India offers formal, casual and workwear clothing for men and women with a corporate style focus.",
+k:"van heusen india, mens formal wear, workwear, shirts, trousers, womens office wear",
+a:""
+},
+
+{
+i:247,
+n:"allen solly",
+c:"fashion_men",
+u:"https://www.allensolly.com",
+d:"Allen Solly offers smart casual clothing for men and women including shirts, chinos and semi-formal outfits.",
+k:"allen solly, smart casuals, mens shirts, chinos, semi formal wear, womens casuals",
+a:""
+},
+
+{
+i:248,
+n:"peter england",
+c:"fashion_men",
+u:"https://www.peterengland.com",
+d:"Peter England offers value menswear including formal shirts, trousers, suits and casual clothing.",
+k:"peter england, value menswear, formal shirts, trousers, suits, casual wear",
+a:""
+},
+
+{
+i:249,
+n:"blackberrys",
+c:"fashion_men",
+u:"https://www.blackberrys.com",
+d:"Blackberrys offers tailored menswear including suits, blazers, shirts and formal trousers.",
+k:"blackberrys, tailored menswear, suits, blazers, formal shirts, trousers",
+a:""
+},
+
+{
+i:250,
+n:"manyavar",
+c:"fashion_men",
+u:"https://www.manyavar.com",
+d:"Manyavar is an ethnic menswear brand offering sherwanis, kurtas, indo-western outfits and wedding wear.",
+k:"manyavar, ethnic menswear, sherwani, kurtas, wedding wear, indo western",
+a:""
+},
+
+{
+i:251,
+n:"raymond",
+c:"fashion_men",
+u:"https://www.raymond.in",
+d:"Raymond offers fabrics, suits, shirts, trousers and ready-made menswear along with tailoring services.",
+k:"raymond, mens fabrics, suits, shirts, trousers, tailoring, formal wear",
+a:""
+},
+
+{
+i:252,
+n:"arrow",
+c:"fashion_men",
+u:"https://www.arrowlife.com",
+d:"Arrow offers formal and business-casual menswear including shirts, trousers and workwear essentials.",
+k:"arrow menswear, formal shirts, business casual, workwear, trousers",
+a:""
+},
+
+{
+i:253,
+n:"jack & jones",
+c:"fashion_men",
+u:"https://www.jackjones.in",
+d:"Jack & Jones offers casual and denim-focused menswear including jeans, t-shirts, jackets and streetwear.",
+k:"jack and jones, mens denim, jeans, t-shirts, jackets, streetwear, casual fashion",
+a:""
+},
+
+{
+i:254,
+n:"only",
+c:"fashion_women",
+u:"https://www.only.in",
+d:"ONLY India offers casual womenswear including jeans, tops, dresses and everyday western fashion.",
+k:"only india, womens casual wear, jeans, tops, dresses, western fashion",
+a:""
+},
+
+{
+i:255,
+n:"vero moda",
+c:"fashion_women",
+u:"https://www.veromoda.in",
+d:"Vero Moda India offers contemporary womenswear including dresses, tops, workwear and occasion outfits.",
+k:"vero moda india, womens fashion, dresses, tops, workwear, occasion wear",
+a:""
+},
+
+{
+i:256,
+n:"forever new",
+c:"fashion_women",
+u:"https://www.forevernew.co.in",
+d:"Forever New India offers feminine womenswear including dresses, gowns, occasion wear and elegant everyday clothing.",
+k:"forever new india, womens dresses, gowns, occasion wear, elegant fashion",
+a:""
+},
+
+{
+i:257,
+n:"global desi",
+c:"fashion_women",
+u:"https://www.globaldesi.in",
+d:"Global Desi offers boho-inspired ethnic fusion wear for women including kurtas, dresses and tops.",
+k:"global desi, boho ethnic, fusion wear, womens kurtas, dresses, tops",
+a:""
+},
+
+{
+i:258,
+n:"and",
+c:"fashion_women",
+u:"https://www.andindia.com",
+d:"AND India offers western womenswear including dresses, jumpsuits, tops and office-ready outfits.",
+k:"and india, womens western wear, dresses, jumpsuits, office wear, tops",
+a:""
+},
+
+{
+i:259,
+n:"rare rabbit",
+c:"fashion_men",
+u:"https://www.rarerabbit.in",
+d:"Rare Rabbit offers premium casual and smart menswear with contemporary designs and stylish fits.",
+k:"rare rabbit, premium menswear, smart casuals, shirts, trousers, contemporary fashion",
+a:""
+},
+
+{
+i:260,
+n:"us polo assn",
+c:"fashion_men,fashion_women",
+u:"https://www.uspoloassn.in",
+d:"U.S. Polo Assn. India offers polo-inspired clothing, t-shirts, shirts and casual wear for men and women.",
+k:"us polo assn india, polo tshirts, mens casual wear, womens casuals, shirts",
+a:""
+},
+
+{
+i:261,
+n:"forest essentials",
+c:"beauty_personalcare,health_pharmacy",
+u:"https://www.forestessentialsindia.com",
+d:"Forest Essentials offers luxury Ayurvedic skincare, haircare and bodycare products using traditional formulations.",
+k:"forest essentials, luxury ayurvedic skincare, haircare, bodycare, natural beauty products",
+a:""
+},
+
+{
+i:262,
+n:"biotique",
+c:"beauty_personalcare,health_pharmacy",
+u:"https://www.biotique.com",
+d:"Biotique offers Ayurvedic and botanical skincare, haircare and personal care products.",
+k:"biotique, ayurvedic skincare, botanical haircare, personal care, herbal beauty",
+a:""
+},
+
+{
+i:263,
+n:"khadi natural",
+c:"beauty_personalcare,health_pharmacy",
+u:"https://www.khadinatural.com",
+d:"Khadi Natural offers handmade herbal soaps, skincare, hair oils and ayurvedic personal care products.",
+k:"khadi natural, herbal soaps, ayurvedic skincare, hair oils, handmade personal care",
+a:""
+},
+
+{
+i:264,
+n:"lakme",
+c:"beauty_personalcare",
+u:"https://www.lakmeindia.com",
+d:"Lakmé India offers makeup, skincare and cosmetics with a wide range of foundations, lipsticks and eyeliners.",
+k:"lakme india, makeup, foundations, lipsticks, eyeliners, cosmetics, beauty brand",
+a:""
+},
+
+{
+i:265,
+n:"vlcc",
+c:"beauty_personalcare,health_pharmacy",
+u:"https://www.vlccproducts.com",
+d:"VLCC offers skincare, slimming, wellness and personal care products along with salon and clinic services.",
+k:"vlcc, skincare products, slimming, wellness, salon, clinic, personal care",
+a:""
+},
+
+{
+i:266,
+n:"minimalist",
+c:"beauty_personalcare,health_pharmacy",
+u:"https://beminimalist.co",
+d:"Minimalist is a clinical skincare brand offering active-ingredient serums and treatments for targeted skin concerns.",
+k:"minimalist skincare, clinical serums, active ingredients, targeted treatments, skin concerns",
+a:""
+},
+
+{
+i:267,
+n:"aqualogica",
+c:"beauty_personalcare,health_pharmacy",
+u:"https://www.aqualogica.in",
+d:"Aqualogica offers hydrating skincare products combining actives and water-based formulations for Indian skin.",
+k:"aqualogica, hydrating skincare, water based formulas, serums, moisturizers, indian skin",
+a:""
+},
+
+{
+i:268,
+n:"foxtale",
+c:"beauty_personalcare,health_pharmacy",
+u:"https://foxtale.in",
+d:"Foxtale is a skincare brand offering cleansers, serums and moisturizers focused on simple routines and effective actives.",
+k:"foxtale skincare, cleansers, serums, moisturizers, simple routines, active formulas",
+a:""
+},
+
+{
+i:269,
+n:"pilgrim",
+c:"beauty_personalcare,health_pharmacy",
+u:"https://discoverpilgrim.com",
+d:"Pilgrim offers global beauty-inspired skincare and haircare ranges like Korean, French and Spanish formulations.",
+k:"pilgrim skincare, global beauty, korean range, french beauty, haircare, serums",
+a:""
+},
+
+{
+i:270,
+n:"earth rhythm",
+c:"beauty_personalcare,health_pharmacy",
+u:"https://earthrhythm.com",
+d:"Earth Rhythm offers sustainable skincare and haircare products with eco-friendly packaging and science-backed actives.",
+k:"earth rhythm, sustainable skincare, eco friendly packaging, haircare, science backed actives",
+a:""
+} 
   
 
   
