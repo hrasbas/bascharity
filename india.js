@@ -198,4 +198,4 @@ n:"wego hotels",
 c:"travel_hotels",
 u:"https://www.wego.com",
 a:"https://extp.in/p1wwg6"
-},
+}];
