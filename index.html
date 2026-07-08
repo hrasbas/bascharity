@@ -8984,7 +8984,8 @@ c:"ai",
 u:"https://lambdalabs.com",
 a:""
 }]; -->
- <script>
+ 
+<script>
 const allCountries = document.getElementById("allCountries");
 const featuredShops = document.getElementById("featuredShops");
 
@@ -9006,7 +9007,7 @@ function setSelectedCountry(country) {
 
     const pureCountry = country.trim().toLowerCase();
 
-    // allCountries.value = pureCountry;
+    // allCountries.value = pureCountry;  // dropdown index later reset ചെയ്യും
     allCountries.classList.add("green-select");
 
     document.querySelectorAll(".country-btn").forEach(btn => {
@@ -9023,16 +9024,19 @@ function setSelectedCountry(country) {
             `SHOP ON <span class="green">${pureCountry.toUpperCase()}</span>`;
     }
 
+    // future load-ലേ default country ആയി same value വരാൻ
     localStorage.setItem("selectedCountry", pureCountry);
 
+    // dynamic JS file load
     fetchExternalCountryJS(pureCountry);
 
+    // Category script-ിലെ changeCountry() ഉണ്ടെങ്കിൽ country sync ചെയ്യാൻ
     if (typeof changeCountry === "function") {
-        changeCountry(pureCountry);      // Category side country update
+        changeCountry(pureCountry);
     }
 }
 
-// PART 1 / മറ്റുള്ള code-ുകൾക്ക് വിളിക്കാൻ ഉള്ള helper
+// മറ്റുള്ള code-ുകൾക്ക് (buttons, dropdown) വിളിക്കാൻ ഉള്ള helper
 function renderCountry(country) {
     setSelectedCountry(country);
 }
@@ -9130,22 +9134,26 @@ ${shop.n}
     if (typeof changeCountry === "function") {
         changeCountry(allCountries.value);
     }
-    // ★ renderCountry ഇവിടെ ഇനി വേണ്ട; കുഴപ്പമുണ്ടാക്കിയത് ഇതായിരുന്നു
+    // ഇവിടെ renderCountry ഇല്ല; dropdown value കൊണ്ട് extra call വേണ്ട
 }
 
 document.addEventListener("DOMContentLoaded", () => {
 
+    // default country spell-checked: india.js ഉണ്ടെന്ന് നീ പറഞ്ഞു
     const savedCountry =
-        localStorage.getItem("selectedCountry") || "afghanistan";
+        localStorage.getItem("selectedCountry") || "india";
 
     setSelectedCountry(savedCountry);
 
+    // country buttons click
     document.querySelectorAll(".country-btn").forEach(btn => {
         btn.addEventListener("click", function () {
-            setSelectedCountry(this.textContent.trim().toLowerCase());
+            const c = this.textContent.trim().toLowerCase();
+            setSelectedCountry(c);
         });
     });
 
+    // dropdown change
     allCountries.addEventListener("change", e => {
         if (e.target.value) {
             setSelectedCountry(e.target.value);
