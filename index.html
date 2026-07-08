@@ -9146,12 +9146,17 @@ document.addEventListener("DOMContentLoaded", () => {
     setSelectedCountry(savedCountry);
 
     // country buttons click
-    document.querySelectorAll(".country-btn").forEach(btn => {
-        btn.addEventListener("click", function () {
-            const c = this.textContent.trim().toLowerCase();
-            setSelectedCountry(c);
-        });
+document.querySelectorAll(".country-btn").forEach(btn => {
+    btn.addEventListener("click", function () {
+        const c = this.textContent.trim().toLowerCase();
+
+        setSelectedCountry(c);              // TOP 10 + country JS load
+
+        if (typeof changeCountry === "function") {
+            changeCountry(c);               // Same click-ൽ Category ഭാഗത്തെ താഴെയുള്ള shops
+        }
     });
+
 
     // dropdown change
     allCountries.addEventListener("change", e => {
