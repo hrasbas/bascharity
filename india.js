@@ -2695,8 +2695,807 @@ u:"https://earthrhythm.com",
 d:"Earth Rhythm offers sustainable skincare and haircare products with eco-friendly packaging and science-backed actives.",
 k:"earth rhythm, sustainable skincare, eco friendly packaging, haircare, science backed actives",
 a:""
-} 
+},
   
+{
+i:271,
+n:"apollo 247",
+c:"health_pharmacy,software_services,beauty_personalcare",
+u:"https://www.apollo247.com",
+d:"Apollo 247 is Apollo Hospitals’ digital health platform offering online doctor consultations, medicine delivery, lab tests and health management services.",
+k:"apollo 247, online consultation, telemedicine, online pharmacy, lab tests, apollo hospitals, health app",
+a:""
+},
+
+{
+i:272,
+n:"care hospitals",
+c:"health_pharmacy,software_services",
+u:"https://www.carehospitals.com",
+d:"CARE Hospitals is a multi-specialty hospital network offering inpatient and outpatient medical services along with online appointment and teleconsultation options.",
+k:"care hospitals, multi specialty hospital, medical services, inpatient care, outpatient, online appointments, teleconsultation",
+a:""
+},
+
+{
+i:273,
+n:"medibuddy",
+c:"health_pharmacy,software_services,business_b2b",
+u:"https://www.medibuddy.in",
+d:"MediBuddy is a digital healthcare platform offering online doctor consultations, medicine delivery, lab tests, health plans and corporate health benefits.",
+k:"medibuddy, online doctor, teleconsultation, online pharmacy, lab tests, health plans, corporate healthcare",
+a:""
+},
+
+{
+i:274,
+n:"mfine",
+c:"health_pharmacy,software_services",
+u:"https://www.mfine.co",
+d:"MFine is a telehealth app offering online doctor consultations, digital prescriptions, lab tests and connected healthcare services.",
+k:"mfine, telehealth app, online doctor consultation, digital prescription, lab tests, connected healthcare",
+a:""
+},
+
+{
+i:275,
+n:"fittr",
+c:"sports_fitness,health_pharmacy,software_services",
+u:"https://www.fittr.com",
+d:"Fittr is an online fitness and nutrition coaching platform providing personalised training plans, diet coaching, community features and health programs.",
+k:"fittr, online coaching, fitness plans, nutrition coaching, health programs, fitness app",
+a:""
+},
+
+{
+i:276,
+n:"healthify",
+c:"health_pharmacy,software_services",
+u:"https://www.healthifyme.com",
+d:"HealthifyMe is a health and fitness app offering calorie tracking, diet plans, workout guidance and access to nutrition coaches.",
+k:"healthifyme, calorie tracker, diet plans, fitness app, nutrition coach, health tracking",
+a:""
+},
+
+{
+i:277,
+n:"netfit",
+c:"sports_fitness,health_pharmacy,software_services",
+u:"https://www.netfit.co.in",
+d:"NetFit offers online fitness programs, workout plans and wellness coaching delivered through digital platforms.",
+k:"netfit, online fitness, workout plans, wellness coaching, fitness programs, digital training",
+a:""
+},
+
+{
+i:278,
+n:"decathlon play",
+c:"sports_fitness,footwear_bags",
+u:"https://play.decathlon.in",
+d:"Decathlon Play is a sports activity platform to book playgrounds, coaching, events and challenges across multiple sports.",
+k:"decathlon play, sports activities, coaching, playground booking, sports events, challenges",
+a:""
+},
+
+{
+i:279,
+n:"cultsport",
+c:"sports_fitness,health_pharmacy",
+u:"https://cultsport.com",
+d:"Cultsport is a sports and fitness brand from Cult.fit offering sportswear, footwear, fitness equipment and wellness products.",
+k:"cultsport, sportswear, fitness equipment, running shoes, workout gear, wellness products",
+a:""
+},
+
+{
+i:280,
+n:"nivia",
+c:"sports_fitness",
+u:"https://www.niviasports.com",
+d:"Nivia Sports offers sports equipment, footwear, balls and gear for football, basketball, cricket and other games.",
+k:"nivia sports, footballs, basketballs, sports shoes, sports equipment, india sports brand",
+a:""
+},
+
+{
+i:281,
+n:"yonex india",
+c:"sports_fitness",
+u:"https://www.yonex.com",
+d:"Yonex India offers badminton racquets, shuttlecocks, tennis gear, sportswear and accessories for racquet sports.",
+k:"yonex india, badminton racquets, shuttlecocks, tennis gear, sportswear, racquet sports",
+a:""
+},
+
+{
+i:282,
+n:"cosco",
+c:"sports_fitness",
+u:"https://www.cosco.in",
+d:"Cosco India offers sports balls, fitness equipment, gym gear and accessories for various indoor and outdoor sports.",
+k:"cosco india, sports balls, fitness equipment, gym gear, sports accessories",
+a:""
+},
+
+{
+i:283,
+n:"sg cricket",
+c:"sports_fitness",
+u:"https://www.sgin.in",
+d:"SG Cricket offers cricket bats, balls, kits, protective gear and accessories for professional and amateur players.",
+k:"sg cricket, cricket bats, cricket balls, kits, protective gear, cricket equipment",
+a:""
+},
+
+{
+i:284,
+n:"ss cricket",
+c:"sports_fitness",
+u:"https://www.sstoncricket.com",
+d:"SS Cricket offers cricket bats, equipment and gear for players at different levels.",
+k:"ss cricket, cricket bats, cricket equipment, cricket gear, sports brand",
+a:""
+},
+
+{
+i:285,
+n:"ceat speciality",
+c:"sports_fitness,automotive_vehicle_accessories",
+u:"https://www.ceat.com",
+d:"CEAT Speciality focuses on tyres for agriculture, industrial and specialty vehicles while CEAT also offers tyres used in motorsport and performance driving.",
+k:"ceat speciality, speciality tyres, agriculture tyres, industrial tyres, motorsport tyres, performance driving",
+a:""
+},
+
+{
+i:286,
+n:"kookaburra",
+c:"sports_fitness",
+u:"https://www.kookaburrasport.com.au",
+d:"Kookaburra Sport offers cricket and hockey gear including bats, balls, protective equipment and sports accessories.",
+k:"kookaburra sport, cricket bats, cricket balls, hockey gear, protective equipment, sports accessories",
+a:""
+},
+
+{
+i:287,
+n:"spartan sports",
+c:"sports_fitness",
+u:"https://www.spartancricket.com",
+d:"Spartan Sports offers cricket bats, kits and sports gear for cricketers and other athletes.",
+k:"spartan sports, cricket bats, cricket kits, sports gear, athletic equipment",
+a:""
+},
+
+{
+i:288,
+n:"amazon mini tv",
+c:"entertainment",
+u:"https://www.amazon.in/minitv",
+d:"Amazon miniTV is a free video streaming service within Amazon India offering web series, shows, comedy and entertainment content.",
+k:"amazon mini tv, free streaming, web series, shows, comedy, entertainment on amazon",
+a:""
+},
+
+{
+i:289,
+n:"jiohotstar",
+c:"entertainment",
+u:"https://www.jiohotstar.com",
+d:"JioHotstar is a bundled streaming access to Disney+ Hotstar content provided via Jio platforms.",
+k:"jiohotstar, disney+ hotstar via jio, streaming, movies, tv shows, sports content",
+a:""
+},
+
+{
+i:290,
+n:"aha",
+c:"entertainment",
+u:"https://www.aha.video",
+d:"Aha is a regional OTT platform offering Telugu and Tamil movies, web series and original shows.",
+k:"aha video, telugu ott, tamil ott, regional movies, web series, originals",
+a:""
+},
+
+{
+i:291,
+n:"eros now",
+c:"entertainment",
+u:"https://erosnow.com",
+d:"Eros Now is a streaming service offering Bollywood movies, music videos, web series and Indian entertainment content.",
+k:"eros now, bollywood movies, indian web series, music videos, streaming platform",
+a:""
+},
+
+{
+i:292,
+n:"hungama",
+c:"entertainment",
+u:"https://www.hungama.com",
+d:"Hungama is a digital entertainment platform offering music streaming, movies and video content.",
+k:"hungama, music streaming, movies, video content, indian entertainment",
+a:""
+},
+
+{
+i:293,
+n:"gaana",
+c:"entertainment",
+u:"https://gaana.com",
+d:"Gaana is a music streaming app offering Bollywood, regional and international songs, podcasts and radio.",
+k:"gaana, music streaming app, bollywood songs, regional music, podcasts, online radio",
+a:""
+},
+
+{
+i:294,
+n:"jiosaavn",
+c:"entertainment",
+u:"https://www.jiosaavn.com",
+d:"JioSaavn is a music and audio streaming service offering songs, playlists, podcasts and radio in multiple languages.",
+k:"jiosaavn, music streaming, playlists, podcasts, radio, jio music app",
+a:""
+},
+
+{
+i:295,
+n:"wynk music",
+c:"entertainment",
+u:"https://wynk.in",
+d:"Wynk Music is Airtel’s music streaming app offering songs, playlists, offline downloads and radio.",
+k:"wynk music, airtel music app, streaming, playlists, offline downloads, radio",
+a:""
+},
+
+{
+i:296,
+n:"audible india",
+c:"education_courses,entertainment",
+u:"https://www.audible.in",
+d:"Audible India offers audiobooks, audio courses, stories and spoken-word content via subscription.",
+k:"audible india, audiobooks, audio courses, spoken word, subscription, learning by listening",
+a:""
+},
+
+{
+i:297,
+n:"kindle store",
+c:"education_courses",
+u:"https://www.amazon.in/kindle-dbs/storefront",
+d:"Kindle Store India offers eBooks and digital reading content for Kindle devices and Kindle apps.",
+k:"kindle store india, ebooks, digital books, kindle reading, amazon kindle",
+a:""
+},
+
+{
+i:298,
+n:"testbook",
+c:"education_courses",
+u:"https://testbook.com",
+d:"Testbook is an exam preparation platform offering online courses, mock tests and practice materials for government and competitive exams.",
+k:"testbook, exam prep, mock tests, government exams, competitive exams, online courses",
+a:""
+},
+
+{
+i:299,
+n:"adda247",
+c:"education_courses",
+u:"https://www.adda247.com",
+d:"Adda247 offers online coaching, video courses and test series for banking, SSC, teaching and government job exams.",
+k:"adda247, online coaching, banking exams, SSC, government job prep, video courses, test series",
+a:""
+},
+
+{
+i:300,
+n:"physics wallah",
+c:"education_courses",
+u:"https://www.pw.live",
+d:"Physics Wallah is an Indian edtech platform offering online classes, recorded lectures and courses for school, JEE, NEET and competitive exams.",
+k:"physics wallah, pw live, online classes, JEE coaching, NEET prep, school courses, competitive exams",
+a:""
+},
+
+{
+i:321,
+n:"microsoft 365",
+c:"software_services,business_b2b",
+u:"https://www.microsoft.com/microsoft-365",
+d:"Microsoft 365 offers productivity software including Word, Excel, PowerPoint, Outlook, cloud storage and collaboration tools for individuals and businesses.",
+k:"microsoft 365, office suite, productivity software, collaboration tools, business subscription, cloud storage",
+a:""
+},
+
+{
+i:322,
+n:"google workspace",
+c:"software_services,business_b2b",
+u:"https://workspace.google.com",
+d:"Google Workspace offers business email, Docs, Sheets, Drive, Meet and collaboration tools for teams and organizations.",
+k:"google workspace, business email, collaboration suite, docs, sheets, drive, meet",
+a:""
+},
+
+{
+i:323,
+n:"zoom",
+c:"software_services,business_b2b",
+u:"https://zoom.us",
+d:"Zoom is a video conferencing platform offering online meetings, webinars and collaboration tools for individuals and businesses.",
+k:"zoom, video conferencing, online meetings, webinars, collaboration, remote work",
+a:""
+},
+
+{
+i:324,
+n:"slack",
+c:"software_services,business_b2b",
+u:"https://slack.com",
+d:"Slack is a team communication and collaboration platform offering channels, messaging, file sharing and integrations.",
+k:"slack, team chat, collaboration, messaging, channels, integrations, workplace communication",
+a:""
+},
+
+{
+i:325,
+n:"trello",
+c:"software_services,business_b2b",
+u:"https://trello.com",
+d:"Trello is a visual project management tool using boards, lists and cards to organize tasks and workflows.",
+k:"trello, project management, kanban boards, task tracking, team collaboration",
+a:""
+},
+
+{
+i:326,
+n:"asana",
+c:"software_services,business_b2b",
+u:"https://asana.com",
+d:"Asana is a work management platform for teams to plan, track and manage projects, tasks and workflows.",
+k:"asana, work management, project tracking, team tasks, workflows, collaboration",
+a:""
+},
+
+{
+i:327,
+n:"clickup",
+c:"software_services,business_b2b",
+u:"https://clickup.com",
+d:"ClickUp is an all-in-one productivity platform offering tasks, docs, goals and project management for teams.",
+k:"clickup, productivity platform, tasks, docs, project management, team collaboration",
+a:""
+},
+
+{
+i:328,
+n:"evernote",
+c:"software_services,business_b2b",
+u:"https://evernote.com",
+d:"Evernote is a note-taking and organization app for capturing ideas, documents, to-dos and projects across devices.",
+k:"evernote, note taking app, organization, to-do lists, documents, cross-device sync",
+a:""
+},
+
+{
+i:329,
+n:"adobe express",
+c:"software_services",
+u:"https://www.adobe.com/express",
+d:"Adobe Express is a web and mobile tool for quick graphic design, social media posts, videos and marketing materials.",
+k:"adobe express, graphic design tool, social media creator, quick video, marketing templates",
+a:""
+},
+
+{
+i:330,
+n:"adobe creative cloud",
+c:"software_services",
+u:"https://www.adobe.com/creativecloud",
+d:"Adobe Creative Cloud is a subscription suite including Photoshop, Illustrator, Premiere Pro and other creative apps.",
+k:"adobe creative cloud, photoshop, illustrator, premiere pro, creative apps, design software",
+a:""
+},
+
+{
+i:331,
+n:"figma",
+c:"software_services,business_b2b",
+u:"https://www.figma.com",
+d:"Figma is a collaborative interface design and prototyping tool used by teams to design and share UI/UX projects.",
+k:"figma, interface design, ui ux, prototyping, collaborative design, design tool",
+a:""
+},
+
+{
+i:332,
+n:"github",
+c:"software_services,business_b2b",
+u:"https://github.com",
+d:"GitHub is a code hosting and collaboration platform for developers offering git repositories, issues and code reviews.",
+k:"github, code hosting, git, repositories, developer collaboration, open source",
+a:""
+},
+
+{
+i:333,
+n:"gitlab",
+c:"software_services,business_b2b",
+u:"https://gitlab.com",
+d:"GitLab is a DevOps platform offering git repositories, CI/CD, issue tracking and project management for development teams.",
+k:"gitlab, devops platform, git repositories, ci cd, issue tracking, development workflows",
+a:""
+},
+
+{
+i:334,
+n:"bitbucket",
+c:"software_services,business_b2b",
+u:"https://bitbucket.org",
+d:"Bitbucket is a git-based code hosting service for teams with repositories, pull requests and integrations.",
+k:"bitbucket, git hosting, code repositories, pull requests, team development, integrations",
+a:""
+},
+
+{
+i:335,
+n:"cloudflare",
+c:"software_services,business_b2b",
+u:"https://www.cloudflare.com",
+d:"Cloudflare offers CDN, DDoS protection, security and performance services for websites and internet applications.",
+k:"cloudflare, cdn, website security, ddos protection, performance optimization, dns",
+a:""
+},
+
+{
+i:336,
+n:"namecheap",
+c:"software_services,business_b2b",
+u:"https://www.namecheap.com",
+d:"Namecheap is a domain registrar and hosting provider offering domains, SSL certificates, email and web hosting.",
+k:"namecheap, domain registration, web hosting, ssl certificates, business email",
+a:""
+},
+
+{
+i:337,
+n:"godaddy",
+c:"software_services,business_b2b",
+u:"https://www.godaddy.com",
+d:"GoDaddy offers domain registration, web hosting, website builder, email and online business services.",
+k:"godaddy, domains, web hosting, website builder, email hosting, online business services",
+a:""
+},
+
+{
+i:338,
+n:"bluehost",
+c:"software_services,business_b2b",
+u:"https://www.bluehost.com",
+d:"Bluehost is a web hosting provider offering shared, VPS and WordPress hosting with domains and site tools.",
+k:"bluehost, web hosting, wordpress hosting, shared hosting, domains, site tools",
+a:""
+},
+
+{
+i:339,
+n:"hostgator",
+c:"software_services,business_b2b",
+u:"https://www.hostgator.in",
+d:"HostGator India offers web hosting, domains and website solutions for individuals and businesses.",
+k:"hostgator india, web hosting, domains, website solutions, hosting plans",
+a:""
+},
+
+{
+i:340,
+n:"digitalocean",
+c:"software_services,business_b2b",
+u:"https://www.digitalocean.com",
+d:"DigitalOcean offers cloud infrastructure, droplets, managed databases and Kubernetes for developers and startups.",
+k:"digitalocean, cloud infrastructure, droplets, managed databases, kubernetes, developer cloud",
+a:""
+},
+
+{
+i:341,
+n:"aws",
+c:"software_services,business_b2b",
+u:"https://aws.amazon.com",
+d:"Amazon Web Services (AWS) offers cloud computing services including compute, storage, databases, AI, networking and more.",
+k:"aws, cloud computing, compute, storage, databases, networking, developer services",
+a:""
+},
+
+{
+i:342,
+n:"google cloud",
+c:"software_services,business_b2b",
+u:"https://cloud.google.com",
+d:"Google Cloud offers infrastructure, platforms, data, AI and developer tools for enterprises and developers.",
+k:"google cloud, cloud platform, infrastructure, data, ai services, developer tools",
+a:""
+},
+
+{
+i:343,
+n:"microsoft azure",
+c:"software_services,business_b2b",
+u:"https://azure.microsoft.com",
+d:"Microsoft Azure is a cloud platform offering compute, storage, databases, AI and enterprise cloud solutions.",
+k:"microsoft azure, cloud platform, compute, storage, databases, ai, enterprise cloud",
+a:""
+},
+
+{
+i:344,
+n:"render",
+c:"software_services,business_b2b",
+u:"https://render.com",
+d:"Render is a cloud hosting platform offering managed web services, databases and static site hosting for developers.",
+k:"render, cloud hosting, managed web services, databases, static site hosting, developer platform",
+a:""
+},
+
+{
+i:345,
+n:"vercel",
+c:"software_services,business_b2b",
+u:"https://vercel.com",
+d:"Vercel is a frontend cloud platform for deploying and hosting web apps and static sites, optimized for Next.js.",
+k:"vercel, frontend cloud, nextjs hosting, web app deployment, static sites, developer platform",
+a:""
+},
+
+{
+i:346,
+n:"netlify",
+c:"software_services,business_b2b",
+u:"https://www.netlify.com",
+d:"Netlify is a platform for building, deploying and hosting static sites and modern web apps.",
+k:"netlify, static site hosting, jamstack, web app deployment, developer tools",
+a:""
+},
+
+{
+i:347,
+n:"pagespeed insights",
+c:"software_services",
+u:"https://pagespeed.web.dev",
+d:"PageSpeed Insights is a Google tool that analyzes website performance and provides optimization suggestions.",
+k:"pagespeed insights, website performance, speed analysis, optimization reports, google tool",
+a:""
+},
+
+{
+i:348,
+n:"gtmetrix",
+c:"software_services",
+u:"https://gtmetrix.com",
+d:"GTmetrix is an online tool that tests website speed and performance with detailed reports and recommendations.",
+k:"gtmetrix, website speed test, performance analysis, optimization suggestions, site reports",
+a:""
+},
+
+{
+i:349,
+n:"tinypng",
+c:"software_services",
+u:"https://tinypng.com",
+d:"TinyPNG is an online tool that compresses PNG and JPEG images to reduce file size while preserving quality.",
+k:"tinypng, image compression, png optimizer, jpeg optimizer, reduce file size",
+a:""
+},
+
+{
+i:350,
+n:"remove bg",
+c:"software_services",
+u:"https://www.remove.bg",
+d:"Remove.bg is an online tool that automatically removes backgrounds from photos and images.",
+k:"remove bg, background removal, photo editing tool, cutout images, automatic background remover",
+a:""
+},
+
+{
+i:351,
+n:"unsplash",
+c:"software_services",
+u:"https://unsplash.com",
+d:"Unsplash offers a large library of free high-resolution photos for personal and commercial use.",
+k:"unsplash, free stock photos, high resolution images, photography library, royalty free",
+a:""
+},
+
+{
+i:352,
+n:"pexels",
+c:"software_services",
+u:"https://www.pexels.com",
+d:"Pexels provides free stock photos and videos for personal and commercial projects.",
+k:"pexels, free stock photos, stock videos, royalty free media, creative resources",
+a:""
+},
+
+{
+i:353,
+n:"pixabay",
+c:"software_services",
+u:"https://pixabay.com",
+d:"Pixabay offers free images, illustrations, vectors and videos for creative and commercial use.",
+k:"pixabay, free images, illustrations, vectors, stock videos, royalty free content",
+a:""
+},
+
+{
+i:354,
+n:"freepik",
+c:"software_services",
+u:"https://www.freepik.com",
+d:"Freepik provides vectors, illustrations, photos and PSD files for designers and content creators.",
+k:"freepik, vectors, illustrations, design resources, stock photos, psd files",
+a:""
+},
+
+{
+i:355,
+n:"vecteezy",
+c:"software_services",
+u:"https://www.vecteezy.com",
+d:"Vecteezy offers free and premium vector graphics, illustrations and design resources.",
+k:"vecteezy, vector graphics, illustrations, design assets, free vectors, premium vectors",
+a:""
+},
+
+{
+i:356,
+n:"shutterstock",
+c:"software_services",
+u:"https://www.shutterstock.com",
+d:"Shutterstock is a stock marketplace offering royalty-free photos, videos, music and vectors for commercial use.",
+k:"shutterstock, stock photos, stock videos, royalty free music, vectors, creative marketplace",
+a:""
+},
+
+{
+i:357,
+n:"envato",
+c:"software_services",
+u:"https://elements.envato.com",
+d:"Envato Elements offers a subscription for unlimited downloads of design assets, templates, photos, videos and audio.",
+k:"envato elements, design assets, templates, stock photos, videos, audio, creative subscription",
+a:""
+},
+
+{
+i:358,
+n:"themeforest",
+c:"software_services",
+u:"https://themeforest.net",
+d:"ThemeForest is a marketplace for website themes and templates for WordPress, HTML and other platforms.",
+k:"themeforest, website themes, wordpress templates, html templates, theme marketplace",
+a:""
+},
+
+{
+i:359,
+n:"codecanyon",
+c:"software_services",
+u:"https://codecanyon.net",
+d:"CodeCanyon is a marketplace for scripts, plugins and code snippets for web and app development.",
+k:"codecanyon, scripts marketplace, plugins, code snippets, web development resources",
+a:""
+},
+
+{
+i:360,
+n:"creative market",
+c:"software_services",
+u:"https://creativemarket.com",
+d:"Creative Market is an online marketplace for fonts, graphics, templates, themes and design assets from independent creators.",
+k:"creative market, fonts, graphics, templates, themes, design marketplace",
+a:""
+},
+
+{
+i:361,
+n:"fiverr",
+c:"services,business_b2b",
+u:"https://www.fiverr.com",
+d:"Fiverr is a freelance services marketplace where businesses hire freelancers for design, writing, marketing, tech and more.",
+k:"fiverr, freelance marketplace, hire freelancers, design services, writing, marketing, business services",
+a:""
+},
+
+{
+i:362,
+n:"upwork",
+c:"services,business_b2b",
+u:"https://www.upwork.com",
+d:"Upwork is a global freelancing platform connecting businesses with professionals for remote work projects.",
+k:"upwork, freelancing platform, remote work, hire freelancers, business projects, global talent",
+a:""
+},
+
+{
+i:363,
+n:"freelancer",
+c:"services,business_b2b",
+u:"https://www.freelancer.com",
+d:"Freelancer.com is an online marketplace where clients post projects and freelancers bid to provide services.",
+k:"freelancer.com, freelance marketplace, project bidding, hire freelancers, online services",
+a:""
+},
+
+{
+i:364,
+n:"peopleperhour",
+c:"services,business_b2b",
+u:"https://www.peopleperhour.com",
+d:"PeoplePerHour connects businesses with freelance professionals for hourly or project-based work.",
+k:"peopleperhour, freelance services, hourly work, project based work, hire professionals",
+a:""
+},
+
+{
+i:365,
+n:"99designs",
+c:"services,business_b2b",
+u:"https://99designs.com",
+d:"99designs is a design marketplace where clients run contests or hire designers for logos, branding and creative work.",
+k:"99designs, design contests, logo design, branding, hire designers, creative marketplace",
+a:""
+},
+
+{
+i:366,
+n:"medium",
+c:"education_courses",
+u:"https://medium.com",
+d:"Medium is a publishing platform where writers share articles, essays and stories across topics.",
+k:"medium, publishing platform, articles, essays, stories, online writing, knowledge sharing",
+a:""
+},
+
+{
+i:367,
+n:"substack",
+c:"education_courses",
+u:"https://substack.com",
+d:"Substack lets writers create newsletters and paid subscriptions to share essays, analysis and commentary.",
+k:"substack, newsletters, paid subscriptions, essays, analysis, independent writing",
+a:""
+},
+
+{
+i:368,
+n:"quora",
+c:"education_courses",
+u:"https://www.quora.com",
+d:"Quora is a Q&A platform where people ask questions and share answers and knowledge on many topics.",
+k:"quora, question and answer site, knowledge sharing, community answers, learn from experts",
+a:""
+},
+
+{
+i:369,
+n:"reddit",
+c:"education_courses,entertainment",
+u:"https://www.reddit.com",
+d:"Reddit is a network of communities where people discuss interests, share content, learn, and engage in entertainment and discussions.",
+k:"reddit, online communities, discussion forums, learn and share, entertainment, social platform",
+a:""
+},
+
+{
+i:370,
+n:"stack overflow",
+c:"software_services,education_courses",
+u:"https://stackoverflow.com",
+d:"Stack Overflow is a Q&A site for developers to ask programming questions, share answers and learn coding solutions.",
+k:"stack overflow, developer q&a, programming questions, coding solutions, software development help",
+a:""
+}  
 
   
 
