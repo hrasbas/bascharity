@@ -279,7 +279,6 @@ c:"fashion_men,fashion_women,kids_school",
 u:"https://www.bewakoof.com",
 a:"https://extp.in/YTpmLn"
 },
-
 {
 i:36,
 n:"nykaa fashion",
@@ -392,13 +391,6 @@ u:"https://www.zanducare.com",
 a:"https://extp.in/health9"
 },
 
-{
-i:50,
-n:"myupchar",
-c:"health_pharmacy,software_services,education_courses",
-u:"https://www.myupchar.com",
-a:"https://extp.in/health10"
-},
 {
 i:50,
 n:"myupchar",
@@ -572,7 +564,7 @@ i:71,
 n:"meesho",
 c:"electronics,mobiles,computers,home_kitchen,home_furniture,fashion_men,fashion_women,kids_school,footwear_bags,beauty_personalcare,health_pharmacy,grocery_daily,sports_fitness,toys_gifts,business_b2b",
 u:"https://www.meesho.com",
-a":""
+a:""
 },
 
 {
@@ -580,7 +572,7 @@ i:72,
 n:"jiomart",
 c:"grocery_daily,home_kitchen,home_furniture,beauty_personalcare,health_pharmacy,electronics,mobiles",
 u:"https://www.jiomart.com",
-a":""
+a:""
 },
 
 {
@@ -588,7 +580,7 @@ i:73,
 n:"bigbasket",
 c:"grocery_daily,home_kitchen,health_pharmacy,beauty_personalcare",
 u:"https://www.bigbasket.com",
-a":""
+a:""
 },
 
 {
@@ -596,7 +588,7 @@ i:74,
 n:"blinkit",
 c:"grocery_daily,restaurants_food,health_pharmacy,beauty_personalcare",
 u:"https://www.blinkit.com",
-a":""
+a:""
 },
 
 {
@@ -604,7 +596,7 @@ i:75,
 n:"zepto",
 c:"grocery_daily,restaurants_food,health_pharmacy,beauty_personalcare",
 u:"https://www.zeptonow.com",
-a":""
+a:""
 },
 
 {
@@ -612,7 +604,7 @@ i:76,
 n:"swiggy",
 c:"restaurants_food,grocery_daily",
 u:"https://www.swiggy.com",
-a":""
+a:""
 },
 
 {
@@ -620,7 +612,7 @@ i:77,
 n:"zomato",
 c:"restaurants_food,grocery_daily",
 u:"https://www.zomato.com",
-a":""
+a:""
 },
 
 {
@@ -628,7 +620,7 @@ i:78,
 n:"pepperfry",
 c:"home_furniture,home_kitchen",
 u:"https://www.pepperfry.com",
-a":""
+a:""
 },
 
 {
@@ -636,7 +628,7 @@ i:79,
 n:"urban ladder",
 c:"home_furniture,home_kitchen",
 u:"https://www.urbanladder.com",
-a":""
+a:""
 },
 
 {
@@ -644,7 +636,7 @@ i:80,
 n:"noise",
 c:"electronics,mobiles",
 u:"https://www.noise.com",
-a":""
+a:""
 },
 
 {
@@ -652,7 +644,7 @@ i:81,
 n:"mivi",
 c:"electronics,mobiles",
 u:"https://www.mivi.in",
-a":""
+a:""
 },
 
 {
@@ -660,7 +652,7 @@ i:82,
 n:"boult audio",
 c:"electronics,mobiles",
 u:"https://www.boultaudio.com",
-a":""
+a:""
 },
 
 {
@@ -668,7 +660,7 @@ i:83,
 n:"samsung",
 c:"electronics,mobiles,computers,home_kitchen",
 u:"https://www.samsung.com/in",
-a":""
+a:""
 },
 
 {
@@ -676,7 +668,7 @@ i:84,
 n:"xiaomi",
 c:"electronics,mobiles,home_kitchen,software_services",
 u:"https://www.mi.com/in",
-a":""
+a:""
 },
 
 {
@@ -684,7 +676,7 @@ i:85,
 n:"lenovo",
 c:"computers,electronics,software_services",
 u:"https://www.lenovo.com/in/en",
-a":""
+a:""
 },
 
 {
@@ -692,7 +684,7 @@ i:86,
 n:"dell",
 c:"computers,electronics,software_services",
 u:"https://www.dell.com/en-in",
-a":""
+a:""
 },
 
 {
@@ -700,7 +692,7 @@ i:87,
 n:"mamaearth",
 c:"beauty_personalcare,health_pharmacy",
 u:"https://www.mamaearth.in",
-a":""
+a:""
 },
 
 {
@@ -708,7 +700,7 @@ i:88,
 n:"wow skin science",
 c:"beauty_personalcare,health_pharmacy",
 u:"https://www.wowskinscience.com",
-a":""
+a:""
 },
 
 {
@@ -716,7 +708,7 @@ i:89,
 n:"the derma co",
 c:"beauty_personalcare,health_pharmacy",
 u:"https://www.thederma-co.com",
-a":""
+a:""
 },
 
 {
@@ -724,7 +716,7 @@ i:90,
 n:"plum",
 c:"beauty_personalcare",
 u:"https://plumgoodness.com",
-a":""
+a:""
 }
   
 
