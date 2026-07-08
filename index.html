@@ -9127,7 +9127,10 @@ ${shop.n}
     if (typeof changeCountry === "function") {
         changeCountry(allCountries.value);
     }
+   if (window.renderCountry) {
+    window.renderCountry(allCountries.value);
 }
+
 
 document.addEventListener("DOMContentLoaded", () => {
 
