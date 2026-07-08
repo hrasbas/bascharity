@@ -1196,7 +1196,506 @@ u:"https://www.woodlandworldwide.com",
 d:"Woodland offers outdoor footwear, adventure apparel, backpacks and accessories designed for travel and outdoor lifestyles.",
 k:"woodland india, outdoor shoes, adventure wear, backpacks, trekking, outdoor gear",
 a:""
-}
+},
+{
+i:121,
+n:"w for woman",
+c:"fashion_women",
+u:"https://www.wforwoman.com",
+d:"W for Woman offers contemporary ethnic wear for women including kurtas, suits, dresses and fusion outfits for everyday and occasion wear.",
+k:"w for woman, womens ethnic wear, kurtas, suits, fusion wear, dresses, indian fashion",
+a:""
+},
+
+{
+i:122,
+n:"aurelia",
+c:"fashion_women",
+u:"https://www.aurelia.com",
+d:"Aurelia offers modern ethnic clothing for women including kurtas, sets, fusion wear and festive outfits at affordable prices.",
+k:"aurelia, womens ethnic wear, kurtas, suit sets, fusion wear, festive clothing",
+a:""
+},
+
+{
+i:123,
+n:"biba",
+c:"fashion_women",
+u:"https://www.biba.in",
+d:"Biba is a popular Indian brand for women’s ethnic wear offering salwar suits, kurtis, lehengas and festive collections.",
+k:"biba, womens ethnic wear, salwar suits, kurtis, lehengas, festive wear",
+a:""
+},
+
+{
+i:124,
+n:"fabindia",
+c:"fashion_women,home_furniture,home_kitchen,business_b2b",
+u:"https://www.fabindia.com",
+d:"Fabindia offers ethnic apparel, handcrafted home decor, furniture, furnishings and lifestyle products made with traditional Indian crafts.",
+k:"fabindia, ethnic clothing, handcrafted decor, furniture, furnishings, indian crafts, lifestyle",
+a:""
+},
+
+{
+i:125,
+n:"soch",
+c:"fashion_women",
+u:"https://www.soch.com",
+d:"Soch offers sarees, salwar suits, kurtas and ethnic wear for women suitable for festive and occasion dressing.",
+k:"soch, womens sarees, salwar suits, kurtas, ethnic wear, festive clothing",
+a:""
+},
+
+{
+i:126,
+n:"libas",
+c:"fashion_women",
+u:"https://www.libas.in",
+d:"Libas offers affordable ethnic and fusion wear for women including kurtas, sets, dresses and everyday Indian clothing.",
+k:"libas, womens kurtas, ethnic wear, fusion wear, dresses, indian clothing",
+a:""
+},
+
+{
+i:127,
+n:"fastrack",
+c:"fashion_women,footwear_bags,electronics",
+u:"https://www.fastrack.in",
+d:"Fastrack offers youth-focused watches, smart wearables, bags, sunglasses and accessories with trendy designs.",
+k:"fastrack, watches, smart wearables, sunglasses, bags, youth fashion accessories",
+a:""
+},
+
+{
+i:128,
+n:"titan",
+c:"fashion_women,footwear_bags",
+u:"https://www.titan.co.in",
+d:"Titan is a leading watch and accessories brand offering analog and smart watches, jewellery and bags for men and women.",
+k:"titan, watches, smart watches, accessories, jewellery, mens watches, womens watches",
+a:""
+},
+
+{
+i:129,
+n:"casio india",
+c:"fashion_women,footwear_bags",
+u:"https://www.casioindiashop.com",
+d:"Casio India offers digital, analog and G-SHOCK watches along with calculators and accessories.",
+k:"casio india, watches, g-shock, digital watches, analog watches, accessories",
+a:""
+},
+
+{
+i:130,
+n:"fossil",
+c:"fashion_women,footwear_bags",
+u:"https://www.fossil.com/en-in",
+d:"Fossil India offers fashion watches, smartwatches, bags, wallets and accessories with vintage-inspired designs.",
+k:"fossil india, fashion watches, smartwatches, bags, wallets, accessories",
+a:""
+},
+
+{
+i:131,
+n:"daniel wellington",
+c:"fashion_women,footwear_bags",
+u:"https://www.danielwellington.com/in",
+d:"Daniel Wellington offers minimalist watches, bracelets and accessories with interchangeable straps for men and women.",
+k:"daniel wellington, minimalist watches, bracelets, accessories, interchangeable straps",
+a:""
+},
+
+{
+i:132,
+n:"timex",
+c:"fashion_women,footwear_bags",
+u:"https://www.timexindia.com",
+d:"Timex India offers everyday watches, sports watches and classic timepieces for men and women.",
+k:"timex india, watches, sports watches, classic timepieces, mens watches, womens watches",
+a:""
+},
+
+{
+i:133,
+n:"lenskart",
+c:"fashion_women,health_pharmacy",
+u:"https://www.lenskart.com",
+d:"Lenskart is an eyewear platform offering prescription glasses, sunglasses, contact lenses and eye check-up services.",
+k:"lenskart, eyeglasses, sunglasses, contact lenses, eyewear, eye test",
+a:""
+},
+
+{
+i:134,
+n:"coolwinks",
+c:"fashion_women,health_pharmacy",
+u:"https://www.coolwinks.com",
+d:"Coolwinks offers eyeglasses, sunglasses and contact lenses with online eye-wear shopping in India.",
+k:"coolwinks, eyeglasses, sunglasses, contact lenses, online eyewear",
+a:""
+},
+
+{
+i:135,
+n:"titan eyeplus",
+c:"fashion_women,health_pharmacy",
+u:"https://www.titaneyeplus.com",
+d:"Titan Eyeplus offers spectacles, sunglasses, contact lenses and eye care services through stores and online.",
+k:"titan eyeplus, spectacles, sunglasses, contact lenses, eye care, eyewear store",
+a:""
+},
+
+{
+i:136,
+n:"giva",
+c:"fashion_women,footwear_bags",
+u:"https://www.giva.co",
+d:"Giva offers silver and gold-plated jewellery including earrings, necklaces, rings and bracelets for women.",
+k:"giva, silver jewellery, gold plated jewellery, earrings, necklaces, rings, bracelets",
+a:""
+},
+
+{
+i:137,
+n:"caratlane",
+c:"fashion_women,footwear_bags",
+u:"https://www.caratlane.com",
+d:"CaratLane is an online jewellery brand offering gold and diamond jewellery, everyday wear designs and engagement rings.",
+k:"caratlane, gold jewellery, diamond jewellery, rings, earrings, online jewellery",
+a:""
+},
+
+{
+i:138,
+n:"bluestone",
+c:"fashion_women,footwear_bags",
+u:"https://www.bluestone.com",
+d:"BlueStone offers fine jewellery including gold, diamond and gemstone pieces with customizable designs and try-at-home options.",
+k:"bluestone, fine jewellery, gold, diamond, gemstone jewellery, customizable designs",
+a:""
+},
+
+{
+i:139,
+n:"voylla",
+c:"fashion_women,footwear_bags",
+u:"https://www.voylla.com",
+d:"Voylla offers fashion jewellery including statement earrings, necklaces, bangles and ethnic accessories at budget prices.",
+k:"voylla, fashion jewellery, earrings, necklaces, bangles, ethnic accessories",
+a:""
+},
+
+{
+i:140,
+n:"zariin",
+c:"fashion_women,footwear_bags",
+u:"https://www.zariin.com",
+d:"Zariin is a designer jewellery brand offering handcrafted, gold-plated and gemstone jewellery pieces.",
+k:"zariin, designer jewellery, handcrafted, gold plated, gemstone jewellery",
+a:""
+},
+
+{
+i:141,
+n:"melorra",
+c:"fashion_women,footwear_bags",
+u:"https://www.melorra.com",
+d:"Melorra offers lightweight gold jewellery in trendy, daily-wear designs inspired by global fashion.",
+k:"melorra, lightweight gold jewellery, daily wear, trendy designs, womens jewellery",
+a:""
+},
+
+{
+i:142,
+n:"safari",
+c:"footwear_bags",
+u:"https://www.safari.in",
+d:"Safari offers luggage, trolley bags, suitcases, backpacks and travel accessories for families and frequent travellers.",
+k:"safari bags, luggage, trolley bags, suitcases, backpacks, travel accessories",
+a:""
+},
+
+{
+i:143,
+n:"vip bags",
+c:"footwear_bags",
+u:"https://www.vipbags.com",
+d:"VIP Bags is a luggage brand offering suitcases, trolley bags, duffle bags and travel gear across India.",
+k:"vip bags, luggage, suitcases, trolley bags, duffle bags, travel gear",
+a:""
+},
+
+{
+i:144,
+n:"american tourister",
+c:"footwear_bags",
+u:"https://www.americantourister.in",
+d:"American Tourister India offers hard and soft luggage, backpacks, travel bags and trolley suitcases.",
+k:"american tourister, luggage, travel bags, suitcases, backpacks, trolley bags",
+a:""
+},
+
+{
+i:145,
+n:"samsonite",
+c:"footwear_bags",
+u:"https://www.samsonite.in",
+d:"Samsonite India offers premium luggage, business bags, travel suitcases and cabin trolleys.",
+k:"samsonite india, premium luggage, travel suitcases, business bags, cabin trolleys",
+a:""
+},
+
+{
+i:146,
+n:"mokobara",
+c:"footwear_bags",
+u:"https://mokobara.com",
+d:"Mokobara offers modern luggage, travel bags, backpacks and accessories with minimalist designs.",
+k:"mokobara, modern luggage, travel bags, backpacks, minimalist bags, suitcases",
+a:""
+},
+
+{
+i:147,
+n:"wildcraft",
+c:"footwear_bags,sports_fitness",
+u:"https://www.wildcraft.com",
+d:"Wildcraft offers outdoor gear including backpacks, rucksacks, travel bags, jackets and performance apparel for adventure and daily use.",
+k:"wildcraft, backpacks, outdoor gear, rucksacks, jackets, travel bags, performance wear",
+a:""
+},
+
+{
+i:148,
+n:"skybags",
+c:"footwear_bags",
+u:"https://www.skybags.co.in",
+d:"Skybags offers trendy backpacks, school bags, luggage and trolley bags aimed at students and young travellers.",
+k:"skybags, backpacks, school bags, luggage, trolley bags, youth bags",
+a:""
+},
+
+{
+i:149,
+n:"firstcry",
+c:"kids_school,beauty_personalcare,health_pharmacy,footwear_bags",
+u:"https://www.firstcry.com",
+d:"FirstCry is a baby and kids store offering clothing, toys, diapers, baby gear, personal care and maternity products.",
+k:"firstcry, baby products, kids clothing, toys, diapers, baby care, maternity",
+a:""
+},
+
+{
+i:150,
+n:"hopscotch",
+c:"kids_school",
+u:"https://www.hopscotch.in",
+d:"Hopscotch offers fashion and accessories for babies and kids including clothing, footwear and curated outfits.",
+k:"hopscotch, kids fashion, baby clothing, childrens wear, kids footwear, outfits",
+a:""
+},
+
+{
+i:151,
+n:"mothercare",
+c:"kids_school,health_pharmacy",
+u:"https://www.mothercare.in",
+d:"Mothercare India offers baby clothing, nursery products, maternity wear and baby care essentials.",
+k:"mothercare india, baby clothing, nursery products, maternity wear, baby essentials",
+a:""
+},
+
+{
+i:152,
+n:"chicco",
+c:"kids_school,health_pharmacy",
+u:"https://www.chicco.in",
+d:"Chicco India offers baby gear, strollers, feeding products, toys and baby skincare essentials.",
+k:"chicco india, baby gear, strollers, feeding bottles, toys, baby skincare",
+a:""
+},
+
+{
+i:153,
+n:"wakefit",
+c:"home_furniture,home_kitchen",
+u:"https://www.wakefit.co",
+d:"Wakefit offers mattresses, beds, sofas, pillows and home furniture focused on comfort and sleep solutions.",
+k:"wakefit, mattresses, beds, pillows, home furniture, sleep solutions",
+a:""
+},
+
+{
+i:154,
+n:"sleepwell",
+c:"home_furniture,home_kitchen",
+u:"https://www.sleepwell.co.in",
+d:"Sleepwell is a mattress and bedding brand offering mattresses, cushions, pillows and comfort products.",
+k:"sleepwell, mattresses, bedding, pillows, cushions, comfort products",
+a:""
+},
+
+{
+i:155,
+n:"duroflex",
+c:"home_furniture,home_kitchen",
+u:"https://www.duroflexworld.com",
+d:"Duroflex offers mattresses, sleep accessories, pillows and beds designed for ergonomic comfort.",
+k:"duroflex, mattresses, pillows, sleep accessories, ergonomic beds, sleep comfort",
+a:""
+},
+
+{
+i:156,
+n:"the sleep company",
+c:"home_furniture,home_kitchen",
+u:"https://www.thesleepcompany.in",
+d:"The Sleep Company offers smartGRID mattresses, chairs and seating products for better comfort and posture.",
+k:"the sleep company, smartgrid mattresses, ergonomic chairs, seating comfort, sleep products",
+a:""
+},
+
+{
+i:157,
+n:"godrej interio",
+c:"home_furniture,home_kitchen,business_b2b",
+u:"https://www.godrejinterio.com",
+d:"Godrej Interio offers home and office furniture, modular kitchens and storage solutions for residential and commercial spaces.",
+k:"godrej interio, home furniture, office furniture, modular kitchen, storage solutions",
+a:""
+},
+
+{
+i:158,
+n:"nilkamal",
+c:"home_furniture,home_kitchen,business_b2b",
+u:"https://www.nilkamalfurniture.com",
+d:"Nilkamal offers plastic and molded furniture, mattresses, storage and home solutions for homes and businesses.",
+k:"nilkamal, plastic furniture, molded furniture, mattresses, storage, home solutions",
+a:""
+},
+
+{
+i:159,
+n:"home centre",
+c:"home_furniture,home_kitchen,beauty_personalcare",
+u:"https://www.homecentre.in",
+d:"Home Centre offers furniture, home decor, kitchenware, furnishings and accessories for modern homes.",
+k:"home centre, furniture, home decor, kitchenware, furnishings, home accessories",
+a:""
+},
+
+{
+i:160,
+n:"pure home and living",
+c:"home_furniture,home_kitchen",
+u:"https://www.purehomeandliving.com",
+d:"Pure Home and Living offers premium home decor, tableware, glassware and soft furnishings for stylish interiors.",
+k:"pure home and living, home decor, tableware, glassware, soft furnishings, interiors",
+a:""
+},
+
+{
+i:161,
+n:"chumbak",
+c:"home_furniture,home_kitchen,toys_gifts",
+u:"https://www.chumbak.com",
+d:"Chumbak offers quirky home decor, kitchenware, fashion, accessories and gifting items with vibrant designs.",
+k:"chumbak, quirky decor, kitchenware, gifts, accessories, vibrant designs",
+a:""
+},
+
+{
+i:162,
+n:"nestasia",
+c:"home_furniture,home_kitchen,toys_gifts",
+u:"https://www.nestasia.in",
+d:"Nestasia offers curated home decor, serveware, tableware and gifting products for modern homes.",
+k:"nestasia, home decor, serveware, tableware, gifts, modern home accessories",
+a:""
+},
+
+{
+i:163,
+n:"dailyobjects",
+c:"home_furniture,footwear_bags,electronics",
+u:"https://www.dailyobjects.com",
+d:"DailyObjects offers designer phone cases, laptop sleeves, bags, desk accessories and home decor with modern aesthetics.",
+k:"dailyobjects, phone cases, laptop sleeves, bags, desk accessories, modern decor",
+a:""
+},
+
+{
+i:164,
+n:"bombay dyeing",
+c:"home_furniture,home_kitchen",
+u:"https://www.bombaydyeing.com",
+d:"Bombay Dyeing offers bed linen, towels, home textiles and furnishings for bedrooms and bathrooms.",
+k:"bombay dyeing, bed linen, towels, home textiles, furnishings, bedding",
+a:""
+},
+
+{
+i:165,
+n:"spaces",
+c:"home_furniture,home_kitchen",
+u:"https://www.spaces.in",
+d:"Spaces offers premium bed sheets, quilts, towels and home linen collections.",
+k:"spaces, bed sheets, quilts, towels, home linen, premium bedding",
+a:""
+},
+
+{
+i:166,
+n:"portico",
+c:"home_furniture,home_kitchen",
+u:"https://www.porticoindia.com",
+d:"Portico India offers designer bed sheets, comforters, dohars and home linen for stylish bedrooms.",
+k:"portico india, bed sheets, comforters, dohars, home linen, designer bedding",
+a:""
+},
+
+{
+i:167,
+n:"philips",
+c:"electronics,home_kitchen,beauty_personalcare,health_pharmacy",
+u:"https://www.philips.co.in",
+d:"Philips India offers consumer electronics, kitchen appliances, grooming tools, health-tech devices and lighting products.",
+k:"philips india, electronics, kitchen appliances, grooming, health devices, lighting",
+a:""
+},
+
+{
+i:168,
+n:"usha",
+c:"home_kitchen,home_furniture,electronics",
+u:"https://www.usha.com",
+d:"Usha offers fans, sewing machines, kitchen appliances and home electrical products for Indian households.",
+k:"usha, fans, sewing machines, kitchen appliances, home electricals",
+a:""
+},
+
+{
+i:169,
+n:"kent",
+c:"home_kitchen,health_pharmacy",
+u:"https://www.kent.co.in",
+d:"Kent offers water purifiers, air purifiers, kitchen appliances and health-focused home products.",
+k:"kent, water purifiers, air purifiers, kitchen appliances, health home products",
+a:""
+},
+
+{
+i:170,
+n:"eureka forbes",
+c:"home_kitchen,health_pharmacy",
+u:"https://www.eurekaforbes.com",
+d:"Eureka Forbes offers water purifiers, vacuum cleaners, air purifiers and home cleaning solutions.",
+k:"eureka forbes, water purifiers, vacuum cleaners, air purifiers, home cleaning",
+a:""
+}  
   
 
   
