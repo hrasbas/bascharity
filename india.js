@@ -3495,7 +3495,1307 @@ u:"https://stackoverflow.com",
 d:"Stack Overflow is a Q&A site for developers to ask programming questions, share answers and learn coding solutions.",
 k:"stack overflow, developer q&a, programming questions, coding solutions, software development help",
 a:""
-}  
+},
+{
+i:371,
+n:"internet archive",
+c:"education_courses",
+u:"https://archive.org",
+d:"Internet Archive is a digital library offering archived websites, books, audio, video and software for free access.",
+k:"internet archive, digital library, wayback machine, free books, archived websites, audio, video, software",
+a:""
+},
+
+{
+i:372,
+n:"project gutenberg",
+c:"education_courses",
+u:"https://www.gutenberg.org",
+d:"Project Gutenberg offers free ebooks of public domain literature that can be downloaded or read online.",
+k:"project gutenberg, free ebooks, public domain books, classic literature, online reading, downloads",
+a:""
+},
+
+{
+i:373,
+n:"open library",
+c:"education_courses",
+u:"https://openlibrary.org",
+d:"Open Library is an online catalog and lending library offering millions of book records and digital borrowing.",
+k:"open library, online catalog, book lending, ebooks, digital borrowing, internet archive books",
+a:""
+},
+
+{
+i:374,
+n:"researchgate",
+c:"education_courses",
+u:"https://www.researchgate.net",
+d:"ResearchGate is a network for researchers to share papers, ask questions and collaborate on scientific work.",
+k:"researchgate, research network, academic papers, scientific collaboration, journals, researchers",
+a:""
+},
+
+{
+i:375,
+n:"google scholar",
+c:"education_courses",
+u:"https://scholar.google.com",
+d:"Google Scholar is a search engine for scholarly literature including articles, theses, books and conference papers.",
+k:"google scholar, academic search, research articles, theses, citations, scholarly literature",
+a:""
+},
+
+{
+i:376,
+n:"wikibooks",
+c:"education_courses",
+u:"https://www.wikibooks.org",
+d:"Wikibooks hosts free open-content textbooks and manuals across various subjects.",
+k:"wikibooks, free textbooks, open content books, manuals, educational resources, wikimedia project",
+a:""
+},
+
+{
+i:377,
+n:"wikiversity",
+c:"education_courses",
+u:"https://www.wikiversity.org",
+d:"Wikiversity offers learning resources, courses and projects for self-study and collaborative education.",
+k:"wikiversity, learning resources, free courses, projects, self study, collaborative education",
+a:""
+},
+
+{
+i:378,
+n:"ted",
+c:"education_courses,entertainment",
+u:"https://www.ted.com",
+d:"TED hosts short talks and conferences featuring speakers on technology, education, design and ideas worth spreading.",
+k:"ted talks, conferences, inspirational talks, education, ideas worth spreading, videos",
+a:""
+},
+
+{
+i:379,
+n:"national geographic",
+c:"education_courses,entertainment",
+u:"https://www.nationalgeographic.com",
+d:"National Geographic offers articles, documentaries, photography and educational content on nature, science and culture.",
+k:"national geographic, documentaries, nature photography, science articles, wildlife, educational content",
+a:""
+},
+
+{
+i:380,
+n:"britannica",
+c:"education_courses",
+u:"https://www.britannica.com",
+d:"Encyclopaedia Britannica is an online reference providing verified articles and summaries across many subjects.",
+k:"britannica, encyclopedia, reference articles, verified information, educational resource",
+a:""
+},
+
+{
+i:381,
+n:"mozilla",
+c:"software_services,education_courses",
+u:"https://www.mozilla.org",
+d:"Mozilla develops Firefox and other open web tools and also offers documentation, learning resources and campaigns for an open internet.",
+k:"mozilla, firefox browser, open web, internet privacy, developer docs, web education",
+a:""
+},
+
+{
+i:382,
+n:"opera",
+c:"software_services",
+u:"https://www.opera.com",
+d:"Opera offers web browsers and related tools for secure and fast browsing on desktop and mobile.",
+k:"opera browser, web browsing, mobile browser, secure browsing, free browser",
+a:""
+},
+
+{
+i:383,
+n:"brave",
+c:"software_services",
+u:"https://brave.com",
+d:"Brave is a privacy-focused browser with built-in ad and tracker blocking and optional rewards.",
+k:"brave browser, privacy focused, ad blocking, tracker blocking, secure browsing",
+a:""
+},
+
+{
+i:384,
+n:"duckduckgo",
+c:"software_services",
+u:"https://duckduckgo.com",
+d:"DuckDuckGo is a privacy-focused search engine that does not track personal search history.",
+k:"duckduckgo, private search engine, no tracking, privacy friendly search",
+a:""
+},
+
+{
+i:385,
+n:"proton mail",
+c:"software_services",
+u:"https://proton.me",
+d:"Proton Mail offers encrypted email and privacy-focused communication services.",
+k:"proton mail, encrypted email, secure communication, privacy first email, proton",
+a:""
+},
+
+{
+i:386,
+n:"tutanota",
+c:"software_services",
+u:"https://tuta.com",
+d:"Tutanota is a secure email service providing end-to-end encryption and privacy-friendly mail.",
+k:"tutanota, secure email, encrypted mailbox, privacy friendly email service",
+a:""
+},
+
+{
+i:387,
+n:"mega",
+c:"software_services",
+u:"https://mega.io",
+d:"MEGA offers encrypted cloud storage, file sharing and backup services.",
+k:"mega cloud, encrypted storage, file sharing, backup, secure cloud service",
+a:""
+},
+
+{
+i:388,
+n:"sync",
+c:"software_services",
+u:"https://www.sync.com",
+d:"Sync.com provides encrypted cloud storage and file sharing for individuals and teams.",
+k:"sync.com, encrypted cloud storage, secure file sharing, privacy cloud, team storage",
+a:""
+},
+
+{
+i:389,
+n:"box",
+c:"software_services,business_b2b",
+u:"https://www.box.com",
+d:"Box offers cloud content management and file collaboration services for businesses and enterprises.",
+k:"box cloud, business file sharing, content management, enterprise collaboration, b2b storage",
+a:""
+},
+
+{
+i:390,
+n:"we transfer",
+c:"software_services",
+u:"https://wetransfer.com",
+d:"WeTransfer is a simple service for sending large files online via temporary download links.",
+k:"wetransfer, large file transfer, online sharing, temporary links, send files",
+a:""
+},
+
+{
+i:391,
+n:"loom",
+c:"software_services,business_b2b",
+u:"https://www.loom.com",
+d:"Loom lets users record and share video messages and screen recordings for work communication.",
+k:"loom, screen recording, video messaging, async communication, team collaboration tool",
+a:""
+},
+
+{
+i:392,
+n:"calendly",
+c:"software_services,business_b2b",
+u:"https://calendly.com",
+d:"Calendly is a scheduling tool that helps businesses and professionals book meetings without back-and-forth emails.",
+k:"calendly, meeting scheduling, appointment booking, calendar integration, b2b scheduling",
+a:""
+},
+
+{
+i:393,
+n:"typeform",
+c:"software_services,business_b2b",
+u:"https://www.typeform.com",
+d:"Typeform lets businesses create interactive forms, surveys and quizzes with a conversational interface.",
+k:"typeform, online forms, surveys, quizzes, lead collection, business tool",
+a:""
+},
+
+{
+i:394,
+n:"jotform",
+c:"software_services,business_b2b",
+u:"https://www.jotform.com",
+d:"Jotform is a form builder platform for creating online forms, collecting responses and automating workflows.",
+k:"jotform, online form builder, surveys, data collection, workflow automation, business forms",
+a:""
+},
+
+{
+i:395,
+n:"mailchimp",
+c:"software_services,business_b2b",
+u:"https://mailchimp.com",
+d:"Mailchimp offers email marketing, marketing automation and audience management tools for businesses.",
+k:"mailchimp, email marketing, newsletters, marketing automation, small business tool",
+a:""
+},
+
+{
+i:396,
+n:"brevo",
+c:"software_services,business_b2b",
+u:"https://www.brevo.com",
+d:"Brevo (formerly Sendinblue) provides email, SMS and marketing automation tools for businesses.",
+k:"brevo, sendinblue, email campaigns, sms marketing, marketing automation, b2b tool",
+a:""
+},
+
+{
+i:397,
+n:"convertkit",
+c:"software_services,business_b2b",
+u:"https://convertkit.com",
+d:"ConvertKit offers email marketing and automation tools tailored for creators and online businesses.",
+k:"convertkit, email marketing for creators, automation, newsletters, online business",
+a:""
+},
+
+{
+i:398,
+n:"gumroad",
+c:"software_services,business_b2b",
+u:"https://gumroad.com",
+d:"Gumroad lets creators sell digital products, memberships and content directly to customers.",
+k:"gumroad, sell digital products, creator storefront, memberships, b2b payments",
+a:""
+},
+
+{
+i:399,
+n:"patreon",
+c:"software_services",
+u:"https://www.patreon.com",
+d:"Patreon is a membership platform where fans support creators through subscriptions for exclusive content.",
+k:"patreon, creator memberships, fan subscriptions, exclusive content, recurring support",
+a:""
+},
+
+{
+i:400,
+n:"buy me a coffee",
+c:"software_services",
+u:"https://www.buymeacoffee.com",
+d:"Buy Me a Coffee lets supporters send one-time or recurring contributions to creators online.",
+k:"buy me a coffee, creator tips, supporter contributions, donations, online support",
+a:""
+},
+
+{
+i:401,
+n:"product hunt",
+c:"software_services,business_b2b",
+u:"https://www.producthunt.com",
+d:"Product Hunt is a platform where makers launch and discover new tech products, apps and tools.",
+k:"product hunt, new products, app launches, startup community, tech tools, b2b discovery",
+a:""
+},
+
+{
+i:402,
+n:"indie hackers",
+c:"education_courses,software_services",
+u:"https://www.indiehackers.com",
+d:"Indie Hackers is a community where founders share stories, revenue numbers and lessons about building online businesses.",
+k:"indie hackers, founder stories, bootstrapping, startup community, online business education",
+a:""
+},
+
+{
+i:403,
+n:"hacker news",
+c:"education_courses,software_services",
+u:"https://news.ycombinator.com",
+d:"Hacker News is a tech and startup-focused news board where users share and discuss articles and projects.",
+k:"hacker news, tech news, startup discussion, programming topics, community board",
+a:""
+},
+
+{
+i:404,
+n:"dev.to",
+c:"education_courses,software_services",
+u:"https://dev.to",
+d:"DEV.to is a community platform where developers publish articles, tutorials and discussions about software development.",
+k:"dev.to, developer blog, coding tutorials, programming articles, dev community",
+a:""
+},
+
+{
+i:405,
+n:"hashnode",
+c:"education_courses,software_services",
+u:"https://hashnode.com",
+d:"Hashnode lets developers run personal blogs and share technical articles with a built-in community.",
+k:"hashnode, developer blogging, technical articles, programming blog platform",
+a:""
+},
+
+{
+i:406,
+n:"smashing magazine",
+c:"education_courses",
+u:"https://www.smashingmagazine.com",
+d:"Smashing Magazine publishes articles, guides and books on web design, front-end development and UX.",
+k:"smashing magazine, web design articles, front end development, ux guides, educational content",
+a:""
+},
+
+{
+i:407,
+n:"css tricks",
+c:"education_courses",
+u:"https://css-tricks.com",
+d:"CSS-Tricks is a site with articles, tutorials and examples focused on CSS and front-end web development.",
+k:"css tricks, css tutorials, front end tips, web design examples, educational blog",
+a:""
+},
+
+{
+i:408,
+n:"sitepoint",
+c:"education_courses",
+u:"https://www.sitepoint.com",
+d:"SitePoint offers books, articles and courses on web development, design and programming.",
+k:"sitepoint, web development books, programming articles, design courses, learning site",
+a:""
+},
+
+{
+i:409,
+n:"a list apart",
+c:"education_courses",
+u:"https://alistapart.com",
+d:"A List Apart publishes essays and articles on web standards, design and user experience.",
+k:"a list apart, web standards, ux essays, design thinking, web design articles",
+a:""
+},
+
+{
+i:410,
+n:"web.dev",
+c:"education_courses,software_services",
+u:"https://web.dev",
+d:"web.dev is a resource offering guides, tools and best practices for modern web development and performance.",
+k:"web.dev, web performance guides, modern web best practices, developer tools",
+a:""
+},
+
+{
+i:411,
+n:"npm",
+c:"software_services,business_b2b",
+u:"https://www.npmjs.com",
+d:"npm is a package registry and tooling ecosystem for JavaScript modules used by developers and organizations.",
+k:"npm registry, javascript packages, node modules, developer tooling, b2b software ecosystem",
+a:""
+},
+
+{
+i:412,
+n:"jsdelivr",
+c:"software_services",
+u:"https://www.jsdelivr.com",
+d:"jsDelivr is a free CDN for open source projects and JavaScript libraries.",
+k:"jsdelivr, free cdn, javascript libraries, open source hosting, static file delivery",
+a:""
+},
+
+{
+i:413,
+n:"unpkg",
+c:"software_services",
+u:"https://unpkg.com",
+d:"unpkg serves files from npm packages over a fast CDN for the web.",
+k:"unpkg, npm cdn, serve package files, javascript delivery, static assets",
+a:""
+},
+
+{
+i:414,
+n:"cdnjs",
+c:"software_services",
+u:"https://cdnjs.com",
+d:"cdnjs is a community-driven CDN hosting popular JavaScript and CSS libraries.",
+k:"cdnjs, library cdn, javascript hosting, css hosting, static assets for web",
+a:""
+},
+
+{
+i:415,
+n:"bootstrap",
+c:"education_courses,software_services",
+u:"https://getbootstrap.com",
+d:"Bootstrap is a front-end CSS framework providing components, layout and documentation for building responsive sites.",
+k:"bootstrap, css framework, ui components, responsive design, front end docs",
+a:""
+},
+
+{
+i:416,
+n:"tailwind css",
+c:"education_courses,software_services",
+u:"https://tailwindcss.com",
+d:"Tailwind CSS is a utility-first CSS framework with docs and tooling for building custom designs.",
+k:"tailwind css, utility css framework, design system, docs, front end tool",
+a:""
+},
+
+{
+i:417,
+n:"react",
+c:"education_courses,software_services",
+u:"https://react.dev",
+d:"React is a JavaScript library for building user interfaces, with documentation, tutorials and ecosystem tools.",
+k:"react, ui library, javascript framework, component based, docs, developer education",
+a:""
+},
+
+{
+i:418,
+n:"vue",
+c:"education_courses,software_services",
+u:"https://vuejs.org",
+d:"Vue.js is a progressive JavaScript framework for building user interfaces with guides and ecosystem tools.",
+k:"vue.js, javascript framework, ui development, progressive framework, docs and guides",
+a:""
+},
+
+{
+i:419,
+n:"angular",
+c:"education_courses,software_services",
+u:"https://angular.dev",
+d:"Angular is a TypeScript-based framework for building web applications with structured tooling and documentation.",
+k:"angular, typescript framework, web apps, structured tooling, docs, developer resources",
+a:""
+},
+
+{
+i:420,
+n:"next.js",
+c:"education_courses,software_services",
+u:"https://nextjs.org",
+d:"Next.js is a React framework for building full-stack and server-side rendered web applications.",
+k:"next.js, react framework, server side rendering, full stack web, docs and examples",
+a:""
+},
+
+{
+i:421,
+n:"nuxt",
+c:"education_courses,software_services",
+u:"https://nuxt.com",
+d:"Nuxt is a framework built on Vue.js for creating server-rendered and static web applications.",
+k:"nuxt, vue framework, server rendered apps, static site generation, docs",
+a:""
+},
+
+{
+i:422,
+n:"svelte",
+c:"education_courses,software_services",
+u:"https://svelte.dev",
+d:"Svelte is a component framework that compiles to efficient JavaScript for building web interfaces.",
+k:"svelte, javascript framework, compiled ui, components, docs and tutorials",
+a:""
+},
+
+{
+i:423,
+n:"electron",
+c:"education_courses,software_services",
+u:"https://www.electronjs.org",
+d:"Electron allows developers to build cross-platform desktop apps with JavaScript, HTML and CSS.",
+k:"electron, desktop apps, javascript, cross platform, framework docs, developer tools",
+a:""
+},
+
+{
+i:424,
+n:"flutter",
+c:"education_courses,software_services",
+u:"https://flutter.dev",
+d:"Flutter is a UI toolkit for building cross-platform apps using the Dart language.",
+k:"flutter, cross platform ui, mobile apps, dart framework, toolkit, docs",
+a:""
+},
+
+{
+i:425,
+n:"dart",
+c:"education_courses,software_services",
+u:"https://dart.dev",
+d:"Dart is a programming language used for client and server development, with docs and tools.",
+k:"dart language, programming docs, client development, flutter language, dev tools",
+a:""
+},
+
+{
+i:426,
+n:"python",
+c:"education_courses,software_services",
+u:"https://www.python.org",
+d:"Python is a high-level programming language with downloads, docs and community resources.",
+k:"python language, programming, interpreter downloads, docs, beginner friendly, dev community",
+a:""
+},
+
+{
+i:427,
+n:"javascript",
+c:"education_courses,software_services",
+u:"https://developer.mozilla.org/docs/Web/JavaScript",
+d:"JavaScript is the core scripting language of the web with documentation and guides.",
+k:"javascript mdn, web scripting, browser language, docs, tutorials, dev education",
+a:""
+},
+
+{
+i:428,
+n:"typescript",
+c:"education_courses,software_services",
+u:"https://www.typescriptlang.org",
+d:"TypeScript is a typed superset of JavaScript offering tooling, docs and compiler downloads.",
+k:"typescript, typed javascript, language docs, tooling, compiler, dev resources",
+a:""
+},
+
+{
+i:429,
+n:"node.js",
+c:"education_courses,software_services",
+u:"https://nodejs.org",
+d:"Node.js is a JavaScript runtime for building server-side and tooling applications with npm support.",
+k:"node.js, javascript runtime, server side, backend dev, npm ecosystem, docs",
+a:""
+},
+
+{
+i:430,
+n:"mongodb",
+c:"education_courses,software_services",
+u:"https://www.mongodb.com",
+d:"MongoDB is a document database offering cloud services, tools and learning resources.",
+k:"mongodb, document database, nosql, atlas cloud, dev tools, learning center",
+a:""
+},
+
+{
+i:431,
+n:"mysql",
+c:"education_courses,software_services",
+u:"https://www.mysql.com",
+d:"MySQL is a widely used open-source relational database with downloads, docs and enterprise offerings.",
+k:"mysql database, relational db, open source, docs, enterprise tools, sql learning",
+a:""
+},
+
+{
+i:432,
+n:"postgresql",
+c:"education_courses,software_services",
+u:"https://www.postgresql.org",
+d:"PostgreSQL is an advanced open-source relational database with documentation and community support.",
+k:"postgresql, open source database, relational db, sql, docs, dev community",
+a:""
+},
+
+{
+i:433,
+n:"sqlite",
+c:"education_courses,software_services",
+u:"https://www.sqlite.org",
+d:"SQLite is a self-contained embedded SQL database engine with docs and source downloads.",
+k:"sqlite, embedded database, sql engine, lightweight db, docs, downloads",
+a:""
+},
+
+{
+i:434,
+n:"supabase",
+c:"software_services,business_b2b",
+u:"https://supabase.com",
+d:"Supabase offers a backend-as-a-service with database, auth and storage APIs for developers and teams.",
+k:"supabase, backend as a service, postgres, auth, storage, developer platform, b2b",
+a:""
+},
+
+{
+i:435,
+n:"firebase",
+c:"software_services,business_b2b",
+u:"https://firebase.google.com",
+d:"Firebase provides backend services like auth, database, storage and analytics for apps.",
+k:"firebase, mobile backend, realtime database, auth, analytics, dev platform",
+a:""
+},
+
+{
+i:436,
+n:"appwrite",
+c:"software_services,business_b2b",
+u:"https://appwrite.io",
+d:"Appwrite is an open-source backend server with APIs for auth, databases and storage.",
+k:"appwrite, open source backend, auth api, database, storage, dev platform",
+a:""
+},
+
+{
+i:437,
+n:"railway",
+c:"software_services,business_b2b",
+u:"https://railway.app",
+d:"Railway is a cloud platform for deploying and managing applications and databases.",
+k:"railway.app, app hosting, cloud deployment, databases, dev platform, b2b hosting",
+a:""
+},
+
+{
+i:438,
+n:"fly.io",
+c:"software_services,business_b2b",
+u:"https://fly.io",
+d:"Fly.io runs apps close to users globally, offering edge deployment and hosting.",
+k:"fly.io, edge hosting, global app deployment, containers, dev friendly cloud",
+a:""
+},
+
+{
+i:439,
+n:"replit",
+c:"software_services,education_courses",
+u:"https://replit.com",
+d:"Replit is an online coding environment to write, run and share code in the browser.",
+k:"replit, online ide, run code in browser, coding education, collaborative programming",
+a:""
+},
+
+{
+i:440,
+n:"codepen",
+c:"software_services,education_courses",
+u:"https://codepen.io",
+d:"CodePen is an online editor for front-end code where developers share demos and experiments.",
+k:"codepen, front end playground, html css js editor, code demos, learning snippets",
+a:""
+},
+
+{
+i:441,
+n:"jsfiddle",
+c:"software_services,education_courses",
+u:"https://jsfiddle.net",
+d:"JSFiddle is a web-based coding sandbox for testing and sharing HTML, CSS and JavaScript.",
+k:"jsfiddle, coding sandbox, html css js testing, share snippets, front end experiments",
+a:""
+},
+
+{
+i:442,
+n:"stackblitz",
+c:"software_services,education_courses",
+u:"https://stackblitz.com",
+d:"StackBlitz is an online IDE for full-stack JavaScript apps running in the browser.",
+k:"stackblitz, online ide, javascript projects, web app sandbox, dev learning tool",
+a:""
+},
+
+{
+i:443,
+n:"glitch",
+c:"software_services,education_courses",
+u:"https://glitch.com",
+d:"Glitch lets users create, remix and host simple web apps with an in-browser editor.",
+k:"glitch, web app remixing, simple hosting, browser editor, learn by building",
+a:""
+},
+
+{
+i:444,
+n:"codesandbox",
+c:"software_services,education_courses",
+u:"https://codesandbox.io",
+d:"CodeSandbox is an online editor for building and sharing JavaScript and web projects.",
+k:"codesandbox, online editor, react sandbox, web projects, collaborative coding",
+a:""
+},
+
+{
+i:445,
+n:"obs studio",
+c:"software_services",
+u:"https://obsproject.com",
+d:"OBS Studio is free software for video recording and live streaming.",
+k:"obs studio, live streaming software, screen capture, video recording, open source",
+a:""
+},
+
+{
+i:446,
+n:"streamlabs",
+c:"software_services",
+u:"https://streamlabs.com",
+d:"Streamlabs provides tools and overlays for streamers using OBS and other platforms.",
+k:"streamlabs, streaming tools, overlays, alerts, live stream customization",
+a:""
+},
+
+{
+i:447,
+n:"restream",
+c:"software_services",
+u:"https://restream.io",
+d:"Restream lets users multistream live video to multiple platforms at once.",
+k:"restream, multistreaming, live video distribution, send streams to many platforms",
+a:""
+},
+
+{
+i:448,
+n:"capcut",
+c:"software_services",
+u:"https://www.capcut.com",
+d:"CapCut is a free video editing app for mobile and desktop.",
+k:"capcut, video editor, mobile editing, free editing tool, social media videos",
+a:""
+},
+
+{
+i:449,
+n:"clipchamp",
+c:"software_services",
+u:"https://clipchamp.com",
+d:"Clipchamp is a browser-based video editor for quick editing and exports.",
+k:"clipchamp, online video editor, simple editing, browser-based editing",
+a:""
+},
+
+{
+i:450,
+n:"veed",
+c:"software_services",
+u:"https://www.veed.io",
+d:"VEED is an online video editing platform with tools for subtitles, cuts and social content.",
+k:"veed.io, online video editor, subtitles, simple cuts, social media content",
+a:""
+},
+
+{
+i:451,
+n:"invideo",
+c:"software_services",
+u:"https://invideo.io",
+d:"InVideo offers templates and tools to create marketing and social videos online.",
+k:"invideo, video templates, marketing videos, social media clips, online editor",
+a:""
+},
+
+{
+i:452,
+n:"descript",
+c:"software_services",
+u:"https://www.descript.com",
+d:"Descript is an audio and video editor that works through text transcripts.",
+k:"descript, transcript-based editing, podcast editor, video editing from text",
+a:""
+},
+
+{
+i:453,
+n:"audacity",
+c:"software_services",
+u:"https://www.audacityteam.org",
+d:"Audacity is free, open-source software for audio recording and editing.",
+k:"audacity, audio editor, recording tool, open source, podcasts and music editing",
+a:""
+},
+
+{
+i:454,
+n:"pixlr",
+c:"software_services",
+u:"https://pixlr.com",
+d:"Pixlr is an online photo editor for quick image edits and filters.",
+k:"pixlr, online photo editing, filters, quick edits, browser-based editor",
+a:""
+},
+
+{
+i:455,
+n:"photopea",
+c:"software_services",
+u:"https://www.photopea.com",
+d:"Photopea is a browser-based image editor that supports PSD and common formats.",
+k:"photopea, photoshop alternative, browser image editor, psd support, free editing",
+a:""
+},
+
+{
+i:456,
+n:"behance",
+c:"education_courses,software_services",
+u:"https://www.behance.net",
+d:"Behance is a portfolio platform where creatives showcase work and discover design inspiration.",
+k:"behance, creative portfolios, design inspiration, artists showcase, community",
+a:""
+},
+
+{
+i:457,
+n:"dribbble",
+c:"education_courses,software_services",
+u:"https://dribbble.com",
+d:"Dribbble is a community for designers to share shots, portfolios and find inspiration.",
+k:"dribbble, design shots, ui inspiration, portfolio site, creative community",
+a:""
+},
+
+{
+i:458,
+n:"artstation",
+c:"education_courses,software_services",
+u:"https://www.artstation.com",
+d:"ArtStation hosts portfolios for game, film and concept artists and offers learning content.",
+k:"artstation, game art portfolios, concept art, 3d artists, creative showcase, learning",
+a:""
+},
+
+{
+i:459,
+n:"deviantart",
+c:"education_courses,software_services",
+u:"https://www.deviantart.com",
+d:"DeviantArt is an online art community for sharing illustrations, photos and creative work.",
+k:"deviantart, art community, illustrations, fan art, photography, creative sharing",
+a:""
+},
+
+{
+i:460,
+n:"itch.io",
+c:"entertainment,software_services",
+u:"https://itch.io",
+d:"itch.io is an indie game marketplace where creators distribute games, jams and experimental projects.",
+k:"itch.io, indie games, game marketplace, game jams, experimental titles, entertainment",
+a:""
+},
+
+{
+i:461,
+n:"unity",
+c:"education_courses,software_services",
+u:"https://unity.com",
+d:"Unity is a game engine and development platform with tools, docs and learning resources.",
+k:"unity engine, game development, 3d & 2d games, docs, tutorials, dev tools",
+a:""
+},
+
+{
+i:462,
+n:"unreal engine",
+c:"education_courses,software_services",
+u:"https://www.unrealengine.com",
+d:"Unreal Engine is a game engine from Epic for high-end games and real-time graphics.",
+k:"unreal engine, high end graphics, game dev, realtime rendering, docs",
+a:""
+},
+
+{
+i:463,
+n:"godot",
+c:"education_courses,software_services",
+u:"https://godotengine.org",
+d:"Godot is an open-source game engine with a built-in editor and scripting.",
+k:"godot engine, open source game dev, 2d and 3d, scripting, docs and tutorials",
+a:""
+},
+
+{
+i:464,
+n:"blender",
+c:"education_courses,software_services",
+u:"https://www.blender.org",
+d:"Blender is free 3D creation software for modelling, animation, rendering and more.",
+k:"blender, 3d modelling, animation, rendering, open source 3d tool, learning resources",
+a:""
+},
+
+{
+i:465,
+n:"sketchfab",
+c:"software_services",
+u:"https://sketchfab.com",
+d:"Sketchfab hosts and displays interactive 3D models online.",
+k:"sketchfab, 3d model viewer, online 3d hosting, interactive models, embed 3d content",
+a:""
+},
+
+{
+i:466,
+n:"cgtrader",
+c:"software_services",
+u:"https://www.cgtrader.com",
+d:"CGTrader is a marketplace for buying and selling 3D models.",
+k:"cgtrader, 3d model marketplace, buy 3d assets, sell models, cg resources",
+a:""
+},
+
+{
+i:467,
+n:"turbosquid",
+c:"software_services",
+u:"https://www.turbosquid.com",
+d:"TurboSquid offers a catalog of paid 3D models for design and visualization.",
+k:"turbosquid, stock 3d models, paid assets, visualization, cg marketplace",
+a:""
+},
+
+{
+i:468,
+n:"gumroad creators",
+c:"software_services",
+u:"https://gumroad.com",
+d:"Gumroad Creators are individuals using Gumroad to sell digital products and memberships.",
+k:"gumroad creators, sell digital goods, creator storefronts, online products, memberships",
+a:""
+},
+
+{
+i:469,
+n:"ko-fi",
+c:"software_services",
+u:"https://ko-fi.com",
+d:"Ko-fi lets fans support creators with tips, donations and memberships.",
+k:"ko-fi, creator support, tips, donations, memberships, patronage",
+a:""
+},
+
+{
+i:470,
+n:"buy me a coffee creators",
+c:"software_services",
+u:"https://www.buymeacoffee.com",
+d:"Buy Me a Coffee Creators use the platform to receive contributions and memberships.",
+k:"buy me a coffee creators, fan support, contributions, memberships, donations",
+a:""
+},
+
+{
+i:471,
+n:"patreon creators",
+c:"software_services",
+u:"https://www.patreon.com",
+d:"Patreon Creators offer tiers and exclusive content to their subscribing fans.",
+k:"patreon creators, membership tiers, exclusive content, fan subscriptions, creator income",
+a:""
+},
+
+{
+i:472,
+n:"teachable",
+c:"education_courses,software_services",
+u:"https://teachable.com",
+d:"Teachable lets creators build and sell online courses and coaching programs.",
+k:"teachable, online course platform, sell courses, coaching, education software",
+a:""
+},
+
+{
+i:473,
+n:"thinkific",
+c:"education_courses,software_services",
+u:"https://www.thinkific.com",
+d:"Thinkific is a platform for creating, hosting and selling online courses.",
+k:"thinkific, course creation, host courses, sell education content, learning platform",
+a:""
+},
+
+{
+i:474,
+n:"podia",
+c:"education_courses,software_services",
+u:"https://www.podia.com",
+d:"Podia offers tools for selling courses, downloads and memberships in one place.",
+k:"podia, creator platform, courses, downloads, memberships, education commerce",
+a:""
+},
+
+{
+i:475,
+n:"kajabi",
+c:"education_courses,software_services",
+u:"https://kajabi.com",
+d:"Kajabi is an all-in-one platform to sell courses, coaching and digital products.",
+k:"kajabi, course and coaching platform, digital products, funnels, education commerce",
+a:""
+},
+
+{
+i:476,
+n:"gumlet",
+c:"software_services",
+u:"https://www.gumlet.com",
+d:"Gumlet optimizes and serves images and videos through a media delivery platform.",
+k:"gumlet, image optimization, video delivery, cdn, media performance",
+a:""
+},
+
+{
+i:477,
+n:"bunny cdn",
+c:"software_services",
+u:"https://bunny.net",
+d:"Bunny CDN offers content delivery, image optimization and video streaming services.",
+k:"bunny cdn, content delivery network, image optimization, video streaming, web performance",
+a:""
+},
+
+{
+i:478,
+n:"imgur",
+c:"software_services",
+u:"https://imgur.com",
+d:"Imgur is an image hosting and sharing platform popular for memes, galleries and embeds.",
+k:"imgur, image hosting, memes, galleries, share pictures, online images",
+a:""
+},
+
+{
+i:479,
+n:"postimages",
+c:"software_services",
+u:"https://postimages.org",
+d:"Postimages is a free image hosting service for sharing and embedding pictures online.",
+k:"postimages, free image hosting, hotlink images, embeds, simple photo sharing",
+a:""
+},
+
+{
+i:480,
+n:"imgbb",
+c:"software_services",
+u:"https://imgbb.com",
+d:"imgbb offers free image hosting and direct links for sharing photos.",
+k:"imgbb, image hosting, share photos, direct links, online uploads",
+a:""
+},
+
+{
+i:481,
+n:"telegram",
+c:"software_services",
+u:"https://telegram.org",
+d:"Telegram is a messaging app with cloud chats, channels and bots.",
+k:"telegram, messaging app, channels, groups, bots, secure chats",
+a:""
+},
+
+{
+i:482,
+n:"discord",
+c:"software_services",
+u:"https://discord.com",
+d:"Discord is a chat and voice platform with servers for communities and gaming.",
+k:"discord, voice and text chat, servers, gaming communities, group communication",
+a:""
+},
+
+{
+i:483,
+n:"whatsapp",
+c:"software_services",
+u:"https://www.whatsapp.com",
+d:"WhatsApp is a messaging app for texts, calls and media sharing.",
+k:"whatsapp, messaging, voice calls, video calls, media sharing, mobile app",
+a:""
+},
+
+{
+i:484,
+n:"signal",
+c:"software_services",
+u:"https://signal.org",
+d:"Signal is a privacy-focused messaging app with end-to-end encryption.",
+k:"signal, encrypted messaging, private chats, secure calls, open source app",
+a:""
+},
+
+{
+i:485,
+n:"element",
+c:"software_services",
+u:"https://element.io",
+d:"Element is a Matrix-based chat client for secure, federated messaging.",
+k:"element, matrix client, secure messaging, federated chat, open standard",
+a:""
+},
+
+{
+i:486,
+n:"mastodon",
+c:"software_services",
+u:"https://joinmastodon.org",
+d:"Mastodon is a decentralized social network with independent servers and federated timelines.",
+k:"mastodon, federated social network, decentralised microblogging, community instances",
+a:""
+},
+
+{
+i:487,
+n:"linkedin",
+c:"software_services,business_b2b",
+u:"https://www.linkedin.com",
+d:"LinkedIn is a professional networking platform for careers, recruiting and business connections.",
+k:"linkedin, professional network, jobs, recruiting, b2b connections, business social",
+a:""
+},
+
+{
+i:488,
+n:"youtube",
+c:"entertainment,software_services",
+u:"https://www.youtube.com",
+d:"YouTube is a video-sharing platform where users upload, watch and stream content.",
+k:"youtube, video sharing, streaming, channels, creators, entertainment",
+a:""
+},
+
+{
+i:489,
+n:"vimeo",
+c:"software_services",
+u:"https://vimeo.com",
+d:"Vimeo hosts high-quality videos with tools for creators and businesses.",
+k:"vimeo, video hosting, professional video, creator tools, business video",
+a:""
+},
+
+{
+i:490,
+n:"dailymotion",
+c:"entertainment,software_services",
+u:"https://www.dailymotion.com",
+d:"Dailymotion is a video platform for sharing and watching clips and shows.",
+k:"dailymotion, video site, clips, online shows, entertainment",
+a:""
+},
+
+{
+i:491,
+n:"spotify",
+c:"entertainment",
+u:"https://www.spotify.com",
+d:"Spotify is a music and podcast streaming service with playlists and recommendations.",
+k:"spotify, music streaming, podcasts, playlists, audio app",
+a:""
+},
+
+{
+i:492,
+n:"apple music",
+c:"entertainment",
+u:"https://music.apple.com",
+d:"Apple Music streams songs, playlists and radio stations.",
+k:"apple music, streaming service, playlists, radio, audio",
+a:""
+},
+
+{
+i:493,
+n:"youtube music",
+c:"entertainment",
+u:"https://music.youtube.com",
+d:"YouTube Music offers music streaming, videos and playlists tied to YouTube.",
+k:"youtube music, music streaming, video songs, playlists, audio service",
+a:""
+},
+
+{
+i:494,
+n:"amazon music",
+c:"entertainment",
+u:"https://music.amazon.in",
+d:"Amazon Music provides streaming music and playlists integrated with Amazon services.",
+k:"amazon music, streaming audio, playlists, prime music, amazon",
+a:""
+},
+
+{
+i:495,
+n:"soundcloud",
+c:"entertainment",
+u:"https://soundcloud.com",
+d:"SoundCloud is a platform for streaming and sharing music and audio from independent creators.",
+k:"soundcloud, indie music, audio streaming, upload tracks, discovery",
+a:""
+},
+
+{
+i:496,
+n:"bandcamp",
+c:"entertainment",
+u:"https://bandcamp.com",
+d:"Bandcamp lets artists sell music and merch directly to fans with streaming and downloads.",
+k:"bandcamp, artist direct sales, indie music, merch, streaming and downloads",
+a:""
+},
+
+{
+i:497,
+n:"deezer",
+c:"entertainment",
+u:"https://www.deezer.com",
+d:"Deezer is a music streaming service with playlists, radio and podcasts.",
+k:"deezer, music streaming, playlists, radios, podcasts, audio app",
+a:""
+},
+
+{
+i:498,
+n:"tidal",
+c:"entertainment",
+u:"https://tidal.com",
+d:"Tidal is a music streaming platform focusing on high-fidelity audio and artist content.",
+k:"tidal, hi-fi music, streaming, artist exclusives, lossless audio",
+a:""
+},
+
+{
+i:499,
+n:"pocket casts",
+c:"entertainment",
+u:"https://pocketcasts.com",
+d:"Pocket Casts is a podcast player app with discovery and listening features.",
+k:"pocket casts, podcast player, subscribe shows, listening app, audio",
+a:""
+},
+
+{
+i:500,
+n:"castbox",
+c:"entertainment",
+u:"https://castbox.fm",
+d:"Castbox is a podcast app offering streaming, downloads and recommendations.",
+k:"castbox, podcasts, audio streaming, episode downloads, discover shows",
+a:""
+}
+  
 
   
 
