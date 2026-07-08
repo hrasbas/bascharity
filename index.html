@@ -8985,6 +8985,10 @@ u:"https://lambdalabs.com",
 a:""
 }]; -->
  
+ 
+     
+
+<div class="shopDot">${(shop.a||"").trim() ? "" : "."}</div>
 <script>
 const allCountries = document.getElementById("allCountries");
 const featuredShops = document.getElementById("featuredShops");
@@ -9000,14 +9004,13 @@ allCountriesList.forEach(country => {
     allCountries.appendChild(option);
 });
 
-// രാജ്യം തിരഞ്ഞെടുക്കുന്നു
+// രാജ്യം തിരഞ്ഞെടുക്കുന്നു + TOP 10 + Category sync
 function setSelectedCountry(country) {
 
     if (!country) return;
 
     const pureCountry = country.trim().toLowerCase();
 
-    // allCountries.value = pureCountry;  // dropdown index later reset ചെയ്യും
     allCountries.classList.add("green-select");
 
     document.querySelectorAll(".country-btn").forEach(btn => {
@@ -9018,13 +9021,12 @@ function setSelectedCountry(country) {
     });
 
     const shopBtn = document.getElementById("shopOnCountry");
-
     if (shopBtn) {
         shopBtn.innerHTML =
             `SHOP ON <span class="green">${pureCountry.toUpperCase()}</span>`;
     }
 
-    // future load-ലേ default country ആയി same value വരാൻ
+    // future load-ലേ default country
     localStorage.setItem("selectedCountry", pureCountry);
 
     // dynamic JS file load
@@ -9036,7 +9038,7 @@ function setSelectedCountry(country) {
     }
 }
 
-// മറ്റുള്ള code-ുകൾക്ക് (buttons, dropdown) വിളിക്കാൻ ഉള്ള helper
+// മറ്റുള്ള code-ുകൾക്ക് helper (butons, dropdown)
 function renderCountry(country) {
     setSelectedCountry(country);
 }
@@ -9062,6 +9064,7 @@ function fetchExternalCountryJS(countryName) {
 
     const script = document.createElement("script");
     script.id = "dynamic-country-script";
+    // ★ REGEX ശരിയായി: s
     script.src = "./" + countryName.replace(/s+/g, "_") + ".js";
 
     script.onload = function () {
@@ -9071,7 +9074,6 @@ function fetchExternalCountryJS(countryName) {
         if (window.countryShops && window.countryShops[countryName]) {
 
             loadShops(countryShops[countryName]);
-
             allCountries.selectedIndex = 0;
 
         } else {
@@ -9130,33 +9132,27 @@ ${shop.n}
 </a>`;
     });
 
-    // TOP 10 shops load ആയതിന് ശേഷം Category side country update
+    // ★ TOP 10 load ആയതിന് ശേഷം Category side country update
     if (typeof changeCountry === "function") {
         changeCountry(allCountries.value);
     }
-    // ഇവിടെ renderCountry ഇല്ല; dropdown value കൊണ്ട് extra call വേണ്ട
 }
 
 document.addEventListener("DOMContentLoaded", () => {
 
-    // default country spell-checked: india.js ഉണ്ടെന്ന് നീ പറഞ്ഞു
+    // ★ default country: india.js ഉണ്ടെന്ന് നീ പറഞ്ഞു
     const savedCountry =
         localStorage.getItem("selectedCountry") || "india";
 
     setSelectedCountry(savedCountry);
 
-    // country buttons click
-document.querySelectorAll(".country-btn").forEach(btn => {
-    btn.addEventListener("click", function () {
-        const c = this.textContent.trim().toLowerCase();
-
-        setSelectedCountry(c);              // TOP 10 + country JS load
-
-        if (typeof changeCountry === "function") {
-            changeCountry(c);               // Same click-ൽ Category ഭാഗത്തെ താഴെയുള്ള shops
-        }
+    // ★ country buttons click: ഒരൊറ്റ click-ൽ top + bottom shops
+    document.querySelectorAll(".country-btn").forEach(btn => {
+        btn.addEventListener("click", function () {
+            const c = this.textContent.trim().toLowerCase();
+            setSelectedCountry(c);
+        });
     });
-
 
     // dropdown change
     allCountries.addEventListener("change", e => {
