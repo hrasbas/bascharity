@@ -5694,8 +5694,1617 @@ u:"https://www.trivago.in",
 d:"Trivago compares hotel prices across booking sites to find deals.",
 k:"trivago, hotel price comparison, booking deals, meta search",
 a:""
-}  
+},
   
+{
+i:590,
+n:"trivago",
+c:"travel_hotels",
+u:"https://www.trivago.in",
+d:"Trivago is a hotel search and price comparison site that aggregates deals from hundreds of booking platforms.",
+k:"trivago, hotel price comparison, accommodation search, booking deals, travel meta search",
+a:""
+},
+
+{
+i:591,
+n:"uber",
+c:"travel_hotels",
+u:"https://www.uber.com/in",
+d:"Uber is a ride‑hailing app that connects passengers with drivers for on‑demand transport and deliveries.",
+k:"uber, ride hailing, taxi app, cab booking, on demand transport",
+a:""
+},
+
+{
+i:592,
+n:"ola",
+c:"travel_hotels",
+u:"https://www.olacabs.com",
+d:"Ola Cabs is an Indian ride‑hailing service for booking taxis, autos and rentals via mobile app.",
+k:"ola cabs, taxi booking, ride hailing India, autos, car rentals",
+a:""
+},
+
+{
+i:593,
+n:"rapido",
+c:"travel_hotels",
+u:"https://www.rapido.bike",
+d:"Rapido is a bike and auto ride‑hailing service offering quick short‑distance transport in Indian cities.",
+k:"rapido, bike taxi, auto rides, quick city transport, India",
+a:""
+},
+
+{
+i:594,
+n:"blu smart",
+c:"travel_hotels",
+u:"https://www.blusmart.com",
+d:"BluSmart is an all‑electric ride‑hailing service providing pre‑booked and on‑demand cabs.",
+k:"blusmart, electric cabs, EV ride hailing, sustainable transport",
+a:""
+},
+
+{
+i:595,
+n:"savaari",
+c:"travel_hotels",
+u:"https://www.savaari.com",
+d:"Savaari offers chauffeur‑driven outstation, local and airport cab services across India.",
+k:"savaari, outstation cabs, chauffeur driven taxi, airport transfer, India",
+a:""
+},
+
+{
+i:596,
+n:"zoomcar",
+c:"travel_hotels",
+u:"https://www.zoomcar.com",
+d:"Zoomcar provides self‑drive car rentals in Indian cities for short and long trips.",
+k:"zoomcar, self drive car rental, car hire India, road trips",
+a:""
+},
+
+{
+i:597,
+n:"revv",
+c:"travel_hotels",
+u:"https://www.revv.co.in",
+d:"Revv offers self‑drive car rentals and car subscription services in India.",
+k:"revv, self drive cars, car subscription, rentals, India",
+a:""
+},
+
+{
+i:598,
+n:"myles",
+c:"travel_hotels",
+u:"https://www.mylescars.com",
+d:"Myles is a self‑drive car rental platform with hourly and daily plans.",
+k:"myles, self drive car rental, car hire, India travel",
+a:""
+},
+
+{
+i:599,
+n:"royal brothers",
+c:"travel_hotels",
+u:"https://www.royalbrothers.com",
+d:"Royal Brothers rents bikes and scooters for self‑drive travel in India.",
+k:"royal brothers, bike rental, scooter hire, self drive bikes, India",
+a:""
+},
+
+{
+i:600,
+n:"yulu",
+c:"travel_hotels",
+u:"https://www.yulu.bike",
+d:"Yulu is a shared e‑bike and e‑scooter service for short urban commutes.",
+k:"yulu bikes, shared mobility, e scooter, micro mobility, city commute",
+a:""
+},
+
+{
+i:601,
+n:"airalo",
+c:"travel_hotels",
+u:"https://www.airalo.com",
+d:"Airalo sells international eSIMs so travelers can access local mobile data without physical SIM cards.",
+k:"airalo, travel eSIM, international data, mobile roaming alternative",
+a:""
+},
+
+{
+i:602,
+n:"nomad esim",
+c:"travel_hotels",
+u:"https://www.getnomad.app",
+d:"Nomad eSIM provides regional and global data plans for travelers via digital SIMs.",
+k:"nomad eSIM, travel data, digital sim, roaming, mobile internet",
+a:""
+},
+
+{
+i:603,
+n:"saily",
+c:"travel_hotels",
+u:"https://saily.com",
+d:"Saily offers prepaid eSIM data plans for international travel.",
+k:"saily, prepaid eSIM, travel data plan, roaming alternative",
+a:""
+},
+
+{
+i:604,
+n:"travelkhana",
+c:"travel_hotels",
+u:"https://www.travelkhana.com",
+d:"Travelkhana lets train passengers order food from partner restaurants delivered to their seat.",
+k:"travelkhana, train food delivery, railway meals, order food on train",
+a:""
+},
+
+{
+i:605,
+n:"e catering irctc",
+c:"travel_hotels",
+u:"https://www.ecatering.irctc.co.in",
+d:"IRCTC e‑Catering allows railway passengers to book meals online from approved vendors.",
+k:"irctc e catering, train food booking, railway meals, online catering",
+a:""
+},
+
+{
+i:606,
+n:"oyo townhouse",
+c:"travel_hotels",
+u:"https://www.oyorooms.com",
+d:"OYO Townhouse is OYO’s mid‑scale hotel brand offering standardized budget‑friendly stays.",
+k:"oyo townhouse, budget hotels, branded stays, oyo rooms, city hotels",
+a:""
+},
+
+{
+i:607,
+n:"treebo",
+c:"travel_hotels",
+u:"https://www.treebo.com",
+d:"Treebo is a budget hotel chain in India providing standardized rooms and amenities.",
+k:"treebo hotels, budget stays India, standardized rooms, affordable hotels",
+a:""
+},
+
+{
+i:608,
+n:"fabhotels",
+c:"travel_hotels",
+u:"https://www.fabhotels.com",
+d:"FabHotels partners with budget hotels to offer branded, value‑for‑money stays.",
+k:"fabhotels, budget hotel network, branded stays, affordable rooms",
+a:""
+},
+
+{
+i:609,
+n:"stayvista",
+c:"travel_hotels",
+u:"https://www.stayvista.com",
+d:"StayVista lists curated private villas and vacation homes for group stays in India.",
+k:"stayvista, private villas, vacation homes, group stays, luxury rentals",
+a:""
+},
+
+{
+i:610,
+n:"saffron stays",
+c:"travel_hotels",
+u:"https://www.saffronstays.com",
+d:"SaffronStays offers managed holiday homes and villas across Indian destinations.",
+k:"saffron stays, holiday homes, villas, weekend getaways, India",
+a:""
+},
+
+{
+i:611,
+n:"makemytrip activities",
+c:"travel_hotels",
+u:"https://www.makemytrip.com",
+d:"MakeMyTrip Activities lists tours, experiences and local activities alongside travel bookings.",
+k:"makemytrip activities, local experiences, tours, things to do, travel packages",
+a:""
+},
+
+{
+i:612,
+n:"klook",
+c:"travel_hotels",
+u:"https://www.klook.com",
+d:"Klook is a platform to book activities, attractions, transport and experiences worldwide.",
+k:"klook, travel activities, attraction tickets, tours, experiences",
+a:""
+},
+
+{
+i:613,
+n:"viator",
+c:"travel_hotels",
+u:"https://www.viator.com",
+d:"Viator, a Tripadvisor company, sells tours, activities and attraction tickets globally.",
+k:"viator, guided tours, attraction passes, travel activities, bookings",
+a:""
+},
+
+{
+i:614,
+n:"thrillophilia",
+c:"travel_hotels",
+u:"https://www.thrillophilia.com",
+d:"Thrillophilia focuses on adventure trips, experiences and tour packages, mainly in India.",
+k:"thrillophilia, adventure tours, experiential travel, India trips",
+a:""
+},
+
+{
+i:615,
+n:"wanderon",
+c:"travel_hotels",
+u:"https://wanderon.in",
+d:"WanderOn organizes group trips and road journeys for young travelers.",
+k:"wanderon, group trips, backpacking tours, road trips, youth travel",
+a:""
+},
+
+{
+i:616,
+n:"tripoto",
+c:"travel_hotels",
+u:"https://www.tripoto.com",
+d:"Tripoto combines travel blogs, itineraries and community trips for discovering and booking journeys.",
+k:"tripoto, travel stories, itineraries, community trips, India travel",
+a:""
+},
+
+{
+i:617,
+n:"holidify",
+c:"travel_hotels",
+u:"https://www.holidify.com",
+d:"Holidify helps discover Indian destinations with guides, itineraries and hotel listings.",
+k:"holidify, India destinations, travel guides, itineraries, hotel search",
+a:""
+},
+
+{
+i:618,
+n:"lonely planet",
+c:"travel_hotels",
+u:"https://www.lonelyplanet.com",
+d:"Lonely Planet publishes travel guides and destination information for travelers worldwide.",
+k:"lonely planet, travel guidebooks, destination info, travel tips",
+a:""
+},
+
+{
+i:619,
+n:"wikivoyage",
+c:"travel_hotels",
+u:"https://www.wikivoyage.org",
+d:"Wikivoyage is a free, community‑edited travel guide covering destinations and itineraries.",
+k:"wikivoyage, free travel guide, community edited, destination info",
+a:""
+},
+
+{
+i:620,
+n:"rome2rio",
+c:"travel_hotels",
+u:"https://www.rome2rio.com",
+d:"Rome2Rio shows multi‑modal routes and transport options between places worldwide.",
+k:"rome2rio, route planner, transport options, flights trains buses, travel planning",
+a:""
+},
+
+{
+i:621,
+n:"weather.com",
+c:"software_services",
+u:"https://weather.com",
+d:"Weather.com provides local and global weather forecasts, radar and alerts.",
+k:"weather.com, weather forecast, live conditions, radar, alerts",
+a:""
+},
+
+{
+i:622,
+n:"accuweather",
+c:"software_services",
+u:"https://www.accuweather.com",
+d:"AccuWeather offers detailed weather forecasts, maps and severe weather warnings.",
+k:"accuweather, daily forecast, realfeel, weather maps, alerts",
+a:""
+},
+
+{
+i:623,
+n:"windy",
+c:"software_services",
+u:"https://www.windy.com",
+d:"Windy visualizes wind, rain and weather data on interactive maps useful for outdoor planning.",
+k:"windy, wind map, weather visualization, storm tracking, forecast maps",
+a:""
+},
+
+{
+i:624,
+n:"ventusky",
+c:"software_services",
+u:"https://www.ventusky.com",
+d:"Ventusky shows animated weather maps including temperature, wind and precipitation.",
+k:"ventusky, animated weather maps, wind forecast, temperature, rainfall",
+a:""
+},
+
+{
+i:625,
+n:"time and date",
+c:"software_services",
+u:"https://www.timeanddate.com",
+d:"Time and Date offers world clocks, time zone tools, calendars and astronomy data.",
+k:"timeanddate, world clock, time zones, calendar, sunrise sunset",
+a:""
+},
+
+{
+i:626,
+n:"world clock",
+c:"software_services",
+u:"https://www.worldclock.com",
+d:"WorldClock.com provides current times in cities worldwide and time zone info.",
+k:"world clock, global time, time zones, local time lookup",
+a:""
+},
+
+{
+i:627,
+n:"speedtest",
+c:"software_services",
+u:"https://www.speedtest.net",
+d:"Speedtest by Ookla measures internet connection speed, latency and performance.",
+k:"speedtest, internet speed test, download upload, ping, network diagnostics",
+a:""
+},
+
+{
+i:628,
+n:"fast",
+c:"software_services",
+u:"https://fast.com",
+d:"Fast.com is Netflix’s simple tool to quickly check download speed of your internet.",
+k:"fast.com, quick speed test, download speed, netflix tool",
+a:""
+},
+
+{
+i:629,
+n:"down detector",
+c:"software_services",
+u:"https://downdetector.com",
+d:"Downdetector tracks and reports service outages for websites, apps and networks.",
+k:"downdetector, outage map, service status, downtime reports",
+a:""
+},
+
+{
+i:630,
+n:"isitdownrightnow",
+c:"software_services",
+u:"https://www.isitdownrightnow.com",
+d:"IsItDownRightNow checks if popular websites are currently up or experiencing issues.",
+k:"isitdownrightnow, website status, site down checker, uptime monitor",
+a:""
+},
+
+{
+i:631,
+n:"google maps",
+c:"software_services",
+u:"https://maps.google.com",
+d:"Google Maps offers maps, navigation, traffic and business listings worldwide.",
+k:"google maps, navigation, gps directions, local search, traffic",
+a:""
+},
+
+{
+i:632,
+n:"openstreetmap",
+c:"software_services",
+u:"https://www.openstreetmap.org",
+d:"OpenStreetMap is a collaborative open‑data map of the world edited by volunteers.",
+k:"openstreetmap, open data maps, community mapping, osm",
+a:""
+},
+
+{
+i:633,
+n:"mapquest",
+c:"software_services",
+u:"https://www.mapquest.com",
+d:"MapQuest provides driving directions, maps and route planning.",
+k:"mapquest, driving directions, route planner, maps",
+a:""
+},
+
+{
+i:634,
+n:"here wego",
+c:"software_services",
+u:"https://wego.here.com",
+d:"HERE WeGo is a navigation app with offline maps and route guidance.",
+k:"here wego, navigation app, offline maps, driving directions",
+a:""
+},
+
+{
+i:635,
+n:"waze",
+c:"software_services",
+u:"https://www.waze.com",
+d:"Waze is a community‑based navigation app with live traffic and road alerts.",
+k:"waze, crowd sourced navigation, live traffic, road alerts, driving",
+a:""
+},
+
+{
+i:636,
+n:"google translate",
+c:"software_services",
+u:"https://translate.google.com",
+d:"Google Translate translates text, speech, images and web pages between many languages.",
+k:"google translate, language translation, text voice camera translate",
+a:""
+},
+
+{
+i:637,
+n:"deepl",
+c:"software_services",
+u:"https://www.deepl.com",
+d:"DeepL is a translation service known for high‑quality neural machine translations.",
+k:"deepl, neural translation, language translator, accurate translations",
+a:""
+},
+
+{
+i:638,
+n:"cambridge dictionary",
+c:"education_courses",
+u:"https://dictionary.cambridge.org",
+d:"Cambridge Dictionary provides definitions, pronunciation and examples for English words.",
+k:"cambridge dictionary, English definitions, pronunciation, usage examples",
+a:""
+},
+
+{
+i:639,
+n:"oxford learner",
+c:"education_courses",
+u:"https://www.oxfordlearnersdictionaries.com",
+d:"Oxford Learner’s Dictionaries are designed for English language learners with clear definitions and audio.",
+k:"oxford learners dictionary, ESL resource, learner friendly definitions, audio pronunciation",
+a:""
+},
+
+{
+i:640,
+n:"merriam webster",
+c:"education_courses",
+u:"https://www.merriam-webster.com",
+d:"Merriam‑Webster is a well‑known American English dictionary with definitions, thesaurus and word games.",
+k:"merriam webster, American English dictionary, thesaurus, word of the day",
+a:""
+},
+
+{
+i:641,
+n:"wolfram alpha",
+c:"education_courses,software_services",
+u:"https://www.wolframalpha.com",
+d:"Wolfram Alpha is a computational knowledge engine that answers queries using built‑in data and algorithms.",
+k:"wolfram alpha, computational engine, math solver, data queries, step by step",
+a:""
+},
+
+{
+i:642,
+n:"symbolab",
+c:"education_courses,software_services",
+u:"https://www.symbolab.com",
+d:"Symbolab solves math problems and shows step‑by‑step solutions for equations and calculus.",
+k:"symbolab, math solver, step by step solutions, algebra, calculus",
+a:""
+},
+
+{
+i:643,
+n:"desmos",
+c:"education_courses,software_services",
+u:"https://www.desmos.com",
+d:"Desmos offers interactive graphing calculators and math activities for students and teachers.",
+k:"desmos, online graphing calculator, interactive math, classroom activities",
+a:""
+},
+
+{
+i:644,
+n:"geogebra",
+c:"education_courses,software_services",
+u:"https://www.geogebra.org",
+d:"GeoGebra provides dynamic math software for geometry, algebra and calculus visualization.",
+k:"geogebra, dynamic geometry, math visualizations, algebra calculator",
+a:""
+},
+
+{
+i:645,
+n:"calculator.net",
+c:"software_services",
+u:"https://www.calculator.net",
+d:"Calculator.net hosts many online calculators for finance, health, math and more.",
+k:"calculator.net, online calculators, bmi, loan calculator, math tools",
+a:""
+},
+
+{
+i:646,
+n:"unit converters",
+c:"software_services",
+u:"https://www.unitconverters.net",
+d:"UnitConverters.net converts units across measurement systems like length, weight and temperature.",
+k:"unit converters, unit conversion, metric imperial, length weight temperature",
+a:""
+},
+
+{
+i:647,
+n:"smallpdf",
+c:"software_services",
+u:"https://smallpdf.com",
+d:"Smallpdf offers simple tools to compress, convert, edit and sign PDF files online.",
+k:"smallpdf, pdf converter, compress pdf, merge split, online pdf tools",
+a:""
+},
+
+{
+i:648,
+n:"ilovepdf",
+c:"software_services",
+u:"https://www.ilovepdf.com",
+d:"iLovePDF provides online utilities to merge, split, convert and optimize PDFs.",
+k:"ilovepdf, pdf merge, split, convert, compress, online pdf service",
+a:""
+},
+
+{
+i:649,
+n:"pdf24",
+c:"software_services",
+u:"https://tools.pdf24.org",
+d:"PDF24 Tools is a collection of free online tools to create, edit and convert PDF documents.",
+k:"pdf24, online pdf tools, convert pdf, edit pdf, free utilities",
+a:""
+},
+
+{
+i:650,
+n:"sejda",
+c:"software_services",
+u:"https://www.sejda.com",
+d:"Sejda is a web and desktop app for editing, converting and managing PDF files.",
+k:"sejda, pdf editor, convert pdf, split merge, pdf toolkit",
+a:""
+},
+
+{
+i:651,
+n:"canva docs",
+c:"software_services",
+u:"https://www.canva.com/docs",
+d:"Canva Docs lets users create visually rich documents using Canva’s design tools.",
+k:"canva docs, visual documents, online editor, templates, collaborative writing",
+a:""
+},
+
+{
+i:652,
+n:"google docs",
+c:"software_services",
+u:"https://docs.google.com",
+d:"Google Docs is a cloud‑based word processor for creating and collaborating on documents.",
+k:"google docs, online word processor, collaboration, cloud documents",
+a:""
+},
+
+{
+i:653,
+n:"google sheets",
+c:"software_services",
+u:"https://sheets.google.com",
+d:"Google Sheets is an online spreadsheet app for data analysis and collaboration.",
+k:"google sheets, online spreadsheet, formulas, collaboration, cloud data",
+a:""
+},
+
+{
+i:654,
+n:"google slides",
+c:"software_services",
+u:"https://slides.google.com",
+d:"Google Slides is a web‑based presentation tool for creating and sharing slide decks.",
+k:"google slides, online presentations, slide deck, collaboration",
+a:""
+},
+
+{
+i:655,
+n:"microsoft word",
+c:"software_services",
+u:"https://www.microsoft.com/microsoft-365/word",
+d:"Microsoft Word is a widely used word processing application in the Microsoft 365 suite.",
+k:"microsoft word, document editor, word processor, office suite",
+a:""
+},
+
+{
+i:656,
+n:"microsoft excel",
+c:"software_services",
+u:"https://www.microsoft.com/microsoft-365/excel",
+d:"Microsoft Excel is a spreadsheet program for calculations, charts and data analysis.",
+k:"microsoft excel, spreadsheets, formulas, data analysis, office",
+a:""
+},
+
+{
+i:657,
+n:"microsoft powerpoint",
+c:"software_services",
+u:"https://www.microsoft.com/microsoft-365/powerpoint",
+d:"Microsoft PowerPoint is presentation software for creating slideshows and visual talks.",
+k:"powerpoint, presentation software, slideshows, office",
+a:""
+},
+
+{
+i:658,
+n:"onlyoffice",
+c:"software_services",
+u:"https://www.onlyoffice.com",
+d:"ONLYOFFICE is an office suite offering document, spreadsheet and presentation editors.",
+k:"onlyoffice, office suite, doc editor, spreadsheet, presentations",
+a:""
+},
+
+{
+i:659,
+n:"zoho writer",
+c:"software_services",
+u:"https://www.zoho.com/writer",
+d:"Zoho Writer is an online word processor with collaboration and publishing features.",
+k:"zoho writer, online document editor, collaboration, cloud writing",
+a:""
+},
+
+{
+i:660,
+n:"zoho sheet",
+c:"software_services",
+u:"https://www.zoho.com/sheet",
+d:"Zoho Sheet is a cloud spreadsheet application for teams and businesses.",
+k:"zoho sheet, online spreadsheet, data analysis, business tool",
+a:""
+},
+
+{
+i:661,
+n:"zoho show",
+c:"software_services",
+u:"https://www.zoho.com/show",
+d:"Zoho Show is an online presentation tool to design and present slides.",
+k:"zoho show, web presentations, slide design, online slideshow",
+a:""
+},
+
+{
+i:662,
+n:"grammarly editor",
+c:"software_services",
+u:"https://app.grammarly.com",
+d:"Grammarly Editor checks grammar, spelling, style and plagiarism for written text.",
+k:"grammarly, grammar checker, writing assistant, spelling, style suggestions",
+a:""
+},
+
+{
+i:663,
+n:"hemingway editor",
+c:"software_services",
+u:"https://hemingwayapp.com",
+d:"Hemingway Editor highlights complex sentences and readability issues in writing.",
+k:"hemingway editor, readability checker, simpler writing, style tool",
+a:""
+},
+
+{
+i:664,
+n:"quillbot",
+c:"software_services",
+u:"https://quillbot.com",
+d:"QuillBot offers paraphrasing, summarizing and grammar‑checking tools powered by AI.",
+k:"quillbot, paraphraser, summarizer, grammar check, AI writing tool",
+a:""
+},
+
+{
+i:665,
+n:"languagetool",
+c:"software_services",
+u:"https://languagetool.org",
+d:"LanguageTool is an open‑source style and grammar checker supporting multiple languages.",
+k:"languagetool, grammar checker, multilingual proofreading, style suggestions",
+a:""
+},
+
+{
+i:666,
+n:"notepad online",
+c:"software_services",
+u:"https://anotepad.com",
+d:"aNotepad.com is a simple online notepad for saving text notes in the browser.",
+k:"online notepad, simple notes, text editor, anotepad",
+a:""
+},
+
+{
+i:667,
+n:"json formatter",
+c:"software_services",
+u:"https://jsonformatter.org",
+d:"JSONFormatter.org formats, validates and views JSON data online.",
+k:"json formatter, json validator, pretty print json, online tool",
+a:""
+},
+
+{
+i:668,
+n:"jsonlint",
+c:"software_services",
+u:"https://jsonlint.com",
+d:"JSONLint is an online JSON validator and linter for checking JSON syntax.",
+k:"jsonlint, json validator, lint json, syntax checker",
+a:""
+},
+
+{
+i:669,
+n:"regex101",
+c:"software_services",
+u:"https://regex101.com",
+d:"Regex101 helps build and test regular expressions with explanations.",
+k:"regex101, regex tester, regular expressions, pattern debugging",
+a:""
+},
+
+{
+i:670,
+n:"code beautify",
+c:"software_services",
+u:"https://codebeautify.org",
+d:"Code Beautify hosts many developer tools like formatters, converters and validators.",
+k:"code beautify, online dev tools, code formatter, json xml converter",
+a:""
+},
+
+{
+i:671,
+n:"tinywow",
+c:"software_services",
+u:"https://tinywow.com",
+d:"TinyWow offers a collection of free online tools for PDFs, images, text and more.",
+k:"tinywow, free online tools, pdf image text utilities, converters",
+a:""
+},
+
+{
+i:672,
+n:"online2pdf",
+c:"software_services",
+u:"https://online2pdf.com",
+d:"Online2PDF converts and edits documents and images to and from PDF format.",
+k:"online2pdf, pdf converter, merge split pdf, document to pdf",
+a:""
+},
+
+{
+i:673,
+n:"convertio",
+c:"software_services",
+u:"https://convertio.co",
+d:"Convertio is an online file converter supporting many formats for documents, images and audio.",
+k:"convertio, file converter, document image audio conversion, online tool",
+a:""
+},
+
+{
+i:674,
+n:"cloudconvert",
+c:"software_services",
+u:"https://cloudconvert.com",
+d:"CloudConvert is a cloud file conversion service with API and wide format support.",
+k:"cloudconvert, file conversion api, multi format converter, cloud tool",
+a:""
+},
+
+{
+i:675,
+n:"freeconvert",
+c:"software_services",
+u:"https://www.freeconvert.com",
+d:"FreeConvert provides free online converters for videos, images, audio and documents.",
+k:"freeconvert, free file converter, video image audio document conversion",
+a:""
+},
+
+{
+i:676,
+n:"remove bg hd",
+c:"software_services",
+u:"https://www.remove.bg",
+d:"Remove.bg automatically removes image backgrounds to create clean cutouts.",
+k:"remove.bg, background remover, image cutout, photo editing",
+a:""
+},
+
+{
+i:677,
+n:"compress jpeg",
+c:"software_services",
+u:"https://compressjpeg.com",
+d:"CompressJPEG.com reduces file size of JPEG images online.",
+k:"compress jpeg, jpeg optimizer, image compression, reduce photo size",
+a:""
+},
+
+{
+i:678,
+n:"compress png",
+c:"software_services",
+u:"https://compresspng.com",
+d:"CompressPNG.com compresses PNG images to smaller file sizes.",
+k:"compress png, png optimizer, image compression, reduce png size",
+a:""
+},
+
+{
+i:679,
+n:"ezgif",
+c:"software_services",
+u:"https://ezgif.com",
+d:"Ezgif offers tools to create, edit and convert GIFs and basic video edits.",
+k:"ezgif, gif maker, gif editor, video to gif, image tools",
+a:""
+},
+
+{
+i:680,
+n:"squoosh",
+c:"software_services",
+u:"https://squoosh.app",
+d:"Squoosh is a web app from Google to compress and convert images with live previews.",
+k:"squoosh, image compression, webp converter, browser image tool",
+a:""
+},
+
+{
+i:681,
+n:"chatgpt",
+c:"software_services",
+u:"https://chatgpt.com",
+d:"ChatGPT is an AI chatbot that generates text, answers questions and assists with tasks.",
+k:"chatgpt, AI chatbot, text generation, question answering, assistant",
+a:""
+},
+
+{
+i:682,
+n:"google gemini",
+c:"software_services",
+u:"https://gemini.google.com",
+d:"Google Gemini is Google’s AI assistant for chat, coding and content generation.",
+k:"google gemini, AI assistant, generative model, coding help, chat",
+a:""
+},
+
+{
+i:683,
+n:"claude",
+c:"software_services",
+u:"https://claude.ai",
+d:"Claude is Anthropic’s AI assistant for writing, analysis and coding.",
+k:"claude AI, anthropic assistant, text analysis, coding help, chatbot",
+a:""
+},
+
+{
+i:684,
+n:"perplexity",
+c:"software_services",
+u:"https://www.perplexity.ai",
+d:"Perplexity is an AI‑powered answer engine that searches the web and responds with cited results.",
+k:"perplexity AI, answer engine, web search with citations, chatbot",
+a:""
+},
+
+{
+i:685,
+n:"grok",
+c:"software_services",
+u:"https://grok.com",
+d:"Grok is an AI chatbot associated with X that answers questions with a humorous tone.",
+k:"grok AI, x chatbot, conversational assistant, humorous responses",
+a:""
+},
+
+{
+i:686,
+n:"mistral",
+c:"software_services",
+u:"https://chat.mistral.ai",
+d:"Mistral Chat provides access to Mistral’s open and proprietary language models via web.",
+k:"mistral chat, LLM interface, french AI models, text generation",
+a:""
+},
+
+{
+i:687,
+n:"hugging face",
+c:"software_services,business_b2b",
+u:"https://huggingface.co",
+d:"Hugging Face hosts open‑source machine learning models, datasets and MLOps tools.",
+k:"hugging face, model hub, transformers, datasets, ML community",
+a:""
+},
+
+{
+i:688,
+n:"replicate",
+c:"software_services,business_b2b",
+u:"https://replicate.com",
+d:"Replicate runs machine learning models in the cloud via simple APIs.",
+k:"replicate, ML inference API, run models, cloud machine learning",
+a:""
+},
+
+{
+i:689,
+n:"together ai",
+c:"software_services,business_b2b",
+u:"https://www.together.ai",
+d:"Together AI offers infrastructure and APIs for serving large language models.",
+k:"together AI, LLM hosting, inference platform, AI infrastructure",
+a:""
+},
+
+{
+i:690,
+n:"openrouter",
+c:"software_services,business_b2b",
+u:"https://openrouter.ai",
+d:"OpenRouter routes requests to many AI models with unified APIs and pricing.",
+k:"openrouter, multi model API, AI routing, LLM marketplace",
+a:""
+},
+
+{
+i:691,
+n:"canva ai",
+c:"software_services",
+u:"https://www.canva.com",
+d:"Canva AI adds generative features like text‑to‑image and Magic Write inside Canva.",
+k:"canva AI, magic write, text to image, design assistant, generative tools",
+a:""
+},
+
+{
+i:692,
+n:"adobe firefly",
+c:"software_services",
+u:"https://firefly.adobe.com",
+d:"Adobe Firefly is Adobe’s generative AI for creating images, effects and text styles.",
+k:"adobe firefly, generative AI, image creation, text effects, adobe",
+a:""
+},
+
+{
+i:693,
+n:"midjourney",
+c:"software_services",
+u:"https://www.midjourney.com",
+d:"Midjourney is an AI image generator accessed mainly through Discord prompts.",
+k:"midjourney, AI art generator, text to image, discord bot",
+a:""
+},
+
+{
+i:694,
+n:"leonardo ai",
+c:"software_services",
+u:"https://leonardo.ai",
+d:"Leonardo AI generates game assets and illustrations using generative models.",
+k:"leonardo AI, asset generation, concept art, text to image",
+a:""
+},
+
+{
+i:695,
+n:"ideogram",
+c:"software_services",
+u:"https://ideogram.ai",
+d:"Ideogram focuses on AI‑generated images with strong typography and logos.",
+k:"ideogram AI, text in images, logo generation, AI art",
+a:""
+},
+
+{
+i:696,
+n:"pixverse",
+c:"software_services",
+u:"https://pixverse.ai",
+d:"PixVerse creates AI‑generated videos from prompts and images.",
+k:"pixverse, AI video generator, text to video, creative clips",
+a:""
+},
+
+{
+i:697,
+n:"runway",
+c:"software_services",
+u:"https://runwayml.com",
+d:"Runway is an AI video and creative toolset offering text‑to‑video and editing features.",
+k:"runway ML, AI video editing, text to video, creative tools",
+a:""
+},
+
+{
+i:698,
+n:"pika",
+c:"software_services",
+u:"https://pika.art",
+d:"Pika is an AI video creation app for short creative clips from prompts.",
+k:"pika art, AI video tool, text to video, shorts creation",
+a:""
+},
+
+{
+i:699,
+n:"luma ai",
+c:"software_services",
+u:"https://lumalabs.ai",
+d:"Luma AI builds 3D scenes and videos from images and videos using neural rendering.",
+k:"luma AI, neural rendering, 3D scenes, video generation",
+a:""
+},
+
+{
+i:700,
+n:"elevenlabs",
+c:"software_services",
+u:"https://elevenlabs.io",
+d:"ElevenLabs offers realistic AI voice generation and voice cloning.",
+k:"elevenlabs, text to speech, AI voices, voice cloning, narration",
+a:""
+},
+
+{
+i:701,
+n:"playht",
+c:"software_services",
+u:"https://play.ht",
+d:"PlayHT provides lifelike text‑to‑speech voices and audio generation.",
+k:"play.ht, AI voice, text to speech, podcast voices, narration",
+a:""
+},
+
+{
+i:702,
+n:"suno",
+c:"software_services",
+u:"https://suno.com",
+d:"Suno generates complete songs including vocals from text prompts.",
+k:"suno AI, music generation, AI songs, text to music",
+a:""
+},
+
+{
+i:703,
+n:"udio",
+c:"software_services",
+u:"https://www.udio.com",
+d:"Udio is an AI music tool for creating tracks with lyrics and melodies.",
+k:"udio, AI music creation, song generator, lyrics and melody",
+a:""
+},
+
+{
+i:704,
+n:"notebooklm",
+c:"software_services",
+u:"https://notebooklm.google.com",
+d:"NotebookLM is Google’s AI tool that lets users create notebooks and ask questions over their sources.",
+k:"notebookLM, AI research assistant, source grounded answers, notebooks",
+a:""
+},
+
+{
+i:705,
+n:"gamma",
+c:"software_services",
+u:"https://gamma.app",
+d:"Gamma generates slide decks and documents from outlines using AI.",
+k:"gamma app, AI presentations, auto slide deck, docs generator",
+a:""
+},
+
+{
+i:706,
+n:"tome",
+c:"software_services",
+u:"https://tome.app",
+d:"Tome is an AI storytelling tool that builds presentations and narratives from prompts.",
+k:"tome, AI storytelling, presentation maker, slide generation",
+a:""
+},
+
+{
+i:707,
+n:"otter ai",
+c:"software_services",
+u:"https://otter.ai",
+d:"Otter.ai transcribes meetings and conversations and generates summaries.",
+k:"otter.ai, meeting transcription, notes, AI summaries, voice to text",
+a:""
+},
+
+{
+i:708,
+n:"descript ai",
+c:"software_services",
+u:"https://www.descript.com",
+d:"Descript AI adds transcription, overdub and editing features to audio and video.",
+k:"descript AI, transcript editing, overdub voices, podcast video editing",
+a:""
+},
+
+{
+i:709,
+n:"cursor",
+c:"software_services",
+u:"https://cursor.com",
+d:"Cursor is an AI‑powered code editor that helps write and refactor software.",
+k:"cursor AI, code editor, AI coding assistant, refactor tool",
+a:""
+},
+
+{
+i:710,
+n:"windsurf",
+c:"software_services",
+u:"https://windsurf.com",
+d:"Windsurf is an AI‑assisted IDE for building applications faster.",
+k:"windsurf, AI IDE, coding assistant, developer tool",
+a:""
+},
+
+{
+i:711,
+n:"bolt",
+c:"software_services",
+u:"https://bolt.new",
+d:"Bolt.new is an AI tool that scaffolds full‑stack web apps in the browser.",
+k:"bolt.new, AI app builder, full stack scaffolding, browser IDE",
+a:""
+},
+
+{
+i:712,
+n:"lovable",
+c:"software_services",
+u:"https://lovable.dev",
+d:"Lovable generates and hosts web apps using AI from natural language descriptions.",
+k:"lovable.dev, AI app generation, no-code apps, web app builder",
+a:""
+},
+
+{
+i:713,
+n:"v0",
+c:"software_services",
+u:"https://v0.dev",
+d:"v0.dev creates UI components and layouts from prompts using Shadcn and React.",
+k:"v0.dev, AI UI generator, React components, shadcn, design from text",
+a:""
+},
+
+{
+i:714,
+n:"replit ai",
+c:"software_services",
+u:"https://replit.com",
+d:"Replit AI adds code suggestions and chat to the Replit online IDE.",
+k:"replit AI, coding assistant, online IDE, code completion",
+a:""
+},
+
+{
+i:715,
+n:"blackbox ai",
+c:"software_services",
+u:"https://www.blackbox.ai",
+d:"Blackbox AI helps developers search code snippets and get AI assistance while coding.",
+k:"blackbox AI, code search, developer assistant, snippet finder",
+a:""
+},
+
+{
+i:716,
+n:"phind",
+c:"software_services",
+u:"https://www.phind.com",
+d:"Phind is an AI search engine optimized for programming and technical questions.",
+k:"phind, AI dev search, coding answers, technical search engine",
+a:""
+},
+
+{
+i:717,
+n:"you.com",
+c:"software_services",
+u:"https://you.com",
+d:"You.com is a privacy‑focused search engine with integrated AI chat.",
+k:"you.com, search engine, AI chat, privacy focused search",
+a:""
+},
+
+{
+i:718,
+n:"consensus",
+c:"software_services",
+u:"https://consensus.app",
+d:"Consensus uses AI to search and summarize peer‑reviewed research papers.",
+k:"consensus app, research search, paper summaries, evidence based answers",
+a:""
+},
+
+{
+i:719,
+n:"scispace",
+c:"software_services",
+u:"https://typeset.io",
+d:"SciSpace (formerly Typeset) helps read, understand and manage scientific papers with AI.",
+k:"scispace, research assistant, paper reading, AI explanations",
+a:""
+},
+
+{
+i:720,
+n:"elicit",
+c:"software_services",
+u:"https://elicit.com",
+d:"Elicit is an AI tool for literature review and research question exploration.",
+k:"elicit, AI literature review, research assistant, paper search",
+a:""
+},
+
+{
+i:721,
+n:"heygen",
+c:"software_services",
+u:"https://www.heygen.com",
+d:"HeyGen creates AI video avatars and multilingual talking‑head videos.",
+k:"heygen, AI avatars, talking head video, lip sync, explainer videos",
+a:""
+},
+
+{
+i:722,
+n:"synthesia",
+c:"software_services",
+u:"https://www.synthesia.io",
+d:"Synthesia generates training and explainer videos using AI avatars and voice.",
+k:"synthesia, AI video avatars, training videos, corporate explainer",
+a:""
+},
+
+{
+i:723,
+n:"captions",
+c:"software_services",
+u:"https://www.captions.ai",
+d:"Captions.ai is an AI video editor tailored for short‑form social content.",
+k:"captions.ai, short video editor, social clips, AI captions",
+a:""
+},
+
+{
+i:724,
+n:"kapwing",
+c:"software_services",
+u:"https://www.kapwing.com",
+d:"Kapwing is an online video and image editor with collaborative tools.",
+k:"kapwing, online video editor, meme maker, social media content",
+a:""
+},
+
+{
+i:725,
+n:"veo",
+c:"software_services",
+u:"https://deepmind.google/technologies/veo",
+d:"Google Veo is a generative video model from DeepMind for high‑quality text‑to‑video.",
+k:"google veo, generative video model, text to video, deepmind",
+a:""
+},
+
+{
+i:726,
+n:"whisk",
+c:"software_services",
+u:"https://labs.google/fx/tools/whisk",
+d:"Google Whisk is an experimental tool for AI‑assisted video editing workflows.",
+k:"google whisk, AI video editing, experimental tool, google labs",
+a:""
+},
+
+{
+i:727,
+n:"dreamina",
+c:"software_services",
+u:"https://dreamina.capcut.com",
+d:"Dreamina by CapCut generates AI images and short videos from prompts.",
+k:"dreamina, capcut AI, text to image, text to video, creative tool",
+a:""
+},
+
+{
+i:728,
+n:"removebg ai",
+c:"software_services",
+u:"https://www.remove.bg",
+d:"Remove.bg AI removes backgrounds from photos with improved quality and edge handling.",
+k:"removebg AI, background removal, photo cutout, image editing",
+a:""
+},
+
+{
+i:729,
+n:"clipdrop",
+c:"software_services",
+u:"https://clipdrop.co",
+d:"Clipdrop offers AI tools for image cleanup, relighting and generation.",
+k:"clipdrop, AI image tools, cleanup, relight, text to image",
+a:""
+},
+
+{
+i:730,
+n:"cleanup pictures",
+c:"software_services",
+u:"https://cleanup.pictures",
+d:"Cleanup.pictures erases unwanted objects and defects from photos using AI.",
+k:"cleanup pictures, remove objects, photo cleanup, AI inpainting",
+a:""
+},
+
+{
+i:731,
+n:"translate ai",
+c:"software_services",
+u:"https://translate.google.com",
+d:"Translate AI refers to using Google Translate’s AI‑powered translation capabilities.",
+k:"AI translation, google translate, machine translation, multilingual text",
+a:""
+},
+
+{
+i:732,
+n:"deepgram",
+c:"software_services,business_b2b",
+u:"https://deepgram.com",
+d:"Deepgram provides speech‑to‑text APIs and models for accurate transcription.",
+k:"deepgram, speech to text API, audio transcription, enterprise STT",
+a:""
+},
+
+{
+i:733,
+n:"assemblyai",
+c:"software_services,business_b2b",
+u:"https://www.assemblyai.com",
+d:"AssemblyAI offers APIs for transcription, audio intelligence and content moderation.",
+k:"assemblyAI, transcription API, audio analysis, speech intelligence",
+a:""
+},
+
+{
+i:734,
+n:"cohere",
+c:"software_services,business_b2b",
+u:"https://cohere.com",
+d:"Cohere provides large language models and APIs for enterprise NLP tasks.",
+k:"cohere, LLM APIs, enterprise NLP, text generation, embeddings",
+a:""
+},
+
+{
+i:735,
+n:"anthropic",
+c:"software_services,business_b2b",
+u:"https://www.anthropic.com",
+d:"Anthropic develops safety‑focused large language models and AI systems like Claude.",
+k:"anthropic, AI company, safety focused LLMs, Claude maker",
+a:""
+},
+
+{
+i:736,
+n:"openai",
+c:"software_services,business_b2b",
+u:"https://openai.com",
+d:"OpenAI creates advanced AI models such as GPT and DALL·E and offers APIs.",
+k:"openAI, GPT models, DALL·E, AI research, developer APIs",
+a:""
+},
+
+{
+i:737,
+n:"google ai",
+c:"software_services,business_b2b",
+u:"https://ai.google",
+d:"Google AI showcases Google’s AI research, tools and products including Gemini.",
+k:"google AI, research, tools, models, Gemini platform",
+a:""
+},
+
+{
+i:738,
+n:"meta ai",
+c:"software_services,business_b2b",
+u:"https://www.meta.ai",
+d:"Meta AI develops models like Llama and provides AI features across Meta products.",
+k:"meta AI, llama models, social AI features, research lab",
+a:""
+},
+
+{
+i:739,
+n:"deepseek",
+c:"software_services,business_b2b",
+u:"https://www.deepseek.com",
+d:"DeepSeek offers open and proprietary language models focused on efficiency.",
+k:"deepseek, efficient LLMs, AI models, text generation",
+a:""
+},
+
+{
+i:740,
+n:"qwen",
+c:"software_services,business_b2b",
+u:"https://chat.qwen.ai",
+d:"Qwen is Alibaba’s family of large language models accessible through chat and APIs.",
+k:"qwen AI, Alibaba LLM, chat interface, enterprise models",
+a:""
+},
+
+{
+i:741,
+n:"alibaba",
+c:"business_b2b",
+u:"https://www.alibaba.com",
+d:"Alibaba.com is a global B2B marketplace connecting buyers with manufacturers and wholesalers.",
+k:"alibaba, B2B marketplace, wholesale suppliers, China sourcing",
+a:""
+},
+
+{
+i:742,
+n:"aliexpress",
+c:"business_b2b",
+u:"https://www.aliexpress.com",
+d:"AliExpress is an online retail platform for low‑cost goods shipped worldwide from sellers.",
+k:"aliexpress, low cost imports, online marketplace, China retail",
+a:""
+},
+
+{
+i:743,
+n:"dhgate",
+c:"business_b2b",
+u:"https://www.dhgate.com",
+d:"DHgate is a B2B and B2C marketplace for Chinese wholesale products.",
+k:"dhgate, wholesale marketplace, China suppliers, bulk buying",
+a:""
+},
+
+{
+i:744,
+n:"globalsources",
+c:"business_b2b",
+u:"https://www.globalsources.com",
+d:"GlobalSources connects international buyers with verified Asian suppliers via trade shows and online listings.",
+k:"global sources, B2B sourcing, verified suppliers, trade shows",
+a:""
+},
+
+{
+i:745,
+n:"made in china",
+c:"business_b2b",
+u:"https://www.made-in-china.com",
+d:"Made‑in‑China.com is a platform listing Chinese manufacturers and products for global buyers.",
+k:"made in china, manufacturer directory, China products, B2B sourcing",
+a:""
+},
+
+{
+i:746,
+n:"indiamart",
+c:"business_b2b",
+u:"https://www.indiamart.com",
+d:"IndiaMART is an Indian B2B marketplace connecting buyers with suppliers and manufacturers.",
+k:"indiamart, India B2B marketplace, suppliers, manufacturers, bulk buying",
+a:""
+},
+
+{
+i:747,
+n:"tradeindia",
+c:"business_b2b",
+u:"https://www.tradeindia.com",
+d:"TradeIndia lists Indian exporters, manufacturers and suppliers for B2B trade.",
+k:"tradeindia, B2B directory India, exporters, suppliers, trade leads",
+a:""
+},
+
+{
+i:748,
+n:"exporters india",
+c:"business_b2b",
+u:"https://www.exportersindia.com",
+d:"ExportersIndia is an online directory of Indian exporters and suppliers.",
+k:"exporters india, exporter directory, Indian suppliers, B2B listings",
+a:""
+},
+
+{
+i:749,
+n:"justdial",
+c:"services",
+u:"https://www.justdial.com",
+d:"Justdial is a local search service listing businesses, services and customer reviews across India.",
+k:"justdial, local search India, business directory, phone numbers, reviews",
+a:""
+},
+
+{
+i:750,
+n:"sulekha",
+c:"services",
+u:"https://www.sulekha.com",
+d:"Sulekha helps find local services such as home repair, education and events through listings and leads.",
+k:"sulekha, local services search, home repair, coaching, service listings",
+a:""
+}  
 
   
 
