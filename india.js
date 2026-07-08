@@ -4794,7 +4794,907 @@ u:"https://castbox.fm",
 d:"Castbox is a podcast app offering streaming, downloads and recommendations.",
 k:"castbox, podcasts, audio streaming, episode downloads, discover shows",
 a:""
-}
+},
+
+{
+i:501,
+n:"goodreads",
+c:"education_courses",
+u:"https://www.goodreads.com",
+d:"Goodreads is a social cataloging site where readers track books, rate, review and discover recommendations.",
+k:"goodreads, book reviews, reading tracker, book recommendations, social reading",
+a:""
+},
+
+{
+i:502,
+n:"storytel",
+c:"entertainment,education_courses",
+u:"https://www.storytel.com",
+d:"Storytel is an audiobook and ebook subscription service offering stories in multiple languages.",
+k:"storytel, audiobooks, ebooks, subscription, stories, multilingual listening",
+a:""
+},
+
+{
+i:503,
+n:"blinkist",
+c:"education_courses",
+u:"https://www.blinkist.com",
+d:"Blinkist provides short summaries of nonfiction books in text and audio form.",
+k:"blinkist, book summaries, nonfiction, quick learning, audio summaries",
+a:""
+},
+
+{
+i:504,
+n:"scribd",
+c:"education_courses",
+u:"https://www.scribd.com",
+d:"Scribd is a digital subscription library for ebooks, audiobooks, documents and magazines.",
+k:"scribd, ebook subscription, audiobooks, documents, digital library",
+a:""
+},
+
+{
+i:505,
+n:"everand",
+c:"education_courses",
+u:"https://www.everand.com",
+d:"Everand is a reading subscription app offering ebooks, audiobooks and other written content.",
+k:"everand, reading app, ebooks, audiobooks, subscription reading",
+a:""
+},
+
+{
+i:506,
+n:"duolingo",
+c:"education_courses,software_services",
+u:"https://www.duolingo.com",
+d:"Duolingo is a gamified language learning app with bite-sized lessons and practice.",
+k:"duolingo, language learning, gamified lessons, vocab practice, free app",
+a:""
+},
+
+{
+i:507,
+n:"babbel",
+c:"education_courses,software_services",
+u:"https://www.babbel.com",
+d:"Babbel offers structured online language courses focused on conversation skills.",
+k:"babbel, language courses, online learning, conversation practice",
+a:""
+},
+
+{
+i:508,
+n:"busuu",
+c:"education_courses,software_services",
+u:"https://www.busuu.com",
+d:"Busuu is a language learning app with lessons, exercises and community corrections.",
+k:"busuu, language learning, community feedback, online lessons",
+a:""
+},
+
+{
+i:509,
+n:"memrise",
+c:"education_courses,software_services",
+u:"https://www.memrise.com",
+d:"Memrise teaches languages and other topics using spaced repetition and short videos.",
+k:"memrise, spaced repetition, language vocab, flashcards, short video lessons",
+a:""
+},
+
+{
+i:510,
+n:"rosetta stone",
+c:"education_courses,software_services",
+u:"https://www.rosettastone.com",
+d:"Rosetta Stone provides immersive language learning software and apps.",
+k:"rosetta stone, immersive language learning, software, language courses",
+a:""
+},
+
+{
+i:511,
+n:"coursera plus",
+c:"education_courses",
+u:"https://www.coursera.org",
+d:"Coursera Plus is a subscription that unlocks unlimited access to selected Coursera courses and certificates.",
+k:"coursera plus, online courses, certificates, subscription learning",
+a:""
+},
+
+{
+i:512,
+n:"edureka",
+c:"education_courses",
+u:"https://www.edureka.co",
+d:"Edureka offers instructor-led online courses focused on IT, data and professional skills.",
+k:"edureka, online training, IT courses, certification, live classes",
+a:""
+},
+
+{
+i:513,
+n:"intellipaat",
+c:"education_courses",
+u:"https://intellipaat.com",
+d:"Intellipaat provides online training and certification programs in tech and data domains.",
+k:"intellipaat, online training, data science, cloud, certifications",
+a:""
+},
+
+{
+i:514,
+n:"coding ninjas",
+c:"education_courses",
+u:"https://www.codingninjas.com",
+d:"Coding Ninjas offers programming courses and bootcamps for students and professionals.",
+k:"coding ninjas, coding bootcamp, programming courses, data structures",
+a:""
+},
+
+{
+i:515,
+n:"coding blocks",
+c:"education_courses",
+u:"https://www.codingblocks.com",
+d:"Coding Blocks provides programming and interview preparation courses.",
+k:"coding blocks, coding courses, interview prep, data structures, algorithms",
+a:""
+},
+
+{
+i:516,
+n:"intershala trainings",
+c:"education_courses",
+u:"https://trainings.internshala.com",
+d:"Internshala Trainings offers online skill courses for students in various fields.",
+k:"internshala trainings, student courses, online skills, career training",
+a:""
+},
+
+{
+i:517,
+n:"internshala",
+c:"education_courses,services",
+u:"https://internshala.com",
+d:"Internshala is a platform for internships and jobs, especially for students and freshers.",
+k:"internshala, internships, student jobs, fresher opportunities, work experience",
+a:""
+},
+
+{
+i:518,
+n:"naukri",
+c:"services,business_b2b",
+u:"https://www.naukri.com",
+d:"Naukri.com is a job portal for recruitment and career opportunities in India.",
+k:"naukri, job portal, recruitment, India jobs, resumes",
+a:""
+},
+
+{
+i:519,
+n:"foundit",
+c:"services,business_b2b",
+u:"https://www.foundit.in",
+d:"Foundit (formerly Monster India) is an online job search and recruitment platform.",
+k:"foundit, job search, recruitment, career portal, India",
+a:""
+},
+
+{
+i:520,
+n:"indeed",
+c:"services,business_b2b",
+u:"https://in.indeed.com",
+d:"Indeed is a global job search engine where employers post openings and candidates apply.",
+k:"indeed, job search, job listings, resumes, recruitment",
+a:""
+},
+
+{
+i:521,
+n:"glassdoor",
+c:"services,business_b2b",
+u:"https://www.glassdoor.com",
+d:"Glassdoor provides company reviews, salary data and job listings.",
+k:"glassdoor, company reviews, salaries, job listings, workplace insights",
+a:""
+},
+
+{
+i:522,
+n:"wellfound",
+c:"services,business_b2b",
+u:"https://wellfound.com",
+d:"Wellfound (formerly AngelList Talent) focuses on startup jobs and hiring.",
+k:"wellfound, startup jobs, angel list, tech hiring, recruitment",
+a:""
+},
+
+{
+i:523,
+n:"flexjobs",
+c:"services,business_b2b",
+u:"https://www.flexjobs.com",
+d:"FlexJobs lists remote, flexible and freelance job opportunities.",
+k:"flexjobs, remote jobs, flexible work, telecommute, freelance",
+a:""
+},
+
+{
+i:524,
+n:"remote ok",
+c:"services,business_b2b",
+u:"https://remoteok.com",
+d:"Remote OK is a job board specializing in remote tech and digital roles.",
+k:"remote ok, remote jobs, tech roles, distributed work",
+a:""
+},
+
+{
+i:525,
+n:"we work remotely",
+c:"services,business_b2b",
+u:"https://weworkremotely.com",
+d:"We Work Remotely is a popular job board for remote positions across industries.",
+k:"we work remotely, remote job board, work from home, distributed teams",
+a:""
+},
+
+{
+i:526,
+n:"freshworks",
+c:"software_services,business_b2b",
+u:"https://www.freshworks.com",
+d:"Freshworks offers customer engagement and support software like CRM and helpdesk tools.",
+k:"freshworks, CRM, customer support, helpdesk, b2b SaaS",
+a:""
+},
+
+{
+i:527,
+n:"zoho",
+c:"software_services,business_b2b",
+u:"https://www.zoho.com",
+d:"Zoho provides a suite of business apps including CRM, email, finance and productivity tools.",
+k:"zoho, business suite, CRM, invoicing, email, productivity",
+a:""
+},
+
+{
+i:528,
+n:"hubspot",
+c:"software_services,business_b2b",
+u:"https://www.hubspot.com",
+d:"HubSpot is a platform for marketing, sales, CRM and customer service.",
+k:"hubspot, marketing automation, CRM, sales tools, customer service",
+a:""
+},
+
+{
+i:529,
+n:"freshdesk",
+c:"software_services,business_b2b",
+u:"https://www.freshdesk.com",
+d:"Freshdesk is a cloud-based helpdesk and customer support solution.",
+k:"freshdesk, helpdesk, ticketing, customer support, SaaS",
+a:""
+},
+
+{
+i:530,
+n:"zendesk",
+c:"software_services,business_b2b",
+u:"https://www.zendesk.com",
+d:"Zendesk offers customer service and support software for businesses.",
+k:"zendesk, customer service, support tickets, helpdesk platform",
+a:""
+},
+
+{
+i:531,
+n:"shopify",
+c:"software_services,business_b2b",
+u:"https://www.shopify.com",
+d:"Shopify is an e-commerce platform for creating and managing online stores.",
+k:"shopify, e-commerce, online store builder, payments, storefront",
+a:""
+},
+
+{
+i:532,
+n:"woocommerce",
+c:"software_services,business_b2b",
+u:"https://woocommerce.com",
+d:"WooCommerce is a WordPress plugin that turns sites into online stores.",
+k:"woocommerce, wordpress e-commerce, online shop plugin, cart",
+a:""
+},
+
+{
+i:533,
+n:"bigcommerce",
+c:"software_services,business_b2b",
+u:"https://www.bigcommerce.com",
+d:"BigCommerce is a hosted e-commerce platform for growing online businesses.",
+k:"bigcommerce, online retail platform, hosted e-commerce, b2b commerce",
+a:""
+},
+
+{
+i:534,
+n:"wix",
+c:"software_services,business_b2b",
+u:"https://www.wix.com",
+d:"Wix offers a drag-and-drop website builder with templates and ecommerce options.",
+k:"wix, website builder, drag and drop, templates, small business sites",
+a:""
+},
+
+{
+i:535,
+n:"squarespace",
+c:"software_services,business_b2b",
+u:"https://www.squarespace.com",
+d:"Squarespace is a design-focused website and online store builder.",
+k:"squarespace, website templates, portfolio sites, online store builder",
+a:""
+},
+
+{
+i:536,
+n:"wordpress",
+c:"software_services,business_b2b",
+u:"https://wordpress.com",
+d:"WordPress.com hosts blogs and websites built using the WordPress platform.",
+k:"wordpress.com, blogging platform, website hosting, CMS",
+a:""
+},
+
+{
+i:537,
+n:"elementor",
+c:"software_services,business_b2b",
+u:"https://elementor.com",
+d:"Elementor is a visual page builder plugin for WordPress.",
+k:"elementor, wordpress page builder, drag-and-drop design, landing pages",
+a:""
+},
+
+{
+i:538,
+n:"webflow",
+c:"software_services,business_b2b",
+u:"https://webflow.com",
+d:"Webflow combines a visual website builder with hosting and CMS features.",
+k:"webflow, no-code website builder, CMS, responsive design",
+a:""
+},
+
+{
+i:539,
+n:"framer",
+c:"software_services,business_b2b",
+u:"https://www.framer.com",
+d:"Framer is a design and prototyping tool that also powers no-code websites.",
+k:"framer, design tool, interactive prototypes, website builder",
+a:""
+},
+
+{
+i:540,
+n:"bubble",
+c:"software_services,business_b2b",
+u:"https://bubble.io",
+d:"Bubble is a no-code platform for building web applications and workflows.",
+k:"bubble, no-code app builder, web apps, visual programming",
+a:""
+},
+
+{
+i:541,
+n:"zapier",
+c:"software_services,business_b2b",
+u:"https://zapier.com",
+d:"Zapier automates workflows by connecting apps and services through triggers and actions.",
+k:"zapier, automation, integrations, workflows, connect apps",
+a:""
+},
+
+{
+i:542,
+n:"make",
+c:"software_services,business_b2b",
+u:"https://www.make.com",
+d:"Make (formerly Integromat) is a visual automation tool for complex workflows.",
+k:"make.com, integromat, advanced automation, integrations, scenarios",
+a:""
+},
+
+{
+i:543,
+n:"ifttt",
+c:"software_services,business_b2b",
+u:"https://ifttt.com",
+d:"IFTTT lets users create simple automations between apps, devices and services.",
+k:"ifttt, applets, simple automation, connect services, triggers",
+a:""
+},
+
+{
+i:544,
+n:"airtable",
+c:"software_services,business_b2b",
+u:"https://www.airtable.com",
+d:"Airtable blends spreadsheets with databases for organizing and collaborating on information.",
+k:"airtable, spreadsheet database, data organization, collaboration, low-code",
+a:""
+},
+
+{
+i:545,
+n:"coda",
+c:"software_services,business_b2b",
+u:"https://coda.io",
+d:"Coda is a document platform that combines docs, spreadsheets and apps.",
+k:"coda, all-in-one docs, dynamic tables, workflows, templates",
+a:""
+},
+
+{
+i:546,
+n:"monday.com",
+c:"software_services,business_b2b",
+u:"https://monday.com",
+d:"Monday.com is a work management platform for projects, tasks and collaboration.",
+k:"monday.com, project management, work OS, task tracking, team collaboration",
+a:""
+},
+
+{
+i:547,
+n:"basecamp",
+c:"software_services,business_b2b",
+u:"https://basecamp.com",
+d:"Basecamp offers simple project management and team communication tools.",
+k:"basecamp, project management, to-dos, team messaging, remote work",
+a:""
+},
+
+{
+i:548,
+n:"toggl",
+c:"software_services,business_b2b",
+u:"https://toggl.com",
+d:"Toggl provides time tracking tools for individuals and teams.",
+k:"toggl, time tracking, productivity, billable hours, timesheets",
+a:""
+},
+
+{
+i:549,
+n:"clockify",
+c:"software_services,business_b2b",
+u:"https://clockify.me",
+d:"Clockify is a free time tracking and timesheet app for projects and teams.",
+k:"clockify, time tracker, timesheets, project hours, productivity",
+a:""
+},
+
+{
+i:550,
+n:"rescuetime",
+c:"software_services,business_b2b",
+u:"https://www.rescuetime.com",
+d:"RescueTime analyzes computer usage to show how time is spent and improve focus.",
+k:"rescuetime, productivity tracking, time analytics, focus tool",
+a:""
+},
+
+{
+i:551,
+n:"wise",
+c:"investment,business_b2b",
+u:"https://wise.com",
+d:"Wise offers low-cost international money transfers and multi-currency accounts.",
+k:"wise, international transfers, forex, multi-currency account, remittance",
+a:""
+},
+
+{
+i:552,
+n:"paypal",
+c:"investment,business_b2b",
+u:"https://www.paypal.com",
+d:"PayPal is an online payment system for sending, receiving and processing money.",
+k:"paypal, online payments, wallets, send money, merchant processing",
+a:""
+},
+
+{
+i:553,
+n:"payoneer",
+c:"investment,business_b2b",
+u:"https://www.payoneer.com",
+d:"Payoneer provides cross-border payment services for freelancers and businesses.",
+k:"payoneer, global payments, freelance payouts, cross-border transfers",
+a:""
+},
+
+{
+i:554,
+n:"stripe",
+c:"investment,business_b2b",
+u:"https://stripe.com",
+d:"Stripe is a payments platform powering online transactions and subscriptions.",
+k:"stripe, payment gateway, online payments, subscriptions, APIs",
+a:""
+},
+
+{
+i:555,
+n:"razorpay",
+c:"investment,business_b2b",
+u:"https://razorpay.com",
+d:"Razorpay is an Indian payment gateway for online businesses and startups.",
+k:"razorpay, India payments, payment gateway, UPI, cards, merchants",
+a:""
+},
+
+{
+i:556,
+n:"cashfree",
+c:"investment,business_b2b",
+u:"https://www.cashfree.com",
+d:"Cashfree offers payment solutions and APIs for Indian businesses.",
+k:"cashfree, payment gateway, payouts, India, APIs",
+a:""
+},
+
+{
+i:557,
+n:"phonepe business",
+c:"investment,business_b2b",
+u:"https://www.phonepe.com/business",
+d:"PhonePe Business provides UPI-based payment and collection solutions for merchants.",
+k:"phonepe business, UPI payments, QR collection, India merchants",
+a:""
+},
+
+{
+i:558,
+n:"bharatpe",
+c:"investment,business_b2b",
+u:"https://bharatpe.com",
+d:"BharatPe offers QR-based payments and financial services to small merchants.",
+k:"bharatpe, merchant QR, UPI acceptance, small business finance",
+a:""
+},
+
+{
+i:559,
+n:"ccavenue",
+c:"investment,business_b2b",
+u:"https://www.ccavenue.com",
+d:"CCAvenue is a payment gateway supporting multiple methods for Indian merchants.",
+k:"ccavenue, payment gateway India, cards, netbanking, payments",
+a:""
+},
+
+{
+i:560,
+n:"instamojo",
+c:"investment,business_b2b",
+u:"https://www.instamojo.com",
+d:"Instamojo offers payment links, online store tools and small business solutions.",
+k:"instamojo, payment links, online store, MSME tools, India",
+a:""
+},
+
+{
+i:561,
+n:"groww",
+c:"investment,business_b2b",
+u:"https://groww.in",
+d:"Groww is an investment platform for mutual funds, stocks and other instruments.",
+k:"groww, stock investing, mutual funds, India broker app",
+a:""
+},
+
+{
+i:562,
+n:"zerodha",
+c:"investment,business_b2b",
+u:"https://zerodha.com",
+d:"Zerodha is a discount stock brokerage in India with trading and investing platforms.",
+k:"zerodha, discount broker, stock trading, kite, India markets",
+a:""
+},
+
+{
+i:563,
+n:"angel one trade",
+c:"investment,business_b2b",
+u:"https://www.angelone.in",
+d:"Angel One Trade is a stockbroking and investment service in India.",
+k:"angel one, stockbroker, trading app, India equity, investments",
+a:""
+},
+
+{
+i:564,
+n:"5paisa",
+c:"investment,business_b2b",
+u:"https://www.5paisa.com",
+d:"5paisa is a discount brokerage offering low-cost stock and mutual fund investing.",
+k:"5paisa, discount broker, stock trading, mutual funds, India",
+a:""
+},
+
+{
+i:565,
+n:"icici direct",
+c:"investment,business_b2b",
+u:"https://www.icicidirect.com",
+d:"ICICI Direct provides trading, investment and research services from ICICI group.",
+k:"icici direct, full-service broker, research, trading, India",
+a:""
+},
+
+{
+i:566,
+n:"hdfc sky",
+c:"investment,business_b2b",
+u:"https://www.hdfcsky.com",
+d:"HDFC Sky is HDFC’s online investing and trading platform.",
+k:"hdfc sky, online trading, investments, HDFC securities",
+a:""
+},
+
+{
+i:567,
+n:"kotak neo",
+c:"investment,business_b2b",
+u:"https://www.kotaksecurities.com",
+d:"Kotak Neo is Kotak Securities’ platform for digital trading and investing.",
+k:"kotak neo, kotak securities, online trading, India stock market",
+a:""
+},
+
+{
+i:568,
+n:"motilal oswal",
+c:"investment,business_b2b",
+u:"https://www.motilaloswal.com",
+d:"Motilal Oswal offers broking, wealth management and research services.",
+k:"motilal oswal, brokerage, wealth management, research, India",
+a:""
+},
+
+{
+i:569,
+n:"sharekhan",
+c:"investment,business_b2b",
+u:"https://www.sharekhan.com",
+d:"Sharekhan is a full-service brokerage with trading platforms and research.",
+k:"sharekhan, stockbroker, trading account, research, India",
+a:""
+},
+
+{
+i:570,
+n:"dhan",
+c:"investment,business_b2b",
+u:"https://dhan.co",
+d:"Dhan is a newer Indian investing platform for stocks and derivatives.",
+k:"dhan, stock investing, trading app, India broker",
+a:""
+},
+
+{
+i:571,
+n:"moneycontrol",
+c:"investment",
+u:"https://www.moneycontrol.com",
+d:"Moneycontrol provides market data, news, portfolios and tools for Indian investors.",
+k:"moneycontrol, stock quotes, India markets, portfolio tracker, business news",
+a:""
+},
+
+{
+i:572,
+n:"screener",
+c:"investment",
+u:"https://www.screener.in",
+d:"Screener.in offers fundamental data and custom screens for Indian stocks.",
+k:"screener.in, stock screener, fundamentals, India equities, analysis",
+a:""
+},
+
+{
+i:573,
+n:"ticker tape",
+c:"investment",
+u:"https://www.tickertape.in",
+d:"Tickertape provides stock analysis, screeners and financial tools for India markets.",
+k:"tickertape, stock analysis, India screener, investing tools",
+a:""
+},
+
+{
+i:574,
+n:"trendlyne",
+c:"investment",
+u:"https://trendlyne.com",
+d:"Trendlyne offers stock analytics, alerts and portfolio tools.",
+k:"trendlyne, stock analytics, alerts, portfolios, India investing",
+a:""
+},
+
+{
+i:575,
+n:"investing",
+c:"investment",
+u:"https://www.investing.com",
+d:"Investing.com delivers global financial quotes, charts, tools and news.",
+k:"investing.com, global markets, forex, stocks, charts, financial news",
+a:""
+},
+
+{
+i:576,
+n:"tradingview",
+c:"investment",
+u:"https://www.tradingview.com",
+d:"TradingView is a charting and social platform for traders and investors.",
+k:"tradingview, stock charts, technical analysis, trading ideas, indicators",
+a:""
+},
+
+{
+i:577,
+n:"economictimes markets",
+c:"investment",
+u:"https://economictimes.indiatimes.com/markets",
+d:"Economic Times Markets section covers Indian market news, data and analysis.",
+k:"economic times markets, India stock news, market updates, ET",
+a:""
+},
+
+{
+i:578,
+n:"livemint",
+c:"investment",
+u:"https://www.livemint.com",
+d:"LiveMint is a business and finance news site from India.",
+k:"livemint, business news, finance, Indian economy, markets",
+a:""
+},
+
+{
+i:579,
+n:"business standard",
+c:"investment",
+u:"https://www.business-standard.com",
+d:"Business Standard is an Indian newspaper focused on business, markets and policy.",
+k:"business standard, business daily, markets, policy, India news",
+a:""
+},
+
+{
+i:580,
+n:"fortune india",
+c:"investment",
+u:"https://www.fortuneindia.com",
+d:"Fortune India covers business stories, rankings and corporate news.",
+k:"fortune india, business magazine, rankings, corporate stories",
+a:""
+},
+
+{
+i:581,
+n:"irctc",
+c:"travel_hotels",
+u:"https://www.irctc.co.in",
+d:"IRCTC is the official Indian Railways portal for ticket booking and related services.",
+k:"irctc, train tickets, Indian Railways, online booking, tatkal",
+a:""
+},
+
+{
+i:582,
+n:"rail yatri",
+c:"travel_hotels",
+u:"https://www.railyatri.in",
+d:"RailYatri provides train information, bookings and travel tools in India.",
+k:"railyatri, train inquiry, seat availability, train booking, India",
+a:""
+},
+
+{
+i:583,
+n:"confirmtkt",
+c:"travel_hotels",
+u:"https://www.confirmtkt.com",
+d:"ConfirmTkt helps book train tickets and predicts confirmation chances.",
+k:"confirmtkt, train booking, PNR prediction, ticket confirmation, India",
+a:""
+},
+
+{
+i:584,
+n:"trainman",
+c:"travel_hotels",
+u:"https://www.trainman.in",
+d:"Trainman offers PNR status, train schedules and ticket booking.",
+k:"trainman, PNR check, train schedules, India train app",
+a:""
+},
+
+{
+i:585,
+n:"goibibo",
+c:"travel_hotels",
+u:"https://www.goibibo.com",
+d:"Goibibo is a travel booking site for flights, hotels, buses and trains.",
+k:"goibibo, flight booking, hotels, buses, trains, India travel",
+a:""
+},
+
+{
+i:586,
+n:"cleartrip flights",
+c:"travel_hotels",
+u:"https://www.cleartrip.com",
+d:"Cleartrip offers flight, hotel and train bookings with a clean interface.",
+k:"cleartrip, flight tickets, hotel booking, train reservations, travel portal",
+a:""
+},
+
+{
+i:587,
+n:"makemytrip hotels",
+c:"travel_hotels",
+u:"https://www.makemytrip.com",
+d:"MakeMyTrip is a major Indian travel platform for flights, hotels and holidays.",
+k:"makemytrip, hotel deals, flight booking, holiday packages, India travel",
+a:""
+},
+
+{
+i:588,
+n:"agoda hotels",
+c:"travel_hotels",
+u:"https://www.agoda.com",
+d:"Agoda specializes in hotel and accommodation bookings worldwide.",
+k:"agoda, hotel booking, accommodations, global travel deals",
+a:""
+},
+
+{
+i:589,
+n:"tripadvisor",
+c:"travel_hotels",
+u:"https://www.tripadvisor.com",
+d:"Tripadvisor provides travel reviews, ratings and booking options for hotels and attractions.",
+k:"tripadvisor, hotel reviews, attractions, travel ratings, user opinions",
+a:""
+},
+
+{
+i:590,
+n:"trivago",
+c:"travel_hotels",
+u:"https://www.trivago.in",
+d:"Trivago compares hotel prices across booking sites to find deals.",
+k:"trivago, hotel price comparison, booking deals, meta search",
+a:""
+}  
   
 
   
