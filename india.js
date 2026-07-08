@@ -898,6 +898,307 @@ u:"https://plumgoodness.com",
 d:"Plum Goodness is a vegan beauty brand offering skincare, haircare and bodycare products.",
 k:"plum goodness, vegan skincare, haircare, bodycare, cruelty-free",
 a:""
+},
+{
+i:91,
+n:"mcaffeine",
+c:"beauty_personalcare",
+u:"https://www.mcaffeine.com",
+d:"mCaffeine is an Indian personal care brand offering coffee-infused skincare, body care, hair care and grooming products for everyday beauty routines.",
+k:"mcaffeine, coffee skincare, body care, hair care, beauty products, personal care, indian skincare",
+a:""
+},
+
+{
+i:92,
+n:"sugar cosmetics",
+c:"beauty_personalcare",
+u:"https://in.sugarcosmetics.com",
+d:"SUGAR Cosmetics is a beauty brand offering makeup products including lipsticks, foundations, eye makeup, face makeup and beauty accessories.",
+k:"sugar cosmetics, makeup, lipstick, foundation, eyeliner, beauty products, cosmetics",
+a:""
+},
+
+{
+i:93,
+n:"mcobeauty",
+c:"beauty_personalcare",
+u:"https://www.mcobeauty.com",
+d:"MCoBeauty offers affordable beauty and cosmetic products including makeup, skincare and beauty essentials.",
+k:"mcobeauty, cosmetics, makeup, skincare, beauty essentials",
+a:""
+},
+
+{
+i:94,
+n:"colorbar",
+c:"beauty_personalcare",
+u:"https://www.colorbarcosmetics.com",
+d:"Colorbar Cosmetics offers premium makeup, skincare, nail care and beauty products for everyday and professional use.",
+k:"colorbar, cosmetics, makeup, skincare, nail care, beauty products",
+a:""
+},
+
+{
+i:95,
+n:"myglamm",
+c:"beauty_personalcare",
+u:"https://www.myglamm.com",
+d:"MyGlamm is a beauty and cosmetics platform offering makeup, skincare, personal care and beauty products through online shopping.",
+k:"myglamm, makeup, cosmetics, skincare, beauty products, personal care",
+a:""
+},
+
+{
+i:96,
+n:"faces canada",
+c:"beauty_personalcare",
+u:"https://facescanada.com",
+d:"Faces Canada offers makeup, skincare and beauty products including lipsticks, foundations, eye makeup and personal beauty essentials.",
+k:"faces canada, cosmetics, makeup, lipstick, skincare, beauty essentials",
+a:""
+},
+
+{
+i:97,
+n:"foxy",
+c:"beauty_personalcare,health_pharmacy,software_services",
+u:"https://www.foxy.in",
+d:"Foxy is a beauty shopping platform offering skincare, haircare, cosmetics, wellness products and personalized beauty recommendations.",
+k:"foxy, beauty shopping, skincare, haircare, cosmetics, wellness, beauty app",
+a:""
+},
+
+{
+i:98,
+n:"kindlife",
+c:"beauty_personalcare,health_pharmacy",
+u:"https://www.kindlife.in",
+d:"Kindlife offers Korean beauty products, nutrition, wellness supplements, skincare and healthy lifestyle products.",
+k:"kindlife, korean beauty, skincare, supplements, wellness, nutrition",
+a:""
+},
+
+{
+i:99,
+n:"the moms co",
+c:"beauty_personalcare,health_pharmacy,kids_school",
+u:"https://themomsco.com",
+d:"The Moms Co offers natural skincare, baby care, maternity care and personal care products for mothers and children.",
+k:"the moms co, baby care, maternity care, skincare, personal care, natural products",
+a:""
+},
+
+{
+i:100,
+n:"cetaphil india",
+c:"beauty_personalcare,health_pharmacy",
+u:"https://www.cetaphil.in",
+d:"Cetaphil India offers dermatologist-recommended skincare products including cleansers, moisturizers, lotions and sensitive skin solutions.",
+k:"cetaphil india, skincare, cleanser, moisturizer, dermatologist recommended, sensitive skin",
+a:""
+},
+
+{
+i:101,
+n:"himalaya wellness",
+c:"beauty_personalcare,health_pharmacy",
+u:"https://himalayawellness.in",
+d:"Himalaya Wellness offers herbal healthcare, skincare, personal care, nutrition and wellness products based on Ayurveda.",
+k:"himalaya wellness, ayurveda, herbal products, skincare, healthcare, wellness",
+a:""
+},
+
+{
+i:102,
+n:"dabur shop",
+c:"beauty_personalcare,health_pharmacy",
+u:"https://www.dabur.com",
+d:"Dabur offers Ayurvedic healthcare, personal care, oral care, hair care and wellness products for daily use.",
+k:"dabur, ayurveda, healthcare, personal care, hair care, oral care, wellness",
+a:""
+},
+
+{
+i:103,
+n:"patanjali ayurved",
+c:"beauty_personalcare,health_pharmacy,grocery_daily",
+u:"https://www.patanjaliayurved.net",
+d:"Patanjali Ayurved offers Ayurvedic medicines, groceries, food products, personal care and wellness products across India.",
+k:"patanjali, ayurveda, grocery, healthcare, personal care, food products, wellness",
+a:""
+},
+
+{
+i:104,
+n:"kapiva",
+c:"health_pharmacy",
+u:"https://kapiva.in",
+d:"Kapiva offers Ayurvedic health supplements, juices, nutrition products and wellness solutions based on traditional formulations.",
+k:"kapiva, ayurveda, health supplements, juices, nutrition, wellness",
+a:""
+},
+
+{
+i:105,
+n:"baidyanath",
+c:"health_pharmacy",
+u:"https://www.baidyanath.co.in",
+d:"Baidyanath is an Ayurvedic healthcare brand offering herbal medicines, supplements and wellness products for various health needs.",
+k:"baidyanath, ayurveda, herbal medicine, health supplements, wellness",
+a:""
+},
+{
+i:106,
+n:"happilo",
+c:"grocery_daily,health_pharmacy",
+u:"https://happilo.com",
+d:"Happilo offers premium dry fruits, nuts, seeds, healthy snacks and nutrition products for everyday healthy living.",
+k:"happilo, dry fruits, nuts, healthy snacks, seeds, nutrition, grocery",
+a:""
+},
+
+{
+i:107,
+n:"slurrp farm",
+c:"grocery_daily,kids_school,health_pharmacy",
+u:"https://slurrpfarm.com",
+d:"Slurrp Farm offers healthy foods for babies, kids and families including cereals, snacks, millet products and nutrition-focused foods.",
+k:"slurrp farm, kids food, baby food, millet, healthy snacks, cereals, nutrition",
+a:""
+},
+
+{
+i:108,
+n:"true elements",
+c:"grocery_daily,health_pharmacy",
+u:"https://true-elements.com",
+d:"True Elements offers healthy breakfast cereals, oats, muesli, seeds, snacks and nutrition products for a healthy lifestyle.",
+k:"true elements, muesli, oats, breakfast cereals, healthy snacks, nutrition",
+a:""
+},
+
+{
+i:109,
+n:"yogabar",
+c:"grocery_daily,health_pharmacy",
+u:"https://www.yogabar.in",
+d:"Yoga Bar offers protein bars, muesli, peanut butter, healthy snacks and nutrition products for active lifestyles.",
+k:"yoga bar, protein bars, healthy snacks, peanut butter, nutrition, muesli",
+a:""
+},
+
+{
+i:110,
+n:"wellbeing nutrition",
+c:"health_pharmacy",
+u:"https://wellbeingnutrition.com",
+d:"Wellbeing Nutrition offers vitamins, supplements, melts, probiotics and nutritional wellness products for everyday health.",
+k:"wellbeing nutrition, vitamins, supplements, probiotics, nutrition, wellness",
+a:""
+},
+
+{
+i:111,
+n:"puma",
+c:"fashion_men,fashion_women,footwear_bags,sports_fitness",
+u:"https://in.puma.com",
+d:"PUMA India offers sportswear, footwear, apparel, accessories and performance products for running, training and everyday lifestyle.",
+k:"puma india, sportswear, shoes, sneakers, apparel, fitness, running",
+a:""
+},
+
+{
+i:112,
+n:"nike",
+c:"fashion_men,fashion_women,footwear_bags,sports_fitness",
+u:"https://www.nike.com/in",
+d:"Nike India offers sports shoes, apparel, accessories and performance products for running, training, football and fitness.",
+k:"nike india, sports shoes, sneakers, apparel, running, football, fitness",
+a:""
+},
+
+{
+i:113,
+n:"reebok",
+c:"fashion_men,fashion_women,footwear_bags,sports_fitness",
+u:"https://www.reebok.in",
+d:"Reebok India offers sports footwear, fitness apparel, training gear and accessories for active lifestyles.",
+k:"reebok india, sports shoes, fitness apparel, training gear, sneakers",
+a:""
+},
+
+{
+i:114,
+n:"under armour",
+c:"fashion_men,fashion_women,footwear_bags,sports_fitness",
+u:"https://www.underarmour.in",
+d:"Under Armour India offers performance sportswear, athletic footwear, training apparel and fitness accessories.",
+k:"under armour india, sportswear, athletic shoes, training apparel, fitness",
+a:""
+},
+
+{
+i:115,
+n:"asics",
+c:"footwear_bags,sports_fitness",
+u:"https://www.asics.com/in/en-in",
+d:"ASICS India offers running shoes, sports footwear and performance gear for runners, athletes and fitness enthusiasts.",
+k:"asics india, running shoes, sports footwear, athletics, fitness",
+a:""
+},
+
+{
+i:116,
+n:"new balance",
+c:"footwear_bags,sports_fitness",
+u:"https://www.newbalance.co.in",
+d:"New Balance India offers running shoes, walking shoes and athletic footwear designed for sports and everyday comfort.",
+k:"new balance india, running shoes, walking shoes, athletic footwear, sports",
+a:""
+},
+
+{
+i:117,
+n:"skechers",
+c:"footwear_bags",
+u:"https://www.skechers.in",
+d:"Skechers India offers casual, walking and comfort footwear for men, women and children along with selected accessories.",
+k:"skechers india, walking shoes, comfort footwear, casual shoes, sneakers",
+a:""
+},
+
+{
+i:118,
+n:"crocs",
+c:"footwear_bags",
+u:"https://www.crocs.in",
+d:"Crocs India offers clogs, sandals, slippers and casual footwear with customizable Jibbitz charms.",
+k:"crocs india, clogs, sandals, slippers, casual footwear, jibbitz",
+a:""
+},
+
+{
+i:119,
+n:"campus activewear",
+c:"footwear_bags,sports_fitness",
+u:"https://www.campusshoes.com",
+d:"Campus Activewear offers sports shoes, casual footwear, running shoes and lifestyle footwear for all age groups.",
+k:"campus activewear, sports shoes, running shoes, casual footwear, sneakers",
+a:""
+},
+
+{
+i:120,
+n:"woodland",
+c:"fashion_men,fashion_women,footwear_bags,sports_fitness",
+u:"https://www.woodlandworldwide.com",
+d:"Woodland offers outdoor footwear, adventure apparel, backpacks and accessories designed for travel and outdoor lifestyles.",
+k:"woodland india, outdoor shoes, adventure wear, backpacks, trekking, outdoor gear",
+a:""
 }
+  
+
+  
 
 ];
