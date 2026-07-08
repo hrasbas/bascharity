@@ -8984,7 +8984,7 @@ c:"ai",
 u:"https://lambdalabs.com",
 a:""
 }]; -->
-  <script>
+ <script>
 const allCountries = document.getElementById("allCountries");
 const featuredShops = document.getElementById("featuredShops");
 
@@ -9006,7 +9006,7 @@ function setSelectedCountry(country) {
 
     const pureCountry = country.trim().toLowerCase();
 
-    //allCountries.value = pureCountry;
+    // allCountries.value = pureCountry;
     allCountries.classList.add("green-select");
 
     document.querySelectorAll(".country-btn").forEach(btn => {
@@ -9028,13 +9028,14 @@ function setSelectedCountry(country) {
     fetchExternalCountryJS(pureCountry);
 
     if (typeof changeCountry === "function") {
-        changeCountry(pureCountry);
+        changeCountry(pureCountry);      // Category side country update
     }
 }
 
+// PART 1 / മറ്റുള്ള code-ുകൾക്ക് വിളിക്കാൻ ഉള്ള helper
 function renderCountry(country) {
     setSelectedCountry(country);
-}   // ← ഈ } വിട്ടുപോയിരുന്നു
+}
 
 function fetchExternalCountryJS(countryName) {
 
@@ -9057,24 +9058,25 @@ function fetchExternalCountryJS(countryName) {
 
     const script = document.createElement("script");
     script.id = "dynamic-country-script";
-    script.src = "./" + countryName.replace(/\s+/g, "_") + ".js";
-script.onload = function () {
+    script.src = "./" + countryName.replace(/s+/g, "_") + ".js";
 
-    loadedCountries[countryName] = true;
+    script.onload = function () {
 
-    if (window.countryShops && window.countryShops[countryName]) {
+        loadedCountries[countryName] = true;
 
-        loadShops(countryShops[countryName]);
+        if (window.countryShops && window.countryShops[countryName]) {
 
-        allCountries.selectedIndex = 0;
+            loadShops(countryShops[countryName]);
 
-    } else {
+            allCountries.selectedIndex = 0;
 
-        featuredShops.innerHTML =
-            "<div style='text-align:center;padding:20px;color:red;'>No Shop Data</div>";
-    }
+        } else {
 
-};
+            featuredShops.innerHTML =
+                "<div style='text-align:center;padding:20px;color:red;'>No Shop Data</div>";
+        }
+
+    };
 
     script.onerror = function () {
         featuredShops.innerHTML =
@@ -9124,13 +9126,12 @@ ${shop.n}
 </a>`;
     });
 
+    // TOP 10 shops load ആയതിന് ശേഷം Category side country update
     if (typeof changeCountry === "function") {
         changeCountry(allCountries.value);
     }
-   if (window.renderCountry) {
-    window.renderCountry(allCountries.value);
+    // ★ renderCountry ഇവിടെ ഇനി വേണ്ട; കുഴപ്പമുണ്ടാക്കിയത് ഇതായിരുന്നു
 }
-
 
 document.addEventListener("DOMContentLoaded", () => {
 
@@ -9144,16 +9145,16 @@ document.addEventListener("DOMContentLoaded", () => {
             setSelectedCountry(this.textContent.trim().toLowerCase());
         });
     });
-allCountries.addEventListener("change", e => {
-    if (e.target.value) {
-        setSelectedCountry(e.target.value);
-        allCountries.selectedIndex = 0;
-    }
-});
+
+    allCountries.addEventListener("change", e => {
+        if (e.target.value) {
+            setSelectedCountry(e.target.value);
+            allCountries.selectedIndex = 0;
+        }
+    });
 
 });
-  
-  </script>
+</script>
 <!-- SL NO 37 : HTML END -->
 <!-- ================================================= -->
 
