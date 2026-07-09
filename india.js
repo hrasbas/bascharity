@@ -5083,6 +5083,4002 @@ u:"https://www.rescuetime.com",
 d:"RescueTime analyzes computer usage to show how time is spent and improve focus.",
 k:"rescuetime, productivity tracking, time analytics, focus tool",
 a:""
+},
+ {
+i:551,
+n:"wise",
+c:"business",
+u:"https://wise.com",
+d:"Wise offers low-cost international money transfers and multi-currency accounts.",
+k:"wise, international transfers, forex, multi-currency account, remittance",
+a:""
+},
+
+{
+i:552,
+n:"paypal",
+c:"business",
+u:"https://www.paypal.com",
+d:"PayPal is an online payment system for sending, receiving and processing money.",
+k:"paypal, online payments, wallets, send money, merchant processing",
+a:""
+},
+
+{
+i:553,
+n:"payoneer",
+c:"business",
+u:"https://www.payoneer.com",
+d:"Payoneer provides cross-border payment services for freelancers and businesses.",
+k:"payoneer, global payments, freelance payouts, cross-border transfers",
+a:""
+},
+
+{
+i:554,
+n:"stripe",
+c:"business",
+u:"https://stripe.com",
+d:"Stripe is a payments platform powering online transactions and subscriptions.",
+k:"stripe, payment gateway, online payments, subscriptions, APIs",
+a:""
+},
+
+{
+i:555,
+n:"razorpay",
+c:"business",
+u:"https://razorpay.com",
+d:"Razorpay is an Indian payment gateway for online businesses and startups.",
+k:"razorpay, India payments, payment gateway, UPI, cards, merchants",
+a:""
+},
+
+{
+i:556,
+n:"cashfree",
+c:"business",
+u:"https://www.cashfree.com",
+d:"Cashfree offers payment solutions and APIs for Indian businesses.",
+k:"cashfree, payment gateway, payouts, India, APIs",
+a:""
+},
+
+{
+i:557,
+n:"phonepe business",
+c:"business",
+u:"https://www.phonepe.com/business",
+d:"PhonePe Business provides UPI-based payment and collection solutions for merchants.",
+k:"phonepe business, UPI payments, QR collection, India merchants",
+a:""
+},
+
+{
+i:558,
+n:"bharatpe",
+c:"business",
+u:"https://bharatpe.com",
+d:"BharatPe offers QR-based payments and financial services to small merchants.",
+k:"bharatpe, merchant QR, UPI acceptance, small business finance",
+a:""
+},
+
+{
+i:559,
+n:"ccavenue",
+c:"business",
+u:"https://www.ccavenue.com",
+d:"CCAvenue is a payment gateway supporting multiple methods for Indian merchants.",
+k:"ccavenue, payment gateway India, cards, netbanking, payments",
+a:""
+},
+
+{
+i:560,
+n:"instamojo",
+c:"business",
+u:"https://www.instamojo.com",
+d:"Instamojo offers payment links, online store tools and small business solutions.",
+k:"instamojo, payment links, online store, MSME tools, India",
+a:""
+},
+
+{
+i:561,
+n:"groww",
+c:"business",
+u:"https://groww.in",
+d:"Groww is an investment platform for mutual funds, stocks and other instruments.",
+k:"groww, stock investing, mutual funds, India broker app",
+a:""
+},
+
+{
+i:562,
+n:"zerodha",
+c:"business",
+u:"https://zerodha.com",
+d:"Zerodha is a discount stock brokerage in India with trading and investing platforms.",
+k:"zerodha, discount broker, stock trading, kite, India markets",
+a:""
+},
+
+{
+i:563,
+n:"angel one trade",
+c:"business",
+u:"https://www.angelone.in",
+d:"Angel One Trade is a stockbroking and investment service in India.",
+k:"angel one, stockbroker, trading app, India equity, investments",
+a:""
+},
+
+{
+i:564,
+n:"5paisa",
+c:"business",
+u:"https://www.5paisa.com",
+d:"5paisa is a discount brokerage offering low-cost stock and mutual fund investing.",
+k:"5paisa, discount broker, stock trading, mutual funds, India",
+a:""
+},
+
+{
+i:565,
+n:"icici direct",
+c:"business",
+u:"https://www.icicidirect.com",
+d:"ICICI Direct provides trading, investment and research services from ICICI group.",
+k:"icici direct, full-service broker, research, trading, India",
+a:""
+},
+
+{
+i:566,
+n:"hdfc sky",
+c:"business",
+u:"https://www.hdfcsky.com",
+d:"HDFC Sky is HDFC’s online investing and trading platform.",
+k:"hdfc sky, online trading, investments, HDFC securities",
+a:""
+},
+
+{
+i:567,
+n:"kotak neo",
+c:"business",
+u:"https://www.kotaksecurities.com",
+d:"Kotak Neo is Kotak Securities’ platform for digital trading and investing.",
+k:"kotak neo, kotak securities, online trading, India stock market",
+a:""
+},
+
+{
+i:568,
+n:"motilal oswal",
+c:"business",
+u:"https://www.motilaloswal.com",
+d:"Motilal Oswal offers broking, wealth management and research services.",
+k:"motilal oswal, brokerage, wealth management, research, India",
+a:""
+},
+
+{
+i:569,
+n:"sharekhan",
+c:"business",
+u:"https://www.sharekhan.com",
+d:"Sharekhan is a full-service brokerage with trading platforms and research.",
+k:"sharekhan, stockbroker, trading account, research, India",
+a:""
+},
+
+{
+i:570,
+n:"dhan",
+c:"business",
+u:"https://dhan.co",
+d:"Dhan is a newer Indian investing platform for stocks and derivatives.",
+k:"dhan, stock investing, trading app, India broker",
+a:""
+},
+
+{
+i:571,
+n:"moneycontrol",
+c:"business",
+u:"https://www.moneycontrol.com",
+d:"Moneycontrol provides market data, news, portfolios and tools for Indian investors.",
+k:"moneycontrol, stock quotes, India markets, portfolio tracker, business news",
+a:""
+},
+
+{
+i:572,
+n:"screener",
+c:"business",
+u:"https://www.screener.in",
+d:"Screener.in offers fundamental data and custom screens for Indian stocks.",
+k:"screener.in, stock screener, fundamentals, India equities, analysis",
+a:""
+},
+
+{
+i:573,
+n:"ticker tape",
+c:"business",
+u:"https://www.tickertape.in",
+d:"Tickertape provides stock analysis, screeners and financial tools for India markets.",
+k:"tickertape, stock analysis, India screener, investing tools",
+a:""
+},
+
+{
+i:574,
+n:"trendlyne",
+c:"business",
+u:"https://trendlyne.com",
+d:"Trendlyne offers stock analytics, alerts and portfolio tools.",
+k:"trendlyne, stock analytics, alerts, portfolios, India investing",
+a:""
+},
+
+{
+i:575,
+n:"investing",
+c:"business",
+u:"https://www.investing.com",
+d:"Investing.com delivers global financial quotes, charts, tools and news.",
+k:"investing.com, global markets, forex, stocks, charts, financial news",
+a:""
+},
+
+{
+i:576,
+n:"tradingview",
+c:"business",
+u:"https://www.tradingview.com",
+d:"TradingView is a charting and social platform for traders and investors.",
+k:"tradingview, stock charts, technical analysis, trading ideas, indicators",
+a:""
+},
+
+{
+i:577,
+n:"economictimes markets",
+c:"business",
+u:"https://economictimes.indiatimes.com/markets",
+d:"Economic Times Markets section covers Indian market news, data and analysis.",
+k:"economic times markets, India stock news, market updates, ET",
+a:""
+},
+
+{
+i:578,
+n:"livemint",
+c:"business",
+u:"https://www.livemint.com",
+d:"LiveMint is a business and finance news site from India.",
+k:"livemint, business news, finance, Indian economy, markets",
+a:""
+},
+
+{
+i:579,
+n:"business standard",
+c:"business",
+u:"https://www.business-standard.com",
+d:"Business Standard is an Indian newspaper focused on business, markets and policy.",
+k:"business standard, business daily, markets, policy, India news",
+a:""
+},
+
+{
+i:580,
+n:"fortune india",
+c:"business",
+u:"https://www.fortuneindia.com",
+d:"Fortune India covers business stories, rankings and corporate news.",
+k:"fortune india, business magazine, rankings, corporate stories",
+a:""
+},
+
+{
+i:581,
+n:"irctc",
+c:"travel",
+u:"https://www.irctc.co.in",
+d:"IRCTC is the official Indian Railways portal for ticket booking and related services.",
+k:"irctc, train tickets, Indian Railways, online booking, tatkal",
+a:""
+},
+
+{
+i:582,
+n:"rail yatri",
+c:"travel",
+u:"https://www.railyatri.in",
+d:"RailYatri provides train information, bookings and travel tools in India.",
+k:"railyatri, train inquiry, seat availability, train booking, India",
+a:""
+},
+
+{
+i:583,
+n:"confirmtkt",
+c:"travel",
+u:"https://www.confirmtkt.com",
+d:"ConfirmTkt helps book train tickets and predicts confirmation chances.",
+k:"confirmtkt, train booking, PNR prediction, ticket confirmation, India",
+a:""
+},
+
+{
+i:584,
+n:"trainman",
+c:"travel",
+u:"https://www.trainman.in",
+d:"Trainman offers PNR status, train schedules and ticket booking.",
+k:"trainman, PNR check, train schedules, India train app",
+a:""
+},
+
+{
+i:585,
+n:"goibibo",
+c:"travel",
+u:"https://www.goibibo.com",
+d:"Goibibo is a travel booking site for flights, hotels, buses and trains.",
+k:"goibibo, flight booking, hotels, buses, trains, India travel",
+a:""
+},
+
+{
+i:586,
+n:"cleartrip flights",
+c:"travel",
+u:"https://www.cleartrip.com",
+d:"Cleartrip offers flight, hotel and train bookings with a clean interface.",
+k:"cleartrip, flight tickets, hotel booking, train reservations, travel portal",
+a:""
+},
+
+{
+i:587,
+n:"makemytrip hotels",
+c:"travel",
+u:"https://www.makemytrip.com",
+d:"MakeMyTrip is a major Indian travel platform for flights, hotels and holidays.",
+k:"makemytrip, hotel deals, flight booking, holiday packages, India travel",
+a:""
+},
+
+{
+i:588,
+n:"agoda hotels",
+c:"travel",
+u:"https://www.agoda.com",
+d:"Agoda specializes in hotel and accommodation bookings worldwide.",
+k:"agoda, hotel booking, accommodations, global travel deals",
+a:""
+},
+
+{
+i:589,
+n:"tripadvisor",
+c:"travel",
+u:"https://www.tripadvisor.com",
+d:"Tripadvisor provides travel reviews, ratings and booking options for hotels and attractions.",
+k:"tripadvisor, hotel reviews, attractions, travel ratings, user opinions",
+a:""
+},
+
+{
+i:590,
+n:"trivago",
+c:"travel",
+u:"https://www.trivago.in",
+d:"Trivago is a hotel search and price comparison site that aggregates deals from hundreds of booking platforms.",
+k:"trivago, hotel price comparison, accommodation search, booking deals, travel meta search",
+a:""
+},
+
+{
+i:591,
+n:"uber",
+c:"travel",
+u:"https://www.uber.com/in",
+d:"Uber is a ride‑hailing app that connects passengers with drivers for on‑demand transport and deliveries.",
+k:"uber, ride hailing, taxi app, cab booking, on demand transport",
+a:""
+},
+
+{
+i:592,
+n:"ola",
+c:"travel",
+u:"https://www.olacabs.com",
+d:"Ola Cabs is an Indian ride‑hailing service for booking taxis, autos and rentals via mobile app.",
+k:"ola cabs, taxi booking, ride hailing India, autos, car rentals",
+a:""
+},
+
+{
+i:593,
+n:"rapido",
+c:"travel",
+u:"https://www.rapido.bike",
+d:"Rapido is a bike and auto ride‑hailing service offering quick short‑distance transport in Indian cities.",
+k:"rapido, bike taxi, auto rides, quick city transport, India",
+a:""
+},
+
+{
+i:594,
+n:"blu smart",
+c:"travel",
+u:"https://www.blusmart.com",
+d:"BluSmart is an all‑electric ride‑hailing service providing pre‑booked and on‑demand cabs.",
+k:"blusmart, electric cabs, EV ride hailing, sustainable transport",
+a:""
+},
+
+{
+i:595,
+n:"savaari",
+c:"travel",
+u:"https://www.savaari.com",
+d:"Savaari offers chauffeur‑driven outstation, local and airport cab services across India.",
+k:"savaari, outstation cabs, chauffeur driven taxi, airport transfer, India",
+a:""
+},
+
+{
+i:596,
+n:"zoomcar",
+c:"travel",
+u:"https://www.zoomcar.com",
+d:"Zoomcar provides self‑drive car rentals in Indian cities for short and long trips.",
+k:"zoomcar, self drive car rental, car hire India, road trips",
+a:""
+},
+
+{
+i:597,
+n:"revv",
+c:"travel",
+u:"https://www.revv.co.in",
+d:"Revv offers self‑drive car rentals and car subscription services in India.",
+k:"revv, self drive cars, car subscription, rentals, India",
+a:""
+},
+
+{
+i:598,
+n:"myles",
+c:"travel",
+u:"https://www.mylescars.com",
+d:"Myles is a self‑drive car rental platform with hourly and daily plans.",
+k:"myles, self drive car rental, car hire, India travel",
+a:""
+},
+
+{
+i:599,
+n:"royal brothers",
+c:"travel",
+u:"https://www.royalbrothers.com",
+d:"Royal Brothers rents bikes and scooters for self‑drive travel in India.",
+k:"royal brothers, bike rental, scooter hire, self drive bikes, India",
+a:""
+},
+
+{
+i:600,
+n:"yulu",
+c:"travel",
+u:"https://www.yulu.bike",
+d:"Yulu is a shared e‑bike and e‑scooter service for short urban commutes.",
+k:"yulu bikes, shared mobility, e scooter, micro mobility, city commute",
+a:""
+},
+
+{
+i:601,
+n:"airalo",
+c:"travel",
+u:"https://www.airalo.com",
+d:"Airalo sells international eSIMs so travelers can access local mobile data without physical SIM cards.",
+k:"airalo, travel eSIM, international data, mobile roaming alternative",
+a:""
+},
+
+{
+i:602,
+n:"nomad esim",
+c:"travel",
+u:"https://www.getnomad.app",
+d:"Nomad eSIM provides regional and global data plans for travelers via digital SIMs.",
+k:"nomad eSIM, travel data, digital sim, roaming, mobile internet",
+a:""
+},
+
+{
+i:603,
+n:"saily",
+c:"travel",
+u:"https://saily.com",
+d:"Saily offers prepaid eSIM data plans for international travel.",
+k:"saily, prepaid eSIM, travel data plan, roaming alternative",
+a:""
+},
+
+{
+i:604,
+n:"travelkhana",
+c:"food",
+u:"https://www.travelkhana.com",
+d:"Travelkhana lets train passengers order food from partner restaurants delivered to their seat.",
+k:"travelkhana, train food delivery, railway meals, order food on train",
+a:""
+},
+
+{
+i:605,
+n:"e catering irctc",
+c:"food",
+u:"https://www.ecatering.irctc.co.in",
+d:"IRCTC e‑Catering allows railway passengers to book meals online from approved vendors.",
+k:"irctc e catering, train food booking, railway meals, online catering",
+a:""
+},
+
+{
+i:606,
+n:"oyo townhouse",
+c:"travel",
+u:"https://www.oyorooms.com",
+d:"OYO Townhouse is OYO’s mid‑scale hotel brand offering standardized budget‑friendly stays.",
+k:"oyo townhouse, budget hotels, branded stays, oyo rooms, city hotels",
+a:""
+},
+
+{
+i:607,
+n:"treebo",
+c:"travel",
+u:"https://www.treebo.com",
+d:"Treebo is a budget hotel chain in India providing standardized rooms and amenities.",
+k:"treebo hotels, budget stays India, standardized rooms, affordable hotels",
+a:""
+},
+
+{
+i:608,
+n:"fabhotels",
+c:"travel",
+u:"https://www.fabhotels.com",
+d:"FabHotels partners with budget hotels to offer branded, value‑for‑money stays.",
+k:"fabhotels, budget hotel network, branded stays, affordable rooms",
+a:""
+},
+
+{
+i:609,
+n:"stayvista",
+c:"travel",
+u:"https://www.stayvista.com",
+d:"StayVista lists curated private villas and vacation homes for group stays in India.",
+k:"stayvista, private villas, vacation homes, group stays, luxury rentals",
+a:""
+},
+
+{
+i:610,
+n:"saffron stays",
+c:"travel",
+u:"https://www.saffronstays.com",
+d:"SaffronStays offers managed holiday homes and villas across Indian destinations.",
+k:"saffron stays, holiday homes, villas, weekend getaways, India",
+a:""
+},
+
+{
+i:611,
+n:"makemytrip activities",
+c:"travel",
+u:"https://www.makemytrip.com",
+d:"MakeMyTrip Activities lists tours, experiences and local activities alongside travel bookings.",
+k:"makemytrip activities, local experiences, tours, things to do, travel packages",
+a:""
+},
+
+{
+i:612,
+n:"klook",
+c:"travel",
+u:"https://www.klook.com",
+d:"Klook is a platform to book activities, attractions, transport and experiences worldwide.",
+k:"klook, travel activities, attraction tickets, tours, experiences",
+a:""
+},
+
+{
+i:613,
+n:"viator",
+c:"travel",
+u:"https://www.viator.com",
+d:"Viator, a Tripadvisor company, sells tours, activities and attraction tickets globally.",
+k:"viator, guided tours, attraction passes, travel activities, bookings",
+a:""
+},
+
+{
+i:614,
+n:"thrillophilia",
+c:"travel",
+u:"https://www.thrillophilia.com",
+d:"Thrillophilia focuses on adventure trips, experiences and tour packages, mainly in India.",
+k:"thrillophilia, adventure tours, experiential travel, India trips",
+a:""
+},
+
+{
+i:615,
+n:"wanderon",
+c:"travel",
+u:"https://wanderon.in",
+d:"WanderOn organizes group trips and road journeys for young travelers.",
+k:"wanderon, group trips, backpacking tours, road trips, youth travel",
+a:""
+},
+
+{
+i:616,
+n:"tripoto",
+c:"travel",
+u:"https://www.tripoto.com",
+d:"Tripoto combines travel blogs, itineraries and community trips for discovering and booking journeys.",
+k:"tripoto, travel stories, itineraries, community trips, India travel",
+a:""
+},
+
+{
+i:617,
+n:"holidify",
+c:"travel",
+u:"https://www.holidify.com",
+d:"Holidify helps discover Indian destinations with guides, itineraries and hotel listings.",
+k:"holidify, India destinations, travel guides, itineraries, hotel search",
+a:""
+},
+
+{
+i:618,
+n:"lonely planet",
+c:"books",
+u:"https://www.lonelyplanet.com",
+d:"Lonely Planet publishes travel guides and destination information for travelers worldwide.",
+k:"lonely planet, travel guidebooks, destination info, travel tips",
+a:""
+},
+
+{
+i:619,
+n:"wikivoyage",
+c:"travel",
+u:"https://www.wikivoyage.org",
+d:"Wikivoyage is a free, community‑edited travel guide covering destinations and itineraries.",
+k:"wikivoyage, free travel guide, community edited, destination info",
+a:""
+},
+
+{
+i:620,
+n:"rome2rio",
+c:"travel",
+u:"https://www.rome2rio.com",
+d:"Rome2Rio shows multi‑modal routes and transport options between places worldwide.",
+k:"rome2rio, route planner, transport options, flights trains buses, travel planning",
+a:""
+},
+
+{
+i:621,
+n:"weather.com",
+c:"software",
+u:"https://weather.com",
+d:"Weather.com provides local and global weather forecasts, radar and alerts.",
+k:"weather.com, weather forecast, live conditions, radar, alerts",
+a:""
+},
+
+{
+i:622,
+n:"accuweather",
+c:"software",
+u:"https://www.accuweather.com",
+d:"AccuWeather offers detailed weather forecasts, maps and severe weather warnings.",
+k:"accuweather, daily forecast, realfeel, weather maps, alerts",
+a:""
+},
+
+{
+i:623,
+n:"windy",
+c:"software",
+u:"https://www.windy.com",
+d:"Windy visualizes wind, rain and weather data on interactive maps useful for outdoor planning.",
+k:"windy, wind map, weather visualization, storm tracking, forecast maps",
+a:""
+},
+
+{
+i:624,
+n:"ventusky",
+c:"software",
+u:"https://www.ventusky.com",
+d:"Ventusky shows animated weather maps including temperature, wind and precipitation.",
+k:"ventusky, animated weather maps, wind forecast, temperature, rainfall",
+a:""
+},
+
+{
+i:625,
+n:"time and date",
+c:"software",
+u:"https://www.timeanddate.com",
+d:"Time and Date offers world clocks, time zone tools, calendars and astronomy data.",
+k:"timeanddate, world clock, time zones, calendar, sunrise sunset",
+a:""
+},
+
+{
+i:626,
+n:"world clock",
+c:"software",
+u:"https://www.worldclock.com",
+d:"WorldClock.com provides current times in cities worldwide and time zone info.",
+k:"world clock, global time, time zones, local time lookup",
+a:""
+},
+
+{
+i:627,
+n:"speedtest",
+c:"software",
+u:"https://www.speedtest.net",
+d:"Speedtest by Ookla measures internet connection speed, latency and performance.",
+k:"speedtest, internet speed test, download upload, ping, network diagnostics",
+a:""
+},
+
+{
+i:628,
+n:"fast",
+c:"software",
+u:"https://fast.com",
+d:"Fast.com is Netflix’s simple tool to quickly check download speed of your internet.",
+k:"fast.com, quick speed test, download speed, netflix tool",
+a:""
+},
+
+{
+i:629,
+n:"down detector",
+c:"software",
+u:"https://downdetector.com",
+d:"Downdetector tracks and reports service outages for websites, apps and networks.",
+k:"downdetector, outage map, service status, downtime reports",
+a:""
+},
+
+{
+i:630,
+n:"isitdownrightnow",
+c:"software",
+u:"https://www.isitdownrightnow.com",
+d:"IsItDownRightNow checks if popular websites are currently up or experiencing issues.",
+k:"isitdownrightnow, website status, site down checker, uptime monitor",
+a:""
+},
+
+{
+i:631,
+n:"google maps",
+c:"software",
+u:"https://maps.google.com",
+d:"Google Maps offers maps, navigation, traffic and business listings worldwide.",
+k:"google maps, navigation, gps directions, local search, traffic",
+a:""
+},
+
+{
+i:632,
+n:"openstreetmap",
+c:"software",
+u:"https://www.openstreetmap.org",
+d:"OpenStreetMap is a collaborative open‑data map of the world edited by volunteers.",
+k:"openstreetmap, open data maps, community mapping, osm",
+a:""
+},
+
+{
+i:633,
+n:"mapquest",
+c:"software",
+u:"https://www.mapquest.com",
+d:"MapQuest provides driving directions, maps and route planning.",
+k:"mapquest, driving directions, route planner, maps",
+a:""
+},
+
+{
+i:634,
+n:"here wego",
+c:"software",
+u:"https://wego.here.com",
+d:"HERE WeGo is a navigation app with offline maps and route guidance.",
+k:"here wego, navigation app, offline maps, driving directions",
+a:""
+},
+
+{
+i:635,
+n:"waze",
+c:"software",
+u:"https://www.waze.com",
+d:"Waze is a community‑based navigation app with live traffic and road alerts.",
+k:"waze, crowd sourced navigation, live traffic, road alerts, driving",
+a:""
+},
+
+{
+i:636,
+n:"google translate",
+c:"software",
+u:"https://translate.google.com",
+d:"Google Translate translates text, speech, images and web pages between many languages.",
+k:"google translate, language translation, text voice camera translate",
+a:""
+},
+
+{
+i:637,
+n:"deepl",
+c:"software",
+u:"https://www.deepl.com",
+d:"DeepL is a translation service known for high‑quality neural machine translations.",
+k:"deepl, neural translation, language translator, accurate translations",
+a:""
+},
+
+{
+i:638,
+n:"cambridge dictionary",
+c:"books",
+u:"https://dictionary.cambridge.org",
+d:"Cambridge Dictionary provides definitions, pronunciation and examples for English words.",
+k:"cambridge dictionary, English definitions, pronunciation, usage examples",
+a:""
+},
+
+{
+i:639,
+n:"oxford learner",
+c:"books",
+u:"https://www.oxfordlearnersdictionaries.com",
+d:"Oxford Learner’s Dictionaries are designed for English language learners with clear definitions and audio.",
+k:"oxford learners dictionary, ESL resource, learner friendly definitions, audio pronunciation",
+a:""
+},
+
+{
+i:640,
+n:"merriam webster",
+c:"books",
+u:"https://www.merriam-webster.com",
+d:"Merriam‑Webster is a well‑known American English dictionary with definitions, thesaurus and word games.",
+k:"merriam webster, American English dictionary, thesaurus, word of the day",
+a:""
+},
+
+{
+i:641,
+n:"wolfram alpha",
+c:"books",
+u:"https://www.wolframalpha.com",
+d:"Wolfram Alpha is a computational knowledge engine that answers queries using built‑in data and algorithms.",
+k:"wolfram alpha, computational engine, math solver, data queries, step by step",
+a:""
+},
+
+{
+i:642,
+n:"symbolab",
+c:"books",
+u:"https://www.symbolab.com",
+d:"Symbolab solves math problems and shows step‑by‑step solutions for equations and calculus.",
+k:"symbolab, math solver, step by step solutions, algebra, calculus",
+a:""
+},
+
+{
+i:643,
+n:"desmos",
+c:"books",
+u:"https://www.desmos.com",
+d:"Desmos offers interactive graphing calculators and math activities for students and teachers.",
+k:"desmos, online graphing calculator, interactive math, classroom activities",
+a:""
+},
+
+{
+i:644,
+n:"geogebra",
+c:"books",
+u:"https://www.geogebra.org",
+d:"GeoGebra provides dynamic math software for geometry, algebra and calculus visualization.",
+k:"geogebra, dynamic geometry, math visualizations, algebra calculator",
+a:""
+},
+
+{
+i:645,
+n:"calculator.net",
+c:"software",
+u:"https://www.calculator.net",
+d:"Calculator.net hosts many online calculators for finance, health, math and more.",
+k:"calculator.net, online calculators, bmi, loan calculator, math tools",
+a:""
+},
+
+{
+i:646,
+n:"unit converters",
+c:"software",
+u:"https://www.unitconverters.net",
+d:"UnitConverters.net converts units across measurement systems like length, weight and temperature.",
+k:"unit converters, unit conversion, metric imperial, length weight temperature",
+a:""
+},
+
+{
+i:647,
+n:"smallpdf",
+c:"software",
+u:"https://smallpdf.com",
+d:"Smallpdf offers simple tools to compress, convert, edit and sign PDF files online.",
+k:"smallpdf, pdf converter, compress pdf, merge split, online pdf tools",
+a:""
+},
+
+{
+i:648,
+n:"ilovepdf",
+c:"software",
+u:"https://www.ilovepdf.com",
+d:"iLovePDF provides online utilities to merge, split, convert and optimize PDFs.",
+k:"ilovepdf, pdf merge, split, convert, compress, online pdf service",
+a:""
+},
+
+{
+i:649,
+n:"pdf24",
+c:"software",
+u:"https://tools.pdf24.org",
+d:"PDF24 Tools is a collection of free online tools to create, edit and convert PDF documents.",
+k:"pdf24, online pdf tools, convert pdf, edit pdf, free utilities",
+a:""
+},
+
+{
+i:650,
+n:"sejda",
+c:"software",
+u:"https://www.sejda.com",
+d:"Sejda is a web and desktop app for editing, converting and managing PDF files.",
+k:"sejda, pdf editor, convert pdf, split merge, pdf toolkit",
+a:""
+},
+ {
+i:651,
+n:"canva docs",
+c:"software",
+u:"https://www.canva.com/docs",
+d:"Canva Docs lets users create visually rich documents using Canva’s design tools.",
+k:"canva docs, visual documents, online editor, templates, collaborative writing",
+a:""
+},
+
+{
+i:652,
+n:"google docs",
+c:"software",
+u:"https://docs.google.com",
+d:"Google Docs is a cloud‑based word processor for creating and collaborating on documents.",
+k:"google docs, online word processor, collaboration, cloud documents",
+a:""
+},
+
+{
+i:653,
+n:"google sheets",
+c:"software",
+u:"https://sheets.google.com",
+d:"Google Sheets is an online spreadsheet app for data analysis and collaboration.",
+k:"google sheets, online spreadsheet, formulas, collaboration, cloud data",
+a:""
+},
+
+{
+i:654,
+n:"google slides",
+c:"software",
+u:"https://slides.google.com",
+d:"Google Slides is a web‑based presentation tool for creating and sharing slide decks.",
+k:"google slides, online presentations, slide deck, collaboration",
+a:""
+},
+
+{
+i:655,
+n:"microsoft word",
+c:"software",
+u:"https://www.microsoft.com/microsoft-365/word",
+d:"Microsoft Word is a widely used word processing application in the Microsoft 365 suite.",
+k:"microsoft word, document editor, word processor, office suite",
+a:""
+},
+
+{
+i:656,
+n:"microsoft excel",
+c:"software",
+u:"https://www.microsoft.com/microsoft-365/excel",
+d:"Microsoft Excel is a spreadsheet program for calculations, charts and data analysis.",
+k:"microsoft excel, spreadsheets, formulas, data analysis, office",
+a:""
+},
+
+{
+i:657,
+n:"microsoft powerpoint",
+c:"software",
+u:"https://www.microsoft.com/microsoft-365/powerpoint",
+d:"Microsoft PowerPoint is presentation software for creating slideshows and visual talks.",
+k:"powerpoint, presentation software, slideshows, office",
+a:""
+},
+
+{
+i:658,
+n:"onlyoffice",
+c:"software",
+u:"https://www.onlyoffice.com",
+d:"ONLYOFFICE is an office suite offering document, spreadsheet and presentation editors.",
+k:"onlyoffice, office suite, doc editor, spreadsheet, presentations",
+a:""
+},
+
+{
+i:659,
+n:"zoho writer",
+c:"software",
+u:"https://www.zoho.com/writer",
+d:"Zoho Writer is an online word processor with collaboration and publishing features.",
+k:"zoho writer, online document editor, collaboration, cloud writing",
+a:""
+},
+
+{
+i:660,
+n:"zoho sheet",
+c:"software",
+u:"https://www.zoho.com/sheet",
+d:"Zoho Sheet is a cloud spreadsheet application for teams and businesses.",
+k:"zoho sheet, online spreadsheet, data analysis, business tool",
+a:""
+},
+
+{
+i:661,
+n:"zoho show",
+c:"software",
+u:"https://www.zoho.com/show",
+d:"Zoho Show is an online presentation tool to design and present slides.",
+k:"zoho show, web presentations, slide design, online slideshow",
+a:""
+},
+
+{
+i:662,
+n:"grammarly editor",
+c:"software",
+u:"https://app.grammarly.com",
+d:"Grammarly Editor checks grammar, spelling, style and plagiarism for written text.",
+k:"grammarly, grammar checker, writing assistant, spelling, style suggestions",
+a:""
+},
+
+{
+i:663,
+n:"hemingway editor",
+c:"software",
+u:"https://hemingwayapp.com",
+d:"Hemingway Editor highlights complex sentences and readability issues in writing.",
+k:"hemingway editor, readability checker, simpler writing, style tool",
+a:""
+},
+
+{
+i:664,
+n:"quillbot",
+c:"software",
+u:"https://quillbot.com",
+d:"QuillBot offers paraphrasing, summarizing and grammar‑checking tools powered by AI.",
+k:"quillbot, paraphraser, summarizer, grammar check, AI writing tool",
+a:""
+},
+
+{
+i:665,
+n:"languagetool",
+c:"software",
+u:"https://languagetool.org",
+d:"LanguageTool is an open‑source style and grammar checker supporting multiple languages.",
+k:"languagetool, grammar checker, multilingual proofreading, style suggestions",
+a:""
+},
+
+{
+i:666,
+n:"notepad online",
+c:"software",
+u:"https://anotepad.com",
+d:"aNotepad.com is a simple online notepad for saving text notes in the browser.",
+k:"online notepad, simple notes, text editor, anotepad",
+a:""
+},
+
+{
+i:667,
+n:"json formatter",
+c:"software",
+u:"https://jsonformatter.org",
+d:"JSONFormatter.org formats, validates and views JSON data online.",
+k:"json formatter, json validator, pretty print json, online tool",
+a:""
+},
+
+{
+i:668,
+n:"jsonlint",
+c:"software",
+u:"https://jsonlint.com",
+d:"JSONLint is an online JSON validator and linter for checking JSON syntax.",
+k:"jsonlint, json validator, lint json, syntax checker",
+a:""
+},
+
+{
+i:669,
+n:"regex101",
+c:"software",
+u:"https://regex101.com",
+d:"Regex101 helps build and test regular expressions with explanations.",
+k:"regex101, regex tester, regular expressions, pattern debugging",
+a:""
+},
+
+{
+i:670,
+n:"code beautify",
+c:"software",
+u:"https://codebeautify.org",
+d:"Code Beautify hosts many developer tools like formatters, converters and validators.",
+k:"code beautify, online dev tools, code formatter, json xml converter",
+a:""
+},
+
+{
+i:671,
+n:"tinywow",
+c:"software",
+u:"https://tinywow.com",
+d:"TinyWow offers a collection of free online tools for PDFs, images, text and more.",
+k:"tinywow, free online tools, pdf image text utilities, converters",
+a:""
+},
+
+{
+i:672,
+n:"online2pdf",
+c:"software",
+u:"https://online2pdf.com",
+d:"Online2PDF converts and edits documents and images to and from PDF format.",
+k:"online2pdf, pdf converter, merge split pdf, document to pdf",
+a:""
+},
+
+{
+i:673,
+n:"convertio",
+c:"software",
+u:"https://convertio.co",
+d:"Convertio is an online file converter supporting many formats for documents, images and audio.",
+k:"convertio, file converter, document image audio conversion, online tool",
+a:""
+},
+
+{
+i:674,
+n:"cloudconvert",
+c:"software",
+u:"https://cloudconvert.com",
+d:"CloudConvert is a cloud file conversion service with API and wide format support.",
+k:"cloudconvert, file conversion api, multi format converter, cloud tool",
+a:""
+},
+
+{
+i:675,
+n:"freeconvert",
+c:"software",
+u:"https://www.freeconvert.com",
+d:"FreeConvert provides free online converters for videos, images, audio and documents.",
+k:"freeconvert, free file converter, video image audio document conversion",
+a:""
+},
+
+{
+i:676,
+n:"remove bg hd",
+c:"software",
+u:"https://www.remove.bg",
+d:"Remove.bg automatically removes image backgrounds to create clean cutouts.",
+k:"remove.bg, background remover, image cutout, photo editing",
+a:""
+},
+
+{
+i:677,
+n:"compress jpeg",
+c:"software",
+u:"https://compressjpeg.com",
+d:"CompressJPEG.com reduces file size of JPEG images online.",
+k:"compress jpeg, jpeg optimizer, image compression, reduce photo size",
+a:""
+},
+
+{
+i:678,
+n:"compress png",
+c:"software",
+u:"https://compresspng.com",
+d:"CompressPNG.com compresses PNG images to smaller file sizes.",
+k:"compress png, png optimizer, image compression, reduce png size",
+a:""
+},
+
+{
+i:679,
+n:"ezgif",
+c:"software",
+u:"https://ezgif.com",
+d:"Ezgif offers tools to create, edit and convert GIFs and basic video edits.",
+k:"ezgif, gif maker, gif editor, video to gif, image tools",
+a:""
+},
+
+{
+i:680,
+n:"squoosh",
+c:"software",
+u:"https://squoosh.app",
+d:"Squoosh is a web app from Google to compress and convert images with live previews.",
+k:"squoosh, image compression, webp converter, browser image tool",
+a:""
+},
+
+{
+i:681,
+n:"chatgpt",
+c:"software",
+u:"https://chatgpt.com",
+d:"ChatGPT is an AI chatbot that generates text, answers questions and assists with tasks.",
+k:"chatgpt, AI chatbot, text generation, question answering, assistant",
+a:""
+},
+
+{
+i:682,
+n:"google gemini",
+c:"software",
+u:"https://gemini.google.com",
+d:"Google Gemini is Google’s AI assistant for chat, coding and content generation.",
+k:"google gemini, AI assistant, generative model, coding help, chat",
+a:""
+},
+
+{
+i:683,
+n:"claude",
+c:"software",
+u:"https://claude.ai",
+d:"Claude is Anthropic’s AI assistant for writing, analysis and coding.",
+k:"claude AI, anthropic assistant, text analysis, coding help, chatbot",
+a:""
+},
+
+{
+i:684,
+n:"perplexity",
+c:"software",
+u:"https://www.perplexity.ai",
+d:"Perplexity is an AI‑powered answer engine that searches the web and responds with cited results.",
+k:"perplexity AI, answer engine, web search with citations, chatbot",
+a:""
+},
+
+{
+i:685,
+n:"grok",
+c:"software",
+u:"https://grok.com",
+d:"Grok is an AI chatbot associated with X that answers questions with a humorous tone.",
+k:"grok AI, x chatbot, conversational assistant, humorous responses",
+a:""
+},
+
+{
+i:686,
+n:"mistral",
+c:"software",
+u:"https://chat.mistral.ai",
+d:"Mistral Chat provides access to Mistral’s open and proprietary language models via web.",
+k:"mistral chat, LLM interface, french AI models, text generation",
+a:""
+},
+
+{
+i:687,
+n:"hugging face",
+c:"software,business",
+u:"https://huggingface.co",
+d:"Hugging Face hosts open‑source machine learning models, datasets and MLOps tools.",
+k:"hugging face, model hub, transformers, datasets, ML community",
+a:""
+},
+
+{
+i:688,
+n:"replicate",
+c:"software,business",
+u:"https://replicate.com",
+d:"Replicate runs machine learning models in the cloud via simple APIs.",
+k:"replicate, ML inference API, run models, cloud machine learning",
+a:""
+},
+
+{
+i:689,
+n:"together ai",
+c:"software,business",
+u:"https://www.together.ai",
+d:"Together AI offers infrastructure and APIs for serving large language models.",
+k:"together AI, LLM hosting, inference platform, AI infrastructure",
+a:""
+},
+
+{
+i:690,
+n:"openrouter",
+c:"software,business",
+u:"https://openrouter.ai",
+d:"OpenRouter routes requests to many AI models with unified APIs and pricing.",
+k:"openrouter, multi model API, AI routing, LLM marketplace",
+a:""
+},
+
+{
+i:691,
+n:"canva ai",
+c:"software",
+u:"https://www.canva.com",
+d:"Canva AI adds generative features like text‑to‑image and Magic Write inside Canva.",
+k:"canva AI, magic write, text to image, design assistant, generative tools",
+a:""
+},
+
+{
+i:692,
+n:"adobe firefly",
+c:"software",
+u:"https://firefly.adobe.com",
+d:"Adobe Firefly is Adobe’s generative AI for creating images, effects and text styles.",
+k:"adobe firefly, generative AI, image creation, text effects, adobe",
+a:""
+},
+
+{
+i:693,
+n:"midjourney",
+c:"software",
+u:"https://www.midjourney.com",
+d:"Midjourney is an AI image generator accessed mainly through Discord prompts.",
+k:"midjourney, AI art generator, text to image, discord bot",
+a:""
+},
+
+{
+i:694,
+n:"leonardo ai",
+c:"software",
+u:"https://leonardo.ai",
+d:"Leonardo AI generates game assets and illustrations using generative models.",
+k:"leonardo AI, asset generation, concept art, text to image",
+a:""
+},
+
+{
+i:695,
+n:"ideogram",
+c:"software",
+u:"https://ideogram.ai",
+d:"Ideogram focuses on AI‑generated images with strong typography and logos.",
+k:"ideogram AI, text in images, logo generation, AI art",
+a:""
+},
+
+{
+i:696,
+n:"pixverse",
+c:"software",
+u:"https://pixverse.ai",
+d:"PixVerse creates AI‑generated videos from prompts and images.",
+k:"pixverse, AI video generator, text to video, creative clips",
+a:""
+},
+
+{
+i:697,
+n:"runway",
+c:"software",
+u:"https://runwayml.com",
+d:"Runway is an AI video and creative toolset offering text‑to‑video and editing features.",
+k:"runway ML, AI video editing, text to video, creative tools",
+a:""
+},
+
+{
+i:698,
+n:"pika",
+c:"software",
+u:"https://pika.art",
+d:"Pika is an AI video creation app for short creative clips from prompts.",
+k:"pika art, AI video tool, text to video, shorts creation",
+a:""
+},
+
+{
+i:699,
+n:"luma ai",
+c:"software",
+u:"https://lumalabs.ai",
+d:"Luma AI builds 3D scenes and videos from images and videos using neural rendering.",
+k:"luma AI, neural rendering, 3D scenes, video generation",
+a:""
+},
+
+{
+i:700,
+n:"elevenlabs",
+c:"software",
+u:"https://elevenlabs.io",
+d:"ElevenLabs offers realistic AI voice generation and voice cloning.",
+k:"elevenlabs, text to speech, AI voices, voice cloning, narration",
+a:""
+},
+
+{
+i:701,
+n:"playht",
+c:"software",
+u:"https://play.ht",
+d:"PlayHT provides lifelike text‑to‑speech voices and audio generation.",
+k:"play.ht, AI voice, text to speech, podcast voices, narration",
+a:""
+},
+
+{
+i:702,
+n:"suno",
+c:"software",
+u:"https://suno.com",
+d:"Suno generates complete songs including vocals from text prompts.",
+k:"suno AI, music generation, AI songs, text to music",
+a:""
+},
+
+{
+i:703,
+n:"udio",
+c:"software",
+u:"https://www.udio.com",
+d:"Udio is an AI music tool for creating tracks with lyrics and melodies.",
+k:"udio, AI music creation, song generator, lyrics and melody",
+a:""
+},
+
+{
+i:704,
+n:"notebooklm",
+c:"software",
+u:"https://notebooklm.google.com",
+d:"NotebookLM is Google’s AI tool that lets users create notebooks and ask questions over their sources.",
+k:"notebookLM, AI research assistant, source grounded answers, notebooks",
+a:""
+},
+
+{
+i:705,
+n:"gamma",
+c:"software",
+u:"https://gamma.app",
+d:"Gamma generates slide decks and documents from outlines using AI.",
+k:"gamma app, AI presentations, auto slide deck, docs generator",
+a:""
+},
+
+{
+i:706,
+n:"tome",
+c:"software",
+u:"https://tome.app",
+d:"Tome is an AI storytelling tool that builds presentations and narratives from prompts.",
+k:"tome, AI storytelling, presentation maker, slide generation",
+a:""
+},
+
+{
+i:707,
+n:"otter ai",
+c:"software",
+u:"https://otter.ai",
+d:"Otter.ai transcribes meetings and conversations and generates summaries.",
+k:"otter.ai, meeting transcription, notes, AI summaries, voice to text",
+a:""
+},
+
+{
+i:708,
+n:"descript ai",
+c:"software",
+u:"https://www.descript.com",
+d:"Descript AI adds transcription, overdub and editing features to audio and video.",
+k:"descript AI, transcript editing, overdub voices, podcast video editing",
+a:""
+},
+
+{
+i:709,
+n:"cursor",
+c:"software",
+u:"https://cursor.com",
+d:"Cursor is an AI‑powered code editor that helps write and refactor software.",
+k:"cursor AI, code editor, AI coding assistant, refactor tool",
+a:""
+},
+
+{
+i:710,
+n:"windsurf",
+c:"software",
+u:"https://windsurf.com",
+d:"Windsurf is an AI‑assisted IDE for building applications faster.",
+k:"windsurf, AI IDE, coding assistant, developer tool",
+a:""
+},
+
+{
+i:711,
+n:"bolt",
+c:"software",
+u:"https://bolt.new",
+d:"Bolt.new is an AI tool that scaffolds full‑stack web apps in the browser.",
+k:"bolt.new, AI app builder, full stack scaffolding, browser IDE",
+a:""
+},
+
+{
+i:712,
+n:"lovable",
+c:"software",
+u:"https://lovable.dev",
+d:"Lovable generates and hosts web apps using AI from natural language descriptions.",
+k:"lovable.dev, AI app generation, no-code apps, web app builder",
+a:""
+},
+
+{
+i:713,
+n:"v0",
+c:"software",
+u:"https://v0.dev",
+d:"v0.dev creates UI components and layouts from prompts using Shadcn and React.",
+k:"v0.dev, AI UI generator, React components, shadcn, design from text",
+a:""
+},
+
+{
+i:714,
+n:"replit ai",
+c:"software",
+u:"https://replit.com",
+d:"Replit AI adds code suggestions and chat to the Replit online IDE.",
+k:"replit AI, coding assistant, online IDE, code completion",
+a:""
+},
+
+{
+i:715,
+n:"blackbox ai",
+c:"software",
+u:"https://www.blackbox.ai",
+d:"Blackbox AI helps developers search code snippets and get AI assistance while coding.",
+k:"blackbox AI, code search, developer assistant, snippet finder",
+a:""
+},
+
+{
+i:716,
+n:"phind",
+c:"software",
+u:"https://www.phind.com",
+d:"Phind is an AI search engine optimized for programming and technical questions.",
+k:"phind, AI dev search, coding answers, technical search engine",
+a:""
+},
+
+{
+i:717,
+n:"you.com",
+c:"software",
+u:"https://you.com",
+d:"You.com is a privacy‑focused search engine with integrated AI chat.",
+k:"you.com, search engine, AI chat, privacy focused search",
+a:""
+},
+
+{
+i:718,
+n:"consensus",
+c:"software",
+u:"https://consensus.app",
+d:"Consensus uses AI to search and summarize peer‑reviewed research papers.",
+k:"consensus app, research search, paper summaries, evidence based answers",
+a:""
+},
+
+{
+i:719,
+n:"scispace",
+c:"software",
+u:"https://typeset.io",
+d:"SciSpace (formerly Typeset) helps read, understand and manage scientific papers with AI.",
+k:"scispace, research assistant, paper reading, AI explanations",
+a:""
+},
+
+{
+i:720,
+n:"elicit",
+c:"software",
+u:"https://elicit.com",
+d:"Elicit is an AI tool for literature review and research question exploration.",
+k:"elicit, AI literature review, research assistant, paper search",
+a:""
+},
+
+{
+i:721,
+n:"heygen",
+c:"software",
+u:"https://www.heygen.com",
+d:"HeyGen creates AI video avatars and multilingual talking‑head videos.",
+k:"heygen, AI avatars, talking head video, lip sync, explainer videos",
+a:""
+},
+
+{
+i:722,
+n:"synthesia",
+c:"software",
+u:"https://www.synthesia.io",
+d:"Synthesia generates training and explainer videos using AI avatars and voice.",
+k:"synthesia, AI video avatars, training videos, corporate explainer",
+a:""
+},
+
+{
+i:723,
+n:"captions",
+c:"software",
+u:"https://www.captions.ai",
+d:"Captions.ai is an AI video editor tailored for short‑form social content.",
+k:"captions.ai, short video editor, social clips, AI captions",
+a:""
+},
+
+{
+i:724,
+n:"kapwing",
+c:"software",
+u:"https://www.kapwing.com",
+d:"Kapwing is an online video and image editor with collaborative tools.",
+k:"kapwing, online video editor, meme maker, social media content",
+a:""
+},
+
+{
+i:725,
+n:"veo",
+c:"software",
+u:"https://deepmind.google/technologies/veo",
+d:"Google Veo is a generative video model from DeepMind for high‑quality text‑to‑video.",
+k:"google veo, generative video model, text to video, deepmind",
+a:""
+},
+
+{
+i:726,
+n:"whisk",
+c:"software",
+u:"https://labs.google/fx/tools/whisk",
+d:"Google Whisk is an experimental tool for AI‑assisted video editing workflows.",
+k:"google whisk, AI video editing, experimental tool, google labs",
+a:""
+},
+
+{
+i:727,
+n:"dreamina",
+c:"software",
+u:"https://dreamina.capcut.com",
+d:"Dreamina by CapCut generates AI images and short videos from prompts.",
+k:"dreamina, capcut AI, text to image, text to video, creative tool",
+a:""
+},
+
+{
+i:728,
+n:"removebg ai",
+c:"software",
+u:"https://www.remove.bg",
+d:"Remove.bg AI removes backgrounds from photos with improved quality and edge handling.",
+k:"removebg AI, background removal, photo cutout, image editing",
+a:""
+},
+
+{
+i:729,
+n:"clipdrop",
+c:"software",
+u:"https://clipdrop.co",
+d:"Clipdrop offers AI tools for image cleanup, relighting and generation.",
+k:"clipdrop, AI image tools, cleanup, relight, text to image",
+a:""
+},
+
+{
+i:730,
+n:"cleanup pictures",
+c:"software",
+u:"https://cleanup.pictures",
+d:"Cleanup.pictures erases unwanted objects and defects from photos using AI.",
+k:"cleanup pictures, remove objects, photo cleanup, AI inpainting",
+a:""
+},
+
+{
+i:731,
+n:"translate ai",
+c:"software",
+u:"https://translate.google.com",
+d:"Translate AI refers to using Google Translate’s AI‑powered translation capabilities.",
+k:"AI translation, google translate, machine translation, multilingual text",
+a:""
+},
+
+{
+i:732,
+n:"deepgram",
+c:"software,business",
+u:"https://deepgram.com",
+d:"Deepgram provides speech‑to‑text APIs and models for accurate transcription.",
+k:"deepgram, speech to text API, audio transcription, enterprise STT",
+a:""
+},
+
+{
+i:733,
+n:"assemblyai",
+c:"software,business",
+u:"https://www.assemblyai.com",
+d:"AssemblyAI offers APIs for transcription, audio intelligence and content moderation.",
+k:"assemblyAI, transcription API, audio analysis, speech intelligence",
+a:""
+},
+
+{
+i:734,
+n:"cohere",
+c:"software,business",
+u:"https://cohere.com",
+d:"Cohere provides large language models and APIs for enterprise NLP tasks.",
+k:"cohere, LLM APIs, enterprise NLP, text generation, embeddings",
+a:""
+},
+
+{
+i:735,
+n:"anthropic",
+c:"software,business",
+u:"https://www.anthropic.com",
+d:"Anthropic develops safety‑focused large language models and AI systems like Claude.",
+k:"anthropic, AI company, safety focused LLMs, Claude maker",
+a:""
+},
+
+{
+i:736,
+n:"openai",
+c:"software,business",
+u:"https://openai.com",
+d:"OpenAI creates advanced AI models such as GPT and DALL·E and offers APIs.",
+k:"openAI, GPT models, DALL·E, AI research, developer APIs",
+a:""
+},
+
+{
+i:737,
+n:"google ai",
+c:"software,business",
+u:"https://ai.google",
+d:"Google AI showcases Google’s AI research, tools and products including Gemini.",
+k:"google AI, research, tools, models, Gemini platform",
+a:""
+},
+
+{
+i:738,
+n:"meta ai",
+c:"software,business",
+u:"https://www.meta.ai",
+d:"Meta AI develops models like Llama and provides AI features across Meta products.",
+k:"meta AI, llama models, social AI features, research lab",
+a:""
+},
+
+{
+i:739,
+n:"deepseek",
+c:"software,business",
+u:"https://www.deepseek.com",
+d:"DeepSeek offers open and proprietary language models focused on efficiency.",
+k:"deepseek, efficient LLMs, AI models, text generation",
+a:""
+},
+
+{
+i:740,
+n:"qwen",
+c:"software,business",
+u:"https://chat.qwen.ai",
+d:"Qwen is Alibaba’s family of large language models accessible through chat and APIs.",
+k:"qwen AI, Alibaba LLM, chat interface, enterprise models",
+a:""
+},
+
+{
+i:741,
+n:"alibaba",
+c:"business",
+u:"https://www.alibaba.com",
+d:"Alibaba.com is a global B2B marketplace connecting buyers with manufacturers and wholesalers.",
+k:"alibaba, B2B marketplace, wholesale suppliers, China sourcing",
+a:""
+},
+
+{
+i:742,
+n:"aliexpress",
+c:"business",
+u:"https://www.aliexpress.com",
+d:"AliExpress is an online retail platform for low‑cost goods shipped worldwide from sellers.",
+k:"aliexpress, low cost imports, online marketplace, China retail",
+a:""
+},
+
+{
+i:743,
+n:"dhgate",
+c:"business",
+u:"https://www.dhgate.com",
+d:"DHgate is a B2B and B2C marketplace for Chinese wholesale products.",
+k:"dhgate, wholesale marketplace, China suppliers, bulk buying",
+a:""
+},
+
+{
+i:744,
+n:"globalsources",
+c:"business",
+u:"https://www.globalsources.com",
+d:"GlobalSources connects international buyers with verified Asian suppliers via trade shows and online listings.",
+k:"global sources, B2B sourcing, verified suppliers, trade shows",
+a:""
+},
+
+{
+i:745,
+n:"made in china",
+c:"business",
+u:"https://www.made-in-china.com",
+d:"Made‑in‑China.com is a platform listing Chinese manufacturers and products for global buyers.",
+k:"made in china, manufacturer directory, China products, B2B sourcing",
+a:""
+},
+
+{
+i:746,
+n:"indiamart",
+c:"business",
+u:"https://www.indiamart.com",
+d:"IndiaMART is an Indian B2B marketplace connecting buyers with suppliers and manufacturers.",
+k:"indiamart, India B2B marketplace, suppliers, manufacturers, bulk buying",
+a:""
+},
+
+{
+i:747,
+n:"tradeindia",
+c:"business",
+u:"https://www.tradeindia.com",
+d:"TradeIndia lists Indian exporters, manufacturers and suppliers for B2B trade.",
+k:"tradeindia, B2B directory India, exporters, suppliers, trade leads",
+a:""
+},
+
+{
+i:748,
+n:"exporters india",
+c:"business",
+u:"https://www.exportersindia.com",
+d:"ExportersIndia is an online directory of Indian exporters and suppliers.",
+k:"exporters india, exporter directory, Indian suppliers, B2B listings",
+a:""
+},
+
+{
+i:749,
+n:"justdial",
+c:"business",
+u:"https://www.justdial.com",
+d:"Justdial is a local search service listing businesses, services and customer reviews across India.",
+k:"justdial, local search India, business directory, phone numbers, reviews",
+a:""
+},
+
+{
+i:750,
+n:"sulekha",
+c:"business",
+u:"https://www.sulekha.com",
+d:"Sulekha helps find local services such as home repair, education and events through listings and leads.",
+k:"sulekha, local services search, home repair, coaching, service listings",
+a:""
+},
+ {
+i:751,
+n:"yellow pages",
+c:"business",
+u:"https://www.yellowpages.com",
+a:""
+},
+
+{
+i:752,
+n:"crunchbase",
+c:"business",
+u:"https://www.crunchbase.com",
+a:""
+},
+
+{
+i:753,
+n:"tracxn",
+c:"business",
+u:"https://tracxn.com",
+a:""
+},
+
+{
+i:754,
+n:"owler",
+c:"business",
+u:"https://www.owler.com",
+a:""
+},
+
+{
+i:755,
+n:"pitchbook",
+c:"business",
+u:"https://pitchbook.com",
+a:""
+},
+
+{
+i:756,
+n:"y combinator",
+c:"business",
+u:"https://www.ycombinator.com",
+a:""
+},
+
+{
+i:757,
+n:"startup india",
+c:"business",
+u:"https://www.startupindia.gov.in",
+a:""
+},
+
+{
+i:758,
+n:"msme india",
+c:"business",
+u:"https://msme.gov.in",
+a:""
+},
+
+{
+i:759,
+n:"gem portal",
+c:"business",
+u:"https://gem.gov.in",
+a:""
+},
+
+{
+i:760,
+n:"udyam registration",
+c:"business",
+u:"https://udyamregistration.gov.in",
+a:""
+},
+
+{
+i:761,
+n:"google business",
+c:"business",
+u:"https://business.google.com",
+a:""
+},
+
+{
+i:762,
+n:"meta business",
+c:"business",
+u:"https://business.facebook.com",
+a:""
+},
+
+{
+i:763,
+n:"linkedin business",
+c:"business",
+u:"https://business.linkedin.com",
+a:""
+},
+
+{
+i:764,
+n:"semrush",
+c:"business",
+u:"https://www.semrush.com",
+a:""
+},
+
+{
+i:765,
+n:"ahrefs",
+c:"business",
+u:"https://ahrefs.com",
+a:""
+},
+
+{
+i:766,
+n:"moz",
+c:"business",
+u:"https://moz.com",
+a:""
+},
+
+{
+i:767,
+n:"ubersuggest",
+c:"business",
+u:"https://neilpatel.com/ubersuggest",
+a:""
+},
+
+{
+i:768,
+n:"similarweb",
+c:"business",
+u:"https://www.similarweb.com",
+a:""
+},
+
+{
+i:769,
+n:"google trends",
+c:"business",
+u:"https://trends.google.com",
+a:""
+},
+
+{
+i:770,
+n:"google analytics",
+c:"business",
+u:"https://analytics.google.com",
+a:""
+},
+
+{
+i:771,
+n:"google search console",
+c:"business",
+u:"https://search.google.com/search-console",
+a:""
+},
+
+{
+i:772,
+n:"bing webmaster",
+c:"business",
+u:"https://www.bing.com/webmasters",
+a:""
+},
+
+{
+i:773,
+n:"google ads",
+c:"business",
+u:"https://ads.google.com",
+a:""
+},
+
+{
+i:774,
+n:"meta ads",
+c:"business",
+u:"https://www.facebook.com/business/ads",
+a:""
+},
+
+{
+i:775,
+n:"linkedin ads",
+c:"business",
+u:"https://business.linkedin.com/marketing-solutions",
+a:""
+},
+
+{
+i:776,
+n:"x ads",
+c:"business",
+u:"https://ads.x.com",
+a:""
+},
+
+{
+i:777,
+n:"youtube creators",
+c:"business",
+u:"https://www.youtube.com/creators",
+a:""
+},
+
+{
+i:778,
+n:"youtube studio",
+c:"business",
+u:"https://studio.youtube.com",
+a:""
+},
+
+{
+i:779,
+n:"google adsense",
+c:"business",
+u:"https://www.google.com/adsense",
+a:""
+},
+
+{
+i:780,
+n:"amazon associates",
+c:"business",
+u:"https://affiliate-program.amazon.in",
+a:""
+},
+
+{
+i:781,
+n:"impact",
+c:"business",
+u:"https://impact.com",
+a:""
+},
+
+{
+i:782,
+n:"cj affiliate",
+c:"business",
+u:"https://www.cj.com",
+a:""
+},
+
+{
+i:783,
+n:"awin",
+c:"business",
+u:"https://www.awin.com",
+a:""
+},
+
+{
+i:784,
+n:"rakuten advertising",
+c:"business",
+u:"https://rakutenadvertising.com",
+a:""
+},
+
+{
+i:785,
+n:"shareasale",
+c:"business",
+u:"https://www.shareasale.com",
+a:""
+},
+
+{
+i:786,
+n:"partnerstack",
+c:"business",
+u:"https://partnerstack.com",
+a:""
+},
+
+{
+i:787,
+n:"digistore24",
+c:"business",
+u:"https://www.digistore24.com",
+a:""
+},
+
+{
+i:788,
+n:"warriorplus",
+c:"business",
+u:"https://warriorplus.com",
+a:""
+},
+
+{
+i:789,
+n:"clickbank",
+c:"business",
+u:"https://www.clickbank.com",
+a:""
+},
+
+{
+i:790,
+n:"gumroad affiliate",
+c:"business",
+u:"https://gumroad.com",
+a:""
+},
+
+{
+i:791,
+n:"envato affiliate",
+c:"business",
+u:"https://elements.envato.com",
+a:""
+},
+
+{
+i:792,
+n:"canva affiliate",
+c:"business",
+u:"https://www.canva.com",
+a:""
+},
+
+{
+i:793,
+n:"hostinger affiliate",
+c:"business",
+u:"https://www.hostinger.com/affiliates",
+a:""
+},
+
+{
+i:794,
+n:"namecheap affiliate",
+c:"business",
+u:"https://www.namecheap.com/affiliates",
+a:""
+},
+
+{
+i:795,
+n:"bluehost affiliate",
+c:"business",
+u:"https://www.bluehost.com/affiliates",
+a:""
+},
+
+{
+i:796,
+n:"semrush affiliate",
+c:"business",
+u:"https://www.semrush.com/partners",
+a:""
+},
+
+{
+i:797,
+n:"coursera affiliate",
+c:"business",
+u:"https://www.coursera.org",
+a:""
+},
+
+{
+i:798,
+n:"udemy affiliate",
+c:"business",
+u:"https://www.udemy.com",
+a:""
+},
+
+{
+i:799,
+n:"fiverr affiliates",
+c:"business",
+u:"https://affiliates.fiverr.com",
+a:""
+},
+
+{
+i:800,
+n:"upwork",
+c:"business",
+u:"https://www.upwork.com",
+a:""
+},
+
+{
+i:801,
+n:"freelancer affiliate",
+c:"business",
+u:"https://www.freelancer.com",
+a:""
+},
+
+{
+i:802,
+n:"impact radius",
+c:"business",
+u:"https://impact.com",
+a:""
+},
+
+{
+i:803,
+n:"refersion",
+c:"business",
+u:"https://www.refersion.com",
+a:""
+},
+
+{
+i:804,
+n:"tapfiliate",
+c:"business",
+u:"https://tapfiliate.com",
+a:""
+},
+
+{
+i:805,
+n:"rewardful",
+c:"business",
+u:"https://www.rewardful.com",
+a:""
+},
+
+{
+i:806,
+n:"firstpromoter",
+c:"business",
+u:"https://firstpromoter.com",
+a:""
+},
+
+{
+i:807,
+n:"post affiliate pro",
+c:"business",
+u:"https://www.postaffiliatepro.com",
+a:""
+},
+
+{
+i:808,
+n:"leadpages",
+c:"business",
+u:"https://www.leadpages.com",
+a:""
+},
+
+{
+i:809,
+n:"unbounce",
+c:"business",
+u:"https://unbounce.com",
+a:""
+},
+
+{
+i:810,
+n:"convertkit creator",
+c:"business",
+u:"https://convertkit.com",
+a:""
+},
+
+{
+i:811,
+n:"mailerlite",
+c:"business",
+u:"https://www.mailerlite.com",
+a:""
+},
+
+{
+i:812,
+n:"sendgrid",
+c:"business",
+u:"https://sendgrid.com",
+a:""
+},
+
+{
+i:813,
+n:"brevo affiliate",
+c:"business",
+u:"https://www.brevo.com",
+a:""
+},
+
+{
+i:814,
+n:"moosend",
+c:"business",
+u:"https://moosend.com",
+a:""
+},
+
+{
+i:815,
+n:"getresponse",
+c:"business",
+u:"https://www.getresponse.com",
+a:""
+},
+
+{
+i:816,
+n:"aweber",
+c:"business",
+u:"https://www.aweber.com",
+a:""
+},
+
+{
+i:817,
+n:"constant contact",
+c:"business",
+u:"https://www.constantcontact.com",
+a:""
+},
+
+{
+i:818,
+n:"hubspot crm",
+c:"business",
+u:"https://www.hubspot.com",
+a:""
+},
+
+{
+i:819,
+n:"pipedrive",
+c:"business",
+u:"https://www.pipedrive.com",
+a:""
+},
+
+{
+i:820,
+n:"zoho crm",
+c:"business",
+u:"https://www.zoho.com/crm",
+a:""
+},
+
+{
+i:821,
+n:"freshsales",
+c:"business",
+u:"https://www.freshworks.com/crm",
+a:""
+},
+
+{
+i:822,
+n:"salesforce",
+c:"business",
+u:"https://www.salesforce.com",
+a:""
+},
+
+{
+i:823,
+n:"intercom",
+c:"business",
+u:"https://www.intercom.com",
+a:""
+},
+
+{
+i:824,
+n:"tidio",
+c:"business",
+u:"https://www.tidio.com",
+a:""
+},
+
+{
+i:825,
+n:"livechat",
+c:"business",
+u:"https://www.livechat.com",
+a:""
+},
+
+{
+i:826,
+n:"zendesk chat",
+c:"business",
+u:"https://www.zendesk.com",
+a:""
+},
+
+{
+i:827,
+n:"trustpilot",
+c:"business",
+u:"https://www.trustpilot.com",
+a:""
+},
+
+{
+i:828,
+n:"g2",
+c:"business",
+u:"https://www.g2.com",
+a:""
+},
+
+{
+i:829,
+n:"capterra",
+c:"business",
+u:"https://www.capterra.com",
+a:""
+},
+
+{
+i:830,
+n:"sourceforge",
+c:"business",
+u:"https://sourceforge.net",
+a:""
+},
+
+{
+i:831,
+n:"product hunt makers",
+c:"business",
+u:"https://www.producthunt.com",
+a:""
+},
+
+{
+i:832,
+n:"indie hackers makers",
+c:"business",
+u:"https://www.indiehackers.com",
+a:""
+},
+
+{
+i:833,
+n:"betalist",
+c:"business",
+u:"https://betalist.com",
+a:""
+},
+
+{
+i:834,
+n:"startup stash",
+c:"business",
+u:"https://startupstash.com",
+a:""
+},
+
+{
+i:835,
+n:"alternative to",
+c:"business",
+u:"https://alternativeto.net",
+a:""
+},
+
+{
+i:836,
+n:"futurepedia",
+c:"ai",
+u:"https://www.futurepedia.io",
+a:""
+},
+
+{
+i:837,
+n:"theres an ai for that",
+c:"ai",
+u:"https://theresanaiforthat.com",
+a:""
+},
+
+{
+i:838,
+n:"toolify",
+c:"ai",
+u:"https://www.toolify.ai",
+a:""
+},
+
+{
+i:839,
+n:"future tools",
+c:"ai",
+u:"https://www.futuretools.io",
+a:""
+},
+
+{
+i:840,
+n:"aitools directory",
+c:"ai",
+u:"https://aitoolsdirectory.com",
+a:""
+},
+
+{
+i:841,
+n:"gumloop",
+c:"ai",
+u:"https://www.gumloop.com",
+a:""
+},
+
+{
+i:842,
+n:"mindstudio",
+c:"ai",
+u:"https://mindstudio.ai",
+a:""
+},
+
+{
+i:843,
+n:"flowise",
+c:"ai",
+u:"https://flowiseai.com",
+a:""
+},
+
+{
+i:844,
+n:"langflow",
+c:"ai",
+u:"https://langflow.org",
+a:""
+},
+
+{
+i:845,
+n:"langchain",
+c:"ai",
+u:"https://www.langchain.com",
+a:""
+},
+
+{
+i:846,
+n:"llamaindex",
+c:"ai",
+u:"https://www.llamaindex.ai",
+a:""
+},
+
+{
+i:847,
+n:"pinecone",
+c:"ai",
+u:"https://www.pinecone.io",
+a:""
+},
+
+{
+i:848,
+n:"weaviate",
+c:"ai",
+u:"https://weaviate.io",
+a:""
+},
+
+{
+i:849,
+n:"chroma",
+c:"ai",
+u:"https://www.trychroma.com",
+a:""
+},
+
+{
+i:850,
+n:"milvus",
+c:"ai",
+u:"https://milvus.io",
+a:""
+},
+
+{
+i:851,
+n:"openstreetmap donate",
+c:"charity",
+u:"https://www.openstreetmap.org",
+a:""
+},
+
+{
+i:852,
+n:"wikipedia donate",
+c:"charity",
+u:"https://donate.wikimedia.org",
+a:""
+},
+
+{
+i:853,
+n:"unicef",
+c:"charity",
+u:"https://www.unicef.org",
+a:""
+},
+
+{
+i:854,
+n:"red cross",
+c:"charity",
+u:"https://www.redcross.org",
+a:""
+},
+
+{
+i:855,
+n:"save the children",
+c:"charity",
+u:"https://www.savethechildren.org",
+a:""
+},
+
+{
+i:856,
+n:"care international",
+c:"charity",
+u:"https://www.care.org",
+a:""
+},
+
+{
+i:857,
+n:"water.org",
+c:"charity",
+u:"https://water.org",
+a:""
+},
+
+{
+i:858,
+n:"charity navigator",
+c:"charity",
+u:"https://www.charitynavigator.org",
+a:""
+},
+
+{
+i:859,
+n:"global giving",
+c:"charity",
+u:"https://www.globalgiving.org",
+a:""
+},
+
+{
+i:860,
+n:"kiva",
+c:"charity",
+u:"https://www.kiva.org",
+a:""
+},
+
+{
+i:861,
+n:"giveindia",
+c:"charity",
+u:"https://www.giveindia.org",
+a:""
+},
+
+{
+i:862,
+n:"ketto",
+c:"charity",
+u:"https://www.ketto.org",
+a:""
+},
+
+{
+i:863,
+n:"milaap",
+c:"charity",
+u:"https://milaap.org",
+a:""
+},
+
+{
+i:864,
+n:"impactguru",
+c:"charity",
+u:"https://www.impactguru.com",
+a:""
+},
+
+{
+i:865,
+n:"akshay patra",
+c:"charity",
+u:"https://www.akshayapatra.org",
+a:""
+},
+
+{
+i:866,
+n:"goonj",
+c:"charity",
+u:"https://goonj.org",
+a:""
+},
+
+{
+i:867,
+n:"cry india",
+c:"charity",
+u:"https://www.cry.org",
+a:""
+},
+
+{
+i:868,
+n:"helpage india",
+c:"charity",
+u:"https://www.helpageindia.org",
+a:""
+},
+
+{
+i:869,
+n:"pratham",
+c:"charity",
+u:"https://www.pratham.org",
+a:""
+},
+
+{
+i:870,
+n:"sewa international",
+c:"charity",
+u:"https://www.sewainternational.org",
+a:""
+},
+
+{
+i:871,
+n:"archive today",
+c:"utilities",
+u:"https://archive.today",
+a:""
+},
+
+{
+i:872,
+n:"wayback machine",
+c:"utilities",
+u:"https://web.archive.org",
+a:""
+},
+
+{
+i:873,
+n:"whois",
+c:"utilities",
+u:"https://who.is",
+a:""
+},
+
+{
+i:874,
+n:"dns checker",
+c:"utilities",
+u:"https://dnschecker.org",
+a:""
+},
+
+{
+i:875,
+n:"mx toolbox",
+c:"utilities",
+u:"https://mxtoolbox.com",
+a:""
+},
+ {
+i:876,
+n:"uptimerobot",
+c:"utilities",
+u:"https://uptimerobot.com",
+a:""
+},
+
+{
+i:877,
+n:"better stack",
+c:"utilities",
+u:"https://betterstack.com",
+a:""
+},
+
+{
+i:878,
+n:"statuspage",
+c:"utilities",
+u:"https://www.atlassian.com/software/statuspage",
+a:""
+},
+
+{
+i:879,
+n:"cronitor",
+c:"utilities",
+u:"https://cronitor.io",
+a:""
+},
+
+{
+i:880,
+n:"pingdom",
+c:"utilities",
+u:"https://www.pingdom.com",
+a:""
+},
+
+{
+i:881,
+n:"rss.app",
+c:"business",
+u:"https://rss.app",
+a:""
+},
+
+{
+i:882,
+n:"feedly",
+c:"business",
+u:"https://feedly.com",
+a:""
+},
+
+{
+i:883,
+n:"inoreader",
+c:"business",
+u:"https://www.inoreader.com",
+a:""
+},
+
+{
+i:884,
+n:"pocket",
+c:"business",
+u:"https://getpocket.com",
+a:""
+},
+
+{
+i:885,
+n:"raindrop",
+c:"business",
+u:"https://raindrop.io",
+a:""
+},
+
+{
+i:886,
+n:"linktree",
+c:"business",
+u:"https://linktr.ee",
+a:""
+},
+
+{
+i:887,
+n:"beacons",
+c:"business",
+u:"https://beacons.ai",
+a:""
+},
+
+{
+i:888,
+n:"taplink",
+c:"business",
+u:"https://taplink.cc",
+a:""
+},
+
+{
+i:889,
+n:"carrd",
+c:"business",
+u:"https://carrd.co",
+a:""
+},
+
+{
+i:890,
+n:"about.me",
+c:"business",
+u:"https://about.me",
+a:""
+},
+
+{
+i:891,
+n:"caffeine",
+c:"business",
+u:"https://www.caffeine.tv",
+a:""
+},
+
+{
+i:892,
+n:"twitch",
+c:"business",
+u:"https://www.twitch.tv",
+a:""
+},
+
+{
+i:893,
+n:"kick",
+c:"business",
+u:"https://kick.com",
+a:""
+},
+
+{
+i:894,
+n:"rumble",
+c:"business",
+u:"https://rumble.com",
+a:""
+},
+
+{
+i:895,
+n:"odysee",
+c:"business",
+u:"https://odysee.com",
+a:""
+},
+
+{
+i:896,
+n:"substack creators",
+c:"business",
+u:"https://substack.com",
+a:""
+},
+
+{
+i:897,
+n:"ghost",
+c:"business",
+u:"https://ghost.org",
+a:""
+},
+
+{
+i:898,
+n:"beehiiv",
+c:"business",
+u:"https://www.beehiiv.com",
+a:""
+},
+
+{
+i:899,
+n:"wordpress.org",
+c:"business",
+u:"https://wordpress.org",
+a:""
+},
+
+{
+i:900,
+n:"blogger",
+c:"business",
+u:"https://www.blogger.com",
+a:""
+},
+
+{
+i:901,
+n:"tumblr",
+c:"business",
+u:"https://www.tumblr.com",
+a:""
+},
+
+{
+i:902,
+n:"medium writers",
+c:"business",
+u:"https://medium.com",
+a:""
+},
+
+{
+i:903,
+n:"hashnode blogs",
+c:"business",
+u:"https://hashnode.com",
+a:""
+},
+
+{
+i:904,
+n:"dev community",
+c:"business",
+u:"https://dev.to",
+a:""
+},
+
+{
+i:905,
+n:"write.as",
+c:"business",
+u:"https://write.as",
+a:""
+},
+
+{
+i:906,
+n:"read.cv",
+c:"business",
+u:"https://read.cv",
+a:""
+},
+
+{
+i:907,
+n:"contra",
+c:"business",
+u:"https://contra.com",
+a:""
+},
+
+{
+i:908,
+n:"peerlist",
+c:"business",
+u:"https://peerlist.io",
+a:""
+},
+
+{
+i:909,
+n:"buymeacoffee pages",
+c:"business",
+u:"https://www.buymeacoffee.com",
+a:""
+},
+
+{
+i:910,
+n:"ko-fi pages",
+c:"business",
+u:"https://ko-fi.com",
+a:""
+},
+
+{
+i:911,
+n:"gumroad store",
+c:"business",
+u:"https://gumroad.com",
+a:""
+},
+
+{
+i:912,
+n:"lemonsqueezy",
+c:"business",
+u:"https://www.lemonsqueezy.com",
+a:""
+},
+
+{
+i:913,
+n:"paddle",
+c:"business",
+u:"https://www.paddle.com",
+a:""
+},
+
+{
+i:914,
+n:"fastspring",
+c:"business",
+u:"https://fastspring.com",
+a:""
+},
+
+{
+i:915,
+n:"sellfy",
+c:"business",
+u:"https://sellfy.com",
+a:""
+},
+
+{
+i:916,
+n:"creative fabrica",
+c:"business",
+u:"https://www.creativefabrica.com",
+a:""
+},
+
+{
+i:917,
+n:"design bundles",
+c:"business",
+u:"https://designbundles.net",
+a:""
+},
+
+{
+i:918,
+n:"creative market sellers",
+c:"business",
+u:"https://creativemarket.com",
+a:""
+},
+
+{
+i:919,
+n:"envato authors",
+c:"business",
+u:"https://author.envato.com",
+a:""
+},
+
+{
+i:920,
+n:"themeisle",
+c:"business",
+u:"https://themeisle.com",
+a:""
+},
+
+{
+i:921,
+n:"astra",
+c:"business",
+u:"https://wpastra.com",
+a:""
+},
+
+{
+i:922,
+n:"generatepress",
+c:"business",
+u:"https://generatepress.com",
+a:""
+},
+
+{
+i:923,
+n:"kadence",
+c:"business",
+u:"https://www.kadencewp.com",
+a:""
+},
+
+{
+i:924,
+n:"blocksy",
+c:"business",
+u:"https://creativethemes.com/blocksy",
+a:""
+},
+
+{
+i:925,
+n:"spectra",
+c:"business",
+u:"https://wpspectra.com",
+a:""
+},
+
+{
+i:926,
+n:"starter templates",
+c:"business",
+u:"https://startertemplates.com",
+a:""
+},
+
+{
+i:927,
+n:"envira gallery",
+c:"business",
+u:"https://enviragallery.com",
+a:""
+},
+
+{
+i:928,
+n:"nextgen gallery",
+c:"business",
+u:"https://www.imagely.com",
+a:""
+},
+
+{
+i:929,
+n:"smush",
+c:"business",
+u:"https://wpmudev.com/project/smush",
+a:""
+},
+
+{
+i:930,
+n:"wp rocket",
+c:"business",
+u:"https://wp-rocket.me",
+a:""
+},
+
+{
+i:931,
+n:"nitropack",
+c:"business",
+u:"https://nitropack.io",
+a:""
+},
+
+{
+i:932,
+n:"lite speed",
+c:"business",
+u:"https://www.litespeedtech.com",
+a:""
+},
+
+{
+i:933,
+n:"rank math",
+c:"business",
+u:"https://rankmath.com",
+a:""
+},
+
+{
+i:934,
+n:"yoast seo",
+c:"business",
+u:"https://yoast.com",
+a:""
+},
+
+{
+i:935,
+n:"all in one seo",
+c:"business",
+u:"https://aioseo.com",
+a:""
+},
+
+{
+i:936,
+n:"monster insights",
+c:"business",
+u:"https://www.monsterinsights.com",
+a:""
+},
+
+{
+i:937,
+n:"wpforms",
+c:"business",
+u:"https://wpforms.com",
+a:""
+},
+
+{
+i:938,
+n:"formidable forms",
+c:"business",
+u:"https://formidableforms.com",
+a:""
+},
+
+{
+i:939,
+n:"gravity forms",
+c:"business",
+u:"https://www.gravityforms.com",
+a:""
+},
+
+{
+i:940,
+n:"memberpress",
+c:"business",
+u:"https://memberpress.com",
+a:""
+},
+
+{
+i:941,
+n:"learn dash",
+c:"books",
+u:"https://www.learndash.com",
+a:""
+},
+
+{
+i:942,
+n:"lifter lms",
+c:"books",
+u:"https://lifterlms.com",
+a:""
+},
+
+{
+i:943,
+n:"tutor lms",
+c:"books",
+u:"https://tutorlms.com",
+a:""
+},
+
+{
+i:944,
+n:"sensei lms",
+c:"books",
+u:"https://senseilms.com",
+a:""
+},
+
+{
+i:945,
+n:"woocommerce payments",
+c:"finance",
+u:"https://woocommerce.com/payments",
+a:""
+},
+
+{
+i:946,
+n:"stripe checkout",
+c:"finance",
+u:"https://stripe.com/payments/checkout",
+a:""
+},
+
+{
+i:947,
+n:"razorpay payment pages",
+c:"finance",
+u:"https://razorpay.com/payment-pages",
+a:""
+},
+
+{
+i:948,
+n:"cashfree payments",
+c:"finance",
+u:"https://www.cashfree.com",
+a:""
+},
+
+{
+i:949,
+n:"phonepe payment gateway",
+c:"finance",
+u:"https://www.phonepe.com/business",
+a:""
+},
+
+{
+i:950,
+n:"payu",
+c:"finance",
+u:"https://payu.in",
+a:""
+},
+
+{
+i:951,
+n:"phonepe",
+c:"finance",
+u:"https://www.phonepe.com",
+a:""
+},
+
+{
+i:952,
+n:"paytm",
+c:"finance",
+u:"https://paytm.com",
+a:""
+},
+
+{
+i:953,
+n:"bharatpe payments",
+c:"finance",
+u:"https://bharatpe.com",
+a:""
+},
+
+{
+i:954,
+n:"mobikwik",
+c:"finance",
+u:"https://www.mobikwik.com",
+a:""
+},
+
+{
+i:955,
+n:"freecharge",
+c:"finance",
+u:"https://www.freecharge.in",
+a:""
+},
+
+{
+i:956,
+n:"amazon pay",
+c:"finance",
+u:"https://pay.amazon.in",
+a:""
+},
+
+{
+i:957,
+n:"google pay",
+c:"finance",
+u:"https://pay.google.com",
+a:""
+},
+
+{
+i:958,
+n:"bhim upi",
+c:"finance",
+u:"https://www.bhimupi.org.in",
+a:""
+},
+
+{
+i:959,
+n:"npci",
+c:"finance",
+u:"https://www.npci.org.in",
+a:""
+},
+
+{
+i:960,
+n:"rbi",
+c:"finance",
+u:"https://www.rbi.org.in",
+a:""
+},
+
+{
+i:961,
+n:"india post",
+c:"business",
+u:"https://www.indiapost.gov.in",
+a:""
+},
+
+{
+i:962,
+n:"digilocker",
+c:"business",
+u:"https://www.digilocker.gov.in",
+a:""
+},
+
+{
+i:963,
+n:"umang",
+c:"business",
+u:"https://web.umang.gov.in",
+a:""
+},
+
+{
+i:964,
+n:"aadhaar",
+c:"business",
+u:"https://uidai.gov.in",
+a:""
+},
+
+{
+i:965,
+n:"income tax india",
+c:"business",
+u:"https://www.incometax.gov.in",
+a:""
+},
+
+{
+i:966,
+n:"gst portal",
+c:"business",
+u:"https://www.gst.gov.in",
+a:""
+},
+
+{
+i:967,
+n:"passport seva",
+c:"business",
+u:"https://www.passportindia.gov.in",
+a:""
+},
+
+{
+i:968,
+n:"parivahan",
+c:"business",
+u:"https://parivahan.gov.in",
+a:""
+},
+
+{
+i:969,
+n:"cowin",
+c:"business",
+u:"https://www.cowin.gov.in",
+a:""
+},
+
+{
+i:970,
+n:"mygov",
+c:"business",
+u:"https://www.mygov.in",
+a:""
+},
+
+{
+i:971,
+n:"wikipedia",
+c:"books",
+u:"https://www.wikipedia.org",
+a:""
+},
+
+{
+i:972,
+n:"wikimedia commons",
+c:"books",
+u:"https://commons.wikimedia.org",
+a:""
+},
+
+{
+i:973,
+n:"openverse",
+c:"books",
+u:"https://openverse.org",
+a:""
+},
+
+{
+i:974,
+n:"internet archive books",
+c:"books",
+u:"https://archive.org/details/texts",
+a:""
+},
+
+{
+i:975,
+n:"google books",
+c:"books",
+u:"https://books.google.com",
+a:""
+},
+
+{
+i:976,
+n:"doaj",
+c:"books",
+u:"https://doaj.org",
+a:""
+},
+
+{
+i:977,
+n:"pubmed",
+c:"books",
+u:"https://pubmed.ncbi.nlm.nih.gov",
+a:""
+},
+
+{
+i:978,
+n:"arxiv",
+c:"books",
+u:"https://arxiv.org",
+a:""
+},
+
+{
+i:979,
+n:"semantic scholar",
+c:"books",
+u:"https://www.semanticscholar.org",
+a:""
+},
+
+{
+i:980,
+n:"crossref",
+c:"books",
+u:"https://www.crossref.org",
+a:""
+},
+
+{
+i:981,
+n:"core",
+c:"books",
+u:"https://core.ac.uk",
+a:""
+},
+
+{
+i:982,
+n:"openalex",
+c:"books",
+u:"https://openalex.org",
+a:""
+},
+
+{
+i:983,
+n:"zenodo",
+c:"books",
+u:"https://zenodo.org",
+a:""
+},
+
+{
+i:984,
+n:"figshare",
+c:"books",
+u:"https://figshare.com",
+a:""
+},
+
+{
+i:985,
+n:"dryad",
+c:"books",
+u:"https://datadryad.org",
+a:""
+},
+
+{
+i:986,
+n:"our world in data",
+c:"books",
+u:"https://ourworldindata.org",
+a:""
+},
+
+{
+i:987,
+n:"world bank data",
+c:"books",
+u:"https://data.worldbank.org",
+a:""
+},
+
+{
+i:988,
+n:"un data",
+c:"books",
+u:"https://data.un.org",
+a:""
+},
+
+{
+i:989,
+n:"data.gov.in",
+c:"books",
+u:"https://www.data.gov.in",
+a:""
+},
+
+{
+i:990,
+n:"data.gov",
+c:"books",
+u:"https://www.data.gov",
+a:""
+},
+
+{
+i:991,
+n:"kaggle",
+c:"books",
+u:"https://www.kaggle.com",
+a:""
+},
+
+{
+i:992,
+n:"hugging face datasets",
+c:"ai",
+u:"https://huggingface.co/datasets",
+a:""
+},
+
+{
+i:993,
+n:"roboflow",
+c:"ai",
+u:"https://roboflow.com",
+a:""
+},
+
+{
+i:994,
+n:"label studio",
+c:"ai",
+u:"https://labelstud.io",
+a:""
+},
+
+{
+i:995,
+n:"weights and biases",
+c:"ai",
+u:"https://wandb.ai",
+a:""
+},
+
+{
+i:996,
+n:"comet",
+c:"ai",
+u:"https://www.comet.com",
+a:""
+},
+
+{
+i:997,
+n:"modal",
+c:"ai",
+u:"https://modal.com",
+a:""
+},
+
+{
+i:998,
+n:"runpod",
+c:"ai",
+u:"https://www.runpod.io",
+a:""
+},
+
+{
+i:999,
+n:"vast ai",
+c:"ai",
+u:"https://vast.ai",
+a:""
+},
+
+{
+i:1000,
+n:"lambda",
+c:"ai",
+u:"https://lambdalabs.com",
+a:""
 }
  
 
