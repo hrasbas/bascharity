@@ -10754,500 +10754,348 @@ transform: scale(0.9);
   width:100%;  
 }  
 
-</style>  
+</style>            
+<script>
+let currentCountry = localStorage.getItem("selectedCountry") || "india";
+let currentCategory = "all";
+let resetTimer = null;
 
-<script>  
-let currentCountry = localStorage.getItem("selectedCountry") || "india";  
-let currentCategory = "all";  
-let resetTimer = null;  
-           // ===== CATEGORY ENGINE v2.0 =====    
-    
-let currentCategory = "all";    
-let resetTimer = null;    
-    
-    
-// ===== 12 MAIN BUTTONS =====    
-    
-const categories = [    
-    "all",    
-    "electronics",    
-    "home",    
-    "fashion",    
-    "beauty",    
-    "health",    
-    "food",    
-    "sports",    
-    "travel",    
-    "books",    
-    "software",    
-    "business"    
-];    
-    
-    
-// ===== CATEGORY DEFINITIONS =====    
-    
-const categoryInfo = {    
-    
-    all:    
-        "All Shops & Commercial Services",    
-    
-    electronics:    
-        "Electronics, Mobiles, Computers, Gadgets, Gaming, Cameras & Accessories",    
-    
-    home:    
-        "Home Appliances, Kitchen, Furniture, Decor, Garden, Tools & Home Essentials",    
-    
-    fashion:    
-        "Men, Women, Kids, Baby, Clothing, Footwear, Bags & Fashion Accessories",    
-    
-    beauty:    
-        "Skincare, Haircare, Cosmetics, Makeup, Fragrances & Personal Care",    
-    
-    health:    
-        "Pharmacy, Hospitals, Clinics, Medical Equipment, Wellness, Ayurveda & Supplements",    
-    
-    food:    
-        "Grocery, Daily Needs, Fruits, Vegetables, Dairy, Bakery, Meat, Seafood, Restaurants & Food Delivery",    
-    
-    sports:    
-        "Sports, Fitness, Gym, Outdoor, Camping, Cycling & Exercise Equipment",    
-    
-    travel:    
-        "Flights, Hotels, Bus, Train, Taxi, Holidays, Visa, Cruises & Car Rental",    
-    
-    books:    
-        "Books, Education, Courses, Learning, eBooks, Stationery & Study Materials",    
-    
-    software:    
-        "Apps, AI Tools, SaaS, Hosting, Domains, Cloud, Security & Digital Services",    
-    
-    business:    
-        "Office Supplies, Wholesale, B2B, Printing, Packaging, Industrial Products & Business Services",    
-    
-    jewellery:    
-        "Gold, Diamond, Silver, Platinum, Gemstones, Bridal Jewellery & Watches",    
-    
-    automotive:    
-        "Cars, Bikes, EVs, Tyres, Batteries, Spare Parts, Accessories, Oils, Lubricants & Vehicle Services"    
-    
-};    
-    
-    
-// ===== INACTIVITY TIMER =====    
-    
-function startInactivityTimer(){    
-    
-    clearTimeout(resetTimer);    
-    
-    resetTimer=setTimeout(()=>{    
-    
-        if(currentCategory!=="all"){    
-    
-            triggerBackToAll();    
-    
-        }    
-    
-    },180000);    
-    
-}    
-    
-    
-// ===== BUTTONS =====    
-    
-function setupCategoryButtons(){    
-    
-    categoryButtons.innerHTML="";    
-    
-    categories.forEach((cat,i)=>{    
-    
-        const btn=document.createElement("button");    
-    
-        btn.className="categoryBtn";    
-    
-        btn.dataset.category=cat;    
-    
-        btn.textContent=cat.toUpperCase();    
-    
-        btn.style.borderLeftColor=colorSet[i%colorSet.length];    
-    
-        btn.title=categoryInfo[cat]||"";    
-    
-        btn.onclick=()=>{    
-    
-            document.querySelectorAll(".categoryBtn")    
-            .forEach(x=>x.classList.remove("active"));    
-    
-            btn.classList.add("active");    
-    
-            currentCategory=cat;    
-    
-            renderCategory(cat);    
-    
-            startInactivityTimer();    
-    
-        };    
-    
-        categoryButtons.appendChild(btn);    
-    
-    });    
-    
-}    
-// ===== DROPDOWN =====    
-    
-function setupCategoryDropdown(){    
-    
-    allCategoriesSelect.innerHTML="";    
-    
-    const first=document.createElement("option");    
-    
-    first.value="all";    
-    first.textContent="SELECT CATEGORY";    
-    
-    allCategoriesSelect.appendChild(first);    
-    
-    categories.forEach(cat=>{    
-    
-        const opt=document.createElement("option");    
-    
-        opt.value=cat;    
-    
-        opt.textContent=    
-            cat.toUpperCase()+" - "+categoryInfo[cat];    
-    
-        allCategoriesSelect.appendChild(opt);    
-    
-    });    
-    
-    
-    const jewellery=document.createElement("option");    
-    
-    jewellery.value="jewellery";    
-    
-    jewellery.textContent=    
-        "JEWELLERY - "+categoryInfo.jewellery;    
-    
-    allCategoriesSelect.appendChild(jewellery);    
-    
-    
-    const automotive=document.createElement("option");    
-    
-    automotive.value="automotive";    
-    
-    automotive.textContent=    
-        "AUTOMOTIVE - "+categoryInfo.automotive;    
-    
-    allCategoriesSelect.appendChild(automotive);    
-    
-    
-    allCategoriesSelect.onchange=()=>{    
-    
-        if(allCategoriesSelect.value==="all") return;    
-    
-        currentCategory=allCategoriesSelect.value;    
-    
-        document.querySelectorAll(".categoryBtn")    
-        .forEach(btn=>{    
-    
-            btn.classList.remove("active");    
-    
-            if(btn.dataset.category===currentCategory){    
-    
-                btn.classList.add("active");    
-    
-            }    
-    
-        });    
-    
-        renderCategory(currentCategory);    
-    
-        allCategoriesSelect.selectedIndex=0;    
-    
-        startInactivityTimer();    
-    
-    };    
-    
-}    
-    
-    
-// ===== BACK TO ALL =====    
-    
-function triggerBackToAll(){    
-    
-    currentCategory="all";    
-    
-    document.querySelectorAll(".categoryBtn")    
-    .forEach(btn=>btn.classList.remove("active"));    
-    
-    if(categorySearch){    
-    
-        categorySearch.value="";    
-    
-    }    
-    
-    renderCategory("all");    
-    
-    startInactivityTimer();    
-    
-}    
-// ===== RENDER CATEGORY =====    
-    
-function renderCategory(cat){    
-    
-    const isAll = (cat === "all");    
-    
-    categoryHeading.innerHTML = isAll    
-        ? "ALL"    
-        : `${cat.toUpperCase()} <button class="back-all-btn" onclick="triggerBackToAll()">BACK TO ALL</button>`;    
-    
-    categoryShops.innerHTML = "";    
-    
-    let shops = countryShops[currentCountry] || [];    
-    
-    if(!isAll){    
-    
-        shops = shops.filter(shop=>{    
-    
-            const codes = (shop.c || "")    
-                .toLowerCase()    
-                .split(",")    
-                .map(x=>x.trim());    
-    
-            return codes.includes(cat);    
-    
-        });    
-    
-    }    
-    
-    if(shops.length===0){    
-    
-        categoryShops.innerHTML =    
-        "<div style='text-align:center;padding:20px;color:#888;'>No shops found!</div>";    
-    
-        return;    
-    
-    }    
-    
-    shops.forEach((shop,index)=>{    
-    
-        createShopCard(shop,index);    
-    
-    });    
-    
-}    
-    
-    
-// ===== SEARCH =====    
-    
-if(categorySearch){    
-    
-categorySearch.addEventListener("input",function(){    
-    
-    const value=(this.value||"").toLowerCase().trim();    
-    
-    startInactivityTimer();    
-    
-    if(value===""){    
-    
-        renderCategory(currentCategory);    
-    
-        return;    
-    
-    }    
-    
-    let shops=countryShops[currentCountry]||[];    
-    
-    shops=shops.filter(shop=>    
-        (shop.n||"").toLowerCase().includes(value)    
-    );    
-    
-    categoryHeading.innerHTML=    
-    `SEARCH RESULTS (${shops.length})    
-    <button class="back-all-btn"    
-    onclick="triggerBackToAll()">    
-    BACK TO ALL    
-    </button>`;    
-    
-    categoryShops.innerHTML="";    
-    
-    shops.forEach((shop,index)=>{    
-    
-        createShopCard(shop,index);    
-    
-    });    
-    
-});    
-    
-}    
-// ===== CHANGE COUNTRY =====    
-    
-function changeCountry(countryName){    
-    
-    currentCountry=(countryName||"india")    
-        .toLowerCase()    
-        .trim();    
-    
-    if(selectedCountryBox){    
-    
-        selectedCountryBox.textContent=    
-        "SELECTED COUNTRY - "+    
-        currentCountry.toUpperCase();    
-    
-    }    
-    
-    if(categoryCountry){    
-    
-        categoryCountry.innerHTML=    
-        `SHOP ON <span class="green">${currentCountry.toUpperCase()}</span>`;    
-    
-    }    
-    
-    renderCategory(currentCategory);    
-    
-    startInactivityTimer();    
-    
-}    
-    
-    
-// ===== SET COUNTRY =====    
-    
-function setCountry(country){    
-    
-    currentCountry=(country||"india")    
-        .toLowerCase()    
-        .trim();    
-    
-    localStorage.setItem(    
-        "selectedCountry",    
-        currentCountry    
-    );    
-    
-    if(selectedCountryBox){    
-    
-        selectedCountryBox.textContent=    
-        "SELECTED COUNTRY - "+    
-        currentCountry.toUpperCase();    
-    
-    }    
-    
-    if(categoryCountry){    
-    
-        categoryCountry.innerHTML=    
-        `SHOP ON <span class="green">${currentCountry.toUpperCase()}</span>`;    
-    
-    }    
-    
-    triggerBackToAll();    
-    
-}    
-    
-    
-// ===== SHOP CARD =====    
-    
-function createShopCard(shop,index){    
-    
-    let host="";    
-    
-    try{    
-    
-        host=new URL(shop.u).hostname;    
-    
-    }catch(e){}    
-    
-    const card=document.createElement("a");    
-    
-    card.className="shopCard";    
-    card.href=shop.u;    
-    card.target="_blank";    
-    
-    card.style.borderLeftColor=    
-        colorSet[index%colorSet.length];    
-    
-    card.innerHTML=`    
-    
-        <div class="shopDot">    
-            ${(shop.a||"").trim() ? "" : "."}    
-        </div>    
-    
-        <div class="shopHead">    
-    
-            <img    
-                class="shopFav"    
-                src="https://www.google.com/s2/favicons?domain=${host}&sz=64"    
-                loading="lazy"    
-                alt=""    
-            >    
-    
-            <div class="shopName" translate="no">    
-    
-                ${shop.n||""}    
-    
-            </div>    
-    
-        </div>    
-    
-    `;    
-    
-    categoryShops.appendChild(card);    
-    
-}    
-// ===== INITIAL LOAD =====    
-    
-document.addEventListener("DOMContentLoaded",()=>{    
-    
-    setupCategoryButtons();    
-    
-    setupCategoryDropdown();    
-    
-    const savedCountry=    
-        localStorage.getItem("selectedCountry") || "india";    
-    
-    setCountry(savedCountry);    
-    
-    window.renderCountry=function(country){    
-    
-        setCountry(country);    
-    
-    };    
-    
-    startInactivityTimer();    
-    
-});    
-    
-    
-// ===== BUTTON DESCRIPTION =====    
-    
-document.addEventListener("mouseover",function(e){    
-    
-    const btn=e.target.closest(".categoryBtn");    
-    
-    if(!btn) return;    
-    
-    const cat=btn.dataset.category;    
-    
-    if(!cat) return;    
-    
-    btn.title=categoryInfo[cat] || "";    
-    
-});    
-    
-    
-// ===== TOUCH SUPPORT =====    
-    
-document.addEventListener("touchstart",function(e){    
-    
-    const btn=e.target.closest(".categoryBtn");    
-    
-    if(!btn) return;    
-    
-    const cat=btn.dataset.category;    
-    
-    if(!cat) return;    
-    
-    btn.title=categoryInfo[cat] || "";    
-    
-},{passive:true});    
-    
- 
+// MASTER CATEGORY CONFIG (button + dropdown + touch window എല്ലാം ഇതിൽ നിന്ന്)
+const categoryConfig = {
+  all: {
+    code: "all",
+    btn: "ALL",
+    label: "all",
+    desc: "all shops & commercial services"
+  },
+  electronics: {
+    code: "electronics",
+    btn: "ELECTRONICS",
+    label: "electronics",
+    desc: "electronics, mobiles, computers, gadgets & accessories"
+  },
+  home: {
+    code: "home",
+    btn: "HOME",
+    label: "home",
+    desc: "home appliances, kitchen, furniture, decor, garden, tools & home essentials"
+  },
+  fashion: {
+    code: "fashion",
+    btn: "FASHION",
+    label: "fashion",
+    desc: "men, women, kids, baby, clothing, footwear, bags & fashion accessories"
+  },
+  beauty: {
+    code: "beauty",
+    btn: "BEAUTY",
+    label: "beauty",
+    desc: "skincare, haircare, cosmetics, makeup, fragrances & personal care"
+  },
+  health: {
+    code: "health",
+    btn: "HEALTH",
+    label: "health",
+    desc: "pharmacy, hospitals, clinics, medical equipment, wellness, ayurveda & supplements"
+  },
+  food: {
+    code: "food",
+    btn: "FOOD",
+    label: "food",
+    desc: "grocery, daily needs, fruits, vegetables, dairy, bakery, meat, seafood, restaurants & food delivery"
+  },
+  sports: {
+    code: "sports",
+    btn: "SPORTS",
+    label: "sports",
+    desc: "sports, fitness, gym, outdoor, camping, cycling & exercise equipment"
+  },
+  travel: {
+    code: "travel",
+    btn: "TRAVEL",
+    label: "travel",
+    desc: "flights, hotels, bus, train, taxi, holidays, visa, cruises & car rental"
+  },
+  books: {
+    code: "books",
+    btn: "BOOKS",
+    label: "books",
+    desc: "books, education, courses, ebooks, learning, exams, stationery & study materials"
+  },
+  software: {
+    code: "software",
+    btn: "SOFTWARE",
+    label: "software",
+    desc: "apps, ai tools, saas, hosting, domains, cloud, security & digital services"
+  },
+  business: {
+    code: "business",
+    btn: "BUSINESS",
+    label: "business",
+    desc: "office supplies, wholesale, b2b, printing, packaging, industrial products & business services"
+  },
+  jewellery: {
+    code: "jewellery",
+    btn: "JEWELLERY",
+    label: "jewellery",
+    desc: "gold, diamond, silver, platinum, gemstones, bridal jewellery, luxury jewellery & watches"
+  },
+  automotive: {
+    code: "automotive",
+    btn: "AUTOMOTIVE",
+    label: "automotive",
+    desc: "cars, bikes, evs, tyres, batteries, spare parts, accessories, oils, lubricants & vehicle services"
+  }
+};
+
+// ബട്ടൺ ഓർഡർ (12 main buttons)
+const buttonOrder = [
+  "all",
+  "electronics",
+  "home",
+  "fashion",
+  "beauty",
+  "health",
+  "food",
+  "sports",
+  "travel",
+  "books",
+  "software",
+  "business"
+];
+
+const categoryButtons   = document.getElementById("categoryButtons");
+const categorySearch    = document.getElementById("categorySearch");
+const allCategoriesSelect = document.getElementById("allCategories");
+const categoryHeading   = document.getElementById("categoryHeading");
+const categoryShops     = document.getElementById("categoryShops");
+const selectedCountryBox = document.getElementById("selectedCountryBox");
+const categoryCountry   = document.getElementById("categoryCountry");
+
+// existing colours 그대로
+const colorSet = [
+  "#00C853","#2196F3","#F44336","#FF9800","#9C27B0",
+  "#00BCD4","#E91E63","#FFC107","#009688","#795548"
+];
+
+// ഇൻ-ആക്റ്റിവിറ്റി ടൈംഔട്ട് റീസെറ്റ് ലോജിക്ക് (3 മിനിറ്റ് ഉപയോഗിച്ചില്ലെങ്കിൽ ALL ലോട്ട് മാറും)
+function startInactivityTimer() {
+  clearTimeout(resetTimer);
+  resetTimer = setTimeout(() => {
+    if (currentCategory !== "all") {
+      triggerBackToAll();
+    }
+  }, 180000); // 3 മിനിറ്റ്
+}
+
+// CATEGORY BUTTONS SETUP
+function setupCategoryButtons() {
+  categoryButtons.innerHTML = "";
+  buttonOrder.forEach((key, i) => {
+    const cfg = categoryConfig[key];
+    if (!cfg) return;
+
+    const btn = document.createElement("button");
+    btn.className = "categoryBtn";
+    btn.textContent = cfg.btn; // uppercase label
+    btn.style.borderLeftColor = colorSet[i % colorSet.length];
+
+    btn.onclick = () => {
+      document.querySelectorAll(".categoryBtn").forEach(x => x.classList.remove("active"));
+      btn.classList.add("active");
+      currentCategory = cfg.code;
+      renderCategory(cfg.code);
+      startInactivityTimer();
+    };
+
+    categoryButtons.appendChild(btn);
+  });
+}
+
+// DROPDOWN / TOUCH WINDOW MASTER
+function setupCategoryDropdown() {
+  allCategoriesSelect.innerHTML = "";
+
+  // top ALL option
+  const allOpt = document.createElement("option");
+  allOpt.value = "all";
+  allOpt.textContent = "ALL CATEGORIES";
+  allCategoriesSelect.appendChild(allOpt);
+
+  // rest from master config
+  Object.keys(categoryConfig).forEach(key => {
+    if (key === "all") return;
+    const cfg = categoryConfig[key];
+    const opt = document.createElement("option");
+    opt.value = cfg.code;
+    opt.textContent = cfg.btn; // same as button
+    allCategoriesSelect.appendChild(opt);
+  });
+
+  allCategoriesSelect.onchange = () => {
+    const val = allCategoriesSelect.value;
+    if (val === "all") {
+      triggerBackToAll();
+      return;
+    }
+
+    currentCategory = val;
+
+    // button active sync
+    document.querySelectorAll(".categoryBtn").forEach(btn => {
+      btn.classList.remove("active");
+      const cfg = categoryConfig[val];
+      if (cfg && btn.textContent === cfg.btn) {
+        btn.classList.add("active");
+      }
+    });
+
+    renderCategory(currentCategory);
+
+    // dropdown reset to ALL text
+    allCategoriesSelect.value = "all";
+    startInactivityTimer();
+  };
+}
+
+// SEARCH
+categorySearch.addEventListener("input", function () {
+  const value = this.value.toLowerCase().trim();
+  startInactivityTimer();
+
+  if (value === "") {
+    renderCategory(currentCategory);
+    return;
+  }
+
+  let allShopsOfCountry = countryShops[currentCountry] || [];
+  let filtered = allShopsOfCountry.filter(shop =>
+    (shop.n || "").toLowerCase().includes(value)
+  );
+
+  categoryHeading.innerHTML = `
+    SEARCH RESULTS (${filtered.length})
+    <button class="back-all-btn" onclick="triggerBackToAll()">BACK TO ALL</button>
+  `;
+
+  categoryShops.innerHTML = "";
+
+  filtered.forEach((shop, index) => {
+    createShopCard(shop, index);
+  });
+});
+
+// COUNTRY CHANGE (PART 1)
+function changeCountry(countryName) {
+  currentCountry = countryName.toLowerCase().trim();
+  if (selectedCountryBox) {
+    selectedCountryBox.textContent = "SELECTED COUNTRY - " + currentCountry.toUpperCase();
+  }
+  if (categoryCountry) {
+    categoryCountry.innerHTML = `SHOP ON <span class="green">${currentCountry.toUpperCase()}</span>`;
+  }
+  renderCategory(currentCategory);
+}
+
+function triggerBackToAll() {
+  currentCategory = "all";
+  document.querySelectorAll(".categoryBtn").forEach(x => x.classList.remove("active"));
+  categorySearch.value = "";
+  renderCategory("all");
+}
+
+// MAIN RENDER
+function renderCategory(cat) {
+  const isAll = (cat === "all");
+  const cfg = categoryConfig[cat] || categoryConfig.all;
+
+  if (isAll) {
+    categoryHeading.innerHTML = `
+      ALL
+      <span class="catDesc">${cfg.desc}</span>
+    `;
+  } else {
+    categoryHeading.innerHTML = `
+      ${cfg.btn}
+      <span class="catDesc">${cfg.desc}</span>
+      <button class="back-all-btn" onclick="triggerBackToAll()">BACK TO ALL</button>
+    `;
+  }
+
+  categoryShops.innerHTML = "";
+
+  let shops = countryShops[currentCountry] || [];
+
+  if (!isAll) {
+    // ഇപ്പോൾ simple includes; later നമുക്ക് c logic fine-tune ചെയ്യാം
+    shops = shops.filter(shop =>
+      (shop.c || "").toLowerCase().includes(cfg.code)
+    );
+  }
+
+  if (shops.length === 0) {
+    categoryShops.innerHTML =
+      "<div style='text-align:center;padding:20px;color:#888;'>No shops found!</div>";
+    return;
+  }
+
+  shops.forEach((shop, index) => {
+    createShopCard(shop, index);
+  });
+}
+
+// SHOP CARD
+function createShopCard(shop, index) {
+  let host = "";
+  try {
+    host = new URL(shop.u).hostname;
+  } catch (e) {}
+
+  const leftColor = colorSet[index % colorSet.length];
+
+  const card = document.createElement("a");
+  card.href = shop.u;
+  card.target = "_blank";
+  card.className = "shopCard";
+  card.style.borderLeftColor = leftColor;
+
+  card.innerHTML = `
+    <div class="shopDot">${(shop.a || "").trim() ? "" : "."}</div>
+    <div class="shopHead">
+      <img class="shopFav"
+           src="https://www.google.com/s2/favicons?domain=${host}&sz=64"
+           loading="lazy" alt="">
+      <div class="shopName" translate="no">${shop.n}</div>
+    </div>
+  `;
+  categoryShops.appendChild(card);
+}
+
+// SET COUNTRY (used on load)
+function setCountry(country) {
+  currentCountry = country.toLowerCase().trim();
+  if (selectedCountryBox) {
+    selectedCountryBox.textContent = "SELECTED COUNTRY - " + currentCountry.toUpperCase();
+  }
+  if (categoryCountry) {
+    categoryCountry.innerHTML = `SHOP ON <span class="green">${currentCountry.toUpperCase()}</span>`;
+  }
+  triggerBackToAll();
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+  setupCategoryButtons();
+  setupCategoryDropdown();
+
+  const saved = localStorage.getItem("selectedCountry") || "india";
+  setCountry(saved);
+
+  // global change hook
+  window.renderCountry = function (c) {
+    setCountry(c);
+  };
+});
+
 </script>
     
 
