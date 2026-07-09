@@ -3994,7 +3994,1854 @@ u:"https://www.domestika.org",
 d:"domestika is an online platform for creative courses and tutorials.",
 k:"domestika, creative courses, online learning, design classes",
 a:""
-}
+},
+ {
+i:401,
+n:"canva uae",
+c:"software",
+u:"https://www.canva.com",
+d:"canva uae is an online design tool for creating graphics, presentations and social media content.",
+k:"canva uae, online design tool, graphic design, presentations, social media templates",
+a:""
+},
+
+{
+i:402,
+n:"boardmix",
+c:"software",
+u:"https://boardmix.com",
+d:"boardmix is an online whiteboard and collaboration tool for teams.",
+k:"boardmix, online whiteboard, collaboration tool, brainstorming, team work",
+a:""
+},
+
+{
+i:403,
+n:"figma",
+c:"software",
+u:"https://www.figma.com",
+d:"figma is a web-based design and prototyping tool for ui and ux design.",
+k:"figma, ui design, ux design, prototyping, design tool",
+a:""
+},
+
+{
+i:404,
+n:"miro",
+c:"software",
+u:"https://miro.com",
+d:"miro is an online collaborative whiteboard platform for teams.",
+k:"miro, online whiteboard, collaboration tool, brainstorming, mapping",
+a:""
+},
+
+{
+i:405,
+n:"notion",
+c:"software",
+u:"https://www.notion.so",
+d:"notion is an all-in-one workspace for notes, tasks, databases and collaboration.",
+k:"notion, workspace, notes app, productivity tool, knowledge base",
+a:""
+},
+
+{
+i:406,
+n:"trello",
+c:"software",
+u:"https://trello.com",
+d:"trello is a visual project management and task board tool.",
+k:"trello, project management, kanban board, task management, productivity",
+a:""
+},
+
+{
+i:407,
+n:"asana",
+c:"software",
+u:"https://asana.com",
+d:"asana is a project and task management platform for teams.",
+k:"asana, project management, task management, team collaboration",
+a:""
+},
+
+{
+i:408,
+n:"clickup",
+c:"software",
+u:"https://clickup.com",
+d:"clickup is a productivity platform combining tasks, docs and goals.",
+k:"clickup, productivity platform, project management, tasks, docs",
+a:""
+},
+
+{
+i:409,
+n:"monday com",
+c:"software",
+u:"https://monday.com",
+d:"monday com is a work management platform for projects and workflows.",
+k:"monday com, work management, project management, workflows, productivity",
+a:""
+},
+
+{
+i:410,
+n:"airtable",
+c:"software",
+u:"https://www.airtable.com",
+d:"airtable is a spreadsheet-database tool for managing projects and data.",
+k:"airtable, spreadsheet database, project tracking, databases, productivity",
+a:""
+},
+
+{
+i:411,
+n:"shopify uae",
+c:"software",
+u:"https://www.shopify.com",
+d:"shopify uae is an ecommerce platform for creating and managing online stores.",
+k:"shopify uae, ecommerce platform, online store builder, shopify",
+a:""
+},
+
+{
+i:412,
+n:"zoho uae",
+c:"software",
+u:"https://www.zoho.com",
+d:"zoho uae offers business software including crm, email and productivity tools.",
+k:"zoho uae, business software, crm, productivity suite, zoho apps",
+a:""
+},
+
+{
+i:413,
+n:"hubspot",
+c:"software",
+u:"https://www.hubspot.com",
+d:"hubspot is a crm and marketing automation platform.",
+k:"hubspot, crm, marketing automation, sales software, customer management",
+a:""
+},
+
+{
+i:414,
+n:"salesforce uae",
+c:"software",
+u:"https://www.salesforce.com",
+d:"salesforce uae provides cloud-based crm and business applications.",
+k:"salesforce uae, crm, cloud software, salesforce platform, business apps",
+a:""
+},
+
+{
+i:415,
+n:"freshworks",
+c:"software",
+u:"https://www.freshworks.com",
+d:"freshworks offers customer support and crm software products.",
+k:"freshworks, customer support software, crm, helpdesk, business tools",
+a:""
+},
+
+{
+i:416,
+n:"mailchimp",
+c:"software",
+u:"https://mailchimp.com",
+d:"mailchimp is an email marketing and marketing automation platform.",
+k:"mailchimp, email marketing, newsletters, marketing automation, campaigns",
+a:""
+},
+
+{
+i:417,
+n:"google workspace",
+c:"software",
+u:"https://workspace.google.com",
+d:"google workspace provides cloud email, storage and collaboration tools.",
+k:"google workspace, gmail, google drive, collaboration tools, productivity",
+a:""
+},
+
+{
+i:418,
+n:"microsoft 365 uae",
+c:"software",
+u:"https://www.microsoft.com",
+d:"microsoft 365 uae offers office apps, email and cloud services.",
+k:"microsoft 365 uae, office apps, outlook, cloud services, productivity",
+a:""
+},
+
+{
+i:419,
+n:"adobe express",
+c:"software",
+u:"https://www.adobe.com",
+d:"adobe express is an online design and content creation tool.",
+k:"adobe express, online design, content creation, graphic design, adobe",
+a:""
+},
+
+{
+i:420,
+n:"envato market",
+c:"software",
+u:"https://elements.envato.com",
+d:"envato market and elements provide digital assets like templates and graphics.",
+k:"envato market, envato elements, design assets, templates, graphics",
+a:""
+},
+
+{
+i:421,
+n:"themeforest",
+c:"software",
+u:"https://themeforest.net",
+d:"themeforest is a marketplace for website themes and templates.",
+k:"themeforest, website themes, wordpress themes, templates, envato",
+a:""
+},
+
+{
+i:422,
+n:"codecanyon",
+c:"software",
+u:"https://codecanyon.net",
+d:"codecanyon sells scripts, plugins and software components.",
+k:"codecanyon, scripts, plugins, software components, envato",
+a:""
+},
+
+{
+i:423,
+n:"graphicriver",
+c:"software",
+u:"https://graphicriver.net",
+d:"graphicriver is a marketplace for graphic templates and design assets.",
+k:"graphicriver, graphic templates, design assets, envato, graphics",
+a:""
+},
+
+{
+i:424,
+n:"freepik",
+c:"software",
+u:"https://www.freepik.com",
+d:"freepik offers free and premium vectors, photos and psd files.",
+k:"freepik, vectors, stock photos, psd files, design resources",
+a:""
+},
+
+{
+i:425,
+n:"vecteezy",
+c:"software",
+u:"https://www.vecteezy.com",
+d:"vecteezy provides free and premium vector graphics and illustrations.",
+k:"vecteezy, vector graphics, illustrations, design resources",
+a:""
+},
+
+{
+i:426,
+n:"shutterstock uae",
+c:"software",
+u:"https://www.shutterstock.com",
+d:"shutterstock uae is a stock marketplace for photos, videos and music.",
+k:"shutterstock uae, stock photos, stock videos, stock music, images",
+a:""
+},
+
+{
+i:427,
+n:"istock",
+c:"software",
+u:"https://www.istockphoto.com",
+d:"istock is a stock photo and illustration marketplace.",
+k:"istock, stock photos, illustrations, images, stock library",
+a:""
+},
+
+{
+i:428,
+n:"pexels",
+c:"software",
+u:"https://www.pexels.com",
+d:"pexels provides free stock photos and videos.",
+k:"pexels, free stock photos, free videos, images, stock library",
+a:""
+},
+
+{
+i:429,
+n:"pixabay",
+c:"software",
+u:"https://pixabay.com",
+d:"pixabay offers free images, videos and illustrations.",
+k:"pixabay, free images, stock photos, illustrations, videos",
+a:""
+},
+
+{
+i:430,
+n:"unsplash",
+c:"software",
+u:"https://unsplash.com",
+d:"unsplash is a library of free high-resolution photos.",
+k:"unsplash, free photos, stock photography, images, photo library",
+a:""
+},
+
+{
+i:431,
+n:"fiverr uae",
+c:"business",
+u:"https://www.fiverr.com",
+d:"fiverr uae is an online marketplace for freelance services.",
+k:"fiverr uae, freelance marketplace, freelancers, online services",
+a:""
+},
+
+{
+i:432,
+n:"upwork",
+c:"business",
+u:"https://www.upwork.com",
+d:"upwork is a global freelancing platform connecting clients and freelancers.",
+k:"upwork, freelancing platform, remote work, freelance jobs",
+a:""
+},
+
+{
+i:433,
+n:"freelancer",
+c:"business",
+u:"https://www.freelancer.com",
+d:"freelancer is an online platform for hiring freelancers and finding projects.",
+k:"freelancer, freelance marketplace, online jobs, hire freelancers",
+a:""
+},
+
+{
+i:434,
+n:"peopleperhour",
+c:"business",
+u:"https://www.peopleperhour.com",
+d:"peopleperhour is a freelancing marketplace for projects and hourly work.",
+k:"peopleperhour, freelance marketplace, hourly projects, freelancers",
+a:""
+},
+
+{
+i:435,
+n:"guru",
+c:"business",
+u:"https://www.guru.com",
+d:"guru is a freelance marketplace for hiring professionals online.",
+k:"guru, freelance marketplace, hire professionals, online work",
+a:""
+},
+
+{
+i:436,
+n:"toptal",
+c:"business",
+u:"https://www.toptal.com",
+d:"toptal connects companies with top freelance developers, designers and finance experts.",
+k:"toptal, freelance developers, top talent, remote experts",
+a:""
+},
+
+{
+i:437,
+n:"khamsat",
+c:"business",
+u:"https://khamsat.com",
+d:"khamsat is an arabic freelance services marketplace.",
+k:"khamsat, arabic freelance marketplace, online services, gigs",
+a:""
+},
+
+{
+i:438,
+n:"mostaql",
+c:"business",
+u:"https://mostaql.com",
+d:"mostaql is an arabic freelancing platform for projects and remote work.",
+k:"mostaql, arabic freelancing, remote work, online projects",
+a:""
+},
+
+{
+i:439,
+n:"behance",
+c:"business",
+u:"https://www.behance.net",
+d:"behance is a portfolio platform for creative professionals to showcase work.",
+k:"behance, creative portfolio, designers, artists, online portfolio",
+a:""
+},
+
+{
+i:440,
+n:"dribbble",
+c:"business",
+u:"https://dribbble.com",
+d:"dribbble is a community and portfolio site for designers.",
+k:"dribbble, design community, portfolio, designers, shots",
+a:""
+},
+
+{
+i:441,
+n:"99designs",
+c:"business",
+u:"https://99designs.com",
+d:"99designs is a design contest and freelance design marketplace.",
+k:"99designs, design contests, freelance designers, logo design",
+a:""
+},
+
+{
+i:442,
+n:"designcrowd",
+c:"business",
+u:"https://www.designcrowd.com",
+d:"designcrowd is a crowdsourcing platform for graphic design projects.",
+k:"designcrowd, crowdsourced design, graphic design, design marketplace",
+a:""
+},
+
+{
+i:443,
+n:"taskrabbit",
+c:"business",
+u:"https://www.taskrabbit.com",
+d:"taskrabbit connects users with local taskers for home and handyman services.",
+k:"taskrabbit, local services, handyman, home tasks, errands",
+a:""
+},
+
+{
+i:444,
+n:"urban company uae",
+c:"business",
+u:"https://www.urbancompany.com",
+d:"urban company uae offers home services such as cleaning, repairs and beauty.",
+k:"urban company uae, home services, cleaning, repairs, beauty services",
+a:""
+},
+
+{
+i:445,
+n:"justlife",
+c:"business",
+u:"https://www.justlife.com",
+d:"justlife provides cleaning, laundry and home services in the uae.",
+k:"justlife, cleaning services, home services, laundry, uae",
+a:""
+},
+
+{
+i:446,
+n:"service market",
+c:"business",
+u:"https://www.servicemarket.com",
+d:"service market is a platform to book home and moving services.",
+k:"service market, home services, moving services, cleaning, uae",
+a:""
+},
+
+{
+i:447,
+n:"helpbit",
+c:"business",
+u:"https://www.helpbit.com",
+d:"helpbit offers home maintenance and appliance repair services.",
+k:"helpbit, home maintenance, appliance repair, home services, uae",
+a:""
+},
+
+{
+i:448,
+n:"fixerman",
+c:"business",
+u:"https://www.fixermanme.com",
+d:"fixerman provides mobile phone and gadget repair services.",
+k:"fixerman, phone repair, gadget repair, tech repair, uae",
+a:""
+},
+
+{
+i:449,
+n:"we will fix it",
+c:"business",
+u:"https://wewillfixit.com",
+d:"we will fix it offers home maintenance and ac repair services in dubai.",
+k:"we will fix it, home maintenance, ac repair, handyman, dubai",
+a:""
+},
+
+{
+i:450,
+n:"movehub uae",
+c:"business",
+u:"https://www.movehub.com",
+d:"movehub uae provides information and services for international moves.",
+k:"movehub uae, international moving, relocation services, moving abroad",
+a:""
+},
+
+{
+i:451,
+n:"netflix uae",
+c:"software",
+u:"https://www.netflix.com",
+d:"netflix uae is a streaming service offering movies and tv shows.",
+k:"netflix uae, streaming service, movies, tv shows, online streaming",
+a:""
+},
+
+{
+i:452,
+n:"prime video uae",
+c:"software",
+u:"https://www.primevideo.com",
+d:"prime video uae streams movies, series and original shows.",
+k:"prime video uae, streaming, movies, series, amazon prime video",
+a:""
+},
+
+{
+i:453,
+n:"disney plus uae",
+c:"software",
+u:"https://www.disneyplus.com",
+d:"disney plus uae offers disney, marvel and star wars content on demand.",
+k:"disney plus uae, streaming, disney shows, marvel, star wars",
+a:""
+},
+
+{
+i:454,
+n:"starzplay",
+c:"software",
+u:"https://www.starzplay.com",
+d:"starzplay is a streaming service for movies, series and regional content.",
+k:"starzplay, streaming service, movies, series, arabic shows",
+a:""
+},
+
+{
+i:455,
+n:"shahid",
+c:"software",
+u:"https://shahid.mbc.net",
+d:"shahid is a streaming platform for arabic and international shows.",
+k:"shahid, arabic streaming, tv shows, movies, mbc",
+a:""
+},
+
+{
+i:456,
+n:"osn plus",
+c:"software",
+u:"https://www.osnplus.com",
+d:"osn plus offers premium tv shows, movies and exclusive content online.",
+k:"osn plus, streaming, premium tv, movies, osn",
+a:""
+},
+
+{
+i:457,
+n:"youtube premium uae",
+c:"software",
+u:"https://www.youtube.com",
+d:"youtube premium uae provides ad-free videos, downloads and music.",
+k:"youtube premium uae, ad free videos, youtube, offline downloads, music",
+a:""
+},
+
+{
+i:458,
+n:"spotify uae",
+c:"software",
+u:"https://www.spotify.com",
+d:"spotify uae streams music and podcasts on demand.",
+k:"spotify uae, music streaming, podcasts, playlists, audio",
+a:""
+},
+
+{
+i:459,
+n:"anghami",
+c:"software",
+u:"https://www.anghami.com",
+d:"anghami is a music streaming service focused on arabic and international music.",
+k:"anghami, music streaming, arabic music, songs, playlists",
+a:""
+},
+
+{
+i:460,
+n:"apple music uae",
+c:"software",
+u:"https://music.apple.com",
+d:"apple music uae offers music streaming and curated playlists.",
+k:"apple music uae, music streaming, apple music, playlists, songs",
+a:""
+},
+
+{
+i:461,
+n:"deezer uae",
+c:"software",
+u:"https://www.deezer.com",
+d:"deezer uae streams music, podcasts and radio.",
+k:"deezer uae, music streaming, podcasts, radio, playlists",
+a:""
+},
+
+{
+i:462,
+n:"soundcloud",
+c:"software",
+u:"https://soundcloud.com",
+d:"soundcloud is a platform for streaming and sharing music and audio.",
+k:"soundcloud, music platform, audio streaming, artists, tracks",
+a:""
+},
+
+{
+i:463,
+n:"tidal",
+c:"software",
+u:"https://tidal.com",
+d:"tidal is a high-fidelity music streaming service.",
+k:"tidal, music streaming, high fidelity, hifi audio, playlists",
+a:""
+},
+
+{
+i:464,
+n:"amazon music uae",
+c:"software",
+u:"https://music.amazon.ae",
+d:"amazon music uae streams music and playlists via amazon.",
+k:"amazon music uae, music streaming, playlists, amazon",
+a:""
+},
+
+{
+i:465,
+n:"virgin megastore music",
+c:"software",
+u:"https://www.virginmegastore.ae",
+d:"virgin megastore music offers music, vinyl and audio products.",
+k:"virgin megastore music, music store, vinyl, cds, audio",
+a:""
+},
+
+{
+i:466,
+n:"ticketmaster uae",
+c:"business",
+u:"https://www.ticketmaster.ae",
+d:"ticketmaster uae sells tickets for concerts, sports and events.",
+k:"ticketmaster uae, event tickets, concert tickets, sports tickets",
+a:""
+},
+
+{
+i:467,
+n:"platinumlist",
+c:"business",
+u:"https://www.platinumlist.net",
+d:"platinumlist is an online platform for booking event and attraction tickets.",
+k:"platinumlist, event tickets, attractions, concerts, ticket booking",
+a:""
+},
+
+{
+i:468,
+n:"bookmyshow uae",
+c:"business",
+u:"https://uae.bookmyshow.com",
+d:"bookmyshow uae offers tickets for movies, events and activities.",
+k:"bookmyshow uae, movie tickets, event tickets, activities, booking",
+a:""
+},
+
+{
+i:469,
+n:"dubai opera",
+c:"business",
+u:"https://www.dubaiopera.com",
+d:"dubai opera hosts concerts, theatre and performing arts events.",
+k:"dubai opera, performing arts, concerts, theatre, events",
+a:""
+},
+
+{
+i:470,
+n:"coca cola arena",
+c:"business",
+u:"https://www.coca-cola-arena.com",
+d:"coca cola arena is an indoor arena hosting concerts and live events in dubai.",
+k:"coca cola arena, concerts, live events, arena, dubai",
+a:""
+},
+
+{
+i:471,
+n:"ski dubai",
+c:"business",
+u:"https://www.skidxb.com",
+d:"ski dubai is an indoor ski resort and snow park in dubai.",
+k:"ski dubai, indoor ski resort, snow park, dubai attraction",
+a:""
+},
+
+{
+i:472,
+n:"img worlds",
+c:"business",
+u:"https://www.imgworlds.com",
+d:"img worlds of adventure is an indoor theme park in dubai.",
+k:"img worlds, theme park, indoor park, dubai attraction",
+a:""
+},
+
+{
+i:473,
+n:"motiongate dubai",
+c:"business",
+u:"https://www.motiongatedubai.com",
+d:"motiongate dubai is a hollywood-inspired theme park.",
+k:"motiongate dubai, theme park, hollywood park, dubai attraction",
+a:""
+},
+
+{
+i:474,
+n:"legoland dubai",
+c:"business",
+u:"https://www.legoland.com/dubai",
+d:"legoland dubai is a theme park for families with lego-themed rides.",
+k:"legoland dubai, theme park, lego rides, family attraction",
+a:""
+},
+
+{
+i:475,
+n:"yas island",
+c:"business",
+u:"https://www.yasisland.com",
+d:"yas island is an entertainment destination in abu dhabi with parks and attractions.",
+k:"yas island, entertainment destination, theme parks, abu dhabi",
+a:""
+},
+
+{
+i:476,
+n:"ferrari world",
+c:"business",
+u:"https://www.ferrariworldabudhabi.com",
+d:"ferrari world is a ferrari-themed theme park on yas island.",
+k:"ferrari world, theme park, ferrari, yas island, abu dhabi",
+a:""
+},
+
+{
+i:477,
+n:"warner bros world abu dhabi",
+c:"business",
+u:"https://www.wbworldabudhabi.com",
+d:"warner bros world abu dhabi is an indoor theme park with warner bros characters.",
+k:"warner bros world abu dhabi, theme park, warner bros, yas island",
+a:""
+},
+
+{
+i:478,
+n:"sea world abu dhabi",
+c:"business",
+u:"https://www.seaworldabudhabi.com",
+d:"sea world abu dhabi is a marine life theme park on yas island.",
+k:"sea world abu dhabi, marine park, theme park, yas island",
+a:""
+},
+
+{
+i:479,
+n:"global village",
+c:"business",
+u:"https://www.globalvillage.ae",
+d:"global village is a seasonal multicultural festival park in dubai.",
+k:"global village, festival park, multicultural, dubai attraction",
+a:""
+},
+
+{
+i:480,
+n:"dubai parks and resorts",
+c:"business",
+u:"https://www.dubaiparksandresorts.com",
+d:"dubai parks and resorts is a destination with multiple theme parks.",
+k:"dubai parks and resorts, theme parks, attractions, dubai",
+a:""
+},
+
+{
+i:481,
+n:"miral experiences",
+c:"business",
+u:"https://www.miral.ae",
+d:"miral experiences develops and manages attractions on yas island.",
+k:"miral experiences, attractions, yas island, developer, abu dhabi",
+a:""
+},
+
+{
+i:482,
+n:"dubai aquarium",
+c:"business",
+u:"https://www.thedubaiaquarium.com",
+d:"dubai aquarium and underwater zoo is a major aquarium attraction in dubai.",
+k:"dubai aquarium, underwater zoo, aquarium attraction, dubai mall",
+a:""
+},
+
+{
+i:483,
+n:"burj khalifa tickets",
+c:"business",
+u:"https://www.burjkhalifa.ae",
+d:"burj khalifa tickets are for visiting the observation decks of burj khalifa.",
+k:"burj khalifa tickets, observation deck, at the top, dubai attraction",
+a:""
+},
+
+{
+i:484,
+n:"atlantis aquaventure",
+c:"business",
+u:"https://www.atlantis.com/dubai",
+d:"atlantis aquaventure is a waterpark and attraction at atlantis the palm.",
+k:"atlantis aquaventure, waterpark, atlantis the palm, dubai attraction",
+a:""
+},
+
+{
+i:485,
+n:"the green planet",
+c:"business",
+u:"https://www.thegreenplanetdubai.com",
+d:"the green planet is an indoor tropical rainforest attraction in dubai.",
+k:"the green planet, indoor rainforest, biodome, dubai attraction",
+a:""
+},
+
+{
+i:486,
+n:"dubai frame",
+c:"business",
+u:"https://www.dubaiframe.ae",
+d:"dubai frame is a landmark attraction offering views of old and new dubai.",
+k:"dubai frame, landmark, observation deck, dubai attraction",
+a:""
+},
+
+{
+i:487,
+n:"museum of the future",
+c:"business",
+u:"https://museumofthefuture.ae",
+d:"museum of the future is an experiential museum showcasing future technologies.",
+k:"museum of the future, experiential museum, future tech, dubai",
+a:""
+},
+
+{
+i:488,
+n:"aya universe",
+c:"business",
+u:"https://www.aya-universe.com",
+d:"aya universe is an immersive light and sound experience in dubai.",
+k:"aya universe, immersive experience, light show, dubai attraction",
+a:""
+},
+
+{
+i:489,
+n:"topgolf dubai",
+c:"sports",
+u:"https://topgolfdubai.ae",
+d:"topgolf dubai is a golf entertainment venue with games and dining.",
+k:"topgolf dubai, golf entertainment, driving range, games, dubai",
+a:""
+},
+
+{
+i:490,
+n:"dubai autodrome",
+c:"sports",
+u:"https://www.dubaiautodrome.com",
+d:"dubai autodrome is a motorsport and racing circuit in dubai.",
+k:"dubai autodrome, motorsport, racing circuit, karting, dubai",
+a:""
+},
+
+{
+i:491,
+n:"emirates golf club",
+c:"sports",
+u:"https://www.dubaigolf.com",
+d:"emirates golf club is a golf course and club in dubai.",
+k:"emirates golf club, golf course, dubai golf, sports club",
+a:""
+},
+
+{
+i:492,
+n:"jumeirah golf estates",
+c:"sports",
+u:"https://www.jumeirahgolfestates.com",
+d:"jumeirah golf estates is a golf and residential community in dubai.",
+k:"jumeirah golf estates, golf course, residential community, dubai",
+a:""
+},
+
+{
+i:493,
+n:"fitness first uae",
+c:"health",
+u:"https://uae.fitnessfirstme.com",
+d:"fitness first uae is a gym chain offering fitness clubs across the uae.",
+k:"fitness first uae, gym, fitness club, workouts, uae gyms",
+a:""
+},
+
+{
+i:494,
+n:"gymnation",
+c:"health",
+u:"https://gymnation.com",
+d:"gymnation is a budget-friendly gym chain with branches in the uae.",
+k:"gymnation, gym, fitness, low cost gym, uae",
+a:""
+},
+
+{
+i:495,
+n:"golds gym uae",
+c:"health",
+u:"https://www.goldsgym.ae",
+d:"golds gym uae offers fitness clubs and training facilities.",
+k:"golds gym uae, gym, fitness club, workouts, training",
+a:""
+},
+
+{
+i:496,
+n:"warehouse gym",
+c:"health",
+u:"https://warehousegym.com",
+d:"warehouse gym is a fitness club brand with multiple locations in the uae.",
+k:"warehouse gym, gym, fitness, workouts, uae",
+a:""
+},
+
+{
+i:497,
+n:"fitrepublik",
+c:"health",
+u:"https://fitrepublik.com",
+d:"fitrepublik is a large fitness and sports facility in dubai.",
+k:"fitrepublik, fitness centre, sports facility, gym, dubai",
+a:""
+},
+
+{
+i:498,
+n:"the platform studios",
+c:"health",
+u:"https://theplatformstudios.com",
+d:"the platform studios offers boutique fitness and group classes in dubai.",
+k:"the platform studios, boutique fitness, group classes, gym, dubai",
+a:""
+},
+
+{
+i:499,
+n:"classpass uae",
+c:"health",
+u:"https://classpass.com",
+d:"classpass uae is a membership giving access to multiple gyms and studios.",
+k:"classpass uae, fitness membership, gyms, studios, classes",
+a:""
+},
+
+{
+i:500,
+n:"myprotein uae",
+c:"health",
+u:"https://www.myprotein.ae",
+d:"myprotein uae sells sports nutrition, supplements and protein products.",
+k:"myprotein uae, sports nutrition, protein powder, supplements, fitness",
+a:""
+},
+
+{
+i:501,
+n:"optimum nutrition uae",
+c:"health",
+u:"https://www.optimumnutrition.com",
+d:"optimum nutrition uae offers sports supplements and protein products.",
+k:"optimum nutrition uae, sports nutrition, protein, supplements",
+a:""
+},
+
+{
+i:502,
+n:"protein supps uae",
+c:"health",
+u:"https://www.proteinsupps.com",
+d:"protein supps uae sells protein powders and sports supplements online.",
+k:"protein supps uae, protein powder, sports supplements, online store",
+a:""
+},
+
+{
+i:503,
+n:"dr nutrition",
+c:"health",
+u:"https://www.drnutrition.com",
+d:"dr nutrition is a health and nutrition store chain in the region.",
+k:"dr nutrition, health store, nutrition supplements, vitamins, uae",
+a:""
+},
+
+{
+i:504,
+n:"nutrition nation",
+c:"health",
+u:"https://nutritionnation.com",
+d:"nutrition nation offers sports nutrition and health supplements.",
+k:"nutrition nation, sports nutrition, health supplements, vitamins",
+a:""
+},
+
+{
+i:505,
+n:"healthkart uae",
+c:"health",
+u:"https://www.healthkart.com",
+d:"healthkart uae is an online store for nutrition and health supplements.",
+k:"healthkart uae, nutrition store, health supplements, online shop",
+a:""
+},
+
+{
+i:506,
+n:"iherb uae",
+c:"health",
+u:"https://www.iherb.com",
+d:"iherb uae delivers vitamins, supplements and health products to the uae.",
+k:"iherb uae, vitamins, supplements, health products, online store",
+a:""
+},
+
+{
+i:507,
+n:"vitamin shop uae",
+c:"health",
+u:"https://www.vitaminshop.ae",
+d:"vitamin shop uae sells vitamins, supplements and health products.",
+k:"vitamin shop uae, vitamins, supplements, health products, uae",
+a:""
+},
+
+{
+i:508,
+n:"life healthcare",
+c:"health",
+u:"https://www.life-me.com",
+d:"life healthcare is part of life group offering health and wellness services.",
+k:"life healthcare, health services, wellness, clinics, uae",
+a:""
+},
+
+{
+i:509,
+n:"aster hospitals",
+c:"health",
+u:"https://www.asterhospitals.in",
+d:"aster hospitals operates healthcare facilities serving patients in the region.",
+k:"aster hospitals, hospital group, healthcare, medical services",
+a:""
+},
+
+{
+i:510,
+n:"medcare",
+c:"health",
+u:"https://www.medcare.ae",
+d:"medcare is a healthcare group operating hospitals and clinics in the uae.",
+k:"medcare, hospital, clinics, healthcare, uae",
+a:""
+},
+
+{
+i:511,
+n:"mediclinic uae",
+c:"health",
+u:"https://www.mediclinic.ae",
+d:"mediclinic uae is a private healthcare provider with hospitals and clinics.",
+k:"mediclinic uae, hospital, clinics, private healthcare, uae",
+a:""
+},
+
+{
+i:512,
+n:"burjeel hospital",
+c:"health",
+u:"https://burjeel.com",
+d:"burjeel hospital is a private hospital brand in the uae.",
+k:"burjeel hospital, private hospital, healthcare, uae",
+a:""
+},
+
+{
+i:513,
+n:"nmc healthcare",
+c:"health",
+u:"https://nmc.ae",
+d:"nmc healthcare operates hospitals and medical centres in the uae.",
+k:"nmc healthcare, hospitals, medical centres, healthcare, uae",
+a:""
+},
+
+{
+i:514,
+n:"thumbay hospital",
+c:"health",
+u:"https://thumbay.com",
+d:"thumbay hospital is a private hospital chain in the uae.",
+k:"thumbay hospital, hospital, healthcare, uae, medical services",
+a:""
+},
+
+{
+i:515,
+n:"saudi german hospital uae",
+c:"health",
+u:"https://www.sghgroup.com",
+d:"saudi german hospital uae is part of a regional hospital group.",
+k:"saudi german hospital uae, hospital, healthcare, medical services",
+a:""
+},
+
+{
+i:516,
+n:"fakeeh university hospital",
+c:"health",
+u:"https://www.fuh.care",
+d:"fakeeh university hospital is a private teaching hospital in dubai.",
+k:"fakeeh university hospital, teaching hospital, healthcare, dubai",
+a:""
+},
+
+{
+i:517,
+n:"cleveland clinic abu dhabi",
+c:"health",
+u:"https://www.clevelandclinicabudhabi.ae",
+d:"cleveland clinic abu dhabi is a tertiary care hospital in abu dhabi.",
+k:"cleveland clinic abu dhabi, tertiary hospital, healthcare, abu dhabi",
+a:""
+},
+
+{
+i:518,
+n:"american hospital dubai",
+c:"health",
+u:"https://www.ahdubai.com",
+d:"american hospital dubai is a private hospital providing medical services.",
+k:"american hospital dubai, private hospital, healthcare, dubai",
+a:""
+},
+
+{
+i:519,
+n:"kings college hospital dubai",
+c:"health",
+u:"https://kch.ae",
+d:"kings college hospital dubai is a uk-affiliated hospital in dubai.",
+k:"kings college hospital dubai, hospital, healthcare, uk-affiliated",
+a:""
+},
+
+{
+i:520,
+n:"zulekha hospital",
+c:"health",
+u:"https://www.zulekhahospitals.com",
+d:"zulekha hospital operates hospitals and medical centres in the uae.",
+k:"zulekha hospital, hospital, medical centre, healthcare, uae",
+a:""
+},
+
+{
+i:521,
+n:"aster clinics",
+c:"health",
+u:"https://www.asterclinic.ae",
+d:"aster clinics is a network of primary care clinics in the uae.",
+k:"aster clinics, clinics, primary care, healthcare, uae",
+a:""
+},
+
+{
+i:522,
+n:"prime hospital",
+c:"health",
+u:"https://www.primehealth.ae",
+d:"prime hospital is a private hospital in the uae under prime healthcare.",
+k:"prime hospital, private hospital, healthcare, uae",
+a:""
+},
+
+{
+i:523,
+n:"canadian specialist hospital",
+c:"health",
+u:"https://www.csh.ae",
+d:"canadian specialist hospital is a private hospital in dubai.",
+k:"canadian specialist hospital, hospital, healthcare, dubai",
+a:""
+},
+
+{
+i:524,
+n:"al zahra hospital dubai",
+c:"health",
+u:"https://www.azhd.ae",
+d:"al zahra hospital dubai is a private hospital in dubai.",
+k:"al zahra hospital dubai, private hospital, healthcare, dubai",
+a:""
+},
+
+{
+i:525,
+n:"emirates hospital",
+c:"health",
+u:"https://emirateshospital.ae",
+d:"emirates hospital operates hospitals and clinics in the uae.",
+k:"emirates hospital, hospital, clinics, healthcare, uae",
+a:""
+},
+
+{
+i:526,
+n:"vps healthcare",
+c:"health",
+u:"https://vpshealth.com",
+d:"vps healthcare is a healthcare group managing hospitals and clinics.",
+k:"vps healthcare, hospital group, clinics, healthcare, uae",
+a:""
+},
+
+{
+i:527,
+n:"aster lab",
+c:"health",
+u:"https://www.asterlabs.com",
+d:"aster lab provides diagnostic laboratory services.",
+k:"aster lab, diagnostic lab, laboratory services, tests",
+a:""
+},
+
+{
+i:528,
+n:"unilabs middle east",
+c:"health",
+u:"https://www.unilabs.ae",
+d:"unilabs middle east offers diagnostic and laboratory services.",
+k:"unilabs middle east, diagnostic lab, laboratory tests, healthcare",
+a:""
+},
+
+{
+i:529,
+n:"medsol diagnostics",
+c:"health",
+u:"https://medsolgroup.com",
+d:"medsol diagnostics provides diagnostic imaging and lab services.",
+k:"medsol diagnostics, diagnostic imaging, lab services, healthcare",
+a:""
+},
+
+{
+i:530,
+n:"healthhub",
+c:"health",
+u:"https://www.healthhubalfuttaim.com",
+d:"healthhub by al-futtaim offers clinics and healthcare services in the uae.",
+k:"healthhub, clinics, healthcare, al-futtaim, uae",
+a:""
+},
+
+{
+i:531,
+n:"petzone online",
+c:"food,home",
+u:"https://www.petzone.com",
+d:"petzone online is a pet store selling pet food and supplies.",
+k:"petzone online, pet store, pet food, pet supplies, uae",
+a:""
+},
+
+{
+i:532,
+n:"the petshop online",
+c:"food,home",
+u:"https://www.dubaipetfood.com",
+d:"the petshop online sells pet food, toys and accessories.",
+k:"the petshop online, pet store, pet food, pet toys, accessories",
+a:""
+},
+
+{
+i:533,
+n:"mypety online",
+c:"food,home",
+u:"https://mypety.com",
+d:"mypety online is a pet store for pet food and accessories.",
+k:"mypety online, pet store, pet food, pet accessories, uae",
+a:""
+},
+
+{
+i:534,
+n:"pets delight",
+c:"food,home",
+u:"https://petsdelight.com",
+d:"pets delight offers pet food, treats and pet supplies.",
+k:"pets delight, pet store, pet food, pet supplies, uae",
+a:""
+},
+
+{
+i:535,
+n:"petworld uae",
+c:"food,home",
+u:"https://petworlduae.com",
+d:"petworld uae sells pet food and accessories.",
+k:"petworld uae, pet store, pet food, pet accessories, uae",
+a:""
+},
+
+{
+i:536,
+n:"petsouq",
+c:"food,home",
+u:"https://www.petsouq.com",
+d:"petsouq is an online pet store offering food and supplies.",
+k:"petsouq, online pet store, pet food, pet supplies, uae",
+a:""
+},
+
+{
+i:537,
+n:"petsky online store",
+c:"food,home",
+u:"https://petskyonline.com",
+d:"petsky online store sells pet food and accessories in the uae.",
+k:"petsky online store, pet store, pet food, pet accessories, uae",
+a:""
+},
+
+{
+i:538,
+n:"pet corner online",
+c:"food,home",
+u:"https://www.petcornerdubai.com",
+d:"pet corner online offers pet food, toys and pet products.",
+k:"pet corner online, pet store, pet food, pet toys, uae",
+a:""
+},
+
+{
+i:539,
+n:"furchild pets",
+c:"food,home",
+u:"https://furchildpets.com",
+d:"furchild pets provides fresh pet food and pet nutrition products.",
+k:"furchild pets, fresh pet food, pet nutrition, pet meals, uae",
+a:""
+},
+
+{
+i:540,
+n:"animal world uae",
+c:"food,home",
+u:"https://animalworld.ae",
+d:"animal world uae offers pet supplies, food and accessories.",
+k:"animal world uae, pet supplies, pet food, pet accessories",
+a:""
+},
+
+{
+i:541,
+n:"pet kingdom",
+c:"food,home",
+u:"https://petkingdom.ae",
+d:"pet kingdom sells pet food, accessories and pet products.",
+k:"pet kingdom, pet store, pet food, pet accessories, uae",
+a:""
+},
+
+{
+i:542,
+n:"pet haus",
+c:"food,home",
+u:"https://pethaus.com",
+d:"pet haus offers pet supplies, food and accessories.",
+k:"pet haus, pet supplies, pet food, accessories, uae",
+a:""
+},
+
+{
+i:543,
+n:"pet lovers centre uae",
+c:"food,home",
+u:"https://www.petloverscentre.com",
+d:"pet lovers centre uae provides pet food and pet care products.",
+k:"pet lovers centre uae, pet food, pet care, pet store",
+a:""
+},
+
+{
+i:544,
+n:"the groomer pet salon",
+c:"food,home",
+u:"https://thegroomer.ae",
+d:"the groomer pet salon offers pet grooming and related services.",
+k:"the groomer pet salon, pet grooming, pet salon, pet care, uae",
+a:""
+},
+
+{
+i:545,
+n:"pet village",
+c:"food,home",
+u:"https://petvillage.ae",
+d:"pet village is a pet store offering pet food and accessories.",
+k:"pet village, pet store, pet food, pet accessories, uae",
+a:""
+},
+
+{
+i:546,
+n:"green branch trading",
+c:"food,home",
+u:"https://greenbranch.ae",
+d:"green branch trading supplies pet products and accessories.",
+k:"green branch trading, pet products, pet supplies, uae",
+a:""
+},
+
+{
+i:547,
+n:"pet first veterinary",
+c:"health",
+u:"https://petfirst.ae",
+d:"pet first veterinary provides veterinary care and pet health services.",
+k:"pet first veterinary, vet clinic, pet health, veterinary services, uae",
+a:""
+},
+
+{
+i:548,
+n:"modern vet",
+c:"health",
+u:"https://www.modernvet.com",
+d:"modern vet operates veterinary clinics and pet hospitals in dubai.",
+k:"modern vet, vet clinic, pet hospital, veterinary services, dubai",
+a:""
+},
+
+{
+i:549,
+n:"british veterinary hospital",
+c:"health",
+u:"https://www.bvh.ae",
+d:"british veterinary hospital provides veterinary care for pets in dubai.",
+k:"british veterinary hospital, vet clinic, pet hospital, dubai",
+a:""
+},
+
+{
+i:550,
+n:"vets fur pets",
+c:"health",
+u:"https://vetsfurpets.com",
+d:"vets fur pets offers veterinary and pet care services.",
+k:"vets fur pets, vet clinic, pet care, veterinary services, uae",
+a:""
+},
+
+{
+i:551,
+n:"malabar gold online uae",
+c:"jewellery",
+u:"https://www.malabargoldanddiamonds.com",
+d:"malabar gold online uae sells gold and diamond jewellery online.",
+k:"malabar gold online uae, gold jewellery, diamond jewellery, online store",
+a:""
+},
+
+{
+i:552,
+n:"joyalukkas online uae",
+c:"jewellery",
+u:"https://www.joyalukkas.in",
+d:"joyalukkas online uae offers gold and diamond jewellery for online purchase.",
+k:"joyalukkas online uae, gold jewellery, diamond jewellery, online store",
+a:""
+},
+
+{
+i:553,
+n:"kalyan jewellers online uae",
+c:"jewellery",
+u:"https://www.kalyanjewellers.net",
+d:"kalyan jewellers online uae sells gold and diamond jewellery online.",
+k:"kalyan jewellers online uae, gold jewellery, diamond jewellery, online",
+a:""
+},
+
+{
+i:554,
+n:"damas online",
+c:"jewellery",
+u:"https://www.damasjewellery.com",
+d:"damas online offers luxury gold and diamond jewellery.",
+k:"damas online, luxury jewellery, gold jewellery, diamond jewellery",
+a:""
+},
+
+{
+i:555,
+n:"pure gold online",
+c:"jewellery",
+u:"https://www.pugold.com",
+d:"pure gold online sells gold and diamond jewellery.",
+k:"pure gold online, gold jewellery, diamond jewellery, online store",
+a:""
+},
+
+{
+i:556,
+n:"cara online",
+c:"jewellery",
+u:"https://www.carajewellery.com",
+d:"cara online offers diamond and fine jewellery collections.",
+k:"cara online, diamond jewellery, fine jewellery, online store",
+a:""
+},
+
+{
+i:557,
+n:"liali online",
+c:"jewellery",
+u:"https://www.lialijewellery.com",
+d:"liali online sells diamond, gold and designer jewellery.",
+k:"liali online, diamond jewellery, gold jewellery, designer jewellery",
+a:""
+},
+
+{
+i:558,
+n:"samra jewellery online",
+c:"jewellery",
+u:"https://samra.ae",
+d:"samra jewellery online offers luxury diamond jewellery.",
+k:"samra jewellery online, diamond jewellery, luxury jewellery, online store",
+a:""
+},
+
+{
+i:559,
+n:"tanishq online uae",
+c:"jewellery",
+u:"https://www.tanishq.ae",
+d:"tanishq online uae sells gold and diamond jewellery collections.",
+k:"tanishq online uae, gold jewellery, diamond jewellery, online store",
+a:""
+},
+
+{
+i:560,
+n:"mint jewellers online",
+c:"jewellery",
+u:"https://mintjewellers.com",
+d:"mint jewellers online offers gold and diamond jewellery.",
+k:"mint jewellers online, gold jewellery, diamond jewellery, online store",
+a:""
+},
+
+{
+i:561,
+n:"rivoli online",
+c:"jewellery",
+u:"https://www.rivolishop.com",
+d:"rivoli online sells branded watches and accessories.",
+k:"rivoli online, branded watches, watch store, accessories, online",
+a:""
+},
+
+{
+i:562,
+n:"hour choice online",
+c:"jewellery",
+u:"https://www.hourchoice.com",
+d:"hour choice online offers fashion and lifestyle watches.",
+k:"hour choice online, watch store, fashion watches, lifestyle watches",
+a:""
+},
+
+{
+i:563,
+n:"swatch online uae",
+c:"jewellery",
+u:"https://www.swatch.com",
+d:"swatch online uae sells swatch watches and accessories.",
+k:"swatch online uae, swatch watches, fashion watches, online store",
+a:""
+},
+
+{
+i:564,
+n:"casio online uae",
+c:"jewellery",
+u:"https://www.casio-mea.com",
+d:"casio online uae provides casio watches and timepieces.",
+k:"casio online uae, casio watches, digital watches, timepieces",
+a:""
+},
+
+{
+i:565,
+n:"watch house online",
+c:"jewellery",
+u:"https://watchhouse.com",
+d:"watch house online sells branded watches and timepieces.",
+k:"watch house online, watch store, branded watches, timepieces",
+a:""
+},
+
+{
+i:566,
+n:"rolex middle east",
+c:"jewellery",
+u:"https://www.rolex.com",
+d:"rolex middle east represents rolex luxury watches in the region.",
+k:"rolex middle east, luxury watches, rolex store, timepieces",
+a:""
+},
+
+{
+i:567,
+n:"tag heuer uae",
+c:"jewellery",
+u:"https://www.tagheuer.com",
+d:"tag heuer uae offers swiss luxury watches and chronographs.",
+k:"tag heuer uae, luxury watches, swiss watches, chronographs",
+a:""
+},
+
+{
+i:568,
+n:"tissot uae",
+c:"jewellery",
+u:"https://www.tissotwatches.com",
+d:"tissot uae sells swiss watches and timepieces.",
+k:"tissot uae, swiss watches, timepieces, watch brand",
+a:""
+},
+
+{
+i:569,
+n:"longines uae",
+c:"jewellery",
+u:"https://www.longines.com",
+d:"longines uae offers swiss luxury watches.",
+k:"longines uae, luxury watches, swiss watches, timepieces",
+a:""
+},
+
+{
+i:570,
+n:"seiko uae",
+c:"jewellery",
+u:"https://www.seikowatches.com",
+d:"seiko uae sells seiko watches and timepieces.",
+k:"seiko uae, seiko watches, timepieces, watch brand",
+a:""
+},
+
+{
+i:571,
+n:"parfum online",
+c:"beauty",
+u:"https://parfum.ae",
+d:"parfum online sells perfumes and fragrances in the uae.",
+k:"parfum online, perfumes, fragrances, online perfume store, uae",
+a:""
+},
+
+{
+i:572,
+n:"v perfumes online",
+c:"beauty",
+u:"https://vperfumes.com",
+d:"v perfumes online offers perfumes and fragrance products.",
+k:"v perfumes online, perfumes, fragrances, online perfume store",
+a:""
+},
+
+{
+i:573,
+n:"ajmal online",
+c:"beauty",
+u:"https://www.ajmalperfume.com",
+d:"ajmal online sells ajmal perfumes and fragrances.",
+k:"ajmal online, ajmal perfumes, fragrances, online store",
+a:""
+},
+
+{
+i:574,
+n:"arabian oud online",
+c:"beauty",
+u:"https://arabianoud.com",
+d:"arabian oud online offers oud and oriental perfumes.",
+k:"arabian oud online, oud perfumes, arabic fragrances, online store",
+a:""
+},
+
+{
+i:575,
+n:"rasasi online",
+c:"beauty",
+u:"https://rasasi.com",
+d:"rasasi online sells perfumes and fragrance products.",
+k:"rasasi online, perfumes, fragrances, online perfume store",
+a:""
+},
+
+{
+i:576,
+n:"swiss arabian online",
+c:"beauty",
+u:"https://www.swissarabian.com",
+d:"swiss arabian online offers perfumes and fragrance oils.",
+k:"swiss arabian online, perfumes, fragrance oils, online store",
+a:""
+},
+
+{
+i:577,
+n:"hind al oud online",
+c:"beauty",
+u:"https://hindaloud.com",
+d:"hind al oud online sells luxury oud and perfumes.",
+k:"hind al oud online, luxury oud, perfumes, online store",
+a:""
+},
+
+{
+i:578,
+n:"faces online uae",
+c:"beauty",
+u:"https://www.faces.ae",
+d:"faces online uae offers beauty, skincare and fragrance products.",
+k:"faces online uae, beauty store, skincare, perfumes, online",
+a:""
+},
+
+{
+i:579,
+n:"sephora online uae",
+c:"beauty",
+u:"https://www.sephora.ae",
+d:"sephora online uae sells makeup, skincare and fragrances.",
+k:"sephora online uae, makeup, skincare, perfumes, beauty store",
+a:""
+},
+
+{
+i:580,
+n:"bashara care online",
+c:"beauty,health",
+u:"https://www.basharacare.com",
+d:"bashara care online focuses on skincare and dermatology products.",
+k:"bashara care online, skincare, dermatology, beauty store, health",
+a:""
+},
+
+{
+i:581,
+n:"the body shop online uae",
+c:"beauty",
+u:"https://www.thebodyshop.com",
+d:"the body shop online uae sells skincare, body care and beauty products.",
+k:"the body shop online uae, skincare, body care, beauty products",
+a:""
+},
+
+{
+i:582,
+n:"bath and body works online uae",
+c:"beauty",
+u:"https://www.bathandbodyworks.ae",
+d:"bath and body works online uae offers body care, fragrances and candles.",
+k:"bath and body works online uae, body care, fragrances, candles",
+a:""
+},
+
+{
+i:583,
+n:"nykaa online uae",
+c:"beauty",
+u:"https://www.nykaa.ae",
+d:"nykaa online uae sells beauty, makeup and skincare products.",
+k:"nykaa online uae, beauty store, makeup, skincare, online",
+a:""
+},
+
+{
+i:584,
+n:"lookfantastic online uae",
+c:"beauty",
+u:"https://www.lookfantastic.ae",
+d:"lookfantastic online uae offers international beauty and skincare brands.",
+k:"lookfantastic online uae, beauty store, skincare, makeup, online",
+a:""
+},
+
+{
+i:585,
+n:"glamazle online",
+c:"beauty",
+u:"https://glamazle.com",
+d:"glamazle online is a beauty store for makeup and skincare products.",
+k:"glamazle online, online beauty s 
   
   
 
