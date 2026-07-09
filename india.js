@@ -1790,8 +1790,3301 @@ u:"https://www.oziva.in",
 d:"Oziva offers clean nutrition including plant-based protein, vitamins, herbs and wellness supplements.",
 k:"oziva, plant protein, clean nutrition, vitamins, herbal supplements, wellness",
 a:""
-}
+},
+ {
+i:201,
+n:"fast&up",
+c:"health,sports",
+u:"https://www.fastandup.in",
+d:"Fast&Up offers effervescent supplements for energy, hydration, immunity, sports performance and daily wellness.",
+k:"fast&up, effervescent supplements, energy, hydration, immunity, sports nutrition",
+a:""
+},
 
+{
+i:202,
+n:"bookmyshow",
+c:"software",
+u:"https://www.bookmyshow.com",
+d:"BookMyShow is an online ticketing platform for movies, events, concerts, sports and live shows in India.",
+k:"bookmyshow, movie tickets, event booking, concerts, sports events, online ticketing",
+a:""
+},
+
+{
+i:203,
+n:"ticketnew",
+c:"software",
+u:"https://www.ticketnew.com",
+d:"TicketNew offers online movie ticket booking for cinemas across multiple cities in India.",
+k:"ticketnew, movie tickets, cinema booking, online ticketing, films",
+a:""
+},
+
+{
+i:204,
+n:"makemytrip",
+c:"travel",
+u:"https://www.makemytrip.com",
+d:"MakeMyTrip is a leading travel portal for flight tickets, hotel bookings, holiday packages and bus bookings.",
+k:"makemytrip, flight booking, hotel booking, holiday packages, bus tickets, online travel",
+a:""
+},
+
+{
+i:205,
+n:"yatra",
+c:"travel",
+u:"https://www.yatra.com",
+d:"Yatra is an online travel agency offering flights, hotels, holidays, trains and bus bookings.",
+k:"yatra, travel agency, flight tickets, hotel deals, holiday packages, bus booking",
+a:""
+},
+
+{
+i:206,
+n:"easemytrip",
+c:"travel",
+u:"https://www.easemytrip.com",
+d:"EaseMyTrip offers discounted flight tickets, hotel bookings, holidays and bus reservations online.",
+k:"easemytrip, cheap flights, hotel booking, holiday deals, bus tickets, online travel",
+a:""
+},
+
+{
+i:207,
+n:"ixigo",
+c:"travel,software",
+u:"https://www.ixigo.com",
+d:"Ixigo is a travel app and site offering bookings and comparisons for trains, flights, buses and hotels.",
+k:"ixigo, travel app, train booking, flight search, bus booking, hotel comparison",
+a:""
+},
+
+{
+i:208,
+n:"redbus",
+c:"travel",
+u:"https://www.redbus.in",
+d:"redBus is an online platform for bus ticket booking across routes in India and selected international destinations.",
+k:"redbus, bus tickets, online bus booking, travel booking, bus routes",
+a:""
+},
+
+{
+i:209,
+n:"abhibus",
+c:"travel",
+u:"https://www.abhibus.com",
+d:"AbhiBus offers bus ticket booking, travel passes and related services across Indian routes.",
+k:"abhibus, bus booking, bus tickets, travel passes, online bus reservation",
+a:""
+},
+
+{
+i:210,
+n:"oyo",
+c:"travel",
+u:"https://www.oyorooms.com",
+d:"OYO Rooms is a budget hotel network offering standardized stays, rooms and homes across cities.",
+k:"oyo rooms, budget hotels, standardized stays, oyo hotels, oyo homes",
+a:""
+},
+
+{
+i:211,
+n:"booking.com",
+c:"travel",
+u:"https://www.booking.com",
+d:"Booking.com is a global travel platform for booking hotels, apartments, resorts and stays worldwide.",
+k:"booking.com, hotel booking, apartments, resorts, stays, global travel site",
+a:""
+},
+
+{
+i:212,
+n:"hostelworld",
+c:"travel",
+u:"https://www.hostelworld.com",
+d:"Hostelworld is a booking site focused on hostels, budget stays and backpacker accommodation worldwide.",
+k:"hostelworld, hostel booking, budget accommodation, backpacker stays, dorms",
+a:""
+},
+
+{
+i:213,
+n:"airbnb",
+c:"travel",
+u:"https://www.airbnb.co.in",
+d:"Airbnb India offers homestays, apartments, unique stays and experiences hosted by local hosts.",
+k:"airbnb india, homestays, apartments, unique stays, local experiences, vacation rentals",
+a:""
+},
+
+{
+i:214,
+n:"hotstar",
+c:"software",
+u:"https://www.hotstar.com",
+d:"Disney+ Hotstar is a streaming platform offering movies, TV shows, sports, originals and live cricket in India.",
+k:"hotstar, disney+ hotstar, streaming, movies, tv shows, sports, live cricket",
+a:""
+},
+
+{
+i:215,
+n:"zee5",
+c:"software",
+u:"https://www.zee5.com",
+d:"ZEE5 is an OTT platform offering Indian TV shows, movies, originals and regional content.",
+k:"zee5, ott platform, indian tv shows, movies, web series, regional content",
+a:""
+},
+
+{
+i:216,
+n:"sonyliv",
+c:"software",
+u:"https://www.sonyliv.com",
+d:"SonyLIV is a streaming service offering Sony network shows, movies, live sports and originals.",
+k:"sonyliv, streaming, sony shows, live sports, movies, originals",
+a:""
+},
+
+{
+i:217,
+n:"discovery plus",
+c:"software",
+u:"https://www.discoveryplus.in",
+d:"Discovery Plus India offers documentaries, reality shows and factual entertainment from Discovery’s channels.",
+k:"discovery plus india, documentaries, reality shows, factual entertainment, streaming",
+a:""
+},
+
+{
+i:218,
+n:"sunnxt",
+c:"software",
+u:"https://www.sunnxt.com",
+d:"Sun NXT is a regional OTT app streaming South Indian movies, TV shows and live channels.",
+k:"sunnxt, south indian movies, regional ott, tv shows, live channels, tamil, telugu",
+a:""
+},
+
+{
+i:219,
+n:"manorama max",
+c:"software",
+u:"https://www.manoramamax.com",
+d:"Manorama Max is a Malayalam OTT platform streaming Manorama TV shows, news and regional content.",
+k:"manorama max, malayalam ott, manorama shows, regional content, tv and news",
+a:""
+},
+
+{
+i:220,
+n:"udemy",
+c:"software,books",
+u:"https://www.udemy.com",
+d:"Udemy is an online learning platform offering video courses across programming, business, design and personal development.",
+k:"udemy, online courses, programming, business skills, design, self learning, video classes",
+a:""
+},
+
+{
+i:221,
+n:"coursera",
+c:"software,books",
+u:"https://www.coursera.org",
+d:"Coursera offers online courses, specializations and degrees from universities and companies worldwide.",
+k:"coursera, university courses, online degrees, specializations, certificates, e-learning",
+a:""
+},
+
+{
+i:222,
+n:"unacademy",
+c:"software,books",
+u:"https://www.unacademy.com",
+d:"Unacademy is an Indian edtech platform offering live classes and courses for competitive exams and school/college learning.",
+k:"unacademy, live classes, competitive exams, test prep, indian edtech, learning app",
+a:""
+},
+
+{
+i:223,
+n:"byjus",
+c:"software,books",
+u:"https://www.byjus.com",
+d:"BYJU'S offers interactive learning programs and courses for school students and exam preparation.",
+k:"byjus, interactive learning, school courses, exam prep, online education, kids learning",
+a:""
+},
+
+{
+i:224,
+n:"upgrad",
+c:"software,books",
+u:"https://www.upgrad.com",
+d:"upGrad offers online higher education programs, degrees and certifications in technology, management and data fields.",
+k:"upgrad, online degrees, certifications, higher education, technology courses, management, data science",
+a:""
+},
+
+{
+i:225,
+n:"simplilearn",
+c:"software,books",
+u:"https://www.simplilearn.com",
+d:"Simplilearn offers professional certification courses in digital marketing, data, cloud, cybersecurity and project management.",
+k:"simplilearn, professional courses, certifications, digital marketing, data science, cloud computing",
+a:""
+},
+{
+i:226,
+n:"inox movies",
+c:"software",
+u:"https://www.inoxmovies.com",
+d:"INOX Movies is a multiplex cinema chain offering movie screenings and online ticket booking.",
+k:"inox movies, multiplex, cinema, movie tickets, online booking, theatres",
+a:""
+},
+
+{
+i:227,
+n:"pvr cinemas",
+c:"software",
+u:"https://www.pvrcinemas.com",
+d:"PVR Cinemas is a leading multiplex chain in India offering premium movie experiences and online ticketing.",
+k:"pvr cinemas, multiplex, movie theatre, premium cinema, online tickets",
+a:""
+},
+
+{
+i:228,
+n:"kfc india",
+c:"food",
+u:"https://online.kfc.co.in",
+d:"KFC India is a fast food chain known for fried chicken buckets, burgers, rice bowls and combo meals.",
+k:"kfc india, fried chicken, fast food, chicken buckets, burgers, combo meals",
+a:""
+},
+
+{
+i:229,
+n:"cafecoffeeday",
+c:"food",
+u:"https://www.cafecoffeeday.com",
+d:"CafeCoffeeDay is an Indian café chain serving coffees, beverages, snacks and light meals.",
+k:"cafecoffeeday, ccd cafe, coffee, beverages, snacks, cafe chain",
+a:""
+},
+
+{
+i:230,
+n:"chaayos tea",
+c:"food",
+u:"https://www.chaayos.com",
+d:"Chaayos Tea is a chai-focused café concept offering customized teas, snacks and quick bites.",
+k:"chaayos tea, chai cafe, customizable tea, snacks, beverages",
+a:""
+},
+
+{
+i:231,
+n:"chai point",
+c:"food",
+u:"https://www.chai-point.com",
+d:"Chai Point serves freshly brewed chai, coffee, beverages and snacks via cafes and delivery.",
+k:"chai point india, chai, beverages, snacks, tea delivery, cafes",
+a:""
+},
+
+{
+i:232,
+n:"noon",
+c:"electronics,home,fashion,beauty,health,food,sports,travel,books,software,business",
+u:"https://www.noon.com",
+d:"Noon is a Middle East-based online marketplace offering electronics, fashion, beauty, home, grocery and more across multiple categories.",
+k:"noon, online marketplace, electronics, fashion, beauty, home, grocery, middle east shopping",
+a:""
+},
+
+{
+i:233,
+n:"shopclues",
+c:"electronics,home,fashion,beauty,health,food,sports,travel,books,software,business",
+u:"https://www.shopclues.com",
+d:"ShopClues is an Indian e-commerce site offering budget-friendly deals on electronics, fashion, home goods and general merchandise.",
+k:"shopclues, budget deals, online shopping, electronics, fashion, home goods, indian marketplace",
+a:""
+},
+
+{
+i:234,
+n:"snapdeal",
+c:"electronics,home,fashion,beauty,health,food,sports,travel,books,software,business",
+u:"https://www.snapdeal.com",
+d:"Snapdeal is an online marketplace offering discounted products across electronics, fashion, home and lifestyle categories.",
+k:"snapdeal, online marketplace, discounts, electronics, fashion, home, lifestyle",
+a:""
+},
+
+{
+i:235,
+n:"home shop 18",
+c:"electronics,home,fashion,beauty,health,food,sports,travel,books,software,business",
+u:"https://www.homeshop18.com",
+d:"HomeShop18 is a home shopping and e-commerce brand offering electronics, home products, fashion and general merchandise.",
+k:"homeshop18, home shopping, tv shopping, online shopping, electronics, home products, fashion",
+a:""
+},
+
+{
+i:236,
+n:"hamleys india",
+c:"fashion,toys_gifts",
+u:"https://www.hamleys.in",
+d:"Hamleys India is a toy store chain offering branded toys, games, soft toys and kids’ gifts.",
+k:"hamleys india, toy store, toys, games, soft toys, kids gifts",
+a:""
+},
+
+{
+i:237,
+n:"babyhug",
+c:"fashion",
+u:"https://www.babyhug.in",
+d:"Babyhug offers clothing, footwear, accessories and essentials for babies and toddlers.",
+k:"babyhug, baby clothing, toddler wear, kids footwear, baby essentials",
+a:""
+},
+
+{
+i:238,
+n:"kidbea",
+c:"fashion",
+u:"https://www.kidbea.com",
+d:"Kidbea offers organic and comfortable clothing for babies and kids with focus on skin-friendly fabrics.",
+k:"kidbea, organic kids clothing, baby wear, comfortable fabrics, kids fashion",
+a:""
+},
+
+{
+i:239,
+n:"supples",
+c:"health",
+u:"https://www.supples.com",
+d:"Supples offers baby diapers, wipes and essentials for infant hygiene and care.",
+k:"supples, baby diapers, wipes, infant care, baby essentials, hygiene products",
+a:""
+},
+
+{
+i:240,
+n:"kidstuff",
+c:"toys_gifts",
+u:"https://www.kidstuff.in",
+d:"Kidstuff offers toys, games, stationery and kids’ activity products.",
+k:"kidstuff, toys, games, kids stationery, activity products, childrens items",
+a:""
+},
+
+{
+i:241,
+n:"campus shoes",
+c:"fashion",
+u:"https://www.campusshoes.com",
+d:"Campus Shoes offers sports shoes, casual footwear and sneakers for men, women and kids.",
+k:"campus shoes, sports footwear, casual shoes, sneakers, mens shoes, womens shoes, kids shoes",
+a:""
+},
+
+{
+i:242,
+n:"red chief",
+c:"fashion",
+u:"https://www.redchief.in",
+d:"Red Chief is a footwear brand offering leather shoes, boots and casual footwear for men.",
+k:"red chief, leather shoes, mens footwear, boots, casual shoes",
+a:""
+},
+
+{
+i:243,
+n:"paragon",
+c:"fashion",
+u:"https://www.paragonfootwear.com",
+d:"Paragon Footwear offers affordable slippers, sandals, shoes and school footwear across India.",
+k:"paragon footwear, slippers, sandals, budget footwear, school shoes, indian brand",
+a:""
+},
+
+{
+i:244,
+n:"khadims",
+c:"fashion",
+u:"https://www.khadims.com",
+d:"Khadim’s is a footwear brand offering sandals, slippers, shoes and casual footwear for families.",
+k:"khadims, family footwear, sandals, slippers, shoes, casual wear",
+a:""
+},
+
+{
+i:245,
+n:"louis philippe",
+c:"fashion",
+u:"https://www.louisphilippe.abfrl.in",
+d:"Louis Philippe offers premium menswear including formal shirts, suits, trousers and smart casuals.",
+k:"louis philippe, mens formal wear, shirts, suits, trousers, premium menswear",
+a:""
+},
+
+{
+i:246,
+n:"van heusen",
+c:"fashion",
+u:"https://www.vanheusenindia.com",
+d:"Van Heusen India offers formal, casual and workwear clothing for men and women with a corporate style focus.",
+k:"van heusen india, mens formal wear, workwear, shirts, trousers, womens office wear",
+a:""
+},
+
+{
+i:247,
+n:"allen solly",
+c:"fashion",
+u:"https://www.allensolly.com",
+d:"Allen Solly offers smart casual clothing for men and women including shirts, chinos and semi-formal outfits.",
+k:"allen solly, smart casuals, mens shirts, chinos, semi formal wear, womens casuals",
+a:""
+},
+
+{
+i:248,
+n:"peter england",
+c:"fashion",
+u:"https://www.peterengland.com",
+d:"Peter England offers value menswear including formal shirts, trousers, suits and casual clothing.",
+k:"peter england, value menswear, formal shirts, trousers, suits, casual wear",
+a:""
+},
+
+{
+i:249,
+n:"blackberrys",
+c:"fashion",
+u:"https://www.blackberrys.com",
+d:"Blackberrys offers tailored menswear including suits, blazers, shirts and formal trousers.",
+k:"blackberrys, tailored menswear, suits, blazers, formal shirts, trousers",
+a:""
+},
+
+{
+i:250,
+n:"manyavar",
+c:"fashion",
+u:"https://www.manyavar.com",
+d:"Manyavar is an ethnic menswear brand offering sherwanis, kurtas, indo-western outfits and wedding wear.",
+k:"manyavar, ethnic menswear, sherwani, kurtas, wedding wear, indo western",
+a:""
+},
+{
+i:251,
+n:"raymond",
+c:"fashion",
+u:"https://www.raymond.in",
+d:"Raymond offers fabrics, suits, shirts, trousers and ready-made menswear along with tailoring services.",
+k:"raymond, mens fabrics, suits, shirts, trousers, tailoring, formal wear",
+a:""
+},
+
+{
+i:252,
+n:"arrow",
+c:"fashion",
+u:"https://www.arrowlife.com",
+d:"Arrow offers formal and business-casual menswear including shirts, trousers and workwear essentials.",
+k:"arrow menswear, formal shirts, business casual, workwear, trousers",
+a:""
+},
+
+{
+i:253,
+n:"jack & jones",
+c:"fashion",
+u:"https://www.jackjones.in",
+d:"Jack & Jones offers casual and denim-focused menswear including jeans, t-shirts, jackets and streetwear.",
+k:"jack and jones, mens denim, jeans, t-shirts, jackets, streetwear, casual fashion",
+a:""
+},
+
+{
+i:254,
+n:"only",
+c:"fashion",
+u:"https://www.only.in",
+d:"ONLY India offers casual womenswear including jeans, tops, dresses and everyday western fashion.",
+k:"only india, womens casual wear, jeans, tops, dresses, western fashion",
+a:""
+},
+
+{
+i:255,
+n:"vero moda",
+c:"fashion",
+u:"https://www.veromoda.in",
+d:"Vero Moda India offers contemporary womenswear including dresses, tops, workwear and occasion outfits.",
+k:"vero moda india, womens fashion, dresses, tops, workwear, occasion wear",
+a:""
+},
+
+{
+i:256,
+n:"forever new",
+c:"fashion",
+u:"https://www.forevernew.co.in",
+d:"Forever New India offers feminine womenswear including dresses, gowns, occasion wear and elegant everyday clothing.",
+k:"forever new india, womens dresses, gowns, occasion wear, elegant fashion",
+a:""
+},
+
+{
+i:257,
+n:"global desi",
+c:"fashion",
+u:"https://www.globaldesi.in",
+d:"Global Desi offers boho-inspired ethnic fusion wear for women including kurtas, dresses and tops.",
+k:"global desi, boho ethnic, fusion wear, womens kurtas, dresses, tops",
+a:""
+},
+
+{
+i:258,
+n:"and",
+c:"fashion",
+u:"https://www.andindia.com",
+d:"AND India offers western womenswear including dresses, jumpsuits, tops and office-ready outfits.",
+k:"and india, womens western wear, dresses, jumpsuits, office wear, tops",
+a:""
+},
+
+{
+i:259,
+n:"rare rabbit",
+c:"fashion",
+u:"https://www.rarerabbit.in",
+d:"Rare Rabbit offers premium casual and smart menswear with contemporary designs and stylish fits.",
+k:"rare rabbit, premium menswear, smart casuals, shirts, trousers, contemporary fashion",
+a:""
+},
+
+{
+i:260,
+n:"us polo assn",
+c:"fashion",
+u:"https://www.uspoloassn.in",
+d:"U.S. Polo Assn. India offers polo-inspired clothing, t-shirts, shirts and casual wear for men and women.",
+k:"us polo assn india, polo tshirts, mens casual wear, womens casuals, shirts",
+a:""
+},
+
+{
+i:261,
+n:"forest essentials",
+c:"beauty,health",
+u:"https://www.forestessentialsindia.com",
+d:"Forest Essentials offers luxury Ayurvedic skincare, haircare and bodycare products using traditional formulations.",
+k:"forest essentials, luxury ayurvedic skincare, haircare, bodycare, natural beauty products",
+a:""
+},
+
+{
+i:262,
+n:"biotique",
+c:"beauty,health",
+u:"https://www.biotique.com",
+d:"Biotique offers Ayurvedic and botanical skincare, haircare and personal care products.",
+k:"biotique, ayurvedic skincare, botanical haircare, personal care, herbal beauty",
+a:""
+},
+
+{
+i:263,
+n:"khadi natural",
+c:"beauty,health",
+u:"https://www.khadinatural.com",
+d:"Khadi Natural offers handmade herbal soaps, skincare, hair oils and ayurvedic personal care products.",
+k:"khadi natural, herbal soaps, ayurvedic skincare, hair oils, handmade personal care",
+a:""
+},
+
+{
+i:264,
+n:"lakme",
+c:"beauty",
+u:"https://www.lakmeindia.com",
+d:"Lakmé India offers makeup, skincare and cosmetics with a wide range of foundations, lipsticks and eyeliners.",
+k:"lakme india, makeup, foundations, lipsticks, eyeliners, cosmetics, beauty brand",
+a:""
+},
+
+{
+i:265,
+n:"vlcc",
+c:"beauty,health",
+u:"https://www.vlccproducts.com",
+d:"VLCC offers skincare, slimming, wellness and personal care products along with salon and clinic services.",
+k:"vlcc, skincare products, slimming, wellness, salon, clinic, personal care",
+a:""
+},
+
+{
+i:266,
+n:"minimalist",
+c:"beauty,health",
+u:"https://beminimalist.co",
+d:"Minimalist is a clinical skincare brand offering active-ingredient serums and treatments for targeted skin concerns.",
+k:"minimalist skincare, clinical serums, active ingredients, targeted treatments, skin concerns",
+a:""
+},
+
+{
+i:267,
+n:"aqualogica",
+c:"beauty,health",
+u:"https://www.aqualogica.in",
+d:"Aqualogica offers hydrating skincare products combining actives and water-based formulations for Indian skin.",
+k:"aqualogica, hydrating skincare, water based formulas, serums, moisturizers, indian skin",
+a:""
+},
+
+{
+i:268,
+n:"foxtale",
+c:"beauty,health",
+u:"https://foxtale.in",
+d:"Foxtale is a skincare brand offering cleansers, serums and moisturizers focused on simple routines and effective actives.",
+k:"foxtale skincare, cleansers, serums, moisturizers, simple routines, active formulas",
+a:""
+},
+
+{
+i:269,
+n:"pilgrim",
+c:"beauty,health",
+u:"https://discoverpilgrim.com",
+d:"Pilgrim offers global beauty-inspired skincare and haircare ranges like Korean, French and Spanish formulations.",
+k:"pilgrim skincare, global beauty, korean range, french beauty, haircare, serums",
+a:""
+},
+
+{
+i:270,
+n:"earth rhythm",
+c:"beauty,health",
+u:"https://earthrhythm.com",
+d:"Earth Rhythm offers sustainable skincare and haircare products with eco-friendly packaging and science-backed actives.",
+k:"earth rhythm, sustainable skincare, eco friendly packaging, haircare, science backed actives",
+a:""
+},
+{
+i:271,
+n:"apollo 247",
+c:"health,software",
+u:"https://www.apollo247.com",
+d:"Apollo 247 is Apollo Hospitals’ digital health platform offering online doctor consultations, medicine delivery, lab tests and health management services.",
+k:"apollo 247, online consultation, telemedicine, online pharmacy, lab tests, apollo hospitals, health app",
+a:""
+},
+
+{
+i:272,
+n:"care hospitals",
+c:"health",
+u:"https://www.carehospitals.com",
+d:"CARE Hospitals is a multi-specialty hospital network offering inpatient and outpatient medical services along with online appointment and teleconsultation options.",
+k:"care hospitals, multi specialty hospital, medical services, inpatient care, outpatient, online appointments, teleconsultation",
+a:""
+},
+
+{
+i:273,
+n:"medibuddy",
+c:"health,software,business",
+u:"https://www.medibuddy.in",
+d:"MediBuddy is a digital healthcare platform offering online doctor consultations, medicine delivery, lab tests, health plans and corporate health benefits.",
+k:"medibuddy, online doctor, teleconsultation, online pharmacy, lab tests, health plans, corporate healthcare",
+a:""
+},
+
+{
+i:274,
+n:"mfine",
+c:"health,software",
+u:"https://www.mfine.co",
+d:"MFine is a telehealth app offering online doctor consultations, digital prescriptions, lab tests and connected healthcare services.",
+k:"mfine, telehealth app, online doctor consultation, digital prescription, lab tests, connected healthcare",
+a:""
+},
+
+{
+i:275,
+n:"fittr",
+c:"sports,health,software",
+u:"https://www.fittr.com",
+d:"Fittr is an online fitness and nutrition coaching platform providing personalised training plans, diet coaching, community features and health programs.",
+k:"fittr, online coaching, fitness plans, nutrition coaching, health programs, fitness app",
+a:""
+},
+
+{
+i:276,
+n:"healthify",
+c:"health,software",
+u:"https://www.healthifyme.com",
+d:"HealthifyMe is a health and fitness app offering calorie tracking, diet plans, workout guidance and access to nutrition coaches.",
+k:"healthifyme, calorie tracker, diet plans, fitness app, nutrition coach, health tracking",
+a:""
+},
+
+{
+i:277,
+n:"netfit",
+c:"sports,health,software",
+u:"https://www.netfit.co.in",
+d:"NetFit offers online fitness programs, workout plans and wellness coaching delivered through digital platforms.",
+k:"netfit, online fitness, workout plans, wellness coaching, fitness programs, digital training",
+a:""
+},
+
+{
+i:278,
+n:"decathlon play",
+c:"sports",
+u:"https://play.decathlon.in",
+d:"Decathlon Play is a sports activity platform to book playgrounds, coaching, events and challenges across multiple sports.",
+k:"decathlon play, sports activities, coaching, playground booking, sports events, challenges",
+a:""
+},
+
+{
+i:279,
+n:"cultsport",
+c:"sports,health",
+u:"https://cultsport.com",
+d:"Cultsport is a sports and fitness brand from Cult.fit offering sportswear, footwear, fitness equipment and wellness products.",
+k:"cultsport, sportswear, fitness equipment, running shoes, workout gear, wellness products",
+a:""
+},
+
+{
+i:280,
+n:"nivia",
+c:"sports",
+u:"https://www.niviasports.com",
+d:"Nivia Sports offers sports equipment, footwear, balls and gear for football, basketball, cricket and other games.",
+k:"nivia sports, footballs, basketballs, sports shoes, sports equipment, india sports brand",
+a:""
+},
+
+{
+i:281,
+n:"yonex india",
+c:"sports",
+u:"https://www.yonex.com",
+d:"Yonex India offers badminton racquets, shuttlecocks, tennis gear, sportswear and accessories for racquet sports.",
+k:"yonex india, badminton racquets, shuttlecocks, tennis gear, sportswear, racquet sports",
+a:""
+},
+
+{
+i:282,
+n:"cosco",
+c:"sports",
+u:"https://www.cosco.in",
+d:"Cosco India offers sports balls, fitness equipment, gym gear and accessories for various indoor and outdoor sports.",
+k:"cosco india, sports balls, fitness equipment, gym gear, sports accessories",
+a:""
+},
+
+{
+i:283,
+n:"sg cricket",
+c:"sports",
+u:"https://www.sgin.in",
+d:"SG Cricket offers cricket bats, balls, kits, protective gear and accessories for professional and amateur players.",
+k:"sg cricket, cricket bats, cricket balls, kits, protective gear, cricket equipment",
+a:""
+},
+
+{
+i:284,
+n:"ss cricket",
+c:"sports",
+u:"https://www.sstoncricket.com",
+d:"SS Cricket offers cricket bats, equipment and gear for players at different levels.",
+k:"ss cricket, cricket bats, cricket equipment, cricket gear, sports brand",
+a:""
+},
+
+{
+i:285,
+n:"ceat speciality",
+c:"sports,automotive",
+u:"https://www.ceat.com",
+d:"CEAT Speciality focuses on tyres for agriculture, industrial and specialty vehicles while CEAT also offers tyres used in motorsport and performance driving.",
+k:"ceat speciality, speciality tyres, agriculture tyres, industrial tyres, motorsport tyres, performance driving",
+a:""
+},
+
+{
+i:286,
+n:"kookaburra",
+c:"sports",
+u:"https://www.kookaburrasport.com.au",
+d:"Kookaburra Sport offers cricket and hockey gear including bats, balls, protective equipment and sports accessories.",
+k:"kookaburra sport, cricket bats, cricket balls, hockey gear, protective equipment, sports accessories",
+a:""
+},
+
+{
+i:287,
+n:"spartan sports",
+c:"sports",
+u:"https://www.spartancricket.com",
+d:"Spartan Sports offers cricket bats, kits and sports gear for cricketers and other athletes.",
+k:"spartan sports, cricket bats, cricket kits, sports gear, athletic equipment",
+a:""
+},
+
+{
+i:288,
+n:"amazon mini tv",
+c:"entertainment",
+u:"https://www.amazon.in/minitv",
+d:"Amazon miniTV is a free video streaming service within Amazon India offering web series, shows, comedy and entertainment content.",
+k:"amazon mini tv, free streaming, web series, shows, comedy, entertainment on amazon",
+a:""
+},
+
+{
+i:289,
+n:"jiohotstar",
+c:"entertainment",
+u:"https://www.jiohotstar.com",
+d:"JioHotstar is a bundled streaming access to Disney+ Hotstar content provided via Jio platforms.",
+k:"jiohotstar, disney+ hotstar via jio, streaming, movies, tv shows, sports content",
+a:""
+},
+
+{
+i:290,
+n:"aha",
+c:"entertainment",
+u:"https://www.aha.video",
+d:"Aha is a regional OTT platform offering Telugu and Tamil movies, web series and original shows.",
+k:"aha video, telugu ott, tamil ott, regional movies, web series, originals",
+a:""
+},
+
+{
+i:291,
+n:"eros now",
+c:"entertainment",
+u:"https://erosnow.com",
+d:"Eros Now is a streaming service offering Bollywood movies, music videos, web series and Indian entertainment content.",
+k:"eros now, bollywood movies, indian web series, music videos, streaming platform",
+a:""
+},
+
+{
+i:292,
+n:"hungama",
+c:"entertainment",
+u:"https://www.hungama.com",
+d:"Hungama is a digital entertainment platform offering music streaming, movies and video content.",
+k:"hungama, music streaming, movies, video content, indian entertainment",
+a:""
+},
+
+{
+i:293,
+n:"gaana",
+c:"entertainment",
+u:"https://gaana.com",
+d:"Gaana is a music streaming app offering Bollywood, regional and international songs, podcasts and radio.",
+k:"gaana, music streaming app, bollywood songs, regional music, podcasts, online radio",
+a:""
+},
+
+{
+i:294,
+n:"jiosaavn",
+c:"entertainment",
+u:"https://www.jiosaavn.com",
+d:"JioSaavn is a music and audio streaming service offering songs, playlists, podcasts and radio in multiple languages.",
+k:"jiosaavn, music streaming, playlists, podcasts, radio, jio music app",
+a:""
+},
+
+{
+i:295,
+n:"wynk music",
+c:"entertainment",
+u:"https://wynk.in",
+d:"Wynk Music is Airtel’s music streaming app offering songs, playlists, offline downloads and radio.",
+k:"wynk music, airtel music app, streaming, playlists, offline downloads, radio",
+a:""
+},
+
+{
+i:296,
+n:"audible india",
+c:"books,entertainment",
+u:"https://www.audible.in",
+d:"Audible India offers audiobooks, audio courses, stories and spoken-word content via subscription.",
+k:"audible india, audiobooks, audio courses, spoken word, subscription, learning by listening",
+a:""
+},
+
+{
+i:297,
+n:"kindle store",
+c:"books",
+u:"https://www.amazon.in/kindle-dbs/storefront",
+d:"Kindle Store India offers eBooks and digital reading content for Kindle devices and Kindle apps.",
+k:"kindle store india, ebooks, digital books, kindle reading, amazon kindle",
+a:""
+},
+
+{
+i:298,
+n:"testbook",
+c:"books",
+u:"https://testbook.com",
+d:"Testbook is an exam preparation platform offering online courses, mock tests and practice materials for government and competitive exams.",
+k:"testbook, exam prep, mock tests, government exams, competitive exams, online courses",
+a:""
+},
+
+{
+i:299,
+n:"adda247",
+c:"books",
+u:"https://www.adda247.com",
+d:"Adda247 offers online coaching, video courses and test series for banking, SSC, teaching and government job exams.",
+k:"adda247, online coaching, banking exams, SSC, government job prep, video courses, test series",
+a:""
+},
+
+{
+i:300,
+n:"physics wallah",
+c:"books",
+u:"https://www.pw.live",
+d:"Physics Wallah is an Indian edtech platform offering online classes, recorded lectures and courses for school, JEE, NEET and competitive exams.",
+k:"physics wallah, pw live, online classes, JEE coaching, NEET prep, school courses, competitive exams",
+a:""
+}, 
+{
+i:321,
+n:"microsoft 365",
+c:"software,business",
+u:"https://www.microsoft.com/microsoft-365",
+d:"Microsoft 365 offers productivity software including Word, Excel, PowerPoint, Outlook, cloud storage and collaboration tools for individuals and businesses.",
+k:"microsoft 365, office suite, productivity software, collaboration tools, business subscription, cloud storage",
+a:""
+},
+
+{
+i:322,
+n:"google workspace",
+c:"software,business",
+u:"https://workspace.google.com",
+d:"Google Workspace offers business email, Docs, Sheets, Drive, Meet and collaboration tools for teams and organizations.",
+k:"google workspace, business email, collaboration suite, docs, sheets, drive, meet",
+a:""
+},
+
+{
+i:323,
+n:"zoom",
+c:"software,business",
+u:"https://zoom.us",
+d:"Zoom is a video conferencing platform offering online meetings, webinars and collaboration tools for individuals and businesses.",
+k:"zoom, video conferencing, online meetings, webinars, collaboration, remote work",
+a:""
+},
+
+{
+i:324,
+n:"slack",
+c:"software,business",
+u:"https://slack.com",
+d:"Slack is a team communication and collaboration platform offering channels, messaging, file sharing and integrations.",
+k:"slack, team chat, collaboration, messaging, channels, integrations, workplace communication",
+a:""
+},
+
+{
+i:325,
+n:"trello",
+c:"software,business",
+u:"https://trello.com",
+d:"Trello is a visual project management tool using boards, lists and cards to organize tasks and workflows.",
+k:"trello, project management, kanban boards, task tracking, team collaboration",
+a:""
+},
+
+{
+i:326,
+n:"asana",
+c:"software,business",
+u:"https://asana.com",
+d:"Asana is a work management platform for teams to plan, track and manage projects, tasks and workflows.",
+k:"asana, work management, project tracking, team tasks, workflows, collaboration",
+a:""
+},
+
+{
+i:327,
+n:"clickup",
+c:"software,business",
+u:"https://clickup.com",
+d:"ClickUp is an all-in-one productivity platform offering tasks, docs, goals and project management for teams.",
+k:"clickup, productivity platform, tasks, docs, project management, team collaboration",
+a:""
+},
+
+{
+i:328,
+n:"evernote",
+c:"software,business",
+u:"https://evernote.com",
+d:"Evernote is a note-taking and organization app for capturing ideas, documents, to-dos and projects across devices.",
+k:"evernote, note taking app, organization, to-do lists, documents, cross-device sync",
+a:""
+},
+
+{
+i:329,
+n:"adobe express",
+c:"software",
+u:"https://www.adobe.com/express",
+d:"Adobe Express is a web and mobile tool for quick graphic design, social media posts, videos and marketing materials.",
+k:"adobe express, graphic design tool, social media creator, quick video, marketing templates",
+a:""
+},
+
+{
+i:330,
+n:"adobe creative cloud",
+c:"software",
+u:"https://www.adobe.com/creativecloud",
+d:"Adobe Creative Cloud is a subscription suite including Photoshop, Illustrator, Premiere Pro and other creative apps.",
+k:"adobe creative cloud, photoshop, illustrator, premiere pro, creative apps, design software",
+a:""
+},
+
+{
+i:331,
+n:"figma",
+c:"software,business",
+u:"https://www.figma.com",
+d:"Figma is a collaborative interface design and prototyping tool used by teams to design and share UI/UX projects.",
+k:"figma, interface design, ui ux, prototyping, collaborative design, design tool",
+a:""
+},
+
+{
+i:332,
+n:"github",
+c:"software,business",
+u:"https://github.com",
+d:"GitHub is a code hosting and collaboration platform for developers offering git repositories, issues and code reviews.",
+k:"github, code hosting, git, repositories, developer collaboration, open source",
+a:""
+},
+
+{
+i:333,
+n:"gitlab",
+c:"software,business",
+u:"https://gitlab.com",
+d:"GitLab is a DevOps platform offering git repositories, CI/CD, issue tracking and project management for development teams.",
+k:"gitlab, devops platform, git repositories, ci cd, issue tracking, development workflows",
+a:""
+},
+
+{
+i:334,
+n:"bitbucket",
+c:"software,business",
+u:"https://bitbucket.org",
+d:"Bitbucket is a git-based code hosting service for teams with repositories, pull requests and integrations.",
+k:"bitbucket, git hosting, code repositories, pull requests, team development, integrations",
+a:""
+},
+
+{
+i:335,
+n:"cloudflare",
+c:"software,business",
+u:"https://www.cloudflare.com",
+d:"Cloudflare offers CDN, DDoS protection, security and performance services for websites and internet applications.",
+k:"cloudflare, cdn, website security, ddos protection, performance optimization, dns",
+a:""
+},
+
+{
+i:336,
+n:"namecheap",
+c:"software,business",
+u:"https://www.namecheap.com",
+d:"Namecheap is a domain registrar and hosting provider offering domains, SSL certificates, email and web hosting.",
+k:"namecheap, domain registration, web hosting, ssl certificates, business email",
+a:""
+},
+
+{
+i:337,
+n:"godaddy",
+c:"software,business",
+u:"https://www.godaddy.com",
+d:"GoDaddy offers domain registration, web hosting, website builder, email and online business services.",
+k:"godaddy, domains, web hosting, website builder, email hosting, online business services",
+a:""
+},
+
+{
+i:338,
+n:"bluehost",
+c:"software,business",
+u:"https://www.bluehost.com",
+d:"Bluehost is a web hosting provider offering shared, VPS and WordPress hosting with domains and site tools.",
+k:"bluehost, web hosting, wordpress hosting, shared hosting, domains, site tools",
+a:""
+},
+
+{
+i:339,
+n:"hostgator",
+c:"software,business",
+u:"https://www.hostgator.in",
+d:"HostGator India offers web hosting, domains and website solutions for individuals and businesses.",
+k:"hostgator india, web hosting, domains, website solutions, hosting plans",
+a:""
+},
+
+{
+i:340,
+n:"digitalocean",
+c:"software,business",
+u:"https://www.digitalocean.com",
+d:"DigitalOcean offers cloud infrastructure, droplets, managed databases and Kubernetes for developers and startups.",
+k:"digitalocean, cloud infrastructure, droplets, managed databases, kubernetes, developer cloud",
+a:""
+},
+ 
+{
+i:341,
+n:"aws",
+c:"software,business",
+u:"https://aws.amazon.com",
+d:"Amazon Web Services (AWS) offers cloud computing services including compute, storage, databases, AI, networking and more.",
+k:"aws, cloud computing, compute, storage, databases, networking, developer services",
+a:""
+},
+
+{
+i:342,
+n:"google cloud",
+c:"software,business",
+u:"https://cloud.google.com",
+d:"Google Cloud offers infrastructure, platforms, data, AI and developer tools for enterprises and developers.",
+k:"google cloud, cloud platform, infrastructure, data, ai services, developer tools",
+a:""
+},
+
+{
+i:343,
+n:"microsoft azure",
+c:"software,business",
+u:"https://azure.microsoft.com",
+d:"Microsoft Azure is a cloud platform offering compute, storage, databases, AI and enterprise cloud solutions.",
+k:"microsoft azure, cloud platform, compute, storage, databases, ai, enterprise cloud",
+a:""
+},
+
+{
+i:344,
+n:"render",
+c:"software,business",
+u:"https://render.com",
+d:"Render is a cloud hosting platform offering managed web services, databases and static site hosting for developers.",
+k:"render, cloud hosting, managed web services, databases, static site hosting, developer platform",
+a:""
+},
+
+{
+i:345,
+n:"vercel",
+c:"software,business",
+u:"https://vercel.com",
+d:"Vercel is a frontend cloud platform for deploying and hosting web apps and static sites, optimized for Next.js.",
+k:"vercel, frontend cloud, nextjs hosting, web app deployment, static sites, developer platform",
+a:""
+},
+
+{
+i:346,
+n:"netlify",
+c:"software,business",
+u:"https://www.netlify.com",
+d:"Netlify is a platform for building, deploying and hosting static sites and modern web apps.",
+k:"netlify, static site hosting, jamstack, web app deployment, developer tools",
+a:""
+},
+
+{
+i:347,
+n:"pagespeed insights",
+c:"software",
+u:"https://pagespeed.web.dev",
+d:"PageSpeed Insights is a Google tool that analyzes website performance and provides optimization suggestions.",
+k:"pagespeed insights, website performance, speed analysis, optimization reports, google tool",
+a:""
+},
+
+{
+i:348,
+n:"gtmetrix",
+c:"software",
+u:"https://gtmetrix.com",
+d:"GTmetrix is an online tool that tests website speed and performance with detailed reports and recommendations.",
+k:"gtmetrix, website speed test, performance analysis, optimization suggestions, site reports",
+a:""
+},
+
+{
+i:349,
+n:"tinypng",
+c:"software",
+u:"https://tinypng.com",
+d:"TinyPNG is an online tool that compresses PNG and JPEG images to reduce file size while preserving quality.",
+k:"tinypng, image compression, png optimizer, jpeg optimizer, reduce file size",
+a:""
+},
+
+{
+i:350,
+n:"remove bg",
+c:"software",
+u:"https://www.remove.bg",
+d:"Remove.bg is an online tool that automatically removes backgrounds from photos and images.",
+k:"remove bg, background removal, photo editing tool, cutout images, automatic background remover",
+a:""
+},
+
+{
+i:351,
+n:"unsplash",
+c:"software",
+u:"https://unsplash.com",
+d:"Unsplash offers a large library of free high-resolution photos for personal and commercial use.",
+k:"unsplash, free stock photos, high resolution images, photography library, royalty free",
+a:""
+},
+
+{
+i:352,
+n:"pexels",
+c:"software",
+u:"https://www.pexels.com",
+d:"Pexels provides free stock photos and videos for personal and commercial projects.",
+k:"pexels, free stock photos, stock videos, royalty free media, creative resources",
+a:""
+},
+
+{
+i:353,
+n:"pixabay",
+c:"software",
+u:"https://pixabay.com",
+d:"Pixabay offers free images, illustrations, vectors and videos for creative and commercial use.",
+k:"pixabay, free images, illustrations, vectors, stock videos, royalty free content",
+a:""
+},
+
+{
+i:354,
+n:"freepik",
+c:"software",
+u:"https://www.freepik.com",
+d:"Freepik provides vectors, illustrations, photos and PSD files for designers and content creators.",
+k:"freepik, vectors, illustrations, design resources, stock photos, psd files",
+a:""
+},
+
+{
+i:355,
+n:"vecteezy",
+c:"software",
+u:"https://www.vecteezy.com",
+d:"Vecteezy offers free and premium vector graphics, illustrations and design resources.",
+k:"vecteezy, vector graphics, illustrations, design assets, free vectors, premium vectors",
+a:""
+},
+
+{
+i:356,
+n:"shutterstock",
+c:"software",
+u:"https://www.shutterstock.com",
+d:"Shutterstock is a stock marketplace offering royalty-free photos, videos, music and vectors for commercial use.",
+k:"shutterstock, stock photos, stock videos, royalty free music, vectors, creative marketplace",
+a:""
+},
+
+{
+i:357,
+n:"envato",
+c:"software",
+u:"https://elements.envato.com",
+d:"Envato Elements offers a subscription for unlimited downloads of design assets, templates, photos, videos and audio.",
+k:"envato elements, design assets, templates, stock photos, videos, audio, creative subscription",
+a:""
+},
+
+{
+i:358,
+n:"themeforest",
+c:"software",
+u:"https://themeforest.net",
+d:"ThemeForest is a marketplace for website themes and templates for WordPress, HTML and other platforms.",
+k:"themeforest, website themes, wordpress templates, html templates, theme marketplace",
+a:""
+},
+
+{
+i:359,
+n:"codecanyon",
+c:"software",
+u:"https://codecanyon.net",
+d:"CodeCanyon is a marketplace for scripts, plugins and code snippets for web and app development.",
+k:"codecanyon, scripts marketplace, plugins, code snippets, web development resources",
+a:""
+},
+
+{
+i:360,
+n:"creative market",
+c:"software",
+u:"https://creativemarket.com",
+d:"Creative Market is an online marketplace for fonts, graphics, templates, themes and design assets from independent creators.",
+k:"creative market, fonts, graphics, templates, themes, design marketplace",
+a:""
+},
+
+{
+i:361,
+n:"fiverr",
+c:"business",
+u:"https://www.fiverr.com",
+d:"Fiverr is a freelance services marketplace where businesses hire freelancers for design, writing, marketing, tech and more.",
+k:"fiverr, freelance marketplace, hire freelancers, design services, writing, marketing, business services",
+a:""
+},
+
+{
+i:362,
+n:"upwork",
+c:"business",
+u:"https://www.upwork.com",
+d:"Upwork is a global freelancing platform connecting businesses with professionals for remote work projects.",
+k:"upwork, freelancing platform, remote work, hire freelancers, business projects, global talent",
+a:""
+},
+
+{
+i:363,
+n:"freelancer",
+c:"business",
+u:"https://www.freelancer.com",
+d:"Freelancer.com is an online marketplace where clients post projects and freelancers bid to provide services.",
+k:"freelancer.com, freelance marketplace, project bidding, hire freelancers, online services",
+a:""
+},
+
+{
+i:364,
+n:"peopleperhour",
+c:"business",
+u:"https://www.peopleperhour.com",
+d:"PeoplePerHour connects businesses with freelance professionals for hourly or project-based work.",
+k:"peopleperhour, freelance services, hourly work, project based work, hire professionals",
+a:""
+},
+
+{
+i:365,
+n:"99designs",
+c:"business",
+u:"https://99designs.com",
+d:"99designs is a design marketplace where clients run contests or hire designers for logos, branding and creative work.",
+k:"99designs, design contests, logo design, branding, hire designers, creative marketplace",
+a:""
+},
+
+{
+i:366,
+n:"medium",
+c:"books",
+u:"https://medium.com",
+d:"Medium is a publishing platform where writers share articles, essays and stories across topics.",
+k:"medium, publishing platform, articles, essays, stories, online writing, knowledge sharing",
+a:""
+},
+
+{
+i:367,
+n:"substack",
+c:"books",
+u:"https://substack.com",
+d:"Substack lets writers create newsletters and paid subscriptions to share essays, analysis and commentary.",
+k:"substack, newsletters, paid subscriptions, essays, analysis, independent writing",
+a:""
+},
+
+{
+i:368,
+n:"quora",
+c:"books",
+u:"https://www.quora.com",
+d:"Quora is a Q&A platform where people ask questions and share answers and knowledge on many topics.",
+k:"quora, question and answer site, knowledge sharing, community answers, learn from experts",
+a:""
+},
+
+{
+i:369,
+n:"reddit",
+c:"books,entertainment",
+u:"https://www.reddit.com",
+d:"Reddit is a network of communities where people discuss interests, share content, learn, and engage in entertainment and discussions.",
+k:"reddit, online communities, discussion forums, learn and share, entertainment, social platform",
+a:""
+},
+
+{
+i:370,
+n:"stack overflow",
+c:"software,books",
+u:"https://stackoverflow.com",
+d:"Stack Overflow is a Q&A site for developers to ask programming questions, share answers and learn coding solutions.",
+k:"stack overflow, developer q&a, programming questions, coding solutions, software development help",
+a:""
+},
+{
+i:371,
+n:"internet archive",
+c:"books",
+u:"https://archive.org",
+d:"Internet Archive is a digital library offering archived websites, books, audio, video and software for free access.",
+k:"internet archive, digital library, wayback machine, free books, archived websites, audio, video, software",
+a:""
+},
+
+{
+i:372,
+n:"project gutenberg",
+c:"books",
+u:"https://www.gutenberg.org",
+d:"Project Gutenberg offers free ebooks of public domain literature that can be downloaded or read online.",
+k:"project gutenberg, free ebooks, public domain books, classic literature, online reading, downloads",
+a:""
+},
+
+{
+i:373,
+n:"open library",
+c:"books",
+u:"https://openlibrary.org",
+d:"Open Library is an online catalog and lending library offering millions of book records and digital borrowing.",
+k:"open library, online catalog, book lending, ebooks, digital borrowing, internet archive books",
+a:""
+},
+
+{
+i:374,
+n:"researchgate",
+c:"books",
+u:"https://www.researchgate.net",
+d:"ResearchGate is a network for researchers to share papers, ask questions and collaborate on scientific work.",
+k:"researchgate, research network, academic papers, scientific collaboration, journals, researchers",
+a:""
+},
+
+{
+i:375,
+n:"google scholar",
+c:"books",
+u:"https://scholar.google.com",
+d:"Google Scholar is a search engine for scholarly literature including articles, theses, books and conference papers.",
+k:"google scholar, academic search, research articles, theses, citations, scholarly literature",
+a:""
+},
+
+{
+i:376,
+n:"wikibooks",
+c:"books",
+u:"https://www.wikibooks.org",
+d:"Wikibooks hosts free open-content textbooks and manuals across various subjects.",
+k:"wikibooks, free textbooks, open content books, manuals, educational resources, wikimedia project",
+a:""
+},
+
+{
+i:377,
+n:"wikiversity",
+c:"books",
+u:"https://www.wikiversity.org",
+d:"Wikiversity offers learning resources, courses and projects for self-study and collaborative education.",
+k:"wikiversity, learning resources, free courses, projects, self study, collaborative education",
+a:""
+},
+
+{
+i:378,
+n:"ted",
+c:"books,entertainment",
+u:"https://www.ted.com",
+d:"TED hosts short talks and conferences featuring speakers on technology, education, design and ideas worth spreading.",
+k:"ted talks, conferences, inspirational talks, education, ideas worth spreading, videos",
+a:""
+},
+
+{
+i:379,
+n:"national geographic",
+c:"books,entertainment",
+u:"https://www.nationalgeographic.com",
+d:"National Geographic offers articles, documentaries, photography and educational content on nature, science and culture.",
+k:"national geographic, documentaries, nature photography, science articles, wildlife, educational content",
+a:""
+},
+
+{
+i:380,
+n:"britannica",
+c:"books",
+u:"https://www.britannica.com",
+d:"Encyclopaedia Britannica is an online reference providing verified articles and summaries across many subjects.",
+k:"britannica, encyclopedia, reference articles, verified information, educational resource",
+a:""
+},
+
+{
+i:381,
+n:"mozilla",
+c:"software,books",
+u:"https://www.mozilla.org",
+d:"Mozilla develops Firefox and other open web tools and also offers documentation, learning resources and campaigns for an open internet.",
+k:"mozilla, firefox browser, open web, internet privacy, developer docs, web education",
+a:""
+},
+
+{
+i:382,
+n:"opera",
+c:"software",
+u:"https://www.opera.com",
+d:"Opera offers web browsers and related tools for secure and fast browsing on desktop and mobile.",
+k:"opera browser, web browsing, mobile browser, secure browsing, free browser",
+a:""
+},
+
+{
+i:383,
+n:"brave",
+c:"software",
+u:"https://brave.com",
+d:"Brave is a privacy-focused browser with built-in ad and tracker blocking and optional rewards.",
+k:"brave browser, privacy focused, ad blocking, tracker blocking, secure browsing",
+a:""
+},
+
+{
+i:384,
+n:"duckduckgo",
+c:"software",
+u:"https://duckduckgo.com",
+d:"DuckDuckGo is a privacy-focused search engine that does not track personal search history.",
+k:"duckduckgo, private search engine, no tracking, privacy friendly search",
+a:""
+},
+
+{
+i:385,
+n:"proton mail",
+c:"software",
+u:"https://proton.me",
+d:"Proton Mail offers encrypted email and privacy-focused communication services.",
+k:"proton mail, encrypted email, secure communication, privacy first email, proton",
+a:""
+},
+
+{
+i:386,
+n:"tutanota",
+c:"software",
+u:"https://tuta.com",
+d:"Tutanota is a secure email service providing end-to-end encryption and privacy-friendly mail.",
+k:"tutanota, secure email, encrypted mailbox, privacy friendly email service",
+a:""
+},
+
+{
+i:387,
+n:"mega",
+c:"software",
+u:"https://mega.io",
+d:"MEGA offers encrypted cloud storage, file sharing and backup services.",
+k:"mega cloud, encrypted storage, file sharing, backup, secure cloud service",
+a:""
+},
+
+{
+i:388,
+n:"sync",
+c:"software",
+u:"https://www.sync.com",
+d:"Sync.com provides encrypted cloud storage and file sharing for individuals and teams.",
+k:"sync.com, encrypted cloud storage, secure file sharing, privacy cloud, team storage",
+a:""
+},
+
+{
+i:389,
+n:"box",
+c:"software,business",
+u:"https://www.box.com",
+d:"Box offers cloud content management and file collaboration services for businesses and enterprises.",
+k:"box cloud, business file sharing, content management, enterprise collaboration, b2b storage",
+a:""
+},
+
+{
+i:390,
+n:"we transfer",
+c:"software",
+u:"https://wetransfer.com",
+d:"WeTransfer is a simple service for sending large files online via temporary download links.",
+k:"wetransfer, large file transfer, online sharing, temporary links, send files",
+a:""
+},
+
+{
+i:391,
+n:"loom",
+c:"software,business",
+u:"https://www.loom.com",
+d:"Loom lets users record and share video messages and screen recordings for work communication.",
+k:"loom, screen recording, video messaging, async communication, team collaboration tool",
+a:""
+},
+
+{
+i:392,
+n:"calendly",
+c:"software,business",
+u:"https://calendly.com",
+d:"Calendly is a scheduling tool that helps businesses and professionals book meetings without back-and-forth emails.",
+k:"calendly, meeting scheduling, appointment booking, calendar integration, b2b scheduling",
+a:""
+},
+
+{
+i:393,
+n:"typeform",
+c:"software,business",
+u:"https://www.typeform.com",
+d:"Typeform lets businesses create interactive forms, surveys and quizzes with a conversational interface.",
+k:"typeform, online forms, surveys, quizzes, lead collection, business tool",
+a:""
+},
+
+{
+i:394,
+n:"jotform",
+c:"software,business",
+u:"https://www.jotform.com",
+d:"Jotform is a form builder platform for creating online forms, collecting responses and automating workflows.",
+k:"jotform, online form builder, surveys, data collection, workflow automation, business forms",
+a:""
+},
+
+{
+i:395,
+n:"mailchimp",
+c:"software,business",
+u:"https://mailchimp.com",
+d:"Mailchimp offers email marketing, marketing automation and audience management tools for businesses.",
+k:"mailchimp, email marketing, newsletters, marketing automation, small business tool",
+a:""
+},
+
+{
+i:396,
+n:"brevo",
+c:"software,business",
+u:"https://www.brevo.com",
+d:"Brevo (formerly Sendinblue) provides email, SMS and marketing automation tools for businesses.",
+k:"brevo, sendinblue, email campaigns, sms marketing, marketing automation, b2b tool",
+a:""
+},
+
+{
+i:397,
+n:"convertkit",
+c:"software,business",
+u:"https://convertkit.com",
+d:"ConvertKit offers email marketing and automation tools tailored for creators and online businesses.",
+k:"convertkit, email marketing for creators, automation, newsletters, online business",
+a:""
+},
+
+{
+i:398,
+n:"gumroad",
+c:"software,business",
+u:"https://gumroad.com",
+d:"Gumroad lets creators sell digital products, memberships and content directly to customers.",
+k:"gumroad, sell digital products, creator storefront, memberships, b2b payments",
+a:""
+},
+
+{
+i:399,
+n:"patreon",
+c:"software",
+u:"https://www.patreon.com",
+d:"Patreon is a membership platform where fans support creators through subscriptions for exclusive content.",
+k:"patreon, creator memberships, fan subscriptions, exclusive content, recurring support",
+a:""
+},
+
+{
+i:400,
+n:"buy me a coffee",
+c:"software",
+u:"https://www.buymeacoffee.com",
+d:"Buy Me a Coffee lets supporters send one-time or recurring contributions to creators online.",
+k:"buy me a coffee, creator tips, supporter contributions, donations, online support",
+a:""
+},
+{
+i:401,
+n:"product hunt",
+c:"software,business",
+u:"https://www.producthunt.com",
+d:"Product Hunt is a platform where makers launch and discover new tech products, apps and tools.",
+k:"product hunt, new products, app launches, startup community, tech tools, b2b discovery",
+a:""
+},
+
+{
+i:402,
+n:"indie hackers",
+c:"books,software",
+u:"https://www.indiehackers.com",
+d:"Indie Hackers is a community where founders share stories, revenue numbers and lessons about building online businesses.",
+k:"indie hackers, founder stories, bootstrapping, startup community, online business education",
+a:""
+},
+
+{
+i:403,
+n:"hacker news",
+c:"books,software",
+u:"https://news.ycombinator.com",
+d:"Hacker News is a tech and startup-focused news board where users share and discuss articles and projects.",
+k:"hacker news, tech news, startup discussion, programming topics, community board",
+a:""
+},
+
+{
+i:404,
+n:"dev.to",
+c:"books,software",
+u:"https://dev.to",
+d:"DEV.to is a community platform where developers publish articles, tutorials and discussions about software development.",
+k:"dev.to, developer blog, coding tutorials, programming articles, dev community",
+a:""
+},
+
+{
+i:405,
+n:"hashnode",
+c:"books,software",
+u:"https://hashnode.com",
+d:"Hashnode lets developers run personal blogs and share technical articles with a built-in community.",
+k:"hashnode, developer blogging, technical articles, programming blog platform",
+a:""
+},
+
+{
+i:406,
+n:"smashing magazine",
+c:"books",
+u:"https://www.smashingmagazine.com",
+d:"Smashing Magazine publishes articles, guides and books on web design, front-end development and UX.",
+k:"smashing magazine, web design articles, front end development, ux guides, educational content",
+a:""
+},
+
+{
+i:407,
+n:"css tricks",
+c:"books",
+u:"https://css-tricks.com",
+d:"CSS-Tricks is a site with articles, tutorials and examples focused on CSS and front-end web development.",
+k:"css tricks, css tutorials, front end tips, web design examples, educational blog",
+a:""
+},
+
+{
+i:408,
+n:"sitepoint",
+c:"books",
+u:"https://www.sitepoint.com",
+d:"SitePoint offers books, articles and courses on web development, design and programming.",
+k:"sitepoint, web development books, programming articles, design courses, learning site",
+a:""
+},
+
+{
+i:409,
+n:"a list apart",
+c:"books",
+u:"https://alistapart.com",
+d:"A List Apart publishes essays and articles on web standards, design and user experience.",
+k:"a list apart, web standards, ux essays, design thinking, web design articles",
+a:""
+},
+
+{
+i:410,
+n:"web.dev",
+c:"books,software",
+u:"https://web.dev",
+d:"web.dev is a resource offering guides, tools and best practices for modern web development and performance.",
+k:"web.dev, web performance guides, modern web best practices, developer tools",
+a:""
+},
+
+{
+i:411,
+n:"npm",
+c:"software,business",
+u:"https://www.npmjs.com",
+d:"npm is a package registry and tooling ecosystem for JavaScript modules used by developers and organizations.",
+k:"npm registry, javascript packages, node modules, developer tooling, b2b software ecosystem",
+a:""
+},
+
+{
+i:412,
+n:"jsdelivr",
+c:"software",
+u:"https://www.jsdelivr.com",
+d:"jsDelivr is a free CDN for open source projects and JavaScript libraries.",
+k:"jsdelivr, free cdn, javascript libraries, open source hosting, static file delivery",
+a:""
+},
+
+{
+i:413,
+n:"unpkg",
+c:"software",
+u:"https://unpkg.com",
+d:"unpkg serves files from npm packages over a fast CDN for the web.",
+k:"unpkg, npm cdn, serve package files, javascript delivery, static assets",
+a:""
+},
+
+{
+i:414,
+n:"cdnjs",
+c:"software",
+u:"https://cdnjs.com",
+d:"cdnjs is a community-driven CDN hosting popular JavaScript and CSS libraries.",
+k:"cdnjs, library cdn, javascript hosting, css hosting, static assets for web",
+a:""
+},
+
+{
+i:415,
+n:"bootstrap",
+c:"books,software",
+u:"https://getbootstrap.com",
+d:"Bootstrap is a front-end CSS framework providing components, layout and documentation for building responsive sites.",
+k:"bootstrap, css framework, ui components, responsive design, front end docs",
+a:""
+},
+
+{
+i:416,
+n:"tailwind css",
+c:"books,software",
+u:"https://tailwindcss.com",
+d:"Tailwind CSS is a utility-first CSS framework with docs and tooling for building custom designs.",
+k:"tailwind css, utility css framework, design system, docs, front end tool",
+a:""
+},
+
+{
+i:417,
+n:"react",
+c:"books,software",
+u:"https://react.dev",
+d:"React is a JavaScript library for building user interfaces, with documentation, tutorials and ecosystem tools.",
+k:"react, ui library, javascript framework, component based, docs, developer education",
+a:""
+},
+
+{
+i:418,
+n:"vue",
+c:"books,software",
+u:"https://vuejs.org",
+d:"Vue.js is a progressive JavaScript framework for building user interfaces with guides and ecosystem tools.",
+k:"vue.js, javascript framework, ui development, progressive framework, docs and guides",
+a:""
+},
+
+{
+i:419,
+n:"angular",
+c:"books,software",
+u:"https://angular.dev",
+d:"Angular is a TypeScript-based framework for building web applications with structured tooling and documentation.",
+k:"angular, typescript framework, web apps, structured tooling, docs, developer resources",
+a:""
+},
+
+{
+i:420,
+n:"next.js",
+c:"books,software",
+u:"https://nextjs.org",
+d:"Next.js is a React framework for building full-stack and server-side rendered web applications.",
+k:"next.js, react framework, server side rendering, full stack web, docs and examples",
+a:""
+},
+
+{
+i:421,
+n:"nuxt",
+c:"books,software",
+u:"https://nuxt.com",
+d:"Nuxt is a framework built on Vue.js for creating server-rendered and static web applications.",
+k:"nuxt, vue framework, server rendered apps, static site generation, docs",
+a:""
+},
+
+{
+i:422,
+n:"svelte",
+c:"books,software",
+u:"https://svelte.dev",
+d:"Svelte is a component framework that compiles to efficient JavaScript for building web interfaces.",
+k:"svelte, javascript framework, compiled ui, components, docs and tutorials",
+a:""
+},
+
+{
+i:423,
+n:"electron",
+c:"books,software",
+u:"https://www.electronjs.org",
+d:"Electron allows developers to build cross-platform desktop apps with JavaScript, HTML and CSS.",
+k:"electron, desktop apps, javascript, cross platform, framework docs, developer tools",
+a:""
+},
+
+{
+i:424,
+n:"flutter",
+c:"books,software",
+u:"https://flutter.dev",
+d:"Flutter is a UI toolkit for building cross-platform apps using the Dart language.",
+k:"flutter, cross platform ui, mobile apps, dart framework, toolkit, docs",
+a:""
+},
+
+{
+i:425,
+n:"dart",
+c:"books,software",
+u:"https://dart.dev",
+d:"Dart is a programming language used for client and server development, with docs and tools.",
+k:"dart language, programming docs, client development, flutter language, dev tools",
+a:""
+},
+
+{
+i:426,
+n:"python",
+c:"books,software",
+u:"https://www.python.org",
+d:"Python is a high-level programming language with downloads, docs and community resources.",
+k:"python language, programming, interpreter downloads, docs, beginner friendly, dev community",
+a:""
+},
+
+{
+i:427,
+n:"javascript",
+c:"books,software",
+u:"https://developer.mozilla.org/docs/Web/JavaScript",
+d:"JavaScript is the core scripting language of the web with documentation and guides.",
+k:"javascript mdn, web scripting, browser language, docs, tutorials, dev education",
+a:""
+},
+
+{
+i:428,
+n:"typescript",
+c:"books,software",
+u:"https://www.typescriptlang.org",
+d:"TypeScript is a typed superset of JavaScript offering tooling, docs and compiler downloads.",
+k:"typescript, typed javascript, language docs, tooling, compiler, dev resources",
+a:""
+},
+
+{
+i:429,
+n:"node.js",
+c:"books,software",
+u:"https://nodejs.org",
+d:"Node.js is a JavaScript runtime for building server-side and tooling applications with npm support.",
+k:"node.js, javascript runtime, server side, backend dev, npm ecosystem, docs",
+a:""
+},
+
+{
+i:430,
+n:"mongodb",
+c:"books,software",
+u:"https://www.mongodb.com",
+d:"MongoDB is a document database offering cloud services, tools and learning resources.",
+k:"mongodb, document database, nosql, atlas cloud, dev tools, learning center",
+a:""
+},
+
+{
+i:431,
+n:"mysql",
+c:"books,software",
+u:"https://www.mysql.com",
+d:"MySQL is a widely used open-source relational database with downloads, docs and enterprise offerings.",
+k:"mysql database, relational db, open source, docs, enterprise tools, sql learning",
+a:""
+},
+
+{
+i:432,
+n:"postgresql",
+c:"books,software",
+u:"https://www.postgresql.org",
+d:"PostgreSQL is an advanced open-source relational database with documentation and community support.",
+k:"postgresql, open source database, relational db, sql, docs, dev community",
+a:""
+},
+
+{
+i:433,
+n:"sqlite",
+c:"books,software",
+u:"https://www.sqlite.org",
+d:"SQLite is a self-contained embedded SQL database engine with docs and source downloads.",
+k:"sqlite, embedded database, sql engine, lightweight db, docs, downloads",
+a:""
+},
+
+{
+i:434,
+n:"supabase",
+c:"software,business",
+u:"https://supabase.com",
+d:"Supabase offers a backend-as-a-service with database, auth and storage APIs for developers and teams.",
+k:"supabase, backend as a service, postgres, auth, storage, developer platform, b2b",
+a:""
+},
+
+{
+i:435,
+n:"firebase",
+c:"software,business",
+u:"https://firebase.google.com",
+d:"Firebase provides backend services like auth, database, storage and analytics for apps.",
+k:"firebase, mobile backend, realtime database, auth, analytics, dev platform",
+a:""
+},
+
+{
+i:436,
+n:"appwrite",
+c:"software,business",
+u:"https://appwrite.io",
+d:"Appwrite is an open-source backend server with APIs for auth, databases and storage.",
+k:"appwrite, open source backend, auth api, database, storage, dev platform",
+a:""
+},
+
+{
+i:437,
+n:"railway",
+c:"software,business",
+u:"https://railway.app",
+d:"Railway is a cloud platform for deploying and managing applications and databases.",
+k:"railway.app, app hosting, cloud deployment, databases, dev platform, b2b hosting",
+a:""
+},
+
+{
+i:438,
+n:"fly.io",
+c:"software,business",
+u:"https://fly.io",
+d:"Fly.io runs apps close to users globally, offering edge deployment and hosting.",
+k:"fly.io, edge hosting, global app deployment, containers, dev friendly cloud",
+a:""
+},
+
+{
+i:439,
+n:"replit",
+c:"software,books",
+u:"https://replit.com",
+d:"Replit is an online coding environment to write, run and share code in the browser.",
+k:"replit, online ide, run code in browser, coding education, collaborative programming",
+a:""
+},
+
+{
+i:440,
+n:"codepen",
+c:"software,books",
+u:"https://codepen.io",
+d:"CodePen is an online editor for front-end code where developers share demos and experiments.",
+k:"codepen, front end playground, html css js editor, code demos, learning snippets",
+a:""
+},
+
+{
+i:441,
+n:"jsfiddle",
+c:"software,books",
+u:"https://jsfiddle.net",
+d:"JSFiddle is a web-based coding sandbox for testing and sharing HTML, CSS and JavaScript.",
+k:"jsfiddle, coding sandbox, html css js testing, share snippets, front end experiments",
+a:""
+},
+
+{
+i:442,
+n:"stackblitz",
+c:"software,books",
+u:"https://stackblitz.com",
+d:"StackBlitz is an online IDE for full-stack JavaScript apps running in the browser.",
+k:"stackblitz, online ide, javascript projects, web app sandbox, dev learning tool",
+a:""
+},
+
+{
+i:443,
+n:"glitch",
+c:"software,books",
+u:"https://glitch.com",
+d:"Glitch lets users create, remix and host simple web apps with an in-browser editor.",
+k:"glitch, web app remixing, simple hosting, browser editor, learn by building",
+a:""
+},
+
+{
+i:444,
+n:"codesandbox",
+c:"software,books",
+u:"https://codesandbox.io",
+d:"CodeSandbox is an online editor for building and sharing JavaScript and web projects.",
+k:"codesandbox, online editor, react sandbox, web projects, collaborative coding",
+a:""
+},
+
+{
+i:445,
+n:"obs studio",
+c:"software",
+u:"https://obsproject.com",
+d:"OBS Studio is free software for video recording and live streaming.",
+k:"obs studio, live streaming software, screen capture, video recording, open source",
+a:""
+},
+
+{
+i:446,
+n:"streamlabs",
+c:"software",
+u:"https://streamlabs.com",
+d:"Streamlabs provides tools and overlays for streamers using OBS and other platforms.",
+k:"streamlabs, streaming tools, overlays, alerts, live stream customization",
+a:""
+},
+
+{
+i:447,
+n:"restream",
+c:"software",
+u:"https://restream.io",
+d:"Restream lets users multistream live video to multiple platforms at once.",
+k:"restream, multistreaming, live video distribution, send streams to many platforms",
+a:""
+},
+
+{
+i:448,
+n:"capcut",
+c:"software",
+u:"https://www.capcut.com",
+d:"CapCut is a free video editing app for mobile and desktop.",
+k:"capcut, video editor, mobile editing, free editing tool, social media videos",
+a:""
+},
+
+{
+i:449,
+n:"clipchamp",
+c:"software",
+u:"https://clipchamp.com",
+d:"Clipchamp is a browser-based video editor for quick editing and exports.",
+k:"clipchamp, online video editor, simple editing, browser-based editing",
+a:""
+},
+
+{
+i:450,
+n:"veed",
+c:"software",
+u:"https://www.veed.io",
+d:"VEED is an online video editing platform with tools for subtitles, cuts and social content.",
+k:"veed.io, online video editor, subtitles, simple cuts, social media content",
+a:""
+},
+
+{
+i:451,
+n:"invideo",
+c:"software",
+u:"https://invideo.io",
+d:"InVideo offers templates and tools to create marketing and social videos online.",
+k:"invideo, video templates, marketing videos, social media clips, online editor",
+a:""
+},
+
+{
+i:452,
+n:"descript",
+c:"software",
+u:"https://www.descript.com",
+d:"Descript is an audio and video editor that works through text transcripts.",
+k:"descript, transcript-based editing, podcast editor, video editing from text",
+a:""
+},
+
+{
+i:453,
+n:"audacity",
+c:"software",
+u:"https://www.audacityteam.org",
+d:"Audacity is free, open-source software for audio recording and editing.",
+k:"audacity, audio editor, recording tool, open source, podcasts and music editing",
+a:""
+},
+
+{
+i:454,
+n:"pixlr",
+c:"software",
+u:"https://pixlr.com",
+d:"Pixlr is an online photo editor for quick image edits and filters.",
+k:"pixlr, online photo editing, filters, quick edits, browser-based editor",
+a:""
+},
+
+{
+i:455,
+n:"photopea",
+c:"software",
+u:"https://www.photopea.com",
+d:"Photopea is a browser-based image editor that supports PSD and common formats.",
+k:"photopea, photoshop alternative, browser image editor, psd support, free editing",
+a:""
+},
+
+{
+i:456,
+n:"behance",
+c:"books,software",
+u:"https://www.behance.net",
+d:"Behance is a portfolio platform where creatives showcase work and discover design inspiration.",
+k:"behance, creative portfolios, design inspiration, artists showcase, community",
+a:""
+},
+
+{
+i:457,
+n:"dribbble",
+c:"books,software",
+u:"https://dribbble.com",
+d:"Dribbble is a community for designers to share shots, portfolios and find inspiration.",
+k:"dribbble, design shots, ui inspiration, portfolio site, creative community",
+a:""
+},
+
+{
+i:458,
+n:"artstation",
+c:"books,software",
+u:"https://www.artstation.com",
+d:"ArtStation hosts portfolios for game, film and concept artists and offers learning content.",
+k:"artstation, game art portfolios, concept art, 3d artists, creative showcase, learning",
+a:""
+},
+
+{
+i:459,
+n:"deviantart",
+c:"books,software",
+u:"https://www.deviantart.com",
+d:"DeviantArt is an online art community for sharing illustrations, photos and creative work.",
+k:"deviantart, art community, illustrations, fan art, photography, creative sharing",
+a:""
+},
+
+{
+i:460,
+n:"itch.io",
+c:"entertainment,software",
+u:"https://itch.io",
+d:"itch.io is an indie game marketplace where creators distribute games, jams and experimental projects.",
+k:"itch.io, indie games, game marketplace, game jams, experimental titles, entertainment",
+a:""
+},
+
+{
+i:461,
+n:"unity",
+c:"books,software",
+u:"https://unity.com",
+d:"Unity is a game engine and development platform with tools, docs and learning resources.",
+k:"unity engine, game development, 3d & 2d games, docs, tutorials, dev tools",
+a:""
+},
+
+{
+i:462,
+n:"unreal engine",
+c:"books,software",
+u:"https://www.unrealengine.com",
+d:"Unreal Engine is a game engine from Epic for high-end games and real-time graphics.",
+k:"unreal engine, high end graphics, game dev, realtime rendering, docs",
+a:""
+},
+
+{
+i:463,
+n:"godot",
+c:"books,software",
+u:"https://godotengine.org",
+d:"Godot is an open-source game engine with a built-in editor and scripting.",
+k:"godot engine, open source game dev, 2d and 3d, scripting, docs and tutorials",
+a:""
+},
+
+{
+i:464,
+n:"blender",
+c:"books,software",
+u:"https://www.blender.org",
+d:"Blender is free 3D creation software for modelling, animation, rendering and more.",
+k:"blender, 3d modelling, animation, rendering, open source 3d tool, learning resources",
+a:""
+},
+
+{
+i:465,
+n:"sketchfab",
+c:"software",
+u:"https://sketchfab.com",
+d:"Sketchfab hosts and displays interactive 3D models online.",
+k:"sketchfab, 3d model viewer, online 3d hosting, interactive models, embed 3d content",
+a:""
+},
+
+{
+i:466,
+n:"cgtrader",
+c:"software",
+u:"https://www.cgtrader.com",
+d:"CGTrader is a marketplace for buying and selling 3D models.",
+k:"cgtrader, 3d model marketplace, buy 3d assets, sell models, cg resources",
+a:""
+},
+
+{
+i:467,
+n:"turbosquid",
+c:"software",
+u:"https://www.turbosquid.com",
+d:"TurboSquid offers a catalog of paid 3D models for design and visualization.",
+k:"turbosquid, stock 3d models, paid assets, visualization, cg marketplace",
+a:""
+},
+
+{
+i:468,
+n:"gumroad creators",
+c:"software",
+u:"https://gumroad.com",
+d:"Gumroad Creators are individuals using Gumroad to sell digital products and memberships.",
+k:"gumroad creators, sell digital goods, creator storefronts, online products, memberships",
+a:""
+},
+
+{
+i:469,
+n:"ko-fi",
+c:"software",
+u:"https://ko-fi.com",
+d:"Ko-fi lets fans support creators with tips, donations and memberships.",
+k:"ko-fi, creator support, tips, donations, memberships, patronage",
+a:""
+},
+
+{
+i:470,
+n:"buy me a coffee creators",
+c:"software",
+u:"https://www.buymeacoffee.com",
+d:"Buy Me a Coffee Creators use the platform to receive contributions and memberships.",
+k:"buy me a coffee creators, fan support, contributions, memberships, donations",
+a:""
+},
+
+{
+i:471,
+n:"patreon creators",
+c:"software",
+u:"https://www.patreon.com",
+d:"Patreon Creators offer tiers and exclusive content to their subscribing fans.",
+k:"patreon creators, membership tiers, exclusive content, fan subscriptions, creator income",
+a:""
+},
+
+{
+i:472,
+n:"teachable",
+c:"books,software",
+u:"https://teachable.com",
+d:"Teachable lets creators build and sell online courses and coaching programs.",
+k:"teachable, online course platform, sell courses, coaching, education software",
+a:""
+},
+
+{
+i:473,
+n:"thinkific",
+c:"books,software",
+u:"https://www.thinkific.com",
+d:"Thinkific is a platform for creating, hosting and selling online courses.",
+k:"thinkific, course creation, host courses, sell education content, learning platform",
+a:""
+},
+
+{
+i:474,
+n:"podia",
+c:"books,software",
+u:"https://www.podia.com",
+d:"Podia offers tools for selling courses, downloads and memberships in one place.",
+k:"podia, creator platform, courses, downloads, memberships, education commerce",
+a:""
+},
+
+{
+i:475,
+n:"kajabi",
+c:"books,software",
+u:"https://kajabi.com",
+d:"Kajabi is an all-in-one platform to sell courses, coaching and digital products.",
+k:"kajabi, course and coaching platform, digital products, funnels, education commerce",
+a:""
+},
+
+{
+i:476,
+n:"gumlet",
+c:"software",
+u:"https://www.gumlet.com",
+d:"Gumlet optimizes and serves images and videos through a media delivery platform.",
+k:"gumlet, image optimization, video delivery, cdn, media performance",
+a:""
+},
+
+{
+i:477,
+n:"bunny cdn",
+c:"software",
+u:"https://bunny.net",
+d:"Bunny CDN offers content delivery, image optimization and video streaming services.",
+k:"bunny cdn, content delivery network, image optimization, video streaming, web performance",
+a:""
+},
+
+{
+i:478,
+n:"imgur",
+c:"software",
+u:"https://imgur.com",
+d:"Imgur is an image hosting and sharing platform popular for memes, galleries and embeds.",
+k:"imgur, image hosting, memes, galleries, share pictures, online images",
+a:""
+},
+
+{
+i:479,
+n:"postimages",
+c:"software",
+u:"https://postimages.org",
+d:"Postimages is a free image hosting service for sharing and embedding pictures online.",
+k:"postimages, free image hosting, hotlink images, embeds, simple photo sharing",
+a:""
+},
+
+{
+i:480,
+n:"imgbb",
+c:"software",
+u:"https://imgbb.com",
+d:"imgbb offers free image hosting and direct links for sharing photos.",
+k:"imgbb, image hosting, share photos, direct links, online uploads",
+a:""
+},
+
+{
+i:481,
+n:"telegram",
+c:"software",
+u:"https://telegram.org",
+d:"Telegram is a messaging app with cloud chats, channels and bots.",
+k:"telegram, messaging app, channels, groups, bots, secure chats",
+a:""
+},
+
+{
+i:482,
+n:"discord",
+c:"software",
+u:"https://discord.com",
+d:"Discord is a chat and voice platform with servers for communities and gaming.",
+k:"discord, voice and text chat, servers, gaming communities, group communication",
+a:""
+},
+
+{
+i:483,
+n:"whatsapp",
+c:"software",
+u:"https://www.whatsapp.com",
+d:"WhatsApp is a messaging app for texts, calls and media sharing.",
+k:"whatsapp, messaging, voice calls, video calls, media sharing, mobile app",
+a:""
+},
+
+{
+i:484,
+n:"signal",
+c:"software",
+u:"https://signal.org",
+d:"Signal is a privacy-focused messaging app with end-to-end encryption.",
+k:"signal, encrypted messaging, private chats, secure calls, open source app",
+a:""
+},
+
+{
+i:485,
+n:"element",
+c:"software",
+u:"https://element.io",
+d:"Element is a Matrix-based chat client for secure, federated messaging.",
+k:"element, matrix client, secure messaging, federated chat, open standard",
+a:""
+},
+
+{
+i:486,
+n:"mastodon",
+c:"software",
+u:"https://joinmastodon.org",
+d:"Mastodon is a decentralized social network with independent servers and federated timelines.",
+k:"mastodon, federated social network, decentralised microblogging, community instances",
+a:""
+},
+
+{
+i:487,
+n:"linkedin",
+c:"software,business",
+u:"https://www.linkedin.com",
+d:"LinkedIn is a professional networking platform for careers, recruiting and business connections.",
+k:"linkedin, professional network, jobs, recruiting, b2b connections, business social",
+a:""
+},
+
+{
+i:488,
+n:"youtube",
+c:"entertainment,software",
+u:"https://www.youtube.com",
+d:"YouTube is a video-sharing platform where users upload, watch and stream content.",
+k:"youtube, video sharing, streaming, channels, creators, entertainment",
+a:""
+},
+
+{
+i:489,
+n:"vimeo",
+c:"software",
+u:"https://vimeo.com",
+d:"Vimeo hosts high-quality videos with tools for creators and businesses.",
+k:"vimeo, video hosting, professional video, creator tools, business video",
+a:""
+},
+
+{
+i:490,
+n:"dailymotion",
+c:"entertainment,software",
+u:"https://www.dailymotion.com",
+d:"Dailymotion is a video platform for sharing and watching clips and shows.",
+k:"dailymotion, video site, clips, online shows, entertainment",
+a:""
+},
+
+{
+i:491,
+n:"spotify",
+c:"entertainment",
+u:"https://www.spotify.com",
+d:"Spotify is a music and podcast streaming service with playlists and recommendations.",
+k:"spotify, music streaming, podcasts, playlists, audio app",
+a:""
+},
+
+{
+i:492,
+n:"apple music",
+c:"entertainment",
+u:"https://music.apple.com",
+d:"Apple Music streams songs, playlists and radio stations.",
+k:"apple music, streaming service, playlists, radio, audio",
+a:""
+},
+
+{
+i:493,
+n:"youtube music",
+c:"entertainment",
+u:"https://music.youtube.com",
+d:"YouTube Music offers music streaming, videos and playlists tied to YouTube.",
+k:"youtube music, music streaming, video songs, playlists, audio service",
+a:""
+},
+
+{
+i:494,
+n:"amazon music",
+c:"entertainment",
+u:"https://music.amazon.in",
+d:"Amazon Music provides streaming music and playlists integrated with Amazon services.",
+k:"amazon music, streaming audio, playlists, prime music, amazon",
+a:""
+},
+
+{
+i:495,
+n:"soundcloud",
+c:"entertainment",
+u:"https://soundcloud.com",
+d:"SoundCloud is a platform for streaming and sharing music and audio from independent creators.",
+k:"soundcloud, indie music, audio streaming, upload tracks, discovery",
+a:""
+},
+
+{
+i:496,
+n:"bandcamp",
+c:"entertainment",
+u:"https://bandcamp.com",
+d:"Bandcamp lets artists sell music and merch directly to fans with streaming and downloads.",
+k:"bandcamp, artist direct sales, indie music, merch, streaming and downloads",
+a:""
+},
+
+{
+i:497,
+n:"deezer",
+c:"entertainment",
+u:"https://www.deezer.com",
+d:"Deezer is a music streaming service with playlists, radio and podcasts.",
+k:"deezer, music streaming, playlists, radios, podcasts, audio app",
+a:""
+},
+
+{
+i:498,
+n:"tidal",
+c:"entertainment",
+u:"https://tidal.com",
+d:"Tidal is a music streaming platform focusing on high-fidelity audio and artist content.",
+k:"tidal, hi-fi music, streaming, artist exclusives, lossless audio",
+a:""
+},
+
+{
+i:499,
+n:"pocket casts",
+c:"entertainment",
+u:"https://pocketcasts.com",
+d:"Pocket Casts is a podcast player app with discovery and listening features.",
+k:"pocket casts, podcast player, subscribe shows, listening app, audio",
+a:""
+},
+
+{
+i:500,
+n:"castbox",
+c:"entertainment",
+u:"https://castbox.fm",
+d:"Castbox is a podcast app offering streaming, downloads and recommendations.",
+k:"castbox, podcasts, audio streaming, episode downloads, discover shows",
+a:""
+},
+
+{
+i:501,
+n:"goodreads",
+c:"books",
+u:"https://www.goodreads.com",
+d:"Goodreads is a social cataloging site where readers track books, rate, review and discover recommendations.",
+k:"goodreads, book reviews, reading tracker, book recommendations, social reading",
+a:""
+},
+
+{
+i:502,
+n:"storytel",
+c:"entertainment,books",
+u:"https://www.storytel.com",
+d:"Storytel is an audiobook and ebook subscription service offering stories in multiple languages.",
+k:"storytel, audiobooks, ebooks, subscription, stories, multilingual listening",
+a:""
+},
+
+{
+i:503,
+n:"blinkist",
+c:"books",
+u:"https://www.blinkist.com",
+d:"Blinkist provides short summaries of nonfiction books in text and audio form.",
+k:"blinkist, book summaries, nonfiction, quick learning, audio summaries",
+a:""
+},
+
+{
+i:504,
+n:"scribd",
+c:"books",
+u:"https://www.scribd.com",
+d:"Scribd is a digital subscription library for ebooks, audiobooks, documents and magazines.",
+k:"scribd, ebook subscription, audiobooks, documents, digital library",
+a:""
+},
+
+{
+i:505,
+n:"everand",
+c:"books",
+u:"https://www.everand.com",
+d:"Everand is a reading subscription app offering ebooks, audiobooks and other written content.",
+k:"everand, reading app, ebooks, audiobooks, subscription reading",
+a:""
+},
+
+{
+i:506,
+n:"duolingo",
+c:"books,software",
+u:"https://www.duolingo.com",
+d:"Duolingo is a gamified language learning app with bite-sized lessons and practice.",
+k:"duolingo, language learning, gamified lessons, vocab practice, free app",
+a:""
+},
+
+{
+i:507,
+n:"babbel",
+c:"books,software",
+u:"https://www.babbel.com",
+d:"Babbel offers structured online language courses focused on conversation skills.",
+k:"babbel, language courses, online learning, conversation practice",
+a:""
+},
+
+{
+i:508,
+n:"busuu",
+c:"books,software",
+u:"https://www.busuu.com",
+d:"Busuu is a language learning app with lessons, exercises and community corrections.",
+k:"busuu, language learning, community feedback, online lessons",
+a:""
+},
+
+{
+i:509,
+n:"memrise",
+c:"books,software",
+u:"https://www.memrise.com",
+d:"Memrise teaches languages and other topics using spaced repetition and short videos.",
+k:"memrise, spaced repetition, language vocab, flashcards, short video lessons",
+a:""
+},
+
+{
+i:510,
+n:"rosetta stone",
+c:"books,software",
+u:"https://www.rosettastone.com",
+d:"Rosetta Stone provides immersive language learning software and apps.",
+k:"rosetta stone, immersive language learning, software, language courses",
+a:""
+},
+
+{
+i:511,
+n:"coursera plus",
+c:"books",
+u:"https://www.coursera.org",
+d:"Coursera Plus is a subscription that unlocks unlimited access to selected Coursera courses and certificates.",
+k:"coursera plus, online courses, certificates, subscription learning",
+a:""
+},
+
+{
+i:512,
+n:"edureka",
+c:"books",
+u:"https://www.edureka.co",
+d:"Edureka offers instructor-led online courses focused on IT, data and professional skills.",
+k:"edureka, online training, IT courses, certification, live classes",
+a:""
+},
+
+{
+i:513,
+n:"intellipaat",
+c:"books",
+u:"https://intellipaat.com",
+d:"Intellipaat provides online training and certification programs in tech and data domains.",
+k:"intellipaat, online training, data science, cloud, certifications",
+a:""
+},
+
+{
+i:514,
+n:"coding ninjas",
+c:"books",
+u:"https://www.codingninjas.com",
+d:"Coding Ninjas offers programming courses and bootcamps for students and professionals.",
+k:"coding ninjas, coding bootcamp, programming courses, data structures",
+a:""
+},
+
+{
+i:515,
+n:"coding blocks",
+c:"books",
+u:"https://www.codingblocks.com",
+d:"Coding Blocks provides programming and interview preparation courses.",
+k:"coding blocks, coding courses, interview prep, data structures, algorithms",
+a:""
+},
+
+{
+i:516,
+n:"intershala trainings",
+c:"books",
+u:"https://trainings.internshala.com",
+d:"Internshala Trainings offers online skill courses for students in various fields.",
+k:"internshala trainings, student courses, online skills, career training",
+a:""
+},
+
+{
+i:517,
+n:"internshala",
+c:"books,business",
+u:"https://internshala.com",
+d:"Internshala is a platform for internships and jobs, especially for students and freshers.",
+k:"internshala, internships, student jobs, fresher opportunities, work experience",
+a:""
+},
+
+{
+i:518,
+n:"naukri",
+c:"business",
+u:"https://www.naukri.com",
+d:"Naukri.com is a job portal for recruitment and career opportunities in India.",
+k:"naukri, job portal, recruitment, India jobs, resumes",
+a:""
+},
+
+{
+i:519,
+n:"foundit",
+c:"business",
+u:"https://www.foundit.in",
+d:"Foundit (formerly Monster India) is an online job search and recruitment platform.",
+k:"foundit, job search, recruitment, career portal, India",
+a:""
+},
+
+{
+i:520,
+n:"indeed",
+c:"business",
+u:"https://in.indeed.com",
+d:"Indeed is a global job search engine where employers post openings and candidates apply.",
+k:"indeed, job search, job listings, resumes, recruitment",
+a:""
+},
+
+{
+i:521,
+n:"glassdoor",
+c:"business",
+u:"https://www.glassdoor.com",
+d:"Glassdoor provides company reviews, salary data and job listings.",
+k:"glassdoor, company reviews, salaries, job listings, workplace insights",
+a:""
+},
+
+{
+i:522,
+n:"wellfound",
+c:"business",
+u:"https://wellfound.com",
+d:"Wellfound (formerly AngelList Talent) focuses on startup jobs and hiring.",
+k:"wellfound, startup jobs, angel list, tech hiring, recruitment",
+a:""
+},
+
+{
+i:523,
+n:"flexjobs",
+c:"business",
+u:"https://www.flexjobs.com",
+d:"FlexJobs lists remote, flexible and freelance job opportunities.",
+k:"flexjobs, remote jobs, flexible work, telecommute, freelance",
+a:""
+},
+
+{
+i:524,
+n:"remote ok",
+c:"business",
+u:"https://remoteok.com",
+d:"Remote OK is a job board specializing in remote tech and digital roles.",
+k:"remote ok, remote jobs, tech roles, distributed work",
+a:""
+},
+
+{
+i:525,
+n:"we work remotely",
+c:"business",
+u:"https://weworkremotely.com",
+d:"We Work Remotely is a popular job board for remote positions across industries.",
+k:"we work remotely, remote job board, work from home, distributed teams",
+a:""
+},
+
+{
+i:526,
+n:"freshworks",
+c:"software,business",
+u:"https://www.freshworks.com",
+d:"Freshworks offers customer engagement and support software like CRM and helpdesk tools.",
+k:"freshworks, CRM, customer support, helpdesk, b2b SaaS",
+a:""
+},
+
+{
+i:527,
+n:"zoho",
+c:"software,business",
+u:"https://www.zoho.com",
+d:"Zoho provides a suite of business apps including CRM, email, finance and productivity tools.",
+k:"zoho, business suite, CRM, invoicing, email, productivity",
+a:""
+},
+
+{
+i:528,
+n:"hubspot",
+c:"software,business",
+u:"https://www.hubspot.com",
+d:"HubSpot is a platform for marketing, sales, CRM and customer service.",
+k:"hubspot, marketing automation, CRM, sales tools, customer service",
+a:""
+},
+
+{
+i:529,
+n:"freshdesk",
+c:"software,business",
+u:"https://www.freshdesk.com",
+d:"Freshdesk is a cloud-based helpdesk and customer support solution.",
+k:"freshdesk, helpdesk, ticketing, customer support, SaaS",
+a:""
+},
+
+{
+i:530,
+n:"zendesk",
+c:"software,business",
+u:"https://www.zendesk.com",
+d:"Zendesk offers customer service and support software for businesses.",
+k:"zendesk, customer service, support tickets, helpdesk platform",
+a:""
+},
+
+{
+i:531,
+n:"shopify",
+c:"software,business",
+u:"https://www.shopify.com",
+d:"Shopify is an e-commerce platform for creating and managing online stores.",
+k:"shopify, e-commerce, online store builder, payments, storefront",
+a:""
+},
+
+{
+i:532,
+n:"woocommerce",
+c:"software,business",
+u:"https://woocommerce.com",
+d:"WooCommerce is a WordPress plugin that turns sites into online stores.",
+k:"woocommerce, wordpress e-commerce, online shop plugin, cart",
+a:""
+},
+
+{
+i:533,
+n:"bigcommerce",
+c:"software,business",
+u:"https://www.bigcommerce.com",
+d:"BigCommerce is a hosted e-commerce platform for growing online businesses.",
+k:"bigcommerce, online retail platform, hosted e-commerce, b2b commerce",
+a:""
+},
+
+{
+i:534,
+n:"wix",
+c:"software,business",
+u:"https://www.wix.com",
+d:"Wix offers a drag-and-drop website builder with templates and ecommerce options.",
+k:"wix, website builder, drag and drop, templates, small business sites",
+a:""
+},
+
+{
+i:535,
+n:"squarespace",
+c:"software,business",
+u:"https://www.squarespace.com",
+d:"Squarespace is a design-focused website and online store builder.",
+k:"squarespace, website templates, portfolio sites, online store builder",
+a:""
+},
+
+{
+i:536,
+n:"wordpress",
+c:"software,business",
+u:"https://wordpress.com",
+d:"WordPress.com hosts blogs and websites built using the WordPress platform.",
+k:"wordpress.com, blogging platform, website hosting, CMS",
+a:""
+},
+
+{
+i:537,
+n:"elementor",
+c:"software,business",
+u:"https://elementor.com",
+d:"Elementor is a visual page builder plugin for WordPress.",
+k:"elementor, wordpress page builder, drag-and-drop design, landing pages",
+a:""
+},
+
+{
+i:538,
+n:"webflow",
+c:"software,business",
+u:"https://webflow.com",
+d:"Webflow combines a visual website builder with hosting and CMS features.",
+k:"webflow, no-code website builder, CMS, responsive design",
+a:""
+},
+
+{
+i:539,
+n:"framer",
+c:"software,business",
+u:"https://www.framer.com",
+d:"Framer is a design and prototyping tool that also powers no-code websites.",
+k:"framer, design tool, interactive prototypes, website builder",
+a:""
+},
+
+{
+i:540,
+n:"bubble",
+c:"software,business",
+u:"https://bubble.io",
+d:"Bubble is a no-code platform for building web applications and workflows.",
+k:"bubble, no-code app builder, web apps, visual programming",
+a:""
+},
+
+{
+i:541,
+n:"zapier",
+c:"software,business",
+u:"https://zapier.com",
+d:"Zapier automates workflows by connecting apps and services through triggers and actions.",
+k:"zapier, automation, integrations, workflows, connect apps",
+a:""
+},
+
+{
+i:542,
+n:"make",
+c:"software,business",
+u:"https://www.make.com",
+d:"Make (formerly Integromat) is a visual automation tool for complex workflows.",
+k:"make.com, integromat, advanced automation, integrations, scenarios",
+a:""
+},
+
+{
+i:543,
+n:"ifttt",
+c:"software,business",
+u:"https://ifttt.com",
+d:"IFTTT lets users create simple automations between apps, devices and services.",
+k:"ifttt, applets, simple automation, connect services, triggers",
+a:""
+},
+
+{
+i:544,
+n:"airtable",
+c:"software,business",
+u:"https://www.airtable.com",
+d:"Airtable blends spreadsheets with databases for organizing and collaborating on information.",
+k:"airtable, spreadsheet database, data organization, collaboration, low-code",
+a:""
+},
+
+{
+i:545,
+n:"coda",
+c:"software,business",
+u:"https://coda.io",
+d:"Coda is a document platform that combines docs, spreadsheets and apps.",
+k:"coda, all-in-one docs, dynamic tables, workflows, templates",
+a:""
+},
+
+{
+i:546,
+n:"monday.com",
+c:"software,business",
+u:"https://monday.com",
+d:"Monday.com is a work management platform for projects, tasks and collaboration.",
+k:"monday.com, project management, work OS, task tracking, team collaboration",
+a:""
+},
+
+{
+i:547,
+n:"basecamp",
+c:"software,business",
+u:"https://basecamp.com",
+d:"Basecamp offers simple project management and team communication tools.",
+k:"basecamp, project management, to-dos, team messaging, remote work",
+a:""
+},
+
+{
+i:548,
+n:"toggl",
+c:"software,business",
+u:"https://toggl.com",
+d:"Toggl provides time tracking tools for individuals and teams.",
+k:"toggl, time tracking, productivity, billable hours, timesheets",
+a:""
+},
+
+{
+i:549,
+n:"clockify",
+c:"software,business",
+u:"https://clockify.me",
+d:"Clockify is a free time tracking and timesheet app for projects and teams.",
+k:"clockify, time tracker, timesheets, project hours, productivity",
+a:""
+},
+
+{
+i:550,
+n:"rescuetime",
+c:"software,business",
+u:"https://www.rescuetime.com",
+d:"RescueTime analyzes computer usage to show how time is spent and improve focus.",
+k:"rescuetime, productivity tracking, time analytics, focus tool",
+a:""
+}
+ 
 
 
 
