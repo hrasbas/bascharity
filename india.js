@@ -9278,12 +9278,209 @@ n:"lambda",
 c:"ai",
 u:"https://lambdalabs.com",
 a:""
-}
+},
  
+{
+i:1001,
+n:"upakarma ayurveda",
+c:"business",
+u:"https://www.upakarma.com",
+d:"Upakarma Ayurveda is a D2C Ayurvedic brand offering herbal supplements, oils and wellness products.",
+k:"upakarma ayurveda, ayurvedic supplements, herbal wellness, health products",
+a:""
+},
+
+{
+i:1002,
+n:"kapila krishi",
+c:"business",
+u:"https://kapilakrishi.com",
+d:"Kapila Krishi sells online ghee, A2 milk products and traditional dairy-based wellness foods.",
+k:"kapila krishi, a2 ghee, dairy products, traditional foods, online store",
+a:""
+},
+
+{
+i:1003,
+n:"vedix",
+c:"business",
+u:"https://vedix.com",
+d:"Vedix is an Ayurvedic personalised hair and skincare brand selling customised products online.",
+k:"vedix, ayurvedic hair care, personalised skincare, online ayurveda brand",
+a:""
+},
+
+{
+i:1004,
+n:"tbo clothing",
+c:"business",
+u:"https://www.thebearhouse.com",
+d:"The Bear House (TBO) is a menswear brand selling shirts, t‑shirts and casualwear online in India.",
+k:"the bear house, tbo clothing, menswear brand, shirts, casual wear, online store",
+a:""
+},
+
+{
+i:1005,
+n:"campus sutra",
+c:"business",
+u:"https://www.campussutra.com",
+d:"Campus Sutra is an Indian fashion brand offering casual clothing and campus‑style apparel online.",
+k:"campus sutra, casual fashion, youth clothing, online apparel brand",
+a:""
+},
+
+{
+i:1006,
+n:"souled store",
+c:"business",
+u:"https://www.thesouledstore.com",
+d:"The Souled Store sells pop culture themed t‑shirts, hoodies and merchandise online.",
+k:"souled store, graphic t-shirts, pop culture merch, hoodies, online clothing",
+a:""
+},
+
+{
+i:1007,
+n:"bewakoof",
+c:"business",
+u:"https://www.bewakoof.com",
+d:"Bewakoof is a D2C fashion brand selling casualwear, printed t‑shirts and loungewear online.",
+k:"bewakoof, casualwear, printed t-shirts, loungewear, d2c fashion brand",
+a:""
+},
+
+{
+i:1008,
+n:"urban monkey",
+c:"business",
+u:"https://www.urbanmonkey.com",
+d:"Urban Monkey is a streetwear and accessories brand offering caps, bags and apparel online.",
+k:"urban monkey, streetwear brand, caps, backpacks, online fashion store",
+a:""
+},
+
+{
+i:1009,
+n:"red tape",
+c:"business",
+u:"https://www.redtape.com",
+d:"Red Tape is a footwear and apparel brand selling shoes, sandals and clothing online in India.",
+k:"red tape, footwear brand, shoes, sandals, apparel, online store",
+a:""
+},
+
+{
+i:1010,
+n:"pavers england",
+c:"business",
+u:"https://www.paversengland.com",
+d:"Pavers England is a footwear brand offering formal, casual and comfort shoes online.",
+k:"pavers england, footwear brand, formal shoes, casual shoes, comfort footwear",
+a:""
+},
+
+{
+i:1011,
+n:"caratlane",
+c:"business",
+u:"https://www.caratlane.com",
+d:"CaratLane is an online jewellery store for gold, diamond and everyday wear jewellery.",
+k:"caratlane, online jewellery, gold jewellery, diamond jewellery, rings, earrings",
+a:""
+},
+
+{
+i:1012,
+n:"blingvine",
+c:"business",
+u:"https://www.blingvine.com",
+d:"Blingvine sells fashion and imitation jewellery like necklaces, earrings and bracelets online.",
+k:"blingvine, fashion jewellery, imitation jewellery, necklaces, earrings, bracelets",
+a:""
+},
+
+{
+i:1013,
+n:"wow skin science",
+c:"business",
+u:"https://www.buywow.in",
+d:"WOW Skin Science is a personal care brand selling shampoos, face washes, supplements and skincare online.",
+k:"wow skin science, personal care brand, shampoos, skincare, supplements, d2c",
+a:""
+},
+
+{
+i:1014,
+n:"mamaearth",
+c:"business",
+u:"https://www.mamaearth.in",
+d:"Mamaearth is a toxin‑free personal care and baby care brand selling products online.",
+k:"mamaearth, baby care, personal care, toxin free products, online brand",
+a:""
+},
+
+{
+i:1015,
+n:"mcaffeine",
+c:"business",
+u:"https://www.mcaffeine.com",
+d:"mCaffeine is an Indian personal care brand offering coffee‑based skincare and body care products.",
+k:"mcaffeine, coffee skincare, body care, indian personal care brand, online store",
+a:""
+},
+
+{
+i:1016,
+n:"wowlife science",
+c:"business",
+u:"https://www.wowlifescience.com",
+d:"WOW Life Science offers vitamins and nutritional supplements through its online store.",
+k:"wow life science, nutrition supplements, vitamins, wellness products, online",
+a:""
+},
+
+{
+i:1017,
+n:"veeba foods",
+c:"business",
+u:"https://www.veeba.in",
+d:"Veeba sells sauces, dressings and kitchen condiments through online and retail channels in India.",
+k:"veeba, sauces, salad dressings, condiments, kitchen products, online store",
+a:""
+},
+
+{
+i:1018,
+n:"id fresh food",
+c:"business",
+u:"https://www.idfreshfood.com",
+d:"iD Fresh Food offers ready‑to‑cook batter, parotas and Indian breakfast products via online grocery.",
+k:"id fresh food, dosa batter, idli batter, parota, ready to cook, grocery brand",
+a:""
+},
+
+{
+i:1019,
+n:"just herbs",
+c:"business",
+u:"https://www.justherbs.in",
+d:"Just Herbs is an Ayurvedic beauty and skincare brand selling herbal products online.",
+k:"just herbs, ayurvedic skincare, herbal beauty products, online ayurveda brand",
+a:""
+},
+
+{
+i:1020,
+n:"nasher miles",
+c:"business",
+u:"https://www.nashermiles.com",
+d:"Nasher Miles is a luggage and travel bags brand selling suitcases, backpacks and trolleys online.",
+k:"nasher miles, luggage brand, travel bags, suitcases, backpacks, online store",
+a:""
+} 
 
 
-
-  
   
 
 ];
