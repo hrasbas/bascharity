@@ -1995,7 +1995,2007 @@ u:"https://www.hardeesarabia.com",
 d:"hardees uae offers burgers and fast food meals via dine-in, takeaway and delivery.",
 k:"hardees uae, burgers, fast food, restaurant, food delivery, uae",
 a:""
+},
+{
+i:201,
+n:"burger king uae",
+c:"food",
+u:"https://www.burgerkinguae.com",
+d:"burger king uae serves burgers and fast food meals across the uae.",
+k:"burger king uae, burgers, fast food, restaurant, food delivery",
+a:""
+},
+
+{
+i:202,
+n:"subway uae",
+c:"food",
+u:"https://www.subway.com",
+d:"subway uae offers made-to-order sandwiches, salads and fast food.",
+k:"subway uae, sandwiches, subs, fast food, restaurant, food delivery",
+a:""
+},
+
+{
+i:203,
+n:"papa johns uae",
+c:"food",
+u:"https://www.papajohns.ae",
+d:"papa johns uae delivers pizzas and sides across the uae.",
+k:"papa johns uae, pizza delivery, pizza restaurant, fast food",
+a:""
+},
+
+{
+i:204,
+n:"jollibee uae",
+c:"food",
+u:"https://www.jollibeeuae.com",
+d:"jollibee uae serves fried chicken, burgers and fast food meals.",
+k:"jollibee uae, fried chicken, burgers, fast food, restaurant",
+a:""
+},
+
+{
+i:205,
+n:"tim hortons uae",
+c:"food",
+u:"https://www.timhortonsme.com",
+d:"tim hortons uae offers coffee, baked goods and quick meals.",
+k:"tim hortons uae, coffee shop, donuts, cafe, baked goods",
+a:""
+},
+
+{
+i:206,
+n:"starbucks uae",
+c:"food",
+u:"https://www.starbucksme.com",
+d:"starbucks uae is a coffeehouse chain serving coffee, beverages and snacks.",
+k:"starbucks uae, coffee, cafe, beverages, coffee shop",
+a:""
+},
+
+{
+i:207,
+n:"costa coffee uae",
+c:"food",
+u:"https://www.costacoffee.ae",
+d:"costa coffee uae offers coffee, drinks and light bites in cafes across the uae.",
+k:"costa coffee uae, coffee shop, cafe, coffee, snacks",
+a:""
+},
+
+{
+i:208,
+n:"caribou coffee uae",
+c:"food",
+u:"https://www.cariboucoffee.com",
+d:"caribou coffee uae serves coffee, beverages and light snacks.",
+k:"caribou coffee uae, coffee shop, cafe, coffee, beverages",
+a:""
+},
+
+{
+i:209,
+n:"dunkin uae",
+c:"food",
+u:"https://www.dunkin.ae",
+d:"dunkin uae offers coffee, donuts and baked treats.",
+k:"dunkin uae, donuts, coffee, cafe, baked goods",
+a:""
+},
+
+{
+i:210,
+n:"krispy kreme uae",
+c:"food",
+u:"https://www.krispykreme.com",
+d:"krispy kreme uae sells donuts and coffee through its stores and kiosks.",
+k:"krispy kreme uae, donuts, doughnuts, coffee, bakery",
+a:""
+},
+
+{
+i:211,
+n:"noon food",
+c:"food",
+u:"https://www.noon.com",
+d:"noon food is a food delivery service on the noon platform.",
+k:"noon food, food delivery, restaurant delivery, noon uae",
+a:""
+},
+
+{
+i:212,
+n:"eat easy",
+c:"food",
+u:"https://www.eateasy.ae",
+d:"eat easy is an online food ordering and delivery platform in the uae.",
+k:"eat easy uae, food delivery, online food ordering, restaurants",
+a:""
+},
+
+{
+i:213,
+n:"amazon fresh uae",
+c:"food,home",
+u:"https://www.amazon.ae",
+d:"amazon fresh uae delivers groceries, fresh food and daily essentials.",
+k:"amazon fresh uae, online groceries, fresh food, grocery delivery",
+a:""
+},
+
+{
+i:214,
+n:"noon grocery",
+c:"food,home",
+u:"https://www.noon.com",
+d:"noon grocery offers online groceries and daily essentials via noon.",
+k:"noon grocery, online groceries, grocery delivery, daily essentials",
+a:""
+},
+
+{
+i:215,
+n:"carrefour online uae",
+c:"food,home",
+u:"https://www.carrefouruae.com",
+d:"carrefour online uae delivers groceries, household items and essentials.",
+k:"carrefour online uae, online supermarket, groceries, home essentials",
+a:""
+},
+
+{
+i:216,
+n:"lulu online uae",
+c:"food,home",
+u:"https://www.luluhypermarket.com",
+d:"lulu online uae offers groceries and home products via its ecommerce site.",
+k:"lulu online uae, online groceries, supermarket, home products",
+a:""
+},
+
+{
+i:217,
+n:"spinneys online",
+c:"food,home",
+u:"https://www.spinneys.com",
+d:"spinneys online provides grocery delivery and online supermarket services.",
+k:"spinneys online, grocery delivery, online supermarket, groceries",
+a:""
+},
+
+{
+i:218,
+n:"waitrose online uae",
+c:"food,home",
+u:"https://www.waitrose.ae",
+d:"waitrose online uae delivers premium groceries and fresh food.",
+k:"waitrose online uae, online groceries, premium supermarket, fresh food",
+a:""
+},
+
+{
+i:219,
+n:"choithrams online",
+c:"food,home",
+u:"https://www.choithrams.com",
+d:"choithrams online offers groceries and household products for delivery.",
+k:"choithrams online, grocery delivery, online supermarket, home products",
+a:""
+},
+
+{
+i:220,
+n:"grandiose online",
+c:"food,home",
+u:"https://grandiose.ae",
+d:"grandiose online delivers groceries, fresh food and home essentials within the uae.",
+k:"grandiose online, groceries, grocery delivery, home essentials, uae",
+a:""
+},
+
+{
+i:221,
+n:"nesto hypermarket",
+c:"food,home",
+u:"https://www.nestohypermarket.com",
+d:"nesto hypermarket is a retail chain offering groceries and home products in the uae.",
+k:"nesto hypermarket, supermarket, groceries, home products, uae",
+a:""
+},
+
+{
+i:222,
+n:"baqala online",
+c:"food,home",
+u:"https://www.baqala.ae",
+d:"baqala online connects users to local grocery stores and mini markets for delivery.",
+k:"baqala online, grocery delivery, local stores, mini mart, uae",
+a:""
+},
+
+{
+i:223,
+n:"elgrocer",
+c:"food,home",
+u:"https://www.elgrocer.com",
+d:"elgrocer is an online grocery marketplace partnering with supermarkets in the uae.",
+k:"elgrocer, online groceries, grocery marketplace, supermarket delivery",
+a:""
+},
+
+{
+i:224,
+n:"sharaf dg online",
+c:"electronics,home",
+u:"https://uae.sharafdg.com",
+d:"sharaf dg online sells electronics and appliances through its ecommerce site.",
+k:"sharaf dg online, electronics store, online electronics, home appliances",
+a:""
+},
+
+{
+i:225,
+n:"jumbo online uae",
+c:"electronics,home",
+u:"https://www.jumbo.ae",
+d:"jumbo online uae offers electronics, gadgets and appliances for online purchase.",
+k:"jumbo online uae, electronics store, gadgets, home appliances",
+a:""
+},
+
+{
+i:226,
+n:"emax online",
+c:"electronics,home",
+u:"https://www.emaxme.com",
+d:"emax online sells electronics, gadgets and appliances in the uae.",
+k:"emax online, electronics store, gadgets, appliances, uae",
+a:""
+},
+
+{
+i:227,
+n:"virgin megastore online uae",
+c:"electronics,books,business",
+u:"https://www.virginmegastore.ae",
+d:"virgin megastore online uae offers electronics, music, books and entertainment products.",
+k:"virgin megastore online, electronics, books, music, entertainment",
+a:""
+},
+
+{
+i:228,
+n:"jarir bookstore uae",
+c:"electronics,books,business",
+u:"https://www.jarir.com",
+d:"jarir bookstore uae provides books, electronics and office supplies.",
+k:"jarir bookstore uae, books, electronics, office supplies, stationery",
+a:""
+},
+
+{
+i:229,
+n:"e city online",
+c:"electronics",
+u:"https://www.ecity.ae",
+d:"e city online sells consumer electronics, gadgets and accessories.",
+k:"e city online, electronics store, gadgets, online electronics",
+a:""
+},
+
+{
+i:230,
+n:"plugins electronics online",
+c:"electronics",
+u:"https://www.plugins-electronics.com",
+d:"plugins electronics online offers gadgets, mobiles and electronics in the uae.",
+k:"plugins electronics online, electronics store, gadgets, mobiles",
+a:""
+},
+
+{
+i:231,
+n:"apple uae",
+c:"electronics",
+u:"https://www.apple.com/ae",
+d:"apple uae offers iphones, macs, ipads and accessories for the uae market.",
+k:"apple uae, iphone, macbook, ipad, apple store, electronics",
+a:""
+},
+
+{
+i:232,
+n:"samsung uae",
+c:"electronics",
+u:"https://www.samsung.com/ae",
+d:"samsung uae provides smartphones, tvs and home appliances.",
+k:"samsung uae, smartphones, tvs, home appliances, electronics",
+a:""
+},
+
+{
+i:233,
+n:"huawei uae",
+c:"electronics",
+u:"https://consumer.huawei.com/ae",
+d:"huawei uae offers smartphones, wearables and electronics.",
+k:"huawei uae, smartphones, wearables, electronics, huawei devices",
+a:""
+},
+
+{
+i:234,
+n:"xiaomi uae",
+c:"electronics",
+u:"https://www.mi.com/ae",
+d:"xiaomi uae sells smartphones, smart devices and electronics.",
+k:"xiaomi uae, mi phones, smart devices, electronics, mi store",
+a:""
+},
+
+{
+i:235,
+n:"oppo uae",
+c:"electronics",
+u:"https://www.oppo.com/ae",
+d:"oppo uae offers smartphones and mobile accessories.",
+k:"oppo uae, smartphones, mobile phones, oppo phones, electronics",
+a:""
+},
+
+{
+i:236,
+n:"vivo uae",
+c:"electronics",
+u:"https://www.vivo.com/ae",
+d:"vivo uae provides smartphones and mobile devices.",
+k:"vivo uae, smartphones, mobile phones, vivo phones, electronics",
+a:""
+},
+
+{
+i:237,
+n:"honor uae",
+c:"electronics",
+u:"https://www.honor.com/ae",
+d:"honor uae offers smartphones, wearables and electronics.",
+k:"honor uae, smartphones, wearables, honor phones, electronics",
+a:""
+},
+
+{
+i:238,
+n:"lenovo uae",
+c:"electronics",
+u:"https://www.lenovo.com/ae",
+d:"lenovo uae sells laptops, pcs and technology devices.",
+k:"lenovo uae, laptops, pcs, computers, electronics, lenovo",
+a:""
+},
+
+{
+i:239,
+n:"hp uae",
+c:"electronics",
+u:"https://www.hp.com",
+d:"hp uae provides laptops, printers and computing products.",
+k:"hp uae, laptops, printers, computers, hp devices",
+a:""
+},
+
+{
+i:240,
+n:"dell uae",
+c:"electronics",
+u:"https://www.dell.com",
+d:"dell uae offers laptops, desktops and monitors for home and business.",
+k:"dell uae, laptops, desktops, monitors, computers",
+a:""
+},
+
+{
+i:241,
+n:"asus uae",
+c:"electronics",
+u:"https://www.asus.com/me-en",
+d:"asus uae sells laptops, gaming pcs and computer components.",
+k:"asus uae, laptops, gaming pcs, computer components, electronics",
+a:""
+},
+
+{
+i:242,
+n:"acer uae",
+c:"electronics",
+u:"https://www.acer.com",
+d:"acer uae offers laptops, desktops and monitors.",
+k:"acer uae, laptops, computers, monitors, electronics",
+a:""
+},
+
+{
+i:243,
+n:"microsoft uae",
+c:"electronics,software",
+u:"https://www.microsoft.com/en-ae",
+d:"microsoft uae provides software, devices and online services.",
+k:"microsoft uae, software, windows, office, surface devices",
+a:""
+},
+
+{
+i:244,
+n:"sony uae",
+c:"electronics",
+u:"https://www.sony-mea.com",
+d:"sony uae offers electronics including tvs, audio devices and cameras.",
+k:"sony uae, tvs, audio systems, cameras, electronics",
+a:""
+},
+
+{
+i:245,
+n:"lg uae",
+c:"electronics",
+u:"https://www.lg.com/ae",
+d:"lg uae sells tvs, home appliances and electronics.",
+k:"lg uae, tvs, home appliances, electronics, lg devices",
+a:""
+},
+
+{
+i:246,
+n:"panasonic uae",
+c:"electronics",
+u:"https://www.panasonic.com",
+d:"panasonic uae provides electronics and home appliances.",
+k:"panasonic uae, electronics, home appliances, panasonic devices",
+a:""
+},
+
+{
+i:247,
+n:"canon uae",
+c:"electronics",
+u:"https://en.canon-me.com",
+d:"canon uae offers cameras, printers and imaging products.",
+k:"canon uae, cameras, printers, imaging, electronics",
+a:""
+},
+
+{
+i:248,
+n:"nikon middle east",
+c:"electronics",
+u:"https://www.nikon-mea.com",
+d:"nikon middle east provides cameras, lenses and imaging equipment.",
+k:"nikon middle east, cameras, lenses, photography gear, imaging",
+a:""
+},
+
+{
+i:249,
+n:"epson uae",
+c:"electronics",
+u:"https://www.epson.ae",
+d:"epson uae sells printers, projectors and imaging devices.",
+k:"epson uae, printers, projectors, imaging devices, electronics",
+a:""
+},
+
+{
+i:250,
+n:"brother gulf",
+c:"electronics",
+u:"https://www.brother.ae",
+d:"brother gulf offers printers, labelers and office electronics.",
+k:"brother gulf, printers, office electronics, labelers, brother devices",
+a:""
+},
+
+{
+i:251,
+n:"bose uae",
+c:"electronics",
+u:"https://www.bose.ae",
+d:"bose uae sells audio products including speakers and headphones.",
+k:"bose uae, speakers, headphones, audio systems, electronics",
+a:""
+},
+
+{
+i:252,
+n:"jbl uae",
+c:"electronics",
+u:"https://www.jbl.com",
+d:"jbl uae offers speakers, headphones and audio devices.",
+k:"jbl uae, speakers, headphones, audio devices, electronics",
+a:""
+},
+
+{
+i:253,
+n:"anker uae",
+c:"electronics",
+u:"https://www.anker.com",
+d:"anker uae provides chargers, power banks and tech accessories.",
+k:"anker uae, chargers, power banks, tech accessories, electronics",
+a:""
+},
+
+{
+i:254,
+n:"belkin uae",
+c:"electronics",
+u:"https://www.belkin.com",
+d:"belkin uae sells networking, charging and tech accessories.",
+k:"belkin uae, networking, chargers, tech accessories, electronics",
+a:""
+},
+
+{
+i:255,
+n:"garmin uae",
+c:"electronics,health",
+u:"https://www.garmin.com/en-AE",
+d:"garmin uae offers gps devices, wearables and fitness trackers.",
+k:"garmin uae, gps devices, fitness trackers, smartwatches, wearables",
+a:""
+},
+
+{
+i:256,
+n:"fitbit uae",
+c:"health",
+u:"https://www.fitbit.com",
+d:"fitbit uae sells fitness trackers and health wearables.",
+k:"fitbit uae, fitness trackers, health wearables, activity trackers",
+a:""
+},
+
+{
+i:257,
+n:"gopro uae",
+c:"electronics",
+u:"https://gopro.com",
+d:"gopro uae offers action cameras and accessories.",
+k:"gopro uae, action cameras, sports cameras, camera accessories",
+a:""
+},
+
+{
+i:258,
+n:"dji uae",
+c:"electronics",
+u:"https://www.dji.com",
+d:"dji uae sells drones, camera stabilizers and imaging equipment.",
+k:"dji uae, drones, gimbals, camera stabilizers, electronics",
+a:""
+},
+
+{
+i:259,
+n:"insta360 uae",
+c:"electronics",
+u:"https://www.insta360.com",
+d:"insta360 uae offers 360 cameras and action cameras.",
+k:"insta360 uae, 360 cameras, action cameras, imaging devices",
+a:""
+},
+
+{
+i:260,
+n:"logitech uae",
+c:"electronics",
+u:"https://www.logitech.com",
+d:"logitech uae sells computer peripherals, webcams and gaming gear.",
+k:"logitech uae, keyboards, mice, webcams, gaming gear, peripherals",
+a:""
+},
+
+{
+i:261,
+n:"corsair uae",
+c:"software",
+u:"https://www.corsair.com",
+d:"corsair uae offers gaming hardware, peripherals and pc components.",
+k:"corsair uae, gaming hardware, pc components, gaming peripherals",
+a:""
+},
+
+{
+i:262,
+n:"razer uae",
+c:"software",
+u:"https://www.razer.com",
+d:"razer uae sells gaming laptops, peripherals and accessories.",
+k:"razer uae, gaming laptops, gaming peripherals, gaming accessories",
+a:""
+},
+
+{
+i:263,
+n:"steelseries uae",
+c:"software",
+u:"https://steelseries.com",
+d:"steelseries uae offers gaming headsets, keyboards and mice.",
+k:"steelseries uae, gaming headsets, gaming keyboards, mice, peripherals",
+a:""
+},
+
+{
+i:264,
+n:"xbox uae",
+c:"software",
+u:"https://www.xbox.com/en-AE",
+d:"xbox uae provides gaming consoles, games and subscriptions.",
+k:"xbox uae, gaming console, xbox games, xbox live, gaming",
+a:""
+},
+
+{
+i:265,
+n:"playstation uae",
+c:"software",
+u:"https://www.playstation.com/en-ae",
+d:"playstation uae offers playstation consoles, games and services.",
+k:"playstation uae, ps5, ps4, playstation games, gaming console",
+a:""
+},
+
+{
+i:266,
+n:"nintendo middle east",
+c:"software",
+u:"https://www.nintendo.com",
+d:"nintendo middle east provides nintendo consoles, games and accessories.",
+k:"nintendo middle east, nintendo switch, games, consoles, gaming",
+a:""
+},
+
+{
+i:267,
+n:"steam uae",
+c:"software",
+u:"https://store.steampowered.com",
+d:"steam uae is the regional access to steam for pc game downloads and purchases.",
+k:"steam uae, pc games, game downloads, steam store, gaming",
+a:""
+},
+
+{
+i:268,
+n:"epic games uae",
+c:"software",
+u:"https://store.epicgames.com",
+d:"epic games uae provides digital pc games and the epic games launcher.",
+k:"epic games uae, pc games, epic store, game launcher, gaming",
+a:""
+},
+
+{
+i:269,
+n:"geekay games",
+c:"software",
+u:"https://www.geekay.com",
+d:"geekay games is a retail and online store for video games and consoles.",
+k:"geekay games, video games, game store, consoles, gaming uae",
+a:""
+},
+
+{
+i:270,
+n:"games2all",
+c:"software",
+u:"https://www.games2all.com",
+d:"games2all sells video games, consoles and gaming accessories.",
+k:"games2all, video games, consoles, gaming accessories, uae",
+a:""
+},
+
+{
+i:271,
+n:"zgames",
+c:"software",
+u:"https://www.zgames.com",
+d:"zgames is a gaming store offering video games and consoles.",
+k:"zgames, video game store, consoles, gaming, uae",
+a:""
+},
+
+{
+i:272,
+n:"virgin games uae",
+c:"software",
+u:"https://www.virginmegastore.ae",
+d:"virgin games uae offers video games and gaming accessories via virgin megastore.",
+k:"virgin games uae, video games, gaming accessories, virgin megastore",
+a:""
+},
+
+{
+i:273,
+n:"noon gaming",
+c:"software",
+u:"https://www.noon.com",
+d:"noon gaming sells gaming consoles, games and accessories on noon.",
+k:"noon gaming, gaming consoles, games, accessories, online gaming store",
+a:""
+},
+
+{
+i:274,
+n:"amazon gaming uae",
+c:"software",
+u:"https://www.amazon.ae",
+d:"amazon gaming uae offers gaming accessories and digital games via amazon.",
+k:"amazon gaming uae, gaming accessories, digital games, amazon",
+a:""
+},
+
+{
+i:275,
+n:"dubizzle",
+c:"business",
+u:"https://dubizzle.com",
+d:"dubizzle is a classified platform for buying and selling items and services in the uae.",
+k:"dubizzle, classifieds, buy and sell, used items, online marketplace",
+a:""
+},
+
+{
+i:276,
+n:"opensooq uae",
+c:"business",
+u:"https://uae.opensooq.com",
+d:"opensooq uae is a classifieds site for cars, property and items.",
+k:"opensooq uae, classifieds, buy and sell, used items, online marketplace",
+a:""
+},
+
+{
+i:277,
+n:"facebook marketplace uae",
+c:"business",
+u:"https://www.facebook.com/marketplace",
+d:"facebook marketplace uae allows users to buy and sell items locally.",
+k:"facebook marketplace uae, buy and sell, local marketplace, used items",
+a:""
+},
+
+{
+i:278,
+n:"yalla deals",
+c:"business",
+u:"https://www.yalladeals.com",
+d:"yalla deals is a classifieds and deals platform in the uae.",
+k:"yalla deals, classifieds, deals, buy and sell, uae",
+a:""
+},
+
+{
+i:279,
+n:"desertcart online uae",
+c:"electronics,home,fashion,beauty,health,food,sports,books,business",
+u:"https://www.desertcart.ae",
+d:"desertcart online uae is a cross-border marketplace delivering products across many categories.",
+k:"desertcart online uae, online marketplace, multi-category store, cross-border shopping",
+a:""
+},
+
+{
+i:280,
+n:"ubuy online uae",
+c:"electronics,home,fashion,beauty,health,food,sports,books,business",
+u:"https://www.ubuy.ae",
+d:"ubuy online uae is a global shopping site offering products in many categories.",
+k:"ubuy online uae, global shopping, online marketplace, multi-category",
+a:""
+},
+
+{
+i:281,
+n:"tradeling online",
+c:"business",
+u:"https://www.tradeling.com",
+d:"tradeling online is a b2b marketplace connecting suppliers and buyers.",
+k:"tradeling online, b2b marketplace, wholesale, business supplies",
+a:""
+},
+
+{
+i:282,
+n:"supplyvan online",
+c:"business",
+u:"https://www.supplyvan.com",
+d:"supplyvan online sells industrial and office supplies for businesses.",
+k:"supplyvan online, industrial supplies, office supplies, b2b ecommerce",
+a:""
+},
+
+{
+i:283,
+n:"office one online",
+c:"business",
+u:"https://officeoneuae.com",
+d:"office one online offers office supplies and stationery in the uae.",
+k:"office one online, office supplies, stationery, business supplies",
+a:""
+},
+
+{
+i:284,
+n:"staples middle east",
+c:"business",
+u:"https://www.staplesadvantage.me",
+d:"staples middle east provides office supplies and business solutions.",
+k:"staples middle east, office supplies, business solutions, stationery",
+a:""
+},
+
+{
+i:285,
+n:"office rock",
+c:"business",
+u:"https://officerock.com",
+d:"office rock is an online store for office supplies and pantry items.",
+k:"office rock, office supplies, office pantry, business supplies, uae",
+a:""
+},
+
+{
+i:286,
+n:"desco copy and print",
+c:"business",
+u:"https://www.descoonline.com",
+d:"desco copy and print offers printing, copying and signage services.",
+k:"desco copy and print, printing services, copy shop, signage, uae",
+a:""
+},
+
+{
+i:287,
+n:"printarabia",
+c:"business",
+u:"https://www.printarabia.ae",
+d:"printarabia is an online printing service for business cards, flyers and marketing materials.",
+k:"printarabia, online printing, business cards, flyers, marketing prints",
+a:""
+},
+
+{
+i:288,
+n:"vista print uae",
+c:"business",
+u:"https://www.vistaprint.ae",
+d:"vista print uae provides custom printing for business and personal use.",
+k:"vistaprint uae, custom printing, business cards, marketing materials",
+a:""
+},
+
+{
+i:289,
+n:"fedex uae",
+c:"business",
+u:"https://www.fedex.com/en-ae",
+d:"fedex uae offers courier, logistics and shipping services.",
+k:"fedex uae, courier, shipping, logistics, express delivery",
+a:""
+},
+
+{
+i:290,
+n:"dhl uae",
+c:"business",
+u:"https://www.dhl.com/ae-en",
+d:"dhl uae provides international shipping and logistics services.",
+k:"dhl uae, courier, shipping, logistics, express delivery",
+a:""
+},
+
+{
+i:291,
+n:"aramex",
+c:"business",
+u:"https://www.aramex.com",
+d:"aramex is a logistics and courier company serving the uae and region.",
+k:"aramex, courier, shipping, logistics, express delivery, uae",
+a:""
+},
+
+{
+i:292,
+n:"emirates post",
+c:"business",
+u:"https://www.emiratespost.ae",
+d:"emirates post is the national postal and parcel service in the uae.",
+k:"emirates post, postal service, mail, parcel delivery, uae",
+a:""
+},
+
+{
+i:293,
+n:"ups uae",
+c:"business",
+u:"https://www.ups.com/ae",
+d:"ups uae offers shipping, courier and logistics services.",
+k:"ups uae, courier, shipping, logistics, parcel delivery",
+a:""
+},
+
+{
+i:294,
+n:"shipa",
+c:"business",
+u:"https://shipa.com",
+d:"shipa provides ecommerce logistics and delivery solutions in the region.",
+k:"shipa, ecommerce logistics, delivery solutions, shipping, uae",
+a:""
+},
+
+{
+i:295,
+n:"careem",
+c:"travel",
+u:"https://www.careem.com",
+d:"careem is a ride-hailing and super app offering transport and delivery services.",
+k:"careem, ride hailing, taxi app, super app, transport, uae",
+a:""
+},
+
+{
+i:296,
+n:"uber uae",
+c:"travel",
+u:"https://www.uber.com/ae",
+d:"uber uae provides ride-hailing services in the uae.",
+k:"uber uae, ride hailing, taxi app, transport, rides, uae",
+a:""
+},
+
+{
+i:297,
+n:"yango uae",
+c:"travel",
+u:"https://yango.com",
+d:"yango uae offers ride-hailing and mobility services.",
+k:"yango uae, ride hailing, taxi app, transport, mobility",
+a:""
+},
+
+{
+i:298,
+n:"dubai taxi",
+c:"travel",
+u:"https://www.dubaitaxi.ae",
+d:"dubai taxi provides official taxi services and ride bookings in dubai.",
+k:"dubai taxi, taxi service, ride booking, transport, dubai",
+a:""
+},
+
+{
+i:299,
+n:"etisalat by eand",
+c:"electronics",
+u:"https://www.etisalat.ae",
+d:"etisalat by eand offers telecom, internet and digital services in the uae.",
+k:"etisalat by eand, telecom, mobile plans, internet, digital services",
+a:""
+},
+
+{
+i:300,
+n:"du uae",
+c:"electronics",
+u:"https://www.du.ae",
+d:"du uae provides mobile, internet and telecom services.",
+k:"du uae, telecom, mobile operator, internet, phone services",
+a:""
+},
+
+{
+i:301,
+n:"virgin mobile uae",
+c:"electronics",
+u:"https://www.virginmobile.ae",
+d:"virgin mobile uae offers digital mobile plans and telecom services.",
+k:"virgin mobile uae, mobile operator, digital plans, telecom, phone",
+a:""
+},
+
+{
+i:302,
+n:"swyp uae",
+c:"electronics",
+u:"https://www.swyp.ae",
+d:"swyp uae is a youth-focused mobile service offering prepaid plans.",
+k:"swyp uae, mobile service, prepaid plans, youth mobile, telecom",
+a:""
+},
+
+{
+i:303,
+n:"noon pay",
+c:"business",
+u:"https://www.noon.com",
+d:"noon pay is a digital payment service integrated with the noon platform.",
+k:"noon pay, digital payments, wallet, noon, payment service",
+a:""
+},
+
+{
+i:304,
+n:"tabby uae",
+c:"business",
+u:"https://tabby.ai",
+d:"tabby uae offers buy now pay later and instalment payment services.",
+k:"tabby uae, buy now pay later, instalments, payment service, bnpl",
+a:""
+},
+
+{
+i:305,
+n:"tamara uae",
+c:"business",
+u:"https://tamara.co",
+d:"tamara uae provides buy now pay later and instalment payment options.",
+k:"tamara uae, buy now pay later, instalments, payment service, bnpl",
+a:""
+},
+
+{
+i:306,
+n:"paypal uae",
+c:"business",
+u:"https://www.paypal.com/ae",
+d:"paypal uae enables online payments and money transfers.",
+k:"paypal uae, online payments, digital wallet, money transfer",
+a:""
+},
+
+{
+i:307,
+n:"wise uae",
+c:"business",
+u:"https://wise.com",
+d:"wise uae offers international money transfers and multi-currency accounts.",
+k:"wise uae, money transfer, remittance, multi-currency account, fintech",
+a:""
+},
+
+{
+i:308,
+n:"western union uae",
+c:"business",
+u:"https://www.westernunion.com",
+d:"western union uae provides international money transfer services.",
+k:"western union uae, money transfer, remittance, send money, uae",
+a:""
+},
+
+{
+i:309,
+n:"al ansari exchange",
+c:"business",
+u:"https://www.alansariexchange.com",
+d:"al ansari exchange offers currency exchange and remittance services in the uae.",
+k:"al ansari exchange, currency exchange, remittance, money transfer, uae",
+a:""
+},
+
+{
+i:310,
+n:"uae exchange",
+c:"business",
+u:"https://www.uaeexchange.com",
+d:"uae exchange provides money transfer and currency exchange services.",
+k:"uae exchange, money transfer, remittance, currency exchange, uae",
+a:""
+},
+
+{
+i:311,
+n:"emirates nbd",
+c:"business",
+u:"https://www.emiratesnbd.com",
+d:"emirates nbd is a major bank in the uae offering retail and corporate banking.",
+k:"emirates nbd, bank, retail banking, corporate banking, uae",
+a:""
+},
+
+{
+i:312,
+n:"adcb",
+c:"business",
+u:"https://www.adcb.com",
+d:"adcb is a uae bank providing retail, corporate and islamic banking services.",
+k:"adcb, abu dhabi commercial bank, bank, retail banking, uae",
+a:""
+},
+
+{
+i:313,
+n:"fab bank",
+c:"business",
+u:"https://www.bankfab.com",
+d:"fab bank is first abu dhabi bank offering banking services in the uae.",
+k:"fab bank, first abu dhabi bank, bank, retail banking, uae",
+a:""
+},
+
+{
+i:314,
+n:"mashreq",
+c:"business",
+u:"https://www.mashreq.com",
+d:"mashreq is a uae bank offering retail and corporate banking.",
+k:"mashreq, bank, retail banking, corporate banking, uae",
+a:""
+},
+
+{
+i:315,
+n:"dib bank",
+c:"business",
+u:"https://www.dib.ae",
+d:"dib is dubai islamic bank providing islamic banking services.",
+k:"dib bank, dubai islamic bank, islamic banking, bank, uae",
+a:""
+},
+
+{
+i:316,
+n:"rakbank",
+c:"business",
+u:"https://www.rakbank.ae",
+d:"rakbank is the national bank of ras al khaimah offering retail banking.",
+k:"rakbank, bank, retail banking, uae, ras al khaimah bank",
+a:""
+},
+
+{
+i:317,
+n:"hsbc uae",
+c:"business",
+u:"https://www.hsbc.ae",
+d:"hsbc uae offers personal, business and corporate banking.",
+k:"hsbc uae, bank, personal banking, business banking, uae",
+a:""
+},
+
+{
+i:318,
+n:"standard chartered uae",
+c:"business",
+u:"https://www.sc.com/ae",
+d:"standard chartered uae provides retail and corporate banking services.",
+k:"standard chartered uae, bank, retail banking, corporate banking",
+a:""
+},
+
+{
+i:319,
+n:"citibank uae",
+c:"business",
+u:"https://www.citibank.ae",
+d:"citibank uae offers banking and credit card services.",
+k:"citibank uae, bank, credit cards, retail banking, uae",
+a:""
+},
+
+{
+i:320,
+n:"liv bank",
+c:"business",
+u:"https://www.liv.me",
+d:"liv bank is a digital bank from emirates nbd targeting millennials.",
+k:"liv bank, digital bank, online banking, emirates nbd, uae",
+a:""
+},
+
+{
+i:321,
+n:"adib",
+c:"business",
+u:"https://www.adib.ae",
+d:"adib is abu dhabi islamic bank offering islamic banking services.",
+k:"adib, abu dhabi islamic bank, islamic banking, bank, uae",
+a:""
+},
+
+{
+i:322,
+n:"emirates islamic",
+c:"business",
+u:"https://www.emiratesislamic.ae",
+d:"emirates islamic is a uae bank providing islamic banking solutions.",
+k:"emirates islamic, islamic bank, banking, uae, sharia-compliant",
+a:""
+},
+
+{
+i:323,
+n:"ajman bank",
+c:"business",
+u:"https://www.ajmanbank.ae",
+d:"ajman bank is an islamic bank offering retail and corporate banking.",
+k:"ajman bank, islamic bank, retail banking, corporate banking, uae",
+a:""
+},
+
+{
+i:324,
+n:"commercial bank of dubai",
+c:"business",
+u:"https://www.cbd.ae",
+d:"commercial bank of dubai offers retail and business banking services.",
+k:"commercial bank of dubai, cbd, bank, retail banking, business banking",
+a:""
+},
+
+{
+i:325,
+n:"sharjah islamic bank",
+c:"business",
+u:"https://www.sib.ae",
+d:"sharjah islamic bank provides islamic banking services in the uae.",
+k:"sharjah islamic bank, islamic banking, bank, uae",
+a:""
+},
+
+{
+i:326,
+n:"national bank of fujairah",
+c:"business",
+u:"https://www.nbf.ae",
+d:"national bank of fujairah offers corporate and retail banking services.",
+k:"national bank of fujairah, nbf, bank, corporate banking, retail banking",
+a:""
+},
+
+{
+i:327,
+n:"uae insurance",
+c:"business",
+u:"https://www.uaeinsurance.ae",
+d:"uae insurance provides insurance products and services in the uae.",
+k:"uae insurance, insurance company, insurance products, uae",
+a:""
+},
+
+{
+i:328,
+n:"oman insurance",
+c:"business",
+u:"https://www.sukoon.com",
+d:"oman insurance, now sukoon, offers insurance solutions in the uae and region.",
+k:"oman insurance, sukoon, insurance company, insurance uae",
+a:""
+},
+
+{
+i:329,
+n:"sukoon insurance",
+c:"business",
+u:"https://www.sukoon.com",
+d:"sukoon insurance provides health, motor and general insurance products.",
+k:"sukoon insurance, health insurance, motor insurance, insurance uae",
+a:""
+},
+
+{
+i:330,
+n:"salama takaful",
+c:"business",
+u:"https://www.salama.ae",
+d:"salama takaful offers islamic insurance products in the uae.",
+k:"salama takaful, islamic insurance, takaful, insurance uae",
+a:""
+},
+
+{
+i:331,
+n:"tokio marine uae",
+c:"business",
+u:"https://www.tokiomarine.ae",
+d:"tokio marine uae provides insurance products and risk solutions.",
+k:"tokio marine uae, insurance company, insurance, risk solutions",
+a:""
+},
+
+{
+i:332,
+n:"axa gulf",
+c:"business",
+u:"https://www.gig-gulf.com",
+d:"axa gulf, now gig gulf, offers insurance products in the region.",
+k:"axa gulf, gig gulf, insurance company, insurance uae",
+a:""
+},
+
+{
+i:333,
+n:"gig gulf",
+c:"business",
+u:"https://www.gig-gulf.com",
+d:"gig gulf provides health, motor and general insurance across the gulf.",
+k:"gig gulf, insurance company, health insurance, motor insurance",
+a:""
+},
+
+{
+i:334,
+n:"metlife uae",
+c:"business",
+u:"https://www.metlife.ae",
+d:"metlife uae offers life and health insurance products.",
+k:"metlife uae, life insurance, health insurance, insurance company",
+a:""
+},
+
+{
+i:335,
+n:"allianz care uae",
+c:"business",
+u:"https://www.allianzcare.com",
+d:"allianz care uae provides international health insurance plans.",
+k:"allianz care uae, health insurance, international insurance, expat plans",
+a:""
+},
+
+{
+i:336,
+n:"bayzat",
+c:"business",
+u:"https://www.bayzat.com",
+d:"bayzat is a platform for employee benefits, hr and insurance solutions.",
+k:"bayzat, employee benefits, hr platform, insurance, uae",
+a:""
+},
+
+{
+i:337,
+n:"policybazaar uae",
+c:"business",
+u:"https://www.policybazaar.ae",
+d:"policybazaar uae lets users compare and buy insurance products online.",
+k:"policybazaar uae, insurance comparison, buy insurance, online insurance",
+a:""
+},
+
+{
+i:338,
+n:"yallacompare",
+c:"business",
+u:"https://yallacompare.com",
+d:"yallacompare is a comparison site for insurance and financial products.",
+k:"yallacompare, insurance comparison, financial products, compare uae",
+a:""
+},
+
+{
+i:339,
+n:"dubizzle property",
+c:"business",
+u:"https://dubizzle.com/property",
+d:"dubizzle property lists properties for rent and sale in the uae.",
+k:"dubizzle property, property listings, rent, buy property, real estate",
+a:""
+},
+
+{
+i:340,
+n:"property finder",
+c:"business",
+u:"https://www.propertyfinder.ae",
+d:"property finder is a real estate portal for property listings in the uae.",
+k:"property finder, real estate portal, property listings, uae",
+a:""
+},
+
+{
+i:341,
+n:"bayut",
+c:"business",
+u:"https://www.bayut.com",
+d:"bayut is a property portal listing homes for rent and sale in the uae.",
+k:"bayut, property portal, real estate, rent, buy property, uae",
+a:""
+},
+
+{
+i:342,
+n:"damac properties",
+c:"business",
+u:"https://www.damacproperties.com",
+d:"damac properties is a real estate developer building projects in dubai and the uae.",
+k:"damac properties, real estate developer, dubai property, uae developer",
+a:""
+},
+
+{
+i:343,
+n:"emaar properties",
+c:"business",
+u:"https://www.emaar.com",
+d:"emaar properties is a major real estate developer in dubai and the uae.",
+k:"emaar properties, real estate developer, dubai property, emaar",
+a:""
+},
+
+{
+i:344,
+n:"nakheel",
+c:"business",
+u:"https://www.nakheel.com",
+d:"nakheel is a dubai-based real estate developer behind major projects.",
+k:"nakheel, real estate developer, dubai property, projects",
+a:""
+},
+
+{
+i:345,
+n:"dubai properties",
+c:"business",
+u:"https://www.dp.ae",
+d:"dubai properties is a real estate developer with communities in dubai.",
+k:"dubai properties, real estate developer, dubai communities, property",
+a:""
+},
+
+{
+i:346,
+n:"sobha realty",
+c:"business",
+u:"https://www.sobharealty.com",
+d:"sobha realty develops luxury residential properties in dubai and beyond.",
+k:"sobha realty, luxury real estate, developer, dubai property",
+a:""
+},
+
+{
+i:347,
+n:"azizi developments",
+c:"business",
+u:"https://www.azizidevelopments.com",
+d:"azizi developments builds residential and mixed-use projects in dubai.",
+k:"azizi developments, real estate developer, dubai projects, property",
+a:""
+},
+
+{
+i:348,
+n:"ellington properties",
+c:"business",
+u:"https://www.ellingtonproperties.ae",
+d:"ellington properties is a boutique developer of design-led homes in dubai.",
+k:"ellington properties, real estate developer, design-led homes, dubai",
+a:""
+},
+
+{
+i:349,
+n:"danube properties",
+c:"business",
+u:"https://www.danubeproperties.com",
+d:"danube properties develops affordable housing projects in the uae.",
+k:"danube properties, real estate developer, affordable housing, uae",
+a:""
+},
+
+{
+i:350,
+n:"binghatti",
+c:"business",
+u:"https://binghatti.com",
+d:"binghatti is a real estate developer known for its architectural projects.",
+k:"binghatti, real estate developer, dubai property, architecture",
+a:""
+},
+
+{
+i:351,
+n:"wasl properties",
+c:"business",
+u:"https://www.wasl.ae",
+d:"wasl properties manages and develops residential and commercial properties in dubai.",
+k:"wasl properties, property management, real estate, dubai",
+a:""
+},
+
+{
+i:352,
+n:"aldar properties",
+c:"business",
+u:"https://www.aldar.com",
+d:"aldar properties is a leading developer in abu dhabi and the uae.",
+k:"aldar properties, real estate developer, abu dhabi property, uae",
+a:""
+},
+
+{
+i:353,
+n:"reportage properties",
+c:"business",
+u:"https://reportageuae.com",
+d:"reportage properties develops residential projects across the uae.",
+k:"reportage properties, real estate developer, residential projects, uae",
+a:""
+},
+
+{
+i:354,
+n:"metropolitan premium properties",
+c:"business",
+u:"https://metropolitan.realestate",
+d:"metropolitan premium properties is a real estate brokerage in dubai.",
+k:"metropolitan premium properties, real estate brokerage, dubai property",
+a:""
+},
+
+{
+i:355,
+n:"betterhomes",
+c:"business",
+u:"https://www.bhomes.com",
+d:"betterhomes is a real estate agency offering property sales and rentals.",
+k:"betterhomes, real estate agency, property sales, rentals, dubai",
+a:""
+},
+
+{
+i:356,
+n:"allsopp and allsopp",
+c:"business",
+u:"https://www.allsoppandallsopp.com",
+d:"allsopp and allsopp is a real estate brokerage in dubai and the uae.",
+k:"allsopp and allsopp, real estate brokerage, property, dubai",
+a:""
+},
+
+{
+i:357,
+n:"haus and haus",
+c:"business",
+u:"https://www.hausandhaus.com",
+d:"haus and haus is a dubai-based real estate agency.",
+k:"haus and haus, real estate agency, property, dubai",
+a:""
+},
+
+{
+i:358,
+n:"driven properties",
+c:"business",
+u:"https://www.drivenproperties.com",
+d:"driven properties is a real estate brokerage offering sales and rentals.",
+k:"driven properties, real estate brokerage, property sales, rentals, dubai",
+a:""
+},
+
+{
+i:359,
+n:"fam properties",
+c:"business",
+u:"https://famproperties.com",
+d:"fam properties is a real estate brokerage focused on dubai properties.",
+k:"fam properties, real estate brokerage, dubai property, sales, rentals",
+a:""
+},
+
+{
+i:360,
+n:"zoom property",
+c:"business",
+u:"https://zoomproperty.com",
+d:"zoom property is an online property portal listing uae real estate.",
+k:"zoom property, property portal, real estate listings, uae",
+a:""
+},
+
+{
+i:361,
+n:"dubizzle jobs",
+c:"business",
+u:"https://dubizzle.com/jobs",
+d:"dubizzle jobs lists job vacancies and employment opportunities in the uae.",
+k:"dubizzle jobs, job listings, jobs uae, employment, careers",
+a:""
+},
+
+{
+i:362,
+n:"naukrigulf",
+c:"business",
+u:"https://www.naukrigulf.com",
+d:"naukrigulf is a job portal for vacancies in the gulf region.",
+k:"naukrigulf, job portal, jobs gulf, employment, careers",
+a:""
+},
+
+{
+i:363,
+n:"gulftalent",
+c:"business",
+u:"https://www.gulftalent.com",
+d:"gulftalent is an online recruitment platform for professionals in the gulf.",
+k:"gulftalent, recruitment, job portal, gulf jobs, careers",
+a:""
+},
+
+{
+i:364,
+n:"bayt",
+c:"business",
+u:"https://www.bayt.com",
+d:"bayt is a job site listing employment opportunities across the middle east.",
+k:"bayt, job site, jobs middle east, employment, careers",
+a:""
+},
+
+{
+i:365,
+n:"linkedin jobs uae",
+c:"business",
+u:"https://www.linkedin.com/jobs",
+d:"linkedin jobs uae lists professional job opportunities and roles.",
+k:"linkedin jobs uae, professional jobs, careers, employment, uae",
+a:""
+},
+
+{
+i:366,
+n:"indeed uae",
+c:"business",
+u:"https://ae.indeed.com",
+d:"indeed uae aggregates job listings from companies and job sites.",
+k:"indeed uae, job search, job listings, employment, careers",
+a:""
+},
+
+{
+i:367,
+n:"foundit gulf",
+c:"business",
+u:"https://www.founditgulf.com",
+d:"foundit gulf is a job portal for gulf region employment.",
+k:"foundit gulf, job portal, gulf jobs, employment, careers",
+a:""
+},
+
+{
+i:368,
+n:"grabjobs uae",
+c:"business",
+u:"https://grabjobs.co",
+d:"grabjobs uae lists jobs and allows quick job applications.",
+k:"grabjobs uae, job site, job listings, employment, careers",
+a:""
+},
+
+{
+i:369,
+n:"oliv jobs",
+c:"business",
+u:"https://oliv.com",
+d:"oliv jobs focuses on internships and graduate jobs in the region.",
+k:"oliv jobs, internships, graduate jobs, youth employment, uae",
+a:""
+},
+
+{
+i:370,
+n:"laimoon jobs",
+c:"business",
+u:"https://www.laimoon.com",
+d:"laimoon jobs lists roles across industries in the middle east.",
+k:"laimoon jobs, job listings, employment, careers, middle east",
+a:""
+},
+
+{
+i:371,
+n:"coursera uae",
+c:"software",
+u:"https://www.coursera.org",
+d:"coursera uae provides online courses and certificates from global universities.",
+k:"coursera uae, online courses, e-learning, certificates, moocs",
+a:""
+},
+
+{
+i:372,
+n:"udemy uae",
+c:"software",
+u:"https://www.udemy.com",
+d:"udemy uae offers online courses on a wide range of topics.",
+k:"udemy uae, online courses, e-learning, skills training",
+a:""
+},
+
+{
+i:373,
+n:"edx",
+c:"software",
+u:"https://www.edx.org",
+d:"edx is an online learning platform offering university-level courses.",
+k:"edx, online learning, moocs, university courses, e-learning",
+a:""
+},
+
+{
+i:374,
+n:"skillshare",
+c:"software",
+u:"https://www.skillshare.com",
+d:"skillshare offers online classes in creative and practical skills.",
+k:"skillshare, online classes, creative skills, e-learning, courses",
+a:""
+},
+
+{
+i:375,
+n:"udacity",
+c:"software",
+u:"https://www.udacity.com",
+d:"udacity provides online nanodegree programs in tech and digital skills.",
+k:"udacity, nanodegree, online learning, tech courses, e-learning",
+a:""
+},
+
+{
+i:376,
+n:"alison courses",
+c:"software",
+u:"https://alison.com",
+d:"alison offers free online courses and diplomas in various subjects.",
+k:"alison courses, free online courses, diplomas, e-learning",
+a:""
+},
+
+{
+i:377,
+n:"futurelearn",
+c:"software",
+u:"https://www.futurelearn.com",
+d:"futurelearn is an online learning platform offering courses and programs.",
+k:"futurelearn, online courses, e-learning, moocs, programs",
+a:""
+},
+
+{
+i:378,
+n:"khan academy",
+c:"software",
+u:"https://www.khanacademy.org",
+d:"khan academy provides free online lessons and practice in many subjects.",
+k:"khan academy, free education, online lessons, e-learning, practice",
+a:""
+},
+
+{
+i:379,
+n:"simplilearn",
+c:"software",
+u:"https://www.simplilearn.com",
+d:"simplilearn offers online bootcamps and certification training.",
+k:"simplilearn, online bootcamps, certification training, e-learning",
+a:""
+},
+
+{
+i:380,
+n:"emirates aviation university",
+c:"business",
+u:"https://www.eau.ac.ae",
+d:"emirates aviation university is a higher education institution in dubai.",
+k:"emirates aviation university, university, higher education, dubai",
+a:""
+},
+
+{
+i:381,
+n:"university of dubai",
+c:"business",
+u:"https://www.ud.ac.ae",
+d:"university of dubai is a higher education university in dubai.",
+k:"university of dubai, university, higher education, dubai",
+a:""
+},
+
+{
+i:382,
+n:"american university in dubai",
+c:"business",
+u:"https://www.aud.edu",
+d:"american university in dubai is a private university in dubai.",
+k:"american university in dubai, aud, university, higher education",
+a:""
+},
+
+{
+i:383,
+n:"heriot watt dubai",
+c:"business",
+u:"https://www.hw.ac.uk/dubai",
+d:"heriot watt dubai is the dubai campus of heriot watt university.",
+k:"heriot watt dubai, university campus, higher education, dubai",
+a:""
+},
+
+{
+i:384,
+n:"middlesex university dubai",
+c:"business",
+u:"https://www.mdx.ac.ae",
+d:"middlesex university dubai is a branch campus offering uk degrees.",
+k:"middlesex university dubai, university, uk degrees, higher education",
+a:""
+},
+
+{
+i:385,
+n:"canadian university dubai",
+c:"business",
+u:"https://www.cud.ac.ae",
+d:"canadian university dubai offers canadian-style higher education programs.",
+k:"canadian university dubai, university, higher education, canadian programs",
+a:""
+},
+
+{
+i:386,
+n:"manipal academy dubai",
+c:"business",
+u:"https://www.manipaldubai.com",
+d:"manipal academy dubai is an indian university branch campus in dubai.",
+k:"manipal academy dubai, university, indian campus, higher education",
+a:""
+},
+
+{
+i:387,
+n:"bits pilani dubai",
+c:"business",
+u:"https://www.bits-pilani.ac.in/dubai",
+d:"bits pilani dubai is the international campus of bits pilani in dubai.",
+k:"bits pilani dubai, university, engineering college, higher education",
+a:""
+},
+
+{
+i:388,
+n:"amity university dubai",
+c:"business",
+u:"https://www.amityuniversity.ae",
+d:"amity university dubai is a private university offering various programs.",
+k:"amity university dubai, university, higher education, private university",
+a:""
+},
+
+{
+i:389,
+n:"ajman university",
+c:"business",
+u:"https://www.ajman.ac.ae",
+d:"ajman university is a higher education institution in ajman.",
+k:"ajman university, university, higher education, ajman",
+a:""
+},
+
+{
+i:390,
+n:"university of sharjah",
+c:"business",
+u:"https://www.sharjah.ac.ae",
+d:"university of sharjah is a comprehensive university in sharjah.",
+k:"university of sharjah, university, higher education, sharjah",
+a:""
+},
+
+{
+i:391,
+n:"duolingo",
+c:"software",
+u:"https://www.duolingo.com",
+d:"duolingo is a language learning app and platform.",
+k:"duolingo, language learning, app, e-learning, languages",
+a:""
+},
+
+{
+i:392,
+n:"italki",
+c:"software",
+u:"https://www.italki.com",
+d:"italki connects language learners with online tutors.",
+k:"italki, language tutors, online lessons, language learning",
+a:""
+},
+
+{
+i:393,
+n:"preply",
+c:"software",
+u:"https://preply.com",
+d:"preply is an online platform for private tutoring and language lessons.",
+k:"preply, private tutoring, language lessons, online tutors",
+a:""
+},
+
+{
+i:394,
+n:"cambly",
+c:"software",
+u:"https://www.cambly.com",
+d:"cambly offers on-demand video chat lessons with english tutors.",
+k:"cambly, english tutors, video lessons, language learning",
+a:""
+},
+
+{
+i:395,
+n:"babbel",
+c:"software",
+u:"https://www.babbel.com",
+d:"babbel is a subscription-based language learning app.",
+k:"babbel, language learning, app, e-learning, languages",
+a:""
+},
+
+{
+i:396,
+n:"memrise",
+c:"software",
+u:"https://www.memrise.com",
+d:"memrise provides vocabulary and language learning through courses and apps.",
+k:"memrise, language learning, vocabulary app, e-learning",
+a:""
+},
+
+{
+i:397,
+n:"udemy business",
+c:"software",
+u:"https://business.udemy.com",
+d:"udemy business offers online training content for organizations.",
+k:"udemy business, corporate training, online courses, e-learning",
+a:""
+},
+
+{
+i:398,
+n:"coursera plus",
+c:"software",
+u:"https://www.coursera.org",
+d:"coursera plus is a subscription giving access to many coursera courses.",
+k:"coursera plus, online courses, subscription, e-learning, moocs",
+a:""
+},
+
+{
+i:399,
+n:"masterclass",
+c:"software",
+u:"https://www.masterclass.com",
+d:"masterclass offers online video lessons from experts and celebrities.",
+k:"masterclass, online classes, expert lessons, video courses",
+a:""
+},
+
+{
+i:400,
+n:"domestika",
+c:"software",
+u:"https://www.domestika.org",
+d:"domestika is an online platform for creative courses and tutorials.",
+k:"domestika, creative courses, online learning, design classes",
+a:""
 }
+  
   
 
 
