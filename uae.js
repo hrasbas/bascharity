@@ -5841,9 +5841,159 @@ n:"glamazle online",
 c:"beauty",
 u:"https://glamazle.com",
 d:"glamazle online is a beauty store for makeup and skincare products.",
-k:"glamazle online, online beauty s 
-  
-  
+k:"glamazle online, online beauty store, makeup, skincare, uae",
+a:""
+},
+
+{
+i:586,
+n:"huda beauty",
+c:"beauty",
+u:"https://hudabeauty.com",
+d:"huda beauty is a cosmetics brand offering makeup products.",
+k:"huda beauty, cosmetics brand, makeup, beauty products",
+a:""
+},
+
+{
+i:587,
+n:"kayali fragrances",
+c:"beauty",
+u:"https://kayalifragrance.com",
+d:"kayali fragrances offers perfumes and fragrance collections.",
+k:"kayali fragrances, perfumes, fragrance collections, huda beauty",
+a:""
+},
+
+{
+i:588,
+n:"wishful skin",
+c:"beauty",
+u:"https://wishfulskin.com",
+d:"wishful skin is a skincare brand from huda beauty.",
+k:"wishful skin, skincare brand, huda beauty, skincare products",
+a:""
+},
+
+{
+i:589,
+n:"the ordinary uae",
+c:"beauty",
+u:"https://theordinary.com",
+d:"the ordinary uae offers clinical skincare products at accessible prices.",
+k:"the ordinary uae, skincare, clinical formulations, beauty products",
+a:""
+},
+
+{
+i:590,
+n:"cerave uae",
+c:"beauty",
+u:"https://www.cerave.com",
+d:"cerave uae sells dermatologist-developed skincare products.",
+k:"cerave uae, skincare, dermatologist recommended, moisturisers, cleansers",
+a:""
+},
+
+{
+i:591,
+n:"danube home online",
+c:"home",
+u:"https://www.danubehome.com",
+d:"danube home online sells furniture and home improvement products.",
+k:"danube home online, furniture, home improvement, home decor, uae",
+a:""
+},
+
+{
+i:592,
+n:"pan emirates online",
+c:"home",
+u:"https://www.panemirates.com",
+d:"pan emirates online offers furniture and home decor products.",
+k:"pan emirates online, furniture, home decor, home furnishings, uae",
+a:""
+},
+
+{
+i:593,
+n:"the one online",
+c:"home",
+u:"https://www.theone.com",
+d:"the one online sells furniture and stylish home accessories.",
+k:"the one online, furniture, home accessories, home decor, uae",
+a:""
+},
+
+{
+i:594,
+n:"royal furniture online",
+c:"home",
+u:"https://royalfurniture.ae",
+d:"royal furniture online offers sofas, beds and home furniture.",
+k:"royal furniture online, furniture store, sofas, beds, home furniture",
+a:""
+},
+
+{
+i:595,
+n:"2xl online",
+c:"home",
+u:"https://2xlme.com",
+d:"2xl online sells premium furniture and home decor.",
+k:"2xl online, premium furniture, home decor, luxury furniture, uae",
+a:""
+},
+
+{
+i:596,
+n:"fsm furniture online",
+c:"home",
+u:"https://fsmfurniture.ae",
+d:"fsm furniture online offers furniture and home furnishings.",
+k:"fsm furniture online, furniture store, home furnishings, uae",
+a:""
+},
+
+{
+i:597,
+n:"home centre online uae",
+c:"home",
+u:"https://www.homecentre.com",
+d:"home centre online uae sells furniture and home accessories.",
+k:"home centre online uae, furniture, home decor, home accessories",
+a:""
+},
+
+{
+i:598,
+n:"homes r us online",
+c:"home",
+u:"https://www.homesrus.ae",
+d:"homes r us online offers furniture and home decor products.",
+k:"homes r us online, furniture, home decor, home furnishings, uae",
+a:""
+},
+
+{
+i:599,
+n:"pottery barn online uae",
+c:"home",
+u:"https://www.potterybarn.ae",
+d:"pottery barn online uae sells furniture, decor and home accessories.",
+k:"pottery barn online uae, furniture, home decor, home accessories",
+a:""
+},
+
+{
+i:600,
+n:"west elm online uae",
+c:"home",
+u:"https://www.westelm.ae",
+d:"west elm online uae offers modern furniture and home decor.",
+k:"west elm online uae, modern furniture, home decor, contemporary furniture",
+a:""
+}
 
 
 
