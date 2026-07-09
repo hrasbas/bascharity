@@ -595,10 +595,1202 @@ u:"https://www.sadhev.com",
 d:"Sadhev Ayurveda offers luxury ayurvedic skincare, haircare and wellness products crafted with traditional recipes.",
 k:"sadhev ayurveda, ayurvedic skincare, haircare, wellness products",
 a:"https://extp.in/BCljjQ"
+},
+ {
+i:61,
+n:"airtel payments bank",
+c:"business,software",
+u:"https://www.airtel.in",
+d:"Airtel Payments Bank offers digital banking, payments, savings and financial services linked with Airtel mobile.",
+k:"airtel payments bank, digital banking, payments, savings account, financial services",
+a:"https://extp.in/g0pxj2"
+},
+
+{
+i:62,
+n:"angel one",
+c:"business,software",
+u:"https://www.angelone.in",
+d:"Angel One is a stock broking and investment platform offering trading in stocks, mutual funds and derivatives.",
+k:"angel one, stock broking, trading, investments, mutual funds, demat",
+a:"https://extp.in/frLCl1"
+},
+
+{
+i:63,
+n:"swiggy hdfc card",
+c:"business,food,travel",
+u:"https://www.hdfcbank.com",
+d:"Swiggy HDFC Bank credit card offers dining and food delivery rewards and cashback for Swiggy users.",
+k:"swiggy hdfc card, credit card, food rewards, cashback, dining card",
+a:"https://extp.in/Xl9qHe"
+},
+
+{
+i:64,
+n:"indusind avios card",
+c:"business,travel",
+u:"https://www.indusind.com",
+d:"IndusInd Bank Avios credit card offers air miles and travel rewards on spending.",
+k:"indusind avios card, credit card, air miles, travel rewards",
+a:"https://extp.in/hj6ArG"
+},
+
+{
+i:65,
+n:"ayushpay",
+c:"business,software,health",
+u:"https://www.ayushpay.com",
+d:"AyushPay provides digital payment and billing solutions for healthcare and wellness businesses.",
+k:"ayushpay, healthcare payments, billing software, clinic solutions",
+a:"https://extp.in/XQxoLW"
+},
+
+{
+i:66,
+n:"marriott bonvoy hdfc",
+c:"travel,business",
+u:"https://www.marriott.com",
+d:"Marriott Bonvoy HDFC card offers hotel rewards and travel benefits with Marriott Bonvoy loyalty.",
+k:"marriott bonvoy hdfc, hotel rewards card, travel credit card, marriott loyalty",
+a:"https://extp.in/cxkWbr"
+},
+
+{
+i:67,
+n:"axis myzone card",
+c:"business",
+u:"https://www.axisbank.com",
+d:"Axis Bank MyZone credit card offers rewards and benefits on shopping, entertainment and online spends.",
+k:"axis myzone card, credit card, shopping rewards, entertainment offers",
+a:"https://extp.in/9myzwo"
+},
+
+{
+i:68,
+n:"navi upi",
+c:"business,software",
+u:"https://www.navi.com",
+d:"Navi UPI provides digital payments and financial services through the Navi app.",
+k:"navi upi, digital payments, UPI app, financial services",
+a:"https://extp.in/J56J4f"
+},
+
+{
+i:69,
+n:"upstox",
+c:"business,software",
+u:"https://upstox.com",
+d:"Upstox is a discount broking platform offering stock trading, mutual funds and derivatives via mobile and web.",
+k:"upstox, discount broker, stock trading, investments, mutual funds",
+a:"https://extp.in/jrfhBK"
+},
+
+{
+i:70,
+n:"zagg money",
+c:"business,software",
+u:"https://zagg.money",
+d:"Zagg Money provides investment tools and financial planning solutions for individuals.",
+k:"zagg money, investment tools, financial planning, wealth management",
+a:"https://extp.in/9zNj2z"
+},
+
+{
+i:71,
+n:"meesho",
+c:"electronics,home,fashion,beauty,health,food,sports,business",
+u:"https://www.meesho.com",
+d:"Meesho is a social commerce and online marketplace offering low-price fashion, home, electronics and more, enabling resellers and small businesses.",
+k:"meesho, social commerce, online shopping, reselling, fashion, home, electronics",
+a:""
+},
+
+{
+i:72,
+n:"jiomart",
+c:"food,home,beauty,health,electronics",
+u:"https://www.jiomart.com",
+d:"JioMart is Reliance's online grocery and essentials store offering daily groceries, home and kitchen products and some electronics.",
+k:"jiomart, online grocery, daily essentials, home kitchen, mobiles, electronics",
+a:""
+},
+
+{
+i:73,
+n:"bigbasket",
+c:"food,home,health,beauty",
+u:"https://www.bigbasket.com",
+d:"BigBasket is an online grocery delivery platform offering fruits, vegetables, staples, household supplies and personal care products.",
+k:"bigbasket, online grocery, fruits and vegetables, staples, household, personal care",
+a:""
+},
+
+{
+i:74,
+n:"blinkit",
+c:"food,health,beauty",
+u:"https://www.blinkit.com",
+d:"Blinkit is a quick commerce app delivering groceries, food and essentials in minutes.",
+k:"blinkit, quick commerce, instant grocery delivery, food delivery, essentials",
+a:""
+},
+
+{
+i:75,
+n:"zepto",
+c:"food,health,beauty",
+u:"https://www.zeptonow.com",
+d:"Zepto is a 10-minute grocery delivery app offering groceries, snacks and daily essentials.",
+k:"zepto, instant delivery, grocery app, snacks, daily essentials",
+a:""
+},
+
+{
+i:76,
+n:"swiggy",
+c:"food",
+u:"https://www.swiggy.com",
+d:"Swiggy is a food delivery and grocery platform delivering restaurant orders and Swiggy Instamart groceries.",
+k:"swiggy, food delivery, restaurant orders, swiggy instamart, grocery delivery",
+a:""
+},
+
+{
+i:77,
+n:"zomato",
+c:"food",
+u:"https://www.zomato.com",
+d:"Zomato is a food delivery and restaurant discovery platform offering online ordering and dining information.",
+k:"zomato, food delivery, restaurant discovery, online ordering",
+a:""
+},
+
+{
+i:78,
+n:"pepperfry",
+c:"home",
+u:"https://www.pepperfry.com",
+d:"Pepperfry is an online furniture and home decor store offering sofas, beds, tables and home accessories.",
+k:"pepperfry, furniture, home decor, sofas, beds, tables",
+a:""
+},
+
+{
+i:79,
+n:"urban ladder",
+c:"home",
+u:"https://www.urbanladder.com",
+d:"Urban Ladder is a furniture and home decor brand offering curated designs for living, bedroom and dining.",
+k:"urban ladder, furniture, home decor, sofas, beds, dining",
+a:""
+},
+
+{
+i:80,
+n:"noise",
+c:"electronics",
+u:"https://www.noise.com",
+d:"Noise India offers smartwatches, earbuds and audio devices focused on lifestyle and fitness.",
+k:"noise india, smartwatches, earbuds, audio devices, wearables",
+a:""
+},
+ 
+{
+i:81,
+n:"mivi",
+c:"electronics",
+u:"https://www.mivi.in",
+d:"Mivi is an Indian brand offering audio products like earbuds, headphones and speakers.",
+k:"mivi, earbuds, headphones, speakers, audio accessories",
+a:""
+},
+
+{
+i:82,
+n:"boult audio",
+c:"electronics",
+u:"https://www.boultaudio.com",
+d:"Boult Audio offers affordable audio products including earbuds, headphones and speakers.",
+k:"boult audio, earbuds, headphones, speakers, audio brand",
+a:""
+},
+
+{
+i:83,
+n:"samsung",
+c:"electronics,home,software",
+u:"https://www.samsung.com/in",
+d:"Samsung India offers smartphones, TVs, home appliances, laptops and consumer electronics.",
+k:"samsung india, smartphones, TVs, home appliances, laptops, electronics",
+a:""
+},
+
+{
+i:84,
+n:"xiaomi",
+c:"electronics,home,software",
+u:"https://www.mi.com/in",
+d:"Xiaomi India sells smartphones, smart TVs, ecosystem products and appliances under the Mi and Redmi brands.",
+k:"xiaomi india, mi, redmi, smartphones, smart tv, ecosystem products",
+a:""
+},
+
+{
+i:85,
+n:"lenovo",
+c:"electronics,software,business",
+u:"https://www.lenovo.com/in/en",
+d:"Lenovo India offers laptops, desktops, tablets and accessories for home and business.",
+k:"lenovo india, laptops, desktops, tablets, business PCs",
+a:""
+},
+
+{
+i:86,
+n:"dell",
+c:"electronics,software,business",
+u:"https://www.dell.com/en-in",
+d:"Dell India sells laptops, desktops, monitors and business computing solutions.",
+k:"dell india, laptops, desktops, monitors, business solutions",
+a:""
+},
+
+{
+i:87,
+n:"mamaearth",
+c:"beauty,health",
+u:"https://www.mamaearth.in",
+d:"Mamaearth offers toxin-free skincare, haircare and baby care products with natural ingredients.",
+k:"mamaearth, skincare, haircare, baby care, toxin-free, natural products",
+a:""
+},
+
+{
+i:88,
+n:"wow skin science",
+c:"beauty,health",
+u:"https://www.wowskinscience.com",
+d:"WOW Skin Science offers skincare, haircare and wellness products with natural actives.",
+k:"wow skin science, skincare, haircare, wellness, natural beauty",
+a:""
+},
+
+{
+i:89,
+n:"the derma co",
+c:"beauty,health",
+u:"https://www.thederma-co.com",
+d:"The Derma Co is a clinical skincare brand offering dermatologist-formulated products for specific skin issues.",
+k:"the derma co, clinical skincare, dermatologist formulated, acne care, pigmentation",
+a:""
+},
+
+{
+i:90,
+n:"plum",
+c:"beauty",
+u:"https://plumgoodness.com",
+d:"Plum Goodness is a vegan beauty brand offering skincare, haircare and bodycare products.",
+k:"plum goodness, vegan skincare, haircare, bodycare, cruelty-free",
+a:""
+},
+
+{
+i:91,
+n:"mcaffeine",
+c:"beauty",
+u:"https://www.mcaffeine.com",
+d:"mCaffeine is an Indian personal care brand offering coffee-infused skincare, body care, hair care and grooming products for everyday beauty routines.",
+k:"mcaffeine, coffee skincare, body care, hair care, beauty products, personal care, indian skincare",
+a:""
+},
+
+{
+i:92,
+n:"sugar cosmetics",
+c:"beauty",
+u:"https://in.sugarcosmetics.com",
+d:"SUGAR Cosmetics is a beauty brand offering makeup products including lipsticks, foundations, eye makeup, face makeup and beauty accessories.",
+k:"sugar cosmetics, makeup, lipstick, foundation, eyeliner, beauty products, cosmetics",
+a:""
+},
+
+{
+i:93,
+n:"mcobeauty",
+c:"beauty",
+u:"https://www.mcobeauty.com",
+d:"MCoBeauty offers affordable beauty and cosmetic products including makeup, skincare and beauty essentials.",
+k:"mcobeauty, cosmetics, makeup, skincare, beauty essentials",
+a:""
+},
+
+{
+i:94,
+n:"colorbar",
+c:"beauty",
+u:"https://www.colorbarcosmetics.com",
+d:"Colorbar Cosmetics offers premium makeup, skincare, nail care and beauty products for everyday and professional use.",
+k:"colorbar, cosmetics, makeup, skincare, nail care, beauty products",
+a:""
+},
+
+{
+i:95,
+n:"myglamm",
+c:"beauty",
+u:"https://www.myglamm.com",
+d:"MyGlamm is a beauty and cosmetics platform offering makeup, skincare, personal care and beauty products through online shopping.",
+k:"myglamm, makeup, cosmetics, skincare, beauty products, personal care",
+a:""
+},
+
+{
+i:96,
+n:"faces canada",
+c:"beauty",
+u:"https://facescanada.com",
+d:"Faces Canada offers makeup, skincare and beauty products including lipsticks, foundations, eye makeup and personal beauty essentials.",
+k:"faces canada, cosmetics, makeup, lipstick, skincare, beauty essentials",
+a:""
+},
+
+{
+i:97,
+n:"foxy",
+c:"beauty,health,software",
+u:"https://www.foxy.in",
+d:"Foxy is a beauty shopping platform offering skincare, haircare, cosmetics, wellness products and personalized beauty recommendations.",
+k:"foxy, beauty shopping, skincare, haircare, cosmetics, wellness, beauty app",
+a:""
+},
+
+{
+i:98,
+n:"kindlife",
+c:"beauty,health",
+u:"https://www.kindlife.in",
+d:"Kindlife offers Korean beauty products, nutrition, wellness supplements, skincare and healthy lifestyle products.",
+k:"kindlife, korean beauty, skincare, supplements, wellness, nutrition",
+a:""
+},
+
+{
+i:99,
+n:"the moms co",
+c:"beauty,health,kids",
+u:"https://themomsco.com",
+d:"The Moms Co offers natural skincare, baby care, maternity care and personal care products for mothers and children.",
+k:"the moms co, baby care, maternity care, skincare, personal care, natural products",
+a:""
+},
+
+{
+i:100,
+n:"cetaphil india",
+c:"beauty,health",
+u:"https://www.cetaphil.in",
+d:"Cetaphil India offers dermatologist-recommended skincare products including cleansers, moisturizers, lotions and sensitive skin solutions.",
+k:"cetaphil india, skincare, cleanser, moisturizer, dermatologist recommended, sensitive skin",
+a:""
+},
+ {
+i:121,
+n:"w for woman",
+c:"fashion",
+u:"https://www.wforwoman.com",
+d:"W for Woman offers contemporary ethnic wear for women including kurtas, suits, dresses and fusion outfits for everyday and occasion wear.",
+k:"w for woman, womens ethnic wear, kurtas, suits, fusion wear, dresses, indian fashion",
+a:""
+},
+
+{
+i:122,
+n:"aurelia",
+c:"fashion",
+u:"https://www.aurelia.com",
+d:"Aurelia offers modern ethnic clothing for women including kurtas, sets, fusion wear and festive outfits at affordable prices.",
+k:"aurelia, womens ethnic wear, kurtas, suit sets, fusion wear, festive clothing",
+a:""
+},
+
+{
+i:123,
+n:"biba",
+c:"fashion",
+u:"https://www.biba.in",
+d:"Biba is a popular Indian brand for women’s ethnic wear offering salwar suits, kurtis, lehengas and festive collections.",
+k:"biba, womens ethnic wear, salwar suits, kurtis, lehengas, festive wear",
+a:""
+},
+
+{
+i:124,
+n:"fabindia",
+c:"fashion,home,business",
+u:"https://www.fabindia.com",
+d:"Fabindia offers ethnic apparel, handcrafted home decor, furniture, furnishings and lifestyle products made with traditional Indian crafts.",
+k:"fabindia, ethnic clothing, handcrafted decor, furniture, furnishings, indian crafts, lifestyle",
+a:""
+},
+{
+i:125,
+n:"soch",
+c:"fashion",
+u:"https://www.soch.com",
+d:"Soch offers sarees, salwar suits, kurtas and ethnic wear for women suitable for festive and occasion dressing.",
+k:"soch, womens sarees, salwar suits, kurtas, ethnic wear, festive clothing",
+a:""
+},
+
+{
+i:126,
+n:"libas",
+c:"fashion",
+u:"https://www.libas.in",
+d:"Libas offers affordable ethnic and fusion wear for women including kurtas, sets, dresses and everyday Indian clothing.",
+k:"libas, womens kurtas, ethnic wear, fusion wear, dresses, indian clothing",
+a:""
+},
+
+{
+i:127,
+n:"fastrack",
+c:"fashion,electronics",
+u:"https://www.fastrack.in",
+d:"Fastrack offers youth-focused watches, smart wearables, bags, sunglasses and accessories with trendy designs.",
+k:"fastrack, watches, smart wearables, sunglasses, bags, youth fashion accessories",
+a:""
+},
+
+{
+i:128,
+n:"titan",
+c:"fashion,jewellery",
+u:"https://www.titan.co.in",
+d:"Titan is a leading watch and accessories brand offering analog and smart watches, jewellery and bags for men and women.",
+k:"titan, watches, smart watches, accessories, jewellery, mens watches, womens watches",
+a:""
+},
+
+{
+i:129,
+n:"casio india",
+c:"fashion",
+u:"https://www.casioindiashop.com",
+d:"Casio India offers digital, analog and G-SHOCK watches along with calculators and accessories.",
+k:"casio india, watches, g-shock, digital watches, analog watches, accessories",
+a:""
+},
+
+{
+i:130,
+n:"fossil",
+c:"fashion",
+u:"https://www.fossil.com/en-in",
+d:"Fossil India offers fashion watches, smartwatches, bags, wallets and accessories with vintage-inspired designs.",
+k:"fossil india, fashion watches, smartwatches, bags, wallets, accessories",
+a:""
+},
+
+{
+i:131,
+n:"daniel wellington",
+c:"fashion",
+u:"https://www.danielwellington.com/in",
+d:"Daniel Wellington offers minimalist watches, bracelets and accessories with interchangeable straps for men and women.",
+k:"daniel wellington, minimalist watches, bracelets, accessories, interchangeable straps",
+a:""
+},
+
+{
+i:132,
+n:"timex",
+c:"fashion",
+u:"https://www.timexindia.com",
+d:"Timex India offers everyday watches, sports watches and classic timepieces for men and women.",
+k:"timex india, watches, sports watches, classic timepieces, mens watches, womens watches",
+a:""
+},
+
+{
+i:133,
+n:"lenskart",
+c:"fashion,health",
+u:"https://www.lenskart.com",
+d:"Lenskart is an eyewear platform offering prescription glasses, sunglasses, contact lenses and eye check-up services.",
+k:"lenskart, eyeglasses, sunglasses, contact lenses, eyewear, eye test",
+a:""
+},
+
+{
+i:134,
+n:"coolwinks",
+c:"fashion,health",
+u:"https://www.coolwinks.com",
+d:"Coolwinks offers eyeglasses, sunglasses and contact lenses with online eye-wear shopping in India.",
+k:"coolwinks, eyeglasses, sunglasses, contact lenses, online eyewear",
+a:""
+},
+
+{
+i:135,
+n:"titan eyeplus",
+c:"fashion,health",
+u:"https://www.titaneyeplus.com",
+d:"Titan Eyeplus offers spectacles, sunglasses, contact lenses and eye care services through stores and online.",
+k:"titan eyeplus, spectacles, sunglasses, contact lenses, eye care, eyewear store",
+a:""
+},
+
+{
+i:136,
+n:"giva",
+c:"jewellery",
+u:"https://www.giva.co",
+d:"Giva offers silver and gold-plated jewellery including earrings, necklaces, rings and bracelets for women.",
+k:"giva, silver jewellery, gold plated jewellery, earrings, necklaces, rings, bracelets",
+a:""
+},
+
+{
+i:137,
+n:"caratlane",
+c:"jewellery",
+u:"https://www.caratlane.com",
+d:"CaratLane is an online jewellery brand offering gold and diamond jewellery, everyday wear designs and engagement rings.",
+k:"caratlane, gold jewellery, diamond jewellery, rings, earrings, online jewellery",
+a:""
+},
+
+{
+i:138,
+n:"bluestone",
+c:"jewellery",
+u:"https://www.bluestone.com",
+d:"BlueStone offers fine jewellery including gold, diamond and gemstone pieces with customizable designs and try-at-home options.",
+k:"bluestone, fine jewellery, gold, diamond, gemstone jewellery, customizable designs",
+a:""
+},
+
+{
+i:139,
+n:"voylla",
+c:"jewellery",
+u:"https://www.voylla.com",
+d:"Voylla offers fashion jewellery including statement earrings, necklaces, bangles and ethnic accessories at budget prices.",
+k:"voylla, fashion jewellery, earrings, necklaces, bangles, ethnic accessories",
+a:""
+},
+
+{
+i:140,
+n:"zariin",
+c:"jewellery",
+u:"https://www.zariin.com",
+d:"Zariin is a designer jewellery brand offering handcrafted, gold-plated and gemstone jewellery pieces.",
+k:"zariin, designer jewellery, handcrafted, gold plated, gemstone jewellery",
+a:""
+},
+
+{
+i:141,
+n:"melorra",
+c:"jewellery",
+u:"https://www.melorra.com",
+d:"Melorra offers lightweight gold jewellery in trendy, daily-wear designs inspired by global fashion.",
+k:"melorra, lightweight gold jewellery, daily wear, trendy designs, womens jewellery",
+a:""
+},
+
+{
+i:142,
+n:"safari",
+c:"fashion",
+u:"https://www.safari.in",
+d:"Safari offers luggage, trolley bags, suitcases, backpacks and travel accessories for families and frequent travellers.",
+k:"safari bags, luggage, trolley bags, suitcases, backpacks, travel accessories",
+a:""
+},
+
+{
+i:143,
+n:"vip bags",
+c:"fashion",
+u:"https://www.vipbags.com",
+d:"VIP Bags is a luggage brand offering suitcases, trolley bags, duffle bags and travel gear across India.",
+k:"vip bags, luggage, suitcases, trolley bags, duffle bags, travel gear",
+a:""
+},
+
+{
+i:144,
+n:"american tourister",
+c:"fashion",
+u:"https://www.americantourister.in",
+d:"American Tourister India offers hard and soft luggage, backpacks, travel bags and trolley suitcases.",
+k:"american tourister, luggage, travel bags, suitcases, backpacks, trolley bags",
+a:""
+},
+
+{
+i:145,
+n:"samsonite",
+c:"fashion",
+u:"https://www.samsonite.in",
+d:"Samsonite India offers premium luggage, business bags, travel suitcases and cabin trolleys.",
+k:"samsonite india, premium luggage, travel suitcases, business bags, cabin trolleys",
+a:""
+},
+
+{
+i:146,
+n:"mokobara",
+c:"fashion",
+u:"https://mokobara.com",
+d:"Mokobara offers modern luggage, travel bags, backpacks and accessories with minimalist designs.",
+k:"mokobara, modern luggage, travel bags, backpacks, minimalist bags, suitcases",
+a:""
+},
+
+{
+i:147,
+n:"wildcraft",
+c:"fashion,sports",
+u:"https://www.wildcraft.com",
+d:"Wildcraft offers outdoor gear including backpacks, rucksacks, travel bags, jackets and performance apparel for adventure and daily use.",
+k:"wildcraft, backpacks, outdoor gear, rucksacks, jackets, travel bags, performance wear",
+a:""
+},
+
+{
+i:148,
+n:"skybags",
+c:"fashion",
+u:"https://www.skybags.co.in",
+d:"Skybags offers trendy backpacks, school bags, luggage and trolley bags aimed at students and young travellers.",
+k:"skybags, backpacks, school bags, luggage, trolley bags, youth bags",
+a:""
+},
+
+{
+i:149,
+n:"firstcry",
+c:"fashion,beauty,health",
+u:"https://www.firstcry.com",
+d:"FirstCry is a baby and kids store offering clothing, toys, diapers, baby gear, personal care and maternity products.",
+k:"firstcry, baby products, kids clothing, toys, diapers, baby care, maternity",
+a:""
+},
+
+{
+i:150,
+n:"hopscotch",
+c:"fashion",
+u:"https://www.hopscotch.in",
+d:"Hopscotch offers fashion and accessories for babies and kids including clothing, footwear and curated outfits.",
+k:"hopscotch, kids fashion, baby clothing, childrens wear, kids footwear, outfits",
+a:""
+},
+{
+i:151,
+n:"mothercare",
+c:"fashion,health",
+u:"https://www.mothercare.in",
+d:"Mothercare India offers baby clothing, nursery products, maternity wear and baby care essentials.",
+k:"mothercare india, baby clothing, nursery products, maternity wear, baby essentials",
+a:""
+},
+
+{
+i:152,
+n:"chicco",
+c:"fashion,health",
+u:"https://www.chicco.in",
+d:"Chicco India offers baby gear, strollers, feeding products, toys and baby skincare essentials.",
+k:"chicco india, baby gear, strollers, feeding bottles, toys, baby skincare",
+a:""
+},
+
+{
+i:153,
+n:"wakefit",
+c:"home",
+u:"https://www.wakefit.co",
+d:"Wakefit offers mattresses, beds, sofas, pillows and home furniture focused on comfort and sleep solutions.",
+k:"wakefit, mattresses, beds, pillows, home furniture, sleep solutions",
+a:""
+},
+
+{
+i:154,
+n:"sleepwell",
+c:"home",
+u:"https://www.sleepwell.co.in",
+d:"Sleepwell is a mattress and bedding brand offering mattresses, cushions, pillows and comfort products.",
+k:"sleepwell, mattresses, bedding, pillows, cushions, comfort products",
+a:""
+},
+
+{
+i:155,
+n:"duroflex",
+c:"home",
+u:"https://www.duroflexworld.com",
+d:"Duroflex offers mattresses, sleep accessories, pillows and beds designed for ergonomic comfort.",
+k:"duroflex, mattresses, pillows, sleep accessories, ergonomic beds, sleep comfort",
+a:""
+},
+
+{
+i:156,
+n:"the sleep company",
+c:"home",
+u:"https://www.thesleepcompany.in",
+d:"The Sleep Company offers smartGRID mattresses, chairs and seating products for better comfort and posture.",
+k:"the sleep company, smartgrid mattresses, ergonomic chairs, seating comfort, sleep products",
+a:""
+},
+
+{
+i:157,
+n:"godrej interio",
+c:"home,business",
+u:"https://www.godrejinterio.com",
+d:"Godrej Interio offers home and office furniture, modular kitchens and storage solutions for residential and commercial spaces.",
+k:"godrej interio, home furniture, office furniture, modular kitchen, storage solutions",
+a:""
+},
+
+{
+i:158,
+n:"nilkamal",
+c:"home,business",
+u:"https://www.nilkamalfurniture.com",
+d:"Nilkamal offers plastic and molded furniture, mattresses, storage and home solutions for homes and businesses.",
+k:"nilkamal, plastic furniture, molded furniture, mattresses, storage, home solutions",
+a:""
+},
+
+{
+i:159,
+n:"home centre",
+c:"home",
+u:"https://www.homecentre.in",
+d:"Home Centre offers furniture, home decor, kitchenware, furnishings and accessories for modern homes.",
+k:"home centre, furniture, home decor, kitchenware, furnishings, home accessories",
+a:""
+},
+
+{
+i:160,
+n:"pure home and living",
+c:"home",
+u:"https://www.purehomeandliving.com",
+d:"Pure Home and Living offers premium home decor, tableware, glassware and soft furnishings for stylish interiors.",
+k:"pure home and living, home decor, tableware, glassware, soft furnishings, interiors",
+a:""
+},
+
+{
+i:161,
+n:"chumbak",
+c:"home,fashion",
+u:"https://www.chumbak.com",
+d:"Chumbak offers quirky home decor, kitchenware, fashion, accessories and gifting items with vibrant designs.",
+k:"chumbak, quirky decor, kitchenware, gifts, accessories, vibrant designs",
+a:""
+},
+
+{
+i:162,
+n:"nestasia",
+c:"home",
+u:"https://www.nestasia.in",
+d:"Nestasia offers curated home decor, serveware, tableware and gifting products for modern homes.",
+k:"nestasia, home decor, serveware, tableware, gifts, modern home accessories",
+a:""
+},
+
+{
+i:163,
+n:"dailyobjects",
+c:"home,fashion,electronics",
+u:"https://www.dailyobjects.com",
+d:"DailyObjects offers designer phone cases, laptop sleeves, bags, desk accessories and home decor with modern aesthetics.",
+k:"dailyobjects, phone cases, laptop sleeves, bags, desk accessories, modern decor",
+a:""
+},
+
+{
+i:164,
+n:"bombay dyeing",
+c:"home",
+u:"https://www.bombaydyeing.com",
+d:"Bombay Dyeing offers bed linen, towels, home textiles and furnishings for bedrooms and bathrooms.",
+k:"bombay dyeing, bed linen, towels, home textiles, furnishings, bedding",
+a:""
+},
+
+{
+i:165,
+n:"spaces",
+c:"home",
+u:"https://www.spaces.in",
+d:"Spaces offers premium bed sheets, quilts, towels and home linen collections.",
+k:"spaces, bed sheets, quilts, towels, home linen, premium bedding",
+a:""
+},
+
+{
+i:166,
+n:"portico",
+c:"home",
+u:"https://www.porticoindia.com",
+d:"Portico India offers designer bed sheets, comforters, dohars and home linen for stylish bedrooms.",
+k:"portico india, bed sheets, comforters, dohars, home linen, designer bedding",
+a:""
+},
+
+{
+i:167,
+n:"philips",
+c:"electronics,home,beauty,health",
+u:"https://www.philips.co.in",
+d:"Philips India offers consumer electronics, kitchen appliances, grooming tools, health-tech devices and lighting products.",
+k:"philips india, electronics, kitchen appliances, grooming, health devices, lighting",
+a:""
+},
+
+{
+i:168,
+n:"usha",
+c:"electronics,home",
+u:"https://www.usha.com",
+d:"Usha offers fans, sewing machines, kitchen appliances and home electrical products for Indian households.",
+k:"usha, fans, sewing machines, kitchen appliances, home electricals",
+a:""
+},
+
+{
+i:169,
+n:"kent",
+c:"home,health",
+u:"https://www.kent.co.in",
+d:"Kent offers water purifiers, air purifiers, kitchen appliances and health-focused home products.",
+k:"kent, water purifiers, air purifiers, kitchen appliances, health home products",
+a:""
+},
+
+{
+i:170,
+n:"eureka forbes",
+c:"home,health",
+u:"https://www.eurekaforbes.com",
+d:"Eureka Forbes offers water purifiers, vacuum cleaners, air purifiers and home cleaning solutions.",
+k:"eureka forbes, water purifiers, vacuum cleaners, air purifiers, home cleaning",
+a:""
+},
+
+{
+i:171,
+n:"prestige",
+c:"home",
+u:"https://www.prestigexclusive.in",
+d:"Prestige offers pressure cookers, cookware, gas stoves, kitchen appliances and home utility products for Indian kitchens.",
+k:"prestige, pressure cooker, cookware, gas stove, kitchen appliances, indian kitchen, home utility",
+a:""
+},
+
+{
+i:172,
+n:"wonderchef",
+c:"home",
+u:"https://www.wonderchef.com",
+d:"Wonderchef offers designer cookware, kitchen appliances and bakeware created in collaboration with Chef Sanjeev Kapoor.",
+k:"wonderchef, designer cookware, kitchen appliances, bakeware, sanjeev kapoor, premium kitchen",
+a:""
+},
+
+{
+i:173,
+n:"milton",
+c:"home",
+u:"https://www.milton.in",
+d:"Milton offers insulated bottles, tiffins, casseroles, storage containers and homeware products for everyday use.",
+k:"milton, insulated bottles, tiffins, casseroles, storage containers, homeware, lunch boxes",
+a:""
+},
+
+{
+i:174,
+n:"cello",
+c:"home",
+u:"https://www.cello.in",
+d:"Cello offers plastic and stainless steel homeware including bottles, storage, kitchenware, furniture and houseware products.",
+k:"cello, homeware, plastic bottles, kitchenware, storage, furniture, houseware",
+a:""
+},
+
+{
+i:175,
+n:"tupperware india",
+c:"home",
+u:"https://www.tupperwareindia.com",
+d:"Tupperware India offers premium food storage containers, lunch boxes, kitchenware and serving products for home and on-the-go use.",
+k:"tupperware india, food storage, containers, lunch boxes, kitchenware, serving products",
+a:""
+},
+ {
+i:176,
+n:"instamart",
+c:"food,health,beauty,home",
+u:"https://www.instamart.com",
+d:"Swiggy Instamart is a quick-delivery platform for groceries, snacks, kitchen essentials, personal care and basic health products.",
+k:"instamart, swiggy instamart, quick grocery delivery, snacks, kitchen essentials, personal care, health products",
+a:""
+},
+
+{
+i:177,
+n:"starquik",
+c:"food,health,beauty,home",
+u:"https://www.starquik.com",
+d:"StarQuik is a Tata-owned online grocery service offering daily essentials, fresh produce, packaged foods and household items.",
+k:"starquik, online grocery, tata grocery, daily essentials, fresh produce, packaged foods, household items",
+a:""
+},
+
+{
+i:178,
+n:"natures basket",
+c:"food,health,beauty,home",
+u:"https://www.naturesbasket.co.in",
+d:"Nature’s Basket is a gourmet grocery store offering imported foods, organic products, fresh produce and delicatessen items.",
+k:"natures basket, gourmet grocery, imported foods, organic products, fresh produce, delicatessen",
+a:""
+},
+
+{
+i:179,
+n:"dmart",
+c:"food,home,fashion,beauty,health,sports,jewellery",
+u:"https://www.dmart.in",
+d:"DMart is a value supermarket chain offering groceries, household items, basic homeware, personal care, clothing, footwear and toys at low prices.",
+k:"dmart, supermarket, discount grocery, household items, clothing, footwear, toys, value retail",
+a:""
+},
+
+{
+i:180,
+n:"licious",
+c:"food,health",
+u:"https://www.licious.in",
+d:"Licious is an online meat and seafood delivery service offering fresh, ready-to-cook and ready-to-eat non-vegetarian products.",
+k:"licious, meat delivery, seafood, fresh chicken, ready to cook, non veg, online butcher",
+a:""
+},
+
+{
+i:181,
+n:"freshtohome",
+c:"food,health",
+u:"https://www.freshtohome.com",
+d:"FreshToHome offers preservative-free meat, seafood and ready-to-cook products delivered directly from farms and fisheries.",
+k:"freshtohome, fresh meat, seafood, preservative free, farm to home, ready to cook",
+a:""
+},
+
+{
+i:182,
+n:"tendercuts",
+c:"food,health",
+u:"https://www.tendercuts.in",
+d:"TenderCuts is an online meat brand offering fresh chicken, mutton, seafood and marinated products delivered to home.",
+k:"tendercuts, fresh meat, chicken, mutton, seafood, marinated products, meat delivery",
+a:""
+},
+
+{
+i:183,
+n:"country delight",
+c:"food,health,beauty",
+u:"https://www.countrydelight.in",
+d:"Country Delight delivers fresh milk, dairy products, staples and breakfast essentials directly from farms to consumers.",
+k:"country delight, fresh milk, dairy products, farm fresh, staples, breakfast essentials",
+a:""
+},
+
+{
+i:184,
+n:"amul",
+c:"food",
+u:"https://www.amul.com",
+d:"Amul is India’s leading dairy brand offering milk, butter, cheese, ice cream, paneer and packaged food products.",
+k:"amul, dairy brand, milk, butter, cheese, ice cream, paneer, packaged foods",
+a:""
+},
+
+{
+i:185,
+n:"haldirams",
+c:"food",
+u:"https://www.haldirams.com",
+d:"Haldiram’s offers Indian snacks, sweets, namkeens, ready-to-eat meals and restaurant food across India and abroad.",
+k:"haldirams, indian snacks, namkeen, sweets, ready to eat, restaurant food",
+a:""
+},
+
+{
+i:186,
+n:"bikano",
+c:"food",
+u:"https://www.bikano.com",
+d:"Bikano offers packaged Indian snacks, namkeens, sweets and ready foods for retail and gifting.",
+k:"bikano, indian snacks, namkeen, sweets, packaged foods, gifting",
+a:""
+},
+
+{
+i:187,
+n:"id fresh food",
+c:"food",
+u:"https://www.idfreshfood.com",
+d:"iD Fresh Food offers ready batter, parotas, chapatis, curd and fresh convenience foods made with minimal ingredients.",
+k:"id fresh food, dosa batter, idli batter, parota, chapati, fresh convenience food",
+a:""
+},
+
+{
+i:188,
+n:"mcdonalds india",
+c:"food",
+u:"https://www.mcdonaldsindia.com",
+d:"McDonald’s India is a quick service restaurant chain offering burgers, fries, wraps, beverages and combo meals.",
+k:"mcdonalds india, burgers, fries, fast food, quick service restaurant, combo meals",
+a:""
+},
+
+{
+i:189,
+n:"dominos",
+c:"food",
+u:"https://www.dominos.co.in",
+d:"Domino’s India offers pizzas, sides, desserts and online ordering with home delivery across major cities.",
+k:"dominos india, pizza delivery, pizzas, garlic bread, fast food, online ordering",
+a:""
+},
+
+{
+i:190,
+n:"pizza hut",
+c:"food",
+u:"https://www.pizzahut.co.in",
+d:"Pizza Hut India is a pizza restaurant chain offering pan pizzas, sides, pasta and dine-in or delivery options.",
+k:"pizza hut india, pizzas, pan pizza, sides, dine in, delivery",
+a:""
+},
+
+{
+i:191,
+n:"burger king",
+c:"food",
+u:"https://www.burgerking.in",
+d:"Burger King India offers flame-grilled burgers, fries, sides and combo meals through dine-in and delivery.",
+k:"burger king india, flame grilled burgers, fast food, fries, combo meals",
+a:""
+},
+
+{
+i:192,
+n:"subway",
+c:"food",
+u:"https://www.subway.com",
+d:"Subway India offers made-to-order sandwiches, subs, salads and wraps with customizable ingredients.",
+k:"subway india, sandwiches, subs, salads, wraps, customizable fast food",
+a:""
+},
+
+{
+i:193,
+n:"starbucks india",
+c:"food",
+u:"https://www.starbucks.in",
+d:"Starbucks India offers handcrafted coffees, beverages, bakery items and café food in a premium café setting.",
+k:"starbucks india, coffee, beverages, bakery items, cafe, premium coffee shop",
+a:""
+},
+
+{
+i:194,
+n:"cafe coffee day",
+c:"food",
+u:"https://www.cafecoffeeday.com",
+d:"Café Coffee Day is an Indian café chain serving coffees, beverages, snacks and light meals.",
+k:"cafe coffee day, ccd, coffee, cafe, beverages, snacks, indian coffee chain",
+a:""
+},
+
+{
+i:195,
+n:"chaayos",
+c:"food",
+u:"https://www.chaayos.com",
+d:"Chaayos is a chai café chain offering customizable teas, snacks and Indian comfort food in a modern setting.",
+k:"chaayos, chai cafe, customizable tea, snacks, indian comfort food",
+a:""
+},
+
+{
+i:196,
+n:"chai point",
+c:"food",
+u:"https://www.chai-point.com",
+d:"Chai Point offers freshly brewed tea, beverages and snacks through cafés, delivery and office dispensers.",
+k:"chai point, tea delivery, chai cafe, beverages, office dispensers, snacks",
+a:""
+},
+
+{
+i:197,
+n:"cult fit",
+c:"sports,health,software",
+u:"https://www.cult.fit",
+d:"Cult Fit is a fitness and wellness platform offering workout classes, gyms, online sessions, mental wellness and health services.",
+k:"cult fit, fitness classes, gyms, online workouts, wellness, health services, fitness app",
+a:""
+},
+
+{
+i:198,
+n:"muscleblaze",
+c:"health,sports",
+u:"https://www.muscleblaze.com",
+d:"MuscleBlaze offers sports nutrition including whey proteins, gainers, pre-workouts and supplements for bodybuilding and fitness.",
+k:"muscleblaze, whey protein, sports nutrition, gainers, pre workout, fitness supplements",
+a:""
+},
+
+{
+i:199,
+n:"myprotein india",
+c:"health,sports",
+u:"https://www.myprotein.in",
+d:"Myprotein India offers protein powders, sports supplements, snacks and nutrition products for fitness enthusiasts.",
+k:"myprotein india, protein powder, sports supplements, fitness nutrition, protein snacks",
+a:""
+},
+
+{
+i:200,
+n:"oziva",
+c:"health,sports",
+u:"https://www.oziva.in",
+d:"Oziva offers clean nutrition including plant-based protein, vitamins, herbs and wellness supplements.",
+k:"oziva, plant protein, clean nutrition, vitamins, herbal supplements, wellness",
+a:""
 }
-
-
-
 
 
 
