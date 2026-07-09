@@ -996,5 +996,1019 @@ u:"https://www.elc.ae",
 d:"early learning centre uae offers educational toys and learning products for children.",
 k:"early learning centre uae, educational toys, kids learning, toy store, uae",
 a:""
+},
+{
+i:101,
+n:"lego uae",
+c:"home",
+u:"https://www.lego.com/en-ae",
+d:"lego uae sells lego building sets, toys and themed play products for kids and collectors.",
+k:"lego uae, lego store, building toys, kids toys, construction sets",
+a:""
+},
+
+{
+i:102,
+n:"build a bear uae",
+c:"home",
+u:"https://www.buildabear.ae",
+d:"build a bear uae offers customizable teddy bears, plush toys and accessories for kids.",
+k:"build a bear uae, teddy bears, plush toys, kids gifts, custom toys",
+a:""
+},
+
+{
+i:103,
+n:"my baby bazaar",
+c:"fashion,home,food",
+u:"https://www.mybabybazaar.ae",
+d:"my baby bazaar is an online store for baby clothing, gear and essentials in the uae.",
+k:"my baby bazaar, baby store, baby clothing, baby gear, baby essentials",
+a:""
+},
+
+{
+i:104,
+n:"babyplus",
+c:"fashion,home,food",
+u:"https://babyplus.ae",
+d:"babyplus offers baby products including clothing, nursery items and baby care essentials.",
+k:"babyplus uae, baby products, baby clothing, nursery items, baby care",
+a:""
+},
+
+{
+i:105,
+n:"mothercare uae",
+c:"fashion,home,food",
+u:"https://www.mothercarestores.com",
+d:"mothercare uae sells maternity, baby and kids products including clothing, nursery gear and essentials.",
+k:"mothercare uae, baby store, maternity wear, kids clothing, nursery products",
+a:""
+},
+
+{
+i:106,
+n:"the toy store",
+c:"home",
+u:"https://www.thetoystore.com",
+d:"the toy store is a toy retailer offering branded toys and games for children in the uae.",
+k:"the toy store uae, toy shop, kids toys, games, childrens store",
+a:""
+},
+
+{
+i:107,
+n:"carters uae",
+c:"fashion",
+u:"https://www.cartersoshkosh.ae",
+d:"carters uae offers baby and kids clothing including bodysuits, sleepwear and outfits.",
+k:"carters uae, baby clothing, kidswear, childrens clothes, carters store",
+a:""
+},
+
+{
+i:108,
+n:"oshkosh uae",
+c:"fashion",
+u:"https://www.cartersoshkosh.ae",
+d:"oshkosh uae sells kids clothing and denim wear under the oshkosh b'gosh brand.",
+k:"oshkosh uae, kids clothing, childrens fashion, oshkosh bgosh",
+a:""
+},
+
+{
+i:109,
+n:"skip hop uae",
+c:"fashion,home",
+u:"https://www.skiphop.ae",
+d:"skip hop uae offers baby bags, feeding accessories, playmats and nursery products.",
+k:"skip hop uae, baby bags, nursery products, baby accessories, kids gear",
+a:""
+},
+
+{
+i:110,
+n:"babybrezza uae",
+c:"home,food",
+u:"https://babybrezza.ae",
+d:"babybrezza uae sells baby feeding appliances and food preparation products.",
+k:"babybrezza uae, baby food maker, feeding appliances, baby products",
+a:""
+},
+
+{
+i:111,
+n:"malabar gold uae",
+c:"jewellery",
+u:"https://www.malabargoldanddiamonds.com",
+d:"malabar gold uae is a jewellery brand offering gold, diamond and bridal jewellery.",
+k:"malabar gold uae, gold jewellery, diamond jewellery, bridal jewellery",
+a:""
+},
+
+{
+i:112,
+n:"joy alukkas uae",
+c:"jewellery",
+u:"https://www.joyalukkas.in",
+d:"joy alukkas uae is a jewellery retailer offering gold, diamond and bridal jewellery collections.",
+k:"joy alukkas uae, gold jewellery, diamond jewellery, bridal jewellery",
+a:""
+},
+
+{
+i:113,
+n:"kalyan jewellers uae",
+c:"jewellery",
+u:"https://www.kalyanjewellers.net",
+d:"kalyan jewellers uae offers gold, diamond and traditional jewellery designs.",
+k:"kalyan jewellers uae, gold jewellery, diamond jewellery, traditional jewellery",
+a:""
+},
+
+{
+i:114,
+n:"damas jewellery",
+c:"jewellery",
+u:"https://www.damasjewellery.com",
+d:"damas jewellery is a middle east jewellery brand offering luxury gold and diamond pieces.",
+k:"damas jewellery, luxury jewellery, gold jewellery, diamond jewellery",
+a:""
+},
+
+{
+i:115,
+n:"pure gold jewellers",
+c:"jewellery",
+u:"https://www.pugold.com",
+d:"pure gold jewellers offers gold, diamond and precious stone jewellery in the uae.",
+k:"pure gold jewellers, gold jewellery, diamond jewellery, jewellery store uae",
+a:""
+},
+
+{
+i:116,
+n:"cara jewellery",
+c:"jewellery",
+u:"https://www.carajewellery.com",
+d:"cara jewellery is a jewellery brand offering diamond and fine jewellery pieces.",
+k:"cara jewellery, diamond jewellery, fine jewellery, luxury jewellery",
+a:""
+},
+
+{
+i:117,
+n:"jewellery by design",
+c:"jewellery",
+u:"https://jbd.ae",
+d:"jewellery by design creates custom and designer jewellery pieces in the uae.",
+k:"jewellery by design, custom jewellery, designer jewellery, uae jewellery",
+a:""
+},
+
+{
+i:118,
+n:"samra jewellery",
+c:"jewellery",
+u:"https://samra.ae",
+d:"samra jewellery offers luxury diamond and fine jewellery collections.",
+k:"samra jewellery, diamond jewellery, fine jewellery, luxury brand",
+a:""
+},
+
+{
+i:119,
+n:"mint jewellers",
+c:"jewellery",
+u:"https://mintjewellers.com",
+d:"mint jewellers is a jewellery store offering gold and diamond jewellery in the uae.",
+k:"mint jewellers, gold jewellery, diamond jewellery, jewellery store uae",
+a:""
+},
+
+{
+i:120,
+n:"tanishq uae",
+c:"jewellery",
+u:"https://www.tanishq.ae",
+d:"tanishq uae is a jewellery brand offering gold, diamond and designer collections.",
+k:"tanishq uae, gold jewellery, diamond jewellery, designer jewellery",
+a:""
+},
+
+{
+i:121,
+n:"dubai gold and jewellery",
+c:"jewellery",
+u:"https://www.visitdubai.com",
+d:"dubai gold and jewellery refers to dubai's gold and jewellery shopping destinations and souks.",
+k:"dubai gold and jewellery, gold souk, jewellery shopping, dubai jewellery",
+a:""
+},
+
+{
+i:122,
+n:"liali jewellery",
+c:"jewellery",
+u:"https://www.lialijewellery.com",
+d:"liali jewellery offers diamond, gold and designer jewellery in the uae.",
+k:"liali jewellery, diamond jewellery, gold jewellery, designer jewellery",
+a:""
+},
+
+{
+i:123,
+n:"alfardan jewellery",
+c:"jewellery",
+u:"https://www.alfardanexchange.com",
+d:"alfardan jewellery is part of the alfardan group offering luxury jewellery and watches in the region.",
+k:"alfardan jewellery, luxury jewellery, watches, jewellery brand",
+a:""
+},
+
+{
+i:124,
+n:"rivoli shop",
+c:"jewellery",
+u:"https://www.rivolishop.com",
+d:"rivoli shop sells branded watches, eyewear and accessories in the middle east.",
+k:"rivoli shop, branded watches, luxury watches, eyewear, accessories",
+a:""
+},
+
+{
+i:125,
+n:"hour choice",
+c:"jewellery",
+u:"https://www.hourchoice.com",
+d:"hour choice is a watch retail chain offering fashion and lifestyle watches.",
+k:"hour choice, watch store, fashion watches, lifestyle watches",
+a:""
+},
+
+{
+i:126,
+n:"swatch uae",
+c:"jewellery",
+u:"https://www.swatch.com",
+d:"swatch uae offers colorful fashion watches and accessories.",
+k:"swatch uae, fashion watches, swiss watches, swatch store",
+a:""
+},
+
+{
+i:127,
+n:"casio middle east",
+c:"jewellery",
+u:"https://www.casio-mea.com",
+d:"casio middle east provides casio watches and electronics across the region.",
+k:"casio middle east, casio watches, digital watches, casio store",
+a:""
+},
+
+{
+i:128,
+n:"watch house uae",
+c:"jewellery",
+u:"https://watchhouse.com",
+d:"watch house uae sells branded watches and timepieces.",
+k:"watch house uae, watch store, branded watches, timepieces",
+a:""
+},
+
+{
+i:129,
+n:"parfum ae",
+c:"beauty",
+u:"https://parfum.ae",
+d:"parfum ae is an online store for perfumes and fragrances in the uae.",
+k:"parfum ae, perfumes, fragrances, online perfume store, uae",
+a:""
+},
+
+{
+i:130,
+n:"v perfumes",
+c:"beauty",
+u:"https://vperfumes.com",
+d:"v perfumes is a uae retailer offering perfumes and beauty fragrances.",
+k:"v perfumes, perfume store, fragrances, uae perfumes",
+a:""
+},
+
+{
+i:131,
+n:"ajmal perfumes",
+c:"beauty",
+u:"https://www.ajmalperfume.com",
+d:"ajmal perfumes is a perfume brand offering oriental and western fragrances.",
+k:"ajmal perfumes, arabic perfumes, oriental fragrances, perfume brand",
+a:""
+},
+
+{
+i:132,
+n:"arabian oud uae",
+c:"beauty",
+u:"https://arabianoud.com",
+d:"arabian oud uae offers oud, perfumes and oriental fragrances.",
+k:"arabian oud uae, oud perfumes, arabic fragrances, oriental perfumes",
+a:""
+},
+
+{
+i:133,
+n:"rasasi perfumes",
+c:"beauty",
+u:"https://rasasi.com",
+d:"rasasi perfumes is a fragrance brand offering arabic and international perfumes.",
+k:"rasasi perfumes, arabic perfumes, fragrances, perfume brand",
+a:""
+},
+
+{
+i:134,
+n:"swiss arabian",
+c:"beauty",
+u:"https://www.swissarabian.com",
+d:"swiss arabian is a perfume brand blending arabic and western fragrances.",
+k:"swiss arabian, perfumes, arabic fragrances, swiss arabian perfumes",
+a:""
+},
+
+{
+i:135,
+n:"hind al oud",
+c:"beauty",
+u:"https://hindaloud.com",
+d:"hind al oud offers luxury oud, perfumes and fragrances in the region.",
+k:"hind al oud, luxury oud, perfumes, arabic fragrances",
+a:""
+},
+
+{
+i:136,
+n:"bath and body works uae",
+c:"beauty",
+u:"https://www.bathandbodyworks.ae",
+d:"bath and body works uae sells body care, fragrances, candles and home scents.",
+k:"bath and body works uae, body care, fragrances, candles, home scents",
+a:""
+},
+
+{
+i:137,
+n:"the body shop uae",
+c:"beauty",
+u:"https://www.thebodyshop.com",
+d:"the body shop uae offers skincare, body care and ethical beauty products.",
+k:"the body shop uae, skincare, body care, ethical beauty, cosmetics",
+a:""
+},
+
+{
+i:138,
+n:"nykaa uae",
+c:"beauty",
+u:"https://www.nykaa.ae",
+d:"nykaa uae is an online beauty store for makeup, skincare and personal care products.",
+k:"nykaa uae, online beauty store, makeup, skincare, personal care",
+a:""
+},
+
+{
+i:139,
+n:"lookfantastic uae",
+c:"beauty",
+u:"https://www.lookfantastic.ae",
+d:"lookfantastic uae is an online beauty retailer offering international skincare and makeup brands.",
+k:"lookfantastic uae, online beauty store, skincare, makeup, beauty brands",
+a:""
+},
+
+{
+i:140,
+n:"glamazle",
+c:"beauty",
+u:"https://glamazle.com",
+d:"glamazle is an online beauty store in the uae offering makeup, skincare and beauty tools.",
+k:"glamazle, online beauty store, makeup, skincare, beauty tools",
+a:""
+},
+
+{
+i:141,
+n:"groupon uae",
+c:"business",
+u:"https://www.groupon.ae",
+d:"groupon uae offers deals and vouchers for restaurants, services, travel and shopping.",
+k:"groupon uae, deals, discount vouchers, coupons, daily deals",
+a:""
+},
+
+{
+i:142,
+n:"cobone",
+c:"business",
+u:"https://www.cobone.com",
+d:"cobone is a deals and coupons site offering discounts on dining, spa, travel and activities in the uae.",
+k:"cobone, deals uae, discount vouchers, coupons, daily deals",
+a:""
+},
+
+{
+i:143,
+n:"the entertainer",
+c:"business",
+u:"https://www.theentertainerme.com",
+d:"the entertainer offers buy one get one free offers and discount deals via its app.",
+k:"the entertainer, buy one get one, discount deals, offers app, uae",
+a:""
+},
+
+{
+i:144,
+n:"smiles deals",
+c:"business",
+u:"https://www.smilesuae.ae",
+d:"smiles deals is an offers platform providing discounts on food, services and entertainment in the uae.",
+k:"smiles deals, offers uae, discount deals, food offers, entertainment deals",
+a:""
+},
+
+{
+i:145,
+n:"couponae",
+c:"business",
+u:"https://couponae.com",
+d:"couponae is a coupon site listing promo codes and discount vouchers for online stores.",
+k:"couponae, coupons uae, promo codes, discount vouchers, deals site",
+a:""
+},
+
+{
+i:146,
+n:"booking uae",
+c:"travel",
+u:"https://www.booking.com",
+d:"booking uae is the regional access to booking.com for hotels, apartments and stays.",
+k:"booking uae, hotel booking, online travel agency, accommodation, booking.com",
+a:""
+},
+
+{
+i:147,
+n:"agoda uae",
+c:"travel",
+u:"https://www.agoda.com",
+d:"agoda uae lets users book hotels, apartments and stays in the uae and worldwide.",
+k:"agoda uae, hotel booking, accommodation, online travel agency",
+a:""
+},
+
+{
+i:148,
+n:"expedia uae",
+c:"travel",
+u:"https://www.expedia.com",
+d:"expedia uae offers flights, hotels and travel packages for trips worldwide.",
+k:"expedia uae, flights, hotel booking, travel packages, online travel site",
+a:""
+},
+
+{
+i:149,
+n:"airbnb uae",
+c:"travel",
+u:"https://www.airbnb.ae",
+d:"airbnb uae provides home and apartment rentals for stays across the uae.",
+k:"airbnb uae, vacation rentals, apartment rentals, home stays, airbnb",
+a:""
+},
+
+{
+i:150,
+n:"tripadvisor uae",
+c:"travel",
+u:"https://www.tripadvisor.com",
+d:"tripadvisor uae offers travel reviews, hotel listings and activity recommendations.",
+k:"tripadvisor uae, travel reviews, hotel reviews, travel guide, activities",
+a:""
+},
+
+{
+i:151,
+n:"emirates",
+c:"travel",
+u:"https://www.emirates.com",
+d:"emirates is a dubai-based airline offering flights, holidays and travel services worldwide.",
+k:"emirates airline, emirates flights, dubai airline, air tickets, holidays",
+a:""
+},
+
+{
+i:152,
+n:"etihad airways",
+c:"travel",
+u:"https://www.etihad.com",
+d:"etihad airways is abu dhabi's national airline offering flights and holiday packages.",
+k:"etihad airways, abu dhabi airline, flights, air tickets, holidays",
+a:""
+},
+
+{
+i:153,
+n:"flydubai",
+c:"travel",
+u:"https://www.flydubai.com",
+d:"flydubai is a low-cost airline based in dubai serving regional and international routes.",
+k:"flydubai, low cost airline, dubai flights, budget airline, air tickets",
+a:""
+},
+
+{
+i:154,
+n:"air arabia",
+c:"travel",
+u:"https://www.airarabia.com",
+d:"air arabia is a low-cost airline operating flights across the middle east and beyond.",
+k:"air arabia, low cost airline, budget flights, middle east airline",
+a:""
+},
+
+{
+i:155,
+n:"wizz air abu dhabi",
+c:"travel",
+u:"https://wizzair.com",
+d:"wizz air abu dhabi is a low-cost airline offering budget flights from the uae.",
+k:"wizz air abu dhabi, low cost airline, budget flights, abu dhabi",
+a:""
+},
+
+{
+i:156,
+n:"rayna tours",
+c:"travel",
+u:"https://www.raynatours.com",
+d:"rayna tours is a uae-based tour operator offering tours, visas and holiday packages.",
+k:"rayna tours, dubai tours, uae tours, holiday packages, visa services",
+a:""
+},
+
+{
+i:157,
+n:"musafir",
+c:"travel",
+u:"https://www.musafir.com",
+d:"musafir is an online travel agency offering flights, hotels and holiday packages.",
+k:"musafir, online travel agency, flights, hotel booking, holidays",
+a:""
+},
+
+{
+i:158,
+n:"cleartrip uae",
+c:"travel",
+u:"https://www.cleartrip.ae",
+d:"cleartrip uae offers flight, hotel and train bookings for travel.",
+k:"cleartrip uae, flight booking, hotel booking, travel site, online bookings",
+a:""
+},
+
+{
+i:159,
+n:"dnata travel",
+c:"travel",
+u:"https://www.dnatatravel.com",
+d:"dnata travel is a uae travel agency offering holidays, flights and travel services.",
+k:"dnata travel, travel agency, holidays, flights, travel services, uae",
+a:""
+},
+
+{
+i:160,
+n:"holiday factory",
+c:"travel",
+u:"https://holidayfactory.ae",
+d:"holiday factory offers budget holiday packages and travel deals from the uae.",
+k:"holiday factory, holiday packages, travel deals, budget holidays, uae",
+a:""
+},
+
+{
+i:161,
+n:"hertz uae",
+c:"travel",
+u:"https://www.hertz.ae",
+d:"hertz uae offers car rental and leasing services across the country.",
+k:"hertz uae, car rental, car hire, vehicle rental, uae",
+a:""
+},
+
+{
+i:162,
+n:"thrifty uae",
+c:"travel",
+u:"https://www.thriftyuae.com",
+d:"thrifty uae provides car rental services for short and long term use.",
+k:"thrifty uae, car rental, car hire, vehicle rental, uae",
+a:""
+},
+
+{
+i:163,
+n:"budget rent a car uae",
+c:"travel",
+u:"https://www.budget-uae.com",
+d:"budget rent a car uae offers budget car rental services across the uae.",
+k:"budget rent a car uae, car rental, budget car hire, vehicle rental",
+a:""
+},
+
+{
+i:164,
+n:"europcar uae",
+c:"travel",
+u:"https://www.europcar.ae",
+d:"europcar uae provides car rental and mobility solutions across the country.",
+k:"europcar uae, car rental, car hire, mobility solutions, uae",
+a:""
+},
+
+{
+i:165,
+n:"sixt uae",
+c:"travel",
+u:"https://www.sixt.ae",
+d:"sixt uae offers premium car rental services in the uae.",
+k:"sixt uae, car rental, premium car hire, vehicle rental, uae",
+a:""
+},
+
+{
+i:166,
+n:"avis uae",
+c:"travel",
+u:"https://www.avisuae.ae",
+d:"avis uae provides car rental and leasing services in the uae.",
+k:"avis uae, car rental, car hire, leasing, vehicle rental, uae",
+a:""
+},
+
+{
+i:167,
+n:"diamondlease",
+c:"travel",
+u:"https://www.diamondlease.com",
+d:"diamondlease offers vehicle leasing and rental services in the uae.",
+k:"diamondlease, vehicle leasing, car rental, fleet services, uae",
+a:""
+},
+
+{
+i:168,
+n:"speedy drive",
+c:"travel",
+u:"https://www.speedydrive.ae",
+d:"speedy drive is a car rental company offering short and long term rentals in dubai.",
+k:"speedy drive, car rental dubai, car hire, vehicle rental, uae",
+a:""
+},
+
+{
+i:169,
+n:"oneclickdrive",
+c:"travel",
+u:"https://www.oneclickdrive.com",
+d:"oneclickdrive is a car rental marketplace aggregating rental cars from multiple providers.",
+k:"oneclickdrive, car rental marketplace, rent a car, car hire, uae",
+a:""
+},
+
+{
+i:170,
+n:"dubizzle cars",
+c:"automotive",
+u:"https://dubizzle.com",
+d:"dubizzle cars is a classified platform for buying and selling used cars in the uae.",
+k:"dubizzle cars, used cars uae, car classifieds, buy used cars, sell car",
+a:""
+},
+
+{
+i:171,
+n:"yallamotor",
+c:"automotive",
+u:"https://uae.yallamotor.com",
+d:"yallamotor is an automotive portal for car listings, reviews and news in the uae.",
+k:"yallamotor, car listings, automotive portal, car reviews, uae cars",
+a:""
+},
+
+{
+i:172,
+n:"cars24 uae",
+c:"automotive",
+u:"https://www.cars24.com/ae",
+d:"cars24 uae buys and sells used cars through its online and branch network.",
+k:"cars24 uae, used cars, sell car, buy car, car marketplace",
+a:""
+},
+
+{
+i:173,
+n:"carswitch",
+c:"automotive",
+u:"https://carswitch.com",
+d:"carswitch is a platform for buying and selling inspected used cars in the uae.",
+k:"carswitch, used cars, car marketplace, buy used car, sell car",
+a:""
+},
+
+{
+i:174,
+n:"automall uae",
+c:"automotive",
+u:"https://automall.ae",
+d:"automall uae sells pre-owned and certified used cars.",
+k:"automall uae, used cars, certified cars, car showroom",
+a:""
+},
+
+{
+i:175,
+n:"al futtaim automall",
+c:"automotive",
+u:"https://www.automall.ae",
+d:"al futtaim automall is a pre-owned car retailer offering multi-brand used cars.",
+k:"al futtaim automall, used cars, pre-owned cars, car retailer, uae",
+a:""
+},
+
+{
+i:176,
+n:"sellanycar",
+c:"automotive",
+u:"https://www.sellanycar.com",
+d:"sellanycar is a platform to quickly sell used cars in the uae.",
+k:"sellanycar, sell car fast, used car buyers, car selling platform, uae",
+a:""
+},
+
+{
+i:177,
+n:"autopro",
+c:"automotive",
+u:"https://www.autopro.ae",
+d:"autopro offers car service centers, car wash and automotive services in the uae.",
+k:"autopro uae, car service, car wash, automotive services, uae",
+a:""
+},
+
+{
+i:178,
+n:"zdegree",
+c:"automotive",
+u:"https://zdegree.com",
+d:"zdegree is a tyre and car service center offering tyres, maintenance and repairs.",
+k:"zdegree, tyre shop, car service, tyre replacement, car maintenance",
+a:""
+},
+
+{
+i:179,
+n:"pitstop arabia",
+c:"automotive",
+u:"https://www.pitstoparabia.com",
+d:"pitstop arabia is an online tyre retailer offering tyre sales and installation in the uae.",
+k:"pitstop arabia, tyres uae, tyre shop, online tyre store, tyre installation",
+a:""
+},
+
+{
+i:180,
+n:"tyres online uae",
+c:"automotive",
+u:"https://www.tyresonline.ae",
+d:"tyres online uae sells tyres online with fitting and delivery services.",
+k:"tyres online uae, online tyres, tyre shop, tyre fitting, uae",
+a:""
+},
+
+{
+i:181,
+n:"adnoc distribution",
+c:"automotive",
+u:"https://www.adnocdistribution.ae",
+d:"adnoc distribution operates fuel stations and convenience stores across the uae.",
+k:"adnoc distribution, fuel stations, petrol stations, convenience stores, uae",
+a:""
+},
+
+{
+i:182,
+n:"enoc",
+c:"automotive",
+u:"https://www.enoc.com",
+d:"enoc operates fuel stations and offers fuels, lubricants and convenience retail in the uae.",
+k:"enoc, fuel stations, petrol stations, lubricants, convenience stores, uae",
+a:""
+},
+
+{
+i:183,
+n:"emarat",
+c:"automotive",
+u:"https://www.emarat.ae",
+d:"emarat operates petrol stations and convenience stores in the uae.",
+k:"emarat, petrol stations, fuel, convenience stores, uae",
+a:""
+},
+
+{
+i:184,
+n:"cafu",
+c:"automotive",
+u:"https://www.cafu.com",
+d:"cafu provides on-demand mobile fuel delivery and car services in the uae.",
+k:"cafu, mobile fuel delivery, on-demand fuel, car services, uae",
+a:""
+},
+
+{
+i:185,
+n:"myzdegree",
+c:"automotive",
+u:"https://myzdegree.com",
+d:"myzdegree is a car service platform linked to zdegree for maintenance and repairs.",
+k:"myzdegree, car service, car maintenance, zdegree, automotive services",
+a:""
+},
+
+{
+i:186,
+n:"dubai petrol station shop",
+c:"automotive",
+u:"https://www.enoc.com",
+d:"dubai petrol station shop refers to fuel station convenience stores operated in dubai.",
+k:"dubai petrol station shop, fuel stations, convenience stores, enoc, uae",
+a:""
+},
+
+{
+i:187,
+n:"noon minutes",
+c:"food,business",
+u:"https://www.noon.com",
+d:"noon minutes is a quick-commerce service delivering groceries and daily essentials in minutes.",
+k:"noon minutes, quick commerce, grocery delivery, daily essentials, uae",
+a:""
+},
+
+{
+i:188,
+n:"instashop",
+c:"food,business",
+u:"https://www.instashop.com",
+d:"instashop is an online grocery delivery app connecting users to supermarkets and local stores.",
+k:"instashop, grocery delivery, online supermarket, quick grocery, uae",
+a:""
+},
+
+{
+i:189,
+n:"talabat mart",
+c:"food,business",
+u:"https://www.talabat.com",
+d:"talabat mart offers on-demand grocery delivery through the talabat app.",
+k:"talabat mart, grocery delivery, quick commerce, online groceries, uae",
+a:""
+},
+
+{
+i:190,
+n:"careem groceries",
+c:"food,business",
+u:"https://www.careem.com",
+d:"careem groceries delivers groceries and daily essentials via the careem app.",
+k:"careem groceries, grocery delivery, daily essentials, careem, uae",
+a:""
+},
+
+{
+i:191,
+n:"deliveroo uae",
+c:"food",
+u:"https://deliveroo.ae",
+d:"deliveroo uae is a food delivery platform connecting restaurants and customers.",
+k:"deliveroo uae, food delivery, restaurant delivery, online food, uae",
+a:""
+},
+
+{
+i:192,
+n:"talabat",
+c:"food",
+u:"https://www.talabat.com",
+d:"talabat is a food and grocery delivery platform operating across the uae.",
+k:"talabat uae, food delivery, restaurant delivery, online food, grocery delivery",
+a:""
+},
+
+{
+i:193,
+n:"careem food",
+c:"food",
+u:"https://www.careem.com",
+d:"careem food is a food delivery service within the careem super app.",
+k:"careem food, food delivery, restaurant delivery, careem, uae",
+a:""
+},
+
+{
+i:194,
+n:"zomato uae",
+c:"food",
+u:"https://www.zomato.com",
+d:"zomato uae offers restaurant listings, reviews and food delivery services.",
+k:"zomato uae, restaurant listings, food delivery, restaurant reviews, uae",
+a:""
+},
+
+{
+i:195,
+n:"americana restaurants",
+c:"food",
+u:"https://www.americanarestaurants.com",
+d:"americana restaurants operates and franchises restaurant brands across the region.",
+k:"americana restaurants, restaurant operator, food brands, fast food, region",
+a:""
+},
+
+{
+i:196,
+n:"mcdonalds uae",
+c:"food",
+u:"https://www.mcdonalds.com/ae",
+d:"mcdonalds uae offers burgers, meals and fast food via dine-in, takeaway and delivery.",
+k:"mcdonalds uae, fast food, burgers, restaurant, food delivery",
+a:""
+},
+
+{
+i:197,
+n:"kfc uae",
+c:"food",
+u:"https://www.kfcarabia.com",
+d:"kfc uae serves fried chicken meals and fast food across the uae.",
+k:"kfc uae, fried chicken, fast food, restaurant, food delivery",
+a:""
+},
+
+{
+i:198,
+n:"pizza hut uae",
+c:"food",
+u:"https://uae.pizzahut.me",
+d:"pizza hut uae offers pizzas and fast food for dine-in, takeaway and delivery.",
+k:"pizza hut uae, pizza delivery, fast food, restaurant, uae",
+a:""
+},
+
+{
+i:199,
+n:"dominos uae",
+c:"food",
+u:"https://www.dominos.ae",
+d:"dominos uae delivers pizzas and fast food across the uae.",
+k:"dominos uae, pizza delivery, fast food, dominos pizza, uae",
+a:""
+},
+
+{
+i:200,
+n:"hardees uae",
+c:"food",
+u:"https://www.hardeesarabia.com",
+d:"hardees uae offers burgers and fast food meals via dine-in, takeaway and delivery.",
+k:"hardees uae, burgers, fast food, restaurant, food delivery, uae",
+a:""
 }
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
 ];
