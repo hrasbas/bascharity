@@ -5993,13 +5993,1812 @@ u:"https://www.westelm.ae",
 d:"west elm online uae offers modern furniture and home decor.",
 k:"west elm online uae, modern furniture, home decor, contemporary furniture",
 a:""
+},
+ {
+  i:601,
+  n:"crate and barrel online uae",
+  c:"home",
+  u:"https://www.crateandbarrel.me",
+  d:"modern furniture, decor, kitchenware and home accessories in the uae",
+  k:"crate and barrel uae, modern furniture, home decor, kitchenware, home accessories, home",
+  a:""
+},
+{
+  i:602,
+  n:"ikea online uae",
+  c:"home",
+  u:"https://www.ikea.com/ae",
+  d:"affordable flat pack furniture, home accessories and decor in the uae",
+  k:"ikea uae, flat pack furniture, home accessories, home decor, home",
+  a:""
+},
+{
+  i:603,
+  n:"ace hardware uae",
+  c:"home",
+  u:"https://www.aceuae.com",
+  d:"home improvement, tools, garden and outdoor products in the uae",
+  k:"ace hardware uae, home improvement, tools, garden products, outdoor, home",
+  a:""
+},
+{
+  i:604,
+  n:"better life home appliances",
+  c:"home,electronics",
+  u:"https://www.betterlifeuae.com",
+  d:"home and kitchen appliances, electronics and accessories in the uae",
+  k:"better life uae, home appliances, kitchen appliances, electronics, home",
+  a:""
+},
+{
+  i:605,
+  n:"eureka electronics",
+  c:"electronics,home",
+  u:"https://www.eureka-electronics.com",
+  d:"electronics, appliances and gadgets for home and personal use",
+  k:"eureka electronics, electronics store, home appliances, gadgets, electronics, home",
+  a:""
+},
+{
+  i:606,
+  n:"carrefour home uae",
+  c:"food,home,electronics,fashion,beauty",
+  u:"https://www.carrefouruae.com",
+  d:"hypermarket offering groceries, home products, electronics and fashion in the uae",
+  k:"carrefour uae, hypermarket, groceries, home products, electronics, fashion, food, home, electronics",
+  a:""
+},
+{
+  i:607,
+  n:"lulu home uae",
+  c:"food,home,electronics,fashion,beauty",
+  u:"https://www.luluhypermarket.com",
+  d:"hypermarket with groceries, home essentials, electronics and fashion in the uae",
+  k:"lulu uae, hypermarket, groceries, home essentials, electronics, fashion, food, home, electronics",
+  a:""
+},
+{
+  i:608,
+  n:"mumuso online uae",
+  c:"home,beauty,food",
+  u:"https://www.mumuso.ae",
+  d:"lifestyle store with home goods, beauty products and snacks",
+  k:"mumuso uae, lifestyle store, home goods, beauty products, snacks, home, beauty, food",
+  a:""
+},
+{
+  i:609,
+  n:"miniso online uae",
+  c:"home,beauty,food",
+  u:"https://miniso.ae",
+  d:"variety store offering home items, beauty products and snacks",
+  k:"miniso uae, variety store, home items, beauty products, snacks, home, beauty, food",
+  a:""
+},
+{
+  i:610,
+  n:"daiso online uae",
+  c:"home,beauty,food",
+  u:"https://www.daisouae.com",
+  d:"value store for home essentials, stationery, beauty and snacks",
+  k:"daiso uae, value store, home essentials, stationery, beauty products, snacks, home, beauty, food",
+  a:""
+},
+{
+  i:611,
+  n:"day to day online",
+  c:"home,beauty,food",
+  u:"https://daytoday.ae",
+  d:"discount store with home items, personal care products and groceries",
+  k:"day to day uae, discount store, home items, personal care, groceries, home, beauty, food",
+  a:""
+},
+{
+  i:612,
+  n:"union coop online",
+  c:"food,home",
+  u:"https://www.unioncoop.ae",
+  d:"supermarket cooperative offering groceries and home products in the uae",
+  k:"union coop uae, supermarket, groceries, home products, food, home",
+  a:""
+},
+{
+  i:613,
+  n:"spinneys grocery online",
+  c:"food,home",
+  u:"https://www.spinneys.com",
+  d:"supermarket for groceries, fresh food and home essentials in the uae",
+  k:"spinneys uae, supermarket, groceries, fresh food, home essentials, food, home",
+  a:""
+},
+{
+  i:614,
+  n:"waitrose grocery online",
+  c:"food,home",
+  u:"https://www.waitrose.ae",
+  d:"premium supermarket with groceries and home products in the uae",
+  k:"waitrose uae, premium supermarket, groceries, home products, food, home",
+  a:""
+},
+{
+  i:615,
+  n:"choithrams grocery online",
+  c:"food,home",
+  u:"https://www.choithrams.com",
+  d:"supermarket chain offering groceries and home essentials in the uae",
+  k:"choithrams uae, supermarket, groceries, home essentials, food, home",
+  a:""
+},
+{
+  i:616,
+  n:"grandiose grocery online",
+  c:"food,home",
+  u:"https://grandiose.ae",
+  d:"grocery store with fresh food, organics and home essentials",
+  k:"grandiose uae, grocery store, fresh food, organic groceries, home essentials, food, home",
+  a:""
+},
+{
+  i:617,
+  n:"viva grocery online",
+  c:"food,home",
+  u:"https://viva-supermarket.com",
+  d:"discount supermarket offering groceries and daily home needs",
+  k:"viva uae, discount supermarket, groceries, daily needs, home essentials, food, home",
+  a:""
+},
+{
+  i:618,
+  n:"west zone online",
+  c:"food,home",
+  u:"https://westzone.com",
+  d:"supermarket and hypermarket chain with groceries and home products",
+  k:"west zone uae, supermarket, hypermarket, groceries, home products, food, home",
+  a:""
+},
+{
+  i:619,
+  n:"geant online uae",
+  c:"food,home,electronics,fashion,beauty",
+  u:"https://www.geantuae.com",
+  d:"hypermarket offering groceries, home, electronics and fashion in the uae",
+  k:"geant uae, hypermarket, groceries, home products, electronics, fashion, food, home, electronics",
+  a:""
+},
+{
+  i:620,
+  n:"nesto online uae",
+  c:"food,home,electronics,fashion,beauty",
+  u:"https://www.nestohypermarket.com",
+  d:"hypermarket with groceries, home items, electronics and fashion",
+  k:"nesto uae, hypermarket, groceries, home items, electronics, fashion, food, home, electronics",
+  a:""
+},
+{
+  i:621,
+  n:"baqala online grocery",
+  c:"food,home",
+  u:"https://www.baqala.ae",
+  d:"online grocery service for daily essentials and home needs",
+  k:"baqala uae, online grocery, daily essentials, home needs, food, home",
+  a:""
+},
+{
+  i:622,
+  n:"elgrocer online",
+  c:"food,home",
+  u:"https://www.elgrocer.com",
+  d:"online grocery marketplace delivering from multiple supermarkets",
+  k:"elgrocer uae, online grocery marketplace, supermarket delivery, food, home",
+  a:""
+},
+{
+  i:623,
+  n:"instashop grocery",
+  c:"food,home",
+  u:"https://www.instashop.com",
+  d:"on demand grocery delivery app for supermarkets and local stores",
+  k:"instashop uae, grocery delivery, on demand groceries, supermarkets, food, home",
+  a:""
+},
+{
+  i:624,
+  n:"talabat mart online",
+  c:"food,home",
+  u:"https://www.talabat.com",
+  d:"quick commerce grocery delivery service for daily needs",
+  k:"talabat mart uae, quick grocery, instant delivery, daily needs, food, home",
+  a:""
+},
+{
+  i:625,
+  n:"careem groceries online",
+  c:"food,home",
+  u:"https://www.careem.com",
+  d:"grocery and daily essentials delivery through careem app",
+  k:"careem uae, grocery delivery, daily essentials, food, home",
+  a:""
+},
+{
+  i:626,
+  n:"noon minutes online",
+  c:"food,home",
+  u:"https://www.noon.com",
+  d:"fast grocery and convenience delivery service from noon",
+  k:"noon minutes, quick grocery, convenience delivery, daily essentials, food, home",
+  a:""
+},
+{
+  i:627,
+  n:"galeries lafayette online uae",
+  c:"fashion,beauty,home",
+  u:"https://www.galerieslafayette.ae",
+  d:"luxury department store for fashion, beauty and home products",
+  k:"galeries lafayette uae, luxury department store, fashion, beauty, home products, fashion, beauty, home",
+  a:""
+},
+{
+  i:628,
+  n:"ounass online",
+  c:"fashion,beauty",
+  u:"https://www.ounass.ae",
+  d:"luxury online store for designer fashion and beauty in the uae",
+  k:"ounass uae, luxury fashion, designer brands, beauty, fashion, beauty",
+  a:""
+},
+{
+  i:629,
+  n:"level shoes online",
+  c:"fashion",
+  u:"https://www.levelshoes.com",
+  d:"luxury footwear and accessories store in the uae",
+  k:"level shoes uae, luxury footwear, designer shoes, fashion accessories, fashion",
+  a:""
+},
+{
+  i:630,
+  n:"6thstreet online",
+  c:"fashion",
+  u:"https://www.6thstreet.com",
+  d:"online fashion store for clothing, footwear and accessories",
+  k:"6thstreet uae, online fashion, clothing, footwear, accessories, fashion",
+  a:""
+},
+{
+  i:631,
+  n:"brands for less online",
+  c:"fashion,home",
+  u:"https://www.brandsforless.com",
+  d:"discount store for fashion, home items and lifestyle products",
+  k:"brands for less uae, discount fashion, home items, lifestyle products, fashion, home",
+  a:""
+},
+{
+  i:632,
+  n:"riva fashion online",
+  c:"fashion",
+  u:"https://www.rivafashion.com",
+  d:"fashion brand offering womens clothing and accessories",
+  k:"riva fashion uae, womens clothing, fashion brand, accessories, fashion",
+  a:""
+},
+{
+  i:633,
+  n:"centrepoint online uae",
+  c:"fashion,home",
+  u:"https://www.centrepointstores.com",
+  d:"family fashion and lifestyle store with clothing and home products",
+  k:"centrepoint uae, family fashion, clothing, home products, lifestyle store, fashion, home",
+  a:""
+},
+{
+  i:634,
+  n:"max fashion online uae",
+  c:"fashion",
+  u:"https://www.maxfashion.com",
+  d:"value fashion brand for mens, womens and kids clothing",
+  k:"max fashion uae, value fashion, mens clothing, womens clothing, kids clothing, fashion",
+  a:""
+},
+{
+  i:635,
+  n:"namshi online",
+  c:"fashion,beauty",
+  u:"https://www.namshi.com",
+  d:"online fashion and lifestyle store with clothing, shoes and beauty",
+  k:"namshi uae, online fashion, clothing, shoes, beauty products, fashion, beauty",
+  a:""
+},
+{
+  i:636,
+  n:"splash fashions online",
+  c:"fashion",
+  u:"https://www.splashfashions.com",
+  d:"fashion brand offering casual clothing and basics",
+  k:"splash fashions uae, casual clothing, basics, fashion brand, fashion",
+  a:""
+},
+{
+  i:637,
+  n:"h and m online uae",
+  c:"fashion",
+  u:"https://www2.hm.com",
+  d:"international fashion brand for clothing and accessories",
+  k:"h and m uae, fashion brand, clothing, accessories, fashion",
+  a:""
+},
+{
+  i:638,
+  n:"zara online uae",
+  c:"fashion",
+  u:"https://www.zara.com",
+  d:"global fashion retailer offering clothing and accessories",
+  k:"zara uae, fashion retailer, clothing, accessories, fashion",
+  a:""
+},
+{
+  i:639,
+  n:"mango online uae",
+  c:"fashion",
+  u:"https://shop.mango.com",
+  d:"fashion brand with clothing and accessories for men and women",
+  k:"mango uae, fashion brand, clothing, accessories, fashion",
+  a:""
+},
+{
+  i:640,
+  n:"aldo uae",
+  c:"fashion",
+  u:"https://www.aldoshoes.com",
+  d:"footwear and accessories brand offering shoes and bags",
+  k:"aldo uae, footwear, shoes, bags, fashion accessories, fashion",
+  a:""
+},
+ 
+{
+  i:641,
+  n:"charles and keith uae",
+  c:"fashion",
+  u:"https://www.charleskeith.com",
+  d:"brand for shoes, bags and fashion accessories in the uae",
+  k:"charles and keith uae, shoes, bags, fashion accessories, footwear, fashion",
+  a:""
+},
+{
+  i:642,
+  n:"nine west uae",
+  c:"fashion",
+  u:"https://www.ninewest.com",
+  d:"footwear and accessories brand offering shoes and bags",
+  k:"nine west uae, footwear, shoes, bags, fashion accessories, fashion",
+  a:""
+},
+{
+  i:643,
+  n:"skechers uae",
+  c:"fashion,sports",
+  u:"https://www.skechers.ae",
+  d:"brand for casual and performance footwear and apparel",
+  k:"skechers uae, casual shoes, sports shoes, sneakers, apparel, fashion, sports",
+  a:""
+},
+{
+  i:644,
+  n:"crocs uae",
+  c:"fashion",
+  u:"https://www.crocs.ae",
+  d:"footwear brand known for clogs and casual shoes",
+  k:"crocs uae, clogs, casual shoes, footwear, fashion",
+  a:""
+},
+{
+  i:645,
+  n:"adidas online uae",
+  c:"sports,fashion",
+  u:"https://www.adidas.ae",
+  d:"sports brand offering footwear, apparel and sports accessories",
+  k:"adidas uae, sportswear, sports shoes, sneakers, apparel, sports accessories, sports, fashion",
+  a:""
+},
+{
+  i:646,
+  n:"nike online uae",
+  c:"sports,fashion",
+  u:"https://www.nike.com",
+  d:"global sports brand for shoes, clothing and sports gear",
+  k:"nike uae, sportswear, sneakers, clothing, sports gear, sports, fashion",
+  a:""
+},
+{
+  i:647,
+  n:"under armour online uae",
+  c:"sports,fashion",
+  u:"https://www.underarmour.ae",
+  d:"sportswear brand with performance apparel, shoes and accessories",
+  k:"under armour uae, performance apparel, sportswear, shoes, sports accessories, sports, fashion",
+  a:""
+},
+{
+  i:648,
+  n:"puma online uae",
+  c:"sports,fashion",
+  u:"https://ae.puma.com",
+  d:"sports and lifestyle brand with footwear, apparel and accessories",
+  k:"puma uae, sportswear, lifestyle brand, shoes, apparel, sports, fashion",
+  a:""
+},
+{
+  i:649,
+  n:"decathlon online uae",
+  c:"sports",
+  u:"https://www.decathlon.ae",
+  d:"sports retailer with equipment, apparel and gear for multiple sports",
+  k:"decathlon uae, sports retailer, sports equipment, sports apparel, sports gear, sports",
+  a:""
+},
+{
+  i:650,
+  n:"go sport online uae",
+  c:"sports",
+  u:"https://www.go-sport.me",
+  d:"sports store offering branded sportswear, footwear and equipment",
+  k:"go sport uae, sports store, sportswear, sports footwear, sports equipment, sports",
+  a:""
+},
+{
+  i:651,
+  n:"sun and sand sports uae",
+  c:"sports",
+  u:"https://en-ae.sssports.com",
+  d:"sports retailer for footwear, apparel and sports accessories in the uae",
+  k:"sun and sand sports uae, sports retailer, sports footwear, sports apparel, sports accessories, sports",
+  a:""
+},
+{
+  i:652,
+  n:"adventure hq online",
+  c:"sports",
+  u:"https://adventurehq.ae",
+  d:"outdoor and adventure store with camping, hiking and sports gear",
+  k:"adventure hq uae, outdoor store, camping gear, hiking gear, sports gear, sports",
+  a:""
+},
+{
+  i:653,
+  n:"wolfis online",
+  c:"sports",
+  u:"https://wolfis.com",
+  d:"cycling and triathlon store for bikes, accessories and sports gear",
+  k:"wolfis uae, cycling store, bikes, triathlon gear, sports accessories, sports",
+  a:""
+},
+{
+  i:654,
+  n:"bikeera online",
+  c:"sports",
+  u:"https://bikeera.com",
+  d:"online store for bicycles, cycling accessories and sports equipment",
+  k:"bikeera uae, bicycles, cycling accessories, sports equipment, sports",
+  a:""
+},
+{
+  i:655,
+  n:"precision football online",
+  c:"sports",
+  u:"https://precisionfootball.com",
+  d:"football training brand with equipment and coaching tools",
+  k:"precision football, football equipment, football training, coaching tools, sports",
+  a:""
+},
+{
+  i:656,
+  n:"babyshop online uae",
+  c:"fashion,home,health",
+  u:"https://www.babyshopstores.com",
+  d:"store for baby clothing, kids fashion, nursery furniture and baby care products",
+  k:"babyshop uae, baby clothing, kids fashion, nursery furniture, baby care products, fashion, home, health",
+  a:""
+},
+{
+  i:657,
+  n:"mumzworld online",
+  c:"fashion,home,health",
+  u:"https://www.mumzworld.com",
+  d:"online store for baby products, kids clothing, gear, toys and baby care",
+  k:"mumzworld uae, baby products, kids clothing, baby gear, toys, baby care, fashion, home, health",
+  a:""
+},
+{
+  i:658,
+  n:"firstcry online uae",
+  c:"fashion,home,health",
+  u:"https://www.firstcry.ae",
+  d:"baby and kids store with clothing, footwear, toys, gear and care items",
+  k:"firstcry uae, baby store, kids clothing, kids footwear, toys, baby gear, baby care, fashion, home, health",
+  a:""
+},
+{
+  i:659,
+  n:"toys r us online uae",
+  c:"home",
+  u:"https://www.toysrusmena.com",
+  d:"toy store offering toys, games and kids entertainment products",
+  k:"toys r us uae, toy store, toys, games, kids products, home",
+  a:""
+},
+{
+  i:660,
+  n:"hamleys online uae",
+  c:"home",
+  u:"https://www.hamleysdubai.com",
+  d:"toy store with branded toys, games and gifts for kids",
+  k:"hamleys uae, toy store, branded toys, games, kids gifts, home",
+  a:""
+},
+ 
+{
+  i:661,
+  n:"lego online uae",
+  c:"home",
+  u:"https://www.lego.com/en-ae",
+  d:"official store for lego sets and building toys in the uae",
+  k:"lego uae, lego sets, building toys, construction toys, home",
+  a:""
+},
+{
+  i:662,
+  n:"build a bear online uae",
+  c:"home",
+  u:"https://www.buildabear.ae",
+  d:"store for customizable soft toys and accessories for kids",
+  k:"build a bear uae, soft toys, stuffed toys, customizable toys, kids gifts, home",
+  a:""
+},
+{
+  i:663,
+  n:"mothercare online uae",
+  c:"fashion,home,health",
+  u:"https://www.mothercarestores.com",
+  d:"store for maternity wear, baby clothing, nursery furniture and baby care products",
+  k:"mothercare uae, maternity wear, baby clothing, nursery furniture, baby care, fashion, home, health",
+  a:""
+},
+{
+  i:664,
+  n:"the toy store online",
+  c:"home",
+  u:"https://www.thetoystore.com",
+  d:"online toy store with a wide range of toys and games for kids",
+  k:"the toy store, toy shop, toys, kids games, kids products, home",
+  a:""
+},
+{
+  i:665,
+  n:"carters online uae",
+  c:"fashion",
+  u:"https://www.cartersoshkosh.ae",
+  d:"baby and kids clothing brand offering outfits and essentials",
+  k:"carters uae, baby clothing, kids clothing, outfits, basics, fashion",
+  a:""
+},
+{
+  i:666,
+  n:"oshkosh online uae",
+  c:"fashion",
+  u:"https://www.cartersoshkosh.ae",
+  d:"kids clothing brand known for durable outfits and denim",
+  k:"oshkosh uae, kids clothing, denim, overalls, durable outfits, fashion",
+  a:""
+},
+{
+  i:667,
+  n:"skip hop online uae",
+  c:"home,health",
+  u:"https://www.skiphop.ae",
+  d:"baby gear and accessories including bags, toys and feeding products",
+  k:"skip hop uae, baby gear, diaper bags, feeding products, baby toys, home, health",
+  a:""
+},
+{
+  i:668,
+  n:"babybrezza online uae",
+  c:"home,health",
+  u:"https://babybrezza.ae",
+  d:"appliances and gadgets for baby feeding and food preparation",
+  k:"babybrezza uae, baby appliances, bottle maker, food maker, home, health",
+  a:""
+},
+{
+  i:669,
+  n:"my baby bazaar online",
+  c:"fashion,home,health",
+  u:"https://www.mybabybazaar.ae",
+  d:"online store for baby clothing, accessories and baby care products",
+  k:"my baby bazaar uae, baby clothing, baby accessories, baby care, fashion, home, health",
+  a:""
+},
+{
+  i:670,
+  n:"babyplus online",
+  c:"fashion,home,health",
+  u:"https://babyplus.ae",
+  d:"baby store with clothing, gear, toys and care products",
+  k:"babyplus uae, baby store, baby clothing, baby gear, baby toys, baby care, fashion, home, health",
+  a:""
+},
+{
+  i:671,
+  n:"kinokuniya online uae",
+  c:"books",
+  u:"https://uae.kinokuniya.com",
+  d:"bookstore offering international books, magazines and stationery",
+  k:"kinokuniya uae, bookstore, international books, magazines, stationery, books",
+  a:""
+},
+{
+  i:672,
+  n:"magrudys online",
+  c:"books",
+  u:"https://www.magrudy.com",
+  d:"bookstore with books, school supplies and educational materials",
+  k:"magrudys uae, bookstore, school supplies, educational books, books",
+  a:""
+},
+{
+  i:673,
+  n:"dubai library distributors online",
+  c:"books",
+  u:"https://www.dubailibrary.com",
+  d:"supplier of books, stationery and library materials in the uae",
+  k:"dubai library distributors, books supplier, stationery, library materials, books",
+  a:""
+},
+{
+  i:674,
+  n:"bookhero online uae",
+  c:"books",
+  u:"https://bookhero.ae",
+  d:"platform for buying and selling pre loved books in the uae",
+  k:"bookhero uae, used books, pre loved books, book marketplace, books",
+  a:""
+},
+{
+  i:675,
+  n:"bookends online uae",
+  c:"books",
+  u:"https://bookends.ae",
+  d:"online marketplace for secondhand books in the uae",
+  k:"bookends uae, secondhand books, used books, book marketplace, books",
+  a:""
+},
+{
+  i:676,
+  n:"creative minds online",
+  c:"books",
+  u:"https://creativemindsdubai.com",
+  d:"store for educational toys, books and learning resources",
+  k:"creative minds dubai, educational toys, learning resources, books, books",
+  a:""
+},
+{
+  i:677,
+  n:"early learning centre online",
+  c:"books",
+  u:"https://www.elc.ae",
+  d:"educational toy store with learning toys and books for children",
+  k:"early learning centre uae, educational toys, learning toys, childrens books, books",
+  a:""
+},
+{
+  i:678,
+  n:"scholastic middle east",
+  c:"books",
+  u:"https://shop.scholastic.ae",
+  d:"publisher and retailer of childrens books and educational materials",
+  k:"scholastic middle east, childrens books, educational materials, publisher, books",
+  a:""
+},
+{
+  i:679,
+  n:"jarir books uae",
+  c:"books,electronics",
+  u:"https://www.jarir.com",
+  d:"bookstore and electronics retailer offering books, stationery and gadgets",
+  k:"jarir books uae, bookstore, stationery, electronics, gadgets, books, electronics",
+  a:""
+},
+{
+  i:680,
+  n:"amazon books uae",
+  c:"books,home,electronics,fashion,beauty,food,business",
+  u:"https://www.amazon.ae",
+  d:"online marketplace offering books, electronics, fashion, home and daily essentials in the uae",
+  k:"amazon uae, online marketplace, books, electronics, fashion, home products, daily essentials, books, home, electronics",
+  a:""
+},
+{
+  i:681,
+  n:"teacher supply online",
+  c:"business",
+  u:"https://www.teachersupplysource.com",
+  d:"online supplier of teaching materials and classroom resources",
+  k:"teacher supply, teaching materials, classroom resources, school supplies, business",
+  a:""
+},
+{
+  i:682,
+  n:"coursera online uae",
+  c:"business,software",
+  u:"https://www.coursera.org",
+  d:"online learning platform offering professional and academic courses",
+  k:"coursera uae, online courses, professional learning, academic programs, business, software",
+  a:""
+},
+{
+  i:683,
+  n:"udemy online uae",
+  c:"business,software",
+  u:"https://www.udemy.com",
+  d:"online course marketplace for skills and professional development",
+  k:"udemy uae, online courses, skill development, professional training, business, software",
+  a:""
+},
+{
+  i:684,
+  n:"edx online",
+  c:"business,software",
+  u:"https://www.edx.org",
+  d:"online learning platform providing university level courses and programs",
+  k:"edx, university courses, online learning, certifications, business, software",
+  a:""
+},
+{
+  i:685,
+  n:"skillshare online",
+  c:"business,software",
+  u:"https://www.skillshare.com",
+  d:"online learning community for creative and practical skills",
+  k:"skillshare, creative courses, online classes, practical skills, business, software",
+  a:""
+},
+{
+  i:686,
+  n:"udacity online",
+  c:"business,software",
+  u:"https://www.udacity.com",
+  d:"online platform offering technology and career focused programs",
+  k:"udacity, tech courses, nanodegree, career programs, business, software",
+  a:""
+},
+{
+  i:687,
+  n:"alison online",
+  c:"business,software",
+  u:"https://alison.com",
+  d:"online courses and certificates for skills and career development",
+  k:"alison, free courses, online certificates, skill training, business, software",
+  a:""
+},
+{
+  i:688,
+  n:"futurelearn online",
+  c:"business,software",
+  u:"https://www.futurelearn.com",
+  d:"online courses and microcredentials from universities and institutions",
+  k:"futurelearn, online courses, microcredentials, university programs, business, software",
+  a:""
+},
+{
+  i:689,
+  n:"khan academy online",
+  c:"business,software",
+  u:"https://www.khanacademy.org",
+  d:"free online learning platform for school subjects and test preparation",
+  k:"khan academy, free learning, school subjects, test prep, online education, business, software",
+  a:""
+},
+{
+  i:690,
+  n:"simplilearn online",
+  c:"business,software",
+  u:"https://www.simplilearn.com",
+  d:"online bootcamps and certification courses for professionals",
+  k:"simplilearn, bootcamps, professional certifications, online training, business, software",
+  a:""
+},
+{
+  i:691,
+  n:"duolingo online",
+  c:"business,software",
+  u:"https://www.duolingo.com",
+  d:"language learning app and platform with gamified lessons",
+  k:"duolingo, language learning, language app, online lessons, business, software",
+  a:""
+},
+{
+  i:692,
+  n:"italki online",
+  c:"business,software",
+  u:"https://www.italki.com",
+  d:"platform connecting language learners with online tutors",
+  k:"italki, language tutors, online classes, language learning, business, software",
+  a:""
+},
+{
+  i:693,
+  n:"preply online",
+  c:"business,software",
+  u:"https://preply.com",
+  d:"online tutoring marketplace for languages and academic subjects",
+  k:"preply, online tutoring, language tutors, academic tutoring, business, software",
+  a:""
+},
+{
+  i:694,
+  n:"cambly online",
+  c:"business,software",
+  u:"https://www.cambly.com",
+  d:"english speaking practice platform with online tutors",
+  k:"cambly, english speaking, online tutors, conversation practice, business, software",
+  a:""
+},
+{
+  i:695,
+  n:"babbel online",
+  c:"business,software",
+  u:"https://www.babbel.com",
+  d:"language learning platform with structured online courses",
+  k:"babbel, language courses, online language learning, business, software",
+  a:""
+},
+{
+  i:696,
+  n:"memrise online",
+  c:"business,software",
+  u:"https://www.memrise.com",
+  d:"language and memory training app using spaced repetition",
+  k:"memrise, language learning, vocabulary practice, memory training, business, software",
+  a:""
+},
+{
+  i:697,
+  n:"masterclass online",
+  c:"business,software",
+  u:"https://www.masterclass.com",
+  d:"online classes taught by experts and celebrities in various fields",
+  k:"masterclass, expert courses, online classes, creative learning, business, software",
+  a:""
+},
+{
+  i:698,
+  n:"domestika online",
+  c:"business,software",
+  u:"https://www.domestika.org",
+  d:"online community with creative courses for design, art and crafts",
+  k:"domestika, creative courses, design classes, crafts, online learning, business, software",
+  a:""
+},
+{
+  i:699,
+  n:"emirates aviation university online",
+  c:"business",
+  u:"https://www.eau.ac.ae",
+  d:"aviation focused university offering academic programs and courses",
+  k:"emirates aviation university, aviation studies, academic programs, business",
+  a:""
+},
+{
+  i:700,
+  n:"university of dubai online",
+  c:"business",
+  u:"https://www.ud.ac.ae",
+  d:"university in dubai offering undergraduate and postgraduate programs",
+  k:"university of dubai, undergraduate programs, postgraduate programs, business",
+  a:""
+},
+
+{
+  i:701,
+  n:"american university in dubai online",
+  c:"business",
+  u:"https://www.aud.edu",
+  d:"american university in dubai with undergraduate and postgraduate programs",
+  k:"american university in dubai, academic programs, undergraduate degrees, postgraduate degrees, business",
+  a:""
+},
+{
+  i:702,
+  n:"heriot watt dubai online",
+  c:"business",
+  u:"https://www.hw.ac.uk/dubai",
+  d:"branch campus of heriot watt university in dubai",
+  k:"heriot watt dubai, university campus, academic programs, business",
+  a:""
+},
+{
+  i:703,
+  n:"middlesex university dubai online",
+  c:"business",
+  u:"https://www.mdx.ac.ae",
+  d:"international university campus in dubai offering multiple degrees",
+  k:"middlesex university dubai, international campus, degree programs, business",
+  a:""
+},
+{
+  i:704,
+  n:"canadian university dubai online",
+  c:"business",
+  u:"https://www.cud.ac.ae",
+  d:"canadian university in dubai offering undergraduate and graduate programs",
+  k:"canadian university dubai, undergraduate programs, graduate programs, business",
+  a:""
+},
+{
+  i:705,
+  n:"manipal academy dubai online",
+  c:"business",
+  u:"https://www.manipaldubai.com",
+  d:"branch campus of manipal academy offering higher education in dubai",
+  k:"manipal academy dubai, higher education, university programs, business",
+  a:""
+},
+{
+  i:706,
+  n:"bits pilani dubai online",
+  c:"business",
+  u:"https://www.bits-pilani.ac.in/dubai",
+  d:"branch campus of bits pilani university in dubai",
+  k:"bits pilani dubai, engineering college, university campus, business",
+  a:""
+},
+{
+  i:707,
+  n:"amity university dubai online",
+  c:"business",
+  u:"https://www.amityuniversity.ae",
+  d:"university campus in dubai offering various academic programs",
+  k:"amity university dubai, academic programs, higher education, business",
+  a:""
+},
+{
+  i:708,
+  n:"ajman university online",
+  c:"business",
+  u:"https://www.ajman.ac.ae",
+  d:"university in ajman with undergraduate and postgraduate courses",
+  k:"ajman university, undergraduate courses, postgraduate courses, business",
+  a:""
+},
+{
+  i:709,
+  n:"university of sharjah online",
+  c:"business",
+  u:"https://www.sharjah.ac.ae",
+  d:"university in sharjah offering diverse academic programs",
+  k:"university of sharjah, academic programs, higher education, business",
+  a:""
+},
+{
+  i:710,
+  n:"zayed university",
+  c:"business",
+  u:"https://www.zu.ac.ae",
+  d:"federal university in the uae with campuses in abu dhabi and dubai",
+  k:"zayed university, federal university, academic programs, business",
+  a:""
+},
+{
+  i:711,
+  n:"united arab emirates university",
+  c:"business",
+  u:"https://www.uaeu.ac.ae",
+  d:"national university of the uae offering multiple disciplines",
+  k:"uaeu, national university, multiple disciplines, higher education, business",
+  a:""
+},
+{
+  i:712,
+  n:"khalifa university",
+  c:"business",
+  u:"https://www.ku.ac.ae",
+  d:"science and technology focused university in the uae",
+  k:"khalifa university, science and technology, engineering programs, business",
+  a:""
+},
+{
+  i:713,
+  n:"mohamed bin zayed university",
+  c:"business",
+  u:"https://mbzuai.ac.ae",
+  d:"university focused on artificial intelligence and related fields",
+  k:"mbzuai, artificial intelligence university, ai programs, business",
+  a:""
+},
+{
+  i:714,
+  n:"shopify online uae",
+  c:"software,business",
+  u:"https://www.shopify.com",
+  d:"ecommerce platform for building and managing online stores",
+  k:"shopify, ecommerce platform, online store builder, business, software",
+  a:""
+},
+{
+  i:715,
+  n:"zoho online uae",
+  c:"software,business",
+  u:"https://www.zoho.com",
+  d:"cloud software suite for crm, finance and business operations",
+  k:"zoho, business software, crm, finance software, productivity tools, business, software",
+  a:""
+},
+{
+  i:716,
+  n:"hubspot online",
+  c:"software,business",
+  u:"https://www.hubspot.com",
+  d:"crm and marketing automation platform for businesses",
+  k:"hubspot, crm, marketing automation, sales tools, business, software",
+  a:""
+},
+{
+  i:717,
+  n:"salesforce online uae",
+  c:"software,business",
+  u:"https://www.salesforce.com",
+  d:"cloud based crm platform and business applications",
+  k:"salesforce, cloud crm, business applications, customer management, business, software",
+  a:""
+},
+{
+  i:718,
+  n:"freshworks online",
+  c:"software,business",
+  u:"https://www.freshworks.com",
+  d:"customer engagement and support software suite",
+  k:"freshworks, customer support, helpdesk software, crm, business, software",
+  a:""
+},
+{
+  i:719,
+  n:"mailchimp online",
+  c:"software,business",
+  u:"https://mailchimp.com",
+  d:"email marketing and marketing automation platform",
+  k:"mailchimp, email marketing, marketing automation, newsletters, business, software",
+  a:""
+},
+{
+  i:720,
+  n:"google workspace online",
+  c:"software,business",
+  u:"https://workspace.google.com",
+  d:"cloud based productivity and collaboration tools from google",
+  k:"google workspace, productivity suite, collaboration tools, gmail, drive, business, software",
+  a:""
+},
+{
+  i:721,
+  n:"microsoft 365 online uae",
+  c:"software,business",
+  u:"https://www.microsoft.com",
+  d:"subscription service offering office apps and cloud productivity tools",
+  k:"microsoft 365, office apps, productivity tools, cloud services, business, software",
+  a:""
+},
+{
+  i:722,
+  n:"canva online uae",
+  c:"software,business",
+  u:"https://www.canva.com",
+  d:"online design tool for graphics, presentations and social media content",
+  k:"canva, online design, graphics editor, social media designs, business, software",
+  a:""
+},
+{
+  i:723,
+  n:"boardmix online",
+  c:"software,business",
+  u:"https://boardmix.com",
+  d:"online whiteboard and collaboration tool for teams",
+  k:"boardmix, online whiteboard, collaboration tool, team brainstorming, business, software",
+  a:""
+},
+{
+  i:724,
+  n:"figma online",
+  c:"software,business",
+  u:"https://www.figma.com",
+  d:"collaborative interface design and prototyping platform",
+  k:"figma, ui design, ux design, design collaboration, prototyping, business, software",
+  a:""
+},
+{
+  i:725,
+  n:"miro online",
+  c:"software,business",
+  u:"https://miro.com",
+  d:"online collaborative whiteboard for teams and projects",
+  k:"miro, online whiteboard, collaboration, brainstorming, business, software",
+  a:""
+},
+{
+  i:726,
+  n:"notion online",
+  c:"software,business",
+  u:"https://www.notion.so",
+  d:"all in one workspace for notes, tasks, databases and collaboration",
+  k:"notion, notes app, task management, databases, collaboration, business, software",
+  a:""
+},
+{
+  i:727,
+  n:"trello online",
+  c:"software,business",
+  u:"https://trello.com",
+  d:"kanban style project management and task tracking tool",
+  k:"trello, project management, kanban boards, task tracking, business, software",
+  a:""
+},
+{
+  i:728,
+  n:"asana online",
+  c:"software,business",
+  u:"https://asana.com",
+  d:"work management platform for projects, tasks and workflows",
+  k:"asana, work management, project management, task tracking, business, software",
+  a:""
+},
+{
+  i:729,
+  n:"clickup online",
+  c:"software,business",
+  u:"https://clickup.com",
+  d:"productivity platform combining tasks, docs and project management",
+  k:"clickup, productivity platform, task management, project management, business, software",
+  a:""
+},
+{
+  i:730,
+  n:"monday com online",
+  c:"software,business",
+  u:"https://monday.com",
+  d:"work management platform for projects, crm and operations",
+  k:"monday com, work management, project management, crm, operations, business, software",
+  a:""
+},
+{
+  i:731,
+  n:"airtable online",
+  c:"software,business",
+  u:"https://www.airtable.com",
+  d:"flexible database and spreadsheet tool for organizing work",
+  k:"airtable, database tool, spreadsheet, project organization, business, software",
+  a:""
+},
+{
+  i:732,
+  n:"adobe express online",
+  c:"software,business",
+  u:"https://www.adobe.com",
+  d:"online tool for creating graphics, videos and social media content",
+  k:"adobe express, online design, graphics, video creation, social media content, business, software",
+  a:""
+},
+{
+  i:733,
+  n:"envato elements",
+  c:"software,business",
+  u:"https://elements.envato.com",
+  d:"subscription service offering digital assets for design and media",
+  k:"envato elements, digital assets, templates, graphics, stock media, business, software",
+  a:""
+},
+{
+  i:734,
+  n:"themeforest online",
+  c:"software,business",
+  u:"https://themeforest.net",
+  d:"marketplace for website themes and templates",
+  k:"themeforest, website themes, templates, wordpress themes, business, software",
+  a:""
+},
+{
+  i:735,
+  n:"codecanyon online",
+  c:"software,business",
+  u:"https://codecanyon.net",
+  d:"marketplace for scripts, plugins and software components",
+  k:"codecanyon, scripts marketplace, plugins, software components, business, software",
+  a:""
+},
+{
+  i:736,
+  n:"graphicriver online",
+  c:"software,business",
+  u:"https://graphicriver.net",
+  d:"marketplace for graphics, templates and design assets",
+  k:"graphicriver, graphics marketplace, design templates, vectors, business, software",
+  a:""
+},
+{
+  i:737,
+  n:"freepik online",
+  c:"software,business",
+  u:"https://www.freepik.com",
+  d:"platform offering free and premium vectors, photos and psd files",
+  k:"freepik, vectors, stock photos, psd files, design resources, business, software",
+  a:""
+},
+{
+  i:738,
+  n:"vecteezy online",
+  c:"software,business",
+  u:"https://www.vecteezy.com",
+  d:"platform for free and premium vector graphics and illustrations",
+  k:"vecteezy, vector graphics, illustrations, design resources, business, software",
+  a:""
+},
+{
+  i:739,
+  n:"shutterstock online uae",
+  c:"software,business",
+  u:"https://www.shutterstock.com",
+  d:"stock media platform offering photos, videos, music and vectors",
+  k:"shutterstock, stock photos, stock videos, stock music, vectors, business, software",
+  a:""
+},
+{
+  i:740,
+  n:"istock online",
+  c:"software,business",
+  u:"https://www.istockphoto.com",
+  d:"stock content library with photos, illustrations and videos",
+  k:"istock, stock photos, stock illustrations, stock videos, business, software",
+  a:""
+},
+ 
+{
+  i:741,
+  n:"pexels online",
+  c:"software,business",
+  u:"https://www.pexels.com",
+  d:"platform offering free stock photos and videos for personal and commercial use",
+  k:"pexels, free stock photos, stock videos, royalty free images, business, software",
+  a:""
+},
+{
+  i:742,
+  n:"pixabay online",
+  c:"software,business",
+  u:"https://pixabay.com",
+  d:"platform with free stock photos, illustrations, videos and music",
+  k:"pixabay, free stock photos, illustrations, stock videos, stock music, business, software",
+  a:""
+},
+{
+  i:743,
+  n:"unsplash online",
+  c:"software,business",
+  u:"https://unsplash.com",
+  d:"platform offering free high resolution photos for personal and commercial use",
+  k:"unsplash, free photos, high resolution images, stock photography, business, software",
+  a:""
+},
+{
+  i:744,
+  n:"fiverr online uae",
+  c:"business",
+  u:"https://www.fiverr.com",
+  d:"freelance services marketplace for digital and creative work",
+  k:"fiverr, freelance marketplace, digital services, creative services, business",
+  a:""
+},
+{
+  i:745,
+  n:"upwork online",
+  c:"business",
+  u:"https://www.upwork.com",
+  d:"global freelance platform connecting clients and independent professionals",
+  k:"upwork, freelance platform, remote work, clients and freelancers, business",
+  a:""
+},
+{
+  i:746,
+  n:"freelancer online",
+  c:"business",
+  u:"https://www.freelancer.com",
+  d:"online marketplace for freelance projects and remote jobs",
+  k:"freelancer, freelance jobs, project marketplace, remote work, business",
+  a:""
+},
+{
+  i:747,
+  n:"peopleperhour online",
+  c:"business",
+  u:"https://www.peopleperhour.com",
+  d:"freelance marketplace for hiring experts by the hour or project",
+  k:"peopleperhour, freelance marketplace, hire experts, hourly projects, business",
+  a:""
+},
+{
+  i:748,
+  n:"guru online",
+  c:"business",
+  u:"https://www.guru.com",
+  d:"freelance platform for hiring professionals across various services",
+  k:"guru, freelance platform, hire professionals, online services, business",
+  a:""
+},
+{
+  i:749,
+  n:"toptal online",
+  c:"business",
+  u:"https://www.toptal.com",
+  d:"network of top freelance developers, designers and finance experts",
+  k:"toptal, top freelancers, developers, designers, finance experts, business",
+  a:""
+},
+{
+  i:750,
+  n:"khamsat online",
+  c:"business",
+  u:"https://khamsat.com",
+  d:"arabic freelance marketplace for microservices and digital work",
+  k:"khamsat, arabic freelance marketplace, microservices, digital work, business",
+  a:""
+},
+{
+  i:751,
+  n:"mostaql online",
+  c:"business",
+  u:"https://mostaql.com",
+  d:"arabic freelance platform for projects and remote work",
+  k:"mostaql, arabic freelance platform, remote projects, online services, business",
+  a:""
+},
+{
+  i:752,
+  n:"behance online",
+  c:"business",
+  u:"https://www.behance.net",
+  d:"platform for showcasing creative portfolios and design work",
+  k:"behance, creative portfolios, design showcase, artists, business",
+  a:""
+},
+{
+  i:753,
+  n:"dribbble online",
+  c:"business",
+  u:"https://dribbble.com",
+  d:"community for designers to share and discover creative work",
+  k:"dribbble, design community, ui design, creatives, business",
+  a:""
+},
+{
+  i:754,
+  n:"99designs online",
+  c:"business",
+  u:"https://99designs.com",
+  d:"platform connecting clients with designers through contests and projects",
+  k:"99designs, design contests, hire designers, logo design, business",
+  a:""
+},
+{
+  i:755,
+  n:"designcrowd online",
+  c:"business",
+  u:"https://www.designcrowd.com",
+  d:"crowdsourcing platform for design projects and contests",
+  k:"designcrowd, crowdsourced design, design projects, design contests, business",
+  a:""
+},
+{
+  i:756,
+  n:"urban company online uae",
+  c:"home,business",
+  u:"https://www.urbancompany.com",
+  d:"home services platform offering cleaning, repairs and beauty services",
+  k:"urban company uae, home services, cleaning, repairs, beauty services, home, business",
+  a:""
+},
+{
+  i:757,
+  n:"justlife online",
+  c:"home,business",
+  u:"https://www.justlife.com",
+  d:"home services app for cleaning, maids, laundry and wellness",
+  k:"justlife uae, home cleaning, maids, laundry, wellness services, home, business",
+  a:""
+},
+{
+  i:758,
+  n:"service market online",
+  c:"home,business",
+  u:"https://www.servicemarket.com",
+  d:"online marketplace for home services like moving, cleaning and maintenance",
+  k:"service market uae, home services marketplace, moving, cleaning, maintenance, home, business",
+  a:""
+},
+{
+  i:759,
+  n:"helpbit online",
+  c:"home,business",
+  u:"https://www.helpbit.com",
+  d:"online platform for home services, cleaning and handyman work",
+  k:"helpbit uae, home services, cleaning services, handyman, home, business",
+  a:""
+},
+{
+  i:760,
+  n:"fixerman online",
+  c:"home,business",
+  u:"https://www.fixermanme.com",
+  d:"service for repairing and fixing electronics and gadgets at home or office",
+  k:"fixerman uae, gadget repair, electronics repair, home service, business, home",
+  a:""
+},
+{
+  i:761,
+  n:"we will fix it online",
+  c:"home,business",
+  u:"https://wewillfixit.com",
+  d:"home maintenance company for ac repair, handyman and cleaning services",
+  k:"we will fix it uae, home maintenance, ac repair, handyman services, cleaning, home, business",
+  a:""
+},
+{
+  i:762,
+  n:"movehub online",
+  c:"home,business",
+  u:"https://www.movehub.com",
+  d:"platform providing information and services for moving and relocation",
+  k:"movehub, moving services, relocation information, international moves, home, business",
+  a:""
+},
+{
+  i:763,
+  n:"fedex online uae",
+  c:"business",
+  u:"https://www.fedex.com/en-ae",
+  d:"courier and logistics company offering shipping and delivery services in the uae",
+  k:"fedex uae, courier, logistics, shipping, delivery services, business",
+  a:""
+},
+{
+  i:764,
+  n:"dhl online uae",
+  c:"business",
+  u:"https://www.dhl.com/ae-en",
+  d:"international courier and logistics company operating in the uae",
+  k:"dhl uae, courier, logistics, international shipping, delivery services, business",
+  a:""
+},
+{
+  i:765,
+  n:"aramex online",
+  c:"business",
+  u:"https://www.aramex.com",
+  d:"logistics and transportation company providing courier and freight services",
+  k:"aramex, logistics, courier services, freight, shipping, business",
+  a:""
+},
+{
+  i:766,
+  n:"emirates post online",
+  c:"business",
+  u:"https://www.emiratespost.ae",
+  d:"postal and courier service provider in the uae",
+  k:"emirates post, postal service, courier, mail delivery, business",
+  a:""
+},
+{
+  i:767,
+  n:"ups online uae",
+  c:"business",
+  u:"https://www.ups.com/ae",
+  d:"global logistics company offering shipping and delivery services in the uae",
+  k:"ups uae, logistics, shipping, courier, delivery services, business",
+  a:""
+},
+{
+  i:768,
+  n:"shipa online",
+  c:"business",
+  u:"https://shipa.com",
+  d:"digital logistics platform for shipping, freight and ecommerce deliveries",
+  k:"shipa, digital logistics, shipping, freight, ecommerce delivery, business",
+  a:""
+},
+{
+  i:769,
+  n:"careem rides",
+  c:"travel,business",
+  u:"https://www.careem.com",
+  d:"ride hailing service offering car and taxi rides in the uae",
+  k:"careem uae, ride hailing, taxi service, car rides, travel, business",
+  a:""
+},
+{
+  i:770,
+  n:"uber rides uae",
+  c:"travel,business",
+  u:"https://www.uber.com/ae",
+  d:"ride hailing platform providing car rides and taxis in the uae",
+  k:"uber uae, ride hailing, car rides, taxis, travel, business",
+  a:""
+},
+{
+  i:771,
+  n:"yango rides",
+  c:"travel,business",
+  u:"https://yango.com",
+  d:"ride hailing service offering car rides in selected cities",
+  k:"yango, ride hailing, car rides, taxi app, travel, business",
+  a:""
+},
+{
+  i:772,
+  n:"dubai taxi online",
+  c:"travel,business",
+  u:"https://www.dubaitaxi.ae",
+  d:"official taxi service provider in dubai",
+  k:"dubai taxi, taxi service, public transport, dubai transport, travel, business",
+  a:""
+},
+{
+  i:773,
+  n:"etisalat online",
+  c:"electronics,business",
+  u:"https://www.etisalat.ae",
+  d:"telecom provider offering mobile, internet and tv services in the uae",
+  k:"etisalat uae, telecom, mobile services, internet, tv services, electronics, business",
+  a:""
+},
+{
+  i:774,
+  n:"du online",
+  c:"electronics,business",
+  u:"https://www.du.ae",
+  d:"telecommunications company providing mobile, internet and tv services",
+  k:"du uae, telecom, mobile network, internet services, tv services, electronics, business",
+  a:""
+},
+{
+  i:775,
+  n:"virgin mobile online uae",
+  c:"electronics,business",
+  u:"https://www.virginmobile.ae",
+  d:"digital mobile service offering sim plans and telecom services",
+  k:"virgin mobile uae, mobile network, prepaid plans, telecom services, electronics, business",
+  a:""
+},
+{
+  i:776,
+  n:"swyp online",
+  c:"electronics,business",
+  u:"https://www.swyp.ae",
+  d:"youth focused mobile service brand offering data and call plans",
+  k:"swyp uae, mobile service, data plans, youth telecom, electronics, business",
+  a:""
+},
+{
+  i:777,
+  n:"emirates nbd online",
+  c:"business",
+  u:"https://www.emiratesnbd.com",
+  d:"bank in the uae offering accounts, cards, loans and online banking",
+  k:"emirates nbd, bank, online banking, accounts, cards, loans, business",
+  a:""
+},
+{
+  i:778,
+  n:"adcb online",
+  c:"business",
+  u:"https://www.adcb.com",
+  d:"bank in the uae providing retail and corporate banking services",
+  k:"adcb, bank, retail banking, corporate banking, business",
+  a:""
+},
+{
+  i:779,
+  n:"fab online",
+  c:"business",
+  u:"https://www.bankfab.com",
+  d:"first abu dhabi bank offering banking and financial services",
+  k:"fab, first abu dhabi bank, banking services, financial services, business",
+  a:""
+},
+{
+  i:780,
+  n:"mashreq online",
+  c:"business",
+  u:"https://www.mashreq.com",
+  d:"bank in the uae offering digital banking and financial products",
+  k:"mashreq, bank, digital banking, financial products, business",
+  a:""
+},
+ 
+{
+  i:781,
+  n:"dib online",
+  c:"business",
+  u:"https://www.dib.ae",
+  d:"dubai islamic bank offering personal and corporate banking services",
+  k:"dubai islamic bank, dib, islamic banking, personal banking, corporate banking, business",
+  a:""
+},
+{
+  i:782,
+  n:"rakbank online",
+  c:"business",
+  u:"https://www.rakbank.ae",
+  d:"bank in the uae providing personal, business and islamic banking services",
+  k:"rakbank, personal banking, business banking, islamic banking, business",
+  a:""
+},
+{
+  i:783,
+  n:"hsbc online uae",
+  c:"business",
+  u:"https://www.hsbc.ae",
+  d:"international bank offering retail and commercial banking in the uae",
+  k:"hsbc uae, international bank, retail banking, commercial banking, business",
+  a:""
+},
+{
+  i:784,
+  n:"standard chartered online uae",
+  c:"business",
+  u:"https://www.sc.com/ae",
+  d:"international bank providing personal and corporate banking services in the uae",
+  k:"standard chartered uae, international bank, personal banking, corporate banking, business",
+  a:""
+},
+{
+  i:785,
+  n:"citibank online uae",
+  c:"business",
+  u:"https://www.citibank.ae",
+  d:"global bank offering credit cards, accounts and banking services in the uae",
+  k:"citibank uae, global bank, credit cards, bank accounts, business",
+  a:""
+},
+{
+  i:786,
+  n:"liv online",
+  c:"business",
+  u:"https://www.liv.me",
+  d:"digital bank account and lifestyle banking app in the uae",
+  k:"liv bank, digital bank, mobile banking, lifestyle banking, business",
+  a:""
+},
+{
+  i:787,
+  n:"adib online",
+  c:"business",
+  u:"https://www.adib.ae",
+  d:"abu dhabi islamic bank offering sharia compliant banking services",
+  k:"adib, abu dhabi islamic bank, islamic banking, sharia compliant, business",
+  a:""
+},
+{
+  i:788,
+  n:"emirates islamic online",
+  c:"business",
+  u:"https://www.emiratesislamic.ae",
+  d:"islamic bank in the uae offering retail and corporate banking",
+  k:"emirates islamic, islamic bank, retail banking, corporate banking, business",
+  a:""
+},
+{
+  i:789,
+  n:"ajman bank online",
+  c:"business",
+  u:"https://www.ajmanbank.ae",
+  d:"islamic bank in the uae providing personal and business banking",
+  k:"ajman bank, islamic banking, personal banking, business banking, business",
+  a:""
+},
+{
+  i:790,
+  n:"commercial bank of dubai online",
+  c:"business",
+  u:"https://www.cbd.ae",
+  d:"bank in the uae offering retail, corporate and islamic banking services",
+  k:"commercial bank of dubai, cbd, retail banking, corporate banking, islamic banking, business",
+  a:""
+},
+{
+  i:791,
+  n:"sharjah islamic bank online",
+  c:"business",
+  u:"https://www.sib.ae",
+  d:"islamic bank in the uae offering financial products and services",
+  k:"sharjah islamic bank, islamic banking, financial products, business",
+  a:""
+},
+{
+  i:792,
+  n:"national bank of fujairah online",
+  c:"business",
+  u:"https://www.nbf.ae",
+  d:"bank in fujairah offering personal, business and corporate banking",
+  k:"national bank of fujairah, nbf, personal banking, business banking, corporate banking, business",
+  a:""
+},
+{
+  i:793,
+  n:"paypal online uae",
+  c:"business",
+  u:"https://www.paypal.com/ae",
+  d:"online payment platform for sending and receiving money and paying online",
+  k:"paypal uae, online payments, digital wallet, send money, receive money, business",
+  a:""
+},
+{
+  i:794,
+  n:"wise online uae",
+  c:"business",
+  u:"https://wise.com",
+  d:"international money transfer and digital account service",
+  k:"wise uae, money transfer, international transfers, digital account, business",
+  a:""
+},
+{
+  i:795,
+  n:"western union online uae",
+  c:"business",
+  u:"https://www.westernunion.com",
+  d:"global money transfer service available online and through agents in the uae",
+  k:"western union uae, money transfer, remittance, international transfers, business",
+  a:""
+},
+{
+  i:796,
+  n:"al ansari exchange online",
+  c:"business",
+  u:"https://www.alansariexchange.com",
+  d:"exchange and remittance company offering currency exchange and money transfers",
+  k:"al ansari exchange, currency exchange, remittance, money transfer, business",
+  a:""
+},
+{
+  i:797,
+  n:"uae exchange online",
+  c:"business",
+  u:"https://www.uaeexchange.com",
+  d:"exchange and remittance service for currency exchange and money transfers",
+  k:"uae exchange, currency exchange, remittance, money transfer, business",
+  a:""
+},
+{
+  i:798,
+  n:"tabby online",
+  c:"business",
+  u:"https://tabby.ai",
+  d:"buy now pay later service for online and in store shopping",
+  k:"tabby uae, buy now pay later, bnpl, installment payments, business",
+  a:""
+},
+{
+  i:799,
+  n:"tamara online",
+  c:"business",
+  u:"https://tamara.co",
+  d:"buy now pay later platform for splitting purchases into installments",
+  k:"tamara uae, buy now pay later, bnpl, installment payments, business",
+  a:""
+},
+{
+  i:800,
+  n:"noon pay online",
+  c:"business",
+  u:"https://www.noon.com",
+  d:"digital wallet and payment service linked to noon for bills and shopping",
+  k:"noon pay, digital wallet, online payments, bill payments, shopping payments, business",
+  a:""
 }
-
-
-
-
-
-
 
 
 
