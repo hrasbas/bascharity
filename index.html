@@ -9151,38 +9151,32 @@ ${shop.n}
 
 }
 
-ddocument.addEventListener("DOMContentLoaded", () => {
+document.addEventListener("DOMContentLoaded",()=>{
 
-    const savedCountry =
-        localStorage.getItem("selectedCountry") || "india";
+    const savedCountry=
+    localStorage.getItem("selectedCountry") || "india";
 
-    // ആദ്യം load
-    setTimeout(() => {
-        setSelectedCountry(savedCountry);
-    }, 100);
+    setSelectedCountry(savedCountry);
 
-    // Google Translate കഴിഞ്ഞും വീണ്ടും ഉറപ്പാക്കുക
-    setTimeout(() => {
-        setSelectedCountry(savedCountry);
-    }, 1000);
+    document.querySelectorAll(".country-btn").forEach(btn=>{
 
-    document.querySelectorAll(".country-btn").forEach(btn => {
+        btn.addEventListener("click",function(){
 
-        btn.addEventListener("click", function () {
-
-            setSelectedCountry(this.textContent.trim().toLowerCase());
+            setSelectedCountry(
+                this.textContent.trim().toLowerCase()
+            );
 
         });
 
     });
 
-    allCountries.addEventListener("change", e => {
+    allCountries.addEventListener("change",e=>{
 
-        if (e.target.value) {
+        if(e.target.value){
 
             setSelectedCountry(e.target.value);
 
-            allCountries.selectedIndex = 0;
+            allCountries.selectedIndex=0;
 
         }
 
