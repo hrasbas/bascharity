@@ -11092,9 +11092,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // global change hook
   window.renderCountry = function (c) {
-    setCountry(c);
-  };
-});
+    setSelectedCountry(c);   // Part-1: shops load
+    setCountry(c);           // Part-2: category sync
+};
 
 </script>
     
