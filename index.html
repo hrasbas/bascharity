@@ -11091,11 +11091,9 @@ document.addEventListener("DOMContentLoaded", () => {
   setCountry(saved);
 
   // global change hook
-  window.renderCountry = function (c) {
-    setSelectedCountry(c);   // Part-1: shops load
-    setCountry(c);           // Part-2: category sync
+window.renderCountry = function (c) {
+    setCountry(c);
 };
-
 </script>
     
 
