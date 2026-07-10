@@ -7798,7 +7798,1634 @@ a:""
   d:"digital wallet and payment service linked to noon for bills and shopping",
   k:"noon pay, digital wallet, online payments, bill payments, shopping payments, business",
   a:""
+},
+ {
+  i:801,
+  n:"sukoon insurance online",
+  c:"business",
+  u:"https://www.sukoon.com",
+  d:"insurance company offering health, motor, life and general insurance in the uae",
+  k:"sukoon insurance, health insurance, motor insurance, life insurance, general insurance, business",
+  a:""
+},
+{
+  i:802,
+  n:"salama takaful online",
+  c:"business",
+  u:"https://www.salama.ae",
+  d:"takaful company providing sharia compliant insurance plans in the uae",
+  k:"salama takaful, islamic insurance, takaful plans, sharia compliant, business",
+  a:""
+},
+{
+  i:803,
+  n:"tokio marine online uae",
+  c:"business",
+  u:"https://www.tokiomarine.ae",
+  d:"insurance provider offering motor, medical and general insurance in the uae",
+  k:"tokio marine uae, motor insurance, medical insurance, general insurance, business",
+  a:""
+},
+{
+  i:804,
+  n:"gig gulf online",
+  c:"business",
+  u:"https://www.gig-gulf.com",
+  d:"insurance company offering personal and commercial insurance in the gulf region",
+  k:"gig gulf, personal insurance, commercial insurance, insurance company, business",
+  a:""
+},
+{
+  i:805,
+  n:"metlife online uae",
+  c:"business",
+  u:"https://www.metlife.ae",
+  d:"life and health insurance provider offering protection and savings plans",
+  k:"metlife uae, life insurance, health insurance, savings plans, business",
+  a:""
+},
+{
+  i:806,
+  n:"allianz care online",
+  c:"business",
+  u:"https://www.allianzcare.com",
+  d:"global health insurance provider for individuals and companies",
+  k:"allianz care, international health insurance, medical plans, global insurance, business",
+  a:""
+},
+{
+  i:807,
+  n:"bayzat online",
+  c:"business,software",
+  u:"https://www.bayzat.com",
+  d:"platform for employee benefits, health insurance and hr software",
+  k:"bayzat, employee benefits, health insurance, hr software, business, software",
+  a:""
+},
+{
+  i:808,
+  n:"policybazaar online uae",
+  c:"business",
+  u:"https://www.policybazaar.ae",
+  d:"insurance comparison platform for car, health, life and other policies",
+  k:"policybazaar uae, insurance comparison, car insurance, health insurance, life insurance, business",
+  a:""
+},
+{
+  i:809,
+  n:"yallacompare online",
+  c:"business",
+  u:"https://yallacompare.com",
+  d:"comparison site for insurance, banking and financial products in the middle east",
+  k:"yallacompare, insurance comparison, financial products, credit cards, business",
+  a:""
+},
+{
+  i:810,
+  n:"uae insurance online",
+  c:"business",
+  u:"https://www.uaeinsurance.ae",
+  d:"platform providing information and services for insurance products in the uae",
+  k:"uae insurance, insurance services, insurance information, business",
+  a:""
+},
+{
+  i:811,
+  n:"property finder online",
+  c:"business",
+  u:"https://www.propertyfinder.ae",
+  d:"real estate portal for buying and renting properties in the uae",
+  k:"property finder uae, real estate portal, buy property, rent property, business",
+  a:""
+},
+{
+  i:812,
+  n:"bayut online",
+  c:"business",
+  u:"https://www.bayut.com",
+  d:"real estate website listing properties for sale and rent in the uae",
+  k:"bayut uae, real estate listings, properties for sale, properties for rent, business",
+  a:""
+},
+{
+  i:813,
+  n:"dubizzle property online",
+  c:"business",
+  u:"https://dubizzle.com/property",
+  d:"classifieds platform section for property listings in the uae",
+  k:"dubizzle property, property classifieds, real estate listings, business",
+  a:""
+},
+{
+  i:814,
+  n:"emaar online",
+  c:"business",
+  u:"https://www.emaar.com",
+  d:"real estate developer behind communities, malls and hotels in the uae",
+  k:"emaar, real estate developer, communities, malls, hotels, business",
+  a:""
+},
+{
+  i:815,
+  n:"damac online",
+  c:"business",
+  u:"https://www.damacproperties.com",
+  d:"real estate developer offering luxury residential and commercial properties",
+  k:"damac, real estate developer, luxury properties, residential projects, business",
+  a:""
+},
+{
+  i:816,
+  n:"nakheel online",
+  c:"business",
+  u:"https://www.nakheel.com",
+  d:"real estate developer known for projects like palm jumeirah in dubai",
+  k:"nakheel, real estate developer, palm jumeirah, dubai projects, business",
+  a:""
+},
+{
+  i:817,
+  n:"aldar online",
+  c:"business",
+  u:"https://www.aldar.com",
+  d:"abu dhabi based real estate developer and property manager",
+  k:"aldar, real estate developer, abu dhabi properties, property management, business",
+  a:""
+},
+{
+  i:818,
+  n:"sobha realty online",
+  c:"business",
+  u:"https://www.sobharealty.com",
+  d:"real estate developer offering premium residential communities",
+  k:"sobha realty, real estate developer, premium residences, communities, business",
+  a:""
+},
+{
+  i:819,
+  n:"azizi developments online",
+  c:"business",
+  u:"https://www.azizidevelopments.com",
+  d:"real estate developer with residential projects across dubai",
+  k:"azizi developments, real estate developer, residential projects, dubai properties, business",
+  a:""
+},
+{
+  i:820,
+  n:"ellington properties online",
+  c:"business",
+  u:"https://www.ellingtonproperties.ae",
+  d:"design focused real estate developer offering residential properties",
+  k:"ellington properties, real estate developer, design focused, residential properties, business",
+  a:""
+},
+{
+  i:821,
+  n:"danube properties online",
+  c:"business",
+  u:"https://www.danubeproperties.com",
+  d:"real estate developer known for affordable housing projects",
+  k:"danube properties, real estate developer, affordable housing, residential projects, business",
+  a:""
+},
+{
+  i:822,
+  n:"binghatti online",
+  c:"business",
+  u:"https://binghatti.com",
+  d:"real estate developer offering residential and commercial properties",
+  k:"binghatti, real estate developer, residential properties, commercial properties, business",
+  a:""
+},
+{
+  i:823,
+  n:"wasl properties online",
+  c:"business",
+  u:"https://www.wasl.ae",
+  d:"property management company offering residential and commercial rentals",
+  k:"wasl properties, property management, residential rentals, commercial rentals, business",
+  a:""
+},
+{
+  i:824,
+  n:"reportage properties online",
+  c:"business",
+  u:"https://reportageuae.com",
+  d:"real estate developer with residential projects in the uae",
+  k:"reportage properties, real estate developer, residential projects, business",
+  a:""
+},
+{
+  i:825,
+  n:"betterhomes online",
+  c:"business",
+  u:"https://www.bhomes.com",
+  d:"real estate agency offering property sales, rentals and management",
+  k:"betterhomes, real estate agency, property sales, property rentals, business",
+  a:""
+},
+{
+  i:826,
+  n:"allsopp and allsopp online",
+  c:"business",
+  u:"https://www.allsoppandallsopp.com",
+  d:"real estate brokerage for buying, selling and renting properties",
+  k:"allsopp and allsopp, real estate brokerage, property sales, property rentals, business",
+  a:""
+},
+{
+  i:827,
+  n:"haus and haus online",
+  c:"business",
+  u:"https://www.hausandhaus.com",
+  d:"real estate agency specialized in dubai property sales and rentals",
+  k:"haus and haus, real estate agency, dubai properties, sales and rentals, business",
+  a:""
+},
+{
+  i:828,
+  n:"driven properties online",
+  c:"business",
+  u:"https://www.drivenproperties.com",
+  d:"real estate brokerage offering property sales, leasing and management",
+  k:"driven properties, real estate brokerage, sales, leasing, property management, business",
+  a:""
+},
+{
+  i:829,
+  n:"fam properties online",
+  c:"business",
+  u:"https://famproperties.com",
+  d:"real estate company providing property advisory and brokerage services",
+  k:"fam properties, real estate company, property advisory, brokerage, business",
+  a:""
+},
+{
+  i:830,
+  n:"zoom property online",
+  c:"business",
+  u:"https://zoomproperty.com",
+  d:"online property portal listing real estate for sale and rent",
+  k:"zoom property, property portal, real estate listings, buy and rent, business",
+  a:""
+},
+{
+  i:831,
+  n:"dubizzle jobs online",
+  c:"business",
+  u:"https://dubizzle.com/jobs",
+  d:"jobs section of dubizzle classifieds with vacancies in the uae",
+  k:"dubizzle jobs, job listings, vacancies, classifieds, business",
+  a:""
+},
+{
+  i:832,
+  n:"naukrigulf online",
+  c:"business",
+  u:"https://www.naukrigulf.com",
+  d:"job portal for finding jobs and vacancies in the gulf region",
+  k:"naukrigulf, jobs in gulf, jobs in uae, job portal, business",
+  a:""
+},
+{
+  i:833,
+  n:"gulftalent online",
+  c:"business",
+  u:"https://www.gulftalent.com",
+  d:"recruitment platform for professional jobs in the middle east",
+  k:"gulftalent, recruitment platform, professional jobs, middle east, business",
+  a:""
+},
+{
+  i:834,
+  n:"bayt online",
+  c:"business",
+  u:"https://www.bayt.com",
+  d:"job site for careers and vacancies in the middle east and north africa",
+  k:"bayt, job site, careers, jobs in middle east, business",
+  a:""
+},
+{
+  i:835,
+  n:"linkedin jobs online",
+  c:"business",
+  u:"https://www.linkedin.com/jobs",
+  d:"jobs section of linkedin for professional roles and careers",
+  k:"linkedin jobs, professional jobs, careers, job search, business",
+  a:""
+},
+{
+  i:836,
+  n:"indeed uae jobs",
+  c:"business",
+  u:"https://ae.indeed.com",
+  d:"job search engine listing vacancies across employers in the uae",
+  k:"indeed uae, job search, job listings, vacancies, business",
+  a:""
+},
+{
+  i:837,
+  n:"foundit gulf online",
+  c:"business",
+  u:"https://www.founditgulf.com",
+  d:"job portal for gulf careers and employment opportunities",
+  k:"foundit gulf, job portal, gulf jobs, careers, business",
+  a:""
+},
+{
+  i:838,
+  n:"grabjobs online",
+  c:"business",
+  u:"https://grabjobs.co",
+  d:"job platform with listings and quick apply options for roles worldwide",
+  k:"grabjobs, job platform, job listings, quick apply, business",
+  a:""
+},
+{
+  i:839,
+  n:"oliv careers",
+  c:"business",
+  u:"https://oliv.com",
+  d:"platform connecting students and graduates with internships and jobs",
+  k:"oliv, internships, graduate jobs, student careers, business",
+  a:""
+},
+{
+  i:840,
+  n:"laimoon careers",
+  c:"business",
+  u:"https://www.laimoon.com",
+  d:"job search site listing vacancies and courses in the middle east",
+  k:"laimoon, job search, vacancies, courses, middle east, business",
+  a:""
+},
+{
+  i:841,
+  n:"glassdoor uae",
+  c:"business",
+  u:"https://www.glassdoor.com",
+  d:"job and employer review site listing jobs and company ratings",
+  k:"glassdoor uae, job site, employer reviews, company ratings, salaries, business",
+  a:""
+},
+{
+  i:842,
+  n:"monster gulf",
+  c:"business",
+  u:"https://www.monstergulf.com",
+  d:"job portal for careers and vacancies in the gulf region",
+  k:"monster gulf, job portal, gulf jobs, careers, vacancies, business",
+  a:""
+},
+{
+  i:843,
+  n:"rozee gulf",
+  c:"business",
+  u:"https://www.rozee.pk",
+  d:"job site mainly for pakistan with listings including gulf roles",
+  k:"rozee gulf, job site, pakistan jobs, gulf jobs, careers, business",
+  a:""
+},
+{
+  i:844,
+  n:"workcircle uae",
+  c:"business",
+  u:"https://workcircle.com",
+  d:"job search engine aggregating listings from multiple job sites",
+  k:"workcircle uae, job search engine, job listings, vacancies, business",
+  a:""
+},
+{
+  i:845,
+  n:"remote ok",
+  c:"business",
+  u:"https://remoteok.com",
+  d:"job board for remote and work from home roles worldwide",
+  k:"remote ok, remote jobs, work from home, online jobs, business",
+  a:""
+},
+{
+  i:846,
+  n:"we work remotely",
+  c:"business",
+  u:"https://weworkremotely.com",
+  d:"job board focused on fully remote positions across industries",
+  k:"we work remotely, remote jobs, online jobs, distributed teams, business",
+  a:""
+},
+{
+  i:847,
+  n:"flexjobs",
+  c:"business",
+  u:"https://www.flexjobs.com",
+  d:"job site specializing in remote, hybrid and flexible jobs",
+  k:"flexjobs, remote jobs, flexible jobs, hybrid roles, business",
+  a:""
+},
+{
+  i:848,
+  n:"angel list jobs",
+  c:"business",
+  u:"https://wellfound.com",
+  d:"job platform for startup and tech roles worldwide",
+  k:"angel list jobs, wellfound, startup jobs, tech roles, business",
+  a:""
+},
+{
+  i:849,
+  n:"upwork jobs",
+  c:"business",
+  u:"https://www.upwork.com",
+  d:"freelance work marketplace listing projects and long term roles",
+  k:"upwork jobs, freelance work, remote projects, contracts, business",
+  a:""
+},
+{
+  i:850,
+  n:"fiverr gigs",
+  c:"business",
+  u:"https://www.fiverr.com",
+  d:"freelance marketplace offering gigs for digital and creative services",
+  k:"fiverr gigs, freelance marketplace, digital services, gigs, business",
+  a:""
+},
+{
+  i:851,
+  n:"booking online uae",
+  c:"travel,business",
+  u:"https://www.booking.com",
+  d:"online travel agency for booking hotels, apartments and stays",
+  k:"booking uae, hotel bookings, apartments, stays, travel website, travel, business",
+  a:""
+},
+{
+  i:852,
+  n:"agoda online uae",
+  c:"travel,business",
+  u:"https://www.agoda.com",
+  d:"online platform for booking hotels and accommodations worldwide",
+  k:"agoda uae, hotel bookings, accommodations, travel deals, travel, business",
+  a:""
+},
+{
+  i:853,
+  n:"expedia online uae",
+  c:"travel,business",
+  u:"https://www.expedia.com",
+  d:"online travel agency for flights, hotels and holiday packages",
+  k:"expedia uae, flights, hotels, holiday packages, travel, business",
+  a:""
+},
+{
+  i:854,
+  n:"airbnb online uae",
+  c:"travel,business",
+  u:"https://www.airbnb.ae",
+  d:"platform for booking holiday homes, apartments and experiences",
+  k:"airbnb uae, holiday homes, apartments, experiences, travel, business",
+  a:""
+},
+{
+  i:855,
+  n:"tripadvisor online uae",
+  c:"travel,business",
+  u:"https://www.tripadvisor.com",
+  d:"travel review site with hotel, restaurant and attraction listings",
+  k:"tripadvisor uae, travel reviews, hotels, restaurants, attractions, travel, business",
+  a:""
+},
+{
+  i:856,
+  n:"emirates online booking",
+  c:"travel,business",
+  u:"https://www.emirates.com",
+  d:"airline website for booking flights and managing emirates bookings",
+  k:"emirates airline, flight booking, manage booking, uae airline, travel, business",
+  a:""
+},
+{
+  i:857,
+  n:"etihad online booking",
+  c:"travel,business",
+  u:"https://www.etihad.com",
+  d:"airline website for booking flights with etihad airways",
+  k:"etihad airline, flight booking, uae airline, travel, business",
+  a:""
+},
+{
+  i:858,
+  n:"flydubai online booking",
+  c:"travel,business",
+  u:"https://www.flydubai.com",
+  d:"low cost airline website for booking flights from dubai",
+  k:"flydubai, low cost airline, flight booking, travel, business",
+  a:""
+},
+{
+  i:859,
+  n:"air arabia online booking",
+  c:"travel,business",
+  u:"https://www.airarabia.com",
+  d:"low cost airline website for booking flights in the region",
+  k:"air arabia, low cost airline, flight booking, regional flights, travel, business",
+  a:""
+},
+{
+  i:860,
+  n:"wizz air abu dhabi booking",
+  c:"travel,business",
+  u:"https://wizzair.com",
+  d:"low cost airline website for booking flights from abu dhabi",
+  k:"wizz air abu dhabi, low cost flights, flight booking, travel, business",
+  a:""
+},
+{
+  i:861,
+  n:"rayna tours online",
+  c:"travel,business",
+  u:"https://www.raynatours.com",
+  d:"travel agency offering tours, activities and holiday packages",
+  k:"rayna tours, tours in uae, activities, holiday packages, travel, business",
+  a:""
+},
+{
+  i:862,
+  n:"musafir online",
+  c:"travel,business",
+  u:"https://www.musafir.com",
+  d:"online travel agency for flights, hotels and holidays",
+  k:"musafir, online travel agency, flights, hotels, holidays, travel, business",
+  a:""
+},
+{
+  i:863,
+  n:"cleartrip online uae",
+  c:"travel,business",
+  u:"https://www.cleartrip.ae",
+  d:"online platform for booking flights, hotels and activities",
+  k:"cleartrip uae, flights, hotels, activities, travel, business",
+  a:""
+},
+{
+  i:864,
+  n:"dnata travel online",
+  c:"travel,business",
+  u:"https://www.dnatatravel.com",
+  d:"travel agency providing holiday packages and travel services",
+  k:"dnata travel, holiday packages, travel services, tours, travel, business",
+  a:""
+},
+{
+  i:865,
+  n:"holiday factory online",
+  c:"travel,business",
+  u:"https://holidayfactory.ae",
+  d:"travel company offering package holidays and tours",
+  k:"holiday factory, package holidays, tours, travel deals, travel, business",
+  a:""
+},
+{
+  i:866,
+  n:"hertz online uae",
+  c:"travel,business",
+  u:"https://www.hertz.ae",
+  d:"car rental company offering vehicles for hire in the uae",
+  k:"hertz uae, car rental, rent a car, vehicles, travel, business",
+  a:""
+},
+{
+  i:867,
+  n:"thrifty online uae",
+  c:"travel,business",
+  u:"https://www.thriftyuae.com",
+  d:"car rental service providing vehicles for short and long term hire",
+  k:"thrifty uae, car rental, rent a car, vehicle hire, travel, business",
+  a:""
+},
+{
+  i:868,
+  n:"budget rent a car online",
+  c:"travel,business",
+  u:"https://www.budget-uae.com",
+  d:"car rental company offering budget friendly rentals in the uae",
+  k:"budget uae, car rental, budget rent a car, vehicle rentals, travel, business",
+  a:""
+},
+{
+  i:869,
+  n:"europcar online uae",
+  c:"travel,business",
+  u:"https://www.europcar.ae",
+  d:"car rental provider with vehicles for rent in the uae",
+  k:"europcar uae, car rental, rent a car, vehicles, travel, business",
+  a:""
+},
+{
+  i:870,
+  n:"sixt online uae",
+  c:"travel,business",
+  u:"https://www.sixt.ae",
+  d:"car rental company offering premium and standard vehicles",
+  k:"sixt uae, car rental, premium cars, vehicle rentals, travel, business",
+  a:""
+},
+{
+  i:871,
+  n:"avis online uae",
+  c:"travel,business",
+  u:"https://www.avisuae.ae",
+  d:"car rental company providing vehicles for business and leisure",
+  k:"avis uae, car rental, business rentals, leisure rentals, travel, business",
+  a:""
+},
+{
+  i:872,
+  n:"diamondlease online",
+  c:"travel,business",
+  u:"https://www.diamondlease.com",
+  d:"vehicle leasing and rental company in the uae",
+  k:"diamondlease, vehicle leasing, car rental, fleet, travel, business",
+  a:""
+},
+{
+  i:873,
+  n:"speedy drive online",
+  c:"travel,business",
+  u:"https://www.speedydrive.ae",
+  d:"car rental service offering short and long term rentals in dubai",
+  k:"speedy drive, car rental, dubai rentals, vehicles, travel, business",
+  a:""
+},
+{
+  i:874,
+  n:"oneclickdrive online",
+  c:"travel,business",
+  u:"https://www.oneclickdrive.com",
+  d:"marketplace listing car rentals and luxury cars from multiple providers",
+  k:"oneclickdrive, car rental marketplace, luxury cars, rent a car, travel, business",
+  a:""
+},
+{
+  i:875,
+  n:"parkin uae",
+  c:"travel,business",
+  u:"https://www.parkin.ae",
+  d:"official platform for parking services and payments in dubai",
+  k:"parkin uae, parking payments, parking services, dubai parking, travel, business",
+  a:""
+},
+{
+  i:876,
+  n:"dubizzle cars online",
+  c:"automotive,business",
+  u:"https://dubizzle.com",
+  d:"classifieds platform listing used cars and vehicles for sale",
+  k:"dubizzle cars, used cars, vehicle classifieds, buy cars, automotive, business",
+  a:""
+},
+{
+  i:877,
+  n:"yallamotor online",
+  c:"automotive,business",
+  u:"https://uae.yallamotor.com",
+  d:"car portal with listings, reviews and car prices in the uae",
+  k:"yallamotor, car portal, car listings, car reviews, automotive, business",
+  a:""
+},
+{
+  i:878,
+  n:"cars24 online uae",
+  c:"automotive,business",
+  u:"https://www.cars24.com/ae",
+  d:"platform for buying and selling used cars in the uae",
+  k:"cars24 uae, used cars, sell car, buy car, automotive, business",
+  a:""
+},
+{
+  i:879,
+  n:"carswitch online",
+  c:"automotive,business",
+  u:"https://carswitch.com",
+  d:"online platform for buying and selling inspected used cars",
+  k:"carswitch, used cars, car marketplace, inspected cars, automotive, business",
+  a:""
+},
+{
+  i:880,
+  n:"sellanycar online",
+  c:"automotive,business",
+  u:"https://www.sellanycar.com",
+  d:"service for quickly valuing and selling used cars in the uae",
+  k:"sellanycar, sell car, car valuation, used cars, automotive, business",
+  a:""
+},
+ 
+{
+  i:881,
+  n:"automall online uae",
+  c:"automotive,business",
+  u:"https://www.automall.ae",
+  d:"used car dealership and marketplace for buying and selling cars in the uae",
+  k:"automall uae, used cars, preowned vehicles, car dealership, automotive, business",
+  a:""
+},
+{
+  i:882,
+  n:"al futtaim automall online",
+  c:"automotive,business",
+  u:"https://www.automall.ae",
+  d:"al futtaim owned certified used car retailer offering inspected vehicles",
+  k:"al futtaim automall, certified used cars, inspected vehicles, car retailer, automotive, business",
+  a:""
+},
+{
+  i:883,
+  n:"autopro online",
+  c:"automotive,business",
+  u:"https://www.autopro.ae",
+  d:"car service and maintenance centers offering car wash, oil change and repairs",
+  k:"autopro uae, car service, car wash, oil change, car maintenance, automotive, business",
+  a:""
+},
+{
+  i:884,
+  n:"zdegree online",
+  c:"automotive,business",
+  u:"https://zdegree.com",
+  d:"automotive service provider for tyres, batteries and car maintenance",
+  k:"zdegree uae, tyres, car maintenance, batteries, automotive services, automotive, business",
+  a:""
+},
+{
+  i:885,
+  n:"pitstop arabia online",
+  c:"automotive,business",
+  u:"https://www.pitstoparabia.com",
+  d:"online platform for buying tyres with installation services across the uae",
+  k:"pitstop arabia, tyres online, tyre installation, car tyres, automotive, business",
+  a:""
+},
+{
+  i:886,
+  n:"tyres online store uae",
+  c:"automotive,business",
+  u:"https://www.tyresonline.ae",
+  d:"online store for tyres and tyre services in the uae",
+  k:"tyres online uae, buy tyres, tyre store, tyre services, automotive, business",
+  a:""
+},
+{
+  i:887,
+  n:"adnoc distribution online",
+  c:"automotive,business",
+  u:"https://www.adnocdistribution.ae",
+  d:"fuel and convenience retailer operating petrol stations and car services in the uae",
+  k:"adnoc distribution, petrol stations, fuel, car services, convenience stores, automotive, business",
+  a:""
+},
+{
+  i:888,
+  n:"enoc online",
+  c:"automotive,business",
+  u:"https://www.enoc.com",
+  d:"energy company operating fuel stations and automotive services in the uae",
+  k:"enoc, petrol stations, fuel, automotive services, energy company, automotive, business",
+  a:""
+},
+{
+  i:889,
+  n:"emarat online",
+  c:"automotive,business",
+  u:"https://www.emarat.ae",
+  d:"fuel retail company with petrol stations and car services in the uae",
+  k:"emarat, petrol stations, fuel, car wash, automotive services, automotive, business",
+  a:""
+},
+{
+  i:890,
+  n:"cafu online",
+  c:"automotive,business",
+  u:"https://www.cafu.com",
+  d:"on demand fuel delivery service bringing petrol to cars in the uae",
+  k:"cafu, fuel delivery, on demand petrol, car refuelling, automotive, business",
+  a:""
 }
+{
+  i:891,
+  n:"netflix online uae",
+  c:"business",
+  u:"https://www.netflix.com",
+  d:"subscription streaming service for movies, series and documentaries",
+  k:"netflix uae, video streaming, movies, tv shows, series, business",
+  a:""
+},
+{
+  i:892,
+  n:"prime video online uae",
+  c:"business",
+  u:"https://www.primevideo.com",
+  d:"video streaming service offering movies, series and originals",
+  k:"prime video uae, video streaming, movies, series, originals, business",
+  a:""
+},
+{
+  i:893,
+  n:"disney plus online uae",
+  c:"business",
+  u:"https://www.disneyplus.com",
+  d:"streaming platform for disney, marvel, star wars and other content",
+  k:"disney plus uae, video streaming, disney movies, marvel, star wars, business",
+  a:""
+},
+{
+  i:894,
+  n:"starzplay online",
+  c:"business",
+  u:"https://www.starzplay.com",
+  d:"subscription video service with movies, series and sports",
+  k:"starzplay, video streaming, movies, series, sports, business",
+  a:""
+},
+{
+  i:895,
+  n:"shahid online",
+  c:"business",
+  u:"https://shahid.mbc.net",
+  d:"arabic streaming platform with series, shows and live tv",
+  k:"shahid, arabic streaming, arabic series, tv shows, live tv, business",
+  a:""
+},
+{
+  i:896,
+  n:"osn plus online",
+  c:"business",
+  u:"https://www.osnplus.com",
+  d:"streaming service offering series, movies and exclusive content",
+  k:"osn plus, video streaming, series, movies, exclusive shows, business",
+  a:""
+},
+{
+  i:897,
+  n:"youtube premium online uae",
+  c:"business",
+  u:"https://www.youtube.com",
+  d:"subscription for ad free youtube videos and background play",
+  k:"youtube premium, ad free videos, video streaming, background play, business",
+  a:""
+},
+{
+  i:898,
+  n:"spotify online uae",
+  c:"business",
+  u:"https://www.spotify.com",
+  d:"music streaming service offering songs, playlists and podcasts",
+  k:"spotify uae, music streaming, songs, playlists, podcasts, business",
+  a:""
+},
+{
+  i:899,
+  n:"anghami online",
+  c:"business",
+  u:"https://www.anghami.com",
+  d:"music streaming app focused on arabic and international songs",
+  k:"anghami, music streaming, arabic songs, playlists, business",
+  a:""
+},
+{
+  i:900,
+  n:"apple music online uae",
+  c:"business",
+  u:"https://music.apple.com",
+  d:"music streaming service from apple with songs and playlists",
+  k:"apple music uae, music streaming, songs, playlists, business",
+  a:""
+},
+{
+  i:901,
+  n:"deezer online uae",
+  c:"business",
+  u:"https://www.deezer.com",
+  d:"music streaming platform with songs, playlists and podcasts",
+  k:"deezer uae, music streaming, playlists, podcasts, business",
+  a:""
+},
+{
+  i:902,
+  n:"soundcloud online",
+  c:"business",
+  u:"https://soundcloud.com",
+  d:"platform for streaming and sharing music and audio tracks",
+  k:"soundcloud, music streaming, audio tracks, independent artists, business",
+  a:""
+},
+{
+  i:903,
+  n:"tidal online",
+  c:"business",
+  u:"https://tidal.com",
+  d:"music streaming service offering high fidelity audio and videos",
+  k:"tidal, music streaming, high quality audio, hi fi music, business",
+  a:""
+},
+{
+  i:904,
+  n:"amazon music online uae",
+  c:"business",
+  u:"https://music.amazon.ae",
+  d:"music streaming service from amazon with songs and playlists",
+  k:"amazon music uae, music streaming, songs, playlists, business",
+  a:""
+},
+{
+  i:905,
+  n:"ticketmaster online uae",
+  c:"business",
+  u:"https://www.ticketmaster.ae",
+  d:"ticketing platform for concerts, events and shows in the uae",
+  k:"ticketmaster uae, event tickets, concerts, shows, business",
+  a:""
+},
+{
+  i:906,
+  n:"platinumlist online",
+  c:"business",
+  u:"https://www.platinumlist.net",
+  d:"online ticketing platform for events, attractions and activities",
+  k:"platinumlist, event tickets, attractions, activities, business",
+  a:""
+},
+{
+  i:907,
+  n:"bookmyshow online uae",
+  c:"business",
+  u:"https://uae.bookmyshow.com",
+  d:"ticketing platform for movies, events and activities in the uae",
+  k:"bookmyshow uae, movie tickets, event tickets, activities, business",
+  a:""
+},
+{
+  i:908,
+  n:"dubai opera online",
+  c:"business",
+  u:"https://www.dubaiopera.com",
+  d:"official site for tickets and information about dubai opera shows",
+  k:"dubai opera, opera tickets, concerts, shows, business",
+  a:""
+},
+{
+  i:909,
+  n:"coca cola arena online",
+  c:"business",
+  u:"https://www.coca-cola-arena.com",
+  d:"venue site for concerts and events at coca cola arena dubai",
+  k:"coca cola arena, concerts, live events, tickets, business",
+  a:""
+},
+{
+  i:910,
+  n:"ski dubai online",
+  c:"business",
+  u:"https://www.skidxb.com",
+  d:"indoor ski resort in dubai offering snow activities and tickets online",
+  k:"ski dubai, indoor ski, snow park, tickets, business",
+  a:""
+},
+{
+  i:911,
+  n:"img worlds online",
+  c:"business",
+  u:"https://www.imgworlds.com",
+  d:"theme park in dubai with rides and attractions, tickets available online",
+  k:"img worlds, theme park, rides, attractions, tickets, business",
+  a:""
+},
+{
+  i:912,
+  n:"motiongate online",
+  c:"business",
+  u:"https://www.motiongatedubai.com",
+  d:"hollywood inspired theme park in dubai parks and resorts",
+  k:"motiongate dubai, theme park, hollywood rides, attractions, business",
+  a:""
+},
+{
+  i:913,
+  n:"legoland dubai online",
+  c:"business",
+  u:"https://www.legoland.com/dubai",
+  d:"family theme park in dubai with lego themed rides and attractions",
+  k:"legoland dubai, theme park, lego rides, family attractions, business",
+  a:""
+},
+{
+  i:914,
+  n:"yas island online",
+  c:"business",
+  u:"https://www.yasisland.com",
+  d:"destination site for attractions and theme parks on yas island",
+  k:"yas island, attractions, theme parks, abu dhabi, business",
+  a:""
+},
+{
+  i:915,
+  n:"ferrari world online",
+  c:"business",
+  u:"https://www.ferrariworldabudhabi.com",
+  d:"theme park in abu dhabi featuring ferrari themed rides and attractions",
+  k:"ferrari world, theme park, ferrari rides, abu dhabi attractions, business",
+  a:""
+},
+{
+  i:916,
+  n:"warner bros world online",
+  c:"business",
+  u:"https://www.wbworldabudhabi.com",
+  d:"indoor theme park in abu dhabi with warner bros themed attractions",
+  k:"warner bros world, theme park, warner bros attractions, abu dhabi, business",
+  a:""
+},
+{
+  i:917,
+  n:"sea world abu dhabi online",
+  c:"business",
+  u:"https://www.seaworldabudhabi.com",
+  d:"marine life theme park and aquarium in abu dhabi",
+  k:"sea world abu dhabi, marine park, aquarium, attractions, business",
+  a:""
+},
+{
+  i:918,
+  n:"global village online",
+  c:"business",
+  u:"https://www.globalvillage.ae",
+  d:"seasonal multicultural park in dubai with pavilions and shows",
+  k:"global village dubai, multicultural park, pavilions, shows, business",
+  a:""
+},
+{
+  i:919,
+  n:"dubai parks and resorts online",
+  c:"business",
+  u:"https://www.dubaiparksandresorts.com",
+  d:"destination with multiple theme parks including motiongate and legoland",
+  k:"dubai parks and resorts, theme parks, motiongate, legoland, business",
+  a:""
+},
+{
+  i:920,
+  n:"museum of the future online",
+  c:"business",
+  u:"https://museumofthefuture.ae",
+  d:"museum in dubai showcasing future technologies and immersive exhibits",
+  k:"museum of the future, dubai museum, future technologies, exhibits, business",
+  a:""
+},
+ 
+{
+  i:921,
+  n:"aya universe online",
+  c:"business",
+  u:"https://www.aya-universe.com",
+  d:"immersive light and sound experience attraction in dubai",
+  k:"aya universe, immersive experience, light shows, dubai attraction, business",
+  a:""
+},
+{
+  i:922,
+  n:"burj khalifa online tickets",
+  c:"business",
+  u:"https://www.burjkhalifa.ae",
+  d:"official site for booking tickets to burj khalifa observation decks",
+  k:"burj khalifa tickets, at the top, observation deck, dubai attraction, business",
+  a:""
+},
+{
+  i:923,
+  n:"dubai aquarium online",
+  c:"business",
+  u:"https://www.thedubaiaquarium.com",
+  d:"site for information and tickets to dubai aquarium and underwater zoo",
+  k:"dubai aquarium, underwater zoo, tickets, dubai mall, business",
+  a:""
+},
+{
+  i:924,
+  n:"atlantis aquaventure online",
+  c:"business",
+  u:"https://www.atlantis.com/dubai",
+  d:"waterpark and resort site for aquaventure and atlantis dubai",
+  k:"atlantis dubai, aquaventure, waterpark, resort, tickets, business",
+  a:""
+},
+{
+  i:925,
+  n:"the green planet online",
+  c:"business",
+  u:"https://www.thegreenplanetdubai.com",
+  d:"indoor tropical bio dome attraction in dubai",
+  k:"the green planet, biodome, indoor rainforest, dubai attraction, business",
+  a:""
+},
+{
+  i:926,
+  n:"dubai frame online",
+  c:"business",
+  u:"https://www.dubaiframe.ae",
+  d:"official site for tickets and information about the dubai frame",
+  k:"dubai frame, tickets, dubai attraction, landmark, business",
+  a:""
+},
+{
+  i:927,
+  n:"topgolf dubai online",
+  c:"business",
+  u:"https://topgolfdubai.ae",
+  d:"entertainment venue in dubai offering golf games and food",
+  k:"topgolf dubai, golf games, entertainment venue, leisure, business",
+  a:""
+},
+{
+  i:928,
+  n:"dubai autodrome online",
+  c:"business",
+  u:"https://www.dubaiautodrome.com",
+  d:"motorsport venue in dubai offering racing experiences and events",
+  k:"dubai autodrome, motorsport, racing, karting, events, business",
+  a:""
+},
+{
+  i:929,
+  n:"emirates golf club online",
+  c:"business",
+  u:"https://www.dubaigolf.com",
+  d:"golf club in dubai offering golf courses and memberships",
+  k:"emirates golf club, golf in dubai, golf course, memberships, business",
+  a:""
+},
+{
+  i:930,
+  n:"jumeirah golf estates online",
+  c:"business",
+  u:"https://www.jumeirahgolfestates.com",
+  d:"golf and residential community in dubai with championship courses",
+  k:"jumeirah golf estates, golf community, golf courses, dubai, business",
+  a:""
+},
+ 
+{
+  i:951,
+  n:"medcare online",
+  c:"health",
+  u:"https://www.medcare.ae",
+  d:"hospital and clinic group offering healthcare services in the uae",
+  k:"medcare hospital, clinics, healthcare services, uae, health",
+  a:""
+},
+{
+  i:952,
+  n:"mediclinic online uae",
+  c:"health",
+  u:"https://www.mediclinic.ae",
+  d:"private healthcare provider with hospitals and clinics in the uae",
+  k:"mediclinic uae, hospitals, clinics, healthcare, health",
+  a:""
+},
+{
+  i:953,
+  n:"burjeel online",
+  c:"health",
+  u:"https://burjeel.com",
+  d:"healthcare group operating hospitals and clinics in the region",
+  k:"burjeel, hospitals, clinics, healthcare group, health",
+  a:""
+},
+{
+  i:954,
+  n:"nmc healthcare online",
+  c:"health",
+  u:"https://nmc.ae",
+  d:"healthcare group providing medical services in the uae",
+  k:"nmc healthcare, hospitals, clinics, medical services, health",
+  a:""
+},
+{
+  i:955,
+  n:"thumbay online",
+  c:"health",
+  u:"https://thumbay.com",
+  d:"healthcare and education group with hospitals and clinics",
+  k:"thumbay hospital, healthcare, medical services, education, health",
+  a:""
+},
+{
+  i:956,
+  n:"saudi german hospital online",
+  c:"health",
+  u:"https://www.sghgroup.com",
+  d:"hospital group providing healthcare services in the uae and region",
+  k:"saudi german hospital, healthcare, hospitals, medical services, health",
+  a:""
+},
+{
+  i:957,
+  n:"fakeeh hospital online",
+  c:"health",
+  u:"https://www.fuh.care",
+  d:"fakeeh university hospital offering medical care in dubai",
+  k:"fakeeh hospital, university hospital, medical care, dubai, health",
+  a:""
+},
+{
+  i:958,
+  n:"cleveland clinic abu dhabi online",
+  c:"health",
+  u:"https://www.clevelandclinicabudhabi.ae",
+  d:"specialty hospital in abu dhabi offering advanced medical care",
+  k:"cleveland clinic abu dhabi, specialty hospital, advanced care, health",
+  a:""
+},
+{
+  i:959,
+  n:"american hospital dubai online",
+  c:"health",
+  u:"https://www.ahdubai.com",
+  d:"private hospital in dubai providing medical and surgical services",
+  k:"american hospital dubai, hospital, medical services, surgery, health",
+  a:""
+},
+{
+  i:960,
+  n:"kings college hospital online",
+  c:"health",
+  u:"https://kch.ae",
+  d:"hospital in the uae affiliated with kings college london",
+  k:"kings college hospital uae, hospital, medical care, health",
+  a:""
+},
+ {
+  i:961,
+  n:"zulekha hospital online",
+  c:"health",
+  u:"https://www.zulekhahospitals.com",
+  d:"hospital group providing medical services in dubai and sharjah",
+  k:"zulekha hospital, hospitals, medical services, dubai, sharjah, health",
+  a:""
+},
+{
+  i:962,
+  n:"aster clinics online",
+  c:"health",
+  u:"https://www.asterclinic.ae",
+  d:"network of clinics in the uae offering primary and specialty care",
+  k:"aster clinics, clinics uae, primary care, specialty care, health",
+  a:""
+},
+{
+  i:963,
+  n:"prime hospital online",
+  c:"health",
+  u:"https://www.primehealth.ae",
+  d:"hospital and medical centers providing healthcare services in the uae",
+  k:"prime hospital, prime healthcare, hospitals, medical centers, health",
+  a:""
+},
+{
+  i:964,
+  n:"canadian specialist hospital online",
+  c:"health",
+  u:"https://www.csh.ae",
+  d:"specialist hospital in dubai offering a range of medical services",
+  k:"canadian specialist hospital, dubai hospital, medical services, health",
+  a:""
+},
+{
+  i:965,
+  n:"al zahra hospital online",
+  c:"health",
+  u:"https://www.azhd.ae",
+  d:"hospital in dubai offering medical and surgical services",
+  k:"al zahra hospital dubai, hospital, medical services, surgery, health",
+  a:""
+},
+{
+  i:966,
+  n:"emirates hospital online",
+  c:"health",
+  u:"https://emirateshospital.ae",
+  d:"private hospital group providing healthcare services in the uae",
+  k:"emirates hospital, hospitals uae, medical care, health",
+  a:""
+},
+{
+  i:967,
+  n:"healthhub online",
+  c:"health",
+  u:"https://www.healthhubalfuttaim.com",
+  d:"clinics and medical centers operated by al futtaim healthcare",
+  k:"healthhub, clinics uae, medical centers, al futtaim, health",
+  a:""
+},
+{
+  i:968,
+  n:"vps healthcare online",
+  c:"health",
+  u:"https://vpshealth.com",
+  d:"healthcare group operating hospitals and clinics in the region",
+  k:"vps healthcare, hospitals, clinics, medical services, health",
+  a:""
+},
+{
+  i:969,
+  n:"aster labs online",
+  c:"health",
+  u:"https://www.asterlabs.com",
+  d:"diagnostic laboratory services offering medical tests",
+  k:"aster labs, diagnostic lab, medical tests, pathology, health",
+  a:""
+},
+{
+  i:970,
+  n:"unilabs online uae",
+  c:"health",
+  u:"https://www.unilabs.ae",
+  d:"diagnostic laboratory network providing imaging and lab tests",
+  k:"unilabs uae, diagnostic lab, imaging, lab tests, health",
+  a:""
+},
+ {
+  i:971,
+  n:"modern vet online",
+  c:"pets",
+  u:"https://www.modernvet.com",
+  d:"veterinary clinics and 24 hour animal hospital in dubai",
+  k:"modern vet, veterinary clinic, animal hospital, pet care, pets",
+  a:""
+},
+{
+  i:972,
+  n:"british veterinary hospital online",
+  c:"pets",
+  u:"https://www.bvh.ae",
+  d:"veterinary hospital in dubai offering medical care for pets",
+  k:"british veterinary hospital, vet hospital, pet care, dubai, pets",
+  a:""
+},
+{
+  i:973,
+  n:"vets fur pets online",
+  c:"pets",
+  u:"https://vetsfurpets.com",
+  d:"veterinary clinic providing medical services for pets",
+  k:"vets fur pets, veterinary clinic, pet healthcare, pets",
+  a:""
+},
+{
+  i:974,
+  n:"pet kingdom online",
+  c:"pets",
+  u:"https://petkingdom.ae",
+  d:"pet store offering pet supplies and accessories in the uae",
+  k:"pet kingdom, pet shop, pet supplies, accessories, pets",
+  a:""
+},
+{
+  i:975,
+  n:"pet haus online",
+  c:"pets",
+  u:"https://pethaus.com",
+  d:"online pet store offering food and accessories",
+  k:"pet haus, pet store, pet food, pet accessories, pets",
+  a:""
+},
+{
+  i:976,
+  n:"pet lovers centre online",
+  c:"pets",
+  u:"https://www.petloverscentre.com",
+  d:"pet shop chain offering pet food and supplies",
+  k:"pet lovers centre, pet shop, pet food, supplies, pets",
+  a:""
+},
+{
+  i:977,
+  n:"pet village online",
+  c:"pets",
+  u:"https://petvillage.ae",
+  d:"pet store and services provider in the uae",
+  k:"pet village, pet store, pet services, pets",
+  a:""
+},
+{
+  i:978,
+  n:"green branch pets online",
+  c:"pets",
+  u:"https://greenbranch.ae",
+  d:"pet shop offering pet food and accessories",
+  k:"green branch pets, pet shop, pet food, accessories, pets",
+  a:""
+},
+{
+  i:979,
+  n:"pet first veterinary online",
+  c:"pets",
+  u:"https://petfirst.ae",
+  d:"veterinary clinic providing medical care for pets",
+  k:"pet first veterinary, vet clinic, pet healthcare, pets",
+  a:""
+},
+{
+  i:980,
+  n:"furchild pets online",
+  c:"pets",
+  u:"https://furchildpets.com",
+  d:"pet food company offering natural and raw pet meals",
+  k:"furchild pets, pet food, raw food, natural pet meals, pets",
+  a:""
+},
+
+{
+  i:981,
+  n:"animal world online",
+  c:"pets",
+  u:"https://animalworld.ae",
+  d:"pet store offering animals, pet food and accessories",
+  k:"animal world, pet store, pet food, accessories, pets",
+  a:""
+},
+{
+  i:982,
+  n:"pets delight online",
+  c:"pets",
+  u:"https://petsdelight.com",
+  d:"online and retail pet shop with food and supplies",
+  k:"pets delight, pet shop, pet food, pet supplies, pets",
+  a:""
+},
+{
+  i:983,
+  n:"petsouq online",
+  c:"pets",
+  u:"https://www.petsouq.com",
+  d:"online pet store offering food, toys and accessories",
+  k:"petsouq, online pet store, pet food, pet toys, pets",
+  a:""
+},
+{
+  i:984,
+  n:"the groomer online",
+  c:"pets",
+  u:"https://thegroomer.ae",
+  d:"pet grooming service and salon in the uae",
+  k:"the groomer, pet grooming, pet salon, pets",
+  a:""
+},
+{
+  i:985,
+  n:"petzone veterinary services",
+  c:"pets",
+  u:"https://www.petzone.com",
+  d:"pet store and veterinary services provider",
+  k:"petzone, pet store, veterinary services, pet care, pets",
+  a:""
+},
+{
+  i:986,
+  n:"amazon uae affiliate",
+  c:"shopping",
+  u:"https://www.amazon.ae/?tag=vmmbaslinks01-21",
+  d:"affiliate link to amazon uae online shopping site",
+  k:"amazon uae, online shopping, affiliate link, ecommerce, shopping",
+  a:""
+},
+{
+  i:987,
+  n:"alibaba affiliate",
+  c:"shopping",
+  u:"https://rzekl.com/g/pm1aev55clcf9d224bea219aa26f6f/",
+  d:"affiliate link to alibaba wholesale and shopping platform",
+  k:"alibaba affiliate, wholesale, online shopping, ecommerce, shopping",
+  a:""
+},
+{
+  i:988,
+  n:"aliexpress affiliate",
+  c:"shopping",
+  u:"https://rzekl.com/g/1e8d114494cf9d224bea16525dc3e8/",
+  d:"affiliate link to aliexpress online marketplace",
+  k:"aliexpress affiliate, online marketplace, cheap products, shopping",
+  a:""
+},
+{
+  i:989,
+  n:"boardmix affiliate",
+  c:"tools",
+  u:"https://axavl.com/g/3tevoaw5qqcf9d224bead12233f6f4/",
+  d:"affiliate link to online whiteboard and collaboration tool boardmix",
+  k:"boardmix affiliate, online whiteboard, collaboration tool, tools",
+  a:""
+},
+{
+  i:990,
+  n:"italki affiliate",
+  c:"education",
+  u:"#",
+  d:"affiliate slot reserved for online language learning platform italki",
+  k:"italki affiliate, language learning, online lessons, education",
+  a:""
+},
+ {
+  i:991,
+  n:"noon affiliate slot",
+  c:"shopping",
+  u:"#",
+  d:"affiliate slot reserved for noon online shopping",
+  k:"noon affiliate, online shopping, ecommerce, shopping",
+  a:""
+},
+{
+  i:992,
+  n:"careem affiliate slot",
+  c:"services",
+  u:"#",
+  d:"affiliate slot reserved for ride hailing and delivery service careem",
+  k:"careem affiliate, ride hailing, delivery service, services",
+  a:""
+},
+{
+  i:993,
+  n:"talabat affiliate slot",
+  c:"services",
+  u:"#",
+  d:"affiliate slot reserved for food delivery platform talabat",
+  k:"talabat affiliate, food delivery, online ordering, services",
+  a:""
+},
+{
+  i:994,
+  n:"dubizzle affiliate slot",
+  c:"business",
+  u:"#",
+  d:"affiliate slot reserved for classifieds and marketplace site dubizzle",
+  k:"dubizzle affiliate, classifieds, marketplace, business",
+  a:""
+},
+{
+  i:995,
+  n:"property finder affiliate slot",
+  c:"business",
+  u:"#",
+  d:"affiliate slot reserved for property finder real estate portal",
+  k:"property finder affiliate, real estate portal, property listings, business",
+  a:""
+},
+{
+  i:996,
+  n:"booking affiliate slot",
+  c:"travel",
+  u:"#",
+  d:"affiliate slot reserved for booking dot com travel site",
+  k:"booking affiliate, hotel bookings, travel site, travel",
+  a:""
+},
+{
+  i:997,
+  n:"agoda affiliate slot",
+  c:"travel",
+  u:"#",
+  d:"affiliate slot reserved for agoda hotel booking site",
+  k:"agoda affiliate, hotel bookings, travel deals, travel",
+  a:""
+},
+{
+  i:998,
+  n:"tripadvisor affiliate slot",
+  c:"travel",
+  u:"#",
+  d:"affiliate slot reserved for tripadvisor travel review site",
+  k:"tripadvisor affiliate, travel reviews, hotels, travel",
+  a:""
+},
+{
+  i:999,
+  n:"future affiliate slot 01",
+  c:"business",
+  u:"#",
+  d:"placeholder for future affiliate link slot one",
+  k:"future affiliate, placeholder, business slot, business",
+  a:""
+},
+{
+  i:1000,
+  n:"future affiliate slot 02",
+  c:"business",
+  u:"#",
+  d:"placeholder for future affiliate link slot two",
+  k:"future affiliate, placeholder, business slot, business",
+  a:""
+}
+
+
+ 
 
 
 
