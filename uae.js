@@ -1,4 +1,4 @@
-countryShops.uae = [
+countryShops.uae = [ 
 {
 i:1,
 n:"amazon uae",
