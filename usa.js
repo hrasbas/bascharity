@@ -1,4 +1,4 @@
-countryShops.usa =[
+countryShops.usa = [ 
   { i:1, n:"amazon", c:"electronics,home,fashion,beauty,health,food,sports,books,software,business,jewellery,automotive", u:"https://www.amazon.com", d:"global online marketplace for electronics, home essentials, fashion, groceries and more in the usa.", k:"amazon usa,online shopping usa,all categories marketplace,electronics and home deals,clothing and fashion store,grocery and food delivery,books and software shop", a:"" },
 { i:2, n:"apple", c:"electronics,software,business", u:"https://www.apple.com", d:"official apple usa store for iphones, ipads, mac computers, watches and digital services.", k:"apple usa,iphone store usa,macbook and ipad shop,apple watch and accessories,apple software and services,apple online store", a:"" },
 { i:3, n:"best buy", c:"electronics,home,business", u:"https://www.bestbuy.com", d:"electronics and appliance retailer for tvs, laptops, phones and home devices across the usa.", k:"best buy usa,electronics store usa,tv and laptop deals,smartphone and gadgets,home appliances retailer", a:"" },
