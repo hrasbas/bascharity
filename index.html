@@ -663,7 +663,7 @@ ball.className = "bas-ball is-pwa-installed";
 
 <!-- COUNTRY BOX START -->
 
-  <style>
+                     <style>
 .country-board{width:96%;max-width:900px;margin:14px auto;padding:14px;border:1px solid #cfcfcf;border-radius:16px;background:#111;color:#fff;font-family:Arial,sans-serif}
 .country-title{width:100%;background:#4a4a4a;color:#fff;border:2px solid #dfe6eb;border-radius:14px;padding:14px 8px;text-align:center;font-size:16px;font-weight:800;margin-bottom:12px}
 .country-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-bottom:12px}
@@ -688,15 +688,15 @@ ball.className = "bas-ball is-pwa-installed";
 <div class="country-board">
   <div class="country-title">SELECT COUNTRY</div>
   <div class="country-grid">
-    <button class="country-btn india" onclick="renderCountry('india')">INDIA</button>
-    <button class="country-btn usa" onclick="renderCountry('usa')">USA</button>
-    <button class="country-btn uk" onclick="renderCountry('uk')">UK</button>
-    <button class="country-btn uae" onclick="renderCountry('uae')">UAE</button>
-    <button class="country-btn saudi" onclick="renderCountry('saudi arabia')">SAUDI ARABIA</button>
-    <button class="country-btn canada" onclick="renderCountry('canada')">CANADA</button>
-    <button class="country-btn germany" onclick="renderCountry('germany')">GERMANY</button>
-    <button class="country-btn france" onclick="renderCountry('france')">FRANCE</button>
-    <button class="country-btn australia" onclick="renderCountry('australia')">AUSTRALIA</button>
+    <button class="country-btn india" data-country="india" onclick="renderCountry('india')">INDIA</button>
+    <button class="country-btn usa" data-country="usa" onclick="renderCountry('usa')">USA</button>
+    <button class="country-btn uk" data-country="uk" onclick="renderCountry('uk')">UK</button>
+    <button class="country-btn uae" data-country="uae" onclick="renderCountry('uae')">UAE</button>
+    <button class="country-btn saudi" data-country="saudi arabia" onclick="renderCountry('saudi arabia')">SAUDI ARABIA</button>
+    <button class="country-btn canada" data-country="canada" onclick="renderCountry('canada')">CANADA</button>
+    <button class="country-btn germany" data-country="germany" onclick="renderCountry('germany')">GERMANY</button>
+    <button class="country-btn france" data-country="france" onclick="renderCountry('france')">FRANCE</button>
+    <button class="country-btn australia" data-country="australia" onclick="renderCountry('australia')">AUSTRALIA</button>
   </div>
 
   <select id="allCountries">
@@ -8985,7 +8985,11 @@ u:"https://lambdalabs.com",
 a:""
 }]; -->
  
- <script>
+          
+
+ 
+
+        <script>
 const allCountries = document.getElementById("allCountries");
 const featuredShops = document.getElementById("featuredShops");
 
@@ -9009,10 +9013,12 @@ function setSelectedCountry(country) {
 
     allCountries.classList.add("green-select");
 
+    // CHANGE: textContent → data-country
     document.querySelectorAll(".country-btn").forEach(btn => {
+        const key = btn.getAttribute("data-country");
         btn.classList.toggle(
             "active",
-            btn.textContent.trim().toLowerCase() === pureCountry
+            key && key.trim().toLowerCase() === pureCountry
         );
     });
 
@@ -9070,7 +9076,7 @@ function fetchExternalCountryJS(countryName) {
     script.id="dynamic-country-script";
 
     // FIXED REGEX
-    script.src="./"+countryName.replace(/\s+/g,"_")+".js";
+    script.src="./"+countryName.replace(/s+/g,"_")+".js";
 
     script.onload=function(){
 
@@ -9162,8 +9168,10 @@ document.addEventListener("DOMContentLoaded",()=>{
 
         btn.addEventListener("click",function(){
 
+            // CHANGE: textContent → data-country
+            const key = this.getAttribute("data-country") || this.textContent;
             setSelectedCountry(
-                this.textContent.trim().toLowerCase()
+                key.trim().toLowerCase()
             );
 
         });
@@ -9183,6 +9191,7 @@ document.addEventListener("DOMContentLoaded",()=>{
     });
 
 });
+
 </script>
 <!-- SL NO 37 : HTML END -->
 <!-- ================================================= -->
