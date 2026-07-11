@@ -1,0 +1,11172 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BAS Charity International</title> 
+
+<link rel="manifest" href="manifest.json">
+<link rel="icon" type="image/png" href="final_app_icon.png">
+<link rel="apple-touch-icon" href="final_app_icon.png"> 
+
+<meta name="theme-color" content="#ff9800">
+<meta name="apple-mobile-web-app-status-bar-style" content="default"> 
+
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"> 
+
+
+<style>
+/* Google Translate top bar + iframe കഠിനമായി ബ്ലോക്ക് ചെയ്യുന്നു */
+.goog-te-banner-frame.skiptranslate,
+iframe.goog-te-banner-frame,
+.skiptranslate.goog-te-banner-frame {
+    display: none !important;
+    visibility: hidden !important;
+}
+
+/* body top offset Google ചേർക്കുന്നത് reset ചെയ്യുന്നു */
+body {
+    top: 0px !important;
+    position: static !important;
+}
+
+/* Google Translate tooltip / opinion / highlight ഒക്കെ ബ്ലോക്ക് */
+#goog-gt-tt,
+.goog-tooltip,
+.goog-tooltip:hover,
+.goog-text-highlight,
+.goog-gt-highlight,
+.goog-gt-spellmark,
+.gt-baf-container,
+.gt-baf-footer {
+    display: none !important;
+    visibility: hidden !important;
+}
+
+/* Translate wrapper / gadget icon hide */
+.goog-te-gadget-icon {
+    display: none !important;
+}
+</style>
+ 
+ <style>
+ /* CODE NO:1 FIX */
+/* എടുത്തു കാണിക്കേണ്ട പ്രധാന ഹെഡിംഗുകളുടെയും ടെക്സ്റ്റുകളുടെയും കളറുകൾ ലോക്ക് ചെയ്യുന്നു */
+h1 { color:#fff !important; }
+.english-fix { color:#bbb !important; }
+#dedication-text { color:#bbb !important; font-weight:300; line-height: 1.6; }
+/* ഇമേജ് ഗാലറി ഹൊറിസോണ്ടൽ ആയി സ്ക്രോൾ ചെയ്യാനുള്ള ഡിസൈൻ */
+#gallery { display:flex; overflow-x:auto; scroll-behavior:smooth; gap:10px; }
+#gallery::-webkit-scrollbar { display:none; }
+.card { min-width:180px; flex-shrink:0; }
+.card img { width:100%; height:auto; border-radius:10px; display:block; }
+#gallery.zoom { transform:scale(1.05); transition:0.3s; } 
+
+/* വിഭിന്ന ബ്രൗസറുകളിൽ മാർജിനുകൾ തെന്നിമാറാതിരിക്കാൻ ഡിസൈൻ ലോക്ക് ചെയ്യുന്നു */
+* { box-sizing:border-box; } 
+
+/* സൈറ്റിന്റെ ബോഡിയുടെ പൊതുവായ പശ്ചാത്തലവും മിനിമം 23px ഫോണ്ട് സൈസും നിശ്ചയിക്കുന്നു */
+body {
+margin:0;
+background:#000;
+font-family:Arial, sans-serif;
+color:#fff;
+overflow-x:hidden;
+font-size:23px;
+} 
+
+p, span, div { font-size:23px; } 
+
+/* പ്രധാന ബോക്സുകൾ വലിയ സ്ക്രീനുകളിൽ 900px ലേക്ക് ഒതുക്കി നിർത്താനും ഫോണിൽ റെസ്പോൺസിവ് ആക്കാനുമുള്ള ഘടന */
+.bas-dedication, .lang-box, .country-box, .shop-container, .compare-container, .share-container, .mainbox, .info-box, .bas7-wrapper, .trust-container, .peace-wrapper, .vada-wrapper, .vision-wrapper, #bas-mega-portal {
+max-width:900px;
+width:96%;
+margin-left:auto;
+margin-right:auto;
+} 
+
+/* സൈറ്റിന്റെ മുകൾഭാഗത്തെ ഹെഡറും വലിയ ലോഗോ സ്പേസും ഡിസൈൻ ചെയ്യുന്നു */
+.header-box { display:flex; flex-direction:column; align-items:center; background:#000; }
+#logo-space { width:100%; height:340px; }
+.brand-heading { text-align:center; margin-top:-35px; padding:10px 20px; }
+.hunger-message { font-size:13px; letter-spacing:2px; color:#FFD700; font-weight:bold; text-transform:uppercase; margin-bottom:20px; }
+.brand-heading h1 { font-size:clamp(32px,9vw,65px); letter-spacing:1px; text-transform:uppercase; margin:0; font-weight:1000; -webkit-text-stroke:1.5px white; line-height:1.1; } 
+
+/* ലാംഗ്വേജ് ബട്ടണുകൾ ഫോണിന് അനുസരിച്ച് ഒരേ വലിപ്പത്തിൽ ഗ്രിഡ് ആയി കാണിക്കാനുള്ള സ്റ്റൈൽ */
+.top-bar { background:#111; padding:15px 8px; border-top:1px solid #333; border-bottom:1px solid #333; }
+.lang-buttons { display:grid; grid-template-columns:repeat(4,1fr); gap:10px; max-width:600px; margin:auto; }
+.lang-btn { padding:10px 2px; border:none; border-radius:20px; font-size:14px; font-weight:bold; cursor:pointer; color:#fff; }
+.en { background:#007BFF; }
+.hi { background:#FF9933; color:#000; }
+.ml { background:#00C853; }
+.ar { background:#2E7D32; }
+.ta { background:#C62828; }
+.ur { background:#6A1B9A; }
+.es { background:#F4C430; color:#000; }
+.pt { background:#1B5E20; }
+.google-row { text-align:center; font-size:14px; margin-top:15px; color:#bbb; } 
+
+/* സമർപ്പണ ബോക്സിന്റെയും മെയിൻ മെസ്സേജ് ബോക്സിന്റെയും ബോർഡറുകളും കളറുകളും നൽകുന്നു */
+.bas-dedication {
+  text-align:center;
+  margin:10px auto 30px auto;
+  padding:0 20px;
+
+  font-size:30px;
+  font-weight:900;
+  font-style:italic;
+  color:#9a9a9a;
+  line-height:1.8;
+}
+.lang-box { margin: 25px auto; padding: 15px; background: #000; border: 1px solid #ff9800; border-radius: 15px; }
+.lang-title { background: #b3ecff; color: #000; font-weight: 900; text-align: center; padding: 10px; border-radius: 10px; border: 1px solid #ff9800; border-left: 6px solid #ff9800; margin-bottom: 10px; text-transform: uppercase; }
+.msg-container { width:96%; padding:20px 0; margin: auto; }
+.question-box { margin:0 auto; width:96%; max-width:900px; background:#000; color:#00BFFF; padding:25px; border-radius:12px; border:1px solid #00BFFF; text-align:center; line-height:1.8; }
+.english-text { font-size:18px; font-weight:500; display:block; }
+.hunger-footer { text-align:center; color:#FFD700; font-weight:bold; font-size:14px; margin-top:15px; letter-spacing:1px; } 
+
+/* ആപ്പ് ഇൻസ്റ്റാൾ ചെയ്യാനുള്ള ഫ്ലോട്ടിങ് ബട്ടണിന്റെ ഡിസൈൻ നിയമങ്ങൾ */
+#install-div {
+display: none;
+position: fixed;
+bottom: 25px;
+right: 25px;
+z-index: 10000;
+}
+#install-btn {
+background: #ff9800;
+color: #fff;
+border: none;
+padding: 12px 24px;
+border-radius: 50px;
+font-size: 16px;
+font-weight: bold;
+box-shadow: 0 4px 15px rgba(0,0,0,0.4);
+cursor: pointer;
+} 
+
+/* ആനിമേഷനോടെ സ്ക്രീനിൽ പൊങ്ങിവരുന്ന ബലൂൺ റാപ്പറിന്റെ പൊസിഷൻ ലോക്ക് ചെയ്യുന്നു */
+#basBalloonWrap {
+position: fixed;
+bottom: 0;
+left: 0;
+width: 280px;
+height: 400px;
+z-index: 2147483647;
+pointer-events: none;
+transform: translateY(120%);transition: transform 2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+display: block !important;
+} 
+
+/* ബലൂൺ പല സ്റ്റേറ്റുകളിൽ കാണിക്കേണ്ട ട്രാൻസ്ഫോം പൊസിഷനുകൾ */
+.state-up { transform: translateY(0%) !important; }
+.state-hide { transform: translateY(120%) !important; }
+.state-rest { transform: translateY(70%) !important; } 
+
+/* ബലൂണിന്റെ റൗണ്ട് ഷേപ്പും ഉള്ളിലെ നൂലും നിപ്പിളും ഉണ്ടാക്കാനുള്ള CSS */
+.bas-ball {
+position: absolute;
+border-radius: 50% 50% 50% 50% / 40% 40% 60% 60%;
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+cursor: pointer;
+pointer-events: auto;
+box-shadow: inset -8px -8px 20px rgba(0,0,0,0.4);
+} 
+
+.bas-str {
+position: absolute;
+width: 1px;
+background: rgba(255,255,255,0.4);
+bottom: -1000px;
+left: 50%;
+height: 1000px;
+} 
+
+.bas-nipple {
+position: absolute;
+bottom: -10px;
+width: 18px;
+height: 10px;
+background: inherit;
+clip-path: polygon(20% 0, 80% 0, 100% 100%, 0 100%);
+} 
+
+/* വെള്ള, നീല ബലൂണുകളുടെ വലിപ്പവും അവ ഫ്ലോട്ട് ചെയ്യാനുള്ള ആനിമേഷൻ ലിങ്കും */
+.white-b {
+width: 120px; height: 160px;
+background: #ffffff;
+bottom: 220px; left: 60px;
+animation: floatW 25s ease-in-out infinite;
+transition: background 0.4s ease;
+} 
+
+.blue-b {
+width: 105px; height: 135px;
+background: #007bff;
+bottom: 70px; left: 30px;
+animation: floatB 20s ease-in-out infinite;
+} 
+
+.bas-sticker { width: 75px; height: 75px; border-radius: 20px; margin-bottom: 5px; border: 1px solid #ddd; }
+.bas-lbl { font-family: sans-serif; font-size: 11px; font-weight: 900; text-align: center; line-height: 1.2; } 
+
+/* ആപ്പ് ഇൻസ്റ്റാൾ ചെയ്യാൻ റെഡി ആകുമ്പോഴും ഇൻസ്റ്റാൾഡ് ആകുമ്പോഴും മാറേണ്ട കളർ കോഡുകൾ */
+.install-ready {
+color: #cddc39 !important;
+text-shadow: 0 0 6px rgba(205,220,57,0.35);
+} 
+
+.installed-state {
+background: #cddc39 !important;
+} 
+
+.installed-state .bas-nipple {
+background: #cddc39 !important;
+} 
+
+.installed-state #statTxt {
+color: #1f2b00 !important;
+text-shadow: none !important;
+} 
+
+/* ബലൂണുകൾ യാഥാർത്ഥ്യമെന്നോണം അന്തരീക്ഷത്തിൽ ഒഴുകി നടക്കാൻ വേണ്ടിയുള്ള ആനിമേഷൻ ഫ്രെയിമുകൾ */
+@keyframes floatW {
+0%, 100% { transform: translate(0, 0) rotate(-3deg); }
+50% { transform: translate(35px, 45px) rotate(5deg); }
+} 
+
+@keyframes floatB {
+0%, 100% { transform: translate(0, 0) rotate(4deg); }
+50% { transform: translate(25px, -25px) rotate(-4deg); }
+}
+</style>
+</head> 
+
+<body> 
+
+<div class="header-box">
+<div id="logo-space"></div>
+<div class="brand-heading">
+<div class="hunger-message">YOUR PURCHASE SATISFIES A HUNGER</div>
+<h1 class="notranslate" translate="no">BAS CHARITY INTERNATIONAL</h1>
+</div>
+</div> 
+
+<div class="bas-dedication">
+<div id="dedication-text" class="english-fix">
+
+dedicated to the good, well-being, and peace of all human beings, their parents, other ancestors, and above all, all souls
+</div>
+</div> 
+
+<div class="top-bar">
+<div class="lang-box">
+<div class="lang-title">SELECT LANGUAGE</div>
+</div>
+<div class="lang-buttons">
+<button class="lang-btn en" onclick="resetToEnglish()">English</button>
+<button class="lang-btn hi" onclick="changeLang('hi')">Hindi Language</button>
+<button class="lang-btn ml" onclick="changeLang('ml')">Malayalam</button>
+<button class="lang-btn ar" onclick="changeLang('ar')">Arabic</button>
+<button class="lang-btn ta" onclick="changeLang('ta')">Tamil</button>
+<button class="lang-btn ur" onclick="changeLang('ur')">Urdu</button>
+<button class="lang-btn es" onclick="changeLang('es')">Spanish</button>
+<button class="lang-btn pt" onclick="changeLang('pt')">Portuguese</button>
+</div>
+<div class="google-row">
+🌐 All Languages : <span id="google_translate_element"></span>
+</div>
+</div> 
+
+<div class="msg-container">
+<div class="question-box">
+<span class="english-text">
+"What if someone's hunger in some corner of the world is satisfied by purchasing through the BAS Charity International links below, without spending a single extra penny, at the same price, and with the same offers...?"
+</span>
+</div>
+<div class="hunger-footer notranslate" translate="no">YOUR PURCHASE SATISFIES A HUNGER</div>
+</div> 
+
+<div id="install-div">
+<button id="install-btn" type="button">Install App</button>
+</div> 
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script> 
+
+<script>
+// വെബ്സൈറ്റ് മൊബൈലിലേക്ക് ഇൻസ്റ്റാൾ ചെയ്യാനുള്ള പ്രോംപ്റ്റ് നിയന്ത്രിക്കുന്ന ലോജിക്
+let deferredPrompt;
+const installDiv = document.getElementById('install-div');
+const installBtn = document.getElementById('install-btn'); 
+
+window.addEventListener('beforeinstallprompt', (e) => {
+e.preventDefault();
+deferredPrompt = e;
+if (installDiv) installDiv.style.display = 'block';
+}); 
+
+if (installBtn) {
+installBtn.addEventListener('click', async () => {
+try {
+if (!deferredPrompt) return;
+if (installDiv) installDiv.style.display = 'none';
+const result = await deferredPrompt.prompt();
+if (result && result.outcome === 'accepted') {
+console.log('App Installed');
+}
+deferredPrompt = null;
+} catch (err) {
+deferredPrompt = null;
+console.error('Install prompt error:', err);
+}
+});
+} 
+
+window.addEventListener('appinstalled', () => {
+deferredPrompt = null;
+if (installDiv) installDiv.style.display = 'none';
+}); 
+
+// ബാക്ക്ഗ്രൗണ്ടിൽ ഓഫ്‌ലൈൻ സപ്പോർട്ടിനായി സർവീസ് വർക്കർ രജിസ്റ്റർ ചെയ്യുന്നു
+if ('serviceWorker' in navigator) {
+window.addEventListener('load', () => {
+navigator.serviceWorker.register('sw.js').catch((err) => {
+console.error('SW registration failed:', err);
+});
+});
+} 
+
+// 3D ഭൂമിയും (Earth) അതിനു ചുറ്റും കറങ്ങുന്ന ചന്ദ്രനും (Moon) നിർമ്മിക്കുന്നതിനുള്ള ത്രീ-ജെഎസ് കോഡ്
+let scene, camera, renderer, ambient, loader, earthGroup, earth, moon, angle = 0, running = true, logoSpace, animateRef = null; 
+
+try {
+if (window.THREE) {
+logoSpace = document.getElementById('logo-space'); 
+
+scene = new THREE.Scene();
+camera = new THREE.PerspectiveCamera(50, window.innerWidth / 340, 0.1, 1000);
+renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true, powerPreference: "high-performance" });
+renderer.setSize(window.innerWidth, 340);
+renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2)); 
+
+if (logoSpace) {
+logoSpace.appendChild(renderer.domElement);
+} 
+
+ambient = new THREE.AmbientLight(0xffffff, 1.2);
+scene.add(ambient); 
+
+loader = new THREE.TextureLoader();
+earthGroup = new THREE.Group(); 
+
+// ഗ്ലോബിലേക്ക് ഭൂമിയുടെ സാറ്റലൈറ്റ് മാപ്പ് ടെക്സ്ചർ ലോഡ് ചെയ്യുന്നു
+earth = new THREE.Mesh(
+new THREE.SphereGeometry(2, 32, 32),
+new THREE.MeshStandardMaterial({
+map: loader.load(
+'https://raw.githubusercontent.com/mrdoob/three.js/master/examples/textures/planets/earth_atmos_2048.jpg',
+undefined,
+undefined,
+function () { console.error('Earth texture failed to load'); }
+),
+metalness: 0.2,
+roughness: 0.8
+})
+);
+earthGroup.add(earth); 
+
+// ഭൂമിക്ക് മുകളിലായി കറങ്ങുന്ന രീതിയിൽ BAS എന്ന അക്ഷരങ്ങൾ ക്യാൻവാസ് വഴി വരച്ച് ചേർക്കുന്നു
+let canvas = document.createElement('canvas');
+let ctx = canvas.getContext('2d');
+if (ctx) {
+canvas.width = 1024;
+canvas.height = 256;
+ctx.fillStyle = "#FFFFFF";
+ctx.font = "Bold 140px Arial";
+ctx.textAlign = "center";
+ctx.fillText("BAS", 256, 160);
+ctx.fillText("BAS", 768, 160); 
+
+let textTexture = new THREE.CanvasTexture(canvas);
+let textMesh = new THREE.Mesh(
+new THREE.CylinderGeometry(2.05, 2.05, 0.8, 64, 1, true),
+new THREE.MeshBasicMaterial({ map: textTexture, transparent: true, side: THREE.DoubleSide })
+);
+earthGroup.add(textMesh);
+} 
+
+scene.add(earthGroup); 
+
+// ഭൂമിക്ക് പുറത്ത് കറങ്ങുന്ന ചെറിയ ചന്ദ്രനെ (Moon Sphere) ഉണ്ടാക്കുന്നു
+moon = new THREE.Mesh(
+new THREE.SphereGeometry(0.35, 16, 16),
+new THREE.MeshStandardMaterial({ color: 0xcccccc })
+);
+scene.add(moon); 
+
+camera.position.z = 8; 
+
+// ഫോൺ തിരിക്കുമ്പോഴും സ്ക്രീൻ സൈസ് മാറുമ്പോഴും 3D ഗ്ലോബ് തകരാതെ കൃത്യമായി ക്രമീകരിക്കുന്നു
+function resizeRenderer() {
+try {
+const box = document.getElementById("logo-space");
+if (!box || !renderer || !camera) return;
+const width = box.clientWidth || window.innerWidth;
+renderer.setSize(width, 340);
+camera.aspect = width / 340;
+camera.updateProjectionMatrix();
+} catch (e) {
+console.error('Resize error:', e);
+}
+} 
+
+window.addEventListener("resize", resizeRenderer); 
+
+// ನಿರ್ಥಾದೆ 3D ഗ്ലോബും ചന്ദ്രനും ആനിമേറ്റ് ചെയ്ത് കറക്കാനുള്ള ലൂപ്പ് ഫംഗ്ഷൻ
+function animate() {
+if (!running || !renderer || !scene || !camera || !earthGroup || !moon) return;
+animateRef = requestAnimationFrame(animate);
+earthGroup.rotation.y += 0.003;
+angle -= 0.01;
+moon.position.x = Math.cos(angle) * 4.5;
+moon.position.z = Math.sin(angle) * 2.8;
+renderer.render(scene, camera);
+}
+animate(); 
+
+// യൂസർ സ്ക്രീൻ സ്ക്രോൾ ചെയ്ത് ലോഗോ കാണുമ്പോൾ മാത്രം 3D റൺ ചെയ്യിച്ച് ബാറ്ററി ലാഭിക്കാനുള്ള ലോജിക്
+if ('IntersectionObserver' in window && logoSpace) {
+let observer = new IntersectionObserver(entries => {
+entries.forEach(entry => {
+if (entry.isIntersecting) {
+const wasStopped = !running;
+running = true;
+if (wasStopped) animate();
+} else {
+running = false;
+}
+});
+});
+observer.observe(logoSpace);
+} 
+
+// സിസ്റ്റം ലോഡ് കാരണം WebGL ക്രാഷായാൽ അത് കണ്ടെത്തി റീസ്റ്റാർട്ട് ചെയ്യാനുള്ള സുരക്ഷാ കോഡ്
+if (renderer && renderer.domElement) {
+renderer.domElement.addEventListener('webglcontextlost', function (event) {
+event.preventDefault();
+running = false;
+console.error('WebGL context lost');
+}, false); 
+
+renderer.domElement.addEventListener('webglcontextrestored', function () {
+running = true;
+animate();
+}, false);
+}
+}
+} catch (e) {
+console.error('Three.js init error:', e);
+} 
+
+// ഗൂഗിൾ ട്രാൻസ്ലേഷൻ എലമെന്റ് സൈറ്റിലേക്ക് ഇനിഷ്യലൈസ് ചെയ്യുന്ന ഫംഗ്ഷൻ
+ 
+// ഗൂഗിൾ ട്രാൻസ്ലേഷൻ എലമെന്റ് സൈറ്റിലേക്ക് ഇനിഷ്യലൈസ് ചെയ്യുന്ന ഫംഗ്ഷൻ
+function googleTranslateElementInit() {
+try {
+if (window.google && google.translate && google.translate.TranslateElement) {
+new google.translate.TranslateElement({ pageLanguage: 'en', autoDisplay: false }, 'google_translate_element');
+}
+} catch (e) {
+console.error('Google Translate init error:', e);
+}
+} 
+
+// RULE: Language മാറുമ്പോഴും shop/country മാറരുത്.
+// => last selectedCountry വീണ്ടും load ചെയ്യണം.
+
+// ബട്ടണുകളിൽ ക്ലിക്ക് ചെയ്യുമ്പോൾ ഓരോ പ്രത്യേക ഭാഷകളിലേക്ക് സൈറ്റ് മാറ്റാനുള്ള ലോജിക്
+function changeLang(langCode) {
+try {
+let select = document.querySelector('select.goog-te-combo');
+if (select) {
+select.value = langCode;
+select.dispatchEvent(new Event('change'));
+}
+} catch (e) {
+console.error('Language change error:', e);
+}
+
+// ഭാഷ മാറിയാലും അവസാനമായി തിരഞ്ഞ country വീണ്ടും load ചെയ്യുക
+try {
+const savedCountry = localStorage.getItem("selectedCountry") || "india";
+if (typeof setSelectedCountry === "function") {
+setSelectedCountry(savedCountry);
+}
+} catch (e) {
+console.error('Country reapply after language change error:', e);
+}
+} 
+
+// RULE: English-ലേക്ക് reset ചെയ്താലും shop/country മാറരുത്.
+
+// തിരികെ ഇംഗ്ലീഷ് ഭാഷയിലേക്ക് തന്നെ മാറ്റാനുള്ള റീസെറ്റ് ഫംഗ്ഷൻ
+function resetToEnglish() {
+try {
+let select = document.querySelector('select.goog-te-combo');
+if (select) {
+select.value = 'en';
+select.dispatchEvent(new Event('change'));
+}
+} catch (e) {
+console.error('Reset language error:', e);
+}
+
+// ഇംഗ്ലീഷിലേക്ക് reset ചെയ്താലും shops വീണ്ടും വരണം
+try {
+const savedCountry = localStorage.getItem("selectedCountry") || "india";
+if (typeof setSelectedCountry === "function") {
+setSelectedCountry(savedCountry);
+}
+} catch (e) {
+console.error('Country reapply after reset error:', e);
+}
+} 
+
+// ഗൂഗിളിന്റെ മുകളിലെ അനാവശ്യ ട്രാൻസ്ലേഷൻ ബാനർ ബാർ നിരന്തരം ചെക്ക് ചെയ്ത് ഹൈഡ് ചെയ്യാനുള്ള ടൈമർ
+let translateBannerInterval = setInterval(function () {
+try {
+const frame = document.querySelector('.goog-te-banner-frame');
+if (frame) {
+frame.style.display = 'none';
+}
+} catch (e) {}
+}, 500); 
+
+// യൂസർ മൊബൈലിൽ മറ്റൊരു ആപ്പിലേക്ക് മാറുമ്പോൾ അനിമേഷൻ നിർത്തിവെച്ച് പ്രോസസ്സർ സ്പീഡ് കൂട്ടുന്നു
+document.addEventListener('visibilitychange', function () {
+if (document.hidden) {
+running = false;
+} else {
+if (renderer && scene && camera && earthGroup && moon) {
+const wasStopped = !running;
+running = true;
+if (wasStopped) animate();
+}
+}
+}); 
+
+// പേജ് അടയ്ക്കുകയോ റീലോഡ് ചെയ്യുകയോ ചെയ്യുമ്പോൾ മെമ്മറി ഫ്രീ ചെയ്യാനുള്ള ക്ലീനപ്പ് കോഡ്
+window.addEventListener('beforeunload', function () {
+try {
+clearInterval(translateBannerInterval);
+if (renderer) renderer.dispose();
+if (animateRef) cancelAnimationFrame(animateRef);
+} catch (e) {}
+});
+</script>
+<script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit">
+</script>
+ <div id="basBalloonWrap" class="notranslate"> 
+
+<div id="installBall" class="bas-ball white-b" onclick="handleInstallTap()">
+<img src="icon-512.png" class="bas-sticker">
+<div id="statTxt" class="bas-lbl">INSTALL</div>
+<div class="bas-nipple"></div>
+<div class="bas-str"></div>
+</div> 
+
+<div class="bas-ball blue-b" onclick="goWhatsApp()">
+<div class="bas-lbl" style="color:#fff;">SAVE TO<br>WHATSAPP</div>
+<div class="bas-nipple"></div>
+<div class="bas-str"></div>
+</div> 
+
+</div> 
+
+<style>
+/* ബലൂണുകൾ സ്ക്രീനിന്റെ താഴെ മറഞ്ഞുപോകാതിരിക്കാൻ ബോഡിക്ക് നൽകുന്ന പാഡിങ് */
+body {
+padding-bottom: 160px !important;
+} 
+
+/* ബലൂൺ റാപ്പറിന്റെ സ്ക്രീനിലെ പൊസിഷനും ആനിമേഷൻ സ്പീഡും നിശ്ചയിക്കുന്ന സ്റ്റൈൽ */
+#basBalloonWrap {
+position: fixed;
+bottom: 0; left: 0;
+width: 280px; height: 400px;
+z-index: 2147483647;
+pointer-events: none;
+transform: translateY(120%);
+transition: transform 10s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+display: block !important;
+} 
+
+/* ബലൂണുകൾ പല സമയങ്ങളിൽ സ്ക്രീനിൽ കാണിക്കേണ്ട ട്രാൻസ്ഫോം പൊസിഷനുകൾ */
+.state-up { transform: translateY(0%) !important; }
+.state-hide { transform: translateY(120%) !important; }
+.state-rest { transform: translateY(70%) !important; } 
+
+/* ബലൂണിന്റെ കൃത്യമായ റൗണ്ട് ഷേപ്പും ഉള്ളിലെ നൂലും നിപ്പിളും ഉണ്ടാക്കാനുള്ള സ്റ്റൈൽ */
+.bas-ball {
+position: absolute;
+border-radius: 50% 50% 50% 50% / 40% 40% 60% 60%;
+display: flex; flex-direction: column; align-items: center; justify-content: center;
+cursor: pointer; pointer-events: auto;
+box-shadow: inset -8px -8px 20px rgba(0,0,0,0.4);
+} 
+
+.bas-str { position: absolute; width: 1px; background: rgba(255,255,255,0.4); bottom: -1000px; left: 50%; height: 1000px; }
+.bas-nipple { position: absolute; bottom: -10px; width: 18px; height: 10px; background: inherit; clip-path: polygon(20% 0, 80% 0, 100% 100%, 0 100%); } 
+
+/* 1. ഇൻസ്റ്റാൾ ബട്ടൺ ഉള്ളപ്പോൾ കാണിക്കേണ്ട വെള്ള ബലൂണിന്റെയും പച്ചകലർന്ന മഞ്ഞ എഴുത്തിന്റെയും സ്റ്റൈൽ */
+.white-b {
+width: 120px; height: 160px;
+background: #ffffff !important;
+bottom: 220px; left: 60px;
+animation: floatW 5s ease-in-out infinite;
+}
+.white-b .bas-lbl {
+color: #adff2f !important;
+text-shadow: 1px 1px 2px rgba(0,0,0,0.8) !important;
+} 
+
+/* 2. ആപ്പ് ഇൻസ്റ്റാൾഡ് ആയിക്കഴിഞ്ഞാൽ കാണിക്കേണ്ട പച്ചകലർന്ന മഞ്ഞ ബലൂണിന്റെയും കറുത്ത എഴുത്തിന്റെയും സ്റ്റൈൽ */
+.is-pwa-installed {
+width: 120px; height: 170Px;
+background: #adff2f !important;
+bottom: 220px; left: 60px;
+animation: floatW 5s ease-in-out infinite;
+}
+.is-pwa-installed .bas-lbl {
+color: #000000 !important;
+text-shadow: none !important;
+} 
+
+/* നീല ബലൂണിന്റെ വലിപ്പവും അത് ഫ്ലോട്ട് ചെയ്യാനുള്ള ആനിമേഷൻ ലിങ്കും */
+.blue-b { width: 105px; height: 135px; background: #007bff; bottom: 70px; left: 30px; animation: floatB 20s ease-in-out infinite; }
+.bas-sticker { width: 75px; height: 75px; border-radius: 20px; margin-bottom: 5px; border: 1px solid #ddd; }
+.bas-lbl { font-family: sans-serif; font-size: 15px; font-weight: 900; text-align: center; line-height: 1.2; } 
+
+/* ബലൂണുകൾ അന്തരീക്ഷത്തിൽ ഒഴുകി നടക്കാൻ വേണ്ടിയുള്ള ആനിമേഷൻ കീഫ്രെയിമുകൾ */
+@keyframes floatW { 0%, 100% { transform: translate(0, 0) rotate(-3deg); } 50% { transform: translate(35px, 45px) rotate(5deg); } }
+@keyframes floatB { 0%, 100% { transform: translate(0, 0) rotate(4deg); } 50% { transform: translate(25px, -25px) rotate(-4deg); } }
+</style> 
+
+<script>
+// ബലൂൺ സ്റ്റാറ്റസ് നിയന്ത്രിക്കുന്നതിനുള്ള ഗ്ലോബൽ വേരിയബിളുകൾ
+let basPrompt;
+const wrap = document.getElementById('basBalloonWrap');
+const stat = document.getElementById('statTxt');
+const ball = document.getElementById('installBall'); 
+
+// 1. ബ്രൗസറിൽ ഇൻസ്റ്റാൾ പ്രോംപ്റ്റ് ലഭ്യമാകുമ്പോൾ വെള്ള ബലൂൺ സെറ്റ് ചെയ്യുന്ന ലോജിക്
+window.addEventListener('beforeinstallprompt', (e) => {
+e.preventDefault();
+basPrompt = e;
+stat.innerText = "INSTALL";
+ball.className = "bas-ball white-b";
+}); 
+
+// 2. ആപ്പ് മുൻപേ ഇൻസ്റ്റാൾ ചെയ്തിട്ടുണ്ടെങ്കിൽ പച്ചകലർന്ന മഞ്ഞ ബലൂൺ കാണിക്കുന്ന ലോജിക്
+window.addEventListener('DOMContentLoaded', () => {
+setTimeout(() => {
+if (!basPrompt) {
+stat.innerText = "INSTALLED";
+ball.className = "bas-ball is-pwa-installed";
+}
+}, 3000); // ബ്രൗസറിന് ലോഡ് ആകാൻ നൽകുന്ന സമയം
+}); 
+
+// ബലൂണുകൾ കൃത്യമായ സമയക്രമത്തിൽ സ്ക്രീനിൽ പൊങ്ങി വരാനും താഴാനും ഉള്ള ടൈമർ ഫങ്ഷൻ
+function initBalloons() {
+setTimeout(() => {
+wrap.classList.add('state-up');
+setTimeout(() => { wrap.classList.replace('state-up', 'state-hide');
+setTimeout(() => { wrap.classList.replace('state-hide', 'state-rest'); }, 30000); }, 15000); }, 5000);
+} 
+
+// യൂസർ ബലൂണിൽ തൊടുമ്പോൾ അതിനെ വീണ്ടും സ്ക്രീനിലേക്ക് പൂർണ്ണമായി കൊണ്ടുവരുന്ന ഫങ്ഷൻ
+const wake = () => { wrap.classList.remove('state-hide', 'state-rest'); wrap.classList.add('state-up'); };
+wrap.addEventListener('click', wake); wrap.addEventListener('touchstart', wake);
+window.addEventListener('load', initBalloons); 
+
+// സൈറ്റ് ഇൻസ്റ്റാൾ ചെയ്യാനുള്ള ഗൈഡ് ലിങ്ക് വാട്സാപ്പിലേക്ക് ഷെയർ ചെയ്യുന്ന ഫങ്ഷൻ
+function goWhatsApp(){
+let url = "https://bascharity-56f.pages.dev";
+let text = "Save a beautiful icon to your screen\n\n" + url + "\n\nChrome → ⋮ 3 dot → Save to Screen → Install";
+window.open("https://wa.me/?text=" + encodeURIComponent(text), "_blank");
+} 
+
+// ഇൻസ്റ്റാൾ ബലൂണിൽ ക്ലിക്ക് ചെയ്യുമ്പോൾ ഇൻസ്റ്റാളേഷൻ വിൻഡോ കാണിക്കുന്ന ഫങ്ഷൻ
+function handleInstallTap() {
+if (!basPrompt) return; // ഇൻസ്റ്റാൾഡ് ആണെങ്കിൽ ക്ലിക്ക് പ്രവർത്തിക്കില്ല
+basPrompt.prompt();
+basPrompt.userChoice.then((c) => {
+if (c.outcome === 'accepted') {
+stat.innerText = "INSTALLED";
+ball.className = "bas-ball is-pwa-installed";
+}
+basPrompt = null;
+});
+} 
+
+// സിസ്റ്റം വഴി ആപ്പ് വിജയകരമായി ഇൻസ്റ്റാൾ ചെയ്യപ്പെട്ടു കഴിഞ്ഞാൽ ബലൂൺ പച്ചയാക്കുന്ന ലോജിക്
+window.addEventListener('appinstalled', () => {
+stat.innerText = "INSTALLED";
+ball.className = "bas-ball is-pwa-installed";
+});
+</script>
+
+<!-- COUNTRY BOX START -->
+
+                     <style>
+.country-board{width:96%;max-width:900px;margin:14px auto;padding:14px;border:1px solid #cfcfcf;border-radius:16px;background:#111;color:#fff;font-family:Arial,sans-serif}
+.country-title{width:100%;background:#4a4a4a;color:#fff;border:2px solid #dfe6eb;border-radius:14px;padding:14px 8px;text-align:center;font-size:16px;font-weight:800;margin-bottom:12px}
+.country-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-bottom:12px}
+.country-btn{background:#4a4a4a;border:1px solid #666;border-radius:14px;padding:14px 8px;color:#fff;font-size:16px;font-weight:800;text-align:center;cursor:pointer;border-left-width:6px}
+.country-btn.active{color:#00ff66}
+.india{border-left-color:#FF9933}.usa{border-left-color:#2196F3}.uk{border-left-color:#E91E63}.uae{border-left-color:#00C853}.saudi{border-left-color:#4CAF50}.canada{border-left-color:#F44336}.germany{border-left-color:#9C27B0}.france{border-left-color:#3F51B5}.australia{border-left-color:#FFC107}
+#allCountries{width:100%;background:#5a5a5a;color:#fff;border:2px solid #dfe6eb;border-radius:14px;padding:14px 8px;font-size:16px;font-weight:800;text-align:center;text-align-last:center;margin-bottom:12px}
+#allCountries.green-select{color:#00ff66}
+#shopOnCountry{width:100%;padding:14px 8px;background:#5a5a5a;border:2px solid #dfe6eb;border-radius:14px;text-align:center;font-size:18px;font-weight:800;color:#fff;margin-bottom:12px}
+#shopOnCountry .green{color:#00ff66}
+#featuredShops{display:flex;flex-direction:column;gap:10px}
+.shopCard{background:#2b2b2b;border:1px solid #c0c0c0;border-left:8px solid #00C853;border-radius:14px;padding:14px 16px;display:flex;align-items:center;gap:12px;min-height:78px;text-decoration:none;box-shadow:0 2px 10px rgba(0,0,0,.25)}
+.shopCard:nth-child(10n+1){border-left-color:#00C853}.shopCard:nth-child(10n+2){border-left-color:#2196F3}.shopCard:nth-child(10n+3){border-left-color:#F44336}.shopCard:nth-child(10n+4){border-left-color:#FF9800}.shopCard:nth-child(10n+5){border-left-color:#9C27B0}.shopCard:nth-child(10n+6){border-left-color:#00BCD4}.shopCard:nth-child(10n+7){border-left-color:#E91E63}.shopCard:nth-child(10n+8){border-left-color:#FFC107}.shopCard:nth-child(10n+9){border-left-color:#009688}.shopCard:nth-child(10n+10){border-left-color:#795548}
+.shopDot{width:18px;flex:0 0 18px;color:#fff;font-weight:900;text-align:center;font-size:20px;line-height:1}
+.shopFav{width:42px;height:42px;object-fit:contain;flex:0 0 42px;border-radius:8px;background:#fff}
+.shopName{flex:1;color:#fff;font-size:30px;font-weight:800;line-height:1.2;text-align:left}
+.shop-button-container{display:inline-flex;align-items:center;position:relative}
+.shop-icon{font-size:50px!important;width:50px!important;height:50px!important;display:flex;align-items:center;justify-content:center;position:absolute;left:0;top:0;z-index:10}
+.shop-button{padding:15px 30px;font-size:16px;background-color:blue;color:white;border:none;margin-left:50px;cursor:pointer;position:relative}
+</style>
+
+<div class="country-board">
+  <div class="country-title">SELECT COUNTRY</div>
+  <div class="country-grid">
+    <button class="country-btn india" data-country="india" onclick="renderCountry('india')">INDIA</button>
+    <button class="country-btn usa" data-country="usa" onclick="renderCountry('usa')">USA</button>
+    <button class="country-btn uk" data-country="uk" onclick="renderCountry('uk')">UK</button>
+    <button class="country-btn uae" data-country="uae" onclick="renderCountry('uae')">UAE</button>
+    <button class="country-btn saudi" data-country="saudi arabia" onclick="renderCountry('saudi arabia')">SAUDI ARABIA</button>
+    <button class="country-btn canada" data-country="canada" onclick="renderCountry('canada')">CANADA</button>
+    <button class="country-btn germany" data-country="germany" onclick="renderCountry('germany')">GERMANY</button>
+    <button class="country-btn france" data-country="france" onclick="renderCountry('france')">FRANCE</button>
+    <button class="country-btn australia" data-country="australia" onclick="renderCountry('australia')">AUSTRALIA</button>
+  </div>
+
+  <select id="allCountries">
+    <option value="">SEARCH / SELECT ALL COUNTRIES ▼</option>
+  </select>
+
+  <div id="shopOnCountry">SHOP ON INDIA</div>
+  <div id="featuredShops"></div>
+</div>
+
+<div id="basCompleteWrapper" style="width: 96%; max-width: 900px; margin: 20px auto; font-family: 'Segoe UI', Roboto, sans-serif; color: #fff; text-align: center; border: 3px solid #ff9800; padding: 50px 40px; border-radius: 28px; background: #111111; box-shadow: 0 20px 50px rgba(255, 152, 0, 0.15);">
+
+    <div id="basMainDisplay" style="width: 100%;">
+        
+        <img src="icon-512.png" alt="BAS CHARITY" onclick="handleInstallTap()" style="width: 150px; height: 150px; margin: 0 auto 35px; border-radius: 34px; display: block; cursor: pointer; border: 4px solid #fff; box-shadow: 0 15px 35px rgba(255, 152, 0, 0.4); transition: transform 0.2s; object-fit: cover;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
+
+        <h1 style="font-size: 42px; color: #ff9800; margin-bottom: 35px; font-weight: bold; line-height: 1.3;">Why Should You Install This Icon?</h1>
+
+        <div style="text-align: left; font-size: 26px; font-weight: bold; line-height: 2.2; margin-bottom: 35px; padding-left: 20px;">
+            <div><span style="color: #ff9800; margin-right: 15px;">•</span> <b>Uses Zero Phone Memory & Storage</b></div>
+            <div><span style="color: #ff9800; margin-right: 15px;">•</span> <b>Works Exactly Like an Original App</b></div>
+            <div><span style="color: #ff9800; margin-right: 15px;">•</span> <b>Compare Prices Easily & Save Money</b></div>
+            <div><span style="color: #ff9800; margin-right: 15px;">•</span> <b>Participate in Charity at Zero Cost</b></div>
+        </div>
+
+        <div onclick="basOpenFullPage()" style="color: #00ff00; font-size: 28px; font-weight: bold; cursor: pointer; text-decoration: underline; display: inline-block;">More....</div>
+    </div>
+
+    <div id="basFullInfoPage" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: #0d0d0d; padding: 40px 30px; overflow-y: auto; text-align: left; z-index: 999999;" onmousemove="basResetIdleTimer()" onscroll="basResetIdleTimer()" onclick="basResetIdleTimer()" ontouchstart="basResetIdleTimer()">
+        <div style="max-width: 900px; margin: 0 auto; padding-bottom: 50px;">
+            
+            <div style="font-size: 38px; color: #ff9800; font-weight: bold; margin-bottom: 30px; border-bottom: 2px solid #333; padding-bottom: 15px;">🌟 Full Specifications</div> 
+
+            <ul style="list-style: none; margin-bottom: 35px; padding: 0;">
+                <li style="font-size: 25px; line-height: 1.7; margin-bottom: 25px; color: #e0e0e0;"><strong style="color: #ff9800;">1. Zero Phone Memory:</strong> Built as a lightweight shortcut replacement for thousands of high-memory shopping applications without slowing down your phone.</li>
+                <li style="font-size: 25px; line-height: 1.7; margin-bottom: 25px; color: #e0e0e0;"><strong style="color: #ff9800;">2. Real App Experience:</strong> Stays on your mobile home screen seamlessly and opens up just like a dedicated premium native application.</li>
+                <li style="font-size: 25px; line-height: 1.7; margin-bottom: 25px; color: #e0e0e0;"><strong style="color: #ff9800;">3. Smart Price Comparison:</strong> Compare items instantly across global shopping sites and find the lowest guaranteed price online.</li>
+                <li style="font-size: 25px; line-height: 1.7; margin-bottom: 25px; color: #e0e0e0;"><strong style="color: #ff9800;">4. Global Marketplace Access:</strong> Surf across global directory stores spanning over 200 countries in all localized international languages.</li>
+                <li style="font-size: 25px; line-height: 1.7; margin-bottom: 25px; color: #e0e0e0;"><strong style="color: #ff9800;">5. Global Trade Culture:</strong> Explore products, localized pricing structures, and regional retail trends directly from your screen.</li>
+                <li style="font-size: 25px; line-height: 1.7; margin-bottom: 25px; color: #e0e0e0;"><strong style="color: #ff9800;">6. Complete Security Guard:</strong> Avoid scam donation traps and identify verified humanitarian platforms directly to extend support.</li>
+                <li style="font-size: 25px; line-height: 1.7; margin-bottom: 25px; color: #e0e0e0;"><strong style="color: #ff9800;">7. Premium Utility Gift:</strong> Share this zero-cost utility application directly with friends and family to involve them in smart savings.</li>
+            </ul> 
+
+            <div style="background: #0e2713; border: 2px solid #00ff00; padding: 35px; border-radius: 20px; margin-bottom: 35px; text-align: center;">
+                <div style="font-size: 26px; color: #00ff00; font-weight: bold; margin-bottom: 15px;">YOUR PURCHASE SATISFIES A HUNGER ®</div>
+                <div style="font-size: 25px; color: #fff; line-height: 1.6;">
+                    Your routine everyday shopping directly provides meals to those suffering in distant corners without requiring any extra donation expenses from your pockets. This is the greatest charity of livelihood dedicated to the eternal souls of our departed ancestors and loved ones.
+                </div>
+                <div style="margin-top: 25px; font-size: 25px; color: #ffc107; font-weight: bold; line-height: 1.5;">
+                    * Bank charge exempted. Please direct transfer the combined monthly balance of 30/- once every month to eliminate banking dynamic service fees.
+                </div>
+                <div style="color: #ff5722; font-weight: bold; margin-top: 15px; font-size: 25px;">
+                    "Provide assistance exclusively to highly verified and trusted channels."
+                </div> 
+                <div style="text-align: left; margin-top: 25px; border-top: 2px dashed #555; padding-top: 20px; font-size: 22px; color: #ccc; line-height: 1.6;">
+                    <b style="color: #00ff00;">🌍 International Remittances:</b><br>
+                    To secure bank charge exemption benefits globally, kindly route consolidated payments via specialized digital channels like Wise, Remitly, Instarem, or directly via native NRI/NRO linked UPI apps.
+                </div>
+            </div> 
+
+            <button onclick="basCloseFullPage()" style="background: #ff9800; color: #000; padding: 15px 45px; border-radius: 30px; font-size: 26px; font-weight: bold; border: none; cursor: pointer; display: block; margin: 30px auto 0;">Back</button>
+        </div>
+    </div>
+
+    <script>
+        let basIdleTimer; 
+        function basOpenFullPage() {
+            document.getElementById('basFullInfoPage').style.display = 'block';
+            document.getElementById('basMainDisplay').style.display = 'none';
+            basResetIdleTimer();
+        } 
+        function basCloseFullPage() {
+            clearTimeout(basIdleTimer);
+            document.getElementById('basFullInfoPage').style.display = 'none';
+            document.getElementById('basMainDisplay').style.display = 'block';
+        } 
+        function basResetIdleTimer() {
+            clearTimeout(basIdleTimer);
+            basIdleTimer = setTimeout(basCloseFullPage, 35000);
+        }
+    </script>
+</div>
+
+  
+<script>
+ 
+/* ================================================= */
+/* FIXED 10 COUNTRIES */
+/* ================================================= */
+const fixedCountries=[
+"india",
+"usa",
+"uk",
+"uae",
+"canada",
+"australia",
+"germany",
+"france",
+"saudi arabia"
+];
+
+
+
+const allCountriesList=[
+"afghanistan",
+"albania",
+"algeria",
+"andorra",
+"angola",
+"antigua_and_barbuda",
+"argentina",
+"armenia",
+"australia",
+"austria",
+"azerbaijan",
+"bahamas",
+"bahrain",
+"bangladesh",
+"barbados",
+"belarus",
+"belgium",
+"belize",
+"benin",
+"bhutan",
+"bolivia",
+"bosnia and herzegovina",
+"botswana",
+"brazil",
+"brunei",
+"bulgaria",
+"burkina faso",
+"burundi",
+"cabo verde",
+"cambodia",
+"cameroon",
+"canada",
+"central african republic",
+"chad",
+"chile",
+"china",
+"colombia",
+"comoros",
+"congo",
+"costa rica",
+"cote d'ivoire",
+"croatia",
+"cuba",
+"cyprus",
+"czechia",
+"democratic republic of the congo",
+"denmark",
+"djibouti",
+"dominica",
+"dominican republic",
+"ecuador",
+"egypt",
+"el salvador",
+"equatorial guinea",
+"eritrea",
+"estonia",
+"eswatini",
+"ethiopia",
+"fiji",
+"finland",
+"france",
+"gabon",
+"gambia",
+"georgia",
+"germany",
+"ghana",
+"greece",
+"grenada",
+"guatemala",
+"guinea",
+"guinea-bissau",
+"guyana",
+"haiti",
+"honduras",
+"hungary",
+"iceland",
+"india",
+"indonesia",
+"iran",
+"iraq",
+"ireland",
+"israel",
+"italy",
+"jamaica",
+"japan",
+"jordan",
+"kazakhstan",
+"kenya",
+"kiribati",
+"kuwait",
+"kyrgyzstan",
+"laos",
+"latvia",
+"lebanon",
+"lesotho",
+"liberia",
+"libya",
+"liechtenstein",
+"lithuania",
+"luxembourg",
+"madagascar",
+"malawi",
+"malaysia",
+"maldives",
+"mali",
+"malta",
+"marshall islands",
+"mauritania",
+"mauritius",
+"mexico",
+"micronesia",
+"moldova",
+"monaco",
+"mongolia",
+"montenegro",
+"morocco",
+"mozambique",
+"myanmar",
+"namibia",
+"nauru",
+"nepal",
+"netherlands",
+"new zealand",
+"nicaragua",
+"niger",
+"nigeria",
+"north korea",
+"north macedonia",
+"norway",
+"oman",
+"pakistan",
+"palau",
+"panama",
+"papua new guinea",
+"paraguay",
+"peru",
+"philippines",
+"poland",
+"portugal",
+"qatar",
+"romania",
+"russia",
+"rwanda",
+"saint kitts and nevis",
+"saint lucia",
+"saint vincent and the grenadines",
+"samoa",
+"san marino",
+"sao tome and principe",
+"saudi arabia",
+"senegal",
+"serbia",
+"seychelles",
+"sierra leone",
+"singapore",
+"slovakia",
+"slovenia",
+"solomon islands",
+"somalia",
+"south africa",
+"south korea",
+"south sudan",
+"spain",
+"sri lanka",
+"sudan",
+"suriname",
+"sweden",
+"switzerland",
+"syria",
+"tajikistan",
+"tanzania",
+"thailand",
+"timor-leste",
+"togo",
+"tonga",
+"trinidad and tobago",
+"tunisia",
+"turkey",
+"turkmenistan",
+"tuvalu",
+"uganda",
+"ukraine",
+"united arab emirates",
+"united kingdom",
+"united states",
+"uruguay",
+"uzbekistan",
+"vanuatu",
+"venezuela",
+"vietnam",
+"yemen",
+"zambia",
+"zimbabwe",
+"cook islands",
+"niue",
+"palestine",
+"kosovo",
+"taiwan",
+"vatican city",
+"hong kong",
+"macau",
+"greenland",
+"faroe islands",
+"puerto rico",
+"guam",
+"new caledonia"
+];
+
+</script>
+
+
+
+
+
+   <!--i:1,
+n:"amazon india",
+c:"general",
+u:"https://www.amazon.in",
+a:"https://www.amazon.in?tag=vmmbaslinks-21"
+},
+
+{
+i:2,
+n:"times prime",
+c:"general",
+u:"https://www.timesprime.com",
+a:"https://extp.in/ZMd1Nw"
+},
+
+{
+i:3,
+n:"flipkart",
+c:"general",
+u:"https://www.flipkart.com",
+a:"https://fkrt.co/4qfbAT"
+},
+
+{
+i:4,
+n:"shopsy",
+c:"general",
+u:"https://www.shopsy.in",
+a:"https://extp.in/Gs6Rb1"
+},
+
+{
+i:5,
+n:"tata cliq",
+c:"general",
+u:"https://www.tatacliq.com",
+a:"https://extp.in/xBzdCz"
+},
+
+{
+i:6,
+n:"hamaramall",
+c:"general",
+u:"https://www.hamaramall.com",
+a:"https://extp.in/8X1jbY"
+},
+
+{
+i:7,
+n:"zop multi-brand",
+c:"general",
+u:"https://www.zopnow.com",
+a:"https://extp.in/IrhoNZ"
+},
+
+{
+i:8,
+n:"borosil",
+c:"general",
+u:"https://www.borosil.com",
+a:"https://extp.in/24qA7X"
+},
+
+{
+i:9,
+n:"loop earplugs",
+c:"general",
+u:"https://www.loopearplugs.com",
+a:"https://extp.in/BB0Xou"
+},
+
+{
+i:10,
+n:"bigrock",
+c:"general",
+u:"https://www.bigrock.in",
+a:"https://extp.in/Nlegt8"
+},
+
+{
+i:11,
+n:"hostinger",
+c:"general",
+u:"https://www.hostinger.in",
+a:"https://extp.in/ftfK2f"
+},
+
+{
+i:12,
+n:"reliance digital",
+c:"electronics",
+u:"https://www.reliancedigital.in",
+a:"https://extp.in/0PgZJ7"
+},
+
+{
+i:13,
+n:"realme",
+c:"electronics",
+u:"https://www.realme.com",
+a:"https://extp.in/hnJCyL"
+},
+
+{
+i:14,
+n:"oppo",
+c:"electronics",
+u:"https://www.oppo.com",
+a:"https://extp.in/fVoq06"
+},
+
+{
+i:15,
+n:"croma",
+c:"electronics",
+u:"https://www.croma.com",
+a:"https://extp.in/8qwyol"
+},
+
+{
+i:16,
+n:"oneplus",
+c:"electronics",
+u:"https://www.oneplus.in",
+a:"https://extp.in/FEEReP"
+},
+
+{
+i:17,
+n:"boat",
+c:"electronics",
+u:"https://www.boat-lifestyle.com",
+a:"https://extp.in/oRxSTk"
+},
+
+{
+i:18,
+n:"hp store",
+c:"electronics",
+u:"https://www.hp.com/in-en",
+a:"https://extp.in/U9ewhY"
+},
+
+{
+i:19,
+n:"apple imagine",
+c:"electronics",
+u:"https://www.apple.com/in",
+a:"https://extp.in/SqFm4N"
+},
+
+{
+i:20,
+n:"havells",
+c:"electronics",
+u:"https://www.havells.com",
+a:"https://extp.in/S9xPk5"
+},
+
+{
+i:21,
+n:"acer",
+c:"electronics",
+u:"https://www.acer.com",
+a:"https://extp.in/VrnWUI"
+},
+
+{
+i:22,
+n:"agoda",
+c:"travel",
+u:"https://www.agoda.com",
+a:"https://extp.in/IVQGXK"
+},
+
+{
+i:23,
+n:"cleartrip",
+c:"travel",
+u:"https://www.cleartrip.com",
+a:"https://extp.in/MScmZs"
+},
+
+{
+i:24,
+n:"skyscanner",
+c:"travel",
+u:"https://www.skyscanner.co.in",
+a:"https://extp.in/OkutuN"
+},
+
+{
+i:25,
+n:"wego hotels",
+c:"travel",
+u:"https://www.wego.com",
+a:"https://extp.in/p1wwg6"
+},
+
+{
+i:26,
+n:"air india express",
+c:"travel",
+u:"https://www.airindiaexpress.com",
+a:"https://extp.in/Yt5n0D"
+},
+
+{
+i:27,
+n:"goibibo hotels",
+c:"travel",
+u:"https://www.goibibo.com",
+a:"https://extp.in/hI611P"
+},
+
+{
+i:28,
+n:"radisson",
+c:"travel",
+u:"https://www.radissonhotels.com",
+a:"https://extp.in/NZ4D3c"
+},
+
+{
+i:29,
+n:"air india",
+c:"travel",
+u:"https://www.airindia.com",
+a:"https://extp.in/dglSuK"
+},
+
+{
+i:30,
+n:"qatar airways",
+c:"travel",
+u:"https://www.qatarairways.com",
+a:"https://extp.in/j1zDhQ"
+},
+
+{
+i:31,
+n:"ajio",
+c:"fashion",
+u:"https://www.ajio.com",
+a:"https://ajiio.co/FB2bjd"
+},
+
+{
+i:32,
+n:"savana",
+c:"fashion",
+u:"https://www.savana.com",
+a:"https://extp.in/vneaiB"
+},
+
+{
+i:33,
+n:"adidas",
+c:"fashion",
+u:"https://www.adidas.co.in",
+a:"https://extp.in/O8an9N"
+},
+
+{
+i:34,
+n:"snitch",
+c:"fashion",
+u:"https://www.snitch.co.in",
+a:"https://extp.in/9HobPl"
+},
+
+{
+i:35,
+n:"bewakoof",
+c:"fashion",
+u:"https://www.bewakoof.com",
+a:"https://extp.in/YTpmLn"
+},
+
+{
+i:36,
+n:"nykaa fashion",
+c:"fashion",
+u:"https://www.nykaafashion.com",
+a:"https://extp.in/K4vmPe"
+},
+
+{
+i:37,
+n:"shyaway",
+c:"fashion",
+u:"https://www.shyaway.com",
+a:"https://extp.in/I17VdZ"
+},
+
+{
+i:38,
+n:"palmonas",
+c:"fashion",
+u:"https://www.palmonas.com",
+a:"https://extp.in/zLMREw"
+},
+
+{
+i:39,
+n:"tanishq",
+c:"fashion",
+u:"https://www.tanishq.co.in",
+a:"https://extp.in/JW39eV"
+},
+
+{
+i:40,
+n:"aramya",
+c:"fashion",
+u:"https://www.aranya.com",
+a:"https://extp.in/weizVL"
+},
+
+{
+i:41,
+n:"pharmeasy",
+c:"health",
+u:"https://pharmeasy.in",
+a:"https://extp.in/health1"
+},
+
+{
+i:42,
+n:"tata 1mg",
+c:"health",
+u:"https://www.1mg.com",
+a:"https://extp.in/health2"
+},
+
+{
+i:43,
+n:"netmeds",
+c:"health",
+u:"https://www.netmeds.com",
+a:"https://extp.in/health3"
+},
+
+{
+i:44,
+n:"apollo pharmacy",
+c:"health",
+u:"https://www.apollopharmacy.in",
+a:"https://extp.in/health4"
+},
+
+{
+i:45,
+n:"practo",
+c:"health",
+u:"https://www.practo.com",
+a:"https://extp.in/health5"
+},
+
+{
+i:46,
+n:"healthkart",
+c:"health",
+u:"https://www.healthkart.com",
+a:"https://extp.in/health6"
+},
+
+{
+i:47,
+n:"boldfit",
+c:"health",
+u:"https://www.boldfit.in",
+a:"https://extp.in/health7"
+},
+
+{
+i:48,
+n:"wellness forever",
+c:"health",
+u:"https://www.wellnessforever.com",
+a:"https://extp.in/health8"
+},
+
+{
+i:49,
+n:"zandu care",
+c:"health",
+u:"https://www.zanducare.com",
+a:"https://extp.in/health9"
+},
+
+{
+i:50,
+n:"myupchar",
+c:"health",
+u:"https://www.myupchar.com",
+a:"https://extp.in/health10"
+},
+
+{
+i:51,
+n:"dot & key",
+c:"beauty",
+u:"https://www.dotandkey.com",
+a:"https://extp.in/FLG6iL"
+},
+
+{
+i:52,
+n:"love beauty & planet",
+c:"beauty",
+u:"https://www.lovebeautyandplanet.com",
+a:"https://extp.in/IGrjfb"
+},
+
+{
+i:53,
+n:"nykaa",
+c:"beauty",
+u:"https://www.nykaa.com",
+a:"https://extp.in/BnQJFH"
+},
+
+{
+i:54,
+n:"clove oral care",
+c:"beauty",
+u:"https://www.cloveoralcare.com",
+a:"https://extp.in/RSLak4"
+},
+
+{
+i:55,
+n:"the man company",
+c:"beauty",
+u:"https://www.themancompany.com",
+a:"https://extp.in/JW1fyD"
+},
+
+{
+i:56,
+n:"lotus botanicals",
+c:"beauty",
+u:"https://www.lotusbotanicals.com",
+a:"https://extp.in/2vyqbh"
+},
+
+{
+i:57,
+n:"nourish mantra",
+c:"beauty",
+u:"https://www.nourishmantra.com",
+a:"https://extp.in/Gg2Mzw"
+},
+
+{
+i:58,
+n:"the body shop",
+c:"beauty",
+u:"https://www.thebodyshop.in",
+a:"https://extp.in/Uel1q3"
+},
+
+{
+i:59,
+n:"swiss beauty",
+c:"beauty",
+u:"https://www.swissbeauty.in",
+a:"https://extp.in/0I5GeF"
+},
+
+{
+i:60,
+n:"sadhev ayurveda",
+c:"beauty",
+u:"https://www.sadhev.com",
+a:"https://extp.in/BCljjQ"
+},
+{
+i:61,
+n:"airtel payments bank",
+c:"banking",
+u:"https://www.airtel.in",
+a:"https://extp.in/g0pxj2"
+},
+
+{
+i:62,
+n:"angel one",
+c:"banking",
+u:"https://www.angelone.in",
+a:"https://extp.in/frLCl1"
+},
+
+{
+i:63,
+n:"swiggy hdfc card",
+c:"banking",
+u:"https://www.hdfcbank.com",
+a:"https://extp.in/Xl9qHe"
+},
+
+{
+i:64,
+n:"indusind avios card",
+c:"banking",
+u:"https://www.indusind.com",
+a:"https://extp.in/hj6ArG"
+},
+
+{
+i:65,
+n:"ayushpay",
+c:"banking",
+u:"https://www.ayushpay.com",
+a:"https://extp.in/XQxoLW"
+},
+
+{
+i:66,
+n:"marriott bonvoy hdfc",
+c:"banking",
+u:"https://www.marriott.com",
+a:"https://extp.in/cxkWbr"
+},
+
+{
+i:67,
+n:"axis myzone card",
+c:"banking",
+u:"https://www.axisbank.com",
+a:"https://extp.in/9myzwo"
+},
+
+{
+i:68,
+n:"navi upi",
+c:"banking",
+u:"https://www.navi.com",
+a:"https://extp.in/J56J4f"
+},
+
+{
+i:69,
+n:"upstox",
+c:"banking",
+u:"https://upstox.com",
+a:"https://extp.in/jrfhBK"
+},
+
+{
+i:70,
+n:"zagg money",
+c:"banking",
+u:"https://zagg.money",
+a:"https://extp.in/9zNj2z"
+},
+
+{
+i:71,
+n:"meesho",
+c:"general",
+u:"https://www.meesho.com",
+a:""
+},
+
+{
+i:72,
+n:"jiomart",
+c:"general",
+u:"https://www.jiomart.com",
+a:""
+},
+
+{
+i:73,
+n:"bigbasket",
+c:"general",
+u:"https://www.bigbasket.com",
+a:""
+},
+
+{
+i:74,
+n:"blinkit",
+c:"general",
+u:"https://www.blinkit.com",
+a:""
+},
+
+{
+i:75,
+n:"zepto",
+c:"general",
+u:"https://www.zeptonow.com",
+a:""
+},
+
+{
+i:76,
+n:"swiggy",
+c:"general",
+u:"https://www.swiggy.com",
+a:""
+},
+
+{
+i:77,
+n:"zomato",
+c:"general",
+u:"https://www.zomato.com",
+a:""
+},
+
+{
+i:78,
+n:"pepperfry",
+c:"home",
+u:"https://www.pepperfry.com",
+a:""
+},
+
+{
+i:79,
+n:"urban ladder",
+c:"home",
+u:"https://www.urbanladder.com",
+a:""
+},
+
+{
+i:80,
+n:"noise",
+c:"electronics",
+u:"https://www.noise.com",
+a:""
+},
+
+{
+i:81,
+n:"mivi",
+c:"electronics",
+u:"https://www.mivi.in",
+a:""
+},
+
+{
+i:82,
+n:"boult audio",
+c:"electronics",
+u:"https://www.boultaudio.com",
+a:""
+},
+
+{
+i:83,
+n:"samsung",
+c:"electronics",
+u:"https://www.samsung.com/in",
+a:""
+},
+
+{
+i:84,
+n:"xiaomi",
+c:"electronics",
+u:"https://www.mi.com/in",
+a:""
+},
+
+{
+i:85,
+n:"lenovo",
+c:"electronics",
+u:"https://www.lenovo.com/in/en",
+a:""
+},
+
+{
+i:86,
+n:"dell",
+c:"electronics",
+u:"https://www.dell.com/en-in",
+a:""
+},
+
+{
+i:87,
+n:"mamaearth",
+c:"beauty",
+u:"https://www.mamaearth.in",
+a:""
+},
+
+{
+i:88,
+n:"wow skin science",
+c:"beauty",
+u:"https://www.wowskinscience.com",
+a:""
+},
+
+{
+i:89,
+n:"the derma co",
+c:"beauty",
+u:"https://www.thederma-co.com",
+a:""
+},
+
+{
+i:90,
+n:"plum",
+c:"beauty",
+u:"https://plumgoodness.com",
+a:""
+},
+{
+i:121,
+n:"w for woman",
+c:"fashion",
+u:"https://www.wforwoman.com",
+a:""
+},
+
+{
+i:122,
+n:"aurelia",
+c:"fashion",
+u:"https://www.aurelia.com",
+a:""
+},
+
+{
+i:123,
+n:"biba",
+c:"fashion",
+u:"https://www.biba.in",
+a:""
+},
+
+{
+i:124,
+n:"fabindia",
+c:"fashion",
+u:"https://www.fabindia.com",
+a:""
+},
+
+{
+i:125,
+n:"soch",
+c:"fashion",
+u:"https://www.soch.com",
+a:""
+},
+
+{
+i:126,
+n:"libas",
+c:"fashion",
+u:"https://www.libas.in",
+a:""
+},
+
+{
+i:127,
+n:"fastrack",
+c:"fashion",
+u:"https://www.fastrack.in",
+a:""
+},
+
+{
+i:128,
+n:"titan",
+c:"fashion",
+u:"https://www.titan.co.in",
+a:""
+},
+
+{
+i:129,
+n:"casio india",
+c:"fashion",
+u:"https://www.casioindiashop.com",
+a:""
+},
+
+{
+i:130,
+n:"fossil",
+c:"fashion",
+u:"https://www.fossil.com/en-in",
+a:""
+},
+
+{
+i:131,
+n:"daniel wellington",
+c:"fashion",
+u:"https://www.danielwellington.com/in",
+a:""
+},
+
+{
+i:132,
+n:"timex",
+c:"fashion",
+u:"https://www.timexindia.com",
+a:""
+},
+
+{
+i:133,
+n:"lenskart",
+c:"fashion",
+u:"https://www.lenskart.com",
+a:""
+},
+
+{
+i:134,
+n:"coolwinks",
+c:"fashion",
+u:"https://www.coolwinks.com",
+a:""
+},
+
+{
+i:135,
+n:"titan eyeplus",
+c:"fashion",
+u:"https://www.titaneyeplus.com",
+a:""
+},
+
+{
+i:136,
+n:"giva",
+c:"fashion",
+u:"https://www.giva.co",
+a:""
+},
+
+{
+i:137,
+n:"caratlane",
+c:"fashion",
+u:"https://www.caratlane.com",
+a:""
+},
+
+{
+i:138,
+n:"bluestone",
+c:"fashion",
+u:"https://www.bluestone.com",
+a:""
+},
+
+{
+i:139,
+n:"voylla",
+c:"fashion",
+u:"https://www.voylla.com",
+a:""
+},
+
+{
+i:140,
+n:"zariin",
+c:"fashion",
+u:"https://www.zariin.com",
+a:""
+},
+
+{
+i:141,
+n:"melorra",
+c:"fashion",
+u:"https://www.melorra.com",
+a:""
+},
+
+{
+i:142,
+n:"safari",
+c:"fashion",
+u:"https://www.safari.in",
+a:""
+},
+
+{
+i:143,
+n:"vip bags",
+c:"fashion",
+u:"https://www.vipbags.com",
+a:""
+},
+
+{
+i:144,
+n:"american tourister",
+c:"fashion",
+u:"https://www.americantourister.in",
+a:""
+},
+
+{
+i:145,
+n:"samsonite",
+c:"fashion",
+u:"https://www.samsonite.in",
+a:""
+},
+
+{
+i:146,
+n:"mokobara",
+c:"fashion",
+u:"https://mokobara.com",
+a:""
+},
+
+{
+i:147,
+n:"wildcraft",
+c:"fashion",
+u:"https://www.wildcraft.com",
+a:""
+},
+
+{
+i:148,
+n:"skybags",
+c:"fashion",
+u:"https://www.skybags.co.in",
+a:""
+},
+
+{
+i:149,
+n:"firstcry",
+c:"baby",
+u:"https://www.firstcry.com",
+a:""
+},
+
+{
+i:150,
+n:"hopscotch",
+c:"baby",
+u:"https://www.hopscotch.in",
+a:""
+},
+{
+i:151,
+n:"mothercare",
+c:"baby",
+u:"https://www.mothercare.in",
+a:""
+},
+
+{
+i:152,
+n:"chicco",
+c:"baby",
+u:"https://www.chicco.in",
+a:""
+},
+
+{
+i:153,
+n:"wakefit",
+c:"home",
+u:"https://www.wakefit.co",
+a:""
+},
+
+{
+i:154,
+n:"sleepwell",
+c:"home",
+u:"https://www.sleepwell.co.in",
+a:""
+},
+
+{
+i:155,
+n:"duroflex",
+c:"home",
+u:"https://www.duroflexworld.com",
+a:""
+},
+
+{
+i:156,
+n:"the sleep company",
+c:"home",
+u:"https://www.thesleepcompany.in",
+a:""
+},
+
+{
+i:157,
+n:"godrej interio",
+c:"home",
+u:"https://www.godrejinterio.com",
+a:""
+},
+
+{
+i:158,
+n:"nilkamal",
+c:"home",
+u:"https://www.nilkamalfurniture.com",
+a:""
+},
+
+{
+i:159,
+n:"home centre",
+c:"home",
+u:"https://www.homecentre.in",
+a:""
+},
+
+{
+i:160,
+n:"pure home and living",
+c:"home",
+u:"https://www.purehomeandliving.com",
+a:""
+},
+
+{
+i:161,
+n:"chumbak",
+c:"home",
+u:"https://www.chumbak.com",
+a:""
+},
+
+{
+i:162,
+n:"nestasia",
+c:"home",
+u:"https://www.nestasia.in",
+a:""
+},
+
+{
+i:163,
+n:"dailyobjects",
+c:"home",
+u:"https://www.dailyobjects.com",
+a:""
+},
+
+{
+i:164,
+n:"bombay dyeing",
+c:"home",
+u:"https://www.bombaydyeing.com",
+a:""
+},
+
+{
+i:165,
+n:"spaces",
+c:"home",
+u:"https://www.spaces.in",
+a:""
+},
+
+{
+i:166,
+n:"portico",
+c:"home",
+u:"https://www.porticoindia.com",
+a:""
+},
+
+{
+i:167,
+n:"philips",
+c:"electronics",
+u:"https://www.philips.co.in",
+a:""
+},
+
+{
+i:168,
+n:"usha",
+c:"home",
+u:"https://www.usha.com",
+a:""
+},
+
+{
+i:169,
+n:"kent",
+c:"home",
+u:"https://www.kent.co.in",
+a:""
+},
+
+{
+i:170,
+n:"eureka forbes",
+c:"home",
+u:"https://www.eurekaforbes.com",
+a:""
+},
+
+{
+i:171,
+n:"prestige",
+c:"home",
+u:"https://www.prestigexclusive.in",
+a:""
+},
+
+{
+i:172,
+n:"wonderchef",
+c:"home",
+u:"https://www.wonderchef.com",
+a:""
+},
+
+{
+i:173,
+n:"milton",
+c:"home",
+u:"https://www.milton.in",
+a:""
+},
+
+{
+i:174,
+n:"cello",
+c:"home",
+u:"https://www.cello.in",
+a:""
+},
+
+{
+i:175,
+n:"tupperware india",
+c:"home",
+u:"https://www.tupperwareindia.com",
+a:""
+},
+
+{
+i:176,
+n:"instamart",
+c:"general",
+u:"https://www.instamart.com",
+a:""
+},
+
+{
+i:177,
+n:"starquik",
+c:"general",
+u:"https://www.starquik.com",
+a:""
+},
+
+{
+i:178,
+n:"natures basket",
+c:"general",
+u:"https://www.naturesbasket.co.in",
+a:""
+},
+
+{
+i:179,
+n:"dmart",
+c:"general",
+u:"https://www.dmart.in",
+a:""
+},
+
+{
+i:180,
+n:"licious",
+c:"food",
+u:"https://www.licious.in",
+a:""
+},
+{
+i:181,
+n:"freshtohome",
+c:"food",
+u:"https://www.freshtohome.com",
+a:""
+},
+
+{
+i:182,
+n:"tendercuts",
+c:"food",
+u:"https://www.tendercuts.in",
+a:""
+},
+
+{
+i:183,
+n:"country delight",
+c:"food",
+u:"https://www.countrydelight.in",
+a:""
+},
+
+{
+i:184,
+n:"amul",
+c:"food",
+u:"https://www.amul.com",
+a:""
+},
+
+{
+i:185,
+n:"haldirams",
+c:"food",
+u:"https://www.haldirams.com",
+a:""
+},
+
+{
+i:186,
+n:"bikano",
+c:"food",
+u:"https://www.bikano.com",
+a:""
+},
+
+{
+i:187,
+n:"id fresh food",
+c:"food",
+u:"https://www.idfreshfood.com",
+a:""
+},
+
+{
+i:188,
+n:"mcdonalds india",
+c:"food",
+u:"https://www.mcdonaldsindia.com",
+a:""
+},
+
+{
+i:189,
+n:"dominos",
+c:"food",
+u:"https://www.dominos.co.in",
+a:""
+},
+
+{
+i:190,
+n:"pizza hut",
+c:"food",
+u:"https://www.pizzahut.co.in",
+a:""
+},
+
+{
+i:191,
+n:"burger king",
+c:"food",
+u:"https://www.burgerking.in",
+a:""
+},
+
+{
+i:192,
+n:"subway",
+c:"food",
+u:"https://www.subway.com",
+a:""
+},
+
+{
+i:193,
+n:"starbucks india",
+c:"food",
+u:"https://www.starbucks.in",
+a:""
+},
+
+{
+i:194,
+n:"cafe coffee day",
+c:"food",
+u:"https://www.cafecoffeeday.com",
+a:""
+},
+
+{
+i:195,
+n:"chaayos",
+c:"food",
+u:"https://www.chaayos.com",
+a:""
+},
+
+{
+i:196,
+n:"chai point",
+c:"food",
+u:"https://www.chai-point.com",
+a:""
+},
+
+{
+i:197,
+n:"cult fit",
+c:"health",
+u:"https://www.cult.fit",
+a:""
+},
+
+{
+i:198,
+n:"muscleblaze",
+c:"health",
+u:"https://www.muscleblaze.com",
+a:""
+},
+
+{
+i:199,
+n:"myprotein india",
+c:"health",
+u:"https://www.myprotein.in",
+a:""
+},
+
+{
+i:200,
+n:"oziva",
+c:"health",
+u:"https://www.oziva.in",
+a:""
+},
+
+{
+i:201,
+n:"fast&up",
+c:"health",
+u:"https://www.fastandup.in",
+a:""
+},
+
+{
+i:202,
+n:"bookmyshow",
+c:"entertainment",
+u:"https://www.bookmyshow.com",
+a:""
+},
+
+{
+i:203,
+n:"ticketnew",
+c:"entertainment",
+u:"https://www.ticketnew.com",
+a:""
+},
+
+{
+i:204,
+n:"makemytrip",
+c:"travel",
+u:"https://www.makemytrip.com",
+a:""
+},
+
+{
+i:205,
+n:"yatra",
+c:"travel",
+u:"https://www.yatra.com",
+a:""
+},
+
+{
+i:206,
+n:"easemytrip",
+c:"travel",
+u:"https://www.easemytrip.com",
+a:""
+},
+
+{
+i:207,
+n:"ixigo",
+c:"travel",
+u:"https://www.ixigo.com",
+a:""
+},
+
+{
+i:208,
+n:"redbus",
+c:"travel",
+u:"https://www.redbus.in",
+a:""
+},
+
+{
+i:209,
+n:"abhibus",
+c:"travel",
+u:"https://www.abhibus.com",
+a:""
+},
+
+{
+i:210,
+n:"oyo",
+c:"travel",
+u:"https://www.oyorooms.com",
+a:""
+},
+{
+i:211,
+n:"booking.com",
+c:"travel",
+u:"https://www.booking.com",
+a:""
+},
+
+{
+i:212,
+n:"hostelworld",
+c:"travel",
+u:"https://www.hostelworld.com",
+a:""
+},
+
+{
+i:213,
+n:"airbnb",
+c:"travel",
+u:"https://www.airbnb.co.in",
+a:""
+},
+
+{
+i:214,
+n:"hotstar",
+c:"entertainment",
+u:"https://www.hotstar.com",
+a:""
+},
+
+{
+i:215,
+n:"zee5",
+c:"entertainment",
+u:"https://www.zee5.com",
+a:""
+},
+
+{
+i:216,
+n:"sonyliv",
+c:"entertainment",
+u:"https://www.sonyliv.com",
+a:""
+},
+
+{
+i:217,
+n:"discovery plus",
+c:"entertainment",
+u:"https://www.discoveryplus.in",
+a:""
+},
+
+{
+i:218,
+n:"sunnxt",
+c:"entertainment",
+u:"https://www.sunnxt.com",
+a:""
+},
+
+{
+i:219,
+n:"manorama max",
+c:"entertainment",
+u:"https://www.manoramamax.com",
+a:""
+},
+
+{
+i:220,
+n:"udemy",
+c:"education",
+u:"https://www.udemy.com",
+a:""
+},
+
+{
+i:221,
+n:"coursera",
+c:"education",
+u:"https://www.coursera.org",
+a:""
+},
+
+{
+i:222,
+n:"unacademy",
+c:"education",
+u:"https://www.unacademy.com",
+a:""
+},
+
+{
+i:223,
+n:"byjus",
+c:"education",
+u:"https://www.byjus.com",
+a:""
+},
+
+{
+i:224,
+n:"upgrad",
+c:"education",
+u:"https://www.upgrad.com",
+a:""
+},
+
+{
+i:225,
+n:"simplilearn",
+c:"education",
+u:"https://www.simplilearn.com",
+a:""
+},
+{
+i:226,
+n:"inox movies",
+c:"entertainment",
+u:"https://www.inoxmovies.com",
+a:""
+},
+
+{
+i:227,
+n:"pvr cinemas",
+c:"entertainment",
+u:"https://www.pvrcinemas.com",
+a:""
+},
+
+{
+i:228,
+n:"kfc india",
+c:"food",
+u:"https://online.kfc.co.in",
+a:""
+},
+
+{
+i:229,
+n:"cafecoffeeday",
+c:"food",
+u:"https://www.cafecoffeeday.com",
+a:""
+},
+
+{
+i:230,
+n:"chaayos tea",
+c:"food",
+u:"https://www.chaayos.com",
+a:""
+},
+
+{
+i:231,
+n:"chai point",
+c:"food",
+u:"https://www.chai-point.com",
+a:""
+},
+
+{
+i:232,
+n:"noon",
+c:"general",
+u:"https://www.noon.com",
+a:""
+},
+
+{
+i:233,
+n:"shopclues",
+c:"general",
+u:"https://www.shopclues.com",
+a:""
+},
+
+{
+i:234,
+n:"snapdeal",
+c:"general",
+u:"https://www.snapdeal.com",
+a:""
+},
+
+{
+i:235,
+n:"home shop 18",
+c:"general",
+u:"https://www.homeshop18.com",
+a:""
+},
+
+{
+i:236,
+n:"hamleys india",
+c:"baby",
+u:"https://www.hamleys.in",
+a:""
+},
+
+{
+i:237,
+n:"babyhug",
+c:"baby",
+u:"https://www.babyhug.in",
+a:""
+},
+
+{
+i:238,
+n:"kidbea",
+c:"baby",
+u:"https://www.kidbea.com",
+a:""
+},
+
+{
+i:239,
+n:"supples",
+c:"baby",
+u:"https://www.supples.com",
+a:""
+},
+
+{
+i:240,
+n:"kidstuff",
+c:"baby",
+u:"https://www.kidstuff.in",
+a:""
+},
+
+{
+i:241,
+n:"campus shoes",
+c:"fashion",
+u:"https://www.campusshoes.com",
+a:""
+},
+
+{
+i:242,
+n:"red chief",
+c:"fashion",
+u:"https://www.redchief.in",
+a:""
+},
+
+{
+i:243,
+n:"paragon",
+c:"fashion",
+u:"https://www.paragonfootwear.com",
+a:""
+},
+
+{
+i:244,
+n:"khadims",
+c:"fashion",
+u:"https://www.khadims.com",
+a:""
+},
+
+{
+i:245,
+n:"louis philippe",
+c:"fashion",
+u:"https://www.louisphilippe.abfrl.in",
+a:""
+},
+
+{
+i:246,
+n:"van heusen",
+c:"fashion",
+u:"https://www.vanheusenindia.com",
+a:""
+},
+
+{
+i:247,
+n:"allen solly",
+c:"fashion",
+u:"https://www.allensolly.com",
+a:""
+},
+
+{
+i:248,
+n:"peter england",
+c:"fashion",
+u:"https://www.peterengland.com",
+a:""
+},
+
+{
+i:249,
+n:"blackberrys",
+c:"fashion",
+u:"https://www.blackberrys.com",
+a:""
+},
+
+{
+i:250,
+n:"manyavar",
+c:"fashion",
+u:"https://www.manyavar.com",
+a:""
+},
+{
+i:251,
+n:"raymond",
+c:"fashion",
+u:"https://www.raymond.in",
+a:""
+},
+
+{
+i:252,
+n:"arrow",
+c:"fashion",
+u:"https://www.arrowlife.com",
+a:""
+},
+
+{
+i:253,
+n:"jack & jones",
+c:"fashion",
+u:"https://www.jackjones.in",
+a:""
+},
+
+{
+i:254,
+n:"only",
+c:"fashion",
+u:"https://www.only.in",
+a:""
+},
+
+{
+i:255,
+n:"vero moda",
+c:"fashion",
+u:"https://www.veromoda.in",
+a:""
+},
+
+{
+i:256,
+n:"forever new",
+c:"fashion",
+u:"https://www.forevernew.co.in",
+a:""
+},
+
+{
+i:257,
+n:"global desi",
+c:"fashion",
+u:"https://www.globaldesi.in",
+a:""
+},
+
+{
+i:258,
+n:"and",
+c:"fashion",
+u:"https://www.andindia.com",
+a:""
+},
+
+{
+i:259,
+n:"rare rabbit",
+c:"fashion",
+u:"https://www.rarerabbit.in",
+a:""
+},
+
+{
+i:260,
+n:"us polo assn",
+c:"fashion",
+u:"https://www.uspoloassn.in",
+a:""
+},
+
+{
+i:261,
+n:"forest essentials",
+c:"beauty",
+u:"https://www.forestessentialsindia.com",
+a:""
+},
+
+{
+i:262,
+n:"biotique",
+c:"beauty",
+u:"https://www.biotique.com",
+a:""
+},
+
+{
+i:263,
+n:"khadi natural",
+c:"beauty",
+u:"https://www.khadinatural.com",
+a:""
+},
+
+{
+i:264,
+n:"lakme",
+c:"beauty",
+u:"https://www.lakmeindia.com",
+a:""
+},
+
+{
+i:265,
+n:"vlcc",
+c:"beauty",
+u:"https://www.vlccproducts.com",
+a:""
+},
+
+{
+i:266,
+n:"minimalist",
+c:"beauty",
+u:"https://beminimalist.co",
+a:""
+},
+
+{
+i:267,
+n:"aqualogica",
+c:"beauty",
+u:"https://www.aqualogica.in",
+a:""
+},
+
+{
+i:268,
+n:"foxtale",
+c:"beauty",
+u:"https://foxtale.in",
+a:""
+},
+
+{
+i:269,
+n:"pilgrim",
+c:"beauty",
+u:"https://discoverpilgrim.com",
+a:""
+},
+
+{
+i:270,
+n:"earth rhythm",
+c:"beauty",
+u:"https://earthrhythm.com",
+a:""
+},
+
+{
+i:271,
+n:"apollo 247",
+c:"health",
+u:"https://www.apollo247.com",
+a:""
+},
+
+{
+i:272,
+n:"care hospitals",
+c:"health",
+u:"https://www.carehospitals.com",
+a:""
+},
+
+{
+i:273,
+n:"medibuddy",
+c:"health",
+u:"https://www.medibuddy.in",
+a:""
+},
+
+{
+i:274,
+n:"mfine",
+c:"health",
+u:"https://www.mfine.co",
+a:""
+},
+
+{
+i:275,
+n:"fittr",
+c:"health",
+u:"https://www.fittr.com",
+a:""
+},
+
+{
+i:276,
+n:"healthify",
+c:"health",
+u:"https://www.healthifyme.com",
+a:""
+},
+
+{
+i:277,
+n:"netfit",
+c:"health",
+u:"https://www.netfit.co.in",
+a:""
+},
+
+{
+i:278,
+n:"decathlon play",
+c:"sports",
+u:"https://play.decathlon.in",
+a:""
+},
+
+{
+i:279,
+n:"cultsport",
+c:"sports",
+u:"https://cultsport.com",
+a:""
+},
+
+{
+i:280,
+n:"nivia",
+c:"sports",
+u:"https://www.niviasports.com",
+a:""
+},
+{
+i:281,
+n:"yonex india",
+c:"sports",
+u:"https://www.yonex.com",
+a:""
+},
+
+{
+i:282,
+n:"cosco",
+c:"sports",
+u:"https://www.cosco.in",
+a:""
+},
+
+{
+i:283,
+n:"sg cricket",
+c:"sports",
+u:"https://www.sgin.in",
+a:""
+},
+
+{
+i:284,
+n:"ss cricket",
+c:"sports",
+u:"https://www.sstoncricket.com",
+a:""
+},
+
+{
+i:285,
+n:"ceat speciality",
+c:"sports",
+u:"https://www.ceat.com",
+a:""
+},
+
+{
+i:286,
+n:"kookaburra",
+c:"sports",
+u:"https://www.kookaburrasport.com.au",
+a:""
+},
+
+{
+i:287,
+n:"spartan sports",
+c:"sports",
+u:"https://www.spartancricket.com",
+a:""
+},
+
+{
+i:288,
+n:"amazon mini tv",
+c:"entertainment",
+u:"https://www.amazon.in/minitv",
+a:""
+},
+
+{
+i:289,
+n:"jiohotstar",
+c:"entertainment",
+u:"https://www.jiohotstar.com",
+a:""
+},
+
+{
+i:290,
+n:"aha",
+c:"entertainment",
+u:"https://www.aha.video",
+a:""
+},
+
+{
+i:291,
+n:"eros now",
+c:"entertainment",
+u:"https://erosnow.com",
+a:""
+},
+
+{
+i:292,
+n:"hungama",
+c:"entertainment",
+u:"https://www.hungama.com",
+a:""
+},
+
+{
+i:293,
+n:"gaana",
+c:"entertainment",
+u:"https://gaana.com",
+a:""
+},
+
+{
+i:294,
+n:"jiosaavn",
+c:"entertainment",
+u:"https://www.jiosaavn.com",
+a:""
+},
+
+{
+i:295,
+n:"wynk music",
+c:"entertainment",
+u:"https://wynk.in",
+a:""
+},
+
+{
+i:296,
+n:"audible india",
+c:"education",
+u:"https://www.audible.in",
+a:""
+},
+
+{
+i:297,
+n:"kindle store",
+c:"education",
+u:"https://www.amazon.in/kindle-dbs/storefront",
+a:""
+},
+
+{
+i:298,
+n:"testbook",
+c:"education",
+u:"https://testbook.com",
+a:""
+},
+
+{
+i:299,
+n:"adda247",
+c:"education",
+u:"https://www.adda247.com",
+a:""
+},
+
+{
+i:300,
+n:"physics wallah",
+c:"education",
+u:"https://www.pw.live",
+a:""
+},
+{
+i:281,
+n:"yonex india",
+c:"sports",
+u:"https://www.yonex.com",
+a:""
+},
+
+{
+i:282,
+n:"cosco",
+c:"sports",
+u:"https://www.cosco.in",
+a:""
+},
+
+{
+i:283,
+n:"sg cricket",
+c:"sports",
+u:"https://www.sgin.in",
+a:""
+},
+
+{
+i:284,
+n:"ss cricket",
+c:"sports",
+u:"https://www.sstoncricket.com",
+a:""
+},
+
+{
+i:285,
+n:"ceat speciality",
+c:"sports",
+u:"https://www.ceat.com",
+a:""
+},
+
+{
+i:286,
+n:"kookaburra",
+c:"sports",
+u:"https://www.kookaburrasport.com.au",
+a:""
+},
+
+{
+i:287,
+n:"spartan sports",
+c:"sports",
+u:"https://www.spartancricket.com",
+a:""
+},
+
+{
+i:288,
+n:"amazon mini tv",
+c:"entertainment",
+u:"https://www.amazon.in/minitv",
+a:""
+},
+
+{
+i:289,
+n:"jiohotstar",
+c:"entertainment",
+u:"https://www.jiohotstar.com",
+a:""
+},
+
+{
+i:290,
+n:"aha",
+c:"entertainment",
+u:"https://www.aha.video",
+a:""
+},
+
+{
+i:291,
+n:"eros now",
+c:"entertainment",
+u:"https://erosnow.com",
+a:""
+},
+
+{
+i:292,
+n:"hungama",
+c:"entertainment",
+u:"https://www.hungama.com",
+a:""
+},
+
+{
+i:293,
+n:"gaana",
+c:"entertainment",
+u:"https://gaana.com",
+a:""
+},
+
+{
+i:294,
+n:"jiosaavn",
+c:"entertainment",
+u:"https://www.jiosaavn.com",
+a:""
+},
+
+{
+i:295,
+n:"wynk music",
+c:"entertainment",
+u:"https://wynk.in",
+a:""
+},
+
+{
+i:296,
+n:"audible india",
+c:"education",
+u:"https://www.audible.in",
+a:""
+},
+
+{
+i:297,
+n:"kindle store",
+c:"education",
+u:"https://www.amazon.in/kindle-dbs/storefront",
+a:""
+},
+
+{
+i:298,
+n:"testbook",
+c:"education",
+u:"https://testbook.com",
+a:""
+},
+
+{
+i:299,
+n:"adda247",
+c:"education",
+u:"https://www.adda247.com",
+a:""
+},
+
+{
+i:300,
+n:"physics wallah",
+c:"education",
+u:"https://www.pw.live",
+a:""
+},
+{
+i:321,
+n:"microsoft 365",
+c:"services",
+u:"https://www.microsoft.com/microsoft-365",
+a:""
+},
+
+{
+i:322,
+n:"google workspace",
+c:"services",
+u:"https://workspace.google.com",
+a:""
+},
+
+{
+i:323,
+n:"zoom",
+c:"services",
+u:"https://zoom.us",
+a:""
+},
+
+{
+i:324,
+n:"slack",
+c:"services",
+u:"https://slack.com",
+a:""
+},
+
+{
+i:325,
+n:"trello",
+c:"services",
+u:"https://trello.com",
+a:""
+},
+
+{
+i:326,
+n:"asana",
+c:"services",
+u:"https://asana.com",
+a:""
+},
+
+{
+i:327,
+n:"clickup",
+c:"services",
+u:"https://clickup.com",
+a:""
+},
+
+{
+i:328,
+n:"evernote",
+c:"services",
+u:"https://evernote.com",
+a:""
+},
+
+{
+i:329,
+n:"adobe express",
+c:"services",
+u:"https://www.adobe.com/express",
+a:""
+},
+
+{
+i:330,
+n:"adobe creative cloud",
+c:"services",
+u:"https://www.adobe.com/creativecloud",
+a:""
+},
+
+{
+i:331,
+n:"figma",
+c:"services",
+u:"https://www.figma.com",
+a:""
+},
+
+{
+i:332,
+n:"github",
+c:"services",
+u:"https://github.com",
+a:""
+},
+
+{
+i:333,
+n:"gitlab",
+c:"services",
+u:"https://gitlab.com",
+a:""
+},
+
+{
+i:334,
+n:"bitbucket",
+c:"services",
+u:"https://bitbucket.org",
+a:""
+},
+
+{
+i:335,
+n:"cloudflare",
+c:"services",
+u:"https://www.cloudflare.com",
+a:""
+},
+
+{
+i:336,
+n:"namecheap",
+c:"services",
+u:"https://www.namecheap.com",
+a:""
+},
+
+{
+i:337,
+n:"godaddy",
+c:"services",
+u:"https://www.godaddy.com",
+a:""
+},
+
+{
+i:338,
+n:"bluehost",
+c:"services",
+u:"https://www.bluehost.com",
+a:""
+},
+
+{
+i:339,
+n:"hostgator",
+c:"services",
+u:"https://www.hostgator.in",
+a:""
+},
+
+{
+i:340,
+n:"digitalocean",
+c:"services",
+u:"https://www.digitalocean.com",
+a:""
+},
+
+{
+i:341,
+n:"aws",
+c:"services",
+u:"https://aws.amazon.com",
+a:""
+},
+
+{
+i:342,
+n:"google cloud",
+c:"services",
+u:"https://cloud.google.com",
+a:""
+},
+
+{
+i:343,
+n:"microsoft azure",
+c:"services",
+u:"https://azure.microsoft.com",
+a:""
+},
+
+{
+i:344,
+n:"render",
+c:"services",
+u:"https://render.com",
+a:""
+},
+
+{
+i:345,
+n:"vercel",
+c:"services",
+u:"https://vercel.com",
+a:""
+},
+
+{
+i:346,
+n:"netlify",
+c:"services",
+u:"https://www.netlify.com",
+a:""
+},
+
+{
+i:347,
+n:"pagespeed insights",
+c:"services",
+u:"https://pagespeed.web.dev",
+a:""
+},
+
+{
+i:348,
+n:"gtmetrix",
+c:"services",
+u:"https://gtmetrix.com",
+a:""
+},
+
+{
+i:349,
+n:"tinypng",
+c:"services",
+u:"https://tinypng.com",
+a:""
+},
+
+{
+i:350,
+n:"remove bg",
+c:"services",
+u:"https://www.remove.bg",
+a:""
+},
+{
+i:351,
+n:"unsplash",
+c:"services",
+u:"https://unsplash.com",
+a:""
+},
+
+{
+i:352,
+n:"pexels",
+c:"services",
+u:"https://www.pexels.com",
+a:""
+},
+
+{
+i:353,
+n:"pixabay",
+c:"services",
+u:"https://pixabay.com",
+a:""
+},
+
+{
+i:354,
+n:"freepik",
+c:"services",
+u:"https://www.freepik.com",
+a:""
+},
+
+{
+i:355,
+n:"vecteezy",
+c:"services",
+u:"https://www.vecteezy.com",
+a:""
+},
+
+{
+i:356,
+n:"shutterstock",
+c:"services",
+u:"https://www.shutterstock.com",
+a:""
+},
+
+{
+i:357,
+n:"envato",
+c:"services",
+u:"https://elements.envato.com",
+a:""
+},
+
+{
+i:358,
+n:"themeforest",
+c:"services",
+u:"https://themeforest.net",
+a:""
+},
+
+{
+i:359,
+n:"codecanyon",
+c:"services",
+u:"https://codecanyon.net",
+a:""
+},
+
+{
+i:360,
+n:"creative market",
+c:"services",
+u:"https://creativemarket.com",
+a:""
+},
+
+{
+i:361,
+n:"fiverr",
+c:"services",
+u:"https://www.fiverr.com",
+a:""
+},
+
+{
+i:362,
+n:"upwork",
+c:"services",
+u:"https://www.upwork.com",
+a:""
+},
+
+{
+i:363,
+n:"freelancer",
+c:"services",
+u:"https://www.freelancer.com",
+a:""
+},
+
+{
+i:364,
+n:"peopleperhour",
+c:"services",
+u:"https://www.peopleperhour.com",
+a:""
+},
+
+{
+i:365,
+n:"99designs",
+c:"services",
+u:"https://99designs.com",
+a:""
+},
+
+{
+i:366,
+n:"medium",
+c:"education",
+u:"https://medium.com",
+a:""
+},
+
+{
+i:367,
+n:"substack",
+c:"education",
+u:"https://substack.com",
+a:""
+},
+
+{
+i:368,
+n:"quora",
+c:"education",
+u:"https://www.quora.com",
+a:""
+},
+
+{
+i:369,
+n:"reddit",
+c:"education",
+u:"https://www.reddit.com",
+a:""
+},
+
+{
+i:370,
+n:"stack overflow",
+c:"education",
+u:"https://stackoverflow.com",
+a:""
+},
+
+{
+i:371,
+n:"internet archive",
+c:"education",
+u:"https://archive.org",
+a:""
+},
+
+{
+i:372,
+n:"project gutenberg",
+c:"education",
+u:"https://www.gutenberg.org",
+a:""
+},
+
+{
+i:373,
+n:"open library",
+c:"education",
+u:"https://openlibrary.org",
+a:""
+},
+
+{
+i:374,
+n:"researchgate",
+c:"education",
+u:"https://www.researchgate.net",
+a:""
+},
+
+{
+i:375,
+n:"google scholar",
+c:"education",
+u:"https://scholar.google.com",
+a:""
+},
+
+{
+i:376,
+n:"wikibooks",
+c:"education",
+u:"https://www.wikibooks.org",
+a:""
+},
+
+{
+i:377,
+n:"wikiversity",
+c:"education",
+u:"https://www.wikiversity.org",
+a:""
+},
+
+{
+i:378,
+n:"ted",
+c:"education",
+u:"https://www.ted.com",
+a:""
+},
+
+{
+i:379,
+n:"national geographic",
+c:"education",
+u:"https://www.nationalgeographic.com",
+a:""
+},
+
+{
+i:380,
+n:"britannica",
+c:"education",
+u:"https://www.britannica.com",
+a:""
+},
+{
+i:381,
+n:"mozilla",
+c:"services",
+u:"https://www.mozilla.org",
+a:""
+},
+
+{
+i:382,
+n:"opera",
+c:"services",
+u:"https://www.opera.com",
+a:""
+},
+
+{
+i:383,
+n:"brave",
+c:"services",
+u:"https://brave.com",
+a:""
+},
+
+{
+i:384,
+n:"duckduckgo",
+c:"services",
+u:"https://duckduckgo.com",
+a:""
+},
+
+{
+i:385,
+n:"proton mail",
+c:"services",
+u:"https://proton.me",
+a:""
+},
+
+{
+i:386,
+n:"tutanota",
+c:"services",
+u:"https://tuta.com",
+a:""
+},
+
+{
+i:387,
+n:"mega",
+c:"services",
+u:"https://mega.io",
+a:""
+},
+
+{
+i:388,
+n:"sync",
+c:"services",
+u:"https://www.sync.com",
+a:""
+},
+
+{
+i:389,
+n:"box",
+c:"services",
+u:"https://www.box.com",
+a:""
+},
+
+{
+i:390,
+n:"we transfer",
+c:"services",
+u:"https://wetransfer.com",
+a:""
+},
+
+{
+i:391,
+n:"loom",
+c:"services",
+u:"https://www.loom.com",
+a:""
+},
+
+{
+i:392,
+n:"calendly",
+c:"services",
+u:"https://calendly.com",
+a:""
+},
+
+{
+i:393,
+n:"typeform",
+c:"services",
+u:"https://www.typeform.com",
+a:""
+},
+
+{
+i:394,
+n:"jotform",
+c:"services",
+u:"https://www.jotform.com",
+a:""
+},
+
+{
+i:395,
+n:"mailchimp",
+c:"services",
+u:"https://mailchimp.com",
+a:""
+},
+
+{
+i:396,
+n:"brevo",
+c:"services",
+u:"https://www.brevo.com",
+a:""
+},
+
+{
+i:397,
+n:"convertkit",
+c:"services",
+u:"https://convertkit.com",
+a:""
+},
+
+{
+i:398,
+n:"gumroad",
+c:"services",
+u:"https://gumroad.com",
+a:""
+},
+
+{
+i:399,
+n:"patreon",
+c:"services",
+u:"https://www.patreon.com",
+a:""
+},
+
+{
+i:400,
+n:"buy me a coffee",
+c:"services",
+u:"https://www.buymeacoffee.com",
+a:""
+},
+
+{
+i:401,
+n:"product hunt",
+c:"services",
+u:"https://www.producthunt.com",
+a:""
+},
+
+{
+i:402,
+n:"indie hackers",
+c:"services",
+u:"https://www.indiehackers.com",
+a:""
+},
+
+{
+i:403,
+n:"hacker news",
+c:"education",
+u:"https://news.ycombinator.com",
+a:""
+},
+
+{
+i:404,
+n:"dev.to",
+c:"education",
+u:"https://dev.to",
+a:""
+},
+
+{
+i:405,
+n:"hashnode",
+c:"education",
+u:"https://hashnode.com",
+a:""
+},
+
+{
+i:406,
+n:"smashing magazine",
+c:"education",
+u:"https://www.smashingmagazine.com",
+a:""
+},
+
+{
+i:407,
+n:"css tricks",
+c:"education",
+u:"https://css-tricks.com",
+a:""
+},
+
+{
+i:408,
+n:"sitepoint",
+c:"education",
+u:"https://www.sitepoint.com",
+a:""
+},
+
+{
+i:409,
+n:"a list apart",
+c:"education",
+u:"https://alistapart.com",
+a:""
+},
+
+{
+i:410,
+n:"web.dev",
+c:"education",
+u:"https://web.dev",
+a:""
+},
+{
+i:411,
+n:"npm",
+c:"services",
+u:"https://www.npmjs.com",
+a:""
+},
+
+{
+i:412,
+n:"jsdelivr",
+c:"services",
+u:"https://www.jsdelivr.com",
+a:""
+},
+
+{
+i:413,
+n:"unpkg",
+c:"services",
+u:"https://unpkg.com",
+a:""
+},
+
+{
+i:414,
+n:"cdnjs",
+c:"services",
+u:"https://cdnjs.com",
+a:""
+},
+
+{
+i:415,
+n:"bootstrap",
+c:"education",
+u:"https://getbootstrap.com",
+a:""
+},
+
+{
+i:416,
+n:"tailwind css",
+c:"education",
+u:"https://tailwindcss.com",
+a:""
+},
+
+{
+i:417,
+n:"react",
+c:"education",
+u:"https://react.dev",
+a:""
+},
+
+{
+i:418,
+n:"vue",
+c:"education",
+u:"https://vuejs.org",
+a:""
+},
+
+{
+i:419,
+n:"angular",
+c:"education",
+u:"https://angular.dev",
+a:""
+},
+
+{
+i:420,
+n:"next.js",
+c:"education",
+u:"https://nextjs.org",
+a:""
+},
+
+{
+i:421,
+n:"nuxt",
+c:"education",
+u:"https://nuxt.com",
+a:""
+},
+
+{
+i:422,
+n:"svelte",
+c:"education",
+u:"https://svelte.dev",
+a:""
+},
+
+{
+i:423,
+n:"electron",
+c:"education",
+u:"https://www.electronjs.org",
+a:""
+},
+
+{
+i:424,
+n:"flutter",
+c:"education",
+u:"https://flutter.dev",
+a:""
+},
+
+{
+i:425,
+n:"dart",
+c:"education",
+u:"https://dart.dev",
+a:""
+},
+
+{
+i:426,
+n:"python",
+c:"education",
+u:"https://www.python.org",
+a:""
+},
+
+{
+i:427,
+n:"javascript",
+c:"education",
+u:"https://developer.mozilla.org/docs/Web/JavaScript",
+a:""
+},
+
+{
+i:428,
+n:"typescript",
+c:"education",
+u:"https://www.typescriptlang.org",
+a:""
+},
+
+{
+i:429,
+n:"node.js",
+c:"education",
+u:"https://nodejs.org",
+a:""
+},
+
+{
+i:430,
+n:"mongodb",
+c:"education",
+u:"https://www.mongodb.com",
+a:""
+},
+
+{
+i:431,
+n:"mysql",
+c:"education",
+u:"https://www.mysql.com",
+a:""
+},
+
+{
+i:432,
+n:"postgresql",
+c:"education",
+u:"https://www.postgresql.org",
+a:""
+},
+
+{
+i:433,
+n:"sqlite",
+c:"education",
+u:"https://www.sqlite.org",
+a:""
+},
+
+{
+i:434,
+n:"supabase",
+c:"services",
+u:"https://supabase.com",
+a:""
+},
+
+{
+i:435,
+n:"firebase",
+c:"services",
+u:"https://firebase.google.com",
+a:""
+},
+
+{
+i:436,
+n:"appwrite",
+c:"services",
+u:"https://appwrite.io",
+a:""
+},
+
+{
+i:437,
+n:"railway",
+c:"services",
+u:"https://railway.app",
+a:""
+},
+
+{
+i:438,
+n:"fly.io",
+c:"services",
+u:"https://fly.io",
+a:""
+},
+
+{
+i:439,
+n:"replit",
+c:"services",
+u:"https://replit.com",
+a:""
+},
+
+{
+i:440,
+n:"codepen",
+c:"services",
+u:"https://codepen.io",
+a:""
+},
+{
+i:441,
+n:"jsfiddle",
+c:"services",
+u:"https://jsfiddle.net",
+a:""
+},
+
+{
+i:442,
+n:"stackblitz",
+c:"services",
+u:"https://stackblitz.com",
+a:""
+},
+
+{
+i:443,
+n:"glitch",
+c:"services",
+u:"https://glitch.com",
+a:""
+},
+
+{
+i:444,
+n:"codesandbox",
+c:"services",
+u:"https://codesandbox.io",
+a:""
+},
+
+{
+i:445,
+n:"obs studio",
+c:"services",
+u:"https://obsproject.com",
+a:""
+},
+
+{
+i:446,
+n:"streamlabs",
+c:"services",
+u:"https://streamlabs.com",
+a:""
+},
+
+{
+i:447,
+n:"restream",
+c:"services",
+u:"https://restream.io",
+a:""
+},
+
+{
+i:448,
+n:"capcut",
+c:"services",
+u:"https://www.capcut.com",
+a:""
+},
+
+{
+i:449,
+n:"clipchamp",
+c:"services",
+u:"https://clipchamp.com",
+a:""
+},
+
+{
+i:450,
+n:"veed",
+c:"services",
+u:"https://www.veed.io",
+a:""
+},
+
+{
+i:451,
+n:"invideo",
+c:"services",
+u:"https://invideo.io",
+a:""
+},
+
+{
+i:452,
+n:"descript",
+c:"services",
+u:"https://www.descript.com",
+a:""
+},
+
+{
+i:453,
+n:"audacity",
+c:"services",
+u:"https://www.audacityteam.org",
+a:""
+},
+
+{
+i:454,
+n:"pixlr",
+c:"services",
+u:"https://pixlr.com",
+a:""
+},
+
+{
+i:455,
+n:"photopea",
+c:"services",
+u:"https://www.photopea.com",
+a:""
+},
+
+{
+i:456,
+n:"behance",
+c:"services",
+u:"https://www.behance.net",
+a:""
+},
+
+{
+i:457,
+n:"dribbble",
+c:"services",
+u:"https://dribbble.com",
+a:""
+},
+
+{
+i:458,
+n:"artstation",
+c:"services",
+u:"https://www.artstation.com",
+a:""
+},
+
+{
+i:459,
+n:"deviantart",
+c:"services",
+u:"https://www.deviantart.com",
+a:""
+},
+
+{
+i:460,
+n:"itch.io",
+c:"services",
+u:"https://itch.io",
+a:""
+},
+
+{
+i:461,
+n:"unity",
+c:"education",
+u:"https://unity.com",
+a:""
+},
+
+{
+i:462,
+n:"unreal engine",
+c:"education",
+u:"https://www.unrealengine.com",
+a:""
+},
+
+{
+i:463,
+n:"godot",
+c:"education",
+u:"https://godotengine.org",
+a:""
+},
+
+{
+i:464,
+n:"blender",
+c:"education",
+u:"https://www.blender.org",
+a:""
+},
+
+{
+i:465,
+n:"sketchfab",
+c:"services",
+u:"https://sketchfab.com",
+a:""
+},
+
+{
+i:466,
+n:"cgtrader",
+c:"services",
+u:"https://www.cgtrader.com",
+a:""
+},
+
+{
+i:467,
+n:"turbosquid",
+c:"services",
+u:"https://www.turbosquid.com",
+a:""
+},
+
+{
+i:468,
+n:"gumroad creators",
+c:"services",
+u:"https://gumroad.com",
+a:""
+},
+
+{
+i:469,
+n:"ko-fi",
+c:"services",
+u:"https://ko-fi.com",
+a:""
+},
+
+{
+i:470,
+n:"buy me a coffee creators",
+c:"services",
+u:"https://www.buymeacoffee.com",
+a:""
+},
+{
+i:471,
+n:"patreon creators",
+c:"services",
+u:"https://www.patreon.com",
+a:""
+},
+
+{
+i:472,
+n:"teachable",
+c:"education",
+u:"https://teachable.com",
+a:""
+},
+
+{
+i:473,
+n:"thinkific",
+c:"education",
+u:"https://www.thinkific.com",
+a:""
+},
+
+{
+i:474,
+n:"podia",
+c:"education",
+u:"https://www.podia.com",
+a:""
+},
+
+{
+i:475,
+n:"kajabi",
+c:"education",
+u:"https://kajabi.com",
+a:""
+},
+
+{
+i:476,
+n:"gumlet",
+c:"services",
+u:"https://www.gumlet.com",
+a:""
+},
+
+{
+i:477,
+n:"bunny cdn",
+c:"services",
+u:"https://bunny.net",
+a:""
+},
+
+{
+i:478,
+n:"imgur",
+c:"services",
+u:"https://imgur.com",
+a:""
+},
+
+{
+i:479,
+n:"postimages",
+c:"services",
+u:"https://postimages.org",
+a:""
+},
+
+{
+i:480,
+n:"imgbb",
+c:"services",
+u:"https://imgbb.com",
+a:""
+},
+
+{
+i:481,
+n:"telegram",
+c:"services",
+u:"https://telegram.org",
+a:""
+},
+
+{
+i:482,
+n:"discord",
+c:"services",
+u:"https://discord.com",
+a:""
+},
+
+{
+i:483,
+n:"whatsapp",
+c:"services",
+u:"https://www.whatsapp.com",
+a:""
+},
+
+{
+i:484,
+n:"signal",
+c:"services",
+u:"https://signal.org",
+a:""
+},
+
+{
+i:485,
+n:"element",
+c:"services",
+u:"https://element.io",
+a:""
+},
+
+{
+i:486,
+n:"mastodon",
+c:"services",
+u:"https://joinmastodon.org",
+a:""
+},
+
+{
+i:487,
+n:"linkedin",
+c:"services",
+u:"https://www.linkedin.com",
+a:""
+},
+
+{
+i:488,
+n:"youtube",
+c:"services",
+u:"https://www.youtube.com",
+a:""
+},
+
+{
+i:489,
+n:"vimeo",
+c:"services",
+u:"https://vimeo.com",
+a:""
+},
+
+{
+i:490,
+n:"dailymotion",
+c:"services",
+u:"https://www.dailymotion.com",
+a:""
+},
+
+{
+i:491,
+n:"spotify",
+c:"entertainment",
+u:"https://www.spotify.com",
+a:""
+},
+
+{
+i:492,
+n:"apple music",
+c:"entertainment",
+u:"https://music.apple.com",
+a:""
+},
+
+{
+i:493,
+n:"youtube music",
+c:"entertainment",
+u:"https://music.youtube.com",
+a:""
+},
+
+{
+i:494,
+n:"amazon music",
+c:"entertainment",
+u:"https://music.amazon.in",
+a:""
+},
+
+{
+i:495,
+n:"soundcloud",
+c:"entertainment",
+u:"https://soundcloud.com",
+a:""
+},
+
+{
+i:496,
+n:"bandcamp",
+c:"entertainment",
+u:"https://bandcamp.com",
+a:""
+},
+
+{
+i:497,
+n:"deezer",
+c:"entertainment",
+u:"https://www.deezer.com",
+a:""
+},
+
+{
+i:498,
+n:"tidal",
+c:"entertainment",
+u:"https://tidal.com",
+a:""
+},
+
+{
+i:499,
+n:"pocket casts",
+c:"entertainment",
+u:"https://pocketcasts.com",
+a:""
+},
+
+{
+i:500,
+n:"castbox",
+c:"entertainment",
+u:"https://castbox.fm",
+a:""
+},
+
+{
+i:501,
+n:"goodreads",
+c:"education",
+u:"https://www.goodreads.com",
+a:""
+},
+
+
+{
+i:502,
+n:"storytel",
+c:"education",
+u:"https://www.storytel.com",
+a:""
+},
+
+{
+i:503,
+n:"blinkist",
+c:"education",
+u:"https://www.blinkist.com",
+a:""
+},
+
+{
+i:504,
+n:"scribd",
+c:"education",
+u:"https://www.scribd.com",
+a:""
+},
+
+{
+i:505,
+n:"everand",
+c:"education",
+u:"https://www.everand.com",
+a:""
+},
+
+{
+i:506,
+n:"duolingo",
+c:"education",
+u:"https://www.duolingo.com",
+a:""
+},
+
+{
+i:507,
+n:"babbel",
+c:"education",
+u:"https://www.babbel.com",
+a:""
+},
+
+{
+i:508,
+n:"busuu",
+c:"education",
+u:"https://www.busuu.com",
+a:""
+},
+
+{
+i:509,
+n:"memrise",
+c:"education",
+u:"https://www.memrise.com",
+a:""
+},
+
+{
+i:510,
+n:"rosetta stone",
+c:"education",
+u:"https://www.rosettastone.com",
+a:""
+},
+
+{
+i:511,
+n:"coursera plus",
+c:"education",
+u:"https://www.coursera.org",
+a:""
+},
+
+{
+i:512,
+n:"edureka",
+c:"education",
+u:"https://www.edureka.co",
+a:""
+},
+
+{
+i:513,
+n:"intellipaat",
+c:"education",
+u:"https://intellipaat.com",
+a:""
+},
+
+{
+i:514,
+n:"coding ninjas",
+c:"education",
+u:"https://www.codingninjas.com",
+a:""
+},
+
+{
+i:515,
+n:"coding blocks",
+c:"education",
+u:"https://www.codingblocks.com",
+a:""
+},
+
+{
+i:516,
+n:"intershala trainings",
+c:"education",
+u:"https://trainings.internshala.com",
+a:""
+},
+
+{
+i:517,
+n:"internshala",
+c:"education",
+u:"https://internshala.com",
+a:""
+},
+
+{
+i:518,
+n:"naukri",
+c:"services",
+u:"https://www.naukri.com",
+a:""
+},
+
+{
+i:519,
+n:"foundit",
+c:"services",
+u:"https://www.foundit.in",
+a:""
+},
+
+{
+i:520,
+n:"indeed",
+c:"services",
+u:"https://in.indeed.com",
+a:""
+},
+
+{
+i:521,
+n:"glassdoor",
+c:"services",
+u:"https://www.glassdoor.com",
+a:""
+},
+
+{
+i:522,
+n:"wellfound",
+c:"services",
+u:"https://wellfound.com",
+a:""
+},
+
+{
+i:523,
+n:"flexjobs",
+c:"services",
+u:"https://www.flexjobs.com",
+a:""
+},
+
+{
+i:524,
+n:"remote ok",
+c:"services",
+u:"https://remoteok.com",
+a:""
+},
+
+{
+i:525,
+n:"we work remotely",
+c:"services",
+u:"https://weworkremotely.com",
+a:""
+},
+
+{
+i:526,
+n:"freshworks",
+c:"services",
+u:"https://www.freshworks.com",
+a:""
+},
+
+{
+i:527,
+n:"zoho",
+c:"services",
+u:"https://www.zoho.com",
+a:""
+},
+
+{
+i:528,
+n:"hubspot",
+c:"services",
+u:"https://www.hubspot.com",
+a:""
+},
+
+{
+i:529,
+n:"freshdesk",
+c:"services",
+u:"https://www.freshdesk.com",
+a:""
+},
+
+{
+i:530,
+n:"zendesk",
+c:"services",
+u:"https://www.zendesk.com",
+a:""
+},
+{
+i:531,
+n:"shopify",
+c:"services",
+u:"https://www.shopify.com",
+a:""
+},
+
+{
+i:532,
+n:"woocommerce",
+c:"services",
+u:"https://woocommerce.com",
+a:""
+},
+
+{
+i:533,
+n:"bigcommerce",
+c:"services",
+u:"https://www.bigcommerce.com",
+a:""
+},
+
+{
+i:534,
+n:"wix",
+c:"services",
+u:"https://www.wix.com",
+a:""
+},
+
+{
+i:535,
+n:"squarespace",
+c:"services",
+u:"https://www.squarespace.com",
+a:""
+},
+
+{
+i:536,
+n:"wordpress",
+c:"services",
+u:"https://wordpress.com",
+a:""
+},
+
+{
+i:537,
+n:"elementor",
+c:"services",
+u:"https://elementor.com",
+a:""
+},
+
+{
+i:538,
+n:"webflow",
+c:"services",
+u:"https://webflow.com",
+a:""
+},
+
+{
+i:539,
+n:"framer",
+c:"services",
+u:"https://www.framer.com",
+a:""
+},
+
+{
+i:540,
+n:"bubble",
+c:"services",
+u:"https://bubble.io",
+a:""
+},
+
+{
+i:541,
+n:"zapier",
+c:"services",
+u:"https://zapier.com",
+a:""
+},
+
+{
+i:542,
+n:"make",
+c:"services",
+u:"https://www.make.com",
+a:""
+},
+
+{
+i:543,
+n:"ifttt",
+c:"services",
+u:"https://ifttt.com",
+a:""
+},
+
+{
+i:544,
+n:"airtable",
+c:"services",
+u:"https://www.airtable.com",
+a:""
+},
+
+{
+i:545,
+n:"coda",
+c:"services",
+u:"https://coda.io",
+a:""
+},
+
+{
+i:546,
+n:"monday.com",
+c:"services",
+u:"https://monday.com",
+a:""
+},
+
+{
+i:547,
+n:"basecamp",
+c:"services",
+u:"https://basecamp.com",
+a:""
+},
+
+{
+i:548,
+n:"toggl",
+c:"services",
+u:"https://toggl.com",
+a:""
+},
+
+{
+i:549,
+n:"clockify",
+c:"services",
+u:"https://clockify.me",
+a:""
+},
+
+{
+i:550,
+n:"rescuetime",
+c:"services",
+u:"https://www.rescuetime.com",
+a:""
+},
+
+{
+i:551,
+n:"wise",
+c:"finance",
+u:"https://wise.com",
+a:""
+},
+
+{
+i:552,
+n:"paypal",
+c:"finance",
+u:"https://www.paypal.com",
+a:""
+},
+
+{
+i:553,
+n:"payoneer",
+c:"finance",
+u:"https://www.payoneer.com",
+a:""
+},
+
+{
+i:554,
+n:"stripe",
+c:"finance",
+u:"https://stripe.com",
+a:""
+},
+
+{
+i:555,
+n:"razorpay",
+c:"finance",
+u:"https://razorpay.com",
+a:""
+},
+
+{
+i:556,
+n:"cashfree",
+c:"finance",
+u:"https://www.cashfree.com",
+a:""
+},
+
+{
+i:557,
+n:"phonepe business",
+c:"finance",
+u:"https://www.phonepe.com/business",
+a:""
+},
+
+{
+i:558,
+n:"bharatpe",
+c:"finance",
+u:"https://bharatpe.com",
+a:""
+},
+
+{
+i:559,
+n:"ccavenue",
+c:"finance",
+u:"https://www.ccavenue.com",
+a:""
+},
+
+{
+i:560,
+n:"instamojo",
+c:"finance",
+u:"https://www.instamojo.com",
+a:""
+},
+{
+i:561,
+n:"groww",
+c:"finance",
+u:"https://groww.in",
+a:""
+},
+
+{
+i:562,
+n:"zerodha",
+c:"finance",
+u:"https://zerodha.com",
+a:""
+},
+
+{
+i:563,
+n:"angel one trade",
+c:"finance",
+u:"https://www.angelone.in",
+a:""
+},
+
+{
+i:564,
+n:"5paisa",
+c:"finance",
+u:"https://www.5paisa.com",
+a:""
+},
+
+{
+i:565,
+n:"icici direct",
+c:"finance",
+u:"https://www.icicidirect.com",
+a:""
+},
+
+{
+i:566,
+n:"hdfc sky",
+c:"finance",
+u:"https://www.hdfcsky.com",
+a:""
+},
+
+{
+i:567,
+n:"kotak neo",
+c:"finance",
+u:"https://www.kotaksecurities.com",
+a:""
+},
+
+{
+i:568,
+n:"motilal oswal",
+c:"finance",
+u:"https://www.motilaloswal.com",
+a:""
+},
+
+{
+i:569,
+n:"sharekhan",
+c:"finance",
+u:"https://www.sharekhan.com",
+a:""
+},
+
+{
+i:570,
+n:"dhan",
+c:"finance",
+u:"https://dhan.co",
+a:""
+},
+
+{
+i:571,
+n:"moneycontrol",
+c:"finance",
+u:"https://www.moneycontrol.com",
+a:""
+},
+
+{
+i:572,
+n:"screener",
+c:"finance",
+u:"https://www.screener.in",
+a:""
+},
+
+{
+i:573,
+n:"ticker tape",
+c:"finance",
+u:"https://www.tickertape.in",
+a:""
+},
+
+{
+i:574,
+n:"trendlyne",
+c:"finance",
+u:"https://trendlyne.com",
+a:""
+},
+
+{
+i:575,
+n:"investing",
+c:"finance",
+u:"https://www.investing.com",
+a:""
+},
+
+{
+i:576,
+n:"tradingview",
+c:"finance",
+u:"https://www.tradingview.com",
+a:""
+},
+
+{
+i:577,
+n:"economictimes markets",
+c:"finance",
+u:"https://economictimes.indiatimes.com/markets",
+a:""
+},
+
+{
+i:578,
+n:"livemint",
+c:"finance",
+u:"https://www.livemint.com",
+a:""
+},
+
+{
+i:579,
+n:"business standard",
+c:"finance",
+u:"https://www.business-standard.com",
+a:""
+},
+
+{
+i:580,
+n:"fortune india",
+c:"finance",
+u:"https://www.fortuneindia.com",
+a:""
+},
+
+{
+i:581,
+n:"irctc",
+c:"travel",
+u:"https://www.irctc.co.in",
+a:""
+},
+
+{
+i:582,
+n:"rail yatri",
+c:"travel",
+u:"https://www.railyatri.in",
+a:""
+},
+
+{
+i:583,
+n:"confirmtkt",
+c:"travel",
+u:"https://www.confirmtkt.com",
+a:""
+},
+
+{
+i:584,
+n:"trainman",
+c:"travel",
+u:"https://www.trainman.in",
+a:""
+},
+
+{
+i:585,
+n:"goibibo",
+c:"travel",
+u:"https://www.goibibo.com",
+a:""
+},
+
+{
+i:586,
+n:"cleartrip flights",
+c:"travel",
+u:"https://www.cleartrip.com",
+a:""
+},
+
+{
+i:587,
+n:"makemytrip hotels",
+c:"travel",
+u:"https://www.makemytrip.com",
+a:""
+},
+
+{
+i:588,
+n:"agoda hotels",
+c:"travel",
+u:"https://www.agoda.com",
+a:""
+},
+
+{
+i:589,
+n:"tripadvisor",
+c:"travel",
+u:"https://www.tripadvisor.com",
+a:""
+},
+
+{
+i:590,
+n:"trivago",
+c:"travel",
+u:"https://www.trivago.in",
+a:""
+},
+{
+i:561,
+n:"groww",
+c:"finance",
+u:"https://groww.in",
+a:""
+},
+
+{
+i:562,
+n:"zerodha",
+c:"finance",
+u:"https://zerodha.com",
+a:""
+},
+
+{
+i:563,
+n:"angel one trade",
+c:"finance",
+u:"https://www.angelone.in",
+a:""
+},
+
+{
+i:564,
+n:"5paisa",
+c:"finance",
+u:"https://www.5paisa.com",
+a:""
+},
+
+{
+i:565,
+n:"icici direct",
+c:"finance",
+u:"https://www.icicidirect.com",
+a:""
+},
+
+{
+i:566,
+n:"hdfc sky",
+c:"finance",
+u:"https://www.hdfcsky.com",
+a:""
+},
+
+{
+i:567,
+n:"kotak neo",
+c:"finance",
+u:"https://www.kotaksecurities.com",
+a:""
+},
+
+{
+i:568,
+n:"motilal oswal",
+c:"finance",
+u:"https://www.motilaloswal.com",
+a:""
+},
+
+{
+i:569,
+n:"sharekhan",
+c:"finance",
+u:"https://www.sharekhan.com",
+a:""
+},
+
+{
+i:570,
+n:"dhan",
+c:"finance",
+u:"https://dhan.co",
+a:""
+},
+
+{
+i:571,
+n:"moneycontrol",
+c:"finance",
+u:"https://www.moneycontrol.com",
+a:""
+},
+
+{
+i:572,
+n:"screener",
+c:"finance",
+u:"https://www.screener.in",
+a:""
+},
+
+{
+i:573,
+n:"ticker tape",
+c:"finance",
+u:"https://www.tickertape.in",
+a:""
+},
+
+{
+i:574,
+n:"trendlyne",
+c:"finance",
+u:"https://trendlyne.com",
+a:""
+},
+
+{
+i:575,
+n:"investing",
+c:"finance",
+u:"https://www.investing.com",
+a:""
+},
+
+{
+i:576,
+n:"tradingview",
+c:"finance",
+u:"https://www.tradingview.com",
+a:""
+},
+
+{
+i:577,
+n:"economictimes markets",
+c:"finance",
+u:"https://economictimes.indiatimes.com/markets",
+a:""
+},
+
+{
+i:578,
+n:"livemint",
+c:"finance",
+u:"https://www.livemint.com",
+a:""
+},
+
+{
+i:579,
+n:"business standard",
+c:"finance",
+u:"https://www.business-standard.com",
+a:""
+},
+
+{
+i:580,
+n:"fortune india",
+c:"finance",
+u:"https://www.fortuneindia.com",
+a:""
+},
+
+{
+i:581,
+n:"irctc",
+c:"travel",
+u:"https://www.irctc.co.in",
+a:""
+},
+
+{
+i:582,
+n:"rail yatri",
+c:"travel",
+u:"https://www.railyatri.in",
+a:""
+},
+
+{
+i:583,
+n:"confirmtkt",
+c:"travel",
+u:"https://www.confirmtkt.com",
+a:""
+},
+
+{
+i:584,
+n:"trainman",
+c:"travel",
+u:"https://www.trainman.in",
+a:""
+},
+
+{
+i:585,
+n:"goibibo",
+c:"travel",
+u:"https://www.goibibo.com",
+a:""
+},
+
+{
+i:586,
+n:"cleartrip flights",
+c:"travel",
+u:"https://www.cleartrip.com",
+a:""
+},
+
+{
+i:587,
+n:"makemytrip hotels",
+c:"travel",
+u:"https://www.makemytrip.com",
+a:""
+},
+
+{
+i:588,
+n:"agoda hotels",
+c:"travel",
+u:"https://www.agoda.com",
+a:""
+},
+
+{
+i:589,
+n:"tripadvisor",
+c:"travel",
+u:"https://www.tripadvisor.com",
+a:""
+},
+
+{
+i:590,
+n:"trivago",
+c:"travel",
+u:"https://www.trivago.in",
+a:""
+},
+{
+i:591,
+n:"uber",
+c:"travel",
+u:"https://www.uber.com/in",
+a:""
+},
+
+{
+i:592,
+n:"ola",
+c:"travel",
+u:"https://www.olacabs.com",
+a:""
+},
+
+{
+i:593,
+n:"rapido",
+c:"travel",
+u:"https://www.rapido.bike",
+a:""
+},
+
+{
+i:594,
+n:"blu smart",
+c:"travel",
+u:"https://www.blusmart.com",
+a:""
+},
+
+{
+i:595,
+n:"savaari",
+c:"travel",
+u:"https://www.savaari.com",
+a:""
+},
+
+{
+i:596,
+n:"zoomcar",
+c:"travel",
+u:"https://www.zoomcar.com",
+a:""
+},
+
+{
+i:597,
+n:"revv",
+c:"travel",
+u:"https://www.revv.co.in",
+a:""
+},
+
+{
+i:598,
+n:"myles",
+c:"travel",
+u:"https://www.mylescars.com",
+a:""
+},
+
+{
+i:599,
+n:"royal brothers",
+c:"travel",
+u:"https://www.royalbrothers.com",
+a:""
+},
+
+{
+i:600,
+n:"yulu",
+c:"travel",
+u:"https://www.yulu.bike",
+a:""
+},
+
+{
+i:601,
+n:"airalo",
+c:"travel",
+u:"https://www.airalo.com",
+a:""
+},
+
+{
+i:602,
+n:"nomad esim",
+c:"travel",
+u:"https://www.getnomad.app",
+a:""
+},
+
+{
+i:603,
+n:"saily",
+c:"travel",
+u:"https://saily.com",
+a:""
+},
+
+{
+i:604,
+n:"travelkhana",
+c:"travel",
+u:"https://www.travelkhana.com",
+a:""
+},
+
+{
+i:605,
+n:"e catering irctc",
+c:"travel",
+u:"https://www.ecatering.irctc.co.in",
+a:""
+},
+
+{
+i:606,
+n:"oyo townhouse",
+c:"travel",
+u:"https://www.oyorooms.com",
+a:""
+},
+
+{
+i:607,
+n:"treebo",
+c:"travel",
+u:"https://www.treebo.com",
+a:""
+},
+
+{
+i:608,
+n:"fabhotels",
+c:"travel",
+u:"https://www.fabhotels.com",
+a:""
+},
+
+{
+i:609,
+n:"stayvista",
+c:"travel",
+u:"https://www.stayvista.com",
+a:""
+},
+
+{
+i:610,
+n:"saffron stays",
+c:"travel",
+u:"https://www.saffronstays.com",
+a:""
+},
+
+{
+i:611,
+n:"makemytrip activities",
+c:"travel",
+u:"https://www.makemytrip.com",
+a:""
+},
+
+{
+i:612,
+n:"klook",
+c:"travel",
+u:"https://www.klook.com",
+a:""
+},
+
+{
+i:613,
+n:"viator",
+c:"travel",
+u:"https://www.viator.com",
+a:""
+},
+
+{
+i:614,
+n:"thrillophilia",
+c:"travel",
+u:"https://www.thrillophilia.com",
+a:""
+},
+
+{
+i:615,
+n:"wanderon",
+c:"travel",
+u:"https://wanderon.in",
+a:""
+},
+
+{
+i:616,
+n:"tripoto",
+c:"travel",
+u:"https://www.tripoto.com",
+a:""
+},
+
+{
+i:617,
+n:"holidify",
+c:"travel",
+u:"https://www.holidify.com",
+a:""
+},
+
+{
+i:618,
+n:"lonely planet",
+c:"travel",
+u:"https://www.lonelyplanet.com",
+a:""
+},
+
+{
+i:619,
+n:"wikivoyage",
+c:"travel",
+u:"https://www.wikivoyage.org",
+a:""
+},
+
+{
+i:620,
+n:"rome2rio",
+c:"travel",
+u:"https://www.rome2rio.com",
+a:""
+},
+{
+i:621,
+n:"weather.com",
+c:"utilities",
+u:"https://weather.com",
+a:""
+},
+
+{
+i:622,
+n:"accuweather",
+c:"utilities",
+u:"https://www.accuweather.com",
+a:""
+},
+
+{
+i:623,
+n:"windy",
+c:"utilities",
+u:"https://www.windy.com",
+a:""
+},
+
+{
+i:624,
+n:"ventusky",
+c:"utilities",
+u:"https://www.ventusky.com",
+a:""
+},
+
+{
+i:625,
+n:"time and date",
+c:"utilities",
+u:"https://www.timeanddate.com",
+a:""
+},
+
+{
+i:626,
+n:"world clock",
+c:"utilities",
+u:"https://www.worldclock.com",
+a:""
+},
+
+{
+i:627,
+n:"speedtest",
+c:"utilities",
+u:"https://www.speedtest.net",
+a:""
+},
+
+{
+i:628,
+n:"fast",
+c:"utilities",
+u:"https://fast.com",
+a:""
+},
+
+{
+i:629,
+n:"down detector",
+c:"utilities",
+u:"https://downdetector.com",
+a:""
+},
+
+{
+i:630,
+n:"isitdownrightnow",
+c:"utilities",
+u:"https://www.isitdownrightnow.com",
+a:""
+},
+
+{
+i:631,
+n:"google maps",
+c:"utilities",
+u:"https://maps.google.com",
+a:""
+},
+
+{
+i:632,
+n:"openstreetmap",
+c:"utilities",
+u:"https://www.openstreetmap.org",
+a:""
+},
+
+{
+i:633,
+n:"mapquest",
+c:"utilities",
+u:"https://www.mapquest.com",
+a:""
+},
+
+{
+i:634,
+n:"here wego",
+c:"utilities",
+u:"https://wego.here.com",
+a:""
+},
+
+{
+i:635,
+n:"waze",
+c:"utilities",
+u:"https://www.waze.com",
+a:""
+},
+
+{
+i:636,
+n:"google translate",
+c:"utilities",
+u:"https://translate.google.com",
+a:""
+},
+
+{
+i:637,
+n:"deepl",
+c:"utilities",
+u:"https://www.deepl.com",
+a:""
+},
+
+{
+i:638,
+n:"cambridge dictionary",
+c:"education",
+u:"https://dictionary.cambridge.org",
+a:""
+},
+
+{
+i:639,
+n:"oxford learner",
+c:"education",
+u:"https://www.oxfordlearnersdictionaries.com",
+a:""
+},
+
+{
+i:640,
+n:"merriam webster",
+c:"education",
+u:"https://www.merriam-webster.com",
+a:""
+},
+
+{
+i:641,
+n:"wolfram alpha",
+c:"education",
+u:"https://www.wolframalpha.com",
+a:""
+},
+
+{
+i:642,
+n:"symbolab",
+c:"education",
+u:"https://www.symbolab.com",
+a:""
+},
+
+{
+i:643,
+n:"desmos",
+c:"education",
+u:"https://www.desmos.com",
+a:""
+},
+
+{
+i:644,
+n:"geogebra",
+c:"education",
+u:"https://www.geogebra.org",
+a:""
+},
+
+{
+i:645,
+n:"calculator.net",
+c:"utilities",
+u:"https://www.calculator.net",
+a:""
+},
+
+{
+i:646,
+n:"unit converters",
+c:"utilities",
+u:"https://www.unitconverters.net",
+a:""
+},
+
+{
+i:647,
+n:"smallpdf",
+c:"services",
+u:"https://smallpdf.com",
+a:""
+},
+
+{
+i:648,
+n:"ilovepdf",
+c:"services",
+u:"https://www.ilovepdf.com",
+a:""
+},
+
+{
+i:649,
+n:"pdf24",
+c:"services",
+u:"https://tools.pdf24.org",
+a:""
+},
+
+{
+i:650,
+n:"sejda",
+c:"services",
+u:"https://www.sejda.com",
+a:""
+},
+{
+i:651,
+n:"canva docs",
+c:"services",
+u:"https://www.canva.com/docs",
+a:""
+},
+
+{
+i:652,
+n:"google docs",
+c:"services",
+u:"https://docs.google.com",
+a:""
+},
+
+{
+i:653,
+n:"google sheets",
+c:"services",
+u:"https://sheets.google.com",
+a:""
+},
+
+{
+i:654,
+n:"google slides",
+c:"services",
+u:"https://slides.google.com",
+a:""
+},
+
+{
+i:655,
+n:"microsoft word",
+c:"services",
+u:"https://www.microsoft.com/microsoft-365/word",
+a:""
+},
+
+{
+i:656,
+n:"microsoft excel",
+c:"services",
+u:"https://www.microsoft.com/microsoft-365/excel",
+a:""
+},
+
+{
+i:657,
+n:"microsoft powerpoint",
+c:"services",
+u:"https://www.microsoft.com/microsoft-365/powerpoint",
+a:""
+},
+
+{
+i:658,
+n:"onlyoffice",
+c:"services",
+u:"https://www.onlyoffice.com",
+a:""
+},
+
+{
+i:659,
+n:"zoho writer",
+c:"services",
+u:"https://www.zoho.com/writer",
+a:""
+},
+
+{
+i:660,
+n:"zoho sheet",
+c:"services",
+u:"https://www.zoho.com/sheet",
+a:""
+},
+
+{
+i:661,
+n:"zoho show",
+c:"services",
+u:"https://www.zoho.com/show",
+a:""
+},
+
+{
+i:662,
+n:"grammarly editor",
+c:"services",
+u:"https://app.grammarly.com",
+a:""
+},
+
+{
+i:663,
+n:"hemingway editor",
+c:"services",
+u:"https://hemingwayapp.com",
+a:""
+},
+
+{
+i:664,
+n:"quillbot",
+c:"services",
+u:"https://quillbot.com",
+a:""
+},
+
+{
+i:665,
+n:"languagetool",
+c:"services",
+u:"https://languagetool.org",
+a:""
+},
+
+{
+i:666,
+n:"notepad online",
+c:"services",
+u:"https://anotepad.com",
+a:""
+},
+
+{
+i:667,
+n:"json formatter",
+c:"services",
+u:"https://jsonformatter.org",
+a:""
+},
+
+{
+i:668,
+n:"jsonlint",
+c:"services",
+u:"https://jsonlint.com",
+a:""
+},
+
+{
+i:669,
+n:"regex101",
+c:"services",
+u:"https://regex101.com",
+a:""
+},
+
+{
+i:670,
+n:"code beautify",
+c:"services",
+u:"https://codebeautify.org",
+a:""
+},
+
+{
+i:671,
+n:"tinywow",
+c:"services",
+u:"https://tinywow.com",
+a:""
+},
+
+{
+i:672,
+n:"online2pdf",
+c:"services",
+u:"https://online2pdf.com",
+a:""
+},
+
+{
+i:673,
+n:"convertio",
+c:"services",
+u:"https://convertio.co",
+a:""
+},
+
+{
+i:674,
+n:"cloudconvert",
+c:"services",
+u:"https://cloudconvert.com",
+a:""
+},
+
+{
+i:675,
+n:"freeconvert",
+c:"services",
+u:"https://www.freeconvert.com",
+a:""
+},
+
+{
+i:676,
+n:"remove bg hd",
+c:"services",
+u:"https://www.remove.bg",
+a:""
+},
+
+{
+i:677,
+n:"compress jpeg",
+c:"services",
+u:"https://compressjpeg.com",
+a:""
+},
+
+{
+i:678,
+n:"compress png",
+c:"services",
+u:"https://compresspng.com",
+a:""
+},
+
+{
+i:679,
+n:"ezgif",
+c:"services",
+u:"https://ezgif.com",
+a:""
+},
+
+{
+i:680,
+n:"squoosh",
+c:"services",
+u:"https://squoosh.app",
+a:""
+},
+{
+i:681,
+n:"chatgpt",
+c:"ai",
+u:"https://chatgpt.com",
+a:""
+},
+
+{
+i:682,
+n:"google gemini",
+c:"ai",
+u:"https://gemini.google.com",
+a:""
+},
+
+{
+i:683,
+n:"claude",
+c:"ai",
+u:"https://claude.ai",
+a:""
+},
+
+{
+i:684,
+n:"perplexity",
+c:"ai",
+u:"https://www.perplexity.ai",
+a:""
+},
+
+{
+i:685,
+n:"grok",
+c:"ai",
+u:"https://grok.com",
+a:""
+},
+
+{
+i:686,
+n:"mistral",
+c:"ai",
+u:"https://chat.mistral.ai",
+a:""
+},
+
+{
+i:687,
+n:"hugging face",
+c:"ai",
+u:"https://huggingface.co",
+a:""
+},
+
+{
+i:688,
+n:"replicate",
+c:"ai",
+u:"https://replicate.com",
+a:""
+},
+
+{
+i:689,
+n:"together ai",
+c:"ai",
+u:"https://www.together.ai",
+a:""
+},
+
+{
+i:690,
+n:"openrouter",
+c:"ai",
+u:"https://openrouter.ai",
+a:""
+},
+
+{
+i:691,
+n:"canva ai",
+c:"ai",
+u:"https://www.canva.com",
+a:""
+},
+
+{
+i:692,
+n:"adobe firefly",
+c:"ai",
+u:"https://firefly.adobe.com",
+a:""
+},
+
+{
+i:693,
+n:"midjourney",
+c:"ai",
+u:"https://www.midjourney.com",
+a:""
+},
+
+{
+i:694,
+n:"leonardo ai",
+c:"ai",
+u:"https://leonardo.ai",
+a:""
+},
+
+{
+i:695,
+n:"ideogram",
+c:"ai",
+u:"https://ideogram.ai",
+a:""
+},
+
+{
+i:696,
+n:"pixverse",
+c:"ai",
+u:"https://pixverse.ai",
+a:""
+},
+
+{
+i:697,
+n:"runway",
+c:"ai",
+u:"https://runwayml.com",
+a:""
+},
+
+{
+i:698,
+n:"pika",
+c:"ai",
+u:"https://pika.art",
+a:""
+},
+
+{
+i:699,
+n:"luma ai",
+c:"ai",
+u:"https://lumalabs.ai",
+a:""
+},
+
+{
+i:700,
+n:"elevenlabs",
+c:"ai",
+u:"https://elevenlabs.io",
+a:""
+},
+
+{
+i:701,
+n:"playht",
+c:"ai",
+u:"https://play.ht",
+a:""
+},
+
+{
+i:702,
+n:"suno",
+c:"ai",
+u:"https://suno.com",
+a:""
+},
+
+{
+i:703,
+n:"udio",
+c:"ai",
+u:"https://www.udio.com",
+a:""
+},
+
+{
+i:704,
+n:"notebooklm",
+c:"ai",
+u:"https://notebooklm.google.com",
+a:""
+},
+
+{
+i:705,
+n:"gamma",
+c:"ai",
+u:"https://gamma.app",
+a:""
+},
+
+{
+i:706,
+n:"tome",
+c:"ai",
+u:"https://tome.app",
+a:""
+},
+
+{
+i:707,
+n:"otter ai",
+c:"ai",
+u:"https://otter.ai",
+a:""
+},
+
+{
+i:708,
+n:"descript ai",
+c:"ai",
+u:"https://www.descript.com",
+a:""
+},
+
+{
+i:709,
+n:"cursor",
+c:"ai",
+u:"https://cursor.com",
+a:""
+},
+
+{
+i:710,
+n:"windsurf",
+c:"ai",
+u:"https://windsurf.com",
+a:""
+},
+{
+i:711,
+n:"bolt",
+c:"ai",
+u:"https://bolt.new",
+a:""
+},
+
+{
+i:712,
+n:"lovable",
+c:"ai",
+u:"https://lovable.dev",
+a:""
+},
+
+{
+i:713,
+n:"v0",
+c:"ai",
+u:"https://v0.dev",
+a:""
+},
+
+{
+i:714,
+n:"replit ai",
+c:"ai",
+u:"https://replit.com",
+a:""
+},
+
+{
+i:715,
+n:"blackbox ai",
+c:"ai",
+u:"https://www.blackbox.ai",
+a:""
+},
+
+{
+i:716,
+n:"phind",
+c:"ai",
+u:"https://www.phind.com",
+a:""
+},
+
+{
+i:717,
+n:"you.com",
+c:"ai",
+u:"https://you.com",
+a:""
+},
+
+{
+i:718,
+n:"consensus",
+c:"ai",
+u:"https://consensus.app",
+a:""
+},
+
+{
+i:719,
+n:"scispace",
+c:"ai",
+u:"https://typeset.io",
+a:""
+},
+
+{
+i:720,
+n:"elicit",
+c:"ai",
+u:"https://elicit.com",
+a:""
+},
+
+{
+i:721,
+n:"heygen",
+c:"ai",
+u:"https://www.heygen.com",
+a:""
+},
+
+{
+i:722,
+n:"synthesia",
+c:"ai",
+u:"https://www.synthesia.io",
+a:""
+},
+
+{
+i:723,
+n:"captions",
+c:"ai",
+u:"https://www.captions.ai",
+a:""
+},
+
+{
+i:724,
+n:"kapwing",
+c:"ai",
+u:"https://www.kapwing.com",
+a:""
+},
+
+{
+i:725,
+n:"veo",
+c:"ai",
+u:"https://deepmind.google/technologies/veo",
+a:""
+},
+
+{
+i:726,
+n:"whisk",
+c:"ai",
+u:"https://labs.google/fx/tools/whisk",
+a:""
+},
+
+{
+i:727,
+n:"dreamina",
+c:"ai",
+u:"https://dreamina.capcut.com",
+a:""
+},
+
+{
+i:728,
+n:"removebg ai",
+c:"ai",
+u:"https://www.remove.bg",
+a:""
+},
+
+{
+i:729,
+n:"clipdrop",
+c:"ai",
+u:"https://clipdrop.co",
+a:""
+},
+
+{
+i:730,
+n:"cleanup pictures",
+c:"ai",
+u:"https://cleanup.pictures",
+a:""
+},
+
+{
+i:731,
+n:"translate ai",
+c:"ai",
+u:"https://translate.google.com",
+a:""
+},
+
+{
+i:732,
+n:"deepgram",
+c:"ai",
+u:"https://deepgram.com",
+a:""
+},
+
+{
+i:733,
+n:"assemblyai",
+c:"ai",
+u:"https://www.assemblyai.com",
+a:""
+},
+
+{
+i:734,
+n:"cohere",
+c:"ai",
+u:"https://cohere.com",
+a:""
+},
+
+{
+i:735,
+n:"anthropic",
+c:"ai",
+u:"https://www.anthropic.com",
+a:""
+},
+
+{
+i:736,
+n:"openai",
+c:"ai",
+u:"https://openai.com",
+a:""
+},
+
+{
+i:737,
+n:"google ai",
+c:"ai",
+u:"https://ai.google",
+a:""
+},
+
+{
+i:738,
+n:"meta ai",
+c:"ai",
+u:"https://www.meta.ai",
+a:""
+},
+
+{
+i:739,
+n:"deepseek",
+c:"ai",
+u:"https://www.deepseek.com",
+a:""
+},
+
+{
+i:740,
+n:"qwen",
+c:"ai",
+u:"https://chat.qwen.ai",
+a:""
+},
+{
+i:741,
+n:"alibaba",
+c:"business",
+u:"https://www.alibaba.com",
+a:""
+},
+
+{
+i:742,
+n:"aliexpress",
+c:"business",
+u:"https://www.aliexpress.com",
+a:""
+},
+
+{
+i:743,
+n:"dhgate",
+c:"business",
+u:"https://www.dhgate.com",
+a:""
+},
+
+{
+i:744,
+n:"globalsources",
+c:"business",
+u:"https://www.globalsources.com",
+a:""
+},
+
+{
+i:745,
+n:"made in china",
+c:"business",
+u:"https://www.made-in-china.com",
+a:""
+},
+
+{
+i:746,
+n:"indiamart",
+c:"business",
+u:"https://www.indiamart.com",
+a:""
+},
+
+{
+i:747,
+n:"tradeindia",
+c:"business",
+u:"https://www.tradeindia.com",
+a:""
+},
+
+{
+i:748,
+n:"exporters india",
+c:"business",
+u:"https://www.exportersindia.com",
+a:""
+},
+
+{
+i:749,
+n:"justdial",
+c:"business",
+u:"https://www.justdial.com",
+a:""
+},
+
+{
+i:750,
+n:"sulekha",
+c:"business",
+u:"https://www.sulekha.com",
+a:""
+},
+
+{
+i:751,
+n:"yellow pages",
+c:"business",
+u:"https://www.yellowpages.com",
+a:""
+},
+
+},
+
+{
+i:752,
+n:"crunchbase",
+c:"business",
+u:"https://www.crunchbase.com",
+a:""
+},
+
+{
+i:753,
+n:"tracxn",
+c:"business",
+u:"https://tracxn.com",
+a:""
+},
+
+{
+i:754,
+n:"owler",
+c:"business",
+u:"https://www.owler.com",
+a:""
+},
+
+{
+i:755,
+n:"pitchbook",
+c:"business",
+u:"https://pitchbook.com",
+a:""
+},
+
+{
+i:756,
+n:"y combinator",
+c:"business",
+u:"https://www.ycombinator.com",
+a:""
+},
+
+{
+i:757,
+n:"startup india",
+c:"business",
+u:"https://www.startupindia.gov.in",
+a:""
+},
+
+{
+i:758,
+n:"msme india",
+c:"business",
+u:"https://msme.gov.in",
+a:""
+},
+
+{
+i:759,
+n:"gem portal",
+c:"business",
+u:"https://gem.gov.in",
+a:""
+},
+
+{
+i:760,
+n:"udyam registration",
+c:"business",
+u:"https://udyamregistration.gov.in",
+a:""
+},
+
+{
+i:761,
+n:"google business",
+c:"business",
+u:"https://business.google.com",
+a:""
+},
+
+{
+i:762,
+n:"meta business",
+c:"business",
+u:"https://business.facebook.com",
+a:""
+},
+
+{
+i:763,
+n:"linkedin business",
+c:"business",
+u:"https://business.linkedin.com",
+a:""
+},
+
+{
+i:764,
+n:"semrush",
+c:"business",
+u:"https://www.semrush.com",
+a:""
+},
+
+{
+i:765,
+n:"ahrefs",
+c:"business",
+u:"https://ahrefs.com",
+a:""
+},
+
+{
+i:766,
+n:"moz",
+c:"business",
+u:"https://moz.com",
+a:""
+},
+
+{
+i:767,
+n:"ubersuggest",
+c:"business",
+u:"https://neilpatel.com/ubersuggest",
+a:""
+},
+
+{
+i:768,
+n:"similarweb",
+c:"business",
+u:"https://www.similarweb.com",
+a:""
+},
+
+{
+i:769,
+n:"google trends",
+c:"business",
+u:"https://trends.google.com",
+a:""
+},
+
+{
+i:770,
+n:"google analytics",
+c:"business",
+u:"https://analytics.google.com",
+a:""
+},
+{
+i:771,
+n:"google search console",
+c:"business",
+u:"https://search.google.com/search-console",
+a:""
+},
+
+{
+i:772,
+n:"bing webmaster",
+c:"business",
+u:"https://www.bing.com/webmasters",
+a:""
+},
+
+{
+i:773,
+n:"google ads",
+c:"business",
+u:"https://ads.google.com",
+a:""
+},
+
+{
+i:774,
+n:"meta ads",
+c:"business",
+u:"https://www.facebook.com/business/ads",
+a:""
+},
+
+{
+i:775,
+n:"linkedin ads",
+c:"business",
+u:"https://business.linkedin.com/marketing-solutions",
+a:""
+},
+
+{
+i:776,
+n:"x ads",
+c:"business",
+u:"https://ads.x.com",
+a:""
+},
+
+{
+i:777,
+n:"youtube creators",
+c:"business",
+u:"https://www.youtube.com/creators",
+a:""
+},
+
+{
+i:778,
+n:"youtube studio",
+c:"business",
+u:"https://studio.youtube.com",
+a:""
+},
+
+{
+i:779,
+n:"google adsense",
+c:"business",
+u:"https://www.google.com/adsense",
+a:""
+},
+
+{
+i:780,
+n:"amazon associates",
+c:"business",
+u:"https://affiliate-program.amazon.in",
+a:""
+},
+
+{
+i:781,
+n:"impact",
+c:"business",
+u:"https://impact.com",
+a:""
+},
+
+{
+i:782,
+n:"cj affiliate",
+c:"business",
+u:"https://www.cj.com",
+a:""
+},
+
+{
+i:783,
+n:"awin",
+c:"business",
+u:"https://www.awin.com",
+a:""
+},
+
+{
+i:784,
+n:"rakuten advertising",
+c:"business",
+u:"https://rakutenadvertising.com",
+a:""
+},
+
+{
+i:785,
+n:"shareasale",
+c:"business",
+u:"https://www.shareasale.com",
+a:""
+},
+
+{
+i:786,
+n:"partnerstack",
+c:"business",
+u:"https://partnerstack.com",
+a:""
+},
+
+{
+i:787,
+n:"digistore24",
+c:"business",
+u:"https://www.digistore24.com",
+a:""
+},
+
+{
+i:788,
+n:"warriorplus",
+c:"business",
+u:"https://warriorplus.com",
+a:""
+},
+
+{
+i:789,
+n:"clickbank",
+c:"business",
+u:"https://www.clickbank.com",
+a:""
+},
+
+{
+i:790,
+n:"gumroad affiliate",
+c:"business",
+u:"https://gumroad.com",
+a:""
+},
+
+{
+i:791,
+n:"envato affiliate",
+c:"business",
+u:"https://elements.envato.com",
+a:""
+},
+
+{
+i:792,
+n:"canva affiliate",
+c:"business",
+u:"https://www.canva.com",
+a:""
+},
+
+{
+i:793,
+n:"hostinger affiliate",
+c:"business",
+u:"https://www.hostinger.com/affiliates",
+a:""
+},
+
+{
+i:794,
+n:"namecheap affiliate",
+c:"business",
+u:"https://www.namecheap.com/affiliates",
+a:""
+},
+
+{
+i:795,
+n:"bluehost affiliate",
+c:"business",
+u:"https://www.bluehost.com/affiliates",
+a:""
+},
+
+{
+i:796,
+n:"semrush affiliate",
+c:"business",
+u:"https://www.semrush.com/partners",
+a:""
+},
+
+{
+i:797,
+n:"coursera affiliate",
+c:"business",
+u:"https://www.coursera.org",
+a:""
+},
+
+{
+i:798,
+n:"udemy affiliate",
+c:"business",
+u:"https://www.udemy.com",
+a:""
+},
+
+{
+i:799,
+n:"fiverr affiliates",
+c:"business",
+u:"https://affiliates.fiverr.com",
+a:""
+},
+
+{
+i:800,
+n:"upwork",
+c:"business",
+u:"https://www.upwork.com",
+a:""
+},
+{
+i:801,
+n:"freelancer affiliate",
+c:"business",
+u:"https://www.freelancer.com",
+a:""
+},
+
+{
+i:802,
+n:"impact radius",
+c:"business",
+u:"https://impact.com",
+a:""
+},
+
+{
+i:803,
+n:"refersion",
+c:"business",
+u:"https://www.refersion.com",
+a:""
+},
+
+{
+i:804,
+n:"tapfiliate",
+c:"business",
+u:"https://tapfiliate.com",
+a:""
+},
+
+{
+i:805,
+n:"rewardful",
+c:"business",
+u:"https://www.rewardful.com",
+a:""
+},
+
+{
+i:806,
+n:"firstpromoter",
+c:"business",
+u:"https://firstpromoter.com",
+a:""
+},
+
+{
+i:807,
+n:"post affiliate pro",
+c:"business",
+u:"https://www.postaffiliatepro.com",
+a:""
+},
+
+{
+i:808,
+n:"leadpages",
+c:"business",
+u:"https://www.leadpages.com",
+a:""
+},
+
+{
+i:809,
+n:"unbounce",
+c:"business",
+u:"https://unbounce.com",
+a:""
+},
+
+{
+i:810,
+n:"convertkit creator",
+c:"business",
+u:"https://convertkit.com",
+a:""
+},
+
+{
+i:811,
+n:"mailerlite",
+c:"business",
+u:"https://www.mailerlite.com",
+a:""
+},
+
+{
+i:812,
+n:"sendgrid",
+c:"business",
+u:"https://sendgrid.com",
+a:""
+},
+
+{
+i:813,
+n:"brevo affiliate",
+c:"business",
+u:"https://www.brevo.com",
+a:""
+},
+
+{
+i:814,
+n:"moosend",
+c:"business",
+u:"https://moosend.com",
+a:""
+},
+
+{
+i:815,
+n:"getresponse",
+c:"business",
+u:"https://www.getresponse.com",
+a:""
+},
+
+{
+i:816,
+n:"aweber",
+c:"business",
+u:"https://www.aweber.com",
+a:""
+},
+
+{
+i:817,
+n:"constant contact",
+c:"business",
+u:"https://www.constantcontact.com",
+a:""
+},
+
+{
+i:818,
+n:"hubspot crm",
+c:"business",
+u:"https://www.hubspot.com",
+a:""
+},
+
+{
+i:819,
+n:"pipedrive",
+c:"business",
+u:"https://www.pipedrive.com",
+a:""
+},
+
+{
+i:820,
+n:"zoho crm",
+c:"business",
+u:"https://www.zoho.com/crm",
+a:""
+},
+
+{
+i:821,
+n:"freshsales",
+c:"business",
+u:"https://www.freshworks.com/crm",
+a:""
+},
+
+{
+i:822,
+n:"salesforce",
+c:"business",
+u:"https://www.salesforce.com",
+a:""
+},
+
+{
+i:823,
+n:"intercom",
+c:"business",
+u:"https://www.intercom.com",
+a:""
+},
+
+{
+i:824,
+n:"tidio",
+c:"business",
+u:"https://www.tidio.com",
+a:""
+},
+
+{
+i:825,
+n:"livechat",
+c:"business",
+u:"https://www.livechat.com",
+a:""
+},
+
+{
+i:826,
+n:"zendesk chat",
+c:"business",
+u:"https://www.zendesk.com",
+a:""
+},
+
+{
+i:827,
+n:"trustpilot",
+c:"business",
+u:"https://www.trustpilot.com",
+a:""
+},
+
+{
+i:828,
+n:"g2",
+c:"business",
+u:"https://www.g2.com",
+a:""
+},
+
+{
+i:829,
+n:"capterra",
+c:"business",
+u:"https://www.capterra.com",
+a:""
+},
+
+{
+i:830,
+n:"sourceforge",
+c:"business",
+u:"https://sourceforge.net",
+a:""
+},
+{
+i:831,
+n:"product hunt makers",
+c:"business",
+u:"https://www.producthunt.com",
+a:""
+},
+
+{
+i:832,
+n:"indie hackers makers",
+c:"business",
+u:"https://www.indiehackers.com",
+a:""
+},
+
+{
+i:833,
+n:"betalist",
+c:"business",
+u:"https://betalist.com",
+a:""
+},
+
+{
+i:834,
+n:"startup stash",
+c:"business",
+u:"https://startupstash.com",
+a:""
+},
+
+{
+i:835,
+n:"alternative to",
+c:"business",
+u:"https://alternativeto.net",
+a:""
+},
+
+{
+i:836,
+n:"futurepedia",
+c:"ai",
+u:"https://www.futurepedia.io",
+a:""
+},
+
+{
+i:837,
+n:"theres an ai for that",
+c:"ai",
+u:"https://theresanaiforthat.com",
+a:""
+},
+
+{
+i:838,
+n:"toolify",
+c:"ai",
+u:"https://www.toolify.ai",
+a:""
+},
+
+{
+i:839,
+n:"future tools",
+c:"ai",
+u:"https://www.futuretools.io",
+a:""
+},
+
+{
+i:840,
+n:"aitools directory",
+c:"ai",
+u:"https://aitoolsdirectory.com",
+a:""
+},
+
+{
+i:841,
+n:"gumloop",
+c:"ai",
+u:"https://www.gumloop.com",
+a:""
+},
+
+{
+i:842,
+n:"mindstudio",
+c:"ai",
+u:"https://mindstudio.ai",
+a:""
+},
+
+{
+i:843,
+n:"flowise",
+c:"ai",
+u:"https://flowiseai.com",
+a:""
+},
+
+{
+i:844,
+n:"langflow",
+c:"ai",
+u:"https://langflow.org",
+a:""
+},
+
+{
+i:845,
+n:"langchain",
+c:"ai",
+u:"https://www.langchain.com",
+a:""
+},
+
+{
+i:846,
+n:"llamaindex",
+c:"ai",
+u:"https://www.llamaindex.ai",
+a:""
+},
+
+{
+i:847,
+n:"pinecone",
+c:"ai",
+u:"https://www.pinecone.io",
+a:""
+},
+
+{
+i:848,
+n:"weaviate",
+c:"ai",
+u:"https://weaviate.io",
+a:""
+},
+
+{
+i:849,
+n:"chroma",
+c:"ai",
+u:"https://www.trychroma.com",
+a:""
+},
+
+{
+i:850,
+n:"milvus",
+c:"ai",
+u:"https://milvus.io",
+a:""
+},
+
+{
+i:851,
+n:"openstreetmap donate",
+c:"charity",
+u:"https://www.openstreetmap.org",
+a:""
+},
+
+{
+i:852,
+n:"wikipedia donate",
+c:"charity",
+u:"https://donate.wikimedia.org",
+a:""
+},
+
+{
+i:853,
+n:"unicef",
+c:"charity",
+u:"https://www.unicef.org",
+a:""
+},
+
+{
+i:854,
+n:"red cross",
+c:"charity",
+u:"https://www.redcross.org",
+a:""
+},
+
+{
+i:855,
+n:"save the children",
+c:"charity",
+u:"https://www.savethechildren.org",
+a:""
+},
+
+{
+i:856,
+n:"care international",
+c:"charity",
+u:"https://www.care.org",
+a:""
+},
+
+{
+i:857,
+n:"water.org",
+c:"charity",
+u:"https://water.org",
+a:""
+},
+
+{
+i:858,
+n:"charity navigator",
+c:"charity",
+u:"https://www.charitynavigator.org",
+a:""
+},
+
+{
+i:859,
+n:"global giving",
+c:"charity",
+u:"https://www.globalgiving.org",
+a:""
+},
+
+{
+i:860,
+n:"kiva",
+c:"charity",
+u:"https://www.kiva.org",
+a:""
+},
+{
+i:861,
+n:"giveindia",
+c:"charity",
+u:"https://www.giveindia.org",
+a:""
+},
+
+{
+i:862,
+n:"ketto",
+c:"charity",
+u:"https://www.ketto.org",
+a:""
+},
+
+{
+i:863,
+n:"milaap",
+c:"charity",
+u:"https://milaap.org",
+a:""
+},
+
+{
+i:864,
+n:"impactguru",
+c:"charity",
+u:"https://www.impactguru.com",
+a:""
+},
+
+{
+i:865,
+n:"akshay patra",
+c:"charity",
+u:"https://www.akshayapatra.org",
+a:""
+},
+
+{
+i:866,
+n:"goonj",
+c:"charity",
+u:"https://goonj.org",
+a:""
+},
+
+{
+i:867,
+n:"cry india",
+c:"charity",
+u:"https://www.cry.org",
+a:""
+},
+
+{
+i:868,
+n:"helpage india",
+c:"charity",
+u:"https://www.helpageindia.org",
+a:""
+},
+
+{
+i:869,
+n:"pratham",
+c:"charity",
+u:"https://www.pratham.org",
+a:""
+},
+
+{
+i:870,
+n:"sewa international",
+c:"charity",
+u:"https://www.sewainternational.org",
+a:""
+},
+
+{
+i:871,
+n:"archive today",
+c:"utilities",
+u:"https://archive.today",
+a:""
+},
+
+{
+i:872,
+n:"wayback machine",
+c:"utilities",
+u:"https://web.archive.org",
+a:""
+},
+
+{
+i:873,
+n:"whois",
+c:"utilities",
+u:"https://who.is",
+a:""
+},
+
+{
+i:874,
+n:"dns checker",
+c:"utilities",
+u:"https://dnschecker.org",
+a:""
+},
+
+{
+i:875,
+n:"mx toolbox",
+c:"utilities",
+u:"https://mxtoolbox.com",
+a:""
+},
+
+{
+i:876,
+n:"uptimerobot",
+c:"utilities",
+u:"https://uptimerobot.com",
+a:""
+},
+
+{
+i:877,
+n:"better stack",
+c:"utilities",
+u:"https://betterstack.com",
+a:""
+},
+
+{
+i:878,
+n:"statuspage",
+c:"utilities",
+u:"https://www.atlassian.com/software/statuspage",
+a:""
+},
+
+{
+i:879,
+n:"cronitor",
+c:"utilities",
+u:"https://cronitor.io",
+a:""
+},
+
+{
+i:880,
+n:"pingdom",
+c:"utilities",
+u:"https://www.pingdom.com",
+a:""
+},
+
+{
+i:881,
+n:"rss.app",
+c:"services",
+u:"https://rss.app",
+a:""
+},
+
+{
+i:882,
+n:"feedly",
+c:"services",
+u:"https://feedly.com",
+a:""
+},
+
+{
+i:883,
+n:"inoreader",
+c:"services",
+u:"https://www.inoreader.com",
+a:""
+},
+
+{
+i:884,
+n:"pocket",
+c:"services",
+u:"https://getpocket.com",
+a:""
+},
+
+{
+i:885,
+n:"raindrop",
+c:"services",
+u:"https://raindrop.io",
+a:""
+},
+
+{
+i:886,
+n:"linktree",
+c:"services",
+u:"https://linktr.ee",
+a:""
+},
+
+{
+i:887,
+n:"beacons",
+c:"services",
+u:"https://beacons.ai",
+a:""
+},
+
+{
+i:888,
+n:"taplink",
+c:"services",
+u:"https://taplink.cc",
+a:""
+},
+
+{
+i:889,
+n:"carrd",
+c:"services",
+u:"https://carrd.co",
+a:""
+},
+
+{
+i:890,
+n:"about.me",
+c:"services",
+u:"https://about.me",
+a:""
+},
+{
+i:891,
+n:"caffeine",
+c:"services",
+u:"https://www.caffeine.tv",
+a:""
+},
+
+{
+i:892,
+n:"twitch",
+c:"services",
+u:"https://www.twitch.tv",
+a:""
+},
+
+{
+i:893,
+n:"kick",
+c:"services",
+u:"https://kick.com",
+a:""
+},
+
+{
+i:894,
+n:"rumble",
+c:"services",
+u:"https://rumble.com",
+a:""
+},
+
+{
+i:895,
+n:"odysee",
+c:"services",
+u:"https://odysee.com",
+a:""
+},
+
+{
+i:896,
+n:"substack creators",
+c:"services",
+u:"https://substack.com",
+a:""
+},
+
+{
+i:897,
+n:"ghost",
+c:"services",
+u:"https://ghost.org",
+a:""
+},
+
+{
+i:898,
+n:"beehiiv",
+c:"services",
+u:"https://www.beehiiv.com",
+a:""
+},
+
+{
+i:899,
+n:"wordpress.org",
+c:"services",
+u:"https://wordpress.org",
+a:""
+},
+
+{
+i:900,
+n:"blogger",
+c:"services",
+u:"https://www.blogger.com",
+a:""
+},
+
+{
+i:901,
+n:"tumblr",
+c:"services",
+u:"https://www.tumblr.com",
+a:""
+},
+
+{
+i:902,
+n:"medium writers",
+c:"services",
+u:"https://medium.com",
+a:""
+},
+
+{
+i:903,
+n:"hashnode blogs",
+c:"services",
+u:"https://hashnode.com",
+a:""
+},
+
+{
+i:904,
+n:"dev community",
+c:"services",
+u:"https://dev.to",
+a:""
+},
+
+{
+i:905,
+n:"write.as",
+c:"services",
+u:"https://write.as",
+a:""
+},
+
+{
+i:906,
+n:"read.cv",
+c:"services",
+u:"https://read.cv",
+a:""
+},
+
+{
+i:907,
+n:"contra",
+c:"services",
+u:"https://contra.com",
+a:""
+},
+
+{
+i:908,
+n:"peerlist",
+c:"services",
+u:"https://peerlist.io",
+a:""
+},
+
+{
+i:909,
+n:"buymeacoffee pages",
+c:"services",
+u:"https://www.buymeacoffee.com",
+a:""
+},
+
+{
+i:910,
+n:"ko-fi pages",
+c:"services",
+u:"https://ko-fi.com",
+a:""
+},
+
+{
+i:911,
+n:"gumroad store",
+c:"services",
+u:"https://gumroad.com",
+a:""
+},
+
+{
+i:912,
+n:"lemonsqueezy",
+c:"services",
+u:"https://www.lemonsqueezy.com",
+a:""
+},
+
+{
+i:913,
+n:"paddle",
+c:"services",
+u:"https://www.paddle.com",
+a:""
+},
+
+{
+i:914,
+n:"fastspring",
+c:"services",
+u:"https://fastspring.com",
+a:""
+},
+
+{
+i:915,
+n:"sellfy",
+c:"services",
+u:"https://sellfy.com",
+a:""
+},
+
+{
+i:916,
+n:"creative fabrica",
+c:"services",
+u:"https://www.creativefabrica.com",
+a:""
+},
+
+{
+i:917,
+n:"design bundles",
+c:"services",
+u:"https://designbundles.net",
+a:""
+},
+
+{
+i:918,
+n:"creative market sellers",
+c:"services",
+u:"https://creativemarket.com",
+a:""
+},
+
+{
+i:919,
+n:"envato authors",
+c:"services",
+u:"https://author.envato.com",
+a:""
+},
+
+{
+i:920,
+n:"themeisle",
+c:"services",
+u:"https://themeisle.com",
+a:""
+},
+{
+i:921,
+n:"astra",
+c:"services",
+u:"https://wpastra.com",
+a:""
+},
+
+{
+i:922,
+n:"generatepress",
+c:"services",
+u:"https://generatepress.com",
+a:""
+},
+
+{
+i:923,
+n:"kadence",
+c:"services",
+u:"https://www.kadencewp.com",
+a:""
+},
+
+{
+i:924,
+n:"blocksy",
+c:"services",
+u:"https://creativethemes.com/blocksy",
+a:""
+},
+
+{
+i:925,
+n:"spectra",
+c:"services",
+u:"https://wpspectra.com",
+a:""
+},
+
+{
+i:926,
+n:"starter templates",
+c:"services",
+u:"https://startertemplates.com",
+a:""
+},
+
+{
+i:927,
+n:"envira gallery",
+c:"services",
+u:"https://enviragallery.com",
+a:""
+},
+
+{
+i:928,
+n:"nextgen gallery",
+c:"services",
+u:"https://www.imagely.com",
+a:""
+},
+
+{
+i:929,
+n:"smush",
+c:"services",
+u:"https://wpmudev.com/project/smush",
+a:""
+},
+
+{
+i:930,
+n:"wp rocket",
+c:"services",
+u:"https://wp-rocket.me",
+a:""
+},
+
+{
+i:931,
+n:"nitropack",
+c:"services",
+u:"https://nitropack.io",
+a:""
+},
+
+{
+i:932,
+n:"lite speed",
+c:"services",
+u:"https://www.litespeedtech.com",
+a:""
+},
+
+{
+i:933,
+n:"rank math",
+c:"services",
+u:"https://rankmath.com",
+a:""
+},
+
+{
+i:934,
+n:"yoast seo",
+c:"services",
+u:"https://yoast.com",
+a:""
+},
+
+{
+i:935,
+n:"all in one seo",
+c:"services",
+u:"https://aioseo.com",
+a:""
+},
+
+{
+i:936,
+n:"monster insights",
+c:"services",
+u:"https://www.monsterinsights.com",
+a:""
+},
+
+{
+i:937,
+n:"wpforms",
+c:"services",
+u:"https://wpforms.com",
+a:""
+},
+
+{
+i:938,
+n:"formidable forms",
+c:"services",
+u:"https://formidableforms.com",
+a:""
+},
+
+{
+i:939,
+n:"gravity forms",
+c:"services",
+u:"https://www.gravityforms.com",
+a:""
+},
+
+{
+i:940,
+n:"memberpress",
+c:"services",
+u:"https://memberpress.com",
+a:""
+},
+
+{
+i:941,
+n:"learn dash",
+c:"education",
+u:"https://www.learndash.com",
+a:""
+},
+
+{
+i:942,
+n:"lifter lms",
+c:"education",
+u:"https://lifterlms.com",
+a:""
+},
+
+{
+i:943,
+n:"tutor lms",
+c:"education",
+u:"https://tutorlms.com",
+a:""
+},
+
+{
+i:944,
+n:"sensei lms",
+c:"education",
+u:"https://senseilms.com",
+a:""
+},
+
+{
+i:945,
+n:"woocommerce payments",
+c:"finance",
+u:"https://woocommerce.com/payments",
+a:""
+},
+
+{
+i:946,
+n:"stripe checkout",
+c:"finance",
+u:"https://stripe.com/payments/checkout",
+a:""
+},
+
+{
+i:947,
+n:"razorpay payment pages",
+c:"finance",
+u:"https://razorpay.com/payment-pages",
+a:""
+},
+
+{
+i:948,
+n:"cashfree payments",
+c:"finance",
+u:"https://www.cashfree.com",
+a:""
+},
+
+{
+i:949,
+n:"phonepe payment gateway",
+c:"finance",
+u:"https://www.phonepe.com/business",
+a:""
+},
+
+{
+i:950,
+n:"payu",
+c:"finance",
+u:"https://payu.in",
+a:""
+},
+{
+i:951,
+n:"phonepe",
+c:"finance",
+u:"https://www.phonepe.com",
+a:""
+},
+
+{
+i:952,
+n:"paytm",
+c:"finance",
+u:"https://paytm.com",
+a:""
+},
+
+{
+i:953,
+n:"bharatpe payments",
+c:"finance",
+u:"https://bharatpe.com",
+a:""
+},
+
+{
+i:954,
+n:"mobikwik",
+c:"finance",
+u:"https://www.mobikwik.com",
+a:""
+},
+
+{
+i:955,
+n:"freecharge",
+c:"finance",
+u:"https://www.freecharge.in",
+a:""
+},
+
+{
+i:956,
+n:"amazon pay",
+c:"finance",
+u:"https://pay.amazon.in",
+a:""
+},
+
+{
+i:957,
+n:"google pay",
+c:"finance",
+u:"https://pay.google.com",
+a:""
+},
+
+{
+i:958,
+n:"bhim upi",
+c:"finance",
+u:"https://www.bhimupi.org.in",
+a:""
+},
+
+{
+i:959,
+n:"npci",
+c:"finance",
+u:"https://www.npci.org.in",
+a:""
+},
+
+{
+i:960,
+n:"rbi",
+c:"finance",
+u:"https://www.rbi.org.in",
+a:""
+},
+
+{
+i:961,
+n:"india post",
+c:"services",
+u:"https://www.indiapost.gov.in",
+a:""
+},
+
+{
+i:962,
+n:"digilocker",
+c:"services",
+u:"https://www.digilocker.gov.in",
+a:""
+},
+
+{
+i:963,
+n:"umang",
+c:"services",
+u:"https://web.umang.gov.in",
+a:""
+},
+
+{
+i:964,
+n:"aadhaar",
+c:"services",
+u:"https://uidai.gov.in",
+a:""
+},
+
+{
+i:965,
+n:"income tax india",
+c:"services",
+u:"https://www.incometax.gov.in",
+a:""
+},
+
+{
+i:966,
+n:"gst portal",
+c:"services",
+u:"https://www.gst.gov.in",
+a:""
+},
+
+{
+i:967,
+n:"passport seva",
+c:"services",
+u:"https://www.passportindia.gov.in",
+a:""
+},
+
+{
+i:968,
+n:"parivahan",
+c:"services",
+u:"https://parivahan.gov.in",
+a:""
+},
+
+{
+i:969,
+n:"cowin",
+c:"services",
+u:"https://www.cowin.gov.in",
+a:""
+},
+
+{
+i:970,
+n:"mygov",
+c:"services",
+u:"https://www.mygov.in",
+a:""
+},
+
+{
+i:971,
+n:"wikipedia",
+c:"education",
+u:"https://www.wikipedia.org",
+a:""
+},
+
+{
+i:972,
+n:"wikimedia commons",
+c:"education",
+u:"https://commons.wikimedia.org",
+a:""
+},
+
+{
+i:973,
+n:"openverse",
+c:"education",
+u:"https://openverse.org",
+a:""
+},
+
+{
+i:974,
+n:"internet archive books",
+c:"education",
+u:"https://archive.org/details/texts",
+a:""
+},
+
+{
+i:975,
+n:"google books",
+c:"education",
+u:"https://books.google.com",
+a:""
+},
+
+{
+i:976,
+n:"doaj",
+c:"education",
+u:"https://doaj.org",
+a:""
+},
+
+{
+i:977,
+n:"pubmed",
+c:"education",
+u:"https://pubmed.ncbi.nlm.nih.gov",
+a:""
+},
+
+{
+i:978,
+n:"arxiv",
+c:"education",
+u:"https://arxiv.org",
+a:""
+},
+
+{
+i:979,
+n:"semantic scholar",
+c:"education",
+u:"https://www.semanticscholar.org",
+a:""
+},
+
+{
+i:980,
+n:"crossref",
+c:"education",
+u:"https://www.crossref.org",
+a:""
+},
+{
+i:981,
+n:"core",
+c:"education",
+u:"https://core.ac.uk",
+a:""
+},
+
+{
+i:982,
+n:"openalex",
+c:"education",
+u:"https://openalex.org",
+a:""
+},
+
+{
+i:983,
+n:"zenodo",
+c:"education",
+u:"https://zenodo.org",
+a:""
+},
+
+{
+i:984,
+n:"figshare",
+c:"education",
+u:"https://figshare.com",
+a:""
+},
+
+{
+i:985,
+n:"dryad",
+c:"education",
+u:"https://datadryad.org",
+a:""
+},
+
+{
+i:986,
+n:"our world in data",
+c:"education",
+u:"https://ourworldindata.org",
+a:""
+},
+
+{
+i:987,
+n:"world bank data",
+c:"education",
+u:"https://data.worldbank.org",
+a:""
+},
+
+{
+i:988,
+n:"un data",
+c:"education",
+u:"https://data.un.org",
+a:""
+},
+
+{
+i:989,
+n:"data.gov.in",
+c:"education",
+u:"https://www.data.gov.in",
+a:""
+},
+
+{
+i:990,
+n:"data.gov",
+c:"education",
+u:"https://www.data.gov",
+a:""
+},
+
+{
+i:991,
+n:"kaggle",
+c:"education",
+u:"https://www.kaggle.com",
+a:""
+},
+
+{
+i:992,
+n:"hugging face datasets",
+c:"ai",
+u:"https://huggingface.co/datasets",
+a:""
+},
+
+{
+i:993,
+n:"roboflow",
+c:"ai",
+u:"https://roboflow.com",
+a:""
+},
+
+{
+i:994,
+n:"label studio",
+c:"ai",
+u:"https://labelstud.io",
+a:""
+},
+
+{
+i:995,
+n:"weights and biases",
+c:"ai",
+u:"https://wandb.ai",
+a:""
+},
+
+{
+i:996,
+n:"comet",
+c:"ai",
+u:"https://www.comet.com",
+a:""
+},
+
+{
+i:997,
+n:"modal",
+c:"ai",
+u:"https://modal.com",
+a:""
+},
+
+{
+i:998,
+n:"runpod",
+c:"ai",
+u:"https://www.runpod.io",
+a:""
+},
+
+{
+i:999,
+n:"vast ai",
+c:"ai",
+u:"https://vast.ai",
+a:""
+},
+
+{
+i:1000,
+n:"lambda",
+c:"ai",
+u:"https://lambdalabs.com",
+a:""
+}]; -->
+ 
+          
+
+ 
+
+        <script>
+const allCountries = document.getElementById("allCountries");
+const featuredShops = document.getElementById("featuredShops");
+
+window.countryShops = window.countryShops || {};
+const loadedCountries = {};
+
+// Dropdown നിറയ്ക്കുന്നു
+allCountriesList.forEach(country => {
+    const option = document.createElement("option");
+    option.value = country;
+    option.textContent = country.toUpperCase();
+    allCountries.appendChild(option);
+});
+
+// രാജ്യം തിരഞ്ഞെടുക്കുന്നു
+function setSelectedCountry(country) {
+
+    if (!country) return;
+
+    const pureCountry = country.trim().toLowerCase();
+
+    allCountries.classList.add("green-select");
+
+    // CHANGE: textContent → data-country
+    document.querySelectorAll(".country-btn").forEach(btn => {
+        const key = btn.getAttribute("data-country");
+        btn.classList.toggle(
+            "active",
+            key && key.trim().toLowerCase() === pureCountry
+        );
+    });
+
+    const shopBtn = document.getElementById("shopOnCountry");
+    if (shopBtn) {
+        shopBtn.innerHTML =
+            `SHOP ON <span class="green">${pureCountry.toUpperCase()}</span>`;
+    }
+
+    localStorage.setItem("selectedCountry", pureCountry);
+
+    fetchExternalCountryJS(pureCountry);
+}
+
+// helper
+function renderCountry(country) {
+    setSelectedCountry(country);
+}
+
+function syncCategory(countryName){
+    if(typeof changeCountry==="function"){
+        changeCountry(countryName);
+    }
+}
+
+function fetchExternalCountryJS(countryName) {
+
+    // Already Loaded
+    if (loadedCountries[countryName]) {
+
+        loadShops(countryShops[countryName]);
+        syncCategory(countryName);
+        return;
+    }
+
+    // Already Exists
+    if (window.countryShops && window.countryShops[countryName]) {
+
+        loadedCountries[countryName]=true;
+
+        loadShops(countryShops[countryName]);
+        syncCategory(countryName);
+
+        return;
+    }
+
+    featuredShops.innerHTML =
+        "<div style='text-align:center;padding:20px;color:#ff9800;font-weight:bold;'>Loading Shops...</div>";
+
+    const oldScript=document.getElementById("dynamic-country-script");
+    if(oldScript) oldScript.remove();
+
+    const script=document.createElement("script");
+
+    script.id="dynamic-country-script";
+
+    // FIXED REGEX
+    script.src="./"+countryName.replace(/s+/g,"_")+".js";
+
+    script.onload=function(){
+
+        loadedCountries[countryName]=true;
+
+        if(window.countryShops && window.countryShops[countryName]){
+
+            loadShops(countryShops[countryName]);
+
+            syncCategory(countryName);
+
+            allCountries.selectedIndex=0;
+
+        }else{
+
+            featuredShops.innerHTML=
+            "<div style='text-align:center;padding:20px;color:red;'>No Shop Data</div>";
+
+        }
+
+    };
+
+    script.onerror=function(){
+
+        featuredShops.innerHTML=
+        "<div style='text-align:center;padding:20px;color:red;'>Country File Not Found</div>";
+
+    };
+
+    document.body.appendChild(script);
+
+}
+
+function loadShops(shopsArray){
+
+    featuredShops.innerHTML="";
+
+    if(!shopsArray || shopsArray.length===0){
+
+        featuredShops.innerHTML=
+        "<div style='text-align:center;font-weight:bold;padding:20px;'>No shops available.</div>";
+
+        return;
+    }
+
+    const colors=[
+        "#00C853","#2196F3","#F44336","#FF9800","#9C27B0",
+        "#00BCD4","#E91E63","#FFC107","#009688","#795548"
+    ];
+
+    shopsArray.slice(0,10).forEach((shop,index)=>{
+
+        let host="";
+
+        try{
+            host=new URL(shop.u).hostname;
+        }catch(e){}
+
+        featuredShops.innerHTML+=`
+
+<a href="${shop.u}" target="_blank"
+class="shopCard"
+style="border-left-color:${colors[index%10]}">
+
+<div class="shopDot">${(shop.a||"").trim() ? "" : "."}</div>
+
+<img class="shopFav"
+src="https://www.google.com/s2/favicons?domain=${host}&sz=64"
+loading="lazy">
+
+<div class="shopName notranslate" translate="no">
+${shop.n}
+</div>
+
+</a>`;
+
+    });
+
+}
+
+document.addEventListener("DOMContentLoaded",()=>{
+
+    const savedCountry=
+    localStorage.getItem("selectedCountry") || "india";
+
+    setSelectedCountry(savedCountry);
+
+    document.querySelectorAll(".country-btn").forEach(btn=>{
+
+        btn.addEventListener("click",function(){
+
+            // CHANGE: textContent → data-country
+            const key = this.getAttribute("data-country") || this.textContent;
+            setSelectedCountry(
+                key.trim().toLowerCase()
+            );
+
+        });
+
+    });
+
+    allCountries.addEventListener("change",e=>{
+
+        if(e.target.value){
+
+            setSelectedCountry(e.target.value);
+
+            allCountries.selectedIndex=0;
+
+        }
+
+    });
+
+});
+
+</script>
+<!-- SL NO 37 : HTML END -->
+<!-- ================================================= -->
+
+  <style>
+.country-btn.active{
+color:#00ff66;
+}
+.compare-box{
+background:#000;
+border:1px solid #00BFFF;
+border-radius:12px;
+padding:20px;
+text-align:center;
+line-height:1.6;
+}
+
+.compare-btn{
+width:96%;
+padding:14px;
+border-radius:10px;
+border:none;
+font-weight:bold;
+font-size: 22px;
+background:#00BFFF;
+color:#000;
+cursor:pointer;
+margin-bottom:15px;
+}
+
+.return-note{
+font-size:22px;
+color:#fff;
+text-align:center;
+}
+
+.return-note b{
+color:#FFD700;
+font-size:16px;
+}
+</style>
+
+<div class="compare-container">
+<div class="compare-box">
+<button class="compare-btn" onclick="window.open('https://www.google.com/shopping','_blank')">
+Compare Price on Trusted Sites
+</button>
+
+<div class="return-note">
+<b>വില താരതമ്യം ചെയ്ത് തിരിച്ചു വരണേ...</b>
+<br><br>
+<span>
+വ്യത്യസ്ത ഷോപ്പുകളിൽ ഏറ്റവും കുറഞ്ഞ വില കണ്ടെത്തി,
+അതേ ഷോപ്പിൽ നിന്ന് അതേ ഓഫറിൽ
+മുകളിലെ ലിങ്കുകൾ വഴി വാങ്ങുമ്പോൾ
+നിങ്ങളും ഈ ചാരിറ്റിയുടെ ഭാഗമാകുന്നു —
+അതുവഴി വിശക്കുന്ന ഒരു വയറിന് ആശ്വാസമാകുന്നു. നന്ദി.
+</span>
+</div>
+<style>
+.share-container {
+max-width: 900px;
+width: 96%;
+margin: 25px auto;
+padding: 20px;
+background: #000;
+border: 1px solid #00BFFF;
+border-radius: 12px;
+text-align: center;
+}
+
+.share-text {
+font-size: 22px;
+line-height: 1.7;
+color: #fff;
+margin-bottom: 20px;
+}
+
+.share-grid {
+display: grid;
+grid-template-columns: repeat(5, 1fr);
+gap: 10px;
+margin-top: 15px;
+}
+
+.share-grid a {
+display: flex;
+align-items: center;
+justify-content: center;
+font-size: 22px;
+height: 50px;
+background: #111;
+border-radius: 10px;
+border: 1px solid #333;
+text-decoration: none;
+}
+
+.share-grid a:hover {
+transform: scale(1.08);
+transition: 0.2s;
+}
+
+.share-sign {
+margin-top: 20px;
+padding-top: 15px;
+border-top: 1px solid #333;
+color: #FFD700;
+font-weight: bold;
+letter-spacing: 2px;
+font-size: 16px;
+}
+</style>
+
+<div class="share-container">
+<p class="share-text">
+Even if you are not buying anything right now, you can still support this charity mission.
+<br><br>Simply share this page with your friends and groups.
+<br><br>When someone purchases through these links, most of the income helps provide food for a hungry person somewhere in the world.
+<br><br>Through your share, you and your parents become part of this act of kindness.
+</p>
+
+<div class="share-grid">
+<a href="https://api.whatsapp.com/send?text=https://bascharity.com" target="_blank"><i class="fab fa-whatsapp" style="color:#25D366"></i></a>
+<a href="https://www.facebook.com/sharer/sharer.php?u=https://bascharity.com" target="_blank"><i class="fab fa-facebook" style="color:#1877F2"></i></a>
+<a href="https://telegram.me/share/url?url=https://bascharity.com" target="_blank"><i class="fab fa-telegram" style="color:#0088cc"></i></a>
+<a href="https://twitter.com/intent/tweet?url=https://bascharity.com" target="_blank"><svg width="20" height="20" viewBox="0 0 24 24" fill="#ffffff" style="vertical-align:middle;"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></a>
+<a href="javascript:void(0)" onclick="copyLink()"><i class="fas fa-link" style="color:#FFD700"></i></a>
+</div>
+
+<div class="share-sign">YOUR PURCHASE SATISFIES A HUNGER</div>
+</div>
+
+<script>
+function copyLink() {
+navigator.clipboard.writeText("https://bascharity.com");
+alert("Link Copied. Share with friends.");
+}
+</script>
+ <style>
+.mainbox {
+max-width: 900px;
+width: 96%;
+margin: 20px auto;
+padding: 25px 15px;
+border: 2px solid #ff4500;
+border-radius: 15px;
+background: #050505;
+box-sizing: border-box;
+text-align: center;
+}
+
+.mainbox h1 {
+color: #ff4500;
+font-size: clamp(24px, 8vw, 36px);
+margin-top: 0;
+}
+
+.sub {
+color: #aaa;
+font-size: clamp(16px, 5vw, 22px);
+margin-bottom: 20px;
+}
+
+.impact {
+width: 100%;
+max-width: 420px;
+margin: auto;
+padding: 20px;
+border: 2px solid #555;
+background: #111;
+box-sizing: border-box;
+}
+
+.amount {
+display: flex;
+justify-content: center;
+align-items: center;
+gap: 10px;
+}
+
+.rs {
+font-size: 36px;
+color: #00ff00;
+}
+
+.counter {
+font-size: 44px;
+color: #00ff00;
+border: 2px solid #333;
+padding: 5px 12px;
+background: #000;
+}
+
+.till {
+color: #ff4500;
+font-size: 16px;
+margin-top: 8px;
+}
+
+.gallery {
+display: flex;
+overflow: hidden;
+gap: 20px;
+padding: 40px 20px; /* സൂം ചെയ്യുമ്പോൾ കട്ടാവാതിരിക്കാൻ മാറ്റിയത് */
+margin: 25px auto;
+width: 100%;
+position: relative;
+box-sizing: border-box;
+scroll-behavior: auto !important;
+}
+
+.card {
+min-width: 280px;
+height: 230px;
+border: 3px solid #ff4500;
+display: flex;
+align-items: center;
+justify-content: center;
+background: #000;
+border-radius: 10px;
+overflow: hidden;
+transition: transform 0.4s ease, z-index 0.4s;
+cursor: pointer;
+position: relative;
+flex-shrink: 0;
+}
+
+.card.zoom-active {
+transform: scale(2);
+z-index: 100;
+border-color: #00ff00;
+box-shadow: 0 0 20px rgba(0,255,0,0.5);
+}
+
+.card img {
+width: 100%;
+height: 100%;
+object-fit: contain;
+}
+
+.rotate { transform: rotate(-90deg); }
+</style>
+
+<div class="mainbox">
+<h1>IMPACT</h1>
+<div class="sub">Amount Distributed for Hunger Relief & Food Support</div>
+
+<div class="impact">
+<div class="amount">
+<div class="rs">Rs</div>
+<div class="counter" id="counter">0000000</div>
+<div class="rs">/-</div>
+</div>
+<div class="till">TILL TODAY</div>
+</div>
+
+<div class="gallery" id="gallery"></div>
+
+<div style="margin-top:10px; font-size:16px; color:#bbb; line-height:1.6; text-align:center;">
+Updated weekly/monthly.<br>
+Affiliate income may take 2–3 months to reflect after purchase.<br>
+Your direct donations are not included in this impact.
+</div>
+</div>
+
+<script>
+let count = 0;
+let target = 27000;
+let counterElement = document.getElementById("counter");
+
+function runCounter() {
+if (count < target) {
+count += 250; /* കൃത്യമായി 27000 ൽ എത്താൻ 250 ആക്കി */
+if (count > target) count = target;
+counterElement.innerText = count.toString().padStart(7, "0");
+setTimeout(runCounter, 120);
+}
+}
+runCounter();
+
+const photos = [
+"https://pub-168159db07cc407eaa28228eb2520ea5.r2.dev/1.jpg",
+"https://pub-168159db07cc407eaa28228eb2520ea5.r2.dev/p1.jpg",
+"https://pub-168159db07cc407eaa28228eb2520ea5.r2.dev/2.jpg",
+"https://pub-168159db07cc407eaa28228eb2520ea5.r2.dev/p2.jpg",
+"https://pub-168159db07cc407eaa28228eb2520ea5.r2.dev/3.jpg",
+"https://pub-168159db07cc407eaa28228eb2520ea5.r2.dev/p3.jpg",
+];
+
+const gallery = document.getElementById("gallery");
+
+function loadImages() {
+photos.forEach((src, i) => {
+let card = document.createElement("div");
+card.className = "card";
+card.onclick = function() {
+scrolling = false;
+this.classList.add("zoom-active");
+setTimeout(() => {
+this.classList.remove("zoom-active");
+scrolling = true;
+}, 4000);
+};
+
+let img = document.createElement("img");
+if (i < 2) { img.className = "rotate"; }
+img.src = src;
+
+card.appendChild(img);
+gallery.appendChild(card);
+});
+}
+
+loadImages();
+loadImages();
+
+let scrolling = true;
+function scrollGallery() {
+if (scrolling) {
+gallery.scrollLeft += 1.5;
+if (gallery.scrollLeft >= (gallery.scrollWidth / 2)) {
+gallery.scrollLeft = 0;
+}
+}
+}
+setInterval(scrollGallery, 20);
+</script>
+ <style>
+.info-box{
+/* ലാപ്ടോപ്പിൽ 900px വരെ വരാൻ max-width മാറ്റി */
+max-width: 900px;
+width: 96%;
+margin: 30px auto;
+padding: 20px;
+background: #000;
+border: 1px solid #00BFFF;
+border-radius: 12px;
+text-align: center;
+line-height: 1.7;
+box-sizing: border-box;
+}
+
+.info-title{
+font-size: 25px;
+color: #FFD700;
+margin-bottom: 10px;
+font-weight: bold;
+}
+
+.info-text{
+font-size: 25px;
+color: #ccc;
+}
+
+.readmore-btn{
+color: #00BFFF;
+font-size: 26px;
+font-weight: bold;
+cursor: pointer;
+}
+
+.more-text{
+display: none;
+}
+
+.signature{
+margin-top: 15px;
+font-size: 25px;
+color: #FFD700;
+font-weight: bold;
+}
+</style>
+
+<div class="info-box" id="section7">
+<div class="info-title">BAS CHARITY PURPOSE</div>
+<div class="info-text">
+Our mission is to ensure that support reaches those who truly need it.
+Through affiliate partnerships with 50,000+ online shops worldwide,
+a significant portion of the income generated is used for hunger relief
+and similar humanitarian activities.
+</div>
+<br>
+<div class="info-text">
+At present, 100% of the<span class="readmore-btn" id="readBtn" onclick="toggleMore7()">Read More...</span>
+</div>
+
+<div class="more-text" id="moreText">
+<br>
+<div class="info-text">
+affiliate income is directed towards helping people in need.
+In the future, a minimum of 51% or more will always be dedicated to
+charity and hunger relief.
+The remaining portion may be used for platform maintenance, staff support,
+development, and operational expenses ,etc
+</div>
+<br>
+<div class="info-text">
+Many people have expressed their willingness to donate through this platform.
+However, currently we do not accept any donations through this website.
+This may be considered in the future only after obtaining the necessary approvals
+from the Central Government and relevant authorities.
+</div>
+<br>
+<div class="info-text">
+Anyone who wishes to support hunger relief may do so directly through
+our trusted institutions listed below.
+</div>
+<br>
+<div class="info-text">
+The widespread misuse and scams carried out in the name of charity on many
+online platforms inspired us to start this initiative.
+</div>
+<br>
+<div class="info-text">
+In any case, our goal is to ensure that 100% of your donation reaches those
+who truly need it.
+</div>
+<div class="readmore-btn" onclick="toggleMore7()">Less</div>
+</div>
+
+<div class="signature">
+Give your donations only through trusted hands
+</div>
+</div>
+
+<script>
+function toggleMore7() {
+var moreText = document.getElementById("moreText");
+var btnText = document.getElementById("readBtn");
+if (moreText.style.display === "none" || moreText.style.display === "") {
+moreText.style.display = "block";
+btnText.style.display = "none";
+} else {
+moreText.style.display = "none";
+btnText.style.display = "inline";
+}
+}
+</script>
+
+<style>
+.bas7-wrapper{
+max-width:900px; /* Responsive Fix */
+width:96%;
+margin:30px auto;
+font-family:Arial,sans-serif;
+}
+
+.bas7-box{
+background:#1a1a1a;
+border-radius:14px;
+border:1px solid #333;
+border-left:6px solid #e91e63;
+overflow:hidden;
+color:#fff;
+}
+
+.bas7-header{
+padding:18px;
+text-align:center;
+background:#111;
+border-bottom:1px solid #333;
+}
+
+.title-main{
+margin:0;
+font-size:22px;
+font-weight:900;
+color:#FFD700;
+}
+
+.title-name{
+margin:8px 0 0;
+font-size:20px;
+font-weight:800;
+}
+
+.title-sub{
+margin:5px 0 0;
+font-size:16px;
+}
+
+.bas7-slider{
+width:100%;
+height:420px;
+overflow:hidden;
+background:#000;
+}
+
+.bas7-slider img{
+width:100%;
+height:100%;
+object-fit:cover;
+transition:opacity .8s;
+}
+
+.bas7-content{
+padding:18px;
+font-size:20px;
+line-height:1.7;
+color:#ccc;
+text-align:justify;
+}
+
+.bas8-more{
+display:none;
+}
+
+.bas8-toggle{
+color:#39FF14;
+cursor:pointer;
+font-weight:bold;
+font-size:18px;
+display:block;
+margin-top:15px;
+}
+
+.bas7-quote{
+margin:15px;
+padding:12px;
+background:#111;
+border-radius:10px;
+border-left:4px solid #e91e63;
+font-weight:bold;
+text-align:center;
+color:#FFD700;
+font-size:14px;
+}
+
+/* ഡെപ്യൂട്ടി ചീഫ് എഞ്ചിനീയറുടെ നോട്ട് സ്റ്റൈൽ */
+.officer-note {
+margin-top: 20px;
+padding: 15px;
+background: #151515;
+border-radius: 8px;
+border: 1px dashed #333;
+font-size: 19px;
+line-height: 1.6;
+color: #e0e0e0;
+}
+
+.officer-sign {
+margin-top: 10px;
+text-align: right;
+font-size: 18px;
+font-weight: bold;
+color: #FFD700;
+}
+</style>
+
+<div class="bas7-wrapper" id="section8">
+<div class="bas7-box">
+<div class="bas7-header">
+<h2 class="title-main">VISIONARY FOUNDER</h2>
+<h2 class="title-name">Mohammed M. Basheer (BAS)</h2>
+<h3 class="title-sub">Retired Assistant Engineer, KSEB</h3>
+</div>
+
+<div class="bas7-slider">
+<img id="bas7Img" src="https://drive.google.com/thumbnail?id=1keyWL0GF-HysweqAYntVaS-vB_fwZj_H&sz=w1000">
+</div>
+
+<div class="bas7-content">
+<p>
+Mohammed M. Basheer brings over four decades of dedicated professional and social
+expertise to this mission.
+</p>
+
+<p>
+A Retired Assistant Engineer from KSEB, his career is marked by
+20 years of <span id="bas8Dots">...</span>
+
+<span class="bas8-more" id="bas8More">
+exemplary service in the power sector.
+His professional journey also includes 5 years of international
+experience working across various Arabian countries.
+<br><br>
+He has dedicated more than 10 years as an active member of the
+Ideal Relief Wing (IRW), a premier government-recognized NGO
+known for disaster management.
+<br><br>
+He is supported by his family, including his wife Rasheena K H
+(High School Teacher – English, Govt. Girl's High School,
+Perumbavoor) and children Alif Bayan (Oman), Amna Bayan (Qatar),
+Azeem Ahmed (Oman) and son-in-law Anees Ameer (Qatar Naval Force).
+</span>
+
+<span class="bas8-toggle" onclick="toggleBas8()" id="bas8Btn">More Details</span>
+</p>
+
+<div class="officer-note">
+"കെ.എസ്.ഇ.ബിയിലെ ഔദ്യോഗിക സേവനത്തിലൂടെയും അല്ലാതെയും എനിക്ക് പരിചയമുള്ള വ്യക്തിയാണ് റിട്ട. അസിസ്റ്റന്റ് എഞ്ചിനീയർ മുഹമ്മദ് ബഷീർ (BAS). വലിയ അവകാശവാദങ്ങളൊന്നുമില്ലാതെ, വിശപ്പില്ലാത്ത ഒരു ലോകം എന്ന ലക്ഷ്യത്തിനായി അദ്ദേഹം മുന്നോട്ടുവെക്കുന്ന ഈ ഡിജിറ്റൽ സംരംഭം തികച്ചും വ്യത്യസ്തവും സ്വാഗതാർഹവുമാണ്. ആത്മാർത്ഥതയുള്ള ഒരു കൂട്ടായ്മയിലൂടെ വലിയ മാറ്റങ്ങൾ ഉണ്ടാക്കാൻ ഈ സംരംഭത്തിന് സാധിക്കട്ടെ എന്ന് ആശംസിക്കുന്നു."
+<div class="officer-sign">
+— Deputy Chief Engineer (Rtd), KSEB
+</div>
+</div>
+
+</div>
+
+<div class="bas7-quote">"YOUR PURCHASE SATISFIES A HUNGER"</div>
+</div>
+</div>
+
+<script>
+/* SECTION 7 (Required for Observer) */
+let opened7=false;
+function toggleMore7(){
+let more=document.getElementById("moreText");
+let btn=document.getElementById("readBtn");
+if(opened7){
+more.style.display="none";
+btn.innerText="Read More...";
+opened7=false;
+} else {
+more.style.display="block";
+btn.innerText="";
+opened7=true;
+}
+}
+
+/* SECTION 8 */
+let opened8=false;
+function toggleBas8(){
+let more=document.getElementById("bas8More");
+let dots=document.getElementById("bas8Dots");
+let btn=document.getElementById("bas8Btn");
+if(opened8){
+more.style.display="none";
+dots.style.display="inline";
+btn.innerText="More Details";
+opened8=false;
+} else {
+more.style.display="inline";
+dots.style.display="none";
+btn.innerText="Less Details";
+opened8=true;
+}
+}
+
+/* IMAGE SLIDER */
+const bas7Images=[ 
+"https://drive.google.com/thumbnail?id=1keyWL0GF-HysweqAYntVaS-vB_fwZj_H&sz=w1000",
+"https://drive.google.com/thumbnail?id=1KdZnPqKlSOXAFY-Lu2FU41B1n7sWtt85&sz=w1000"
+];
+let bas7Index=0;
+const bas7Img=document.getElementById("bas7Img");
+
+setInterval(function(){
+bas7Img.style.opacity=0;
+setTimeout(function(){
+bas7Index=(bas7Index+1)%bas7Images.length;
+bas7Img.src=bas7Images[bas7Index];
+bas7Img.style.opacity=1;
+},800);
+},5000);
+
+/* AUTO RESET */
+const observer78=new IntersectionObserver(entries=>{
+entries.forEach(entry=>{
+if(!entry.isIntersecting){
+if(entry.target.id==="section7" && opened7){ toggleMore7(); }
+if(entry.target.id==="section8" && opened8){ toggleBas8(); }
+}
+});
+},{threshold:0});
+
+if(document.getElementById("section7")) observer78.observe(document.getElementById("section7"));
+if(document.getElementById("section8")) observer78.observe(document.getElementById("section8"));
+</script>
+ <style>
+.trust-container{
+max-width:900px; /* Responsive Fix */
+width:96%;
+margin:auto;
+}
+.trust-title{
+background:#000;
+color:#00e676;
+font-weight:900;
+font-size:28px;
+text-align:center;
+padding:20px;
+border-radius:12px;
+margin-bottom:25px;
+border:1px solid #333;
+border-left:6px solid #00e676;
+}
+.trust-title{
+background:#000;
+color:#00e676;
+font-weight:900;
+font-size:28px;
+text-align:center;
+padding:20px;
+border-radius:12px;
+margin-bottom:25px;
+border:1px solid #333;
+border-left:6px solid #00e676;
+}
+.trust-box{
+background:#1a1a1a;
+padding:22px;
+border-radius:12px;
+border:1px solid #333;
+border-left:6px solid #e91e63;
+margin-bottom:20px;
+}
+.trust-box h1{
+font-size:26px;
+margin-bottom:10px;
+color:#fff;
+}
+.trust-sub{
+font-size:22px;
+color:#4fc3f7;
+margin-bottom:15px;
+display:block;
+}
+.trust-box p{
+font-size:22px;
+color:#ddd;
+line-height:1.7;
+}
+.btn-row{
+display:flex;
+gap:10px;
+margin-top:20px;
+}
+.trust-btn{
+padding:16px;
+border-radius:10px;
+font-size:22px;
+font-weight:bold;
+text-align:center;
+cursor:pointer;
+display:flex;
+align-items:center;
+justify-content:center;
+flex-direction: column;
+}
+.btn-row{
+display:flex;
+gap:10px;
+margin-top:20px;
+}
+.trust-btn{
+padding:16px;
+border-radius:10px;
+font-size:22px;
+font-weight:bold;
+text-align:center;
+cursor:pointer;
+display:flex;
+align-items:center;
+justify-content:center;
+flex-direction: column;
+}
+.btn-red{ background:#8b0000; color:#fff; flex:1; }
+.btn-green{ background:#006400; color:#fff; flex:2; }
+.inner-card{
+background:#111;
+padding:18px;
+border-radius:10px;
+border:1px solid #333;
+margin-top:15px;
+font-size:22px;
+line-height:1.7;
+border-left:4px solid #00e676;
+color:#fff;
+}
+.sub-view{display:none;}
+.back-btn{
+margin-top:20px;
+background:#333;
+color:#fff;
+padding:14px;
+border-radius:10px;
+text-align:center;
+font-size:22px;
+font-weight:bold;
+cursor:pointer;
+}
+</style>
+
+<div class="trust-container">
+<div class="trust-title"> OUR TRUSTED INSTITUTIONS </div>
+
+<div class="trust-box">
+<h1>Guidance India Education and Charitable Trust</h1>
+<span class="trust-sub"> Paracode Rehabilitation Project </span>
+
+<p>
+A rehabilitation initiative focusing on pain and palliative care, orphan support, ration aid, education assistance, de addiction awareness and sustainable welfare.
+</p>
+
+<div class="btn-row">
+<div class="trust-btn btn-red" onclick="showDetails9()">DETAILS</div>
+<div class="trust-btn btn-green" onclick="showDonate9()">
+Donate Directly→
+<span style="font-size:18px;">(India Only)</span>
+</div>
+</div>
+
+<div id="details9" class="sub-view">
+<div class="trust-box">
+<h1>Project Details</h1>
+<div class="inner-card">
+The Paracode Rehabilitation Project supports individuals and families through pain and palliative care, orphan care, ration distribution, education support and rehabilitation awareness.
+</div>
+<div class="inner-card">
+Even a small daily contribution can relieve hunger and bring dignity to lives in need.
+</div>
+<div class="back-btn" onclick="reset9()">BACK</div>
+</div>
+</div>
+
+<div id="donate9" class="sub-view">
+<div class="trust-box">
+<h1>Donation Categories</h1>
+<div class="inner-card">
+<b>Pain and Palliative Care</b><br>
+Medical support, medicines and comfort care.
+</div>
+<div class="inner-card">
+<b>Orphan Support</b><br>
+Food, shelter, education and basic needs.
+</div>
+<div class="inner-card">
+<b>Building Fund Contribution - Sustainable Income (Sadaqa Jaria)</b>
+<br><br>
+1 sq.ft - Rs 1500<br>
+100 sq.ft - Rs 150000
+<br><br>
+One Flat Sponsorship - Rs 1500000<br>
+Total Project - Rs 7500000
+</div>
+<div class="inner-card">
+<b>Bank Transfer Details</b><br><br>
+Account Name : Guidance India Education and Charitable Trust<br>
+Account Number : 10350200008909<br>
+IFSC : FDRL0001035<br>
+Federal Bank Kizhakkambalam Branch
+</div>
+<div class="back-btn" onclick="reset9()">BACK</div>
+</div>
+</div>
+</div>
+</div>
+
+<script>
+let timer9;
+function showDetails9(){
+document.getElementById("details9").style.display="block";
+document.getElementById("donate9").style.display="none";
+window.scrollBy({top:200, behavior:"smooth"});
+startTimer9();
+}
+function showDonate9(){
+document.getElementById("details9").style.display="none";
+document.getElementById("donate9").style.display="block";
+window.scrollBy({top:200, behavior:"smooth"});
+startTimer9();
+}
+function reset9(){
+document.getElementById("details9").style.display="none";
+document.getElementById("donate9").style.display="none";
+clearTimeout(timer9);
+}
+function startTimer9(){
+clearTimeout(timer9);
+timer9=setTimeout(reset9,15000);
+}
+</script>
+
+<style>
+.peace-wrapper{
+max-width:900px; /* Responsive Fix */
+width:96%;
+margin:30px auto;
+}
+.peace-box{
+background:#1a1a1a;
+padding:22px;
+border-radius:12px;
+border:1px solid #333;
+border-left:6px solid #e91e63;
+color:#fff;
+margin-bottom:20px;
+}
+.peace-box h1{ font-size:26px; margin-bottom:12px; }
+.peace-sub{ font-size:22px; color:#4fc3f7; margin-bottom:14px; display:block; font-weight:700; }
+.peace-box p{ font-size:22px; line-height:1.7; color:#ccc; }
+.peace-btn-row{ display:flex; gap:10px; margin-top:20px; }
+.peace-btn{ padding:16px; border-radius:10px; font-weight:800; cursor:pointer; font-size:22px; text-align:center; }
+.peace-btn-details{ background:#8b0000; color:#fff; flex:1; }
+.peace-section{ display:none; }
+.peace-card{ background:#111; padding:16px; border-radius:10px; border:1px solid #333; margin-bottom:14px; font-size:22px; line-height:1.7; border-left:4px solid #00e676; }
+.peace-link{ display:inline-block; margin-top:10px; padding:12px 18px; background:#00c853; color:#000; border-radius:10px; font-weight:bold; text-decoration:none; font-size:22px; }
+.peace-back{ margin-top:20px; background:#333; color:#fff; padding:14px; border-radius:10px; text-align:center; cursor:pointer; font-weight:bold; font-size:22px; }
+</style>
+
+<div class="peace-wrapper">
+<div class="peace-box">
+<h1>Peace Valley – Kothamangalam</h1>
+<span class="peace-sub"> Charitable Care Institution </span>
+<p>
+A humanitarian institution providing shelter, medical care, rehabilitation and daily support for the needy and vulnerable.
+</p>
+
+<div class="peace-btn-row">
+<div class="peace-btn peace-btn-details" onclick="peaceDetails10()">Details</div>
+<a class="peace-link" href="https://peacevalley.org.in/donation/" target="_blank">
+Donate Directly ➜
+<br><span style="font-size:18px;">(Global)</span>
+</a>
+</div>
+
+<div id="peaceDetails10" class="peace-section">
+<div class="peace-box">
+<h1>About Peace Valley</h1>
+<div class="peace-card">
+Peace Valley Charitable Trust in Kothamangalam provides long-term shelter, food, medical care and rehabilitation support.
+</div>
+<div class="peace-card">
+Visit official website for full information.<br>
+<a class="peace-link" href="https://peacevalley.org.in/" target="_blank">Visit Website</a>
+</div>
+<div class="peace-back" onclick="peaceReset10()">BACK</div>
+</div>
+</div>
+
+<div id="peaceDonate10" class="peace-section">
+<div class="peace-box">
+<h1>Support Categories</h1>
+<div class="peace-card">
+<b>Food and Daily Care</b><br>
+Providing nutritious meals and daily essentials.<br>
+<a class="peace-link" href="https://peacevalley.org.in/donation/" target="_blank">Donate Directly</a>
+</div>
+<div class="peace-back" onclick="peaceReset10()">BACK</div>
+</div>
+</div>
+</div>
+</div>
+
+<script>
+let timer10;
+function peaceDetails10(){
+document.getElementById("peaceDetails10").style.display="block";
+document.getElementById("peaceDonate10").style.display="none";
+window.scrollBy({top:200, behavior:"smooth"});
+startTimer10();
+}
+function peaceReset10(){
+document.getElementById("peaceDetails10").style.display="none";
+document.getElementById("peaceDonate10").style.display="none";
+clearTimeout(timer10);
+}
+function startTimer10(){
+clearTimeout(timer10);
+timer10=setTimeout(peaceReset10,15000);
+}
+</script>
+ <style>
+.vada-wrapper {
+max-width: 900px;
+width:96%;
+margin: 30px auto;
+}
+.vada-box {
+background: #1a1a1a;
+padding: 22px;
+border-radius: 12px;
+border: 1px solid #333;
+border-left: 6px solid #e53935;
+color: #fff;
+margin-bottom: 20px;
+}
+.vada-box h1 { font-size: 26px; margin-bottom: 10px; }
+.vada-box h2 { font-size: 22px; color: #ffd54f; margin-bottom: 12px; }
+.vada-box p { font-size: 22px; line-height: 1.7; color: #ccc; }
+.vada-btn-row { display: flex; gap: 10px; margin-top: 20px; }
+.vada-btn {
+padding: 16px;
+border-radius: 10px;
+font-size: 22px;
+font-weight: bold;
+text-align: center;
+cursor: pointer;
+display: flex;
+align-items: center;
+justify-content: center;
+flex-direction: column;
+}
+.vada-details { background: #b71c1c; color: #fff; flex: 1; }
+.vada-donate { background: #0b5e20; color: #fff; flex: 2; }
+.vada-section { display: none; }
+.vada-card {
+background: #111;
+padding: 18px;
+border-radius: 10px;
+border: 1px solid #333;
+margin-bottom: 14px;
+font-size: 22px;
+line-height: 1.7;
+border-left: 4px solid #00e676;
+}
+.vada-back {
+margin-top: 20px;
+background: #333;
+color: #fff;
+padding: 14px;
+border-radius: 10px;
+text-align: center;
+cursor: pointer;
+font-weight: bold;
+font-size: 22px;
+}
+</style>
+
+<div class="vada-wrapper">
+<div class="vada-box">
+<h1>Vadanappally Orphanage</h1>
+<p>A charitable institution dedicated to the care, protection and upbringing of orphaned and destitute children through education, shelter and moral support.</p>
+<div class="vada-btn-row">
+<div class="vada-btn vada-details" onclick="vadaDetails11()">Details</div>
+<div class="vada-btn vada-donate" onclick="vadaDonate11()">
+Donate Directly→
+<span style="font-size:18px;">(India Only)</span>
+</div>
+</div>
+</div>
+
+<div id="vadaDetails11" class="vada-section">
+<div class="vada-box">
+<h2>About Vadanappally Orphanage</h2>
+<div class="vada-card">Vadanappally Orphanage Committee is a community-based charitable organisation functioning in Thrissur district, Kerala. The institution provides shelter, education and emotional care for orphaned and vulnerable children.</div>
+<div class="vada-card">Their activities focus on long-term child welfare, education support and social upliftment.</div>
+<div class="vada-back" onclick="vadaReset11()">BACK</div>
+</div>
+</div>
+
+<div id="vadaDonate11" class="vada-section">
+<div class="vada-box">
+<h2>Support Their Work</h2>
+<div class="vada-card"><b>Orphan Care & Shelter</b><br>Providing food, clothing, accommodation and daily care for orphaned children.</div>
+<div class="vada-card"><b>Education Support</b><br>Schooling, books, uniforms and guidance to help children build a better future.</div>
+<div class="vada-card">
+<b>Bank Details</b><br><br>
+A/c Name : VATANAPPALLY ORPHANAGE COMMITTEE<br><br>
+A/c No : 917020025053101<br>Bank : Axis Bank<br>Branch : Vatanappally, Thrissur<br>IFSC : UTIB0003224<br><br>
+A/c No : 10532244438<br>Bank : SBI<br>Branch : Vatanappally, Thrissur<br>IFSC : SBIN0008683
+</div>
+<div class="vada-back" onclick="vadaReset11()">BACK</div>
+</div>
+</div>
+</div>
+
+<script>
+let timer11;
+function vadaDetails11(){
+document.getElementById("vadaDetails11").style.display="block";
+document.getElementById("vadaDonate11").style.display="none";
+scrollTopSmooth("vadaDetails11");
+startTimer11();
+}
+function vadaDonate11(){
+document.getElementById("vadaDetails11").style.display="none";
+document.getElementById("vadaDonate11").style.display="block";
+scrollTopSmooth("vadaDonate11");
+startTimer11();
+}
+function vadaReset11(){
+document.getElementById("vadaDetails11").style.display="none";
+document.getElementById("vadaDonate11").style.display="none";
+clearTimeout(timer11);
+}
+function startTimer11(){
+clearTimeout(timer11);
+timer11=setTimeout(vadaReset11,20000);
+}
+</script>
+
+<style>
+.vision-wrapper {
+max-width: 900px;
+width: 96%;
+margin: 30px auto;
+}
+.vision-box {
+background: #121212;
+padding: 22px;
+border-radius: 16px;
+border: 1px solid #1f1f1f;
+border-left: 6px solid #e91e63;
+color: #fff;
+margin-bottom: 22px;
+position: relative;
+overflow: hidden;
+}
+.vision-box h1 { font-size: 26px; margin: 0 0 12px; }
+.vision-box h2 { font-size: 22px; color: #ffd54f; margin-bottom: 10px; }
+.vision-box p { font-size: 22px; line-height: 1.6; color: #ddd; }
+.vision-impact { margin-top: 14px; font-size: 18px; line-height: 1.8; color: #ffd54f; }
+.vision-btn-row { display: flex; gap: 14px; margin-top: 18px; }
+.vision-btn {
+flex: 1;
+padding: 14px 0;
+text-align: center;
+border-radius: 12px;
+font-weight: bold;
+cursor: pointer;
+display: flex;
+align-items: center;
+justify-content: center;
+flex-direction: column;
+}
+.vision-details { background: #b71c1c; color: #fff; }
+.vision-link {
+display: flex;
+flex: 1;
+align-items: center;
+justify-content: center;
+flex-direction: column;
+padding: 14px 0;
+background: #0b5e20;
+color: #fff;
+border-radius: 12px;
+font-weight: bold;
+text-decoration: none;
+text-align: center;
+}
+.vision-section { display: none; margin-top: 18px; }
+.vision-card {
+background: #181818;
+padding: 18px;
+border-radius: 12px;
+margin-bottom: 12px;
+font-size: 20px;
+line-height: 1.6;
+}
+.vision-back {
+margin-top: 20px;
+background: #333;
+color: #fff;
+padding: 14px;
+border-radius: 10px;
+text-align: center;
+cursor: pointer;
+font-weight: bold;
+font-size: 22px;
+}
+</style>
+
+<div class="vision-wrapper">
+<div class="vision-box">
+<h1>Vision 2026 – Human Welfare Foundation</h1>
+<p>Humanitarian initiatives focusing on hunger relief, education, healthcare, orphan care and disaster response.</p>
+<div class="vision-impact">
+✔️ <b>20,000,000+</b> Lives Impacted<br>
+✔️ <b>6000+</b> Projects Implemented<br>
+✔️ <b>200+</b> Partner Organisations<br>
+✔️ <b>23+</b> States Covered<br>
+✔️ <b>16+</b> Years of Service
+</div>
+<div class="vision-btn-row">
+<div class="vision-btn vision-details" onclick="visionDetails12()">Details</div>
+<a class="vision-link" href="https://www.hwfindia.org/donate/" target="_blank">
+Donate Directly⇒
+<span style="font-size:18px;">(Global)</span>
+</a>
+</div>
+</div> 
+
+<div id="visionDetails12" class="vision-section">
+<div class="vision-box">
+<h2>About Vision 2026 – HWF</h2>
+<p>Vision 2026 is a flagship humanitarian mission of Human Welfare Foundation, addressing hunger, education, healthcare, orphan care, disaster relief and sustainable livelihood development.</p>
+<p><a href="https://www.hwfindia.org/about-hwf/" target="_blank" style="color:#4fc3f7;">For more details →</a></p>
+<div class="vision-back" onclick="visionReset12()">BACK</div>
+</div>
+</div>
+</div>
+
+<script>
+let timer12;
+function visionDetails12(){
+document.getElementById("visionDetails12").style.display="block";
+scrollTopSmooth("visionDetails12");
+startTimer12();
+}
+function visionReset12(){
+document.getElementById("visionDetails12").style.display="none";
+clearTimeout(timer12);
+}
+function startTimer12(){
+clearTimeout(timer12);
+timer12=setTimeout(visionReset12,20000);
+}
+
+function scrollTopSmooth(el){
+const target = document.getElementById(el);
+if(target) target.scrollIntoView({ behavior:"smooth", block:"start" });
+}
+</script>
+
+
+<div id="bas-charity-total-dark-info" style="
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.8;
+    color: #eeeeee;
+    background-color: #121212; /* Full Black Background */
+    border: 2px solid #444444; /* Glowing Gray Border */
+    border-radius: 15px;
+    max-width: 900px;
+    margin: 25px auto;
+    box-shadow: 0 0 20px rgba(255,255,255,0.05), 0 10px 30px rgba(0,0,0,0.7);
+    box-sizing: border-box;
+    width: 96%;
+    overflow: hidden;
+">
+
+    <div style="padding: 35px 25px;">
+
+        <div style="margin-bottom: 40px; text-align: center;">
+            <h2 style="color: #2ecc71; border-bottom: 3px solid #27ae60; display: inline-block; padding-bottom: 8px; margin-bottom: 15px; letter-spacing: 1px;">TRANSPARENCY & LEGAL DISCLOSURES</h2>
+            <p style="font-weight: bold; color: #27ae60; font-size: 1.15em; margin: 15px 0;">"YOUR PURCHASE SATISFIES A HUNGER" [cite: 2026-01-01]</p>
+            <p style="text-align: justify; color: #cccccc; font-size: 0.98em; margin: 0 auto; max-width: 800px;">
+                <strong>BAS Charity International</strong> acts as a bridge between global commerce and humanitarian aid. Our mission is to ensure that support reaches those who truly need it through affiliate partnerships with <strong>50,000+ online shops</strong> worldwide [cite: 2026-01-01].
+            </p>
+        </div>
+
+        <div style="background: linear-gradient(135deg, #161616 0%, #1e1e1e 100%); padding: 25px; border-radius: 12px; margin-bottom: 30px; border-left: 6px solid #27ae60; border-top: 1px solid #2d2d2d; border-right: 1px solid #2d2d2d; border-bottom: 1px solid #2d2d2d;">
+            <h3 style="color: #2ecc71; margin-top: 0; font-size: 1.25em; margin-bottom: 12px;">Financial Governance</h3>
+            <p style="margin-bottom: 10px;"><strong>Initially, 100% of the affiliate income</strong> generated through this platform was dedicated entirely to hunger relief [cite: 2026-01-01]. As we scale, a <strong>minimum of 51% or more</strong> will always be strictly dedicated to these noble causes.</p>
+            <p style="font-style: italic; color: #999999; font-size: 0.95em; margin-bottom: 0;">The remaining portion is utilized for platform maintenance, technical development, staff support, and operational expenses to ensure long-term sustainability [cite: 2026-01-01].</p>
+        </div>
+
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 25px; margin-bottom: 30px;">
+            
+            <div style="background: linear-gradient(135deg, #161616 0%, #1e1e1e 100%); padding: 22px; border-radius: 12px; border-left: 6px solid #27ae60; border-top: 1px solid #2d2d2d; border-right: 1px solid #2d2d2d; border-bottom: 1px solid #2d2d2d;">
+                <h3 style="color: #2ecc71; margin-top: 0; margin-bottom: 12px; font-size: 1.15em;">Privacy Commitment</h3>
+                <p style="font-size: 0.95em; text-align: justify; color: #bbbbbb; margin-bottom: 0;">
+                    We value your digital safety. <strong>BAS Charity International</strong> does not collect or store your personal financial information. When you click the <strong>above links</strong>, your transaction happens directly on the official retailer's secure website [cite: 2026-01-01].
+                </p>
+            </div>
+
+            <div style="background: linear-gradient(135deg, #161616 0%, #1e1e1e 100%); padding: 22px; border-radius: 12px; border-left: 6px solid #27ae60; border-top: 1px solid #2d2d2d; border-right: 1px solid #2d2d2d; border-bottom: 1px solid #2d2d2d;">
+                <h3 style="color: #2ecc71; margin-top: 0; margin-bottom: 12px; font-size: 1.15em;">Affiliate Disclosure</h3>
+                <p style="font-size: 0.95em; text-align: justify; color: #bbbbbb; margin-bottom: 0;">
+                    Shopping through the <strong>above links</strong> costs you <strong>nothing extra</strong> [cite: 2026-01-01]. The retailers pay a commission to us, which we use for our humanitarian missions to fight hunger and help those in need [cite: 2026-01-01].
+                </p>
+            </div>
+
+        </div>
+
+        <div style="padding: 20px; border: 2px solid #c0392b; border-radius: 12px; background-color: #1a0d0d; text-align: center;">
+            <h3 style="color: #e74c3c; margin-top: 0; font-size: 1.15em; margin-bottom: 10px;">Direct Donations Notice</h3>
+            <p style="font-weight: 500; margin-bottom: 8px;">Currently, we <strong>do not accept any direct donations</strong> through this website.</p>
+            <p style="font-size: 0.92em; color: #a5a5a5; font-weight: bold; letter-spacing: 0.5px;">"Give your donations only through trusted hands."</p>
+        </div>
+
+    </div>
+</div>
+
+
+</div>
+
+<div style="text-align: center; background-color: #0a0a0a; color: #ffffff; padding: 35px 20px; border-top: 1px solid #222222;">
+<p style="font-size: 1.1em; color: #2ecc71; margin: 0;"><strong>Contact:</strong> <a href="mailto:support@bascharity.com" style="color: #27ae60; text-decoration: none; font-weight: bold; border-bottom: 1px dashed #27ae60;">support@bascharity.com</a> | Kerala, India</p>
+<p style="font-size: 0.85em; color: #666666; margin-top: 20px; letter-spacing: 1px;">&copy; 2026 BAS Charity International. All Rights Reserved.</p>
+</div>
+</div>
+<div id="floating-selector" style="position: fixed; bottom: 30px; right: 20px; display: flex; flex-direction: column; gap: 15px; z-index: 9999;">
+
+<div onclick="document.querySelector('.lang-box').scrollIntoView({behavior: 'smooth'})"
+style="background: linear-gradient(135deg, #FF5722, #E64A19);
+color: white;
+padding: 15px 20px;
+border-radius: 50px;
+cursor: pointer;
+font-weight: bold;
+box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+display: flex;
+align-items: center;
+gap: 10px;
+animation: float-anim 3s ease-in-out infinite;">
+<span style="font-size: 20px;">🌐</span> <span>Change Language/Country
+ </span>
+</div>
+
+<div onclick="document.querySelector('.country-box').scrollIntoView({behavior: 'smooth'})"
+style="background: linear-gradient(135deg, #2196F3, #1976D2);
+color: white;
+padding: 15px 20px;
+border-radius: 50px;
+cursor: pointer;
+font-weight: bold;
+box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+display: flex;
+align-items: center;
+gap: 10px;
+animation: float-anim 3s ease-in-out infinite 1.5s;">
+<span style="font-size: 20px;">📍</span> <span>Change Category</span>
+</div>
+
+</div>
+
+<style>
+/* ബലൂൺ പോലെ ചെറുതായി കറങ്ങാനും പൊങ്ങാനും ഉള്ള ആനിമേഷൻ */
+@keyframes float-anim {
+0%, 100% { transform: translateY(0) rotate(0deg); }
+50% { transform: translateY(-10px) rotate(2deg); }
+}
+
+ 
+/* ക്ലിക്ക് ചെയ്യുമ്പോൾ ഉള്ള എഫക്ട് */
+#floating-selector div:active {
+transform: scale(0.9);
+}
+</style>
+
+ 
+  <!-- PART 2 : CATEGORY -->
+<!-- ================================================= -->
+<!-- PART 2 : CATEGORY SECTION -->
+ 
+ <!-- ================================================= -->
+<!-- PART 2 : CATEGORY SECTION -->
+ 
+<div id="selectedCountryBox">SELECTED COUNTRY - INDIA</div>  
+<div id="categoryCountry">SHOP ON <span class="green">INDIA</span></div>  
+
+<div class="country-box">  
+<input id="categorySearch" type="text" placeholder="🔍 SEARCH 50,000+ SHOPS">
+  <div class="section-label">SELECT CATOGARY</div>  
+  <div id="categoryButtons" class="category-grid"></div>    
+  
+  <select id="allCategories">  
+    <option value="all">SELECT ALL CATO GARIES</option>  
+  </select>    
+  
+  <div id="categoryHeading">ALL</div>    
+  <div id="categoryShops"></div>  
+</div>  
+
+<style>  
+#selectedCountryBox{  
+  width:100%;  
+  max-width:900px;  
+  margin:14px auto 10px;  
+  padding:14px 16px;  
+  background:#3f3f3f;  
+  border:1px solid #8a8a8a;  
+  border-radius:12px;  
+  color:#00ff66;  
+  font-size:18px;  
+  font-weight:800;  
+  text-align:center;  
+  box-sizing:border-box;  
+}  
+  
+.country-box{  
+  width:96%;  
+  max-width:900px;  
+  margin:0 auto 18px;  
+  padding:14px;  
+  border:1px solid #3a3a3a;  
+  border-radius:16px;  
+  background:#111;  
+  color:#fff;  
+  font-family:Arial,sans-serif;  
+  box-sizing:border-box;  
+}  
+#categoryCountry{
+    width:100%;
+    text-align:center;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:8px;
+    color:#ffffff;
+    font-size:20px;
+    font-weight:800;
+}
+
+#categoryCountry .green{
+    color:#FFC107;
+}
+   
+  
+#categorySearch{  
+  width:100%;  
+  height:48px;  
+  border:1px solid #666;  
+  border-radius:12px;  
+  padding:0 14px;  
+  margin-bottom:12px;  
+  background:#fff;  
+  color:#111;  
+  font-size:16px;  
+  box-sizing:border-box;  
+}  
+#categorySearch::placeholder{
+    color:#00C853;
+    font-weight:700;
+    opacity:1;
+}
+
+   
+   
+.section-label{  
+  width:100%;  
+  background:#3f3f3f;  
+  border:1px solid #8a8a8a;  
+  border-radius:12px;  
+  color:#fff;  
+  font-size:18px;  
+  font-weight:800;  
+  text-align:center;  
+  padding:12px 10px;  
+  margin-bottom:12px;  
+  box-sizing:border-box;  
+}  
+  
+.category-grid{  
+  display:grid;  
+  grid-template-columns:repeat(3,1fr);  
+  gap:10px;  
+  margin-bottom:12px;  
+}  
+  
+.categoryBtn{  
+  background:#4a4a4a;  
+  border:1px solid #666;  
+  border-left-width:6px;  
+  border-radius:14px;  
+  padding:14px 8px;  
+  color:#fff;  
+  font-size:15px;  
+  font-weight:800;  
+  text-align:center;  
+  cursor:pointer;  
+  min-height:50px;  
+}  
+  
+.categoryBtn.active{  
+  color:#00ff66;  
+}  
+  
+.categoryBtn:nth-child(1){border-left-color:#FF9933;}  
+.categoryBtn:nth-child(2){border-left-color:#2196F3;}  
+.categoryBtn:nth-child(3){border-left-color:#E91E63;}  
+.categoryBtn:nth-child(4){border-left-color:#00C853;}  
+.categoryBtn:nth-child(5){border-left-color:#4CAF50;}  
+.categoryBtn:nth-child(6){border-left-color:#F44336;}  
+.categoryBtn:nth-child(7){border-left-color:#9C27B0;}  
+.categoryBtn:nth-child(8){border-left-color:#3F51B5;}  
+.categoryBtn:nth-child(9){border-left-color:#FFC107;}  
+.categoryBtn:nth-child(10){border-left-color:#009688;}  
+.categoryBtn:nth-child(11){border-left-color:#795548;}  
+.categoryBtn:nth-child(12){border-left-color:#FF5722;}  
+  
+#allCategories{  
+  width:100%;  
+  height:48px;  
+  border:1px solid #666;  
+  border-radius:12px;  
+  padding:0 12px;  
+  margin-bottom:12px;  
+  background:#4a4a4a;  
+  color:#fff;  
+  font-size:16px;  
+  font-weight:800;  
+  box-sizing:border-box;  
+}  
+  
+#categoryHeading{  
+  margin:10px 0 14px;  
+  padding:12px;  
+  background:#4a4a4a;  
+  border:1px solid #8a8a8a;  
+  border-radius:12px;  
+  color:#00ff66;  
+  font-size:20px;  
+  font-weight:800;  
+  text-align:center;  
+  text-transform:uppercase;  
+  display: flex;  
+  justify-content: center;  
+  align-items: center;  
+  gap: 15px;  
+}  
+
+.back-all-btn {  
+  background: #ff3b30;  
+  color: #fff;  
+  border: none;  
+  padding: 6px 12px;  
+  border-radius: 6px;  
+  font-size: 12px;  
+  cursor: pointer;  
+  font-weight: bold;  
+}  
+  
+#categoryShops{  
+  display:flex;  
+  flex-direction:column;  
+  gap:10px;  
+}  
+  
+.shopCard{  
+  background:#2b2b2b;  
+  border:1px solid #c0c0c0;  
+  border-left:8px solid #00C853;  
+  border-radius:14px;  
+  padding:14px 16px;  
+  display:flex;  
+  align-items:center;  
+  gap:12px;  
+  min-height:78px;  
+  text-decoration:none;  
+  box-shadow:0 2px 10px rgba(0,0,0,.25);  
+  box-sizing:border-box;  
+}  
+  
+.shopCard:nth-child(10n+1){border-left-color:#00C853;}  
+.shopCard:nth-child(10n+2){border-left-color:#2196F3;}  
+.shopCard:nth-child(10n+3){border-left-color:#F44336;}  
+.shopCard:nth-child(10n+4){border-left-color:#FF9800;}  
+.shopCard:nth-child(10n+5){border-left-color:#9C27B0;}  
+.shopCard:nth-child(10n+6){border-left-color:#00BCD4;}  
+.shopCard:nth-child(10n+7){border-left-color:#E91E63;}  
+.shopCard:nth-child(10n+8){border-left-color:#FFC107;}  
+.shopCard:nth-child(10n+9){border-left-color:#009688;}  
+.shopCard:nth-child(10n+10){border-left-color:#795548;}  
+  
+.shopDot{  
+  width:18px;  
+  flex:0 0 18px;  
+  color:#555; /* താങ്കൾ ആവശ്യപ്പെട്ട പ്രകാരം ലൈറ്റ് ഗ്രേ കളർ നമുക്ക് മാത്രം കാണാൻ */  
+  font-weight:900;  
+  text-align:center;  
+  font-size:20px;  
+  line-height:1;  
+}  
+  
+.shopFav{  
+  width:42px;  
+  height:42px;  
+  object-fit:contain;  
+  flex:0 0 42px;  
+  border-radius:8px;  
+  background:#fff;  
+}  
+  
+.shopName{  
+  flex:1;  
+  color:#fff;  
+  font-size:28px;  
+  font-weight:800;  
+  line-height:1.2;  
+  text-align:left;  
+}  
+  
+.shopHead{  
+  display:flex;  
+  align-items:center;  
+  gap:12px;  
+  width:100%;  
+}  
+
+</style>            
+<script>
+let currentCountry = localStorage.getItem("selectedCountry") || "india";
+let currentCategory = "all";
+let resetTimer = null;
+
+// MASTER CATEGORY CONFIG (button + dropdown + touch window എല്ലാം ഇതിൽ നിന്ന്)
+const categoryConfig = {
+  all: {
+    code: "all",
+    btn: "ALL",
+    label: "all",
+    desc: "all shops & commercial services"
+  },
+  electronics: {
+    code: "electronics",
+    btn: "ELECTRONICS",
+    label: "electronics",
+    desc: "electronics, mobiles, computers, gadgets & accessories"
+  },
+  home: {
+    code: "home",
+    btn: "HOME",
+    label: "home",
+    desc: "home appliances, kitchen, furniture, decor, garden, tools & home essentials"
+  },
+  fashion: {
+    code: "fashion",
+    btn: "FASHION",
+    label: "fashion",
+    desc: "men, women, kids, baby, clothing, footwear, bags & fashion accessories"
+  },
+  beauty: {
+    code: "beauty",
+    btn: "BEAUTY",
+    label: "beauty",
+    desc: "skincare, haircare, cosmetics, makeup, fragrances & personal care"
+  },
+  health: {
+    code: "health",
+    btn: "HEALTH",
+    label: "health",
+    desc: "pharmacy, hospitals, clinics, medical equipment, wellness, ayurveda & supplements"
+  },
+  food: {
+    code: "food",
+    btn: "FOOD",
+    label: "food",
+    desc: "grocery, daily needs, fruits, vegetables, dairy, bakery, meat, seafood, restaurants & food delivery"
+  },
+  sports: {
+    code: "sports",
+    btn: "SPORTS",
+    label: "sports",
+    desc: "sports, fitness, gym, outdoor, camping, cycling & exercise equipment"
+  },
+  travel: {
+    code: "travel",
+    btn: "TRAVEL",
+    label: "travel",
+    desc: "flights, hotels, bus, train, taxi, holidays, visa, cruises & car rental"
+  },
+  books: {
+    code: "books",
+    btn: "BOOKS",
+    label: "books",
+    desc: "books, education, courses, ebooks, learning, exams, stationery & study materials"
+  },
+  software: {
+    code: "software",
+    btn: "SOFTWARE",
+    label: "software",
+    desc: "apps, ai tools, saas, hosting, domains, cloud, security & digital services"
+  },
+  business: {
+    code: "business",
+    btn: "BUSINESS",
+    label: "business",
+    desc: "office supplies, wholesale, b2b, printing, packaging, industrial products & business services"
+  },
+  jewellery: {
+    code: "jewellery",
+    btn: "JEWELLERY",
+    label: "jewellery",
+    desc: "gold, diamond, silver, platinum, gemstones, bridal jewellery, luxury jewellery & watches"
+  },
+  automotive: {
+    code: "automotive",
+    btn: "AUTOMOTIVE",
+    label: "automotive",
+    desc: "cars, bikes, evs, tyres, batteries, spare parts, accessories, oils, lubricants & vehicle services"
+  }
+};
+
+// ബട്ടൺ ഓർഡർ (12 main buttons)
+const buttonOrder = [
+  "all",
+  "electronics",
+  "home",
+  "fashion",
+  "beauty",
+  "health",
+  "food",
+  "sports",
+  "travel",
+  "books",
+  "software",
+  "business"
+];
+
+const categoryButtons   = document.getElementById("categoryButtons");
+const categorySearch    = document.getElementById("categorySearch");
+const allCategoriesSelect = document.getElementById("allCategories");
+const categoryHeading   = document.getElementById("categoryHeading");
+const categoryShops     = document.getElementById("categoryShops");
+const selectedCountryBox = document.getElementById("selectedCountryBox");
+const categoryCountry   = document.getElementById("categoryCountry");
+
+// existing colours 그대로
+const colorSet = [
+  "#00C853","#2196F3","#F44336","#FF9800","#9C27B0",
+  "#00BCD4","#E91E63","#FFC107","#009688","#795548"
+];
+
+// ഇൻ-ആക്റ്റിവിറ്റി ടൈംഔട്ട് റീസെറ്റ് ലോജിക്ക് (3 മിനിറ്റ് ഉപയോഗിച്ചില്ലെങ്കിൽ ALL ലോട്ട് മാറും)
+function startInactivityTimer() {
+  clearTimeout(resetTimer);
+  resetTimer = setTimeout(() => {
+    if (currentCategory !== "all") {
+      triggerBackToAll();
+    }
+  }, 180000); // 3 മിനിറ്റ്
+}
+
+// CATEGORY BUTTONS SETUP
+function setupCategoryButtons() {
+  categoryButtons.innerHTML = "";
+  buttonOrder.forEach((key, i) => {
+    const cfg = categoryConfig[key];
+    if (!cfg) return;
+
+    const btn = document.createElement("button");
+    btn.className = "categoryBtn";
+    btn.textContent = cfg.btn; // uppercase label
+    btn.style.borderLeftColor = colorSet[i % colorSet.length];
+
+    btn.onclick = () => {
+      document.querySelectorAll(".categoryBtn").forEach(x => x.classList.remove("active"));
+      btn.classList.add("active");
+      currentCategory = cfg.code;
+      renderCategory(cfg.code);
+      startInactivityTimer();
+    };
+
+    categoryButtons.appendChild(btn);
+  });
+}
+
+// DROPDOWN / TOUCH WINDOW MASTER
+function setupCategoryDropdown() {
+  allCategoriesSelect.innerHTML = "";
+
+  // top ALL option
+  const allOpt = document.createElement("option");
+  allOpt.value = "all";
+  allOpt.textContent = "ALL CATEGORIES";
+  allCategoriesSelect.appendChild(allOpt);
+
+  // rest from master config
+  Object.keys(categoryConfig).forEach(key => {
+    if (key === "all") return;
+    const cfg = categoryConfig[key];
+    const opt = document.createElement("option");
+    opt.value = cfg.code;
+    opt.textContent = cfg.btn; // same as button
+    allCategoriesSelect.appendChild(opt);
+  });
+
+  allCategoriesSelect.onchange = () => {
+    const val = allCategoriesSelect.value;
+    if (val === "all") {
+      triggerBackToAll();
+      return;
+    }
+
+    currentCategory = val;
+
+    // button active sync
+    document.querySelectorAll(".categoryBtn").forEach(btn => {
+      btn.classList.remove("active");
+      const cfg = categoryConfig[val];
+      if (cfg && btn.textContent === cfg.btn) {
+        btn.classList.add("active");
+      }
+    });
+
+    renderCategory(currentCategory);
+
+    // dropdown reset to ALL text
+    allCategoriesSelect.value = "all";
+    startInactivityTimer();
+  };
+}
+
+// SEARCH
+categorySearch.addEventListener("input", function () {
+  const value = this.value.toLowerCase().trim();
+  startInactivityTimer();
+
+  if (value === "") {
+    renderCategory(currentCategory);
+    return;
+  }
+
+  let allShopsOfCountry = countryShops[currentCountry] || [];
+  let filtered = allShopsOfCountry.filter(shop =>
+    (shop.n || "").toLowerCase().includes(value)
+  );
+
+  categoryHeading.innerHTML = `
+    SEARCH RESULTS (${filtered.length})
+    <button class="back-all-btn" onclick="triggerBackToAll()">BACK TO ALL</button>
+  `;
+
+  categoryShops.innerHTML = "";
+
+  filtered.forEach((shop, index) => {
+    createShopCard(shop, index);
+  });
+});
+
+// COUNTRY CHANGE (PART 1)
+function changeCountry(countryName) {
+  currentCountry = countryName.toLowerCase().trim();
+  if (selectedCountryBox) {
+    selectedCountryBox.textContent = "SELECTED COUNTRY - " + currentCountry.toUpperCase();
+  }
+  if (categoryCountry) {
+    categoryCountry.innerHTML = `SHOP ON <span class="green">${currentCountry.toUpperCase()}</span>`;
+  }
+  renderCategory(currentCategory);
+}
+
+function triggerBackToAll() {
+  currentCategory = "all";
+  document.querySelectorAll(".categoryBtn").forEach(x => x.classList.remove("active"));
+  categorySearch.value = "";
+  renderCategory("all");
+}
+
+// MAIN RENDER
+function renderCategory(cat) {
+  const isAll = (cat === "all");
+  const cfg = categoryConfig[cat] || categoryConfig.all;
+
+  if (isAll) {
+    categoryHeading.innerHTML = `
+      ALL
+      <span class="catDesc">${cfg.desc}</span>
+    `;
+  } else {
+    categoryHeading.innerHTML = `
+      ${cfg.btn}
+      <span class="catDesc">${cfg.desc}</span>
+      <button class="back-all-btn" onclick="triggerBackToAll()">BACK TO ALL</button>
+    `;
+  }
+
+  categoryShops.innerHTML = "";
+
+  let shops = countryShops[currentCountry] || [];
+
+  if (!isAll) {
+    // ഇപ്പോൾ simple includes; later നമുക്ക് c logic fine-tune ചെയ്യാം
+    shops = shops.filter(shop =>
+      (shop.c || "").toLowerCase().includes(cfg.code)
+    );
+  }
+
+  if (shops.length === 0) {
+    categoryShops.innerHTML =
+      "<div style='text-align:center;padding:20px;color:#888;'>No shops found!</div>";
+    return;
+  }
+
+  shops.forEach((shop, index) => {
+    createShopCard(shop, index);
+  });
+}
+
+// SHOP CARD
+function createShopCard(shop, index) {
+  let host = "";
+  try {
+    host = new URL(shop.u).hostname;
+  } catch (e) {}
+
+  const leftColor = colorSet[index % colorSet.length];
+
+  const card = document.createElement("a");
+  card.href = shop.u;
+  card.target = "_blank";
+  card.className = "shopCard";
+  card.style.borderLeftColor = leftColor;
+
+  card.innerHTML = `
+    <div class="shopDot">${(shop.a || "").trim() ? "" : "."}</div>
+    <div class="shopHead">
+      <img class="shopFav"
+           src="https://www.google.com/s2/favicons?domain=${host}&sz=64"
+           loading="lazy" alt="">
+      <div class="shopName" translate="no">${shop.n}</div>
+    </div>
+  `;
+  categoryShops.appendChild(card);
+}
+
+// SET COUNTRY (used on load)
+function setCountry(country) {
+  currentCountry = country.toLowerCase().trim();
+  if (selectedCountryBox) {
+    selectedCountryBox.textContent = "SELECTED COUNTRY - " + currentCountry.toUpperCase();
+  }
+  if (categoryCountry) {
+    categoryCountry.innerHTML = `SHOP ON <span class="green">${currentCountry.toUpperCase()}</span>`;
+  }
+  triggerBackToAll();
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+  setupCategoryButtons();
+  setupCategoryDropdown();
+
+  const saved = localStorage.getItem("selectedCountry") || "india";
+  setCountry(saved);
+
+  // global change hook
+  window.renderCountry = function (c) {
+    setCountry(c);
+  };
+});
+
+</script>
+    
+
+</body>
+</html>
