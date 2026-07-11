@@ -438,6 +438,8 @@ console.error('Three.js init error:', e);
 } 
 
 // ഗൂഗിൾ ട്രാൻസ്ലേഷൻ എലമെന്റ് സൈറ്റിലേക്ക് ഇനിഷ്യലൈസ് ചെയ്യുന്ന ഫംഗ്ഷൻ
+ 
+// ഗൂഗിൾ ട്രാൻസ്ലേഷൻ എലമെന്റ് സൈറ്റിലേക്ക് ഇനിഷ്യലൈസ് ചെയ്യുന്ന ഫംഗ്ഷൻ
 function googleTranslateElementInit() {
 try {
 if (window.google && google.translate && google.translate.TranslateElement) {
@@ -447,6 +449,9 @@ new google.translate.TranslateElement({ pageLanguage: 'en', autoDisplay: false }
 console.error('Google Translate init error:', e);
 }
 } 
+
+// RULE: Language മാറുമ്പോഴും shop/country മാറരുത്.
+// => last selectedCountry വീണ്ടും load ചെയ്യണം.
 
 // ബട്ടണുകളിൽ ക്ലിക്ക് ചെയ്യുമ്പോൾ ഓരോ പ്രത്യേക ഭാഷകളിലേക്ക് സൈറ്റ് മാറ്റാനുള്ള ലോജിക്
 function changeLang(langCode) {
@@ -459,7 +464,19 @@ select.dispatchEvent(new Event('change'));
 } catch (e) {
 console.error('Language change error:', e);
 }
+
+// ഭാഷ മാറിയാലും അവസാനമായി തിരഞ്ഞ country വീണ്ടും load ചെയ്യുക
+try {
+const savedCountry = localStorage.getItem("selectedCountry") || "india";
+if (typeof setSelectedCountry === "function") {
+setSelectedCountry(savedCountry);
+}
+} catch (e) {
+console.error('Country reapply after language change error:', e);
+}
 } 
+
+// RULE: English-ലേക്ക് reset ചെയ്താലും shop/country മാറരുത്.
 
 // തിരികെ ഇംഗ്ലീഷ് ഭാഷയിലേക്ക് തന്നെ മാറ്റാനുള്ള റീസെറ്റ് ഫംഗ്ഷൻ
 function resetToEnglish() {
@@ -471,6 +488,16 @@ select.dispatchEvent(new Event('change'));
 }
 } catch (e) {
 console.error('Reset language error:', e);
+}
+
+// ഇംഗ്ലീഷിലേക്ക് reset ചെയ്താലും shops വീണ്ടും വരണം
+try {
+const savedCountry = localStorage.getItem("selectedCountry") || "india";
+if (typeof setSelectedCountry === "function") {
+setSelectedCountry(savedCountry);
+}
+} catch (e) {
+console.error('Country reapply after reset error:', e);
 }
 } 
 
@@ -505,11 +532,9 @@ if (renderer) renderer.dispose();
 if (animateRef) cancelAnimationFrame(animateRef);
 } catch (e) {}
 });
-  
-
 </script>
 <script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit">
-                        </script>
+</script>
  <div id="basBalloonWrap" class="notranslate"> 
 
 <div id="installBall" class="bas-ball white-b" onclick="handleInstallTap()">
