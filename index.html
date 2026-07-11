@@ -9048,15 +9048,18 @@ a:""
           
 
  <script>
-window.allCountriesList = [ ... ];
-const allCountriesList = window.allCountriesList;
-
 const allCountries = document.getElementById("allCountries");
 const featuredShops = document.getElementById("featuredShops");
-
+window.allCountriesList = [
+  "afghanistan",
+  "albania",
+  ...
+  "usa",
+  ...
+];
+const allCountriesList = window.allCountriesList;
 window.countryShops = window.countryShops || {};
 const loadedCountries = {};
-  
 
 // രാജ്യം തിരഞ്ഞെടുക്കുന്നു
 function setSelectedCountry(country) {
