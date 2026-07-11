@@ -9122,14 +9122,7 @@ function fetchExternalCountryJS(countryName) {
         return;
     }
 
-    // Already Exists
-    if (window.countryShops && window.countryShops[countryName]) {
-
-        loadedCountries[countryName]=true;
-
-        loadShops(countryShops[countryName]);
-        syncCategory(countryName);
-
+     
         return;
     }
 
