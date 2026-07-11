@@ -16,6 +16,40 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"> 
 
 <style>
+<style>
+/* Google Translate top bar + iframe കഠിനമായി ബ്ലോക്ക് ചെയ്യുന്നു */
+.goog-te-banner-frame.skiptranslate,
+iframe.goog-te-banner-frame,
+.skiptranslate.goog-te-banner-frame {
+    display: none !important;
+    visibility: hidden !important;
+}
+
+/* body top offset Google ചേർക്കുന്നത് reset ചെയ്യുന്നു */
+body {
+    top: 0px !important;
+    position: static !important;
+}
+
+/* Google Translate tooltip / opinion / highlight ഒക്കെ ബ്ലോക്ക് */
+#goog-gt-tt,
+.goog-tooltip,
+.goog-tooltip:hover,
+.goog-text-highlight,
+.goog-gt-highlight,
+.goog-gt-spellmark,
+.gt-baf-container,
+.gt-baf-footer {
+    display: none !important;
+    visibility: hidden !important;
+}
+
+/* Translate wrapper / gadget icon hide */
+.goog-te-gadget-icon {
+    display: none !important;
+}
+</style>
+ 
 /* CODE NO:1 FIX */
 /* എടുത്തു കാണിക്കേണ്ട പ്രധാന ഹെഡിംഗുകളുടെയും ടെക്സ്റ്റുകളുടെയും കളറുകൾ ലോക്ക് ചെയ്യുന്നു */
 h1 { color:#fff !important; }
