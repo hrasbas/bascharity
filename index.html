@@ -9048,23 +9048,14 @@ a:""
           
 
  <script>
+window.allCountriesList = [ ... ];
+const allCountriesList = window.allCountriesList;
+
+const allCountries = document.getElementById("allCountries");
+const featuredShops = document.getElementById("featuredShops");
 
 window.countryShops = window.countryShops || {};
 const loadedCountries = {};
-
-const allCountriesList = [
-  // നിന്റെ countries list
-];
-
-window.allCountriesList = allCountriesList;
-
-allCountriesList.forEach(country => {
-    const option = document.createElement("option");
-    option.value = country;
-    option.textContent = country.toUpperCase();
-    allCountries.appendChild(option);
-});
- </script>
   
   <script>
 // രാജ്യം തിരഞ്ഞെടുക്കുന്നു
