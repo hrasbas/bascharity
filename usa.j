@@ -99,4 +99,4 @@ countryShops.usa = [
 { i:98, n:"nautica", c:"fashion,business", u:"https://www.nautica.com", d:"fashion brand with nautical inspired clothing and casual wear.", k:"nautica usa,nautical clothing brand,casual fashion store,men and women apparel", a:"" },
 { i:99, n:"oshkosh bgosh", c:"fashion,business", u:"https://www.oshkosh.com", d:"kids clothing brand offering durable outfits, overalls and casual wear.", k:"oshkosh bgosh usa,kids clothing store,overalls and outfits,children apparel", a:"" },
 { i:100, n:"peloton", c:"sports,business", u:"https://www.onepeloton.com", d:"fitness brand offering connected bikes, treadmills and workout subscriptions.", k:"peloton usa,home fitness bike,connected workouts,treadmill and classes,fitness subscription service", a:"" }
-  ];
+];
