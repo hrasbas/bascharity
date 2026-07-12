@@ -1,4 +1,4 @@
-countryShops.albania = [
+countryShops.usa = [
   { id: 1, n: "Big Market", c: "general, supermarket, grocery, food, home", u: "https://bigmarket.al", a: "" },
   { id: 2, n: "SPAR Albania", c: "general, supermarket, grocery, food, beverages", u: "https://spar.al", a: "" },
   { id: 3, n: "Conad Albania", c: "general, supermarket, grocery, food", u: "https://conad.al", a: "" },
