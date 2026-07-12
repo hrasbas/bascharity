@@ -1,6 +1,6 @@
-countryShops.afghanistan =[
-{
-id: 1,
+countryShops.afghanistan= [
+  {
+ id: 1,
 n: "E-Tohfa",
 c: "general, marketplace, shopping, fashion, electronics, mobile, home, beauty, health, books, gifts, flowers, kids",
 u: "https://www.e-tohfa.com",
