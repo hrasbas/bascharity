@@ -524,9 +524,9 @@ a: ""
 
 { id: 281, n: "Society for Science", c: "general, books, education, science", u: "https://www.societyforscience.org", a: "" },
 
-{ id: 282, n: "eBay", c: "general, shopping, electronics, fashion, collectibles", u: "https://www.ebay.com", a: "" },
 
-{ id: 283, n: "AliExpress", c: "general, shopping, electronics, fashion, home", u: "https://www.aliexpress.com", a: "" },
+
+
 
 { id: 284, n: "Alibaba", c: "general, wholesale, business, marketplace", u: "https://www.alibaba.com", a: "" },
 
