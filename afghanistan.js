@@ -961,7 +961,7 @@ a: ""
 
 { id: 499, n: "Avast", c: "general, security, antivirus, software", u: "https://www.avast.com", a: "" },
 
-{ id: 500, n: "AVG", c: "general, security, antivirus, software", u: "https://www.avg.com", a: "" }
+{ id: 500, n: "AVG", c: "general, security, antivirus, software", u: "https://www.avg.com", a: "" },
  
  ];
 
