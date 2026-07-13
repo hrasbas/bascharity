@@ -9135,8 +9135,7 @@ function fetchExternalCountryJS(countryName) {
     script.id = "dynamic-country-script";
 
     // FIXED REGEX (small correction: s instead of s)
-    script.src = "./" + countryName.replace(/s+/g, "_") + ".js";
-
+    script.src = "./" + countryName.replace(/\s+/g, "_") + ".js";
     script.onload = function () {
 
         loadedCountries[countryName] = true;
