@@ -9049,14 +9049,14 @@ a:""
 
  
 
-        <script>
+  <script>
 const allCountries = document.getElementById("allCountries");
 const featuredShops = document.getElementById("featuredShops");
 
 window.countryShops = window.countryShops || {};
 const loadedCountries = {};
 
-// Dropdown നിറയ്ക്കുന്നു
+// dropdown നിറയ്ക്കുന്നു
 allCountriesList.forEach(country => {
     const option = document.createElement("option");
     option.value = country;
@@ -9098,15 +9098,15 @@ function renderCountry(country) {
     setSelectedCountry(country);
 }
 
-function syncCategory(countryName){
-    if(typeof changeCountry==="function"){
+function syncCategory(countryName) {
+    if (typeof changeCountry === "function") {
         changeCountry(countryName);
     }
 }
 
 function fetchExternalCountryJS(countryName) {
 
-    // Already Loaded
+    // already loaded
     if (loadedCountries[countryName]) {
 
         loadShops(countryShops[countryName]);
@@ -9114,55 +9114,51 @@ function fetchExternalCountryJS(countryName) {
         return;
     }
 
-    // Already Exists
+    // already exists in window.countryShops
     if (window.countryShops && window.countryShops[countryName]) {
 
-        loadedCountries[countryName]=true;
+        loadedCountries[countryName] = true;
 
         loadShops(countryShops[countryName]);
         syncCategory(countryName);
-
         return;
     }
 
     featuredShops.innerHTML =
-        "<div style='text-align:center;padding:20px;color:#ff9800;font-weight:bold;'>Loading Shops...</div>";
+        "<div style='text-align:center;padding:20px;color:#ff9800;font-weight:bold;'>Loading shops...</div>";
 
-    const oldScript=document.getElementById("dynamic-country-script");
-    if(oldScript) oldScript.remove();
+    const oldScript = document.getElementById("dynamic-country-script");
+    if (oldScript) oldScript.remove();
 
-    const script=document.createElement("script");
+    const script = document.createElement("script");
 
-    script.id="dynamic-country-script";
+    script.id = "dynamic-country-script";
 
-    // FIXED REGEX
-    script.src="./"+countryName.replace(/s+/g,"_")+".js";
+    // FIXED REGEX (small correction: s instead of s)
+    script.src = "./" + countryName.replace(/s+/g, "_") + ".js";
 
-    script.onload=function(){
+    script.onload = function () {
 
-        loadedCountries[countryName]=true;
+        loadedCountries[countryName] = true;
 
-        if(window.countryShops && window.countryShops[countryName]){
+        if (window.countryShops && window.countryShops[countryName]) {
 
             loadShops(countryShops[countryName]);
-
             syncCategory(countryName);
 
-            allCountries.selectedIndex=0;
+        } else {
 
-        }else{
-
-            featuredShops.innerHTML=
-            "<div style='text-align:center;padding:20px;color:red;'>No Shop Data</div>";
+            featuredShops.innerHTML =
+                "<div style='text-align:center;padding:20px;color:red;'>No shop data</div>";
 
         }
 
     };
 
-    script.onerror=function(){
+    script.onerror = function () {
 
-        featuredShops.innerHTML=
-        "<div style='text-align:center;padding:20px;color:red;'>Country File Not Found</div>";
+        featuredShops.innerHTML =
+            "<div style='text-align:center;padding:20px;color:red;'>Country file not found</div>";
 
     };
 
@@ -9170,38 +9166,37 @@ function fetchExternalCountryJS(countryName) {
 
 }
 
-function loadShops(shopsArray){
+function loadShops(shopsArray) {
 
-    featuredShops.innerHTML="";
+    featuredShops.innerHTML = "";
 
-    if(!shopsArray || shopsArray.length===0){
+    if (!shopsArray || shopsArray.length === 0) {
 
-        featuredShops.innerHTML=
-        "<div style='text-align:center;font-weight:bold;padding:20px;'>No shops available.</div>";
+        featuredShops.innerHTML =
+            "<div style='text-align:center;font-weight:bold;padding:20px;'>No shops available.</div>";
 
         return;
     }
 
-    const colors=[
-        "#00C853","#2196F3","#F44336","#FF9800","#9C27B0",
-        "#00BCD4","#E91E63","#FFC107","#009688","#795548"
+    const colors = [
+        "#00C853", "#2196F3", "#F44336", "#FF9800", "#9C27B0",
+        "#00BCD4", "#E91E63", "#FFC107", "#009688", "#795548"
     ];
 
-    shopsArray.slice(0,10).forEach((shop,index)=>{
+    shopsArray.slice(0, 10).forEach((shop, index) => {
 
-        let host="";
+        let host = "";
 
-        try{
-            host=new URL(shop.u).hostname;
-        }catch(e){}
+        try {
+            host = new URL(shop.u).hostname;
+        } catch (e) { }
 
-        featuredShops.innerHTML+=`
-
+        featuredShops.innerHTML += `
 <a href="${shop.u}" target="_blank"
 class="shopCard"
-style="border-left-color:${colors[index%10]}">
+style="border-left-color:${colors[index % 10]}">
 
-<div class="shopDot">${(shop.a||"").trim() ? "" : "."}</div>
+<div class="shopDot">${(shop.a || "").trim() ? "" : "."}</div>
 
 <img class="shopFav"
 src="https://www.google.com/s2/favicons?domain=${host}&sz=64"
@@ -9212,46 +9207,42 @@ ${shop.n}
 </div>
 
 </a>`;
-
     });
 
 }
 
-document.addEventListener("DOMContentLoaded",()=>{
+document.addEventListener("DOMContentLoaded", () => {
 
-    const savedCountry=
-    localStorage.getItem("selectedCountry") || "india";
+    const savedCountry =
+        localStorage.getItem("selectedCountry") || "india";
 
     setSelectedCountry(savedCountry);
 
-    document.querySelectorAll(".country-btn").forEach(btn=>{
+    document.querySelectorAll(".country-btn").forEach(btn => {
 
-        btn.addEventListener("click",function(){
-
+        btn.addEventListener("click", function () {
             // CHANGE: textContent → data-country
             const key = this.getAttribute("data-country") || this.textContent;
             setSelectedCountry(
                 key.trim().toLowerCase()
             );
-
         });
 
     });
 
-    allCountries.addEventListener("change",e=>{
+    allCountries.addEventListener("change", e => {
 
-        if(e.target.value){
+        if (e.target.value) {
 
             setSelectedCountry(e.target.value);
 
-            allCountries.selectedIndex=0;
+            allCountries.selectedIndex = 0;
 
         }
 
     });
 
 });
-
 </script>
 <!-- SL NO 37 : HTML END -->
 <!-- ================================================= -->
