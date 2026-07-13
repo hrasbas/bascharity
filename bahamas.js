@@ -1,4 +1,4 @@
-window.countryShops = window.countryShops || {};
+window.countryShops = window.countryShops || {}; 
 window.countryShops["bahamas"] = [
   {
     i:1,
