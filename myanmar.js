@@ -1,0 +1,23 @@
+// myanmar.js
+
+window.countryShops = window.countryShops || {};
+window.countryShops["myanmar"] = [
+  {
+    i:1,
+    n:"ubuy myanmar",
+    c:"electronics,home,fashion,beauty,health,food,sports,travel,books,jewellery,automotive,business",
+    u:"https://www.ubuy.com.mm/en/",
+    d:"ubuy myanmar is an international online shopping website where customers in myanmar can order over one hundred million imported products including electronics, mobiles and tablets, home goods, fashion, beauty items, books, travel gear, groceries, pet supplies and automotive accessories from global brands at low prices.[web:1233][web:1238][web:1239][web:1240]",
+    k:"ubuy myanmar,international online shopping myanmar,imported electronics mobiles tablets home goods,fashion beauty books travel gear groceries,pet supplies and automotive accessories cross border shopping myanmar",
+    a:""
+  },
+  {
+    i:2,
+    n:"shop.com.mm myanmar online marketplace",
+    c:"electronics,home,fashion,beauty,food,sports,business",
+    u:"https://www.shop.com.mm/",
+    d:"shop.com.mm myanmar online marketplace is one of the biggest ecommerce platforms in myanmar where shoppers buy mobiles, electronics, fashion, home appliances, kids items, beauty products and groceries with nationwide delivery, cash on delivery and frequent deals.[web:1235][web:1236][web:1241][web:1242]",
+    k:"shop.com.mm myanmar online marketplace,biggest ecommerce platform in myanmar,buy mobiles electronics fashion home appliances,beauty products kids items and groceries online,cash on delivery nationwide delivery myanmar",
+    a:""
+  }
+];
