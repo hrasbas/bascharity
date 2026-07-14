@@ -1,0 +1,229 @@
+// yemen.js
+window.countryShops = window.countryShops || {};
+window.countryShops["yemen"] = [
+  {
+    i:1,
+    n:"yesouq",
+    c:"electronics,home,fashion,beauty,health,food,sports,books,business",
+    u:"https://yesouq.com/",
+    d:"yesouq is one of the largest ecommerce marketplaces in yemen where millions of products from thousands of merchants are offered across electronics, fashion, beauty, home, food, sports and books for convenient online shopping in yemen.",
+    k:"yesouq,yemen online shopping marketplace,electronics mobiles and gadgets,fashion clothing beauty and perfumes,home appliances groceries and sports,books and learning products ecommerce",
+    a:""
+  },
+  {
+    i:2,
+    n:"goxip yemen",
+    c:"fashion,beauty,business",
+    u:"https://www.goxip.com/ye/en",
+    d:"goxip yemen is a fashion, beauty and lifestyle online shopping destination that aggregates clothing, shoes and beauty products from thousands of brands for shoppers in yemen.",
+    k:"goxip yemen,online fashion shopping yemen,clothing shoes and accessories,beauty and lifestyle products,brands aggregated in one platform",
+    a:""
+  },
+  {
+    i:3,
+    n:"opensooq yemen",
+    c:"automotive,home,fashion,business",
+    u:"https://ye.opensooq.com/en",
+    d:"opensooq yemen is an online classifieds and marketplace where users can browse and post listings to buy and sell cars, property, furniture, clothing and services.",
+    k:"opensooq yemen,online marketplace for cars and property,classifieds for furniture and clothing,services and jobs listings yemen,buy and sell platform",
+    a:""
+  },
+  {
+    i:4,
+    n:"yemenmall",
+    c:"electronics,home,fashion,food,business",
+    u:"https://yemenmall.com/",
+    d:"yemenmall is a broad online marketplace in yemen offering electronics, fashion and daily essentials with a focus on convenient home delivery for local shoppers.",
+    k:"yemenmall,yemen ecommerce marketplace,electronics and mobile phones,fashion clothing and accessories,daily essentials and groceries online",
+    a:""
+  },
+  {
+    i:5,
+    n:"sanabuy",
+    c:"food,home,business",
+    u:"https://sanabuy.com/",
+    d:"sanabuy is a yemen based online grocery and household goods store focusing on local produce, packaged foods and home essentials with quick delivery in sanaa and nearby areas.",
+    k:"sanabuy,online grocery shopping yemen,local produce and packaged foods,home essentials delivery sanaa,yemen supermarket ecommerce",
+    a:""
+  },
+  {
+    i:6,
+    n:"adenshop",
+    c:"electronics,business",
+    u:"https://adenshop.com/",
+    d:"adenshop is an online electronics retailer in yemen specializing in mobile phones, computers and accessories with strong logistics coverage in aden and southern regions.",
+    k:"adenshop,yemen electronics retailer online,mobile phones and computers,tech accessories and gadgets,aden focused ecommerce store",
+    a:""
+  },
+  {
+    i:7,
+    n:"yemenbazaar",
+    c:"home,fashion,jewellery,business",
+    u:"https://yemenbazaar.com/",
+    d:"yemenbazaar is an online marketplace promoting local artisans who sell handmade crafts, fashion items, jewellery and decor products to customers inside yemen and abroad.",
+    k:"yemenbazaar,handmade crafts marketplace yemen,local fashion and jewellery,home decor and artisan products,shop from small makers online",
+    a:""
+  },
+  {
+    i:8,
+    n:"hodeidahmart",
+    c:"food,home,business",
+    u:"https://hodeidahmart.com/",
+    d:"hodeidahmart is an ecommerce site serving western yemen with affordable groceries, packaged foods and household products using cash on delivery and local distribution.",
+    k:"hodeidahmart,affordable groceries western yemen,packaged foods and household products,cash on delivery online store,yemen supermarket ecommerce",
+    a:""
+  },
+  {
+    i:9,
+    n:"maribmarket",
+    c:"food,home,business",
+    u:"https://maribmarket.com/",
+    d:"maribmarket is an online marketplace focused on central yemen residents offering a mix of consumer goods including food staples, home items and everyday products.",
+    k:"maribmarket,consumer goods online marib,food staples and groceries,home items and daily products,yemen regional ecommerce site",
+    a:""
+  },
+  {
+    i:10,
+    n:"taizonline",
+    c:"electronics,fashion,business",
+    u:"https://taizonline.com/",
+    d:"taizonline is a regional ecommerce platform emphasizing fashion, accessories and electronics for customers in taiz and surrounding areas with simple online ordering.",
+    k:"taizonline,online shopping taiz yemen,fashion clothing and accessories,electronics and mobiles marketplace,regional ecommerce platform",
+    a:""
+  },
+  {
+    i:11,
+    n:"sanatech",
+    c:"electronics,software,business",
+    u:"https://sanatech.com/",
+    d:"sanatech is a tech focused marketplace in yemen offering gadgets, computer hardware, software licenses and digital services for tech savvy consumers and small businesses.",
+    k:"sanatech,tech marketplace yemen,gadgets and computer hardware,software licenses and digital services,online store for tech enthusiasts",
+    a:""
+  },
+  {
+    i:12,
+    n:"emahallat",
+    c:"electronics,home,fashion,business",
+    u:"https://www.emahallat.com/",
+    d:"emahallat is a yemen ecommerce store that carries products across electronics, fashion and home categories providing an organized online shopping experience with delivery.",
+    k:"emahallat,yemen ecommerce store,electronics mobiles and accessories,fashion clothing and shoes,home products and appliances online",
+    a:""
+  },
+  {
+    i:13,
+    n:"kannour",
+    c:"fashion,business",
+    u:"https://www.kannour.com/",
+    d:"kannour is an online clothing and accessories shop serving yemen and nearby markets with modest wear, casual outfits and fashion items for men and women.",
+    k:"kannour,online clothing store yemen,modest wear and casual outfits,fashion accessories for men and women,yemen fashion ecommerce",
+    a:""
+  },
+  {
+    i:14,
+    n:"ishterry",
+    c:"electronics,home,fashion,business",
+    u:"https://ishterry.com/",
+    d:"ishterry is an ecommerce platform in yemen that lets customers purchase electronics, household items and fashion products from multiple sellers in one place.",
+    k:"ishterry,yemen ecommerce platform,electronics and household items,fashion products marketplace,multi seller online shopping",
+    a:""
+  },
+  {
+    i:15,
+    n:"miscota yemen",
+    c:"food,health,business",
+    u:"https://ye.miscota.com/",
+    d:"miscota yemen is an online pet shop offering pet food, treats and health supplies for dogs, cats and other animals with delivery across yemen.",
+    k:"miscota yemen,online pet shop yemen,pet food and treats,pet health supplies and accessories,animal care ecommerce store",
+    a:""
+  },
+  {
+    i:16,
+    n:"petness yemen",
+    c:"food,health,business",
+    u:"https://ye.petness.com/",
+    d:"petness yemen is an ecommerce site dedicated to pet food and supplies providing kibble, canned food, supplements and accessories for pet owners in yemen.",
+    k:"petness yemen,pet food and supplies yemen,kibble canned food and treats,pet supplements and accessories,online store for pet owners",
+    a:""
+  },
+  {
+    i:17,
+    n:"shopdecor yemen",
+    c:"home,business",
+    u:"https://ye.shopdecor.com/",
+    d:"shopdecor yemen is an online decor and art store showcasing wall art, home accessories and design items for modern interiors with shipping options to yemen.",
+    k:"shopdecor yemen,home decor online yemen,wall art and accessories,design items for modern interiors,decor ecommerce platform",
+    a:""
+  },
+  {
+    i:18,
+    n:"anayees",
+    c:"fashion,sports,business",
+    u:"https://anayees.com/",
+    d:"anayees is a fashion ecommerce brand offering sportswear, casual clothing and team apparel targeted at young people and active shoppers in yemen.",
+    k:"anayees,fashion sportswear online yemen,casual clothing and team apparel,young and active shoppers marketplace,yemen clothing ecommerce",
+    a:""
+  },
+  {
+    i:19,
+    n:"warazan",
+    c:"food,home,business",
+    u:"https://warazan.com/",
+    d:"warazan is an online retail site in yemen selling packaged foods, snacks and select household goods with easy ordering and simple delivery options.",
+    k:"warazan,packaged foods and snacks yemen,household goods online store,easy ordering and delivery,yemen grocery ecommerce",
+    a:""
+  },
+  {
+    i:20,
+    n:"rawaia",
+    c:"electronics,home,business",
+    u:"https://www.rawaia.com/",
+    d:"rawaia is a yemen based ecommerce store where customers can shop for electronics, small appliances and home products with secure online payment.",
+    k:"rawaia,yemen online store,electronics and small appliances,home products and essentials,secure ecommerce shopping",
+    a:""
+  },
+  {
+    i:21,
+    n:"oskran",
+    c:"home,fashion,business",
+    u:"https://oskran.com/",
+    d:"oskran is an online shopping site presenting a curated mix of home goods, decor and fashion accessories for lifestyle conscious shoppers in yemen.",
+    k:"oskran,home goods and decor yemen,fashion accessories curated store,lifestyle focused ecommerce,online shopping platform yemen",
+    a:""
+  },
+  {
+    i:22,
+    n:"bazaraden",
+    c:"electronics,home,fashion,business",
+    u:"https://bazaraden.com/",
+    d:"bazaraden is a general marketplace in yemen offering electronics, home products and fashion items from various vendors through a single online storefront.",
+    k:"bazaraden,general marketplace yemen,electronics home and fashion items,multi vendor online storefront,yemen ecommerce platform",
+    a:""
+  },
+  {
+    i:23,
+    n:"raffih",
+    c:"fashion,sports,business",
+    u:"https://raffih.com/",
+    d:"raffih is a shopify based store selling athletic apparel, team sports clothing and sporting goods for customers in yemen and the region.",
+    k:"raffih,athletic apparel store yemen,team sports clothing and gear,sporting goods ecommerce,online sportswear shopping",
+    a:""
+  },
+  {
+    i:24,
+    n:"yemeni shop",
+    c:"fashion,jewellery,business",
+    u:"https://yemeni.shop/en/",
+    d:"yemeni shop is an online store featuring traditional yemeni clothing for men, women and children along with cultural accessories and jewellery for customers worldwide.",
+    k:"yemeni shop,traditional yemeni clothing online,men women and children outfits,cultural accessories and jewellery,heritage fashion ecommerce",
+    a:""
+  },
+  {
+    i:25,
+    n:"yemenexpress store",
+    c:"electronics,home,fashion,food,business",
+    u:"https://yemenexpress.com/",
+    d:"yemenexpress store combines ecommerce and fast delivery services in yemen, offering electronics, fashion, home goods and groceries with courier based logistics.",
+    k:"yemenexpress store,electronics and fashion online yemen,home goods and groceries,fast delivery and courier services,ecommerce with logistics platform",
+    a:""
+  }
+];
