@@ -10447,6 +10447,158 @@ if(target) target.scrollIntoView({ behavior:"smooth", block:"start" });
 }
 </script>
 
+ <style>
+.basglobal-wrapper {
+  max-width: 900px;
+  width: 96%;
+  margin: 20px auto;
+  padding: 0 10px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.basglobal-box {
+  background: #121212;
+  padding: 18px;
+  border-radius: 14px;
+  border: 1px solid #666;
+  color: #fff;
+}
+.basglobal-box h1 { font-size: 24px; text-align: center; margin-bottom: 14px; }
+.basglobal-btn {
+  background: #1a1a1a;
+  padding: 16px;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  cursor: pointer;
+  font-size: 22px;
+  font-weight: 600;
+  border: 1px solid #00e676;
+  border-left: 6px solid #00e676;
+  transition: 0.3s;
+}
+.basglobal-btn.active { border-left: 6px solid #ff5252; background: #222; }
+.basglobal-support {
+  position: fixed;
+  left: 50%;
+  bottom: 0;
+  width: 90%;
+  max-width: 480px;
+  background: #1a1a1a;
+  padding: 24px;
+  padding-bottom: 100px;
+  border-top-left-radius: 18px;
+  border-top-right-radius: 18px;
+  line-height: 1.8;
+  font-size: 22px;
+  color: #ddd;
+  border: 1px solid #666;
+  border-top: 2px solid #00e676;
+  box-shadow: 0 -10px 30px rgba(0,0,0,0.8);
+  transform: translate(-50%,100%);
+  display: none;
+  transition: 0.4s;
+  overflow-y: auto;
+  z-index: 999;
+}
+.basglobal-support.show { transform: translate(-50%, 0); }
+.basglobal-head { font-size: 22px; font-weight: bold; margin-bottom: 12px; color: #ffd54f; }
+.basglobal-big {
+  position: sticky;
+  bottom: 0;
+  background: #00c853;
+  padding: 18px;
+  border-radius: 12px;
+  text-align: center;
+  font-weight: bold;
+  margin-top: 18px;
+  cursor: pointer;
+  font-size: 22px;
+}
+.basglobal-back { background: #333; margin-top: 10px; }
+</style>
+
+<div class="basglobal-wrapper">
+  <div class="basglobal-box">
+    <h1>Bas-Global relief & support</h1>
+    <div id="basglobal-list">
+      <div class="basglobal-btn" onclick="basglobal.open(this,'ifrc')">Red Crescent / Red Cross</div>
+      <div class="basglobal-btn" onclick="basglobal.open(this,'unicef')">UNICEF</div>
+      <div class="basglobal-btn" onclick="basglobal.open(this,'msf')">MSF (Doctors Without Borders)</div>
+      <div class="basglobal-btn" onclick="basglobal.open(this,'unrwa')">UNRWA</div>
+      <div class="basglobal-btn" onclick="basglobal.open(this,'irc')">IRC</div>
+      <div class="basglobal-btn" onclick="basglobal.open(this,'care')">CARE</div>
+      <div class="basglobal-btn" onclick="basglobal.open(this,'save')">Save the Children</div>
+      <div class="basglobal-btn" onclick="basglobal.open(this,'islamic')">Islamic Relief</div>
+    </div>
+  </div>
+</div>
+
+<div id="basglobal-support" class="basglobal-support">
+  <div class="basglobal-head">Details & Donate</div>
+  <p>Many people want to help, but are afraid of scams. This platform helps you reach trusted humanitarian organisations safely.</p>
+  <p>Remember: Your support can save lives and satisfy someone’s hunger.</p>
+  <div class="basglobal-big" onclick="basglobal.go()">View Details & Donate</div>
+  <div class="basglobal-big basglobal-back" onclick="basglobal.close()">Close</div>
+</div>
+
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+  (function() {
+    let basglobalLink = "";
+    let basglobalTimer;
+    const basglobalBox = document.getElementById("basglobal-support");
+    if (!basglobalBox) return;
+
+    function setLink(type){
+      const links = {
+        ifrc: "https://www.ifrc.org/donate",
+        unicef: "https://www.unicef.org/donate",
+        msf: "https://www.doctorswithoutborders.org/donate",
+        unrwa: "https://donate.unrwa.org",
+        irc: "https://www.rescue.org/donate",
+        care: "https://www.care.org/donate",
+        save: "https://www.savethechildren.org/donate",
+        islamic: "https://www.islamic-relief.org/donate"
+      };
+      basglobalLink = links[type] || "";
+    }
+
+    function basglobalClose(){
+      basglobalBox.classList.remove("show");
+      setTimeout(()=>basglobalBox.style.display="none",300);
+      document.querySelectorAll(".basglobal-btn").forEach(btn=>btn.classList.remove("active"));
+      clearTimeout(basglobalTimer);
+    }
+
+    function resetTimer(){
+      clearTimeout(basglobalTimer);
+      basglobalTimer = setTimeout(basglobalClose, 30000);
+    }
+
+    function basglobalGo(){
+      if (basglobalLink) window.open(basglobalLink, "_blank");
+    }
+
+    function basglobalSwitch(el, type){
+      document.querySelectorAll(".basglobal-btn").forEach(btn=>btn.classList.remove("active"));
+      el.classList.add("active");
+      basglobalBox.classList.remove("show");
+      setTimeout(()=>{
+        basglobalBox.style.display = "block";
+        setTimeout(()=>basglobalBox.classList.add("show"),10);
+        setLink(type);
+      }, 250);
+      resetTimer();
+    }
+
+    window.basglobal = {
+      open: basglobalSwitch,
+      go: basglobalGo,
+      close: basglobalClose
+    };
+  })();
+});
+</script>
+
 
 <div id="bas-charity-total-dark-info" style="
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
