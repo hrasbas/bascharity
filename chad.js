@@ -1,95 +1,229 @@
-// chad.js
-
+ // chad.js
 window.countryShops = window.countryShops || {};
 window.countryShops["chad"] = [
   {
     i:1,
-    n:"mossosouk",
-    c:"electronics,home,fashion,automotive,business",
-    u:"https://mossosouk.com",
-    d:"mossosouk is chad's main local online marketplace where users in n'djamena rent cars and buy small items like electronics, clothing and household goods from local sellers.[web:427][web:426]",
-    k:"mossosouk chad,local online marketplace,car rentals n'djamena,small electronics and gadgets,clothing and household goods,shop from local sellers",
+    n:"ubuy chad",
+    c:"electronics,fashion,home,beauty,books,sports,jewellery,automotive,food,business",
+    u:"https://www.ubuy.td/ha/",
+    d:"ubuy chad is an international online shopping platform where customers in chad can order imported electronics, apparel, mobile phones, beauty products and many other categories from global brands with delivery to n’djamena and other cities.[web:1945][web:1947][web:1946]",
+    k:"ubuy chad,international online shopping chad,imported electronics mobiles apparel beauty and home,books sports gear groceries automotive,global brands delivered to chad ubuy",
     a:""
   },
   {
     i:2,
-    n:"mossosouk shopping app",
-    c:"electronics,home,fashion,automotive,business",
-    u:"https://play.google.com/store/apps/details?id=com.mossosouk.shopping&hl=en_US",
-    d:"mossosouk shopping app is a mobile marketplace for chad that helps shoppers discover products from top sellers and order items like electronics, fashion, home goods and cars at good prices.[web:426][web:427]",
-    k:"mossosouk shopping app,chad mobile marketplace,discover best products,top sellers online,electronics fashion home goods,cars and rentals",
+    n:"ubuy chad main site",
+    c:"electronics,fashion,home,beauty,food,business",
+    u:"https://www.chad.ubuy.com/",
+    d:"the main ubuy chad portal highlights curated categories from fashion and electronics to home decor and beauty essentials, making cross border shopping easier for residents of chad.[web:1945][web:1946]",
+    k:"ubuy chad main site,cross border ecommerce chad,fashion electronics home decor and beauty,shop premium brands online",
     a:""
   },
   {
     i:3,
-    n:"ubuy chad",
-    c:"electronics,home,fashion,beauty,health,sports,books,business",
-    u:"https://www.ubuy.td/fr/",
-    d:"ubuy chad is an international online shopping website delivering imported electronics, apparel, mobile phones, beauty products and home goods from global brands at low prices.[web:424][web:425][web:429]",
-    k:"ubuy chad,cross border shopping,imported electronics and mobiles,apparel and fashion,beauty products store,home goods and gadgets,global brands chad",
+    n:"ubuy chad electronics category",
+    c:"electronics,business",
+    u:"https://www.ubuy.td/en/category/electronics-10171",
+    d:"ubuy chad electronics category offers gadgets, laptops, cameras, tvs and accessories from top global brands like samsung and apple for online shoppers in chad.[web:1952]",
+    k:"ubuy chad electronics,online electronics shop chad,gadgets laptops cameras tvs and accessories,top tech brands via ubuy",
     a:""
   },
   {
     i:4,
-    n:"chad ubuy mirror site",
-    c:"electronics,home,fashion,beauty,health,sports,books,business",
-    u:"https://www.chad.ubuy.com/",
-    d:"chad ubuy mirror site also points shoppers to ubuy's large catalog of premium electronics, fashion, beauty, health, sports, books and home products for the chadian market.[web:425][web:429]",
-    k:"chad ubuy mirror site,premium electronics and fashion,beauty health sports products,books and home goods,large catalog for chad shoppers",
+    n:"ubuy chad electronics french",
+    c:"electronics,business",
+    u:"https://www.ubuy.td/fr/category/electronics-10171",
+    d:"ubuy chad also provides its electronics section in french so francophone users can browse and buy phones, computers and other tech products more easily.[web:1953]",
+    k:"ubuy chad electronics french,magasin electronique en ligne tchad,telephones ordinateurs et accessoires,ubuy categorie technologie fr",
     a:""
   },
   {
     i:5,
-    n:"ubuy chad europe imports",
-    c:"electronics,home,fashion,beauty,business",
-    u:"https://www.ubuy.td/en/shop-import-products-from-germany",
-    d:"ubuy chad europe imports page lets customers order made in europe products including electronics, home goods, clothing and beauty items shipped directly to chad.[web:428]",
-    k:"ubuy chad europe imports,made in europe products,electronics and home goods,clothing and beauty items,direct shipping to chad",
+    n:"mossosouk marketplace",
+    c:"electronics,home,fashion,automotive,business",
+    u:"http://mossosouk.com/",
+    d:"mossosouk is an online marketplace based in n’djamena, chad, where users can rent cars and buy small items such as electronics, fashion and home products from local sellers.[web:1951][web:1948]",
+    k:"mossosouk marketplace,online shopping chad,mossosouk car rentals and small items,electronics fashion and home products n’djamena",
     a:""
   },
   {
     i:6,
-    n:"ubuy chad electronics shop",
-    c:"electronics,business",
-    u:"https://www.ubuy.td/en/category/electronics-10171",
-    d:"ubuy chad electronics shop sells branded gadgets, laptops, cameras, tvs and accessories from companies like samsung, apple and sony for online buyers in chad.[web:430]",
-    k:"ubuy chad electronics shop,branded gadgets and laptops,cameras and televisions,electronics accessories,samsung apple sony chad",
+    n:"mossosouk shopping app",
+    c:"electronics,home,fashion,automotive,business,software",
+    u:"https://play.google.com/store/apps/details?id=com.mossosouk.shopping&hl=en_US",
+    d:"mossosouk shopping is an android app that lets chadian users buy and sell products with a simple interface, connecting them to the mossosouk marketplace for local online commerce.[web:1948][web:1951]",
+    k:"mossosouk shopping app,android ecommerce app chad,buy and sell products via mobile,local marketplace access on mossosouk",
     a:""
   },
   {
     i:7,
-    n:"aftership ecommerce stats chad",
-    c:"business",
-    u:"https://www.aftership.com/ecommerce/statistics/regions/td",
-    d:"aftership ecommerce stats chad provides data on how many online stores use platforms like woocommerce and shopify, helping businesses understand the local ecommerce landscape.[web:423]",
-    k:"aftership ecommerce stats chad,online stores by platform,woocommerce and shopify usage,ecommerce landscape data,business insights chad",
+    n:"mossosouk car rentals",
+    c:"automotive,business",
+    u:"http://mossosouk.com/",
+    d:"through mossosouk, customers in n’djamena can rent vehicles online for personal or business use, comparing offers and contacting providers directly on the platform.[web:1951]",
+    k:"mossosouk car rentals,online vehicle rental chad,car hire n’djamena via mossosouk,automotive marketplace service",
     a:""
   },
   {
     i:8,
-    n:"trade.gov chad ecommerce guide",
-    c:"business",
-    u:"https://www.trade.gov/country-commercial-guides/chad-ecommerce",
-    d:"trade.gov chad ecommerce guide explains the limited state of ecommerce in chad and highlights mossoSouk as the main online marketplace for companies exploring the local market.[web:427]",
-    k:"trade.gov chad ecommerce guide,limited ecommerce in chad,mossoSouk main marketplace,companies exploring local market,b2b ecommerce information",
+    n:"mossosouk electronics",
+    c:"electronics,business",
+    u:"http://mossosouk.com/",
+    d:"mossosouk electronics listings include phones, accessories and small gadgets from local merchants, supporting basic online tech shopping in chad where ecommerce is still emerging.[web:1951][web:1949]",
+    k:"mossosouk electronics,online phones and gadgets chad,local merchants selling tech products,basic ecommerce platform mossosouk",
     a:""
   },
   {
     i:9,
-    n:"xform technologies iriba chad ecommerce software",
-    c:"software,business",
-    u:"https://xformtechnologies.com/ecommerce-software-development/ecommerce-software-iriba-chad.php",
-    d:"xform technologies iriba chad ecommerce software offers custom online store solutions, shopping cart systems and marketplace development for businesses in chad.[web:432]",
-    k:"xform technologies iriba chad,ecommerce software development,custom online store solutions,shopping cart systems,digital marketplace development",
+    n:"mossosouk fashion and accessories",
+    c:"fashion,business",
+    u:"http://mossosouk.com/",
+    d:"mossosouk fashion category showcases clothing and accessories offered by sellers in n’djamena, letting customers browse styles and place orders online or by phone.[web:1951]",
+    k:"mossosouk fashion,online clothing and accessories chad,local boutiques on mossosouk,fashion marketplace n’djamena",
     a:""
   },
   {
     i:10,
-    n:"chad austin ecommerce web design",
+    n:"chad ecommerce overview",
     c:"software,business",
-    u:"https://chadaustin.com/web-design-e-commerce/",
-    d:"chad austin ecommerce web design provides turnkey responsive web development for ecommerce stores, helping brands launch professional shopping sites.[web:431]",
-    k:"chad austin ecommerce web design,turnkey responsive web development,ecommerce store design,professional shopping sites,online business solutions",
+    u:"https://www.trade.gov/country-commercial-guides/chad-ecommerce",
+    d:"an ecommerce guide for chad notes that online trade remains very limited due to connectivity and payment challenges, with mossosouk identified as the country’s only local online marketplace.[web:1951][web:1950]",
+    k:"chad ecommerce overview,limited online shopping market,challenges with internet and payments,mossosouk as main marketplace",
+    a:""
+  },
+  {
+    i:11,
+    n:"chad ecommerce websites list",
+    c:"electronics,home,fashion,food,business",
+    u:"https://usabusiness.co.in/e-commerce-websites-chad/",
+    d:"a list of ecommerce websites in chad highlights ubuy and mossosouk as key platforms, showing that most online purchases involve imported goods or local classifieds style sales.[web:1949]",
+    k:"chad ecommerce websites list,online shopping platforms in chad,ubuy and mossosouk key sites,imported goods and local sales",
+    a:""
+  },
+  {
+    i:12,
+    n:"ubuy global platform info",
+    c:"software,business",
+    u:"https://ubuy.com/",
+    d:"the global ubuy site explains that it operates cross border ecommerce in more than 180 countries including chad, aggregating premium products at competitive prices.[web:1946]",
+    k:"ubuy global platform info,cross border ecommerce 180 countries,premium products at competitive prices,ubuy.com corporate site",
+    a:""
+  },
+  {
+    i:13,
+    n:"aftership chad ecommerce stats",
+    c:"software,business",
+    u:"https://www.aftership.com/ecommerce/statistics/regions/td",
+    d:"aftership’s statistics for chad summarize the small number of online stores by category, platform and app usage, reflecting the early stage of ecommerce in the country.[web:1950]",
+    k:"aftership chad ecommerce stats,online store count by category chad,ecommerce market data and insights,early stage online retail",
+    a:""
+  },
+  {
+    i:14,
+    n:"chad online shopping guide",
+    c:"food,home,fashion,business",
+    u:"https://blog.onevasco.com/things-to-buy/chad",
+    d:"a shopping guide for chad describes handmade crafts, local food items and cultural gifts that visitors can buy, and mentions where to find them in markets and small shops, some of which are starting to appear online.[web:1954]",
+    k:"chad online shopping guide,handmade crafts and souvenirs,chadian local food items and gifts,where to shop in chad markets and online",
+    a:""
+  },
+  {
+    i:15,
+    n:"mossosouk small items category",
+    c:"home,food,business",
+    u:"http://mossosouk.com/",
+    d:"mossosouk small items category allows users to list and buy household goods, packaged food and small accessories, acting as a basic online classifieds marketplace for n’djamena residents.[web:1951]",
+    k:"mossosouk small items,household goods and packaged food chad,online classifieds style marketplace,buy and sell small products",
+    a:""
+  },
+  {
+    i:16,
+    n:"mossosouk seller services",
+    c:"software,business",
+    u:"https://play.google.com/store/apps/details?id=com.mossosouk.shopping&hl=en_US",
+    d:"the mossosouk app gives chadian merchants tools to create listings, manage messages and track interest in their products, lowering barriers to enter online commerce.[web:1948]",
+    k:"mossosouk seller services,tools for merchants in chad,create and manage product listings via app,enter online commerce easily",
+    a:""
+  },
+  {
+    i:17,
+    n:"ubuy chad fashion and beauty",
+    c:"fashion,beauty,business",
+    u:"https://www.chad.ubuy.com/",
+    d:"ubuy chad highlights fashion and beauty sections where customers can find clothing, shoes, cosmetics and personal care items not easily available in local stores.[web:1945]",
+    k:"ubuy chad fashion and beauty,online clothing and cosmetics chad,imported shoes and personal care,fill gaps in local retail market",
+    a:""
+  },
+  {
+    i:18,
+    n:"ubuy chad home and decor",
+    c:"home,business",
+    u:"https://www.chad.ubuy.com/",
+    d:"ubuy chad home and decor categories supply bedding, kitchenware and decorative accessories, allowing residents to order home products that are difficult to source locally.[web:1945]",
+    k:"ubuy chad home and decor,online bedding and kitchenware chad,decorative accessories imported,home improvement via ubuy",
+    a:""
+  },
+  {
+    i:19,
+    n:"ubuy chad automotive products",
+    c:"automotive,business",
+    u:"https://www.chad.ubuy.com/",
+    d:"ubuy chad automotive section includes car accessories, tools and maintenance products that vehicle owners in chad can import through online orders.[web:1945]",
+    k:"ubuy chad automotive products,car accessories and tools online chad,vehicle maintenance items imported,automotive ecommerce ubuy",
+    a:""
+  },
+  {
+    i:20,
+    n:"ubuy chad sports and outdoors",
+    c:"sports,business",
+    u:"https://www.chad.ubuy.com/",
+    d:"ubuy chad offers sports and outdoor equipment such as fitness gear, camping accessories and sportswear for customers who cannot find these items in local shops.[web:1945]",
+    k:"ubuy chad sports and outdoors,online fitness gear chad,camping accessories and sportswear,import sports equipment via ubuy",
+    a:""
+  },
+  {
+    i:21,
+    n:"ubuy chad books and learning",
+    c:"books,business",
+    u:"https://www.chad.ubuy.com/",
+    d:"through ubuy chad, students and readers can order foreign language books, textbooks and study materials that are not widely distributed inside chad.[web:1945]",
+    k:"ubuy chad books and learning,order textbooks and study materials chad,foreign language books online,education supplies via ubuy",
+    a:""
+  },
+  {
+    i:22,
+    n:"mossosouk contact hub",
+    c:"software,business",
+    u:"https://play.google.com/store/apps/details?id=com.mossosouk.shopping&hl=en_US",
+    d:"mossosouk provides support contacts and phone numbers in the app listing so chadian users can get help with orders, listings and technical issues related to the marketplace.[web:1948]",
+    k:"mossosouk contact hub,customer support for online shopping chad,help with orders and listings,marketplace assistance mossosouk",
+    a:""
+  },
+  {
+    i:23,
+    n:"chad online payment context",
+    c:"software,business",
+    u:"https://www.trade.gov/country-commercial-guides/chad-ecommerce",
+    d:"the ecommerce guide notes that while full online card payments are rare in chad, mobile money services like tigo cash and airtel money are used to pay for purchases at shops and services.[web:1951]",
+    k:"chad online payment context,mobile money usage for purchases,limited online card payments,chad ecommerce payment landscape",
+    a:""
+  },
+  {
+    i:24,
+    n:"chad best things to buy",
+    c:"food,home,jewellery,business",
+    u:"https://blog.onevasco.com/things-to-buy/chad",
+    d:"an article about things to buy in chad highlights handmade crafts, jewellery, textiles and local food products, which small merchants are gradually starting to promote via social media and simple online listings.[web:1954]",
+    k:"chad best things to buy,handmade jewellery textiles and crafts,local food specialties from chad,merchants using online promotion",
+    a:""
+  },
+  {
+    i:25,
+    n:"overview ecommerce statistics chad",
+    c:"software,business",
+    u:"https://www.aftership.com/ecommerce/statistics/regions/td",
+    d:"ecommerce statistics for chad reveal very low store counts and app usage across categories, reflecting a nascent but slowly growing online retail environment.[web:1950]",
+    k:"overview ecommerce statistics chad,low number of online stores,app usage and category distribution,chad nascent online retail",
     a:""
   }
 ];
