@@ -1,95 +1,229 @@
-// cameroon.js
-
+ // cameroon.js
 window.countryShops = window.countryShops || {};
 window.countryShops["cameroon"] = [
   {
     i:1,
-    n:"glotelho",
-    c:"electronics,home,health,business",
-    u:"https://glotelho.cm",
-    d:"glotelho is one of cameroon's biggest online shops focusing on electronics, phones, tablets, computers, household appliances and pharmacy products with secure payments and delivery.[web:384]",
-    k:"glotelho cameroon,online electronics store,phones tablets computers,household appliances shop,pharmacy products online,secure payments and delivery",
+    n:"ubuy cameroon",
+    c:"electronics,fashion,home,beauty,books,sports,jewellery,automotive,food,business",
+    u:"https://www.ubuy.cm/en/",
+    d:"ubuy cameroon is an international online shopping platform where customers in cameroon can order imported electronics, mobiles, fashion, beauty, home products and more from global brands with delivery nationwide.[web:1974]",
+    k:"ubuy cameroon,international online shopping cameroon,imported electronics mobiles fashion and beauty,home kitchen books sports and automotive,global brands via ubuy.cm",
     a:""
   },
   {
     i:2,
-    n:"temogroup store",
-    c:"electronics,home,health,business",
-    u:"https://temogroup.com",
-    d:"temogroup store is a free online shopping mall in cameroon selling laptops, electronics, pharmacy products, phones, tablets and tech gadgets at low prices.[web:384]",
-    k:"temogroup store cameroon,free online shopping mall,laptops and electronics,pharmacy products and drugs,phones tablets tech gadgets,low prices store",
+    n:"ubuy cameroon french",
+    c:"electronics,fashion,home,beauty,books,sports,jewellery,automotive,food,business",
+    u:"https://www.ubuy.cm/fr/",
+    d:"ubuy cameroon also offers a french language site so francophone shoppers can browse and buy electronics, apparel, beauty items, home goods and more with localized support.[web:1976][web:1974]",
+    k:"ubuy cameroon french,boutique en ligne internationale cameroun,importation d’electronique vetements et beaute,produits maison sport et auto ubuy,shopping transfrontalier cameroun",
     a:""
   },
   {
     i:3,
-    n:"kikuu cameroon",
-    c:"electronics,fashion,business",
-    u:"https://www.kikuu.com/cm",
-    d:"kikuu cameroon is an african shopping mall app offering fashion products, dresses, electronics and mobile phones for online shoppers.[web:384]",
-    k:"kikuu cameroon,african shopping mall app,fashion products and dresses,electronics and mobile phones,online shopping cameroon",
+    n:"ubuy cameroon app download",
+    c:"electronics,software,business",
+    u:"https://www.ubuy.cm/fr/download-app",
+    d:"the ubuy cameroon app lets users shop for electronics, fashion, home and beauty products on their phones with faster browsing, checkout and order tracking.[web:1982][web:1974]",
+    k:"ubuy cameroon app,shopping app cameroun,fast mobile checkout and tracking,buy electronics fashion and home via app",
     a:""
   },
   {
     i:4,
-    n:"jumia cameroon",
-    c:"electronics,home,fashion,food,business",
-    u:"https://www.jumia.cm",
-    d:"jumia cameroon is a well known online marketplace where people buy electronics, fashion, home goods and groceries with delivery in major cities.[web:384]",
-    k:"jumia cameroon,online marketplace,electronics and gadgets,fashion clothes and shoes,home goods and groceries,delivery in major cities",
+    n:"kamermall",
+    c:"electronics,home,fashion,beauty,food,business",
+    u:"https://kamermall.shop/",
+    d:"kamermall is a cameroonian marketplace where trusted vendors sell electronics, fashion, home goods and groceries online with secure payment and delivery across cameroon.[web:1975]",
+    k:"kamermall,online marketplace cameroon,buy electronics fashion and home goods,secure payment and delivery kamermall.shop",
     a:""
   },
   {
     i:5,
-    n:"yema cameroon",
-    c:"electronics,home,business",
-    u:"https://yema.cm",
-    d:"yema cameroon deals in household appliances, phones, tablets, computers, electronics and network equipment available for online purchase.[web:384]",
-    k:"yema cameroon,household appliances store,phones tablets computers,electronics and network equipment,online tech shop",
+    n:"iziway",
+    c:"electronics,home,fashion,beauty,food,business",
+    u:"https://iziway.cm/",
+    d:"iziway is a leading online shopping site in cameroon offering affordable electronics, fashion, beauty products, home items and groceries with delivery throughout the country and cash or online payment.[web:1977]",
+    k:"iziway,vente en ligne cameroun,acheter electronique mode et beaute en ligne,livraison partout au cameroun,iziway.cm ecommerce",
     a:""
   },
   {
     i:6,
-    n:"sellam quick",
-    c:"electronics,home,fashion,automotive,business",
-    u:"https://sellamquick.com",
-    d:"sellam quick is one of the oldest online stores in cameroon selling electronic appliances, fridges, phones, tablets, shoes, computers, dresses and network equipment.[web:384]",
-    k:"sellam quick cameroon,oldest online store,electronic appliances fridges,phones tablets computers,shoes and dresses,network equipment shop",
+    n:"glotelho",
+    c:"electronics,home,fashion,beauty,business",
+    u:"https://glotelho.cm/",
+    d:"glotelho is a major cameroonian ecommerce site selling authentic electronics, phones, computers, appliances, fashion and home products with warranties and fast delivery to homes and offices.[web:1979]",
+    k:"glotelho,site de vente en ligne cameroun,electronique telephones ordinateurs et electromenager,mode et produits maison glotelho.cm",
     a:""
   },
   {
     i:7,
-    n:"mboamart",
-    c:"food,fashion,electronics,home,business",
-    u:"https://mboamart.com",
-    d:"mboamart is cameroon's one stop online shop for affordable groceries, fashion, electronics and home essentials with fast delivery from trusted local vendors.[web:387]",
-    k:"mboamart cameroon,online groceries shop,fashion and clothing,electronics and gadgets,home essentials store,fast delivery trusted vendors",
+    n:"glotelho ecommerce app",
+    c:"electronics,software,business",
+    u:"https://play.google.com/store/apps/details?id=com.glotelho.ecommerce&hl=en_IN",
+    d:"the glotelho ecommerce app lets cameroon customers buy quality electronics, phones, appliances and other products in one click with secure payment, returns and customer service.[web:1981][web:1979]",
+    k:"glotelho ecommerce app,shopping app cameroon,buy phones appliances and gadgets,secure mobile ecommerce glotelho",
     a:""
   },
   {
     i:8,
-    n:"ubuy cameroon",
-    c:"electronics,home,fashion,beauty,health,sports,books,business",
-    u:"https://www.ubuy.cm/fr/",
-    d:"ubuy cameroon is an international online shopping website delivering imported electronics, fashion, beauty, health products, sports gear, books and home goods from global brands.[web:383][web:384]",
-    k:"ubuy cameroon,cross border online shopping,imported electronics and mobiles,fashion clothes and shoes,beauty and health items,sports gear and books,home goods store cameroon",
+    n:"yorix marketplace cameroun",
+    c:"electronics,home,fashion,food,business,software",
+    u:"https://www.yorix.cm/en",
+    d:"yorix is a cameroonian marketplace and commerce index that connects buyers, sellers, delivery and local service providers using local payment rails like momo and orange money and tools built for cameroon’s cities.[web:1983]",
+    k:"yorix marketplace cameroun,achat en ligne cameroun,acheter vendre et se faire livrer,local payments momo orange money,yorix.cm digital commerce platform",
     a:""
   },
   {
     i:9,
-    n:"online shopping yaounde ubuy",
-    c:"electronics,home,fashion,beauty,health,sports,business",
-    u:"https://www.ubuy.cm/en/online-shopping-in-yaounde",
-    d:"online shopping yaounde ubuy page targets yaounde residents who want overseas electronics, fashion, beauty, health and home products shipped at competitive prices.[web:390]",
-    k:"online shopping yaounde ubuy,overseas products yaounde,electronics and fashion online,beauty health and home items,competitive prices delivery",
+    n:"jumia cameroon",
+    c:"electronics,home,fashion,beauty,food,business",
+    u:"https://www.jumia.cm/",
+    d:"jumia cameroon is a large online marketplace where users can shop for electronics, phones, fashion, beauty products, home items and groceries with delivery to major cities.[web:1978]",
+    k:"jumia cameroon,online shopping cameroon,electronics phones fashion and beauty,groceries and home products jumia.cm",
     a:""
   },
   {
     i:10,
-    n:"ubuy cameroon bikes shop",
-    c:"sports,business",
-    u:"https://www.ubuy.cm/en/category/sports-outdoors/cycling/electric-bicycles/bikes-1265458011",
-    d:"ubuy cameroon bikes shop sells a wide range of bikes for cycling enthusiasts at low prices with fast delivery nationwide.[web:391]",
-    k:"ubuy cameroon bikes shop,bikes for sale online,cycling enthusiasts store,low prices and offers,fast delivery nationwide",
+    n:"camaroonmall",
+    c:"electronics,fashion,home,business",
+    u:"https://camaroonmall.com/",
+    d:"camaroonmall focuses on electronics and fashion with a growing selection of home products, using localized payment options to attract cameroon shoppers buying online.[web:1978]",
+    k:"camaroonmall,online electronics and fashion cameroon,localized payment solutions,camaroonmall.com marketplace",
+    a:""
+  },
+  {
+    i:11,
+    n:"konga cameroon",
+    c:"electronics,home,fashion,business",
+    u:"https://cameroon.konga.com/",
+    d:"konga cameroon is an ecommerce platform that connects local vendors with buyers for affordable electronics, appliances, fashion and household products.[web:1978]",
+    k:"konga cameroon,online marketplace cameroon,affordable electronics appliances and fashion,local vendors on konga",
+    a:""
+  },
+  {
+    i:12,
+    n:"afrishop cameroon",
+    c:"electronics,fashion,home,beauty,business",
+    u:"https://afrishop.cm/",
+    d:"afrishop offers a mobile friendly shopping experience in cameroon with a mix of electronics, fashion, beauty and home products from local and regional vendors.[web:1978]",
+    k:"afrishop cameroon,mobile shopping platform cameroon,electronics fashion and beauty online,afrishop.cm ecommerce",
+    a:""
+  },
+  {
+    i:13,
+    n:"shopcameroon",
+    c:"electronics,business",
+    u:"https://shopcameroon.com/",
+    d:"shopcameroon specializes in tech and electronics, providing a wide product selection and quick delivery services to customers in urban areas of cameroon.[web:1978]",
+    k:"shopcameroon,online electronics store cameroon,wide tech product selection,quick delivery shopcameroon.com",
+    a:""
+  },
+  {
+    i:14,
+    n:"cameroonmarket",
+    c:"electronics,home,fashion,food,business",
+    u:"https://cameroonmarket.com/",
+    d:"cameroonmarket is an ecommerce marketplace that sells fashion, electronics, home goods and some food products while leveraging social media integrations to boost sales.[web:1978]",
+    k:"cameroonmarket,online marketplace cameroon,fashion electronics home goods and food,social media integrated ecommerce",
+    a:""
+  },
+  {
+    i:15,
+    n:"ecomcameroon",
+    c:"home,fashion,beauty,business",
+    u:"https://ecomcameroon.com/",
+    d:"ecomcameroon focuses on sustainable products and local artisan crafts, making it easy for cameroon shoppers to buy eco friendly home decor, fashion and beauty items online.[web:1978]",
+    k:"ecomcameroon,sustainable ecommerce cameroon,local artisan crafts and decor,eco friendly fashion and beauty",
+    a:""
+  },
+  {
+    i:16,
+    n:"bazaarcameroon",
+    c:"electronics,home,fashion,beauty,business",
+    u:"https://bazaarcameroon.com/",
+    d:"bazaarcameroon offers a personalized shopping experience with curated electronics, fashion, beauty and home products plus strong customer service support.[web:1978]",
+    k:"bazaarcameroon,personalized online shopping cameroon,curated electronics fashion and beauty,customer focused marketplace",
+    a:""
+  },
+  {
+    i:17,
+    n:"quickbuy cameroon",
+    c:"electronics,home,fashion,food,business",
+    u:"https://quickbuycameroon.com/",
+    d:"quickbuy cameroon emphasizes fast delivery and competitive pricing on electronics, fashion, household items and packaged foods ordered online.[web:1978]",
+    k:"quickbuy cameroon,fast delivery ecommerce cameroon,cheap electronics fashion and home goods,quickbuycameroon.com shopping",
+    a:""
+  },
+  {
+    i:18,
+    n:"localshop cameroon",
+    c:"home,food,fashion,business",
+    u:"https://localshopcameroon.com/",
+    d:"localshop cameroon promotes local businesses and artisans by listing their food products, fashion pieces and home crafts for online purchase.[web:1978]",
+    k:"localshop cameroon,support local businesses online,food fashion and crafts marketplace,localshopcameroon.com",
+    a:""
+  },
+  {
+    i:19,
+    n:"orimo cameroon official store",
+    c:"electronics,business",
+    u:"https://cm.orimo.com/",
+    d:"orimo cameroon sells official oraimo brand accessories like headphones, chargers and other electronics with secure payment and home delivery.[web:1980]",
+    k:"orimo cameroon,official oraimo accessories store,headphones chargers and gadgets,secure electronics shopping cameroon",
+    a:""
+  },
+  {
+    i:20,
+    n:"biome marketplace cameroon",
+    c:"electronics,home,food,business",
+    u:"https://biome.cm/",
+    d:"biome connects buyers and vendors in cameroon for a variety of products including electronics, furniture, and even food, verifying vendor documents to offer a safer marketplace.[web:1980]",
+    k:"biome marketplace cameroon,buy and sell electronics furniture and food,verified vendors safer ecommerce,biome.cm platform",
+    a:""
+  },
+  {
+    i:21,
+    n:"qrika",
+    c:"fashion,home,beauty,business",
+    u:"https://qrika.cm/",
+    d:"qrika connects people to brands and individuals selling fashion, beauty and home items, using a strict verification process and a modern app interface for secure deals.[web:1980]",
+    k:"qrika cameroon,verified sellers marketplace,fashion beauty and home products,modern ecommerce app qrika.cm",
+    a:""
+  },
+  {
+    i:22,
+    n:"facebook marketplace cameroon",
+    c:"electronics,home,fashion,automotive,food,business",
+    u:"https://www.facebook.com/marketplace/",
+    d:"facebook marketplace is widely used in cameroon as an informal platform where people list electronics, furniture, clothing, vehicles and some food items for local sale and delivery.[web:1980]",
+    k:"facebook marketplace cameroon,online classifieds cameroon,buy and sell electronics furniture and cars,informal ecommerce via facebook",
+    a:""
+  },
+  {
+    i:23,
+    n:"yorix delivery and services",
+    c:"food,home,software,business",
+    u:"https://www.yorix.cm/en",
+    d:"yorix also helps cameroon users book delivery and find trusted local providers such as restaurants, shops and service companies through one digital entry point.[web:1983]",
+    k:"yorix delivery and services,book delivery and providers cameroon,restaurants shops and services index,digital commerce hub yorix.cm",
+    a:""
+  },
+  {
+    i:24,
+    n:"glotelho phones and tablets",
+    c:"electronics,business",
+    u:"https://glotelho.cm/",
+    d:"glotelho phones and tablets category offers smartphones, basic phones and tablets from major brands with warranty and nationwide shipping in cameroon.[web:1979]",
+    k:"glotelho phones and tablets,smartphones and tablets online cameroon,phones with warranty and delivery,glotelho electronics category",
+    a:""
+  },
+  {
+    i:25,
+    n:"iziway fashion and beauty",
+    c:"fashion,beauty,business",
+    u:"https://iziway.cm/",
+    d:"iziway dedicates sections of its site to fashion and beauty where cameroon shoppers can order clothing, shoes, cosmetics and personal care products at competitive prices.[web:1977]",
+    k:"iziway fashion and beauty,mode et beaute en ligne cameroun,vetements chaussures et cosmetiques,shopping pas cher iziway.cm",
     a:""
   }
 ];
