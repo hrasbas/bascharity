@@ -568,6 +568,111 @@ if (animateRef) cancelAnimationFrame(animateRef);
 } catch (e) {}
 });
 </script>
+<!-- ========================= -->
+<!-- BAS DEDICATION INTEGRATION -->
+<!-- ========================= -->
+
+<script src="dedication.js"></script>
+
+<script>
+(function () {
+
+const map = {
+en:"english",
+ml:"malayalam",
+hi:"hindi",
+ar:"arabic",
+ta:"tamil",
+ur:"urdu",
+es:"spanish",
+pt:"portuguese",
+zh:"chinese",
+bn:"bengali",
+ru:"russian",
+ja:"japanese",
+de:"german",
+fr:"french",
+ko:"korean",
+te:"telugu",
+kn:"kannada",
+mr:"marathi",
+gu:"gujarati",
+pa:"punjabi",
+id:"indonesian",
+tr:"turkish",
+vi:"vietnamese",
+th:"thai",
+it:"italian",
+fa:"persian",
+pl:"polish",
+nl:"dutch",
+uk:"ukrainian",
+el:"greek",
+he:"hebrew",
+sw:"swahili",
+fil:"filipino"
+};
+
+window.updateDedication=function(langCode){
+
+try{
+
+const key=map[langCode]||"english";
+
+if(
+window.dedicationData &&
+window.dedicationData[key] &&
+document.getElementById("dedication-text")
+){
+
+document.getElementById("dedication-text").innerHTML=
+window.dedicationData[key].content;
+
+}
+
+}catch(e){
+console.error(e);
+}
+
+};
+
+const oldChangeLang=window.changeLang;
+
+window.changeLang=function(langCode){
+
+if(typeof oldChangeLang==="function"){
+oldChangeLang(langCode);
+}
+
+updateDedication(langCode);
+
+};
+
+const oldReset=window.resetToEnglish;
+
+window.resetToEnglish=function(){
+
+if(typeof oldReset==="function"){
+oldReset();
+}
+
+updateDedication("en");
+
+};
+
+document.addEventListener("DOMContentLoaded",function(){
+
+updateDedication("en");
+
+});
+
+})();
+</script>
+
+<!-- ========================= -->
+<!-- END BAS DEDICATION -->
+<!-- ========================= -->
+  
 <script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit">
 </script>
  <div id="basBalloonWrap" class="notranslate"> 
