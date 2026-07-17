@@ -244,6 +244,170 @@ text-shadow: none !important;
 50% { transform: translate(25px, -25px) rotate(-4deg); }
 }
 </style>
+<!-- ===========================
+BAS CHARITY GOOGLE ANALYTICS
+Measurement ID : G-W0NH1KVHHC
+=========================== -->
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-W0NH1KVHHC"></script>
+
+<script>
+window.dataLayer = window.dataLayer || [];
+
+function gtag(){
+dataLayer.push(arguments);
+}
+
+gtag('js', new Date());
+
+gtag('config','G-W0NH1KVHHC',{
+send_page_view:true
+});
+
+/* ---------- Universal Event Function ---------- */
+
+function basTrack(eventName, params={}){
+gtag('event',eventName,params);
+}
+
+/* ---------- Page Loaded ---------- */
+
+window.addEventListener("load",function(){
+
+basTrack("page_loaded");
+
+});
+
+/* ---------- Shop Click ---------- */
+
+document.addEventListener("click",function(e){
+
+const shop=e.target.closest("a.shopCard");
+
+if(shop){
+
+basTrack("shop_click",{
+shop_name:shop.innerText.trim(),
+shop_url:shop.href
+});
+
+}
+
+});
+
+/* ---------- Compare Button ---------- */
+
+document.addEventListener("click",function(e){
+
+const btn=e.target.closest(".compare-btn");
+
+if(btn){
+
+basTrack("compare_click");
+
+}
+
+});
+
+/* ---------- Share Buttons ---------- */
+
+document.addEventListener("click",function(e){
+
+const share=e.target.closest(".share-grid a");
+
+if(share){
+
+basTrack("share_click",{
+
+platform:share.href
+
+});
+
+}
+
+});
+
+/* ---------- Copy Link ---------- */
+
+function analyticsCopyLink(){
+
+basTrack("copy_link");
+
+}
+
+/* ---------- Country ---------- */
+
+function analyticsCountry(country){
+
+basTrack("country_selected",{
+
+country:country
+
+});
+
+}
+
+/* ---------- Language ---------- */
+
+function analyticsLanguage(language){
+
+basTrack("language_selected",{
+
+language:language
+
+});
+
+}
+
+/* ---------- Search ---------- */
+
+function analyticsSearch(text){
+
+basTrack("search",{
+
+search_term:text
+
+});
+
+}
+
+/* ---------- PWA Install ---------- */
+
+function analyticsPWA(){
+
+basTrack("pwa_install");
+
+}
+
+/* ---------- Donation ---------- */
+
+function analyticsDonation(name){
+
+basTrack("donation_button",{
+
+charity:name
+
+});
+
+}
+
+/* ---------- External Link ---------- */
+
+function analyticsExternal(url){
+
+basTrack("external_link",{
+
+url:url
+
+});
+
+}
+</script>
+
+<!-- ===========================
+END OF BAS ANALYTICS
+=========================== -->
+  
 </head> 
 
 <body> 
