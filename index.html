@@ -796,27 +796,31 @@ window.updateDedication=function(langCode){
     return false;
 };
 
-const oldChangeLang=window.changeLang;
+const oldChangeLang = window.changeLang;
 
-window.changeLang=function(langCode){
+window.changeLang = function(langCode){
 
-    const found=updateDedication(langCode);
-
-    if(!found && typeof oldChangeLang==="function"){
+    if(typeof oldChangeLang === "function"){
         oldChangeLang(langCode);
     }
 
+    setTimeout(function(){
+        updateDedication(langCode);
+    },800);
+
 };
 
-const oldReset=window.resetToEnglish;
+const oldReset = window.resetToEnglish;
 
-window.resetToEnglish=function(){
+window.resetToEnglish = function(){
 
-if(typeof oldReset==="function"){
-oldReset();
-}
+    if(typeof oldReset === "function"){
+        oldReset();
+    }
 
-updateDedication("en");
+    setTimeout(function(){
+        updateDedication("en");
+    },800);
 
 };
 
