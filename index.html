@@ -615,36 +615,32 @@ fil:"filipino"
 
 window.updateDedication=function(langCode){
 
-try{
+    const key=map[langCode]||"english";
 
-const key=map[langCode]||"english";
+    if(
+        window.dedicationData &&
+        window.dedicationData[key] &&
+        document.getElementById("dedication-text")
+    ){
 
-if(
-window.dedicationData &&
-window.dedicationData[key] &&
-document.getElementById("dedication-text")
-){
+        document.getElementById("dedication-text").innerHTML =
+        window.dedicationData[key].content;
 
-document.getElementById("dedication-text").innerHTML=
-window.dedicationData[key].content;
+        return true;
+    }
 
-}
-
-}catch(e){
-console.error(e);
-}
-
+    return false;
 };
 
 const oldChangeLang=window.changeLang;
 
 window.changeLang=function(langCode){
 
-if(typeof oldChangeLang==="function"){
-oldChangeLang(langCode);
-}
+    const found=updateDedication(langCode);
 
-updateDedication(langCode);
+    if(!found && typeof oldChangeLang==="function"){
+        oldChangeLang(langCode);
+    }
 
 };
 
