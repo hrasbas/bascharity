@@ -869,55 +869,123 @@ ball.className = "bas-ball is-pwa-installed";
 </div>
 
 <div id="basCompleteWrapper" style="width: 96%; max-width: 900px; margin: 20px auto; font-family: 'Segoe UI', Roboto, sans-serif; color: #fff; text-align: center; border: 3px solid #ff9800; padding: 50px 40px; border-radius: 28px; background: #111111; box-shadow: 0 20px 50px rgba(255, 152, 0, 0.15);">
-<div id="basMainDisplay" style="width: 100%;">
-    <img src="icon-512.png" alt="BAS CHARITY" onclick="handleInstallTap()" style="width: 150px; height: 150px; margin: 0 auto 35px; border-radius: 34px; display: block; cursor: pointer; border: 4px solid #fff; box-shadow: 0 15px 35px rgba(255, 152, 0, 0.4); transition: transform 0.2s; object-fit: cover;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
+<div id="basMainDisplay" style="width:100%;">
 
-    <h1 style="font-size: 42px; color: #ff9800; margin-bottom: 35px; font-weight: bold; line-height: 1.3;">Why Should You Install This Icon?</h1>
+    <h1 style="font-size:34px; color:#ff9800; margin-bottom:30px; font-weight:bold; line-height:1.4;">
+        Why Do People 
+        <span onclick="handleInstallTap()" style="color:#2196f3; cursor:pointer; text-decoration:underline;">Install</span> 
+        This 
+        <span onclick="handleInstallTap()" style="color:#2196f3; cursor:pointer; text-decoration:underline;">Icon</span>?
+    </h1>
 
-    <div style="text-align: left; font-size: 26px; font-weight: bold; line-height: 2.2; margin-bottom: 35px; padding-left: 20px;">
-        <div><span style="color: #ff9800; margin-right: 15px;">•</span> <b>Uses Zero Phone Memory & Storage</b></div>
-        <div><span style="color: #ff9800; margin-right: 15px;">•</span> <b>Works Exactly Like an Original App</b></div>
-        <div><span style="color: #ff9800; margin-right: 15px;">•</span> <b>Compare Prices Easily & Save Money</b></div>
+    <div style="text-align:left; font-size:23px; line-height:1.7; padding:0 10px;">
+
+        <div style="margin-bottom:25px;">
+            <strong style="color:#ff9800;">1.</strong>
+            First of all, it is free to use and requires very little phone memory. It can be used as an alternative to installing thousands of high-memory shopping apps.
+        </div>
+
+        <div style="margin-bottom:25px;">
+            <strong style="color:#ff9800;">2.</strong>
+            It provides access to 50,000+ shops across different countries and languages, giving users the opportunity to shop and purchase products from different locations around the world.
+        </div>
+
+        <div style="margin-bottom:25px;">
+            <strong style="color:#ff9800;">3.</strong>
+            It helps users compare prices across multiple shops and buy products at lower prices.
+        </div>
+
     </div>
 
-    <div onclick="basOpenFullPage()" style="color: #00ff00; font-size: 28px; font-weight: bold; cursor: pointer; text-decoration: underline; display: inline-block;">More....</div>
-</div>
-
-<div id="basFullInfoPage" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: #0d0d0d; padding: 40px 30px; overflow-y: auto; text-align: left; z-index: 999999;" onmousemove="basResetIdleTimer()" onscroll="basResetIdleTimer()" onclick="basResetIdleTimer()" ontouchstart="basResetIdleTimer()">
-    <div style="max-width: 900px; margin: 0 auto; padding-bottom: 50px;">
-        <div style="font-size: 38px; color: #ff9800; font-weight: bold; margin-bottom: 30px; border-bottom: 2px solid #333; padding-bottom: 15px;">🌟 Full Specifications</div>
-
-        <ul style="list-style: none; margin-bottom: 35px; padding: 0;">
-            <li style="font-size: 25px; line-height: 1.7; margin-bottom: 25px; color: #e0e0e0;"><strong style="color: #ff9800;">1. Zero Phone Memory:</strong> Built as a lightweight shortcut replacement for thousands of high-memory shopping applications without slowing down your phone.</li>
-            <li style="font-size: 25px; line-height: 1.7; margin-bottom: 25px; color: #e0e0e0;"><strong style="color: #ff9800;">2. Real App Experience:</strong> Stays on your mobile home screen seamlessly and opens up just like a dedicated premium native application.</li>
-            <li style="font-size: 25px; line-height: 1.7; margin-bottom: 25px; color: #e0e0e0;"><strong style="color: #ff9800;">3. Smart Price Comparison:</strong> Compare items instantly across global shopping sites and find the lowest guaranteed price online.</li>
-            <li style="font-size: 25px; line-height: 1.7; margin-bottom: 25px; color: #e0e0e0;"><strong style="color: #ff9800;">4. Global Marketplace Access:</strong> Surf across global directory stores spanning over 200 countries in all localized international languages.</li>
-            <li style="font-size: 25px; line-height: 1.7; margin-bottom: 25px; color: #e0e0e0;"><strong style="color: #ff9800;">5. Global Trade Culture:</strong> Explore products, localized pricing structures, and regional retail trends directly from your screen.</li>
-            <li style="font-size: 25px; line-height: 1.7; margin-bottom: 25px; color: #e0e0e0;"><strong style="color: #ff9800;">6. Complete Security Guard:</strong> Avoid scam donation traps and identify verified humanitarian platforms directly to extend support.</li>
-            <li style="font-size: 25px; line-height: 1.7; margin-bottom: 25px; color: #e0e0e0;"><strong style="color: #ff9800;">7. Premium Utility Gift:</strong> Share this zero-cost utility application directly with friends and family to involve them in smart savings.</li>
-        </ul>
-
-        <button onclick="basCloseFullPage()" style="background: #ff9800; color: #000; padding: 15px 45px; border-radius: 30px; font-size: 26px; font-weight: bold; border: none; cursor: pointer; display: block; margin: 30px auto 0;">Back</button>
+    <div onclick="basOpenFullPage()" 
+         style="color:#00ff00; font-size:27px; font-weight:bold; cursor:pointer; text-decoration:underline; display:inline-block; margin-top:10px;">
+        More....
     </div>
+
 </div>
 
-    <script>
-        let basIdleTimer; 
-        function basOpenFullPage() {
-            document.getElementById('basFullInfoPage').style.display = 'block';
-            document.getElementById('basMainDisplay').style.display = 'none';
-            basResetIdleTimer();
-        } 
-        function basCloseFullPage() {
-            clearTimeout(basIdleTimer);
-            document.getElementById('basFullInfoPage').style.display = 'none';
-            document.getElementById('basMainDisplay').style.display = 'block';
-        } 
-        function basResetIdleTimer() {
-            clearTimeout(basIdleTimer);
-            basIdleTimer = setTimeout(basCloseFullPage, 35000);
-        }
-    </script>
+
+<div id="basFullInfoPage" style="display:none; width:100%; text-align:left;">
+
+    <div style="text-align:left; font-size:23px; line-height:1.7; padding:20px 10px 0;">
+
+        <div style="margin-bottom:25px;">
+            <strong style="color:#ff9800;">4.</strong>
+            By shopping and sharing links, users can become part of the Hunger Relief charity mission.
+        </div>
+
+        <div style="margin-bottom:25px;">
+            <strong style="color:#ff9800;">5.</strong>
+            It helps people understand products, prices, offers, and shopping cultures in different countries.
+        </div>
+
+        <div style="margin-bottom:25px;">
+            <strong style="color:#ff9800;">6.</strong>
+            Since everything can be accessed anytime through a single icon, it reduces the need to repeatedly install new apps or constantly update them.
+        </div>
+
+        <div style="margin-bottom:25px;">
+            <strong style="color:#ff9800;">7.</strong>
+            It provides a way to send your donations directly to trusted organisations worldwide and helps protect people from fraudulent charity advertisements.
+        </div>
+
+        <div style="margin-bottom:25px;">
+            <strong style="color:#ff9800;">8.</strong>
+            It can also be shared as a useful gift with relatives and friends, enabling them to become part of this good cause.
+        </div>
+
+        <div style="margin-bottom:25px;">
+            <strong style="color:#ff9800;">9.</strong>
+            It can also serve as a Global Shopping Guide for students, expatriates, travellers, and anyone interested in understanding the global market.
+        </div>
+
+        <div style="margin-bottom:25px;">
+            <strong style="color:#ff9800;">10.</strong>
+            Links to government institutions and public services will be made available in the next update.
+            <strong style="color:#00ff00;">(In Progress)</strong>
+        </div>
+
+    </div>
+
+    <button onclick="basCloseFullPage()" 
+            style="background:#ff9800; color:#000; padding:14px 40px; border-radius:30px; font-size:23px; font-weight:bold; border:none; cursor:pointer; display:block; margin:30px auto 10px;">
+        Back
+    </button>
+
+</div>
+
+
+<script>
+
+let basIdleTimer;
+
+function basOpenFullPage(){
+
+    document.getElementById('basMainDisplay').style.display='none';
+    document.getElementById('basFullInfoPage').style.display='block';
+
+    basResetIdleTimer();
+}
+
+function basCloseFullPage(){
+
+    clearTimeout(basIdleTimer);
+
+    document.getElementById('basFullInfoPage').style.display='none';
+    document.getElementById('basMainDisplay').style.display='block';
+}
+
+function basResetIdleTimer(){
+
+    clearTimeout(basIdleTimer);
+
+    basIdleTimer=setTimeout(
+        basCloseFullPage,
+        35000
+    );
+}
+
+</script>
 </div>
 
   
