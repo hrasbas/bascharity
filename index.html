@@ -248,165 +248,1352 @@ text-shadow: none !important;
 BAS CHARITY GOOGLE ANALYTICS
 Measurement ID : G-W0NH1KVHHC
 =========================== -->
+ 
+<!-- ===========================
+BAS CHARITY GOOGLE ANALYTICS
+Measurement ID : G-W0NH1KVHHC
+=========================== -->
 
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-W0NH1KVHHC"></script>
 
 <script>
 window.dataLayer = window.dataLayer || [];
 
-function gtag(){
-dataLayer.push(arguments);
+function gtag() {
+  dataLayer.push(arguments);
 }
 
 gtag('js', new Date());
 
-gtag('config','G-W0NH1KVHHC',{
-send_page_view:true
+gtag('config', 'G-W0NH1KVHHC', {
+  send_page_view: true
 });
 
 /* ---------- Universal Event Function ---------- */
-
-function basTrack(eventName, params={}){
-gtag('event',eventName,params);
+function basTrack(eventName, params = {}) {
+  if (typeof gtag === "function") {
+    gtag('event', eventName, params);
+  }
 }
 
 /* ---------- Page Loaded ---------- */
-
-window.addEventListener("load",function(){
-
-basTrack("page_loaded");
-
+window.addEventListener("load", function () {
+  basTrack("page_loaded");
 });
 
 /* ---------- Shop Click ---------- */
-
-document.addEventListener("click",function(e){
-
-const shop=e.target.closest("a.shopCard");
-
-if(shop){
-
-basTrack("shop_click",{
-shop_name:shop.innerText.trim(),
-shop_url:shop.href
-});
-
-}
-
+document.addEventListener("click", function (e) {
+  const shop = e.target.closest("a.shopCard");
+  if (shop) {
+    basTrack("shop_click", {
+      shop_name: shop.innerText.trim(),
+      shop_url: shop.href
+    });
+  }
 });
 
 /* ---------- Compare Button ---------- */
-
-document.addEventListener("click",function(e){
-
-const btn=e.target.closest(".compare-btn");
-
-if(btn){
-
-basTrack("compare_click");
-
-}
-
+document.addEventListener("click", function (e) {
+  const btn = e.target.closest(".compare-btn");
+  if (btn) {
+    basTrack("compare_click");
+  }
 });
 
 /* ---------- Share Buttons ---------- */
-
-document.addEventListener("click",function(e){
-
-const share=e.target.closest(".share-grid a");
-
-if(share){
-
-basTrack("share_click",{
-
-platform:share.href
-
-});
-
-}
-
+document.addEventListener("click", function (e) {
+  const share = e.target.closest(".share-grid a");
+  if (share) {
+    basTrack("share_click", {
+      platform: share.href
+    });
+  }
 });
 
 /* ---------- Copy Link ---------- */
-
-function analyticsCopyLink(){
-
-basTrack("copy_link");
-
+function analyticsCopyLink() {
+  basTrack("copy_link");
 }
 
 /* ---------- Country ---------- */
-
-function analyticsCountry(country){
-
-basTrack("country_selected",{
-
-country:country
-
-});
-
+function analyticsCountry(country) {
+  basTrack("country_selected", {
+    country: country
+  });
 }
 
 /* ---------- Language ---------- */
-
-function analyticsLanguage(language){
-
-basTrack("language_selected",{
-
-language:language
-
-});
-
+function analyticsLanguage(language) {
+  basTrack("language_selected", {
+    language: language
+  });
 }
 
 /* ---------- Search ---------- */
-
-function analyticsSearch(text){
-
-basTrack("search",{
-
-search_term:text
-
-});
-
+function analyticsSearch(text) {
+  basTrack("search", {
+    search_term: text
+  });
 }
 
 /* ---------- PWA Install ---------- */
-
-function analyticsPWA(){
-
-basTrack("pwa_install");
-
+function analyticsPWA() {
+  basTrack("pwa_install");
 }
 
 /* ---------- Donation ---------- */
-
-function analyticsDonation(name){
-
-basTrack("donation_button",{
-
-charity:name
-
-});
-
+function analyticsDonation(name) {
+  basTrack("donation_button", {
+    charity: name
+  });
 }
 
 /* ---------- External Link ---------- */
-
-function analyticsExternal(url){
-
-basTrack("external_link",{
-
-url:url
-
-});
-
+function analyticsExternal(url) {
+  basTrack("external_link", {
+    url: url
+  });
 }
 </script>
+
+/* ==========================================================
+SL No : 001
+എന്തിനാണ്?
+ഈ Website-ലെ എല്ലാ Analytics Event-കളും Google Analytics-ലേക്ക്
+അയയ്ക്കുന്ന അടിസ്ഥാന (Base) Function ആണ്.
+========================================================== */
+function basTrack(eventName, params = {}) {
+if (typeof gtag === "function") {
+gtag("event", eventName, params);
+}
+}
+
+/* ==========================================================
+SL No : 002
+എന്തിനാണ്?
+ഉപയോക്താവ് ഏത് Country തിരഞ്ഞെടുക്കുന്നു എന്ന് അറിയാൻ.
+========================================================== */
+function analyticsCountry(country = "") {
+basTrack("country_select", {
+country: country
+});
+}
+
+/* ==========================================================
+SL No : 003
+എന്തിനാണ്?
+ഉപയോക്താവ് ഏത് Category തിരഞ്ഞെടുക്കുന്നു എന്ന് രേഖപ്പെടുത്താൻ.
+========================================================== */
+function analyticsCategory(category = "") {
+basTrack("category_select", {
+category: category
+});
+}
+
+/* ==========================================================
+SL No : 004
+എന്തിനാണ്?
+Website-ൽ Search ചെയ്ത വാക്കുകൾ Analytics-ൽ സൂക്ഷിക്കാൻ.
+========================================================== */
+function analyticsSearch(searchTerm = "") {
+basTrack("search", {
+search_term: searchTerm
+});
+}
+
+/* ==========================================================
+SL No : 005
+എന്തിനാണ്?
+ഏത് Shop ആണ് Click ചെയ്തത്, ഏത് Country-യിലും Category-യിലും
+നിന്നാണ് Click ചെയ്തത് എന്നത് അറിയാൻ.
+========================================================== */
+function analyticsShop(
+shopName = "",
+country = "",
+category = ""
+) {
+basTrack("shop_click", {
+shop_name: shopName,
+country: country,
+category: category
+});
+}
+
+/* ==========================================================
+SL No : 006
+എന്തിനാണ്?
+Compare Button ഉപയോഗിച്ചപ്പോൾ ഏത് രണ്ട് Item-കളാണ്
+താരതമ്യം ചെയ്തത് എന്ന് രേഖപ്പെടുത്താൻ.
+========================================================== */
+function analyticsCompare(item1 = "", item2 = "") {
+basTrack("compare", {
+item_1: item1,
+item_2: item2
+});
+}
+
+/* ==========================================================
+SL No : 007
+എന്തിനാണ്?
+Facebook, WhatsApp തുടങ്ങിയ Platform-കളിലേക്ക് Share ചെയ്ത വിവരം
+Analytics-ൽ രേഖപ്പെടുത്താൻ.
+========================================================== */
+function analyticsShare(platform = "", item = "") {
+basTrack("share", {
+platform: platform,
+item: item
+});
+}
+
+/* ==========================================================
+SL No : 008
+എന്തിനാണ്?
+Link അല്ലെങ്കിൽ Text Copy ചെയ്ത വിവരം രേഖപ്പെടുത്താൻ.
+========================================================== */
+function analyticsCopy(item = "") {
+basTrack("copy", {
+item: item
+});
+}
+
+/* ==========================================================
+SL No : 009
+എന്തിനാണ്?
+Donation Button Click ചെയ്തപ്പോൾ ഏത് Institution ആണ്
+തിരഞ്ഞെടുത്തത് എന്ന് അറിയാൻ.
+========================================================== */
+function analyticsDonation(institution = "") {
+basTrack("donation_click", {
+institution: institution
+});
+}
+
+/* ==========================================================
+SL No : 010
+എന്തിനാണ്?
+Donation Report ചെയ്ത തുകയും Currency-യും Analytics-ൽ
+രേഖപ്പെടുത്താൻ.
+========================================================== */
+function analyticsDonationReported(
+institution = "",
+amount = 0,
+currency = "INR"
+) {
+basTrack("donation_reported", {
+institution: institution,
+amount: amount,
+currency: currency
+});
+}
+
+/* ==========================================================
+SL No : 011
+എന്തിനാണ്?
+WhatsApp വഴി Share ചെയ്ത വിവരം പ്രത്യേകം അറിയാൻ.
+========================================================== */
+function analyticsWhatsApp(item = "") {
+basTrack("whatsapp_share", {
+item: item
+});
+}
+
+/* ==========================================================
+SL No : 012
+എന്തിനാണ്?
+Website-ൽ നിന്ന് പുറത്തെ Website-കളിലേക്ക് പോയ Link Click
+രേഖപ്പെടുത്താൻ.
+========================================================== */
+function analyticsExternalLink(url = "") {
+basTrack("external_link", {
+url: url
+});
+}
+
+/* ==========================================================
+SL No : 013
+എന്തിനാണ്?
+ഉപയോക്താവ് Language മാറ്റിയ വിവരം Analytics-ൽ സൂക്ഷിക്കാൻ.
+========================================================== */
+function analyticsLanguage(language = "") {
+basTrack("language_change", {
+language: language
+});
+}
+
+/* ==========================================================
+SL No : 014
+എന്തിനാണ്?
+Install Button Click ചെയ്തപ്പോൾ അത് രേഖപ്പെടുത്താൻ.
+========================================================== */
+function analyticsInstallClick(source = "") {
+basTrack("install_click", {
+source: source
+});
+}
+
+/* ==========================================================
+SL No : 015
+എന്തിനാണ്?
+Install Prompt Screen ഉപയോക്താവിന് കാണിച്ച സമയം
+രേഖപ്പെടുത്താൻ.
+========================================================== */
+function analyticsInstallPromptShown(source = "") {
+basTrack("install_prompt_shown", {
+source: source
+});
+}
+
+/* ==========================================================
+SL No : 016
+എന്തിനാണ്?
+Install Prompt Accept ചെയ്ത വിവരം രേഖപ്പെടുത്താൻ.
+========================================================== */
+function analyticsInstallAccepted(source = "") {
+basTrack("install_accepted", {
+source: source
+});
+}
+
+/* ==========================================================
+SL No : 017
+എന്തിനാണ്?
+Install Prompt Cancel ചെയ്ത വിവരം രേഖപ്പെടുത്താൻ.
+========================================================== */
+function analyticsInstallCancelled(source = "") {
+basTrack("install_cancelled", {
+source: source
+});
+}
+
+/* ==========================================================
+SL No : 018
+എന്തിനാണ്?
+App വിജയകരമായി Install ആയ വിവരം Analytics-ൽ
+രേഖപ്പെടുത്താൻ.
+========================================================== */
+function analyticsAppInstalled(source = "") {
+basTrack("app_installed", {
+source: source
+});
+}
+
+/* ==========================================================
+SL No : 019
+എന്തിനാണ്?
+Impact Section അല്ലെങ്കിൽ Impact Page കണ്ട വിവരം
+രേഖപ്പെടുത്താൻ.
+========================================================== */
+function analyticsImpact(item = "") {
+basTrack("impact_view", {
+item: item
+});
+}
+
+/* ==========================================================
+SL No : 020
+എന്തിനാണ്?
+Read More Button Click ചെയ്ത ഭാഗം അറിയാൻ.
+========================================================== */
+function analyticsReadMore(section = "") {
+basTrack("read_more", {
+section: section
+});
+}
+
+/* ==========================================================
+SL No : 021
+എന്തിനാണ്?
+Page എത്ര ശതമാനം വരെ Scroll ചെയ്തു എന്ന് അറിയാൻ.
+========================================================== */
+function analyticsScroll(percent = 0) {
+basTrack("scroll", {
+percent: percent
+});
+}
+
+/* ==========================================================
+SL No : 022
+എന്തിനാണ്?
+Page-ൽ എത്ര സെക്കൻഡ് ചെലവഴിച്ചു എന്ന് രേഖപ്പെടുത്താൻ.
+========================================================== */
+function analyticsTimeOnPage(seconds = 0) {
+basTrack("time_on_page", {
+seconds: seconds
+});
+}
+
+/* ==========================================================
+SL No : 023
+എന്തിനാണ്?
+Website-ൽ ഉപയോക്താവിന്റെ ആദ്യ Interaction എന്തായിരുന്നു
+എന്ന് രേഖപ്പെടുത്താൻ.
+========================================================== */
+function analyticsFirstInteraction(action = "") {
+basTrack("first_interaction", {
+action: action
+});
+}
+
+/* ==========================================================
+SL No : 024
+എന്തിനാണ്?
+Search വിജയിച്ച് എത്ര Result ലഭിച്ചു എന്ന് അറിയാൻ.
+========================================================== */
+function analyticsSearchSuccess(searchTerm = "", results = 0) {
+basTrack("search_success", {
+search_term: searchTerm,
+results: results
+});
+}
+
+/* ==========================================================
+SL No : 025
+എന്തിനാണ്?
+Search ചെയ്തിട്ടും Result ഒന്നും ലഭിക്കാത്ത സാഹചര്യങ്ങൾ
+Analytics-ൽ രേഖപ്പെടുത്താൻ.
+========================================================== */
+function analyticsNoSearchResults(searchTerm = "") {
+basTrack("no_search_results", {
+search_term: searchTerm
+});
+}
+
+/* ==========================================================
+SL No : 025
+എന്തിനാണ്?
+Search ചെയ്തിട്ടും Result ഒന്നും ലഭിക്കാത്ത സാഹചര്യങ്ങൾ
+Analytics-ൽ രേഖപ്പെടുത്താൻ.
+========================================================== */
+function analyticsNoSearchResults(searchTerm = "") {
+basTrack("no_search_results", {
+search_term: searchTerm
+});
+}
+
+/* ==========================================================
+SL No : 026
+എന്തിനാണ്?
+തിരഞ്ഞെടുത്ത Country/Category-ൽ Shop ഒന്നും ലഭിക്കാത്തത്
+രേഖപ്പെടുത്താൻ.
+========================================================== */
+function analyticsNoShops(country = "", category = "") {
+basTrack("no_shops", {
+country: country,
+category: category
+});
+}
+
+/* ==========================================================
+SL No : 027
+എന്തിനാണ്?
+ഒരു Country-യുടെ JavaScript File വിജയകരമായി Load ആയോ
+എന്ന് അറിയാൻ.
+========================================================== */
+function analyticsCountryJSLoaded(country = "") {
+basTrack("country_js_loaded", {
+country: country
+});
+}
+
+/* ==========================================================
+SL No : 028
+എന്തിനാണ്?
+Search വിജയിച്ച് എത്ര Result ലഭിച്ചു എന്ന് അറിയാൻ.
+========================================================== */
+function analyticsSearchSuccess(searchTerm = "", results = 0) {
+basTrack("search_success", {
+search_term: searchTerm,
+results: results
+});
+}
+
+/* ==========================================================
+SL No : 029
+എന്തിനാണ്?
+Search വഴി ഏത് Shop ആണ് കണ്ടെത്തിയത് എന്ന് അറിയാൻ.
+========================================================== */
+function analyticsSearchShop(searchTerm = "", shopName = "") {
+basTrack("search_shop", {
+search_term: searchTerm,
+shop_name: shopName
+});
+}
+
+/* ==========================================================
+SL No : 030
+എന്തിനാണ്?
+ഏത് Country Page ആണ് തുറന്നത്, എത്ര Shop ഉണ്ടായിരുന്നു
+എന്നത് രേഖപ്പെടുത്താൻ.
+========================================================== */
+function analyticsCountryView(country = "", shopCount = 0) {
+basTrack("country_view", {
+country: country,
+shop_count: shopCount
+});
+}
+
+/* ==========================================================
+SL No : 031
+എന്തിനാണ്?
+ഏത് Category ആണ് കണ്ടത്, അതിൽ എത്ര Shop ഉണ്ടെന്ന്
+രേഖപ്പെടുത്താൻ.
+========================================================== */
+function analyticsCategoryView(category = "", shopCount = 0) {
+basTrack("category_view", {
+category: category,
+shop_count: shopCount
+});
+}
+
+/* ==========================================================
+SL No : 032
+എന്തിനാണ്?
+Featured Shop-കൾ കണ്ടതോ Click ചെയ്തതോ
+രേഖപ്പെടുത്താൻ.
+========================================================== */
+function analyticsFeaturedShop(shopName = "", country = "") {
+basTrack("featured_shop", {
+shop_name: shopName,
+country: country
+});
+}
+
+/* ==========================================================
+SL No : 033
+എന്തിനാണ്?
+Install Balloon ഉപയോഗിച്ചതോ Click ചെയ്തതോ
+രേഖപ്പെടുത്താൻ.
+========================================================== */
+function analyticsBalloonInstall() {
+basTrack("balloon_install");
+}
+
+/* ==========================================================
+SL No : 034
+എന്തിനാണ്?
+Install Icon Click ചെയ്ത വിവരം രേഖപ്പെടുത്താൻ.
+========================================================== */
+function analyticsInstallIcon() {
+basTrack("install_icon");
+}
+
+/* ==========================================================
+SL No : 035
+എന്തിനാണ്?
+Impact Photo കണ്ടതോ തുറന്നതോ
+രേഖപ്പെടുത്താൻ.
+========================================================== */
+function analyticsImpactPhoto(photoName = "") {
+basTrack("impact_photo", {
+photo_name: photoName
+});
+}
+
+/* ==========================================================
+SL No : 036
+എന്തിനാണ്?
+Trusted Institutions Section കണ്ട വിവരം
+രേഖപ്പെടുത്താൻ.
+========================================================== */
+function analyticsTrustedInstitutionsView() {
+basTrack("trusted_institutions_view");
+}
+
+/* ==========================================================
+SL No : 037
+എന്തിനാണ്?
+ഏത് Trusted Institution തിരഞ്ഞെടുത്തു എന്ന്
+രേഖപ്പെടുത്താൻ.
+========================================================== */
+function analyticsTrustedInstitution(institution = "") {
+basTrack("trusted_institution", {
+institution: institution
+});
+}
+
+/* ==========================================================
+SL No : 038
+എന്തിനാണ്?
+ഒരു Institution-ലേക്ക് Donation ചെയ്ത വിവരം
+രേഖപ്പെടുത്താൻ.
+========================================================== */
+function analyticsInstitutionDonation(
+institution = "",
+amount = 0,
+currency = "INR"
+) {
+basTrack("institution_donation", {
+institution: institution,
+amount: amount,
+currency: currency
+});
+}
+
+/* ==========================================================
+SL No : 039
+എന്തിനാണ്?
+Donation Amount പ്രത്യേകം Analytics-ൽ
+രേഖപ്പെടുത്താൻ.
+========================================================== */
+function analyticsDonationAmount(
+institution = "",
+amount = 0,
+currency = "INR"
+) {
+basTrack("donation_amount", {
+institution: institution,
+amount: amount,
+currency: currency
+});
+}
+
+/* ==========================================================
+SL No : 040
+എന്തിനാണ്?
+Donation ഏത് Currency-യിൽ രേഖപ്പെടുത്തി എന്ന്
+അറിയാൻ.
+========================================================== */
+function analyticsDonationCurrency(currency = "INR") {
+basTrack("donation_currency", {
+currency: currency
+});
+}
+
+/* ==========================================================
+SL No : 041
+എന്തിനാണ്?
+Donation നടന്ന തീയതി Analytics-ൽ
+രേഖപ്പെടുത്താൻ.
+========================================================== */
+function analyticsDonationDate(
+institution = "",
+donationDate = ""
+) {
+basTrack("donation_date", {
+institution: institution,
+donation_date: donationDate
+});
+}
+
+/* ==========================================================
+SL No : 042
+എന്തിനാണ്?
+Institution-ന്റെ Website Link സന്ദർശിച്ച വിവരം
+രേഖപ്പെടുത്താൻ.
+========================================================== */
+function analyticsInstitutionWebsite(
+institution = "",
+url = ""
+) {
+basTrack("institution_website", {
+institution: institution,
+url: url
+});
+}
+
+/* ==========================================================
+SL No : 043
+എന്തിനാണ്?
+ഏത് Country-യിൽ നിന്ന് Institution-ലേക്ക്
+Referral ലഭിച്ചു എന്ന് അറിയാൻ.
+========================================================== */
+function analyticsInstitutionReferral(
+institution = "",
+country = ""
+) {
+basTrack("institution_referral", {
+institution: institution,
+country: country
+});
+}
+
+/* ==========================================================
+SL No : 044
+എന്തിനാണ്?
+Community Report ചെയ്ത Donation വിവരം
+രേഖപ്പെടുത്താൻ.
+========================================================== */
+function analyticsCommunityDonation(
+institution = "",
+amount = 0,
+currency = "INR"
+) {
+basTrack("community_reported_donation", {
+institution: institution,
+amount: amount,
+currency: currency
+});
+}
+
+/* ==========================================================
+SL No : 045
+എന്തിനാണ്?
+Community Donation Edit ചെയ്ത വിവരം
+രേഖപ്പെടുത്താൻ.
+========================================================== */
+function analyticsCommunityDonationEdit(institution = "") {
+basTrack("community_donation_edit", {
+institution: institution
+});
+}
+
+/* ==========================================================
+SL No : 046
+എന്തിനാണ്?
+Community Donation Delete ചെയ്ത വിവരം
+രേഖപ്പെടുത്താൻ.
+========================================================== */
+function analyticsCommunityDonationDelete(institution = "") {
+basTrack("community_donation_delete", {
+institution: institution
+});
+}
+
+/* ==========================================================
+SL No : 047
+എന്തിനാണ്?
+Community Donation List/View കണ്ട വിവരം
+രേഖപ്പെടുത്താൻ.
+========================================================== */
+function analyticsCommunityDonationView() {
+basTrack("community_donation_view");
+}
+
+/* ==========================================================
+SL No : 048
+എന്തിനാണ്?
+Community Impact Section കണ്ട വിവരം
+രേഖപ്പെടുത്താൻ.
+========================================================== */
+function analyticsCommunityImpactView(section = "") {
+basTrack("community_impact_view", {
+section: section
+});
+}
+
+/* ==========================================================
+SL No : 049
+എന്തിനാണ്?
+Community Impact Share ചെയ്ത Platform
+രേഖപ്പെടുത്താൻ.
+========================================================== */
+function analyticsCommunityImpactShare(platform = "") {
+basTrack("community_impact_share", {
+platform: platform
+});
+}
+
+/* ==========================================================
+SL No : 050
+എന്തിനാണ്?
+Community Impact Filter ഉപയോഗിച്ച വിധം
+രേഖപ്പെടുത്താൻ.
+========================================================== /
+function analyticsCommunityImpactFilter(filterType = "", filterValue = "") {
+basTrack("community_impact_filter", {
+filter_type: filterType,
+filter_value: filterValue
+});
+}
+/ ==========================================================
+SL No : 050
+എന്തിനാണ്?
+Community Impact കാണുമ്പോൾ ഉപയോഗിച്ച Filter-ന്റെ
+തരംയും മൂല്യവും Analytics-ൽ രേഖപ്പെടുത്താൻ.
+========================================================== */
+function analyticsCommunityImpactFilter(filterType = "", filterValue = "") {
+basTrack("community_impact_filter", {
+filter_type: filterType,
+filter_value: filterValue
+});
+}
+
+/* ==========================================================
+SL No : 051
+എന്തിനാണ്?
+Community Donation തുടർച്ചയായി എത്ര തവണ നടത്തിയെന്ന്
+(Streak) രേഖപ്പെടുത്താൻ.
+========================================================== */
+function analyticsCommunityDonationStreak(streakType = "", count = 1) {
+basTrack("community_donation_streak", {
+streak_type: streakType,
+streak_count: count
+});
+}
+
+/* ==========================================================
+SL No : 052
+എന്തിനാണ്?
+Community Donation Milestone നേടിയ വിവരം
+രേഖപ്പെടുത്താൻ.
+========================================================== */
+function analyticsCommunityDonationMilestone(
+milestone = "",
+totalAmount = 0,
+currency = "INR"
+) {
+basTrack("community_donation_milestone", {
+milestone: milestone,
+total_amount: totalAmount,
+currency: currency
+});
+}
+
+/* ==========================================================
+SL No : 053
+എന്തിനാണ്?
+Community Donation Goal-ന്റെ ലക്ഷ്യവും നിലവിലെ
+പുരോഗതിയും രേഖപ്പെടുത്താൻ.
+========================================================== */
+function analyticsCommunityDonationGoal(
+goalName = "",
+targetValue = 0,
+currentValue = 0
+) {
+basTrack("community_donation_goal", {
+goal_name: goalName,
+target_value: targetValue,
+current_value: currentValue
+});
+}
+
+/* ==========================================================
+SL No : 054
+എന്തിനാണ്?
+Community Donation Reminder ഏത് ഇടവേളയിൽ
+ക്രമീകരിച്ചിട്ടുണ്ടെന്ന് രേഖപ്പെടുത്താൻ.
+========================================================== */
+function analyticsCommunityDonationReminder(frequency = "") {
+basTrack("community_donation_reminder", {
+frequency: frequency
+});
+}
+
+/* ==========================================================
+SL No : 055
+എന്തിനാണ്?
+ദിവസേന Charity Saving Plan-ൽ എത്ര തുക
+മാറ്റിവെക്കുന്നു എന്ന് രേഖപ്പെടുത്താൻ.
+========================================================== */
+function analyticsDailyCharitySavingPlan(
+dailyAmount = 0,
+currency = "INR"
+) {
+basTrack("daily_charity_saving_plan", {
+daily_amount: dailyAmount,
+currency: currency
+});
+}
+
+/* ==========================================================
+SL No : 056
+എന്തിനാണ്?
+മാസാന്ത Donation Transfer നടത്തിയ വിവരം
+രേഖപ്പെടുത്താൻ.
+========================================================== */
+function analyticsMonthlyDonationTransfer(
+institution = "",
+amount = 0,
+currency = "INR"
+) {
+basTrack("monthly_donation_transfer", {
+institution: institution,
+amount: amount,
+currency: currency
+});
+}
+
+/* ==========================================================
+SL No : 057
+എന്തിനാണ്?
+Daily Charity Saving Reminder പ്രവർത്തനക്ഷമമാണോ
+എന്ന് രേഖപ്പെടുത്താൻ.
+========================================================== */
+function analyticsDailyCharitySavingReminder(
+status = "enabled",
+frequency = "daily"
+) {
+basTrack("daily_charity_saving_reminder", {
+status: status,
+frequency: frequency
+});
+}
+
+/* ==========================================================
+SL No : 058
+എന്തിനാണ്?
+Monthly Donation Reminder-ന്റെ ക്രമീകരണം
+രേഖപ്പെടുത്താൻ.
+========================================================== */
+function analyticsMonthlyDonationReminder(
+status = "enabled",
+reminderDay = ""
+) {
+basTrack("monthly_donation_reminder", {
+status: status,
+reminder_day: reminderDay
+});
+}
+
+/* ==========================================================
+SL No : 059
+എന്തിനാണ്?
+Charity Savings Plan-ന്റെ നിലവിലെ പുരോഗതി
+രേഖപ്പെടുത്താൻ.
+========================================================== */
+function analyticsCharitySavingsProgress(
+savedAmount = 0,
+targetAmount = 0,
+currency = "INR"
+) {
+basTrack("charity_savings_progress", {
+saved_amount: savedAmount,
+target_amount: targetAmount,
+currency: currency
+});
+}
+
+/* ==========================================================
+SL No : 060
+എന്തിനാണ്?
+Charity Savings Target പൂർത്തിയായ വിവരം
+രേഖപ്പെടുത്താൻ.
+========================================================== */
+function analyticsCharitySavingsTargetAchieved(
+targetAmount = 0,
+savedAmount = 0,
+currency = "INR"
+) {
+basTrack("charity_savings_target_achieved", {
+target_amount: targetAmount,
+saved_amount: savedAmount,
+currency: currency
+});
+}
+
+/* ==========================================================
+SL No : 061
+എന്തിനാണ്?
+Charity Savings Plan വിജയകരമായി പൂർത്തിയാക്കി
+Donation നൽകിയ വിവരം രേഖപ്പെടുത്താൻ.
+========================================================== */
+function analyticsCharitySavingsPlanCompleted(
+institution = "",
+totalAmount = 0,
+currency = "INR"
+) {
+basTrack("charity_savings_plan_completed", {
+institution: institution,
+total_amount: totalAmount,
+currency: currency
+});
+}
+
+/* ==========================================================
+SL No : 062
+എന്തിനാണ്?
+Charity Savings Plan റദ്ദാക്കിയ കാരണം
+രേഖപ്പെടുത്താൻ.
+========================================================== */
+function analyticsCharitySavingsPlanCancelled(reason = "") {
+basTrack("charity_savings_plan_cancelled", {
+reason: reason
+});
+}
+
+/* ==========================================================
+SL No : 063
+എന്തിനാണ്?
+Charity Savings Plan വീണ്ടും ആരംഭിച്ച വിവരം
+രേഖപ്പെടുത്താൻ.
+========================================================== */
+function analyticsCharitySavingsPlanRestart(
+dailyAmount = 0,
+currency = "INR"
+) {
+basTrack("charity_savings_plan_restart", {
+daily_amount: dailyAmount,
+currency: currency
+});
+}
+
+/* ==========================================================
+SL No : 064
+എന്തിനാണ്?
+Charity Savings Plan History കണ്ട വിവരം
+രേഖപ്പെടുത്താൻ.
+========================================================== */
+function analyticsCharitySavingsPlanHistory(period = "") {
+basTrack("charity_savings_plan_history", {
+period: period
+});
+}
+
+/* ==========================================================
+SL No : 065
+എന്തിനാണ്?
+Charity Savings Plan-ന്റെ ആകെ കണക്ക്
+(Statistics) രേഖപ്പെടുത്താൻ.
+========================================================== */
+function analyticsCharitySavingsPlanStatistics(
+totalSaved = 0,
+totalPlans = 0,
+currency = "INR"
+) {
+basTrack("charity_savings_plan_statistics", {
+total_saved: totalSaved,
+total_plans: totalPlans,
+currency: currency
+});
+}
+
+/* ==========================================================
+SL No : 066
+എന്തിനാണ്?
+Charity Savings Plan മറ്റുള്ളവരുമായി Share
+ചെയ്ത വിവരം രേഖപ്പെടുത്താൻ.
+========================================================== */
+function analyticsCharitySavingsPlanShare(
+platform = "",
+dailyAmount = 0,
+monthlyTarget = 0,
+currency = "INR"
+) {
+basTrack("charity_savings_plan_share", {
+platform: platform,
+daily_amount: dailyAmount,
+monthly_target: monthlyTarget,
+currency: currency
+});
+}
+
+/* ==========================================================
+SL No : 067
+എന്തിനാണ്?
+Charity Savings Plan വിജയകരമായി പൂർത്തിയായി
+എന്ന വിവരം രേഖപ്പെടുത്താൻ.
+========================================================== */
+function analyticsCharitySavingsPlanSuccess(
+institution = "",
+amount = 0,
+currency = "INR"
+) {
+basTrack("charity_savings_plan_success", {
+institution: institution,
+amount: amount,
+currency: currency
+});
+}
+
+/* ==========================================================
+SL No : 068
+എന്തിനാണ്?
+Charity Savings Plan-ൽ ഒരു ദിവസം നഷ്ടമായ
+വിവരം രേഖപ്പെടുത്താൻ.
+========================================================== */
+function analyticsCharitySavingsPlanMissed(
+reason = "",
+missedAmount = 0,
+currency = "INR"
+) {
+basTrack("charity_savings_plan_missed", {
+reason: reason,
+missed_amount: missedAmount,
+currency: currency
+});
+}
+
+/* ==========================================================
+SL No : 069
+എന്തിനാണ്?
+Charity Savings Plan താൽക്കാലികമായി Pause
+ചെയ്ത കാരണം രേഖപ്പെടുത്താൻ.
+========================================================== */
+function analyticsCharitySavingsPlanPause(reason = "") {
+basTrack("charity_savings_plan_pause", {
+reason: reason
+});
+}
+
+/* ==========================================================
+SL No : 070
+എന്തിനാണ്?
+Pause ചെയ്ത Charity Savings Plan വീണ്ടും
+ആരംഭിച്ച വിവരം രേഖപ്പെടുത്താൻ.
+========================================================== */
+function analyticsCharitySavingsPlanResume(
+dailyAmount = 0,
+currency = "INR"
+) {
+basTrack("charity_savings_plan_resume", {
+daily_amount: dailyAmount,
+currency: currency
+});
+}
+
+/* ==========================================================
+SL No : 071
+എന്തിനാണ്?
+Charity Savings Plan Settings-ൽ വരുത്തിയ
+മാറ്റങ്ങൾ രേഖപ്പെടുത്താൻ.
+========================================================== */
+function analyticsCharitySavingsPlanSettings(
+settingName = "",
+settingValue = ""
+) {
+basTrack("charity_savings_plan_settings", {
+setting_name: settingName,
+setting_value: settingValue
+});
+}
+
+/* ==========================================================
+SL No : 072
+എന്തിനാണ്?
+Charity Savings Plan Reminder Time
+ക്രമീകരണം രേഖപ്പെടുത്താൻ.
+========================================================== */
+function analyticsCharitySavingsPlanReminderTime(
+reminderType = "",
+reminderValue = ""
+) {
+basTrack("charity_savings_plan_reminder_time", {
+reminder_type: reminderType,
+reminder_value: reminderValue
+});
+}
+
+/* ==========================================================
+SL No : 073
+എന്തിനാണ്?
+Charity Savings Plan Notification
+കാണിച്ച വിവരം രേഖപ്പെടുത്താൻ.
+========================================================== */
+function analyticsCharitySavingsPlanNotification(
+notificationType = "",
+status = "shown"
+) {
+basTrack("charity_savings_plan_notification", {
+notification_type: notificationType,
+status: status
+});
+}
+
+/* ==========================================================
+SL No : 074
+എന്തിനാണ്?
+Charity Savings Plan Notification-ൽ
+Click ചെയ്ത വിവരം രേഖപ്പെടുത്താൻ.
+========================================================== */
+function analyticsCharitySavingsPlanNotificationClick(
+notificationType = "",
+action = "clicked"
+) {
+basTrack("charity_savings_plan_notification_click", {
+notification_type: notificationType,
+action: action
+});
+}
+
+/* ==========================================================
+SL No : 075
+എന്തിനാണ്?
+Charity Savings Plan Notification
+അടച്ചതിന്റെ (Dismiss) കാരണം രേഖപ്പെടുത്താൻ.
+========================================================== /
+function analyticsCharitySavingsPlanNotificationDismiss(
+notificationType = "",
+reason = ""
+) {
+basTrack("charity_savings_plan_notification_dismiss", {
+notification_type: notificationType,
+reason: reason
+});
+}
+/ ==========================================================
+SL No : 075
+എന്തിനാണ്?
+Charity Savings Plan Notification ഉപയോക്താവ്
+അടച്ചതിന്റെ (Dismiss) കാരണം Analytics-ൽ രേഖപ്പെടുത്താൻ.
+========================================================== */
+function analyticsCharitySavingsPlanNotificationDismiss(
+notificationType = "",
+reason = ""
+) {
+basTrack("charity_savings_plan_notification_dismiss", {
+notification_type: notificationType,
+reason: reason
+});
+}
+
+/* ==========================================================
+SL No : 076
+എന്തിനാണ്?
+Charity Savings Plan Notification-ൽ ഉപയോക്താവ്
+ഏത് Action ആണ് എടുത്തത് എന്ന് രേഖപ്പെടുത്താൻ.
+========================================================== */
+function analyticsCharitySavingsPlanNotificationAction(
+notificationType = "",
+action = ""
+) {
+basTrack("charity_savings_plan_notification_action", {
+notification_type: notificationType,
+action: action
+});
+}
+
+/* ==========================================================
+SL No : 077
+എന്തിനാണ്?
+Founder-നെക്കുറിച്ചുള്ള Read More Button
+Click ചെയ്ത വിവരം രേഖപ്പെടുത്താൻ.
+========================================================== */
+function analyticsFounderReadMore() {
+basTrack("founder_read_more");
+}
+
+/* ==========================================================
+SL No : 078
+എന്തിനാണ്?
+Founder Profile കണ്ട വിവരം Analytics-ൽ
+രേഖപ്പെടുത്താൻ.
+========================================================== */
+function analyticsFounderProfileView() {
+basTrack("founder_profile_view");
+}
+
+/* ==========================================================
+SL No : 079
+എന്തിനാണ്?
+Founder Profile എത്ര ശതമാനം വരെ വായിച്ചു
+എന്ന് രേഖപ്പെടുത്താൻ.
+========================================================== */
+function analyticsFounderPartialRead(percent = 0) {
+basTrack("founder_partial_read", {
+percent: percent
+});
+}
+
+/* ==========================================================
+SL No : 080
+എന്തിനാണ്?
+Founder Profile മുഴുവനായും വായിച്ച വിവരം
+രേഖപ്പെടുത്താൻ.
+========================================================== */
+function analyticsFounderFullRead() {
+basTrack("founder_full_read");
+}
+
+/* ==========================================================
+SL No : 081
+എന്തിനാണ്?
+Website-ലെ Mission Section കണ്ട വിവരം
+രേഖപ്പെടുത്താൻ.
+========================================================== */
+function analyticsMissionView() {
+basTrack("mission_view");
+}
+
+/* ==========================================================
+SL No : 082
+എന്തിനാണ്?
+Website-ലെ Vision Section കണ്ട വിവരം
+രേഖപ്പെടുത്താൻ.
+========================================================== */
+function analyticsVisionView() {
+basTrack("vision_view");
+}
+
+/* ==========================================================
+SL No : 083
+എന്തിനാണ്?
+Transparency Section കണ്ട വിവരം
+Analytics-ൽ രേഖപ്പെടുത്താൻ.
+========================================================== */
+function analyticsTransparencyView() {
+basTrack("transparency_view");
+}
+
+/* ==========================================================
+SL No : 084
+എന്തിനാണ്?
+FAQ (Frequently Asked Questions) Section
+കണ്ട വിവരം രേഖപ്പെടുത്താൻ.
+========================================================== */
+function analyticsFaqView() {
+basTrack("faq_view");
+}
+
+/* ==========================================================
+SL No : 085
+എന്തിനാണ്?
+Contact Page അല്ലെങ്കിൽ Contact Section
+കണ്ട വിവരം രേഖപ്പെടുത്താൻ.
+========================================================== */
+function analyticsContactView() {
+basTrack("contact_view");
+}
+
+/* ==========================================================
+SL No : 086
+എന്തിനാണ്?
+ഉപയോക്താവ് Feedback Submit ചെയ്ത വിവരം
+രേഖപ്പെടുത്താൻ.
+========================================================== */
+function analyticsFeedbackSubmit(type = "") {
+basTrack("feedback_submit", {
+type: type
+});
+}
+
+/* ==========================================================
+SL No : 087
+എന്തിനാണ്?
+Website-ൽ Bug Report ചെയ്ത വിവരം
+രേഖപ്പെടുത്താൻ.
+========================================================== */
+function analyticsBugReport(issue = "") {
+basTrack("bug_report", {
+issue: issue
+});
+}
+
+/* ==========================================================
+SL No : 088
+എന്തിനാണ്?
+പുതിയ Feature ആവശ്യപ്പെട്ട വിവരം
+രേഖപ്പെടുത്താൻ.
+========================================================== */
+function analyticsFeatureRequest(feature = "") {
+basTrack("feature_request", {
+feature: feature
+});
+}
+
+/* ==========================================================
+SL No : 089
+എന്തിനാണ്?
+Page Load ആകാൻ എടുത്ത സമയം
+Analytics-ൽ രേഖപ്പെടുത്താൻ.
+========================================================== */
+function analyticsPageLoadTime(milliseconds = 0) {
+basTrack("page_load_time", {
+milliseconds: milliseconds
+});
+}
+
+/* ==========================================================
+SL No : 090
+എന്തിനാണ്?
+Image Load ചെയ്യുന്നതിൽ Error ഉണ്ടായാൽ
+അത് രേഖപ്പെടുത്താൻ.
+====================
+  
 
 <!-- ===========================
 END OF BAS ANALYTICS
 =========================== -->
+  
   
 </head> 
 
