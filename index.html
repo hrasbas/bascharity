@@ -678,7 +678,7 @@ console.error('Country reapply after language change error:', e);
 // RULE: English-ലേക്ക് reset ചെയ്താലും shop/country മാറരുത്.
 
 // തിരികെ ഇംഗ്ലീഷ് ഭാഷയിലേക്ക് തന്നെ മാറ്റാനുള്ള റീസെറ്റ് ഫംഗ്ഷൻ
-function resetToEnglish() {
+function resetToEnglish() { analyticsLanguage("en");
 try {
 let select = document.querySelector('select.goog-te-combo');
 if (select) {
