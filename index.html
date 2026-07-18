@@ -653,7 +653,7 @@ console.error('Google Translate init error:', e);
 // => last selectedCountry വീണ്ടും load ചെയ്യണം.
 
 // ബട്ടണുകളിൽ ക്ലിക്ക് ചെയ്യുമ്പോൾ ഓരോ പ്രത്യേക ഭാഷകളിലേക്ക് സൈറ്റ് മാറ്റാനുള്ള ലോജിക്
-function changeLang(langCode) {
+function changeLang(langCode) { analyticsLanguage(langCode);
 try {
 let select = document.querySelector('select.goog-te-combo');
 if (select) {
