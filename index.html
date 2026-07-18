@@ -3518,7 +3518,7 @@ function setupCategoryDropdown() {
 categorySearch.addEventListener("input", function () {
   const value = this.value.toLowerCase().trim();
   startInactivityTimer();
-
+analyticsSearch(value);
   if (value === "") {
     renderCategory(currentCategory);
     return;
