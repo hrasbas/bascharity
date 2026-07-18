@@ -967,6 +967,7 @@ window.addEventListener('load', initBalloons);
 function goWhatsApp(){
 let url = "https://bascharity-56f.pages.dev";
 let text = "Save a beautiful icon to your screen\n\n" + url + "\n\nChrome → ⋮ 3 dot → Save to Screen → Install";
+analyticsExternal(url);
 window.open("https://wa.me/?text=" + encodeURIComponent(text), "_blank");
 } 
 
