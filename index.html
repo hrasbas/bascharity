@@ -973,6 +973,7 @@ window.open("https://wa.me/?text=" + encodeURIComponent(text), "_blank");
 // ഇൻസ്റ്റാൾ ബലൂണിൽ ക്ലിക്ക് ചെയ്യുമ്പോൾ ഇൻസ്റ്റാളേഷൻ വിൻഡോ കാണിക്കുന്ന ഫങ്ഷൻ
 function handleInstallTap() {
 if (!basPrompt) return; // ഇൻസ്റ്റാൾഡ് ആണെങ്കിൽ ക്ലിക്ക് പ്രവർത്തിക്കില്ല
+analyticsPWA();
 basPrompt.prompt();
 basPrompt.userChoice.then((c) => {
 if (c.outcome === 'accepted') {
