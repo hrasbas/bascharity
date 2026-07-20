@@ -1,4 +1,4 @@
-  <!DOCTYPE html>  
+   <!DOCTYPE html>  
 <html lang="en">
 <head>
 <meta charset="UTF-8">
@@ -653,7 +653,7 @@ console.error('Google Translate init error:', e);
 // => last selectedCountry വീണ്ടും load ചെയ്യണം.
 
 // ബട്ടണുകളിൽ ക്ലിക്ക് ചെയ്യുമ്പോൾ ഓരോ പ്രത്യേക ഭാഷകളിലേക്ക് സൈറ്റ് മാറ്റാനുള്ള ലോജിക്
-function changeLang(langCode) { analyticsLanguage(langCode);
+function changeLang(langCode) {
 try {
 let select = document.querySelector('select.goog-te-combo');
 if (select) {
@@ -678,7 +678,7 @@ console.error('Country reapply after language change error:', e);
 // RULE: English-ലേക്ക് reset ചെയ്താലും shop/country മാറരുത്.
 
 // തിരികെ ഇംഗ്ലീഷ് ഭാഷയിലേക്ക് തന്നെ മാറ്റാനുള്ള റീസെറ്റ് ഫംഗ്ഷൻ
-function resetToEnglish() { analyticsLanguage("en");
+function resetToEnglish() {
 try {
 let select = document.querySelector('select.goog-te-combo');
 if (select) {
@@ -796,31 +796,27 @@ window.updateDedication=function(langCode){
     return false;
 };
 
-const oldChangeLang = window.changeLang;
+const oldChangeLang=window.changeLang;
 
-window.changeLang = function(langCode){
+window.changeLang=function(langCode){
 
-    if(typeof oldChangeLang === "function"){
+    const found=updateDedication(langCode);
+
+    if(!found && typeof oldChangeLang==="function"){
         oldChangeLang(langCode);
     }
 
-    setTimeout(function(){
-        updateDedication(langCode);
-    },800);
-
 };
 
-const oldReset = window.resetToEnglish;
+const oldReset=window.resetToEnglish;
 
-window.resetToEnglish = function(){
+window.resetToEnglish=function(){
 
-    if(typeof oldReset === "function"){
-        oldReset();
-    }
+if(typeof oldReset==="function"){
+oldReset();
+}
 
-    setTimeout(function(){
-        updateDedication("en");
-    },800);
+updateDedication("en");
 
 };
 
@@ -967,14 +963,12 @@ window.addEventListener('load', initBalloons);
 function goWhatsApp(){
 let url = "https://bascharity-56f.pages.dev";
 let text = "Save a beautiful icon to your screen\n\n" + url + "\n\nChrome → ⋮ 3 dot → Save to Screen → Install";
-analyticsExternal(url);
 window.open("https://wa.me/?text=" + encodeURIComponent(text), "_blank");
 } 
 
 // ഇൻസ്റ്റാൾ ബലൂണിൽ ക്ലിക്ക് ചെയ്യുമ്പോൾ ഇൻസ്റ്റാളേഷൻ വിൻഡോ കാണിക്കുന്ന ഫങ്ഷൻ
 function handleInstallTap() {
 if (!basPrompt) return; // ഇൻസ്റ്റാൾഡ് ആണെങ്കിൽ ക്ലിക്ക് പ്രവർത്തിക്കില്ല
-analyticsPWA();
 basPrompt.prompt();
 basPrompt.userChoice.then((c) => {
 if (c.outcome === 'accepted') {
@@ -1715,7 +1709,7 @@ Even if you are not buying anything right now, you can still support this charit
 </div>
 
 <script>
-function copyLink() { analyticsCopyLink();
+function copyLink() {
 navigator.clipboard.writeText("https://bascharity.com");
 alert("Link Copied. Share with friends.");
 }
@@ -2791,115 +2785,8 @@ const target = document.getElementById(el);
 if(target) target.scrollIntoView({ behavior:"smooth", block:"start" });
 }
 </script>
-  <style>
-.basglobal-wrapper{
-  max-width:900px;
-  width:96%;
-  margin:20px auto;
-  padding:0 10px;
-  font-family:Arial,Helvetica,sans-serif;
-}
 
-.basglobal-box{
-  background:#121212;
-  padding:18px;
-  border-radius:14px;
-  border:1px solid #444;
-}
-
-.basglobal-box h1{
-  font-size:24px;
-  text-align:center;
-  margin-bottom:14px;
-  color:#fff;
-}
-
-.basglobal-btn{
-  background:#1a1a1a;
-  padding:16px;
-  border-radius:10px;
-  margin-bottom:10px;
-  cursor:pointer;
-  font-size:20px;
-  font-weight:600;
-  color:#fff;
-  border:1px solid #00e676;
-  border-left:6px solid #00e676;
-  transition:.3s;
-}
-
-.basglobal-btn:hover{
-  background:#252525;
-}
-
-.basglobal-btn.active{
-  border-left:6px solid #ff5252;
-  background:#222;
-}
-
-.basglobal-support{
-  position:fixed;
-  left:50%;
-  bottom:0;
-  width:90%;
-  max-width:480px;
-  background:#1a1a1a;
-  padding:24px;
-  padding-bottom:100px;
-  border-top-left-radius:18px;
-  border-top-right-radius:18px;
-  line-height:1.8;
-  font-size:18px;
-  color:#ddd;
-  border:1px solid #666;
-  border-top:2px solid #00e676;
-  box-shadow:0 -10px 30px rgba(0,0,0,.8);
-  transform:translate(-50%,100%);
-  display:none;
-  transition:.4s;
-  overflow-y:auto;
-  z-index:999;
-}
-
-.basglobal-support.show{
-  transform:translate(-50%,0);
-}
-
-.basglobal-head{
-  font-size:22px;
-  font-weight:bold;
-  margin-bottom:12px;
-  color:#ffd54f;
-}
-
-.basglobal-big{
-  position:sticky;
-  bottom:0;
-  background:#00c853;
-  color:#fff;
-  padding:18px;
-  border-radius:12px;
-  text-align:center;
-  font-weight:bold;
-  margin-top:18px;
-  cursor:pointer;
-  font-size:20px;
-}
-
-.basglobal-big:hover{
-  background:#00b248;
-}
-
-.basglobal-back{
-  background:#333;
-}
-
-.basglobal-back:hover{
-  background:#444;
-}
-</style>
-
- <!--<style>
+ <style>
 .basglobal-wrapper {
   max-width: 900px;
   width: 96%;
@@ -2967,84 +2854,9 @@ if(target) target.scrollIntoView({ behavior:"smooth", block:"start" });
   font-size: 22px;
 }
 .basglobal-back { background: #333; margin-top: 10px; }
-</style>-->
+</style>
+
 <div class="basglobal-wrapper">
-
-  <div class="basglobal-box">
-
-    <h1>BAS GLOBAL SUPPORT</h1>
-
-    <div id="basglobal-list">
-
-      <div class="basglobal-btn" onclick="basglobal.open(this,'unicef')">
-        UNICEF
-      </div>
-
-      <div class="basglobal-btn" onclick="basglobal.open(this,'wfp')">
-        World Food Programme (WFP)
-      </div>
-
-      <div class="basglobal-btn" onclick="basglobal.open(this,'unhcr')">
-        UNHCR
-      </div>
-
-      <div class="basglobal-btn" onclick="basglobal.open(this,'icrc')">
-        International Committee of the Red Cross (ICRC)
-      </div>
-
-      <div class="basglobal-btn" onclick="basglobal.open(this,'ifrc')">
-        International Federation of Red Cross and Red Crescent Societies (IFRC)
-      </div>
-
-      <div class="basglobal-btn" onclick="basglobal.open(this,'msf')">
-        Médecins Sans Frontières (MSF)
-      </div>
-
-      <div class="basglobal-btn" onclick="basglobal.open(this,'islamic')">
-        Islamic Relief Worldwide
-      </div>
-
-    </div>
-
-  </div>
-
-</div>
-
-
-<div id="basglobal-support" class="basglobal-support">
-
-  <div class="basglobal-head">
-    BAS GLOBAL SUPPORT
-  </div>
-
-  <div id="basglobal-content">
-
-    <p>
-      Trusted humanitarian organization serving people around the world.
-    </p>
-
-    <p>
-      🌍 Accepts donations from supporters in all countries through its official website.
-    </p>
-
-    <p>
-      BAS GLOBAL SUPPORT does not collect or receive donations.
-      All donations are made directly through the selected organization's official website.
-    </p>
-
-  </div>
-
-  <div class="basglobal-big" onclick="basglobal.go()">
-    ❤️ Official Details & Donate
-  </div>
-
-  <div class="basglobal-big basglobal-back" onclick="basglobal.close()">
-    Close
-  </div>
-
-</div>  
-
-<!--<div class="basglobal-wrapper">
   <div class="basglobal-box">
     <h1>Bas-Global relief & support</h1>
     <div id="basglobal-list">
@@ -3066,7 +2878,7 @@ if(target) target.scrollIntoView({ behavior:"smooth", block:"start" });
   <p>Remember: Your support can save lives and satisfy someone’s hunger.</p>
   <div class="basglobal-big" onclick="basglobal.go()">View Details & Donate</div>
   <div class="basglobal-big basglobal-back" onclick="basglobal.close()">Close</div>
-</div>-->
+</div>
 
 <script>
 document.addEventListener("DOMContentLoaded", function() {
@@ -3077,64 +2889,6 @@ document.addEventListener("DOMContentLoaded", function() {
     if (!basglobalBox) return;
 
     function setLink(type){
-
-  const data={
-
-    unicef:{
-      title:"UNICEF",
-      link:"https://www.unicef.org/donate",
-      text:"UNICEF works in more than 190 countries to protect children through healthcare, nutrition, education and emergency relief.<br><br>🌍 Accepts donations from supporters in all countries through its official website."
-    },
-
-    wfp:{
-      title:"World Food Programme (WFP)",
-      link:"https://donate.wfp.org/",
-      text:"The World Food Programme is the world's largest humanitarian organization fighting hunger and providing emergency food assistance.<br><br>🌍 Accepts donations from supporters in all countries through its official website."
-    },
-
-    unhcr:{
-      title:"UNHCR",
-      link:"https://donate.unhcr.org/",
-      text:"UNHCR protects refugees, displaced families and stateless people around the world.<br><br>🌍 Accepts donations from supporters in all countries through its official website."
-    },
-
-    icrc:{
-      title:"International Committee of the Red Cross (ICRC)",
-      link:"https://www.icrc.org/en/donate",
-      text:"ICRC provides humanitarian protection and assistance during wars and armed conflicts worldwide.<br><br>🌍 Accepts donations from supporters in all countries through its official website."
-    },
-
-    ifrc:{
-      title:"International Federation of Red Cross and Red Crescent Societies (IFRC)",
-      link:"https://www.ifrc.org/donate",
-      text:"IFRC coordinates disaster response, emergency relief and health programmes through National Societies worldwide.<br><br>🌍 Accepts donations from supporters in all countries through its official website."
-    },
-
-    msf:{
-      title:"Médecins Sans Frontières (MSF)",
-      link:"https://www.doctorswithoutborders.org/donate",
-      text:"MSF provides emergency medical care to people affected by war, disasters and disease in more than 70 countries.<br><br>🌍 Accepts donations from supporters in all countries through its official website."
-    },
-
-    islamic:{
-      title:"Islamic Relief Worldwide",
-      link:"https://www.islamic-relief.org/donate",
-      text:"Islamic Relief Worldwide provides emergency relief, food, healthcare, education and long-term development across the world.<br><br>🌍 Accepts donations from supporters in all countries through its official website."
-    }
-
-  };
-
-  const org=data[type];
-  if(!org) return;
-
-  basglobalLink=org.link;
-
-  document.querySelector(".basglobal-head").innerHTML=org.title;
-
-  document.getElementById("basglobal-content").innerHTML=
-  "<p>"+org.text+"</p>";
-}
-   /*function setLink(type){
       const links = {
         ifrc: "https://www.ifrc.org/donate",
         unicef: "https://www.unicef.org/donate",
@@ -3146,7 +2900,7 @@ document.addEventListener("DOMContentLoaded", function() {
         islamic: "https://www.islamic-relief.org/donate"
       };
       basglobalLink = links[type] || "";
-    }*/
+    }
 
     function basglobalClose(){
       basglobalBox.classList.remove("show");
@@ -3160,58 +2914,7 @@ document.addEventListener("DOMContentLoaded", function() {
       basglobalTimer = setTimeout(basglobalClose, 30000);
     }
 
-
-
-
-
-
-    
     function basglobalGo(){
-
-  if(!basglobalLink) return;
-
-  if(typeof analyticsDonation==="function"){
-    analyticsDonation(
-      document.querySelector(".basglobal-head").textContent.trim()
-    );
-  }
-
-  window.open(basglobalLink,"_blank");
-}
-
-
-function basglobalSwitch(el,type){
-
-  document.querySelectorAll(".basglobal-btn")
-    .forEach(btn=>btn.classList.remove("active"));
-
-  el.classList.add("active");
-
-  basglobalBox.classList.remove("show");
-
-  setTimeout(()=>{
-
-    basglobalBox.style.display="block";
-
-    setTimeout(()=>{
-      basglobalBox.classList.add("show");
-    },10);
-
-    setLink(type);
-
-  },250);
-
-  resetTimer();
-
-}
-
-
-window.basglobal={
-  open:basglobalSwitch,
-  go:basglobalGo,
-  close:basglobalClose
-};
-   /* function basglobalGo(){
       if (basglobalLink) window.open(basglobalLink, "_blank");
     }
 
@@ -3233,7 +2936,7 @@ window.basglobal={
       close: basglobalClose
     };
   })();
-});*/
+});
 </script>
 
 
@@ -3810,7 +3513,7 @@ function setupCategoryDropdown() {
 categorySearch.addEventListener("input", function () {
   const value = this.value.toLowerCase().trim();
   startInactivityTimer();
-analyticsSearch(value);
+
   if (value === "") {
     renderCategory(currentCategory);
     return;
