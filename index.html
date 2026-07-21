@@ -738,6 +738,7 @@ if (animateRef) cancelAnimationFrame(animateRef);
 
 <script src="dedication.js"></script>
 
+ 
 <script>
 (function () {
 
@@ -777,56 +778,67 @@ sw:"swahili",
 fil:"filipino"
 };
 
-window.updateDedication=function(langCode){
+window.updateDedication = function(langCode){
 
-    const key=map[langCode]||"english";
+    const key = map[langCode] || "english";
 
     if(
         window.dedicationData &&
         window.dedicationData[key] &&
         document.getElementById("dedication-text")
     ){
-
         document.getElementById("dedication-text").innerHTML =
         window.dedicationData[key].content;
-
-        return true;
     }
 
-    return false;
 };
 
-const oldChangeLang=window.changeLang;
+const oldChangeLang = window.changeLang;
 
-window.changeLang=function(langCode){
+window.changeLang = function(langCode){
 
-    const found=updateDedication(langCode);
-
-    if(!found && typeof oldChangeLang==="function"){
+    if(typeof oldChangeLang === "function"){
         oldChangeLang(langCode);
     }
 
+    setTimeout(function(){
+        updateDedication(langCode);
+    },800);
+
 };
 
-const oldReset=window.resetToEnglish;
+const oldReset = window.resetToEnglish;
 
-window.resetToEnglish=function(){
+window.resetToEnglish = function(){
 
-if(typeof oldReset==="function"){
-oldReset();
-}
+    if(typeof oldReset === "function"){
+        oldReset();
+    }
 
-updateDedication("en");
+    setTimeout(function(){
+        updateDedication("en");
+    },800);
 
 };
 
 document.addEventListener("DOMContentLoaded",function(){
 
-updateDedication("en");
+    updateDedication("en");
+
+    setInterval(function(){
+
+        const s = document.querySelector(".goog-te-combo");
+
+        if(s && s.value){
+            updateDedication(s.value);
+        }
+
+    },1000);
 
 });
 
 })();
+
 </script>
 
 <!-- ========================= -->
