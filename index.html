@@ -825,20 +825,26 @@ document.addEventListener("DOMContentLoaded",function(){
 
     updateDedication("en");
 
-    setInterval(function(){
+    const timer = setInterval(function(){
 
         const s = document.querySelector(".goog-te-combo");
 
-        if(s && s.value){
-            updateDedication(s.value);
+        if(s){
+
+            s.addEventListener("change",function(){
+
+                setTimeout(function(){
+                    updateDedication(s.value);
+                },800);
+
+            },{once:false});
+
+            clearInterval(timer);
         }
 
-    },1000);
+    },300);
 
 });
-
-})();
-
 </script>
 
 <!-- ========================= -->
