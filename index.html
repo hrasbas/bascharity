@@ -2785,33 +2785,7 @@ const target = document.getElementById(el);
 if(target) target.scrollIntoView({ behavior:"smooth", block:"start" });
 }
 </script>
-
-
-<div class="basglobal-wrapper">
-  <div class="basglobal-box">
-    <h1>Bas-Global relief & support</h1>
-    <div id="basglobal-list">
-      <div class="basglobal-btn" onclick="basglobal.open(this,'ifrc')">Red Crescent / Red Cross</div>
-      <div class="basglobal-btn" onclick="basglobal.open(this,'unicef')">UNICEF</div>
-      <div class="basglobal-btn" onclick="basglobal.open(this,'msf')">MSF (Doctors Without Borders)</div>
-      <div class="basglobal-btn" onclick="basglobal.open(this,'unrwa')">UNRWA</div>
-      <div class="basglobal-btn" onclick="basglobal.open(this,'irc')">IRC</div>
-      <div class="basglobal-btn" onclick="basglobal.open(this,'care')">CARE</div>
-      <div class="basglobal-btn" onclick="basglobal.open(this,'save')">Save the Children</div>
-      <div class="basglobal-btn" onclick="basglobal.open(this,'islamic')">Islamic Relief</div>
-    </div>
-  </div>
-</div>
-
-<div id="basglobal-support" class="basglobal-support">
-  <div class="basglobal-head">Details & Donate</div>
-  <p>Many people want to help, but are afraid of scams. This platform helps you reach trusted humanitarian organisations safely.</p>
-  <p>Remember: Your support can save lives and satisfy someone’s hunger.</p>
-  <div class="basglobal-big" onclick="basglobal.go()">View Details & Donate</div>
-  <div class="basglobal-big basglobal-back" onclick="basglobal.close()">Close</div>
-</div>
-
-<style>
+    <style>
   .global-support-container {
     width: 96%;
     max-width: 900px;
@@ -2849,7 +2823,7 @@ if(target) target.scrollIntoView({ behavior:"smooth", block:"start" });
     border: 1px solid rgba(224, 224, 224, 0.4);
     text-transform: uppercase;
     cursor: pointer;
-    font-size: 15px;
+    font-size: 15px; /* എല്ലാ ബട്ടണുകൾക്കും ഒരേ ഫോണ്ട് സൈസ് */
     transition: background 0.2s;
     letter-spacing: 0.5px;
   }
@@ -2994,7 +2968,7 @@ if(target) target.scrollIntoView({ behavior:"smooth", block:"start" });
     text-decoration: none;
     text-transform: uppercase;
     text-align: center;
-    font-size: 14px;
+    font-size: 15px; /* ബട്ടൺ ഫോണ്ട് സെയിം ആക്കി */
     transition: background 0.2s;
   }
 
@@ -3011,7 +2985,7 @@ if(target) target.scrollIntoView({ behavior:"smooth", block:"start" });
     border: none;
     text-transform: uppercase;
     cursor: pointer;
-    font-size: 13px;
+    font-size: 15px; /* ബട്ടൺ ഫോണ്ട് സെയിം ആക്കി */
   }
 </style>
 
@@ -3019,45 +2993,45 @@ if(target) target.scrollIntoView({ behavior:"smooth", block:"start" });
   
   <h2 class="support-title"><span class="notranslate">BAS</span> GLOBAL SUPPORT</h2>
 
-  <!-- 1. Red Crescent / Red Cross -->
+  <!-- 1. Red Crescent (പ്രത്യേകം വേർതിരിച്ചത്) -->
   <div class="charity-block">
-    <button onclick="openDonateModal('IFRC', 'https://www.ifrc.org/donate')" class="charity-btn notranslate" style="border-left: 6px solid #00E676;">
-      Red Crescent / Red Cross (IFRC)
+    <button onclick="openDonateModal('RED_CRESCENT', 'https://www.ifrc.org/donate')" class="charity-btn notranslate" style="border-left: 6px solid #00E676;">
+      RED CRESCENT (IFRC)
     </button>
   </div>
 
-  <!-- 2. UNICEF -->
+  <!-- 2. Red Cross (പ്രത്യേകം വേർതിരിച്ചത്) -->
+  <div class="charity-block">
+    <button onclick="openDonateModal('RED_CROSS', 'https://www.icrc.org/donate')" class="charity-btn notranslate" style="border-left: 6px solid #DD2C00;">
+      RED CROSS (ICRC)
+    </button>
+  </div>
+
+  <!-- 3. UNICEF -->
   <div class="charity-block">
     <button onclick="openDonateModal('UNICEF', 'https://www.unicef.org/donate')" class="charity-btn notranslate" style="border-left: 6px solid #FFD600;">
       UNICEF
     </button>
   </div>
 
-  <!-- 3. WORLD FOOD PROGRAMME (WFP) -->
+  <!-- 4. WORLD FOOD PROGRAMME (WFP) -->
   <div class="charity-block">
     <button onclick="openDonateModal('WFP', 'https://www.wfp.org')" class="charity-btn notranslate" style="border-left: 6px solid #00B0FF;">
       WORLD FOOD PROGRAMME (WFP)
     </button>
   </div>
 
-  <!-- 4. UNHCR -->
+  <!-- 5. UNHCR -->
   <div class="charity-block">
     <button onclick="openDonateModal('UNHCR', 'https://www.unhcr.org')" class="charity-btn notranslate" style="border-left: 6px solid #FF9100;">
       UNHCR
     </button>
   </div>
 
-  <!-- 5. ICRC -->
-  <div class="charity-block">
-    <button onclick="openDonateModal('ICRC', 'https://www.icrc.org')" class="charity-btn notranslate" style="border-left: 6px solid #DD2C00;">
-      INTERNATIONAL COMMITTEE OF THE RED CROSS (ICRC)
-    </button>
-  </div>
-
   <!-- 6. MSF (Doctors Without Borders) -->
   <div class="charity-block">
     <button onclick="openDonateModal('MSF', 'https://www.doctorswithoutborders.org/donate')" class="charity-btn notranslate" style="border-left: 6px solid #AA00FF;">
-      MSF (Doctors Without Borders)
+      MSF (DOCTORS WITHOUT BORDERS)
     </button>
   </div>
 
@@ -3071,7 +3045,7 @@ if(target) target.scrollIntoView({ behavior:"smooth", block:"start" });
   <!-- 8. IRC -->
   <div class="charity-block">
     <button onclick="openDonateModal('IRC', 'https://www.rescue.org/donate')" class="charity-btn notranslate" style="border-left: 6px solid #FFEA00;">
-      IRC (International Rescue Committee)
+      IRC (INTERNATIONAL RESCUE COMMITTEE)
     </button>
   </div>
 
@@ -3082,10 +3056,10 @@ if(target) target.scrollIntoView({ behavior:"smooth", block:"start" });
     </button>
   </div>
 
-  <!-- 10. Save the Children -->
+  <!-- 10. SAVE THE CHILDREN -->
   <div class="charity-block">
     <button onclick="openDonateModal('SAVE_THE_CHILDREN', 'https://www.savethechildren.org/donate')" class="charity-btn notranslate" style="border-left: 6px solid #FF1744;">
-      Save the Children
+      SAVE THE CHILDREN
     </button>
   </div>
 
@@ -3225,7 +3199,6 @@ if(target) target.scrollIntoView({ behavior:"smooth", block:"start" });
     }, 4000);
   }
 </script>
-
 
 
 <div id="bas-charity-total-dark-info" style="
