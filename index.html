@@ -2786,75 +2786,6 @@ if(target) target.scrollIntoView({ behavior:"smooth", block:"start" });
 }
 </script>
 
- <style>
-.basglobal-wrapper {
-  max-width: 900px;
-  width: 96%;
-  margin: 20px auto;
-  padding: 0 10px;
-  font-family: Arial, Helvetica, sans-serif;
-}
-  font-family: Arial, Helvetica, sans-serif;
-}
-.basglobal-box {
-  background: #121212;
-  padding: 18px;
-  border-radius: 14px;
-  border: 1px solid
- }  
-.basglobal-box h1 { font-size: 24px; text-align: center; margin-bottom: 14px; }
-.basglobal-btn {
-  background: #1a1a1a;
-  padding: 16px;
-  border-radius: 10px;
-  margin-bottom: 10px;
-  cursor: pointer;
-  font-size: 22px;
-  font-weight: 600;
-  border: 1px solid #00e676;
-  border-left: 6px solid #00e676;
-  transition: 0.3s;
-}
-.basglobal-btn.active { border-left: 6px solid #ff5252; background: #222; }
-.basglobal-support {
-  position: fixed;
-  left: 50%;
-  bottom: 0;
-  width: 90%;
-  max-width: 480px;
-  background: #1a1a1a;
-  padding: 24px;
-  padding-bottom: 100px;
-  border-top-left-radius: 18px;
-  border-top-right-radius: 18px;
-  line-height: 1.8;
-  font-size: 22px;
-  color: #ddd;
-  border: 1px solid #666;
-  border-top: 2px solid #00e676;
-  box-shadow: 0 -10px 30px rgba(0,0,0,0.8);
-  transform: translate(-50%,100%);
-  display: none;
-  transition: 0.4s;
-  overflow-y: auto;
-  z-index: 999;
-}
-.basglobal-support.show { transform: translate(-50%, 0); }
-.basglobal-head { font-size: 22px; font-weight: bold; margin-bottom: 12px; color: #ffd54f; }
-.basglobal-big {
-  position: sticky;
-  bottom: 0;
-  background: #00c853;
-  padding: 18px;
-  border-radius: 12px;
-  text-align: center;
-  font-weight: bold;
-  margin-top: 18px;
-  cursor: pointer;
-  font-size: 22px;
-}
-.basglobal-back { background: #333; margin-top: 10px; }
-</style>
 
 <div class="basglobal-wrapper">
   <div class="basglobal-box">
@@ -2881,63 +2812,421 @@ if(target) target.scrollIntoView({ behavior:"smooth", block:"start" });
 </div>
 
 <script>
-document.addEventListener("DOMContentLoaded", function() {
-  (function() {
-    let basglobalLink = "";
-    let basglobalTimer;
-    const basglobalBox = document.getElementById("basglobal-support");
-    if (!basglobalBox) return;
+<style>
+  .global-support-container {
+    width: 96%;
+    max-width: 900px;
+    margin: 20px auto;
+    border: 1px solid rgba(224, 224, 224, 0.4);
+    border-radius: 16px;
+    padding: 22px;
+    background: #121212;
+    box-shadow: 0px 0px 6px rgba(255, 255, 255, 0.15);
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+  }
 
-    function setLink(type){
-      const links = {
-        ifrc: "https://www.ifrc.org/donate",
-        unicef: "https://www.unicef.org/donate",
-        msf: "https://www.doctorswithoutborders.org/donate",
-        unrwa: "https://donate.unrwa.org",
-        irc: "https://www.rescue.org/donate",
-        care: "https://www.care.org/donate",
-        save: "https://www.savethechildren.org/donate",
-        islamic: "https://www.islamic-relief.org/donate"
-      };
-      basglobalLink = links[type] || "";
+  .support-title {
+    text-align: center;
+    color: #fff;
+    font-size: 24px;
+    margin-bottom: 25px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+
+  .charity-block {
+    margin-bottom: 15px;
+    text-align: center;
+  }
+
+  .charity-btn {
+    width: 100%;
+    padding: 16px;
+    background: #1a1a1a;
+    color: #fff;
+    font-weight: bold;
+    border-radius: 12px;
+    border: 1px solid rgba(224, 224, 224, 0.4);
+    text-transform: uppercase;
+    cursor: pointer;
+    font-size: 15px;
+    transition: background 0.2s;
+    letter-spacing: 0.5px;
+  }
+
+  .charity-btn:hover {
+    background: #262626;
+  }
+
+  /* പേജിന്റെ അടിയിൽ വരുന്ന റിപ്പോർട്ട് ബോക്സ് */
+  .bottom-report-section {
+    text-align: center;
+    color: #e0e0e0;
+    font-size: 15px;
+    margin-top: 35px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding-top: 25px;
+  }
+
+  .report-input-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-top: 10px;
+    flex-wrap: wrap;
+  }
+
+  .input-dash {
+    background: transparent;
+    border: none;
+    border-bottom: 2px solid #ffffff;
+    color: #00E676;
+    font-size: 20px;
+    width: 120px;
+    text-align: center;
+    outline: none;
+    padding: 2px;
+    font-weight: bold;
+  }
+
+  .btn-submit-amount {
+    background: #00E676;
+    color: #000;
+    border: none;
+    padding: 8px 16px;
+    font-weight: bold;
+    border-radius: 8px;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-size: 13px;
+    transition: opacity 0.2s;
+  }
+
+  .btn-submit-amount:hover {
+    opacity: 0.9;
+  }
+
+  /* അൺഡൂ ഏരിയ */
+  .status-container {
+    margin-top: 15px;
+    min-height: 30px;
+  }
+
+  .status-msg {
+    color: #00E676;
+    font-size: 14px;
+    font-weight: bold;
+    display: inline-block;
+  }
+
+  .btn-undo {
+    background: #FF3D00;
+    color: #fff;
+    border: none;
+    padding: 5px 12px;
+    margin-left: 10px;
+    font-size: 12px;
+    font-weight: bold;
+    border-radius: 4px;
+    cursor: pointer;
+    text-transform: uppercase;
+  }
+
+  /* COMMON POP-UP (MODAL) STYLING */
+  .modal-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: 999;
+  }
+
+  .common-modal {
+    display: none;
+    position: fixed;
+    top: 15%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90%;
+    max-width: 500px;
+    background: #1c1c1c;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 16px;
+    padding: 24px;
+    box-shadow: 0px 5px 15px rgba(255, 255, 255, 0.1);
+    z-index: 1000;
+    box-sizing: border-box;
+  }
+
+  .modal-title {
+    color: #FFD600;
+    text-align: center;
+    margin-top: 0;
+    font-size: 20px;
+    text-transform: uppercase;
+  }
+
+  .modal-text {
+    color: #fff;
+    font-size: 15px;
+    line-height: 1.6;
+    text-align: center;
+    margin-bottom: 15px;
+  }
+
+  .modal-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 25px;
+  }
+
+  .btn-donate-now {
+    padding: 14px;
+    background: #0b5e20;
+    color: #fff;
+    font-weight: bold;
+    border-radius: 12px;
+    text-decoration: none;
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 14px;
+    transition: background 0.2s;
+  }
+
+  .btn-donate-now:hover {
+    background: #0f822c;
+  }
+
+  .btn-close-modal {
+    padding: 12px;
+    background: #333;
+    color: #fff;
+    font-weight: bold;
+    border-radius: 12px;
+    border: none;
+    text-transform: uppercase;
+    cursor: pointer;
+    font-size: 13px;
+  }
+</style>
+
+<div class="global-support-container">
+  
+  <h2 class="support-title"><span class="notranslate">BAS</span> GLOBAL SUPPORT</h2>
+
+  <!-- 1. Red Crescent / Red Cross -->
+  <div class="charity-block">
+    <button onclick="openDonateModal('IFRC', 'https://www.ifrc.org/donate')" class="charity-btn notranslate" style="border-left: 6px solid #00E676;">
+      Red Crescent / Red Cross (IFRC)
+    </button>
+  </div>
+
+  <!-- 2. UNICEF -->
+  <div class="charity-block">
+    <button onclick="openDonateModal('UNICEF', 'https://www.unicef.org/donate')" class="charity-btn notranslate" style="border-left: 6px solid #FFD600;">
+      UNICEF
+    </button>
+  </div>
+
+  <!-- 3. WORLD FOOD PROGRAMME (WFP) -->
+  <div class="charity-block">
+    <button onclick="openDonateModal('WFP', 'https://www.wfp.org')" class="charity-btn notranslate" style="border-left: 6px solid #00B0FF;">
+      WORLD FOOD PROGRAMME (WFP)
+    </button>
+  </div>
+
+  <!-- 4. UNHCR -->
+  <div class="charity-block">
+    <button onclick="openDonateModal('UNHCR', 'https://www.unhcr.org')" class="charity-btn notranslate" style="border-left: 6px solid #FF9100;">
+      UNHCR
+    </button>
+  </div>
+
+  <!-- 5. ICRC -->
+  <div class="charity-block">
+    <button onclick="openDonateModal('ICRC', 'https://www.icrc.org')" class="charity-btn notranslate" style="border-left: 6px solid #DD2C00;">
+      INTERNATIONAL COMMITTEE OF THE RED CROSS (ICRC)
+    </button>
+  </div>
+
+  <!-- 6. MSF (Doctors Without Borders) -->
+  <div class="charity-block">
+    <button onclick="openDonateModal('MSF', 'https://www.doctorswithoutborders.org/donate')" class="charity-btn notranslate" style="border-left: 6px solid #AA00FF;">
+      MSF (Doctors Without Borders)
+    </button>
+  </div>
+
+  <!-- 7. UNRWA -->
+  <div class="charity-block">
+    <button onclick="openDonateModal('UNRWA', 'https://donate.unrwa.org')" class="charity-btn notranslate" style="border-left: 6px solid #00E5FF;">
+      UNRWA
+    </button>
+  </div>
+
+  <!-- 8. IRC -->
+  <div class="charity-block">
+    <button onclick="openDonateModal('IRC', 'https://www.rescue.org/donate')" class="charity-btn notranslate" style="border-left: 6px solid #FFEA00;">
+      IRC (International Rescue Committee)
+    </button>
+  </div>
+
+  <!-- 9. CARE -->
+  <div class="charity-block">
+    <button onclick="openDonateModal('CARE', 'https://www.care.org/donate')" class="charity-btn notranslate" style="border-left: 6px solid #FF6D00;">
+      CARE
+    </button>
+  </div>
+
+  <!-- 10. Save the Children -->
+  <div class="charity-block">
+    <button onclick="openDonateModal('SAVE_THE_CHILDREN', 'https://www.savethechildren.org/donate')" class="charity-btn notranslate" style="border-left: 6px solid #FF1744;">
+      Save the Children
+    </button>
+  </div>
+
+  <!-- 11. ISLAMIC RELIEF WORLDWIDE -->
+  <div class="charity-block">
+    <button onclick="openDonateModal('ISLAMIC_RELIEF', 'https://www.islamic-relief.org/donate')" class="charity-btn notranslate" style="border-left: 6px solid #00BFA5;">
+      ISLAMIC RELIEF WORLDWIDE
+    </button>
+  </div>
+
+  <!-- പേജിന്റെ താഴെയുള്ള റിപ്പോർട്ട് ബോക്സ് -->
+  <div class="bottom-report-section">
+    <p style="margin-bottom: 10px; font-style: italic;">if you donated Write the amount here for report Thank you</p>
+    
+    <div id="input-area-wrapper" class="report-input-wrapper">
+      <span>₹</span>
+      <input type="number" id="donation-amount" class="input-dash" placeholder="______">
+      <button onclick="submitDonationAmount()" class="btn-submit-amount">SUBMIT</button>
+    </div>
+
+    <div class="status-container">
+      <div id="save-status-msg"></div>
+    </div>
+  </div>
+
+</div>
+
+<!-- BACKGROUND OVERLAY & COMMON POP-UP WINDOW -->
+<div id="modalOverlay" class="modal-overlay" onclick="closeDonateModal()"></div>
+
+<div id="commonDonateModal" class="common-modal">
+  <h3 class="modal-title">Details & Donate</h3>
+  <p class="modal-text">
+    Many people want to help, but are afraid of scams. This platform helps you reach trusted humanitarian organisations safely.
+  </p>
+  <p class="modal-text" style="font-weight: bold;">
+    Remember: Your support can save lives and satisfy someone's hunger.
+  </p>
+  
+  <div class="modal-buttons">
+    <a id="modalDonateLink" href="#" target="_blank" onclick="trackFinalClick()" class="btn-donate-now">
+      DONATE DIRECTLY
+    </a>
+    <button onclick="closeDonateModal()" class="btn-close-modal">
+      CLOSE
+    </button>
+  </div>
+</div>
+
+<script>
+  let lastClickedSite = "NONE";
+  let currentActiveUrl = "";
+  let undoTimeout = null;
+  let pendingAmount = 0;
+  let pendingTime = "";
+
+  function openDonateModal(siteName, siteUrl) {
+    lastClickedSite = siteName;
+    currentActiveUrl = siteUrl;
+    
+    document.getElementById('modalDonateLink').href = siteUrl;
+    document.getElementById('modalOverlay').style.display = 'block';
+    document.getElementById('commonDonateModal').style.display = 'block';
+  }
+
+  function closeDonateModal() {
+    document.getElementById('modalOverlay').style.display = 'none';
+    document.getElementById('commonDonateModal').style.display = 'none';
+  }
+
+  function trackFinalClick() {
+    let currentTime = new Date().toISOString();
+    console.log(`[GA CLICK] Site: ${lastClickedSite} | URL: ${currentActiveUrl} | Time: ${currentTime}`);
+    
+    if (typeof gtag === 'function') {
+      gtag('event', 'final_donate_click', {
+        'charity_site': lastClickedSite,
+        'click_url': currentActiveUrl,
+        'click_time': currentTime
+      });
+    }
+    closeDonateModal();
+  }
+
+  function submitDonationAmount() {
+    let amountInput = document.getElementById('donation-amount');
+    pendingAmount = amountInput.value;
+    pendingTime = new Date().toISOString();
+
+    if (!pendingAmount || pendingAmount <= 0) {
+      alert("Please enter a valid amount.");
+      return;
     }
 
-    function basglobalClose(){
-      basglobalBox.classList.remove("show");
-      setTimeout(()=>basglobalBox.style.display="none",300);
-      document.querySelectorAll(".basglobal-btn").forEach(btn=>btn.classList.remove("active"));
-      clearTimeout(basglobalTimer);
+    document.getElementById('input-area-wrapper').style.display = 'none';
+    let statusDiv = document.getElementById('save-status-msg');
+    
+    statusDiv.innerHTML = `
+      <span class="status-msg" style="color: #FFD600;">₹${pendingAmount} will submit in 1 hour... </span>
+      <button class="btn-undo" onclick="undoSubmission()">UNDO</button>
+    `;
+
+    undoTimeout = setTimeout(sendFinalDataToAnalytics, 3600000);
+  }
+
+  function undoSubmission() {
+    if (undoTimeout) clearTimeout(undoTimeout);
+    
+    let statusDiv = document.getElementById('save-status-msg');
+    statusDiv.innerHTML = `<span class="status-msg" style="color: #FF3D00;">Cancelled! You can edit now.</span>`;
+    
+    setTimeout(() => {
+      statusDiv.innerHTML = "";
+      document.getElementById('input-area-wrapper').style.display = 'flex';
+    }, 1500);
+  }
+
+  function sendFinalDataToAnalytics() {
+    console.log(`[GA TIMEOUT SUBMITTED] Last Clicked Site: ${lastClickedSite} | Amount: ₹${pendingAmount} | Time: ${pendingTime}`);
+
+    if (typeof gtag === 'function') {
+      gtag('event', 'total_donation_submit', {
+        'last_clicked_site': lastClickedSite,
+        'amount': parseFloat(pendingAmount),
+        'saved_time': pendingTime
+      });
     }
 
-    function resetTimer(){
-      clearTimeout(basglobalTimer);
-      basglobalTimer = setTimeout(basglobalClose, 30000);
-    }
+    let statusDiv = document.getElementById('save-status-msg');
+    statusDiv.innerHTML = `<span class="status-msg">Reported ₹${pendingAmount} successfully! Thank you.</span>`;
+    
+    document.getElementById('donation-amount').value = "";
 
-    function basglobalGo(){
-      if (basglobalLink) window.open(basglobalLink, "_blank");
-    }
-
-    function basglobalSwitch(el, type){
-      document.querySelectorAll(".basglobal-btn").forEach(btn=>btn.classList.remove("active"));
-      el.classList.add("active");
-      basglobalBox.classList.remove("show");
-      setTimeout(()=>{
-        basglobalBox.style.display = "block";
-        setTimeout(()=>basglobalBox.classList.add("show"),10);
-        setLink(type);
-      }, 250);
-      resetTimer();
-    }
-
-    window.basglobal = {
-      open: basglobalSwitch,
-      go: basglobalGo,
-      close: basglobalClose
-    };
-  })();
-});
+    setTimeout(() => {
+      statusDiv.innerHTML = "";
+      document.getElementById('input-area-wrapper').style.display = 'flex';
+    }, 4000);
+  }
 </script>
+
 
 
 <div id="bas-charity-total-dark-info" style="
