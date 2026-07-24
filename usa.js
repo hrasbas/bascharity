@@ -7195,7 +7195,7 @@ d:"finish line is a usa online store for athletic shoes, apparel and sports gear
 k:"finish line,online shopping usa,usa fashion,sportswear,athletic shoes,online retail,sneaker shopping,activewear",
 a:""
 },
-{
+/*{
 i:800,
 n:"jordans",
 c:"business,fashion,sports",
@@ -8995,7 +8995,7 @@ u:"https://www.bestbuy.com/",
 d:"best buy is a usa online electronics retailer for computers, appliances, phones and video games. it is for shoppers looking for new tech, store pickup and free 2-day shipping on many items.",
 k:"best buy,online shopping usa,usa electronics,computers,appliances,cell phones,video games,online retail",
 a:""
-},
+},*/
 {
 i:1000,
 n:"hsn",
