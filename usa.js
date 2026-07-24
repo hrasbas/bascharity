@@ -7195,7 +7195,7 @@ d:"finish line is a usa online store for athletic shoes, apparel and sports gear
 k:"finish line,online shopping usa,usa fashion,sportswear,athletic shoes,online retail,sneaker shopping,activewear",
 a:""
 },
-/*{
+{
 i:800,
 n:"jordans",
 c:"business,fashion,sports",
@@ -8104,7 +8104,7 @@ d:"instacart is a usa grocery delivery platform that connects shoppers with loca
 k:"instacart,online shopping usa,usa grocery delivery,household essentials,online supermarket,daily needs,delivery app,food shopping",
 a:""
 }, 
-{
+/*{
 i:901,
 n:"amazon",
 c:"business,electronics,home,fashion,beauty,health,food,sports,books,jewellery,automotive,travel,software",
