@@ -4162,8 +4162,7 @@ u:"https://www.dingdongmaicai.com/",
 d:"dingdong maicai is a china fresh grocery shopping platform for everyday meal planning. it is popular with buyers who want produce, meat and kitchen items online.",
 k:"dingdong maicai,online shopping china,china grocery,food delivery,fresh produce,online supermarket,kitchen essentials,daily needs",
 a:""
-}
-
+},
 {
 i:475,
 n:"dingdong maicai",
