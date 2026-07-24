@@ -901,10 +901,7 @@ d:"petco is a usa online pet store for food, toys, grooming and health products.
 k:"petco,online shopping usa,usa pet food,pet supplies,pet health,pet grooming,online retail,animal care",
 a:""
 },
-  
-window.countryShops = window.countryShops || {};
-window.countryShops["usa"] = [
-{
+   {
 i:101,
 n:"shop app",
 c:"business,electronics,home,fashion,beauty,health,food,sports,books,jewellery,automotive,travel,software",
