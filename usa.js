@@ -8455,7 +8455,7 @@ d:"calvin klein is a usa online fashion store for underwear, apparel and accesso
 k:"calvin klein,online shopping usa,usa fashion,apparel,underwear,accessories,online retail,minimalist style",
 a:""
 },
-{
+/*{
 i:940,
 n:"foot locker",
 c:"business,fashion,sports",
