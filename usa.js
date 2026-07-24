@@ -8545,7 +8545,7 @@ d:"versace is a usa online luxury store for clothing, shoes, accessories and hom
 k:"versace,online shopping usa,usa luxury fashion,designer clothing,shoes,accessories,home products,online retail",
 a:""
 },
-/*{
+{
 i:950,
 n:"balmain",
 c:"business,fashion",
@@ -8553,7 +8553,7 @@ u:"https://us.balmain.com/en",
 d:"balmain is a usa online luxury fashion store for designer clothing and accessories. it is for shoppers looking for high-fashion pieces and premium style.",
 k:"balmain,online shopping usa,usa luxury fashion,designer clothing,high fashion,accessories,online retail,premium brand",
 a:""
-}.*/
+},
 {
 i:951,
 n:"net-a-porter",
