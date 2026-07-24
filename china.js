@@ -3466,7 +3466,946 @@ u:"https://www.dewu.com/",
 d:"dewudewu.com is a china social ecommerce platform focused on sneakers, fashion and collectible goods. it is popular with younger shoppers looking for branded streetwear and lifestyle products online.",
 k:"dewudewu.com,online shopping china,china fashion,sneakers,streetwear,lifestyle products,social commerce,online store",
 a:""
+},
+ 
+{
+i:400,
+n:"dewudewu.com",
+c:"business,electronics,home,fashion,beauty,health,food,sports,books,jewellery,automotive,software",
+u:"https://www.dewu.com/",
+d:"dewudewu.com is a china social ecommerce platform focused on sneakers, fashion and collectible goods. it is popular with younger shoppers looking for branded streetwear and lifestyle products online.",
+k:"dewudewu.com,online shopping china,china fashion,sneakers,streetwear,lifestyle products,social commerce,online store",
+a:""
+},
+{
+i:401,
+n:"ubuy china",
+c:"business,electronics,home,fashion,beauty,health,food,sports,books,jewellery,automotive,travel,software",
+u:"https://www.ubuy.com.cn/en/",
+d:"ubuy china is a cross-border online shopping site for imported and premium products. it serves buyers in china looking for electronics, fashion, beauty, home and lifestyle items.",
+k:"ubuy china,online shopping china,cross border shopping,imported electronics,fashion products,beauty shopping,home goods,premium brands",
+a:""
+},
+{
+i:402,
+n:"xiaomi",
+c:"business,electronics,home,software",
+u:"https://www.mi.com/",
+d:"xiaomi is the official china online store for smartphones, smart devices and home technology. it is a popular shopping site for consumer electronics and smart living products in china.",
+k:"xiaomi,online shopping china,china electronics,smartphones,smart home devices,official store,consumer tech,online retail",
+a:""
+},
+{
+i:403,
+n:"jd.com",
+c:"business,electronics,home,fashion,beauty,health,food,sports,books,jewellery,automotive,travel,software",
+u:"https://www.jd.com/?lang=en",
+d:"jd.com is a major china ecommerce platform known for fast delivery and direct sales. it is a strong option for electronics, home appliances, food and fashion shopping in china.",
+k:"jd.com,online shopping china,china ecommerce,electronics shopping,home appliances,fast delivery,fashion shopping,online retail",
+a:""
+},
+{
+i:404,
+n:"kaola",
+c:"business,beauty,fashion,home,food,health,jewellery",
+u:"https://www.kaola.com/",
+d:"kaola is a china cross-border shopping platform for imported lifestyle products. it is used by buyers looking for beauty, fashion, home and health products online in china.",
+k:"kaola,online shopping china,china cross border,imported goods,beauty shopping,fashion products,home goods,international shopping",
+a:""
+},
+{
+i:405,
+n:"1688",
+c:"business,electronics,home,fashion,beauty,food,sports,books,jewellery,automotive,software",
+u:"https://www.1688.com/",
+d:"1688 is china's leading domestic wholesale marketplace for businesses and resellers. it covers raw materials, industrial goods, apparel, home products and many other b2b categories in china.",
+k:"1688,online shopping china,china wholesale,b2b marketplace,manufacturer sourcing,industrial products,apparel wholesale,business trade",
+a:""
+},
+{
+i:406,
+n:"taobao",
+c:"business,electronics,home,fashion,beauty,health,food,sports,books,jewellery,automotive,travel,software",
+u:"https://www.taobao.com/",
+d:"taobao is one of the largest china online shopping marketplaces with huge product variety. it is used for electronics, fashion, home goods, beauty, food and many other categories in china.",
+k:"taobao,online shopping china,china marketplace,electronics shopping,fashion shopping,home goods,beauty products,general shopping",
+a:""
+},
+{
+i:407,
+n:"tmall",
+c:"business,electronics,home,fashion,beauty,health,food,sports,books,jewellery,automotive,travel,software",
+u:"https://www.tmall.com/index",
+d:"tmall is a top china marketplace for official stores and branded products. it is popular with shoppers looking for authentic electronics, fashion, beauty and home products online in china.",
+k:"tmall,online shopping china,china marketplace,branded shopping,official stores,electronics store,fashion store,beauty products",
+a:""
+},
+{
+i:408,
+n:"pinduoduo",
+c:"business,electronics,home,fashion,beauty,health,food,sports,books,jewellery,automotive,travel,software",
+u:"https://m.pinduoduo.com/en/?lang=en",
+d:"pinduoduo is a china social commerce platform centered on group buying and discounts. it is widely used for affordable electronics, fashion, home and daily goods in china.",
+k:"pinduoduo,online shopping china,china social commerce,group buying,discount shopping,electronics shopping,fashion shopping,online store",
+a:""
+},
+{
+i:409,
+n:"vipshop",
+c:"business,fashion,beauty,home,jewellery",
+u:"https://www.vip.com/",
+d:"vipshop is a china flash-sale ecommerce site for branded deals. it is popular for fashion, beauty, home goods and lifestyle products at discounted prices in china.",
+k:"vipshop,online shopping china,china fashion,beauty products,home goods,flash sale,brand deals,discount shopping",
+a:""
+},
+{
+i:410,
+n:"gome",
+c:"business,electronics,home,software",
+u:"https://www.gome.com.cn/",
+d:"gome is a china online store focused on consumer electronics and appliances. it is useful for shoppers buying gadgets, home products and tech equipment online in china.",
+k:"gome,online shopping china,china electronics,home appliances,tech store,consumer electronics,online retailer,ecommerce site",
+a:""
+},
+{
+i:411,
+n:"suning",
+c:"business,electronics,home,automotive,software",
+u:"https://www.suning.com/",
+d:"suning is a major china online shopping platform for electronics and home appliances. it also serves customers buying household essentials, automotive items and tech products in china.",
+k:"suning,online shopping china,china electronics,home appliances,consumer tech,appliance store,online retail,shopping platform",
+a:""
+},
+{
+i:412,
+n:"dangdang",
+c:"business,books,electronics,home,software",
+u:"https://www.dangdang.com/",
+d:"dangdang is a china online shopping site best known for books and media. it also serves customers looking for electronics, stationery and educational products online.",
+k:"dangdang,online shopping china,china books,online bookstore,study materials,electronics shopping,stationery,education shopping",
+a:""
+},
+{
+i:413,
+n:"bookuu",
+c:"business,books,software",
+u:"https://www.bookuu.com/",
+d:"bookuu is a china online bookstore and reading platform. it is used by students and readers looking for books, learning materials and stationery online in china.",
+k:"bookuu,online shopping china,china books,online bookstore,reading platform,study materials,stationery,education shopping",
+a:""
+},
+{
+i:414,
+n:"xinhua bookstore",
+c:"business,books,software",
+u:"https://www.xhsd.com/",
+d:"xinhua bookstore is a china book retail platform with online shopping services. it serves readers, students and institutions looking for books, learning supplies and educational products in china.",
+k:"xinhua bookstore,online shopping china,china books,book retail,learning materials,stationery,education shopping,online store",
+a:""
+},
+{
+i:415,
+n:"sephora china",
+c:"business,beauty,health",
+u:"https://www.sephora.cn/",
+d:"sephora china is the official beauty shopping site for cosmetics, skincare and fragrance. it is used by customers in china looking for premium beauty brands and personal care products.",
+k:"sephora china,online shopping china,china beauty,cosmetics shopping,skincare products,fragrance store,personal care,official store",
+a:""
+},
+{
+i:416,
+n:"perfect diary",
+c:"business,beauty,health",
+u:"https://www.perfectdiary.com/",
+d:"perfect diary is a china beauty brand with an official online store for makeup and skincare. it is popular with shoppers looking for cosmetics and personal care products in china.",
+k:"perfect diary,online shopping china,china beauty,makeup store,skincare products,cosmetics,personal care,official brand store",
+a:""
+},
+{
+i:417,
+n:"jumei",
+c:"business,beauty,health,fashion",
+u:"https://www.jumei.com/",
+d:"jumei is a china ecommerce site focused on beauty and personal care products. it is used by shoppers looking for cosmetics, skincare and grooming items online in china.",
+k:"jumei,online shopping china,china beauty,skincare shopping,cosmetics store,personal care,beauty ecommerce,online store",
+a:""
+},
+{
+i:418,
+n:"decathlon china",
+c:"business,sports,home",
+u:"https://www.decathlon.cn/",
+d:"decathlon china is the official online shopping site for sports and outdoor equipment. it is used by customers in china looking for fitness gear, camping items and sportswear.",
+k:"decathlon china,online shopping china,china sports,fitness gear,camping products,sportswear,outdoor equipment,official store",
+a:""
+},
+{
+i:419,
+n:"intersport china",
+c:"business,sports,fashion",
+u:"https://www.intersport.com.cn/",
+d:"intersport china is a sports retail platform for athletic apparel and equipment. it serves shoppers in china looking for training gear, shoes and active lifestyle products.",
+k:"intersport china,online shopping china,china sports,sportswear,athletic gear,training shoes,active lifestyle,online retail",
+a:""
+},
+{
+i:420,
+n:"the north face china",
+c:"business,sports,travel,fashion",
+u:"https://www.thenorthface.com.cn/",
+d:"the north face china is the official online store for outdoor apparel and adventure gear. it is popular with shoppers in china looking for travel, hiking and sports products.",
+k:"the north face china,online shopping china,china sports,outdoor gear,travel apparel,hiking products,official brand store,online retail",
+a:""
+},
+{
+i:421,
+n:"salomon china",
+c:"business,sports,fashion,travel",
+u:"https://www.salomon.com.cn/",
+d:"salomon china is the official online shopping site for trail running and outdoor equipment. it serves customers in china looking for sports shoes, hiking gear and active travel products.",
+k:"salomon china,online shopping china,china sports,trails shoes,hiking gear,outdoor equipment,official brand store,online retail",
+a:""
+},
+{
+i:422,
+n:"autohome",
+c:"business,automotive",
+u:"https://www.autohome.com.cn/",
+d:"autohome is a china automotive platform for car research, comparisons and shopping leads. it serves buyers looking for cars, vehicle reviews and automotive market information online in china.",
+k:"autohome,online shopping china,china automotive,car shopping,vehicle reviews,auto marketplace,car comparison,online store",
+a:""
+},
+{
+i:423,
+n:"bitauto",
+c:"business,automotive",
+u:"https://www.bitauto.com/",
+d:"bitauto is a china automotive shopping and information platform for cars and related services. it helps buyers compare vehicles, find auto offers and explore car content online in china.",
+k:"bitauto,online shopping china,china automotive,car marketplace,vehicle offers,auto comparison,car shopping,online platform",
+a:""
+},
+{
+i:424,
+n:"pcauto",
+c:"business,automotive",
+u:"https://www.pcauto.com.cn/",
+d:"pcauto is a china automotive platform covering cars, reviews and car shopping content. it is useful for buyers researching vehicles and automotive products in china.",
+k:"pcauto,online shopping china,china automotive,car reviews,vehicle shopping,auto content,car comparison,online platform",
+a:""
+},
+{
+i:425,
+n:"motorchina",
+c:"business,automotive",
+u:"https://www.motorchina.com/",
+d:"motorchina is a china automotive website for vehicle news, car models and shopping-related information. it serves shoppers and enthusiasts following the automotive market in china.",
+k:"motorchina,online shopping china,china automotive,car market,vehicle news,auto content,car shopping,online platform",
+a:""
+},
+ 
+{
+i:426,
+n:"ubuy china",
+c:"business,electronics,home,fashion,beauty,health,food,sports,books,jewellery,automotive,travel,software",
+u:"https://www.ubuy.com.cn/en/",
+d:"ubuy china is a cross-border online shopping site for imported and premium products. it serves buyers in china looking for electronics, fashion, beauty, home and lifestyle items.",
+k:"ubuy china,online shopping china,cross border shopping,imported electronics,fashion products,beauty shopping,home goods,premium brands",
+a:""
+},
+{
+i:427,
+n:"xiaomixiaomi.com",
+c:"business,electronics,home,software",
+u:"https://www.xiaomi.com/",
+d:"xiaomixiaomi.com is xiaomi's online shopping platform for smartphones, smart home devices and accessories. it is used by customers in china looking for consumer electronics and connected products.",
+k:"xiaomixiaomi.com,online shopping china,china electronics,smartphones,smart home devices,official brand store,consumer tech,online retail",
+a:""
+},
+{
+i:428,
+n:"dewudewu.com",
+c:"business,electronics,home,fashion,beauty,health,food,sports,books,jewellery,automotive,software",
+u:"https://www.dewu.com/",
+d:"dewudewu.com is a china social ecommerce platform focused on sneakers, fashion and collectible goods. it is popular with younger shoppers looking for branded streetwear and lifestyle products online.",
+k:"dewudewu.com,online shopping china,china fashion,sneakers,streetwear,lifestyle products,social commerce,online store",
+a:""
+},
+{
+i:429,
+n:"xiaomi",
+c:"business,electronics,home,software",
+u:"https://www.mi.com/",
+d:"xiaomi is the official china online store for smartphones, smart devices and home technology. it is a popular shopping site for consumer electronics and smart living products in china.",
+k:"xiaomi,online shopping china,china electronics,smartphones,smart home devices,official store,consumer tech,online retail",
+a:""
+},
+{
+i:430,
+n:"cosco shipping",
+c:"business,automotive,travel,home",
+u:"https://www.coscoshipping.com/",
+d:"cosco shipping is a china logistics and shipping platform with online service access for customers. it supports business shipping, freight and transport-related needs in china.",
+k:"cosco shipping,online shopping china,china logistics,shipping services,freight transport,business services,transport platform,online service",
+a:""
+},
+{
+i:431,
+n:"autohome",
+c:"business,automotive",
+u:"https://www.autohome.com.cn/",
+d:"autohome is a china automotive platform for car research, comparisons and shopping leads. it serves buyers looking for cars, vehicle reviews and automotive market information online in china.",
+k:"autohome,online shopping china,china automotive,car shopping,vehicle reviews,auto marketplace,car comparison,online store",
+a:""
+},
+{
+i:432,
+n:"bitauto",
+c:"business,automotive",
+u:"https://www.bitauto.com/",
+d:"bitauto is a china automotive shopping and information platform for cars and related services. it helps buyers compare vehicles, find auto offers and explore car content online in china.",
+k:"bitauto,online shopping china,china automotive,car marketplace,vehicle offers,auto comparison,car shopping,online platform",
+a:""
+},
+{
+i:433,
+n:"pcauto",
+c:"business,automotive",
+u:"https://www.pcauto.com.cn/",
+d:"pcauto is a china automotive platform covering cars, reviews and car shopping content. it is useful for buyers researching vehicles and automotive products in china.",
+k:"pcauto,online shopping china,china automotive,car reviews,vehicle shopping,auto content,car comparison,online platform",
+a:""
+},
+{
+i:434,
+n:"motorchina",
+c:"business,automotive",
+u:"https://www.motorchina.com/",
+d:"motorchina is a china automotive website for vehicle news, car models and shopping-related information. it serves shoppers and enthusiasts following the automotive market in china.",
+k:"motorchina,online shopping china,china automotive,car market,vehicle news,auto content,car shopping,online platform",
+a:""
+},
+{
+i:435,
+n:"carku",
+c:"business,automotive,electronics",
+u:"https://www.carku.com/",
+d:"carku is a china automotive and electronics brand for jump starters and power products. it is used by drivers and buyers looking for vehicle accessories and portable power solutions in china.",
+k:"carku,online shopping china,china automotive,car accessories,jump starter,portable power,vehicle electronics,online store",
+a:""
+},
+{
+i:436,
+n:"bikexpress",
+c:"business,automotive,sports",
+u:"https://www.bikexpress.com.cn/",
+d:"bikexpress is a china online store for bicycles and cycling products. it is useful for riders looking for bikes, parts and outdoor cycling gear in china.",
+k:"bikexpress,online shopping china,china automotive,bicycles,cycling gear,bike parts,outdoor sports,online store",
+a:""
+},
+{
+i:437,
+n:"decathlon china",
+c:"business,sports,home",
+u:"https://www.decathlon.cn/",
+d:"decathlon china is the official online shopping site for sports and outdoor equipment. it is used by customers in china looking for fitness gear, camping items and sportswear.",
+k:"decathlon china,online shopping china,china sports,fitness gear,camping products,sportswear,outdoor equipment,official store",
+a:""
+},
+{
+i:438,
+n:"intersport china",
+c:"business,sports,fashion",
+u:"https://www.intersport.com.cn/",
+d:"intersport china is a sports retail platform for athletic apparel and equipment. it serves shoppers in china looking for training gear, shoes and active lifestyle products.",
+k:"intersport china,online shopping china,china sports,sportswear,athletic gear,training shoes,active lifestyle,online retail",
+a:""
+},
+{
+i:439,
+n:"the north face china",
+c:"business,sports,travel,fashion",
+u:"https://www.thenorthface.com.cn/",
+d:"the north face china is the official online store for outdoor apparel and adventure gear. it is popular with shoppers in china looking for travel, hiking and sports products.",
+k:"the north face china,online shopping china,china sports,outdoor gear,travel apparel,hiking products,official brand store,online retail",
+a:""
+},
+{
+i:440,
+n:"salomon china",
+c:"business,sports,fashion,travel",
+u:"https://www.salomon.com.cn/",
+d:"salomon china is the official online shopping site for trail running and outdoor equipment. it serves customers in china looking for sports shoes, hiking gear and active travel products.",
+k:"salomon china,online shopping china,china sports,trails shoes,hiking gear,outdoor equipment,official brand store,online retail",
+a:""
+},
+{
+i:441,
+n:"tuniu",
+c:"business,travel",
+u:"https://www.tuniu.com/",
+d:"tuniu is a china travel booking platform for tours, hotels and vacation packages. it is used by travelers in china looking to plan trips and book travel services online.",
+k:"tuniu,online shopping china,china travel,tour booking,hotel booking,vacation packages,travel services,online platform",
+a:""
+},
+{
+i:442,
+n:"ctrip",
+c:"business,travel",
+u:"https://www.ctrip.com/",
+d:"ctrip is a major china travel platform for flights, hotels and holiday bookings. it serves travelers looking for transport, accommodation and trip planning services online in china.",
+k:"ctrip,online shopping china,china travel,flight booking,hotel booking,holiday packages,travel services,online platform",
+a:""
+},
+{
+i:443,
+n:"fliggy",
+c:"business,travel",
+u:"https://www.fliggy.com/",
+d:"fliggy is a china online travel platform for flights, hotels and travel experiences. it is popular with customers in china looking for booking services and vacation planning online.",
+k:"fliggy,online shopping china,china travel,flight booking,hotel booking,vacation planning,travel services,online platform",
+a:""
+},
+{
+i:444,
+n:"ly.com",
+c:"business,travel",
+u:"https://www.ly.com/",
+d:"ly.com is a china travel booking website for transport, hotels and tour packages. it helps travelers in china find booking options for trips, stays and tourist services online.",
+k:"ly.com,online shopping china,china travel,hotel booking,transport booking,tour packages,travel services,online platform",
+a:""
+},
+{
+i:445,
+n:"trip.com",
+c:"business,travel",
+u:"https://www.trip.com/",
+d:"trip.com is a global travel booking platform with strong china reach. it offers flights, hotels, trains and vacation bookings for travelers in china and worldwide.",
+k:"trip.com,online shopping china,china travel,flight booking,hotel booking,train booking,travel services,online platform",
+a:""
+},
+{
+i:446,
+n:"qunar",
+c:"business,travel",
+u:"https://www.qunar.com/",
+d:"qunar is a china travel platform for flight, hotel and train bookings. it is useful for customers looking to compare travel options and book trips online in china.",
+k:"qunar,online shopping china,china travel,flight booking,hotel booking,train booking,travel comparison,online platform",
+a:""
+},
+{
+i:447,
+n:"mafengwo",
+c:"business,travel",
+u:"https://www.mafengwo.cn/",
+d:"mafengwo is a china travel community and booking platform for trip ideas and reservations. it serves travelers looking for guides, hotels and vacation planning online.",
+k:"mafengwo,online shopping china,china travel,trip guides,hotel booking,vacation planning,travel community,online platform",
+a:""
+},
+{
+i:448,
+n:"carnival cruise china",
+c:"business,travel",
+u:"https://www.carnivalcruise.com.cn/",
+d:"carnival cruise china is a cruise travel booking site for vacation packages and cruise trips. it helps travelers in china explore leisure travel and sea holiday options online.",
+k:"carnival cruise china,online shopping china,china travel,cruise booking,vacation packages,holiday travel,travel services,online platform",
+a:""
+},
+{
+i:449,
+n:"tuniu travel",
+c:"business,travel",
+u:"https://www.tuniu.com/",
+d:"tuniu travel is a china booking platform focused on tours, hotels and vacation products. it is used by travelers in china who want trip planning and holiday services online.",
+k:"tuniu travel,online shopping china,china travel,tour booking,holiday packages,hotel booking,travel services,online platform",
+a:""
+},
+{
+i:450,
+n:"decathlon china",
+c:"business,sports,home",
+u:"https://www.decathlon.cn/",
+d:"decathlon china is the official online shopping site for sports and outdoor equipment. it is used by customers in china looking for fitness gear, camping items and sportswear.",
+k:"decathlon china,online shopping china,china sports,fitness gear,camping products,sportswear,outdoor equipment,official store",
+a:""
+},
+ 
+{
+i:450,
+n:"decathlon china",
+c:"business,sports,home",
+u:"https://www.decathlon.cn/",
+d:"decathlon china is the official online shopping site for sports and outdoor equipment. it is used by customers in china looking for fitness gear, camping items and sportswear.",
+k:"decathlon china,online shopping china,china sports,fitness gear,camping products,sportswear,outdoor equipment,official store",
+a:""
+},
+{
+i:451,
+n:"intersport china",
+c:"business,sports,fashion",
+u:"https://www.intersport.com.cn/",
+d:"intersport china is a sports retail platform for athletic apparel and equipment. it serves shoppers in china looking for training gear, shoes and active lifestyle products.",
+k:"intersport china,online shopping china,china sports,sportswear,athletic gear,training shoes,active lifestyle,online retail",
+a:""
+},
+{
+i:452,
+n:"the north face china",
+c:"business,sports,travel,fashion",
+u:"https://www.thenorthface.com.cn/",
+d:"the north face china is the official online store for outdoor apparel and adventure gear. it is popular with shoppers in china looking for travel, hiking and sports products.",
+k:"the north face china,online shopping china,china sports,outdoor gear,travel apparel,hiking products,official brand store,online retail",
+a:""
+},
+{
+i:453,
+n:"salomon china",
+c:"business,sports,fashion,travel",
+u:"https://www.salomon.com.cn/",
+d:"salomon china is the official online shopping site for trail running and outdoor equipment. it serves customers in china looking for sports shoes, hiking gear and active travel products.",
+k:"salomon china,online shopping china,china sports,trails shoes,hiking gear,outdoor equipment,official brand store,online retail",
+a:""
+},
+{
+i:454,
+n:"anta",
+c:"business,sports,fashion",
+u:"https://www.anta.com/",
+d:"anta is a china sportswear and athletic goods brand with online shopping available. it is popular for sneakers, sports clothing and fitness products in china.",
+k:"anta,online shopping china,china sports,sportswear,athletic shoes,fitness clothing,online store,official brand store",
+a:""
+},
+{
+i:455,
+n:"li-ning",
+c:"business,sports,fashion",
+u:"https://www.lining.com/",
+d:"li-ning is a china sportswear brand with an online store for athletic apparel and shoes. it is used by shoppers looking for sports fashion and training gear in china.",
+k:"li-ning,online shopping china,china sports,sportswear,athletic apparel,training gear,online store,official brand store",
+a:""
+},
+{
+i:456,
+n:"361 degrees",
+c:"business,sports,fashion",
+u:"https://www.361sport.com/",
+d:"361 degrees is a china sports brand selling footwear, apparel and training products online. it is useful for shoppers searching for sportswear and active lifestyle gear in china.",
+k:"361 degrees,online shopping china,china sports,footwear,sportswear,training products,active lifestyle,online store",
+a:""
+},
+{
+i:457,
+n:"peak",
+c:"business,sports,fashion",
+u:"https://www.peak.com/",
+d:"peak is a china sportswear company with an online store for shoes and athletic clothing. it serves customers looking for sports fashion and performance gear in china.",
+k:"peak,online shopping china,china sports,athletic shoes,sportswear,performance gear,online store,official brand store",
+a:""
+},
+{
+i:458,
+n:"hoka china",
+c:"business,sports,fashion,travel",
+u:"https://www.hoka.com.cn/",
+d:"hoka china is the official online store for running shoes and outdoor performance gear. it is popular with shoppers in china looking for athletic footwear and sports products.",
+k:"hoka china,online shopping china,china sports,running shoes,athletic footwear,outdoor performance,official brand store,online retail",
+a:""
+},
+{
+i:459,
+n:"asics china",
+c:"business,sports,fashion",
+u:"https://www.asics.com.cn/",
+d:"asics china is the official online store for running shoes and sports apparel. it serves shoppers in china looking for fitness footwear, training gear and activewear.",
+k:"asics china,online shopping china,china sports,running shoes,sportswear,training gear,activewear,official brand store",
+a:""
+},
+{
+i:460,
+n:"new balance china",
+c:"business,sports,fashion",
+u:"https://www.newbalance.com.cn/",
+d:"new balance china is the official online store for sneakers and sportswear. it is used by shoppers in china looking for casual athletic shoes and performance apparel.",
+k:"new balance china,online shopping china,china sports,sneakers,sportswear,athletic shoes,official brand store,online retail",
+a:""
+},
+{
+i:461,
+n:"salewa china",
+c:"business,sports,travel,fashion",
+u:"https://www.salewa.com.cn/",
+d:"salewa china is an online store for mountaineering and outdoor apparel. it helps shoppers in china find hiking gear, climbing equipment and travel clothing online.",
+k:"salewa china,online shopping china,china sports,outdoor apparel,hiking gear,climbing equipment,travel clothing,official store",
+a:""
+},
+{
+i:462,
+n:"hermes china",
+c:"business,fashion,jewellery",
+u:"https://www.hermes.cn/cn/en/",
+d:"hermes china is the official online store for luxury fashion, bags and accessories. it serves premium shoppers in china looking for high-end leather goods and jewellery.",
+k:"hermes china,online shopping china,china luxury,fashion accessories,luxury bags,jewellery,official brand store,premium shopping",
+a:""
+},
+{
+i:463,
+n:"prada china",
+c:"business,fashion,jewellery",
+u:"https://www.prada.cn/cn/en.html",
+d:"prada china is the official online store for luxury fashion and accessories. it is used by shoppers in china looking for designer clothing, bags and premium style products.",
+k:"prada china,online shopping china,china luxury,fashion shopping,designer bags,accessories,official brand store,premium shopping",
+a:""
+},
+{
+i:464,
+n:"hm china",
+c:"business,fashion,home",
+u:"https://www.hm.com.cn/en_cn/",
+d:"hm china is the official online shopping site for fashion and home products. it serves shoppers in china looking for affordable clothing, accessories and home style items.",
+k:"hm china,online shopping china,china fashion,clothing store,home products,affordable style,official brand store,online retail",
+a:""
+},
+{
+i:465,
+n:"zara china",
+c:"business,fashion,home",
+u:"https://www.zara.cn/",
+d:"zara china is the official online store for fashion and lifestyle products. it is popular with shoppers looking for clothing, shoes and home items in china.",
+k:"zara china,online shopping china,china fashion,clothing store,style shopping,home products,official brand store,online retail",
+a:""
+},
+{
+i:466,
+n:"uniqlo china",
+c:"business,fashion,home",
+u:"https://www.uniqlo.cn/",
+d:"uniqlo china is the official online store for casual clothing and basics. it is used by shoppers in china looking for everyday fashion, outerwear and home products.",
+k:"uniqlo china,online shopping china,china fashion,cotton basics,casual clothing,home products,official brand store,online retail",
+a:""
+},
+{
+i:467,
+n:"gap china",
+c:"business,fashion,home",
+u:"https://www.gap.cn/",
+d:"gap china is the official online store for casual apparel and family clothing. it is used by customers in china looking for everyday fashion and home lifestyle items.",
+k:"gap china,online shopping china,china fashion,casual clothing,family apparel,home lifestyle,official brand store,online retail",
+a:""
+},
+{
+i:468,
+n:"crocs china",
+c:"business,fashion",
+u:"https://www.crocs.cn/",
+d:"crocs china is the official online store for casual footwear and accessories. it serves shoppers in china looking for comfortable shoes and lifestyle fashion products.",
+k:"crocs china,online shopping china,china fashion,footwear,casual shoes,accessories,official brand store,online retail",
+a:""
+},
+{
+i:469,
+n:"lululemon china",
+c:"business,sports,fashion",
+u:"https://www.lululemon.cn/",
+d:"lululemon china is the official online store for athletic wear and fitness apparel. it is used by shoppers in china looking for sports clothing and active lifestyle gear.",
+k:"lululemon china,online shopping china,china sports,athletic wear,fitness apparel,active lifestyle,official brand store,online retail",
+a:""
+},
+{
+i:470,
+n:"sephora china",
+c:"business,beauty,health",
+u:"https://www.sephora.cn/",
+d:"sephora china is the official beauty shopping site for cosmetics, skincare and fragrance. it is used by customers in china looking for premium beauty brands and personal care products.",
+k:"sephora china,online shopping china,china beauty,cosmetics shopping,skincare products,fragrance store,personal care,official store",
+a:""
+},
+{
+i:471,
+n:"perfect diary",
+c:"business,beauty,health",
+u:"https://www.perfectdiary.com/",
+d:"perfect diary is a china beauty brand with an official online store for makeup and skincare. it is popular with shoppers looking for cosmetics and personal care products in china.",
+k:"perfect diary,online shopping china,china beauty,makeup store,skincare products,cosmetics,personal care,official brand store",
+a:""
+},
+{
+i:472,
+n:"jumei",
+c:"business,beauty,health,fashion",
+u:"https://www.jumei.com/",
+d:"jumei is a china ecommerce site focused on beauty and personal care products. it is used by shoppers looking for cosmetics, skincare and grooming items online in china.",
+k:"jumei,online shopping china,china beauty,skincare shopping,cosmetics store,personal care,beauty ecommerce,online store",
+a:""
+},
+{
+i:473,
+n:"walmart china",
+c:"business,food,home,electronics,fashion,beauty,health",
+u:"https://en.walmart.cn/",
+d:"walmart china is an online shopping platform for groceries, household goods and daily essentials. it serves families in china looking for food, home products, beauty and electronics online.",
+k:"walmart china,online shopping china,china grocery,household essentials,daily needs,home products,beauty products,electronics",
+a:""
+},
+{
+i:474,
+n:"freshhema",
+c:"business,food,home",
+u:"https://www.freshhema.com/",
+d:"freshhema is an alibaba grocery and fresh food platform in china. it offers fruits, vegetables, seafood and household products for online buyers.",
+k:"freshhema,online shopping china,china grocery,online supermarket,fresh food,seafood shopping,household products,daily essentials",
+a:""
+},
+{
+i:475,
+n:"dingdong maicai",
+c:"business,food,home",
+u:"https://www.dingdongmaicai.com/",
+d:"dingdong maicai is a china fresh grocery shopping platform for everyday meal planning. it is popular with buyers who want produce, meat and kitchen items online.",
+k:"dingdong maicai,online shopping china,china grocery,food delivery,fresh produce,online supermarket,kitchen essentials,daily needs",
+a:""
 }
+
+{
+i:475,
+n:"dingdong maicai",
+c:"business,food,home",
+u:"https://www.dingdongmaicai.com/",
+d:"dingdong maicai is a china fresh grocery shopping platform for everyday meal planning. it is popular with buyers who want produce, meat and kitchen items online.",
+k:"dingdong maicai,online shopping china,china grocery,food delivery,fresh produce,online supermarket,kitchen essentials,daily needs",
+a:""
+},
+{
+i:476,
+n:"missfresh",
+c:"business,food,home",
+u:"https://www.missfresh.cn/",
+d:"missfresh is a china online grocery platform focused on fresh food and household needs. it is used by customers who want produce, meat and kitchen essentials delivered.",
+k:"missfresh,online shopping china,china grocery,fresh food,fruit delivery,vegetable shopping,food delivery,household essentials",
+a:""
+},
+{
+i:477,
+n:"yhd",
+c:"business,food,home,electronics,fashion,beauty,health,books,automotive",
+u:"https://www.yhd.com/",
+d:"yhd is a china online supermarket and general retail platform for daily shopping. it serves customers looking for groceries, home products, electronics and essentials online.",
+k:"yhd,online shopping china,china supermarket,grocery shopping,home products,electronics store,daily essentials,online retail",
+a:""
+},
+{
+i:478,
+n:"walmart china",
+c:"business,food,home,electronics,fashion,beauty,health",
+u:"https://en.walmart.cn/",
+d:"walmart china is an online shopping platform for groceries, household goods and daily essentials. it serves families in china looking for food, home products, beauty and electronics online.",
+k:"walmart china,online shopping china,china grocery,household essentials,daily needs,home products,beauty products,electronics",
+a:""
+},
+{
+i:479,
+n:"freshhema",
+c:"business,food,home",
+u:"https://www.freshhema.com/",
+d:"freshhema is an alibaba grocery and fresh food platform in china. it offers fruits, vegetables, seafood and household products for online buyers.",
+k:"freshhema,online shopping china,china grocery,online supermarket,fresh food,seafood shopping,household products,daily essentials",
+a:""
+},
+{
+i:480,
+n:"taobao world",
+c:"business,electronics,home,fashion,beauty,health,food,sports,books,jewellery,automotive,travel,software",
+u:"https://world.taobao.com/",
+d:"taobao world is the global shopping version of taobao for cross-border buyers. it offers fashion, home goods, beauty, electronics and many other categories online.",
+k:"taobao world,online shopping china,cross border shopping,china marketplace,fashion shopping,electronics shopping,home goods,global retail",
+a:""
+},
+{
+i:481,
+n:"aliexpress",
+c:"business,electronics,home,fashion,beauty,health,food,sports,books,jewellery,automotive,travel,software",
+u:"https://www.aliexpress.com/",
+d:"aliexpress is a global online shopping marketplace that connects buyers with sellers from china. it is popular for electronics, fashion, home goods and many cross-border products.",
+k:"aliexpress,online shopping china,china marketplace,global retail,electronics shopping,fashion shopping,home products,cross border shopping",
+a:""
+},
+{
+i:482,
+n:"global jd",
+c:"business,electronics,home,fashion,beauty,health,food,sports,books,jewellery,automotive,travel,software",
+u:"https://global.jd.com/",
+d:"global jd is jd's international shopping platform for buyers outside mainland china. it offers electronics, fashion, home products and other popular chinese goods with cross-border service.",
+k:"global jd,online shopping china,cross border shopping,electronics shopping,fashion shopping,home products,global retail,international delivery",
+a:""
+},
+{
+i:483,
+n:"jd.com",
+c:"business,electronics,home,fashion,beauty,health,food,sports,books,jewellery,automotive,travel,software",
+u:"https://www.jd.com/?lang=en",
+d:"jd.com is a major china ecommerce platform known for fast delivery and direct sales. it is a strong option for electronics, home appliances, food and fashion shopping in china.",
+k:"jd.com,online shopping china,china ecommerce,electronics shopping,home appliances,fast delivery,fashion shopping,online retail",
+a:""
+},
+{
+i:484,
+n:"dangdang",
+c:"business,books,electronics,home,software",
+u:"https://www.dangdang.com/",
+d:"dangdang is a china online shopping site best known for books and media. it also serves customers looking for electronics, stationery and educational products online.",
+k:"dangdang,online shopping china,china books,online bookstore,study materials,electronics shopping,stationery,education shopping",
+a:""
+},
+{
+i:485,
+n:"bookuu",
+c:"business,books,software",
+u:"https://www.bookuu.com/",
+d:"bookuu is a china online bookstore and reading platform. it is used by students and readers looking for books, learning materials and stationery online in china.",
+k:"bookuu,online shopping china,china books,online bookstore,reading platform,study materials,stationery,education shopping",
+a:""
+},
+{
+i:486,
+n:"xinhua bookstore",
+c:"business,books,software",
+u:"https://www.xhsd.com/",
+d:"xinhua bookstore is a china book retail platform with online shopping services. it serves readers, students and institutions looking for books, learning supplies and educational products in china.",
+k:"xinhua bookstore,online shopping china,china books,book retail,learning materials,stationery,education shopping,online store",
+a:""
+},
+{
+i:487,
+n:"hermes china",
+c:"business,fashion,jewellery",
+u:"https://www.hermes.cn/cn/en/",
+d:"hermes china is the official online store for luxury fashion, bags and accessories. it serves premium shoppers in china looking for high-end leather goods and jewellery.",
+k:"hermes china,online shopping china,china luxury,fashion accessories,luxury bags,jewellery,official brand store,premium shopping",
+a:""
+},
+{
+i:488,
+n:"prada china",
+c:"business,fashion,jewellery",
+u:"https://www.prada.cn/cn/en.html",
+d:"prada china is the official online store for luxury fashion and accessories. it is used by shoppers in china looking for designer clothing, bags and premium style products.",
+k:"prada china,online shopping china,china luxury,fashion shopping,designer bags,accessories,official brand store,premium shopping",
+a:""
+},
+{
+i:489,
+n:"hm china",
+c:"business,fashion,home",
+u:"https://www.hm.com.cn/en_cn/",
+d:"hm china is the official online shopping site for fashion and home products. it serves shoppers in china looking for affordable clothing, accessories and home style items.",
+k:"hm china,online shopping china,china fashion,clothing store,home products,affordable style,official brand store,online retail",
+a:""
+},
+{
+i:490,
+n:"zara china",
+c:"business,fashion,home",
+u:"https://www.zara.cn/",
+d:"zara china is the official online store for fashion and lifestyle products. it is popular with shoppers looking for clothing, shoes and home items in china.",
+k:"zara china,online shopping china,china fashion,clothing store,style shopping,home products,official brand store,online retail",
+a:""
+},
+{
+i:491,
+n:"uniqlo china",
+c:"business,fashion,home",
+u:"https://www.uniqlo.cn/",
+d:"uniqlo china is the official online store for casual clothing and basics. it is used by shoppers in china looking for everyday fashion, outerwear and home products.",
+k:"uniqlo china,online shopping china,china fashion,cotton basics,casual clothing,home products,official brand store,online retail",
+a:""
+},
+{
+i:492,
+n:"gap china",
+c:"business,fashion,home",
+u:"https://www.gap.cn/",
+d:"gap china is the official online store for casual apparel and family clothing. it is used by customers in china looking for everyday fashion and home lifestyle items.",
+k:"gap china,online shopping china,china fashion,casual clothing,family apparel,home lifestyle,official brand store,online retail",
+a:""
+},
+{
+i:493,
+n:"crocs china",
+c:"business,fashion",
+u:"https://www.crocs.cn/",
+d:"crocs china is the official online store for casual footwear and accessories. it serves shoppers in china looking for comfortable shoes and lifestyle fashion products.",
+k:"crocs china,online shopping china,china fashion,footwear,casual shoes,accessories,official brand store,online retail",
+a:""
+},
+{
+i:494,
+n:"lululemon china",
+c:"business,sports,fashion",
+u:"https://www.lululemon.cn/",
+d:"lululemon china is the official online store for athletic wear and fitness apparel. it is used by shoppers in china looking for sports clothing and active lifestyle gear.",
+k:"lululemon china,online shopping china,china sports,athletic wear,fitness apparel,active lifestyle,official brand store,online retail",
+a:""
+},
+{
+i:495,
+n:"sephora china",
+c:"business,beauty,health",
+u:"https://www.sephora.cn/",
+d:"sephora china is the official beauty shopping site for cosmetics, skincare and fragrance. it is used by customers in china looking for premium beauty brands and personal care products.",
+k:"sephora china,online shopping china,china beauty,cosmetics shopping,skincare products,fragrance store,personal care,official store",
+a:""
+},
+{
+i:496,
+n:"perfect diary",
+c:"business,beauty,health",
+u:"https://www.perfectdiary.com/",
+d:"perfect diary is a china beauty brand with an official online store for makeup and skincare. it is popular with shoppers looking for cosmetics and personal care products in china.",
+k:"perfect diary,online shopping china,china beauty,makeup store,skincare products,cosmetics,personal care,official brand store",
+a:""
+},
+{
+i:497,
+n:"jumei",
+c:"business,beauty,health,fashion",
+u:"https://www.jumei.com/",
+d:"jumei is a china ecommerce site focused on beauty and personal care products. it is used by shoppers looking for cosmetics, skincare and grooming items online in china.",
+k:"jumei,online shopping china,china beauty,skincare shopping,cosmetics store,personal care,beauty ecommerce,online store",
+a:""
+},
+{
+i:498,
+n:"decathlon china",
+c:"business,sports,home",
+u:"https://www.decathlon.cn/",
+d:"decathlon china is the official online shopping site for sports and outdoor equipment. it is used by customers in china looking for fitness gear, camping items and sportswear.",
+k:"decathlon china,online shopping china,china sports,fitness gear,camping products,sportswear,outdoor equipment,official store",
+a:""
+},
+{
+i:499,
+n:"intersport china",
+c:"business,sports,fashion",
+u:"https://www.intersport.com.cn/",
+d:"intersport china is a sports retail platform for athletic apparel and equipment. it serves shoppers in china looking for training gear, shoes and active lifestyle products.",
+k:"intersport china,online shopping china,china sports,sportswear,athletic gear,training shoes,active lifestyle,online retail",
+a:""
+},
+{
+i:500,
+n:"the north face china",
+c:"business,sports,travel,fashion",
+u:"https://www.thenorthface.com.cn/",
+d:"the north face china is the official online store for outdoor apparel and adventure gear. it is popular with shoppers in china looking for travel, hiking and sports products.",
+k:"the north face china,online shopping china,china sports,outdoor gear,travel apparel,hiking products,official brand store,online retail",
+a:""
+}
+];
+
+
+
+
+
+
+ 
 ];
 
 
