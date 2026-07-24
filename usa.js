@@ -8104,7 +8104,7 @@ d:"instacart is a usa grocery delivery platform that connects shoppers with loca
 k:"instacart,online shopping usa,usa grocery delivery,household essentials,online supermarket,daily needs,delivery app,food shopping",
 a:""
 }, 
-{
+/*{
 i:901,
 n:"amazon",
 c:"business,electronics,home,fashion,beauty,health,food,sports,books,jewellery,automotive,travel,software",
@@ -8553,8 +8553,8 @@ u:"https://us.balmain.com/en",
 d:"balmain is a usa online luxury fashion store for designer clothing and accessories. it is for shoppers looking for high-fashion pieces and premium style.",
 k:"balmain,online shopping usa,usa luxury fashion,designer clothing,high fashion,accessories,online retail,premium brand",
 a:""
-}.
-/*{
+}.*/
+{
 i:951,
 n:"net-a-porter",
 c:"business,fashion,beauty,jewellery",
@@ -8994,7 +8994,7 @@ u:"https://www.bestbuy.com/",
 d:"best buy is a usa online electronics retailer for computers, appliances, phones and video games. it is for shoppers looking for new tech, store pickup and free 2-day shipping on many items.",
 k:"best buy,online shopping usa,usa electronics,computers,appliances,cell phones,video games,online retail",
 a:""
-},*/
+},
 {
 i:1000,
 n:"hsn",
