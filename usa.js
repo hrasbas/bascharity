@@ -8500,7 +8500,7 @@ d:"new balance is a usa online store for lifestyle shoes, clothing and sports ap
 k:"new balance,online shopping usa,usa sports,lifestyle shoes,clothing,sports apparel,online retail,sneakers",
 a:""
 },
-{
+/*{
 i:945,
 n:"chanel",
 c:"business,fashion,beauty,jewellery",
@@ -8544,7 +8544,7 @@ u:"https://www.versace.com/us/en/",
 d:"versace is a usa online luxury store for clothing, shoes, accessories and home products. it is for shoppers who want bold designer fashion and premium lifestyle goods.",
 k:"versace,online shopping usa,usa luxury fashion,designer clothing,shoes,accessories,home products,online retail",
 a:""
-},
+},*/
 {
 i:950,
 n:"balmain",
