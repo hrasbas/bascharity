@@ -8320,7 +8320,7 @@ d:"barnes and noble is a usa online bookstore for books, ebooks, toys and gifts.
 k:"barnes and noble,online shopping usa,usa books,online bookstore,reading products,educational shopping,book retailer,online retail",
 a:""
 },
-/*{
+{
 i:925,
 n:"thriftbooks",
 c:"business,books",
@@ -8455,7 +8455,7 @@ d:"calvin klein is a usa online fashion store for underwear, apparel and accesso
 k:"calvin klein,online shopping usa,usa fashion,apparel,underwear,accessories,online retail,minimalist style",
 a:""
 },
-{
+/*{
 i:940,
 n:"foot locker",
 c:"business,fashion,sports",
