@@ -5401,10 +5401,7 @@ u:"https://thrivemarket.com/",
 d:"thrive market is a usa online marketplace for organic groceries, wellness items and household essentials. it is for shoppers looking for healthy food and sustainable products.",
 k:"thrive market,online shopping usa,usa grocery,organic food,wellness products,household essentials,online retail,healthy shopping",
 a:""
-},
- // usa.js
-window.countryShops = window.countryShops || {};
-window.countryShops["usa"] = [
+}, 
 {
 i:551,
 n:"shop.com",
