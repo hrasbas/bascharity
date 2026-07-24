@@ -9457,7 +9457,7 @@ u:"https://www.hsn.com/",
 d:"hsn is a usa online shopping channel for beauty, electronics, fashion, home and more. it is for shoppers who want daily deals, special values and easy ordering.",
 k:"hsn,online shopping usa,usa beauty,electronics,fashion,home goods,online retail,daily deals",
 a:""
-},
+}
  ];
 
 
