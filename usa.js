@@ -1801,9 +1801,6 @@ d:"gap is a usa online fashion store for casual clothing, denim and everyday bas
 k:"gap,online shopping usa,usa fashion,casual clothing,denim store,everyday basics,online retail,apparel shopping",
 a:""
 },
-
-window.countryShops = window.countryShops || {};
-window.countryShops["usa"] = [
 {
 i:201,
 n:"shop app",
