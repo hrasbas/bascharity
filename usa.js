@@ -8455,7 +8455,7 @@ d:"calvin klein is a usa online fashion store for underwear, apparel and accesso
 k:"calvin klein,online shopping usa,usa fashion,apparel,underwear,accessories,online retail,minimalist style",
 a:""
 },
-/*{
+{
 i:940,
 n:"foot locker",
 c:"business,fashion,sports",
@@ -8500,7 +8500,7 @@ d:"new balance is a usa online store for lifestyle shoes, clothing and sports ap
 k:"new balance,online shopping usa,usa sports,lifestyle shoes,clothing,sports apparel,online retail,sneakers",
 a:""
 },
-/*{
+{
 i:945,
 n:"chanel",
 c:"business,fashion,beauty,jewellery",
@@ -8545,7 +8545,7 @@ d:"versace is a usa online luxury store for clothing, shoes, accessories and hom
 k:"versace,online shopping usa,usa luxury fashion,designer clothing,shoes,accessories,home products,online retail",
 a:""
 },
-{
+/*{
 i:950,
 n:"balmain",
 c:"business,fashion",
