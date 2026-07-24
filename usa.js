@@ -8104,7 +8104,7 @@ d:"instacart is a usa grocery delivery platform that connects shoppers with loca
 k:"instacart,online shopping usa,usa grocery delivery,household essentials,online supermarket,daily needs,delivery app,food shopping",
 a:""
 }, 
-/*{
+{
 i:901,
 n:"amazon",
 c:"business,electronics,home,fashion,beauty,health,food,sports,books,jewellery,automotive,travel,software",
@@ -8320,7 +8320,7 @@ d:"barnes and noble is a usa online bookstore for books, ebooks, toys and gifts.
 k:"barnes and noble,online shopping usa,usa books,online bookstore,reading products,educational shopping,book retailer,online retail",
 a:""
 },
-{
+/*{
 i:925,
 n:"thriftbooks",
 c:"business,books",
