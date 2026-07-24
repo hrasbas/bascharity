@@ -8464,7 +8464,7 @@ d:"foot locker is a usa online sneaker and apparel store for men, women and kids
 k:"foot locker,online shopping usa,usa fashion,sneakers,athletic shoes,apparel,online retail,shoe store",
 a:""
 },
-{
+/*{
 i:941,
 n:"finish line",
 c:"business,fashion,sports",
@@ -8499,8 +8499,8 @@ u:"https://www.newbalance.com/lifestyle/",
 d:"new balance is a usa online store for lifestyle shoes, clothing and sports apparel. it is for shoppers who want comfort-focused sneakers and casual activewear.",
 k:"new balance,online shopping usa,usa sports,lifestyle shoes,clothing,sports apparel,online retail,sneakers",
 a:""
-},
-/*{
+},*/
+{
 i:945,
 n:"chanel",
 c:"business,fashion,beauty,jewellery",
@@ -8544,7 +8544,7 @@ u:"https://www.versace.com/us/en/",
 d:"versace is a usa online luxury store for clothing, shoes, accessories and home products. it is for shoppers who want bold designer fashion and premium lifestyle goods.",
 k:"versace,online shopping usa,usa luxury fashion,designer clothing,shoes,accessories,home products,online retail",
 a:""
-},*/
+},
 {
 i:950,
 n:"balmain",
