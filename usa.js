@@ -4537,7 +4537,7 @@ d:"net-a-porter is a usa online luxury fashion store for women’s clothing, bea
 k:"net-a-porter,online shopping usa,usa luxury fashion,designer clothing,beauty products,lifestyle shopping,online retail,premium store",
 a:""
 },
-/*{
+{
 i:505,
 n:"sephora",
 c:"business,beauty,health",
@@ -5402,7 +5402,7 @@ d:"thrive market is a usa online marketplace for organic groceries, wellness ite
 k:"thrive market,online shopping usa,usa grocery,organic food,wellness products,household essentials,online retail,healthy shopping",
 a:""
 },   
-{
+/*{
 i:601,
 n:"armani",
 c:"business,fashion,home",
