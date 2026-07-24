@@ -5402,7 +5402,7 @@ d:"thrive market is a usa online marketplace for organic groceries, wellness ite
 k:"thrive market,online shopping usa,usa grocery,organic food,wellness products,household essentials,online retail,healthy shopping",
 a:""
 },   
-/*{
+{
 i:601,
 n:"armani",
 c:"business,fashion,home",
@@ -6295,7 +6295,7 @@ k:"jcpenney,online shopping usa,usa fashion,home goods,beauty products,jewellery
 a:""
 },
 {
-/*i:700,
+i:700,
 n:"belk",
 c:"business,fashion,home,beauty,jewellery",
 u:"https://www.belk.com/",
@@ -8995,7 +8995,7 @@ u:"https://www.bestbuy.com/",
 d:"best buy is a usa online electronics retailer for computers, appliances, phones and video games. it is for shoppers looking for new tech, store pickup and free 2-day shipping on many items.",
 k:"best buy,online shopping usa,usa electronics,computers,appliances,cell phones,video games,online retail",
 a:""
-},*/
+},
 {
 i:1000,
 n:"hsn",
