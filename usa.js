@@ -8455,7 +8455,7 @@ d:"calvin klein is a usa online fashion store for underwear, apparel and accesso
 k:"calvin klein,online shopping usa,usa fashion,apparel,underwear,accessories,online retail,minimalist style",
 a:""
 },
-/*{
+{
 i:940,
 n:"foot locker",
 c:"business,fashion,sports",
@@ -8553,7 +8553,7 @@ u:"https://us.balmain.com/en",
 d:"balmain is a usa online luxury fashion store for designer clothing and accessories. it is for shoppers looking for high-fashion pieces and premium style.",
 k:"balmain,online shopping usa,usa luxury fashion,designer clothing,high fashion,accessories,online retail,premium brand",
 a:""
-}.*/
+}.
 {
 i:951,
 n:"net-a-porter",
