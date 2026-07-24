@@ -4050,10 +4050,7 @@ u:"https://www.petco.com/",
 d:"petco is a usa online pet store for food, toys, grooming and health products. it is used by pet owners shopping for daily supplies and veterinary-related items.",
 k:"petco,online shopping usa,usa pet food,pet supplies,pet health,pet grooming,online retail,animal care",
 a:""
-},
-// usa.js
-window.countryShops = window.countryShops || {};
-window.countryShops["usa"] = [
+}, 
 {
 i:451,
 n:"amazon",
@@ -4503,10 +4500,7 @@ u:"https://www.primark.com/en-us",
 d:"primark is a usa fashion and lifestyle shopping site for affordable clothing, home and beauty products. it is aimed at shoppers who want trend-led value items and everyday basics.",
 k:"primark,online shopping usa,usa fashion,affordable clothing,home products,beauty shopping,online retail,value fashion",
 a:""
-},
-// usa.js
-window.countryShops = window.countryShops || {};
-window.countryShops["usa"] = [
+}, 
 {
 i:501,
 n:"neiman marcus",
@@ -4957,10 +4951,7 @@ d:"rei is a usa online outdoor store for camping, hiking, cycling and travel gea
 k:"rei,online shopping usa,usa sports,outdoor gear,camping shopping,travel gear,online retail,fitness equipment",
 a:""
 },
- 
-// usa.js
-window.countryShops = window.countryShops || {};
-window.countryShops["usa"] = [
+  
 {
 i:551,
 n:"shop.com",
@@ -5863,10 +5854,7 @@ u:"https://thrivemarket.com/",
 d:"thrive market is a usa online marketplace for organic groceries, wellness items and household essentials. it is for shoppers looking for healthy food and sustainable products.",
 k:"thrive market,online shopping usa,usa grocery,organic food,wellness products,household essentials,online retail,healthy shopping",
 a:""
-},
- // usa.js
-window.countryShops = window.countryShops || {};
-window.countryShops["usa"] = [
+}, 
 {
 i:601,
 n:"armani",
@@ -6317,10 +6305,7 @@ d:"kroger is a usa online grocery retailer for food, household items and pharmac
 k:"kroger,online shopping usa,usa grocery,grocery delivery,household essentials,pharmacy shopping,online retail,food store",
 a:""
 },
- 
-// usa.js
-window.countryShops = window.countryShops || {};
-window.countryShops["usa"] = [
+  
 {
 i:651,
 n:"walgreens",
@@ -6771,10 +6756,7 @@ d:"belk is a usa online department store for fashion, home, beauty and accessori
 k:"belk,online shopping usa,usa fashion,home goods,beauty products,department store,online retail,accessories",
 a:""
 },
- 
-// usa.js
-window.countryShops = window.countryShops || {};
-window.countryShops["usa"] = [
+  
 {
 i:701,
 n:"chanel",
@@ -7224,10 +7206,7 @@ u:"https://www.wayfair.com/",
 d:"wayfair is a usa online shopping site for furniture, decor and home essentials. it is for shoppers furnishing homes and apartments with a wide range of styles.",
 k:"wayfair,online shopping usa,usa furniture,home decor,home essentials,furniture store,online marketplace,household shopping",
 a:""
-},
- // usa.js
-window.countryShops = window.countryShops || {};
-window.countryShops["usa"] = [
+}, 
 {
 i:751,
 n:"hsn",
@@ -7677,7 +7656,1809 @@ u:"https://www.nike.com/jordan",
 d:"jordans is a usa online shopping destination for jordan sneakers, apparel and sport style products. it is for sneaker fans and buyers looking for iconic athletic footwear.",
 k:"jordans,online shopping usa,usa fashion,sneakers,athletic footwear,sports apparel,online retail,sneaker store",
 a:""
-}
+}, 
+{
+i:801,
+n:"zappos",
+c:"business,fashion",
+u:"https://www.zappos.com/",
+d:"zappos is a usa online shoe and clothing retailer with a wide selection of footwear and apparel. it is for shoppers who want easy browsing, fast shipping and free returns.",
+k:"zappos,online shopping usa,usa fashion,shoes,footwear,clothing,online retail,shoe store",
+a:""
+},
+{
+i:802,
+n:"adidas",
+c:"business,sports,fashion",
+u:"https://www.adidas.com/us",
+d:"adidas is a usa online store for sneakers, activewear and sporting goods. it is for shoppers looking for athletic shoes, clothing and sports accessories.",
+k:"adidas,online shopping usa,usa sports,sneakers,activewear,sporting goods,online retail,athletic wear",
+a:""
+},
+{
+i:803,
+n:"amazon",
+c:"business,electronics,home,fashion,beauty,health,food,sports,books,jewellery,automotive,travel,software",
+u:"https://www.amazon.com/",
+d:"amazon is a major usa online marketplace where shoppers can buy electronics, home goods, fashion, beauty, books, groceries and more. it serves everyday consumers, families and sellers with broad selection and fast delivery.",
+k:"amazon,online shopping usa,usa marketplace,electronics shopping,home goods,fashion shopping,grocery delivery,online retail",
+a:""
+},
+{
+i:804,
+n:"target",
+c:"business,electronics,home,fashion,beauty,health,food,sports,books,jewellery,automotive",
+u:"https://www.target.com/",
+d:"target is a usa online retailer for groceries, household essentials, clothing, beauty and electronics. it is for families and everyday shoppers who want convenient one-stop shopping.",
+k:"target,online shopping usa,usa retail,grocery shopping,home essentials,fashion shopping,beauty products,online marketplace",
+a:""
+},
+{
+i:805,
+n:"walmart",
+c:"business,electronics,home,fashion,beauty,health,food,sports,books,automotive",
+u:"https://www.walmart.com/",
+d:"walmart is a large usa online shopping platform for groceries, household essentials, electronics and apparel. it is for budget-conscious families and shoppers who want daily needs in one place.",
+k:"walmart,online shopping usa,usa retail,grocery shopping,electronics store,home essentials,fashion shopping,online marketplace",
+a:""
+},
+{
+i:806,
+n:"kohl's",
+c:"business,fashion,home,beauty,health,electronics",
+u:"https://www.kohls.com/",
+d:"kohl's is a usa online department store for clothing, shoes, home goods, toys and electronics. it is for families and value shoppers looking for everyday brands and savings.",
+k:"kohl's,online shopping usa,usa fashion,home goods,electronics,department store,online retail,value shopping",
+a:""
+},
+{
+i:807,
+n:"nordstrom",
+c:"business,fashion,beauty,home,jewellery",
+u:"https://www.nordstrom.com/",
+d:"nordstrom is a usa online department store for shoes, clothing, jewelry, makeup and more. it is for shoppers who want premium brands, free shipping and easy returns.",
+k:"nordstrom,online shopping usa,usa fashion,beauty,jewellery,shoes,department store,online retail",
+a:""
+},
+{
+i:808,
+n:"foot locker",
+c:"business,fashion,sports",
+u:"https://www.footlocker.com/en",
+d:"foot locker is a usa online sneaker and apparel store for men, women and kids. it is for shoppers looking for athletic footwear, streetwear and exclusive styles.",
+k:"foot locker,online shopping usa,usa fashion,sneakers,athletic shoes,apparel,online retail,shoe store",
+a:""
+},
+{
+i:809,
+n:"nike",
+c:"business,sports,fashion",
+u:"https://www.nike.com/",
+d:"nike is a usa online store for sportswear, sneakers and training gear. it is for athletes and casual shoppers looking for performance and everyday activewear.",
+k:"nike,online shopping usa,usa sports,sportswear,sneakers,activewear,online retail,athletic gear",
+a:""
+},
+{
+i:810,
+n:"new balance",
+c:"business,sports,fashion",
+u:"https://www.newbalance.com/lifestyle/",
+d:"new balance is a usa online store for lifestyle shoes, clothing and sports apparel. it is for shoppers who want comfort-focused sneakers and casual activewear.",
+k:"new balance,online shopping usa,usa sports,lifestyle shoes,clothing,sports apparel,online retail,sneakers",
+a:""
+},
+{
+i:811,
+n:"macy's",
+c:"business,fashion,home,beauty,jewellery",
+u:"https://www.macys.com/",
+d:"macy's is a usa online department store for clothing, shoes, beauty and home products. it is for shoppers who want many popular brands in one place with easy shopping.",
+k:"macy's,online shopping usa,usa fashion,beauty products,home goods,department store,online retail,shopping site",
+a:""
+},
+{
+i:812,
+n:"jcpenney",
+c:"business,fashion,home,beauty,jewellery",
+u:"https://www.jcpenney.com/",
+d:"jcpenney is a usa online department store for clothing, home goods, beauty and jewelry. it is for families and everyday shoppers looking for value and variety.",
+k:"jcpenney,online shopping usa,usa fashion,home goods,beauty products,jewellery,department store,online retail",
+a:""
+},
+{
+i:813,
+n:"belk",
+c:"business,fashion,home,beauty,jewellery",
+u:"https://www.belk.com/",
+d:"belk is a usa online department store for fashion, home, beauty and accessories. it is for shoppers looking for branded essentials and seasonal style products.",
+k:"belk,online shopping usa,usa fashion,home goods,beauty products,department store,online retail,accessories",
+a:""
+},
+{
+i:814,
+n:"sears",
+c:"business,home,automotive,electronics",
+u:"https://www.sears.com/",
+d:"sears is a usa online retailer for home appliances, tools, electronics and automotive products. it is for shoppers looking for household and repair-related goods.",
+k:"sears,online shopping usa,usa home,appliances,electronics,automotive products,online retail,household shopping",
+a:""
+},
+{
+i:815,
+n:"home depot",
+c:"business,home,electronics,automotive",
+u:"https://www.homedepot.com/",
+d:"home depot is a usa online home improvement retailer for appliances, tools, patio furniture and building supplies. it is for diy customers, contractors and homeowners.",
+k:"home depot,online shopping usa,usa home improvement,tools,appliances,building supplies,online retail,household shopping",
+a:""
+},
+{
+i:816,
+n:"ikea usa",
+c:"business,home",
+u:"https://www.ikea.com/us/en/",
+d:"ikea usa is a usa online store for furniture, home furnishings and household goods. it is for shoppers looking for affordable home solutions and modern design.",
+k:"ikea usa,online shopping usa,usa home,furniture,home goods,household shopping,online retail,modern furniture",
+a:""
+},
+{
+i:817,
+n:"wayfair",
+c:"business,home",
+u:"https://www.wayfair.com/",
+d:"wayfair is a usa online shopping site for furniture, decor and home essentials. it is for shoppers furnishing homes and apartments with a wide range of styles.",
+k:"wayfair,online shopping usa,usa furniture,home decor,home essentials,furniture store,online marketplace,household shopping",
+a:""
+},
+{
+i:818,
+n:"overstock",
+c:"business,home,fashion",
+u:"https://www.overstock.com/",
+d:"overstock is a usa online retailer for furniture, home decor and discounted goods. it is for shoppers furnishing homes while looking for lower prices and seasonal deals.",
+k:"overstock,online shopping usa,usa home,furniture shopping,home decor,discount retail,online marketplace,household goods",
+a:""
+},
+{
+i:819,
+n:"crate and barrel",
+c:"business,home",
+u:"https://www.crateandbarrel.com/",
+d:"crate and barrel is a usa home and furniture shopping site for modern living spaces. it is for buyers looking for kitchenware, decor, furniture and home accessories.",
+k:"crate and barrel,online shopping usa,usa home,furniture store,home decor,kitchenware,online retail,household goods",
+a:""
+},
+{
+i:820,
+n:"west elm",
+c:"business,home",
+u:"https://www.westelm.com/",
+d:"west elm is a usa online furniture and home decor store with a modern style focus. it is for shoppers looking for furnishings, lighting and design-led home items.",
+k:"west elm,online shopping usa,usa home,furniture shopping,home decor,modern design,online retail,interior goods",
+a:""
+},
+{
+i:821,
+n:"bed bath and beyond",
+c:"business,home",
+u:"https://www.bedbathandbeyond.com/",
+d:"bed bath and beyond is a usa online retailer for home goods, bedding, kitchen items and decor. it is for shoppers who want household products and room essentials in one place.",
+k:"bed bath and beyond,online shopping usa,usa home,bedding,kitchen goods,home decor,online retail,household shopping",
+a:""
+},
+{
+i:822,
+n:"world market",
+c:"business,home,food",
+u:"https://www.worldmarket.com/",
+d:"world market is a usa online retailer for home decor, furniture, gifts and specialty foods. it is for shoppers looking for global style and unique household items.",
+k:"world market,online shopping usa,usa home,home decor,furniture,specialty foods,online retail,gift shopping",
+a:""
+},
+{
+i:823,
+n:"michaels",
+c:"business,home,books",
+u:"https://www.michaels.com/",
+d:"michaels is a usa online arts and crafts store for diy supplies, home decor and project materials. it is for hobbyists, creators and families making craft projects.",
+k:"michaels,online shopping usa,usa home,arts and crafts,diy supplies,home decor,craft store,online retail",
+a:""
+},
+{
+i:824,
+n:"joann",
+c:"business,home,books",
+u:"https://www.joann.com/",
+d:"joann is a usa online craft and fabric store for sewing, diy and home project supplies. it is for makers and crafters shopping for materials and tools.",
+k:"joann,online shopping usa,usa home,craft supplies,fabric,sewing,diy products,online retail",
+a:""
+},
+{
+i:825,
+n:"the container store",
+c:"business,home",
+u:"https://www.containerstore.com/",
+d:"the container store is a usa online retailer for storage, organization and home solutions. it is for shoppers who want to organize closets, kitchens and offices.",
+k:"the container store,online shopping usa,usa home,storage,organization,home solutions,online retail,household shopping",
+a:""
+},
+{
+i:826,
+n:"zappos",
+c:"business,fashion",
+u:"https://www.zappos.com/",
+d:"zappos is a usa online shoe and clothing retailer with a wide selection of footwear and apparel. it is for shoppers who want easy browsing, fast shipping and free returns.",
+k:"zappos,online shopping usa,usa fashion,shoes,footwear,clothing,online retail,shoe store",
+a:""
+},
+{
+i:827,
+n:"dsw",
+c:"business,fashion",
+u:"https://www.dsw.com/",
+d:"dsw is a usa online shoe store for sneakers, heels, boots and accessories. it is for shoppers looking for branded footwear and seasonal styles.",
+k:"dsw,online shopping usa,usa fashion,shoes,footwear,accessories,online retail,shoe store",
+a:""
+},
+{
+i:828,
+n:"amazon fashion",
+c:"business,fashion",
+u:"https://www.amazon.com/",
+d:"amazon fashion is the usa clothing and accessories shopping section on amazon. it is for shoppers looking for apparel, shoes and style basics with wide selection.",
+k:"amazon fashion,online shopping usa,usa fashion,clothing,shoes,accessories,online retail,fashion marketplace",
+a:""
+},
+{
+i:829,
+n:"asos",
+c:"business,fashion,home,beauty",
+u:"https://www.asos.com/us/",
+d:"asos is a usa online fashion marketplace for apparel, footwear and accessories. it is for shoppers who want trendy clothing and broad style choices.",
+k:"asos,online shopping usa,usa fashion,apparel,footwear,accessories,online retail,trendy clothing",
+a:""
+},
+{
+i:830,
+n:"forever 21",
+c:"business,fashion,home",
+u:"https://www.forever21.com/",
+d:"forever 21 is a usa online fashion store for affordable trend-driven clothing and accessories. it is for younger shoppers and budget-friendly style buyers.",
+k:"forever 21,online shopping usa,usa fashion,affordable clothing,accessories,trendy wear,online retail,youth fashion",
+a:""
+},
+{
+i:831,
+n:"gap",
+c:"business,fashion,home",
+u:"https://www.gap.com/",
+d:"gap is a usa online clothing store for casual apparel and family basics. it is for shoppers who want everyday fashion for adults and kids.",
+k:"gap,online shopping usa,usa fashion,casual clothing,family basics,online retail,apparel shopping",
+a:""
+},
+{
+i:832,
+n:"old navy",
+c:"business,fashion,home",
+u:"https://oldnavy.gap.com/",
+d:"old navy is a usa online clothing store for affordable family fashion and casual wear. it is for shoppers looking for budget-friendly apparel and seasonal styles.",
+k:"old navy,online shopping usa,usa fashion,affordable clothing,family apparel,casual wear,online retail,shopping site",
+a:""
+},
+{
+i:833,
+n:"tommy hilfiger",
+c:"business,fashion,home",
+u:"https://usa.tommy.com/",
+d:"tommy hilfiger is a usa online fashion store for clothing, shoes and accessories. it is for shoppers who want casual premium style for men, women and kids.",
+k:"tommy hilfiger,online shopping usa,usa fashion,clothing store,shoes,accessories,online retail,casual wear",
+a:""
+},
+{
+i:834,
+n:"calvin klein",
+c:"business,fashion,beauty",
+u:"https://www.calvinklein.us/",
+d:"calvin klein is a usa online fashion store for underwear, apparel and accessories. it is for shoppers looking for minimalist style and everyday wardrobe pieces.",
+k:"calvin klein,online shopping usa,usa fashion,apparel,underwear,accessories,online retail,minimalist style",
+a:""
+},
+{
+i:835,
+n:"foot locker",
+c:"business,fashion,sports",
+u:"https://www.footlocker.com/en",
+d:"foot locker is a usa online sneaker and apparel store for men, women and kids. it is for shoppers looking for athletic footwear, streetwear and exclusive styles.",
+k:"foot locker,online shopping usa,usa fashion,sneakers,athletic shoes,apparel,online retail,shoe store",
+a:""
+},
+{
+i:836,
+n:"finish line",
+c:"business,fashion,sports",
+u:"https://www.finishline.com/",
+d:"finish line is a usa online store for athletic shoes, apparel and sports gear. it is for sneaker shoppers and active lifestyle buyers.",
+k:"finish line,online shopping usa,usa fashion,sportswear,athletic shoes,online retail,sneaker shopping,activewear",
+a:""
+},
+{
+i:837,
+n:"adidas",
+c:"business,sports,fashion",
+u:"https://www.adidas.com/us",
+d:"adidas is a usa online store for sneakers, activewear and sporting goods. it is for shoppers looking for athletic shoes, clothing and sports accessories.",
+k:"adidas,online shopping usa,usa sports,sneakers,activewear,sporting goods,online retail,athletic wear",
+a:""
+},
+{
+i:838,
+n:"nike",
+c:"business,sports,fashion",
+u:"https://www.nike.com/",
+d:"nike is a usa online store for sportswear, sneakers and training gear. it is for athletes and casual shoppers looking for performance and everyday activewear.",
+k:"nike,online shopping usa,usa sports,sportswear,sneakers,activewear,online retail,athletic gear",
+a:""
+},
+{
+i:839,
+n:"new balance",
+c:"business,sports,fashion",
+u:"https://www.newbalance.com/lifestyle/",
+d:"new balance is a usa online store for lifestyle shoes, clothing and sports apparel. it is for shoppers who want comfort-focused sneakers and casual activewear.",
+k:"new balance,online shopping usa,usa sports,lifestyle shoes,clothing,sports apparel,online retail,sneakers",
+a:""
+},
+{
+i:840,
+n:"chanel",
+c:"business,fashion,beauty,jewellery",
+u:"https://www.chanel.com/us/",
+d:"chanel is a usa online luxury store for fashion, fragrance, beauty, watches and fine jewellery. it is for shoppers who want iconic designer products and premium style.",
+k:"chanel,online shopping usa,usa luxury fashion,fragrance shopping,beauty products,watches,jewellery,online retail",
+a:""
+},
+{
+i:841,
+n:"dior",
+c:"business,fashion,beauty,jewellery",
+u:"https://www.dior.com/en_us",
+d:"dior is the usa official online boutique for fashion, beauty and luxury accessories. it is for shoppers looking for premium clothing, skincare, fragrance and watches.",
+k:"dior,online shopping usa,usa luxury fashion,beauty boutique,fragrance shopping,jewellery shopping,official store,designer goods",
+a:""
+},
+{
+i:842,
+n:"prada",
+c:"business,fashion,beauty,jewellery",
+u:"https://www.prada.com/us/en.html",
+d:"prada is a usa online luxury store for ready-to-wear, bags, shoes, fragrances and accessories. it is for shoppers looking for refined designer fashion and premium goods.",
+k:"prada,online shopping usa,usa luxury fashion,designer bags,shoes,fragrances,accessories,online retail",
+a:""
+},
+{
+i:843,
+n:"louis vuitton",
+c:"business,fashion,beauty,jewellery,home,travel",
+u:"https://us.louisvuitton.com/eng-us/women/spring-summer-2026-collection/_/N-t1ym4reu",
+d:"louis vuitton is a usa online luxury fashion destination for iconic clothing, bags and accessories. it is for shoppers who want premium designer pieces and travel goods.",
+k:"louis vuitton,online shopping usa,usa luxury fashion,designer bags,accessories,travel goods,online retail,premium brand",
+a:""
+},
+{
+i:844,
+n:"versace",
+c:"business,fashion,home,jewellery",
+u:"https://www.versace.com/us/en/",
+d:"versace is a usa online luxury store for clothing, shoes, accessories and home products. it is for shoppers who want bold designer fashion and premium lifestyle goods.",
+k:"versace,online shopping usa,usa luxury fashion,designer clothing,shoes,accessories,home products,online retail",
+a:""
+},
+{
+i:845,
+n:"balmain",
+c:"business,fashion",
+u:"https://us.balmain.com/en",
+d:"balmain is a usa online luxury fashion store for designer clothing and accessories. it is for shoppers looking for high-fashion pieces and premium style.",
+k:"balmain,online shopping usa,usa luxury fashion,designer clothing,high fashion,accessories,online retail,premium brand",
+a:""
+},
+{
+i:846,
+n:"armani",
+c:"business,fashion,home",
+u:"https://www.armani.com/en-us/giorgio-armani/experience/",
+d:"armani is a usa online luxury fashion store for clothing, accessories and home items. it is for shoppers who want refined designer style and premium collections.",
+k:"armani,online shopping usa,usa luxury fashion,designer clothing,accessories,home products,online retail,premium style",
+a:""
+},
+{
+i:847,
+n:"ralph lauren",
+c:"business,fashion,home",
+u:"https://www.ralphlauren.com/",
+d:"ralph lauren is a usa online store for clothing, accessories and home furnishings. it is for shoppers who want classic premium fashion and lifestyle products.",
+k:"ralph lauren,online shopping usa,usa fashion,designer clothing,home furnishings,accessories,online retail,classic style",
+a:""
+},
+{
+i:848,
+n:"net-a-porter",
+c:"business,fashion,beauty,jewellery",
+u:"https://www.net-a-porter.com/en-us/",
+d:"net-a-porter is a usa online luxury fashion store for women’s clothing, beauty and lifestyle items. it is for shoppers who want curated designer brands and premium edits.",
+k:"net-a-porter,online shopping usa,usa luxury fashion,designer clothing,beauty products,lifestyle shopping,online retail,premium store",
+a:""
+},
+{
+i:849,
+n:"hsn",
+c:"business,electronics,home,fashion,beauty,health,jewellery",
+u:"https://www.hsn.com/",
+d:"hsn is a usa online shopping channel for beauty, electronics, fashion, home and more. it is for shoppers who want daily deals, special values and easy ordering.",
+k:"hsn,online shopping usa,usa beauty,electronics,fashion,home goods,online retail,daily deals",
+a:""
+},
+{
+i:850,
+n:"qvc",
+c:"business,electronics,home,fashion,beauty,health,jewellery",
+u:"https://www.qvc.com/",
+d:"qvc is a usa online retail and shopping channel for beauty, fashion, home and electronics. it is for shoppers who like featured offers and branded daily deals.",
+k:"qvc,online shopping usa,usa retail,beauty products,home goods,fashion shopping,electronics store,online retail",
+a:""
+}, 
+{
+i:851,
+n:"best buy",
+c:"business,electronics,home,software",
+u:"https://www.bestbuy.com/",
+d:"best buy is a usa online electronics retailer for computers, appliances, phones and video games. it is for shoppers looking for new tech, store pickup and free 2-day shipping on many items.",
+k:"best buy,online shopping usa,usa electronics,computers,appliances,cell phones,video games,online retail",
+a:""
+},
+{
+i:852,
+n:"hsn",
+c:"business,electronics,home,fashion,beauty,health,jewellery",
+u:"https://www.hsn.com/",
+d:"hsn is a usa online shopping channel for beauty, electronics, fashion, home and more. it is for shoppers who want daily deals, special values and easy ordering.",
+k:"hsn,online shopping usa,usa beauty,electronics,fashion,home goods,online retail,daily deals",
+a:""
+},
+{
+i:853,
+n:"qvc",
+c:"business,electronics,home,fashion,beauty,health,jewellery",
+u:"https://www.qvc.com/",
+d:"qvc is a usa online retail and shopping channel for beauty, fashion, home and electronics. it is for shoppers who like featured offers and branded daily deals.",
+k:"qvc,online shopping usa,usa retail,beauty products,home goods,fashion shopping,electronics store,online retail",
+a:""
+},
+{
+i:854,
+n:"amazon",
+c:"business,electronics,home,fashion,beauty,health,food,sports,books,jewellery,automotive,travel,software",
+u:"https://www.amazon.com/",
+d:"amazon is a major usa online marketplace where shoppers can buy electronics, home goods, fashion, beauty, books, groceries and more. it serves everyday consumers, families and sellers with broad selection and fast delivery.",
+k:"amazon,online shopping usa,usa marketplace,electronics shopping,home goods,fashion shopping,grocery delivery,online retail",
+a:""
+},
+{
+i:855,
+n:"target",
+c:"business,electronics,home,fashion,beauty,health,food,sports,books,jewellery,automotive",
+u:"https://www.target.com/",
+d:"target is a usa online retailer for groceries, household essentials, clothing, beauty and electronics. it is for families and everyday shoppers who want convenient one-stop shopping.",
+k:"target,online shopping usa,usa retail,grocery shopping,home essentials,fashion shopping,beauty products,online marketplace",
+a:""
+},
+{
+i:856,
+n:"walmart",
+c:"business,electronics,home,fashion,beauty,health,food,sports,books,automotive",
+u:"https://www.walmart.com/",
+d:"walmart is a large usa online shopping platform for groceries, household essentials, electronics and apparel. it is for budget-conscious families and shoppers who want daily needs in one place.",
+k:"walmart,online shopping usa,usa retail,grocery shopping,electronics store,home essentials,fashion shopping,online marketplace",
+a:""
+},
+{
+i:857,
+n:"kohl's",
+c:"business,fashion,home,beauty,health,electronics",
+u:"https://www.kohls.com/",
+d:"kohl's is a usa online department store for clothing, shoes, home goods, toys and electronics. it is for families and value shoppers looking for everyday brands and savings.",
+k:"kohl's,online shopping usa,usa fashion,home goods,electronics,department store,online retail,value shopping",
+a:""
+},
+{
+i:858,
+n:"macy's",
+c:"business,fashion,home,beauty,jewellery",
+u:"https://www.macys.com/",
+d:"macy's is a usa online department store for clothing, shoes, beauty and home products. it is for shoppers who want many popular brands in one place with easy shopping.",
+k:"macy's,online shopping usa,usa fashion,beauty products,home goods,department store,online retail,shopping site",
+a:""
+},
+{
+i:859,
+n:"nordstrom",
+c:"business,fashion,beauty,home,jewellery",
+u:"https://www.nordstrom.com/",
+d:"nordstrom is a usa online department store for shoes, clothing, jewelry, makeup and more. it is for shoppers who want premium brands, free shipping and easy returns.",
+k:"nordstrom,online shopping usa,usa fashion,beauty,jewellery,shoes,department store,online retail",
+a:""
+},
+{
+i:860,
+n:"sears",
+c:"business,home,automotive,electronics",
+u:"https://www.sears.com/",
+d:"sears is a usa online retailer for home appliances, tools, electronics and automotive products. it is for shoppers looking for household and repair-related goods.",
+k:"sears,online shopping usa,usa home,appliances,electronics,automotive products,online retail,household shopping",
+a:""
+},
+{
+i:861,
+n:"home depot",
+c:"business,home,electronics,automotive",
+u:"https://www.homedepot.com/",
+d:"home depot is a usa online home improvement retailer for appliances, tools, patio furniture and building supplies. it is for diy customers, contractors and homeowners.",
+k:"home depot,online shopping usa,usa home improvement,tools,appliances,building supplies,online retail,household shopping",
+a:""
+},
+{
+i:862,
+n:"ikea usa",
+c:"business,home",
+u:"https://www.ikea.com/us/en/",
+d:"ikea usa is a usa online store for furniture, home furnishings and household goods. it is for shoppers looking for affordable home solutions and modern design.",
+k:"ikea usa,online shopping usa,usa home,furniture,home goods,household shopping,online retail,modern furniture",
+a:""
+},
+{
+i:863,
+n:"wayfair",
+c:"business,home",
+u:"https://www.wayfair.com/",
+d:"wayfair is a usa online shopping site for furniture, decor and home essentials. it is for shoppers furnishing homes and apartments with a wide range of styles.",
+k:"wayfair,online shopping usa,usa furniture,home decor,home essentials,furniture store,online marketplace,household shopping",
+a:""
+},
+{
+i:864,
+n:"overstock",
+c:"business,home,fashion",
+u:"https://www.overstock.com/",
+d:"overstock is a usa online retailer for furniture, home decor and discounted goods. it is for shoppers furnishing homes while looking for lower prices and seasonal deals.",
+k:"overstock,online shopping usa,usa home,furniture shopping,home decor,discount retail,online marketplace,household goods",
+a:""
+},
+{
+i:865,
+n:"crate and barrel",
+c:"business,home",
+u:"https://www.crateandbarrel.com/",
+d:"crate and barrel is a usa home and furniture shopping site for modern living spaces. it is for buyers looking for kitchenware, decor, furniture and home accessories.",
+k:"crate and barrel,online shopping usa,usa home,furniture store,home decor,kitchenware,online retail,household goods",
+a:""
+},
+{
+i:866,
+n:"west elm",
+c:"business,home",
+u:"https://www.westelm.com/",
+d:"west elm is a usa online furniture and home decor store with a modern style focus. it is for shoppers looking for furnishings, lighting and design-led home items.",
+k:"west elm,online shopping usa,usa home,furniture shopping,home decor,modern design,online retail,interior goods",
+a:""
+},
+{
+i:867,
+n:"bed bath and beyond",
+c:"business,home",
+u:"https://www.bedbathandbeyond.com/",
+d:"bed bath and beyond is a usa online retailer for home goods, bedding, kitchen items and decor. it is for shoppers who want household products and room essentials in one place.",
+k:"bed bath and beyond,online shopping usa,usa home,bedding,kitchen goods,home decor,online retail,household shopping",
+a:""
+},
+{
+i:868,
+n:"michaels",
+c:"business,home,books",
+u:"https://www.michaels.com/",
+d:"michaels is a usa online arts and crafts store for diy supplies, home decor and project materials. it is for hobbyists, creators and families making craft projects.",
+k:"michaels,online shopping usa,usa home,arts and crafts,diy supplies,home decor,craft store,online retail",
+a:""
+},
+{
+i:869,
+n:"joann",
+c:"business,home,books",
+u:"https://www.joann.com/",
+d:"joann is a usa online craft and fabric store for sewing, diy and home project supplies. it is for makers and crafters shopping for materials and tools.",
+k:"joann,online shopping usa,usa home,craft supplies,fabric,sewing,diy products,online retail",
+a:""
+},
+{
+i:870,
+n:"the container store",
+c:"business,home",
+u:"https://www.containerstore.com/",
+d:"the container store is a usa online retailer for storage, organization and home solutions. it is for shoppers who want to organize closets, kitchens and offices.",
+k:"the container store,online shopping usa,usa home,storage,organization,home solutions,online retail,household shopping",
+a:""
+},
+{
+i:871,
+n:"zappos",
+c:"business,fashion",
+u:"https://www.zappos.com/",
+d:"zappos is a usa online shoe and clothing retailer with a wide selection of footwear and apparel. it is for shoppers who want easy browsing, fast shipping and free returns.",
+k:"zappos,online shopping usa,usa fashion,shoes,footwear,clothing,online retail,shoe store",
+a:""
+},
+{
+i:872,
+n:"dsw",
+c:"business,fashion",
+u:"https://www.dsw.com/",
+d:"dsw is a usa online shoe store for sneakers, heels, boots and accessories. it is for shoppers looking for branded footwear and seasonal styles.",
+k:"dsw,online shopping usa,usa fashion,shoes,footwear,accessories,online retail,shoe store",
+a:""
+},
+{
+i:873,
+n:"amazon fashion",
+c:"business,fashion",
+u:"https://www.amazon.com/",
+d:"amazon fashion is the usa clothing and accessories shopping section on amazon. it is for shoppers looking for apparel, shoes and style basics with wide selection.",
+k:"amazon fashion,online shopping usa,usa fashion,clothing,shoes,accessories,online retail,fashion marketplace",
+a:""
+},
+{
+i:874,
+n:"asos",
+c:"business,fashion,home,beauty",
+u:"https://www.asos.com/us/",
+d:"asos is a usa online fashion marketplace for apparel, footwear and accessories. it is for shoppers who want trendy clothing and broad style choices.",
+k:"asos,online shopping usa,usa fashion,apparel,footwear,accessories,online retail,trendy clothing",
+a:""
+},
+{
+i:875,
+n:"forever 21",
+c:"business,fashion,home",
+u:"https://www.forever21.com/",
+d:"forever 21 is a usa online fashion store for affordable trend-driven clothing and accessories. it is for younger shoppers and budget-friendly style buyers.",
+k:"forever 21,online shopping usa,usa fashion,affordable clothing,accessories,trendy wear,online retail,youth fashion",
+a:""
+},
+{
+i:876,
+n:"gap",
+c:"business,fashion,home",
+u:"https://www.gap.com/",
+d:"gap is a usa online clothing store for casual apparel and family basics. it is for shoppers who want everyday fashion for adults and kids.",
+k:"gap,online shopping usa,usa fashion,casual clothing,family basics,online retail,apparel shopping",
+a:""
+},
+{
+i:877,
+n:"old navy",
+c:"business,fashion,home",
+u:"https://oldnavy.gap.com/",
+d:"old navy is a usa online clothing store for affordable family fashion and casual wear. it is for shoppers looking for budget-friendly apparel and seasonal styles.",
+k:"old navy,online shopping usa,usa fashion,affordable clothing,family apparel,casual wear,online retail,shopping site",
+a:""
+},
+{
+i:878,
+n:"tommy hilfiger",
+c:"business,fashion,home",
+u:"https://usa.tommy.com/",
+d:"tommy hilfiger is a usa online fashion store for clothing, shoes and accessories. it is for shoppers who want casual premium style for men, women and kids.",
+k:"tommy hilfiger,online shopping usa,usa fashion,clothing store,shoes,accessories,online retail,casual wear",
+a:""
+},
+{
+i:879,
+n:"calvin klein",
+c:"business,fashion,beauty",
+u:"https://www.calvinklein.us/",
+d:"calvin klein is a usa online fashion store for underwear, apparel and accessories. it is for shoppers looking for minimalist style and everyday wardrobe pieces.",
+k:"calvin klein,online shopping usa,usa fashion,apparel,underwear,accessories,online retail,minimalist style",
+a:""
+},
+{
+i:880,
+n:"foot locker",
+c:"business,fashion,sports",
+u:"https://www.footlocker.com/en",
+d:"foot locker is a usa online sneaker and apparel store for men, women and kids. it is for shoppers looking for athletic footwear, streetwear and exclusive styles.",
+k:"foot locker,online shopping usa,usa fashion,sneakers,athletic shoes,apparel,online retail,shoe store",
+a:""
+},
+{
+i:881,
+n:"finish line",
+c:"business,fashion,sports",
+u:"https://www.finishline.com/",
+d:"finish line is a usa online store for athletic shoes, apparel and sports gear. it is for sneaker shoppers and active lifestyle buyers.",
+k:"finish line,online shopping usa,usa fashion,sportswear,athletic shoes,online retail,sneaker shopping,activewear",
+a:""
+},
+{
+i:882,
+n:"adidas",
+c:"business,sports,fashion",
+u:"https://www.adidas.com/us",
+d:"adidas is a usa online store for sneakers, activewear and sporting goods. it is for shoppers looking for athletic shoes, clothing and sports accessories.",
+k:"adidas,online shopping usa,usa sports,sneakers,activewear,sporting goods,online retail,athletic wear",
+a:""
+},
+{
+i:883,
+n:"nike",
+c:"business,sports,fashion",
+u:"https://www.nike.com/",
+d:"nike is a usa online store for sportswear, sneakers and training gear. it is for athletes and casual shoppers looking for performance and everyday activewear.",
+k:"nike,online shopping usa,usa sports,sportswear,sneakers,activewear,online retail,athletic gear",
+a:""
+},
+{
+i:884,
+n:"new balance",
+c:"business,sports,fashion",
+u:"https://www.newbalance.com/lifestyle/",
+d:"new balance is a usa online store for lifestyle shoes, clothing and sports apparel. it is for shoppers who want comfort-focused sneakers and casual activewear.",
+k:"new balance,online shopping usa,usa sports,lifestyle shoes,clothing,sports apparel,online retail,sneakers",
+a:""
+},
+{
+i:885,
+n:"chanel",
+c:"business,fashion,beauty,jewellery",
+u:"https://www.chanel.com/us/",
+d:"chanel is a usa online luxury store for fashion, fragrance, beauty, watches and fine jewellery. it is for shoppers who want iconic designer products and premium style.",
+k:"chanel,online shopping usa,usa luxury fashion,fragrance shopping,beauty products,watches,jewellery,online retail",
+a:""
+},
+{
+i:886,
+n:"dior",
+c:"business,fashion,beauty,jewellery",
+u:"https://www.dior.com/en_us",
+d:"dior is the usa official online boutique for fashion, beauty and luxury accessories. it is for shoppers looking for premium clothing, skincare, fragrance and watches.",
+k:"dior,online shopping usa,usa luxury fashion,beauty boutique,fragrance shopping,jewellery shopping,official store,designer goods",
+a:""
+},
+{
+i:887,
+n:"prada",
+c:"business,fashion,beauty,jewellery",
+u:"https://www.prada.com/us/en.html",
+d:"prada is a usa online luxury store for ready-to-wear, bags, shoes, fragrances and accessories. it is for shoppers looking for refined designer fashion and premium goods.",
+k:"prada,online shopping usa,usa luxury fashion,designer bags,shoes,fragrances,accessories,online retail",
+a:""
+},
+{
+i:888,
+n:"louis vuitton",
+c:"business,fashion,beauty,jewellery,home,travel",
+u:"https://us.louisvuitton.com/eng-us/women/spring-summer-2026-collection/_/N-t1ym4reu",
+d:"louis vuitton is a usa online luxury fashion destination for iconic clothing, bags and accessories. it is for shoppers who want premium designer pieces and travel goods.",
+k:"louis vuitton,online shopping usa,usa luxury fashion,designer bags,accessories,travel goods,online retail,premium brand",
+a:""
+},
+{
+i:889,
+n:"versace",
+c:"business,fashion,home,jewellery",
+u:"https://www.versace.com/us/en/",
+d:"versace is a usa online luxury store for clothing, shoes, accessories and home products. it is for shoppers who want bold designer fashion and premium lifestyle goods.",
+k:"versace,online shopping usa,usa luxury fashion,designer clothing,shoes,accessories,home products,online retail",
+a:""
+},
+{
+i:890,
+n:"balmain",
+c:"business,fashion",
+u:"https://us.balmain.com/en",
+d:"balmain is a usa online luxury fashion store for designer clothing and accessories. it is for shoppers looking for high-fashion pieces and premium style.",
+k:"balmain,online shopping usa,usa luxury fashion,designer clothing,high fashion,accessories,online retail,premium brand",
+a:""
+},
+{
+i:891,
+n:"armani",
+c:"business,fashion,home",
+u:"https://www.armani.com/en-us/giorgio-armani/experience/",
+d:"armani is a usa online luxury fashion store for clothing, accessories and home items. it is for shoppers who want refined designer style and premium collections.",
+k:"armani,online shopping usa,usa luxury fashion,designer clothing,accessories,home products,online retail,premium style",
+a:""
+},
+{
+i:892,
+n:"ralph lauren",
+c:"business,fashion,home",
+u:"https://www.ralphlauren.com/",
+d:"ralph lauren is a usa online store for clothing, accessories and home furnishings. it is for shoppers who want classic premium fashion and lifestyle products.",
+k:"ralph lauren,online shopping usa,usa fashion,designer clothing,home furnishings,accessories,online retail,classic style",
+a:""
+},
+{
+i:893,
+n:"net-a-porter",
+c:"business,fashion,beauty,jewellery",
+u:"https://www.net-a-porter.com/en-us/",
+d:"net-a-porter is a usa online luxury fashion store for women’s clothing, beauty and lifestyle items. it is for shoppers who want curated designer brands and premium edits.",
+k:"net-a-porter,online shopping usa,usa luxury fashion,designer clothing,beauty products,lifestyle shopping,online retail,premium store",
+a:""
+},
+{
+i:894,
+n:"chanel beauty",
+c:"business,beauty,health",
+u:"https://www.chanel.com/us/",
+d:"chanel beauty is a usa online destination for fragrance, makeup and skincare. it is for shoppers who want luxury beauty products and signature scent collections.",
+k:"chanel beauty,online shopping usa,usa beauty,fragrance,makeup,skincare,online retail,luxury beauty",
+a:""
+},
+{
+i:895,
+n:"sephora",
+c:"business,beauty,health",
+u:"https://www.sephora.com/",
+d:"sephora is a usa online beauty retailer for makeup, skincare, fragrance and grooming products. it is for shoppers who want popular and prestige beauty brands.",
+k:"sephora,online shopping usa,usa beauty,makeup shopping,skincare products,fragrance store,grooming,online retail",
+a:""
+},
+{
+i:896,
+n:"ulta beauty",
+c:"business,beauty,health",
+u:"https://www.ulta.com/",
+d:"ulta beauty is a usa online beauty store for cosmetics, skincare, haircare and salon products. it is for shoppers looking for both drugstore and premium beauty items.",
+k:"ulta beauty,online shopping usa,usa beauty,cosmetics,skincare,haircare,beauty deals,online retail",
+a:""
+},
+{
+i:897,
+n:"walgreens",
+c:"business,health,beauty,food,home",
+u:"https://www.walgreens.com/",
+d:"walgreens is a usa online pharmacy and convenience retailer for health, beauty and daily essentials. it is for shoppers who want prescriptions, wellness products and quick household shopping.",
+k:"walgreens,online shopping usa,usa pharmacy,health products,beauty products,household essentials,online retail,wellness store",
+a:""
+},
+{
+i:898,
+n:"costco",
+c:"business,food,home,electronics,fashion,beauty,health,travel,automotive",
+u:"https://www.costco.com/",
+d:"costco is a usa membership-based online warehouse store for bulk groceries, home goods and general merchandise. it is for families and businesses that want value pricing and large-pack shopping.",
+k:"costco,online shopping usa,usa warehouse,bulk grocery,home goods,electronics shopping,member savings,online retail",
+a:""
+},
+{
+i:899,
+n:"sam's club",
+c:"business,food,home,electronics,fashion,beauty,health,travel,automotive",
+u:"https://www.samsclub.com/",
+d:"sam's club is a usa membership warehouse shopping site for bulk groceries, home goods and general merchandise. it is for families and businesses that want value pricing and large-pack purchases.",
+k:"sam's club,online shopping usa,usa warehouse,bulk grocery,home goods,electronics shopping,member savings,online retail",
+a:""
+},
+{
+i:900,
+n:"instacart",
+c:"business,food,home",
+u:"https://www.instacart.com/",
+d:"instacart is a usa grocery delivery platform that connects shoppers with local stores. it is for groceries, household essentials and same-day delivery from supermarkets.",
+k:"instacart,online shopping usa,usa grocery delivery,household essentials,online supermarket,daily needs,delivery app,food shopping",
+a:""
+}, 
+{
+i:901,
+n:"amazon",
+c:"business,electronics,home,fashion,beauty,health,food,sports,books,jewellery,automotive,travel,software",
+u:"https://www.amazon.com/",
+d:"amazon is a major usa online marketplace where shoppers can buy electronics, home goods, fashion, beauty, books, groceries and more. it serves everyday consumers, families and sellers with broad selection and fast delivery.",
+k:"amazon,online shopping usa,usa marketplace,electronics shopping,home goods,fashion shopping,grocery delivery,online retail",
+a:""
+},
+{
+i:902,
+n:"target",
+c:"business,electronics,home,fashion,beauty,health,food,sports,books,jewellery,automotive",
+u:"https://www.target.com/",
+d:"target is a usa online retailer for groceries, household essentials, clothing, beauty and electronics. it is for families and everyday shoppers who want convenient one-stop shopping.",
+k:"target,online shopping usa,usa retail,grocery shopping,home essentials,fashion shopping,beauty products,online marketplace",
+a:""
+},
+{
+i:903,
+n:"walmart",
+c:"business,electronics,home,fashion,beauty,health,food,sports,books,automotive",
+u:"https://www.walmart.com/",
+d:"walmart is a large usa online shopping platform for groceries, household essentials, electronics and apparel. it is for budget-conscious families and shoppers who want daily needs in one place.",
+k:"walmart,online shopping usa,usa retail,grocery shopping,electronics store,home essentials,fashion shopping,online marketplace",
+a:""
+},
+{
+i:904,
+n:"costco",
+c:"business,food,home,electronics,fashion,beauty,health,travel,automotive",
+u:"https://www.costco.com/",
+d:"costco is a usa membership-based online warehouse store for bulk groceries, home goods and general merchandise. it is for families and businesses that want value pricing and large-pack shopping.",
+k:"costco,online shopping usa,usa warehouse,bulk grocery,home goods,electronics shopping,member savings,online retail",
+a:""
+},
+{
+i:905,
+n:"sam's club",
+c:"business,food,home,electronics,fashion,beauty,health,travel,automotive",
+u:"https://www.samsclub.com/",
+d:"sam's club is a usa membership warehouse shopping site for bulk groceries, home goods and general merchandise. it is for families and businesses that want value pricing and large-pack purchases.",
+k:"sam's club,online shopping usa,usa warehouse,bulk grocery,home goods,electronics shopping,member savings,online retail",
+a:""
+},
+{
+i:906,
+n:"instacart",
+c:"business,food,home",
+u:"https://www.instacart.com/",
+d:"instacart is a usa grocery delivery platform that connects shoppers with local stores. it is for groceries, household essentials and same-day delivery from supermarkets.",
+k:"instacart,online shopping usa,usa grocery delivery,household essentials,online supermarket,daily needs,delivery app,food shopping",
+a:""
+},
+{
+i:907,
+n:"whole foods market",
+c:"business,food,home,health",
+u:"https://www.wholefoodsmarket.com/",
+d:"whole foods market is a usa online grocery destination focused on natural and organic products. it is for health-conscious shoppers looking for quality food and household items.",
+k:"whole foods market,online shopping usa,usa grocery,organic food,healthy shopping,household essentials,online retail,supermarket",
+a:""
+},
+{
+i:908,
+n:"thrive market",
+c:"business,food,home,health",
+u:"https://thrivemarket.com/",
+d:"thrive market is a usa online marketplace for organic groceries, wellness items and household essentials. it is for shoppers looking for healthy food and sustainable products.",
+k:"thrive market,online shopping usa,usa grocery,organic food,wellness products,household essentials,online retail,healthy shopping",
+a:""
+},
+{
+i:909,
+n:"walgreens",
+c:"business,health,beauty,food,home",
+u:"https://www.walgreens.com/",
+d:"walgreens is a usa online pharmacy and convenience retailer for health, beauty and daily essentials. it is for shoppers who want prescriptions, wellness products and quick household shopping.",
+k:"walgreens,online shopping usa,usa pharmacy,health products,beauty products,household essentials,online retail,wellness store",
+a:""
+},
+{
+i:910,
+n:"petco",
+c:"business,food,health",
+u:"https://www.petco.com/",
+d:"petco is a usa online pet store for food, toys, grooming and health products. it is for pet owners shopping for daily supplies and veterinary-related items.",
+k:"petco,online shopping usa,usa pet food,pet supplies,pet health,pet grooming,online retail,animal care",
+a:""
+},
+{
+i:911,
+n:"petsmart",
+c:"business,food,health",
+u:"https://www.petsmart.com/",
+d:"petsmart is a usa online pet retailer for food, accessories and wellness products. it is for pet owners looking for supplies, grooming items and animal care essentials.",
+k:"petsmart,online shopping usa,usa pet food,pet supplies,pet health,pet grooming,online retail,animal care",
+a:""
+},
+{
+i:912,
+n:"chewy",
+c:"business,food,health",
+u:"https://www.chewy.com/",
+d:"chewy is a usa online retailer for pet food, pet supplies and pet health products. it is for pet owners who want convenient delivery and recurring purchases.",
+k:"chewy,online shopping usa,usa pet food,pet supplies,pet health,online retail,animal care,pet shopping",
+a:""
+},
+{
+i:913,
+n:"petland",
+c:"business,food,health",
+u:"https://petland.com/",
+d:"petland is a usa online pet retailer for animals, pet supplies and pet care products. it is for pet owners looking for pets, food and everyday care items.",
+k:"petland,online shopping usa,usa pet food,pet supplies,pet care,online retail,animal care,pet store",
+a:""
+},
+{
+i:914,
+n:"rei",
+c:"business,sports,travel,home",
+u:"https://www.rei.com/",
+d:"rei is a usa online outdoor store for camping, hiking, cycling and travel gear. it is for active shoppers and adventure travelers who need reliable equipment.",
+k:"rei,online shopping usa,usa sports,outdoor gear,camping shopping,travel gear,online retail,fitness equipment",
+a:""
+},
+{
+i:915,
+n:"dick's sporting goods",
+c:"business,sports,fashion",
+u:"https://www.dickssportinggoods.com/",
+d:"dick's sporting goods is a usa online sports retailer for athletic gear, footwear and equipment. it is for athletes, teams and active shoppers across many sports.",
+k:"dick's sporting goods,online shopping usa,usa sports,athletic gear,sports equipment,footwear,online retail,fitness shopping",
+a:""
+},
+{
+i:916,
+n:"academy sports",
+c:"business,sports,automotive,home",
+u:"https://www.academy.com/",
+d:"academy sports is a usa online retailer for sports equipment, outdoor gear and activewear. it is for families and athletes looking for recreation and fitness products.",
+k:"academy sports,online shopping usa,usa sports,sports equipment,outdoor gear,activewear,online retail,fitness shopping",
+a:""
+},
+{
+i:917,
+n:"backcountry",
+c:"business,sports,travel,home",
+u:"https://www.backcountry.com/",
+d:"backcountry is a usa online store for outdoor gear, hiking apparel and travel equipment. it is for adventure shoppers looking for premium recreation products.",
+k:"backcountry,online shopping usa,usa sports,outdoor gear,hiking apparel,travel equipment,online retail,adventure shopping",
+a:""
+},
+{
+i:918,
+n:"patagonia",
+c:"business,sports,fashion,travel",
+u:"https://www.patagonia.com/",
+d:"patagonia is a usa online store for outdoor clothing and performance gear. it is for shoppers looking for durable apparel for hiking, travel and active lifestyles.",
+k:"patagonia,online shopping usa,usa sports,outdoor clothing,performance gear,travel apparel,online retail,activewear",
+a:""
+},
+{
+i:919,
+n:"ll bean",
+c:"business,fashion,home,sports,travel",
+u:"https://www.llbean.com/",
+d:"ll bean is a usa online store for outdoor clothing, boots, camping gear and home goods. it is for shoppers who want durable lifestyle and travel products.",
+k:"ll bean,online shopping usa,usa fashion,outdoor gear,camping products,boots,home goods,travel shopping",
+a:""
+},
+{
+i:920,
+n:"michaels",
+c:"business,home,books",
+u:"https://www.michaels.com/",
+d:"michaels is a usa online arts and crafts store for diy supplies, home decor and project materials. it is for hobbyists, creators and families making craft projects.",
+k:"michaels,online shopping usa,usa home,arts and crafts,diy supplies,home decor,craft store,online retail",
+a:""
+},
+{
+i:921,
+n:"joann",
+c:"business,home,books",
+u:"https://www.joann.com/",
+d:"joann is a usa online craft and fabric store for sewing, diy and home project supplies. it is for makers and crafters shopping for materials and tools.",
+k:"joann,online shopping usa,usa home,craft supplies,fabric,sewing,diy products,online retail",
+a:""
+},
+{
+i:922,
+n:"the container store",
+c:"business,home",
+u:"https://www.containerstore.com/",
+d:"the container store is a usa online retailer for storage, organization and home solutions. it is for shoppers who want to organize closets, kitchens and offices.",
+k:"the container store,online shopping usa,usa home,storage,organization,home solutions,online retail,household shopping",
+a:""
+},
+{
+i:923,
+n:"bookshop.org",
+c:"business,books",
+u:"https://bookshop.org/",
+d:"bookshop.org is a usa online bookstore that supports independent booksellers. it is for readers looking for printed books, literary gifts and local-bookstore style shopping.",
+k:"bookshop.org,online shopping usa,usa books,online bookstore,reading shopping,literary gifts,book retailer,online retail",
+a:""
+},
+{
+i:924,
+n:"barnes and noble",
+c:"business,books",
+u:"https://www.barnesandnoble.com/",
+d:"barnes and noble is a usa online bookstore for books, ebooks, toys and gifts. it is for readers, students and families looking for books and educational products.",
+k:"barnes and noble,online shopping usa,usa books,online bookstore,reading products,educational shopping,book retailer,online retail",
+a:""
+},
+{
+i:925,
+n:"thriftbooks",
+c:"business,books",
+u:"https://www.thriftbooks.com/",
+d:"thriftbooks is a usa online bookstore for used books at low prices. it is for readers looking for affordable fiction, nonfiction and educational titles.",
+k:"thriftbooks,online shopping usa,usa books,used books,online bookstore,reading deals,book retailer,online retail",
+a:""
+},
+{
+i:926,
+n:"half price books",
+c:"business,books",
+u:"https://hpb.com/",
+d:"half price books is a usa bookseller with an online store for new and used books. it is for readers who want budget-friendly books, media and collectibles.",
+k:"half price books,online shopping usa,usa books,used books,online bookstore,reading shopping,book retailer,online retail",
+a:""
+},
+{
+i:927,
+n:"book outlet",
+c:"business,books",
+u:"https://bookoutlet.com/",
+d:"book outlet is a usa online bookstore that focuses on discounted books and reading deals. it is for readers and families buying affordable titles in many genres.",
+k:"book outlet,online shopping usa,usa books,discount books,online bookstore,reading deals,book retailer,online retail",
+a:""
+},
+{
+i:928,
+n:"office depot",
+c:"business,electronics,home,software,books",
+u:"https://www.officedepot.com/",
+d:"office depot is a usa online store for office supplies, business products and technology. it is for offices, students and home workspaces buying essentials.",
+k:"office depot,online shopping usa,usa business,office supplies,technology,printer supplies,online retail,work essentials",
+a:""
+},
+{
+i:929,
+n:"staples",
+c:"business,electronics,home,software,books",
+u:"https://www.staples.com/",
+d:"staples is a usa online retailer for office supplies, business products and workplace technology. it is for businesses, students and home offices.",
+k:"staples,online shopping usa,usa business,office supplies,workplace technology,printer supplies,online retail,home office",
+a:""
+},
+{
+i:930,
+n:"uhaul",
+c:"business,home,travel",
+u:"https://www.uhaul.com/",
+d:"uhaul is a usa online moving and storage service with equipment and supplies for relocations. it is for people moving homes or needing truck and storage solutions.",
+k:"uhaul,online shopping usa,usa business,moving supplies,storage solutions,truck rental,online retail,home moving",
+a:""
+},
+{
+i:931,
+n:"zappos",
+c:"business,fashion",
+u:"https://www.zappos.com/",
+d:"zappos is a usa online shoe and clothing retailer with a wide selection of footwear and apparel. it is for shoppers who want easy browsing, fast shipping and free returns.",
+k:"zappos,online shopping usa,usa fashion,shoes,footwear,clothing,online retail,shoe store",
+a:""
+},
+{
+i:932,
+n:"dsw",
+c:"business,fashion",
+u:"https://www.dsw.com/",
+d:"dsw is a usa online shoe store for sneakers, heels, boots and accessories. it is for shoppers looking for branded footwear and seasonal styles.",
+k:"dsw,online shopping usa,usa fashion,shoes,footwear,accessories,online retail,shoe store",
+a:""
+},
+{
+i:933,
+n:"amazon fashion",
+c:"business,fashion",
+u:"https://www.amazon.com/",
+d:"amazon fashion is the usa clothing and accessories shopping section on amazon. it is for shoppers looking for apparel, shoes and style basics with wide selection.",
+k:"amazon fashion,online shopping usa,usa fashion,clothing,shoes,accessories,online retail,fashion marketplace",
+a:""
+},
+{
+i:934,
+n:"asos",
+c:"business,fashion,home,beauty",
+u:"https://www.asos.com/us/",
+d:"asos is a usa online fashion marketplace for apparel, footwear and accessories. it is for shoppers who want trendy clothing and broad style choices.",
+k:"asos,online shopping usa,usa fashion,apparel,footwear,accessories,online retail,trendy clothing",
+a:""
+},
+{
+i:935,
+n:"forever 21",
+c:"business,fashion,home",
+u:"https://www.forever21.com/",
+d:"forever 21 is a usa online fashion store for affordable trend-driven clothing and accessories. it is for younger shoppers and budget-friendly style buyers.",
+k:"forever 21,online shopping usa,usa fashion,affordable clothing,accessories,trendy wear,online retail,youth fashion",
+a:""
+},
+{
+i:936,
+n:"gap",
+c:"business,fashion,home",
+u:"https://www.gap.com/",
+d:"gap is a usa online clothing store for casual apparel and family basics. it is for shoppers who want everyday fashion for adults and kids.",
+k:"gap,online shopping usa,usa fashion,casual clothing,family basics,online retail,apparel shopping",
+a:""
+},
+{
+i:937,
+n:"old navy",
+c:"business,fashion,home",
+u:"https://oldnavy.gap.com/",
+d:"old navy is a usa online clothing store for affordable family fashion and casual wear. it is for shoppers looking for budget-friendly apparel and seasonal styles.",
+k:"old navy,online shopping usa,usa fashion,affordable clothing,family apparel,casual wear,online retail,shopping site",
+a:""
+},
+{
+i:938,
+n:"tommy hilfiger",
+c:"business,fashion,home",
+u:"https://usa.tommy.com/",
+d:"tommy hilfiger is a usa online fashion store for clothing, shoes and accessories. it is for shoppers who want casual premium style for men, women and kids.",
+k:"tommy hilfiger,online shopping usa,usa fashion,clothing store,shoes,accessories,online retail,casual wear",
+a:""
+},
+{
+i:939,
+n:"calvin klein",
+c:"business,fashion,beauty",
+u:"https://www.calvinklein.us/",
+d:"calvin klein is a usa online fashion store for underwear, apparel and accessories. it is for shoppers looking for minimalist style and everyday wardrobe pieces.",
+k:"calvin klein,online shopping usa,usa fashion,apparel,underwear,accessories,online retail,minimalist style",
+a:""
+},
+{
+i:940,
+n:"foot locker",
+c:"business,fashion,sports",
+u:"https://www.footlocker.com/en",
+d:"foot locker is a usa online sneaker and apparel store for men, women and kids. it is for shoppers looking for athletic footwear, streetwear and exclusive styles.",
+k:"foot locker,online shopping usa,usa fashion,sneakers,athletic shoes,apparel,online retail,shoe store",
+a:""
+},
+{
+i:941,
+n:"finish line",
+c:"business,fashion,sports",
+u:"https://www.finishline.com/",
+d:"finish line is a usa online store for athletic shoes, apparel and sports gear. it is for sneaker shoppers and active lifestyle buyers.",
+k:"finish line,online shopping usa,usa fashion,sportswear,athletic shoes,online retail,sneaker shopping,activewear",
+a:""
+},
+{
+i:942,
+n:"adidas",
+c:"business,sports,fashion",
+u:"https://www.adidas.com/us",
+d:"adidas is a usa online store for sneakers, activewear and sporting goods. it is for shoppers looking for athletic shoes, clothing and sports accessories.",
+k:"adidas,online shopping usa,usa sports,sneakers,activewear,sporting goods,online retail,athletic wear",
+a:""
+},
+{
+i:943,
+n:"nike",
+c:"business,sports,fashion",
+u:"https://www.nike.com/",
+d:"nike is a usa online store for sportswear, sneakers and training gear. it is for athletes and casual shoppers looking for performance and everyday activewear.",
+k:"nike,online shopping usa,usa sports,sportswear,sneakers,activewear,online retail,athletic gear",
+a:""
+},
+{
+i:944,
+n:"new balance",
+c:"business,sports,fashion",
+u:"https://www.newbalance.com/lifestyle/",
+d:"new balance is a usa online store for lifestyle shoes, clothing and sports apparel. it is for shoppers who want comfort-focused sneakers and casual activewear.",
+k:"new balance,online shopping usa,usa sports,lifestyle shoes,clothing,sports apparel,online retail,sneakers",
+a:""
+},
+{
+i:945,
+n:"chanel",
+c:"business,fashion,beauty,jewellery",
+u:"https://www.chanel.com/us/",
+d:"chanel is a usa online luxury store for fashion, fragrance, beauty, watches and fine jewellery. it is for shoppers who want iconic designer products and premium style.",
+k:"chanel,online shopping usa,usa luxury fashion,fragrance shopping,beauty products,watches,jewellery,online retail",
+a:""
+},
+{
+i:946,
+n:"dior",
+c:"business,fashion,beauty,jewellery",
+u:"https://www.dior.com/en_us",
+d:"dior is the usa official online boutique for fashion, beauty and luxury accessories. it is for shoppers looking for premium clothing, skincare, fragrance and watches.",
+k:"dior,online shopping usa,usa luxury fashion,beauty boutique,fragrance shopping,jewellery shopping,official store,designer goods",
+a:""
+},
+{
+i:947,
+n:"prada",
+c:"business,fashion,beauty,jewellery",
+u:"https://www.prada.com/us/en.html",
+d:"prada is a usa online luxury store for ready-to-wear, bags, shoes, fragrances and accessories. it is for shoppers looking for refined designer fashion and premium goods.",
+k:"prada,online shopping usa,usa luxury fashion,designer bags,shoes,fragrances,accessories,online retail",
+a:""
+},
+{
+i:948,
+n:"louis vuitton",
+c:"business,fashion,beauty,jewellery,home,travel",
+u:"https://us.louisvuitton.com/eng-us/women/spring-summer-2026-collection/_/N-t1ym4reu",
+d:"louis vuitton is a usa online luxury fashion destination for iconic clothing, bags and accessories. it is for shoppers who want premium designer pieces and travel goods.",
+k:"louis vuitton,online shopping usa,usa luxury fashion,designer bags,accessories,travel goods,online retail,premium brand",
+a:""
+},
+{
+i:949,
+n:"versace",
+c:"business,fashion,home,jewellery",
+u:"https://www.versace.com/us/en/",
+d:"versace is a usa online luxury store for clothing, shoes, accessories and home products. it is for shoppers who want bold designer fashion and premium lifestyle goods.",
+k:"versace,online shopping usa,usa luxury fashion,designer clothing,shoes,accessories,home products,online retail",
+a:""
+},
+{
+i:950,
+n:"balmain",
+c:"business,fashion",
+u:"https://us.balmain.com/en",
+d:"balmain is a usa online luxury fashion store for designer clothing and accessories. it is for shoppers looking for high-fashion pieces and premium style.",
+k:"balmain,online shopping usa,usa luxury fashion,designer clothing,high fashion,accessories,online retail,premium brand",
+a:""
+}.
+ 
+{
+i:951,
+n:"net-a-porter",
+c:"business,fashion,beauty,jewellery",
+u:"https://www.net-a-porter.com/en-us/",
+d:"net-a-porter is a usa online luxury fashion store for women’s clothing, beauty and lifestyle items. it is for shoppers who want curated designer brands and premium edits.",
+k:"net-a-porter,online shopping usa,usa luxury fashion,designer clothing,beauty products,lifestyle shopping,online retail,premium store",
+a:""
+},
+{
+i:952,
+n:"chanel",
+c:"business,fashion,beauty,jewellery",
+u:"https://www.chanel.com/us/",
+d:"chanel is a usa online luxury store for fashion, fragrance, beauty, watches and fine jewellery. it is for shoppers who want iconic designer products and premium style.",
+k:"chanel,online shopping usa,usa luxury fashion,fragrance shopping,beauty products,watches,jewellery,online retail",
+a:""
+},
+{
+i:953,
+n:"macys",
+c:"business,fashion,home,beauty,jewellery",
+u:"https://www.macys.com/",
+d:"macys is a usa online department store for clothing, shoes, beauty and home products. it is for shoppers who want many popular brands in one place with easy shopping.",
+k:"macys,online shopping usa,usa fashion,beauty products,home goods,department store,online retail,shopping site",
+a:""
+},
+{
+i:954,
+n:"dior",
+c:"business,fashion,beauty,jewellery",
+u:"https://www.dior.com/en_us",
+d:"dior is the usa official online boutique for fashion, beauty and luxury accessories. it is for shoppers looking for premium clothing, skincare, fragrance and watches.",
+k:"dior,online shopping usa,usa luxury fashion,beauty boutique,fragrance shopping,jewellery shopping,official store,designer goods",
+a:""
+},
+{
+i:955,
+n:"selfridges us",
+c:"business,fashion,beauty,jewellery,home",
+u:"https://www.selfridges.com/US/en/",
+d:"selfridges us is a usa-facing luxury department store website for designer fashion, beauty, toys and gifts. it is for shoppers looking for premium brands and curated gifting.",
+k:"selfridges us,online shopping usa,usa luxury fashion,designer beauty,toys,gifts,online retail,premium department store",
+a:""
+},
+{
+i:956,
+n:"saks fifth avenue",
+c:"business,fashion,beauty,jewellery",
+u:"https://www.saksfifthavenue.com/",
+d:"saks fifth avenue is a usa online luxury store for designer clothing, shoes, handbags and beauty products. it is for shoppers looking for curated fashion and top designer arrivals.",
+k:"saks fifth avenue,online shopping usa,usa luxury fashion,designer clothing,shoes,handbags,beauty products,online retail",
+a:""
+},
+{
+i:957,
+n:"bergdorf goodman",
+c:"business,fashion,beauty,jewellery",
+u:"https://www.bergdorfgoodman.com/",
+d:"bergdorf goodman is a usa online luxury department store for designer fashion, beauty and accessories. it is for customers who want premium labels and exclusive edits.",
+k:"bergdorf goodman,online shopping usa,usa luxury fashion,designer clothing,beauty shopping,jewellery,online retail,premium department store",
+a:""
+},
+{
+i:958,
+n:"armani",
+c:"business,fashion,home",
+u:"https://www.armani.com/en-us/giorgio-armani/experience/",
+d:"armani is a usa online luxury fashion store for clothing, accessories and home items. it is for shoppers who want refined designer style and premium collections.",
+k:"armani,online shopping usa,usa luxury fashion,designer clothing,accessories,home products,online retail,premium style",
+a:""
+},
+{
+i:959,
+n:"balmain",
+c:"business,fashion",
+u:"https://us.balmain.com/en",
+d:"balmain is a usa online luxury fashion store for designer clothing and accessories. it is for shoppers looking for high-fashion pieces and premium style.",
+k:"balmain,online shopping usa,usa luxury fashion,designer clothing,high fashion,accessories,online retail,premium brand",
+a:""
+},
+{
+i:960,
+n:"versace",
+c:"business,fashion,home,jewellery",
+u:"https://www.versace.com/us/en/",
+d:"versace is a usa online luxury store for clothing, shoes, accessories and home products. it is for shoppers who want bold designer fashion and premium lifestyle goods.",
+k:"versace,online shopping usa,usa luxury fashion,designer clothing,shoes,accessories,home products,online retail",
+a:""
+},
+{
+i:961,
+n:"prada",
+c:"business,fashion,beauty,jewellery",
+u:"https://www.prada.com/us/en.html",
+d:"prada is a usa online luxury store for ready-to-wear, bags, shoes, fragrances and accessories. it is for shoppers looking for refined designer fashion and premium goods.",
+k:"prada,online shopping usa,usa luxury fashion,designer bags,shoes,fragrances,accessories,online retail",
+a:""
+},
+{
+i:962,
+n:"louis vuitton",
+c:"business,fashion,beauty,jewellery,home,travel",
+u:"https://us.louisvuitton.com/eng-us/women/spring-summer-2026-collection/_/N-t1ym4reu",
+d:"louis vuitton is a usa online luxury fashion destination for iconic clothing, bags and accessories. it is for shoppers who want premium designer pieces and travel goods.",
+k:"louis vuitton,online shopping usa,usa luxury fashion,designer bags,accessories,travel goods,online retail,premium brand",
+a:""
+},
+{
+i:963,
+n:"ralph lauren",
+c:"business,fashion,home",
+u:"https://www.ralphlauren.com/",
+d:"ralph lauren is a usa online store for clothing, accessories and home furnishings. it is for shoppers who want classic premium fashion and lifestyle products.",
+k:"ralph lauren,online shopping usa,usa fashion,designer clothing,home furnishings,accessories,online retail,classic style",
+a:""
+},
+{
+i:964,
+n:"amazon",
+c:"business,electronics,home,fashion,beauty,health,food,sports,books,jewellery,automotive,travel,software",
+u:"https://www.amazon.com/",
+d:"amazon is a major usa online marketplace where shoppers can buy electronics, home goods, fashion, beauty, books, groceries and more. it serves everyday consumers, families and sellers with broad selection and fast delivery.",
+k:"amazon,online shopping usa,usa marketplace,electronics shopping,home goods,fashion shopping,grocery delivery,online retail",
+a:""
+},
+{
+i:965,
+n:"target",
+c:"business,electronics,home,fashion,beauty,health,food,sports,books,jewellery,automotive",
+u:"https://www.target.com/",
+d:"target is a usa online retailer for groceries, household essentials, clothing, beauty and electronics. it is for families and everyday shoppers who want convenient one-stop shopping.",
+k:"target,online shopping usa,usa retail,grocery shopping,home essentials,fashion shopping,beauty products,online marketplace",
+a:""
+},
+{
+i:966,
+n:"walmart",
+c:"business,electronics,home,fashion,beauty,health,food,sports,books,automotive",
+u:"https://www.walmart.com/",
+d:"walmart is a large usa online shopping platform for groceries, household essentials, electronics and apparel. it is for budget-conscious families and shoppers who want daily needs in one place.",
+k:"walmart,online shopping usa,usa retail,grocery shopping,electronics store,home essentials,fashion shopping,online marketplace",
+a:""
+},
+{
+i:967,
+n:"costco",
+c:"business,food,home,electronics,fashion,beauty,health,travel,automotive",
+u:"https://www.costco.com/",
+d:"costco is a usa membership-based online warehouse store for bulk groceries, home goods and general merchandise. it is for families and businesses that want value pricing and large-pack shopping.",
+k:"costco,online shopping usa,usa warehouse,bulk grocery,home goods,electronics shopping,member savings,online retail",
+a:""
+},
+{
+i:968,
+n:"sam's club",
+c:"business,food,home,electronics,fashion,beauty,health,travel,automotive",
+u:"https://www.samsclub.com/",
+d:"sam's club is a usa membership warehouse shopping site for bulk groceries, home goods and general merchandise. it is for families and businesses that want value pricing and large-pack purchases.",
+k:"sam's club,online shopping usa,usa warehouse,bulk grocery,home goods,electronics shopping,member savings,online retail",
+a:""
+},
+{
+i:969,
+n:"instacart",
+c:"business,food,home",
+u:"https://www.instacart.com/",
+d:"instacart is a usa grocery delivery platform that connects shoppers with local stores. it is for groceries, household essentials and same-day delivery from supermarkets.",
+k:"instacart,online shopping usa,usa grocery delivery,household essentials,online supermarket,daily needs,delivery app,food shopping",
+a:""
+},
+{
+i:970,
+n:"walgreens",
+c:"business,health,beauty,food,home",
+u:"https://www.walgreens.com/",
+d:"walgreens is a usa online pharmacy and convenience retailer for health, beauty and daily essentials. it is for shoppers who want prescriptions, wellness products and quick household shopping.",
+k:"walgreens,online shopping usa,usa pharmacy,health products,beauty products,household essentials,online retail,wellness store",
+a:""
+},
+{
+i:971,
+n:"whole foods market",
+c:"business,food,home,health",
+u:"https://www.wholefoodsmarket.com/",
+d:"whole foods market is a usa online grocery destination focused on natural and organic products. it is for health-conscious shoppers looking for quality food and household items.",
+k:"whole foods market,online shopping usa,usa grocery,organic food,healthy shopping,household essentials,online retail,supermarket",
+a:""
+},
+{
+i:972,
+n:"thrive market",
+c:"business,food,home,health",
+u:"https://thrivemarket.com/",
+d:"thrive market is a usa online marketplace for organic groceries, wellness items and household essentials. it is for shoppers looking for healthy food and sustainable products.",
+k:"thrive market,online shopping usa,usa grocery,organic food,wellness products,household essentials,online retail,healthy shopping",
+a:""
+},
+{
+i:973,
+n:"petco",
+c:"business,food,health",
+u:"https://www.petco.com/",
+d:"petco is a usa online pet store for food, toys, grooming and health products. it is for pet owners shopping for daily supplies and veterinary-related items.",
+k:"petco,online shopping usa,usa pet food,pet supplies,pet health,pet grooming,online retail,animal care",
+a:""
+},
+{
+i:974,
+n:"petsmart",
+c:"business,food,health",
+u:"https://www.petsmart.com/",
+d:"petsmart is a usa online pet retailer for food, accessories and wellness products. it is for pet owners looking for supplies, grooming items and animal care essentials.",
+k:"petsmart,online shopping usa,usa pet food,pet supplies,pet health,pet grooming,online retail,animal care",
+a:""
+},
+{
+i:975,
+n:"chewy",
+c:"business,food,health",
+u:"https://www.chewy.com/",
+d:"chewy is a usa online retailer for pet food, pet supplies and pet health products. it is for pet owners who want convenient delivery and recurring purchases.",
+k:"chewy,online shopping usa,usa pet food,pet supplies,pet health,online retail,animal care,pet shopping",
+a:""
+},
+{
+i:976,
+n:"bookshop.org",
+c:"business,books",
+u:"https://bookshop.org/",
+d:"bookshop.org is a usa online bookstore that supports independent booksellers. it is for readers looking for printed books, literary gifts and local-bookstore style shopping.",
+k:"bookshop.org,online shopping usa,usa books,online bookstore,reading shopping,literary gifts,book retailer,online retail",
+a:""
+},
+{
+i:977,
+n:"barnes and noble",
+c:"business,books",
+u:"https://www.barnesandnoble.com/",
+d:"barnes and noble is a usa online bookstore for books, ebooks, toys and gifts. it is for readers, students and families looking for books and educational products.",
+k:"barnes and noble,online shopping usa,usa books,online bookstore,reading products,educational shopping,book retailer,online retail",
+a:""
+},
+{
+i:978,
+n:"thriftbooks",
+c:"business,books",
+u:"https://www.thriftbooks.com/",
+d:"thriftbooks is a usa online bookstore for used books at low prices. it is for readers looking for affordable fiction, nonfiction and educational titles.",
+k:"thriftbooks,online shopping usa,usa books,used books,online bookstore,reading deals,book retailer,online retail",
+a:""
+},
+{
+i:979,
+n:"office depot",
+c:"business,electronics,home,software,books",
+u:"https://www.officedepot.com/",
+d:"office depot is a usa online store for office supplies, business products and technology. it is for offices, students and home workspaces buying essentials.",
+k:"office depot,online shopping usa,usa business,office supplies,technology,printer supplies,online retail,work essentials",
+a:""
+},
+{
+i:980,
+n:"staples",
+c:"business,electronics,home,software,books",
+u:"https://www.staples.com/",
+d:"staples is a usa online retailer for office supplies, business products and workplace technology. it is for businesses, students and home offices.",
+k:"staples,online shopping usa,usa business,office supplies,workplace technology,printer supplies,online retail,home office",
+a:""
+},
+{
+i:981,
+n:"uhaul",
+c:"business,home,travel",
+u:"https://www.uhaul.com/",
+d:"uhaul is a usa online moving and storage service with equipment and supplies for relocations. it is for people moving homes or needing truck and storage solutions.",
+k:"uhaul,online shopping usa,usa business,moving supplies,storage solutions,truck rental,online retail,home moving",
+a:""
+},
+{
+i:982,
+n:"adidas",
+c:"business,sports,fashion",
+u:"https://www.adidas.com/us",
+d:"adidas is a usa online store for sneakers, activewear and sporting goods. it is for shoppers looking for athletic shoes, clothing and sports accessories.",
+k:"adidas,online shopping usa,usa sports,sneakers,activewear,sporting goods,online retail,athletic wear",
+a:""
+},
+{
+i:983,
+n:"nike",
+c:"business,sports,fashion",
+u:"https://www.nike.com/",
+d:"nike is a usa online store for sportswear, sneakers and training gear. it is for athletes and casual shoppers looking for performance and everyday activewear.",
+k:"nike,online shopping usa,usa sports,sportswear,sneakers,activewear,online retail,athletic gear",
+a:""
+},
+{
+i:984,
+n:"new balance",
+c:"business,sports,fashion",
+u:"https://www.newbalance.com/lifestyle/",
+d:"new balance is a usa online store for lifestyle shoes, clothing and sports apparel. it is for shoppers who want comfort-focused sneakers and casual activewear.",
+k:"new balance,online shopping usa,usa sports,lifestyle shoes,clothing,sports apparel,online retail,sneakers",
+a:""
+},
+{
+i:985,
+n:"foot locker",
+c:"business,fashion,sports",
+u:"https://www.footlocker.com/en",
+d:"foot locker is a usa online sneaker and apparel store for men, women and kids. it is for shoppers looking for athletic footwear, streetwear and exclusive styles.",
+k:"foot locker,online shopping usa,usa fashion,sneakers,athletic shoes,apparel,online retail,shoe store",
+a:""
+},
+{
+i:986,
+n:"finish line",
+c:"business,fashion,sports",
+u:"https://www.finishline.com/",
+d:"finish line is a usa online store for athletic shoes, apparel and sports gear. it is for sneaker shoppers and active lifestyle buyers.",
+k:"finish line,online shopping usa,usa fashion,sportswear,athletic shoes,online retail,sneaker shopping,activewear",
+a:""
+},
+{
+i:987,
+n:"zappos",
+c:"business,fashion",
+u:"https://www.zappos.com/",
+d:"zappos is a usa online shoe and clothing retailer with a wide selection of footwear and apparel. it is for shoppers who want easy browsing, fast shipping and free returns.",
+k:"zappos,online shopping usa,usa fashion,shoes,footwear,clothing,online retail,shoe store",
+a:""
+},
+{
+i:988,
+n:"dsw",
+c:"business,fashion",
+u:"https://www.dsw.com/",
+d:"dsw is a usa online shoe store for sneakers, heels, boots and accessories. it is for shoppers looking for branded footwear and seasonal styles.",
+k:"dsw,online shopping usa,usa fashion,shoes,footwear,accessories,online retail,shoe store",
+a:""
+},
+{
+i:989,
+n:"michaels",
+c:"business,home,books",
+u:"https://www.michaels.com/",
+d:"michaels is a usa online arts and crafts store for diy supplies, home decor and project materials. it is for hobbyists, creators and families making craft projects.",
+k:"michaels,online shopping usa,usa home,arts and crafts,diy supplies,home decor,craft store,online retail",
+a:""
+},
+{
+i:990,
+n:"joann",
+c:"business,home,books",
+u:"https://www.joann.com/",
+d:"joann is a usa online craft and fabric store for sewing, diy and home project supplies. it is for makers and crafters shopping for materials and tools.",
+k:"joann,online shopping usa,usa home,craft supplies,fabric,sewing,diy products,online retail",
+a:""
+},
+{
+i:991,
+n:"the container store",
+c:"business,home",
+u:"https://www.containerstore.com/",
+d:"the container store is a usa online retailer for storage, organization and home solutions. it is for shoppers who want to organize closets, kitchens and offices.",
+k:"the container store,online shopping usa,usa home,storage,organization,home solutions,online retail,household shopping",
+a:""
+},
+{
+i:992,
+n:"ikea usa",
+c:"business,home",
+u:"https://www.ikea.com/us/en/",
+d:"ikea usa is a usa online store for furniture, home furnishings and household goods. it is for shoppers looking for affordable home solutions and modern design.",
+k:"ikea usa,online shopping usa,usa home,furniture,home goods,household shopping,online retail,modern furniture",
+a:""
+},
+{
+i:993,
+n:"wayfair",
+c:"business,home",
+u:"https://www.wayfair.com/",
+d:"wayfair is a usa online shopping site for furniture, decor and home essentials. it is for shoppers furnishing homes and apartments with a wide range of styles.",
+k:"wayfair,online shopping usa,usa furniture,home decor,home essentials,furniture store,online marketplace,household shopping",
+a:""
+},
+{
+i:994,
+n:"overstock",
+c:"business,home,fashion",
+u:"https://www.overstock.com/",
+d:"overstock is a usa online retailer for furniture, home decor and discounted goods. it is for shoppers furnishing homes while looking for lower prices and seasonal deals.",
+k:"overstock,online shopping usa,usa home,furniture shopping,home decor,discount retail,online marketplace,household goods",
+a:""
+},
+{
+i:995,
+n:"crate and barrel",
+c:"business,home",
+u:"https://www.crateandbarrel.com/",
+d:"crate and barrel is a usa home and furniture shopping site for modern living spaces. it is for buyers looking for kitchenware, decor, furniture and home accessories.",
+k:"crate and barrel,online shopping usa,usa home,furniture store,home decor,kitchenware,online retail,household goods",
+a:""
+},
+{
+i:996,
+n:"west elm",
+c:"business,home",
+u:"https://www.westelm.com/",
+d:"west elm is a usa online furniture and home decor store with a modern style focus. it is for shoppers looking for furnishings, lighting and design-led home items.",
+k:"west elm,online shopping usa,usa home,furniture shopping,home decor,modern design,online retail,interior goods",
+a:""
+},
+{
+i:997,
+n:"bed bath and beyond",
+c:"business,home",
+u:"https://www.bedbathandbeyond.com/",
+d:"bed bath and beyond is a usa online retailer for home goods, bedding, kitchen items and decor. it is for shoppers who want household products and room essentials in one place.",
+k:"bed bath and beyond,online shopping usa,usa home,bedding,kitchen goods,home decor,online retail,household shopping",
+a:""
+},
+{
+i:998,
+n:"home depot",
+c:"business,home,electronics,automotive",
+u:"https://www.homedepot.com/",
+d:"home depot is a usa online home improvement retailer for appliances, tools, patio furniture and building supplies. it is for diy customers, contractors and homeowners.",
+k:"home depot,online shopping usa,usa home improvement,tools,appliances,building supplies,online retail,household shopping",
+a:""
+},
+{
+i:999,
+n:"best buy",
+c:"business,electronics,home,software",
+u:"https://www.bestbuy.com/",
+d:"best buy is a usa online electronics retailer for computers, appliances, phones and video games. it is for shoppers looking for new tech, store pickup and free 2-day shipping on many items.",
+k:"best buy,online shopping usa,usa electronics,computers,appliances,cell phones,video games,online retail",
+a:""
+},
+{
+i:1000,
+n:"hsn",
+c:"business,electronics,home,fashion,beauty,health,jewellery",
+u:"https://www.hsn.com/",
+d:"hsn is a usa online shopping channel for beauty, electronics, fashion, home and more. it is for shoppers who want daily deals, special values and easy ordering.",
+k:"hsn,online shopping usa,usa beauty,electronics,fashion,home goods,online retail,daily deals",
+a:""
+},
+ ];
 
 
 
