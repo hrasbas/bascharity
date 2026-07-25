@@ -850,8 +850,7 @@ c:"fashion,jewellery,business",
 u:"https://www.accessorize.com/uk/",
 d:"accessorize is a popular uk brand providing fashion jewellery, bags, scarves, hair accessories and beachwear for women and girls.",
 k:"accessorize uk,fashion jewellery,handbags scarves,hair accessories,womens beachwear"
-}
-
+},
 {
 i:101,
 n:"Kurt Geiger",
