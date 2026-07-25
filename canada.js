@@ -8248,9 +8248,8 @@ a:""
     d:"hostpapa is a canadian online hosting and website services provider. it is useful for businesses and creators who need domains, hosting and website tools in canada.",
     k:"hostpapa canada,web hosting canada,domain website services,online business tools,hostpapa.ca",
     a:""
-  },// canada.js
-window.countryShops = window.countryShops || {};
-window.countryShops["canada"] = [
+  },
+ 
   {
     i:1001,
     n:"amazon canada",
@@ -8700,10 +8699,7 @@ window.countryShops["canada"] = [
     d:"canadian tire’s online store sells tools, home and garden products, sporting goods, automotive parts and some electronics aimed at canadian families and diy customers.",
     k:"canadian tire,online shopping canada tools and hardware,home garden sports and automotive parts,canadiantire.ca ecommerce",
     a:""
-  }
-// canada.js
-window.countryShops = window.countryShops || {};
-window.countryShops["canada"] = [
+  },
   {
     i:1051,
     n:"staples canada",
