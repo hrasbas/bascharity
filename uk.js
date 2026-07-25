@@ -451,11 +451,7 @@ d:"the range is a home and garden retailer in the uk providing furniture, crafts
 k:"the range uk,home decor,garden furniture,craft supplies,affordable homeware",
 a:""
 },
-  // uk.js
-window.countryShops = window.countryShops || {};
-window.countryShops["uk"] = window.countryShops["uk"] || [];
-window.countryShops["uk"].push(
-{
+ {
 i:51,
 n:"BoohooMAN",
 c:"fashion,beauty,jewellery,business",
@@ -855,7 +851,6 @@ u:"https://www.accessorize.com/uk/",
 d:"accessorize is a popular uk brand providing fashion jewellery, bags, scarves, hair accessories and beachwear for women and girls.",
 k:"accessorize uk,fashion jewellery,handbags scarves,hair accessories,womens beachwear"
 }
-// uk.js (Indices 101 to 150)
 
 {
 i:101,
@@ -1307,7 +1302,6 @@ d:"pact coffee is a specialty coffee subscription service delivering freshly roa
 k:"pact coffee uk,coffee subscription,fresh roasted coffee,specialty coffee,coffee bean delivery",
 a:""
 },
-// uk.js
 
 {
 i:151,
@@ -1760,8 +1754,6 @@ k:"boll and branch uk,organic cotton sheets,sustainable bedding,luxury duvets,ba
 a:""
 },
 
-// uk.js
-
 {
 i:201,
 n:"Sweaty Betty",
@@ -2212,7 +2204,6 @@ d:"size delivers exclusive footwear collaborations, streetwear clothing, deadsto
 k:"size uk,exclusive footwear,streetwear clothing,deadstock sneakers,trainers online",
 a:""
 },
-[
 {
 i:251,
 n:"Waterstones",
@@ -2663,7 +2654,6 @@ d:"buyagift provides thousands of experience days, short breaks, dining experien
 k:"buyagift uk,experience days,short breaks,dining vouchers,skydiving,activity gifts",
 a:""
 },
-  [
 {
 i:301,
 n:"Laptops Direct",
@@ -3114,7 +3104,6 @@ d:"cotton prints provides high quality cotton fabrics, quilting supplies, and ho
 k:"cotton prints uk,cotton fabrics,quilting supplies,sewing materials,textiles",
 a:""
 },
-  [
 {
 i:351,
 n:"Halfords",
@@ -3565,10 +3554,7 @@ d:"butternut box delivers freshly prepared, gently cooked dog food meals customi
 k:"butternut box uk,fresh dog food,gently cooked pet meals,dog food subscription,canine health",
 a:""
 },
-    
-   // uk.js
-window.countryShops = window.countryShops || {};
-window.countryShops["uk"] = [
+
 {
 i:401,
 n:"Goldsmiths",
@@ -4469,11 +4455,7 @@ d:"surfdome is a leading UK action sports retailer stocking surfboards, wetsuits
 k:"surfdome uk,action sports retailer,surfboards,wetsuits,skateboards,streetwear,snow gear",
 a:""
 },
-  
-  import json
 
-# Generating shops 551 to 600 for UK
-shops_data = [
     {
         "i": 551,
         "n": "Wiggle",
