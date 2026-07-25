@@ -8248,7 +8248,913 @@ a:""
     d:"hostpapa is a canadian online hosting and website services provider. it is useful for businesses and creators who need domains, hosting and website tools in canada.",
     k:"hostpapa canada,web hosting canada,domain website services,online business tools,hostpapa.ca",
     a:""
+  },// canada.js
+window.countryShops = window.countryShops || {};
+window.countryShops["canada"] = [
+  {
+    i:1001,
+    n:"amazon canada",
+    c:"electronics,home,fashion,beauty,books,sports,food,jewellery,automotive,business",
+    u:"https://www.amazon.ca/",
+    d:"amazon canada is the largest online retailer in canada where shoppers can buy electronics, books, fashion, home goods, groceries, automotive items and more with fast nationwide delivery.",
+    k:"amazon canada,online shopping canada,marketplace for electronics books fashion and home,groceries automotive and more,amazon.ca ecommerce",
+    a:""
+  },
+  {
+    i:1002,
+    n:"walmart canada",
+    c:"food,home,electronics,fashion,beauty,business",
+    u:"https://www.walmart.ca/en",
+    d:"walmart canada offers online shopping for groceries, household essentials, electronics, clothing and beauty products with options for home delivery and store pickup across canada.",
+    k:"walmart canada,online supermarket canada,groceries household essentials and electronics,clothing and beauty,walmart.ca ecommerce",
+    a:""
+  },
+  {
+    i:1003,
+    n:"costco canada",
+    c:"food,home,electronics,business",
+    u:"https://www.costco.ca/",
+    d:"costco canada’s ecommerce site serves members with bulk groceries, appliances, electronics, furniture and office supplies delivered or available for warehouse pickup.",
+    k:"costco canada,online wholesale shopping canada,bulk groceries appliances and electronics,member only warehouse and delivery",
+    a:""
+  },
+  {
+    i:1004,
+    n:"canadian tire",
+    c:"home,sports,automotive,electronics,business",
+    u:"https://www.canadiantire.ca/",
+    d:"canadian tire’s online store sells tools, home and garden products, sporting goods, automotive parts and some electronics aimed at canadian families and diy customers.",
+    k:"canadian tire,online shopping canada tools and hardware,home garden sports and automotive parts,canadiantire.ca ecommerce",
+    a:""
+  },
+  {
+    i:1005,
+    n:"best buy canada",
+    c:"electronics,home,business",
+    u:"https://www.bestbuy.ca/",
+    d:"best buy canada is a major online electronics retailer for computers, phones, tvs, gaming and home appliances. it suits tech shoppers who want delivery and pickup across canada.",
+    k:"best buy canada,online electronics store,computers phones tvs,gaming home appliances,bestbuy.ca",
+    a:""
+  },
+  {
+    i:1006,
+    n:"home depot canada",
+    c:"home,electronics,business",
+    u:"https://www.homedepot.ca/",
+    d:"the home depot canada ecommerce site provides building materials, tools, appliances, lighting and home improvement products for homeowners and professionals across canada.",
+    k:"home depot canada,online home improvement store canada,building materials tools and appliances,homedepot.ca diy shopping",
+    a:""
+  },
+  {
+    i:1007,
+    n:"ikea canada",
+    c:"home,business",
+    u:"https://www.ikea.com/ca/en/",
+    d:"ikea canada sells flat pack furniture, home decor, kitchenware and storage solutions online with delivery and click and collect services in major canadian cities.",
+    k:"ikea canada,online furniture store canada,home decor kitchenware and storage,ikea.com ca ecommerce",
+    a:""
+  },
+  {
+    i:1008,
+    n:"wayfair canada",
+    c:"home,business",
+    u:"https://www.wayfair.ca/",
+    d:"wayfair canada is an online retailer specializing in furniture, rugs, lighting and home decor items shipped directly to canadian households.",
+    k:"wayfair canada,online home decor and furniture canada,rugs lighting and home accessories,wayfair.ca shopping",
+    a:""
+  },
+  {
+    i:1009,
+    n:"simons",
+    c:"fashion,home,business",
+    u:"https://www.simons.ca/",
+    d:"simons is a canadian online fashion and home retailer with clothing, footwear, accessories and home trends. it suits shoppers looking for modern everyday style in canada.",
+    k:"simons canada,online fashion canada,clothing footwear accessories,home trends,simons.ca",
+    a:""
+  },
+  {
+    i:1010,
+    n:"aritzia",
+    c:"fashion,business",
+    u:"https://www.aritzia.com/",
+    d:"aritzia is a canadian online fashion retailer for contemporary women’s clothing and accessories. it is popular with shoppers who want curated in house brands.",
+    k:"aritzia canada,online fashion store canada,womens clothing accessories,aritzia.com shopping",
+    a:""
+  },
+  {
+    i:1011,
+    n:"roots",
+    c:"fashion,business",
+    u:"https://www.roots.com/ca/",
+    d:"roots is a canadian fashion brand selling clothing, bags, footwear and accessories online. it is suited for shoppers looking for casual canadian lifestyle apparel.",
+    k:"roots canada,online fashion store canada,clothing bags footwear,casual apparel,roots.com ca",
+    a:""
+  },
+  {
+    i:1012,
+    n:"gap canada",
+    c:"fashion,business",
+    u:"https://www.gapcanada.ca/",
+    d:"gap canada sells casual clothing, basics and accessories for the whole family through its online store. it is useful for everyday apparel shopping in canada.",
+    k:"gap canada,online casual clothing canada,basics for men women and kids,gapcanada.ca shopping",
+    a:""
+  },
+  {
+    i:1013,
+    n:"old navy canada",
+    c:"fashion,business",
+    u:"https://oldnavy.gapcanada.ca/",
+    d:"old navy canada is an online clothing store for casual fashion, basics and family apparel. it is popular with shoppers looking for affordable everyday wear.",
+    k:"old navy canada,online fashion canada,casual clothing basics,family apparel,oldnavy gapcanada ca",
+    a:""
+  },
+  {
+    i:1014,
+    n:"h&m canada",
+    c:"fashion,business",
+    u:"https://www2.hm.com/en_ca/index.html",
+    d:"h&m canada is an online fashion destination for affordable clothing, shoes and accessories for the whole family. it is useful for everyday style shopping in canada.",
+    k:"h&m canada,online fashion canada,affordable clothing shoes,accessories family wear,fashion shopping ca",
+    a:""
+  },
+  {
+    i:1015,
+    n:"zara canada",
+    c:"fashion,business",
+    u:"https://www.zara.com/ca/",
+    d:"zara canada is an online fashion store for men, women and kids clothing, shoes and accessories. it suits shoppers looking for current trends and stylish basics.",
+    k:"zara canada,online shopping canada,clothing shoes accessories,trendy fashion,zara.com ca",
+    a:""
+  },
+  {
+    i:1016,
+    n:"sephora canada",
+    c:"beauty,fashion,business",
+    u:"https://www.sephora.com/ca/en/",
+    d:"sephora canada is an online beauty retailer for makeup, skincare, fragrance and hair care from many brands. it is useful for shoppers looking for premium cosmetics and beauty products in canada.",
+    k:"sephora canada,online beauty store canada,makeup skincare fragrance,hair care,cosmetics,sephora.com ca",
+    a:""
+  },
+  {
+    i:1017,
+    n:"shoppers drug mart",
+    c:"health,beauty,food,business",
+    u:"https://www.shoppersdrugmart.ca/",
+    d:"shoppers drug mart is a canadian online pharmacy and retail store for beauty, personal care, health and baby products. it also offers electronics and grocery essentials for everyday shopping.",
+    k:"shoppers drug mart,online pharmacy canada,beauty personal care health,baby products,everyday essentials",
+    a:""
+  },
+  {
+    i:1018,
+    n:"well.ca",
+    c:"health,beauty,food,business",
+    u:"https://well.ca/",
+    d:"well.ca is a canadian online health, wellness, baby and beauty store with a wide range of natural products. it is useful for shoppers looking for personal care and family essentials.",
+    k:"well.ca,online health store canada,beauty wellness baby,natural products,well.ca shopping",
+    a:""
+  },
+  {
+    i:1019,
+    n:"rexall",
+    c:"health,beauty,business",
+    u:"https://www.rexall.ca/",
+    d:"rexall is a canadian online pharmacy and health store with prescription services, wellness products and personal care items. it is suited for shoppers who want pharmacy support and health essentials.",
+    k:"rexall canada,online pharmacy canada,health wellness personal care,wellness products,rexall.ca",
+    a:""
+  },
+  {
+    i:1020,
+    n:"pharmaprix",
+    c:"health,beauty,business",
+    u:"https://www.pharmaprix.ca/",
+    d:"pharmaprix is a quebec focused online pharmacy and beauty store in canada with health products, cosmetics and personal care items. it is useful for everyday pharmacy shopping.",
+    k:"pharmaprix canada,online pharmacy canada,health beauty personal care,cosmetics and wellness,pharmaprix.ca",
+    a:""
+  },
+  {
+    i:1021,
+    n:"sport chek",
+    c:"sports,fashion,business",
+    u:"https://www.sportchek.ca/",
+    d:"sport chek is a canadian sporting goods retailer with apparel, footwear, equipment and outdoor gear. it is useful for athletes and families shopping for sports products in canada.",
+    k:"sport chek canada,online sports store canada,apparel footwear equipment,outdoor gear,sportchek.ca",
+    a:""
+  },
+  {
+    i:1022,
+    n:"sporting life",
+    c:"sports,fashion,business",
+    u:"https://www.sportinglife.ca/en-CA/homepage",
+    d:"sporting life is a canadian lifestyle retailer for sportswear, casual wear, athletic apparel, footwear and equipment. it is useful for families and active shoppers in canada.",
+    k:"sporting life canada,online sportswear canada,athletic apparel footwear,equipment,lifestyle retailer",
+    a:""
+  },
+  {
+    i:1023,
+    n:"mec",
+    c:"sports,travel,home,business",
+    u:"https://www.mec.ca/",
+    d:"mec is a canadian online retailer for outdoor gear, camping equipment, travel accessories and activewear. it is ideal for hikers, campers and adventure travelers.",
+    k:"mec canada,online outdoor gear canada,camping travel accessories,adventure equipment,mec.ca",
+    a:""
+  },
+  {
+    i:1024,
+    n:"altitude sports",
+    c:"sports,travel,home,business",
+    u:"https://www.altitude-sports.com/",
+    d:"altitude sports is an online outdoor store in canada for gear, clothing and travel accessories. it serves active shoppers who want camping and hiking products.",
+    k:"altitude sports canada,online outdoor store canada,gear clothing travel accessories,altitude-sports.com",
+    a:""
+  },
+  {
+    i:1025,
+    n:"book outlet canada",
+    c:"books,business",
+    u:"https://bookoutlet.ca/",
+    d:"book outlet canada is an online bookstore for discounted books, children’s titles and gifts. it is useful for readers and families looking for book deals in canada.",
+    k:"book outlet canada,discount books canada,children books gifts,book deals,bookoutlet.ca",
+    a:""
+  },
+  {
+    i:1026,
+    n:"thriftbooks canada",
+    c:"books,business",
+    u:"https://www.thriftbooks.com/",
+    d:"thriftbooks canada is an online bookstore for affordable used books and popular titles. it is useful for readers who want low cost book shopping in canada.",
+    k:"thriftbooks canada,online used books canada,affordable books,popular titles,thriftbooks.com",
+    a:""
+  },
+  {
+    i:1027,
+    n:"indigo",
+    c:"books,home,business",
+    u:"https://www.indigo.ca/",
+    d:"indigo is a canadian online bookstore and lifestyle shop offering books, ebooks, stationery, toys and home gifts with shipping across canada.",
+    k:"indigo canada,online bookstore canada,books ebooks stationery and toys,indigo.ca lifestyle shop",
+    a:""
+  },
+  {
+    i:1028,
+    n:"chapters",
+    c:"books,home,business",
+    u:"https://www.chapters.indigo.ca/",
+    d:"chapters is an online book and gift shopping destination in canada. it is useful for readers looking for books, stationery and lifestyle products.",
+    k:"chapters canada,online bookstore canada,books stationery gifts,reading and lifestyle,chapters.indigo.ca",
+    a:""
+  },
+  {
+    i:1029,
+    n:"amazon books canada",
+    c:"books,software,business",
+    u:"https://www.amazon.ca/books-used-books-textbooks/b?node=916520",
+    d:"amazon books canada is an online bookstore section for new books, used books and textbooks. it is useful for readers, students and gift buyers in canada.",
+    k:"amazon books canada,online bookstore canada,new books used books,textbooks,amazon.ca books",
+    a:""
+  },
+  {
+    i:1030,
+    n:"canva canada",
+    c:"software,business",
+    u:"https://www.canva.com/en_ca/",
+    d:"canva canada is an online design platform for graphics, presentations and content creation. it is useful for businesses, students and creators in canada.",
+    k:"canva canada,online design platform,graphics presentations content,creative software,canva.com en_ca",
+    a:""
+  },
+  {
+    i:1031,
+    n:"adobe canada",
+    c:"software,business",
+    u:"https://www.adobe.com/ca/",
+    d:"adobe canada is an online software destination for creative, document and digital tools. it is useful for professionals, businesses and students in canada.",
+    k:"adobe canada,online software canada,creative tools document tools,digital products,adobe.com ca",
+    a:""
+  },
+  {
+    i:1032,
+    n:"microsoft store canada",
+    c:"software,electronics,business",
+    u:"https://www.microsoft.com/en-ca/store",
+    d:"microsoft store canada is an online shop for software, devices and digital services. it is useful for buyers looking for windows products, surface devices and productivity tools.",
+    k:"microsoft store canada,online software canada,devices digital services,windows surface productivity,microsoft.com en-ca store",
+    a:""
+  },
+  {
+    i:1033,
+    n:"shopify app store",
+    c:"software,business",
+    u:"https://apps.shopify.com/",
+    d:"shopify app store is an online app marketplace for ecommerce store tools and business software. it is useful for merchants in canada who want apps and integrations.",
+    k:"shopify app store,online software marketplace,ecommerce apps business tools,merchant apps,apps.shopify.com",
+    a:""
+  },
+  {
+    i:1034,
+    n:"shopify partners",
+    c:"software,business",
+    u:"https://www.shopify.com/partners",
+    d:"shopify partners is an online program and platform for developers, agencies and ecommerce experts. it is useful for businesses in canada that need store building and app services.",
+    k:"shopify partners,online ecommerce services,store developers agencies,merchant support,shopify.com partners",
+    a:""
+  },
+  {
+    i:1035,
+    n:"hostpapa",
+    c:"software,business",
+    u:"https://www.hostpapa.ca/",
+    d:"hostpapa is a canadian online hosting and website services provider. it is useful for businesses and creators who need domains, hosting and website tools in canada.",
+    k:"hostpapa canada,web hosting canada,domain website services,online business tools,hostpapa.ca",
+    a:""
+  },
+  {
+    i:1036,
+    n:"jbl canada",
+    c:"electronics,business",
+    u:"https://ca.jbl.com/",
+    d:"jbl canada is an online audio store for speakers, headphones and portable sound products. it is popular with music lovers and gadget shoppers in canada.",
+    k:"jbl canada,online shopping canada,speakers headphones audio,portable sound,ca.jbl.com",
+    a:""
+  },
+  {
+    i:1037,
+    n:"anker canada",
+    c:"electronics,business",
+    u:"https://www.anker.com/ca-en",
+    d:"anker canada sells chargers, power banks, earbuds and accessories online. it is useful for mobile users who want practical tech accessories in canada.",
+    k:"anker canada,online shopping canada,chargers power banks earbuds,tech accessories,anker.com ca",
+    a:""
+  },
+  {
+    i:1038,
+    n:"apple canada",
+    c:"electronics,business",
+    u:"https://www.apple.com/ca/",
+    d:"apple canada is the official online store for iphones, macs, ipads, wearables and accessories. it is useful for customers who want premium devices and support in canada.",
+    k:"apple canada,online shopping canada,iphone mac ipad,wearables accessories,apple.com ca",
+    a:""
+  },
+  {
+    i:1039,
+    n:"samsung canada",
+    c:"electronics,home,business",
+    u:"https://www.samsung.com/ca/",
+    d:"samsung canada is an online store for smartphones, tablets, tvs, home appliances and smart devices. it is useful for families and tech buyers looking for the latest samsung products.",
+    k:"samsung canada,online shopping canada,smartphones tvs home appliances,smart devices,samsung.com ca",
+    a:""
+  },
+  {
+    i:1040,
+    n:"lg canada",
+    c:"electronics,home,business",
+    u:"https://www.lg.com/ca_en/",
+    d:"lg canada is an online store for consumer electronics and home appliances. it is useful for shoppers looking for tvs, washing machines, refrigerators and smart home products.",
+    k:"lg canada,online electronics canada,home appliances tvs,smart home products,lg.com ca",
+    a:""
+  },
+  {
+    i:1041,
+    n:"sony canada",
+    c:"electronics,home,business",
+    u:"https://www.sony.ca/",
+    d:"sony canada offers cameras, audio gear, gaming products and home entertainment online. it is aimed at shoppers looking for premium electronics and media products.",
+    k:"sony canada,online electronics canada,cameras audio gaming,home entertainment,sony.ca",
+    a:""
+  },
+  {
+    i:1042,
+    n:"sephora canada",
+    c:"beauty,fashion,business",
+    u:"https://www.sephora.com/ca/en/",
+    d:"sephora canada is an online beauty retailer for makeup, skincare, fragrance and hair care from many brands. it is useful for shoppers looking for premium cosmetics and beauty products in canada.",
+    k:"sephora canada,online beauty store canada,makeup skincare fragrance,hair care,cosmetics,sephora.com ca",
+    a:""
+  },
+  {
+    i:1043,
+    n:"shoppers drug mart",
+    c:"health,beauty,food,business",
+    u:"https://www.shoppersdrugmart.ca/",
+    d:"shoppers drug mart is a canadian online pharmacy and retail store for beauty, personal care, health and baby products. it also offers electronics and grocery essentials for everyday shopping.",
+    k:"shoppers drug mart,online pharmacy canada,beauty personal care health,baby products,everyday essentials",
+    a:""
+  },
+  {
+    i:1044,
+    n:"well.ca",
+    c:"health,beauty,food,business",
+    u:"https://well.ca/",
+    d:"well.ca is a canadian online health, wellness, baby and beauty store with a wide range of natural products. it is useful for shoppers looking for personal care and family essentials.",
+    k:"well.ca,online health store canada,beauty wellness baby,natural products,well.ca shopping",
+    a:""
+  },
+  {
+    i:1045,
+    n:"rexall",
+    c:"health,beauty,business",
+    u:"https://www.rexall.ca/",
+    d:"rexall is a canadian online pharmacy and health store with prescription services, wellness products and personal care items. it is suited for shoppers who want pharmacy support and health essentials.",
+    k:"rexall canada,online pharmacy canada,health wellness personal care,wellness products,rexall.ca",
+    a:""
+  },
+  {
+    i:1046,
+    n:"pharmaprix",
+    c:"health,beauty,business",
+    u:"https://www.pharmaprix.ca/",
+    d:"pharmaprix is a quebec focused online pharmacy and beauty store in canada with health products, cosmetics and personal care items. it is useful for everyday pharmacy shopping.",
+    k:"pharmaprix canada,online pharmacy canada,health beauty personal care,cosmetics and wellness,pharmaprix.ca",
+    a:""
+  },
+  {
+    i:1047,
+    n:"amazon canada",
+    c:"electronics,home,fashion,beauty,books,sports,food,jewellery,automotive,business",
+    u:"https://www.amazon.ca/",
+    d:"amazon canada is the largest online retailer in canada where shoppers can buy electronics, books, fashion, home goods, groceries, automotive items and more with fast nationwide delivery.",
+    k:"amazon canada,online shopping canada,marketplace for electronics books fashion and home,groceries automotive and more,amazon.ca ecommerce",
+    a:""
+  },
+  {
+    i:1048,
+    n:"walmart canada",
+    c:"food,home,electronics,fashion,beauty,business",
+    u:"https://www.walmart.ca/en",
+    d:"walmart canada offers online shopping for groceries, household essentials, electronics, clothing and beauty products with options for home delivery and store pickup across canada.",
+    k:"walmart canada,online supermarket canada,groceries household essentials and electronics,clothing and beauty,walmart.ca ecommerce",
+    a:""
+  },
+  {
+    i:1049,
+    n:"costco canada",
+    c:"food,home,electronics,business",
+    u:"https://www.costco.ca/",
+    d:"costco canada’s ecommerce site serves members with bulk groceries, appliances, electronics, furniture and office supplies delivered or available for warehouse pickup.",
+    k:"costco canada,online wholesale shopping canada,bulk groceries appliances and electronics,member only warehouse and delivery",
+    a:""
+  },
+  {
+    i:1050,
+    n:"canadian tire",
+    c:"home,sports,automotive,electronics,business",
+    u:"https://www.canadiantire.ca/",
+    d:"canadian tire’s online store sells tools, home and garden products, sporting goods, automotive parts and some electronics aimed at canadian families and diy customers.",
+    k:"canadian tire,online shopping canada tools and hardware,home garden sports and automotive parts,canadiantire.ca ecommerce",
+    a:""
   }
+// canada.js
+window.countryShops = window.countryShops || {};
+window.countryShops["canada"] = [
+  {
+    i:1051,
+    n:"staples canada",
+    c:"software,home,electronics,business",
+    u:"https://www.staples.ca/",
+    d:"staples canada is an online store for office supplies, laptops, printers, furniture and business essentials. it is useful for students, home offices and companies in canada.",
+    k:"staples canada,online office supplies canada,laptops printers furniture,business essentials,staples.ca",
+    a:""
+  },
+  {
+    i:1052,
+    n:"rona",
+    c:"home,automotive,business",
+    u:"https://www.rona.ca/",
+    d:"rona is a canadian home improvement retailer with tools, building materials, paint and outdoor products. it is useful for diy shoppers and contractors in canada.",
+    k:"rona canada,online home improvement canada,tools building materials paint,diy and contractor supplies,rona.ca",
+    a:""
+  },
+  {
+    i:1053,
+    n:"lowe's canada",
+    c:"home,business",
+    u:"https://www.lowes.ca/",
+    d:"lowe's canada is an online home improvement store for appliances, flooring, tools and renovation supplies. it is useful for homeowners planning repair and remodeling projects.",
+    k:"lowes canada,online home improvement store canada,appliances flooring tools,renovation supplies,lowes.ca",
+    a:""
+  },
+  {
+    i:1054,
+    n:"rona+",
+    c:"home,business",
+    u:"https://www.ronaplus.ca/",
+    d:"rona+ is a canadian online home renovation and building materials destination. it serves customers looking for contractor grade supplies and project materials in canada.",
+    k:"rona plus canada,home renovation store canada,building materials contractor supplies,project materials,ronaplus.ca",
+    a:""
+  },
+  {
+    i:1055,
+    n:"the bay",
+    c:"fashion,home,beauty,business",
+    u:"https://www.thebay.com/",
+    d:"the bay is a canadian department store online for fashion, beauty, home and gift products. it is useful for shoppers looking for a wide variety of branded goods in canada.",
+    k:"the bay canada,online department store canada,fashion beauty home gifts,thebay.com shopping",
+    a:""
+  },
+  {
+    i:1056,
+    n:"ssense",
+    c:"fashion,business",
+    u:"https://www.ssense.com/en-ca",
+    d:"ssense is a canadian online fashion retailer known for luxury, designer and streetwear brands. it is useful for shoppers looking for high end style and curated labels in canada.",
+    k:"ssense canada,online luxury fashion canada,designer streetwear,curated brands,ssense.com en-ca",
+    a:""
+  },
+  {
+    i:1057,
+    n:"kotn",
+    c:"fashion,business",
+    u:"https://kotn.com/",
+    d:"kotn is a canadian online clothing brand offering basics, tees, hoodies and everyday apparel. it is known for simple design and comfortable wardrobe staples.",
+    k:"kotn canada,online clothing brand canada,basics tees hoodies,everyday apparel,kotn.com",
+    a:""
+  },
+  {
+    i:1058,
+    n:"lululemon canada",
+    c:"fashion,sports,business",
+    u:"https://shop.lululemon.com/",
+    d:"lululemon canada is an online athletic apparel store for yoga wear, running gear and lifestyle clothing. it is popular with active shoppers looking for premium performance wear.",
+    k:"lululemon canada,online athletic wear canada,yoga running gear,lifestyle clothing,lululemon shopping",
+    a:""
+  },
+  {
+    i:1059,
+    n:"mark's",
+    c:"fashion,home,business",
+    u:"https://www.marks.com/",
+    d:"mark's is a canadian retailer for workwear, casual clothing, footwear and home items. it is useful for shoppers looking for durable everyday apparel.",
+    k:"marks canada,online clothing canada,workwear casual clothing,footwear and home items,marks.com",
+    a:""
+  },
+  {
+    i:1060,
+    n:"la maison simons",
+    c:"fashion,home,business",
+    u:"https://www.simons.ca/en",
+    d:"la maison simons is a canadian fashion and home retailer with clothing, decor and accessories. it offers modern style and lifestyle products for canadian shoppers.",
+    k:"la maison simons canada,online fashion and home canada,clothing decor accessories,simons.ca en",
+    a:""
+  },
+  {
+    i:1061,
+    n:"roots canada",
+    c:"fashion,business",
+    u:"https://www.roots.com/ca/",
+    d:"roots canada sells casual apparel, bags, footwear and accessories online. it is suited for shoppers looking for relaxed canadian lifestyle clothing.",
+    k:"roots canada,online apparel canada,casual clothing bags footwear,roots.com ca shopping",
+    a:""
+  },
+  {
+    i:1062,
+    n:"mechanics wear canada",
+    c:"home,business",
+    u:"https://www.mechanix.com/",
+    d:"mechanix wear canada offers gloves and protective gear for work, automotive and outdoor use. it is useful for users who need durable hand protection and safety accessories.",
+    k:"mechanix wear canada,protective gloves canada,work automotive outdoor gear,mechanix.com",
+    a:""
+  },
+  {
+    i:1063,
+    n:"homesense",
+    c:"home,business",
+    u:"https://www.homesense.ca/",
+    d:"homesense is an online home decor and furnishings retailer in canada with furniture, decor, kitchenware and seasonal items. it is useful for shoppers updating their living space.",
+    k:"homesense canada,online home decor canada,furniture kitchenware seasonal,homesense.ca",
+    a:""
+  },
+  {
+    i:1064,
+    n:"visions electronics",
+    c:"electronics,business",
+    u:"https://www.visions.ca/",
+    d:"visions electronics is a canadian online store for tvs, audio, appliances, computers and smart devices. it is useful for shoppers looking for home electronics and appliances.",
+    k:"visions electronics canada,online electronics store canada,tvs audio appliances,smart devices,visions.ca",
+    a:""
+  },
+  {
+    i:1065,
+    n:"memory express",
+    c:"electronics,software,business",
+    u:"https://www.memoryexpress.com/",
+    d:"memory express is a canadian online retailer for computers, components, storage and gaming hardware. it is useful for pc builders and tech enthusiasts in canada.",
+    k:"memory express canada,online computer store canada,pc components gaming hardware,computer parts,memoryexpress.com",
+    a:""
+  },
+  {
+    i:1066,
+    n:"newegg canada",
+    c:"electronics,software,business",
+    u:"https://www.newegg.ca/",
+    d:"newegg canada is an online store for computer parts, electronics, accessories and tech deals. it is useful for shoppers seeking hardware and consumer electronics in canada.",
+    k:"newegg canada,online electronics canada,computer parts tech deals,newegg.ca shopping",
+    a:""
+  },
+  {
+    i:1067,
+    n:"app store canada",
+    c:"software,electronics,business",
+    u:"https://www.apple.com/ca/app-store/",
+    d:"app store canada is the official digital marketplace for ios apps, subscriptions and in app services. it is useful for iphone and ipad users in canada.",
+    k:"app store canada,ios apps canada,digital marketplace,iphone ipad services,apple app store ca",
+    a:""
+  },
+  {
+    i:1068,
+    n:"google play canada",
+    c:"software,electronics,business",
+    u:"https://play.google.com/store?hl=en_CA",
+    d:"google play canada is the official digital store for android apps, games, books and subscriptions. it is useful for android users looking for software and entertainment.",
+    k:"google play canada,android apps canada,digital store games books,subscriptions,play.google.com en_CA",
+    a:""
+  },
+  {
+    i:1069,
+    n:"spotify canada",
+    c:"software,media,business",
+    u:"https://www.spotify.com/ca-en/",
+    d:"spotify canada is an online music and podcast platform with streaming plans for individuals, families and students. it is useful for users who want digital entertainment in canada.",
+    k:"spotify canada,music streaming canada,podcasts family student plans,spotify.com ca-en",
+    a:""
+  },
+  {
+    i:1070,
+    n:"netflix canada",
+    c:"software,media,business",
+    u:"https://www.netflix.com/ca/",
+    d:"netflix canada is an online video streaming service for movies, tv shows and documentaries. it is useful for viewers looking for subscription entertainment in canada.",
+    k:"netflix canada,video streaming canada,movies tv shows documentaries,netflix.com ca",
+    a:""
+  },
+  {
+    i:1071,
+    n:"adorama canada",
+    c:"electronics,business",
+    u:"https://www.adorama.com/",
+    d:"adorama canada serves shoppers looking for cameras, audio equipment and video gear online. it is useful for creators and photography enthusiasts in canada.",
+    k:"adorama canada,online camera store canada,audio video gear,creator equipment,adorama.com",
+    a:""
+  },
+  {
+    i:1072,
+    n:"futureshop",
+    c:"electronics,business",
+    u:"https://www.futureshop.ca/",
+    d:"futureshop is a canadian electronics shopping destination online for computers, gadgets and home tech. it is useful for shoppers looking for consumer electronics in canada.",
+    k:"futureshop canada,online electronics canada,computers gadgets home tech,futureshop.ca",
+    a:""
+  },
+  {
+    i:1073,
+    n:"best buy marketplace",
+    c:"electronics,home,business",
+    u:"https://www.bestbuy.ca/en-ca/marketplace",
+    d:"best buy marketplace is an online shopping section with products from multiple sellers on best buy canada. it is useful for comparing more product choices in one place.",
+    k:"best buy marketplace canada,multi seller shopping canada,electronics home products,bestbuy.ca marketplace",
+    a:""
+  },
+  {
+    i:1074,
+    n:"amazon fashion canada",
+    c:"fashion,business",
+    u:"https://www.amazon.ca/fashion/",
+    d:"amazon fashion canada is the clothing and accessories section of amazon canada. it is useful for shoppers who want a wide mix of fashion brands and price points.",
+    k:"amazon fashion canada,online clothing canada,accessories fashion brands,amazon.ca fashion",
+    a:""
+  },
+  {
+    i:1075,
+    n:"amazon home canada",
+    c:"home,business",
+    u:"https://www.amazon.ca/home-garden/",
+    d:"amazon home canada is the home and garden section of amazon canada. it is useful for furniture, decor, kitchen and organization shopping.",
+    k:"amazon home canada,home and garden shopping canada,furniture decor kitchen,amazon.ca home-garden",
+    a:""
+  },
+  {
+    i:1076,
+    n:"amazon electronics canada",
+    c:"electronics,business",
+    u:"https://www.amazon.ca/electronics/",
+    d:"amazon electronics canada is the electronics section of amazon canada for gadgets, accessories and consumer tech. it is useful for shopping across many brands and categories.",
+    k:"amazon electronics canada,consumer tech canada,gadgets accessories,amazon.ca electronics",
+    a:""
+  },
+  {
+    i:1077,
+    n:"costco grocery canada",
+    c:"food,home,business",
+    u:"https://www.costco.ca/grocery.html",
+    d:"costco grocery canada is the food and pantry section of costco canada. it is useful for bulk grocery shopping and household staples.",
+    k:"costco grocery canada,bulk grocery shopping canada,pantry household staples,costco.ca grocery",
+    a:""
+  },
+  {
+    i:1078,
+    n:"walmart grocery canada",
+    c:"food,home,business",
+    u:"https://www.walmart.ca/en/grocery",
+    d:"walmart grocery canada is the food shopping section of walmart canada. it is useful for everyday groceries, pantry items and household essentials.",
+    k:"walmart grocery canada,online grocery canada,pantry household essentials,walmart.ca grocery",
+    a:""
+  },
+  {
+    i:1079,
+    n:"indigo books",
+    c:"books,home,business",
+    u:"https://www.indigo.ca/en-ca/books/",
+    d:"indigo books is the book section of indigo canada with fiction, nonfiction, children’s books and gifts. it is useful for readers and gift buyers in canada.",
+    k:"indigo books canada,book store online canada,fiction nonfiction children books,indigo.ca books",
+    a:""
+  },
+  {
+    i:1080,
+    n:"chapters books",
+    c:"books,home,business",
+    u:"https://www.chapters.indigo.ca/en-ca/books/",
+    d:"chapters books is the books section of chapters indigo for readers shopping in canada. it is useful for browsing popular titles and giftable reads.",
+    k:"chapters books canada,online books canada,popular titles gift books,chapters.indigo.ca books",
+    a:""
+  },
+  {
+    i:1081,
+    n:"steam canada",
+    c:"software,business",
+    u:"https://store.steampowered.com/",
+    d:"steam canada is a digital game store for pc games, downloadable content and software. it is useful for gamers in canada who want digital downloads and updates.",
+    k:"steam canada,pc game store canada,digital games downloadable content,steam powered store",
+    a:""
+  },
+  {
+    i:1082,
+    n:"epic games store canada",
+    c:"software,business",
+    u:"https://store.epicgames.com/en-US/",
+    d:"epic games store canada is a digital storefront for pc games and software offers. it is useful for gamers looking for downloads and promotions.",
+    k:"epic games store canada,pc games digital storefront,software offers,epicgames.com store",
+    a:""
+  },
+  {
+    i:1083,
+    n:"nintendo canada",
+    c:"electronics,software,business",
+    u:"https://www.nintendo.com/ca/",
+    d:"nintendo canada is an online store for consoles, games and accessories. it is useful for family and gaming shoppers looking for official nintendo products.",
+    k:"nintendo canada,online game store canada,consoles games accessories,nintendo.com ca",
+    a:""
+  },
+  {
+    i:1084,
+    n:"playstation canada",
+    c:"electronics,software,business",
+    u:"https://www.playstation.com/en-ca/",
+    d:"playstation canada is the official online destination for consoles, games and services. it is useful for gamers in canada looking for playstation products and subscriptions.",
+    k:"playstation canada,online gaming canada,consoles games services,playstation.com en-ca",
+    a:""
+  },
+  {
+    i:1085,
+    n:"xbox canada",
+    c:"electronics,software,business",
+    u:"https://www.xbox.com/en-CA/",
+    d:"xbox canada is the official online store for consoles, games and game subscriptions. it is useful for canadian gamers looking for xbox hardware and digital content.",
+    k:"xbox canada,online gaming canada,consoles games subscriptions,xbox.com en-CA",
+    a:""
+  },
+  {
+    i:1086,
+    n:"fido",
+    c:"electronics,software,business",
+    u:"https://www.fido.ca/",
+    d:"fido is a canadian online wireless service provider with phones, plans and accessories. it is useful for customers shopping for mobile service in canada.",
+    k:"fido canada,online mobile plans canada,phones accessories,wireless service provider,fido.ca",
+    a:""
+  },
+  {
+    i:1087,
+    n:"rogers",
+    c:"electronics,software,business",
+    u:"https://www.rogers.com/",
+    d:"rogers is a canadian telecom and online service provider for mobile, internet and tv plans. it is useful for households and businesses looking for connectivity services.",
+    k:"rogers canada,online telecom canada,mobile internet tv plans,rogers.com",
+    a:""
+  },
+  {
+    i:1088,
+    n:"bell",
+    c:"electronics,software,business",
+    u:"https://www.bell.ca/",
+    d:"bell is a canadian telecom provider with online shopping for phones, internet and tv services. it is useful for customers wanting bundled communication plans in canada.",
+    k:"bell canada,online telecom canada,phones internet tv,bell.ca plans",
+    a:""
+  },
+  {
+    i:1089,
+    n:"telus",
+    c:"electronics,software,business",
+    u:"https://www.telus.com/en/ca",
+    d:"telus is a canadian provider of mobile, internet and digital services with online shopping for devices and plans. it is useful for users looking for telecom services in canada.",
+    k:"telus canada,online telecom canada,mobile internet services,device plans,telus.com en ca",
+    a:""
+  },
+  {
+    i:1090,
+    n:"koodo",
+    c:"electronics,software,business",
+    u:"https://www.koodomobile.com/",
+    d:"koodo is a canadian mobile carrier with online phone plans, devices and accessories. it is useful for users who want flexible wireless options in canada.",
+    k:"koodo canada,online mobile plans canada,phones accessories,wireless carrier,koodomobile.com",
+    a:""
+  },
+  {
+    i:1091,
+    n:"the source",
+    c:"electronics,home,business",
+    u:"https://www.thesource.ca/",
+    d:"the source is a canadian electronics retailer with gadgets, accessories, cables and small home tech. it is useful for quick consumer electronics shopping in canada.",
+    k:"the source canada,online electronics store canada,gadgets accessories cables,small home tech,thesource.ca",
+    a:""
+  },
+  {
+    i:1092,
+    n:"london drugs",
+    c:"health,beauty,electronics,business",
+    u:"https://www.londondrugs.com/",
+    d:"london drugs is a western canadian retailer online for pharmacy, electronics, beauty and household items. it is useful for shoppers who want a mix of health and tech products.",
+    k:"london drugs canada,online pharmacy electronics canada,beauty household items,londondrugs.com",
+    a:""
+  },
+  {
+    i:1093,
+    n:"bulk barn",
+    c:"food,business",
+    u:"https://www.bulkbarn.ca/",
+    d:"bulk barn is a canadian online store for baking ingredients, snacks, candy and pantry goods. it is useful for shoppers who buy food staples and specialty items in bulk.",
+    k:"bulk barn canada,online bulk food canada,baking ingredients snacks,candy pantry goods,bulkbarn.ca",
+    a:""
+  },
+  {
+    i:1094,
+    n:"hello fresh canada",
+    c:"food,business",
+    u:"https://www.hellofresh.ca/",
+    d:"hello fresh canada is an online meal kit service with weekly recipes and delivered ingredients. it is useful for households that want convenient meal planning in canada.",
+    k:"hello fresh canada,meal kit delivery canada,weekly recipes delivered ingredients,hellofresh.ca",
+    a:""
+  },
+  {
+    i:1095,
+    n:"goodfood",
+    c:"food,business",
+    u:"https://www.makegoodfood.ca/",
+    d:"goodfood is a canadian meal kit and grocery service offering fresh ingredients and recipes online. it is useful for customers looking for easy dinner planning and delivery.",
+    k:"goodfood canada,meal kit delivery canada,fresh ingredients recipes,makegoodfood.ca",
+    a:""
+  },
+  {
+    i:1096,
+    n:"freshii",
+    c:"food,business",
+    u:"https://www.freshii.com/",
+    d:"freshii is a canadian food brand with online ordering for bowls, wraps, salads and healthy meals. it is useful for customers looking for convenient healthier dining options.",
+    k:"freshii canada,online food ordering canada,healthy meals bowls wraps,freshii.com",
+    a:""
+  },
+  {
+    i:1097,
+    n:"skip the dishes",
+    c:"food,business",
+    u:"https://www.skipthedishes.com/",
+    d:"skip the dishes is a canadian food delivery platform for ordering from local restaurants and stores. it is useful for customers who want delivered meals and groceries.",
+    k:"skip the dishes canada,food delivery canada,local restaurants and groceries,skipthedishes.com",
+    a:""
+  },
+  {
+    i:1098,
+    n:"doordash canada",
+    c:"food,business",
+    u:"https://www.doordash.com/en-CA",
+    d:"doordash canada is a food delivery platform for restaurants, convenience stores and grocery items. it is useful for shoppers who want delivery across many canadian cities.",
+    k:"doordash canada,food delivery platform canada,restaurants groceries convenience items,doordash.com en-ca",
+    a:""
+  },
+  {
+    i:1099,
+    n:"ubereats canada",
+    c:"food,business",
+    u:"https://www.ubereats.com/ca",
+    d:"ubereats canada is an online delivery service for restaurants, groceries and convenience purchases. it is useful for users who want fast delivery from local businesses in canada.",
+    k:"ubereats canada,online food delivery canada,restaurants groceries convenience,ubereats.com ca",
+    a:""
+  },
+  {
+    i:1100,
+    n:"instacart canada",
+    c:"food,business",
+    u:"https://www.instacart.ca/",
+    d:"instacart canada is an online grocery delivery platform that connects shoppers with supermarket partners. it is useful for households wanting same day grocery delivery in canada.",
+    k:"instacart canada,online grocery delivery canada,same day grocery shopping,instacart.ca",
+    a:""
+  }
+
 ]; 
 
 
