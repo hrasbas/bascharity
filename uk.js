@@ -451,7 +451,7 @@ d:"the range is a home and garden retailer in the uk providing furniture, crafts
 k:"the range uk,home decor,garden furniture,craft supplies,affordable homeware",
 a:""
 },
- {
+/* {
 i:51,
 n:"BoohooMAN",
 c:"fashion,beauty,jewellery,business",
@@ -850,7 +850,7 @@ c:"fashion,jewellery,business",
 u:"https://www.accessorize.com/uk/",
 d:"accessorize is a popular uk brand providing fashion jewellery, bags, scarves, hair accessories and beachwear for women and girls.",
 k:"accessorize uk,fashion jewellery,handbags scarves,hair accessories,womens beachwear"
-},
+},*/
 {
 i:101,
 n:"Kurt Geiger",
