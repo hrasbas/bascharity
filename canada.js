@@ -594,10 +594,7 @@ u:"https://www.nordstrom.ca/",
 d:"nordstrom canada is an online department store with fashion, beauty, shoes, jewellery and home products. it is useful for shoppers looking for premium retail brands.",
 k:"nordstrom canada,online department store canada,fashion beauty jewellery home,nordstrom.ca shopping",
 a:""
-},
-// canada.js
-window.countryShops = window.countryShops || {};
-window.countryShops["canada"] = [
+}, 
 {
 i:101,
 n:"shopify",
