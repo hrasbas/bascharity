@@ -6326,8 +6326,2531 @@ d:"careem uae is a digital service platform in the uae for rides, delivery and m
 k:"careem uae,online shopping uae,uae travel app,ride booking delivery,mobility services,business ecommerce",
 a:""
 },
-{ i:701, n:"6thStreet UAE", c:"business,fashion,beauty,jewellery", u:"https://en-ae.6thstreet.com⁠�", d:"6thstreet uae is an online fashion marketplace offering clothing, footwear, bags, beauty products and accessories from international brands. it serves shoppers across the uae with fast delivery and seasonal offers.", k:"6thstreet uae,online shopping uae,fashion footwear,beauty products,designer brands,lifestyle shopping,online marketplace", a:"" }, { i:702, n:"Styli", c:"business,fashion,beauty", u:"https://www.styli.com⁠�", d:"styli is an online fashion store in the uae offering clothing, footwear, handbags and beauty products for men women and kids. it focuses on affordable fashion with regular promotions.", k:"styli,online shopping uae,fashion clothing,footwear,beauty products,affordable fashion,ecommerce", a:"" }, { i:703, n:"Foot Locker UAE", c:"business,fashion,sports", u:"https://www.footlocker.ae⁠�", d:"foot locker uae is an online sneaker and sportswear store featuring athletic shoes apparel and accessories from leading global brands. it serves sports and streetwear shoppers across the uae.", k:"foot locker uae,online shopping uae,sneakers,sportswear,athletic shoes,streetwear,ecommerce", a:"" }, { i:704, n:"Bath & Body Works UAE", c:"business,beauty,health", u:"https://www.bathandbodyworks.ae⁠�", d:"bath and body works uae is an online beauty store offering body care fragrances candles and personal care products. it serves customers looking for premium wellness and gifting products.", k:"bath and body works uae,online shopping uae,body care,fragrances,candles,personal care,beauty store", a:"" }, { i:705, n:"Aldo UAE", c:"business,fashion", u:"https://www.aldoshoes.me/ae⁠�", d:"aldo uae is an online footwear and accessories store offering shoes handbags and fashion accessories for men and women. it provides modern styles with nationwide delivery.", k:"aldo uae,online shopping uae,footwear,handbags,fashion accessories,shoes,ecommerce", a:"" }, { i:706, n:"Steve Madden UAE", c:"business,fashion", u:"https://www.stevemadden.me⁠�", d:"steve madden uae is an online fashion retailer specializing in shoes handbags and accessories. it offers contemporary collections for fashion conscious shoppers.", k:"steve madden uae,online shopping uae,designer shoes,handbags,fashion accessories,footwear,ecommerce", a:"" }, { i:707, n:"Crocs UAE", c:"business,fashion", u:"https://www.crocs.ae⁠�", d:"crocs uae is an official online footwear store offering clogs sandals and casual shoes for all ages. it provides comfortable footwear with online delivery across the uae.", k:"crocs uae,online shopping uae,clogs,sandals,casual shoes,footwear,ecommerce", a:"" }, { i:708, n:"Skechers UAE", c:"business,fashion,sports", u:"https://www.skechers.ae⁠�", d:"skechers uae is an online footwear store offering walking shoes running shoes and casual footwear for men women and children. it serves active lifestyle shoppers across the uae.", k:"skechers uae,online shopping uae,walking shoes,running shoes,casual footwear,sports shoes,ecommerce", a:"" }, { i:709, n:"ECCO UAE", c:"business,fashion", u:"https://mena.ecco.com⁠�", d:"ecco uae is an online footwear retailer offering premium leather shoes boots sandals and accessories. it focuses on comfort and quality craftsmanship.", k:"ecco uae,online shopping uae,leather shoes,boots,sandals,premium footwear,ecommerce", a:"" }, { i:710, n:"Charles & Keith UAE", c:"business,fashion", u:"https://www.charleskeith.ae⁠�", d:"charles and keith uae is an online fashion accessories store offering handbags shoes wallets and accessories. it serves modern fashion shoppers throughout the uae.", k:"charles and keith uae,online shopping uae,handbags,shoes,fashion accessories,wallets,ecommerce", a:"" }, { i:711, n:"Tommy Hilfiger UAE", c:"business,fashion", u:"https://en-ae.tommy.com⁠�", d:"tommy hilfiger uae is the official online fashion store offering premium clothing footwear and accessories. it serves customers looking for international lifestyle fashion.", k:"tommy hilfiger uae,online shopping uae,premium fashion,clothing,footwear,accessories,ecommerce", a:"" }, { i:712, n:"Calvin Klein UAE", c:"business,fashion", u:"https://www.calvinklein.ae⁠�", d:"calvin klein uae is an online fashion destination for clothing underwear footwear and accessories. it provides premium collections for men and women.", k:"calvin klein uae,online shopping uae,clothing,underwear,footwear,fashion accessories,ecommerce", a:"" }, { i:713, n:"Levi's UAE", c:"business,fashion", u:"https://www.levi.com/AE/en⁠�", d:"levi's uae is the official online denim store offering jeans jackets shirts and casual clothing. it serves shoppers seeking authentic denim fashion.", k:"levis uae,online shopping uae,jeans,denim clothing,jackets,casual wear,ecommerce", a:"" }, { i:714, n:"American Eagle UAE", c:"business,fashion", u:"https://www.ae.com⁠�", d:"american eagle serves uae shoppers with online fashion including jeans tops dresses and accessories. it focuses on casual lifestyle clothing for young customers.", k:"american eagle uae,online shopping uae,casual clothing,jeans,tops,fashion,ecommerce", a:"" }, { i:715, n:"Kiabi UAE", c:"business,fashion", u:"https://www.kiabi.ae⁠�", d:"kiabi uae is an online clothing retailer offering affordable fashion for men women children and babies. it provides family fashion with convenient delivery.", k:"kiabi uae,online shopping uae,family clothing,affordable fashion,kids wear,baby clothing,ecommerce", a:"" }, { i:716, n:"Decathlon UAE", c:"business,sports,fashion", u:"https://www.decathlon.ae⁠�", d:"decathlon uae is an online sports retailer offering fitness equipment outdoor gear bicycles and sportswear. it serves beginners and professional athletes alike.", k:"decathlon uae,online shopping uae,sports equipment,fitness gear,bicycles,sportswear,ecommerce", a:"" }, { i:717, n:"Go Sport UAE", c:"business,sports,fashion", u:"https://www.gosportme.com⁠�", d:"go sport uae is an online sporting goods retailer selling fitness equipment sportswear shoes and outdoor products. it supports active lifestyles across the uae.", k:"go sport uae,online shopping uae,sportswear,fitness equipment,outdoor gear,athletic shoes,ecommerce", a:"" }, { i:718, n:"Garmin UAE", c:"business,electronics,sports", u:"https://www.garmin.ae⁠�", d:"garmin uae is an online electronics store offering smartwatches gps devices cycling computers and fitness products. it serves sports and outdoor enthusiasts.", k:"garmin uae,online shopping uae,smartwatches,gps devices,fitness electronics,cycling computers,ecommerce", a:"" }, { i:719, n:"Bose UAE", c:"business,electronics", u:"https://www.bose.ae⁠�", d:"bose uae is the official online store for headphones speakers soundbars and audio accessories. it provides premium sound products with online shopping.", k:"bose uae,online shopping uae,headphones,speakers,soundbars,audio equipment,ecommerce", a:"" }, { i:720, n:"Sony UAE", c:"business,electronics", u:"https://www.sony.ae⁠�", d:"sony uae is the official online destination for televisions cameras headphones gaming products and electronics. it serves technology shoppers throughout the uae.", k:"sony uae,online shopping uae,electronics,tvs,cameras,headphones,gaming products", a:"" }
-
-
-  
+{ i:701, n:"6thStreet UAE", c:"business,fashion,beauty,jewellery", u:"https://en-ae.6thstreet.com⁠�", d:"6thstreet uae is an online fashion marketplace offering clothing, footwear, bags, beauty products and accessories from international brands. it serves shoppers across the uae with fast delivery and seasonal offers.", k:"6thstreet uae,online shopping uae,fashion footwear,beauty products,designer brands,lifestyle shopping,online marketplace", a:"" }, { i:702, n:"Styli", c:"business,fashion,beauty", u:"https://www.styli.com⁠�", d:"styli is an online fashion store in the uae offering clothing, footwear, handbags and beauty products for men women and kids. it focuses on affordable fashion with regular promotions.", k:"styli,online shopping uae,fashion clothing,footwear,beauty products,affordable fashion,ecommerce", a:"" }, { i:703, n:"Foot Locker UAE", c:"business,fashion,sports", u:"https://www.footlocker.ae⁠�", d:"foot locker uae is an online sneaker and sportswear store featuring athletic shoes apparel and accessories from leading global brands. it serves sports and streetwear shoppers across the uae.", k:"foot locker uae,online shopping uae,sneakers,sportswear,athletic shoes,streetwear,ecommerce", a:"" }, { i:704, n:"Bath & Body Works UAE", c:"business,beauty,health", u:"https://www.bathandbodyworks.ae⁠�", d:"bath and body works uae is an online beauty store offering body care fragrances candles and personal care products. it serves customers looking for premium wellness and gifting products.", k:"bath and body works uae,online shopping uae,body care,fragrances,candles,personal care,beauty store", a:"" }, { i:705, n:"Aldo UAE", c:"business,fashion", u:"https://www.aldoshoes.me/ae⁠�", d:"aldo uae is an online footwear and accessories store offering shoes handbags and fashion accessories for men and women. it provides modern styles with nationwide delivery.", k:"aldo uae,online shopping uae,footwear,handbags,fashion accessories,shoes,ecommerce", a:"" }, { i:706, n:"Steve Madden UAE", c:"business,fashion", u:"https://www.stevemadden.me⁠�", d:"steve madden uae is an online fashion retailer specializing in shoes handbags and accessories. it offers contemporary collections for fashion conscious shoppers.", k:"steve madden uae,online shopping uae,designer shoes,handbags,fashion accessories,footwear,ecommerce", a:"" }, { i:707, n:"Crocs UAE", c:"business,fashion", u:"https://www.crocs.ae⁠�", d:"crocs uae is an official online footwear store offering clogs sandals and casual shoes for all ages. it provides comfortable footwear with online delivery across the uae.", k:"crocs uae,online shopping uae,clogs,sandals,casual shoes,footwear,ecommerce", a:"" }, { i:708, n:"Skechers UAE", c:"business,fashion,sports", u:"https://www.skechers.ae⁠�", d:"skechers uae is an online footwear store offering walking shoes running shoes and casual footwear for men women and children. it serves active lifestyle shoppers across the uae.", k:"skechers uae,online shopping uae,walking shoes,running shoes,casual footwear,sports shoes,ecommerce", a:"" }, { i:709, n:"ECCO UAE", c:"business,fashion", u:"https://mena.ecco.com⁠�", d:"ecco uae is an online footwear retailer offering premium leather shoes boots sandals and accessories. it focuses on comfort and quality craftsmanship.", k:"ecco uae,online shopping uae,leather shoes,boots,sandals,premium footwear,ecommerce", a:"" }, { i:710, n:"Charles & Keith UAE", c:"business,fashion", u:"https://www.charleskeith.ae⁠�", d:"charles and keith uae is an online fashion accessories store offering handbags shoes wallets and accessories. it serves modern fashion shoppers throughout the uae.", k:"charles and keith uae,online shopping uae,handbags,shoes,fashion accessories,wallets,ecommerce", a:"" }, { i:711, n:"Tommy Hilfiger UAE", c:"business,fashion", u:"https://en-ae.tommy.com⁠�", d:"tommy hilfiger uae is the official online fashion store offering premium clothing footwear and accessories. it serves customers looking for international lifestyle fashion.", k:"tommy hilfiger uae,online shopping uae,premium fashion,clothing,footwear,accessories,ecommerce", a:"" }, { i:712, n:"Calvin Klein UAE", c:"business,fashion", u:"https://www.calvinklein.ae⁠�", d:"calvin klein uae is an online fashion destination for clothing underwear footwear and accessories. it provides premium collections for men and women.", k:"calvin klein uae,online shopping uae,clothing,underwear,footwear,fashion accessories,ecommerce", a:"" }, { i:713, n:"Levi's UAE", c:"business,fashion", u:"https://www.levi.com/AE/en⁠�", d:"levi's uae is the official online denim store offering jeans jackets shirts and casual clothing. it serves shoppers seeking authentic denim fashion.", k:"levis uae,online shopping uae,jeans,denim clothing,jackets,casual wear,ecommerce", a:"" }, { i:714, n:"American Eagle UAE", c:"business,fashion", u:"https://www.ae.com⁠�", d:"american eagle serves uae shoppers with online fashion including jeans tops dresses and accessories. it focuses on casual lifestyle clothing for young customers.", k:"american eagle uae,online shopping uae,casual clothing,jeans,tops,fashion,ecommerce", a:"" }, { i:715, n:"Kiabi UAE", c:"business,fashion", u:"https://www.kiabi.ae⁠�", d:"kiabi uae is an online clothing retailer offering affordable fashion for men women children and babies. it provides family fashion with convenient delivery.", k:"kiabi uae,online shopping uae,family clothing,affordable fashion,kids wear,baby clothing,ecommerce", a:"" }, { i:716, n:"Decathlon UAE", c:"business,sports,fashion", u:"https://www.decathlon.ae⁠�", d:"decathlon uae is an online sports retailer offering fitness equipment outdoor gear bicycles and sportswear. it serves beginners and professional athletes alike.", k:"decathlon uae,online shopping uae,sports equipment,fitness gear,bicycles,sportswear,ecommerce", a:"" }, { i:717, n:"Go Sport UAE", c:"business,sports,fashion", u:"https://www.gosportme.com⁠�", d:"go sport uae is an online sporting goods retailer selling fitness equipment sportswear shoes and outdoor products. it supports active lifestyles across the uae.", k:"go sport uae,online shopping uae,sportswear,fitness equipment,outdoor gear,athletic shoes,ecommerce", a:"" }, { i:718, n:"Garmin UAE", c:"business,electronics,sports", u:"https://www.garmin.ae⁠�", d:"garmin uae is an online electronics store offering smartwatches gps devices cycling computers and fitness products. it serves sports and outdoor enthusiasts.", k:"garmin uae,online shopping uae,smartwatches,gps devices,fitness electronics,cycling computers,ecommerce", a:"" }, { i:719, n:"Bose UAE", c:"business,electronics", u:"https://www.bose.ae⁠�", d:"bose uae is the official online store for headphones speakers soundbars and audio accessories. it provides premium sound products with online shopping.", k:"bose uae,online shopping uae,headphones,speakers,soundbars,audio equipment,ecommerce", a:"" },
+ { i:720, n:"Sony UAE", c:"business,electronics", u:"https://www.sony.ae⁠�", d:"sony uae is the official online destination for televisions cameras headphones gaming products and electronics. it serves technology shoppers throughout the uae.", k:"sony uae,online shopping uae,electronics,tvs,cameras,headphones,gaming products", a:"" },
+ {
+i:721,
+n:"Canon UAE",
+c:"business,electronics",
+u:"https://en.canon-me.com",
+d:"canon uae is the official online destination for cameras printers lenses and imaging accessories. it serves photographers businesses and home users across the uae.",
+k:"canon uae,online shopping uae,cameras,printers,lenses,imaging products,ecommerce",
+a:""
+},
+{
+i:722,
+n:"Huawei UAE",
+c:"business,electronics,software",
+u:"https://consumer.huawei.com/ae-en/",
+d:"huawei uae is the official online store for smartphones tablets laptops wearables and smart devices. it offers technology products with nationwide delivery.",
+k:"huawei uae,online shopping uae,smartphones,tablets,laptops,smart devices,ecommerce",
+a:""
+},
+{
+i:723,
+n:"Xiaomi UAE",
+c:"business,electronics,software",
+u:"https://www.mi.com/ae",
+d:"xiaomi uae is an online electronics store offering smartphones smart home devices wearables and accessories. it serves value conscious technology buyers.",
+k:"xiaomi uae,online shopping uae,smartphones,smart home,wearables,electronics,ecommerce",
+a:""
+},
+{
+i:724,
+n:"Honor UAE",
+c:"business,electronics,software",
+u:"https://www.honor.com/ae-en/",
+d:"honor uae is the official online store for smartphones tablets laptops and wearable devices. it offers consumer electronics with local support.",
+k:"honor uae,online shopping uae,smartphones,tablets,laptops,wearables,ecommerce",
+a:""
+},
+{
+i:725,
+n:"Philips UAE",
+c:"business,electronics,home,health",
+u:"https://www.philips.ae",
+d:"philips uae offers personal care products home appliances lighting and healthcare devices through its official online platform. it serves homes and professionals across the uae.",
+k:"philips uae,online shopping uae,home appliances,personal care,health devices,electronics,ecommerce",
+a:""
+},
+{
+i:726,
+n:"Braun UAE",
+c:"business,beauty,health,electronics",
+u:"https://www.braunhousehold.com/en-ae",
+d:"braun uae is an online destination for grooming products kitchen appliances and personal care devices. it provides trusted household brands for everyday use.",
+k:"braun uae,online shopping uae,grooming products,kitchen appliances,personal care,electronics,ecommerce",
+a:""
+},
+{
+i:727,
+n:"Anker UAE",
+c:"business,electronics",
+u:"https://anker.ae",
+d:"anker uae is an online electronics store for chargers power banks cables and mobile accessories. it serves smartphone users with reliable charging solutions.",
+k:"anker uae,online shopping uae,power banks,chargers,cables,mobile accessories,ecommerce",
+a:""
+},
+{
+i:728,
+n:"Belkin UAE",
+c:"business,electronics",
+u:"https://www.belkin.com",
+d:"belkin serves uae customers with online shopping for charging products networking devices and mobile accessories. it focuses on premium connectivity solutions.",
+k:"belkin uae,online shopping uae,chargers,networking,mobile accessories,cables,ecommerce",
+a:""
+},
+{
+i:729,
+n:"Dyson UAE",
+c:"business,home,electronics",
+u:"https://www.dyson.ae",
+d:"dyson uae is the official online store for vacuum cleaners air purifiers hair care products and home appliances. it offers premium technology for modern homes.",
+k:"dyson uae,online shopping uae,vacuum cleaners,air purifiers,hair care,home appliances,ecommerce",
+a:""
+},
+{
+i:730,
+n:"Nothing UAE",
+c:"business,electronics,software",
+u:"https://mena.nothing.tech",
+d:"nothing serves uae customers with smartphones wireless earbuds and consumer electronics through its official online platform. it focuses on innovative technology products.",
+k:"nothing uae,online shopping uae,smartphones,wireless earbuds,electronics,technology,ecommerce",
+a:""
+},
+{
+i:731,
+n:"Dr Nutrition UAE",
+c:"business,health,food",
+u:"https://drnutrition.com",
+d:"dr nutrition uae is an online health store offering vitamins supplements sports nutrition and wellness products. it serves customers seeking healthy lifestyles.",
+k:"dr nutrition uae,online shopping uae,vitamins,supplements,sports nutrition,wellness,ecommerce",
+a:""
+},
+{
+i:732,
+n:"Life Pharmacy UAE",
+c:"business,health,beauty",
+u:"https://www.lifepharmacy.com",
+d:"life pharmacy uae is an online pharmacy offering medicines beauty products wellness items and healthcare essentials. it provides delivery across the uae.",
+k:"life pharmacy uae,online shopping uae,online pharmacy,medicines,beauty products,healthcare,ecommerce",
+a:""
+},
+{
+i:733,
+n:"Aster Pharmacy UAE",
+c:"business,health,beauty",
+u:"https://www.asterpharmacy.ae",
+d:"aster pharmacy uae is an online healthcare store offering medicines wellness products skincare and personal care items. it serves families across the emirates.",
+k:"aster pharmacy uae,online shopping uae,online pharmacy,wellness,skincare,health products,ecommerce",
+a:""
+},
+{
+i:734,
+n:"BinSina Pharmacy",
+c:"business,health,beauty",
+u:"https://www.binsina.ae",
+d:"binsina pharmacy is an online pharmacy in the uae offering medicines healthcare products beauty items and wellness solutions. it supports convenient home delivery.",
+k:"binsina pharmacy,online shopping uae,online pharmacy,medicines,beauty products,healthcare,ecommerce",
+a:""
+},
+{
+i:735,
+n:"Faces UAE",
+c:"business,beauty,health",
+u:"https://www.faces.ae",
+d:"faces uae is an online beauty retailer offering makeup skincare fragrances and luxury cosmetics. it serves beauty shoppers looking for premium brands.",
+k:"faces uae,online shopping uae,makeup,skincare,fragrances,luxury cosmetics,ecommerce",
+a:""
+},
+{
+i:736,
+n:"KIKO Milano UAE",
+c:"business,beauty",
+u:"https://www.kikocosmetics.com",
+d:"kiko milano serves uae customers with online shopping for makeup skincare and beauty accessories. it offers professional cosmetics at affordable prices.",
+k:"kiko milano uae,online shopping uae,makeup,skincare,beauty accessories,cosmetics,ecommerce",
+a:""
+},
+{
+i:737,
+n:"Dune London UAE",
+c:"business,fashion",
+u:"https://www.dunelondon.me",
+d:"dune london uae is an online footwear and accessories store offering shoes handbags and fashion collections. it serves premium fashion shoppers.",
+k:"dune london uae,online shopping uae,shoes,handbags,fashion accessories,premium footwear,ecommerce",
+a:""
+},
+{
+i:738,
+n:"Birkenstock UAE",
+c:"business,fashion",
+u:"https://www.birkenstock.ae",
+d:"birkenstock uae is an online footwear store offering sandals shoes and comfort footwear for men women and children. it focuses on premium everyday comfort.",
+k:"birkenstock uae,online shopping uae,sandals,comfort footwear,shoes,fashion,ecommerce",
+a:""
+},
+{
+i:739,
+n:"Lacoste UAE",
+c:"business,fashion",
+u:"https://www.lacoste.ae",
+d:"lacoste uae is the official online fashion store for clothing footwear bags and accessories. it offers premium lifestyle collections across the uae.",
+k:"lacoste uae,online shopping uae,premium clothing,footwear,bags,fashion,ecommerce",
+a:""
+},
+{
+i:740,
+n:"Diesel UAE",
+c:"business,fashion",
+u:"https://www.diesel.ae",
+d:"diesel uae is an online fashion destination offering denim clothing footwear and accessories for men and women. it provides premium international fashion collections.",
+k:"diesel uae,online shopping uae,denim clothing,footwear,fashion accessories,premium fashion,ecommerce",
+a:""
+},
+{
+i:741,
+n:"Virgin Megastore UAE",
+c:"business,electronics,books,home,software",
+u:"https://www.virginmegastore.ae",
+d:"virgin megastore uae is an online retail store for electronics books gaming music toys and lifestyle products. it serves shoppers looking for entertainment and technology products.",
+k:"virgin megastore uae,online shopping uae,electronics,books,gaming,lifestyle products,ecommerce",
+a:""
+},
+{
+i:742,
+n:"Geekay",
+c:"business,electronics,software",
+u:"https://www.geekay.com",
+d:"geekay is an online gaming and electronics retailer in the uae offering consoles games accessories and collectibles. it serves gamers with official products and accessories.",
+k:"geekay uae,online shopping uae,gaming,playstation,xbox,video games,ecommerce",
+a:""
+},
+{
+i:743,
+n:"Menakart",
+c:"business,electronics,home,fashion,beauty,health",
+u:"https://www.menakart.com",
+d:"menakart is an online marketplace in the uae offering electronics home products fashion beauty and health items. it serves customers looking for affordable online shopping.",
+k:"menakart,online shopping uae,electronics,home products,fashion,beauty,ecommerce",
+a:""
+},
+{
+i:744,
+n:"Awok",
+c:"business,electronics,home,fashion",
+u:"https://www.awok.com",
+d:"awok is a well known online shopping platform in the uae offering electronics mobiles fashion and household products. it provides affordable ecommerce options for everyday shoppers.",
+k:"awok,online shopping uae,electronics,mobiles,fashion,home products,ecommerce",
+a:""
+},
+{
+i:745,
+n:"Jashanmal",
+c:"business,home,fashion,books",
+u:"https://www.jashanmal.com",
+d:"jashanmal is an online department store in the uae offering home products luggage books gifts and fashion items. it serves families and lifestyle shoppers.",
+k:"jashanmal,online shopping uae,home products,luggage,books,fashion,ecommerce",
+a:""
+},
+{
+i:746,
+n:"Danube Home",
+c:"business,home",
+u:"https://www.danubehome.com",
+d:"danube home is an online furniture and home improvement store in the uae offering decor kitchen and outdoor products. it serves homeowners and interior design enthusiasts.",
+k:"danube home,online shopping uae,furniture,home decor,kitchen,outdoor products,ecommerce",
+a:""
+},
+{
+i:747,
+n:"Royal Furniture UAE",
+c:"business,home",
+u:"https://royalfurniture.ae",
+d:"royal furniture uae is an online furniture retailer offering sofas beds dining sets and home decor. it serves customers furnishing homes across the uae.",
+k:"royal furniture uae,online shopping uae,furniture,home decor,bedroom,dining,ecommerce",
+a:""
+},
+{
+i:748,
+n:"Homes r Us UAE",
+c:"business,home",
+u:"https://www.homesrus.ae",
+d:"homes r us uae is an online furniture and home accessories store offering decor lighting and storage products. it serves shoppers looking for stylish interiors.",
+k:"homes r us uae,online shopping uae,furniture,home decor,lighting,storage,ecommerce",
+a:""
+},
+{
+i:749,
+n:"FSM Furniture Shop",
+c:"business,home",
+u:"https://fsmfurniture.ae",
+d:"fsm furniture shop is an online furniture retailer in the uae offering sofas beds wardrobes and office furniture. it serves residential and commercial customers.",
+k:"fsm furniture shop,online shopping uae,furniture,office furniture,bedroom,home decor,ecommerce",
+a:""
+},
+{
+i:750,
+n:"United Furniture",
+c:"business,home",
+u:"https://www.unitedfurniture.ae",
+d:"united furniture is an online furniture store in the uae offering living room bedroom dining and office furniture. it provides modern home furnishing solutions.",
+k:"united furniture,online shopping uae,furniture,living room,bedroom,home furnishings,ecommerce",
+a:""
+},
+{
+i:751,
+n:"Pet Corner UAE",
+c:"business,food,health",
+u:"https://www.petcornerdubai.com",
+d:"pet corner uae is an online pet store offering pet food healthcare products toys and accessories. it serves pet owners across the uae with home delivery.",
+k:"pet corner uae,online shopping uae,pet food,pet health,pet accessories,pet supplies,ecommerce",
+a:""
+},
+{
+i:752,
+n:"The Pet Shop UAE",
+c:"business,food,health",
+u:"https://www.dubaipetfood.com",
+d:"the pet shop uae is an online retailer offering pet food veterinary products toys and grooming supplies. it serves dog cat bird and small pet owners.",
+k:"the pet shop uae,online shopping uae,pet food,pet health,grooming,pet accessories,ecommerce",
+a:""
+},
+{
+i:753,
+n:"Petzone UAE",
+c:"business,food,health",
+u:"https://www.petzone.com",
+d:"petzone uae is an online pet supplies store offering food healthcare grooming and accessories. it serves pet lovers looking for quality brands.",
+k:"petzone uae,online shopping uae,pet food,pet care,grooming,pet accessories,ecommerce",
+a:""
+},
+{
+i:754,
+n:"Virgin Mobile UAE",
+c:"business,electronics,software",
+u:"https://www.virginmobile.ae",
+d:"virgin mobile uae offers smartphones mobile plans accessories and digital services through its online platform. it serves customers looking for mobile connectivity and devices.",
+k:"virgin mobile uae,online shopping uae,smartphones,mobile accessories,digital services,ecommerce",
+a:""
+},
+{
+i:755,
+n:"Switch Plus UAE",
+c:"business,electronics,software",
+u:"https://www.switch.com.my",
+d:"switch plus serves uae shoppers with premium apple devices accessories and technology products through online ordering. it focuses on consumer electronics.",
+k:"switch plus uae,online shopping uae,apple products,electronics,accessories,technology,ecommerce",
+a:""
+},
+{
+i:756,
+n:"OneDeal",
+c:"business,electronics,home,fashion",
+u:"https://www.onedealshop.com",
+d:"onedeal is an online shopping platform in the uae offering electronics fashion home products and accessories. it serves customers seeking value deals.",
+k:"onedeal uae,online shopping uae,electronics,fashion,home products,ecommerce,deals",
+a:""
+},
+{
+i:757,
+n:"Mall of the Emirates Online",
+c:"business,fashion,home,beauty",
+u:"https://www.malloftheemirates.com",
+d:"mall of the emirates provides online access to shopping promotions brands and retail services in the uae. it connects shoppers with leading fashion and lifestyle retailers.",
+k:"mall of the emirates,online shopping uae,fashion,lifestyle brands,beauty,shopping,ecommerce",
+a:""
+},
+{
+i:758,
+n:"Dubai Mall Online",
+c:"business,fashion,beauty,home",
+u:"https://thedubaimall.com",
+d:"dubai mall online connects shoppers with brands fashion beauty and lifestyle retailers in the uae. it supports digital shopping and retail discovery.",
+k:"dubai mall online,online shopping uae,fashion,beauty,lifestyle brands,shopping,ecommerce",
+a:""
+},
+{
+i:759,
+n:"Dragon Mart Online",
+c:"business,home,electronics",
+u:"https://www.dragonmart.ae",
+d:"dragon mart online is an ecommerce marketplace offering home improvement electronics furniture and wholesale products. it serves retail and business customers.",
+k:"dragon mart online,online shopping uae,home improvement,electronics,furniture,wholesale,ecommerce",
+a:""
+},
+{
+i:760,
+n:"Blue Ocean Global",
+c:"business,books",
+u:"https://www.blueoceanacademy.com",
+d:"blue ocean global provides online professional courses certification programs and learning resources in the uae. it serves students and working professionals.",
+k:"blue ocean global,online shopping uae,online courses,professional certification,learning,education",
+a:""
+},
+{
+i:761,
+n:"Dubai Library Distributors",
+c:"business,books",
+u:"https://www.dubailibrary.com",
+d:"dubai library distributors is an online bookstore in the uae offering books educational materials stationery and office supplies. it serves schools students and general readers.",
+k:"dubai library distributors,online shopping uae,books,stationery,educational materials,office supplies,ecommerce",
+a:""
+},
+{
+i:762,
+n:"BookHero UAE",
+c:"business,books",
+u:"https://bookhero.ae",
+d:"bookhero uae is an online bookstore offering fiction non fiction children's books and educational titles. it serves readers across the uae with convenient delivery.",
+k:"bookhero uae,online shopping uae,books,education,fiction,online bookstore,ecommerce",
+a:""
+},
+{
+i:763,
+n:"Borders UAE",
+c:"business,books",
+u:"https://www.borders.com",
+d:"borders serves uae customers with books stationery gifts and educational products through online shopping. it is suitable for students families and readers.",
+k:"borders uae,online shopping uae,books,stationery,gifts,education,ecommerce",
+a:""
+},
+{
+i:764,
+n:"Speedex Tools",
+c:"business,home",
+u:"https://www.speedextools.com",
+d:"speedex tools is an online retailer in the uae offering power tools hardware safety equipment and industrial products. it serves professionals and diy users.",
+k:"speedex tools,online shopping uae,power tools,hardware,safety equipment,diy,ecommerce",
+a:""
+},
+{
+i:765,
+n:"Tool Time UAE",
+c:"business,home",
+u:"https://tooltime.ae",
+d:"tool time uae is an online hardware store offering tools garden equipment and home improvement products. it serves homeowners and contractors across the uae.",
+k:"tool time uae,online shopping uae,hardware,tools,garden equipment,home improvement,ecommerce",
+a:""
+},
+{
+i:766,
+n:"Office One",
+c:"business",
+u:"https://officeoneuae.com",
+d:"office one is an online office supplies store offering stationery printers furniture and workplace essentials. it serves businesses schools and home offices.",
+k:"office one uae,online shopping uae,office supplies,stationery,office furniture,business products,ecommerce",
+a:""
+},
+{
+i:767,
+n:"OfficeRock",
+c:"business",
+u:"https://www.officerock.com",
+d:"officerock is an online supplier of office products furniture pantry items and workplace essentials in the uae. it serves businesses with fast delivery.",
+k:"officerock,online shopping uae,office supplies,office furniture,pantry supplies,business,ecommerce",
+a:""
+},
+{
+i:768,
+n:"Creative Minds",
+c:"business,books",
+u:"https://www.creativemindsdubai.com",
+d:"creative minds is an online art and craft store offering stationery educational materials and hobby supplies. it serves artists students and schools.",
+k:"creative minds uae,online shopping uae,art supplies,craft materials,stationery,education,ecommerce",
+a:""
+},
+{
+i:769,
+n:"Desertcart UAE",
+c:"business,electronics,home,fashion,beauty,health,food,sports,books,jewellery,automotive,travel,software",
+u:"https://www.desertcart.ae",
+d:"desertcart uae is an international ecommerce marketplace offering imported products across many categories. it serves shoppers looking for global brands and fast delivery.",
+k:"desertcart uae,online shopping uae,international marketplace,electronics,fashion,imported products,ecommerce",
+a:""
+},
+{
+i:770,
+n:"Sprii",
+c:"business,fashion,home,health",
+u:"https://www.sprii.com",
+d:"sprii is an online marketplace in the uae offering baby products toys maternity essentials and family items. it serves parents with trusted brands.",
+k:"sprii uae,online shopping uae,baby products,maternity,toys,family shopping,ecommerce",
+a:""
+},
+{
+i:771,
+n:"Babyshop UAE",
+c:"business,fashion,home,health",
+u:"https://www.babyshopstores.com/ae/en",
+d:"babyshop uae is an online retailer for baby clothing nursery products toys and accessories. it serves families with newborns and young children.",
+k:"babyshop uae,online shopping uae,baby clothing,nursery products,toys,parenting,ecommerce",
+a:""
+},
+{
+i:772,
+n:"Baby Plus",
+c:"business,fashion,home,health",
+u:"https://www.babyplus.ae",
+d:"baby plus is an online shopping destination for baby gear clothing feeding products and nursery essentials. it serves parents throughout the uae.",
+k:"baby plus uae,online shopping uae,baby gear,nursery essentials,parenting,baby products,ecommerce",
+a:""
+},
+{
+i:773,
+n:"Adventure HQ",
+c:"business,sports",
+u:"https://adventurehq.ae",
+d:"adventure hq is an online outdoor retailer offering camping hiking cycling and fitness equipment. it serves outdoor enthusiasts across the uae.",
+k:"adventure hq,online shopping uae,camping,hiking,cycling,fitness equipment,ecommerce",
+a:""
+},
+{
+i:774,
+n:"Adventure Zone",
+c:"business,sports",
+u:"https://www.adventurezone.ae",
+d:"adventure zone is an online store offering outdoor sports equipment camping gear and travel accessories. it serves active lifestyle shoppers.",
+k:"adventure zone uae,online shopping uae,outdoor gear,camping,sports equipment,travel accessories,ecommerce",
+a:""
+},
+{
+i:775,
+n:"The Green Ecostore",
+c:"business,home,health",
+u:"https://thegreenecostore.com",
+d:"the green ecostore is an online retailer offering eco friendly household wellness and sustainable living products. it serves environmentally conscious shoppers.",
+k:"green ecostore uae,online shopping uae,eco products,household items,sustainable living,wellness,ecommerce",
+a:""
+},
+{
+i:776,
+n:"Organic Foods & Cafe",
+c:"business,food,health",
+u:"https://organicfoodsandcafe.com",
+d:"organic foods and cafe offers online grocery shopping for organic food fresh produce and health products in the uae. it serves healthy lifestyle customers.",
+k:"organic foods cafe uae,online shopping uae,organic food,grocery,health products,ecommerce",
+a:""
+},
+{
+i:777,
+n:"Kibsons",
+c:"business,food",
+u:"https://kibsons.com",
+d:"kibsons is an online grocery platform in the uae offering fresh fruits vegetables meat seafood and household essentials. it serves families with home delivery.",
+k:"kibsons,online shopping uae,online grocery,fresh fruits,vegetables,home delivery,ecommerce",
+a:""
+},
+{
+i:778,
+n:"El Grocer",
+c:"business,food",
+u:"https://elgrocer.com",
+d:"el grocer is an online grocery marketplace connecting customers with supermarkets and convenience stores across the uae. it provides fast grocery delivery.",
+k:"el grocer uae,online shopping uae,grocery delivery,supermarket,fresh food,ecommerce",
+a:""
+},
+{
+i:779,
+n:"Choithrams UAE",
+c:"business,food,home",
+u:"https://www.choithrams.com",
+d:"choithrams uae is an online supermarket offering groceries household products bakery items and daily essentials. it serves families across the emirates.",
+k:"choithrams uae,online shopping uae,online supermarket,grocery,household products,bakery,ecommerce",
+a:""
+},
+{
+i:780,
+n:"Spinneys UAE",
+c:"business,food,home",
+u:"https://www.spinneys.com",
+d:"spinneys uae is an online grocery store offering premium food fresh produce bakery and household essentials. it serves customers seeking quality supermarket products.",
+k:"spinneys uae,online shopping uae,premium grocery,fresh produce,supermarket,home delivery,ecommerce",
+a:""
+},
+ 
+{
+i:781,
+n:"Grandiose Supermarket",
+c:"business,food,home",
+u:"https://grandiose.ae",
+d:"grandiose supermarket is an online grocery store offering fresh produce bakery dairy beverages and household essentials. it serves families across the uae with home delivery.",
+k:"grandiose supermarket uae,online shopping uae,online grocery,fresh produce,household essentials,supermarket,ecommerce",
+a:""
+},
+{
+i:782,
+n:"NRTC Fresh",
+c:"business,food",
+u:"https://nrtcfresh.com",
+d:"nrtc fresh is an online grocery retailer offering fruits vegetables groceries and fresh food products. it serves homes and businesses throughout the uae.",
+k:"nrtc fresh uae,online shopping uae,fresh fruits,vegetables,groceries,online grocery,ecommerce",
+a:""
+},
+{
+i:783,
+n:"Barakat Fresh",
+c:"business,food,health",
+u:"https://www.barakatfresh.ae",
+d:"barakat fresh is an online food retailer offering fresh juices fruits vegetables salads and healthy food products. it serves customers across the uae.",
+k:"barakat fresh uae,online shopping uae,fresh juice,healthy food,fruits,vegetables,ecommerce",
+a:""
+},
+{
+i:784,
+n:"Jones the Grocer UAE",
+c:"business,food",
+u:"https://www.jonesthegrocer.com",
+d:"jones the grocer offers premium groceries gourmet foods beverages and gift hampers through its online store. it serves customers seeking quality food products.",
+k:"jones the grocer uae,online shopping uae,gourmet food,premium grocery,beverages,ecommerce",
+a:""
+},
+{
+i:785,
+n:"Gulf Fruits",
+c:"business,food",
+u:"https://gulffruits.com",
+d:"gulf fruits is an online supplier of fresh fruits vegetables and grocery products. it serves households restaurants and businesses across the uae.",
+k:"gulf fruits uae,online shopping uae,fresh fruits,vegetables,grocery,ecommerce",
+a:""
+},
+{
+i:786,
+n:"Baqala",
+c:"business,food,home",
+u:"https://baqala.ae",
+d:"baqala is an online convenience store offering groceries beverages snacks and household essentials with fast delivery across the uae.",
+k:"baqala uae,online shopping uae,groceries,convenience store,snacks,household essentials,ecommerce",
+a:""
+},
+{
+i:787,
+n:"Chef Middle East",
+c:"business,food",
+u:"https://www.chefmiddleeast.com",
+d:"chef middle east supplies premium food ingredients beverages and kitchen essentials through its online platform. it serves homes hotels and restaurants.",
+k:"chef middle east uae,online shopping uae,food ingredients,beverages,kitchen supplies,ecommerce",
+a:""
+},
+{
+i:788,
+n:"Coffee Souq",
+c:"business,food,home",
+u:"https://www.coffeesouq.com",
+d:"coffee souq is an online coffee marketplace offering coffee beans espresso machines grinders and brewing accessories. it serves coffee lovers across the uae.",
+k:"coffee souq uae,online shopping uae,coffee beans,espresso machine,coffee accessories,ecommerce",
+a:""
+},
+{
+i:789,
+n:"My Vapery",
+c:"business",
+u:"https://myvapery.com",
+d:"my vapery is an online retailer offering vaping devices and accessories for eligible adult customers in supported regions.",
+k:"my vapery uae,vaping accessories,online retailer,ecommerce",
+a:""
+},
+{
+i:790,
+n:"Blooming Box",
+c:"business,home",
+u:"https://bloomingbox.com",
+d:"blooming box is an online flower and gift delivery service offering bouquets plants cakes and personalized gifts across the uae.",
+k:"blooming box uae,online shopping uae,flowers,gifts,cakes,online florist,ecommerce",
+a:""
+},
+{
+i:791,
+n:"Ferns N Petals UAE",
+c:"business,home",
+u:"https://www.fnp.ae",
+d:"ferns n petals uae is an online florist and gifting platform offering flowers cakes plants and personalized gifts with same day delivery.",
+k:"ferns n petals uae,online shopping uae,flowers,gifts,cakes,plants,ecommerce",
+a:""
+},
+{
+i:792,
+n:"Floward UAE",
+c:"business,home",
+u:"https://www.floward.com",
+d:"floward uae is an online flower and gift delivery platform offering bouquets chocolates cakes and luxury gifts across the uae.",
+k:"floward uae,online shopping uae,flowers,gifts,chocolates,cakes,ecommerce",
+a:""
+},
+{
+i:793,
+n:"Black Tulip Flowers",
+c:"business,home",
+u:"https://www.blacktulipflowers.com",
+d:"black tulip flowers is an online florist offering bouquets gift baskets cakes and personalized gifts for all occasions.",
+k:"black tulip flowers uae,online shopping uae,flowers,bouquets,gifts,online florist,ecommerce",
+a:""
+},
+{
+i:794,
+n:"800 Flower",
+c:"business,home",
+u:"https://www.800flower.ae",
+d:"800 flower is an online flower delivery service providing bouquets floral arrangements gifts and cakes across the uae.",
+k:"800 flower uae,online shopping uae,flower delivery,bouquets,gifts,cakes,ecommerce",
+a:""
+},
+{
+i:795,
+n:"Joigifts UAE",
+c:"business,home",
+u:"https://www.joigifts.com",
+d:"joigifts is an online gifting marketplace offering flowers chocolates cakes balloons and personalized gifts with fast delivery.",
+k:"joigifts uae,online shopping uae,gifts,flowers,chocolates,cakes,ecommerce",
+a:""
+},
+{
+i:796,
+n:"800 Storage",
+c:"business,home",
+u:"https://800storage.com",
+d:"800 storage offers online booking for self storage moving and packing services across the uae for homes and businesses.",
+k:"800 storage uae,self storage,moving services,packing,business services",
+a:""
+},
+{
+i:797,
+n:"Justlife",
+c:"business,home",
+u:"https://www.justlife.com",
+d:"justlife is an online platform for booking home cleaning maintenance beauty and wellness services across the uae.",
+k:"justlife uae,home services,cleaning,maintenance,beauty booking,ecommerce",
+a:""
+},
+{
+i:798,
+n:"Urban Company UAE",
+c:"business,home",
+u:"https://www.urbancompany.com",
+d:"urban company offers online booking for home cleaning repair beauty and wellness services through its digital platform.",
+k:"urban company uae,home services,cleaning,beauty,repair,online booking",
+a:""
+},
+{
+i:799,
+n:"Help AG",
+c:"business,software",
+u:"https://www.helpag.com",
+d:"help ag provides cybersecurity solutions cloud security and managed security services for businesses across the middle east.",
+k:"help ag uae,cybersecurity,cloud security,business software,it services",
+a:""
+},
+{
+i:800,
+n:"Cloud Box Technologies",
+c:"business,software",
+u:"https://www.cloudboxtechnologies.com",
+d:"cloud box technologies provides cloud computing cybersecurity digital transformation and managed it services for businesses.",
+k:"cloud box technologies uae,cloud computing,cybersecurity,it services,business software",
+a:""
+},
+{
+i:801,
+n:"DubaiStore",
+c:"business,electronics,home,fashion,beauty,health,food",
+u:"https://www.dubaistore.com",
+d:"dubaistore is an official online marketplace in the uae where customers can buy electronics, home products, fashion, beauty and grocery items from verified local sellers.",
+k:"dubaistore,online shopping uae,uae marketplace,electronics,fashion,grocery,local sellers",
+a:""
+},
+{
+i:802,
+n:"Shopkees UAE",
+c:"business,electronics,home,fashion",
+u:"https://www.shopkees.com",
+d:"shopkees is an online shopping store in the uae offering electronics, home appliances, mobiles and lifestyle products with fast delivery.",
+k:"shopkees,online shopping uae,electronics,mobiles,home appliances,lifestyle products,ecommerce",
+a:""
+},
+{
+i:803,
+n:"Eros Digital Home",
+c:"business,electronics,home",
+u:"https://www.erosdigitalhome.ae",
+d:"eros digital home is an online electronics retailer in the uae selling televisions, home appliances, mobiles and premium consumer electronics.",
+k:"eros digital home,online shopping uae,electronics,tvs,home appliances,mobiles",
+a:""
+},
+{
+i:804,
+n:"Grand Stores Online",
+c:"business,electronics,home",
+u:"https://www.grandstores.ae",
+d:"grand stores online offers electronics, cameras, home appliances and lifestyle products through its online shopping platform in the uae.",
+k:"grand stores,online shopping uae,electronics,cameras,home appliances,lifestyle",
+a:""
+},
+{
+i:805,
+n:"Jacky's Brand Shop",
+c:"business,electronics",
+u:"https://jackysbrandshop.com",
+d:"jacky's brand shop is an online electronics store in the uae offering mobiles, laptops, televisions and smart devices from leading brands.",
+k:"jacky's brand shop,online shopping uae,electronics,mobiles,laptops,smart devices",
+a:""
+},
+{
+i:806,
+n:"Better Life UAE",
+c:"business,home",
+u:"https://www.betterlifeuae.com",
+d:"better life uae is an online home appliance store offering kitchen appliances, laundry solutions and premium home products.",
+k:"better life uae,online shopping uae,home appliances,kitchen,laundry,home products",
+a:""
+},
+{
+i:807,
+n:"Miele UAE",
+c:"business,home",
+u:"https://shop.miele.ae",
+d:"miele uae is the official online store for premium home appliances including kitchen and cleaning solutions for modern homes.",
+k:"miele uae,online shopping uae,home appliances,kitchen appliances,cleaning,premium appliances",
+a:""
+},
+{
+i:808,
+n:"Tavola UAE",
+c:"business,home",
+u:"https://www.tavolashop.com",
+d:"tavola is an online kitchen and home store in the uae offering cookware, bakeware, dining and home accessories.",
+k:"tavola uae,online shopping uae,cookware,bakeware,kitchen,dining",
+a:""
+},
+{
+i:809,
+n:"Crate and Barrel UAE",
+c:"business,home",
+u:"https://www.crateandbarrel.me",
+d:"crate and barrel uae offers premium furniture, home decor, kitchenware and dining collections through its online store.",
+k:"crate and barrel uae,online shopping uae,furniture,home decor,kitchenware,dining",
+a:""
+},
+{
+i:810,
+n:"Marina Home",
+c:"business,home",
+u:"https://www.marinahomeinteriors.com",
+d:"marina home is an online furniture and home decor retailer offering premium interior collections and lifestyle products.",
+k:"marina home uae,online shopping uae,furniture,home decor,interiors,lifestyle",
+a:""
+},
+{
+i:811,
+n:"The Mattress Store UAE",
+c:"business,home",
+u:"https://themattressstore.com",
+d:"the mattress store is an online bedding retailer in the uae offering mattresses, pillows and bedroom accessories.",
+k:"the mattress store uae,online shopping uae,mattresses,bedding,pillows,bedroom",
+a:""
+},
+{
+i:812,
+n:"Sleep Fine UAE",
+c:"business,home",
+u:"https://sleepfine.com",
+d:"sleep fine is an online bedding store in the uae selling mattresses, beds and sleep accessories for homes and hotels.",
+k:"sleep fine uae,online shopping uae,mattresses,beds,bedding,sleep products",
+a:""
+},
+{
+i:813,
+n:"The Watch House UAE",
+c:"business,jewellery",
+u:"https://www.thewatchhouse.com",
+d:"the watch house is an online watch retailer offering luxury and fashion watches from international brands in the uae.",
+k:"the watch house uae,online shopping uae,watches,luxury watches,fashion watches,timepieces",
+a:""
+},
+{
+i:814,
+n:"Ethos Watches UAE",
+c:"business,jewellery",
+u:"https://www.ethoswatches.com",
+d:"ethos watches serves uae customers with luxury watches and premium timepieces through its online shopping platform.",
+k:"ethos watches uae,online shopping uae,luxury watches,premium watches,timepieces",
+a:""
+},
+{
+i:815,
+n:"Damas Jewellery",
+c:"business,jewellery",
+u:"https://www.damasjewellery.com",
+d:"damas jewellery is an online jewellery store offering gold, diamond and luxury jewellery collections across the uae.",
+k:"damas jewellery,online shopping uae,gold jewellery,diamond jewellery,luxury jewellery",
+a:""
+},
+{
+i:816,
+n:"Liali Jewellery",
+c:"business,jewellery",
+u:"https://www.lialijewellery.com",
+d:"liali jewellery offers online shopping in the uae for gold, diamond and bridal jewellery with premium collections.",
+k:"liali jewellery,online shopping uae,gold,diamond,bridal jewellery,luxury",
+a:""
+},
+{
+i:817,
+n:"Pure Gold Jewellers",
+c:"business,jewellery",
+u:"https://www.pugold.com",
+d:"pure gold jewellers is an online jewellery retailer offering gold, diamond and gemstone jewellery for all occasions.",
+k:"pure gold jewellers,online shopping uae,gold jewellery,diamond,gemstones,bridal",
+a:""
+},
+{
+i:818,
+n:"Joyalukkas UAE",
+c:"business,jewellery",
+u:"https://www.joyalukkas.in",
+d:"joyalukkas serves uae customers with online shopping for gold, diamond and bridal jewellery from trusted collections.",
+k:"joyalukkas uae,online shopping uae,gold jewellery,diamond jewellery,bridal jewellery",
+a:""
+},
+{
+i:819,
+n:"Malabar Gold & Diamonds UAE",
+c:"business,jewellery",
+u:"https://www.malabargoldanddiamonds.com",
+d:"malabar gold and diamonds offers online jewellery shopping in the uae with gold, diamond and precious gemstone collections.",
+k:"malabar gold uae,online shopping uae,gold,diamond,jewellery,bridal",
+a:""
+},
+{
+i:820,
+n:"Titan Arabia",
+c:"business,jewellery",
+u:"https://www.titanworld.com",
+d:"titan arabia offers watches and jewellery through its online shopping platform serving customers in the uae and gulf region.",
+k:"titan arabia,online shopping uae,watches,jewellery,fashion accessories,timepieces",
+a:""
+},
+ {
+i:821,
+n:"Kanz Jewels",
+c:"business,jewellery",
+u:"https://kanzjewels.com",
+d:"kanz jewels is an online jewellery store in the uae offering gold, diamond and bridal jewellery collections. it serves customers looking for premium jewellery and gifts.",
+k:"kanz jewels,online shopping uae,gold jewellery,diamond jewellery,bridal jewellery,luxury gifts",
+a:""
+},
+{
+i:822,
+n:"Samra Jewellery",
+c:"business,jewellery",
+u:"https://samrajewellery.com",
+d:"samra jewellery offers luxury jewellery, diamonds and fine accessories through its online shopping platform in the uae.",
+k:"samra jewellery,online shopping uae,luxury jewellery,diamond jewellery,fine jewellery,gifts",
+a:""
+},
+{
+i:823,
+n:"Mouawad UAE",
+c:"business,jewellery",
+u:"https://www.mouawad.com",
+d:"mouawad is an online luxury jewellery retailer offering diamond jewellery, watches and exclusive collections for premium shoppers.",
+k:"mouawad uae,online shopping uae,luxury jewellery,diamond,watches,fine jewellery",
+a:""
+},
+{
+i:824,
+n:"Tanishq UAE",
+c:"business,jewellery",
+u:"https://www.tanishq.ae",
+d:"tanishq uae offers online shopping for gold, diamond and bridal jewellery with certified premium collections.",
+k:"tanishq uae,online shopping uae,gold jewellery,diamond jewellery,bridal jewellery,certified jewellery",
+a:""
+},
+{
+i:825,
+n:"CarSwitch",
+c:"business,automotive",
+u:"https://carswitch.com",
+d:"carswitch is an online marketplace in the uae for buying and selling used cars with verified inspections and secure transactions.",
+k:"carswitch,online shopping uae,used cars,car marketplace,vehicle buying,automotive",
+a:""
+},
+{
+i:826,
+n:"Dubizzle Cars",
+c:"business,automotive",
+u:"https://dubizzle.com/motors",
+d:"dubizzle cars is an online automotive marketplace where customers can buy and sell new and used vehicles across the uae.",
+k:"dubizzle cars,online shopping uae,used cars,new cars,vehicle marketplace,automotive",
+a:""
+},
+{
+i:827,
+n:"YallaMotor UAE",
+c:"business,automotive",
+u:"https://uae.yallamotor.com",
+d:"yallamotor uae is an online automotive platform offering new cars, used cars and vehicle buying services across the uae.",
+k:"yallamotor uae,online shopping uae,new cars,used cars,vehicle marketplace,automotive",
+a:""
+},
+{
+i:828,
+n:"SellAnyCar.com",
+c:"business,automotive",
+u:"https://www.sellanycar.com",
+d:"sellanycar.com helps customers sell vehicles online quickly with inspections and instant purchase services in the uae.",
+k:"sellanycar uae,sell car online,vehicle selling,used cars,automotive marketplace",
+a:""
+},
+{
+i:829,
+n:"CarSouq",
+c:"business,automotive",
+u:"https://carsouq.com",
+d:"carsouq is an online marketplace for buying and selling used cars with verified listings and dealer offers in the uae.",
+k:"carsouq uae,used cars,online shopping uae,vehicle marketplace,automotive,dealer cars",
+a:""
+},
+{
+i:830,
+n:"AutoPlus UAE",
+c:"business,automotive",
+u:"https://autoplusdubai.com",
+d:"autoplus uae offers tyres, batteries, vehicle accessories and automotive services through its online platform.",
+k:"autoplus uae,automotive,tyres,batteries,car accessories,vehicle service",
+a:""
+},
+{
+i:831,
+n:"PitStopArabia",
+c:"business,automotive",
+u:"https://www.pitstoparabia.com",
+d:"pitstoparabia is an online tyre marketplace offering tyres, batteries and fitting services across the uae.",
+k:"pitstoparabia,online shopping uae,tyres,batteries,car tyres,automotive",
+a:""
+},
+{
+i:832,
+n:"TyresOnline UAE",
+c:"business,automotive",
+u:"https://www.tyresonline.ae",
+d:"tyresonline uae provides online shopping for tyres, wheels and automotive accessories with installation services.",
+k:"tyresonline uae,online shopping uae,car tyres,wheels,automotive accessories",
+a:""
+},
+{
+i:833,
+n:"Battery.ae",
+c:"business,automotive",
+u:"https://battery.ae",
+d:"battery.ae offers online battery replacement services for cars with doorstep installation across the uae.",
+k:"battery.ae,car battery,online shopping uae,battery replacement,automotive",
+a:""
+},
+{
+i:834,
+n:"MySyara",
+c:"business,automotive",
+u:"https://www.mysyara.com",
+d:"mysyara is an online automotive service platform offering vehicle maintenance, repairs and emergency assistance in the uae.",
+k:"mysyara uae,car service,vehicle maintenance,automotive,online booking",
+a:""
+},
+{
+i:835,
+n:"eZhire",
+c:"business,travel,automotive",
+u:"https://www.ezhire.ae",
+d:"ezhire is an online car rental platform in the uae offering self drive rental vehicles through a mobile booking service.",
+k:"ezhire uae,car rental,travel,vehicle hire,online booking",
+a:""
+},
+{
+i:836,
+n:"SelfDrive.ae",
+c:"business,travel,automotive",
+u:"https://www.selfdrive.ae",
+d:"selfdrive.ae is an online car rental marketplace offering daily, weekly and monthly rental vehicles across the uae.",
+k:"selfdrive uae,car rental,travel,self drive cars,vehicle hire",
+a:""
+},
+{
+i:837,
+n:"Dollar Rent A Car UAE",
+c:"business,travel,automotive",
+u:"https://www.dollaruae.com",
+d:"dollar rent a car uae provides online vehicle rental services for business and leisure travelers across the emirates.",
+k:"dollar rent a car uae,car rental,travel,vehicle hire,online booking",
+a:""
+},
+{
+i:838,
+n:"Thrifty UAE",
+c:"business,travel,automotive",
+u:"https://www.thriftyuae.com",
+d:"thrifty uae offers online booking for rental cars with short term and long term vehicle hire options.",
+k:"thrifty uae,car rental,travel,vehicle hire,business travel",
+a:""
+},
+{
+i:839,
+n:"OneClickDrive",
+c:"business,travel,automotive",
+u:"https://www.oneclickdrive.com",
+d:"oneclickdrive is an online marketplace for car rental and leasing services across the uae with multiple vehicle choices.",
+k:"oneclickdrive,car rental uae,vehicle leasing,travel,online booking",
+a:""
+},
+{
+i:840,
+n:"Diamondlease",
+c:"business,travel,automotive",
+u:"https://www.diamondlease.com",
+d:"diamondlease offers online vehicle leasing and rental services for individuals and businesses throughout the uae.",
+k:"diamondlease uae,car lease,car rental,business travel,vehicle hire",
+a:""
+},
+{
+i:841,
+n:"Musafir UAE",
+c:"business,travel",
+u:"https://www.musafir.com",
+d:"musafir is an online travel platform offering flight bookings, hotels, holiday packages and visa assistance in the uae.",
+k:"musafir uae,online travel,flight booking,hotel booking,holiday packages",
+a:""
+},
+{
+i:842,
+n:"Cleartrip UAE",
+c:"business,travel",
+u:"https://www.cleartrip.ae",
+d:"cleartrip uae provides online booking for flights, hotels and holiday packages with convenient travel planning tools.",
+k:"cleartrip uae,flight booking,hotel booking,travel,holiday packages",
+a:""
+},
+{
+i:843,
+n:"Al Tayer Travel",
+c:"business,travel",
+u:"https://www.altayertravel.com",
+d:"al tayer travel offers online travel services including flights, hotels, holidays and corporate travel solutions.",
+k:"al tayer travel,travel booking,flights,hotels,holiday packages,business travel",
+a:""
+},
+{
+i:844,
+n:"Rayna Tours",
+c:"business,travel",
+u:"https://www.raynatours.com",
+d:"rayna tours is an online travel company offering holiday packages, attraction tickets, cruises and visa services in the uae.",
+k:"rayna tours,holiday packages,dubai tours,travel booking,visa services",
+a:""
+},
+{
+i:845,
+n:"Holiday Factory",
+c:"business,travel",
+u:"https://holiday-factory.com",
+d:"holiday factory provides affordable holiday packages, flights and hotel bookings through its online travel platform.",
+k:"holiday factory,holiday packages,travel deals,flight booking,hotel booking",
+a:""
+},
+{
+i:846,
+n:"HolidayMe",
+c:"business,travel",
+u:"https://www.holidayme.com",
+d:"holidayme is an online travel marketplace offering flights, hotels and customized holiday packages for uae travelers.",
+k:"holidayme,travel booking,holiday packages,flights,hotels",
+a:""
+},
+{
+i:847,
+n:"Wego UAE",
+c:"business,travel",
+u:"https://www.wego.ae",
+d:"wego uae helps travelers compare and book flights, hotels and travel deals from multiple providers online.",
+k:"wego uae,flight comparison,hotel booking,travel deals,online travel",
+a:""
+},
+{
+i:848,
+n:"HolidayCars",
+c:"business,travel,automotive",
+u:"https://www.holidaycars.com",
+d:"holidaycars provides online car rental comparison and booking services for travelers visiting the uae and other destinations.",
+k:"holidaycars,car rental,travel,vehicle booking,online comparison",
+a:""
+},
+{
+i:849,
+n:"HotelsCombined UAE",
+c:"business,travel",
+u:"https://www.hotelscombined.ae",
+d:"hotelscombined uae compares hotel prices from multiple travel websites to help customers find accommodation deals online.",
+k:"hotelscombined uae,hotel comparison,travel booking,hotel deals,online travel",
+a:""
+},
+{
+i:850,
+n:"Visit Dubai Shop",
+c:"business,travel",
+u:"https://www.visitdubai.com",
+d:"visit dubai helps travelers discover attractions, experiences and tourism services while planning trips to the uae through its official platform.",
+k:"visit dubai,travel uae,dubai tourism,attractions,trip planning",
+a:""
+},
+ 
+{
+i:851,
+n:"Holiday Factory Experiences",
+c:"business,travel",
+u:"https://holiday-factory.com",
+d:"holiday factory experiences helps travelers book holiday packages, hotels and flights through its online travel platform. it serves leisure travelers looking for affordable vacations from the uae.",
+k:"holiday factory experiences,online travel uae,holiday packages,flight booking,hotel booking,travel deals",
+a:""
+},
+{
+i:852,
+n:"Arabian Adventures",
+c:"business,travel",
+u:"https://www.arabian-adventures.com",
+d:"arabian adventures is an online travel company offering desert safaris, tours, cruises and holiday experiences in the uae. it serves local and international tourists.",
+k:"arabian adventures,online travel uae,desert safari,dubai tours,holiday experiences,travel booking",
+a:""
+},
+{
+i:853,
+n:"Platinum Heritage",
+c:"business,travel",
+u:"https://www.platinum-heritage.com",
+d:"platinum heritage offers premium desert safari experiences and cultural tours through online booking in the uae.",
+k:"platinum heritage,online travel uae,desert safari,luxury tours,cultural experiences,travel booking",
+a:""
+},
+{
+i:854,
+n:"OceanAir Travels",
+c:"business,travel",
+u:"https://www.oceanairtravels.com",
+d:"oceanair travels provides online booking for sightseeing tours, desert safaris, cruises and holiday activities across the uae.",
+k:"oceanair travels,online travel uae,dubai tours,desert safari,cruises,holiday activities",
+a:""
+},
+{
+i:855,
+n:"Cobone",
+c:"business",
+u:"https://www.cobone.com",
+d:"cobone is an online deals marketplace in the uae offering discounts on dining, travel, beauty, entertainment and lifestyle services.",
+k:"cobone,online shopping uae,deals marketplace,discount coupons,lifestyle offers,dining deals",
+a:""
+},
+{
+i:856,
+n:"Groupon UAE",
+c:"business",
+u:"https://www.groupon.ae",
+d:"groupon uae provides online discount vouchers for restaurants, travel, beauty and local experiences through its ecommerce platform.",
+k:"groupon uae,online shopping uae,discount deals,coupons,travel offers,beauty deals",
+a:""
+},
+{
+i:857,
+n:"Cobone Groceries",
+c:"business,food",
+u:"https://www.cobone.com",
+d:"cobone features grocery and food related discount offers from participating merchants through its online marketplace in the uae.",
+k:"cobone groceries,online shopping uae,grocery deals,food offers,discount marketplace",
+a:""
+},
+{
+i:858,
+n:"Desertcart Business",
+c:"business",
+u:"https://www.desertcart.ae",
+d:"desertcart business helps customers source international products through its online marketplace serving individuals and commercial buyers.",
+k:"desertcart business,online shopping uae,b2b marketplace,international products,ecommerce",
+a:""
+},
+{
+i:859,
+n:"SupplyVan",
+c:"business",
+u:"https://www.supplyvan.com",
+d:"supplyvan is an online industrial marketplace offering tools, safety equipment, office products and maintenance supplies in the uae.",
+k:"supplyvan,online shopping uae,industrial supplies,tools,safety equipment,business products",
+a:""
+},
+{
+i:860,
+n:"Dragonmart.ae",
+c:"business,home,electronics",
+u:"https://dragonmart.ae",
+d:"dragonmart.ae is an online marketplace offering furniture, electronics, home improvement products and wholesale goods across the uae.",
+k:"dragonmart.ae,online shopping uae,home products,electronics,wholesale marketplace",
+a:""
+},
+{
+i:861,
+n:"Farfetch UAE",
+c:"business,fashion",
+u:"https://www.farfetch.com",
+d:"farfetch serves uae customers with luxury fashion, footwear, bags and designer accessories through its online marketplace.",
+k:"farfetch uae,online shopping uae,luxury fashion,designer clothing,footwear,bags",
+a:""
+},
+{
+i:862,
+n:"NET-A-PORTER UAE",
+c:"business,fashion",
+u:"https://www.net-a-porter.com",
+d:"net-a-porter offers luxury fashion, designer clothing, shoes and accessories for online shoppers in the uae.",
+k:"net-a-porter uae,online shopping uae,luxury fashion,designer clothing,women fashion",
+a:""
+},
+{
+i:863,
+n:"MR PORTER UAE",
+c:"business,fashion",
+u:"https://www.mrporter.com",
+d:"mr porter serves uae customers with premium men's fashion, footwear and luxury accessories through online shopping.",
+k:"mr porter uae,online shopping uae,men fashion,luxury clothing,designer accessories",
+a:""
+},
+{
+i:864,
+n:"The Luxury Closet",
+c:"business,fashion,jewellery",
+u:"https://theluxurycloset.com",
+d:"the luxury closet is an online marketplace for authenticated pre owned luxury fashion, watches, jewellery and handbags in the uae.",
+k:"the luxury closet,online shopping uae,pre owned luxury,designer bags,watches,jewellery",
+a:""
+},
+{
+i:865,
+n:"WatchBox UAE",
+c:"business,jewellery",
+u:"https://www.thewatchbox.com",
+d:"watchbox offers authenticated luxury watches for online buyers and collectors across the uae and international markets.",
+k:"watchbox uae,online shopping uae,luxury watches,pre owned watches,timepieces",
+a:""
+},
+{
+i:866,
+n:"Ahmed Seddiqi & Sons",
+c:"business,jewellery",
+u:"https://www.seddiqi.com",
+d:"ahmed seddiqi and sons is an online luxury watch retailer offering premium international watch brands in the uae.",
+k:"ahmed seddiqi,online shopping uae,luxury watches,premium timepieces,watch retailer",
+a:""
+},
+{
+i:867,
+n:"Swiss Arabian",
+c:"business,beauty",
+u:"https://www.swissarabian.com",
+d:"swiss arabian is an online fragrance store offering perfumes, oud and personal care products for customers across the uae.",
+k:"swiss arabian,online shopping uae,perfumes,oud,fragrances,beauty",
+a:""
+},
+{
+i:868,
+n:"Ajmal Perfumes",
+c:"business,beauty",
+u:"https://www.ajmalperfume.com",
+d:"ajmal perfumes offers online shopping for perfumes, oud and fragrance gift collections throughout the uae.",
+k:"ajmal perfumes,online shopping uae,perfumes,oud,fragrances,gifts",
+a:""
+},
+{
+i:869,
+n:"Rasasi",
+c:"business,beauty",
+u:"https://rasasi.com",
+d:"rasasi is an online fragrance retailer offering perfumes, oriental scents and personal care products in the uae.",
+k:"rasasi,online shopping uae,perfumes,fragrances,oud,beauty",
+a:""
+},
+{
+i:870,
+n:"Arabian Oud UAE",
+c:"business,beauty",
+u:"https://arabianoud.com",
+d:"arabian oud offers luxury perfumes, oud oils and fragrance collections through its online store serving customers in the uae.",
+k:"arabian oud uae,online shopping uae,oud,perfumes,luxury fragrances,beauty",
+a:""
+},
+{
+i:871,
+n:"PerfumeUAE",
+c:"business,beauty",
+u:"https://perfumeuae.com",
+d:"perfumeuae is an online perfume store offering international fragrance brands, gift sets and beauty products across the uae.",
+k:"perfumeuae,online shopping uae,perfumes,fragrance store,beauty,gift sets",
+a:""
+},
+{
+i:872,
+n:"V Perfumes",
+c:"business,beauty",
+u:"https://vperfumes.com",
+d:"v perfumes is an online fragrance retailer offering perfumes, oud and beauty products with delivery across the uae.",
+k:"v perfumes,online shopping uae,perfumes,oud,beauty,fragrance store",
+a:""
+},
+{
+i:873,
+n:"Notino UAE",
+c:"business,beauty",
+u:"https://www.notino.ae",
+d:"notino uae is an online beauty store offering perfumes, skincare, makeup and personal care products from global brands.",
+k:"notino uae,online shopping uae,beauty,skincare,makeup,perfumes",
+a:""
+},
+{
+i:874,
+n:"Golden Scent UAE",
+c:"business,beauty",
+u:"https://www.goldenscent.com",
+d:"golden scent serves uae customers with online shopping for perfumes, cosmetics, skincare and beauty essentials.",
+k:"golden scent uae,online shopping uae,perfumes,cosmetics,skincare,beauty",
+a:""
+},
+{
+i:875,
+n:"Nice One UAE",
+c:"business,beauty",
+u:"https://www.niceonesa.com",
+d:"nice one serves customers in the uae with online shopping for beauty products, perfumes, skincare and cosmetics.",
+k:"nice one uae,online shopping uae,beauty products,perfumes,skincare,cosmetics",
+a:""
+},
+ 
+{
+i:876,
+n:"Makeup.ae",
+c:"business,beauty",
+u:"https://makeup.ae",
+d:"makeup.ae is an online beauty store in the uae offering skincare, makeup, fragrances and personal care products from international brands.",
+k:"makeup.ae,online shopping uae,makeup,skincare,beauty products,fragrances,cosmetics",
+a:""
+},
+{
+i:877,
+n:"LookFantastic UAE",
+c:"business,beauty",
+u:"https://www.lookfantastic.ae",
+d:"lookfantastic uae offers online shopping for skincare, haircare, makeup and beauty products from premium global brands.",
+k:"lookfantastic uae,online shopping uae,beauty,skincare,haircare,makeup",
+a:""
+},
+{
+i:878,
+n:"Cult Beauty UAE",
+c:"business,beauty",
+u:"https://www.cultbeauty.com",
+d:"cult beauty serves uae customers with premium skincare, makeup, haircare and wellness products through online shopping.",
+k:"cult beauty uae,online shopping uae,skincare,makeup,haircare,beauty",
+a:""
+},
+{
+i:879,
+n:"iHerb UAE",
+c:"business,health,beauty",
+u:"https://www.iherb.com",
+d:"iherb delivers vitamins, supplements, natural beauty and wellness products to customers across the uae through its online store.",
+k:"iherb uae,online shopping uae,vitamins,supplements,natural beauty,wellness",
+a:""
+},
+{
+i:880,
+n:"HealthKart UAE",
+c:"business,health",
+u:"https://www.healthkart.com",
+d:"healthkart serves customers in the uae with sports nutrition, vitamins and wellness products through international online shopping.",
+k:"healthkart uae,online shopping uae,supplements,vitamins,sports nutrition,health",
+a:""
+},
+{
+i:881,
+n:"Nutrabay UAE",
+c:"business,health",
+u:"https://nutrabay.com",
+d:"nutrabay supplies protein powders, sports nutrition and health supplements for online customers in the uae.",
+k:"nutrabay uae,online shopping uae,protein,sports nutrition,supplements,health",
+a:""
+},
+{
+i:882,
+n:"MyProtein UAE",
+c:"business,health,sports",
+u:"https://www.myprotein.ae",
+d:"myprotein uae is an online fitness nutrition store offering protein, vitamins, sports supplements and healthy snacks.",
+k:"myprotein uae,online shopping uae,protein,sports nutrition,fitness supplements,health",
+a:""
+},
+{
+i:883,
+n:"Bulk UAE",
+c:"business,health,sports",
+u:"https://www.bulk.com",
+d:"bulk supplies sports nutrition, protein powders, vitamins and fitness foods through online shopping for customers in the uae.",
+k:"bulk uae,online shopping uae,sports nutrition,protein,vitamins,fitness",
+a:""
+},
+{
+i:884,
+n:"Sporter UAE",
+c:"business,health,sports",
+u:"https://www.sporter.com",
+d:"sporter is an online health and fitness marketplace offering supplements, vitamins and sports nutrition products across the uae.",
+k:"sporter uae,online shopping uae,supplements,fitness,sports nutrition,vitamins",
+a:""
+},
+{
+i:885,
+n:"The Protein Works UAE",
+c:"business,health,sports",
+u:"https://www.theproteinworks.com",
+d:"the protein works supplies protein powders, meal replacements and sports nutrition through online shopping for uae customers.",
+k:"protein works uae,online shopping uae,protein,supplements,fitness,sports nutrition",
+a:""
+},
+{
+i:886,
+n:"Mediclinic Pharmacy",
+c:"business,health",
+u:"https://www.mediclinic.ae",
+d:"mediclinic pharmacy provides online pharmacy services with healthcare products and wellness essentials for customers in the uae.",
+k:"mediclinic pharmacy,online shopping uae,pharmacy,healthcare,wellness,medicines",
+a:""
+},
+{
+i:887,
+n:"Supercare Pharmacy",
+c:"business,health,beauty",
+u:"https://www.supercare.ae",
+d:"supercare pharmacy is an online healthcare store offering medicines, wellness products, skincare and personal care items.",
+k:"supercare pharmacy,online shopping uae,pharmacy,medicines,wellness,beauty",
+a:""
+},
+{
+i:888,
+n:"800 Pharmacy",
+c:"business,health",
+u:"https://800pharmacy.ae",
+d:"800 pharmacy provides online medicine ordering and healthcare products with home delivery across the uae.",
+k:"800 pharmacy,online shopping uae,online pharmacy,medicines,healthcare,wellness",
+a:""
+},
+{
+i:889,
+n:"Med7 Online",
+c:"business,health",
+u:"https://med7online.com",
+d:"med7 online offers medicines, medical devices and healthcare essentials through its online pharmacy platform in the uae.",
+k:"med7 online,online shopping uae,online pharmacy,medical supplies,healthcare",
+a:""
+},
+{
+i:890,
+n:"Pet's Delight",
+c:"business,food,health",
+u:"https://www.petsdelight.com",
+d:"pet's delight is an online pet store offering pet food, healthcare products, grooming supplies and accessories in the uae.",
+k:"pet's delight uae,online shopping uae,pet food,pet health,pet accessories,grooming",
+a:""
+},
+{
+i:891,
+n:"The Healthy Home",
+c:"business,home,health",
+u:"https://thehealthyhome.me",
+d:"the healthy home offers mattresses, air purifiers, cleaning services and wellness products through online booking in the uae.",
+k:"the healthy home uae,online shopping uae,wellness,air purifiers,mattresses,home health",
+a:""
+},
+{
+i:892,
+n:"Sleep Mod",
+c:"business,home",
+u:"https://sleepmod.com",
+d:"sleep mod is an online bedding retailer offering mattresses, beds and sleep accessories for customers across the uae.",
+k:"sleep mod uae,online shopping uae,mattresses,beds,bedding,sleep products",
+a:""
+},
+{
+i:893,
+n:"Bloomr UAE",
+c:"business,home",
+u:"https://bloomr.com",
+d:"bloomr is an online flower and gifting platform delivering bouquets, plants and gifts throughout the uae.",
+k:"bloomr uae,online shopping uae,flowers,plants,gifts,online florist",
+a:""
+},
+{
+i:894,
+n:"Flower Station Dubai",
+c:"business,home",
+u:"https://www.flowerstationdubai.com",
+d:"flower station dubai offers online flower delivery, bouquets, gifts and floral arrangements across the uae.",
+k:"flower station dubai,online shopping uae,flowers,bouquets,gifts,florist",
+a:""
+},
+{
+i:895,
+n:"National Store LLC",
+c:"business,electronics,home",
+u:"https://nationalstore.ae",
+d:"national store llc is an online retailer offering electronics, home appliances and consumer technology products in the uae.",
+k:"national store uae,online shopping uae,electronics,home appliances,consumer electronics",
+a:""
+},
+{
+i:896,
+n:"Bafleh Jewellery",
+c:"business,jewellery",
+u:"https://www.bafleh.com",
+d:"bafleh jewellery offers gold, diamond and bridal jewellery collections through its online shopping platform in the uae.",
+k:"bafleh jewellery,online shopping uae,gold jewellery,diamond jewellery,bridal jewellery",
+a:""
+},
+{
+i:897,
+n:"Kalyan Jewellers UAE",
+c:"business,jewellery",
+u:"https://www.kalyanjewellers.net",
+d:"kalyan jewellers serves customers in the uae with certified gold, diamond and precious jewellery collections online.",
+k:"kalyan jewellers uae,online shopping uae,gold jewellery,diamond jewellery,bridal",
+a:""
+},
+{
+i:898,
+n:"Swarovski UAE",
+c:"business,jewellery",
+u:"https://www.swarovski.com",
+d:"swarovski offers crystal jewellery, watches and accessories through its official online shopping platform serving uae customers.",
+k:"swarovski uae,online shopping uae,crystal jewellery,watches,fashion accessories",
+a:""
+},
+{
+i:899,
+n:"Pandora UAE",
+c:"business,jewellery",
+u:"https://ae.pandora.net",
+d:"pandora uae is the official online jewellery store offering charms, bracelets, rings and gift collections.",
+k:"pandora uae,online shopping uae,charms,bracelets,rings,jewellery",
+a:""
+},
+{
+i:900,
+n:"Michael Kors UAE",
+c:"business,fashion",
+u:"https://www.michaelkors.global/en_AE/",
+d:"michael kors uae offers handbags, watches, footwear, clothing and fashion accessories through its official online store.",
+k:"michael kors uae,online shopping uae,handbags,fashion,footwear,accessories",
+a:""
+},
+ 
+{
+i:901,
+n:"iSTYLE UAE",
+c:"business,electronics",
+u:"https://istyle.ae",
+d:"istyle uae is an apple premium reseller offering iphones, macs, ipads, accessories and apple services through online shopping in the uae.",
+k:"istyle uae,online shopping uae,apple products,iphones,macbooks,electronics,premium reseller",
+a:""
+},
+{
+i:902,
+n:"HomeSmiths",
+c:"business,home",
+u:"https://www.homesmiths.ae",
+d:"homesmiths is an online home improvement store in the uae offering furniture, decor, kitchenware, garden and diy products.",
+k:"homesmiths,online shopping uae,home improvement,furniture,home decor,diy products",
+a:""
+},
+{
+i:903,
+n:"Mamas & Papas UAE",
+c:"business,fashion,home",
+u:"https://www.mamasandpapas.ae",
+d:"mamas and papas uae offers baby clothing, nursery furniture, strollers and parenting essentials through its online store.",
+k:"mamas and papas uae,online shopping uae,baby products,nursery,fashion,parenting",
+a:""
+},
+{
+i:904,
+n:"BasharaCare",
+c:"business,beauty",
+u:"https://www.basharacare.com",
+d:"basharacare is an online beauty retailer offering skincare, haircare and cosmetics from premium international brands.",
+k:"basharacare,online shopping uae,skincare,beauty,cosmetics,haircare",
+a:""
+},
+{
+i:905,
+n:"Kiehl's UAE",
+c:"business,beauty",
+u:"https://www.kiehls.ae",
+d:"kiehl's uae is the official online skincare store offering facial care, body care and beauty products for daily wellness.",
+k:"kiehl's uae,online shopping uae,skincare,beauty,facial care,body care",
+a:""
+},
+{
+i:906,
+n:"Molton Brown UAE",
+c:"business,beauty",
+u:"https://www.moltonbrown.ae",
+d:"molton brown uae offers luxury bath, body, fragrance and personal care products through its online store.",
+k:"molton brown uae,online shopping uae,luxury beauty,fragrance,body care",
+a:""
+},
+{
+i:907,
+n:"Penhaligon's UAE",
+c:"business,beauty",
+u:"https://www.penhaligons.ae",
+d:"penhaligon's uae is an online fragrance boutique offering perfumes, gift sets and luxury scented products.",
+k:"penhaligon's uae,online shopping uae,perfume,luxury fragrance,gift sets",
+a:""
+},
+{
+i:908,
+n:"Izil Beauty",
+c:"business,beauty",
+u:"https://izilbeauty.com",
+d:"izil beauty is an online skincare brand inspired by moroccan beauty traditions offering natural beauty products in the uae.",
+k:"izil beauty,online shopping uae,natural skincare,beauty,moroccan beauty",
+a:""
+},
+{
+i:909,
+n:"Cosmetis UAE",
+c:"business,beauty",
+u:"https://www.cosmetis.com",
+d:"cosmetis delivers skincare, cosmetics, perfumes and wellness products to customers shopping online in the uae.",
+k:"cosmetis uae,online shopping uae,cosmetics,skincare,perfumes,beauty",
+a:""
+},
+{
+i:910,
+n:"Displate UAE",
+c:"business,home",
+u:"https://displate.com",
+d:"displate serves uae customers with premium metal posters and wall art through online shopping and international delivery.",
+k:"displate uae,online shopping uae,wall art,metal posters,home decor",
+a:""
+},
+{
+i:911,
+n:"The Bedroom by Intercoil",
+c:"business,home",
+u:"https://www.thebedroomstore.com",
+d:"the bedroom offers mattresses, beds and bedroom furniture through its online shopping platform in the uae.",
+k:"the bedroom uae,online shopping uae,mattresses,beds,bedroom furniture",
+a:""
+},
+{
+i:912,
+n:"All For Padel UAE",
+c:"business,sports",
+u:"https://allforpadel.com",
+d:"all for padel supplies padel rackets, shoes, apparel and accessories through online shopping for players in the uae.",
+k:"all for padel uae,online shopping uae,padel,rackets,sports equipment",
+a:""
+},
+{
+i:913,
+n:"Padel Market UAE",
+c:"business,sports",
+u:"https://padelmarket.com",
+d:"padel market offers padel equipment, clothing and accessories through its online store serving customers in the uae.",
+k:"padel market uae,online shopping uae,padel equipment,sports,accessories",
+a:""
+},
+{
+i:914,
+n:"Macron UAE",
+c:"business,sports,fashion",
+u:"https://www.macron.com",
+d:"macron supplies sportswear, teamwear and athletic apparel through online shopping for clubs and individuals in the uae.",
+k:"macron uae,online shopping uae,sportswear,teamwear,athletic apparel",
+a:""
+},
+{
+i:915,
+n:"MiniInTheBox UAE",
+c:"business,electronics,fashion,home",
+u:"https://www.miniinthebox.com",
+d:"miniinthebox delivers electronics, fashion accessories, gadgets and home products to online shoppers in the uae.",
+k:"miniinthebox uae,online shopping uae,gadgets,electronics,fashion accessories",
+a:""
+},
+{
+i:916,
+n:"Yoins UAE",
+c:"business,fashion",
+u:"https://www.yoins.com",
+d:"yoins serves uae customers with affordable fashion clothing, footwear and accessories through its online store.",
+k:"yoins uae,online shopping uae,fashion,women clothing,footwear",
+a:""
+},
+{
+i:917,
+n:"Berrylook UAE",
+c:"business,fashion",
+u:"https://www.berrylook.com",
+d:"berrylook offers fashion clothing, shoes and accessories through online shopping with delivery to the uae.",
+k:"berrylook uae,online shopping uae,fashion clothing,shoes,accessories",
+a:""
+},
+{
+i:918,
+n:"Newchic UAE",
+c:"business,fashion,home",
+u:"https://www.newchic.com",
+d:"newchic delivers fashion, home products and lifestyle accessories to customers shopping online in the uae.",
+k:"newchic uae,online shopping uae,fashion,home products,lifestyle",
+a:""
+},
+{
+i:919,
+n:"RedMagic UAE",
+c:"business,electronics",
+u:"https://global.redmagic.gg",
+d:"redmagic supplies gaming smartphones and accessories through its official online store for customers in the uae.",
+k:"redmagic uae,online shopping uae,gaming phone,electronics,smartphones",
+a:""
+},
+{
+i:920,
+n:"Revibe",
+c:"business,electronics",
+u:"https://revibe.me",
+d:"revibe is an online marketplace for certified refurbished electronics including smartphones, laptops and tablets in the uae.",
+k:"revibe,online shopping uae,refurbished electronics,smartphones,laptops",
+a:""
+},
+{
+i:921,
+n:"JustKidding",
+c:"business,fashion,home",
+u:"https://www.justkidding-me.com",
+d:"justkidding offers baby products, toys, clothing and nursery essentials through online shopping across the uae.",
+k:"justkidding uae,online shopping uae,baby products,toys,nursery",
+a:""
+},
+{
+i:922,
+n:"Marah Kids",
+c:"business,fashion",
+u:"https://marahkids.com",
+d:"marah kids is an online children's fashion store offering clothing and accessories for babies and kids in the uae.",
+k:"marah kids,online shopping uae,kids clothing,baby fashion,children wear",
+a:""
+},
+{
+i:923,
+n:"Cicabelle",
+c:"business,beauty",
+u:"https://cicabelle.com",
+d:"cicabelle offers skincare and beauty products through online shopping with delivery for customers in the uae.",
+k:"cicabelle,online shopping uae,beauty,skincare,cosmetics",
+a:""
+},
+{
+i:924,
+n:"Mr Key Shop",
+c:"business,software",
+u:"https://www.mrkeyshop.com",
+d:"mr key shop provides software licenses, operating systems and digital products through secure online purchasing.",
+k:"mr key shop,software licenses,digital products,windows keys,online software",
+a:""
+},
+{
+i:925,
+n:"GAP UAE",
+c:"business,fashion",
+u:"https://www.gap.ae",
+d:"gap uae is the official online fashion store offering clothing, denim and accessories for men, women and children.",
+k:"gap uae,online shopping uae,fashion clothing,denim,kids wear,accessories",
+a:""
+},
+{
+i:926,
+n:"BFL Group",
+c:"business,fashion,home",
+u:"https://www.bflgroup.com",
+d:"bfl group operates value retail brands offering fashion, home products and lifestyle goods for online shoppers in the uae.",
+k:"bfl group,online shopping uae,fashion,home products,lifestyle,value retail",
+a:""
+},
+{
+i:927,
+n:"Sun & Sand Sports Outlet",
+c:"business,sports,fashion",
+u:"https://en-ae.sssports.com",
+d:"sun and sand sports outlet offers discounted sportswear, footwear and fitness products through online shopping in the uae.",
+k:"sun and sand sports outlet,online shopping uae,sportswear,fitness,footwear,outlet",
+a:""
+},
+{
+i:928,
+n:"Nike UAE",
+c:"business,fashion,sports",
+u:"https://www.nike.ae",
+d:"nike uae is the official online store for sports shoes, apparel and athletic accessories for all ages.",
+k:"nike uae,online shopping uae,sports shoes,athletic apparel,fitness,sportswear",
+a:""
+},
+{
+i:929,
+n:"adidas UAE",
+c:"business,fashion,sports",
+u:"https://www.adidas.ae",
+d:"adidas uae offers sportswear, footwear and performance apparel through its official online shopping platform.",
+k:"adidas uae,online shopping uae,sportswear,footwear,fitness,athletic clothing",
+a:""
+},
+{
+i:930,
+n:"Under Armour UAE",
+c:"business,fashion,sports",
+u:"https://www.underarmour.ae",
+d:"under armour uae provides performance clothing, sports shoes and training accessories through online shopping.",
+k:"under armour uae,online shopping uae,sportswear,training shoes,fitness apparel",
+a:""
+},
+{
+i:931,
+n:"Reebok UAE",
+c:"business,fashion,sports",
+u:"https://www.reebok.ae",
+d:"reebok uae is an online sportswear store offering footwear, fitness clothing and athletic accessories.",
+k:"reebok uae,online shopping uae,sportswear,fitness shoes,athletic apparel",
+a:""
+},
+{
+i:932,
+n:"ASICS UAE",
+c:"business,fashion,sports",
+u:"https://www.asics.com/ae",
+d:"asics uae offers running shoes, sports apparel and fitness accessories through its official online store.",
+k:"asics uae,online shopping uae,running shoes,sportswear,fitness",
+a:""
+},
+{
+i:933,
+n:"New Balance UAE",
+c:"business,fashion,sports",
+u:"https://www.newbalance.ae",
+d:"new balance uae supplies athletic footwear, sports clothing and lifestyle shoes through online shopping.",
+k:"new balance uae,online shopping uae,running shoes,sportswear,lifestyle footwear",
+a:""
+},
+{
+i:934,
+n:"Columbia UAE",
+c:"business,fashion,sports",
+u:"https://www.columbiasportswear.ae",
+d:"columbia uae is an online outdoor apparel retailer offering jackets, hiking gear and sportswear for adventure lovers.",
+k:"columbia uae,online shopping uae,outdoor clothing,hiking gear,sportswear",
+a:""
+},
+{
+i:935,
+n:"Timberland UAE",
+c:"business,fashion",
+u:"https://www.timberland.ae",
+d:"timberland uae offers boots, casual footwear, apparel and outdoor accessories through its online store.",
+k:"timberland uae,online shopping uae,boots,footwear,outdoor fashion",
+a:""
+},
+{
+i:936,
+n:"Clarks UAE",
+c:"business,fashion",
+u:"https://www.clarks.ae",
+d:"clarks uae provides comfortable footwear and leather shoes for men, women and children through online shopping.",
+k:"clarks uae,online shopping uae,leather shoes,footwear,fashion",
+a:""
+},
+{
+i:937,
+n:"Nine West UAE",
+c:"business,fashion",
+u:"https://www.ninewest.ae",
+d:"nine west uae offers women's shoes, handbags and fashion accessories through its official online store.",
+k:"nine west uae,online shopping uae,women shoes,handbags,fashion accessories",
+a:""
+},
+{
+i:938,
+n:"Cole Haan UAE",
+c:"business,fashion",
+u:"https://www.colehaan.ae",
+d:"cole haan uae is an online fashion retailer offering premium shoes, bags and accessories for men and women.",
+k:"cole haan uae,online shopping uae,premium shoes,handbags,fashion",
+a:""
+},
+{
+i:939,
+n:"Hush Puppies UAE",
+c:"business,fashion",
+u:"https://www.hushpuppies.ae",
+d:"hush puppies uae sells casual footwear and accessories through its official online shopping platform.",
+k:"hush puppies uae,online shopping uae,casual shoes,footwear,fashion",
+a:""
+},
+{
+i:940,
+n:"Forever New UAE",
+c:"business,fashion",
+u:"https://www.forevernew.com.au/ae",
+d:"forever new uae offers women's fashion, dresses and accessories through online shopping with delivery in the uae.",
+k:"forever new uae,online shopping uae,women fashion,dresses,accessories",
+a:""
+},
+{
+i:941,
+n:"Mango UAE",
+c:"business,fashion",
+u:"https://shop.mango.com/ae",
+d:"mango uae provides fashion clothing, footwear and accessories for men, women and children through its online store.",
+k:"mango uae,online shopping uae,fashion clothing,footwear,accessories",
+a:""
+},
+{
+i:942,
+n:"Ted Baker UAE",
+c:"business,fashion",
+u:"https://www.tedbaker.ae",
+d:"ted baker uae offers premium clothing, footwear and fashion accessories through online shopping.",
+k:"ted baker uae,online shopping uae,premium fashion,clothing,accessories",
+a:""
+},
+{
+i:943,
+n:"Karen Millen UAE",
+c:"business,fashion",
+u:"https://www.karenmillen.com",
+d:"karen millen serves uae customers with luxury women's clothing and fashion accessories through online shopping.",
+k:"karen millen uae,online shopping uae,women fashion,luxury clothing",
+a:""
+},
+{
+i:944,
+n:"Coast UAE",
+c:"business,fashion",
+u:"https://www.coastfashion.com",
+d:"coast offers occasion wear, dresses and fashion accessories with online delivery for customers in the uae.",
+k:"coast uae,online shopping uae,dresses,occasion wear,women fashion",
+a:""
+},
+{
+i:945,
+n:"Phase Eight UAE",
+c:"business,fashion",
+u:"https://www.phase-eight.com",
+d:"phase eight supplies women's clothing and occasion wear through online shopping for customers in the uae.",
+k:"phase eight uae,online shopping uae,women clothing,dresses,fashion",
+a:""
+},
+{
+i:946,
+n:"Oasis Fashion UAE",
+c:"business,fashion",
+u:"https://www.oasisfashion.com",
+d:"oasis fashion serves uae shoppers with women's clothing, dresses and accessories through its online store.",
+k:"oasis fashion uae,online shopping uae,women fashion,dresses,accessories",
+a:""
+},
+{
+i:947,
+n:"Warehouse Fashion UAE",
+c:"business,fashion",
+u:"https://www.warehousefashion.com",
+d:"warehouse fashion offers modern women's clothing and accessories with online shopping available for uae customers.",
+k:"warehouse fashion uae,online shopping uae,women clothing,fashion,accessories",
+a:""
+},
+{
+i:948,
+n:"Accessorize UAE",
+c:"business,fashion",
+u:"https://www.accessorize.ae",
+d:"accessorize uae is an online fashion accessories store offering bags, jewellery and lifestyle products.",
+k:"accessorize uae,online shopping uae,fashion accessories,bags,jewellery",
+a:""
+},
+{
+i:949,
+n:"Monsoon UAE",
+c:"business,fashion",
+u:"https://www.monsoon.ae",
+d:"monsoon uae offers women's and children's clothing with fashion accessories through its official online store.",
+k:"monsoon uae,online shopping uae,women clothing,kids fashion,accessories",
+a:""
+},
+{
+i:950,
+n:"Guess UAE",
+c:"business,fashion",
+u:"https://www.guess.ae",
+d:"guess uae provides fashion clothing, handbags, watches and footwear through its official online shopping platform.",
+k:"guess uae,online shopping uae,fashion clothing,handbags,watches,footwear",
+a:""
+},
+ {
+i:951,
+n:"Aldo UAE",
+c:"business,fashion",
+u:"https://www.aldoshoes.me",
+d:"aldo uae is an online fashion retailer offering shoes, handbags and accessories for men and women. it serves customers across the uae with official online shopping.",
+k:"aldo uae,online shopping uae,shoes,handbags,fashion accessories,footwear",
+a:""
+},
+{
+i:952,
+n:"Charles & Keith UAE",
+c:"business,fashion",
+u:"https://www.charleskeith.com/ae",
+d:"charles and keith uae offers women's footwear, handbags and fashion accessories through its official online store.",
+k:"charles and keith uae,online shopping uae,women shoes,handbags,fashion accessories",
+a:""
+},
+{
+i:953,
+n:"Steve Madden UAE",
+c:"business,fashion",
+u:"https://www.stevemadden.me",
+d:"steve madden uae provides trendy footwear, handbags and fashion accessories through online shopping in the uae.",
+k:"steve madden uae,online shopping uae,footwear,handbags,fashion accessories",
+a:""
+},
+{
+i:954,
+n:"Crocs UAE",
+c:"business,fashion",
+u:"https://www.crocs.ae",
+d:"crocs uae is the official online store for casual footwear, sandals and accessories for all age groups.",
+k:"crocs uae,online shopping uae,casual footwear,sandals,fashion",
+a:""
+},
+{
+i:955,
+n:"ECCO UAE",
+c:"business,fashion",
+u:"https://ae.ecco.com",
+d:"ecco uae offers premium leather footwear, bags and accessories through its official online shopping platform.",
+k:"ecco uae,online shopping uae,leather shoes,footwear,bags",
+a:""
+},
+{
+i:956,
+n:"Skechers UAE",
+c:"business,fashion,sports",
+u:"https://www.skechers.ae",
+d:"skechers uae supplies walking shoes, sports footwear and casual apparel through official online shopping.",
+k:"skechers uae,online shopping uae,sports shoes,walking shoes,casual footwear",
+a:""
+},
+{
+i:957,
+n:"Birkenstock UAE",
+c:"business,fashion",
+u:"https://www.birkenstock.ae",
+d:"birkenstock uae offers comfortable sandals, footwear and accessories through its official online store.",
+k:"birkenstock uae,online shopping uae,sandals,comfort footwear,fashion",
+a:""
+},
+{
+i:958,
+n:"Bata UAE",
+c:"business,fashion",
+u:"https://www.bata.com/ae",
+d:"bata uae provides affordable footwear and accessories for men, women and children through online shopping.",
+k:"bata uae,online shopping uae,footwear,shoes,fashion",
+a:""
+},
+{
+i:959,
+n:"Aigner UAE",
+c:"business,fashion",
+u:"https://www.aigner-club.com",
+d:"aigner serves uae customers with luxury handbags, leather goods and fashion accessories through online shopping.",
+k:"aigner uae,online shopping uae,luxury handbags,leather goods,fashion",
+a:""
+},
+{
+i:960,
+n:"Longchamp UAE",
+c:"business,fashion",
+u:"https://www.longchamp.com",
+d:"longchamp offers handbags, travel bags and fashion accessories for online shoppers in the uae.",
+k:"longchamp uae,online shopping uae,handbags,travel bags,fashion accessories",
+a:""
+},
+{
+i:961,
+n:"TUMI UAE",
+c:"business,fashion,travel",
+u:"https://www.tumi.ae",
+d:"tumi uae offers premium luggage, backpacks and travel accessories through its official online store.",
+k:"tumi uae,online shopping uae,luggage,travel bags,travel accessories",
+a:""
+},
+{
+i:962,
+n:"Samsonite UAE",
+c:"business,travel",
+u:"https://www.samsonite.ae",
+d:"samsonite uae provides luggage, suitcases and travel accessories through online shopping across the uae.",
+k:"samsonite uae,online shopping uae,luggage,suitcases,travel accessories",
+a:""
+},
+{
+i:963,
+n:"American Tourister UAE",
+c:"business,travel",
+u:"https://www.americantourister.ae",
+d:"american tourister uae offers travel bags, luggage and suitcases through its official online shopping platform.",
+k:"american tourister uae,online shopping uae,luggage,travel bags,suitcases",
+a:""
+},
+{
+i:964,
+n:"Victorinox UAE",
+c:"business,travel",
+u:"https://www.victorinox.com",
+d:"victorinox serves uae customers with travel gear, luggage and multifunction accessories through online shopping.",
+k:"victorinox uae,online shopping uae,travel gear,luggage,travel accessories",
+a:""
+},
+{
+i:965,
+n:"Lacoste UAE",
+c:"business,fashion",
+u:"https://www.lacoste.ae",
+d:"lacoste uae offers premium clothing, footwear and accessories through its official online shopping platform.",
+k:"lacoste uae,online shopping uae,premium fashion,clothing,footwear",
+a:""
+},
+{
+i:966,
+n:"Calvin Klein UAE",
+c:"business,fashion",
+u:"https://www.calvinklein.ae",
+d:"calvin klein uae provides fashion clothing, underwear and accessories through online shopping.",
+k:"calvin klein uae,online shopping uae,fashion clothing,underwear,accessories",
+a:""
+},
+{
+i:967,
+n:"Tommy Hilfiger UAE",
+c:"business,fashion",
+u:"https://www.tommy.com/en_ae",
+d:"tommy hilfiger uae offers clothing, footwear and fashion accessories through its official online store.",
+k:"tommy hilfiger uae,online shopping uae,clothing,footwear,fashion",
+a:""
+},
+{
+i:968,
+n:"Levi's UAE",
+c:"business,fashion",
+u:"https://www.levi.com/AE",
+d:"levi's uae supplies denim clothing, jeans and fashion accessories through online shopping.",
+k:"levi's uae,online shopping uae,jeans,denim,fashion clothing",
+a:""
+},
+{
+i:969,
+n:"Diesel UAE",
+c:"business,fashion",
+u:"https://www.diesel.com",
+d:"diesel serves uae customers with premium denim, clothing and fashion accessories through online shopping.",
+k:"diesel uae,online shopping uae,denim,clothing,fashion",
+a:""
+},
+{
+i:970,
+n:"Superdry UAE",
+c:"business,fashion",
+u:"https://www.superdry.com",
+d:"superdry offers clothing, jackets and fashion accessories with online delivery to customers in the uae.",
+k:"superdry uae,online shopping uae,clothing,jackets,fashion accessories",
+a:""
+},
+{
+i:971,
+n:"Hackett London UAE",
+c:"business,fashion",
+u:"https://www.hackett.com",
+d:"hackett london serves uae shoppers with premium men's clothing and accessories through online shopping.",
+k:"hackett london uae,online shopping uae,men clothing,premium fashion,accessories",
+a:""
+},
+{
+i:972,
+n:"GANT UAE",
+c:"business,fashion",
+u:"https://www.gant.com",
+d:"gant offers premium casual clothing and fashion accessories with online shopping available for uae customers.",
+k:"gant uae,online shopping uae,premium clothing,fashion,casual wear",
+a:""
+},
+{
+i:973,
+n:"DKNY UAE",
+c:"business,fashion",
+u:"https://www.dkny.com",
+d:"dkny provides fashion clothing, handbags and accessories through online shopping for customers in the uae.",
+k:"dkny uae,online shopping uae,handbags,fashion clothing,accessories",
+a:""
+},
+{
+i:974,
+n:"Coach UAE",
+c:"business,fashion",
+u:"https://www.coach.com",
+d:"coach serves uae customers with luxury handbags, wallets and fashion accessories through its online store.",
+k:"coach uae,online shopping uae,luxury handbags,wallets,fashion accessories",
+a:""
+},
+{
+i:975,
+n:"Kate Spade UAE",
+c:"business,fashion",
+u:"https://www.katespade.com",
+d:"kate spade offers handbags, fashion accessories and lifestyle products through online shopping for customers in the uae.",
+k:"kate spade uae,online shopping uae,handbags,fashion accessories,lifestyle products",
+a:""
+},
+ 
+{
+i:976,
+n:"Fossil UAE",
+c:"business,fashion,jewellery",
+u:"https://www.fossil.com",
+d:"fossil serves customers in the uae with watches, bags, wallets and fashion accessories through official online shopping.",
+k:"fossil uae,online shopping uae,watches,leather bags,fashion accessories",
+a:""
+},
+{
+i:977,
+n:"Michael Kors Outlet UAE",
+c:"business,fashion",
+u:"https://www.michaelkors.global",
+d:"michael kors outlet offers handbags, footwear and fashion accessories for online shoppers in the uae.",
+k:"michael kors outlet uae,online shopping uae,handbags,footwear,fashion",
+a:""
+},
+{
+i:978,
+n:"Ralph Lauren UAE",
+c:"business,fashion",
+u:"https://www.ralphlauren.com",
+d:"ralph lauren delivers premium clothing and fashion accessories to online customers in the uae.",
+k:"ralph lauren uae,online shopping uae,premium clothing,fashion accessories",
+a:""
+},
+{
+i:979,
+n:"Polo Ralph Lauren UAE",
+c:"business,fashion",
+u:"https://www.ralphlauren.com",
+d:"polo ralph lauren offers apparel, footwear and accessories through online shopping for customers in the uae.",
+k:"polo ralph lauren uae,online shopping uae,polo shirts,fashion,clothing",
+a:""
+},
+{
+i:980,
+n:"Tom Ford Beauty UAE",
+c:"business,beauty",
+u:"https://www.tomfordbeauty.com",
+d:"tom ford beauty offers luxury fragrances, makeup and skincare through official online shopping for the uae.",
+k:"tom ford beauty uae,online shopping uae,luxury perfume,makeup,skincare",
+a:""
+},
+{
+i:981,
+n:"Jo Malone UAE",
+c:"business,beauty",
+u:"https://www.jomalone.ae",
+d:"jo malone uae offers luxury fragrances, candles and bath products through its official online store.",
+k:"jo malone uae,online shopping uae,perfume,candles,luxury fragrance",
+a:""
+},
+{
+i:982,
+n:"MAC Cosmetics UAE",
+c:"business,beauty",
+u:"https://www.maccosmetics.ae",
+d:"mac cosmetics uae supplies makeup, skincare and beauty products through online shopping.",
+k:"mac cosmetics uae,online shopping uae,makeup,beauty,skincare",
+a:""
+},
+{
+i:983,
+n:"Bobbi Brown UAE",
+c:"business,beauty",
+u:"https://www.bobbibrown.ae",
+d:"bobbi brown uae provides makeup and skincare products through official online shopping.",
+k:"bobbi brown uae,online shopping uae,makeup,beauty,skincare",
+a:""
+},
+{
+i:984,
+n:"Clinique UAE",
+c:"business,beauty",
+u:"https://www.clinique.ae",
+d:"clinique uae offers skincare, makeup and fragrance products through its online store.",
+k:"clinique uae,online shopping uae,skincare,beauty,makeup",
+a:""
+},
+{
+i:985,
+n:"Estée Lauder UAE",
+c:"business,beauty",
+u:"https://www.esteelauder.ae",
+d:"estée lauder uae sells premium skincare, makeup and fragrances through official online shopping.",
+k:"estee lauder uae,online shopping uae,skincare,makeup,fragrance",
+a:""
+},
+{
+i:986,
+n:"The Body Shop UAE",
+c:"business,beauty",
+u:"https://www.thebodyshop.ae",
+d:"the body shop uae offers skincare, bath and body products with online shopping across the uae.",
+k:"the body shop uae,online shopping uae,skincare,body care,beauty",
+a:""
+},
+{
+i:987,
+n:"Bath & Body Works UAE",
+c:"business,beauty",
+u:"https://www.bathandbodyworks.ae",
+d:"bath and body works uae supplies fragrances, body care and home scents through online shopping.",
+k:"bath and body works uae,online shopping uae,body care,fragrance,home scents",
+a:""
+},
+{
+i:988,
+n:"Lush UAE",
+c:"business,beauty",
+u:"https://www.lush.com",
+d:"lush serves uae customers with handmade cosmetics, skincare and bath products through online shopping.",
+k:"lush uae,online shopping uae,handmade cosmetics,skincare,bath products",
+a:""
+},
+{
+i:989,
+n:"Aster Online",
+c:"business,health",
+u:"https://www.asteronline.com",
+d:"aster online is an online pharmacy in the uae offering medicines, wellness products and healthcare essentials.",
+k:"aster online,online shopping uae,online pharmacy,medicines,healthcare",
+a:""
+},
+{
+i:990,
+n:"Life Pharmacy Online",
+c:"business,health,beauty",
+u:"https://www.lifepharmacy.com",
+d:"life pharmacy online offers medicines, vitamins, skincare and wellness products through online shopping in the uae.",
+k:"life pharmacy online,online shopping uae,pharmacy,wellness,vitamins,skincare",
+a:""
+},
+{
+i:991,
+n:"Lulu Webstore",
+c:"business,electronics,home,fashion,beauty,food",
+u:"https://www.luluhypermarket.com",
+d:"lulu webstore provides online shopping in the uae for groceries, electronics, fashion, beauty and home essentials.",
+k:"lulu webstore,online shopping uae,grocery,electronics,fashion,home",
+a:""
+},
+{
+i:992,
+n:"Sharaf DG Apple Store",
+c:"business,electronics",
+u:"https://uae.sharafdg.com",
+d:"sharaf dg apple store offers apple devices and accessories through online shopping in the uae.",
+k:"sharaf dg apple store,online shopping uae,apple,iphone,macbook,electronics",
+a:""
+},
+{
+i:993,
+n:"Virgin Megastore Tickets UAE",
+c:"business,books",
+u:"https://tickets.virginmegastore.me",
+d:"virgin megastore tickets provides online booking for entertainment events and related merchandise in the uae.",
+k:"virgin megastore tickets uae,event tickets,online booking,books,entertainment",
+a:""
+},
+{
+i:994,
+n:"Creative Minds",
+c:"business,books",
+u:"https://www.creativemindsdubai.com",
+d:"creative minds offers art supplies, craft materials, stationery and educational products through online shopping in the uae.",
+k:"creative minds,online shopping uae,art supplies,stationery,craft materials",
+a:""
+},
+{
+i:995,
+n:"Paperclip UAE",
+c:"business,books",
+u:"https://paperclipuae.com",
+d:"paperclip uae supplies stationery, office products and school essentials through its online store.",
+k:"paperclip uae,online shopping uae,stationery,office supplies,school products",
+a:""
+},
+{
+i:996,
+n:"Office One UAE",
+c:"business,books",
+u:"https://officeoneuae.com",
+d:"office one uae offers office supplies, stationery and workplace essentials through online shopping.",
+k:"office one uae,online shopping uae,office supplies,stationery,business products",
+a:""
+},
+{
+i:997,
+n:"OfficeRock",
+c:"business,books",
+u:"https://officerock.com",
+d:"officerock is an online office supplies retailer serving businesses and home offices across the uae.",
+k:"officerock,online shopping uae,office supplies,stationery,business",
+a:""
+},
+{
+i:998,
+n:"Creative Zone Market",
+c:"business",
+u:"https://www.creativezone.ae",
+d:"creative zone provides business services and online solutions for entrepreneurs and companies in the uae.",
+k:"creative zone,business services uae,company setup,online business",
+a:""
+},
+{
+i:999,
+n:"HostSailor",
+c:"business,software",
+u:"https://hostsailor.com",
+d:"hostsailor offers web hosting, cloud servers and domain services for customers in the uae through its online platform.",
+k:"hostsailor,web hosting,cloud servers,domains,software services",
+a:""
+},
+{
+i:1000,
+n:"AEserver",
+c:"business,software",
+u:"https://www.aeserver.com",
+d:"aeserver provides domain registration, web hosting, cloud solutions and digital infrastructure services for businesses in the uae.",
+k:"aeserver,uae web hosting,domain registration,cloud hosting,software services",
+a:""
+}
 ];
