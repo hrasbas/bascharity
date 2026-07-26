@@ -225,10 +225,7 @@ window.countryShops["australia"] = [
     d:"many australian shoppers use aliexpress as a cross border marketplace to buy low cost electronics, clothing, homeware, beauty items, sports accessories and auto parts from international sellers.[web:2196][web:2201]",
     k:"aliexpress australia usage,cross border shopping australia,cheap electronics clothing home and beauty,sports accessories and auto parts marketplace",
     a:""
-  }
-];// australia.js
-window.countryShops = window.countryShops || {};
-window.countryShops["australia"] = [
+  } ,
   {
     i:51,
     n:"adore beauty",
@@ -678,12 +675,7 @@ window.countryShops["australia"] = [
     d:"myer is a major australian department store with online shopping across fashion, beauty, homewares and gifts. it is a trusted option for shoppers wanting a broad department store range and brand variety.",
     k:"myer australia,department store online australia,fashion beauty homewares,gifts,department store shopping",
     a:""
-  }
-];
-
-// australia.js
-window.countryShops = window.countryShops || {};
-window.countryShops["australia"] = [
+  } ,
   {
     i:101,
     n:"amazon australia",
@@ -1133,10 +1125,7 @@ window.countryShops["australia"] = [
     d:"marley spoon australia is a meal kit delivery service with online ordering for recipes and fresh ingredients. it suits households that want flexible weekly meals and easy cooking.",
     k:"marley spoon australia,meal kit delivery australia,recipes fresh ingredients,weekly meals,marleyspoon.com.au",
     a:""
-  }
-];// australia.js
-window.countryShops = window.countryShops || {};
-window.countryShops["australia"] = [
+  } ,
   {
     i:151,
     n:"amazon australia",
@@ -1586,11 +1575,7 @@ window.countryShops["australia"] = [
     d:"marley spoon australia is a meal kit delivery service with online ordering for recipes and fresh ingredients. it suits households that want flexible weekly meals and easy cooking.",
     k:"marley spoon australia,meal kit delivery australia,recipes fresh ingredients,weekly meals,marleyspoon.com.au",
     a:""
-  }
-];
-// australia.js
-window.countryShops = window.countryShops || {};
-window.countryShops["australia"] = [
+  } ,
   {
     i:201,
     n:"amazon australia",
@@ -2049,11 +2034,7 @@ window.countryShops["australia"] = [
     d:"apple store online australia is the official online store for apple devices, accessories and services. it is for customers who want iphones, macs, ipads and apple ecosystem products with official support and delivery.",
     k:"apple store online australia,official apple store australia,iphone mac ipad accessories,apple devices,apple.com/au/store",
     a:""
-  }
-];
-// australia.js
-window.countryShops = window.countryShops || {};
-window.countryShops["australia"] = [
+  } ,
   {
     i:251,
     n:"amazon australia",
@@ -2503,11 +2484,7 @@ window.countryShops["australia"] = [
     d:"marley spoon australia is a meal kit delivery service with online ordering for recipes and fresh ingredients. it suits households that want flexible weekly meals and easy cooking.",
     k:"marley spoon australia,meal kit delivery australia,recipes fresh ingredients,weekly meals,marleyspoon.com.au",
     a:""
-  }
-];
-// australia.js
-window.countryShops = window.countryShops || {};
-window.countryShops["australia"] = [
+  },
   {
     i:251,
     n:"amazon australia",
@@ -2957,11 +2934,7 @@ window.countryShops["australia"] = [
     d:"marley spoon australia is a meal kit delivery service with online ordering for recipes and fresh ingredients. it suits households that want flexible weekly meals and easy cooking.",
     k:"marley spoon australia,meal kit delivery australia,recipes fresh ingredients,weekly meals,marleyspoon.com.au",
     a:""
-  }
-];
-// australia.js
-window.countryShops = window.countryShops || {};
-window.countryShops["australia"] = [
+  } ,
   {
     i:301,
     n:"amazon australia",
@@ -3411,10 +3384,7 @@ window.countryShops["australia"] = [
     d:"marley spoon australia is a meal kit delivery service with online ordering for recipes and fresh ingredients. it suits households that want flexible weekly meals and easy cooking.",
     k:"marley spoon australia,meal kit delivery australia,recipes fresh ingredients,weekly meals,marleyspoon.com.au",
     a:""
-  }
-];// australia.js
-window.countryShops = window.countryShops || {};
-window.countryShops["australia"] = [
+  },
   {
     i:351,
     n:"amazon australia",
@@ -3864,11 +3834,7 @@ window.countryShops["australia"] = [
     d:"marley spoon australia is a meal kit delivery service with online ordering for recipes and fresh ingredients. it suits households that want flexible weekly meals and easy cooking.",
     k:"marley spoon australia,meal kit delivery australia,recipes fresh ingredients,weekly meals,marleyspoon.com.au",
     a:""
-  }
-];
-// australia.js
-window.countryShops = window.countryShops || {};
-window.countryShops["australia"] = [
+  } ,
   {
     i:401,
     n:"amazon australia",
@@ -4318,11 +4284,7 @@ window.countryShops["australia"] = [
     d:"australia post shop is the online store for australia post products, gifts, stationery and selected lifestyle items. it is useful for customers who want postal supplies and gift shopping in one place.",
     k:"australia post shop,online store australia,postal supplies gifts stationery,lifestyle items,shop.auspost.com.au",
     a:""
-  }
-];
-// australia.js
-window.countryShops = window.countryShops || {};
-window.countryShops["australia"] = [
+  } ,
   {
     i:451,
     n:"amazon australia",
@@ -4772,8 +4734,7 @@ window.countryShops["australia"] = [
     d:"australia post shop is the online store for australia post products, gifts, stationery and selected lifestyle items. it is useful for customers who want postal supplies and gift shopping in one place.",
     k:"australia post shop,online store australia,postal supplies gifts stationery,lifestyle items,shop.auspost.com.au",
     a:""
-  }
-];
+  },
 {
   i:501,
   n:"amazon australia",
@@ -5223,10 +5184,7 @@ window.countryShops["australia"] = [
   d:"australia post shop is the online store for australia post products, gifts, stationery and selected lifestyle items. it is useful for customers who want postal supplies and gift shopping in one place.",
   k:"australia post shop,online store australia,postal supplies gifts stationery,lifestyle items,shop.auspost.com.au",
   a:""
-}
-// australia.js
-window.countryShops = window.countryShops || {};
-window.countryShops["australia"] = [
+},
   {
     i:551,
     n:"princess polly",
@@ -5676,11 +5634,7 @@ window.countryShops["australia"] = [
     d:"ozbargain is a popular australian deals community where users share coupons, discounts and shopping bargains across many stores. it is useful for shoppers who want to compare offers before buying online.",
     k:"ozbargain,australia online shopping,deals coupons discounts,shopping bargains australia,ozbargain.com.au",
     a:""
-  }
-];
-// australia.js
-window.countryShops = window.countryShops || {};
-window.countryShops["australia"] = [
+  } ,
   {
     i:601,
     n:"billabong",
@@ -6130,11 +6084,7 @@ window.countryShops["australia"] = [
     d:"woolworths online is a leading australian supermarket website for groceries, fresh food and household essentials. it is designed for families and busy shoppers who want delivery or pickup in australia.",
     k:"woolworths online,australia online shopping,groceries fresh food,household essentials,woolworths.com.au",
     a:""
-  }
-];
-// australia.js
-window.countryShops = window.countryShops || {};
-window.countryShops["australia"] = [
+  } ,
   {
     i:651,
     n:"sneaker freaker",
@@ -6584,11 +6534,7 @@ window.countryShops["australia"] = [
     d:"angus and robertson is an australian bookseller with online shopping for books, stationery and reading gifts. it suits readers and students who want mainstream and educational titles in australia.",
     k:"angus and robertson,australia online shopping,books stationery reading gifts,students,angusrobertson.com.au",
     a:""
-  }
-];
-// australia.js
-window.countryShops = window.countryShops || {};
-window.countryShops["australia"] = [
+  },
   {
     i:701,
     n:"showpo",
@@ -7047,12 +6993,7 @@ window.countryShops["australia"] = [
     d:"amazon australia is a major online marketplace in australia for electronics, home goods, fashion, beauty, books, food and sports products. it is one of the largest ecommerce sites in australia and suits shoppers who want wide selection and fast delivery.",
     k:"amazon australia,australia online shopping,electronics home fashion beauty,books food sports marketplace,amazon.com.au",
     a:""
-  }
-];
-
-// australia.js
-window.countryShops = window.countryShops || {};
-window.countryShops["australia"] = [
+  },
   {
     i:752,
     n:"bunnings warehouse",
@@ -7947,11 +7888,7 @@ window.countryShops["australia"] = [
     d:"seed heritage is an australian fashion retailer with online shopping for men's, women's and kids' clothing. it is for shoppers looking for clean, modern wardrobe staples.",
     k:"seed heritage,australia online shopping,mens womens kids fashion,wardrobe staples,seedheritage.com",
     a:""
-  }
-];
-// australia.js
-window.countryShops = window.countryShops || {};
-window.countryShops["australia"] = [
+  },
   {
     i:851,
     n:"flow hive",
@@ -8401,11 +8338,7 @@ window.countryShops["australia"] = [
     d:"frank green is an australian online store for reusable drink bottles, coffee cups and lifestyle accessories. it suits shoppers in australia who want sustainable everyday products.",
     k:"frank green,australia online shopping,reusable bottles coffee cups,lifestyle accessories,frankgreen.com.au",
     a:""
-  }
-];
-// australia.js
-window.countryShops = window.countryShops || {};
-window.countryShops["australia"] = [
+  },
   {
     i:901,
     n:"bonds",
@@ -8855,11 +8788,7 @@ window.countryShops["australia"] = [
     d:"sephora australia is an online beauty retailer for cosmetics, skincare, haircare and fragrance. it is for shoppers in australia who want premium and trending beauty brands.",
     k:"sephora australia,australia online shopping,cosmetics skincare haircare,fragrance premium beauty,sephora.com.au",
     a:""
-  }
-];
-// australia.js
-window.countryShops = window.countryShops || {};
-window.countryShops["australia"] = [
+  },
   {
     i:951,
     n:"boohoo man usa",
