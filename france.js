@@ -2207,7 +2207,7 @@ k:"citroen france,online shopping france,automotive france,cars accessories vehi
 a:""
 },
   
-[
+
 {
 i:251,
 n:"amazon france",
@@ -2658,7 +2658,7 @@ d:"bmw france is an automotive brand site in france for cars, accessories and pr
 k:"bmw france,online shopping france,premium cars accessories,vehicle services,luxury automotive",
 a:""
 },
-[
+
 {
 i:301,
 n:"amazon france",
@@ -3110,7 +3110,7 @@ k:"bmw france,online shopping france,premium cars accessories,vehicle services,l
 a:""
 },
   
-[
+
 {
 i:351,
 n:"marmiton france",
@@ -3561,7 +3561,7 @@ d:"bonjour france is a lifestyle brand in france for clothing, home goods and gi
 k:"bonjour france,online shopping france,lifestyle brand france,clothing home goods gifts,simple design",
 a:""
 },
- [
+ 
 {
 i:401,
 n:"placeholder 401",
