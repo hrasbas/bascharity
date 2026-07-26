@@ -4545,7 +4545,2273 @@ window.countryShops["germany"] = [
     k: "frankfurt airport shopping,germany online shopping,duty free travel retail,airport click and collect,travel offers",
     a: ""
   }
-];
 
+// germany.js
+window.countryShops = window.countryShops || {};
+window.countryShops["germany"] = [
+  {
+    i: 501,
+    n: "chefkoch.de",
+    c: "food,business",
+    u: "https://www.chefkoch.de/",
+    d: "chefkoch.de is a germany food and recipe platform with cooking ideas, community content and grocery inspiration. it is used by home cooks looking for recipes and food planning online.",
+    k: "chefkoch.de,germany online shopping,recipe platform germany,food community,cooking inspiration",
+    a: ""
+  },
+  {
+    i: 502,
+    n: "getyourguide.com",
+    c: "travel,business",
+    u: "https://www.getyourguide.com/",
+    d: "getyourguide.com is a germany travel platform for tours, activities and attractions. it is popular with travelers booking experiences and local sightseeing online.",
+    k: "getyourguide.com,germany online shopping,travel experiences germany,tours activities attractions,sightseeing booking",
+    a: ""
+  },
+  {
+    i: 503,
+    n: "visitberlin.de",
+    c: "travel,business",
+    u: "https://www.visitberlin.de/",
+    d: "visitberlin.de is a germany travel and city tourism platform for planning visits and finding attractions. it helps travelers discover events, tickets and local experiences.",
+    k: "visitberlin.de,germany online shopping,city tourism germany,attractions events travel,visit planning",
+    a: ""
+  },
+  {
+    i: 504,
+    n: "mpb.com",
+    c: "electronics,business",
+    u: "https://www.mpb.com/",
+    d: "mpb.com is a germany marketplace for used cameras and photo equipment. it is useful for photographers buying and selling pre-owned imaging gear.",
+    k: "mpb.com,germany online shopping,used cameras germany,photo equipment marketplace,secondhand imaging gear",
+    a: ""
+  },
+  {
+    i: 505,
+    n: "heise.de",
+    c: "electronics,software,business",
+    u: "https://www.heise.de/",
+    d: "heise.de is a germany technology and media site with news, software and digital products. it serves readers who want tech information and related online services.",
+    k: "heise.de,germany online shopping,technology media germany,software digital products,tech news site",
+    a: ""
+  },
+  {
+    i: 506,
+    n: "infineon.com",
+    c: "electronics,business",
+    u: "https://www.infineon.com/",
+    d: "infineon.com is a germany technology company site focused on semiconductors and electronics solutions. it is relevant for business and industrial tech users.",
+    k: "infineon.com,germany online shopping,semiconductor germany,electronics solutions,industrial technology",
+    a: ""
+  },
+  {
+    i: 507,
+    n: "bmw.com",
+    c: "automotive,business",
+    u: "https://www.bmw.com/",
+    d: "bmw.com is a germany automotive site for vehicles, accessories and brand services. it is used by car shoppers and owners looking for premium mobility products.",
+    k: "bmw.com,germany online shopping,automotive germany,car accessories brand,vehicle services",
+    a: ""
+  },
+  {
+    i: 508,
+    n: "liqui-moly.com",
+    c: "automotive,business",
+    u: "https://www.liqui-moly.com/",
+    d: "liqui-moly.com is a germany automotive brand shop for oils, additives and car care products. it is used by drivers and workshops looking for vehicle maintenance items.",
+    k: "liqui-moly.com,germany online shopping,car care germany,vehicle maintenance oils,automotive products",
+    a: ""
+  },
+  {
+    i: 509,
+    n: "canyon.com",
+    c: "sports,automotive,business",
+    u: "https://www.canyon.com/",
+    d: "canyon.com is a germany cycling and sports brand site for bikes and accessories. it serves riders who want performance bicycles and related gear online.",
+    k: "canyon.com,germany online shopping,bike brand germany,cycling accessories,sports bicycles",
+    a: ""
+  },
+  {
+    i: 510,
+    n: "carhartt-wip.com",
+    c: "fashion,business",
+    u: "https://www.carhartt-wip.com/de-de",
+    d: "carhartt-wip.com is a germany fashion store for workwear-inspired clothing and streetwear. it is popular with shoppers looking for durable casual style.",
+    k: "carhartt wip.com,germany online shopping,streetwear germany,workwear fashion,casual apparel",
+    a: ""
+  },
+  {
+    i: 511,
+    n: "c-and-a.com",
+    c: "fashion,business",
+    u: "https://www.c-and-a.com/de/de/shop",
+    d: "c-and-a.com is a germany fashion retailer for clothing, shoes and family apparel. it is used by shoppers looking for everyday styles at accessible prices.",
+    k: "c and a.com,germany online shopping,fashion retailer germany,family clothing shoes,everyday apparel",
+    a: ""
+  },
+  {
+    i: 512,
+    n: "hugo-boss.com",
+    c: "fashion,beauty,business",
+    u: "https://www.hugoboss.com/",
+    d: "hugo-boss.com is a germany premium fashion brand for clothing, shoes and accessories. it is aimed at shoppers who want designer tailoring and modern luxury style.",
+    k: "hugo boss.com,germany online shopping,premium fashion germany,designer clothing accessories,luxury style",
+    a: ""
+  },
+  {
+    i: 513,
+    n: "carhartt.com",
+    c: "fashion,business",
+    u: "https://www.carhartt.com/",
+    d: "carhartt.com is a germany workwear and lifestyle clothing brand site. it is used by shoppers looking for sturdy apparel and casual utility wear.",
+    k: "carhartt.com,germany online shopping,workwear germany,utility clothing,casual apparel",
+    a: ""
+  },
+  {
+    i: 514,
+    n: "impericon.com",
+    c: "fashion,music,business",
+    u: "https://www.impericon.com/",
+    d: "impericon.com is a germany fashion and alternative lifestyle shop with clothing and band merchandise. it is popular with shoppers looking for streetwear and music-related goods.",
+    k: "impericon.com,germany online shopping,alternative fashion germany,band merchandise streetwear,music apparel",
+    a: ""
+  },
+  {
+    i: 515,
+    n: "bonprix.de",
+    c: "fashion,home,business",
+    u: "https://www.bonprix.de/",
+    d: "bonprix.de is a germany fashion retailer for clothing, shoes and home items. it serves budget-conscious families and shoppers looking for practical online fashion.",
+    k: "bonprix.de,germany online shopping,fashion home germany,clothing shoes family,budget apparel",
+    a: ""
+  },
+  {
+    i: 516,
+    n: "limango.de",
+    c: "fashion,home,business",
+    u: "https://www.limango.de/",
+    d: "limango.de is a germany shopping club for fashion, kids and home products. it is used by shoppers seeking discounted brands and family-focused offers.",
+    k: "limango.de,germany online shopping,shopping club germany,fashion kids home,discount offers",
+    a: ""
+  },
+  {
+    i: 517,
+    n: "dress-for-less.de",
+    c: "fashion,business",
+    u: "https://www.dress-for-less.de/",
+    d: "dress-for-less.de is a germany outlet site for discounted fashion and accessories. it is popular with bargain shoppers looking for brand-name clothing online.",
+    k: "dress for less.de,germany online shopping,fashion outlet germany,discount clothing accessories,brand deals",
+    a: ""
+  },
+  {
+    i: 518,
+    n: "eschuhe.de",
+    c: "fashion,business",
+    u: "https://www.eschuhe.de/",
+    d: "eschuhe.de is a germany footwear store for shoes, boots and accessories. it is used by shoppers who want a broad range of branded shoe options online.",
+    k: "eschuhe.de,germany online shopping,shoe store germany,footwear accessories,online shoe shop",
+    a: ""
+  },
+  {
+    i: 519,
+    n: "gebrueder-goetz.de",
+    c: "fashion,business",
+    u: "https://www.gebrueder-goetz.de/",
+    d: "gebrueder-goetz.de is a germany shoe retailer for footwear and accessories. it serves customers shopping for everyday shoes and family footwear online.",
+    k: "gebrueder goetz.de,germany online shopping,shoe retailer germany,footwear family,online footwear",
+    a: ""
+  },
+  {
+    i: 520,
+    n: "peterhahn.de",
+    c: "fashion,business",
+    u: "https://www.peterhahn.de/",
+    d: "peterhahn.de is a germany fashion retailer for womenswear, menswear and premium clothing. it is aimed at shoppers looking for classic styles and quality apparel.",
+    k: "peter hahn.de,germany online shopping,fashion germany,womenswear menswear,premium clothing",
+    a: ""
+  },
+  {
+    i: 521,
+    n: "jd.com",
+    c: "fashion,sports,business",
+    u: "https://www.jdsports.de/",
+    d: "jdsports.de is a germany sports fashion retailer for sneakers, clothing and accessories. it is popular with shoppers looking for branded athleisure and streetwear.",
+    k: "jdsports.de,germany online shopping,sports fashion germany,sneakers clothing accessories,athleisure",
+    a: ""
+  },
+  {
+    i: 522,
+    n: "mister-lady.com",
+    c: "fashion,business",
+    u: "https://www.mister-lady.com/",
+    d: "mister-lady.com is a germany fashion retailer for casual clothing and basics. it is used by shoppers looking for everyday apparel at value prices.",
+    k: "mister lady.com,germany online shopping,fashion germany,casual clothing basics,value apparel",
+    a: ""
+  },
+  {
+    i: 523,
+    n: "nkd.com",
+    c: "fashion,home,business",
+    u: "https://www.nkd.com/",
+    d: "nkd.com is a germany value retail site for fashion, home textiles and everyday essentials. it serves budget shoppers and families looking for practical products.",
+    k: "nkd.com,germany online shopping,value retail germany,fashion home textiles,practical essentials",
+    a: ""
+  },
+  {
+    i: 524,
+    n: "mustang-jeans.com",
+    c: "fashion,business",
+    u: "https://www.mustang-jeans.com/de_de/",
+    d: "mustang-jeans.com is a germany denim and casual fashion brand site. it is popular with shoppers looking for jeans and relaxed everyday clothing.",
+    k: "mustang jeans.com,germany online shopping,jeans germany,casual fashion,denim brand",
+    a: ""
+  },
+  {
+    i: 525,
+    n: "y-a-s.com",
+    c: "fashion,business",
+    u: "https://www.y-a-s.com/",
+    d: "y-a-s.com is a germany fashion brand site for womenswear and contemporary style. it is aimed at shoppers who want modern clothing and polished looks.",
+    k: "y a s.com,germany online shopping,womens fashion germany,contemporary style,modern clothing",
+    a: ""
+  },
+  {
+    i: 526,
+    n: "calvinklein.de",
+    c: "fashion,beauty,business",
+    u: "https://www.calvinklein.de/",
+    d: "calvinklein.de is a germany fashion brand store for apparel, underwear and accessories. it serves shoppers looking for minimalist branded clothing and lifestyle products.",
+    k: "calvin klein.de,germany online shopping,fashion brand germany,underwear apparel accessories,branded lifestyle",
+    a: ""
+  },
+  {
+    i: 527,
+    n: "edited.de",
+    c: "fashion,business",
+    u: "https://www.edited.de/",
+    d: "edited.de is a germany fashion store for modern clothing and trend-led pieces. it is used by shoppers who want curated style and contemporary wardrobe basics.",
+    k: "edited.de,germany online shopping,fashion store germany,trend clothing,curated style",
+    a: ""
+  },
+  {
+    i: 528,
+    n: "uhrcenter.de",
+    c: "jewellery,fashion,business",
+    u: "https://www.uhrcenter.de/",
+    d: "uhrcenter.de is a germany watch and jewelry retailer. it is useful for shoppers looking for timepieces, accessories and gift items online.",
+    k: "uhrcenter.de,germany online shopping,watch store germany,jewelry accessories,gift shop",
+    a: ""
+  },
+  {
+    i: 529,
+    n: "taschenkaufhaus.de",
+    c: "fashion,business",
+    u: "https://www.taschenkaufhaus.de/",
+    d: "taschenkaufhaus.de is a germany bag and luggage store for handbags, backpacks and travel accessories. it serves shoppers looking for functional and fashion-focused carry goods.",
+    k: "taschenkaufhaus.de,germany online shopping,bags germany,luggage accessories,travel bags",
+    a: ""
+  },
+  {
+    i: 530,
+    n: "koffer-to-go.de",
+    c: "travel,fashion,business",
+    u: "https://www.koffer-to-go.de/",
+    d: "koffer-to-go.de is a germany luggage and travel accessories shop. it is used by travelers looking for suitcases, bags and trip essentials online.",
+    k: "koffer to go.de,germany online shopping,luggage germany,travel accessories,suitcases bags",
+    a: ""
+  },
+  {
+    i: 531,
+    n: "bmw.com",
+    c: "automotive,business",
+    u: "https://www.bmw.com/",
+    d: "bmw.com is a germany automotive site for vehicles, accessories and brand services. it is used by car shoppers and owners looking for premium mobility products.",
+    k: "bmw.com,germany online shopping,automotive germany,car accessories brand,vehicle services",
+    a: ""
+  },
+  {
+    i: 532,
+    n: "audi.com",
+    c: "automotive,business",
+    u: "https://www.audi.com/",
+    d: "audi.com is a germany automotive brand site for cars, accessories and digital services. it serves drivers and buyers interested in premium vehicles and ownership products.",
+    k: "audi.com,germany online shopping,automotive germany,premium cars accessories,digital car services",
+    a: ""
+  },
+  {
+    i: 533,
+    n: "mercedes-benz.com",
+    c: "automotive,business",
+    u: "https://www.mercedes-benz.com/",
+    d: "mercedes-benz.com is a germany automotive brand site for vehicles, accessories and mobility services. it is used by customers looking for premium cars and brand offerings.",
+    k: "mercedes benz.com,germany online shopping,automotive germany,premium vehicles,car accessories services",
+    a: ""
+  },
+  {
+    i: 534,
+    n: "porsche.com",
+    c: "automotive,business",
+    u: "https://www.porsche.com/",
+    d: "porsche.com is a germany automotive brand site for cars, accessories and lifestyle products. it is popular with enthusiasts and buyers seeking premium sports cars and related goods.",
+    k: "porsche.com,germany online shopping,automotive germany,sports cars accessories,lifestyle brand",
+    a: ""
+  },
+  {
+    i: 535,
+    n: "volkswagen.de",
+    c: "automotive,business",
+    u: "https://www.volkswagen.de/",
+    d: "volkswagen.de is a germany automotive brand site for vehicles, parts and services. it serves car owners and shoppers looking for mainstream vehicle offerings and support.",
+    k: "volkswagen.de,germany online shopping,automotive germany,vehicles parts services,car brand",
+    a: ""
+  },
+  {
+    i: 536,
+    n: "opel.de",
+    c: "automotive,business",
+    u: "https://www.opel.de/",
+    d: "opel.de is a germany automotive brand site for cars, accessories and service information. it is used by buyers and owners looking for vehicle options and support.",
+    k: "opel.de,germany online shopping,automotive germany,cars accessories service,vehicle brand",
+    a: ""
+  },
+  {
+    i: 537,
+    n: "sixt.de",
+    c: "automotive,travel,business",
+    u: "https://www.sixt.de/",
+    d: "sixt.de is a germany car rental and mobility platform for vehicles and travel services. it is used by travelers who need short-term car hire and transport solutions.",
+    k: "sixt.de,germany online shopping,car rental germany,mobility travel service,vehicle hire",
+    a: ""
+  },
+  {
+    i: 538,
+    n: "mietwagencheck.de",
+    c: "travel,automotive,business",
+    u: "https://www.mietwagencheck.de/",
+    d: "mietwagencheck.de is a germany car rental comparison site. it helps travelers compare rental cars and choose vehicle offers online.",
+    k: "mietwagencheck.de,germany online shopping,car rental comparison germany,vehicle hire deals,travel car booking",
+    a: ""
+  },
+  {
+    i: 539,
+    n: "freenow.com",
+    c: "travel,automotive,business",
+    u: "https://www.freenow.com/",
+    d: "freenow.com is a germany mobility platform for taxi rides and urban transport. it is used by people who want convenient ride booking and travel on demand.",
+    k: "freenow.com,germany online shopping,mobility germany,taxi ride booking,urban transport app",
+    a: ""
+  },
+  {
+    i: 540,
+    n: "bolt.eu",
+    c: "travel,automotive,business",
+    u: "https://bolt.eu/",
+    d: "bolt.eu is a germany ride-hailing and mobility platform for trips and deliveries. it is popular with users looking for quick urban transport and app-based rides.",
+    k: "bolt.eu,germany online shopping,ride hailing germany,mobility app,urban transport delivery",
+    a: ""
+  },
+  {
+    i: 541,
+    n: "lufthansa.com",
+    c: "travel,business",
+    u: "https://www.lufthansa.com/",
+    d: "lufthansa.com is a germany airline site for booking domestic and international flights. it serves passengers planning business and leisure air travel.",
+    k: "lufthansa.com,germany online shopping,flight booking germany,airline travel international,business leisure flights",
+    a: ""
+  },
+  {
+    i: 542,
+    n: "ryanair.com",
+    c: "travel,business",
+    u: "https://www.ryanair.com/",
+    d: "ryanair.com is a germany airline booking site for low-cost flights across europe. it is used by travelers searching for budget air travel and direct booking.",
+    k: "ryanair.com,germany online shopping,flight booking germany,budget airline europe,low cost travel",
+    a: ""
+  },
+  {
+    i: 543,
+    n: "booking.com",
+    c: "travel,business",
+    u: "https://www.booking.com/",
+    d: "booking.com is a germany travel platform for hotels, apartments and vacation bookings. it helps travelers compare stays and reserve accommodation online.",
+    k: "booking.com,germany online shopping,travel booking germany,hotel apartment reservation,accommodation platform",
+    a: ""
+  },
+  {
+    i: 544,
+    n: "airbnb.com",
+    c: "travel,business",
+    u: "https://www.airbnb.com/",
+    d: "airbnb.com is a germany travel platform for booking homes, apartments and unique stays. it is used by travelers looking for short-term accommodation online.",
+    k: "airbnb.com,germany online shopping,travel booking germany,home apartment stays,short term accommodation",
+    a: ""
+  },
+  {
+    i: 545,
+    n: "trip.com",
+    c: "travel,business",
+    u: "https://www.trip.com/",
+    d: "trip.com is a germany travel booking platform for flights, hotels and transport. it helps users plan and book trips through one online service.",
+    k: "trip.com,germany online shopping,travel booking germany,flights hotels transport,trip planning platform",
+    a: ""
+  },
+  {
+    i: 546,
+    n: "weg.de",
+    c: "travel,business",
+    u: "https://www.weg.de/",
+    d: "weg.de is a germany travel booking site for holidays, hotels and package trips. it helps users compare vacation options and book trips online.",
+    k: "weg.de,germany online shopping,travel booking germany,holiday package hotel,vacation deals",
+    a: ""
+  },
+  {
+    i: 547,
+    n: "holidaycheck.de",
+    c: "travel,business",
+    u: "https://www.holidaycheck.de/",
+    d: "holidaycheck.de is a germany travel review and booking platform for hotels and holidays. it helps travelers compare accommodations using reviews and booking tools.",
+    k: "holidaycheck.de,germany online shopping,travel review germany,hotel booking holiday,accommodation comparison",
+    a: ""
+  },
+  {
+    i: 548,
+    n: "momondo.de",
+    c: "travel,business",
+    u: "https://www.momondo.de/",
+    d: "momondo.de is a germany travel search platform for flights, hotels and car rentals. it is used by travelers comparing trip options across providers.",
+    k: "momondo.de,germany online shopping,travel search germany,flight hotel car rental,compare trip options",
+    a: ""
+  },
+  {
+    i: 549,
+    n: "skyscanner.de",
+    c: "travel,business",
+    u: "https://www.skyscanner.de/",
+    d: "skyscanner.de is a germany travel search platform for flights, hotels and car hire. it is popular with travelers comparing prices before booking.",
+    k: "skyscanner.de,germany online shopping,flight search germany,hotel car hire comparison,travel deals",
+    a: ""
+  },
+  {
+    i: 550,
+    n: "kayak.de",
+    c: "travel,business",
+    u: "https://www.kayak.de/",
+    d: "kayak.de is a germany travel search and booking platform for flights, hotels and rental cars. it helps travelers compare many options in one place.",
+    k: "kayak.de,germany online shopping,travel search germany,flight hotel car rental,booking comparison",
+    a: ""
+  }
+// germany.js
+window.countryShops = window.countryShops || {};
+window.countryShops["germany"] = [
+  {
+    i: 601,
+    n: "allyouneedfresh.de",
+    c: "food,home,business",
+    u: "https://www.allyouneedfresh.de/",
+    d: "allyouneedfresh.de is a germany grocery delivery site for food, fresh produce and household essentials. it is useful for customers who want home delivery for everyday shopping.",
+    k: "allyouneedfresh.de,germany online shopping,online grocery germany,food delivery household essentials,fresh produce supermarket",
+    a: ""
+  },
+  {
+    i: 602,
+    n: "metro.de",
+    c: "food,business",
+    u: "https://www.metro.de/",
+    d: "metro.de is a germany wholesale shopping platform for food, catering and business supplies. it serves restaurants, retailers and professional buyers.",
+    k: "metro.de,germany online shopping,wholesale germany,food catering business supplies,professional buyers",
+    a: ""
+  },
+  {
+    i: 603,
+    n: "rewe.de",
+    c: "food,home,health,business",
+    u: "https://www.rewe.de/shop",
+    d: "rewe.de is a germany online grocery shop for food, fresh produce and household essentials. it is designed for everyday shoppers who want grocery delivery or pickup.",
+    k: "rewe.de,germany online shopping,online grocery germany,food delivery household essentials,fresh produce supermarket",
+    a: ""
+  },
+  {
+    i: 604,
+    n: "lidl.de",
+    c: "food,home,fashion,beauty,health,sports,business",
+    u: "https://www.lidl.de/",
+    d: "lidl.de is a germany discount shopping site for groceries, household goods, fashion and seasonal items. it suits price-conscious shoppers looking for online deals and practical products.",
+    k: "lidl.de,germany online shopping,discount shopping germany,grocery home fashion seasonal deals,everyday essentials",
+    a: ""
+  },
+  {
+    i: 605,
+    n: "aldi.de",
+    c: "food,home,health,business",
+    u: "https://www.aldi.de/",
+    d: "aldi.de is a germany discount supermarket site for groceries, household goods and seasonal offers. it is popular with shoppers looking for value-priced everyday essentials.",
+    k: "aldi.de,germany online shopping,discount supermarket germany,grocery household seasonal offers,value essentials",
+    a: ""
+  },
+  {
+    i: 606,
+    n: "penny.de",
+    c: "food,home,business",
+    u: "https://www.penny.de/",
+    d: "penny.de is a germany discount grocery retailer for food and household products. it is used by shoppers who want low-price daily essentials.",
+    k: "penny.de,germany online shopping,discount grocery germany,food household essentials,supermarket shopping",
+    a: ""
+  },
+  {
+    i: 607,
+    n: "netto-online.de",
+    c: "food,home,business",
+    u: "https://www.netto-online.de/",
+    d: "netto-online.de is a germany discount shopping site for groceries, household items and seasonal goods. it is designed for value-focused online shoppers.",
+    k: "netto-online.de,germany online shopping,discount shopping germany,grocery household seasonal goods,value store",
+    a: ""
+  },
+  {
+    i: 608,
+    n: "norma24.de",
+    c: "food,home,business",
+    u: "https://www.norma24.de/",
+    d: "norma24.de is a germany discount retailer with groceries, home goods and general merchandise. it serves shoppers looking for practical products at low prices.",
+    k: "norma24.de,germany online shopping,discount retailer germany,grocery home goods,general merchandise",
+    a: ""
+  },
+  {
+    i: 609,
+    n: "fressnapf.de",
+    c: "food,home,business",
+    u: "https://www.fressnapf.de/",
+    d: "fressnapf.de is a germany pet supply retailer for food, care and accessories. it is used by pet owners shopping for animals and pet care products.",
+    k: "fressnapf.de,germany online shopping,pet store germany,pet food care accessories,animal supplies",
+    a: ""
+  },
+  {
+    i: 610,
+    n: "zooplus.de",
+    c: "food,home,business",
+    u: "https://www.zooplus.de/",
+    d: "zooplus.de is a germany online pet shop for food, toys and care items. it is popular with pet owners who want home delivery for pet essentials.",
+    k: "zooplus.de,germany online shopping,pet shop germany,pet food toys care,home delivery pet supplies",
+    a: ""
+  },
+  {
+    i: 611,
+    n: "dehner.de",
+    c: "home,business",
+    u: "https://www.dehner.de/",
+    d: "dehner.de is a germany garden and pet retail site with plants, home goods and animal supplies. it serves gardeners and pet owners shopping online.",
+    k: "dehner.de,germany online shopping,garden store germany,plants pet supplies,home goods",
+    a: ""
+  },
+  {
+    i: 612,
+    n: "toom.de",
+    c: "home,business",
+    u: "https://toom.de/",
+    d: "toom.de is a germany diy and home improvement shop for tools, garden and renovation supplies. it is used by homeowners and builders working on projects.",
+    k: "toom.de,germany online shopping,diy store germany,tools garden renovation,home improvement supplies",
+    a: ""
+  },
+  {
+    i: 613,
+    n: "obi.de",
+    c: "home,business",
+    u: "https://www.obi.de/",
+    d: "obi.de is a germany home improvement retailer with tools, garden, building and renovation products. it serves diy shoppers and professional project buyers.",
+    k: "obi.de,germany online shopping,home improvement germany,tools garden building,diy retailer",
+    a: ""
+  },
+  {
+    i: 614,
+    n: "hornbach.de",
+    c: "home,business",
+    u: "https://www.hornbach.de/",
+    d: "hornbach.de is a germany diy and construction supply store for home, garden and renovation materials. it is popular with serious diy users and trade buyers.",
+    k: "hornbach.de,germany online shopping,diy and construction germany,home garden renovation,building materials store",
+    a: ""
+  },
+  {
+    i: 615,
+    n: "home24.de",
+    c: "home,business",
+    u: "https://www.home24.de/",
+    d: "home24.de is a germany online furniture and home decor retailer. it helps customers buy sofas, tables, storage and interior products online.",
+    k: "home24.de,germany online shopping,furniture germany,home decor sofas tables,interior store",
+    a: ""
+  },
+  {
+    i: 616,
+    n: "jysk.de",
+    c: "home,business",
+    u: "https://jysk.de/",
+    d: "jysk.de is a germany home and furniture shop for beds, decor and household items. it serves shoppers furnishing bedrooms, living rooms and practical spaces.",
+    k: "jysk.de,germany online shopping,furniture store germany,home decor bedding,household furnishings",
+    a: ""
+  },
+  {
+    i: 617,
+    n: "ikea.com",
+    c: "home,business",
+    u: "https://www.ikea.com/de/de/",
+    d: "ikea.com is a germany online shopping site for furniture, storage, kitchen and home decor products. it is popular with families and homeowners furnishing living spaces.",
+    k: "ikea.com,germany online shopping,furniture store germany,home decor kitchen storage,household furnishings",
+    a: ""
+  },
+  {
+    i: 618,
+    n: "manomano.de",
+    c: "home,business",
+    u: "https://www.manomano.de/",
+    d: "manomano.de is a germany online marketplace for diy, home improvement, garden and tools. it is useful for homeowners and hobbyists buying practical project supplies.",
+    k: "manomano.de,germany online shopping,diy store germany,home improvement garden tools,project supplies marketplace",
+    a: ""
+  },
+  {
+    i: 619,
+    n: "conrad.de",
+    c: "electronics,business",
+    u: "https://www.conrad.de/",
+    d: "conrad.de is a germany online store for electronics, tools, automation and technical products. it serves hobbyists, professionals and businesses that need technology supplies.",
+    k: "conrad.de,germany online shopping,electronics and tools germany,technical products automation,professional tech supplies",
+    a: ""
+  },
+  {
+    i: 620,
+    n: "alternate.de",
+    c: "electronics,home,software,business",
+    u: "https://www.alternate.de/",
+    d: "alternate.de is a germany online retailer for computers, gaming, electronics and tech accessories. it is used by shoppers looking for hardware, components and digital products.",
+    k: "alternate.de,germany online shopping,computer shop germany,gaming electronics hardware,tech accessories online",
+    a: ""
+  },
+  {
+    i: 621,
+    n: "notebooksbilliger.de",
+    c: "electronics,software,business",
+    u: "https://www.notebooksbilliger.de/",
+    d: "notebooksbilliger.de is a germany ecommerce store for laptops, computers, monitors and accessories. it helps shoppers compare and buy tech products online.",
+    k: "notebooksbilliger.de,germany online shopping,laptop store germany,computers monitors accessories,tech deals online",
+    a: ""
+  },
+  {
+    i: 622,
+    n: "cyberport.de",
+    c: "electronics,software,business",
+    u: "https://www.cyberport.de/",
+    d: "cyberport.de is a germany online shop for laptops, electronics and digital devices. it is built for tech shoppers and professionals seeking computer and office hardware.",
+    k: "cyberport.de,germany online shopping,laptop and electronics germany,computer hardware digital devices,tech retail store",
+    a: ""
+  },
+  {
+    i: 623,
+    n: "mindfactory.de",
+    c: "electronics,software,business",
+    u: "https://www.mindfactory.de/",
+    d: "mindfactory.de is a germany online retailer for pc parts, hardware and gaming components. it is popular with builders and tech buyers looking for computer upgrades.",
+    k: "mindfactory.de,germany online shopping,pc parts germany,hardware gaming components,computer upgrade store",
+    a: ""
+  },
+  {
+    i: 624,
+    n: "coolblue.de",
+    c: "electronics,home,business",
+    u: "https://www.coolblue.de/",
+    d: "coolblue.de is a germany online electronics store with devices, appliances and accessories. it is designed for shoppers who want clear product choices and home delivery.",
+    k: "coolblue.de,germany online shopping,electronics store germany,appliances accessories devices,tech shopping online",
+    a: ""
+  },
+  {
+    i: 625,
+    n: "mediamarkt.de",
+    c: "electronics,business",
+    u: "https://www.mediamarkt.de/",
+    d: "mediamarkt.de is a major germany online shopping site for consumer electronics, appliances and tech accessories. it is popular with customers buying gadgets, devices and home tech products.",
+    k: "mediamarkt.de,germany online shopping,electronics retailer germany,consumer tech appliances,gadgets devices accessories",
+    a: ""
+  },
+  {
+    i: 626,
+    n: "saturn.de",
+    c: "electronics,business",
+    u: "https://www.saturn.de/",
+    d: "saturn.de is a germany ecommerce store for electronics, computers, appliances and media products. it serves shoppers looking for technology and household devices online.",
+    k: "saturn.de,germany online shopping,electronics store germany,computers appliances media,tech gadgets online shop",
+    a: ""
+  },
+  {
+    i: 627,
+    n: "expert.de",
+    c: "electronics,home,business",
+    u: "https://www.expert.de/",
+    d: "expert.de is a germany electronics retailer with appliances, computers and home tech products. it serves shoppers looking for consumer technology and household devices.",
+    k: "expert.de,germany online shopping,electronics retailer germany,home appliances computers,consumer tech store",
+    a: ""
+  },
+  {
+    i: 628,
+    n: "galaxus.de",
+    c: "electronics,home,business",
+    u: "https://www.galaxus.de/",
+    d: "galaxus.de is a germany online marketplace for electronics, home items and everyday products. it is used by shoppers who want a broad selection of goods online.",
+    k: "galaxus.de,germany online shopping,marketplace germany,electronics home items,everyday products",
+    a: ""
+  },
+  {
+    i: 629,
+    n: "mactrade.de",
+    c: "electronics,software,business",
+    u: "https://www.mactrade.de/",
+    d: "mactrade.de is a germany online store for apple-related hardware and accessories. it is used by mac users and tech buyers looking for compatible devices.",
+    k: "mactrade.de,germany online shopping,apple accessories germany,mac hardware tech,computer store",
+    a: ""
+  },
+  {
+    i: 630,
+    n: "apple.com",
+    c: "electronics,software,business",
+    u: "https://www.apple.com/de/",
+    d: "apple.com is a germany online store for smartphones, laptops, tablets and digital services. it is used by customers who want premium consumer tech and software products.",
+    k: "apple.com,germany online shopping,electronics germany,phones laptops tablets,digital devices software",
+    a: ""
+  },
+  {
+    i: 631,
+    n: "adidas.de",
+    c: "sports,fashion,business",
+    u: "https://www.adidas.de/",
+    d: "adidas.de is a germany sports and fashion brand shop for footwear, apparel and training gear. it is used by athletes and casual shoppers looking for branded activewear.",
+    k: "adidas.de,germany online shopping,sportswear germany,shoes apparel training gear,branded activewear",
+    a: ""
+  },
+  {
+    i: 632,
+    n: "nike.com",
+    c: "sports,fashion,business",
+    u: "https://www.nike.com/de/",
+    d: "nike.com is a germany sportswear shop for shoes, clothing and performance gear. it serves athletes and style shoppers looking for branded sports products.",
+    k: "nike.com,germany online shopping,sportswear germany,shoes clothing performance gear,branded athletic wear",
+    a: ""
+  },
+  {
+    i: 633,
+    n: "puma.com",
+    c: "sports,fashion,business",
+    u: "https://eu.puma.com/de/de/home",
+    d: "puma.com is a germany sports and lifestyle brand shop for footwear and apparel. it is popular with shoppers who want activewear and streetwear styles.",
+    k: "puma.com,germany online shopping,sports lifestyle germany,footwear apparel activewear,streetwear brand",
+    a: ""
+  },
+  {
+    i: 634,
+    n: "decathlon.de",
+    c: "sports,business",
+    u: "https://www.decathlon.de/",
+    d: "decathlon.de is a germany sports retailer with equipment, clothing and gear for many activities. it is popular with athletes, families and outdoor shoppers.",
+    k: "decathlon.de,germany online shopping,sports store germany,fitness outdoor gear,sporting goods",
+    a: ""
+  },
+  {
+    i: 635,
+    n: "intersport.de",
+    c: "sports,business",
+    u: "https://www.intersport.de/",
+    d: "intersport.de is a germany sports retail site for training gear, footwear and outdoor equipment. it is used by athletes and hobbyists shopping for active lifestyle products.",
+    k: "intersport.de,germany online shopping,sports gear germany,training footwear outdoor,active lifestyle store",
+    a: ""
+  },
+  {
+    i: 636,
+    n: "jack-wolfskin.de",
+    c: "sports,travel,business",
+    u: "https://www.jack-wolfskin.de/",
+    d: "jack-wolfskin.de is a germany outdoor store for hiking, travel and weatherproof clothing. it serves customers buying gear for adventure and everyday outdoor use.",
+    k: "jack wolfskin.de,germany online shopping,outdoor gear germany,hiking travel clothing,adventure apparel",
+    a: ""
+  },
+  {
+    i: 637,
+    n: "bergfreunde.de",
+    c: "sports,travel,business",
+    u: "https://www.bergfreunde.de/",
+    d: "bergfreunde.de is a germany outdoor shop for climbing, hiking and camping equipment. it is built for adventure shoppers who need technical gear online.",
+    k: "bergfreunde.de,germany online shopping,outdoor store germany,hiking climbing camping,adventure gear",
+    a: ""
+  },
+  {
+    i: 638,
+    n: "fahrrad-xxl.de",
+    c: "sports,automotive,business",
+    u: "https://www.fahrrad-xxl.de/",
+    d: "fahrrad-xxl.de is a germany bicycle retailer for bikes, parts and cycling accessories. it is used by riders who want online bike shopping and service products.",
+    k: "fahrrad-xxl.de,germany online shopping,bicycle store germany,cycling accessories bikes,cycle shop",
+    a: ""
+  },
+  {
+    i: 639,
+    n: "fahrrad.de",
+    c: "sports,automotive,business",
+    u: "https://www.fahrrad.de/",
+    d: "fahrrad.de is a germany online shop for bicycles, cycling gear and accessories. it is aimed at riders who want bikes, parts and outdoor cycling products.",
+    k: "fahrrad.de,germany online shopping,bicycle store germany,cycling gear accessories,outdoor bikes",
+    a: ""
+  },
+  {
+    i: 640,
+    n: "canyon.com",
+    c: "sports,automotive,business",
+    u: "https://www.canyon.com/",
+    d: "canyon.com is a germany cycling and sports brand site for bikes and accessories. it serves riders who want performance bicycles and related gear online.",
+    k: "canyon.com,germany online shopping,bike brand germany,cycling accessories,sports bicycles",
+    a: ""
+  },
+  {
+    i: 641,
+    n: "thalia.de",
+    c: "books,software,business",
+    u: "https://www.thalia.de/",
+    d: "thalia.de is a germany online bookstore for books, ebooks and learning materials. it is popular with readers, students and families buying literature and study products.",
+    k: "thalia.de,germany online shopping,bookstore germany,books ebooks study materials,reading and learning",
+    a: ""
+  },
+  {
+    i: 642,
+    n: "hugendubel.de",
+    c: "books,software,business",
+    u: "https://www.hugendubel.de/",
+    d: "hugendubel.de is a germany bookshop online for books, ebooks and stationery. it serves readers and students looking for literature and learning products.",
+    k: "hugendubel.de,germany online shopping,book shop germany,books ebooks stationery,reading learning store",
+    a: ""
+  },
+  {
+    i: 643,
+    n: "medimops.de",
+    c: "books,software,business",
+    u: "https://www.medimops.de/",
+    d: "medimops.de is a germany online shop for used books, media and entertainment goods. it is useful for budget shoppers looking for secondhand reading material.",
+    k: "medimops.de,germany online shopping,used books germany,secondhand media,cheap reading materials",
+    a: ""
+  },
+  {
+    i: 644,
+    n: "bol.de",
+    c: "books,software,business",
+    u: "https://www.bol.de/",
+    d: "bol.de is a germany online bookstore and media shop. it serves readers and learners shopping for books, ebooks and related items.",
+    k: "bol.de,germany online shopping,bookstore germany,ebooks media,learning materials",
+    a: ""
+  },
+  {
+    i: 645,
+    n: "worldofbooks.com",
+    c: "books,business",
+    u: "https://www.worldofbooks.com/de-de",
+    d: "worldofbooks.com is a germany online shop for used books and secondhand reading material. it is useful for budget readers and collectors.",
+    k: "worldofbooks.com,germany online shopping,used books germany,secondhand books,cheap reading material",
+    a: ""
+  },
+  {
+    i: 646,
+    n: "eurobuch.com",
+    c: "books,business",
+    u: "https://www.eurobuch.com/",
+    d: "eurobuch.com is a germany book search and marketplace platform for finding books from many sellers. it helps readers compare book offers and availability online.",
+    k: "eurobuch.com,germany online shopping,book marketplace germany,book search platform,compare book offers",
+    a: ""
+  },
+  {
+    i: 647,
+    n: "bahn.com",
+    c: "travel,business",
+    u: "https://www.bahn.com/de",
+    d: "bahn.com is a germany travel platform for train tickets, rail journeys and travel planning. it is used by passengers booking domestic and international rail travel.",
+    k: "bahn.com,germany online shopping,travel booking germany,train tickets rail,journey planning",
+    a: ""
+  },
+  {
+    i: 648,
+    n: "fluege.de",
+    c: "travel,business",
+    u: "https://www.fluege.de/",
+    d: "fluege.de is a germany travel booking platform for flights and holiday planning. it helps users compare airfare and book travel online.",
+    k: "fluege.de,germany online shopping,flight booking germany,travel deals holidays,airfare comparison",
+    a: ""
+  },
+  {
+    i: 649,
+    n: "tui.com",
+    c: "travel,business",
+    u: "https://www.tui.com/",
+    d: "tui.com is a germany travel booking site for package holidays, flights and hotels. it is used by travelers planning vacations and all-in-one trips online.",
+    k: "tui.com,germany online shopping,travel booking germany,package holidays hotels,flight vacation platform",
+    a: ""
+  },
+  {
+    i: 650,
+    n: "getyourguide.com",
+    c: "travel,business",
+    u: "https://www.getyourguide.com/",
+    d: "getyourguide.com is a germany travel platform for tours, activities and attractions. it is popular with travelers booking experiences and local sightseeing online.",
+    k: "getyourguide.com,germany online shopping,travel experiences germany,tours activities attractions,sightseeing booking",
+    a: ""
+  }
+
+// germany.js
+window.countryShops = window.countryShops || {};
+window.countryShops["germany"] = [
+  {
+    i: 651,
+    n: "intersport.de",
+    c: "sports,business",
+    u: "https://www.intersport.de/",
+    d: "intersport.de is a germany sports retail site for training gear, footwear and outdoor equipment. it is used by athletes and hobbyists shopping for active lifestyle products.",
+    k: "intersport.de,germany online shopping,sports gear germany,training footwear outdoor,active lifestyle store",
+    a: ""
+  },
+  {
+    i: 652,
+    n: "sportschuster.de",
+    c: "sports,travel,business",
+    u: "https://www.sport-schuster.de/",
+    d: "sport-schuster.de is a germany outdoor and sports retailer for hiking, climbing and winter equipment. it serves adventure shoppers looking for technical gear online.",
+    k: "sport schuster.de,germany online shopping,outdoor sports germany,hiking climbing winter gear,technical equipment",
+    a: ""
+  },
+  {
+    i: 653,
+    n: "sportler.com",
+    c: "sports,travel,business",
+    u: "https://www.sportler.com/",
+    d: "sportler.com is a germany sports and outdoor shop with gear for mountain, hiking and active travel. it is useful for shoppers who want performance equipment and apparel.",
+    k: "sportler.com,germany online shopping,sports outdoor germany,hiking mountain gear,active travel equipment",
+    a: ""
+  },
+  {
+    i: 654,
+    n: "mountain24.de",
+    c: "sports,travel,business",
+    u: "https://www.mountain24.de/",
+    d: "mountain24.de is a germany outdoor retail site for climbing, hiking and alpine gear. it is built for adventure buyers who need specialty equipment online.",
+    k: "mountain24.de,germany online shopping,outdoor gear germany,climbing hiking alpine,specialty equipment",
+    a: ""
+  },
+  {
+    i: 655,
+    n: "outdoor-zeit.de",
+    c: "sports,travel,business",
+    u: "https://www.outdoor-zeit.de/",
+    d: "outdoor-zeit.de is a germany outdoor and leisure shop for hiking and travel equipment. it serves customers looking for practical gear for adventures and trips.",
+    k: "outdoor-zeit.de,germany online shopping,outdoor shop germany,hiking travel equipment,leisure gear",
+    a: ""
+  },
+  {
+    i: 656,
+    n: "brooksrunning.com",
+    c: "sports,business",
+    u: "https://www.brooksrunning.com/de_de/",
+    d: "brooksrunning.com is a germany running brand site for shoes and performance apparel. it is popular with runners seeking training footwear and sport clothing.",
+    k: "brooksrunning.com,germany online shopping,running shoes germany,performance apparel,sport footwear",
+    a: ""
+  },
+  {
+    i: 657,
+    n: "jdsports.de",
+    c: "sports,fashion,business",
+    u: "https://www.jdsports.de/",
+    d: "jdsports.de is a germany sports fashion retailer for sneakers, clothing and accessories. it is popular with shoppers looking for branded athleisure and streetwear.",
+    k: "jdsports.de,germany online shopping,sports fashion germany,sneakers clothing accessories,athleisure",
+    a: ""
+  },
+  {
+    i: 658,
+    n: "footlocker.de",
+    c: "sports,fashion,business",
+    u: "https://www.footlocker.de/",
+    d: "footlocker.de is a germany footwear and sportswear retailer for sneakers, apparel and accessories. it is used by shoppers looking for branded athletic and street styles.",
+    k: "footlocker.de,germany online shopping,sneakers germany,sportswear apparel accessories,branded footwear",
+    a: ""
+  },
+  {
+    i: 659,
+    n: "galeria.de",
+    c: "fashion,home,beauty,sports,business",
+    u: "https://www.galeria.de/",
+    d: "galeria.de is a germany department store ecommerce site with fashion, home, beauty and gifts. it serves shoppers who want a broad multi-category online store.",
+    k: "galeria.de,germany online shopping,department store germany,fashion home beauty gifts,multi category retail",
+    a: ""
+  },
+  {
+    i: 660,
+    n: "peek-cloppenburg.de",
+    c: "fashion,business",
+    u: "https://www.peek-cloppenburg.de/",
+    d: "peek-cloppenburg.de is a germany fashion retailer for clothing, shoes and accessories. it is aimed at shoppers looking for branded apparel and style advice.",
+    k: "peek cloppenburg.de,germany online shopping,fashion retailer germany,clothing shoes accessories,branded apparel",
+    a: ""
+  },
+  {
+    i: 661,
+    n: "engelhorn.de",
+    c: "fashion,sports,business",
+    u: "https://www.engelhorn.de/",
+    d: "engelhorn.de is a germany fashion and sports retailer with clothing, shoes and activewear. it serves shoppers seeking premium lifestyle and sports brands.",
+    k: "engelhorn.de,germany online shopping,fashion sports germany,clothing shoes activewear,premium retailer",
+    a: ""
+  },
+  {
+    i: 662,
+    n: "baur.de",
+    c: "fashion,home,business",
+    u: "https://www.baur.de/",
+    d: "baur.de is a germany ecommerce site for fashion, home and lifestyle products. it is used by families and everyday shoppers looking for a broad assortment.",
+    k: "baur.de,germany online shopping,fashion home germany,lifestyle products family shopping,ecommerce store",
+    a: ""
+  },
+  {
+    i: 663,
+    n: "ottobrunn.com",
+    c: "fashion,home,business",
+    u: "https://www.otto.de/",
+    d: "otto.de is a major online retailer in germany for fashion, furniture, electronics and lifestyle products. it serves households and everyday shoppers looking for a broad ecommerce selection.",
+    k: "otto.de,germany online shopping,online retailer germany,fashion furniture electronics,lifestyle products ecommerce",
+    a: ""
+  },
+  {
+    i: 664,
+    n: "mister-lady.com",
+    c: "fashion,business",
+    u: "https://www.mister-lady.com/",
+    d: "mister-lady.com is a germany fashion retailer for casual clothing and basics. it is used by shoppers looking for everyday apparel at value prices.",
+    k: "mister lady.com,germany online shopping,fashion germany,casual clothing basics,value apparel",
+    a: ""
+  },
+  {
+    i: 665,
+    n: "maerz.de",
+    c: "fashion,business",
+    u: "https://www.maerz.de/",
+    d: "maerz.de is a germany fashion brand site focused on knitwear and premium casual clothing. it is suitable for shoppers looking for quality wardrobe basics.",
+    k: "maerz.de,germany online shopping,fashion brand germany,knitwear casual clothing,premium basics",
+    a: ""
+  },
+  {
+    i: 666,
+    n: "jeans-fritz.de",
+    c: "fashion,business",
+    u: "https://www.jeans-fritz.de/",
+    d: "jeans-fritz.de is a germany clothing retailer for jeans, casual wear and everyday fashion. it is used by shoppers seeking value-priced apparel and denim.",
+    k: "jeans fritz.de,germany online shopping,jeans germany,casual clothing denim,value fashion",
+    a: ""
+  },
+  {
+    i: 667,
+    n: "mustang-jeans.com",
+    c: "fashion,business",
+    u: "https://www.mustang-jeans.com/de_de/",
+    d: "mustang-jeans.com is a germany denim and casual fashion brand site. it is popular with shoppers looking for jeans and relaxed everyday clothing.",
+    k: "mustang jeans.com,germany online shopping,jeans germany,casual fashion,denim brand",
+    a: ""
+  },
+  {
+    i: 668,
+    n: "calvinklein.de",
+    c: "fashion,beauty,business",
+    u: "https://www.calvinklein.de/",
+    d: "calvinklein.de is a germany fashion brand store for apparel, underwear and accessories. it serves shoppers looking for minimalist branded clothing and lifestyle products.",
+    k: "calvin klein.de,germany online shopping,fashion brand germany,underwear apparel accessories,branded lifestyle",
+    a: ""
+  },
+  {
+    i: 669,
+    n: "y-a-s.com",
+    c: "fashion,business",
+    u: "https://www.y-a-s.com/",
+    d: "y-a-s.com is a germany fashion brand site for womenswear and contemporary style. it is aimed at shoppers who want modern clothing and polished looks.",
+    k: "y a s.com,germany online shopping,womens fashion germany,contemporary style,modern clothing",
+    a: ""
+  },
+  {
+    i: 670,
+    n: "edited.de",
+    c: "fashion,business",
+    u: "https://www.edited.de/",
+    d: "edited.de is a germany fashion store for modern clothing and trend-led pieces. it is used by shoppers who want curated style and contemporary wardrobe basics.",
+    k: "edited.de,germany online shopping,fashion store germany,trend clothing,curated style",
+    a: ""
+  },
+  {
+    i: 671,
+    n: "limango.de",
+    c: "fashion,home,business",
+    u: "https://www.limango.de/",
+    d: "limango.de is a germany shopping club for fashion, kids and home products. it is used by shoppers seeking discounted brands and family-focused offers.",
+    k: "limango.de,germany online shopping,shopping club germany,fashion kids home,discount offers",
+    a: ""
+  },
+  {
+    i: 672,
+    n: "bonprix.de",
+    c: "fashion,home,business",
+    u: "https://www.bonprix.de/",
+    d: "bonprix.de is a germany fashion retailer for clothing, shoes and home items. it serves budget-conscious families and shoppers looking for practical online fashion.",
+    k: "bonprix.de,germany online shopping,fashion home germany,clothing shoes family,budget apparel",
+    a: ""
+  },
+  {
+    i: 673,
+    n: "dress-for-less.de",
+    c: "fashion,business",
+    u: "https://www.dress-for-less.de/",
+    d: "dress-for-less.de is a germany outlet site for discounted fashion and accessories. it is popular with bargain shoppers looking for brand-name clothing online.",
+    k: "dress for less.de,germany online shopping,fashion outlet germany,discount clothing accessories,brand deals",
+    a: ""
+  },
+  {
+    i: 674,
+    n: "eschuhe.de",
+    c: "fashion,business",
+    u: "https://www.eschuhe.de/",
+    d: "eschuhe.de is a germany footwear store for shoes, boots and accessories. it is used by shoppers who want a broad range of branded shoe options online.",
+    k: "eschuhe.de,germany online shopping,shoe store germany,footwear accessories,online shoe shop",
+    a: ""
+  },
+  {
+    i: 675,
+    n: "uhrcenter.de",
+    c: "jewellery,fashion,business",
+    u: "https://www.uhrcenter.de/",
+    d: "uhrcenter.de is a germany watch and jewelry retailer. it is useful for shoppers looking for timepieces, accessories and gift items online.",
+    k: "uhrcenter.de,germany online shopping,watch store germany,jewelry accessories,gift shop",
+    a: ""
+  },
+  {
+    i: 676,
+    n: "taschenkaufhaus.de",
+    c: "fashion,business",
+    u: "https://www.taschenkaufhaus.de/",
+    d: "taschenkaufhaus.de is a germany bag and luggage store for handbags, backpacks and travel accessories. it serves shoppers looking for functional and fashion-focused carry goods.",
+    k: "taschenkaufhaus.de,germany online shopping,bags germany,luggage accessories,travel bags",
+    a: ""
+  },
+  {
+    i: 677,
+    n: "koffer-to-go.de",
+    c: "travel,fashion,business",
+    u: "https://www.koffer-to-go.de/",
+    d: "koffer-to-go.de is a germany luggage and travel accessories shop. it is used by travelers looking for suitcases, bags and trip essentials online.",
+    k: "koffer to go.de,germany online shopping,luggage germany,travel accessories,suitcases bags",
+    a: ""
+  },
+  {
+    i: 678,
+    n: "christ.de",
+    c: "jewellery,business",
+    u: "https://www.christ.de/",
+    d: "christ.de is a germany online jewelry and watches retailer. it serves shoppers looking for rings, necklaces, bracelets and gift items.",
+    k: "christ.de,germany online shopping,jewelry store germany,watches rings necklaces,gift jewelry",
+    a: ""
+  },
+  {
+    i: 679,
+    n: "pandora.net",
+    c: "jewellery,business",
+    u: "https://www.pandora.net/de-de/",
+    d: "pandora.net is a germany jewelry brand shop with charms, bracelets and gift jewelry. it is aimed at shoppers looking for fashionable accessories and presents.",
+    k: "pandora.net,germany online shopping,jewelry brand germany,charms bracelets gifts,fashion accessories",
+    a: ""
+  },
+  {
+    i: 680,
+    n: "123gold.de",
+    c: "jewellery,business",
+    u: "https://www.123gold.de/",
+    d: "123gold.de is a germany jewelry shop for gold rings, wedding bands and custom pieces. it is popular with couples and gift buyers seeking precious metal jewelry.",
+    k: "123gold.de,germany online shopping,gold jewelry germany,wedding rings custom jewelry,precious metal store",
+    a: ""
+  },
+  {
+    i: 681,
+    n: "valmano.de",
+    c: "jewellery,business",
+    u: "https://www.valmano.de/",
+    d: "valmano.de is a germany online shop for watches and jewelry. it is used by shoppers searching for accessories, gifts and branded timepieces.",
+    k: "valmano.de,germany online shopping,watches germany,jewelry accessories gifts,online watch shop",
+    a: ""
+  },
+  {
+    i: 682,
+    n: "mytheresa.com",
+    c: "fashion,beauty,jewellery,business",
+    u: "https://www.mytheresa.com/de/de",
+    d: "mytheresa.com is a germany luxury fashion ecommerce site for designer clothing, bags and shoes. it is aimed at shoppers who want high-end brands and premium style.",
+    k: "mytheresa.com,germany online shopping,luxury fashion germany,designer clothing bags,high end ecommerce",
+    a: ""
+  },
+  {
+    i: 683,
+    n: "breuninger.com",
+    c: "fashion,beauty,jewellery,business",
+    u: "https://www.breuninger.com/de/",
+    d: "breuninger.com is a germany premium fashion store with clothing, shoes, accessories and beauty products. it is aimed at shoppers who want designer and upscale lifestyle items.",
+    k: "breuninger.com,germany online shopping,premium fashion germany,designer clothing beauty,style accessories",
+    a: ""
+  },
+  {
+    i: 684,
+    n: "bestsecret.com",
+    c: "fashion,beauty,business",
+    u: "https://www.bestsecret.com/",
+    d: "bestsecret.com is a germany fashion shopping platform with private-sale style offers on clothing and accessories. it is built for members seeking premium brands at discounted prices.",
+    k: "bestsecret.com,germany online shopping,fashion outlet germany,private sale clothing,premium brands discounts",
+    a: ""
+  },
+  {
+    i: 685,
+    n: "zalando.de",
+    c: "fashion,beauty,business",
+    u: "https://www.zalando.de/",
+    d: "zalando.de is a leading fashion marketplace in germany for clothing, shoes and accessories. it is built for shoppers who want branded fashion with easy online ordering and returns.",
+    k: "zalando.de,germany online shopping,fashion marketplace germany,shoes clothing accessories,branded fashion ecommerce",
+    a: ""
+  },
+  {
+    i: 686,
+    n: "aboutyou.de",
+    c: "fashion,beauty,business",
+    u: "https://www.aboutyou.de/",
+    d: "aboutyou.de is a germany fashion ecommerce site with clothing, shoes, accessories and lifestyle brands. it is aimed at shoppers who want trend-focused online fashion shopping.",
+    k: "aboutyou.de,germany online shopping,fashion ecommerce germany,clothing shoes accessories,style brands online",
+    a: ""
+  },
+  {
+    i: 687,
+    n: "zara.com",
+    c: "fashion,business",
+    u: "https://www.zara.com/de/",
+    d: "zara.com is a germany fashion store for clothing, shoes and accessories. it is popular with shoppers who want trend-led apparel and stylish wardrobe pieces.",
+    k: "zara.com,germany online shopping,fashion store germany,clothing shoes accessories,trendy apparel",
+    a: ""
+  },
+  {
+    i: 688,
+    n: "hm.com",
+    c: "fashion,business",
+    u: "https://www2.hm.com/de_de/index.html",
+    d: "hm.com is a germany fashion ecommerce site for clothing, shoes and accessories. it serves shoppers looking for affordable everyday styles and seasonal trends.",
+    k: "hm.com,germany online shopping,fashion germany,clothing shoes accessories,online clothing store",
+    a: ""
+  },
+  {
+    i: 689,
+    n: "deichmann.com",
+    c: "fashion,business",
+    u: "https://www.deichmann.com/DE/de/shop/welcome.html",
+    d: "deichmann.com is a germany shoe retailer selling footwear for men, women and children. it is a practical choice for shoppers looking for affordable shoes and accessories.",
+    k: "deichmann.com,germany online shopping,shoe store germany,footwear for family,affordable shoes",
+    a: ""
+  },
+  {
+    i: 690,
+    n: "tkmaxx.de",
+    c: "fashion,home,beauty,business",
+    u: "https://www.tkmaxx.de/",
+    d: "tkmaxx.de is a germany off-price shopping site for fashion, home and beauty products. it suits bargain hunters looking for branded items at discounted prices.",
+    k: "tkmaxx.de,germany online shopping,discount fashion germany,home beauty bargains,off price retailer",
+    a: ""
+  },
+  {
+    i: 691,
+    n: "douglas.de",
+    c: "beauty,health,business",
+    u: "https://www.douglas.de/",
+    d: "douglas.de is a germany beauty ecommerce site for fragrances, cosmetics and personal care products. it is aimed at shoppers who want premium beauty and skincare online.",
+    k: "douglas.de,germany online shopping,beauty store germany,cosmetics fragrance skincare,personal care products",
+    a: ""
+  },
+  {
+    i: 692,
+    n: "flaconi.de",
+    c: "beauty,health,business",
+    u: "https://www.flaconi.de/",
+    d: "flaconi.de is a germany beauty online shop for perfumes, skincare and makeup. it serves shoppers looking for branded beauty products and fragrance deals.",
+    k: "flaconi.de,germany online shopping,beauty store germany,perfume skincare makeup,fragrance deals online",
+    a: ""
+  },
+  {
+    i: 693,
+    n: "parfumdreams.de",
+    c: "beauty,health,business",
+    u: "https://www.parfumdreams.de/",
+    d: "parfumdreams.de is a germany online beauty shop specializing in perfumes, skincare and cosmetics. it is used by shoppers searching for fragrance and personal care deals.",
+    k: "parfumdreams.de,germany online shopping,perfume store germany,skincare cosmetics fragrance,beauty deals online",
+    a: ""
+  },
+  {
+    i: 694,
+    n: "notino.de",
+    c: "beauty,health,business",
+    u: "https://www.notino.de/",
+    d: "notino.de is a germany beauty ecommerce site for perfumes, makeup and personal care items. it is useful for shoppers looking for a wide range of beauty brands online.",
+    k: "notino.de,germany online shopping,beauty ecommerce germany,perfumes makeup personal care,brand cosmetics store",
+    a: ""
+  },
+  {
+    i: 695,
+    n: "rituals.com",
+    c: "beauty,health,home,business",
+    u: "https://www.rituals.com/de-de",
+    d: "rituals.com is a germany lifestyle beauty shop for body care, fragrances and home scent products. it is popular with shoppers looking for premium wellness gifts.",
+    k: "rituals.com,germany online shopping,beauty lifestyle germany,body care home fragrance,welfare gift products",
+    a: ""
+  },
+  {
+    i: 696,
+    n: "sephora.de",
+    c: "beauty,health,business",
+    u: "https://www.sephora.de/",
+    d: "sephora.de is a germany beauty store for makeup, skincare and fragrance. it serves shoppers who want brand-name cosmetics and beauty discovery online.",
+    k: "sephora.de,germany online shopping,beauty store germany,makeup skincare fragrance,cosmetics retailer",
+    a: ""
+  },
+  {
+    i: 697,
+    n: "dm.de",
+    c: "beauty,health,home,food,business",
+    u: "https://www.dm.de/",
+    d: "dm.de is a germany drugstore ecommerce site for beauty, health, baby and household products. it is used by families and everyday shoppers buying care essentials.",
+    k: "dm.de,germany online shopping,drugstore germany,beauty health household,baby care essentials",
+    a: ""
+  },
+  {
+    i: 698,
+    n: "rossmann.de",
+    c: "beauty,health,home,food,business",
+    u: "https://www.rossmann.de/",
+    d: "rossmann.de is a germany drugstore ecommerce site for beauty, health, baby and household products. it is used by families and everyday shoppers buying care essentials.",
+    k: "rossmann.de,germany online shopping,drugstore germany,beauty health household,baby care essentials",
+    a: ""
+  },
+  {
+    i: 699,
+    n: "shop-apotheke.com",
+    c: "health,beauty,business",
+    u: "https://www.shop-apotheke.com/",
+    d: "shop-apotheke.com is a germany online pharmacy for medicines, wellness, beauty and health products. it is helpful for customers shopping for pharmacy essentials and personal care items.",
+    k: "shop-apotheke.com,germany online shopping,online pharmacy germany,health beauty wellness,medicine personal care",
+    a: ""
+  },
+  {
+    i: 700,
+    n: "medpex.de",
+    c: "health,beauty,business",
+    u: "https://www.medpex.de/",
+    d: "medpex.de is a germany online pharmacy for medicines, health products and personal care. it is used by shoppers who want pharmacy goods delivered online.",
+    k: "medpex.de,germany online shopping,online pharmacy germany,health products personal care,medicine delivery",
+    a: ""
+  }
+  // germany.js
+window.countryShops = window.countryShops || {};
+window.countryShops["germany"] = [
+  {
+    i: 701,
+    n: "asgoodasnew.de",
+    c: "electronics,business",
+    u: "https://www.asgoodasnew.com/",
+    d: "asgoodasnew.de is a germany refurbished electronics retailer for phones, tablets and gadgets. it is designed for shoppers who want checked secondhand tech products.",
+    k: "asgoodasnew.de,germany online shopping,refurbished tech germany,phones tablets gadgets,used electronics",
+    a: ""
+  },
+  {
+    i: 702,
+    n: "clevertronic.de",
+    c: "electronics,business",
+    u: "https://www.clevertronic.de/",
+    d: "clevertronic.de is a germany online shop for refurbished smartphones and electronics. it suits buyers looking for tested devices at lower prices.",
+    k: "clevertronic.de,germany online shopping,refurbished electronics germany,used smartphones,tech deals online",
+    a: ""
+  },
+  {
+    i: 703,
+    n: "buyzoxs.de",
+    c: "electronics,books,business",
+    u: "https://www.buyzoxs.de/",
+    d: "buyzoxs.de is a germany resale shop for used electronics, books and media. it serves buyers and sellers who want to trade in secondhand goods online.",
+    k: "buyzoxs.de,germany online shopping,used electronics germany,secondhand books media,resale store",
+    a: ""
+  },
+  {
+    i: 704,
+    n: "galaxus.de",
+    c: "electronics,home,business",
+    u: "https://www.galaxus.de/",
+    d: "galaxus.de is a germany online marketplace for electronics, home items and everyday products. it is used by shoppers who want a broad selection of goods online.",
+    k: "galaxus.de,germany online shopping,marketplace germany,electronics home items,everyday products",
+    a: ""
+  },
+  {
+    i: 705,
+    n: "mactrade.de",
+    c: "electronics,software,business",
+    u: "https://www.mactrade.de/",
+    d: "mactrade.de is a germany online store for apple-related hardware and accessories. it is used by mac users and tech buyers looking for compatible devices.",
+    k: "mactrade.de,germany online shopping,apple accessories germany,mac hardware tech,computer store",
+    a: ""
+  },
+  {
+    i: 706,
+    n: "apple.com",
+    c: "electronics,software,business",
+    u: "https://www.apple.com/de/",
+    d: "apple.com is a germany online store for smartphones, laptops, tablets and digital services. it is used by customers who want premium consumer tech and software products.",
+    k: "apple.com,germany online shopping,electronics germany,phones laptops tablets,digital devices software",
+    a: ""
+  },
+  {
+    i: 707,
+    n: "mediamarkt.de",
+    c: "electronics,business",
+    u: "https://www.mediamarkt.de/",
+    d: "mediamarkt.de is a major germany online shopping site for consumer electronics, appliances and tech accessories. it is popular with customers buying gadgets, devices and home tech products.",
+    k: "mediamarkt.de,germany online shopping,electronics retailer germany,consumer tech appliances,gadgets devices accessories",
+    a: ""
+  },
+  {
+    i: 708,
+    n: "saturn.de",
+    c: "electronics,business",
+    u: "https://www.saturn.de/",
+    d: "saturn.de is a germany ecommerce store for electronics, computers, appliances and media products. it serves shoppers looking for technology and household devices online.",
+    k: "saturn.de,germany online shopping,electronics store germany,computers appliances media,tech gadgets online shop",
+    a: ""
+  },
+  {
+    i: 709,
+    n: "expert.de",
+    c: "electronics,home,business",
+    u: "https://www.expert.de/",
+    d: "expert.de is a germany electronics retailer with appliances, computers and home tech products. it serves shoppers looking for consumer technology and household devices.",
+    k: "expert.de,germany online shopping,electronics retailer germany,home appliances computers,consumer tech store",
+    a: ""
+  },
+  {
+    i: 710,
+    n: "conrad.de",
+    c: "electronics,business",
+    u: "https://www.conrad.de/",
+    d: "conrad.de is a germany online store for electronics, tools, automation and technical products. it serves hobbyists, professionals and businesses that need technology supplies.",
+    k: "conrad.de,germany online shopping,electronics and tools germany,technical products automation,professional tech supplies",
+    a: ""
+  },
+  {
+    i: 711,
+    n: "alternate.de",
+    c: "electronics,home,software,business",
+    u: "https://www.alternate.de/",
+    d: "alternate.de is a germany online retailer for computers, gaming, electronics and tech accessories. it is used by shoppers looking for hardware, components and digital products.",
+    k: "alternate.de,germany online shopping,computer shop germany,gaming electronics hardware,tech accessories online",
+    a: ""
+  },
+  {
+    i: 712,
+    n: "notebooksbilliger.de",
+    c: "electronics,software,business",
+    u: "https://www.notebooksbilliger.de/",
+    d: "notebooksbilliger.de is a germany ecommerce store for laptops, computers, monitors and accessories. it helps shoppers compare and buy tech products online.",
+    k: "notebooksbilliger.de,germany online shopping,laptop store germany,computers monitors accessories,tech deals online",
+    a: ""
+  },
+  {
+    i: 713,
+    n: "cyberport.de",
+    c: "electronics,software,business",
+    u: "https://www.cyberport.de/",
+    d: "cyberport.de is a germany online shop for laptops, electronics and digital devices. it is built for tech shoppers and professionals seeking computer and office hardware.",
+    k: "cyberport.de,germany online shopping,laptop and electronics germany,computer hardware digital devices,tech retail store",
+    a: ""
+  },
+  {
+    i: 714,
+    n: "mindfactory.de",
+    c: "electronics,software,business",
+    u: "https://www.mindfactory.de/",
+    d: "mindfactory.de is a germany online retailer for pc parts, hardware and gaming components. it is popular with builders and tech buyers looking for computer upgrades.",
+    k: "mindfactory.de,germany online shopping,pc parts germany,hardware gaming components,computer upgrade store",
+    a: ""
+  },
+  {
+    i: 715,
+    n: "coolblue.de",
+    c: "electronics,home,business",
+    u: "https://www.coolblue.de/",
+    d: "coolblue.de is a germany online electronics store with devices, appliances and accessories. it is designed for shoppers who want clear product choices and home delivery.",
+    k: "coolblue.de,germany online shopping,electronics store germany,appliances accessories devices,tech shopping online",
+    a: ""
+  },
+  {
+    i: 716,
+    n: "galeria.de",
+    c: "fashion,home,beauty,sports,business",
+    u: "https://www.galeria.de/",
+    d: "galeria.de is a germany department store ecommerce site with fashion, home, beauty and gifts. it serves shoppers who want a broad multi-category online store.",
+    k: "galeria.de,germany online shopping,department store germany,fashion home beauty gifts,multi category retail",
+    a: ""
+  },
+  {
+    i: 717,
+    n: "breuninger.com",
+    c: "fashion,beauty,jewellery,business",
+    u: "https://www.breuninger.com/de/",
+    d: "breuninger.com is a germany premium fashion store with clothing, shoes, accessories and beauty products. it is aimed at shoppers who want designer and upscale lifestyle items.",
+    k: "breuninger.com,germany online shopping,premium fashion germany,designer clothing beauty,style accessories",
+    a: ""
+  },
+  {
+    i: 718,
+    n: "bestsecret.com",
+    c: "fashion,beauty,business",
+    u: "https://www.bestsecret.com/",
+    d: "bestsecret.com is a germany fashion shopping platform with private-sale style offers on clothing and accessories. it is built for members seeking premium brands at discounted prices.",
+    k: "bestsecret.com,germany online shopping,fashion outlet germany,private sale clothing,premium brands discounts",
+    a: ""
+  },
+  {
+    i: 719,
+    n: "zalando.de",
+    c: "fashion,beauty,business",
+    u: "https://www.zalando.de/",
+    d: "zalando.de is a leading fashion marketplace in germany for clothing, shoes and accessories. it is built for shoppers who want branded fashion with easy online ordering and returns.",
+    k: "zalando.de,germany online shopping,fashion marketplace germany,shoes clothing accessories,branded fashion ecommerce",
+    a: ""
+  },
+  {
+    i: 720,
+    n: "aboutyou.de",
+    c: "fashion,beauty,business",
+    u: "https://www.aboutyou.de/",
+    d: "aboutyou.de is a germany fashion ecommerce site with clothing, shoes, accessories and lifestyle brands. it is aimed at shoppers who want trend-focused online fashion shopping.",
+    k: "aboutyou.de,germany online shopping,fashion ecommerce germany,clothing shoes accessories,style brands online",
+    a: ""
+  },
+  {
+    i: 721,
+    n: "zara.com",
+    c: "fashion,business",
+    u: "https://www.zara.com/de/",
+    d: "zara.com is a germany fashion store for clothing, shoes and accessories. it is popular with shoppers who want trend-led apparel and stylish wardrobe pieces.",
+    k: "zara.com,germany online shopping,fashion store germany,clothing shoes accessories,trendy apparel",
+    a: ""
+  },
+  {
+    i: 722,
+    n: "hm.com",
+    c: "fashion,business",
+    u: "https://www2.hm.com/de_de/index.html",
+    d: "hm.com is a germany fashion ecommerce site for clothing, shoes and accessories. it serves shoppers looking for affordable everyday styles and seasonal trends.",
+    k: "hm.com,germany online shopping,fashion germany,clothing shoes accessories,online clothing store",
+    a: ""
+  },
+  {
+    i: 723,
+    n: "deichmann.com",
+    c: "fashion,business",
+    u: "https://www.deichmann.com/DE/de/shop/welcome.html",
+    d: "deichmann.com is a germany shoe retailer selling footwear for men, women and children. it is a practical choice for shoppers looking for affordable shoes and accessories.",
+    k: "deichmann.com,germany online shopping,shoe store germany,footwear for family,affordable shoes",
+    a: ""
+  },
+  {
+    i: 724,
+    n: "tkmaxx.de",
+    c: "fashion,home,beauty,business",
+    u: "https://www.tkmaxx.de/",
+    d: "tkmaxx.de is a germany off-price shopping site for fashion, home and beauty products. it suits bargain hunters looking for branded items at discounted prices.",
+    k: "tkmaxx.de,germany online shopping,discount fashion germany,home beauty bargains,off price retailer",
+    a: ""
+  },
+  {
+    i: 725,
+    n: "bonprix.de",
+    c: "fashion,home,business",
+    u: "https://www.bonprix.de/",
+    d: "bonprix.de is a germany fashion retailer for clothing, shoes and home items. it serves budget-conscious families and shoppers looking for practical online fashion.",
+    k: "bonprix.de,germany online shopping,fashion home germany,clothing shoes family,budget apparel",
+    a: ""
+  },
+  {
+    i: 726,
+    n: "limango.de",
+    c: "fashion,home,business",
+    u: "https://www.limango.de/",
+    d: "limango.de is a germany shopping club for fashion, kids and home products. it is used by shoppers seeking discounted brands and family-focused offers.",
+    k: "limango.de,germany online shopping,shopping club germany,fashion kids home,discount offers",
+    a: ""
+  },
+  {
+    i: 727,
+    n: "dress-for-less.de",
+    c: "fashion,business",
+    u: "https://www.dress-for-less.de/",
+    d: "dress-for-less.de is a germany outlet site for discounted fashion and accessories. it is popular with bargain shoppers looking for brand-name clothing online.",
+    k: "dress for less.de,germany online shopping,fashion outlet germany,discount clothing accessories,brand deals",
+    a: ""
+  },
+  {
+    i: 728,
+    n: "eschuhe.de",
+    c: "fashion,business",
+    u: "https://www.eschuhe.de/",
+    d: "eschuhe.de is a germany footwear store for shoes, boots and accessories. it is used by shoppers who want a broad range of branded shoe options online.",
+    k: "eschuhe.de,germany online shopping,shoe store germany,footwear accessories,online shoe shop",
+    a: ""
+  },
+  {
+    i: 729,
+    n: "christ.de",
+    c: "jewellery,business",
+    u: "https://www.christ.de/",
+    d: "christ.de is a germany online jewelry and watches retailer. it serves shoppers looking for rings, necklaces, bracelets and gift items.",
+    k: "christ.de,germany online shopping,jewelry store germany,watches rings necklaces,gift jewelry",
+    a: ""
+  },
+  {
+    i: 730,
+    n: "pandora.net",
+    c: "jewellery,business",
+    u: "https://www.pandora.net/de-de/",
+    d: "pandora.net is a germany jewelry brand shop with charms, bracelets and gift jewelry. it is aimed at shoppers looking for fashionable accessories and presents.",
+    k: "pandora.net,germany online shopping,jewelry brand germany,charms bracelets gifts,fashion accessories",
+    a: ""
+  },
+  {
+    i: 731,
+    n: "123gold.de",
+    c: "jewellery,business",
+    u: "https://www.123gold.de/",
+    d: "123gold.de is a germany jewelry shop for gold rings, wedding bands and custom pieces. it is popular with couples and gift buyers seeking precious metal jewelry.",
+    k: "123gold.de,germany online shopping,gold jewelry germany,wedding rings custom jewelry,precious metal store",
+    a: ""
+  },
+  {
+    i: 732,
+    n: "valmano.de",
+    c: "jewellery,business",
+    u: "https://www.valmano.de/",
+    d: "valmano.de is a germany online shop for watches and jewelry. it is used by shoppers searching for accessories, gifts and branded timepieces.",
+    k: "valmano.de,germany online shopping,watches germany,jewelry accessories gifts,online watch shop",
+    a: ""
+  },
+  {
+    i: 733,
+    n: "douglas.de",
+    c: "beauty,health,business",
+    u: "https://www.douglas.de/",
+    d: "douglas.de is a germany beauty ecommerce site for fragrances, cosmetics and personal care products. it is aimed at shoppers who want premium beauty and skincare online.",
+    k: "douglas.de,germany online shopping,beauty store germany,cosmetics fragrance skincare,personal care products",
+    a: ""
+  },
+  {
+    i: 734,
+    n: "flaconi.de",
+    c: "beauty,health,business",
+    u: "https://www.flaconi.de/",
+    d: "flaconi.de is a germany beauty online shop for perfumes, skincare and makeup. it serves shoppers looking for branded beauty products and fragrance deals.",
+    k: "flaconi.de,germany online shopping,beauty store germany,perfume skincare makeup,fragrance deals online",
+    a: ""
+  },
+  {
+    i: 735,
+    n: "parfumdreams.de",
+    c: "beauty,health,business",
+    u: "https://www.parfumdreams.de/",
+    d: "parfumdreams.de is a germany online beauty shop specializing in perfumes, skincare and cosmetics. it is used by shoppers searching for fragrance and personal care deals.",
+    k: "parfumdreams.de,germany online shopping,perfume store germany,skincare cosmetics fragrance,beauty deals online",
+    a: ""
+  },
+  {
+    i: 736,
+    n: "notino.de",
+    c: "beauty,health,business",
+    u: "https://www.notino.de/",
+    d: "notino.de is a germany beauty ecommerce site for perfumes, makeup and personal care items. it is useful for shoppers looking for a wide range of beauty brands online.",
+    k: "notino.de,germany online shopping,beauty ecommerce germany,perfumes makeup personal care,brand cosmetics store",
+    a: ""
+  },
+  {
+    i: 737,
+    n: "rituals.com",
+    c: "beauty,health,home,business",
+    u: "https://www.rituals.com/de-de",
+    d: "rituals.com is a germany lifestyle beauty shop for body care, fragrances and home scent products. it is popular with shoppers looking for premium wellness gifts.",
+    k: "rituals.com,germany online shopping,beauty lifestyle germany,body care home fragrance,welfare gift products",
+    a: ""
+  },
+  {
+    i: 738,
+    n: "sephora.de",
+    c: "beauty,health,business",
+    u: "https://www.sephora.de/",
+    d: "sephora.de is a germany beauty store for makeup, skincare and fragrance. it serves shoppers who want brand-name cosmetics and beauty discovery online.",
+    k: "sephora.de,germany online shopping,beauty store germany,makeup skincare fragrance,cosmetics retailer",
+    a: ""
+  },
+  {
+    i: 739,
+    n: "dm.de",
+    c: "beauty,health,home,food,business",
+    u: "https://www.dm.de/",
+    d: "dm.de is a germany drugstore ecommerce site for beauty, health, baby and household products. it is used by families and everyday shoppers buying care essentials.",
+    k: "dm.de,germany online shopping,drugstore germany,beauty health household,baby care essentials",
+    a: ""
+  },
+  {
+    i: 740,
+    n: "rossmann.de",
+    c: "beauty,health,home,food,business",
+    u: "https://www.rossmann.de/",
+    d: "rossmann.de is a germany drugstore ecommerce site for beauty, health, baby and household products. it is used by families and everyday shoppers buying care essentials.",
+    k: "rossmann.de,germany online shopping,drugstore germany,beauty health household,baby care essentials",
+    a: ""
+  },
+  {
+    i: 741,
+    n: "shop-apotheke.com",
+    c: "health,beauty,business",
+    u: "https://www.shop-apotheke.com/",
+    d: "shop-apotheke.com is a germany online pharmacy for medicines, wellness, beauty and health products. it is helpful for customers shopping for pharmacy essentials and personal care items.",
+    k: "shop-apotheke.com,germany online shopping,online pharmacy germany,health beauty wellness,medicine personal care",
+    a: ""
+  },
+  {
+    i: 742,
+    n: "medpex.de",
+    c: "health,beauty,business",
+    u: "https://www.medpex.de/",
+    d: "medpex.de is a germany online pharmacy for medicines, health products and personal care. it is used by shoppers who want pharmacy goods delivered online.",
+    k: "medpex.de,germany online shopping,online pharmacy germany,health products personal care,medicine delivery",
+    a: ""
+  },
+  {
+    i: 743,
+    n: "docmorris.de",
+    c: "health,beauty,business",
+    u: "https://www.docmorris.de/",
+    d: "docmorris.de is a germany online pharmacy and health shop for medicines, wellness and care products. it serves people looking for digital pharmacy shopping and home delivery.",
+    k: "docmorris.de,germany online shopping,online pharmacy germany,health wellness medicine,care products",
+    a: ""
+  },
+  {
+    i: 744,
+    n: "myprotein.de",
+    c: "health,sports,food,business",
+    u: "https://www.myprotein.de/",
+    d: "myprotein.de is a germany nutrition and fitness shop for supplements, protein and sports food. it is used by athletes and health-focused customers.",
+    k: "myprotein.de,germany online shopping,fitness nutrition germany,protein supplements sports food,health products",
+    a: ""
+  },
+  {
+    i: 745,
+    n: "bodylab24.de",
+    c: "health,sports,food,business",
+    u: "https://www.bodylab24.de/",
+    d: "bodylab24.de is a germany online store for sports nutrition and supplements. it serves gym users and health-focused shoppers looking for performance products.",
+    k: "bodylab24.de,germany online shopping,sports nutrition germany,protein supplements health,fitness store",
+    a: ""
+  },
+  {
+    i: 746,
+    n: "thalia.de",
+    c: "books,software,business",
+    u: "https://www.thalia.de/",
+    d: "thalia.de is a germany online bookstore for books, ebooks and learning materials. it is popular with readers, students and families buying literature and study products.",
+    k: "thalia.de,germany online shopping,bookstore germany,books ebooks study materials,reading and learning",
+    a: ""
+  },
+  {
+    i: 747,
+    n: "hugendubel.de",
+    c: "books,software,business",
+    u: "https://www.hugendubel.de/",
+    d: "hugendubel.de is a germany bookshop online for books, ebooks and stationery. it serves readers and students looking for literature and learning products.",
+    k: "hugendubel.de,germany online shopping,book shop germany,books ebooks stationery,reading learning store",
+    a: ""
+  },
+  {
+    i: 748,
+    n: "medimops.de",
+    c: "books,software,business",
+    u: "https://www.medimops.de/",
+    d: "medimops.de is a germany online shop for used books, media and entertainment goods. it is useful for budget shoppers looking for secondhand reading material.",
+    k: "medimops.de,germany online shopping,used books germany,secondhand media,cheap reading materials",
+    a: ""
+  },
+  {
+    i: 749,
+    n: "bol.de",
+    c: "books,software,business",
+    u: "https://www.bol.de/",
+    d: "bol.de is a germany online bookstore and media shop. it serves readers and learners shopping for books, ebooks and related items.",
+    k: "bol.de,germany online shopping,bookstore germany,ebooks media,learning materials",
+    a: ""
+  },
+  {
+    i: 750,
+    n: "worldofbooks.com",
+    c: "books,business",
+    u: "https://www.worldofbooks.com/de-de",
+    d: "worldofbooks.com is a germany online shop for used books and secondhand reading material. it is useful for budget readers and collectors.",
+    k: "worldofbooks.com,germany online shopping,used books germany,secondhand books,cheap reading material",
+    a: ""
+  }
+// germany.js
+window.countryShops = window.countryShops || {};
+window.countryShops["germany"] = [
+  {
+    i: 751,
+    n: "sport-schuster.de",
+    c: "sports,travel,business",
+    u: "https://www.sport-schuster.de/",
+    d: "sport-schuster.de is a germany outdoor and sports retailer for hiking, climbing and winter equipment. it serves adventure shoppers looking for technical gear online.",
+    k: "sport schuster.de,germany online shopping,outdoor sports germany,hiking climbing winter gear,technical equipment",
+    a: ""
+  },
+  {
+    i: 752,
+    n: "sportler.com",
+    c: "sports,travel,business",
+    u: "https://www.sportler.com/",
+    d: "sportler.com is a germany sports and outdoor shop with gear for mountain, hiking and active travel. it is useful for shoppers who want performance equipment and apparel.",
+    k: "sportler.com,germany online shopping,sports outdoor germany,hiking mountain gear,active travel equipment",
+    a: ""
+  },
+  {
+    i: 753,
+    n: "mountain24.de",
+    c: "sports,travel,business",
+    u: "https://www.mountain24.de/",
+    d: "mountain24.de is a germany outdoor retail site for climbing, hiking and alpine gear. it is built for adventure buyers who need specialty equipment online.",
+    k: "mountain24.de,germany online shopping,outdoor gear germany,climbing hiking alpine,specialty equipment",
+    a: ""
+  },
+  {
+    i: 754,
+    n: "outdoor-zeit.de",
+    c: "sports,travel,business",
+    u: "https://www.outdoor-zeit.de/",
+    d: "outdoor-zeit.de is a germany outdoor and leisure shop for hiking and travel equipment. it serves customers looking for practical gear for adventures and trips.",
+    k: "outdoor-zeit.de,germany online shopping,outdoor shop germany,hiking travel equipment,leisure gear",
+    a: ""
+  },
+  {
+    i: 755,
+    n: "brooksrunning.com",
+    c: "sports,business",
+    u: "https://www.brooksrunning.com/de_de/",
+    d: "brooksrunning.com is a germany running brand site for shoes and performance apparel. it is popular with runners seeking training footwear and sport clothing.",
+    k: "brooksrunning.com,germany online shopping,running shoes germany,performance apparel,sport footwear",
+    a: ""
+  },
+  {
+    i: 756,
+    n: "jdsports.de",
+    c: "sports,fashion,business",
+    u: "https://www.jdsports.de/",
+    d: "jdsports.de is a germany sports fashion retailer for sneakers, clothing and accessories. it is popular with shoppers looking for branded athleisure and streetwear.",
+    k: "jdsports.de,germany online shopping,sports fashion germany,sneakers clothing accessories,athleisure",
+    a: ""
+  },
+  {
+    i: 757,
+    n: "footlocker.de",
+    c: "sports,fashion,business",
+    u: "https://www.footlocker.de/",
+    d: "footlocker.de is a germany footwear and sportswear retailer for sneakers, apparel and accessories. it is used by shoppers looking for branded athletic and street styles.",
+    k: "footlocker.de,germany online shopping,sneakers germany,sportswear apparel accessories,branded footwear",
+    a: ""
+  },
+  {
+    i: 758,
+    n: "galeria.de",
+    c: "fashion,home,beauty,sports,business",
+    u: "https://www.galeria.de/",
+    d: "galeria.de is a germany department store ecommerce site with fashion, home, beauty and gifts. it serves shoppers who want a broad multi-category online store.",
+    k: "galeria.de,germany online shopping,department store germany,fashion home beauty gifts,multi category retail",
+    a: ""
+  },
+  {
+    i: 759,
+    n: "peek-cloppenburg.de",
+    c: "fashion,business",
+    u: "https://www.peek-cloppenburg.de/",
+    d: "peek-cloppenburg.de is a germany fashion retailer for clothing, shoes and accessories. it is aimed at shoppers looking for branded apparel and style advice.",
+    k: "peek cloppenburg.de,germany online shopping,fashion retailer germany,clothing shoes accessories,branded apparel",
+    a: ""
+  },
+  {
+    i: 760,
+    n: "engelhorn.de",
+    c: "fashion,sports,business",
+    u: "https://www.engelhorn.de/",
+    d: "engelhorn.de is a germany fashion and sports retailer with clothing, shoes and activewear. it serves shoppers seeking premium lifestyle and sports brands.",
+    k: "engelhorn.de,germany online shopping,fashion sports germany,clothing shoes activewear,premium retailer",
+    a: ""
+  },
+  {
+    i: 761,
+    n: "baur.de",
+    c: "fashion,home,business",
+    u: "https://www.baur.de/",
+    d: "baur.de is a germany ecommerce site for fashion, home and lifestyle products. it is used by families and everyday shoppers looking for a broad assortment.",
+    k: "baur.de,germany online shopping,fashion home germany,lifestyle products family shopping,ecommerce store",
+    a: ""
+  },
+  {
+    i: 762,
+    n: "mister-lady.com",
+    c: "fashion,business",
+    u: "https://www.mister-lady.com/",
+    d: "mister-lady.com is a germany fashion retailer for casual clothing and basics. it is used by shoppers looking for everyday apparel at value prices.",
+    k: "mister lady.com,germany online shopping,fashion germany,casual clothing basics,value apparel",
+    a: ""
+  },
+  {
+    i: 763,
+    n: "maerz.de",
+    c: "fashion,business",
+    u: "https://www.maerz.de/",
+    d: "maerz.de is a germany fashion brand site focused on knitwear and premium casual clothing. it is suitable for shoppers looking for quality wardrobe basics.",
+    k: "maerz.de,germany online shopping,fashion brand germany,knitwear casual clothing,premium basics",
+    a: ""
+  },
+  {
+    i: 764,
+    n: "jeans-fritz.de",
+    c: "fashion,business",
+    u: "https://www.jeans-fritz.de/",
+    d: "jeans-fritz.de is a germany clothing retailer for jeans, casual wear and everyday fashion. it is used by shoppers seeking value-priced apparel and denim.",
+    k: "jeans fritz.de,germany online shopping,jeans germany,casual clothing denim,value fashion",
+    a: ""
+  },
+  {
+    i: 765,
+    n: "mustang-jeans.com",
+    c: "fashion,business",
+    u: "https://www.mustang-jeans.com/de_de/",
+    d: "mustang-jeans.com is a germany denim and casual fashion brand site. it is popular with shoppers looking for jeans and relaxed everyday clothing.",
+    k: "mustang jeans.com,germany online shopping,jeans germany,casual fashion,denim brand",
+    a: ""
+  },
+  {
+    i: 766,
+    n: "calvinklein.de",
+    c: "fashion,beauty,business",
+    u: "https://www.calvinklein.de/",
+    d: "calvinklein.de is a germany fashion brand store for apparel, underwear and accessories. it serves shoppers looking for minimalist branded clothing and lifestyle products.",
+    k: "calvin klein.de,germany online shopping,fashion brand germany,underwear apparel accessories,branded lifestyle",
+    a: ""
+  },
+  {
+    i: 767,
+    n: "y-a-s.com",
+    c: "fashion,business",
+    u: "https://www.y-a-s.com/",
+    d: "y-a-s.com is a germany fashion brand site for womenswear and contemporary style. it is aimed at shoppers who want modern clothing and polished looks.",
+    k: "y a s.com,germany online shopping,womens fashion germany,contemporary style,modern clothing",
+    a: ""
+  },
+  {
+    i: 768,
+    n: "edited.de",
+    c: "fashion,business",
+    u: "https://www.edited.de/",
+    d: "edited.de is a germany fashion store for modern clothing and trend-led pieces. it is used by shoppers who want curated style and contemporary wardrobe basics.",
+    k: "edited.de,germany online shopping,fashion store germany,trend clothing,curated style",
+    a: ""
+  },
+  {
+    i: 769,
+    n: "limango.de",
+    c: "fashion,home,business",
+    u: "https://www.limango.de/",
+    d: "limango.de is a germany shopping club for fashion, kids and home products. it is used by shoppers seeking discounted brands and family-focused offers.",
+    k: "limango.de,germany online shopping,shopping club germany,fashion kids home,discount offers",
+    a: ""
+  },
+  {
+    i: 770,
+    n: "bonprix.de",
+    c: "fashion,home,business",
+    u: "https://www.bonprix.de/",
+    d: "bonprix.de is a germany fashion retailer for clothing, shoes and home items. it serves budget-conscious families and shoppers looking for practical online fashion.",
+    k: "bonprix.de,germany online shopping,fashion home germany,clothing shoes family,budget apparel",
+    a: ""
+  },
+  {
+    i: 771,
+    n: "dress-for-less.de",
+    c: "fashion,business",
+    u: "https://www.dress-for-less.de/",
+    d: "dress-for-less.de is a germany outlet site for discounted fashion and accessories. it is popular with bargain shoppers looking for brand-name clothing online.",
+    k: "dress for less.de,germany online shopping,fashion outlet germany,discount clothing accessories,brand deals",
+    a: ""
+  },
+  {
+    i: 772,
+    n: "eschuhe.de",
+    c: "fashion,business",
+    u: "https://www.eschuhe.de/",
+    d: "eschuhe.de is a germany footwear store for shoes, boots and accessories. it is used by shoppers who want a broad range of branded shoe options online.",
+    k: "eschuhe.de,germany online shopping,shoe store germany,footwear accessories,online shoe shop",
+    a: ""
+  },
+  {
+    i: 773,
+    n: "uhrcenter.de",
+    c: "jewellery,fashion,business",
+    u: "https://www.uhrcenter.de/",
+    d: "uhrcenter.de is a germany watch and jewelry retailer. it is useful for shoppers looking for timepieces, accessories and gift items online.",
+    k: "uhrcenter.de,germany online shopping,watch store germany,jewelry accessories,gift shop",
+    a: ""
+  },
+  {
+    i: 774,
+    n: "taschenkaufhaus.de",
+    c: "fashion,business",
+    u: "https://www.taschenkaufhaus.de/",
+    d: "taschenkaufhaus.de is a germany bag and luggage store for handbags, backpacks and travel accessories. it serves shoppers looking for functional and fashion-focused carry goods.",
+    k: "taschenkaufhaus.de,germany online shopping,bags germany,luggage accessories,travel bags",
+    a: ""
+  },
+  {
+    i: 775,
+    n: "koffer-to-go.de",
+    c: "travel,fashion,business",
+    u: "https://www.koffer-to-go.de/",
+    d: "koffer-to-go.de is a germany luggage and travel accessories shop. it is used by travelers looking for suitcases, bags and trip essentials online.",
+    k: "koffer to go.de,germany online shopping,luggage germany,travel accessories,suitcases bags",
+    a: ""
+  },
+  {
+    i: 776,
+    n: "christ.de",
+    c: "jewellery,business",
+    u: "https://www.christ.de/",
+    d: "christ.de is a germany online jewelry and watches retailer. it serves shoppers looking for rings, necklaces, bracelets and gift items.",
+    k: "christ.de,germany online shopping,jewelry store germany,watches rings necklaces,gift jewelry",
+    a: ""
+  },
+  {
+    i: 777,
+    n: "pandora.net",
+    c: "jewellery,business",
+    u: "https://www.pandora.net/de-de/",
+    d: "pandora.net is a germany jewelry brand shop with charms, bracelets and gift jewelry. it is aimed at shoppers looking for fashionable accessories and presents.",
+    k: "pandora.net,germany online shopping,jewelry brand germany,charms bracelets gifts,fashion accessories",
+    a: ""
+  },
+  {
+    i: 778,
+    n: "123gold.de",
+    c: "jewellery,business",
+    u: "https://www.123gold.de/",
+    d: "123gold.de is a germany jewelry shop for gold rings, wedding bands and custom pieces. it is popular with couples and gift buyers seeking precious metal jewelry.",
+    k: "123gold.de,germany online shopping,gold jewelry germany,wedding rings custom jewelry,precious metal store",
+    a: ""
+  },
+  {
+    i: 779,
+    n: "valmano.de",
+    c: "jewellery,business",
+    u: "https://www.valmano.de/",
+    d: "valmano.de is a germany online shop for watches and jewelry. it is used by shoppers searching for accessories, gifts and branded timepieces.",
+    k: "valmano.de,germany online shopping,watches germany,jewelry accessories gifts,online watch shop",
+    a: ""
+  },
+  {
+    i: 780,
+    n: "mytheresa.com",
+    c: "fashion,beauty,jewellery,business",
+    u: "https://www.mytheresa.com/de/de",
+    d: "mytheresa.com is a germany luxury fashion ecommerce site for designer clothing, bags and shoes. it is aimed at shoppers who want high-end brands and premium style.",
+    k: "mytheresa.com,germany online shopping,luxury fashion germany,designer clothing bags,high end ecommerce",
+    a: ""
+  },
+  {
+    i: 781,
+    n: "breuninger.com",
+    c: "fashion,beauty,jewellery,business",
+    u: "https://www.breuninger.com/de/",
+    d: "breuninger.com is a germany premium fashion store with clothing, shoes, accessories and beauty products. it is aimed at shoppers who want designer and upscale lifestyle items.",
+    k: "breuninger.com,germany online shopping,premium fashion germany,designer clothing beauty,style accessories",
+    a: ""
+  },
+  {
+    i: 782,
+    n: "bestsecret.com",
+    c: "fashion,beauty,business",
+    u: "https://www.bestsecret.com/",
+    d: "bestsecret.com is a germany fashion shopping platform with private-sale style offers on clothing and accessories. it is built for members seeking premium brands at discounted prices.",
+    k: "bestsecret.com,germany online shopping,fashion outlet germany,private sale clothing,premium brands discounts",
+    a: ""
+  },
+  {
+    i: 783,
+    n: "zalando.de",
+    c: "fashion,beauty,business",
+    u: "https://www.zalando.de/",
+    d: "zalando.de is a leading fashion marketplace in germany for clothing, shoes and accessories. it is built for shoppers who want branded fashion with easy online ordering and returns.",
+    k: "zalando.de,germany online shopping,fashion marketplace germany,shoes clothing accessories,branded fashion ecommerce",
+    a: ""
+  },
+  {
+    i: 784,
+    n: "aboutyou.de",
+    c: "fashion,beauty,business",
+    u: "https://www.aboutyou.de/",
+    d: "aboutyou.de is a germany fashion ecommerce site with clothing, shoes, accessories and lifestyle brands. it is aimed at shoppers who want trend-focused online fashion shopping.",
+    k: "aboutyou.de,germany online shopping,fashion ecommerce germany,clothing shoes accessories,style brands online",
+    a: ""
+  },
+  {
+    i: 785,
+    n: "douglas.de",
+    c: "beauty,health,business",
+    u: "https://www.douglas.de/",
+    d: "douglas.de is a germany beauty ecommerce site for fragrances, cosmetics and personal care products. it is aimed at shoppers who want premium beauty and skincare online.",
+    k: "douglas.de,germany online shopping,beauty store germany,cosmetics fragrance skincare,personal care products",
+    a: ""
+  },
+  {
+    i: 786,
+    n: "flaconi.de",
+    c: "beauty,health,business",
+    u: "https://www.flaconi.de/",
+    d: "flaconi.de is a germany beauty online shop for perfumes, skincare and makeup. it serves shoppers looking for branded beauty products and fragrance deals.",
+    k: "flaconi.de,germany online shopping,beauty store germany,perfume skincare makeup,fragrance deals online",
+    a: ""
+  },
+  {
+    i: 787,
+    n: "parfumdreams.de",
+    c: "beauty,health,business",
+    u: "https://www.parfumdreams.de/",
+    d: "parfumdreams.de is a germany online beauty shop specializing in perfumes, skincare and cosmetics. it is used by shoppers searching for fragrance and personal care deals.",
+    k: "parfumdreams.de,germany online shopping,perfume store germany,skincare cosmetics fragrance,beauty deals online",
+    a: ""
+  },
+  {
+    i: 788,
+    n: "notino.de",
+    c: "beauty,health,business",
+    u: "https://www.notino.de/",
+    d: "notino.de is a germany beauty ecommerce site for perfumes, makeup and personal care items. it is useful for shoppers looking for a wide range of beauty brands online.",
+    k: "notino.de,germany online shopping,beauty ecommerce germany,perfumes makeup personal care,brand cosmetics store",
+    a: ""
+  },
+  {
+    i: 789,
+    n: "rituals.com",
+    c: "beauty,health,home,business",
+    u: "https://www.rituals.com/de-de",
+    d: "rituals.com is a germany lifestyle beauty shop for body care, fragrances and home scent products. it is popular with shoppers looking for premium wellness gifts.",
+    k: "rituals.com,germany online shopping,beauty lifestyle germany,body care home fragrance,welfare gift products",
+    a: ""
+  },
+  {
+    i: 790,
+    n: "sephora.de",
+    c: "beauty,health,business",
+    u: "https://www.sephora.de/",
+    d: "sephora.de is a germany beauty store for makeup, skincare and fragrance. it serves shoppers who want brand-name cosmetics and beauty discovery online.",
+    k: "sephora.de,germany online shopping,beauty store germany,makeup skincare fragrance,cosmetics retailer",
+    a: ""
+  },
+  {
+    i: 791,
+    n: "dm.de",
+    c: "beauty,health,home,food,business",
+    u: "https://www.dm.de/",
+    d: "dm.de is a germany drugstore ecommerce site for beauty, health, baby and household products. it is used by families and everyday shoppers buying care essentials.",
+    k: "dm.de,germany online shopping,drugstore germany,beauty health household,baby care essentials",
+    a: ""
+  },
+  {
+    i: 792,
+    n: "rossmann.de",
+    c: "beauty,health,home,food,business",
+    u: "https://www.rossmann.de/",
+    d: "rossmann.de is a germany drugstore ecommerce site for beauty, health, baby and household products. it is used by families and everyday shoppers buying care essentials.",
+    k: "rossmann.de,germany online shopping,drugstore germany,beauty health household,baby care essentials",
+    a: ""
+  },
+  {
+    i: 793,
+    n: "shop-apotheke.com",
+    c: "health,beauty,business",
+    u: "https://www.shop-apotheke.com/",
+    d: "shop-apotheke.com is a germany online pharmacy for medicines, wellness, beauty and health products. it is helpful for customers shopping for pharmacy essentials and personal care items.",
+    k: "shop-apotheke.com,germany online shopping,online pharmacy germany,health beauty wellness,medicine personal care",
+    a: ""
+  },
+  {
+    i: 794,
+    n: "medpex.de",
+    c: "health,beauty,business",
+    u: "https://www.medpex.de/",
+    d: "medpex.de is a germany online pharmacy for medicines, health products and personal care. it is used by shoppers who want pharmacy goods delivered online.",
+    k: "medpex.de,germany online shopping,online pharmacy germany,health products personal care,medicine delivery",
+    a: ""
+  },
+  {
+    i: 795,
+    n: "docmorris.de",
+    c: "health,beauty,business",
+    u: "https://www.docmorris.de/",
+    d: "docmorris.de is a germany online pharmacy and health shop for medicines, wellness and care products. it serves people looking for digital pharmacy shopping and home delivery.",
+    k: "docmorris.de,germany online shopping,online pharmacy germany,health wellness medicine,care products",
+    a: ""
+  },
+  {
+    i: 796,
+    n: "myprotein.de",
+    c: "health,sports,food,business",
+    u: "https://www.myprotein.de/",
+    d: "myprotein.de is a germany nutrition and fitness shop for supplements, protein and sports food. it is used by athletes and health-focused customers.",
+    k: "myprotein.de,germany online shopping,fitness nutrition germany,protein supplements sports food,health products",
+    a: ""
+  },
+  {
+    i: 797,
+    n: "bodylab24.de",
+    c: "health,sports,food,business",
+    u: "https://www.bodylab24.de/",
+    d: "bodylab24.de is a germany online store for sports nutrition and supplements. it serves gym users and health-focused shoppers looking for performance products.",
+    k: "bodylab24.de,germany online shopping,sports nutrition germany,protein supplements health,fitness store",
+    a: ""
+  },
+  {
+    i: 798,
+    n: "thalia.de",
+    c: "books,software,business",
+    u: "https://www.thalia.de/",
+    d: "thalia.de is a germany online bookstore for books, ebooks and learning materials. it is popular with readers, students and families buying literature and study products.",
+    k: "thalia.de,germany online shopping,bookstore germany,books ebooks study materials,reading and learning",
+    a: ""
+  },
+  {
+    i: 799,
+    n: "hugendubel.de",
+    c: "books,software,business",
+    u: "https://www.hugendubel.de/",
+    d: "hugendubel.de is a germany bookshop online for books, ebooks and stationery. it serves readers and students looking for literature and learning products.",
+    k: "hugendubel.de,germany online shopping,book shop germany,books ebooks stationery,reading learning store",
+    a: ""
+  },
+  {
+    i: 800,
+    n: "medimops.de",
+    c: "books,software,business",
+    u: "https://www.medimops.de/",
+    d: "medimops.de is a germany online shop for used books, media and entertainment goods. it is useful for budget shoppers looking for secondhand reading material.",
+    k: "medimops.de,germany online shopping,used books germany,secondhand media,cheap reading materials",
+    a: ""
+  }
+];
   
 ];
