@@ -225,11 +225,7 @@ window.countryShops["germany"] = [
     d:"galeria germany department store site offers fashion, footwear, beauty products, home goods and gifts via its online shop.[web:1646]",
     k:"galeria germany,department store online shop,fashion footwear beauty products home goods gifts,galeria.de shopping germany",
     a:""
-  }
-,
-// germany.js
-window.countryShops = window.countryShops || {};
-window.countryShops["germany"] = [
+  },
   {
     i: 25,
     n: "amazon.de",
@@ -463,11 +459,7 @@ window.countryShops["germany"] = [
     d: "home24.de is a germany online furniture and home decor store. it serves shoppers looking for furniture, lighting and interior items for the home.",
     k: "home24.de,germany online shopping,furniture store germany,home decor lighting,interior shopping online",
     a: ""
-  }
-
-// germany.js
-window.countryShops = window.countryShops || {};
-window.countryShops["germany"] = [
+  },
   {
     i: 51,
     n: "ikea.com",
@@ -917,10 +909,7 @@ window.countryShops["germany"] = [
     d: "rewe.de is a germany online grocery shop for food, fresh produce and household essentials. it is designed for everyday shoppers who want grocery delivery or pickup.",
     k: "rewe.de,germany online shopping,online grocery germany,food delivery household essentials,fresh produce supermarket",
     a: ""
-  }
-// germany.js
-window.countryShops = window.countryShops || {};
-window.countryShops["germany"] = [
+  },
   {
     i: 101,
     n: "ebay.de",
@@ -1370,10 +1359,7 @@ window.countryShops["germany"] = [
     d: "fluege.de is a germany travel booking platform for flights and holiday planning. it helps users compare airfare and book travel online.",
     k: "fluege.de,germany online shopping,flight booking germany,travel deals holidays,airfare comparison",
     a: ""
-  }
-// germany.js
-window.countryShops = window.countryShops || {};
-window.countryShops["germany"] = [
+  },
   {
     i: 151,
     n: "kleinanzeigen.de",
@@ -1823,10 +1809,7 @@ window.countryShops["germany"] = [
     d: "foodora.de is a germany food ordering platform for restaurant delivery and takeaway. it serves customers who want quick meal ordering online.",
     k: "foodora.de,germany online shopping,food ordering germany,restaurant delivery takeaway,meal app",
     a: ""
-  }
-// germany.js
-window.countryShops = window.countryShops || {};
-window.countryShops["germany"] = [
+  } ,
   {
     i: 201,
     n: "otto.de",
@@ -2276,11 +2259,7 @@ window.countryShops["germany"] = [
     d: "bahn.com is a germany travel platform for train tickets, rail journeys and travel planning. it is used by passengers booking domestic and international rail travel.",
     k: "bahn.com,germany online shopping,travel booking germany,train tickets rail,journey planning",
     a: ""
-  }
-
-// germany.js
-window.countryShops = window.countryShops || {};
-window.countryShops["germany"] = [
+  } ,
   {
     i: 251,
     n: "mediamarkt.de",
@@ -2730,11 +2709,7 @@ window.countryShops["germany"] = [
     d: "bahn.com is a germany travel platform for train tickets, rail journeys and travel planning. it is used by passengers booking domestic and international rail travel.",
     k: "bahn.com,germany online shopping,travel booking germany,train tickets rail,journey planning",
     a: ""
-  }
-
-// germany.js
-window.countryShops = window.countryShops || {};
-window.countryShops["germany"] = [
+  },
   {
     i: 301,
     n: "billiger.de",
@@ -3184,10 +3159,7 @@ window.countryShops["germany"] = [
     d: "hellofresh.de is a germany meal kit service that delivers ingredients and recipes to customers. it is popular with households wanting easy home cooking and planned meals.",
     k: "hellofresh.de,germany online shopping,meal kit germany,food delivery recipes,home cooking service",
     a: ""
-  }
-// germany.js
-window.countryShops = window.countryShops || {};
-window.countryShops["germany"] = [
+  },
   {
     i: 351,
     n: "lieferando.de",
@@ -3637,10 +3609,7 @@ window.countryShops["germany"] = [
     d: "bol.de is a germany online bookstore and media shop. it serves readers and learners shopping for books, ebooks and related items.",
     k: "bol.de,germany online shopping,bookstore germany,ebooks media,learning materials",
     a: ""
-  }
-// germany.js
-window.countryShops = window.countryShops || {};
-window.countryShops["germany"] = [
+  },
   {
     i: 401,
     n: "coolblue.de",
@@ -4090,11 +4059,8 @@ window.countryShops["germany"] = [
     d: "fluege.de is a germany travel booking platform for flights and holiday planning. it helps users compare airfare and book travel online.",
     k: "fluege.de,germany online shopping,flight booking germany,travel deals holidays,airfare comparison",
     a: ""
-  }
-
-// germany.js
-window.countryShops = window.countryShops || {};
-window.countryShops["germany"] = [
+  },
+ 
   {
     i: 451,
     n: "amazon.de",
@@ -4545,10 +4511,7 @@ window.countryShops["germany"] = [
     k: "frankfurt airport shopping,germany online shopping,duty free travel retail,airport click and collect,travel offers",
     a: ""
   }
-
-// germany.js
-window.countryShops = window.countryShops || {};
-window.countryShops["germany"] = [
+ 
   {
     i: 501,
     n: "chefkoch.de",
