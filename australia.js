@@ -7434,13 +7434,8 @@ window.countryShops["australia"] = [
     d:"ebay australia is a marketplace for new and used electronics, home items, fashion, car parts and sports gear. it is useful for shoppers and sellers who want auctions, secondhand deals and broad product choice.",
     k:"ebay australia,australia online shopping,electronics fashion home,auto parts sports gear,ebay.com.au",
     a:""
-  }
-];
-// australia.js
-window.countryShops = window.countryShops || {};
-window.countryShops["australia"] = [
-  {
-    i:801,
+  },
+  { i:801,
     n:"kogan.com",
     c:"electronics,home,fashion,business",
     u:"https://www.kogan.com/au/",
