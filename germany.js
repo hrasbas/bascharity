@@ -4998,10 +4998,7 @@ window.countryShops["germany"] = [
     d: "kayak.de is a germany travel search and booking platform for flights, hotels and rental cars. it helps travelers compare many options in one place.",
     k: "kayak.de,germany online shopping,travel search germany,flight hotel car rental,booking comparison",
     a: ""
-  }
-// germany.js
-window.countryShops = window.countryShops || {};
-window.countryShops["germany"] = [
+  },
   {
     i: 601,
     n: "allyouneedfresh.de",
@@ -5451,11 +5448,7 @@ window.countryShops["germany"] = [
     d: "getyourguide.com is a germany travel platform for tours, activities and attractions. it is popular with travelers booking experiences and local sightseeing online.",
     k: "getyourguide.com,germany online shopping,travel experiences germany,tours activities attractions,sightseeing booking",
     a: ""
-  }
-
-// germany.js
-window.countryShops = window.countryShops || {};
-window.countryShops["germany"] = [
+  },
   {
     i: 651,
     n: "intersport.de",
@@ -5905,10 +5898,7 @@ window.countryShops["germany"] = [
     d: "medpex.de is a germany online pharmacy for medicines, health products and personal care. it is used by shoppers who want pharmacy goods delivered online.",
     k: "medpex.de,germany online shopping,online pharmacy germany,health products personal care,medicine delivery",
     a: ""
-  }
-  // germany.js
-window.countryShops = window.countryShops || {};
-window.countryShops["germany"] = [
+  },
   {
     i: 701,
     n: "asgoodasnew.de",
@@ -6358,10 +6348,7 @@ window.countryShops["germany"] = [
     d: "worldofbooks.com is a germany online shop for used books and secondhand reading material. it is useful for budget readers and collectors.",
     k: "worldofbooks.com,germany online shopping,used books germany,secondhand books,cheap reading material",
     a: ""
-  }
-// germany.js
-window.countryShops = window.countryShops || {};
-window.countryShops["germany"] = [
+  },
   {
     i: 751,
     n: "sport-schuster.de",
@@ -6811,10 +6798,7 @@ window.countryShops["germany"] = [
     d: "medimops.de is a germany online shop for used books, media and entertainment goods. it is useful for budget shoppers looking for secondhand reading material.",
     k: "medimops.de,germany online shopping,used books germany,secondhand media,cheap reading materials",
     a: ""
-  }
-// germany.js
-window.countryShops = window.countryShops || {};
-window.countryShops["germany"] = [
+  },
   {
     i: 801,
     n: "worldofbooks.com",
@@ -7264,10 +7248,7 @@ window.countryShops["germany"] = [
     d: "aldi.de is a germany discount supermarket site for groceries, household goods and seasonal offers. it is popular with shoppers looking for value-priced everyday essentials.",
     k: "aldi.de,germany online shopping,discount supermarket germany,grocery household seasonal offers,value essentials",
     a: ""
-  }
-// germany.js
-window.countryShops = window.countryShops || {};
-window.countryShops["germany"] = [
+  },
   {
     i: 851,
     n: "metro.de",
@@ -7717,10 +7698,7 @@ window.countryShops["germany"] = [
     d: "myprotein.de is a germany nutrition and fitness shop for supplements, protein and sports food. it is used by athletes and health-focused customers.",
     k: "myprotein.de,germany online shopping,fitness nutrition germany,protein supplements sports food,health products",
     a: ""
-  }
-// germany.js
-window.countryShops = window.countryShops || {};
-window.countryShops["germany"] = [
+  },
   {
     i: 901,
     n: "kaufland.de",
@@ -8170,10 +8148,7 @@ window.countryShops["germany"] = [
     d: "toom.de is a germany diy and home improvement shop for tools, garden and renovation supplies. it is used by homeowners and builders working on projects.",
     k: "toom.de,germany online shopping,diy store germany,tools garden renovation,home improvement supplies",
     a: ""
-  }
-// germany.js
-window.countryShops = window.countryShops || {};
-window.countryShops["germany"] = [
+  }, 
   {
     i: 951,
     n: "pinterest.com",
@@ -8624,6 +8599,4 @@ window.countryShops["germany"] = [
     k: "hornbach.de,germany online shopping,diy and construction germany,home garden renovation,building materials store",
     a: ""
   }
-
-  
 ];
