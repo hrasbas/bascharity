@@ -4510,7 +4510,7 @@ window.countryShops["germany"] = [
     d: "frankfurt-airport.com is a germany travel shopping site for duty free and airport retail offers. it is useful for passengers looking for click and collect and travel shopping.",
     k: "frankfurt airport shopping,germany online shopping,duty free travel retail,airport click and collect,travel offers",
     a: ""
-  }
+  },
  
   {
     i: 501,
