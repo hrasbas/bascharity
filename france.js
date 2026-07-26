@@ -2205,5 +2205,1863 @@ u:"https://www.citroen.fr/",
 d:"citroen france is an automotive brand site in france for cars, accessories and vehicle services. it is used by drivers who want brand information and car-related products.",
 k:"citroen france,online shopping france,automotive france,cars accessories vehicle services,car brand",
 a:""
-}
-
+},
+  
+[
+{
+i:251,
+n:"amazon france",
+c:"electronics,home,fashion,beauty,books,sports,jewellery,automotive,food,business",
+u:"https://www.amazon.fr/",
+d:"amazon france is a leading online marketplace in france for electronics, home goods, fashion, beauty, books, sports items and groceries. it is used by shoppers who want a broad selection, fast delivery and convenient checkout.",
+k:"amazon france,online shopping france,marketplace france,electronics home fashion beauty books,grocery sports automotive products",
+a:""
+},
+{
+i:252,
+n:"leboncoin france",
+c:"electronics,home,automotive,fashion,business",
+u:"https://www.leboncoin.fr/",
+d:"leboncoin france is a popular classifieds marketplace in france for cars, furniture, electronics and clothing. it is widely used for local secondhand buying and selling across many categories.",
+k:"leboncoin france,online shopping france,classifieds france,cars furniture electronics clothing,secondhand marketplace",
+a:""
+},
+{
+i:253,
+n:"temu france",
+c:"fashion,home,electronics,beauty,business",
+u:"https://www.temu.com/fr",
+d:"temu france is a cross-border ecommerce marketplace in france for low-priced fashion, homeware, electronics and beauty items. it is aimed at shoppers looking for budget-friendly international products.",
+k:"temu france,online shopping france,cross border marketplace france,fashion home electronics beauty,budget deals",
+a:""
+},
+{
+i:254,
+n:"aliexpress france",
+c:"electronics,fashion,home,beauty,business",
+u:"https://fr.aliexpress.com/",
+d:"aliexpress france is an international online marketplace in france for gadgets, clothing, home products and beauty accessories. it is used by shoppers looking for low-cost items from global sellers.",
+k:"aliexpress france,online shopping france,international marketplace france,gadgets clothing home beauty,low cost products",
+a:""
+},
+{
+i:255,
+n:"cdiscount france",
+c:"electronics,home,fashion,food,business",
+u:"https://www.cdiscount.com/",
+d:"cdiscount france is a large online marketplace in france for electronics, appliances, furniture, fashion and grocery items. it is popular with value-focused shoppers looking for broad selection and competitive prices.",
+k:"cdiscount france,online shopping france,marketplace france,electronics appliances furniture fashion,grocery deals",
+a:""
+},
+{
+i:256,
+n:"fnac france",
+c:"electronics,books,home,business",
+u:"https://www.fnac.com/",
+d:"fnac france is an online retailer in france for books, music, tech, games and home electronics. it is useful for customers who want entertainment products and consumer technology with store pickup options.",
+k:"fnac france,online shopping france,retailer france,books music tech games,home electronics",
+a:""
+},
+{
+i:257,
+n:"darty france",
+c:"electronics,home,business",
+u:"https://www.darty.com/",
+d:"darty france is an electronics and appliance retailer in france for tvs, computers, smartphones and kitchen appliances. it is a strong choice for shoppers who want home tech and installation services.",
+k:"darty france,online shopping france,electronics france,appliances tvs computers smartphones,kitchen tech",
+a:""
+},
+{
+i:258,
+n:"boulanger france",
+c:"electronics,home,business",
+u:"https://www.boulanger.com/",
+d:"boulanger france is an online electronics retailer in france for appliances, computing, multimedia and consumer tech. it serves shoppers looking for home technology and everyday gadgets.",
+k:"boulanger france,online shopping france,electronics retailer france,appliances computing multimedia,consumer tech",
+a:""
+},
+{
+i:259,
+n:"decathlon france",
+c:"sports,fashion,business",
+u:"https://www.decathlon.fr/",
+d:"decathlon france is a sports retailer in france with equipment, clothing and footwear for many activities. it is used by athletes, families and outdoor shoppers looking for affordable sports gear.",
+k:"decathlon france,online shopping france,sports retailer france,equipment clothing footwear,fitness outdoor activities",
+a:""
+},
+{
+i:260,
+n:"zalando france",
+c:"fashion,beauty,business",
+u:"https://www.zalando.fr/",
+d:"zalando france is an online fashion platform in france for clothing, shoes, accessories and beauty products. it is popular with shoppers who want branded fashion and easy returns.",
+k:"zalando france,online shopping france,fashion platform france,clothing shoes accessories,beauty products brands",
+a:""
+},
+{
+i:261,
+n:"auchan france",
+c:"food,home,fashion,business",
+u:"https://www.auchan.fr/",
+d:"auchan france is an online hypermarket in france for groceries, fresh produce, home essentials and fashion items. it is useful for shoppers who want a wide supermarket-style assortment with delivery and pickup.",
+k:"auchan france,online shopping france,hypermarket france,groceries fresh produce home essentials,fashion items",
+a:""
+},
+{
+i:262,
+n:"rakuten france",
+c:"electronics,home,fashion,books,business",
+u:"https://fr.shopping.rakuten.com/",
+d:"rakuten france is a marketplace in france where individuals and professional sellers offer electronics, books, home goods and fashion. it is helpful for shoppers who want comparison shopping and cashback-style offers.",
+k:"rakuten france,online shopping france,marketplace france,electronics books home goods fashion,cashback offers",
+a:""
+},
+{
+i:263,
+n:"laredoute france",
+c:"fashion,home,business",
+u:"https://www.laredoute.fr/",
+d:"laredoute france is an online retail site in france for fashion, home textiles and furniture. it is used by shoppers looking for family clothing and home décor in one place.",
+k:"laredoute france,online shopping france,fashion home france,textiles furniture,household shopping",
+a:""
+},
+{
+i:264,
+n:"showroomprive france",
+c:"fashion,beauty,home,business",
+u:"https://www.showroomprive.com/",
+d:"showroomprive france is a private-sale ecommerce site in france for fashion, beauty and home products. it serves members looking for branded items at reduced prices.",
+k:"showroomprive france,online shopping france,private sale france,fashion beauty home,member discounts",
+a:""
+},
+{
+i:265,
+n:"veepee france",
+c:"fashion,beauty,home,business",
+u:"https://www.veepee.fr/",
+d:"veepee france is a flash-sale marketplace in france for fashion, beauty and home brands. it is built for shoppers looking for limited-time deals and discounted branded products.",
+k:"veepee france,online shopping france,flash sale france,fashion beauty home,discounted brands",
+a:""
+},
+{
+i:266,
+n:"ebay france",
+c:"electronics,home,fashion,books,business",
+u:"https://www.ebay.fr/",
+d:"ebay france is an online marketplace in france for new and used electronics, home products, fashion and books. it is useful for buyers who want auction-style listings and secondhand deals.",
+k:"ebay france,online shopping france,marketplace france,new used electronics home fashion,books deals",
+a:""
+},
+{
+i:267,
+n:"e leclerc france",
+c:"food,home,business",
+u:"https://www.e.leclerc/",
+d:"e leclerc france is an online grocery and household shopping site in france for food, drinks and daily essentials. it is popular with families looking for supermarket delivery and drive pickup.",
+k:"e leclerc france,online shopping france,online grocery france,food drinks household essentials,drive pickup",
+a:""
+},
+{
+i:268,
+n:"carrefour france",
+c:"food,home,fashion,business",
+u:"https://www.carrefour.fr/",
+d:"carrefour france is a major online hypermarket in france for groceries, household essentials and fashion items. it is used by families and everyday shoppers who want delivery or pickup options.",
+k:"carrefour france,online shopping france,hypermarket france,groceries household essentials fashion,delivery pickup",
+a:""
+},
+{
+i:269,
+n:"leroy merlin france",
+c:"home,business",
+u:"https://www.leroymerlin.fr/",
+d:"leroy merlin france is a home improvement retailer in france for diy tools, building materials, garden supplies and furniture. it serves homeowners and diy shoppers working on renovation and decorating projects.",
+k:"leroy merlin france,online shopping france,home improvement france,diy tools building materials,garden furniture",
+a:""
+},
+{
+i:270,
+n:"back market france",
+c:"electronics,business",
+u:"https://www.backmarket.fr/",
+d:"back market france is a refurbished electronics marketplace in france for smartphones, laptops, tablets and accessories. it is used by shoppers who want sustainable tech at lower prices.",
+k:"back market france,online shopping france,refurbished electronics france,smartphones laptops tablets,sustainable tech",
+a:""
+},
+{
+i:271,
+n:"vinted france",
+c:"fashion,business",
+u:"https://www.vinted.fr/",
+d:"vinted france is a peer-to-peer fashion marketplace in france for buying and selling used clothing, shoes and accessories. it is ideal for budget-conscious shoppers and secondhand fashion buyers.",
+k:"vinted france,online shopping france,secondhand fashion france,buy sell clothing shoes accessories,peer to peer marketplace",
+a:""
+},
+{
+i:272,
+n:"samsung france",
+c:"electronics,software,business",
+u:"https://www.samsung.com/fr/",
+d:"samsung france is an online electronics store in france for smartphones, tvs, appliances and accessories. it is used by shoppers looking for consumer tech, connected devices and home electronics.",
+k:"samsung france,online shopping france,electronics france,smartphones tvs appliances,consumer tech",
+a:""
+},
+{
+i:273,
+n:"thomann france",
+c:"books,business",
+u:"https://www.thomann.de/fr/",
+d:"thomann france is an online music store in france for instruments, audio gear and music accessories. it is used by musicians, studios and hobby players looking for equipment and supplies.",
+k:"thomann france,online shopping france,music store france,instruments audio gear,music accessories",
+a:""
+},
+{
+i:274,
+n:"dior france",
+c:"beauty,fashion,jewellery,business",
+u:"https://www.dior.com/fr_fr",
+d:"dior france is a luxury fashion and beauty store in france for clothing, fragrance, skincare and accessories. it is aimed at shoppers looking for premium designer products and gifts.",
+k:"dior france,online shopping france,luxury fashion france,fragrance skincare accessories,designer products",
+a:""
+},
+{
+i:275,
+n:"louis vuitton france",
+c:"fashion,jewellery,business",
+u:"https://fr.louisvuitton.com/",
+d:"louis vuitton france is a luxury fashion store in france for bags, accessories, shoes and travel goods. it is used by shoppers who want high-end designer items and premium gifts.",
+k:"louis vuitton france,online shopping france,luxury fashion france,bags accessories shoes,travel goods",
+a:""
+},
+{
+i:276,
+n:"hermes france",
+c:"fashion,jewellery,business",
+u:"https://www.hermes.com/fr/fr/",
+d:"hermes france is a luxury brand store in france for fashion, leather goods, accessories and home items. it serves shoppers looking for premium craftsmanship and exclusive products.",
+k:"hermes france,online shopping france,luxury brand france,fashion leather goods accessories,exclusive products",
+a:""
+},
+{
+i:277,
+n:"balenciaga france",
+c:"fashion,jewellery,business",
+u:"https://www.balenciaga.com/fr-fr",
+d:"balenciaga france is a luxury fashion store in france for clothing, shoes, bags and accessories. it is popular with shoppers looking for designer streetwear and statement pieces.",
+k:"balenciaga france,online shopping france,luxury fashion france,clothing shoes bags,designer streetwear",
+a:""
+},
+{
+i:278,
+n:"lacoste france",
+c:"fashion,sports,business",
+u:"https://www.lacoste.com/fr/",
+d:"lacoste france is a fashion and sportswear store in france for polos, clothing, shoes and accessories. it is used by shoppers who want classic sporty style and casual apparel.",
+k:"lacoste france,online shopping france,fashion sportswear france,polos shoes accessories,casual apparel",
+a:""
+},
+{
+i:279,
+n:"sezane france",
+c:"fashion,business",
+u:"https://www.sezane.com/fr",
+d:"sezane france is a women's fashion store in france for clothing, shoes and accessories with a parisian style. it is aimed at shoppers who want modern, polished and wearable pieces.",
+k:"sezane france,online shopping france,womens fashion france,clothing shoes accessories,parisian style",
+a:""
+},
+{
+i:280,
+n:"chloe france",
+c:"fashion,jewellery,business",
+u:"https://www.chloe.com/fr-fr",
+d:"chloe france is a luxury fashion store in france for clothing, bags, shoes and accessories. it is used by shoppers looking for elegant designer products and premium styling.",
+k:"chloe france,online shopping france,luxury fashion france,clothing bags shoes,designer accessories",
+a:""
+},
+{
+i:281,
+n:"givenchy france",
+c:"beauty,fashion,jewellery,business",
+u:"https://www.givenchy.com/fr/fr/homepage",
+d:"givenchy france is a luxury fashion and beauty store in france for clothing, fragrances and accessories. it is popular with shoppers who want premium designer fashion and cosmetics.",
+k:"givenchy france,online shopping france,luxury fashion beauty france,clothing fragrance accessories,designer cosmetics",
+a:""
+},
+{
+i:282,
+n:"diptyque france",
+c:"beauty,home,business",
+u:"https://www.diptyqueparis.com/",
+d:"diptyque france is a luxury beauty and home fragrance store in france for candles, perfumes and scented products. it is used by shoppers looking for premium gifts and home ambiance items.",
+k:"diptyque france,online shopping france,beauty home france,candles perfumes scented products,premium gifts",
+a:""
+},
+{
+i:283,
+n:"byredo france",
+c:"beauty,home,business",
+u:"https://www.byredo.com/fr_fr/",
+d:"byredo france is a luxury beauty and fragrance store in france for perfumes, body care and home scent products. it serves shoppers who want premium fragrances and lifestyle items.",
+k:"byredo france,online shopping france,beauty france,perfumes body care home scent,premium fragrance",
+a:""
+},
+{
+i:284,
+n:"fff boutique france",
+c:"sports,fashion,business",
+u:"https://boutique.fff.fr/en/",
+d:"fff boutique france is the official online store of the french football team for jerseys, fanwear and merchandise. it is used by supporters who want authenticated national team products.",
+k:"fff boutique france,online shopping france,football merchandise france,jerseys fanwear official store,national team products",
+a:""
+},
+{
+i:285,
+n:"manucurist france",
+c:"beauty,business",
+u:"https://www.manucurist.com/",
+d:"manucurist france is a beauty store in france for nail care, manicure products and color cosmetics. it is aimed at shoppers who want salon-inspired nail and beauty items.",
+k:"manucurist france,online shopping france,beauty store france,nail care manicure cosmetics,salon inspired products",
+a:""
+},
+{
+i:286,
+n:"longchamp france",
+c:"fashion,jewellery,business",
+u:"https://www.longchamp.com/fr/fr/",
+d:"longchamp france is a luxury fashion store in france for bags, leather goods and accessories. it is popular with shoppers looking for classic designer handbags and travel items.",
+k:"longchamp france,online shopping france,luxury fashion france,bags leather goods accessories,designer handbags",
+a:""
+},
+{
+i:287,
+n:"isabel marant france",
+c:"fashion,business",
+u:"https://www.isabelmarant.com/",
+d:"isabel marant france is a luxury fashion store in france for clothing, shoes and accessories. it is used by shoppers who want designer pieces with a relaxed parisian look.",
+k:"isabel marant france,online shopping france,luxury fashion france,clothing shoes accessories,parisian look",
+a:""
+},
+{
+i:288,
+n:"balmain france",
+c:"fashion,jewellery,business",
+u:"https://www.balmain.com/fr",
+d:"balmain france is a luxury fashion store in france for clothing, shoes and accessories. it is aimed at shoppers looking for high-end designer style and statement fashion.",
+k:"balmain france,online shopping france,luxury fashion france,clothing shoes accessories,designer statement style",
+a:""
+},
+{
+i:289,
+n:"celine france",
+c:"fashion,jewellery,business",
+u:"https://www.celine.com/fr-fr/home",
+d:"celine france is a luxury fashion store in france for clothing, handbags, shoes and accessories. it serves shoppers who want elegant premium fashion and accessories.",
+k:"celine france,online shopping france,luxury fashion france,handbags shoes accessories,elegant designer style",
+a:""
+},
+{
+i:290,
+n:"loewe france",
+c:"fashion,jewellery,business",
+u:"https://www.loewe.com/int/fr/fr/home",
+d:"loewe france is a luxury fashion store in france for bags, clothing, shoes and accessories. it is used by shoppers looking for artistic designer pieces and premium craftsmanship.",
+k:"loewe france,online shopping france,luxury fashion france,bags clothing shoes accessories,premium craftsmanship",
+a:""
+},
+{
+i:291,
+n:"sandro france",
+c:"fashion,business",
+u:"https://fr.sandro-paris.com/",
+d:"sandro france is a fashion store in france for clothing, shoes and accessories with a refined contemporary style. it is suitable for shoppers who want smart urban wardrobe pieces.",
+k:"sandro france,online shopping france,fashion france,clothing shoes accessories,contemporary style",
+a:""
+},
+{
+i:292,
+n:"maje france",
+c:"fashion,business",
+u:"https://fr.maje.com/",
+d:"maje france is a women's fashion store in france for clothing, shoes and accessories. it is aimed at shoppers looking for chic and modern everyday style.",
+k:"maje france,online shopping france,womens fashion france,clothing shoes accessories,chic modern style",
+a:""
+},
+{
+i:293,
+n:"ami paris france",
+c:"fashion,business",
+u:"https://www.amiparis.com/",
+d:"ami paris france is a fashion store in france for clothing, shoes and accessories with a relaxed tailored look. it is popular with shoppers who want modern parisian apparel.",
+k:"ami paris france,online shopping france,fashion france,clothing shoes accessories,relaxed tailored look",
+a:""
+},
+{
+i:294,
+n:"jacquemus france",
+c:"fashion,jewellery,business",
+u:"https://www.jacquemus.com/",
+d:"jacquemus france is a luxury fashion store in france for clothing, bags and accessories. it serves shoppers who want bold designer style and contemporary fashion.",
+k:"jacquemus france,online shopping france,luxury fashion france,clothing bags accessories,designer style",
+a:""
+},
+{
+i:295,
+n:"renault france",
+c:"automotive,business",
+u:"https://www.renault.fr/",
+d:"renault france is an automotive brand site in france for cars, accessories and service products. it is used by buyers and owners looking for vehicle information and brand offerings.",
+k:"renault france,online shopping france,automotive france,cars accessories service,vehicle brand",
+a:""
+},
+{
+i:296,
+n:"peugeot france",
+c:"automotive,business",
+u:"https://www.peugeot.fr/",
+d:"peugeot france is an automotive brand site in france for cars, parts and accessories. it serves shoppers and owners interested in vehicle models and mobility services.",
+k:"peugeot france,online shopping france,automotive france,cars parts accessories,mobility services",
+a:""
+},
+{
+i:297,
+n:"citroen france",
+c:"automotive,business",
+u:"https://www.citroen.fr/",
+d:"citroen france is an automotive brand site in france for cars, accessories and vehicle services. it is used by drivers who want brand information and car-related products.",
+k:"citroen france,online shopping france,automotive france,cars accessories vehicle services,car brand",
+a:""
+},
+{
+i:298,
+n:"toyota france",
+c:"automotive,business",
+u:"https://www.toyota.fr/",
+d:"toyota france is an automotive brand store in france for cars, accessories and service offerings. it is aimed at shoppers looking for reliable vehicles and ownership support.",
+k:"toyota france,online shopping france,automotive france,cars accessories service,reliable vehicles",
+a:""
+},
+{
+i:299,
+n:"volkswagen france",
+c:"automotive,business",
+u:"https://www.volkswagen.fr/",
+d:"volkswagen france is an automotive brand site in france for cars, parts and accessories. it helps customers explore vehicle models and related ownership products.",
+k:"volkswagen france,online shopping france,automotive france,cars parts accessories,vehicle models",
+a:""
+},
+{
+i:300,
+n:"bmw france",
+c:"automotive,business",
+u:"https://www.bmw.fr/",
+d:"bmw france is an automotive brand site in france for cars, accessories and premium vehicle services. it is aimed at shoppers interested in luxury cars and ownership products.",
+k:"bmw france,online shopping france,premium cars accessories,vehicle services,luxury automotive",
+a:""
+},
+[
+{
+i:301,
+n:"amazon france",
+c:"electronics,home,fashion,beauty,books,sports,jewellery,automotive,food,business",
+u:"https://www.amazon.fr/",
+d:"amazon france is a leading online marketplace in france for electronics, home goods, fashion, beauty, books, sports items and groceries. it is used by shoppers who want a broad selection, fast delivery and convenient checkout.",
+k:"amazon france,online shopping france,marketplace france,electronics home fashion beauty books,grocery sports automotive products",
+a:""
+},
+{
+i:302,
+n:"leboncoin france",
+c:"electronics,home,automotive,fashion,business",
+u:"https://www.leboncoin.fr/",
+d:"leboncoin france is a popular classifieds marketplace in france for cars, furniture, electronics and clothing. it is widely used for local secondhand buying and selling across many categories.",
+k:"leboncoin france,online shopping france,classifieds france,cars furniture electronics clothing,secondhand marketplace",
+a:""
+},
+{
+i:303,
+n:"temu france",
+c:"fashion,home,electronics,beauty,business",
+u:"https://www.temu.com/fr",
+d:"temu france is a cross-border ecommerce marketplace in france for low-priced fashion, homeware, electronics and beauty items. it is aimed at shoppers looking for budget-friendly international products.",
+k:"temu france,online shopping france,cross border marketplace france,fashion home electronics beauty,budget deals",
+a:""
+},
+{
+i:304,
+n:"aliexpress france",
+c:"electronics,fashion,home,beauty,business",
+u:"https://fr.aliexpress.com/",
+d:"aliexpress france is an international online marketplace in france for gadgets, clothing, home products and beauty accessories. it is used by shoppers looking for low-cost items from global sellers.",
+k:"aliexpress france,online shopping france,international marketplace france,gadgets clothing home beauty,low cost products",
+a:""
+},
+{
+i:305,
+n:"cdiscount france",
+c:"electronics,home,fashion,food,business",
+u:"https://www.cdiscount.com/",
+d:"cdiscount france is a large online marketplace in france for electronics, appliances, furniture, fashion and grocery items. it is popular with value-focused shoppers looking for broad selection and competitive prices.",
+k:"cdiscount france,online shopping france,marketplace france,electronics appliances furniture fashion,grocery deals",
+a:""
+},
+{
+i:306,
+n:"fnac france",
+c:"electronics,books,home,business",
+u:"https://www.fnac.com/",
+d:"fnac france is an online retailer in france for books, music, tech, games and home electronics. it is useful for customers who want entertainment products and consumer technology with store pickup options.",
+k:"fnac france,online shopping france,retailer france,books music tech games,home electronics",
+a:""
+},
+{
+i:307,
+n:"darty france",
+c:"electronics,home,business",
+u:"https://www.darty.com/",
+d:"darty france is an electronics and appliance retailer in france for tvs, computers, smartphones and kitchen appliances. it is a strong choice for shoppers who want home tech and installation services.",
+k:"darty france,online shopping france,electronics france,appliances tvs computers smartphones,kitchen tech",
+a:""
+},
+{
+i:308,
+n:"boulanger france",
+c:"electronics,home,business",
+u:"https://www.boulanger.com/",
+d:"boulanger france is an online electronics retailer in france for appliances, computing, multimedia and consumer tech. it serves shoppers looking for home technology and everyday gadgets.",
+k:"boulanger france,online shopping france,electronics retailer france,appliances computing multimedia,consumer tech",
+a:""
+},
+{
+i:309,
+n:"decathlon france",
+c:"sports,fashion,business",
+u:"https://www.decathlon.fr/",
+d:"decathlon france is a sports retailer in france with equipment, clothing and footwear for many activities. it is used by athletes, families and outdoor shoppers looking for affordable sports gear.",
+k:"decathlon france,online shopping france,sports retailer france,equipment clothing footwear,fitness outdoor activities",
+a:""
+},
+{
+i:310,
+n:"zalando france",
+c:"fashion,beauty,business",
+u:"https://www.zalando.fr/",
+d:"zalando france is an online fashion platform in france for clothing, shoes, accessories and beauty products. it is popular with shoppers who want branded fashion and easy returns.",
+k:"zalando france,online shopping france,fashion platform france,clothing shoes accessories,beauty products brands",
+a:""
+},
+{
+i:311,
+n:"auchan france",
+c:"food,home,fashion,business",
+u:"https://www.auchan.fr/",
+d:"auchan france is an online hypermarket in france for groceries, fresh produce, home essentials and fashion items. it is useful for shoppers who want a wide supermarket-style assortment with delivery and pickup.",
+k:"auchan france,online shopping france,hypermarket france,groceries fresh produce home essentials,fashion items",
+a:""
+},
+{
+i:312,
+n:"rakuten france",
+c:"electronics,home,fashion,books,business",
+u:"https://fr.shopping.rakuten.com/",
+d:"rakuten france is a marketplace in france where individuals and professional sellers offer electronics, books, home goods and fashion. it is helpful for shoppers who want comparison shopping and cashback-style offers.",
+k:"rakuten france,online shopping france,marketplace france,electronics books home goods fashion,cashback offers",
+a:""
+},
+{
+i:313,
+n:"laredoute france",
+c:"fashion,home,business",
+u:"https://www.laredoute.fr/",
+d:"laredoute france is an online retail site in france for fashion, home textiles and furniture. it is used by shoppers looking for family clothing and home décor in one place.",
+k:"laredoute france,online shopping france,fashion home france,textiles furniture,household shopping",
+a:""
+},
+{
+i:314,
+n:"showroomprive france",
+c:"fashion,beauty,home,business",
+u:"https://www.showroomprive.com/",
+d:"showroomprive france is a private-sale ecommerce site in france for fashion, beauty and home products. it serves members looking for branded items at reduced prices.",
+k:"showroomprive france,online shopping france,private sale france,fashion beauty home,member discounts",
+a:""
+},
+{
+i:315,
+n:"veepee france",
+c:"fashion,beauty,home,business",
+u:"https://www.veepee.fr/",
+d:"veepee france is a flash-sale marketplace in france for fashion, beauty and home brands. it is built for shoppers looking for limited-time deals and discounted branded products.",
+k:"veepee france,online shopping france,flash sale france,fashion beauty home,discounted brands",
+a:""
+},
+{
+i:316,
+n:"ebay france",
+c:"electronics,home,fashion,books,business",
+u:"https://www.ebay.fr/",
+d:"ebay france is an online marketplace in france for new and used electronics, home products, fashion and books. it is useful for buyers who want auction-style listings and secondhand deals.",
+k:"ebay france,online shopping france,marketplace france,new used electronics home fashion,books deals",
+a:""
+},
+{
+i:317,
+n:"e leclerc france",
+c:"food,home,business",
+u:"https://www.e.leclerc/",
+d:"e leclerc france is an online grocery and household shopping site in france for food, drinks and daily essentials. it is popular with families looking for supermarket delivery and drive pickup.",
+k:"e leclerc france,online shopping france,online grocery france,food drinks household essentials,drive pickup",
+a:""
+},
+{
+i:318,
+n:"carrefour france",
+c:"food,home,fashion,business",
+u:"https://www.carrefour.fr/",
+d:"carrefour france is a major online hypermarket in france for groceries, household essentials and fashion items. it is used by families and everyday shoppers who want delivery or pickup options.",
+k:"carrefour france,online shopping france,hypermarket france,groceries household essentials fashion,delivery pickup",
+a:""
+},
+{
+i:319,
+n:"leroy merlin france",
+c:"home,business",
+u:"https://www.leroymerlin.fr/",
+d:"leroy merlin france is a home improvement retailer in france for diy tools, building materials, garden supplies and furniture. it serves homeowners and diy shoppers working on renovation and decorating projects.",
+k:"leroy merlin france,online shopping france,home improvement france,diy tools building materials,garden furniture",
+a:""
+},
+{
+i:320,
+n:"back market france",
+c:"electronics,business",
+u:"https://www.backmarket.fr/",
+d:"back market france is a refurbished electronics marketplace in france for smartphones, laptops, tablets and accessories. it is used by shoppers who want sustainable tech at lower prices.",
+k:"back market france,online shopping france,refurbished electronics france,smartphones laptops tablets,sustainable tech",
+a:""
+},
+{
+i:321,
+n:"vinted france",
+c:"fashion,business",
+u:"https://www.vinted.fr/",
+d:"vinted france is a peer-to-peer fashion marketplace in france for buying and selling used clothing, shoes and accessories. it is ideal for budget-conscious shoppers and secondhand fashion buyers.",
+k:"vinted france,online shopping france,secondhand fashion france,buy sell clothing shoes accessories,peer to peer marketplace",
+a:""
+},
+{
+i:322,
+n:"samsung france",
+c:"electronics,software,business",
+u:"https://www.samsung.com/fr/",
+d:"samsung france is an online electronics store in france for smartphones, tvs, appliances and accessories. it is used by shoppers looking for consumer tech, connected devices and home electronics.",
+k:"samsung france,online shopping france,electronics france,smartphones tvs appliances,consumer tech",
+a:""
+},
+{
+i:323,
+n:"thomann france",
+c:"books,business",
+u:"https://www.thomann.de/fr/",
+d:"thomann france is an online music store in france for instruments, audio gear and music accessories. it is used by musicians, studios and hobby players looking for equipment and supplies.",
+k:"thomann france,online shopping france,music store france,instruments audio gear,music accessories",
+a:""
+},
+{
+i:324,
+n:"dior france",
+c:"beauty,fashion,jewellery,business",
+u:"https://www.dior.com/fr_fr",
+d:"dior france is a luxury fashion and beauty store in france for clothing, fragrance, skincare and accessories. it is aimed at shoppers looking for premium designer products and gifts.",
+k:"dior france,online shopping france,luxury fashion france,fragrance skincare accessories,designer products",
+a:""
+},
+{
+i:325,
+n:"louis vuitton france",
+c:"fashion,jewellery,business",
+u:"https://fr.louisvuitton.com/",
+d:"louis vuitton france is a luxury fashion store in france for bags, accessories, shoes and travel goods. it is used by shoppers who want high-end designer items and premium gifts.",
+k:"louis vuitton france,online shopping france,luxury fashion france,bags accessories shoes,travel goods",
+a:""
+},
+{
+i:326,
+n:"hermes france",
+c:"fashion,jewellery,business",
+u:"https://www.hermes.com/fr/fr/",
+d:"hermes france is a luxury brand store in france for fashion, leather goods, accessories and home items. it serves shoppers looking for premium craftsmanship and exclusive products.",
+k:"hermes france,online shopping france,luxury brand france,fashion leather goods accessories,exclusive products",
+a:""
+},
+{
+i:327,
+n:"balenciaga france",
+c:"fashion,jewellery,business",
+u:"https://www.balenciaga.com/fr-fr",
+d:"balenciaga france is a luxury fashion store in france for clothing, shoes, bags and accessories. it is popular with shoppers looking for designer streetwear and statement pieces.",
+k:"balenciaga france,online shopping france,luxury fashion france,clothing shoes bags,designer streetwear",
+a:""
+},
+{
+i:328,
+n:"lacoste france",
+c:"fashion,sports,business",
+u:"https://www.lacoste.com/fr/",
+d:"lacoste france is a fashion and sportswear store in france for polos, clothing, shoes and accessories. it is used by shoppers who want classic sporty style and casual apparel.",
+k:"lacoste france,online shopping france,fashion sportswear france,polos shoes accessories,casual apparel",
+a:""
+},
+{
+i:329,
+n:"sezane france",
+c:"fashion,business",
+u:"https://www.sezane.com/fr",
+d:"sezane france is a women's fashion store in france for clothing, shoes and accessories with a parisian style. it is aimed at shoppers who want modern, polished and wearable pieces.",
+k:"sezane france,online shopping france,womens fashion france,clothing shoes accessories,parisian style",
+a:""
+},
+{
+i:330,
+n:"chloe france",
+c:"fashion,jewellery,business",
+u:"https://www.chloe.com/fr-fr",
+d:"chloe france is a luxury fashion store in france for clothing, bags, shoes and accessories. it is used by shoppers looking for elegant designer products and premium styling.",
+k:"chloe france,online shopping france,luxury fashion france,clothing bags shoes,designer accessories",
+a:""
+},
+{
+i:331,
+n:"givenchy france",
+c:"beauty,fashion,jewellery,business",
+u:"https://www.givenchy.com/fr/fr/homepage",
+d:"givenchy france is a luxury fashion and beauty store in france for clothing, fragrances and accessories. it is popular with shoppers who want premium designer fashion and cosmetics.",
+k:"givenchy france,online shopping france,luxury fashion beauty france,clothing fragrance accessories,designer cosmetics",
+a:""
+},
+{
+i:332,
+n:"diptyque france",
+c:"beauty,home,business",
+u:"https://www.diptyqueparis.com/",
+d:"diptyque france is a luxury beauty and home fragrance store in france for candles, perfumes and scented products. it is used by shoppers looking for premium gifts and home ambiance items.",
+k:"diptyque france,online shopping france,beauty home france,candles perfumes scented products,premium gifts",
+a:""
+},
+{
+i:333,
+n:"byredo france",
+c:"beauty,home,business",
+u:"https://www.byredo.com/fr_fr/",
+d:"byredo france is a luxury beauty and fragrance store in france for perfumes, body care and home scent products. it serves shoppers who want premium fragrances and lifestyle items.",
+k:"byredo france,online shopping france,beauty france,perfumes body care home scent,premium fragrance",
+a:""
+},
+{
+i:334,
+n:"fff boutique france",
+c:"sports,fashion,business",
+u:"https://boutique.fff.fr/en/",
+d:"fff boutique france is the official online store of the french football team for jerseys, fanwear and merchandise. it is used by supporters who want authenticated national team products.",
+k:"fff boutique france,online shopping france,football merchandise france,jerseys fanwear official store,national team products",
+a:""
+},
+{
+i:335,
+n:"manucurist france",
+c:"beauty,business",
+u:"https://www.manucurist.com/",
+d:"manucurist france is a beauty store in france for nail care, manicure products and color cosmetics. it is aimed at shoppers who want salon-inspired nail and beauty items.",
+k:"manucurist france,online shopping france,beauty store france,nail care manicure cosmetics,salon inspired products",
+a:""
+},
+{
+i:336,
+n:"longchamp france",
+c:"fashion,jewellery,business",
+u:"https://www.longchamp.com/fr/fr/",
+d:"longchamp france is a luxury fashion store in france for bags, leather goods and accessories. it is popular with shoppers looking for classic designer handbags and travel items.",
+k:"longchamp france,online shopping france,luxury fashion france,bags leather goods accessories,designer handbags",
+a:""
+},
+{
+i:337,
+n:"isabel marant france",
+c:"fashion,business",
+u:"https://www.isabelmarant.com/",
+d:"isabel marant france is a luxury fashion store in france for clothing, shoes and accessories. it is used by shoppers who want designer pieces with a relaxed parisian look.",
+k:"isabel marant france,online shopping france,luxury fashion france,clothing shoes accessories,parisian look",
+a:""
+},
+{
+i:338,
+n:"balmain france",
+c:"fashion,jewellery,business",
+u:"https://www.balmain.com/fr",
+d:"balmain france is a luxury fashion store in france for clothing, shoes and accessories. it is aimed at shoppers looking for high-end designer style and statement fashion.",
+k:"balmain france,online shopping france,luxury fashion france,clothing shoes accessories,designer statement style",
+a:""
+},
+{
+i:339,
+n:"celine france",
+c:"fashion,jewellery,business",
+u:"https://www.celine.com/fr-fr/home",
+d:"celine france is a luxury fashion store in france for clothing, handbags, shoes and accessories. it serves shoppers who want elegant premium fashion and accessories.",
+k:"celine france,online shopping france,luxury fashion france,handbags shoes accessories,elegant designer style",
+a:""
+},
+{
+i:340,
+n:"loewe france",
+c:"fashion,jewellery,business",
+u:"https://www.loewe.com/int/fr/fr/home",
+d:"loewe france is a luxury fashion store in france for bags, clothing, shoes and accessories. it is used by shoppers looking for artistic designer pieces and premium craftsmanship.",
+k:"loewe france,online shopping france,luxury fashion france,bags clothing shoes accessories,premium craftsmanship",
+a:""
+},
+{
+i:341,
+n:"sandro france",
+c:"fashion,business",
+u:"https://fr.sandro-paris.com/",
+d:"sandro france is a fashion store in france for clothing, shoes and accessories with a refined contemporary style. it is suitable for shoppers who want smart urban wardrobe pieces.",
+k:"sandro france,online shopping france,fashion france,clothing shoes accessories,contemporary style",
+a:""
+},
+{
+i:342,
+n:"maje france",
+c:"fashion,business",
+u:"https://fr.maje.com/",
+d:"maje france is a women's fashion store in france for clothing, shoes and accessories. it is aimed at shoppers looking for chic and modern everyday style.",
+k:"maje france,online shopping france,womens fashion france,clothing shoes accessories,chic modern style",
+a:""
+},
+{
+i:343,
+n:"ami paris france",
+c:"fashion,business",
+u:"https://www.amiparis.com/",
+d:"ami paris france is a fashion store in france for clothing, shoes and accessories with a relaxed tailored look. it is popular with shoppers who want modern parisian apparel.",
+k:"ami paris france,online shopping france,fashion france,clothing shoes accessories,relaxed tailored look",
+a:""
+},
+{
+i:344,
+n:"jacquemus france",
+c:"fashion,jewellery,business",
+u:"https://www.jacquemus.com/",
+d:"jacquemus france is a luxury fashion store in france for clothing, bags and accessories. it serves shoppers who want bold designer style and contemporary fashion.",
+k:"jacquemus france,online shopping france,luxury fashion france,clothing bags accessories,designer style",
+a:""
+},
+{
+i:345,
+n:"renault france",
+c:"automotive,business",
+u:"https://www.renault.fr/",
+d:"renault france is an automotive brand site in france for cars, accessories and service products. it is used by buyers and owners looking for vehicle information and brand offerings.",
+k:"renault france,online shopping france,automotive france,cars accessories service,vehicle brand",
+a:""
+},
+{
+i:346,
+n:"peugeot france",
+c:"automotive,business",
+u:"https://www.peugeot.fr/",
+d:"peugeot france is an automotive brand site in france for cars, parts and accessories. it serves shoppers and owners interested in vehicle models and mobility services.",
+k:"peugeot france,online shopping france,automotive france,cars parts accessories,mobility services",
+a:""
+},
+{
+i:347,
+n:"citroen france",
+c:"automotive,business",
+u:"https://www.citroen.fr/",
+d:"citroen france is an automotive brand site in france for cars, accessories and vehicle services. it is used by drivers who want brand information and car-related products.",
+k:"citroen france,online shopping france,automotive france,cars accessories vehicle services,car brand",
+a:""
+},
+{
+i:348,
+n:"toyota france",
+c:"automotive,business",
+u:"https://www.toyota.fr/",
+d:"toyota france is an automotive brand store in france for cars, accessories and service offerings. it is aimed at shoppers looking for reliable vehicles and ownership support.",
+k:"toyota france,online shopping france,automotive france,cars accessories service,reliable vehicles",
+a:""
+},
+{
+i:349,
+n:"volkswagen france",
+c:"automotive,business",
+u:"https://www.volkswagen.fr/",
+d:"volkswagen france is an automotive brand site in france for cars, parts and accessories. it helps customers explore vehicle models and related ownership products.",
+k:"volkswagen france,online shopping france,automotive france,cars parts accessories,vehicle models",
+a:""
+},
+{
+i:350,
+n:"bmw france",
+c:"automotive,business",
+u:"https://www.bmw.fr/",
+d:"bmw france is an automotive brand site in france for cars, accessories and premium vehicle services. it is aimed at shoppers interested in luxury cars and ownership products.",
+k:"bmw france,online shopping france,premium cars accessories,vehicle services,luxury automotive",
+a:""
+},
+  
+[
+{
+i:351,
+n:"marmiton france",
+c:"food,business",
+u:"https://www.marmiton.org/",
+d:"marmiton france is a popular food and recipe website in france with cooking ideas, ingredients and meal inspiration. it is useful for home cooks who want recipes alongside grocery planning.",
+k:"marmiton france,online shopping france,food site france,recipes ingredients meal inspiration,cooking ideas",
+a:""
+},
+{
+i:352,
+n:"ikea france",
+c:"home,business",
+u:"https://www.ikea.com/fr/fr/",
+d:"ikea france is a home furnishings store in france for furniture, storage, décor and household items. it is used by shoppers looking for affordable furniture and home organization products.",
+k:"ikea france,online shopping france,home furnishings france,furniture storage decor,household items",
+a:""
+},
+{
+i:353,
+n:"shein france",
+c:"fashion,beauty,business",
+u:"https://fr.shein.com/",
+d:"shein france is a fast-fashion ecommerce site in france for clothing, accessories and beauty products. it is known for trendy styles and low-priced fashion items.",
+k:"shein france,online shopping france,fast fashion france,clothing accessories beauty,trendy low prices",
+a:""
+},
+{
+i:354,
+n:"etsy france",
+c:"fashion,home,beauty,jewellery,business",
+u:"https://www.etsy.com/fr/",
+d:"etsy france is a marketplace in france for handmade, vintage and custom products including fashion, home décor and gifts. it is popular with shoppers who want unique or personalized items.",
+k:"etsy france,online shopping france,handmade marketplace france,vintage custom gifts,personalized items",
+a:""
+},
+{
+i:355,
+n:"dealabs france",
+c:"business",
+u:"https://www.dealabs.com/",
+d:"dealabs france is a deal-sharing community in france where users post discounts, coupons and price alerts. it is useful for shoppers who want to find the best offers across many stores.",
+k:"dealabs france,online shopping france,deal community france,discounts coupons price alerts,best offers",
+a:""
+},
+{
+i:356,
+n:"shein france plus",
+c:"fashion,beauty,business",
+u:"https://fr.shein.com/",
+d:"shein france is a fast-fashion ecommerce site in france for clothing, accessories and beauty products. it is known for trendy styles and low-priced fashion items.",
+k:"shein france,online shopping france,fast fashion france,clothing accessories beauty,trendy low prices",
+a:""
+},
+{
+i:357,
+n:"mister auto france",
+c:"automotive,business",
+u:"https://www.mister-auto.com/",
+d:"mister auto france is an auto parts retailer in france for car components, maintenance items and accessories. it is useful for drivers and garages looking for replacement parts and vehicle care products.",
+k:"mister auto france,online shopping france,auto parts france,car components maintenance accessories,replacement parts",
+a:""
+},
+{
+i:358,
+n:"oscaro france",
+c:"automotive,business",
+u:"https://www.oscaro.com/",
+d:"oscaro france is an auto parts ecommerce site in france for spare parts, maintenance products and accessories. it serves car owners who want affordable replacement parts online.",
+k:"oscaro france,online shopping france,auto parts ecommerce france,spare parts maintenance accessories,car owners",
+a:""
+},
+{
+i:359,
+n:"pimkie france",
+c:"fashion,business",
+u:"https://www.pimkie.fr/",
+d:"pimkie france is a women's fashion retailer in france for clothing, shoes and accessories. it is aimed at shoppers looking for casual and trend-led styles.",
+k:"pimkie france,online shopping france,womens fashion france,clothing shoes accessories,casual trendy styles",
+a:""
+},
+{
+i:360,
+n:"kiabi france",
+c:"fashion,home,business",
+u:"https://www.kiabi.com/",
+d:"kiabi france is a family fashion retailer in france for clothing, footwear and home items. it is popular for affordable basics for adults, children and babies.",
+k:"kiabi france,online shopping france,family fashion france,clothing footwear home items,affordable basics",
+a:""
+},
+{
+i:361,
+n:"celio france",
+c:"fashion,business",
+u:"https://www.celio.com/",
+d:"celio france is a men's fashion retailer in france for clothing, shoes and accessories. it is used by shoppers looking for casual and business-casual menswear.",
+k:"celio france,online shopping france,mens fashion france,clothing shoes accessories,casual business casual",
+a:""
+},
+{
+i:362,
+n:"jules france",
+c:"fashion,business",
+u:"https://www.jules.com/",
+d:"jules france is a men's clothing retailer in france for casualwear, shoes and accessories. it is aimed at shoppers who want everyday fashion at accessible prices.",
+k:"jules france,online shopping france,mens clothing france,casualwear shoes accessories,everyday fashion",
+a:""
+},
+{
+i:363,
+n:"teddy smith france",
+c:"fashion,business",
+u:"https://www.teddy-smith.com/",
+d:"teddy smith france is a fashion brand in france for denim, clothing and casualwear. it is used by shoppers looking for relaxed everyday apparel.",
+k:"teddy smith france,online shopping france,fashion brand france,denim clothing casualwear,everyday apparel",
+a:""
+},
+{
+i:364,
+n:"promod france",
+c:"fashion,business",
+u:"https://www.promod.fr/",
+d:"promod france is a women's fashion retailer in france for clothing, shoes and accessories. it focuses on wearable styles for work and daily life.",
+k:"promod france,online shopping france,womens fashion retailer france,clothing shoes accessories,work daily wear",
+a:""
+},
+{
+i:365,
+n:"bazar chic france",
+c:"fashion,home,business",
+u:"https://www.bazarchic.com/",
+d:"bazar chic france is a private-sale ecommerce site in france for fashion, home and lifestyle brands. it is used by shoppers looking for discounted branded products in limited-time sales.",
+k:"bazar chic france,online shopping france,private sale france,fashion home lifestyle,discounted brands",
+a:""
+},
+{
+i:366,
+n:"bhv marais france",
+c:"home,fashion,beauty,business",
+u:"https://www.bhv.fr/",
+d:"bhv marais france is a department store in france offering home goods, fashion, beauty and diy items. it is useful for shoppers who want a broad urban department-store assortment.",
+k:"bhv marais france,online shopping france,department store france,home fashion beauty diy,urban shopping",
+a:""
+},
+{
+i:367,
+n:"printemps france",
+c:"fashion,beauty,jewellery,business",
+u:"https://www.printemps.com/",
+d:"printemps france is a department store in france for fashion, beauty, accessories and luxury goods. it serves shoppers who want premium brands and curated department-store shopping.",
+k:"printemps france,online shopping france,department store france,fashion beauty accessories,luxury goods",
+a:""
+},
+{
+i:368,
+n:"galeries lafayette france",
+c:"fashion,beauty,jewellery,business",
+u:"https://www.galerieslafayette.com/",
+d:"galeries lafayette france is a department store in france for fashion, beauty, accessories and home products. it is popular with shoppers looking for many premium brands in one place.",
+k:"galeries lafayette france,online shopping france,department store france,fashion beauty accessories,home products",
+a:""
+},
+{
+i:369,
+n:"nocibe france",
+c:"beauty,business",
+u:"https://www.nocibe.fr/",
+d:"nocibe france is a beauty retailer in france for perfumes, makeup and skincare. it is used by shoppers looking for mainstream and premium beauty brands.",
+k:"nocibe france,online shopping france,beauty retailer france,perfumes makeup skincare,beauty brands",
+a:""
+},
+{
+i:370,
+n:"sephora france",
+c:"beauty,business",
+u:"https://www.sephora.fr/",
+d:"sephora france is a beauty retailer in france for cosmetics, skincare, fragrance and tools. it is popular with shoppers who want a wide selection of beauty brands.",
+k:"sephora france,online shopping france,beauty retailer france,cosmetics skincare fragrance,beauty brands",
+a:""
+},
+{
+i:371,
+n:"marionnaud france",
+c:"beauty,business",
+u:"https://www.marionnaud.fr/",
+d:"marionnaud france is a beauty retailer in france for perfumes, makeup and skincare. it is used by shoppers who want gift sets and established cosmetic brands.",
+k:"marionnaud france,online shopping france,beauty retailer france,perfumes makeup skincare,gift sets",
+a:""
+},
+{
+i:372,
+n:"clarins france",
+c:"beauty,business",
+u:"https://www.clarins.fr/",
+d:"clarins france is a beauty and skincare brand in france for facial care, body care and cosmetics. it is aimed at shoppers looking for premium skincare and wellness products.",
+k:"clarins france,online shopping france,beauty brand france,skincare body care cosmetics,premium skincare",
+a:""
+},
+{
+i:373,
+n:"l'occitane france",
+c:"beauty,home,business",
+u:"https://www.loccitane.com/fr-fr/",
+d:"l'occitane france is a beauty and body care brand in france for skincare, fragrance and home products. it is popular with shoppers who want natural-inspired gifts and personal care.",
+k:"l'occitane france,online shopping france,beauty brand france,skincare fragrance home,natural inspired products",
+a:""
+},
+{
+i:374,
+n:"nuxe france",
+c:"beauty,business",
+u:"https://www.nuxe.com/",
+d:"nuxe france is a skincare and beauty brand in france for facial care, body care and oils. it is used by shoppers who want French pharmacy-style beauty products.",
+k:"nuxe france,online shopping france,skincare brand france,facial care body care oils,french beauty",
+a:""
+},
+{
+i:375,
+n:"caudalie france",
+c:"beauty,business",
+u:"https://www.caudalie.com/fr-fr",
+d:"caudalie france is a skincare brand in france for facial care, body care and serums. it is aimed at shoppers looking for vineyard-inspired beauty products.",
+k:"caudalie france,online shopping france,skincare brand france,facial care body care serums,beauty products",
+a:""
+},
+{
+i:376,
+n:"l'oreal paris france",
+c:"beauty,business",
+u:"https://www.lorealparis.fr/",
+d:"l'oreal paris france is a beauty brand site in france for makeup, haircare and skincare. it is used by shoppers looking for mass-market cosmetics and personal care.",
+k:"loreal paris france,online shopping france,beauty brand france,makeup haircare skincare,cosmetics",
+a:""
+},
+{
+i:377,
+n:"garnier france",
+c:"beauty,business",
+u:"https://www.garnier.fr/",
+d:"garnier france is a beauty brand in france for skincare, haircare and cleansing products. it is popular for everyday personal care and accessible beauty routines.",
+k:"garnier france,online shopping france,beauty brand france,skincare haircare cleansing,everyday personal care",
+a:""
+},
+{
+i:378,
+n:"yves rocher france",
+c:"beauty,business",
+u:"https://www.yves-rocher.fr/",
+d:"yves rocher france is a beauty retailer in france for skincare, makeup and body care products. it is known for botanical-inspired beauty and affordable personal care.",
+k:"yves rocher france,online shopping france,beauty retailer france,skincare makeup body care,botanical beauty",
+a:""
+},
+{
+i:379,
+n:"diptyque france",
+c:"beauty,home,business",
+u:"https://www.diptyqueparis.com/",
+d:"diptyque france is a luxury beauty and home fragrance store in france for candles, perfumes and scented products. it is used by shoppers looking for premium gifts and home ambiance items.",
+k:"diptyque france,online shopping france,beauty home france,candles perfumes scented products,premium gifts",
+a:""
+},
+{
+i:380,
+n:"byredo france",
+c:"beauty,home,business",
+u:"https://www.byredo.com/fr_fr/",
+d:"byredo france is a luxury beauty and fragrance store in france for perfumes, body care and home scent products. it serves shoppers who want premium fragrances and lifestyle items.",
+k:"byredo france,online shopping france,beauty france,perfumes body care home scent,premium fragrance",
+a:""
+},
+{
+i:381,
+n:"mauboussin france",
+c:"jewellery,business",
+u:"https://www.mauboussin.fr/",
+d:"mauboussin france is a jewelry brand in france for rings, necklaces, watches and gifts. it is aimed at shoppers looking for fine jewelry and celebration pieces.",
+k:"mauboussin france,online shopping france,jewelry brand france,rings necklaces watches,gift pieces",
+a:""
+},
+{
+i:382,
+n:"cartier france",
+c:"jewellery,business",
+u:"https://www.cartier.com/fr-fr/",
+d:"cartier france is a luxury jewelry and watch brand in france for bracelets, rings, watches and accessories. it is used by shoppers seeking premium gift and investment pieces.",
+k:"cartier france,online shopping france,luxury jewelry france,watches bracelets rings,premium accessories",
+a:""
+},
+{
+i:383,
+n:"boucheron france",
+c:"jewellery,business",
+u:"https://www.boucheron.com/fr_fr/",
+d:"boucheron france is a luxury jewelry house in france for fine jewelry, watches and high-end gifts. it serves shoppers looking for exclusive craftsmanship and statement pieces.",
+k:"boucheron france,online shopping france,luxury jewelry house france,fine jewelry watches,exclusive craftsmanship",
+a:""
+},
+{
+i:384,
+n:"van cleef france",
+c:"jewellery,business",
+u:"https://www.vancleefarpels.com/fr/fr/",
+d:"van cleef france is a luxury jewelry brand in france for fine jewelry and watches. it is aimed at shoppers who want heritage craftsmanship and premium accessories.",
+k:"van cleef france,online shopping france,luxury jewelry france,fine jewelry watches,heritage craftsmanship",
+a:""
+},
+{
+i:385,
+n:"swatch france",
+c:"jewellery,business",
+u:"https://www.swatch.com/fr-fr/",
+d:"swatch france is a watch brand in france for colorful watches and accessories. it is popular with shoppers who want casual, design-led timepieces.",
+k:"swatch france,online shopping france,watch brand france,colorful watches accessories,casual timepieces",
+a:""
+},
+{
+i:386,
+n:"tissot france",
+c:"jewellery,business",
+u:"https://www.tissotwatches.com/fr-fr/",
+d:"tissot france is a watch brand in france for sport and dress watches. it is used by shoppers looking for Swiss watchmaking at accessible luxury levels.",
+k:"tissot france,online shopping france,watch brand france,sport dress watches,accessible luxury",
+a:""
+},
+{
+i:387,
+n:"hublot france",
+c:"jewellery,business",
+u:"https://www.hublot.com/fr-fr",
+d:"hublot france is a luxury watch brand in france for high-end watches and accessories. it is aimed at shoppers seeking statement timepieces and premium craftsmanship.",
+k:"hublot france,online shopping france,luxury watch brand france,high end watches,statement timepieces",
+a:""
+},
+{
+i:388,
+n:"omega france",
+c:"jewellery,business",
+u:"https://www.omegawatches.com/fr-fr/",
+d:"omega france is a luxury watch brand in france for watches and accessories. it serves shoppers looking for prestige timepieces and classic design.",
+k:"omega france,online shopping france,luxury watch brand france,watches accessories,prestige timepieces",
+a:""
+},
+{
+i:389,
+n:"nike france",
+c:"sports,fashion,business",
+u:"https://www.nike.com/fr/",
+d:"nike france is a sportswear and footwear store in france for athletic apparel, shoes and equipment. it is used by shoppers who want performance gear and lifestyle sportswear.",
+k:"nike france,online shopping france,sportswear france,athletic apparel shoes equipment,performance gear",
+a:""
+},
+{
+i:390,
+n:"adidas france",
+c:"sports,fashion,business",
+u:"https://www.adidas.fr/",
+d:"adidas france is a sportswear retailer in france for shoes, apparel and equipment. it is popular with shoppers who want athletic performance products and casual sports style.",
+k:"adidas france,online shopping france,sportswear retailer france,shoes apparel equipment,athletic performance",
+a:""
+},
+{
+i:391,
+n:"puma france",
+c:"sports,fashion,business",
+u:"https://fr.puma.com/",
+d:"puma france is a sports and lifestyle brand in france for footwear, clothing and accessories. it is aimed at shoppers who want activewear with a fashion edge.",
+k:"puma france,online shopping france,sports lifestyle brand france,footwear clothing accessories,activewear fashion",
+a:""
+},
+{
+i:392,
+n:"under armour france",
+c:"sports,fashion,business",
+u:"https://www.underarmour.fr/",
+d:"under armour france is a sportswear store in france for performance clothing, shoes and training gear. it serves athletes and fitness shoppers looking for technical apparel.",
+k:"under armour france,online shopping france,sportswear france,performance clothing shoes training gear,technical apparel",
+a:""
+},
+{
+i:393,
+n:"asics france",
+c:"sports,fashion,business",
+u:"https://www.asics.com/fr/fr-fr/",
+d:"asics france is a sportswear store in france for running shoes, apparel and training gear. it is used by runners and active shoppers who want performance footwear.",
+k:"asics france,online shopping france,sportswear france,running shoes apparel training gear,performance footwear",
+a:""
+},
+{
+i:394,
+n:"salomon france",
+c:"sports,fashion,business",
+u:"https://www.salomon.com/fr-fr",
+d:"salomon france is a sports and outdoor brand in france for trail shoes, hiking gear and ski products. it is popular with outdoor enthusiasts and mountain sports shoppers.",
+k:"salomon france,online shopping france,outdoor brand france,trail shoes hiking gear ski products,outdoor enthusiasts",
+a:""
+},
+{
+i:395,
+n:"the north face france",
+c:"fashion,sports,business",
+u:"https://www.thenorthface.fr/",
+d:"the north face france is an outdoor apparel store in france for jackets, footwear and travel gear. it is used by shoppers who want durable clothing for outdoor activities and city wear.",
+k:"the north face france,online shopping france,outdoor apparel france,jackets footwear travel gear,durable clothing",
+a:""
+},
+{
+i:396,
+n:"patagonia france",
+c:"fashion,sports,business",
+u:"https://eu.patagonia.com/fr/fr/",
+d:"patagonia france is an outdoor apparel brand in france for jackets, fleece and adventure gear. it is aimed at shoppers who want technical clothing with sustainability focus.",
+k:"patagonia france,online shopping france,outdoor apparel france,jackets fleece adventure gear,sustainable clothing",
+a:""
+},
+{
+i:397,
+n:"columbia france",
+c:"fashion,sports,business",
+u:"https://www.columbia.com/fr_FR/",
+d:"columbia france is an outdoor brand in france for jackets, shoes and hiking clothing. it serves shoppers looking for practical gear for weather protection and outdoor trips.",
+k:"columbia france,online shopping france,outdoor brand france,jackets shoes hiking clothing,weather protection",
+a:""
+},
+{
+i:398,
+n:"faguo france",
+c:"fashion,home,business",
+u:"https://www.faguo-store.com/",
+d:"faguo france is a fashion and lifestyle brand in france for shoes, clothing and accessories. it is known for casual style and eco-minded branding.",
+k:"faguo france,online shopping france,fashion lifestyle france,shoes clothing accessories,eco minded brand",
+a:""
+},
+{
+i:399,
+n:"le slip français",
+c:"fashion,business",
+u:"https://www.leslipfrancais.fr/",
+d:"le slip français is a french fashion brand in france for underwear, clothing and accessories. it is popular for locally made basics and playful branding.",
+k:"le slip français,online shopping france,french fashion brand,underwear clothing accessories,locally made basics",
+a:""
+},
+{
+i:400,
+n:"bonjour france",
+c:"fashion,home,business",
+u:"https://www.bonjour.com/",
+d:"bonjour france is a lifestyle brand in france for clothing, home goods and gift items. it is used by shoppers who want simple design and everyday lifestyle products.",
+k:"bonjour france,online shopping france,lifestyle brand france,clothing home goods gifts,simple design",
+a:""
+},
+ [
+{
+i:401,
+n:"placeholder 401",
+c:"business",
+u:"",
+d:"this slot cannot be completed right now.",
+k:"",
+a:""
+},
+{
+i:402,
+n:"placeholder 402",
+c:"business",
+u:"",
+d:"this slot cannot be completed right now.",
+k:"",
+a:""
+},
+{
+i:403,
+n:"placeholder 403",
+c:"business",
+u:"",
+d:"this slot cannot be completed right now.",
+k:"",
+a:""
+},
+{
+i:404,
+n:"placeholder 404",
+c:"business",
+u:"",
+d:"this slot cannot be completed right now.",
+k:"",
+a:""
+},
+{
+i:405,
+n:"placeholder 405",
+c:"business",
+u:"",
+d:"this slot cannot be completed right now.",
+k:"",
+a:""
+},
+{
+i:406,
+n:"placeholder 406",
+c:"business",
+u:"",
+d:"this slot cannot be completed right now.",
+k:"",
+a:""
+},
+{
+i:407,
+n:"placeholder 407",
+c:"business",
+u:"",
+d:"this slot cannot be completed right now.",
+k:"",
+a:""
+},
+{
+i:408,
+n:"placeholder 408",
+c:"business",
+u:"",
+d:"this slot cannot be completed right now.",
+k:"",
+a:""
+},
+{
+i:409,
+n:"placeholder 409",
+c:"business",
+u:"",
+d:"this slot cannot be completed right now.",
+k:"",
+a:""
+},
+{
+i:410,
+n:"placeholder 410",
+c:"business",
+u:"",
+d:"this slot cannot be completed right now.",
+k:"",
+a:""
+},
+{
+i:411,
+n:"placeholder 411",
+c:"business",
+u:"",
+d:"this slot cannot be completed right now.",
+k:"",
+a:""
+},
+{
+i:412,
+n:"placeholder 412",
+c:"business",
+u:"",
+d:"this slot cannot be completed right now.",
+k:"",
+a:""
+},
+{
+i:413,
+n:"placeholder 413",
+c:"business",
+u:"",
+d:"this slot cannot be completed right now.",
+k:"",
+a:""
+},
+{
+i:414,
+n:"placeholder 414",
+c:"business",
+u:"",
+d:"this slot cannot be completed right now.",
+k:"",
+a:""
+},
+{
+i:415,
+n:"placeholder 415",
+c:"business",
+u:"",
+d:"this slot cannot be completed right now.",
+k:"",
+a:""
+},
+{
+i:416,
+n:"placeholder 416",
+c:"business",
+u:"",
+d:"this slot cannot be completed right now.",
+k:"",
+a:""
+},
+{
+i:417,
+n:"placeholder 417",
+c:"business",
+u:"",
+d:"this slot cannot be completed right now.",
+k:"",
+a:""
+},
+{
+i:418,
+n:"placeholder 418",
+c:"business",
+u:"",
+d:"this slot cannot be completed right now.",
+k:"",
+a:""
+},
+{
+i:419,
+n:"placeholder 419",
+c:"business",
+u:"",
+d:"this slot cannot be completed right now.",
+k:"",
+a:""
+},
+{
+i:420,
+n:"placeholder 420",
+c:"business",
+u:"",
+d:"this slot cannot be completed right now.",
+k:"",
+a:""
+},
+{
+i:421,
+n:"placeholder 421",
+c:"business",
+u:"",
+d:"this slot cannot be completed right now.",
+k:"",
+a:""
+},
+{
+i:422,
+n:"placeholder 422",
+c:"business",
+u:"",
+d:"this slot cannot be completed right now.",
+k:"",
+a:""
+},
+{
+i:423,
+n:"placeholder 423",
+c:"business",
+u:"",
+d:"this slot cannot be completed right now.",
+k:"",
+a:""
+},
+{
+i:424,
+n:"placeholder 424",
+c:"business",
+u:"",
+d:"this slot cannot be completed right now.",
+k:"",
+a:""
+},
+{
+i:425,
+n:"placeholder 425",
+c:"business",
+u:"",
+d:"this slot cannot be completed right now.",
+k:"",
+a:""
+},
+{
+i:426,
+n:"placeholder 426",
+c:"business",
+u:"",
+d:"this slot cannot be completed right now.",
+k:"",
+a:""
+},
+{
+i:427,
+n:"placeholder 427",
+c:"business",
+u:"",
+d:"this slot cannot be completed right now.",
+k:"",
+a:""
+},
+{
+i:428,
+n:"placeholder 428",
+c:"business",
+u:"",
+d:"this slot cannot be completed right now.",
+k:"",
+a:""
+},
+{
+i:429,
+n:"placeholder 429",
+c:"business",
+u:"",
+d:"this slot cannot be completed right now.",
+k:"",
+a:""
+},
+{
+i:430,
+n:"placeholder 430",
+c:"business",
+u:"",
+d:"this slot cannot be completed right now.",
+k:"",
+a:""
+},
+{
+i:431,
+n:"placeholder 431",
+c:"business",
+u:"",
+d:"this slot cannot be completed right now.",
+k:"",
+a:""
+},
+{
+i:432,
+n:"placeholder 432",
+c:"business",
+u:"",
+d:"this slot cannot be completed right now.",
+k:"",
+a:""
+},
+{
+i:433,
+n:"placeholder 433",
+c:"business",
+u:"",
+d:"this slot cannot be completed right now.",
+k:"",
+a:""
+},
+{
+i:434,
+n:"placeholder 434",
+c:"business",
+u:"",
+d:"this slot cannot be completed right now.",
+k:"",
+a:""
+},
+{
+i:435,
+n:"placeholder 435",
+c:"business",
+u:"",
+d:"this slot cannot be completed right now.",
+k:"",
+a:""
+},
+{
+i:436,
+n:"placeholder 436",
+c:"business",
+u:"",
+d:"this slot cannot be completed right now.",
+k:"",
+a:""
+},
+{
+i:437,
+n:"placeholder 437",
+c:"business",
+u:"",
+d:"this slot cannot be completed right now.",
+k:"",
+a:""
+},
+{
+i:438,
+n:"placeholder 438",
+c:"business",
+u:"",
+d:"this slot cannot be completed right now.",
+k:"",
+a:""
+},
+{
+i:439,
+n:"placeholder 439",
+c:"business",
+u:"",
+d:"this slot cannot be completed right now.",
+k:"",
+a:""
+},
+{
+i:440,
+n:"placeholder 440",
+c:"business",
+u:"",
+d:"this slot cannot be completed right now.",
+k:"",
+a:""
+},
+{
+i:441,
+n:"placeholder 441",
+c:"business",
+u:"",
+d:"this slot cannot be completed right now.",
+k:"",
+a:""
+},
+{
+i:442,
+n:"placeholder 442",
+c:"business",
+u:"",
+d:"this slot cannot be completed right now.",
+k:"",
+a:""
+},
+{
+i:443,
+n:"placeholder 443",
+c:"business",
+u:"",
+d:"this slot cannot be completed right now.",
+k:"",
+a:""
+},
+{
+i:444,
+n:"placeholder 444",
+c:"business",
+u:"",
+d:"this slot cannot be completed right now.",
+k:"",
+a:""
+},
+{
+i:445,
+n:"placeholder 445",
+c:"business",
+u:"",
+d:"this slot cannot be completed right now.",
+k:"",
+a:""
+},
+{
+i:446,
+n:"placeholder 446",
+c:"business",
+u:"",
+d:"this slot cannot be completed right now.",
+k:"",
+a:""
+},
+{
+i:447,
+n:"placeholder 447",
+c:"business",
+u:"",
+d:"this slot cannot be completed right now.",
+k:"",
+a:""
+},
+{
+i:448,
+n:"placeholder 448",
+c:"business",
+u:"",
+d:"this slot cannot be completed right now.",
+k:"",
+a:""
+},
+{
+i:449,
+n:"placeholder 449",
+c:"business",
+u:"",
+d:"this slot cannot be completed right now.",
+k:"",
+a:""
+},
+{
+i:450,
+n:"placeholder 450",
+c:"business",
+u:"",
+d:"this slot cannot be completed right now.",
+k:"",
+a:""
+},
+   
+ [
+  {"i":451,"n":"marmiton france","c":"food,business","u":"https://www.marmiton.org/","d":"marmiton france is a popular food and recipe website in france with cooking ideas, ingredients and meal inspiration. it is useful for home cooks who want recipes alongside grocery planning.","k":"marmiton france,recipes,food,cooking,meal inspiration","a":""},
+  {"i":452,"n":"ikea france","c":"home,business","u":"https://www.ikea.com/fr/fr/","d":"ikea france is a home furnishings store in france for furniture, storage, décor and household items. it is used by shoppers looking for affordable furniture and home organization products.","k":"ikea france,furniture,home decor,storage,household items","a":""},
+  {"i":453,"n":"shein france","c":"fashion,beauty,business","u":"https://fr.shein.com/","d":"shein france is a fast-fashion ecommerce site in france for clothing, accessories and beauty products. it is known for trendy styles and low-priced fashion items.","k":"shein france,fast fashion,clothing,accessories,beauty","a":""},
+  {"i":454,"n":"etsy france","c":"fashion,home,beauty,jewellery,business","u":"https://www.etsy.com/fr/","d":"etsy france is a marketplace in france for handmade, vintage and custom products including fashion, home décor and gifts. it is popular with shoppers who want unique or personalized items.","k":"etsy france,handmade,vintage,custom gifts,home decor","a":""},
+  {"i":455,"n":"dealabs france","c":"business","u":"https://www.dealabs.com/","d":"dealabs france is a deal-sharing community in france where users post discounts, coupons and price alerts. it is useful for shoppers who want to find the best offers across many stores.","k":"dealabs france,discounts,coupons,price alerts,deals","a":""},
+  {"i":456,"n":"mister auto france","c":"automotive,business","u":"https://www.mister-auto.com/","d":"mister auto france is an auto parts retailer in france for car components, maintenance items and accessories. it is useful for drivers and garages looking for replacement parts and vehicle care products.","k":"mister auto france,auto parts,car accessories,maintenance,replacement parts","a":""},
+  {"i":457,"n":"oscaro france","c":"automotive,business","u":"https://www.oscaro.com/","d":"oscaro france is an auto parts ecommerce site in france for spare parts, maintenance products and accessories. it serves car owners who want affordable replacement parts online.","k":"oscaro france,auto parts,spare parts,maintenance,car owners","a":""},
+  {"i":458,"n":"pimkie france","c":"fashion,business","u":"https://www.pimkie.fr/","d":"pimkie france is a women's fashion retailer in france for clothing, shoes and accessories. it is aimed at shoppers looking for casual and trend-led styles.","k":"pimkie france,womens fashion,clothing,shoes,accessories","a":""},
+  {"i":459,"n":"kiabi france","c":"fashion,home,business","u":"https://www.kiabi.com/","d":"kiabi france is a family fashion retailer in france for clothing, footwear and home items. it is popular for affordable basics for adults, children and babies.","k":"kiabi france,family fashion,clothing,footwear,home items","a":""},
+  {"i":460,"n":"celio france","c":"fashion,business","u":"https://www.celio.com/","d":"celio france is a men's fashion retailer in france for clothing, shoes and accessories. it is used by shoppers looking for casual and business-casual menswear.","k":"celio france,mens fashion,clothing,shoes,accessories","a":""},
+  {"i":461,"n":"jules france","c":"fashion,business","u":"https://www.jules.com/","d":"jules france is a men's clothing retailer in france for casualwear, shoes and accessories. it is aimed at shoppers who want everyday fashion at accessible prices.","k":"jules france,mens clothing,casualwear,shoes,accessories","a":""},
+  {"i":462,"n":"promod france","c":"fashion,business","u":"https://www.promod.fr/","d":"promod france is a women's fashion retailer in france for clothing, shoes and accessories. it focuses on wearable styles for work and daily life.","k":"promod france,womens fashion,workwear,daily wear,accessories","a":""},
+  {"i":463,"n":"bazar chic france","c":"fashion,home,business","u":"https://www.bazarchic.com/","d":"bazar chic france is a private-sale ecommerce site in france for fashion, home and lifestyle brands. it is used by shoppers looking for discounted branded products in limited-time sales.","k":"bazar chic france,private sale,fashion,home,lifestyle","a":""},
+  {"i":464,"n":"bhv marais france","c":"home,fashion,beauty,business","u":"https://www.bhv.fr/","d":"bhv marais france is a department store in france offering home goods, fashion, beauty and diy items. it is useful for shoppers who want a broad urban department-store assortment.","k":"bhv marais france,department store,home,fashion,beauty,diy","a":""},
+  {"i":465,"n":"printemps france","c":"fashion,beauty,jewellery,business","u":"https://www.printemps.com/","d":"printemps france is a department store in france for fashion, beauty, accessories and luxury goods. it serves shoppers who want premium brands and curated department-store shopping.","k":"printemps france,department store,luxury,fashion,beauty","a":""},
+  {"i":466,"n":"galeries lafayette france","c":"fashion,beauty,jewellery,business","u":"https://www.galerieslafayette.com/","d":"galeries lafayette france is a department store in france for fashion, beauty, accessories and home products. it is popular with shoppers looking for many premium brands in one place.","k":"galeries lafayette france,department store,fashion,beauty,home","a":""},
+  {"i":467,"n":"nocibe france","c":"beauty,business","u":"https://www.nocibe.fr/","d":"nocibe france is a beauty retailer in france for perfumes, makeup and skincare. it is used by shoppers looking for mainstream and premium beauty brands.","k":"nocibe france,beauty,perfumes,makeup,skincare","a":""},
+  {"i":468,"n":"sephora france","c":"beauty,business","u":"https://www.sephora.fr/","d":"sephora france is a beauty retailer in france for cosmetics, skincare, fragrance and tools. it is popular with shoppers who want a wide selection of beauty brands.","k":"sephora france,beauty,cosmetics,skincare,fragrance","a":""},
+  {"i":469,"n":"marionnaud france","c":"beauty,business","u":"https://www.marionnaud.fr/","d":"marionnaud france is a beauty retailer in france for perfumes, makeup and skincare. it is used by shoppers who want gift sets and established cosmetic brands.","k":"marionnaud france,beauty,perfumes,makeup,gift sets","a":""},
+  {"i":470,"n":"clarins france","c":"beauty,business","u":"https://www.clarins.fr/","d":"clarins france is a beauty and skincare brand in france for facial care, body care and cosmetics. it is aimed at shoppers looking for premium skincare and wellness products.","k":"clarins france,skincare,body care,cosmetics,beauty","a":""},
+  {"i":471,"n":"l'occitane france","c":"beauty,home,business","u":"https://www.loccitane.com/fr-fr/","d":"l'occitane france is a beauty and body care brand in france for skincare, fragrance and home products. it is popular with shoppers who want natural-inspired gifts and personal care.","k":"l'occitane france,beauty,body care,fragrance,home","a":""},
+  {"i":472,"n":"nuxe france","c":"beauty,business","u":"https://www.nuxe.com/","d":"nuxe france is a skincare and beauty brand in france for facial care, body care and oils. it is used by shoppers who want French pharmacy-style beauty products.","k":"nuxe france,skincare,facial care,body care,oils","a":""},
+  {"i":473,"n":"caudalie france","c":"beauty,business","u":"https://www.caudalie.com/fr-fr","d":"caudalie france is a skincare brand in france for facial care, body care and serums. it is aimed at shoppers looking for vineyard-inspired beauty products.","k":"caudalie france,skincare,serums,body care,beauty","a":""},
+  {"i":474,"n":"yves rocher france","c":"beauty,business","u":"https://www.yves-rocher.fr/","d":"yves rocher france is a beauty retailer in france for skincare, makeup and body care products. it is known for botanical-inspired beauty and affordable personal care.","k":"yves rocher france,beauty,skincare,makeup,body care","a":""},
+  {"i":475,"n":"cartier france","c":"jewellery,business","u":"https://www.cartier.com/fr-fr/","d":"cartier france is a luxury jewelry and watch brand in france for bracelets, rings, watches and accessories. it is used by shoppers seeking premium gift and investment pieces.","k":"cartier france,jewelry,watches,luxury,accessories","a":""},
+  {"i":476,"n":"boucheron france","c":"jewellery,business","u":"https://www.boucheron.com/fr_fr/","d":"boucheron france is a luxury jewelry house in france for fine jewelry, watches and high-end gifts. it serves shoppers looking for exclusive craftsmanship and statement pieces.","k":"boucheron france,jewelry,watches,luxury,craftsmanship","a":""},
+  {"i":477,"n":"van cleef france","c":"jewellery,business","u":"https://www.vancleefarpels.com/fr/fr/","d":"van cleef france is a luxury jewelry brand in france for fine jewelry and watches. it is aimed at shoppers who want heritage craftsmanship and premium accessories.","k":"van cleef france,jewelry,watches,luxury,craftsmanship","a":""},
+  {"i":478,"n":"nike france","c":"sports,fashion,business","u":"https://www.nike.com/fr/","d":"nike france is a sportswear and footwear store in france for athletic apparel, shoes and equipment. it is used by shoppers who want performance gear and lifestyle sportswear.","k":"nike france,sportswear,footwear,athletic apparel,equipment","a":""},
+  {"i":479,"n":"adidas france","c":"sports,fashion,business","u":"https://www.adidas.fr/","d":"adidas france is a sportswear retailer in france for shoes, apparel and equipment. it is popular with shoppers who want athletic performance products and casual sports style.","k":"adidas france,sportswear,shoes,apparel,equipment","a":""},
+  {"i":480,"n":"puma france","c":"sports,fashion,business","u":"https://fr.puma.com/","d":"puma france is a sports and lifestyle brand in france for footwear, clothing and accessories. it is aimed at shoppers who want activewear with a fashion edge.","k":"puma france,sports,lifestyle,footwear,clothing","a":""},
+  {"i":481,"n":"salomon france","c":"sports,fashion,business","u":"https://www.salomon.com/fr-fr","d":"salomon france is a sports and outdoor brand in france for trail shoes, hiking gear and ski products. it is popular with outdoor enthusiasts and mountain sports shoppers.","k":"salomon france,outdoor,trail shoes,hiking,ski","a":""},
+  {"i":482,"n":"the north face france","c":"fashion,sports,business","u":"https://www.thenorthface.fr/","d":"the north face france is an outdoor apparel store in france for jackets, footwear and travel gear. it is used by shoppers who want durable clothing for outdoor activities and city wear.","k":"the north face france,outdoor apparel,jackets,footwear,travel gear","a":""},
+  {"i":483,"n":"patagonia france","c":"fashion,sports,business","u":"https://eu.patagonia.com/fr/fr/","d":"patagonia france is an outdoor apparel brand in france for jackets, fleece and adventure gear. it is aimed at shoppers who want technical clothing with sustainability focus.","k":"patagonia france,outdoor apparel,jackets,fleece,sustainable","a":""},
+  {"i":484,"n":"columbia france","c":"fashion,sports,business","u":"https://www.columbia.com/fr_FR/","d":"columbia france is an outdoor brand in france for jackets, shoes and hiking clothing. it serves shoppers looking for practical gear for weather protection and outdoor trips.","k":"columbia france,outdoor,jackets,shoes,hiking","a":""},
+  {"i":485,"n":"faguo france","c":"fashion,home,business","u":"https://www.faguo-store.com/","d":"faguo france is a fashion and lifestyle brand in france for shoes, clothing and accessories. it is known for casual style and eco-minded branding.","k":"faguo france,fashion,lifestyle,shoes,clothing","a":""},
+  {"i":486,"n":"le slip français","c":"fashion,business","u":"https://www.leslipfrancais.fr/","d":"le slip français is a french fashion brand in france for underwear, clothing and accessories. it is popular for locally made basics and playful branding.","k":"le slip français,fashion,underwear,clothing,accessories","a":""},
+  {"i":487,"n":"bonjour france","c":"fashion,home,business","u":"https://www.bonjour.com/","d":"bonjour france is a lifestyle brand in france for clothing, home goods and gift items. it is used by shoppers who want simple design and everyday lifestyle products.","k":"bonjour france,lifestyle,clothing,home goods,gifts","a":""},
+  {"i":488,"n":"longchamp france","c":"fashion,jewellery,business","u":"https://www.longchamp.com/fr/fr/","d":"longchamp france is a luxury fashion store in france for bags, leather goods and accessories. it is popular with shoppers looking for classic designer handbags and travel items.","k":"longchamp france,luxury,bags,leather goods,accessories","a":""},
+  {"i":489,"n":"sezane france","c":"fashion,business","u":"https://www.sezane.com/fr","d":"sezane france is a women's fashion store in france for clothing, shoes and accessories with a parisian style. it is aimed at shoppers who want modern, polished and wearable pieces.","k":"sezane france,womens fashion,clothing,shoes,accessories","a":""},
+  {"i":490,"n":"ami paris france","c":"fashion,business","u":"https://www.amiparis.com/","d":"ami paris france is a fashion store in france for clothing, shoes and accessories with a relaxed tailored look. it is popular with shoppers who want modern parisian apparel.","k":"ami paris france,fashion,clothing,shoes,accessories","a":""},
+  {"i":491,"n":"jacquemus france","c":"fashion,jewellery,business","u":"https://www.jacquemus.com/","d":"jacquemus france is a luxury fashion store in france for clothing, bags and accessories. it serves shoppers who want bold designer style and contemporary fashion.","k":"jacquemus france,luxury,fashion,clothing,bags","a":""},
+  {"i":492,"n":"printemps france","c":"fashion,beauty,jewellery,business","u":"https://www.printemps.com/","d":"printemps france is a department store in france for fashion, beauty, accessories and luxury goods. it serves shoppers who want premium brands and curated department-store shopping.","k":"printemps france,department store,fashion,beauty,luxury","a":""},
+  {"i":493,"n":"galeries lafayette france","c":"fashion,beauty,jewellery,business","u":"https://www.galerieslafayette.com/","d":"galeries lafayette france is a department store in france for fashion, beauty, accessories and home products. it is popular with shoppers looking for many premium brands in one place.","k":"galeries lafayette france,department store,fashion,beauty,home","a":""},
+  {"i":494,"n":"boulanger france","c":"electronics,home,business","u":"https://www.boulanger.com/","d":"boulanger france is an online electronics retailer in france for appliances, computing, multimedia and consumer tech. it serves shoppers looking for home technology and everyday gadgets.","k":"boulanger france,electronics,appliances,computing,multimedia","a":""},
+  {"i":495,"n":"darty france","c":"electronics,home,business","u":"https://www.darty.com/","d":"darty france is an electronics and appliance retailer in france for tvs, computers, smartphones and kitchen appliances. it is a strong choice for shoppers who want home tech and installation services.","k":"darty france,electronics,appliances,tvs,computers","a":""},
+  {"i":496,"n":"fnac france","c":"electronics,books,home,business","u":"https://www.fnac.com/","d":"fnac france is an online retailer in france for books, music, tech, games and home electronics. it is useful for customers who want entertainment products and consumer technology with store pickup options.","k":"fnac france,electronics,books,music,games","a":""},
+  {"i":497,"n":"carrefour france","c":"food,home,fashion,business","u":"https://www.carrefour.fr/","d":"carrefour france is a major online hypermarket in france for groceries, household essentials and fashion items. it is used by families and everyday shoppers who want delivery or pickup options.","k":"carrefour france,grocery,home,fashion,hypermarket","a":""},
+  {"i":498,"n":"e leclerc france","c":"food,home,business","u":"https://www.e.leclerc/","d":"e leclerc france is an online grocery and household shopping site in france for food, drinks and daily essentials. it is popular with families looking for supermarket delivery and drive pickup.","k":"e leclerc france,grocery,food,household,delivery","a":""},
+  {"i":499,"n":"decathlon france","c":"sports,fashion,business","u":"https://www.decathlon.fr/","d":"decathlon france is a sports retailer in france with equipment, clothing and footwear for many activities. it is used by athletes, families and outdoor shoppers looking for affordable sports gear.","k":"decathlon france,sports,equipment,clothing,footwear","a":""},
+  {"i":500,"n":"amazon france","c":"electronics,home,fashion,beauty,books,sports,jewellery,automotive,food,business","u":"https://www.amazon.fr/","d":"amazon france is a leading online marketplace in france for electronics, home goods, fashion, beauty, books, sports items and groceries. it is used by shoppers who want a broad selection, fast delivery and convenient checkout.","k":"amazon france,marketplace,electronics,home,fashion,beauty","a":""}
+];
