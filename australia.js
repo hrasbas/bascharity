@@ -5224,3 +5224,4090 @@ window.countryShops["australia"] = [
   k:"australia post shop,online store australia,postal supplies gifts stationery,lifestyle items,shop.auspost.com.au",
   a:""
 }
+// australia.js
+window.countryShops = window.countryShops || {};
+window.countryShops["australia"] = [
+  {
+    i:551,
+    n:"princess polly",
+    c:"fashion,business",
+    u:"https://www.princesspolly.com.au/",
+    d:"princess polly is an australian online fashion store for womenswear, dresses, tops, shoes and accessories. it is popular with young shoppers in australia who want trend-led clothing and fast online ordering.",
+    k:"princess polly,australia online shopping,fashion womenswear dresses,tops shoes accessories,princesspolly.com.au",
+    a:""
+  },
+  {
+    i:552,
+    n:"culture kings",
+    c:"fashion,sports,business",
+    u:"https://www.culturekings.com/",
+    d:"culture kings is an australian streetwear and sneaker retailer with online shopping for apparel, caps, shoes and accessories. it suits shoppers who want branded street fashion and sports-inspired style in australia.",
+    k:"culture kings,australia online shopping,streetwear sneakers apparel,caps shoes accessories,culturekings.com",
+    a:""
+  },
+  {
+    i:553,
+    n:"showpo",
+    c:"fashion,business",
+    u:"https://www.showpo.com/",
+    d:"showpo is an australian online fashion retailer for womens clothing, event wear, dresses and accessories. it is made for shoppers looking for party outfits and everyday style with delivery in australia.",
+    k:"showpo,australia online shopping,womens clothing event wear,dresses accessories,showpo.com",
+    a:""
+  },
+  {
+    i:554,
+    n:"blackmilk clothing",
+    c:"fashion,business",
+    u:"https://blackmilkclothing.com/",
+    d:"blackmilk clothing is an australian fashion brand known for bold leggings, dresses, swimwear and statement apparel. it is for shoppers who want unique prints and expressive clothing online in australia.",
+    k:"blackmilk clothing,australia online shopping,bold fashion leggings dresses,swimwear statement apparel,blackmilkclothing.com",
+    a:""
+  },
+  {
+    i:555,
+    n:"threadheads",
+    c:"fashion,business",
+    u:"https://threadheads.com.au/",
+    d:"threadheads is an australian online clothing store for graphic tees, hoodies, socks and casual streetwear. it suits shoppers who want fun everyday fashion and pop-culture style in australia.",
+    k:"threadheads,australia online shopping,graphic tees hoodies socks,streetwear casual fashion,threadheads.com.au",
+    a:""
+  },
+  {
+    i:556,
+    n:"bonds",
+    c:"fashion,business",
+    u:"https://www.bonds.com.au/",
+    d:"bonds is an australian online store for underwear, basics, activewear and kids clothing. it is a popular choice for families and everyday shoppers looking for comfortable essentials in australia.",
+    k:"bonds,australia online shopping,underwear basics activewear,kids clothing essentials,bonds.com.au",
+    a:""
+  },
+  {
+    i:557,
+    n:"forever new",
+    c:"fashion,business",
+    u:"https://www.forevernew.com.au/",
+    d:"forever new is an australian fashion retailer with online shopping for womens clothing, dresses, workwear and accessories. it suits shoppers looking for polished everyday style and occasion wear in australia.",
+    k:"forever new,australia online shopping,womens clothing dresses,workwear accessories,forevernew.com.au",
+    a:""
+  },
+  {
+    i:558,
+    n:"boohoo australia",
+    c:"fashion,business",
+    u:"https://www.boohoo.com/au",
+    d:"boohoo australia is an online fashion store for womenswear, menswear, shoes and accessories. it is useful for budget-minded shoppers in australia who want fast-moving trends and frequent new arrivals.",
+    k:"boohoo australia,australia online shopping,fashion womenswear menswear,shoes accessories,boohoo.com/au",
+    a:""
+  },
+  {
+    i:559,
+    n:"boohoo man australia",
+    c:"fashion,business",
+    u:"https://www.boohooman.com/au",
+    d:"boohoo man australia is an online menswear store with streetwear, basics, shoes and accessories. it suits australian shoppers looking for affordable men’s fashion and trend-led outfits.",
+    k:"boohoo man australia,australia online shopping,menswear streetwear basics,shoes accessories,boohooman.com/au",
+    a:""
+  },
+  {
+    i:560,
+    n:"sabo skirt",
+    c:"fashion,business",
+    u:"https://saboskirt.com/",
+    d:"sabo skirt is an australian womens fashion brand with online shopping for dresses, sets, tops and vacation wear. it is popular with shoppers looking for feminine, stylish clothing in australia.",
+    k:"sabo skirt,australia online shopping,womens fashion dresses sets,tops vacation wear,saboskirt.com",
+    a:""
+  },
+  {
+    i:561,
+    n:"babyboo fashion",
+    c:"fashion,business",
+    u:"https://www.babyboofashion.com/",
+    d:"babyboo fashion is an australian online store for womens dresses, occasion wear and going-out outfits. it is for shoppers in australia who want fitted, trend-forward fashion for events and nights out.",
+    k:"babyboo fashion,australia online shopping,womens dresses occasion wear,going out outfits,babyboofashion.com",
+    a:""
+  },
+  {
+    i:562,
+    n:"alamour the label",
+    c:"fashion,business",
+    u:"https://alamourthelabel.com/",
+    d:"alamour the label is an australian fashion boutique for formal dresses, bridal wear and luxury occasion outfits. it suits shoppers in australia who need premium style for weddings, galas and special events.",
+    k:"alamour the label,australia online shopping,formal dresses bridal wear,luxury occasion outfits,alamourthelabel.com",
+    a:""
+  },
+  {
+    i:563,
+    n:"honey birdette",
+    c:"fashion,beauty,business",
+    u:"https://www.honeybirdette.com/",
+    d:"honey birdette is an australian lingerie and lifestyle retailer with online shopping for intimates, sleepwear and accessories. it is for shoppers who want premium lingerie and fashion-forward pieces in australia.",
+    k:"honey birdette,australia online shopping,lingerie intimates sleepwear,accessories premium fashion,honeybirdette.com",
+    a:""
+  },
+  {
+    i:564,
+    n:"princess highway",
+    c:"fashion,business",
+    u:"https://princesshighway.com.au/",
+    d:"princess highway is an australian fashion store for playful womens clothing, dresses, knitwear and accessories. it is useful for australian shoppers who want colourful everyday style and retro-inspired fashion.",
+    k:"princess highway,australia online shopping,womens clothing dresses,knitwear accessories,princesshighway.com.au",
+    a:""
+  },
+  {
+    i:565,
+    n:"surfstitch",
+    c:"fashion,sports,business",
+    u:"https://www.surfstitch.com/",
+    d:"surfstitch is an australian online retailer for surfwear, beachwear, sneakers and active lifestyle apparel. it is designed for shoppers who want coastal fashion and outdoor-ready brands in australia.",
+    k:"surfstitch,australia online shopping,surfwear beachwear sneakers,active lifestyle apparel,surfstitch.com",
+    a:""
+  },
+  {
+    i:566,
+    n:"platypus shoes",
+    c:"fashion,sports,business",
+    u:"https://www.platypusshoes.com.au/",
+    d:"platypus shoes is an australian sneaker and casual footwear retailer with online shopping for shoes and streetwear. it suits sneaker fans in australia looking for popular brands and everyday shoes.",
+    k:"platypus shoes,australia online shopping,sneakers casual footwear,streetwear shoes,platypusshoes.com.au",
+    a:""
+  },
+  {
+    i:567,
+    n:"foot locker australia",
+    c:"fashion,sports,business",
+    u:"https://www.footlocker.com.au/",
+    d:"foot locker australia is an online sneaker and sportswear store for running shoes, basketball shoes and apparel. it is for australian shoppers who want branded athletic footwear and street style.",
+    k:"foot locker australia,australia online shopping,sneakers sportswear,athletic footwear apparel,footlocker.com.au",
+    a:""
+  },
+  {
+    i:568,
+    n:"jd sports australia",
+    c:"fashion,sports,business",
+    u:"https://www.jdsports.com.au/",
+    d:"jd sports australia is an online sportswear and sneaker retailer with clothing, shoes and accessories. it is popular with australian shoppers who want athletic brands and casual sports style.",
+    k:"jd sports australia,australia online shopping,sportswear sneakers,clothing shoes accessories,jdsports.com.au",
+    a:""
+  },
+  {
+    i:569,
+    n:"nike australia",
+    c:"fashion,sports,business",
+    u:"https://www.nike.com/au/",
+    d:"nike australia is the official online store for sports shoes, apparel and training gear. it suits australian shoppers looking for performance footwear and activewear from a global sports brand.",
+    k:"nike australia,australia online shopping,sports shoes apparel,training gear activewear,nike.com/au",
+    a:""
+  },
+  {
+    i:570,
+    n:"adidas australia",
+    c:"fashion,sports,business",
+    u:"https://www.adidas.com.au/",
+    d:"adidas australia is an official online store for sportswear, sneakers, training gear and accessories. it is for australian shoppers who want athletic clothing and footwear from a major brand.",
+    k:"adidas australia,australia online shopping,sportswear sneakers,training gear accessories,adidas.com.au",
+    a:""
+  },
+  {
+    i:571,
+    n:"new balance australia",
+    c:"fashion,sports,business",
+    u:"https://www.newbalance.com.au/",
+    d:"new balance australia is an online store for running shoes, sportswear and casual sneakers. it suits australian shoppers who want comfortable footwear and active lifestyle apparel.",
+    k:"new balance australia,australia online shopping,running shoes sportswear,casual sneakers apparel,newbalance.com.au",
+    a:""
+  },
+  {
+    i:572,
+    n:"asics australia",
+    c:"fashion,sports,business",
+    u:"https://www.asics.com/au/en-au/",
+    d:"asics australia is an official online store for running shoes, training footwear and sports apparel. it is for australian buyers who want performance-focused shoes and activewear.",
+    k:"asics australia,australia online shopping,running shoes sports apparel,training footwear,asics.com/au/en-au",
+    a:""
+  },
+  {
+    i:573,
+    n:"lululemon australia",
+    c:"fashion,sports,business",
+    u:"https://www.lululemon.com.au/",
+    d:"lululemon australia is an online store for yoga wear, athletic apparel, activewear and accessories. it suits australian shoppers who want premium fitness clothing and comfort-focused sportswear.",
+    k:"lululemon australia,australia online shopping,activewear yoga wear,athletic apparel accessories,lululemon.com.au",
+    a:""
+  },
+  {
+    i:574,
+    n:"kookai",
+    c:"fashion,business",
+    u:"https://www.kookai.com.au/",
+    d:"kookai is an australian fashion brand with online shopping for womens clothing, dresses and wardrobe essentials. it is a good fit for shoppers in australia who want modern everyday fashion.",
+    k:"kookai,australia online shopping,womens clothing dresses,wardrobe essentials,kookai.com.au",
+    a:""
+  },
+  {
+    i:575,
+    n:"sass and bide",
+    c:"fashion,business",
+    u:"https://sassandbide.com/",
+    d:"sass and bide is an australian fashion label offering online shopping for womens clothing, denim and statement pieces. it suits shoppers who want designer-inspired style in australia.",
+    k:"sass and bide,australia online shopping,womens clothing denim,statement pieces,sassandbide.com",
+    a:""
+  },
+  {
+    i:576,
+    n:"zimmermann",
+    c:"fashion,business",
+    u:"https://www.zimmermann.com/",
+    d:"zimmermann is an australian fashion brand with online shopping for womens dresses, resort wear and luxury clothing. it is for shoppers in australia who want premium designer fashion.",
+    k:"zimmermann,australia online shopping,womens dresses resort wear,luxury fashion,zimmermann.com",
+    a:""
+  },
+  {
+    i:577,
+    n:"country road home",
+    c:"home,fashion,business",
+    u:"https://www.countryroad.com.au/",
+    d:"country road home is an australian lifestyle store with homewares, furniture, bedding and decor alongside fashion. it suits australian shoppers looking for modern home products and clothing in one place.",
+    k:"country road home,australia online shopping,homewares furniture bedding,decor fashion,countryroad.com.au",
+    a:""
+  },
+  {
+    i:578,
+    n:"bed bath n table",
+    c:"home,business",
+    u:"https://www.bedbathntable.com.au/",
+    d:"bed bath n table is an australian home retailer for bedding, bathroom items, kitchenware and home decor. it is for shoppers who want practical home essentials and gifting options in australia.",
+    k:"bed bath n table,australia online shopping,bedding bathroom kitchenware,home decor gifts,bedbathntable.com.au",
+    a:""
+  },
+  {
+    i:579,
+    n:"spotlight",
+    c:"home,books,business",
+    u:"https://www.spotlightstores.com/",
+    d:"spotlight is an australian online store for crafts, fabric, home decor, party supplies and sewing products. it is useful for hobby shoppers and home decorators across australia.",
+    k:"spotlight,australia online shopping,home decor crafts fabric,party supplies sewing products,spotlightstores.com",
+    a:""
+  },
+  {
+    i:580,
+    n:"fantastic furniture",
+    c:"home,business",
+    u:"https://www.fantasticfurniture.com.au/",
+    d:"fantastic furniture is an australian furniture retailer with online shopping for sofas, beds, dining, storage and decor. it suits shoppers who want affordable home furniture in australia.",
+    k:"fantastic furniture,australia online shopping,furniture sofas beds,dining storage decor,fantasticfurniture.com.au",
+    a:""
+  },
+  {
+    i:581,
+    n:"super amart",
+    c:"home,business",
+    u:"https://www.superamart.com.au/",
+    d:"super amart is an australian online furniture and home store for bedrooms, lounges, dining and outdoor items. it is for shoppers in australia who want value furniture and home essentials.",
+    k:"super amart,australia online shopping,furniture bedrooms lounges,dining outdoor items,superamart.com.au",
+    a:""
+  },
+  {
+    i:582,
+    n:"mitre 10",
+    c:"home,automotive,business",
+    u:"https://www.mitre10.com.au/",
+    d:"mitre 10 is an australian hardware retailer with online shopping for tools, garden, paint and home improvement products. it is useful for diy customers and tradies across australia.",
+    k:"mitre 10,australia online shopping,hardware tools garden,paint home improvement,mitre10.com.au",
+    a:""
+  },
+  {
+    i:583,
+    n:"total tools",
+    c:"home,automotive,business",
+    u:"https://www.totaltools.com.au/",
+    d:"total tools is an australian tool and equipment retailer with online shopping for power tools, hand tools and workshop supplies. it suits tradies and diy buyers in australia.",
+    k:"total tools,australia online shopping,power tools hand tools,workshop supplies, totaltools.com.au",
+    a:""
+  },
+  {
+    i:584,
+    n:"repco",
+    c:"automotive,business",
+    u:"https://www.repco.com.au/",
+    d:"repco is an australian automotive retailer with online shopping for car parts, batteries, oils and workshop tools. it is for car owners and mechanics who want vehicle products in australia.",
+    k:"repco,australia online shopping,car parts batteries oils,workshop tools,repco.com.au",
+    a:""
+  },
+  {
+    i:585,
+    n:"binglee",
+    c:"electronics,home,business",
+    u:"https://www.binglee.com.au/",
+    d:"bing lee is an australian electronics retailer with online shopping for tvs, audio, computers, appliances and home tech. it suits shoppers in australia who want consumer electronics and appliance deals.",
+    k:"bing lee,australia online shopping,electronics appliances tvs,audio computers home tech,binglee.com.au",
+    a:""
+  },
+  {
+    i:586,
+    n:"harvey norman",
+    c:"electronics,home,business",
+    u:"https://www.harveynorman.com.au/",
+    d:"harvey norman is an australian retailer with online shopping for furniture, appliances, computers and electronics. it is for buyers in australia who want home and tech products with delivery options.",
+    k:"harvey norman,australia online shopping,furniture appliances computers,electronics delivery,harveynorman.com.au",
+    a:""
+  },
+  {
+    i:587,
+    n:"the good guys",
+    c:"electronics,home,business",
+    u:"https://www.thegoodguys.com.au/",
+    d:"the good guys is an australian online retailer for appliances, tvs, kitchen products and consumer electronics. it is useful for shoppers who want electrical deals and home tech in australia.",
+    k:"the good guys,australia online shopping,appliances tvs kitchen products,consumer electronics,thegoodguys.com.au",
+    a:""
+  },
+  {
+    i:588,
+    n:"costco australia",
+    c:"food,home,business",
+    u:"https://www.costco.com.au/",
+    d:"costco australia is a membership-based online store for groceries, home goods, electronics and bulk products. it is for families and value shoppers in australia who want bulk buying and warehouse deals.",
+    k:"costco australia,australia online shopping,groceries home goods,electronics bulk products,costco.com.au",
+    a:""
+  },
+  {
+    i:589,
+    n:"coles express shop",
+    c:"food,business",
+    u:"https://shop.coles.com.au/",
+    d:"coles express shop is an australian online grocery and convenience shopping site linked to coles. it suits shoppers who want food, drinks and everyday essentials with easy ordering in australia.",
+    k:"coles express shop,australia online shopping,grocery convenience food,drinks everyday essentials,shop.coles.com.au",
+    a:""
+  },
+  {
+    i:590,
+    n:"woolworths metro",
+    c:"food,business",
+    u:"https://www.woolworths.com.au/shop",
+    d:"woolworths metro is an australian grocery shopping experience for fresh food, snacks, household items and quick convenience orders. it is for busy shoppers who want local grocery options in australia.",
+    k:"woolworths metro,australia online shopping,grocery fresh food snacks,household items,woolworths.com.au",
+    a:""
+  },
+  {
+    i:591,
+    n:"dan murphys",
+    c:"food,business",
+    u:"https://www.danmurphys.com.au/",
+    d:"dan murphys is an australian online liquor store for wine, beer, spirits and gift packs. it is for adults in australia who want drinks and party essentials delivered or collected.",
+    k:"dan murphys,australia online shopping,liquor wine beer,spirits gift packs,danmurphys.com.au",
+    a:""
+  },
+  {
+    i:592,
+    n:"liquorland",
+    c:"food,business",
+    u:"https://www.liquorland.com.au/",
+    d:"liquorland is an australian online liquor retailer for beer, wine, spirits and celebration drinks. it suits shoppers in australia looking for convenient alcohol shopping online.",
+    k:"liquorland,australia online shopping,liquor beer wine,spirits celebration drinks,liquorland.com.au",
+    a:""
+  },
+  {
+    i:593,
+    n:"the a2 milk company",
+    c:"food,health,business",
+    u:"https://a2milk.com.au/",
+    d:"the a2 milk company is an australian online brand site for milk products and dairy-related information. it is for families and health-conscious shoppers interested in dairy options in australia.",
+    k:"a2 milk australia,online shopping australia,dairy milk products,health conscious shoppers,a2milk.com.au",
+    a:""
+  },
+  {
+    i:594,
+    n:"mychemist",
+    c:"health,beauty,business",
+    u:"https://www.mychemist.com.au/",
+    d:"mychemist is an australian online pharmacy for medicines, vitamins, skincare, beauty and health products. it suits shoppers who want pharmacy items and personal care in australia.",
+    k:"mychemist,australia online shopping,pharmacy vitamins skincare,beauty health products,mychemist.com.au",
+    a:""
+  },
+  {
+    i:595,
+    n:"priceline pharmacy",
+    c:"health,beauty,business",
+    u:"https://www.priceline.com.au/",
+    d:"priceline pharmacy is an australian online pharmacy and beauty retailer for health, makeup, skincare and personal care. it is for shoppers who want pharmacy convenience and beauty deals in australia.",
+    k:"priceline pharmacy,australia online shopping,health beauty makeup,skincare personal care,priceline.com.au",
+    a:""
+  },
+  {
+    i:596,
+    n:"chemist king",
+    c:"health,beauty,business",
+    u:"https://www.chemistking.com.au/",
+    d:"chemist king is an australian online pharmacy store for medicines, vitamins, skincare and wellness products. it suits customers in australia who want affordable pharmacy shopping online.",
+    k:"chemist king,australia online shopping,pharmacy medicines vitamins,skincare wellness products,chemistking.com.au",
+    a:""
+  },
+  {
+    i:597,
+    n:"adairs",
+    c:"home,business",
+    u:"https://www.adairs.com.au/",
+    d:"adairs is an australian home store for bedding, towels, home decor and furniture pieces. it is for shoppers who want stylish home essentials and gift items in australia.",
+    k:"adairs,australia online shopping,bedding towels home decor,furniture gift items,adairs.com.au",
+    a:""
+  },
+  {
+    i:598,
+    n:"kmart australia",
+    c:"home,fashion,food,business",
+    u:"https://www.kmart.com.au/",
+    d:"kmart australia is a value retailer with online shopping for homewares, furniture, clothing, toys and pantry essentials. it is popular with families looking for affordable everyday products and seasonal deals.",
+    k:"kmart australia,australia online shopping,homewares furniture clothing,toys pantry essentials,kmart.com.au",
+    a:""
+  },
+  {
+    i:599,
+    n:"amazon australia",
+    c:"electronics,home,fashion,beauty,books,food,sports,business",
+    u:"https://www.amazon.com.au/",
+    d:"amazon australia is a major online marketplace in australia for electronics, home goods, fashion, beauty, books, food and sports products. it is one of the largest ecommerce sites in australia and suits shoppers who want wide selection and fast delivery.",
+    k:"amazon australia,australia online shopping,electronics home fashion beauty,books food sports marketplace,amazon.com.au",
+    a:""
+  },
+  {
+    i:600,
+    n:"ozbargain",
+    c:"business",
+    u:"https://www.ozbargain.com.au/",
+    d:"ozbargain is a popular australian deals community where users share coupons, discounts and shopping bargains across many stores. it is useful for shoppers who want to compare offers before buying online.",
+    k:"ozbargain,australia online shopping,deals coupons discounts,shopping bargains australia,ozbargain.com.au",
+    a:""
+  }
+];
+// australia.js
+window.countryShops = window.countryShops || {};
+window.countryShops["australia"] = [
+  {
+    i:601,
+    n:"billabong",
+    c:"fashion,sports,business",
+    u:"https://www.billabong.com.au/",
+    d:"billabong is an australian online store for surfwear, boardshorts, swimwear and casual clothing. it suits shoppers in australia who want beach lifestyle apparel and sporty fashion.",
+    k:"billabong,australia online shopping,surfwear boardshorts swimwear,casual clothing beach lifestyle,billabong.com.au",
+    a:""
+  },
+  {
+    i:602,
+    n:"hurley australia",
+    c:"fashion,sports,business",
+    u:"https://www.hurley.com.au/",
+    d:"hurley australia is an online shop for surf apparel, boardshorts, tees and active lifestyle clothing. it is for australian shoppers who want surf-inspired fashion and sportswear.",
+    k:"hurley australia,australia online shopping,surf apparel boardshorts tees,active lifestyle clothing hurley.com.au",
+    a:""
+  },
+  {
+    i:603,
+    n:"rip curl",
+    c:"fashion,sports,business",
+    u:"https://www.ripcurl.com.au/",
+    d:"rip curl is an australian surf and lifestyle retailer with online shopping for wetsuits, swimwear, clothing and accessories. it suits surfers and beachwear shoppers across australia.",
+    k:"rip curl,australia online shopping,surfwear wetsuits swimwear,clothing accessories,ripcurl.com.au",
+    a:""
+  },
+  {
+    i:604,
+    n:"the oodie",
+    c:"fashion,home,business",
+    u:"https://theoodie.com/",
+    d:"the oodie is an australian online store for hooded blankets, loungewear and cozy home comfort products. it is popular with shoppers in australia looking for warm, soft and giftable items.",
+    k:"the oodie,australia online shopping,hooded blankets loungewear,home comfort gift items,theoodie.com",
+    a:""
+  },
+  {
+    i:605,
+    n:"lskd",
+    c:"fashion,sports,business",
+    u:"https://www.lskd.co/",
+    d:"lskd is an australian activewear brand with online shopping for training clothes, leggings, shorts and gym apparel. it is for fitness-focused shoppers who want performance wear and street style.",
+    k:"lskd,australia online shopping,activewear training clothes,leggings shorts gym apparel,lskd.co",
+    a:""
+  },
+  {
+    i:606,
+    n:"quad lock",
+    c:"electronics,automotive,business",
+    u:"https://www.quadlockcase.com.au/",
+    d:"quad lock is an australian online store for phone mounts, cases and accessories for bikes, cars and active lifestyles. it suits users who want secure device mounting and mobile protection.",
+    k:"quad lock,australia online shopping,phone mounts cases accessories,bike car mounts,quadlockcase.com.au",
+    a:""
+  },
+  {
+    i:607,
+    n:"bellroy",
+    c:"fashion,jewellery,business",
+    u:"https://bellroy.com/",
+    d:"bellroy is an australian online brand for wallets, bags, tech carry goods and everyday accessories. it suits shoppers who want premium minimalist accessories in australia.",
+    k:"bellroy,australia online shopping,wallets bags tech accessories,travel carry goods,bellroy.com",
+    a:""
+  },
+  {
+    i:608,
+    n:"aesop",
+    c:"beauty,health,business",
+    u:"https://www.aesop.com/au/",
+    d:"aesop is an australian online beauty and personal care store for skincare, haircare, body care and fragrances. it is for shoppers who want premium grooming products in australia.",
+    k:"aesop,australia online shopping,skincare haircare body care,fragrances personal care,aesop.com/au",
+    a:""
+  },
+  {
+    i:609,
+    n:"uggs since 1974",
+    c:"fashion,business",
+    u:"https://uggsince1974.com.au/",
+    d:"uggs since 1974 is an australian footwear store with online shopping for ugg boots, slippers and cozy winter shoes. it suits shoppers looking for sheepskin footwear and comfort items in australia.",
+    k:"uggs since 1974,australia online shopping,ugg boots slippers,winter shoes sheepskin,uggsince1974.com.au",
+    a:""
+  },
+  {
+    i:610,
+    n:"shiels jewellers",
+    c:"jewellery,business",
+    u:"https://www.shiels.com.au/",
+    d:"shiels jewellers is an australian online jewellery store for rings, watches, earrings and gifts. it is for shoppers who want gold, silver and fashion jewellery in australia.",
+    k:"shiels jewellers,australia online shopping,jewellery watches rings,earrings gift items,shiels.com.au",
+    a:""
+  },
+  {
+    i:611,
+    n:"sabo",
+    c:"fashion,business",
+    u:"https://saboskirt.com/",
+    d:"sabo is an australian womens fashion brand with online shopping for dresses, sets, tops and resort wear. it suits shoppers who want stylish feminine clothing in australia.",
+    k:"sabo,australia online shopping,womens fashion dresses sets,tops resort wear,saboskirt.com",
+    a:""
+  },
+  {
+    i:612,
+    n:"threadheads",
+    c:"fashion,business",
+    u:"https://threadheads.com.au/",
+    d:"threadheads is an australian online clothing store for graphic tees, hoodies and casual streetwear. it is for shoppers who want relaxed everyday fashion in australia.",
+    k:"threadheads,australia online shopping,graphic tees hoodies,casual streetwear,threadheads.com.au",
+    a:""
+  },
+  {
+    i:613,
+    n:"showpo",
+    c:"fashion,business",
+    u:"https://www.showpo.com/",
+    d:"showpo is an australian online fashion retailer for dresses, event wear, tops and accessories. it is popular with shoppers in australia looking for occasion outfits and trend-led clothing.",
+    k:"showpo,australia online shopping,dresses event wear,tops accessories,showpo.com",
+    a:""
+  },
+  {
+    i:614,
+    n:"blackmilk clothing",
+    c:"fashion,business",
+    u:"https://blackmilkclothing.com/",
+    d:"blackmilk clothing is an australian fashion brand known for bold leggings, dresses and statement pieces. it suits shoppers in australia who want expressive clothing and unique prints.",
+    k:"blackmilk clothing,australia online shopping,bold leggings dresses,statement fashion,blackmilkclothing.com",
+    a:""
+  },
+  {
+    i:615,
+    n:"babyboo fashion",
+    c:"fashion,business",
+    u:"https://www.babyboofashion.com/",
+    d:"babyboo fashion is an australian online store for womens dresses, party wear and special occasion outfits. it is for shoppers who want fitted, glamour-focused fashion in australia.",
+    k:"babyboo fashion,australia online shopping,womens dresses party wear,occasion outfits,babyboofashion.com",
+    a:""
+  },
+  {
+    i:616,
+    n:"alamour the label",
+    c:"fashion,business",
+    u:"https://alamourthelabel.com/",
+    d:"alamour the label is an australian fashion boutique for formal dresses, bridal wear and luxury occasion pieces. it suits australian shoppers looking for premium event fashion.",
+    k:"alamour the label,australia online shopping,formal dresses bridal wear,luxury occasion fashion,alamourthelabel.com",
+    a:""
+  },
+  {
+    i:617,
+    n:"forever new",
+    c:"fashion,business",
+    u:"https://www.forevernew.com.au/",
+    d:"forever new is an australian online fashion store for womens clothing, workwear and dresses. it is useful for shoppers in australia who want polished everyday style and occasion wear.",
+    k:"forever new,australia online shopping,womens clothing dresses,workwear fashion,forevernew.com.au",
+    a:""
+  },
+  {
+    i:618,
+    n:"kookai",
+    c:"fashion,business",
+    u:"https://www.kookai.com.au/",
+    d:"kookai is an australian fashion retailer with online shopping for womenswear, dresses and wardrobe basics. it suits shoppers in australia who want modern and versatile clothing.",
+    k:"kookai,australia online shopping,womenswear dresses,wardrobe basics,kookai.com.au",
+    a:""
+  },
+  {
+    i:619,
+    n:"sass and bide",
+    c:"fashion,business",
+    u:"https://sassandbide.com/",
+    d:"sass and bide is an australian fashion label offering online shopping for womens clothing, denim and statement looks. it is for shoppers in australia who want designer-style fashion.",
+    k:"sass and bide,australia online shopping,womens clothing denim,statement looks,sassandbide.com",
+    a:""
+  },
+  {
+    i:620,
+    n:"zimmermann",
+    c:"fashion,business",
+    u:"https://www.zimmermann.com/",
+    d:"zimmermann is an australian fashion brand with online shopping for luxury womenswear, dresses and resort pieces. it suits shoppers in australia looking for premium designer clothing.",
+    k:"zimmermann,australia online shopping,luxury womenswear dresses,resort pieces,zimmermann.com",
+    a:""
+  },
+  {
+    i:621,
+    n:"princess polly",
+    c:"fashion,business",
+    u:"https://www.princesspolly.com.au/",
+    d:"princess polly is an australian online fashion store for womenswear, dresses and accessories. it is popular with young shoppers in australia who want trendy everyday clothing.",
+    k:"princess polly,australia online shopping,womenswear dresses,accessories trendy fashion,princesspolly.com.au",
+    a:""
+  },
+  {
+    i:622,
+    n:"culture kings",
+    c:"fashion,sports,business",
+    u:"https://www.culturekings.com/",
+    d:"culture kings is an australian streetwear and sneaker retailer with online shopping for apparel, caps and shoes. it suits shoppers who want branded street fashion in australia.",
+    k:"culture kings,australia online shopping,streetwear sneakers apparel,caps shoes,culturekings.com",
+    a:""
+  },
+  {
+    i:623,
+    n:"foot locker australia",
+    c:"fashion,sports,business",
+    u:"https://www.footlocker.com.au/",
+    d:"foot locker australia is an online sneaker and sportswear store for shoes, apparel and accessories. it is for australian shoppers who want branded athletic footwear and casual style.",
+    k:"foot locker australia,australia online shopping,sneakers sportswear,athletic footwear accessories,footlocker.com.au",
+    a:""
+  },
+  {
+    i:624,
+    n:"jd sports australia",
+    c:"fashion,sports,business",
+    u:"https://www.jdsports.com.au/",
+    d:"jd sports australia is an online retailer for sportswear, sneakers and casual fashion. it suits australian shoppers who want athletic brands and everyday street style.",
+    k:"jd sports australia,australia online shopping,sportswear sneakers,casual fashion,jdsports.com.au",
+    a:""
+  },
+  {
+    i:625,
+    n:"bonds",
+    c:"fashion,business",
+    u:"https://www.bonds.com.au/",
+    d:"bonds is an australian online store for underwear, basics, activewear and kids clothing. it is a popular choice for families and everyday shoppers in australia.",
+    k:"bonds,australia online shopping,underwear basics activewear,kids clothing,bonds.com.au",
+    a:""
+  },
+  {
+    i:626,
+    n:"billabong",
+    c:"fashion,sports,business",
+    u:"https://www.billabong.com.au/",
+    d:"billabong is an australian online store for surfwear, boardshorts, swimwear and casual clothing. it suits shoppers in australia who want beach lifestyle apparel and sporty fashion.",
+    k:"billabong,australia online shopping,surfwear boardshorts swimwear,casual clothing,billabong.com.au",
+    a:""
+  },
+  {
+    i:627,
+    n:"rip curl",
+    c:"fashion,sports,business",
+    u:"https://www.ripcurl.com.au/",
+    d:"rip curl is an australian surf and lifestyle retailer with online shopping for wetsuits, swimwear and clothing. it is for surfers and beachwear shoppers across australia.",
+    k:"rip curl,australia online shopping,surfwear wetsuits swimwear,clothing accessories,ripcurl.com.au",
+    a:""
+  },
+  {
+    i:628,
+    n:"surfstitch",
+    c:"fashion,sports,business",
+    u:"https://www.surfstitch.com/",
+    d:"surfstitch is an australian online retailer for surfwear, beachwear and casual sports clothing. it suits shoppers who want coastal fashion and outdoor-ready brands in australia.",
+    k:"surfstitch,australia online shopping,surfwear beachwear,sports clothing,casual fashion,surfstitch.com",
+    a:""
+  },
+  {
+    i:629,
+    n:"the oodie",
+    c:"fashion,home,business",
+    u:"https://theoodie.com/",
+    d:"the oodie is an australian online store for hooded blankets, loungewear and comfort products. it is popular with shoppers in australia looking for cozy gifts and home comfort items.",
+    k:"the oodie,australia online shopping,hooded blankets loungewear,comfort products,theoodie.com",
+    a:""
+  },
+  {
+    i:630,
+    n:"lskd",
+    c:"fashion,sports,business",
+    u:"https://www.lskd.co/",
+    d:"lskd is an australian activewear brand with online shopping for training clothes, leggings and gym apparel. it is for fitness-focused shoppers who want performance wear in australia.",
+    k:"lskd,australia online shopping,activewear training clothes,leggings gym apparel,lskd.co",
+    a:""
+  },
+  {
+    i:631,
+    n:"platinum homes",
+    c:"home,business",
+    u:"https://www.platinumhomes.com.au/",
+    d:"platinum homes is an australian home builder with online information for new home designs and building services. it is for customers researching house plans and construction in australia.",
+    k:"platinum homes,australia online shopping,home designs building services,new homes,platinumhomes.com.au",
+    a:""
+  },
+  {
+    i:632,
+    n:"bed bath n table",
+    c:"home,business",
+    u:"https://www.bedbathntable.com.au/",
+    d:"bed bath n table is an australian home retailer for bedding, bathroom items and kitchenware. it is useful for shoppers who want everyday home essentials in australia.",
+    k:"bed bath n table,australia online shopping,bedding bathroom kitchenware,home essentials,bedbathntable.com.au",
+    a:""
+  },
+  {
+    i:633,
+    n:"spotlight",
+    c:"home,books,business",
+    u:"https://www.spotlightstores.com/",
+    d:"spotlight is an australian online store for crafts, fabric, home decor and party supplies. it suits hobby shoppers and home decorators across australia.",
+    k:"spotlight,australia online shopping,crafts fabric home decor,party supplies,spotlightstores.com",
+    a:""
+  },
+  {
+    i:634,
+    n:"fantastic furniture",
+    c:"home,business",
+    u:"https://www.fantasticfurniture.com.au/",
+    d:"fantastic furniture is an australian furniture retailer with online shopping for sofas, beds, dining and storage. it suits shoppers who want affordable home furniture in australia.",
+    k:"fantastic furniture,australia online shopping,furniture sofas beds,dining storage,fantasticfurniture.com.au",
+    a:""
+  },
+  {
+    i:635,
+    n:"super amart",
+    c:"home,business",
+    u:"https://www.superamart.com.au/",
+    d:"super amart is an australian online furniture and home store for bedrooms, lounges and outdoor items. it is for shoppers in australia who want value furniture and home essentials.",
+    k:"super amart,australia online shopping,furniture bedrooms lounges,outdoor items,superamart.com.au",
+    a:""
+  },
+  {
+    i:636,
+    n:"adairs",
+    c:"home,business",
+    u:"https://www.adairs.com.au/",
+    d:"adairs is an australian home store for bedding, towels, decor and furniture pieces. it suits shoppers who want stylish home essentials and gifts in australia.",
+    k:"adairs,australia online shopping,bedding towels decor,furniture gift items,adairs.com.au",
+    a:""
+  },
+  {
+    i:637,
+    n:"country road home",
+    c:"home,fashion,business",
+    u:"https://www.countryroad.com.au/",
+    d:"country road home is an australian lifestyle store with homewares, furniture, bedding and decor. it suits shoppers looking for modern home products and clothing in australia.",
+    k:"country road home,australia online shopping,homewares furniture bedding,decor fashion,countryroad.com.au",
+    a:""
+  },
+  {
+    i:638,
+    n:"mitre 10",
+    c:"home,automotive,business",
+    u:"https://www.mitre10.com.au/",
+    d:"mitre 10 is an australian hardware retailer with online shopping for tools, garden and home improvement products. it is useful for diy customers and tradies across australia.",
+    k:"mitre 10,australia online shopping,hardware tools garden,home improvement,mitre10.com.au",
+    a:""
+  },
+  {
+    i:639,
+    n:"total tools",
+    c:"home,automotive,business",
+    u:"https://www.totaltools.com.au/",
+    d:"total tools is an australian tool retailer with online shopping for power tools, hand tools and workshop supplies. it suits tradies and diy buyers in australia.",
+    k:"total tools,australia online shopping,power tools hand tools,workshop supplies,totaltools.com.au",
+    a:""
+  },
+  {
+    i:640,
+    n:"bunnings warehouse",
+    c:"home,business",
+    u:"https://www.bunnings.com.au/",
+    d:"bunnings warehouse is an australian home improvement store with online shopping for tools, building materials and garden supplies. it is used by diy buyers and homeowners across australia.",
+    k:"bunnings warehouse,australia online shopping,tools building materials,garden supplies,bunnings.com.au",
+    a:""
+  },
+  {
+    i:641,
+    n:"repco",
+    c:"automotive,business",
+    u:"https://www.repco.com.au/",
+    d:"repco is an australian automotive retailer with online shopping for car parts, batteries, oils and workshop tools. it is for car owners and mechanics who want vehicle products in australia.",
+    k:"repco,australia online shopping,car parts batteries oils,workshop tools,repco.com.au",
+    a:""
+  },
+  {
+    i:642,
+    n:"supercheap auto",
+    c:"automotive,business",
+    u:"https://www.supercheapauto.com.au/",
+    d:"supercheap auto is an australian automotive retailer for car care, tools, spare parts and accessories. it is a practical online shop for car owners and diy vehicle buyers.",
+    k:"supercheap auto,australia online shopping,car care tools spare parts,auto accessories,supercheapauto.com.au",
+    a:""
+  },
+  {
+    i:643,
+    n:"geda",
+    c:"automotive,business",
+    u:"https://www.geda.com.au/",
+    d:"geda is an australian online store for automotive electrical products, batteries and related equipment. it suits vehicle owners and trade buyers looking for auto electrical parts in australia.",
+    k:"geda,australia online shopping,automotive electrical products,batteries vehicle parts,geda.com.au",
+    a:""
+  },
+  {
+    i:644,
+    n:"bing lee",
+    c:"electronics,home,business",
+    u:"https://www.binglee.com.au/",
+    d:"bing lee is an australian electronics retailer with online shopping for tvs, appliances, computers and home tech. it suits shoppers in australia who want consumer electronics and appliance deals.",
+    k:"bing lee,australia online shopping,electronics appliances tvs,computers home tech,binglee.com.au",
+    a:""
+  },
+  {
+    i:645,
+    n:"jbhifi",
+    c:"electronics,home,business",
+    u:"https://www.jbhifi.com.au/",
+    d:"jbhifi is an australian electronics store with online shopping for tvs, audio, computers, gaming and appliances. it is useful for shoppers in australia who want a wide range of tech products.",
+    k:"jbhifi,australia online shopping,electronics tvs audio,computers gaming appliances,jbhifi.com.au",
+    a:""
+  },
+  {
+    i:646,
+    n:"harvey norman online",
+    c:"electronics,home,business",
+    u:"https://www.harveynorman.com.au/",
+    d:"harvey norman online is an australian retailer for furniture, appliances, computers and electronics. it is for buyers who want home and tech products with delivery options in australia.",
+    k:"harvey norman online,australia online shopping,furniture appliances computers,electronics delivery,harveynorman.com.au",
+    a:""
+  },
+  {
+    i:647,
+    n:"the good guys online",
+    c:"electronics,home,business",
+    u:"https://www.thegoodguys.com.au/",
+    d:"the good guys online is an australian retailer for appliances, tvs and kitchen products. it suits shoppers who want electrical deals and home tech in australia.",
+    k:"the good guys online,australia online shopping,appliances tvs kitchen products,home tech,thegoodguys.com.au",
+    a:""
+  },
+  {
+    i:648,
+    n:"costco australia",
+    c:"food,home,business",
+    u:"https://www.costco.com.au/",
+    d:"costco australia is a membership-based online store for groceries, home goods and bulk products. it is for families and value shoppers who want warehouse-style buying in australia.",
+    k:"costco australia,australia online shopping,groceries home goods,bulk products,costco.com.au",
+    a:""
+  },
+  {
+    i:649,
+    n:"coles online",
+    c:"food,home,business",
+    u:"https://www.coles.com.au/",
+    d:"coles online is an australian grocery shopping site for pantry items, fresh produce and household products. it suits households that want convenient supermarket delivery in australia.",
+    k:"coles online,australia online shopping,groceries fresh produce,household products,coles.com.au",
+    a:""
+  },
+  {
+    i:650,
+    n:"woolworths online",
+    c:"food,home,business",
+    u:"https://www.woolworths.com.au/shop",
+    d:"woolworths online is a leading australian supermarket website for groceries, fresh food and household essentials. it is designed for families and busy shoppers who want delivery or pickup in australia.",
+    k:"woolworths online,australia online shopping,groceries fresh food,household essentials,woolworths.com.au",
+    a:""
+  }
+];
+// australia.js
+window.countryShops = window.countryShops || {};
+window.countryShops["australia"] = [
+  {
+    i:651,
+    n:"sneaker freaker",
+    c:"fashion,sports,business",
+    u:"https://www.sneakerfreaker.com/",
+    d:"sneaker freaker is an australian sneaker and streetwear store with online shopping for footwear, apparel and accessories. it suits shoppers in australia who want sneaker culture products and urban fashion.",
+    k:"sneaker freaker,australia online shopping,sneakers streetwear footwear,apparel accessories,sneakerfreaker.com",
+    a:""
+  },
+  {
+    i:652,
+    n:"vrg grl",
+    c:"fashion,business",
+    u:"https://www.vrggrl.com.au/",
+    d:"vrg grl is an australian online fashion store for womens clothing, dresses and statement pieces. it is for shoppers who want bold, trend-driven style in australia.",
+    k:"vrg grl,australia online shopping,womens clothing dresses,statement fashion,vrggrl.com.au",
+    a:""
+  },
+  {
+    i:653,
+    n:"ksubi",
+    c:"fashion,business",
+    u:"https://ksubi.com/",
+    d:"ksubi is an australian fashion brand with online shopping for denim, clothing and streetwear. it suits shoppers in australia who want premium casual fashion with a distinctive edge.",
+    k:"ksubi,australia online shopping,denim clothing streetwear,premium casual fashion,ksubi.com",
+    a:""
+  },
+  {
+    i:654,
+    n:"sydney opera house shop",
+    c:"books,home,business",
+    u:"https://www.sydneyoperahouse.com/shop",
+    d:"sydney opera house shop is an australian online store for gifts, books, home items and merchandise. it is for shoppers in australia looking for cultural souvenirs and branded products.",
+    k:"sydney opera house shop,australia online shopping,gifts books home items,merchandise souvenirs,sydneyoperahouse.com/shop",
+    a:""
+  },
+  {
+    i:655,
+    n:"marie claire shop",
+    c:"fashion,beauty,business",
+    u:"https://www.marieclaire.com.au/",
+    d:"marie claire shop is an australian lifestyle and fashion site with online shopping links and curated products. it suits shoppers who want fashion, beauty and style content in australia.",
+    k:"marie claire shop,australia online shopping,fashion beauty lifestyle,curated products,marieclaire.com.au",
+    a:""
+  },
+  {
+    i:656,
+    n:"vodafone australia",
+    c:"electronics,software,business",
+    u:"https://www.vodafone.com.au/",
+    d:"vodafone australia is an online telecom store for phones, sim plans, broadband and connected devices. it is for customers in australia who want mobile and internet services online.",
+    k:"vodafone australia,australia online shopping,phones sim plans,broadband connected devices,vodafone.com.au",
+    a:""
+  },
+  {
+    i:657,
+    n:"telstra personal",
+    c:"electronics,software,business",
+    u:"https://www.telstra.com.au/",
+    d:"telstra personal is an australian online telecom store for mobile phones, plans, internet and accessories. it suits shoppers in australia who want carrier devices and connectivity services.",
+    k:"telstra personal,australia online shopping,mobile phones plans,internet accessories,telstra.com.au",
+    a:""
+  },
+  {
+    i:658,
+    n:"optus",
+    c:"electronics,software,business",
+    u:"https://www.optus.com.au/",
+    d:"optus is an australian telecom provider with online shopping for phones, sim plans, internet and devices. it is for customers in australia who want mobile and broadband services.",
+    k:"optus,australia online shopping,phones sim plans,internet devices,optus.com.au",
+    a:""
+  },
+  {
+    i:659,
+    n:"the telecom shop",
+    c:"electronics,software,business",
+    u:"https://www.telecomshop.com.au/",
+    d:"the telecom shop is an australian online store for phones, internet hardware and communication products. it is useful for shoppers and business users who need telecom equipment in australia.",
+    k:"the telecom shop,australia online shopping,phones internet hardware,communication products,telecomshop.com.au",
+    a:""
+  },
+  {
+    i:660,
+    n:"access communications australia",
+    c:"electronics,software,business",
+    u:"https://www.accesscomms.com.au/",
+    d:"access communications australia is an online store for business communication and networking equipment. it suits australian customers who need telecom hardware and office connectivity solutions.",
+    k:"access communications australia,australia online shopping,communications equipment networking,business connectivity,accesscomms.com.au",
+    a:""
+  },
+  {
+    i:661,
+    n:"mss data solutions",
+    c:"electronics,software,business",
+    u:"https://www.mssdatasolutions.com.au/",
+    d:"mss data solutions is an australian online store for networking, it hardware and telecom products. it is for businesses in australia that need infrastructure and connectivity equipment.",
+    k:"mss data solutions,australia online shopping,networking it hardware,telecom products,mssdatasolutions.com.au",
+    a:""
+  },
+  {
+    i:662,
+    n:"powertec telecommunications",
+    c:"electronics,software,business",
+    u:"https://www.powertec.com.au/",
+    d:"powertec telecommunications is an australian online shop for wireless, networking and communication gear. it suits customers in australia who want telecom hardware and signal solutions.",
+    k:"powertec telecommunications,australia online shopping,wireless networking,communication gear,powertec.com.au",
+    a:""
+  },
+  {
+    i:663,
+    n:"codecom",
+    c:"electronics,software,business",
+    u:"https://www.codecom.com.au/",
+    d:"codecom is an australian online retailer for networking, it and communication equipment. it is for business buyers and technical teams in australia who need infrastructure products.",
+    k:"codecom,australia online shopping,networking it communication,equipment infrastructure,codecom.com.au",
+    a:""
+  },
+  {
+    i:664,
+    n:"elprotech",
+    c:"electronics,software,business",
+    u:"https://www.elprotech.com/",
+    d:"elprotech is an australian online store for industrial electronics, networking and communication solutions. it is useful for business and technical customers in australia.",
+    k:"elprotech,australia online shopping,industrial electronics networking,communication solutions,elprotech.com",
+    a:""
+  },
+  {
+    i:665,
+    n:"iot store",
+    c:"electronics,software,business",
+    u:"https://www.iotstore.com.au/",
+    d:"iot store is an australian online shop for iot devices, electronics and connectivity products. it suits buyers in australia who need smart technology and industrial internet products.",
+    k:"iot store,australia online shopping,iot devices electronics,connectivity products,iotstore.com.au",
+    a:""
+  },
+  {
+    i:666,
+    n:"flexiroam",
+    c:"travel,software,business",
+    u:"https://www.flexiroam.com/",
+    d:"flexiroam is an online travel connectivity service for esim, roaming data and international mobile plans. it is for australian travellers who want easy internet access abroad.",
+    k:"flexiroam,australia online shopping,esim roaming data,travel connectivity,flexiroam.com",
+    a:""
+  },
+  {
+    i:667,
+    n:"maxotel",
+    c:"electronics,software,business",
+    u:"https://www.maxotel.com.au/",
+    d:"maxotel is an australian online telecommunications provider for voice, video and business communication services. it is for companies in australia that need connected office tools.",
+    k:"maxotel,australia online shopping,telecommunications voice video,business communication,maxotel.com.au",
+    a:""
+  },
+  {
+    i:668,
+    n:"uchat",
+    c:"software,business",
+    u:"https://www.uchat.com.au/",
+    d:"uchat is an australian online chatbot and messaging platform for customer support automation. it suits businesses in australia looking for ai-style support tools and digital service software.",
+    k:"uchat,australia online shopping,chatbot messaging platform,customer support automation,uchat.com.au",
+    a:""
+  },
+  {
+    i:669,
+    n:"lisafurze",
+    c:"books,software,business",
+    u:"https://lisafurze.com/",
+    d:"lisafurze is an australian online education and digital product site for learning resources and tools. it is for students and professionals in australia seeking study and digital materials.",
+    k:"lisafurze,australia online shopping,education resources digital products,learning tools,lisafurze.com",
+    a:""
+  },
+  {
+    i:670,
+    n:"sena australia",
+    c:"electronics,sports,business",
+    u:"https://www.senaaustralia.com.au/",
+    d:"sena australia is an online store for motorcycle and outdoor communication devices. it is for australian riders who want helmet communication and wireless gear.",
+    k:"sena australia,australia online shopping,motorcycle communication devices,wireless gear,senaaustralia.com.au",
+    a:""
+  },
+  {
+    i:671,
+    n:"mifo australia",
+    c:"electronics,sports,business",
+    u:"https://mifo.com.au/",
+    d:"mifo australia is an online store for wireless earbuds and audio accessories. it suits australian shoppers who want portable sound products for active lifestyles.",
+    k:"mifo australia,australia online shopping,wireless earbuds audio,portable sound products,mifo.com.au",
+    a:""
+  },
+  {
+    i:672,
+    n:"flipbelt australia",
+    c:"sports,fashion,business",
+    u:"https://www.flipbelt.com.au/",
+    d:"flipbelt australia is an online store for running belts, fitness accessories and activewear storage products. it is for australian runners and fitness shoppers who want hands-free gear.",
+    k:"flipbelt australia,australia online shopping,running belts fitness accessories,activewear storage,flipbelt.com.au",
+    a:""
+  },
+  {
+    i:673,
+    n:"traffic technologies",
+    c:"automotive,business",
+    u:"https://www.traffictechnologies.com.au/",
+    d:"traffic technologies is an australian online supplier of road safety and vehicle equipment. it is for business and fleet customers in australia who need transport and traffic products.",
+    k:"traffic technologies,australia online shopping,road safety vehicle equipment,transport products,traffictechnologies.com.au",
+    a:""
+  },
+  {
+    i:674,
+    n:"saint cloud",
+    c:"fashion,business",
+    u:"https://www.saintcloud.com.au/",
+    d:"saint cloud is an australian online fashion store for clothing and contemporary apparel. it suits shoppers in australia who want modern wardrobe pieces and curated style.",
+    k:"saint cloud,australia online shopping,fashion clothing apparel,contemporary style,saintcloud.com.au",
+    a:""
+  },
+  {
+    i:675,
+    n:"bellroy",
+    c:"fashion,business",
+    u:"https://bellroy.com/",
+    d:"bellroy is an australian online brand for wallets, bags, tech carry goods and everyday accessories. it suits shoppers who want premium minimalist accessories in australia.",
+    k:"bellroy,australia online shopping,wallets bags tech accessories,everyday carry,bellroy.com",
+    a:""
+  },
+  {
+    i:676,
+    n:"shiels jewellers",
+    c:"jewellery,business",
+    u:"https://www.shiels.com.au/",
+    d:"shiels jewellers is an australian online jewellery store for rings, watches and earrings. it is for shoppers who want gift jewellery and fashion watches in australia.",
+    k:"shiels jewellers,australia online shopping,jewellery rings watches,earrings gifts,shiels.com.au",
+    a:""
+  },
+  {
+    i:677,
+    n:"temple and webster",
+    c:"home,business",
+    u:"https://www.templeandwebster.com.au/",
+    d:"temple and webster is an australian online furniture and home store for sofas, beds, decor and storage. it is made for shoppers furnishing homes in australia.",
+    k:"temple and webster,australia online shopping,furniture sofas beds,decor storage,templeandwebster.com.au",
+    a:""
+  },
+  {
+    i:678,
+    n:"bedshed",
+    c:"home,business",
+    u:"https://www.bedshed.com.au/",
+    d:"bedshed is an australian bedroom retailer with online shopping for mattresses, beds and bedding. it is for customers in australia upgrading sleep and bedroom setups.",
+    k:"bedshed,australia online shopping,mattresses beds bedding,bedroom furniture,bedshed.com.au",
+    a:""
+  },
+  {
+    i:679,
+    n:"petbarn",
+    c:"food,health,business",
+    u:"https://www.petbarn.com.au/",
+    d:"petbarn is an australian online pet retailer for pet food, toys, accessories and pet care products. it is for pet owners in australia who want everyday supplies delivered or collected.",
+    k:"petbarn,australia online shopping,pet food toys accessories,pet care products,petbarn.com.au",
+    a:""
+  },
+  {
+    i:680,
+    n:"bcf",
+    c:"sports,home,business",
+    u:"https://www.bcf.com.au/",
+    d:"bcf is an australian retailer for boating, camping, fishing and outdoor gear with online shopping support. it is useful for outdoor families and adventure buyers in australia.",
+    k:"bcf,australia online shopping,boating camping fishing,outdoor gear,bcf.com.au",
+    a:""
+  },
+  {
+    i:681,
+    n:"macpac australia",
+    c:"sports,fashion,business",
+    u:"https://www.macpac.com.au/",
+    d:"macpac australia is an outdoor brand with online shopping for jackets, packs, hiking gear and travel clothing. it suits shoppers in australia who want durable outdoor apparel and equipment.",
+    k:"macpac australia,australia online shopping,outdoor clothing hiking gear,jackets packs,macpac.com.au",
+    a:""
+  },
+  {
+    i:682,
+    n:"rebel sport",
+    c:"sports,fashion,business",
+    u:"https://www.rebelsport.com.au/",
+    d:"rebel sport is an australian sports retailer with online shopping for activewear, running shoes and gym equipment. it is useful for fitness buyers and outdoor athletes in australia.",
+    k:"rebel sport,australia online shopping,sports store activewear,running shoes gym equipment,rebelsport.com.au",
+    a:""
+  },
+  {
+    i:683,
+    n:"decathlon australia",
+    c:"sports,business",
+    u:"https://www.decathlon.com.au/",
+    d:"decathlon australia is an online sports store for fitness, outdoor, cycling and team sports gear. it suits australian shoppers who want affordable sporting equipment and apparel.",
+    k:"decathlon australia,australia online shopping,sports gear fitness outdoor,cycling team sports,decathlon.com.au",
+    a:""
+  },
+  {
+    i:684,
+    n:"helly hansen australia",
+    c:"sports,fashion,business",
+    u:"https://www.hellyhansen.com.au/",
+    d:"helly hansen australia is an online outdoor clothing store for jackets, technical wear and adventure gear. it is for australian shoppers who want weather-ready apparel and sportswear.",
+    k:"helly hansen australia,australia online shopping,outdoor clothing jackets,technical wear adventure gear,hellyhansen.com.au",
+    a:""
+  },
+  {
+    i:685,
+    n:"the north face australia",
+    c:"sports,fashion,business",
+    u:"https://www.thenorthface.com.au/",
+    d:"the north face australia is an online outdoor retailer for jackets, backpacks, hiking gear and activewear. it is for australian shoppers who want durable adventure clothing and equipment.",
+    k:"the north face australia,australia online shopping,outdoor clothing backpacks,hiking gear activewear,thenorthface.com.au",
+    a:""
+  },
+  {
+    i:686,
+    n:"patagonia australia",
+    c:"sports,fashion,business",
+    u:"https://www.patagonia.com.au/",
+    d:"patagonia australia is an online outdoor store for jackets, fleeces, bags and technical clothing. it suits shoppers in australia who want sustainable adventure wear and gear.",
+    k:"patagonia australia,australia online shopping,outdoor clothing jackets,technical clothing bags,patagonia.com.au",
+    a:""
+  },
+  {
+    i:687,
+    n:"aesop",
+    c:"beauty,health,business",
+    u:"https://www.aesop.com/au/",
+    d:"aesop is an australian online beauty and personal care store for skincare, body care and fragrances. it is for shoppers who want premium grooming products in australia.",
+    k:"aesop,australia online shopping,skincare body care fragrances,personal care,aesop.com/au",
+    a:""
+  },
+  {
+    i:688,
+    n:"chemist warehouse",
+    c:"health,beauty,business",
+    u:"https://www.chemistwarehouse.com.au/",
+    d:"chemist warehouse is an australian discount pharmacy retailer with online shopping for medicines, vitamins, skincare and personal care. it suits shoppers looking for value health and beauty products in australia.",
+    k:"chemist warehouse,australia online shopping,pharmacy vitamins skincare,personal care,chemistwarehouse.com.au",
+    a:""
+  },
+  {
+    i:689,
+    n:"priceline pharmacy",
+    c:"health,beauty,business",
+    u:"https://www.priceline.com.au/",
+    d:"priceline pharmacy is an australian online pharmacy and beauty retailer for health, makeup and skincare. it is for shoppers who want pharmacy convenience and beauty deals in australia.",
+    k:"priceline pharmacy,australia online shopping,health makeup skincare,beauty retailer,priceline.com.au",
+    a:""
+  },
+  {
+    i:690,
+    n:"mychemist",
+    c:"health,beauty,business",
+    u:"https://www.mychemist.com.au/",
+    d:"mychemist is an australian online pharmacy for medicines, vitamins, skincare and wellness products. it suits customers in australia who want affordable pharmacy shopping online.",
+    k:"mychemist,australia online shopping,pharmacy medicines vitamins,skincare wellness,mychemist.com.au",
+    a:""
+  },
+  {
+    i:691,
+    n:"chemist king",
+    c:"health,beauty,business",
+    u:"https://www.chemistking.com.au/",
+    d:"chemist king is an australian online pharmacy store for medicines, vitamins and skincare. it is for customers in australia who want low-cost pharmacy products online.",
+    k:"chemist king,australia online shopping,pharmacy medicines vitamins,skincare products,chemistking.com.au",
+    a:""
+  },
+  {
+    i:692,
+    n:"adore beauty",
+    c:"beauty,health,business",
+    u:"https://www.adorebeauty.com.au/",
+    d:"adore beauty is an australian online beauty store for skincare, makeup, haircare and fragrance. it suits shoppers who want a dedicated beauty retailer with broad brand choice in australia.",
+    k:"adore beauty,australia online shopping,skincare makeup haircare,fragrance beauty retailer,adorebeauty.com.au",
+    a:""
+  },
+  {
+    i:693,
+    n:"sephora australia",
+    c:"beauty,business",
+    u:"https://www.sephora.com.au/",
+    d:"sephora australia is an online beauty retailer for cosmetics, skincare, haircare and fragrance. it is for shoppers in australia who want premium and trending beauty brands.",
+    k:"sephora australia,australia online shopping,cosmetics skincare haircare,fragrance premium beauty,sephora.com.au",
+    a:""
+  },
+  {
+    i:694,
+    n:"myer",
+    c:"fashion,beauty,home,business",
+    u:"https://www.myer.com.au/",
+    d:"myer is an australian department store with online shopping for fashion, beauty, homewares and gifts. it is useful for shoppers who want branded goods and department-store variety in australia.",
+    k:"myer,australia online shopping,fashion beauty homewares,gifts department store,myer.com.au",
+    a:""
+  },
+  {
+    i:695,
+    n:"target australia",
+    c:"fashion,home,toys,beauty,business",
+    u:"https://www.target.com.au/",
+    d:"target australia offers online shopping for affordable fashion, homewares, kids products and beauty items. it is suited to families and budget shoppers in australia.",
+    k:"target australia,australia online shopping,fashion homewares kids products,beauty items,target.com.au",
+    a:""
+  },
+  {
+    i:696,
+    n:"big w",
+    c:"home,fashion,books,toys,business",
+    u:"https://www.bigw.com.au/",
+    d:"big w is an australian department store with online shopping for clothing, homewares, toys and books. it is a good fit for families and value shoppers in australia.",
+    k:"big w,australia online shopping,clothing homewares toys,books family shopping,bigw.com.au",
+    a:""
+  },
+  {
+    i:697,
+    n:"officeworks",
+    c:"books,home,electronics,business",
+    u:"https://www.officeworks.com.au/",
+    d:"officeworks is an australian office supplies and tech store with online ordering for stationery, furniture, computers and school supplies. it is a strong choice for home offices, students and businesses in australia.",
+    k:"officeworks,australia online shopping,office supplies stationery furniture,computers school supplies,officeworks.com.au",
+    a:""
+  },
+  {
+    i:698,
+    n:"booktopia",
+    c:"books,business",
+    u:"https://www.booktopia.com.au/",
+    d:"booktopia is an australian online bookstore for books, ebooks and gifts. it is ideal for readers, students and families in australia.",
+    k:"booktopia,australia online shopping,books ebooks gifts,online bookstore,booktopia.com.au",
+    a:""
+  },
+  {
+    i:699,
+    n:"dymocks",
+    c:"books,business",
+    u:"https://www.dymocks.com.au/",
+    d:"dymocks is an australian bookstore chain with online shopping for books, education titles and stationery. it suits readers and learners who want trusted book retail in australia.",
+    k:"dymocks,australia online shopping,books education titles,stationery reading,dymocks.com.au",
+    a:""
+  },
+  {
+    i:700,
+    n:"angus and robertson",
+    c:"books,business",
+    u:"https://www.angusrobertson.com.au/",
+    d:"angus and robertson is an australian bookseller with online shopping for books, stationery and reading gifts. it suits readers and students who want mainstream and educational titles in australia.",
+    k:"angus and robertson,australia online shopping,books stationery reading gifts,students,angusrobertson.com.au",
+    a:""
+  }
+];
+// australia.js
+window.countryShops = window.countryShops || {};
+window.countryShops["australia"] = [
+  {
+    i:701,
+    n:"showpo",
+    c:"fashion,business",
+    u:"https://www.showpo.com/",
+    d:"showpo is an australian online fashion retailer for womens clothing, event wear, dresses and accessories. it is popular with shoppers in australia looking for occasion outfits and trend-led style.",
+    k:"showpo,australia online shopping,womens clothing event wear,dresses accessories,showpo.com",
+    a:""
+  },
+  {
+    i:702,
+    n:"sneaker freaker magazine",
+    c:"fashion,sports,business",
+    u:"https://www.sneakerfreaker.com/",
+    d:"sneaker freaker magazine is an australian sneaker and streetwear site with online shopping for footwear, apparel and accessories. it suits shoppers in australia who want sneaker culture products and urban fashion.",
+    k:"sneaker freaker magazine,australia online shopping,sneakers streetwear footwear,apparel accessories,sneakerfreaker.com",
+    a:""
+  },
+  {
+    i:703,
+    n:"optus",
+    c:"electronics,software,business",
+    u:"https://www.optus.com.au/",
+    d:"optus is an australian telecom provider with online shopping for phones, sim plans, internet and devices. it is for customers in australia who want mobile and broadband services.",
+    k:"optus,australia online shopping,phones sim plans,internet devices,optus.com.au",
+    a:""
+  },
+  {
+    i:704,
+    n:"babyboo fashion",
+    c:"fashion,business",
+    u:"https://www.babyboofashion.com/",
+    d:"babyboo fashion is an australian online store for womens dresses, party wear and special occasion outfits. it is for shoppers who want fitted, glamour-focused fashion in australia.",
+    k:"babyboo fashion,australia online shopping,womens dresses party wear,occasion outfits,babyboofashion.com",
+    a:""
+  },
+  {
+    i:705,
+    n:"adidas australia",
+    c:"fashion,sports,business",
+    u:"https://www.adidas.com.au/",
+    d:"adidas australia is an official online store for sportswear, sneakers, training gear and accessories. it is for australian shoppers who want athletic clothing and footwear from a major brand.",
+    k:"adidas australia,australia online shopping,sportswear sneakers,training gear accessories,adidas.com.au",
+    a:""
+  },
+  {
+    i:706,
+    n:"bellroy",
+    c:"fashion,business",
+    u:"https://bellroy.com/",
+    d:"bellroy is an australian online brand for wallets, bags, tech carry goods and everyday accessories. it suits shoppers who want premium minimalist accessories in australia.",
+    k:"bellroy,australia online shopping,wallets bags tech accessories,everyday carry,bellroy.com",
+    a:""
+  },
+  {
+    i:707,
+    n:"alamour the label",
+    c:"fashion,business",
+    u:"https://alamourthelabel.com/",
+    d:"alamour the label is an australian fashion boutique for formal dresses, bridal wear and luxury occasion pieces. it suits australian shoppers looking for premium event fashion.",
+    k:"alamour the label,australia online shopping,formal dresses bridal wear,luxury occasion fashion,alamourthelabel.com",
+    a:""
+  },
+  {
+    i:708,
+    n:"aesop",
+    c:"beauty,health,business",
+    u:"https://www.aesop.com/au/",
+    d:"aesop is an australian online beauty and personal care store for skincare, body care and fragrances. it is for shoppers who want premium grooming products in australia.",
+    k:"aesop,australia online shopping,skincare body care fragrances,personal care,aesop.com/au",
+    a:""
+  },
+  {
+    i:709,
+    n:"officeworks",
+    c:"books,home,electronics,business",
+    u:"https://www.officeworks.com.au/",
+    d:"officeworks is an australian office supplies and tech store with online ordering for stationery, furniture, computers and school supplies. it is a strong choice for home offices, students and businesses in australia.",
+    k:"officeworks,australia online shopping,office supplies stationery furniture,computers school supplies,officeworks.com.au",
+    a:""
+  },
+  {
+    i:710,
+    n:"chemist warehouse",
+    c:"health,beauty,business",
+    u:"https://www.chemistwarehouse.com.au/",
+    d:"chemist warehouse is an australian discount pharmacy retailer with online shopping for medicines, vitamins, skincare and personal care. it suits shoppers looking for value health and beauty products in australia.",
+    k:"chemist warehouse,australia online shopping,pharmacy vitamins skincare,personal care,chemistwarehouse.com.au",
+    a:""
+  },
+  {
+    i:711,
+    n:"uggs since 1974",
+    c:"fashion,business",
+    u:"https://uggsince1974.com.au/",
+    d:"uggs since 1974 is an australian footwear store with online shopping for ugg boots, slippers and cozy winter shoes. it suits shoppers looking for sheepskin footwear and comfort items in australia.",
+    k:"uggs since 1974,australia online shopping,ugg boots slippers,winter shoes sheepskin,uggsince1974.com.au",
+    a:""
+  },
+  {
+    i:712,
+    n:"vodafone australia",
+    c:"electronics,software,business",
+    u:"https://www.vodafone.com.au/",
+    d:"vodafone australia is an online telecom store for phones, sim plans, broadband and connected devices. it is for customers in australia who want mobile and internet services online.",
+    k:"vodafone australia,australia online shopping,phones sim plans,broadband connected devices,vodafone.com.au",
+    a:""
+  },
+  {
+    i:713,
+    n:"ksubi",
+    c:"fashion,business",
+    u:"https://ksubi.com/",
+    d:"ksubi is an australian fashion brand with online shopping for denim, clothing and streetwear. it suits shoppers in australia who want premium casual fashion with a distinctive edge.",
+    k:"ksubi,australia online shopping,denim clothing streetwear,premium casual fashion,ksubi.com",
+    a:""
+  },
+  {
+    i:714,
+    n:"vrg grl",
+    c:"fashion,business",
+    u:"https://www.vrggrl.com.au/",
+    d:"vrg grl is an australian online fashion store for womens clothing, dresses and statement pieces. it is for shoppers who want bold, trend-driven style in australia.",
+    k:"vrg grl,australia online shopping,womens clothing dresses,statement fashion,vrggrl.com.au",
+    a:""
+  },
+  {
+    i:715,
+    n:"the oodie",
+    c:"fashion,home,business",
+    u:"https://theoodie.com/",
+    d:"the oodie is an australian online store for hooded blankets, loungewear and comfort products. it is popular with shoppers in australia looking for cozy gifts and home comfort items.",
+    k:"the oodie,australia online shopping,hooded blankets loungewear,comfort products,theoodie.com",
+    a:""
+  },
+  {
+    i:716,
+    n:"lskd",
+    c:"fashion,sports,business",
+    u:"https://www.lskd.co/",
+    d:"lskd is an australian activewear brand with online shopping for training clothes, leggings and gym apparel. it is for fitness-focused shoppers who want performance wear in australia.",
+    k:"lskd,australia online shopping,activewear training clothes,leggings gym apparel,lskd.co",
+    a:""
+  },
+  {
+    i:717,
+    n:"shiels jewellers",
+    c:"jewellery,business",
+    u:"https://www.shiels.com.au/",
+    d:"shiels jewellers is an australian online jewellery store for rings, watches and earrings. it is for shoppers who want gift jewellery and fashion watches in australia.",
+    k:"shiels jewellers,australia online shopping,jewellery rings watches,earrings gifts,shiels.com.au",
+    a:""
+  },
+  {
+    i:718,
+    n:"sydney opera house shop",
+    c:"books,home,business",
+    u:"https://www.sydneyoperahouse.com/shop",
+    d:"sydney opera house shop is an australian online store for gifts, books, home items and merchandise. it is for shoppers in australia looking for cultural souvenirs and branded products.",
+    k:"sydney opera house shop,australia online shopping,gifts books home items,merchandise souvenirs,sydneyoperahouse.com/shop",
+    a:""
+  },
+  {
+    i:719,
+    n:"bellroy",
+    c:"fashion,business",
+    u:"https://bellroy.com/",
+    d:"bellroy is an australian online brand for wallets, bags, tech carry goods and everyday accessories. it suits shoppers who want premium minimalist accessories in australia.",
+    k:"bellroy,australia online shopping,wallets bags tech accessories,everyday carry,bellroy.com",
+    a:""
+  },
+  {
+    i:720,
+    n:"flow hive",
+    c:"home,business",
+    u:"https://www.honeyflow.com/",
+    d:"flow hive is an australian online store for beekeeping equipment, hive systems and honey harvesting products. it suits hobbyists and small producers in australia who want modern beekeeping gear.",
+    k:"flow hive,australia online shopping,beekeeping equipment hive systems,honey harvesting products,honeyflow.com",
+    a:""
+  },
+  {
+    i:721,
+    n:"powertec telecommunications",
+    c:"electronics,software,business",
+    u:"https://www.powertec.com.au/",
+    d:"powertec telecommunications is an australian online shop for wireless, networking and communication gear. it suits customers in australia who want telecom hardware and signal solutions.",
+    k:"powertec telecommunications,australia online shopping,wireless networking,communication gear,powertec.com.au",
+    a:""
+  },
+  {
+    i:722,
+    n:"access communications australia",
+    c:"electronics,software,business",
+    u:"https://www.accesscomms.com.au/",
+    d:"access communications australia is an online store for business communication and networking equipment. it suits australian customers who need telecom hardware and office connectivity solutions.",
+    k:"access communications australia,australia online shopping,communications equipment networking,business connectivity,accesscomms.com.au",
+    a:""
+  },
+  {
+    i:723,
+    n:"mss data solutions",
+    c:"electronics,software,business",
+    u:"https://www.mssdatasolutions.com.au/",
+    d:"mss data solutions is an australian online store for networking, it hardware and telecom products. it is for businesses in australia that need infrastructure and connectivity equipment.",
+    k:"mss data solutions,australia online shopping,networking it hardware,telecom products,mssdatasolutions.com.au",
+    a:""
+  },
+  {
+    i:724,
+    n:"codecom",
+    c:"electronics,software,business",
+    u:"https://www.codecom.com.au/",
+    d:"codecom is an australian online retailer for networking, it and communication equipment. it is for business buyers and technical teams in australia who need infrastructure products.",
+    k:"codecom,australia online shopping,networking it communication,equipment infrastructure,codecom.com.au",
+    a:""
+  },
+  {
+    i:725,
+    n:"elprotech",
+    c:"electronics,software,business",
+    u:"https://www.elprotech.com/",
+    d:"elprotech is an australian online store for industrial electronics, networking and communication solutions. it is useful for business and technical customers in australia.",
+    k:"elprotech,australia online shopping,industrial electronics networking,communication solutions,elprotech.com",
+    a:""
+  },
+  {
+    i:726,
+    n:"iot store",
+    c:"electronics,software,business",
+    u:"https://www.iotstore.com.au/",
+    d:"iot store is an australian online shop for iot devices, electronics and connectivity products. it suits buyers in australia who need smart technology and industrial internet products.",
+    k:"iot store,australia online shopping,iot devices electronics,connectivity products,iotstore.com.au",
+    a:""
+  },
+  {
+    i:727,
+    n:"mifo australia",
+    c:"electronics,sports,business",
+    u:"https://mifo.com.au/",
+    d:"mifo australia is an online store for wireless earbuds and audio accessories. it suits australian shoppers who want portable sound products for active lifestyles.",
+    k:"mifo australia,australia online shopping,wireless earbuds audio,portable sound products,mifo.com.au",
+    a:""
+  },
+  {
+    i:728,
+    n:"flipbelt australia",
+    c:"sports,fashion,business",
+    u:"https://www.flipbelt.com.au/",
+    d:"flipbelt australia is an online store for running belts, fitness accessories and activewear storage products. it is for australian runners and fitness shoppers who want hands-free gear.",
+    k:"flipbelt australia,australia online shopping,running belts fitness accessories,activewear storage,flipbelt.com.au",
+    a:""
+  },
+  {
+    i:729,
+    n:"traffic technologies",
+    c:"automotive,business",
+    u:"https://www.traffictechnologies.com.au/",
+    d:"traffic technologies is an australian online supplier of road safety and vehicle equipment. it is for business and fleet customers in australia who need transport and traffic products.",
+    k:"traffic technologies,australia online shopping,road safety vehicle equipment,transport products,traffictechnologies.com.au",
+    a:""
+  },
+  {
+    i:730,
+    n:"saint cloud",
+    c:"fashion,business",
+    u:"https://www.saintcloud.com.au/",
+    d:"saint cloud is an australian online fashion store for clothing and contemporary apparel. it suits shoppers in australia who want modern wardrobe pieces and curated style.",
+    k:"saint cloud,australia online shopping,fashion clothing apparel,contemporary style,saintcloud.com.au",
+    a:""
+  },
+  {
+    i:731,
+    n:"marie claire",
+    c:"fashion,beauty,business",
+    u:"https://www.marieclaire.com.au/",
+    d:"marie claire is an australian lifestyle and fashion site with online shopping links and curated products. it suits shoppers who want fashion, beauty and style content in australia.",
+    k:"marie claire,australia online shopping,fashion beauty lifestyle,curated products,marieclaire.com.au",
+    a:""
+  },
+  {
+    i:732,
+    n:"decathlon australia",
+    c:"sports,business",
+    u:"https://www.decathlon.com.au/",
+    d:"decathlon australia is an online sports store for fitness, outdoor, cycling and team sports gear. it suits australian shoppers who want affordable sporting equipment and apparel.",
+    k:"decathlon australia,australia online shopping,sports gear fitness outdoor,cycling team sports,decathlon.com.au",
+    a:""
+  },
+  {
+    i:733,
+    n:"helly hansen australia",
+    c:"sports,fashion,business",
+    u:"https://www.hellyhansen.com.au/",
+    d:"helly hansen australia is an online outdoor clothing store for jackets, technical wear and adventure gear. it is for australian shoppers who want weather-ready apparel and sportswear.",
+    k:"helly hansen australia,australia online shopping,outdoor clothing jackets,technical wear adventure gear,hellyhansen.com.au",
+    a:""
+  },
+  {
+    i:734,
+    n:"the north face australia",
+    c:"sports,fashion,business",
+    u:"https://www.thenorthface.com.au/",
+    d:"the north face australia is an online outdoor retailer for jackets, backpacks, hiking gear and activewear. it is for australian shoppers who want durable adventure clothing and equipment.",
+    k:"the north face australia,australia online shopping,outdoor clothing backpacks,hiking gear activewear,thenorthface.com.au",
+    a:""
+  },
+  {
+    i:735,
+    n:"patagonia australia",
+    c:"sports,fashion,business",
+    u:"https://www.patagonia.com.au/",
+    d:"patagonia australia is an online outdoor store for jackets, fleeces, bags and technical clothing. it suits shoppers in australia who want sustainable adventure wear and gear.",
+    k:"patagonia australia,australia online shopping,outdoor clothing jackets,technical clothing bags,patagonia.com.au",
+    a:""
+  },
+  {
+    i:736,
+    n:"chemist king",
+    c:"health,beauty,business",
+    u:"https://www.chemistking.com.au/",
+    d:"chemist king is an australian online pharmacy store for medicines, vitamins and skincare. it is for customers in australia who want low-cost pharmacy products online.",
+    k:"chemist king,australia online shopping,pharmacy medicines vitamins,skincare products,chemistking.com.au",
+    a:""
+  },
+  {
+    i:737,
+    n:"adore beauty",
+    c:"beauty,health,business",
+    u:"https://www.adorebeauty.com.au/",
+    d:"adore beauty is an australian online beauty store for skincare, makeup, haircare and fragrance. it suits shoppers who want a dedicated beauty retailer with broad brand choice in australia.",
+    k:"adore beauty,australia online shopping,skincare makeup haircare,fragrance beauty retailer,adorebeauty.com.au",
+    a:""
+  },
+  {
+    i:738,
+    n:"sephora australia",
+    c:"beauty,business",
+    u:"https://www.sephora.com.au/",
+    d:"sephora australia is an online beauty retailer for cosmetics, skincare, haircare and fragrance. it is for shoppers in australia who want premium and trending beauty brands.",
+    k:"sephora australia,australia online shopping,cosmetics skincare haircare,fragrance premium beauty,sephora.com.au",
+    a:""
+  },
+  {
+    i:739,
+    n:"myer",
+    c:"fashion,beauty,home,business",
+    u:"https://www.myer.com.au/",
+    d:"myer is an australian department store with online shopping for fashion, beauty, homewares and gifts. it is useful for shoppers who want branded goods and department-store variety in australia.",
+    k:"myer,australia online shopping,fashion beauty homewares,gifts department store,myer.com.au",
+    a:""
+  },
+  {
+    i:740,
+    n:"target australia",
+    c:"fashion,home,toys,beauty,business",
+    u:"https://www.target.com.au/",
+    d:"target australia offers online shopping for affordable fashion, homewares, kids products and beauty items. it is suited to families and budget shoppers in australia.",
+    k:"target australia,australia online shopping,fashion homewares kids products,beauty items,target.com.au",
+    a:""
+  },
+  {
+    i:741,
+    n:"big w",
+    c:"home,fashion,books,toys,business",
+    u:"https://www.bigw.com.au/",
+    d:"big w is an australian department store with online shopping for clothing, homewares, toys and books. it is a good fit for families and value shoppers in australia.",
+    k:"big w,australia online shopping,clothing homewares toys,books family shopping,bigw.com.au",
+    a:""
+  },
+  {
+    i:742,
+    n:"officeworks",
+    c:"books,home,electronics,business",
+    u:"https://www.officeworks.com.au/",
+    d:"officeworks is an australian office supplies and tech store with online ordering for stationery, furniture, computers and school supplies. it is a strong choice for home offices, students and businesses in australia.",
+    k:"officeworks,australia online shopping,office supplies stationery furniture,computers school supplies,officeworks.com.au",
+    a:""
+  },
+  {
+    i:743,
+    n:"booktopia",
+    c:"books,business",
+    u:"https://www.booktopia.com.au/",
+    d:"booktopia is an australian online bookstore for books, ebooks and gifts. it is ideal for readers, students and families in australia.",
+    k:"booktopia,australia online shopping,books ebooks gifts,online bookstore,booktopia.com.au",
+    a:""
+  },
+  {
+    i:744,
+    n:"dymocks",
+    c:"books,business",
+    u:"https://www.dymocks.com.au/",
+    d:"dymocks is an australian bookstore chain with online shopping for books, education titles and stationery. it suits readers and learners who want trusted book retail in australia.",
+    k:"dymocks,australia online shopping,books education titles,stationery reading,dymocks.com.au",
+    a:""
+  },
+  {
+    i:745,
+    n:"angus and robertson",
+    c:"books,business",
+    u:"https://www.angusrobertson.com.au/",
+    d:"angus and robertson is an australian bookseller with online shopping for books, stationery and reading gifts. it suits readers and students who want mainstream and educational titles in australia.",
+    k:"angus and robertson,australia online shopping,books stationery reading gifts,students,angusrobertson.com.au",
+    a:""
+  },
+  {
+    i:746,
+    n:"hello fresh australia",
+    c:"food,business",
+    u:"https://www.hellofresh.com.au/",
+    d:"hello fresh australia is a meal kit service that delivers recipes and ingredients to homes across australia. it is for busy households that want convenient cooking and meal planning.",
+    k:"hello fresh australia,australia online shopping,meal kits recipes ingredients,home delivery,cooking service,hellofresh.com.au",
+    a:""
+  },
+  {
+    i:747,
+    n:"marley spoon australia",
+    c:"food,business",
+    u:"https://marleyspoon.com.au/",
+    d:"marley spoon australia is a meal kit delivery service with online ordering for recipes and fresh ingredients. it suits households that want flexible weekly meals and easy cooking in australia.",
+    k:"marley spoon australia,australia online shopping,meal kit delivery recipes,fresh ingredients,marleyspoon.com.au",
+    a:""
+  },
+  {
+    i:748,
+    n:"coles online",
+    c:"food,home,business",
+    u:"https://www.coles.com.au/",
+    d:"coles online is an australian grocery shopping site for pantry items, fresh produce and household products. it suits households that want convenient supermarket delivery in australia.",
+    k:"coles online,australia online shopping,groceries fresh produce,household products,coles.com.au",
+    a:""
+  },
+  {
+    i:749,
+    n:"woolworths online",
+    c:"food,home,business",
+    u:"https://www.woolworths.com.au/shop",
+    d:"woolworths online is a leading australian supermarket website for groceries, fresh food and household essentials. it is designed for families and busy shoppers who want delivery or pickup in australia.",
+    k:"woolworths online,australia online shopping,groceries fresh food,household essentials,woolworths.com.au",
+    a:""
+  },
+  {
+    i:750,
+    n:"costco australia",
+    c:"food,home,business",
+    u:"https://www.costco.com.au/",
+    d:"costco australia is a membership-based online store for groceries, home goods and bulk products. it is for families and value shoppers who want warehouse-style buying in australia.",
+    k:"costco australia,australia online shopping,groceries home goods,bulk products,costco.com.au",
+    a:""
+  },
+  {
+    i:751,
+    n:"amazon australia",
+    c:"electronics,home,fashion,beauty,books,food,sports,business",
+    u:"https://www.amazon.com.au/",
+    d:"amazon australia is a major online marketplace in australia for electronics, home goods, fashion, beauty, books, food and sports products. it is one of the largest ecommerce sites in australia and suits shoppers who want wide selection and fast delivery.",
+    k:"amazon australia,australia online shopping,electronics home fashion beauty,books food sports marketplace,amazon.com.au",
+    a:""
+  }
+];
+
+// australia.js
+window.countryShops = window.countryShops || {};
+window.countryShops["australia"] = [
+  {
+    i:752,
+    n:"bunnings warehouse",
+    c:"home,business",
+    u:"https://www.bunnings.com.au/",
+    d:"bunnings warehouse is an australian home improvement store with online shopping for tools, building materials and garden supplies. it is useful for diy buyers and homeowners across australia.",
+    k:"bunnings warehouse,australia online shopping,tools building materials,garden supplies,bunnings.com.au",
+    a:""
+  },
+  {
+    i:753,
+    n:"jb hi-fi",
+    c:"electronics,home,business",
+    u:"https://www.jbhifi.com.au/",
+    d:"jb hi-fi is an australian electronics store with online shopping for tvs, audio, computers, gaming and appliances. it is useful for shoppers in australia who want a wide range of tech products.",
+    k:"jb hi-fi,australia online shopping,electronics tvs audio,computers gaming appliances,jbhifi.com.au",
+    a:""
+  },
+  {
+    i:754,
+    n:"news.com.au",
+    c:"business",
+    u:"https://www.news.com.au/",
+    d:"news.com.au is an australian news and digital content site with shopping and deals coverage. it is for australian readers who want news, lifestyle content and product discovery online.",
+    k:"news.com.au,australia online shopping,news lifestyle content,deals product discovery,news.com.au",
+    a:""
+  },
+  {
+    i:755,
+    n:"quad lock",
+    c:"electronics,automotive,business",
+    u:"https://www.quadlockcase.com.au/",
+    d:"quad lock is an australian online store for phone mounts, cases and accessories for bikes, cars and active lifestyles. it suits users who want secure device mounting and mobile protection.",
+    k:"quad lock,australia online shopping,phone mounts cases accessories,bike car mounts,quadlockcase.com.au",
+    a:""
+  },
+  {
+    i:756,
+    n:"threadheads",
+    c:"fashion,business",
+    u:"https://threadheads.com.au/",
+    d:"threadheads is an australian online clothing store for graphic tees, hoodies and casual streetwear. it is for shoppers who want relaxed everyday fashion in australia.",
+    k:"threadheads,australia online shopping,graphic tees hoodies,casual streetwear,threadheads.com.au",
+    a:""
+  },
+  {
+    i:757,
+    n:"sabo",
+    c:"fashion,business",
+    u:"https://saboskirt.com/",
+    d:"sabo is an australian womens fashion brand with online shopping for dresses, sets, tops and resort wear. it suits shoppers who want stylish feminine clothing in australia.",
+    k:"sabo,australia online shopping,womens fashion dresses sets,tops resort wear,saboskirt.com",
+    a:""
+  },
+  {
+    i:758,
+    n:"coles online",
+    c:"food,home,business",
+    u:"https://www.coles.com.au/",
+    d:"coles online is an australian grocery shopping site for pantry items, fresh produce and household products. it suits households that want convenient supermarket delivery in australia.",
+    k:"coles online,australia online shopping,groceries fresh produce,household products,coles.com.au",
+    a:""
+  },
+  {
+    i:759,
+    n:"australia post shop",
+    c:"home,business",
+    u:"https://shop.auspost.com.au/",
+    d:"australia post shop is the online store for postal supplies, gifts, stationery and selected lifestyle items. it is useful for customers in australia who want mailing essentials and gift shopping.",
+    k:"australia post shop,australia online shopping,postal supplies gifts,stationery lifestyle items,shop.auspost.com.au",
+    a:""
+  },
+  {
+    i:760,
+    n:"billabong",
+    c:"fashion,sports,business",
+    u:"https://www.billabong.com.au/",
+    d:"billabong is an australian online store for surfwear, boardshorts, swimwear and casual clothing. it suits shoppers in australia who want beach lifestyle apparel and sporty fashion.",
+    k:"billabong,australia online shopping,surfwear boardshorts swimwear,casual clothing,billabong.com.au",
+    a:""
+  },
+  {
+    i:761,
+    n:"honey birdette",
+    c:"fashion,beauty,business",
+    u:"https://www.honeybirdette.com/",
+    d:"honey birdette is an australian lingerie and lifestyle retailer with online shopping for intimates, sleepwear and accessories. it is for shoppers who want premium lingerie and fashion-forward pieces in australia.",
+    k:"honey birdette,australia online shopping,lingerie intimates sleepwear,accessories premium fashion,honeybirdette.com",
+    a:""
+  },
+  {
+    i:762,
+    n:"the oodie",
+    c:"fashion,home,business",
+    u:"https://theoodie.com/",
+    d:"the oodie is an australian online store for hooded blankets, loungewear and cozy home comfort products. it is popular with shoppers in australia looking for warm, soft and giftable items.",
+    k:"the oodie,australia online shopping,hooded blankets loungewear,home comfort gift items,theoodie.com",
+    a:""
+  },
+  {
+    i:763,
+    n:"lskd",
+    c:"fashion,sports,business",
+    u:"https://www.lskd.co/",
+    d:"lskd is an australian activewear brand with online shopping for training clothes, leggings, shorts and gym apparel. it is for fitness-focused shoppers who want performance wear and street style.",
+    k:"lskd,australia online shopping,activewear training clothes,leggings shorts gym apparel,lskd.co",
+    a:""
+  },
+  {
+    i:764,
+    n:"shiels jewellers",
+    c:"jewellery,business",
+    u:"https://www.shiels.com.au/",
+    d:"shiels jewellers is an australian online jewellery store for rings, watches, earrings and gifts. it is for shoppers who want gold, silver and fashion jewellery in australia.",
+    k:"shiels jewellers,australia online shopping,jewellery watches rings,earrings gift items,shiels.com.au",
+    a:""
+  },
+  {
+    i:765,
+    n:"optus",
+    c:"electronics,software,business",
+    u:"https://www.optus.com.au/",
+    d:"optus is an australian telecom provider with online shopping for phones, sim plans, internet and connected devices. it is for customers in australia who want mobile and broadband services.",
+    k:"optus,australia online shopping,phones sim plans,internet devices,optus.com.au",
+    a:""
+  },
+  {
+    i:766,
+    n:"telstra personal",
+    c:"electronics,software,business",
+    u:"https://www.telstra.com.au/",
+    d:"telstra personal is an australian online telecom store for mobile phones, plans, internet and accessories. it suits shoppers in australia who want carrier devices and connectivity services.",
+    k:"telstra personal,australia online shopping,mobile phones plans,internet accessories,telstra.com.au",
+    a:""
+  },
+  {
+    i:767,
+    n:"vodafone australia",
+    c:"electronics,software,business",
+    u:"https://www.vodafone.com.au/",
+    d:"vodafone australia is an online telecom store for phones, sim plans, broadband and connected devices. it is for customers in australia who want mobile and internet services online.",
+    k:"vodafone australia,australia online shopping,phones sim plans,broadband connected devices,vodafone.com.au",
+    a:""
+  },
+  {
+    i:768,
+    n:"the telecom shop",
+    c:"electronics,software,business",
+    u:"https://www.telecomshop.com.au/",
+    d:"the telecom shop is an australian online store for phones, internet hardware and communication products. it is useful for shoppers and business users who need telecom equipment in australia.",
+    k:"the telecom shop,australia online shopping,phones internet hardware,communication products,telecomshop.com.au",
+    a:""
+  },
+  {
+    i:769,
+    n:"access communications australia",
+    c:"electronics,software,business",
+    u:"https://www.accesscomms.com.au/",
+    d:"access communications australia is an online store for business communication and networking equipment. it suits australian customers who need telecom hardware and office connectivity solutions.",
+    k:"access communications australia,australia online shopping,communications equipment networking,business connectivity,accesscomms.com.au",
+    a:""
+  },
+  {
+    i:770,
+    n:"mss data solutions",
+    c:"electronics,software,business",
+    u:"https://www.mssdatasolutions.com.au/",
+    d:"mss data solutions is an australian online store for networking, it hardware and telecom products. it is for businesses in australia that need infrastructure and connectivity equipment.",
+    k:"mss data solutions,australia online shopping,networking it hardware,telecom products,mssdatasolutions.com.au",
+    a:""
+  },
+  {
+    i:771,
+    n:"powertec telecommunications",
+    c:"electronics,software,business",
+    u:"https://www.powertec.com.au/",
+    d:"powertec telecommunications is an australian online shop for wireless, networking and communication gear. it suits customers in australia who want telecom hardware and signal solutions.",
+    k:"powertec telecommunications,australia online shopping,wireless networking,communication gear,powertec.com.au",
+    a:""
+  },
+  {
+    i:772,
+    n:"codecom",
+    c:"electronics,software,business",
+    u:"https://www.codecom.com.au/",
+    d:"codecom is an australian online retailer for networking, it and communication equipment. it is for business buyers and technical teams in australia who need infrastructure products.",
+    k:"codecom,australia online shopping,networking it communication,equipment infrastructure,codecom.com.au",
+    a:""
+  },
+  {
+    i:773,
+    n:"elprotech",
+    c:"electronics,software,business",
+    u:"https://www.elprotech.com/",
+    d:"elprotech is an australian online store for industrial electronics, networking and communication solutions. it is useful for business and technical customers in australia.",
+    k:"elprotech,australia online shopping,industrial electronics networking,communication solutions,elprotech.com",
+    a:""
+  },
+  {
+    i:774,
+    n:"iot store",
+    c:"electronics,software,business",
+    u:"https://www.iotstore.com.au/",
+    d:"iot store is an australian online shop for iot devices, electronics and connectivity products. it suits buyers in australia who need smart technology and industrial internet products.",
+    k:"iot store,australia online shopping,iot devices electronics,connectivity products,iotstore.com.au",
+    a:""
+  },
+  {
+    i:775,
+    n:"mifo australia",
+    c:"electronics,sports,business",
+    u:"https://mifo.com.au/",
+    d:"mifo australia is an online store for wireless earbuds and audio accessories. it suits australian shoppers who want portable sound products for active lifestyles.",
+    k:"mifo australia,australia online shopping,wireless earbuds audio,portable sound products,mifo.com.au",
+    a:""
+  },
+  {
+    i:776,
+    n:"flipbelt australia",
+    c:"sports,fashion,business",
+    u:"https://www.flipbelt.com.au/",
+    d:"flipbelt australia is an online store for running belts, fitness accessories and activewear storage products. it is for australian runners and fitness shoppers who want hands-free gear.",
+    k:"flipbelt australia,australia online shopping,running belts fitness accessories,activewear storage,flipbelt.com.au",
+    a:""
+  },
+  {
+    i:777,
+    n:"traffic technologies",
+    c:"automotive,business",
+    u:"https://www.traffictechnologies.com.au/",
+    d:"traffic technologies is an australian online supplier of road safety and vehicle equipment. it is for business and fleet customers in australia who need transport and traffic products.",
+    k:"traffic technologies,australia online shopping,road safety vehicle equipment,transport products,traffictechnologies.com.au",
+    a:""
+  },
+  {
+    i:778,
+    n:"saint cloud",
+    c:"fashion,business",
+    u:"https://www.saintcloud.com.au/",
+    d:"saint cloud is an australian online fashion store for clothing and contemporary apparel. it suits shoppers in australia who want modern wardrobe pieces and curated style.",
+    k:"saint cloud,australia online shopping,fashion clothing apparel,contemporary style,saintcloud.com.au",
+    a:""
+  },
+  {
+    i:779,
+    n:"marie claire",
+    c:"fashion,beauty,business",
+    u:"https://www.marieclaire.com.au/",
+    d:"marie claire is an australian lifestyle and fashion site with online shopping links and curated products. it suits shoppers who want fashion, beauty and style content in australia.",
+    k:"marie claire,australia online shopping,fashion beauty lifestyle,curated products,marieclaire.com.au",
+    a:""
+  },
+  {
+    i:780,
+    n:"decathlon australia",
+    c:"sports,business",
+    u:"https://www.decathlon.com.au/",
+    d:"decathlon australia is an online sports store for fitness, outdoor, cycling and team sports gear. it suits australian shoppers who want affordable sporting equipment and apparel.",
+    k:"decathlon australia,australia online shopping,sports gear fitness outdoor,cycling team sports,decathlon.com.au",
+    a:""
+  },
+  {
+    i:781,
+    n:"helly hansen australia",
+    c:"sports,fashion,business",
+    u:"https://www.hellyhansen.com.au/",
+    d:"helly hansen australia is an online outdoor clothing store for jackets, technical wear and adventure gear. it is for australian shoppers who want weather-ready apparel and sportswear.",
+    k:"helly hansen australia,australia online shopping,outdoor clothing jackets,technical wear adventure gear,hellyhansen.com.au",
+    a:""
+  },
+  {
+    i:782,
+    n:"the north face australia",
+    c:"sports,fashion,business",
+    u:"https://www.thenorthface.com.au/",
+    d:"the north face australia is an online outdoor retailer for jackets, backpacks, hiking gear and activewear. it is for australian shoppers who want durable adventure clothing and equipment.",
+    k:"the north face australia,australia online shopping,outdoor clothing backpacks,hiking gear activewear,thenorthface.com.au",
+    a:""
+  },
+  {
+    i:783,
+    n:"patagonia australia",
+    c:"sports,fashion,business",
+    u:"https://www.patagonia.com.au/",
+    d:"patagonia australia is an online outdoor store for jackets, fleeces, bags and technical clothing. it suits shoppers in australia who want sustainable adventure wear and gear.",
+    k:"patagonia australia,australia online shopping,outdoor clothing jackets,technical clothing bags,patagonia.com.au",
+    a:""
+  },
+  {
+    i:784,
+    n:"chemist king",
+    c:"health,beauty,business",
+    u:"https://www.chemistking.com.au/",
+    d:"chemist king is an australian online pharmacy store for medicines, vitamins and skincare. it is for customers in australia who want low-cost pharmacy products online.",
+    k:"chemist king,australia online shopping,pharmacy medicines vitamins,skincare products,chemistking.com.au",
+    a:""
+  },
+  {
+    i:785,
+    n:"adore beauty",
+    c:"beauty,health,business",
+    u:"https://www.adorebeauty.com.au/",
+    d:"adore beauty is an australian online beauty store for skincare, makeup, haircare and fragrance. it suits shoppers who want a dedicated beauty retailer with broad brand choice in australia.",
+    k:"adore beauty,australia online shopping,skincare makeup haircare,fragrance beauty retailer,adorebeauty.com.au",
+    a:""
+  },
+  {
+    i:786,
+    n:"sephora australia",
+    c:"beauty,business",
+    u:"https://www.sephora.com.au/",
+    d:"sephora australia is an online beauty retailer for cosmetics, skincare, haircare and fragrance. it is for shoppers in australia who want premium and trending beauty brands.",
+    k:"sephora australia,australia online shopping,cosmetics skincare haircare,fragrance premium beauty,sephora.com.au",
+    a:""
+  },
+  {
+    i:787,
+    n:"myer",
+    c:"fashion,beauty,home,business",
+    u:"https://www.myer.com.au/",
+    d:"myer is an australian department store with online shopping for fashion, beauty, homewares and gifts. it is useful for shoppers who want branded goods and department-store variety in australia.",
+    k:"myer,australia online shopping,fashion beauty homewares,gifts department store,myer.com.au",
+    a:""
+  },
+  {
+    i:788,
+    n:"target australia",
+    c:"fashion,home,toys,beauty,business",
+    u:"https://www.target.com.au/",
+    d:"target australia offers online shopping for affordable fashion, homewares, kids products and beauty items. it is suited to families and budget shoppers in australia.",
+    k:"target australia,australia online shopping,fashion homewares kids products,beauty items,target.com.au",
+    a:""
+  },
+  {
+    i:789,
+    n:"big w",
+    c:"home,fashion,books,toys,business",
+    u:"https://www.bigw.com.au/",
+    d:"big w is an australian department store with online shopping for clothing, homewares, toys and books. it is a good fit for families and value shoppers in australia.",
+    k:"big w,australia online shopping,clothing homewares toys,books family shopping,bigw.com.au",
+    a:""
+  },
+  {
+    i:790,
+    n:"officeworks",
+    c:"books,home,electronics,business",
+    u:"https://www.officeworks.com.au/",
+    d:"officeworks is an australian office supplies and tech store with online ordering for stationery, furniture, computers and school supplies. it is a strong choice for home offices, students and businesses in australia.",
+    k:"officeworks,australia online shopping,office supplies stationery furniture,computers school supplies,officeworks.com.au",
+    a:""
+  },
+  {
+    i:791,
+    n:"booktopia",
+    c:"books,business",
+    u:"https://www.booktopia.com.au/",
+    d:"booktopia is an australian online bookstore for books, ebooks and gifts. it is ideal for readers, students and families in australia.",
+    k:"booktopia,australia online shopping,books ebooks gifts,online bookstore,booktopia.com.au",
+    a:""
+  },
+  {
+    i:792,
+    n:"dymocks",
+    c:"books,business",
+    u:"https://www.dymocks.com.au/",
+    d:"dymocks is an australian bookstore chain with online shopping for books, education titles and stationery. it suits readers and learners who want trusted book retail in australia.",
+    k:"dymocks,australia online shopping,books education titles,stationery reading,dymocks.com.au",
+    a:""
+  },
+  {
+    i:793,
+    n:"angus and robertson",
+    c:"books,business",
+    u:"https://www.angusrobertson.com.au/",
+    d:"angus and robertson is an australian bookseller with online shopping for books, stationery and reading gifts. it suits readers and students who want mainstream and educational titles in australia.",
+    k:"angus and robertson,australia online shopping,books stationery reading gifts,students,angusrobertson.com.au",
+    a:""
+  },
+  {
+    i:794,
+    n:"hello fresh australia",
+    c:"food,business",
+    u:"https://www.hellofresh.com.au/",
+    d:"hello fresh australia is a meal kit service that delivers recipes and ingredients to homes across australia. it is for busy households that want convenient cooking and meal planning.",
+    k:"hello fresh australia,australia online shopping,meal kits recipes ingredients,home delivery,cooking service,hellofresh.com.au",
+    a:""
+  },
+  {
+    i:795,
+    n:"marley spoon australia",
+    c:"food,business",
+    u:"https://marleyspoon.com.au/",
+    d:"marley spoon australia is a meal kit delivery service with online ordering for recipes and fresh ingredients. it suits households that want flexible weekly meals and easy cooking in australia.",
+    k:"marley spoon australia,australia online shopping,meal kit delivery recipes,fresh ingredients,marleyspoon.com.au",
+    a:""
+  },
+  {
+    i:796,
+    n:"coles online",
+    c:"food,home,business",
+    u:"https://www.coles.com.au/",
+    d:"coles online is an australian grocery shopping site for pantry items, fresh produce and household products. it suits households that want convenient supermarket delivery in australia.",
+    k:"coles online,australia online shopping,groceries fresh produce,household products,coles.com.au",
+    a:""
+  },
+  {
+    i:797,
+    n:"woolworths online",
+    c:"food,home,business",
+    u:"https://www.woolworths.com.au/shop",
+    d:"woolworths online is a leading australian supermarket website for groceries, fresh food and household essentials. it is designed for families and busy shoppers who want delivery or pickup in australia.",
+    k:"woolworths online,australia online shopping,groceries fresh food,household essentials,woolworths.com.au",
+    a:""
+  },
+  {
+    i:798,
+    n:"costco australia",
+    c:"food,home,business",
+    u:"https://www.costco.com.au/",
+    d:"costco australia is a membership-based online store for groceries, home goods and bulk products. it is for families and value shoppers who want warehouse-style buying in australia.",
+    k:"costco australia,australia online shopping,groceries home goods,bulk products,costco.com.au",
+    a:""
+  },
+  {
+    i:799,
+    n:"amazon australia",
+    c:"electronics,home,fashion,beauty,books,food,sports,business",
+    u:"https://www.amazon.com.au/",
+    d:"amazon australia is a major online marketplace in australia for electronics, home goods, fashion, beauty, books, food and sports products. it is one of the largest ecommerce sites in australia and suits shoppers who want wide selection and fast delivery.",
+    k:"amazon australia,australia online shopping,electronics home fashion beauty,books food sports marketplace,amazon.com.au",
+    a:""
+  },
+  {
+    i:800,
+    n:"ebay australia",
+    c:"electronics,home,fashion,automotive,sports,business",
+    u:"https://www.ebay.com.au/",
+    d:"ebay australia is a marketplace for new and used electronics, home items, fashion, car parts and sports gear. it is useful for shoppers and sellers who want auctions, secondhand deals and broad product choice.",
+    k:"ebay australia,australia online shopping,electronics fashion home,auto parts sports gear,ebay.com.au",
+    a:""
+  }
+];
+// australia.js
+window.countryShops = window.countryShops || {};
+window.countryShops["australia"] = [
+  {
+    i:801,
+    n:"kogan.com",
+    c:"electronics,home,fashion,business",
+    u:"https://www.kogan.com/au/",
+    d:"kogan.com is an australian online retailer known for affordable electronics, appliances, homewares and some fashion products. it is useful for shoppers looking for direct-to-consumer pricing and value deals in australia.",
+    k:"kogan australia,online electronics australia,affordable appliances homewares,fashion products,kogan.com.au",
+    a:""
+  },
+  {
+    i:802,
+    n:"catch.com.au",
+    c:"electronics,home,fashion,beauty,food,sports,business",
+    u:"https://www.catch.com.au/",
+    d:"catch.com.au is a deals marketplace in australia offering discounted electronics, homewares, fashion, beauty, groceries and sports products. it suits bargain hunters who want flash sales and daily specials.",
+    k:"catch australia,online deals site australia,discount electronics fashion homewares,beauty groceries sports,catch.com.au",
+    a:""
+  },
+  {
+    i:803,
+    n:"mydeal",
+    c:"home,fashion,beauty,electronics,business",
+    u:"https://www.mydeal.com.au/",
+    d:"mydeal is an australian online marketplace for homewares, furniture, fashion, beauty and electronics. it is good for bargain hunters who want wide variety and discounted deals.",
+    k:"mydeal australia,online marketplace australia,homewares furniture fashion beauty,electronics deals,mydeal.com.au",
+    a:""
+  },
+  {
+    i:804,
+    n:"marketplace bunnings",
+    c:"home,business",
+    u:"https://www.bunnings.com.au/",
+    d:"bunnings is an australian home improvement retailer with an online store for tools, building materials and garden supplies. it suits diy buyers, tradies and homeowners across australia.",
+    k:"bunnings australia,online hardware store australia,tools building materials garden supplies,bunnings.com.au",
+    a:""
+  },
+  {
+    i:805,
+    n:"myer online",
+    c:"fashion,beauty,home,business",
+    u:"https://www.myer.com.au/",
+    d:"myer online is an australian department store website for fashion, beauty, homewares and gifts. it is for shoppers who want branded goods and department-store variety in australia.",
+    k:"myer australia,department store online,fashion beauty homewares,gifts,myer.com.au",
+    a:""
+  },
+  {
+    i:806,
+    n:"kmart australia",
+    c:"home,fashion,food,business",
+    u:"https://www.kmart.com.au/",
+    d:"kmart australia is a value retailer with online shopping for homewares, furniture, clothing, toys and pantry essentials. it is popular with families looking for affordable everyday products and seasonal deals.",
+    k:"kmart australia,online shopping australia,homewares furniture clothing,toys pantry essentials,kmart.com.au",
+    a:""
+  },
+  {
+    i:807,
+    n:"big w",
+    c:"home,fashion,books,toys,business",
+    u:"https://www.bigw.com.au/",
+    d:"big w is an australian department store with online shopping for clothing, homewares, toys and books. it is a good fit for families and value shoppers in australia.",
+    k:"big w,australia online shopping,clothing homewares toys,books family shopping,bigw.com.au",
+    a:""
+  },
+  {
+    i:808,
+    n:"target australia",
+    c:"fashion,home,toys,beauty,business",
+    u:"https://www.target.com.au/",
+    d:"target australia offers online shopping for affordable fashion, homewares, kids products and beauty items. it is suited to families and budget shoppers in australia.",
+    k:"target australia,australia online shopping,fashion homewares kids products,beauty items,target.com.au",
+    a:""
+  },
+  {
+    i:809,
+    n:"harvey norman",
+    c:"electronics,home,business",
+    u:"https://www.harveynorman.com.au/",
+    d:"harvey norman is an australian retailer with online shopping for furniture, appliances, computers and electronics. it is for buyers who want home and tech products with delivery options in australia.",
+    k:"harvey norman australia,online furniture appliances computers,electronics delivery,harveynorman.com.au",
+    a:""
+  },
+  {
+    i:810,
+    n:"the good guys",
+    c:"electronics,home,business",
+    u:"https://www.thegoodguys.com.au/",
+    d:"the good guys is an australian retailer for appliances, tvs and kitchen products with online shopping support. it suits shoppers who want electrical deals and home tech in australia.",
+    k:"the good guys,australia online shopping,appliances tvs kitchen products,home tech,thegoodguys.com.au",
+    a:""
+  },
+  {
+    i:811,
+    n:"bing lee",
+    c:"electronics,home,business",
+    u:"https://www.binglee.com.au/",
+    d:"bing lee is an australian electronics retailer with online shopping for tvs, appliances, computers and home tech. it suits shoppers in australia who want consumer electronics and appliance deals.",
+    k:"bing lee,australia online shopping,electronics appliances tvs,computers home tech,binglee.com.au",
+    a:""
+  },
+  {
+    i:812,
+    n:"jb hi-fi",
+    c:"electronics,home,business",
+    u:"https://www.jbhifi.com.au/",
+    d:"jb hi-fi is an australian electronics store with online shopping for tvs, audio, computers, gaming and appliances. it is useful for shoppers in australia who want a wide range of tech products.",
+    k:"jb hi-fi,australia online shopping,electronics tvs audio,computers gaming appliances,jbhifi.com.au",
+    a:""
+  },
+  {
+    i:813,
+    n:"officeworks",
+    c:"books,home,electronics,business",
+    u:"https://www.officeworks.com.au/",
+    d:"officeworks is an australian office supplies and tech store with online ordering for stationery, furniture, computers and school supplies. it is a strong choice for home offices, students and businesses in australia.",
+    k:"officeworks,australia online shopping,office supplies stationery furniture,computers school supplies,officeworks.com.au",
+    a:""
+  },
+  {
+    i:814,
+    n:"amazon australia",
+    c:"electronics,home,fashion,beauty,books,food,sports,business",
+    u:"https://www.amazon.com.au/",
+    d:"amazon australia is a major online marketplace in australia for electronics, home goods, fashion, beauty, books, food and sports products. it is one of the largest ecommerce sites in australia and suits shoppers who want wide selection and fast delivery.",
+    k:"amazon australia,online shopping australia,electronics home fashion beauty,books food sports marketplace,amazon.com.au",
+    a:""
+  },
+  {
+    i:815,
+    n:"ebay australia",
+    c:"electronics,home,fashion,automotive,sports,business",
+    u:"https://www.ebay.com.au/",
+    d:"ebay australia is a marketplace for new and used electronics, home items, fashion, car parts and sports gear. it is useful for shoppers and sellers who want auctions, secondhand deals and broad product choice.",
+    k:"ebay australia,online marketplace australia,electronics fashion home,auto parts sports gear,ebay.com.au",
+    a:""
+  },
+  {
+    i:816,
+    n:"kmart marketplace",
+    c:"home,fashion,food,business",
+    u:"https://www.kmart.com.au/",
+    d:"kmart marketplace is the online shopping hub for affordable homewares, clothing, toys and everyday essentials in australia. it is designed for families and value-driven shoppers.",
+    k:"kmart marketplace,australia online shopping,homewares clothing toys,everyday essentials,kmart.com.au",
+    a:""
+  },
+  {
+    i:817,
+    n:"coles online",
+    c:"food,home,business",
+    u:"https://www.coles.com.au/",
+    d:"coles online is an australian grocery shopping site for pantry items, fresh produce and household products. it suits households that want convenient supermarket delivery in australia.",
+    k:"coles online,australia online shopping,groceries fresh produce,household products,coles.com.au",
+    a:""
+  },
+  {
+    i:818,
+    n:"woolworths online",
+    c:"food,home,business",
+    u:"https://www.woolworths.com.au/shop",
+    d:"woolworths online is a leading australian supermarket website for groceries, fresh food and household essentials. it is designed for families and busy shoppers who want delivery or pickup in australia.",
+    k:"woolworths online,australia online shopping,groceries fresh food,household essentials,woolworths.com.au",
+    a:""
+  },
+  {
+    i:819,
+    n:"costco australia",
+    c:"food,home,business",
+    u:"https://www.costco.com.au/",
+    d:"costco australia is a membership-based online store for groceries, home goods and bulk products. it is for families and value shoppers who want warehouse-style buying in australia.",
+    k:"costco australia,australia online shopping,groceries home goods,bulk products,costco.com.au",
+    a:""
+  },
+  {
+    i:820,
+    n:"hello fresh australia",
+    c:"food,business",
+    u:"https://www.hellofresh.com.au/",
+    d:"hello fresh australia is a meal kit service that delivers recipes and ingredients to homes across australia. it is for busy households that want convenient cooking and meal planning.",
+    k:"hello fresh australia,australia online shopping,meal kits recipes ingredients,home delivery,cooking service,hellofresh.com.au",
+    a:""
+  },
+  {
+    i:821,
+    n:"marley spoon australia",
+    c:"food,business",
+    u:"https://marleyspoon.com.au/",
+    d:"marley spoon australia is a meal kit delivery service with online ordering for recipes and fresh ingredients. it suits households that want flexible weekly meals and easy cooking in australia.",
+    k:"marley spoon australia,australia online shopping,meal kit delivery recipes,fresh ingredients,marleyspoon.com.au",
+    a:""
+  },
+  {
+    i:822,
+    n:"dan murphys",
+    c:"food,business",
+    u:"https://www.danmurphys.com.au/",
+    d:"dan murphys is an australian online liquor store for wine, beer, spirits and gift packs. it is for adults in australia who want drinks and party essentials delivered or collected.",
+    k:"dan murphys,australia online shopping,liquor wine beer,spirits gift packs,danmurphys.com.au",
+    a:""
+  },
+  {
+    i:823,
+    n:"liquorland",
+    c:"food,business",
+    u:"https://www.liquorland.com.au/",
+    d:"liquorland is an australian online liquor retailer for beer, wine, spirits and celebration drinks. it suits shoppers in australia looking for convenient alcohol shopping online.",
+    k:"liquorland,australia online shopping,liquor beer wine,spirits celebration drinks,liquorland.com.au",
+    a:""
+  },
+  {
+    i:824,
+    n:"petbarn",
+    c:"food,health,business",
+    u:"https://www.petbarn.com.au/",
+    d:"petbarn is an australian online pet retailer for pet food, toys, accessories and pet care products. it is for pet owners in australia who want everyday supplies delivered or collected.",
+    k:"petbarn,australia online shopping,pet food toys accessories,pet care products,petbarn.com.au",
+    a:""
+  },
+  {
+    i:825,
+    n:"bunnings marketplace",
+    c:"home,business",
+    u:"https://www.bunnings.com.au/",
+    d:"bunnings marketplace is the online home improvement destination for tools, building materials and garden supplies in australia. it is useful for diy buyers, tradies and homeowners.",
+    k:"bunnings marketplace,australia online shopping,home improvement tools,garden supplies,bunnings.com.au",
+    a:""
+  },
+  {
+    i:826,
+    n:"rebel sport",
+    c:"sports,fashion,business",
+    u:"https://www.rebelsport.com.au/",
+    d:"rebel sport is an australian sports retailer with online shopping for activewear, running shoes and gym equipment. it is useful for fitness buyers and outdoor athletes in australia.",
+    k:"rebel sport,australia online shopping,sports store activewear,running shoes gym equipment,rebelsport.com.au",
+    a:""
+  },
+  {
+    i:827,
+    n:"decathlon australia",
+    c:"sports,business",
+    u:"https://www.decathlon.com.au/",
+    d:"decathlon australia is an online sports store for fitness, outdoor, cycling and team sports gear. it suits australian shoppers who want affordable sporting equipment and apparel.",
+    k:"decathlon australia,australia online shopping,sports gear fitness outdoor,cycling team sports,decathlon.com.au",
+    a:""
+  },
+  {
+    i:828,
+    n:"bcf",
+    c:"sports,home,business",
+    u:"https://www.bcf.com.au/",
+    d:"bcf is an australian retailer for boating, camping, fishing and outdoor gear with online shopping support. it is useful for outdoor families and adventure buyers in australia.",
+    k:"bcf,australia online shopping,boating camping fishing,outdoor gear,bcf.com.au",
+    a:""
+  },
+  {
+    i:829,
+    n:"macpac australia",
+    c:"sports,fashion,business",
+    u:"https://www.macpac.com.au/",
+    d:"macpac australia is an outdoor brand with online shopping for jackets, packs, hiking gear and travel clothing. it suits shoppers in australia who want durable outdoor apparel and equipment.",
+    k:"macpac australia,australia online shopping,outdoor clothing hiking gear,jackets packs,macpac.com.au",
+    a:""
+  },
+  {
+    i:830,
+    n:"the north face australia",
+    c:"sports,fashion,business",
+    u:"https://www.thenorthface.com.au/",
+    d:"the north face australia is an online outdoor retailer for jackets, backpacks, hiking gear and activewear. it is for australian shoppers who want durable adventure clothing and equipment.",
+    k:"the north face australia,australia online shopping,outdoor clothing backpacks,hiking gear activewear,thenorthface.com.au",
+    a:""
+  },
+  {
+    i:831,
+    n:"patagonia australia",
+    c:"sports,fashion,business",
+    u:"https://www.patagonia.com.au/",
+    d:"patagonia australia is an online outdoor store for jackets, fleeces, bags and technical clothing. it suits shoppers in australia who want sustainable adventure wear and gear.",
+    k:"patagonia australia,australia online shopping,outdoor clothing jackets,technical clothing bags,patagonia.com.au",
+    a:""
+  },
+  {
+    i:832,
+    n:"adore beauty",
+    c:"beauty,health,business",
+    u:"https://www.adorebeauty.com.au/",
+    d:"adore beauty is an australian online beauty store for skincare, makeup, haircare and fragrance. it suits shoppers who want a dedicated beauty retailer with broad brand choice in australia.",
+    k:"adore beauty,australia online shopping,skincare makeup haircare,fragrance beauty retailer,adorebeauty.com.au",
+    a:""
+  },
+  {
+    i:833,
+    n:"sephora australia",
+    c:"beauty,business",
+    u:"https://www.sephora.com.au/",
+    d:"sephora australia is an online beauty retailer for cosmetics, skincare, haircare and fragrance. it is for shoppers in australia who want premium and trending beauty brands.",
+    k:"sephora australia,australia online shopping,cosmetics skincare haircare,fragrance premium beauty,sephora.com.au",
+    a:""
+  },
+  {
+    i:834,
+    n:"chemist warehouse",
+    c:"health,beauty,business",
+    u:"https://www.chemistwarehouse.com.au/",
+    d:"chemist warehouse is an australian discount pharmacy retailer with online shopping for medicines, vitamins, skincare and personal care. it suits shoppers looking for value health and beauty products in australia.",
+    k:"chemist warehouse,australia online shopping,pharmacy vitamins skincare,personal care,chemistwarehouse.com.au",
+    a:""
+  },
+  {
+    i:835,
+    n:"priceline pharmacy",
+    c:"health,beauty,business",
+    u:"https://www.priceline.com.au/",
+    d:"priceline pharmacy is an australian online pharmacy and beauty retailer for health, makeup and skincare. it is for shoppers who want pharmacy convenience and beauty deals in australia.",
+    k:"priceline pharmacy,australia online shopping,health makeup skincare,beauty retailer,priceline.com.au",
+    a:""
+  },
+  {
+    i:836,
+    n:"mychemist",
+    c:"health,beauty,business",
+    u:"https://www.mychemist.com.au/",
+    d:"mychemist is an australian online pharmacy for medicines, vitamins, skincare and wellness products. it suits customers in australia who want affordable pharmacy shopping online.",
+    k:"mychemist,australia online shopping,pharmacy medicines vitamins,skincare wellness,mychemist.com.au",
+    a:""
+  },
+  {
+    i:837,
+    n:"chemist king",
+    c:"health,beauty,business",
+    u:"https://www.chemistking.com.au/",
+    d:"chemist king is an australian online pharmacy store for medicines, vitamins and skincare. it is for customers in australia who want low-cost pharmacy products online.",
+    k:"chemist king,australia online shopping,pharmacy medicines vitamins,skincare products,chemistking.com.au",
+    a:""
+  },
+  {
+    i:838,
+    n:"bonds",
+    c:"fashion,business",
+    u:"https://www.bonds.com.au/",
+    d:"bonds is an australian online store for underwear, basics, activewear and kids clothing. it is a popular choice for families and everyday shoppers in australia.",
+    k:"bonds,australia online shopping,underwear basics activewear,kids clothing,bonds.com.au",
+    a:""
+  },
+  {
+    i:839,
+    n:"showpo",
+    c:"fashion,business",
+    u:"https://www.showpo.com/",
+    d:"showpo is an australian online fashion retailer for womens clothing, event wear, dresses and accessories. it is popular with shoppers in australia looking for occasion outfits and trend-led style.",
+    k:"showpo,australia online shopping,womens clothing event wear,dresses accessories,showpo.com",
+    a:""
+  },
+  {
+    i:840,
+    n:"sneaker freaker magazine",
+    c:"fashion,sports,business",
+    u:"https://www.sneakerfreaker.com/",
+    d:"sneaker freaker magazine is an australian sneaker and streetwear site with online shopping for footwear, apparel and accessories. it suits shoppers in australia who want sneaker culture products and urban fashion.",
+    k:"sneaker freaker magazine,australia online shopping,sneakers streetwear footwear,apparel accessories,sneakerfreaker.com",
+    a:""
+  },
+  {
+    i:841,
+    n:"the oodie",
+    c:"fashion,home,business",
+    u:"https://theoodie.com/",
+    d:"the oodie is an australian online store for hooded blankets, loungewear and cozy home comfort products. it is popular with shoppers in australia looking for warm, soft and giftable items.",
+    k:"the oodie,australia online shopping,hooded blankets loungewear,home comfort gift items,theoodie.com",
+    a:""
+  },
+  {
+    i:842,
+    n:"honey birdette",
+    c:"fashion,beauty,business",
+    u:"https://www.honeybirdette.com/",
+    d:"honey birdette is an australian lingerie and lifestyle retailer with online shopping for intimates, sleepwear and accessories. it is for shoppers who want premium lingerie and fashion-forward pieces in australia.",
+    k:"honey birdette,australia online shopping,lingerie intimates sleepwear,accessories premium fashion,honeybirdette.com",
+    a:""
+  },
+  {
+    i:843,
+    n:"bellroy",
+    c:"fashion,business",
+    u:"https://bellroy.com/",
+    d:"bellroy is an australian online brand for wallets, bags, tech carry goods and everyday accessories. it suits shoppers who want premium minimalist accessories in australia.",
+    k:"bellroy,australia online shopping,wallets bags tech accessories,everyday carry,bellroy.com",
+    a:""
+  },
+  {
+    i:844,
+    n:"shiels jewellers",
+    c:"jewellery,business",
+    u:"https://www.shiels.com.au/",
+    d:"shiels jewellers is an australian online jewellery store for rings, watches, earrings and gifts. it is for shoppers who want gold, silver and fashion jewellery in australia.",
+    k:"shiels jewellers,australia online shopping,jewellery watches rings,earrings gift items,shiels.com.au",
+    a:""
+  },
+  {
+    i:845,
+    n:"sydney opera house shop",
+    c:"books,home,business",
+    u:"https://www.sydneyoperahouse.com/shop",
+    d:"sydney opera house shop is an australian online store for gifts, books, home items and merchandise. it is for shoppers in australia looking for cultural souvenirs and branded products.",
+    k:"sydney opera house shop,australia online shopping,gifts books home items,merchandise souvenirs,sydneyoperahouse.com/shop",
+    a:""
+  },
+  {
+    i:846,
+    n:"liz jordan",
+    c:"fashion,business",
+    u:"https://www.lizjordan.com.au/",
+    d:"liz jordan is an australian online fashion store for womens clothing, workwear and occasion pieces. it suits shoppers in australia who want polished wardrobe staples and style options.",
+    k:"liz jordan,australia online shopping,womens clothing workwear,occasion pieces,lizjordan.com.au",
+    a:""
+  },
+  {
+    i:847,
+    n:"country road",
+    c:"fashion,home,business",
+    u:"https://www.countryroad.com.au/",
+    d:"country road is an australian lifestyle retailer with online shopping for clothing, accessories, homewares and gifts. it suits shoppers who want modern fashion and home products from a local brand.",
+    k:"country road,australia online shopping,clothing accessories homewares,gifts,countryroad.com.au",
+    a:""
+  },
+  {
+    i:848,
+    n:"witchery",
+    c:"fashion,beauty,business",
+    u:"https://www.witchery.com.au/",
+    d:"witchery is an australian fashion retailer with ecommerce for women's clothing, shoes, bags and accessories. it is aimed at shoppers looking for contemporary style and wardrobe essentials.",
+    k:"witchery,australia online shopping,womens clothing shoes bags,accessories,witchery.com.au",
+    a:""
+  },
+  {
+    i:849,
+    n:"sportsgirl",
+    c:"fashion,beauty,business",
+    u:"https://www.sportsgirl.com.au/",
+    d:"sportsgirl is an australian fashion store with online shopping for womenswear, accessories, beauty and gifts. it is popular with younger shoppers who want casual fashion and trend-led pieces.",
+    k:"sportsgirl,australia online shopping,womens fashion accessories,beauty gifts,sportsgirl.com.au",
+    a:""
+  },
+  {
+    i:850,
+    n:"seed heritage",
+    c:"fashion,business",
+    u:"https://www.seedheritage.com/",
+    d:"seed heritage is an australian fashion retailer with online shopping for men's, women's and kids' clothing. it is for shoppers looking for clean, modern wardrobe staples.",
+    k:"seed heritage,australia online shopping,mens womens kids fashion,wardrobe staples,seedheritage.com",
+    a:""
+  }
+];
+// australia.js
+window.countryShops = window.countryShops || {};
+window.countryShops["australia"] = [
+  {
+    i:851,
+    n:"flow hive",
+    c:"home,business",
+    u:"https://www.honeyflow.com/",
+    d:"flow hive is an australian online store for beekeeping equipment, hive systems and honey harvesting products. it suits hobbyists and small producers in australia who want modern beekeeping gear.",
+    k:"flow hive,australia online shopping,beekeeping equipment hive systems,honey harvesting products,honeyflow.com",
+    a:""
+  },
+  {
+    i:852,
+    n:"barkbox australia",
+    c:"food,health,business",
+    u:"https://www.barkbox.com/",
+    d:"barkbox australia is an online pet subscription and shop for dog toys, treats and pet supplies. it is for australian dog owners who want regular pet care boxes and supplies.",
+    k:"barkbox australia,australia online shopping,dog toys treats,pet supplies subscription,barkbox.com",
+    a:""
+  },
+  {
+    i:853,
+    n:"afr",
+    c:"business",
+    u:"https://www.afr.com/",
+    d:"afr is an australian business news and digital content site with subscription and commerce features. it is for readers and professionals in australia who want finance, markets and business coverage.",
+    k:"afr,australia online shopping,business news finance,subscription content,afr.com",
+    a:""
+  },
+  {
+    i:854,
+    n:"kogan home",
+    c:"home,electronics,business",
+    u:"https://www.kogan.com/au/",
+    d:"kogan home is the australian online store section for appliances, homewares and everyday household products. it is useful for shoppers in australia who want value home goods and tech.",
+    k:"kogan home,australia online shopping,homewares appliances,household products,kogan.com.au",
+    a:""
+  },
+  {
+    i:855,
+    n:"crucial australia",
+    c:"electronics,software,business",
+    u:"https://www.crucial.com/au/en",
+    d:"crucial australia is an online store for computer memory, ssds and storage upgrades. it is for australian pc users and it buyers who want hardware performance products.",
+    k:"crucial australia,australia online shopping,computer memory ssds,storage upgrades,crucial.com/au/en",
+    a:""
+  },
+  {
+    i:856,
+    n:"karen millen australia",
+    c:"fashion,business",
+    u:"https://www.karenmillen.com/au",
+    d:"karen millen australia is an online womens fashion store for dresses, tailoring and occasion wear. it suits australian shoppers looking for polished and premium clothing.",
+    k:"karen millen australia,australia online shopping,womens fashion dresses,tailoring occasion wear,karenmillen.com/au",
+    a:""
+  },
+  {
+    i:857,
+    n:"threadheads",
+    c:"fashion,business",
+    u:"https://threadheads.com.au/",
+    d:"threadheads is an australian online clothing store for graphic tees, hoodies and casual streetwear. it is for shoppers who want relaxed everyday fashion in australia.",
+    k:"threadheads,australia online shopping,graphic tees hoodies,casual streetwear,threadheads.com.au",
+    a:""
+  },
+  {
+    i:858,
+    n:"showpo",
+    c:"fashion,business",
+    u:"https://www.showpo.com/",
+    d:"showpo is an australian online fashion retailer for womens clothing, event wear, dresses and accessories. it is popular with shoppers in australia looking for occasion outfits and trend-led style.",
+    k:"showpo,australia online shopping,womens clothing event wear,dresses accessories,showpo.com",
+    a:""
+  },
+  {
+    i:859,
+    n:"sneaker freaker magazine",
+    c:"fashion,sports,business",
+    u:"https://www.sneakerfreaker.com/",
+    d:"sneaker freaker magazine is an australian sneaker and streetwear site with online shopping for footwear, apparel and accessories. it suits shoppers in australia who want sneaker culture products and urban fashion.",
+    k:"sneaker freaker magazine,australia online shopping,sneakers streetwear footwear,apparel accessories,sneakerfreaker.com",
+    a:""
+  },
+  {
+    i:860,
+    n:"optus",
+    c:"electronics,software,business",
+    u:"https://www.optus.com.au/",
+    d:"optus is an australian telecom provider with online shopping for phones, sim plans, internet and devices. it is for customers in australia who want mobile and broadband services.",
+    k:"optus,australia online shopping,phones sim plans,internet devices,optus.com.au",
+    a:""
+  },
+  {
+    i:861,
+    n:"babyboo fashion",
+    c:"fashion,business",
+    u:"https://www.babyboofashion.com/",
+    d:"babyboo fashion is an australian online store for womens dresses, party wear and special occasion outfits. it is for shoppers who want fitted, glamour-focused fashion in australia.",
+    k:"babyboo fashion,australia online shopping,womens dresses party wear,occasion outfits,babyboofashion.com",
+    a:""
+  },
+  {
+    i:862,
+    n:"adidas australia",
+    c:"fashion,sports,business",
+    u:"https://www.adidas.com.au/",
+    d:"adidas australia is an official online store for sportswear, sneakers, training gear and accessories. it is for australian shoppers who want athletic clothing and footwear from a major brand.",
+    k:"adidas australia,australia online shopping,sportswear sneakers,training gear accessories,adidas.com.au",
+    a:""
+  },
+  {
+    i:863,
+    n:"bellroy",
+    c:"fashion,business",
+    u:"https://bellroy.com/",
+    d:"bellroy is an australian online brand for wallets, bags, tech carry goods and everyday accessories. it suits shoppers who want premium minimalist accessories in australia.",
+    k:"bellroy,australia online shopping,wallets bags tech accessories,everyday carry,bellroy.com",
+    a:""
+  },
+  {
+    i:864,
+    n:"alamour the label",
+    c:"fashion,business",
+    u:"https://alamourthelabel.com/",
+    d:"alamour the label is an australian fashion boutique for formal dresses, bridal wear and luxury occasion pieces. it suits australian shoppers looking for premium event fashion.",
+    k:"alamour the label,australia online shopping,formal dresses bridal wear,luxury occasion fashion,alamourthelabel.com",
+    a:""
+  },
+  {
+    i:865,
+    n:"aesop",
+    c:"beauty,health,business",
+    u:"https://www.aesop.com/au/",
+    d:"aesop is an australian online beauty and personal care store for skincare, body care and fragrances. it is for shoppers who want premium grooming products in australia.",
+    k:"aesop,australia online shopping,skincare body care fragrances,personal care,aesop.com/au",
+    a:""
+  },
+  {
+    i:866,
+    n:"officeworks",
+    c:"books,home,electronics,business",
+    u:"https://www.officeworks.com.au/",
+    d:"officeworks is an australian office supplies and tech store with online ordering for stationery, furniture, computers and school supplies. it is a strong choice for home offices, students and businesses in australia.",
+    k:"officeworks,australia online shopping,office supplies stationery furniture,computers school supplies,officeworks.com.au",
+    a:""
+  },
+  {
+    i:867,
+    n:"chemist warehouse",
+    c:"health,beauty,business",
+    u:"https://www.chemistwarehouse.com.au/",
+    d:"chemist warehouse is an australian discount pharmacy retailer with online shopping for medicines, vitamins, skincare and personal care. it suits shoppers looking for value health and beauty products in australia.",
+    k:"chemist warehouse,australia online shopping,pharmacy vitamins skincare,personal care,chemistwarehouse.com.au",
+    a:""
+  },
+  {
+    i:868,
+    n:"uggs since 1974",
+    c:"fashion,business",
+    u:"https://uggsince1974.com.au/",
+    d:"uggs since 1974 is an australian footwear store with online shopping for ugg boots, slippers and cozy winter shoes. it suits shoppers looking for sheepskin footwear and comfort items in australia.",
+    k:"uggs since 1974,australia online shopping,ugg boots slippers,winter shoes sheepskin,uggsince1974.com.au",
+    a:""
+  },
+  {
+    i:869,
+    n:"vodafone australia",
+    c:"electronics,software,business",
+    u:"https://www.vodafone.com.au/",
+    d:"vodafone australia is an online telecom store for phones, sim plans, broadband and connected devices. it is for customers in australia who want mobile and internet services online.",
+    k:"vodafone australia,australia online shopping,phones sim plans,broadband connected devices,vodafone.com.au",
+    a:""
+  },
+  {
+    i:870,
+    n:"telstra personal",
+    c:"electronics,software,business",
+    u:"https://www.telstra.com.au/",
+    d:"telstra personal is an australian online telecom store for mobile phones, plans, internet and accessories. it suits shoppers in australia who want carrier devices and connectivity services.",
+    k:"telstra personal,australia online shopping,mobile phones plans,internet accessories,telstra.com.au",
+    a:""
+  },
+  {
+    i:871,
+    n:"the oodie",
+    c:"fashion,home,business",
+    u:"https://theoodie.com/",
+    d:"the oodie is an australian online store for hooded blankets, loungewear and cozy home comfort products. it is popular with shoppers in australia looking for warm, soft and giftable items.",
+    k:"the oodie,australia online shopping,hooded blankets loungewear,home comfort gift items,theoodie.com",
+    a:""
+  },
+  {
+    i:872,
+    n:"lskd",
+    c:"fashion,sports,business",
+    u:"https://www.lskd.co/",
+    d:"lskd is an australian activewear brand with online shopping for training clothes, leggings and gym apparel. it is for fitness-focused shoppers who want performance wear in australia.",
+    k:"lskd,australia online shopping,activewear training clothes,leggings gym apparel,lskd.co",
+    a:""
+  },
+  {
+    i:873,
+    n:"shiels jewellers",
+    c:"jewellery,business",
+    u:"https://www.shiels.com.au/",
+    d:"shiels jewellers is an australian online jewellery store for rings, watches, earrings and gifts. it is for shoppers who want gold, silver and fashion jewellery in australia.",
+    k:"shiels jewellers,australia online shopping,jewellery watches rings,earrings gift items,shiels.com.au",
+    a:""
+  },
+  {
+    i:874,
+    n:"barkbox australia",
+    c:"food,health,business",
+    u:"https://www.barkbox.com/",
+    d:"barkbox australia is an online pet subscription and shop for dog toys, treats and pet supplies. it is for australian dog owners who want regular pet care boxes and supplies.",
+    k:"barkbox australia,australia online shopping,dog toys treats,pet supplies subscription,barkbox.com",
+    a:""
+  },
+  {
+    i:875,
+    n:"kogan.com",
+    c:"electronics,home,fashion,business",
+    u:"https://www.kogan.com/au/",
+    d:"kogan.com is an australian online retailer known for affordable electronics, appliances, homewares and some fashion products. it is useful for shoppers looking for direct-to-consumer pricing and value deals in australia.",
+    k:"kogan australia,online electronics australia,affordable appliances homewares,fashion products,kogan.com.au",
+    a:""
+  },
+  {
+    i:876,
+    n:"catch.com.au",
+    c:"electronics,home,fashion,beauty,food,sports,business",
+    u:"https://www.catch.com.au/",
+    d:"catch.com.au is a deals marketplace in australia offering discounted electronics, homewares, fashion, beauty, groceries and sports products. it suits bargain hunters who want flash sales and daily specials.",
+    k:"catch australia,online deals site australia,discount electronics fashion homewares,beauty groceries sports,catch.com.au",
+    a:""
+  },
+  {
+    i:877,
+    n:"mydeal",
+    c:"home,fashion,beauty,electronics,business",
+    u:"https://www.mydeal.com.au/",
+    d:"mydeal is an australian online marketplace for homewares, furniture, fashion, beauty and electronics. it is good for bargain hunters who want wide variety and discounted deals.",
+    k:"mydeal australia,online marketplace australia,homewares furniture fashion beauty,electronics deals,mydeal.com.au",
+    a:""
+  },
+  {
+    i:878,
+    n:"frank green",
+    c:"home,business",
+    u:"https://www.frankgreen.com.au/",
+    d:"frank green is an australian online store for reusable drink bottles, coffee cups and lifestyle accessories. it suits shoppers in australia who want sustainable everyday products.",
+    k:"frank green,australia online shopping,reusable bottles coffee cups,lifestyle accessories,frankgreen.com.au",
+    a:""
+  },
+  {
+    i:879,
+    n:"barkbox",
+    c:"food,health,business",
+    u:"https://www.barkbox.com/",
+    d:"barkbox is an online pet subscription shop for dog toys, treats and pet supplies. it is for dog owners in australia who want regular pet boxes and accessories.",
+    k:"barkbox,australia online shopping,dog toys treats,pet supplies subscription,barkbox.com",
+    a:""
+  },
+  {
+    i:880,
+    n:"liquorland",
+    c:"food,business",
+    u:"https://www.liquorland.com.au/",
+    d:"liquorland is an australian online liquor retailer for beer, wine, spirits and celebration drinks. it suits shoppers in australia looking for convenient alcohol shopping online.",
+    k:"liquorland,australia online shopping,liquor beer wine,spirits celebration drinks,liquorland.com.au",
+    a:""
+  },
+  {
+    i:881,
+    n:"dan murphys",
+    c:"food,business",
+    u:"https://www.danmurphys.com.au/",
+    d:"dan murphys is an australian online liquor store for wine, beer, spirits and gift packs. it is for adults in australia who want drinks and party essentials delivered or collected.",
+    k:"dan murphys,australia online shopping,liquor wine beer,spirits gift packs,danmurphys.com.au",
+    a:""
+  },
+  {
+    i:882,
+    n:"petbarn",
+    c:"food,health,business",
+    u:"https://www.petbarn.com.au/",
+    d:"petbarn is an australian online pet retailer for pet food, toys, accessories and pet care products. it is for pet owners in australia who want everyday supplies delivered or collected.",
+    k:"petbarn,australia online shopping,pet food toys accessories,pet care products,petbarn.com.au",
+    a:""
+  },
+  {
+    i:883,
+    n:"rebel sport",
+    c:"sports,fashion,business",
+    u:"https://www.rebelsport.com.au/",
+    d:"rebel sport is an australian sports retailer with online shopping for activewear, running shoes and gym equipment. it is useful for fitness buyers and outdoor athletes in australia.",
+    k:"rebel sport,australia online shopping,sports store activewear,running shoes gym equipment,rebelsport.com.au",
+    a:""
+  },
+  {
+    i:884,
+    n:"bcf",
+    c:"sports,home,business",
+    u:"https://www.bcf.com.au/",
+    d:"bcf is an australian retailer for boating, camping, fishing and outdoor gear with online shopping support. it is useful for outdoor families and adventure buyers in australia.",
+    k:"bcf,australia online shopping,boating camping fishing,outdoor gear,bcf.com.au",
+    a:""
+  },
+  {
+    i:885,
+    n:"macpac australia",
+    c:"sports,fashion,business",
+    u:"https://www.macpac.com.au/",
+    d:"macpac australia is an outdoor brand with online shopping for jackets, packs, hiking gear and travel clothing. it suits shoppers in australia who want durable outdoor apparel and equipment.",
+    k:"macpac australia,australia online shopping,outdoor clothing hiking gear,jackets packs,macpac.com.au",
+    a:""
+  },
+  {
+    i:886,
+    n:"the north face australia",
+    c:"sports,fashion,business",
+    u:"https://www.thenorthface.com.au/",
+    d:"the north face australia is an online outdoor retailer for jackets, backpacks, hiking gear and activewear. it is for australian shoppers who want durable adventure clothing and equipment.",
+    k:"the north face australia,australia online shopping,outdoor clothing backpacks,hiking gear activewear,thenorthface.com.au",
+    a:""
+  },
+  {
+    i:887,
+    n:"patagonia australia",
+    c:"sports,fashion,business",
+    u:"https://www.patagonia.com.au/",
+    d:"patagonia australia is an online outdoor store for jackets, fleeces, bags and technical clothing. it suits shoppers in australia who want sustainable adventure wear and gear.",
+    k:"patagonia australia,australia online shopping,outdoor clothing jackets,technical clothing bags,patagonia.com.au",
+    a:""
+  },
+  {
+    i:888,
+    n:"adore beauty",
+    c:"beauty,health,business",
+    u:"https://www.adorebeauty.com.au/",
+    d:"adore beauty is an australian online beauty store for skincare, makeup, haircare and fragrance. it suits shoppers who want a dedicated beauty retailer with broad brand choice in australia.",
+    k:"adore beauty,australia online shopping,skincare makeup haircare,fragrance beauty retailer,adorebeauty.com.au",
+    a:""
+  },
+  {
+    i:889,
+    n:"sephora australia",
+    c:"beauty,business",
+    u:"https://www.sephora.com.au/",
+    d:"sephora australia is an online beauty retailer for cosmetics, skincare, haircare and fragrance. it is for shoppers in australia who want premium and trending beauty brands.",
+    k:"sephora australia,australia online shopping,cosmetics skincare haircare,fragrance premium beauty,sephora.com.au",
+    a:""
+  },
+  {
+    i:890,
+    n:"chemist warehouse",
+    c:"health,beauty,business",
+    u:"https://www.chemistwarehouse.com.au/",
+    d:"chemist warehouse is an australian discount pharmacy retailer with online shopping for medicines, vitamins, skincare and personal care. it suits shoppers looking for value health and beauty products in australia.",
+    k:"chemist warehouse,australia online shopping,pharmacy vitamins skincare,personal care,chemistwarehouse.com.au",
+    a:""
+  },
+  {
+    i:891,
+    n:"priceline pharmacy",
+    c:"health,beauty,business",
+    u:"https://www.priceline.com.au/",
+    d:"priceline pharmacy is an australian online pharmacy and beauty retailer for health, makeup and skincare. it is for shoppers who want pharmacy convenience and beauty deals in australia.",
+    k:"priceline pharmacy,australia online shopping,health makeup skincare,beauty retailer,priceline.com.au",
+    a:""
+  },
+  {
+    i:892,
+    n:"mychemist",
+    c:"health,beauty,business",
+    u:"https://www.mychemist.com.au/",
+    d:"mychemist is an australian online pharmacy for medicines, vitamins, skincare and wellness products. it suits customers in australia who want affordable pharmacy shopping online.",
+    k:"mychemist,australia online shopping,pharmacy medicines vitamins,skincare wellness,mychemist.com.au",
+    a:""
+  },
+  {
+    i:893,
+    n:"bunnings warehouse",
+    c:"home,business",
+    u:"https://www.bunnings.com.au/",
+    d:"bunnings warehouse is an australian home improvement store with online shopping for tools, building materials and garden supplies. it is useful for diy buyers and homeowners across australia.",
+    k:"bunnings warehouse,australia online shopping,tools building materials,garden supplies,bunnings.com.au",
+    a:""
+  },
+  {
+    i:894,
+    n:"country road",
+    c:"fashion,home,business",
+    u:"https://www.countryroad.com.au/",
+    d:"country road is an australian lifestyle retailer with online shopping for clothing, accessories, homewares and gifts. it suits shoppers who want modern fashion and home products from a local brand.",
+    k:"country road,australia online shopping,clothing accessories homewares,gifts,countryroad.com.au",
+    a:""
+  },
+  {
+    i:895,
+    n:"witchery",
+    c:"fashion,beauty,business",
+    u:"https://www.witchery.com.au/",
+    d:"witchery is an australian fashion retailer with ecommerce for women's clothing, shoes, bags and accessories. it is aimed at shoppers looking for contemporary style and wardrobe essentials.",
+    k:"witchery,australia online shopping,womens clothing shoes bags,accessories,witchery.com.au",
+    a:""
+  },
+  {
+    i:896,
+    n:"sportsgirl",
+    c:"fashion,beauty,business",
+    u:"https://www.sportsgirl.com.au/",
+    d:"sportsgirl is an australian fashion store with online shopping for womenswear, accessories, beauty and gifts. it is popular with younger shoppers who want casual fashion and trend-led pieces.",
+    k:"sportsgirl,australia online shopping,womens fashion accessories,beauty gifts,sportsgirl.com.au",
+    a:""
+  },
+  {
+    i:897,
+    n:"seed heritage",
+    c:"fashion,business",
+    u:"https://www.seedheritage.com/",
+    d:"seed heritage is an australian fashion retailer with online shopping for men's, women's and kids' clothing. it is for shoppers looking for clean, modern wardrobe staples.",
+    k:"seed heritage,australia online shopping,mens womens kids fashion,wardrobe staples,seedheritage.com",
+    a:""
+  },
+  {
+    i:898,
+    n:"jumper man",
+    c:"fashion,business",
+    u:"https://www.jumpersandco.com.au/",
+    d:"jumper man is an australian online clothing store for knitwear, casual wear and seasonal apparel. it suits shoppers in australia who want comfortable everyday fashion.",
+    k:"jumper man,australia online shopping,knitwear casual wear,seasonal apparel,jumpersandco.com.au",
+    a:""
+  },
+  {
+    i:899,
+    n:"little party dress",
+    c:"fashion,business",
+    u:"https://www.littlepartydress.com.au/",
+    d:"little party dress is an australian online fashion retailer for dresses, event wear and occasion outfits. it is for shoppers who want stylish party clothing in australia.",
+    k:"little party dress,australia online shopping,dresses event wear,occasion outfits,littlepartydress.com.au",
+    a:""
+  },
+  {
+    i:900,
+    n:"frank green",
+    c:"home,business",
+    u:"https://www.frankgreen.com.au/",
+    d:"frank green is an australian online store for reusable drink bottles, coffee cups and lifestyle accessories. it suits shoppers in australia who want sustainable everyday products.",
+    k:"frank green,australia online shopping,reusable bottles coffee cups,lifestyle accessories,frankgreen.com.au",
+    a:""
+  }
+];
+// australia.js
+window.countryShops = window.countryShops || {};
+window.countryShops["australia"] = [
+  {
+    i:901,
+    n:"bonds",
+    c:"fashion,business",
+    u:"https://www.bonds.com.au/",
+    d:"bonds is an australian online store for underwear, basics, activewear and kids clothing. it is a popular choice for families and everyday shoppers in australia.",
+    k:"bonds,australia online shopping,underwear basics activewear,kids clothing,bonds.com.au",
+    a:""
+  },
+  {
+    i:902,
+    n:"karen millen australia",
+    c:"fashion,business",
+    u:"https://www.karenmillen.com/au",
+    d:"karen millen australia is an online womens fashion store for dresses, tailoring and occasion wear. it suits australian shoppers looking for polished and premium clothing.",
+    k:"karen millen australia,australia online shopping,womens fashion dresses,tailoring occasion wear,karenmillen.com/au",
+    a:""
+  },
+  {
+    i:903,
+    n:"frank green",
+    c:"home,business",
+    u:"https://www.frankgreen.com.au/",
+    d:"frank green is an australian online store for reusable drink bottles, coffee cups and lifestyle accessories. it suits shoppers in australia who want sustainable everyday products.",
+    k:"frank green,australia online shopping,reusable bottles coffee cups,lifestyle accessories,frankgreen.com.au",
+    a:""
+  },
+  {
+    i:904,
+    n:"kogan.com",
+    c:"electronics,home,fashion,business",
+    u:"https://www.kogan.com/au/",
+    d:"kogan.com is an australian online retailer known for affordable electronics, appliances, homewares and some fashion products. it is useful for shoppers looking for direct-to-consumer pricing and value deals in australia.",
+    k:"kogan australia,online electronics australia,affordable appliances homewares,fashion products,kogan.com.au",
+    a:""
+  },
+  {
+    i:905,
+    n:"catch.com.au",
+    c:"electronics,home,fashion,beauty,food,sports,business",
+    u:"https://www.catch.com.au/",
+    d:"catch.com.au is a deals marketplace in australia offering discounted electronics, homewares, fashion, beauty, groceries and sports products. it suits bargain hunters who want flash sales and daily specials.",
+    k:"catch australia,online deals site australia,discount electronics fashion homewares,beauty groceries sports,catch.com.au",
+    a:""
+  },
+  {
+    i:906,
+    n:"mydeal",
+    c:"home,fashion,beauty,electronics,business",
+    u:"https://www.mydeal.com.au/",
+    d:"mydeal is an australian online marketplace for homewares, furniture, fashion, beauty and electronics. it is good for bargain hunters who want wide variety and discounted deals.",
+    k:"mydeal australia,online marketplace australia,homewares furniture fashion beauty,electronics deals,mydeal.com.au",
+    a:""
+  },
+  {
+    i:907,
+    n:"bunnings warehouse",
+    c:"home,business",
+    u:"https://www.bunnings.com.au/",
+    d:"bunnings warehouse is an australian home improvement store with online shopping for tools, building materials and garden supplies. it is useful for diy buyers and homeowners across australia.",
+    k:"bunnings warehouse,australia online shopping,tools building materials,garden supplies,bunnings.com.au",
+    a:""
+  },
+  {
+    i:908,
+    n:"jb hi-fi",
+    c:"electronics,home,business",
+    u:"https://www.jbhifi.com.au/",
+    d:"jb hi-fi is an australian electronics store with online shopping for tvs, audio, computers, gaming and appliances. it is useful for shoppers in australia who want a wide range of tech products.",
+    k:"jb hi-fi,australia online shopping,electronics tvs audio,computers gaming appliances,jbhifi.com.au",
+    a:""
+  },
+  {
+    i:909,
+    n:"news.com.au",
+    c:"business",
+    u:"https://www.news.com.au/",
+    d:"news.com.au is an australian news and digital content site with shopping and deals coverage. it is for australian readers who want news, lifestyle content and product discovery online.",
+    k:"news.com.au,australia online shopping,news lifestyle content,deals product discovery,news.com.au",
+    a:""
+  },
+  {
+    i:910,
+    n:"quad lock",
+    c:"electronics,automotive,business",
+    u:"https://www.quadlockcase.com.au/",
+    d:"quad lock is an australian online store for phone mounts, cases and accessories for bikes, cars and active lifestyles. it suits users who want secure device mounting and mobile protection.",
+    k:"quad lock,australia online shopping,phone mounts cases accessories,bike car mounts,quadlockcase.com.au",
+    a:""
+  },
+  {
+    i:911,
+    n:"threadheads",
+    c:"fashion,business",
+    u:"https://threadheads.com.au/",
+    d:"threadheads is an australian online clothing store for graphic tees, hoodies and casual streetwear. it is for shoppers who want relaxed everyday fashion in australia.",
+    k:"threadheads,australia online shopping,graphic tees hoodies,casual streetwear,threadheads.com.au",
+    a:""
+  },
+  {
+    i:912,
+    n:"sabo",
+    c:"fashion,business",
+    u:"https://saboskirt.com/",
+    d:"sabo is an australian womens fashion brand with online shopping for dresses, sets, tops and resort wear. it suits shoppers who want stylish feminine clothing in australia.",
+    k:"sabo,australia online shopping,womens fashion dresses sets,tops resort wear,saboskirt.com",
+    a:""
+  },
+  {
+    i:913,
+    n:"coles online",
+    c:"food,home,business",
+    u:"https://www.coles.com.au/",
+    d:"coles online is an australian grocery shopping site for pantry items, fresh produce and household products. it suits households that want convenient supermarket delivery in australia.",
+    k:"coles online,australia online shopping,groceries fresh produce,household products,coles.com.au",
+    a:""
+  },
+  {
+    i:914,
+    n:"australia post shop",
+    c:"home,business",
+    u:"https://shop.auspost.com.au/",
+    d:"australia post shop is the online store for postal supplies, gifts, stationery and selected lifestyle items. it is useful for customers in australia who want mailing essentials and gift shopping.",
+    k:"australia post shop,australia online shopping,postal supplies gifts,stationery lifestyle items,shop.auspost.com.au",
+    a:""
+  },
+  {
+    i:915,
+    n:"billabong",
+    c:"fashion,sports,business",
+    u:"https://www.billabong.com.au/",
+    d:"billabong is an australian online store for surfwear, boardshorts, swimwear and casual clothing. it suits shoppers in australia who want beach lifestyle apparel and sporty fashion.",
+    k:"billabong,australia online shopping,surfwear boardshorts swimwear,casual clothing,billabong.com.au",
+    a:""
+  },
+  {
+    i:916,
+    n:"honey birdette",
+    c:"fashion,beauty,business",
+    u:"https://www.honeybirdette.com/",
+    d:"honey birdette is an australian lingerie and lifestyle retailer with online shopping for intimates, sleepwear and accessories. it is for shoppers who want premium lingerie and fashion-forward pieces in australia.",
+    k:"honey birdette,australia online shopping,lingerie intimates sleepwear,accessories premium fashion,honeybirdette.com",
+    a:""
+  },
+  {
+    i:917,
+    n:"the oodie",
+    c:"fashion,home,business",
+    u:"https://theoodie.com/",
+    d:"the oodie is an australian online store for hooded blankets, loungewear and cozy home comfort products. it is popular with shoppers in australia looking for warm, soft and giftable items.",
+    k:"the oodie,australia online shopping,hooded blankets loungewear,home comfort gift items,theoodie.com",
+    a:""
+  },
+  {
+    i:918,
+    n:"lskd",
+    c:"fashion,sports,business",
+    u:"https://www.lskd.co/",
+    d:"lskd is an australian activewear brand with online shopping for training clothes, leggings and gym apparel. it is for fitness-focused shoppers who want performance wear in australia.",
+    k:"lskd,australia online shopping,activewear training clothes,leggings gym apparel,lskd.co",
+    a:""
+  },
+  {
+    i:919,
+    n:"shiels jewellers",
+    c:"jewellery,business",
+    u:"https://www.shiels.com.au/",
+    d:"shiels jewellers is an australian online jewellery store for rings, watches, earrings and gifts. it is for shoppers who want gold, silver and fashion jewellery in australia.",
+    k:"shiels jewellers,australia online shopping,jewellery watches rings,earrings gift items,shiels.com.au",
+    a:""
+  },
+  {
+    i:920,
+    n:"barkbox australia",
+    c:"food,health,business",
+    u:"https://www.barkbox.com/",
+    d:"barkbox australia is an online pet subscription and shop for dog toys, treats and pet supplies. it is for australian dog owners who want regular pet care boxes and supplies.",
+    k:"barkbox australia,australia online shopping,dog toys treats,pet supplies subscription,barkbox.com",
+    a:""
+  },
+  {
+    i:921,
+    n:"optus",
+    c:"electronics,software,business",
+    u:"https://www.optus.com.au/",
+    d:"optus is an australian telecom provider with online shopping for phones, sim plans, internet and devices. it is for customers in australia who want mobile and broadband services.",
+    k:"optus,australia online shopping,phones sim plans,internet devices,optus.com.au",
+    a:""
+  },
+  {
+    i:922,
+    n:"babyboo fashion",
+    c:"fashion,business",
+    u:"https://www.babyboofashion.com/",
+    d:"babyboo fashion is an australian online store for womens dresses, party wear and special occasion outfits. it is for shoppers who want fitted, glamour-focused fashion in australia.",
+    k:"babyboo fashion,australia online shopping,womens dresses party wear,occasion outfits,babyboofashion.com",
+    a:""
+  },
+  {
+    i:923,
+    n:"adidas australia",
+    c:"fashion,sports,business",
+    u:"https://www.adidas.com.au/",
+    d:"adidas australia is an official online store for sportswear, sneakers, training gear and accessories. it is for australian shoppers who want athletic clothing and footwear from a major brand.",
+    k:"adidas australia,australia online shopping,sportswear sneakers,training gear accessories,adidas.com.au",
+    a:""
+  },
+  {
+    i:924,
+    n:"bellroy",
+    c:"fashion,business",
+    u:"https://bellroy.com/",
+    d:"bellroy is an australian online brand for wallets, bags, tech carry goods and everyday accessories. it suits shoppers who want premium minimalist accessories in australia.",
+    k:"bellroy,australia online shopping,wallets bags tech accessories,everyday carry,bellroy.com",
+    a:""
+  },
+  {
+    i:925,
+    n:"alamour the label",
+    c:"fashion,business",
+    u:"https://alamourthelabel.com/",
+    d:"alamour the label is an australian fashion boutique for formal dresses, bridal wear and luxury occasion pieces. it suits australian shoppers looking for premium event fashion.",
+    k:"alamour the label,australia online shopping,formal dresses bridal wear,luxury occasion fashion,alamourthelabel.com",
+    a:""
+  },
+  {
+    i:926,
+    n:"aesop",
+    c:"beauty,health,business",
+    u:"https://www.aesop.com/au/",
+    d:"aesop is an australian online beauty and personal care store for skincare, body care and fragrances. it is for shoppers who want premium grooming products in australia.",
+    k:"aesop,australia online shopping,skincare body care fragrances,personal care,aesop.com/au",
+    a:""
+  },
+  {
+    i:927,
+    n:"officeworks",
+    c:"books,home,electronics,business",
+    u:"https://www.officeworks.com.au/",
+    d:"officeworks is an australian office supplies and tech store with online ordering for stationery, furniture, computers and school supplies. it is a strong choice for home offices, students and businesses in australia.",
+    k:"officeworks,australia online shopping,office supplies stationery furniture,computers school supplies,officeworks.com.au",
+    a:""
+  },
+  {
+    i:928,
+    n:"chemist warehouse",
+    c:"health,beauty,business",
+    u:"https://www.chemistwarehouse.com.au/",
+    d:"chemist warehouse is an australian discount pharmacy retailer with online shopping for medicines, vitamins, skincare and personal care. it suits shoppers looking for value health and beauty products in australia.",
+    k:"chemist warehouse,australia online shopping,pharmacy vitamins skincare,personal care,chemistwarehouse.com.au",
+    a:""
+  },
+  {
+    i:929,
+    n:"uggs since 1974",
+    c:"fashion,business",
+    u:"https://uggsince1974.com.au/",
+    d:"uggs since 1974 is an australian footwear store with online shopping for ugg boots, slippers and cozy winter shoes. it suits shoppers looking for sheepskin footwear and comfort items in australia.",
+    k:"uggs since 1974,australia online shopping,ugg boots slippers,winter shoes sheepskin,uggsince1974.com.au",
+    a:""
+  },
+  {
+    i:930,
+    n:"vodafone australia",
+    c:"electronics,software,business",
+    u:"https://www.vodafone.com.au/",
+    d:"vodafone australia is an online telecom store for phones, sim plans, broadband and connected devices. it is for customers in australia who want mobile and internet services online.",
+    k:"vodafone australia,australia online shopping,phones sim plans,broadband connected devices,vodafone.com.au",
+    a:""
+  },
+  {
+    i:931,
+    n:"telstra personal",
+    c:"electronics,software,business",
+    u:"https://www.telstra.com.au/",
+    d:"telstra personal is an australian online telecom store for mobile phones, plans, internet and accessories. it suits shoppers in australia who want carrier devices and connectivity services.",
+    k:"telstra personal,australia online shopping,mobile phones plans,internet accessories,telstra.com.au",
+    a:""
+  },
+  {
+    i:932,
+    n:"kogan home",
+    c:"home,electronics,business",
+    u:"https://www.kogan.com/au/",
+    d:"kogan home is the australian online store section for appliances, homewares and everyday household products. it is useful for shoppers in australia who want value home goods and tech.",
+    k:"kogan home,australia online shopping,homewares appliances,household products,kogan.com.au",
+    a:""
+  },
+  {
+    i:933,
+    n:"crucial australia",
+    c:"electronics,software,business",
+    u:"https://www.crucial.com/au/en",
+    d:"crucial australia is an online store for computer memory, ssds and storage upgrades. it is for australian pc users and it buyers who want hardware performance products.",
+    k:"crucial australia,australia online shopping,computer memory ssds,storage upgrades,crucial.com/au/en",
+    a:""
+  },
+  {
+    i:934,
+    n:"karen millen australia",
+    c:"fashion,business",
+    u:"https://www.karenmillen.com/au",
+    d:"karen millen australia is an online womens fashion store for dresses, tailoring and occasion wear. it suits australian shoppers looking for polished and premium clothing.",
+    k:"karen millen australia,australia online shopping,womens fashion dresses,tailoring occasion wear,karenmillen.com/au",
+    a:""
+  },
+  {
+    i:935,
+    n:"frank green",
+    c:"home,business",
+    u:"https://www.frankgreen.com.au/",
+    d:"frank green is an australian online store for reusable drink bottles, coffee cups and lifestyle accessories. it suits shoppers in australia who want sustainable everyday products.",
+    k:"frank green,australia online shopping,reusable bottles coffee cups,lifestyle accessories,frankgreen.com.au",
+    a:""
+  },
+  {
+    i:936,
+    n:"country road",
+    c:"fashion,home,business",
+    u:"https://www.countryroad.com.au/",
+    d:"country road is an australian lifestyle retailer with online shopping for clothing, accessories, homewares and gifts. it suits shoppers who want modern fashion and home products from a local brand.",
+    k:"country road,australia online shopping,clothing accessories homewares,gifts,countryroad.com.au",
+    a:""
+  },
+  {
+    i:937,
+    n:"witchery",
+    c:"fashion,beauty,business",
+    u:"https://www.witchery.com.au/",
+    d:"witchery is an australian fashion retailer with ecommerce for women's clothing, shoes, bags and accessories. it is aimed at shoppers looking for contemporary style and wardrobe essentials.",
+    k:"witchery,australia online shopping,womens clothing shoes bags,accessories,witchery.com.au",
+    a:""
+  },
+  {
+    i:938,
+    n:"sportsgirl",
+    c:"fashion,beauty,business",
+    u:"https://www.sportsgirl.com.au/",
+    d:"sportsgirl is an australian fashion store with online shopping for womenswear, accessories, beauty and gifts. it is popular with younger shoppers who want casual fashion and trend-led pieces.",
+    k:"sportsgirl,australia online shopping,womens fashion accessories,beauty gifts,sportsgirl.com.au",
+    a:""
+  },
+  {
+    i:939,
+    n:"seed heritage",
+    c:"fashion,business",
+    u:"https://www.seedheritage.com/",
+    d:"seed heritage is an australian fashion retailer with online shopping for men's, women's and kids' clothing. it is for shoppers looking for clean, modern wardrobe staples.",
+    k:"seed heritage,australia online shopping,mens womens kids fashion,wardrobe staples,seedheritage.com",
+    a:""
+  },
+  {
+    i:940,
+    n:"barkbox",
+    c:"food,health,business",
+    u:"https://www.barkbox.com/",
+    d:"barkbox is an online pet subscription shop for dog toys, treats and pet supplies. it is for dog owners in australia who want regular pet boxes and accessories.",
+    k:"barkbox,australia online shopping,dog toys treats,pet supplies subscription,barkbox.com",
+    a:""
+  },
+  {
+    i:941,
+    n:"liquorland",
+    c:"food,business",
+    u:"https://www.liquorland.com.au/",
+    d:"liquorland is an australian online liquor retailer for beer, wine, spirits and celebration drinks. it suits shoppers in australia looking for convenient alcohol shopping online.",
+    k:"liquorland,australia online shopping,liquor beer wine,spirits celebration drinks,liquorland.com.au",
+    a:""
+  },
+  {
+    i:942,
+    n:"dan murphys",
+    c:"food,business",
+    u:"https://www.danmurphys.com.au/",
+    d:"dan murphys is an australian online liquor store for wine, beer, spirits and gift packs. it is for adults in australia who want drinks and party essentials delivered or collected.",
+    k:"dan murphys,australia online shopping,liquor wine beer,spirits gift packs,danmurphys.com.au",
+    a:""
+  },
+  {
+    i:943,
+    n:"petbarn",
+    c:"food,health,business",
+    u:"https://www.petbarn.com.au/",
+    d:"petbarn is an australian online pet retailer for pet food, toys, accessories and pet care products. it is for pet owners in australia who want everyday supplies delivered or collected.",
+    k:"petbarn,australia online shopping,pet food toys accessories,pet care products,petbarn.com.au",
+    a:""
+  },
+  {
+    i:944,
+    n:"rebel sport",
+    c:"sports,fashion,business",
+    u:"https://www.rebelsport.com.au/",
+    d:"rebel sport is an australian sports retailer with online shopping for activewear, running shoes and gym equipment. it is useful for fitness buyers and outdoor athletes in australia.",
+    k:"rebel sport,australia online shopping,sports store activewear,running shoes gym equipment,rebelsport.com.au",
+    a:""
+  },
+  {
+    i:945,
+    n:"bcf",
+    c:"sports,home,business",
+    u:"https://www.bcf.com.au/",
+    d:"bcf is an australian retailer for boating, camping, fishing and outdoor gear with online shopping support. it is useful for outdoor families and adventure buyers in australia.",
+    k:"bcf,australia online shopping,boating camping fishing,outdoor gear,bcf.com.au",
+    a:""
+  },
+  {
+    i:946,
+    n:"macpac australia",
+    c:"sports,fashion,business",
+    u:"https://www.macpac.com.au/",
+    d:"macpac australia is an outdoor brand with online shopping for jackets, packs, hiking gear and travel clothing. it suits shoppers in australia who want durable outdoor apparel and equipment.",
+    k:"macpac australia,australia online shopping,outdoor clothing hiking gear,jackets packs,macpac.com.au",
+    a:""
+  },
+  {
+    i:947,
+    n:"the north face australia",
+    c:"sports,fashion,business",
+    u:"https://www.thenorthface.com.au/",
+    d:"the north face australia is an online outdoor retailer for jackets, backpacks, hiking gear and activewear. it is for australian shoppers who want durable adventure clothing and equipment.",
+    k:"the north face australia,australia online shopping,outdoor clothing backpacks,hiking gear activewear,thenorthface.com.au",
+    a:""
+  },
+  {
+    i:948,
+    n:"patagonia australia",
+    c:"sports,fashion,business",
+    u:"https://www.patagonia.com.au/",
+    d:"patagonia australia is an online outdoor store for jackets, fleeces, bags and technical clothing. it suits shoppers in australia who want sustainable adventure wear and gear.",
+    k:"patagonia australia,australia online shopping,outdoor clothing jackets,technical clothing bags,patagonia.com.au",
+    a:""
+  },
+  {
+    i:949,
+    n:"adore beauty",
+    c:"beauty,health,business",
+    u:"https://www.adorebeauty.com.au/",
+    d:"adore beauty is an australian online beauty store for skincare, makeup, haircare and fragrance. it suits shoppers who want a dedicated beauty retailer with broad brand choice in australia.",
+    k:"adore beauty,australia online shopping,skincare makeup haircare,fragrance beauty retailer,adorebeauty.com.au",
+    a:""
+  },
+  {
+    i:950,
+    n:"sephora australia",
+    c:"beauty,business",
+    u:"https://www.sephora.com.au/",
+    d:"sephora australia is an online beauty retailer for cosmetics, skincare, haircare and fragrance. it is for shoppers in australia who want premium and trending beauty brands.",
+    k:"sephora australia,australia online shopping,cosmetics skincare haircare,fragrance premium beauty,sephora.com.au",
+    a:""
+  }
+];
+// australia.js
+window.countryShops = window.countryShops || {};
+window.countryShops["australia"] = [
+  {
+    i:951,
+    n:"boohoo man usa",
+    c:"fashion,business",
+    u:"https://www.boohooman.com/",
+    d:"boohoo man usa is an online menswear store with casual fashion, streetwear and seasonal clothing. it is relevant for australian shoppers who buy trend-led mens apparel online.",
+    k:"boohoo man usa,australia online shopping,menswear casual fashion,streetwear clothing,boohooman.com",
+    a:""
+  },
+  {
+    i:952,
+    n:"blackmilk clothing",
+    c:"fashion,business",
+    u:"https://blackmilkclothing.com/",
+    d:"blackmilk clothing is an australian online fashion brand known for leggings, dresses and statement prints. it suits shoppers who want bold and distinctive clothing in australia.",
+    k:"blackmilk clothing,australia online shopping,leggings dresses statement prints,distinctive fashion,blackmilkclothing.com",
+    a:""
+  },
+  {
+    i:953,
+    n:"flow hive us",
+    c:"home,business",
+    u:"https://www.honeyflow.com/",
+    d:"flow hive us is an online beekeeping store for hive systems, tools and honey harvesting products. it is useful for australian hobbyists and small producers seeking modern beekeeping gear.",
+    k:"flow hive us,australia online shopping,beekeeping tools hive systems,honey harvesting,honeyflow.com",
+    a:""
+  },
+  {
+    i:954,
+    n:"barkbox",
+    c:"food,health,business",
+    u:"https://www.barkbox.com/",
+    d:"barkbox is an online pet subscription shop for dog toys, treats and pet supplies. it is for dog owners in australia who want regular pet boxes and accessories.",
+    k:"barkbox,australia online shopping,dog toys treats,pet supplies subscription,barkbox.com",
+    a:""
+  },
+  {
+    i:955,
+    n:"telstra personal",
+    c:"electronics,software,business",
+    u:"https://www.telstra.com.au/",
+    d:"telstra personal is an australian online telecom store for mobile phones, plans, internet and accessories. it suits shoppers in australia who want carrier devices and connectivity services.",
+    k:"telstra personal,australia online shopping,mobile phones plans,internet accessories,telstra.com.au",
+    a:""
+  },
+  {
+    i:956,
+    n:"wrangler australia",
+    c:"fashion,business",
+    u:"https://www.wrangler.com.au/",
+    d:"wrangler australia is an online denim and casualwear store for jeans, jackets and everyday clothing. it suits australian shoppers looking for classic denim and relaxed fashion.",
+    k:"wrangler australia,australia online shopping,denim jeans jackets,casual clothing,wrangler.com.au",
+    a:""
+  },
+  {
+    i:957,
+    n:"outdoor life",
+    c:"sports,home,business",
+    u:"https://www.outdoorlife.com.au/",
+    d:"outdoor life is an australian online store for camping, hiking and outdoor living products. it suits buyers in australia who want gear for adventures and backyard recreation.",
+    k:"outdoor life,australia online shopping,camping hiking outdoor living,adventure gear,outdoorlife.com.au",
+    a:""
+  },
+  {
+    i:958,
+    n:"sensis",
+    c:"business,software",
+    u:"https://www.sensis.com.au/",
+    d:"sensis is an australian digital business and directory platform with online products and services for marketing. it is for companies in australia that want business listing and digital presence tools.",
+    k:"sensis,australia online shopping,business directory marketing,digital products,sensis.com.au",
+    a:""
+  },
+  {
+    i:959,
+    n:"typo",
+    c:"books,home,business",
+    u:"https://www.typo.com/",
+    d:"typo is an australian lifestyle retailer with online shopping for stationery, gifts, home decor and accessories. it is popular with shoppers who want playful and affordable gift items in australia.",
+    k:"typo,australia online shopping,stationery gifts home decor,accessories,typo.com",
+    a:""
+  },
+  {
+    i:960,
+    n:"cotton on",
+    c:"fashion,home,business",
+    u:"https://cottonon.com/AU/",
+    d:"cotton on is an australian fashion retailer with online shopping for clothing, basics, activewear and home products. it suits shoppers who want casual style and value fashion in australia.",
+    k:"cotton on,australia online shopping,clothing basics activewear,home products,cottonon.com",
+    a:""
+  },
+  {
+    i:961,
+    n:"supre",
+    c:"fashion,business",
+    u:"https://www.supre.com.au/",
+    d:"supre is an australian womens fashion retailer with online shopping for casual clothing, denim and trend-led basics. it is aimed at younger shoppers looking for affordable style in australia.",
+    k:"supre,australia online shopping,womens fashion casual clothing,denim basics,supre.com.au",
+    a:""
+  },
+  {
+    i:962,
+    n:"valleygirl",
+    c:"fashion,business",
+    u:"https://www.valleygirl.com.au/",
+    d:"valleygirl is an australian fashion store for young womens clothing, dresses and accessories. it suits shoppers who want budget-friendly trend fashion in australia.",
+    k:"valleygirl,australia online shopping,young womens clothing dresses,accessories,valleygirl.com.au",
+    a:""
+  },
+  {
+    i:963,
+    n:"amart furniture",
+    c:"home,business",
+    u:"https://www.amartfurniture.com.au/",
+    d:"amart furniture is an australian online furniture store for sofas, beds, dining sets and outdoor pieces. it is useful for shoppers furnishing homes in australia on a budget.",
+    k:"amart furniture,australia online shopping,sofas beds dining sets,outdoor furniture,amartfurniture.com.au",
+    a:""
+  },
+  {
+    i:964,
+    n:"fantastic furniture",
+    c:"home,business",
+    u:"https://www.fantasticfurniture.com.au/",
+    d:"fantastic furniture is an australian online retailer for affordable furniture and storage solutions. it suits households in australia looking for practical home furnishings.",
+    k:"fantastic furniture,australia online shopping,affordable furniture storage,home furnishings,fantasticfurniture.com.au",
+    a:""
+  },
+  {
+    i:965,
+    n:"freedom furniture",
+    c:"home,business",
+    u:"https://www.freedom.com.au/",
+    d:"freedom furniture is an australian home store with online shopping for furniture, decor and home accessories. it is for shoppers who want modern home styling and furnishings in australia.",
+    k:"freedom furniture,australia online shopping,furniture decor home accessories,home styling,freedom.com.au",
+    a:""
+  },
+  {
+    i:966,
+    n:"the sleep company",
+    c:"home,health,business",
+    u:"https://www.thesleepcompany.com.au/",
+    d:"the sleep company is an australian online sleep retailer for mattresses, pillows and bedding products. it is for customers in australia who want comfort and better rest at home.",
+    k:"the sleep company,australia online shopping,mattresses pillows bedding,sleep products,thesleepcompany.com.au",
+    a:""
+  },
+  {
+    i:967,
+    n:"slumbercorp",
+    c:"home,health,business",
+    u:"https://slumbercorp.com.au/",
+    d:"slumbercorp is an australian online mattress and bedding store with sleep products for homes. it suits shoppers in australia who want bedroom comfort and support.",
+    k:"slumbercorp,australia online shopping,mattresses bedding,sleep comfort,slumbercorp.com.au",
+    a:""
+  },
+  {
+    i:968,
+    n:"myer online",
+    c:"fashion,beauty,home,business",
+    u:"https://www.myer.com.au/",
+    d:"myer online is an australian department store website for fashion, beauty, homewares and gifts. it is for shoppers who want branded goods and department-store variety in australia.",
+    k:"myer online,australia online shopping,fashion beauty homewares,gifts,myer.com.au",
+    a:""
+  },
+  {
+    i:969,
+    n:"woolworths online",
+    c:"food,home,business",
+    u:"https://www.woolworths.com.au/shop",
+    d:"woolworths online is a leading australian supermarket website for groceries, fresh food and household essentials. it is designed for families and busy shoppers who want delivery or pickup in australia.",
+    k:"woolworths online,australia online shopping,groceries fresh food,household essentials,woolworths.com.au",
+    a:""
+  },
+  {
+    i:970,
+    n:"pet circle",
+    c:"food,health,business",
+    u:"https://www.petcircle.com.au/",
+    d:"pet circle is an australian online pet store for food, medicines, toys and accessories. it is for pet owners in australia who want convenient delivery and a wide range of pet products.",
+    k:"pet circle,australia online shopping,pet food medicines toys,accessories,petcircle.com.au",
+    a:""
+  },
+  {
+    i:971,
+    n:"best and less",
+    c:"fashion,home,business",
+    u:"https://www.bestandless.com.au/",
+    d:"best and less is an australian value retailer with online shopping for clothing, basics, home and kids items. it suits budget-conscious families in australia.",
+    k:"best and less,australia online shopping,clothing basics home,kids items,bestandless.com.au",
+    a:""
+  },
+  {
+    i:972,
+    n:"target australia",
+    c:"fashion,home,toys,beauty,business",
+    u:"https://www.target.com.au/",
+    d:"target australia offers online shopping for affordable fashion, homewares, kids products and beauty items. it is suited to families and budget shoppers in australia.",
+    k:"target australia,australia online shopping,fashion homewares kids products,beauty items,target.com.au",
+    a:""
+  },
+  {
+    i:973,
+    n:"big w",
+    c:"home,fashion,books,toys,business",
+    u:"https://www.bigw.com.au/",
+    d:"big w is an australian department store with online shopping for clothing, homewares, toys and books. it is a good fit for families and value shoppers in australia.",
+    k:"big w,australia online shopping,clothing homewares toys,books family shopping,bigw.com.au",
+    a:""
+  },
+  {
+    i:974,
+    n:"the iconic",
+    c:"fashion,business",
+    u:"https://www.theiconic.com.au/",
+    d:"the iconic is an australian online fashion marketplace for clothing, shoes, bags and accessories. it is popular with shoppers in australia who want fast delivery and a broad style range.",
+    k:"the iconic,australia online shopping,fashion shoes bags,accessories,theiconic.com.au",
+    a:""
+  },
+  {
+    i:975,
+    n:"sportsgirl",
+    c:"fashion,beauty,business",
+    u:"https://www.sportsgirl.com.au/",
+    d:"sportsgirl is an australian fashion store with online shopping for womenswear, accessories, beauty and gifts. it is popular with younger shoppers who want casual fashion and trend-led pieces.",
+    k:"sportsgirl,australia online shopping,womens fashion accessories,beauty gifts,sportsgirl.com.au",
+    a:""
+  },
+  {
+    i:976,
+    n:"seed heritage",
+    c:"fashion,business",
+    u:"https://www.seedheritage.com/",
+    d:"seed heritage is an australian fashion retailer with online shopping for men's, women's and kids' clothing. it is for shoppers looking for clean, modern wardrobe staples.",
+    k:"seed heritage,australia online shopping,mens womens kids fashion,wardrobe staples,seedheritage.com",
+    a:""
+  },
+  {
+    i:977,
+    n:"country road",
+    c:"fashion,home,business",
+    u:"https://www.countryroad.com.au/",
+    d:"country road is an australian lifestyle retailer with online shopping for clothing, accessories, homewares and gifts. it suits shoppers who want modern fashion and home products from a local brand.",
+    k:"country road,australia online shopping,clothing accessories homewares,gifts,countryroad.com.au",
+    a:""
+  },
+  {
+    i:978,
+    n:"witchery",
+    c:"fashion,beauty,business",
+    u:"https://www.witchery.com.au/",
+    d:"witchery is an australian fashion retailer with ecommerce for women's clothing, shoes, bags and accessories. it is aimed at shoppers looking for contemporary style and wardrobe essentials.",
+    k:"witchery,australia online shopping,womens clothing shoes bags,accessories,witchery.com.au",
+    a:""
+  },
+  {
+    i:979,
+    n:"uggs since 1974",
+    c:"fashion,business",
+    u:"https://uggsince1974.com.au/",
+    d:"uggs since 1974 is an australian footwear store with online shopping for ugg boots, slippers and cozy winter shoes. it suits shoppers looking for sheepskin footwear and comfort items in australia.",
+    k:"uggs since 1974,australia online shopping,ugg boots slippers,winter shoes sheepskin,uggsince1974.com.au",
+    a:""
+  },
+  {
+    i:980,
+    n:"frank green",
+    c:"home,business",
+    u:"https://www.frankgreen.com.au/",
+    d:"frank green is an australian online store for reusable drink bottles, coffee cups and lifestyle accessories. it suits shoppers in australia who want sustainable everyday products.",
+    k:"frank green,australia online shopping,reusable bottles coffee cups,lifestyle accessories,frankgreen.com.au",
+    a:""
+  },
+  {
+    i:981,
+    n:"bonds",
+    c:"fashion,business",
+    u:"https://www.bonds.com.au/",
+    d:"bonds is an australian online store for underwear, basics, activewear and kids clothing. it is a popular choice for families and everyday shoppers in australia.",
+    k:"bonds,australia online shopping,underwear basics activewear,kids clothing,bonds.com.au",
+    a:""
+  },
+  {
+    i:982,
+    n:"karen millen australia",
+    c:"fashion,business",
+    u:"https://www.karenmillen.com/au",
+    d:"karen millen australia is an online womens fashion store for dresses, tailoring and occasion wear. it suits australian shoppers looking for polished and premium clothing.",
+    k:"karen millen australia,australia online shopping,womens fashion dresses,tailoring occasion wear,karenmillen.com/au",
+    a:""
+  },
+  {
+    i:983,
+    n:"boody",
+    c:"fashion,health,business",
+    u:"https://www.boody.com.au/",
+    d:"boody is an australian online clothing brand for basics, underwear and bamboo loungewear. it suits shoppers in australia who want comfort-focused and eco-friendly apparel.",
+    k:"boody,australia online shopping,basics underwear bamboo,loungewear,boody.com.au",
+    a:""
+  },
+  {
+    i:984,
+    n:"country road home",
+    c:"home,fashion,business",
+    u:"https://www.countryroad.com.au/",
+    d:"country road home is the home and lifestyle section of an australian retailer with decor, textiles and gifts. it suits shoppers who want modern home products in australia.",
+    k:"country road home,australia online shopping,home decor textiles,gifts,countryroad.com.au",
+    a:""
+  },
+  {
+    i:985,
+    n:"typo",
+    c:"books,home,business",
+    u:"https://www.typo.com/",
+    d:"typo is an australian lifestyle retailer with online shopping for stationery, gifts, home decor and accessories. it is popular with shoppers who want playful and affordable gift items in australia.",
+    k:"typo,australia online shopping,stationery gifts home decor,accessories,typo.com",
+    a:""
+  },
+  {
+    i:986,
+    n:"cotton on",
+    c:"fashion,home,business",
+    u:"https://cottonon.com/AU/",
+    d:"cotton on is an australian fashion retailer with online shopping for clothing, basics, activewear and home products. it suits shoppers who want casual style and value fashion in australia.",
+    k:"cotton on,australia online shopping,clothing basics activewear,home products,cottonon.com",
+    a:""
+  },
+  {
+    i:987,
+    n:"supre",
+    c:"fashion,business",
+    u:"https://www.supre.com.au/",
+    d:"supre is an australian womens fashion retailer with online shopping for casual clothing, denim and trend-led basics. it is aimed at younger shoppers looking for affordable style in australia.",
+    k:"supre,australia online shopping,womens fashion casual clothing,denim basics,supre.com.au",
+    a:""
+  },
+  {
+    i:988,
+    n:"valleygirl",
+    c:"fashion,business",
+    u:"https://www.valleygirl.com.au/",
+    d:"valleygirl is an australian fashion store for young womens clothing, dresses and accessories. it suits shoppers who want budget-friendly trend fashion in australia.",
+    k:"valleygirl,australia online shopping,young womens clothing dresses,accessories,valleygirl.com.au",
+    a:""
+  },
+  {
+    i:989,
+    n:"amart furniture",
+    c:"home,business",
+    u:"https://www.amartfurniture.com.au/",
+    d:"amart furniture is an australian online furniture store for sofas, beds, dining sets and outdoor pieces. it is useful for shoppers furnishing homes in australia on a budget.",
+    k:"amart furniture,australia online shopping,sofas beds dining sets,outdoor furniture,amartfurniture.com.au",
+    a:""
+  },
+  {
+    i:990,
+    n:"fantastic furniture",
+    c:"home,business",
+    u:"https://www.fantasticfurniture.com.au/",
+    d:"fantastic furniture is an australian online retailer for affordable furniture and storage solutions. it suits households in australia looking for practical home furnishings.",
+    k:"fantastic furniture,australia online shopping,affordable furniture storage,home furnishings,fantasticfurniture.com.au",
+    a:""
+  },
+  {
+    i:991,
+    n:"freedom furniture",
+    c:"home,business",
+    u:"https://www.freedom.com.au/",
+    d:"freedom furniture is an australian home store with online shopping for furniture, decor and home accessories. it is for shoppers who want modern home styling and furnishings in australia.",
+    k:"freedom furniture,australia online shopping,furniture decor home accessories,home styling,freedom.com.au",
+    a:""
+  },
+  {
+    i:992,
+    n:"the sleep company",
+    c:"home,health,business",
+    u:"https://www.thesleepcompany.com.au/",
+    d:"the sleep company is an australian online sleep retailer for mattresses, pillows and bedding products. it is for customers in australia who want comfort and better rest at home.",
+    k:"the sleep company,australia online shopping,mattresses pillows bedding,sleep products,thesleepcompany.com.au",
+    a:""
+  },
+  {
+    i:993,
+    n:"slumbercorp",
+    c:"home,health,business",
+    u:"https://slumbercorp.com.au/",
+    d:"slumbercorp is an australian online mattress and bedding store with sleep products for homes. it suits shoppers in australia who want bedroom comfort and support.",
+    k:"slumbercorp,australia online shopping,mattresses bedding,sleep comfort,slumbercorp.com.au",
+    a:""
+  },
+  {
+    i:994,
+    n:"pet circle",
+    c:"food,health,business",
+    u:"https://www.petcircle.com.au/",
+    d:"pet circle is an australian online pet store for food, medicines, toys and accessories. it is for pet owners in australia who want convenient delivery and a wide range of pet products.",
+    k:"pet circle,australia online shopping,pet food medicines toys,accessories,petcircle.com.au",
+    a:""
+  },
+  {
+    i:995,
+    n:"best and less",
+    c:"fashion,home,business",
+    u:"https://www.bestandless.com.au/",
+    d:"best and less is an australian value retailer with online shopping for clothing, basics, home and kids items. it suits budget-conscious families in australia.",
+    k:"best and less,australia online shopping,clothing basics home,kids items,bestandless.com.au",
+    a:""
+  },
+  {
+    i:996,
+    n:"the iconic",
+    c:"fashion,business",
+    u:"https://www.theiconic.com.au/",
+    d:"the iconic is an australian online fashion marketplace for clothing, shoes, bags and accessories. it is popular with shoppers in australia who want fast delivery and a broad style range.",
+    k:"the iconic,australia online shopping,fashion shoes bags,accessories,theiconic.com.au",
+    a:""
+  },
+  {
+    i:997,
+    n:"blackmilk clothing",
+    c:"fashion,business",
+    u:"https://blackmilkclothing.com/",
+    d:"blackmilk clothing is an australian online fashion brand known for leggings, dresses and statement prints. it suits shoppers who want bold and distinctive clothing in australia.",
+    k:"blackmilk clothing,australia online shopping,leggings dresses statement prints,distinctive fashion,blackmilkclothing.com",
+    a:""
+  },
+  {
+    i:998,
+    n:"sensis",
+    c:"business,software",
+    u:"https://www.sensis.com.au/",
+    d:"sensis is an australian digital business and directory platform with online products and services for marketing. it is for companies in australia that want business listing and digital presence tools.",
+    k:"sensis,australia online shopping,business directory marketing,digital products,sensis.com.au",
+    a:""
+  },
+  {
+    i:999,
+    n:"afr",
+    c:"business",
+    u:"https://www.afr.com/",
+    d:"afr is an australian business news and digital content site with subscription and commerce features. it is for readers and professionals in australia who want finance, markets and business coverage.",
+    k:"afr,australia online shopping,business news finance,subscription content,afr.com",
+    a:""
+  },
+  {
+    i:1000,
+    n:"amazon australia",
+    c:"electronics,home,fashion,beauty,books,food,sports,business",
+    u:"https://www.amazon.com.au/",
+    d:"amazon australia is a major online marketplace in australia for electronics, home goods, fashion, beauty, books, food and sports products. it is one of the largest ecommerce sites in australia and suits shoppers who want wide selection and fast delivery.",
+    k:"amazon australia,online shopping australia,electronics home fashion beauty,books food sports marketplace,amazon.com.au",
+    a:""
+  }
+];
