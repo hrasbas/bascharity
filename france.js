@@ -4013,7 +4013,6 @@ k:"",
 a:""
 },
    
- [
   {"i":451,"n":"marmiton france","c":"food,business","u":"https://www.marmiton.org/","d":"marmiton france is a popular food and recipe website in france with cooking ideas, ingredients and meal inspiration. it is useful for home cooks who want recipes alongside grocery planning.","k":"marmiton france,recipes,food,cooking,meal inspiration","a":""},
   {"i":452,"n":"ikea france","c":"home,business","u":"https://www.ikea.com/fr/fr/","d":"ikea france is a home furnishings store in france for furniture, storage, décor and household items. it is used by shoppers looking for affordable furniture and home organization products.","k":"ikea france,furniture,home decor,storage,household items","a":""},
   {"i":453,"n":"shein france","c":"fashion,beauty,business","u":"https://fr.shein.com/","d":"shein france is a fast-fashion ecommerce site in france for clothing, accessories and beauty products. it is known for trendy styles and low-priced fashion items.","k":"shein france,fast fashion,clothing,accessories,beauty","a":""},
@@ -4063,5 +4062,6 @@ a:""
   {"i":497,"n":"carrefour france","c":"food,home,fashion,business","u":"https://www.carrefour.fr/","d":"carrefour france is a major online hypermarket in france for groceries, household essentials and fashion items. it is used by families and everyday shoppers who want delivery or pickup options.","k":"carrefour france,grocery,home,fashion,hypermarket","a":""},
   {"i":498,"n":"e leclerc france","c":"food,home,business","u":"https://www.e.leclerc/","d":"e leclerc france is an online grocery and household shopping site in france for food, drinks and daily essentials. it is popular with families looking for supermarket delivery and drive pickup.","k":"e leclerc france,grocery,food,household,delivery","a":""},
   {"i":499,"n":"decathlon france","c":"sports,fashion,business","u":"https://www.decathlon.fr/","d":"decathlon france is a sports retailer in france with equipment, clothing and footwear for many activities. it is used by athletes, families and outdoor shoppers looking for affordable sports gear.","k":"decathlon france,sports,equipment,clothing,footwear","a":""},
-  {"i":500,"n":"amazon france","c":"electronics,home,fashion,beauty,books,sports,jewellery,automotive,food,business","u":"https://www.amazon.fr/","d":"amazon france is a leading online marketplace in france for electronics, home goods, fashion, beauty, books, sports items and groceries. it is used by shoppers who want a broad selection, fast delivery and convenient checkout.","k":"amazon france,marketplace,electronics,home,fashion,beauty","a":""}
+  {"i":500,"n":"amazon france","c":"electronics,home,fashion,beauty,books,sports,jewellery,automotive,food,business","u":"https://www.amazon.fr/","d":"amazon france is a leading online marketplace in france for electronics, home goods, fashion, beauty, books, sports items and groceries. it is used by shoppers who want a broad selection,
+    fast delivery and convenient checkout.","k":"amazon france,marketplace,electronics,home,fashion,beauty","a":""}
 ];
