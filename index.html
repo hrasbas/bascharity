@@ -3949,6 +3949,76 @@ function renderCategory(cat) {
   shops.forEach((shop, index) => {
     createShopCard(shop, index);
   });
+categoryShops.innerHTML += `
+<div style="
+max-width:900px;
+margin:22px auto;
+padding:22px;
+background:#2b2b2b;
+border:1px solid #c0c0c0;
+border-left:8px solid #FFD700;
+border-radius:14px;
+box-shadow:0 2px 10px rgba(0,0,0,.25);
+text-align:center;
+">
+
+<div style="
+font-size:16px;
+color:#FFD700;
+font-weight:bold;
+letter-spacing:2px;
+margin-bottom:12px;">
+THANK YOU FOR VISITING
+</div>
+
+<div style="
+font-size:30px;
+font-weight:900;
+color:#ffffff;
+line-height:1.5;">
+YOUR PURCHASE<br>
+SATISFIES A HUNGER®
+</div>
+
+<div style="
+margin-top:14px;
+font-size:20px;
+color:#cccccc;">
+HUNGER HAS HOPE IN YOU
+</div>
+
+<div style="
+width:140px;
+height:2px;
+background:#FFD700;
+margin:22px auto;">
+</div>
+
+<div style="
+font-family:cursive;
+font-size:30px;
+color:#FFD700;">
+Mohd Basheer Peringala
+</div>
+
+<div style="
+font-size:18px;
+color:#ffffff;
+margin-top:6px;">
+Founder
+</div>
+
+<div style="
+margin-top:8px;
+font-size:17px;
+font-weight:bold;
+color:#ff9800;">
+BAS CHARITY INTERNATIONAL
+</div>
+
+</div>
+`;
+    
  categoryShops.innerHTML += `
 <div class="shop-status-box">
 
