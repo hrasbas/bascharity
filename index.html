@@ -2248,39 +2248,56 @@ He is supported by his wife, Rasheena K. H., a High School English Teacher, thei
 </style>
 
 <style>
-<style>
 .recommendation-plaque{
     margin:25px 0;
-    padding:22px 20px;
-    background:#3a3a3a;              /* Pure Dark Gray */
-    border:1px solid #666;
+    padding:20px;
+    background:#3b3b3b;
+    border:1px solid #555;
     border-radius:6px;
-    box-shadow:0 2px 8px rgba(0,0,0,.30);
+    box-shadow:
+        inset 0 1px 0 rgba(255,255,255,.05),
+        0 1px 3px rgba(0,0,0,.20);
+    color:#f4f4f4;
     font-family:Georgia,"Times New Roman",serif;
     font-size:18px;
     line-height:1.9;
-    color:#f8f8f8;                   /* White text */
     text-align:justify;
-    text-shadow:0 0.25px 0 rgba(255,255,255,.15);
 }
 
 .recommendation-plaque p{
     margin:0 0 18px;
 }
 
+.recommendation-footer{
+    display:flex;
+    align-items:flex-end;
+    gap:16px;
+    margin-top:18px;
+}
+
+.recommendation-photo{
+    width:72px;
+    height:90px;
+    object-fit:cover;
+    border:1px solid rgba(255,255,255,.25);
+    border-radius:3px;
+    background:#555;
+}
+
+.recommendation-details{
+    color:#f5f5f5;
+    line-height:1.45;
+}
+
 .recommendation-sign{
-    margin-top:20px;
-    text-align:right;
     font-size:20px;
     font-weight:bold;
     color:#ffffff;
 }
 
 .recommendation-post{
-    text-align:right;
-    font-size:16px;
-    line-height:1.5;
-    color:#e0e0e0;
+    font-size:15px;
+    color:#dddddd;
 }
 </style>
 
@@ -2298,13 +2315,21 @@ This digital initiative, launched with the noble vision of helping vulnerable pe
 I extend my heartfelt best wishes for the success of this exemplary initiative towards building a hunger-free society.
 </p>
 
-<div class="recommendation-sign">
-— Suresh
+<div class="recommendation-footer">
+
+    <!-- Replace suresh.jpg with your photo -->
+    <img src="suresh.jpg" class="recommendation-photo" alt="Suresh">
+
+    <div class="recommendation-details">
+        <div class="recommendation-sign">— Suresh</div>
+        <div class="recommendation-post">
+            Retired Deputy Chief Engineer,<br>
+            Kerala State Electricity Board (KSEB)
+        </div>
+    </div>
+
 </div>
 
-<div class="recommendation-post">
-Retired Deputy Chief Engineer,<br>
-Kerala State Electricity Board (KSEB)
 </div>
 
 </div> 
