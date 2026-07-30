@@ -2212,77 +2212,145 @@ He is supported by his wife, Rasheena K. H, High School English Teacher (India),
 <link href="https://fonts.googleapis.com/css2?family=Kalam:wght@300;400;700&display=swap" rel="stylesheet">
 
 <style>
-.recommendation-plaque-black {
-    margin: 25px auto;
-    max-width: 900px;
-    width: 96%;
-    padding: 24px 22px;
-    background: #000000; /* Full Black Background */
-    border: 1px solid #333333;
-    border-radius: 12px;
-    
-    /* 0.25 Projection 3D Look */
-    box-shadow: 
-        0 8px 16px rgba(0, 0, 0, 0.80),
-        0 2px 4px rgba(0, 0, 0, 0.60),
-        inset 0 1px 0 rgba(255, 255, 255, 0.15),
-        inset 0 -2px 4px rgba(0, 0, 0, 0.90);
-        
-    font-family: Georgia, "Times New Roman", serif;
-    font-size: 18px;
-    line-height: 1.9;
-    color: #e0e0e0; /* Soft readable white */
-    text-align: justify;
-    box-sizing: border-box;
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Deputy CEO Greetings</title>
+
+<style>
+body{
+    margin:0;
+    padding:35px;
+    background:#111;
+    font-family:Georgia,serif;
 }
 
-.recommendation-plaque-black p {
-    margin: 0 0 18px;
-    /* 0.25 Subtle 3D Text Projection */
-    text-shadow: 0 0.25px 0.5px rgba(255, 255, 255, 0.20), 0 1px 2px rgba(0, 0, 0, 0.9);
+.deputy-card{
+    max-width:860px;
+    margin:auto;
+    padding:38px;
+    border-radius:22px;
+    background:linear-gradient(160deg,#081a35,#0d3470,#0a2145);
+    border:2px solid #d4af37;
+    box-shadow:
+        0 0 28px rgba(0,150,255,.30),
+        0 0 12px rgba(255,215,0,.25);
+    color:#fff;
+    position:relative;
 }
 
-.recommendation-sign {
-    margin-top: 22px;
-    text-align: right;
-    font-size: 20px;
-    font-weight: bold;
-    color: #ffffff;
-    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.9);
+.deputy-card::before{
+    content:"Greetings";
+    position:absolute;
+    top:-18px;
+    left:50%;
+    transform:translateX(-50%);
+    padding:9px 28px;
+    border-radius:30px;
+    background:linear-gradient(90deg,#ffe082,#d4af37,#fff5c2);
+    color:#222;
+    font-size:22px;
+    font-weight:bold;
+    letter-spacing:2px;
 }
 
-.recommendation-post {
-    text-align: right;
-    font-size: 16px;
-    line-height: 1.5;
-    color: #b0b0b0;
+.deputy-card p{
+    font-size:22px;
+    line-height:1.95;
+    text-align:justify;
+    margin:26px 0;
+}
+
+/* 1st Paragraph - Gold Italic */
+.deputy-card p:nth-of-type(1){
+    color:#ffd84d;
+    font-style:italic;
+}
+
+/* 2nd Paragraph - Silver */
+.deputy-card p:nth-of-type(2){
+    color:#e6e6e6;
+}
+
+/* 3rd Paragraph - Gold */
+.deputy-card p:nth-of-type(3){
+    color:#ffd84d;
+}
+
+/* 4th Paragraph - Silver */
+.deputy-card p:nth-of-type(4){
+    color:#e6e6e6;
+}
+
+/* Slogan */
+.slogan{
+    color:#ffd700;
+    font-weight:700;
+}
+
+/* Signature */
+.signature{
+    margin-top:45px;
+    text-align:right;
+}
+
+.signature .name{
+    color:#ffd700;
+    font-size:32px;
+    font-weight:700;
+    font-style:normal;
+    text-transform:uppercase;
+}
+
+.signature .designation{
+    color:#ffd700;
+    font-size:18px;
+    font-style:normal;
+    text-transform:uppercase;
+    margin-top:8px;
+}
+
+.signature .office{
+    color:#ffd700;
+    font-size:18px;
+    font-style:normal;
+    text-transform:uppercase;
 }
 </style>
 
-<div class="recommendation-plaque-black">
+
+<div class="deputy-card">
 
 <p>
-I have had the opportunity to know Mr. Mohammed M. Basheer personally. I believe that his honesty, sincerity, and compassion are truly reflected in this initiative.
+I have had the opportunity to know Mr. Mohammed M. Basheer personally.
+I believe that his honesty, sincerity, and compassion are truly reflected
+in this initiative.
 </p>
 
 <p>
-This digital initiative, launched with the noble vision of helping vulnerable people who struggle to access even the most basic necessity of life—food—is truly commendable. Its message, "YOUR PURCHASE SATISFIES A HUNGER®", is simple yet deeply meaningful. By simply saving a small icon and using it for your regular purchases whenever possible, everyone has an opportunity to become part of this noble humanitarian mission.
+This digital initiative, launched with the noble vision of helping
+vulnerable people who struggle to access even the most basic necessity of
+life—food—is truly commendable. Its message,
+<span class="slogan">"YOUR PURCHASE SATISFIES A HUNGER®"</span>,
+is simple yet deeply meaningful.
 </p>
 
 <p>
-I extend my heartfelt best wishes for the success of this exemplary initiative towards building a hunger-free society.
+By simply saving a small icon and using it for your regular purchases
+whenever possible, everyone has an opportunity to become part of this
+noble humanitarian mission.
 </p>
-<div class="recommendation-sign">
-— Name
+
+<p>
+I extend my heartfelt best wishes for the success of this exemplary
+initiative towards building a hunger-free society.
+</p>
+
+<div class="signature">
+<div class="name">MR. ABC XYZ</div>
+<div class="designation">RETIRED DEPUTY CHIEF ENGINEER</div>
+<div class="office">KERALA STATE ELECTRICITY BOARD (KSEB)</div>
 </div>
 
-<div class="recommendation-post">
-RTD DEPUTY CHIEF ENGINEER,<br>
-KERALA STATE ELECTRICITY BOARD (KSEB)
 </div>
-
-
-
 
 <script>
 function toggleWish() {
