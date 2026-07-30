@@ -8,7 +8,7 @@ c:"business,electronics,home,fashion,beauty,health,food,sports,books,jewellery,a
 u:"https://www.amazon.com/",
 d:"amazon is a major online marketplace in the usa where shoppers can buy electronics, home goods, fashion, beauty, books and grocery items. it serves everyday consumers, families and sellers with fast delivery and broad selection.",
 k:"amazon,online shopping usa,usa marketplace,electronics shopping,home goods,fashion shopping,grocery delivery,online retail",
-a:""
+a:"https://www.amazon.com/?tag=vmmbaslinks-20"
 },
 {
 i:2,
