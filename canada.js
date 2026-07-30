@@ -8,7 +8,7 @@ window.countryShops["canada"] = [
     u:"https://www.amazon.ca/",
     d:"amazon canada is the largest online marketplace in canada where shoppers can buy electronics, books, fashion, home goods, groceries, automotive items and more with fast nationwide delivery.[web:1964][web:1969][web:1970]",
     k:"amazon canada,online shopping canada,marketplace for electronics books fashion and home,groceries automotive and more,amazon.ca ecommerce",
-    a:""
+    a:"https://www.amazon.ca/?tag=vmmbaslinks06-20"
   },
   {
     i:2,
