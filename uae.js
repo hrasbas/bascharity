@@ -8,7 +8,7 @@ c:"business,electronics,home,fashion,beauty,health,food,sports,books,jewellery,a
 u:"https://www.amazon.ae/",
 d:"amazon.ae is a major online marketplace in the uae where customers can buy electronics, fashion, beauty, groceries and more. it is for shoppers who want fast shipping, wide selection and easy returns.",
 k:"amazon.ae,online shopping uae,uae marketplace,electronics shopping,fashion shopping,grocery delivery,online retail",
-a:""
+a:"https://www.amazon.ae/?tag=vmmbaslinks01-21"
 },
 {
 i:2,
