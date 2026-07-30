@@ -8,7 +8,7 @@ c:"electronics,home,fashion,beauty,health,food,sports,travel,books,software,busi
 u:"https://www.amazon.co.uk",
 d:"amazon uk is a leading online marketplace in the united kingdom offering electronics, fashion, home essentials, books and groceries with fast delivery options.",
 k:"amazon uk,online shopping uk,electronics and fashion uk,amazon prime uk,buy books and groceries uk",
-a:""
+a:"https://www.amazon.co.uk/?tag=vmmbaslinks03-21"
 },
 {
 i:2,
