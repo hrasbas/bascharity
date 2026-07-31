@@ -755,8 +755,36 @@ pages.forEach((page) => {
     syncStack();
   };
 
-  page.addEventListener('pointerup', finishTurn);
-  page.addEventListener('pointercancel', finishTurn);
+  page.addEventListener('pointerup', (e) => {
+  if (draggingPage !== page) return;
+
+  const dx = e.clientX - startX;
+  page.style.transition = 'transform .65s cubic-bezier(.25, 1, .5, 1)';
+  clearPageVisuals(page);
+
+  if (page.dataset.state !== 'open' && dx < -50) {
+    page.dataset.state = 'open';
+    page.style.transform = 'rotateY(-180deg)';
+  } else if (page.dataset.state === 'open' && dx > 50) {
+    page.dataset.state = 'closed';
+    page.style.transform = 'rotateY(0deg)';
+  } else {
+    page.style.transform = page.dataset.state === 'open' ? 'rotateY(-180deg)' : 'rotateY(0deg)';
+  }
+
+  draggingPage = null;
+  currentRotateY = 0;
+  setTimeout(syncStack, 0);
+});
+
+page.addEventListener('pointercancel', () => {
+  if (draggingPage !== page) return;
+  page.style.transition = 'transform .65s cubic-bezier(.25, 1, .5, 1)';
+  clearPageVisuals(page);
+  page.style.transform = page.dataset.state === 'open' ? 'rotateY(-180deg)' : 'rotateY(0deg)';
+  draggingPage = null;
+  currentRotateY = 0;
+  setTimeout(syncStack, 0);
 });
 
 syncStack();
