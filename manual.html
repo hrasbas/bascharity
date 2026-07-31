@@ -654,9 +654,6 @@ let startY = 0;
 let currentRotateY = 0;
 
 function syncStack() {
-  let firstClosedIndex = pages.findIndex(p => p.dataset.state === 'closed');
-  if (firstClosedIndex === -1) firstClosedIndex = pages.length;
-
   pages.forEach((page, i) => {
     const isFlipped = page.dataset.state === 'open';
     
@@ -668,12 +665,7 @@ function syncStack() {
       page.style.transform = 'rotateY(0deg)';
     }
 
-    // Optimization to avoid flickering: hide far away pages
-    if (i < firstClosedIndex - 2 || i > firstClosedIndex + 2) {
-      page.style.visibility = 'hidden';
-    } else {
-      page.style.visibility = 'visible';
-    }
+    page.style.visibility = 'visible';
   });
 }
 
