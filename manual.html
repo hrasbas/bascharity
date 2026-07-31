@@ -1,4 +1,4 @@
- <!DOCTYPE html> 
+ <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8" />
@@ -654,18 +654,17 @@ let startY = 0;
 let currentRotateY = 0;
 
 function syncStack() {
-  const openPages = pages.filter(page => page.dataset.state === 'open');
-  const closedPages = pages.filter(page => page.dataset.state !== 'open');
+  pages.forEach((page, i) => {
+    const isFlipped = page.dataset.state === 'open';
+    
+    if (isFlipped) {
+      page.style.zIndex = i + 2;
+      page.style.transform = 'rotateY(-180deg)';
+    } else {
+      page.style.zIndex = (pages.length - i) + 2;
+      page.style.transform = 'rotateY(0deg)';
+    }
 
-  closedPages.forEach((page, i) => {
-    page.style.zIndex = (closedPages.length - i) + 2;
-    page.style.transform = 'rotateY(0deg)';
-    page.style.visibility = 'visible';
-  });
-
-  openPages.forEach((page, i) => {
-    page.style.zIndex = i + 2;
-    page.style.transform = 'rotateY(-180deg)';
     page.style.visibility = 'visible';
   });
 }
@@ -741,21 +740,16 @@ pages.forEach((page) => {
   });
 
   const finishTurn = () => {
-  if (draggingPage !== page) return;
-
-  const shouldOpen = currentRotateY < -90;
-  page.style.transition = 'transform .65s cubic-bezier(.25, 1, .5, 1)';
-  clearPageVisuals(page);
-
-  if (shouldOpen) {
-    page.dataset.state = 'open';
-  } else {
-    page.dataset.state = 'closed';
-  }
-
-  draggingPage = null;
-  setTimeout(syncStack, 0);
-};
+    if (draggingPage !== page) return;
+    const shouldOpen = currentRotateY < -90;
+    page.style.transition = 'transform .65s cubic-bezier(.25, 1, .5, 1)';
+    clearPageVisuals(page);
+    
+    if (shouldOpen) {
+      page.dataset.state = 'open';
+    } else {
+      page.dataset.state = 'closed';
+    }
     
     draggingPage = null;
     syncStack();
