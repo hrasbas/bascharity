@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8" />
@@ -33,7 +33,7 @@ body {
   perspective-origin: 50% 50%;
   transform-style: preserve-3d;
   touch-action: none;
-  transform: rotateY(-18deg) rotateX(6deg) translateZ(0);
+  transform: rotateY(-18deg) rotateX(6deg);
 }
 
 .back-cover-base {
@@ -71,9 +71,6 @@ body {
   will-change: transform;
   cursor: grab;
   pointer-events: auto;
-  backface-visibility: hidden;
-  -webkit-backface-visibility: hidden;
-  transform-box: fill-box;
 }
 .page:active { cursor: grabbing; }
 
@@ -463,120 +460,6 @@ const pagesData = [
       <p>Unauthorized use of our content may result in legal action under applicable copyright and intellectual property laws.</p>
       <p><strong>We appreciate and encourage respect for intellectual property rights.</strong></p>
     `
-  },
-  {
-    title: "INTELLECTUAL PROPERTY RIGHTS",
-    content: `
-      <p>BAS Charity International respects the intellectual property rights of others and expects all users to do the same.</p>
-      <p>All original content, designs, logos, graphics, text, software, and other materials created for this website are the intellectual property of BAS Charity International unless otherwise stated.</p>
-      <p>Users may view and use the website for personal, non-commercial purposes only. Any unauthorized copying, modification, distribution, commercial use, or creation of derivative works is prohibited without prior written permission.</p>
-      <p>If you believe that any content on this website infringes your intellectual property rights, please contact us with the relevant details so that we can review and address the matter promptly.</p>
-      <p><strong>We are committed to protecting intellectual property and respecting the rights of creators, owners, and partners.</strong></p>
-    `
-  },
-  {
-    title: "EXTERNAL LINKS POLICY",
-    content: `
-      <p>BAS Charity International contains links to third-party websites, including affiliate partners, merchants, and other external resources for your convenience.</p>
-      <p>These external websites are owned and operated independently. We do not control their content, privacy practices, security, products, services, or business policies.</p>
-      <p>When you leave our website, you become subject to the terms, conditions, and privacy policies of the respective third-party website. We encourage you to review those policies before making purchases or sharing personal information.</p>
-      <p>The inclusion of an external link does not imply our endorsement or guarantee of the information, products, or services offered by that website.</p>
-      <p><strong>BAS Charity International is not responsible for any loss, damage, or issues arising from the use of third-party websites.</strong></p>
-    `
-  },
-  {
-    title: "FINANCIAL TRANSPARENCY",
-    content: `
-      <p>BAS Charity International is committed to maintaining transparency, honesty, and accountability in the management of eligible affiliate earnings and charitable activities.</p>
-      <p>We aim to provide clear and accurate information about our operations, charitable commitments, and other relevant updates through our official website whenever appropriate.</p>
-      <p>Financial information published by BAS Charity International will reflect our genuine efforts to operate responsibly and in accordance with applicable laws and ethical standards.</p>
-      <p>We continuously strive to strengthen public confidence by promoting openness and responsible financial practices throughout our organization.</p>
-      <p><strong>Transparency builds trust, and trust strengthens our mission to serve humanity.</strong></p>
-    `
-  },
-  {
-    title: "DONATIONS & CHARITY POLICY",
-    content: `
-      <p>BAS Charity International is dedicated to supporting humanitarian and charitable initiatives through eligible affiliate earnings and other lawful sources of funding.</p>
-      <p>Our charitable activities are carried out with a commitment to transparency, accountability, and ethical responsibility. Support will be provided based on available resources and organizational priorities.</p>
-      <p>Where appropriate, updates regarding charitable initiatives, contributions, and community projects may be published through our official website or other authorized communication channels.</p>
-      <p>All charitable activities are subject to applicable laws, regulations, and the operational capacity of BAS Charity International.</p>
-      <p><strong>Our commitment is to transform everyday support into meaningful assistance for those in need.</strong></p>
-    `
-  },
-  {
-    title: "SECURITY & DATA PROTECTION",
-    content: `
-      <p>BAS Charity International is committed to protecting the security of our website and the information entrusted to us by our users.</p>
-      <p>We implement reasonable technical and organizational measures to safeguard data against unauthorized access, misuse, alteration, disclosure, or destruction.</p>
-      <p>Although we strive to maintain a secure online environment, no website or internet transmission can be guaranteed to be completely secure. Users are encouraged to take appropriate precautions while using online services.</p>
-      <p>Any personal information collected through our website will be handled in accordance with our Privacy Policy and applicable data protection laws.</p>
-      <p><strong>Protecting your information is an important part of maintaining your trust.</strong></p>
-    `
-  },
-  {
-    title: "COMMUNITY GUIDELINES",
-    content: `
-      <p>BAS Charity International welcomes everyone to participate in a respectful, honest, and inclusive online community.</p>
-      <p>Users are expected to interact with others politely and must not post or share unlawful, abusive, offensive, misleading, or harmful content through our platform.</p>
-      <p>Any attempt to misuse the website, violate the rights of others, distribute malicious software, or interfere with the operation of the platform may result in restricted access or other appropriate action.</p>
-      <p>We encourage positive participation that reflects compassion, integrity, and respect for people of all backgrounds, cultures, and beliefs.</p>
-      <p><strong>Together, we can build a safe, welcoming, and trustworthy community for everyone.</strong></p>
-    `
-  },
-  {
-    title: "FREQUENTLY ASKED QUESTIONS (FAQ)",
-    content: `
-      <p><strong>Q: Does shopping through BAS Charity International cost me extra?</strong><br>
-      A: No. Eligible purchases are made at the merchant's normal price.</p>
-      <p><strong>Q: Where do I complete my purchase?</strong><br>
-      A: All purchases are completed securely on the official website of the respective merchant.</p>
-      <p><strong>Q: How does BAS Charity International receive support?</strong><br>
-      A: Eligible purchases may generate affiliate commissions paid by participating merchants.</p>
-      <p><strong>Q: Is BAS Charity International responsible for products or services?</strong><br>
-      A: No. Products, services, payments, shipping, and customer support are handled by the respective merchants.</p>
-      <p><strong>For more information, please visit our Contact page or reach out through our official communication channels.</strong></p>
-    `
-  },
-  {
-    title: "CONTACT INFORMATION",
-    content: `
-      <p>BAS Charity International welcomes your questions, suggestions, feedback, and partnership inquiries.</p>
-      <p>If you need assistance or wish to contact us regarding our website, affiliate partnerships, charitable initiatives, or any other matter, please use our official communication channels.</p>
-      <p>We will make every reasonable effort to respond to genuine inquiries as promptly as possible.</p>
-      <p>Please refer to the Contact page on our website for our latest email address, contact form, and other official communication details.</p>
-      <p><strong>We appreciate your interest and thank you for supporting BAS Charity International.</strong></p>
-    `
-  },
-  {
-    title: "UPDATES & AMENDMENTS",
-    content: `
-      <p>BAS Charity International reserves the right to update, modify, or amend its policies, terms, and website content at any time to reflect operational, legal, or regulatory changes.</p>
-      <p>Any revisions will become effective upon publication on our official website unless otherwise stated.</p>
-      <p>Users are encouraged to review these policies periodically to stay informed about any updates that may affect their use of our website and services.</p>
-      <p>Your continued use of BAS Charity International after changes have been published constitutes your acceptance of the revised policies and terms.</p>
-      <p><strong>We are committed to keeping our policies accurate, transparent, and up to date.</strong></p>
-    `
-  },
-  {
-    title: "ACKNOWLEDGEMENTS",
-    content: `
-      <p>BAS Charity International sincerely thanks every visitor, supporter, affiliate partner, volunteer, and well-wisher who contributes to our mission.</p>
-      <p>We are grateful to our trusted affiliate partners and service providers whose cooperation helps make this initiative possible.</p>
-      <p>We also appreciate the encouragement, feedback, and continued support received from individuals and communities around the world. Your trust inspires us to improve and serve with greater dedication.</p>
-      <p>Every act of kindness, no matter how small, strengthens our shared vision of building a more compassionate and caring world.</p>
-      <p><strong>Thank you for being a valued part of the BAS Charity International family.</strong></p>
-    `
-  },
-  {
-    title: "THANK YOU",
-    content: `
-      <p>Thank you for visiting BAS Charity International and for taking the time to learn about our mission and values.</p>
-      <p>Your support, trust, and participation help us move closer to our goal of creating a better world through responsible everyday shopping and meaningful humanitarian action.</p>
-      <p>Whether you are a visitor, customer, affiliate partner, volunteer, or supporter, your contribution is truly valued and appreciated.</p>
-      <p>We look forward to serving our global community with integrity, transparency, and compassion for many years to come.</p>
-      <p><strong>Thank you for being part of our journey. Together, we can make every purchase a step toward a brighter future.</strong></p>
-    `
   }
 ];
 
@@ -656,7 +539,6 @@ let currentRotateY = 0;
 function syncStack() {
   pages.forEach((page, i) => {
     const isFlipped = page.dataset.state === 'open';
-    
     if (isFlipped) {
       page.style.zIndex = i + 2;
       page.style.transform = 'rotateY(-180deg)';
@@ -664,8 +546,6 @@ function syncStack() {
       page.style.zIndex = (pages.length - i) + 2;
       page.style.transform = 'rotateY(0deg)';
     }
-
-    page.style.visibility = 'visible';
   });
 }
 
@@ -719,7 +599,6 @@ pages.forEach((page) => {
     
     page.style.transition = 'none';
     page.style.zIndex = 999;
-    page.style.visibility = 'visible';
     page.setPointerCapture?.(e.pointerId);
   });
 
@@ -755,36 +634,8 @@ pages.forEach((page) => {
     syncStack();
   };
 
-  page.addEventListener('pointerup', (e) => {
-  if (draggingPage !== page) return;
-
-  const dx = e.clientX - startX;
-  page.style.transition = 'transform .65s cubic-bezier(.25, 1, .5, 1)';
-  clearPageVisuals(page);
-
-  if (page.dataset.state !== 'open' && dx < -50) {
-    page.dataset.state = 'open';
-    page.style.transform = 'rotateY(-180deg)';
-  } else if (page.dataset.state === 'open' && dx > 50) {
-    page.dataset.state = 'closed';
-    page.style.transform = 'rotateY(0deg)';
-  } else {
-    page.style.transform = page.dataset.state === 'open' ? 'rotateY(-180deg)' : 'rotateY(0deg)';
-  }
-
-  draggingPage = null;
-  currentRotateY = 0;
-  setTimeout(syncStack, 0);
-});
-
-page.addEventListener('pointercancel', () => {
-  if (draggingPage !== page) return;
-  page.style.transition = 'transform .65s cubic-bezier(.25, 1, .5, 1)';
-  clearPageVisuals(page);
-  page.style.transform = page.dataset.state === 'open' ? 'rotateY(-180deg)' : 'rotateY(0deg)';
-  draggingPage = null;
-  currentRotateY = 0;
-  setTimeout(syncStack, 0);
+  page.addEventListener('pointerup', finishTurn);
+  page.addEventListener('pointercancel', finishTurn);
 });
 
 syncStack();
