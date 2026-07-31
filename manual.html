@@ -654,17 +654,18 @@ let startY = 0;
 let currentRotateY = 0;
 
 function syncStack() {
-  pages.forEach((page, i) => {
-    const isFlipped = page.dataset.state === 'open';
-    
-    if (isFlipped) {
-      page.style.zIndex = i + 2;
-      page.style.transform = 'rotateY(-180deg)';
-    } else {
-      page.style.zIndex = (pages.length - i) + 2;
-      page.style.transform = 'rotateY(0deg)';
-    }
+  const openPages = pages.filter(page => page.dataset.state === 'open');
+  const closedPages = pages.filter(page => page.dataset.state !== 'open');
 
+  closedPages.forEach((page, i) => {
+    page.style.zIndex = (closedPages.length - i) + 2;
+    page.style.transform = 'rotateY(0deg)';
+    page.style.visibility = 'visible';
+  });
+
+  openPages.forEach((page, i) => {
+    page.style.zIndex = i + 2;
+    page.style.transform = 'rotateY(-180deg)';
     page.style.visibility = 'visible';
   });
 }
@@ -740,16 +741,21 @@ pages.forEach((page) => {
   });
 
   const finishTurn = () => {
-    if (draggingPage !== page) return;
-    const shouldOpen = currentRotateY < -90;
-    page.style.transition = 'transform .65s cubic-bezier(.25, 1, .5, 1)';
-    clearPageVisuals(page);
-    
-    if (shouldOpen) {
-      page.dataset.state = 'open';
-    } else {
-      page.dataset.state = 'closed';
-    }
+  if (draggingPage !== page) return;
+
+  const shouldOpen = currentRotateY < -90;
+  page.style.transition = 'transform .65s cubic-bezier(.25, 1, .5, 1)';
+  clearPageVisuals(page);
+
+  if (shouldOpen) {
+    page.dataset.state = 'open';
+  } else {
+    page.dataset.state = 'closed';
+  }
+
+  draggingPage = null;
+  setTimeout(syncStack, 0);
+};
     
     draggingPage = null;
     syncStack();
