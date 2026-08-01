@@ -25,24 +25,24 @@ body {
   align-items: center;
   background: radial-gradient(circle at top, #1e293b 0%, #0f172a 54%, #020617 100%);
   font-family: Georgia, serif;
-  padding: 5px; 
+  padding: 0;
 }
 
-/* Book Stage - Mobile Responsive Fitting */
+/* Book Stage - Maximized Fit for Mobile */
 .stage {
   position: relative;
-  width: min(80vw, 400px);
-  max-height: 58vh;                 /* അടിഭാഗം മുറിഞ്ഞു പോകാതിരിക്കാൻ */
-  aspect-ratio: 1 / 1.35;
-  margin-top: 20px !important;      /* മാന്യമായ ഇടവേള */
-  margin-bottom: 10px;
+  width: min(88vw, 420px);
+  height: calc(100vh - 140px);       /* സ്ക്രീനിന്റെ ലഭ്യമായ പരമാവധി ഉയരം */
+  max-height: 520px;
+  margin-top: 10px !important;
+  margin-bottom: 5px;
   margin-left: auto;
   margin-right: auto;
   perspective: 2500px;
   perspective-origin: 50% 50%;
   transform-style: preserve-3d;
   touch-action: none;
-  transform: rotateY(-14deg) rotateX(4deg) rotateZ(-0.5deg);
+  transform: rotateY(-12deg) rotateX(2deg);
 }
 
 .back-cover-base {
@@ -83,14 +83,6 @@ body {
 }
 .page:active { cursor: grabbing; }
 
-@keyframes cornerWiggle {
-  0%, 100% { transform: rotateY(0deg); }
-  50% { transform: rotateY(-14deg); }
-}
-.page.hint-wiggle {
-  animation: cornerWiggle 2s ease-in-out infinite;
-}
-
 .cover-page .page-face {
   background:
     radial-gradient(circle at 30% 20%, rgba(255,255,255,.75), transparent 40%),
@@ -107,22 +99,22 @@ body {
   justify-content: space-between;
   align-items: center;
   text-align: center;
-  padding: 7% 5% 10%;              /* അടിയിലെ പേരിന് വ്യക്തത നൽകാൻ താഴത്തെ പാഡിങ് കൂട്ടി */
+  padding: 6% 4% 8%;               /* അടിയിലെ പേര് കൃത്യമായി കാണാൻ */
   z-index: 10;
   pointer-events: none;
 }
 
 .brand-logo {
-  width: min(65px, 12vw);
-  height: min(65px, 12vw);
-  margin-bottom: 6px;
+  width: min(60px, 11vw);
+  height: min(60px, 11vw);
+  margin-bottom: 4px;
   fill: #000000;
   filter: drop-shadow(0 2px 4px rgba(212,175,55,0.5));
 }
 
 .main-title-unified {
   font-family: 'Arial Black', Gadget, sans-serif;
-  font-size: clamp(15px, 4.8vw, 24px);
+  font-size: clamp(16px, 5vw, 24px);
   font-weight: 900;
   color: #000000;
   letter-spacing: 1px;
@@ -137,12 +129,12 @@ body {
 
 .sub-title-dark {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  font-size: clamp(8px, 2.2vw, 10px);
+  font-size: clamp(8px, 2.3vw, 11px);
   font-weight: 900;
   color: #000000;
   letter-spacing: 1px;
   text-transform: uppercase;
-  margin-top: 6px;
+  margin-top: 4px;
   border-top: 1.5px solid #000000;
   border-bottom: 1.5px solid #000000;
   padding: 3px 6px;
@@ -150,7 +142,7 @@ body {
 
 .author-handwriting-3d {
   font-family: 'Dancing Script', 'Brush Script MT', cursive;
-  font-size: clamp(17px, 4.8vw, 24px);
+  font-size: clamp(18px, 5.2vw, 26px);
   font-weight: 700;
   font-style: italic;
   color: #1a1a1a;
@@ -160,13 +152,12 @@ body {
     1px 1px 0px #ffd700,
     2px 2px 1px #b8860b,
     3px 3px 3px rgba(0,0,0,0.3);
-  margin-bottom: 4px;             /* അടിവശത്തുനിന്ന് ഒരല്പം കയറ്റി നിർത്തി */
 }
 
 .page-face {
   position: absolute;
   inset: 0;
-  padding: 6% 6% 5%;
+  padding: 5% 5% 4%;
   background: linear-gradient(135deg, #fffdf8 0%, #f4ede0 100%);
   border: 1px solid #d6ccb6;
   display: flex;
@@ -198,7 +189,7 @@ body {
   text-align: left;
 }
 .content-title {
-  font-size: clamp(11px, 2.8vw, 14px);
+  font-size: clamp(12px, 3vw, 15px);
   color: #000000;
   font-weight: 900;
   border-bottom: 2px solid #cbd5e1;
@@ -208,19 +199,19 @@ body {
   letter-spacing: .5px;
 }
 .content-body {
-  font-size: clamp(10.5px, 2.8vw, 13.5px);
-  line-height: 1.45;
+  font-size: clamp(10px, 2.6vw, 13px);
+  line-height: 1.4;
   color: #1e293b;
   text-align: justify;
 }
-.content-body p { margin-bottom: 5px; }
+.content-body p { margin-bottom: 4px; }
 
-.index-list { list-style: none; padding: 0; margin-top: 4px; }
+.index-list { list-style: none; padding: 0; margin-top: 2px; }
 .index-item {
   display: flex;
   justify-content: space-between;
   font-size: clamp(8.5px, 2.2vw, 10.5px);
-  padding: 3px 0;
+  padding: 2.5px 0;
   border-bottom: 1px dashed #cbd5e1;
   color: #000000;
   font-weight: 700;
@@ -231,8 +222,8 @@ body {
   justify-content: space-between;
   align-items: center;
   border-top: 1px dashed #cbd5e1;
-  padding-top: 3px;
-  margin-top: 3px;
+  padding-top: 2px;
+  margin-top: 2px;
 }
 
 .page-number {
@@ -547,7 +538,7 @@ const stage = document.getElementById('bookStage');
 
 function makePage(data, index) {
   const page = document.createElement('div');
-  page.className = 'page' + (index === 0 ? ' cover-page hint-wiggle' : '');
+  page.className = 'page' + (index === 0 ? ' cover-page' : '');
   page.dataset.index = index;
   page.dataset.state = 'closed';
   
@@ -670,7 +661,6 @@ function clearPageVisuals(page) {
 
 pages.forEach((page) => {
   page.addEventListener('pointerdown', (e) => {
-    page.classList.remove('hint-wiggle');
     const pt = getPoint(e);
     draggingPage = page;
     startX = pt.x;
