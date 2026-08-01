@@ -26,16 +26,15 @@ body {
   background: radial-gradient(circle at top, #1e293b 0%, #0f172a 54%, #020617 100%);
   font-family: Georgia, serif;
   padding: 0;
+  overflow-y: auto; /* പുസ്തകത്തിന്റെ വലിപ്പം കൂടുമ്പോൾ സ്ക്രീനിൽ ഒതുങ്ങിപ്പോകാതിരിക്കാൻ */
 }
 
-/* Book Stage - Top Margin set to 2.5cm below header elements */
 .stage {
   position: relative;
-  width: min(88vw, 550px);
-  height: calc(100vh - 180px);       
-  max-height: 650px;
-  margin-top: 2.5cm !important;       /* പ്രാർത്ഥനാ ബോക്സിൽ നിന്ന് 2.5 cm താഴേക്ക് മാറ്റി */
-  margin-bottom: 5px;
+  width: min(95vw, 550px);
+  height: 650px !important;   /* ഇവിടെ കൃത്യമായി 650px ലഭിക്കും */
+  margin-top: 2.5cm !important;
+  margin-bottom: 20px;
   margin-left: auto;
   margin-right: auto;
   perspective: 2500px;
@@ -44,6 +43,7 @@ body {
   touch-action: none;
   transform: rotateY(-12deg) rotateX(2deg);
 }
+
 
 .back-cover-base {
   position: absolute;
