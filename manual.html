@@ -22,7 +22,7 @@ body {
   font-family: Georgia, serif;
   overflow-y: auto;
   overflow-x: hidden;
-  padding: 40px 10px 0px 10px;
+  padding: 40px 10px 40px 10px;
 }
 
 .stage {
@@ -264,24 +264,6 @@ body {
   clip-path: polygon(100% 0, 0 0, 100% 100%);
   box-shadow: -10px 10px 22px rgba(0,0,0,.35);
 }
-
-/* സ്ക്രീനിന്റെ അടിയിലുള്ള വരയും സ്പേസും */
-.bottom-line-spacer {
-  width: 100%;
-  height: 40vh; /* സ്ക്രോളിംഗിനുള്ള സ്പേസ് */
-  display: flex;
-  align-items: flex-end;
-  justify-content: center;
-}
-
-.bottom-line-spacer::after {
-  content: '';
-  width: 80%;
-  height: 2px;
-  background-color: #cbd5e1; /* സ്ക്രീനിന്റെ അറ്റത്തുള്ള വര */
-  opacity: 0.5;
-  margin-bottom: 20px;
-}
 </style>
 </head>
 <body>
@@ -290,9 +272,6 @@ body {
   <div class="back-cover-base"></div>
   <div class="spine"></div>
 </div>
-
-<!-- സ്ക്രീനിന്റെ അറ്റത്തെ വര -->
-<div class="bottom-line-spacer"></div>
 
 <script>
 const pagesData = [
