@@ -20,15 +20,16 @@ body {
   align-items: center;
   background: radial-gradient(circle at top, #1e293b 0%, #0f172a 54%, #020617 100%);
   font-family: Georgia, serif;
-  overflow: hidden;
-  padding: 20px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  padding: 40px 10px;
 }
 
 .stage {
   position: relative;
   width: 520px;
   height: 650px;
-  margin-left: 60px;
+  margin: 0 auto;
   perspective: 2500px;
   perspective-origin: 50% 50%;
   transform-style: preserve-3d;
