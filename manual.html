@@ -1,10 +1,10 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>BAS CHARITY INTERNATIONAL</title>
-<!-- Beautiful Handwriting Font Import -->
+<!-- Font Import -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
@@ -12,7 +12,6 @@
 <style>
 * { box-sizing: border-box; margin: 0; padding: 0; user-select: none; -webkit-user-select: none; }
 
-/* പേജ് മൊത്തത്തിൽ സ്‌ക്രോൾ ചെയ്യാതിരിക്കാൻ */
 html, body { 
   width: 100%; 
   height: 100%; 
@@ -26,23 +25,23 @@ body {
   align-items: center;
   background: radial-gradient(circle at top, #1e293b 0%, #0f172a 54%, #020617 100%);
   font-family: Georgia, serif;
-  padding: 10px; 
+  padding: 5px; 
 }
 
-/* Diplomatic & Proportional Book Stage */
+/* Book Stage - Mobile Responsive Fitting */
 .stage {
   position: relative;
-  width: min(86vw, 460px);          /* ഫോൺ സ്‌ക്രീനുകളിൽ അനുയോജ്യമായ ഫ്ലെക്സിബിൾ വീതി */
-  aspect-ratio: 1 / 1.35;           /* ഒറിജിനൽ ബുക്കിന്റെ പ്രോപ്പർഷണൽ അനുപാതം */
-  margin-top: 25mm !important;      /* Thank you ബോർഡിൽ നിന്ന് കൃത്യമായി 2.5 cm താഴെ */
-  margin-bottom: 15px;
+  width: min(80vw, 400px);
+  max-height: 58vh;                 /* അടിഭാഗം മുറിഞ്ഞു പോകാതിരിക്കാൻ */
+  aspect-ratio: 1 / 1.35;
+  margin-top: 20px !important;      /* മാന്യമായ ഇടവേള */
+  margin-bottom: 10px;
   margin-left: auto;
   margin-right: auto;
   perspective: 2500px;
   perspective-origin: 50% 50%;
   transform-style: preserve-3d;
   touch-action: none;
-  /* Diplomatic Style 3D Angle */
   transform: rotateY(-14deg) rotateX(4deg) rotateZ(-0.5deg);
 }
 
@@ -108,26 +107,26 @@ body {
   justify-content: space-between;
   align-items: center;
   text-align: center;
-  padding: 8% 5% 6%;
+  padding: 7% 5% 10%;              /* അടിയിലെ പേരിന് വ്യക്തത നൽകാൻ താഴത്തെ പാഡിങ് കൂട്ടി */
   z-index: 10;
   pointer-events: none;
 }
 
 .brand-logo {
-  width: min(75px, 14vw);
-  height: min(75px, 14vw);
-  margin-bottom: 8px;
+  width: min(65px, 12vw);
+  height: min(65px, 12vw);
+  margin-bottom: 6px;
   fill: #000000;
   filter: drop-shadow(0 2px 4px rgba(212,175,55,0.5));
 }
 
 .main-title-unified {
   font-family: 'Arial Black', Gadget, sans-serif;
-  font-size: clamp(17px, 5.2vw, 26px);
+  font-size: clamp(15px, 4.8vw, 24px);
   font-weight: 900;
   color: #000000;
-  letter-spacing: 1.5px;
-  line-height: 1.25;
+  letter-spacing: 1px;
+  line-height: 1.2;
   text-transform: uppercase;
   text-shadow: 
     1px 1px 0px #d4af37,
@@ -138,20 +137,20 @@ body {
 
 .sub-title-dark {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  font-size: clamp(9px, 2.4vw, 11px);
+  font-size: clamp(8px, 2.2vw, 10px);
   font-weight: 900;
   color: #000000;
-  letter-spacing: 1.5px;
+  letter-spacing: 1px;
   text-transform: uppercase;
-  margin-top: 10px;
-  border-top: 2px solid #000000;
-  border-bottom: 2px solid #000000;
-  padding: 4px 8px;
+  margin-top: 6px;
+  border-top: 1.5px solid #000000;
+  border-bottom: 1.5px solid #000000;
+  padding: 3px 6px;
 }
 
 .author-handwriting-3d {
   font-family: 'Dancing Script', 'Brush Script MT', cursive;
-  font-size: clamp(19px, 5.2vw, 26px);
+  font-size: clamp(17px, 4.8vw, 24px);
   font-weight: 700;
   font-style: italic;
   color: #1a1a1a;
@@ -161,6 +160,7 @@ body {
     1px 1px 0px #ffd700,
     2px 2px 1px #b8860b,
     3px 3px 3px rgba(0,0,0,0.3);
+  margin-bottom: 4px;             /* അടിവശത്തുനിന്ന് ഒരല്പം കയറ്റി നിർത്തി */
 }
 
 .page-face {
@@ -198,29 +198,29 @@ body {
   text-align: left;
 }
 .content-title {
-  font-size: clamp(12px, 3vw, 15px);
+  font-size: clamp(11px, 2.8vw, 14px);
   color: #000000;
   font-weight: 900;
   border-bottom: 2px solid #cbd5e1;
   padding-bottom: 4px;
-  margin-bottom: 8px;
+  margin-bottom: 6px;
   text-transform: uppercase;
   letter-spacing: .5px;
 }
 .content-body {
-  font-size: clamp(11.5px, 3.2vw, 15px);
-  line-height: 1.5;
+  font-size: clamp(10.5px, 2.8vw, 13.5px);
+  line-height: 1.45;
   color: #1e293b;
   text-align: justify;
 }
-.content-body p { margin-bottom: 6px; }
+.content-body p { margin-bottom: 5px; }
 
 .index-list { list-style: none; padding: 0; margin-top: 4px; }
 .index-item {
   display: flex;
   justify-content: space-between;
-  font-size: clamp(9.5px, 2.4vw, 11.5px);
-  padding: 3.5px 0;
+  font-size: clamp(8.5px, 2.2vw, 10.5px);
+  padding: 3px 0;
   border-bottom: 1px dashed #cbd5e1;
   color: #000000;
   font-weight: 700;
@@ -231,18 +231,18 @@ body {
   justify-content: space-between;
   align-items: center;
   border-top: 1px dashed #cbd5e1;
-  padding-top: 4px;
-  margin-top: 4px;
+  padding-top: 3px;
+  margin-top: 3px;
 }
 
 .page-number {
-  font-size: clamp(8.5px, 2vw, 10.5px);
+  font-size: clamp(8px, 1.8vw, 10px);
   color: #000000;
   font-weight: 900;
   font-family: sans-serif;
 }
 .flip-hint {
-  font-size: clamp(8.5px, 2vw, 10.5px);
+  font-size: clamp(8px, 1.8vw, 10px);
   color: #2563eb;
   font-weight: 700;
   font-family: sans-serif;
