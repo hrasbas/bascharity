@@ -11,29 +11,35 @@
 
 <style>
 * { box-sizing: border-box; margin: 0; padding: 0; user-select: none; -webkit-user-select: none; }
-html, body { width: 100%; height: 100%; }
+
+/* മൊബൈൽ സ്‌ക്രോളിംഗ് ശരിയാക്കാൻ height: 100% മാറ്റി min-height ആക്കി */
+html, body { 
+  width: 100%; 
+  min-height: 100vh; 
+}
+
 body {
-  min-height: 100vh;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
   background: radial-gradient(circle at top, #1e293b 0%, #0f172a 54%, #020617 100%);
   font-family: Georgia, serif;
-  overflow-y: auto;
+  /* ഫോൺ സ്‌ക്രീനിൽ സുഗമമായി സ്‌ക്രോൾ ചെയ്യാൻ overflow നിർബന്ധമാക്കി */
+  overflow-y: auto !important; 
   overflow-x: hidden;
-  padding: 40px 10px 40px 10px;
+  padding: 40px 10px 60px 10px;
 }
 
 .stage {
   position: relative;
   width: 520px;
-  height:850px;
-  margin: 20mm auto 0 auto; /* താങ്ക്യൂ ബോക്‌സുമായി കൃത്യമായി 2cm (20mm) ഇടവേള */
+  height: 650px;
+  margin: 20mm auto 40px auto; /* കൃത്യമായി 2cm (20mm) ഗ്യാപ്പ് */
   perspective: 2500px;
   perspective-origin: 50% 50%;
   transform-style: preserve-3d;
-  touch-action: none;
+  touch-action: pan-y; /* ഫോണിൽ വിരൽ കൊണ്ട് താഴേക്ക് സ്‌ക്രോൾ ചെയ്യാൻ അനുവാദം നൽകുന്നു */
   transform: rotateY(-18deg) rotateX(6deg);
 }
 
@@ -686,7 +692,6 @@ pages.forEach((page) => {
     }
     
     setPageVisuals(page, currentRotateY, Math.abs(dx), Math.abs(dy));
-    e.preventDefault?.();
   });
 
   const finishTurn = () => {
