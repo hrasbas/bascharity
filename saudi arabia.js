@@ -8,7 +8,7 @@ window.countryShops["saudi arabia"] = [
     u:"https://www.amazon.sa/",
     d:"amazon.sa is a leading online marketplace in saudi arabia offering a huge range of electronics, home goods, fashion, beauty, books, groceries and more for customers across the kingdom.[web:835][web:844]",
     k:"amazon.sa ksa,online shopping saudi arabia,electronics mobiles and gadgets,fashion beauty home and books,groceries and everyday products marketplace",
-    a:"https://www.amazon.sa/?tag=vmmbaslinks01-21"
+    a:"https://www.amazon.sa/?tag=bascharity05-21"
   },
   {
     i:2,
