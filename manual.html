@@ -28,6 +28,7 @@ body {
   position: relative;
   width: 520px;
   height: 650px;
+  margin-top: -80px;
   margin-left: 60px;
   perspective: 2500px;
   perspective-origin: 50% 50%;
@@ -74,12 +75,16 @@ body {
 }
 .page:active { cursor: grabbing; }
 
-@keyframes cornerWiggle {
+@keyframes coverBreeze {
   0%, 100% { transform: rotateY(0deg); }
-  50% { transform: rotateY(-16deg); }
+  3% { transform: rotateY(-22deg); }
+  6% { transform: rotateY(0deg); }
+  9% { transform: rotateY(-12deg); }
+  12% { transform: rotateY(0deg); }
 }
-.page.hint-wiggle {
-  animation: cornerWiggle 1.8s ease-in-out infinite;
+
+.cover-page.breeze-animation {
+  animation: coverBreeze 15s ease-in-out infinite;
 }
 
 .cover-page .page-face {
@@ -198,7 +203,7 @@ body {
   letter-spacing: .5px;
 }
 .content-body {
-  font-size: 12px;
+  font-size: 17px;
   line-height: 1.6;
   color: #1e293b;
   text-align: justify;
@@ -296,8 +301,7 @@ const pagesData = [
       { name: '09. Privacy Policy', page: 'Page 11' },
       { name: '10. Terms & Conditions', page: 'Page 12' },
       { name: '11. User Responsibilities', page: 'Page 13' },
-      { name: '12. Disclaimer', page: 'Page 14' },
-      { name: '13. Cookie Policy', page: 'Page 15' }
+      { name: '12. Disclaimer', page: 'Page 14' }
     ]
   },
   {
@@ -305,18 +309,15 @@ const pagesData = [
     title: 'INDEX / സൂചിക (PART 2)',
     pageNo: 'Page 02',
     items: [
-      { name: '14. Copyright Notice', page: 'Page 16' },
-      { name: '15. Intellectual Property Rights', page: 'Page 17' },
-      { name: '16. External Links Policy', page: 'Page 18' },
-      { name: '17. Financial Transparency', page: 'Page 19' },
-      { name: '18. Donations & Charity Policy', page: 'Page 20' },
-      { name: '19. Security & Data Protection', page: 'Page 21' },
-      { name: '20. Community Guidelines', page: 'Page 22' },
-      { name: '21. FAQ', page: 'Page 23' },
-      { name: '22. Contact Information', page: 'Page 24' },
-      { name: '23. Updates & Amendments', page: 'Page 25' },
-      { name: '24. Acknowledgements', page: 'Page 26' },
-      { name: '25. Thank You', page: 'Page 27' }
+      { name: '13. Copyright Notice', page: 'Page 15' },
+      { name: '14. Intellectual Property Rights', page: 'Page 16' },
+      { name: '15. Donations & Charity Policy', page: 'Page 17' },
+      { name: '16. Security & Data Protection', page: 'Page 18' },
+      { name: '17. Community Guidelines', page: 'Page 19' },
+      { name: '18. FAQ', page: 'Page 20' },
+      { name: '19. Contact Information', page: 'Page 21' },
+      { name: '20. Updates & Amendments', page: 'Page 22' },
+      { name: '21. Thank You', page: 'Page 23' }
     ]
   },
   {
@@ -442,16 +443,6 @@ const pagesData = [
     `
   },
   {
-    title: "COOKIE POLICY",
-    content: `
-      <p>BAS Charity International may use cookies and similar technologies to improve website performance, enhance user experience, and understand how visitors interact with our platform.</p>
-      <p>Cookies are small text files stored on your device that help remember preferences, analyze website traffic, and support essential website functions.</p>
-      <p>You can control or disable cookies through your browser settings. However, disabling certain cookies may affect the functionality and performance of some parts of the website.</p>
-      <p>By continuing to use our website, you consent to the use of cookies in accordance with this Cookie Policy unless you choose to disable them.</p>
-      <p><strong>Our goal is to use cookies responsibly while respecting your privacy and enhancing your browsing experience.</strong></p>
-    `
-  },
-  {
     title: "COPYRIGHT NOTICE",
     content: `
       <p>All content published on BAS Charity International, including text, graphics, logos, icons, images, designs, and other materials, is protected by applicable copyright and intellectual property laws unless otherwise stated.</p>
@@ -460,6 +451,90 @@ const pagesData = [
       <p>Unauthorized use of our content may result in legal action under applicable copyright and intellectual property laws.</p>
       <p><strong>We appreciate and encourage respect for intellectual property rights.</strong></p>
     `
+  },
+  {
+    title: "INTELLECTUAL PROPERTY RIGHTS",
+    content: `
+      <p>BAS Charity International respects the intellectual property rights of others and expects all users to do the same.</p>
+      <p>All original content, designs, logos, graphics, text, software, and other materials created for this website are the intellectual property of BAS Charity International unless otherwise stated.</p>
+      <p>Users may view and use the website for personal, non-commercial purposes only. Any unauthorized copying, modification, distribution, commercial use, or creation of derivative works is prohibited without prior written permission.</p>
+      <p>If you believe that any content on this website infringes your intellectual property rights, please contact us with the relevant details so that we can review and address the matter promptly.</p>
+      <p><strong>We are committed to protecting intellectual property and respecting the rights of creators, owners, and partners.</strong></p>
+    `
+  },
+  {
+    title: "DONATIONS & CHARITY POLICY",
+    content: `
+      <p>BAS Charity International is dedicated to supporting humanitarian and charitable initiatives through eligible affiliate earnings and other lawful sources of funding.</p>
+      <p>Our charitable activities are carried out with a commitment to transparency, accountability, and ethical responsibility. Support will be provided based on available resources and organizational priorities.</p>
+      <p>Where appropriate, updates regarding charitable initiatives, contributions, and community projects may be published through our official website or other authorized communication channels.</p>
+      <p>All charitable activities are subject to applicable laws, regulations, and the operational capacity of BAS Charity International.</p>
+      <p><strong>Our commitment is to transform everyday support into meaningful assistance for those in need.</strong></p>
+    `
+  },
+  {
+    title: "SECURITY & DATA PROTECTION",
+    content: `
+      <p>BAS Charity International is committed to protecting the security of our website and the information entrusted to us by our users.</p>
+      <p>We implement reasonable technical and organizational measures to safeguard data against unauthorized access, misuse, alteration, disclosure, or destruction.</p>
+      <p>Although we strive to maintain a secure online environment, no website or internet transmission can be guaranteed to be completely secure. Users are encouraged to take appropriate precautions while using online services.</p>
+      <p>Any personal information collected through our website will be handled in accordance with our Privacy Policy and applicable data protection laws.</p>
+      <p><strong>Protecting your information is an important part of maintaining your trust.</strong></p>
+    `
+  },
+  {
+    title: "COMMUNITY GUIDELINES",
+    content: `
+      <p>BAS Charity International welcomes everyone to participate in a respectful, honest, and inclusive online community.</p>
+      <p>Users are expected to interact with others politely and must not post or share unlawful, abusive, offensive, misleading, or harmful content through our platform.</p>
+      <p>Any attempt to misuse the website, violate the rights of others, distribute malicious software, or interfere with the operation of the platform may result in restricted access or other appropriate action.</p>
+      <p>We encourage positive participation that reflects compassion, integrity, and respect for people of all backgrounds, cultures, and beliefs.</p>
+      <p><strong>Together, we can build a safe, welcoming, and trustworthy community for everyone.</strong></p>
+    `
+  },
+  {
+    title: "FREQUENTLY ASKED QUESTIONS (FAQ)",
+    content: `
+      <p><strong>Q: Does shopping through BAS Charity International cost me extra?</strong><br>
+      A: No. Eligible purchases are made at the merchant's normal price.</p>
+      <p><strong>Q: Where do I complete my purchase?</strong><br>
+      A: All purchases are completed securely on the official website of the respective merchant.</p>
+      <p><strong>Q: How does BAS Charity International receive support?</strong><br>
+      A: Eligible purchases may generate affiliate commissions paid by participating merchants.</p>
+      <p><strong>Q: Is BAS Charity International responsible for products or services?</strong><br>
+      A: No. Products, services, payments, shipping, and customer support are handled by the respective merchants.</p>
+      <p><strong>For more information, please visit our Contact page or reach out through our official communication channels.</strong></p>
+    `
+  },
+  {
+    title: "CONTACT INFORMATION",
+    content: `
+      <p>BAS Charity International welcomes your questions, suggestions, feedback, and partnership inquiries.</p>
+      <p>If you need assistance or wish to contact us regarding our website, affiliate partnerships, charitable initiatives, or any other matter, please use our official communication channels.</p>
+      <p>We will make every reasonable effort to respond to genuine inquiries as promptly as possible.</p>
+      <p>Please refer to the Contact page on our website for our latest email address, contact form, and other official communication details.</p>
+      <p><strong>We appreciate your interest and thank you for supporting BAS Charity International.</strong></p>
+    `
+  },
+  {
+    title: "UPDATES & AMENDMENTS",
+    content: `
+      <p>BAS Charity International reserves the right to update, modify, or amend its policies, terms, and website content at any time to reflect operational, legal, or regulatory changes.</p>
+      <p>Any revisions will become effective upon publication on our official website unless otherwise stated.</p>
+      <p>Users are encouraged to review these policies periodically to stay informed about any updates that may affect their use of our website and services.</p>
+      <p>Your continued use of BAS Charity International after changes have been published constitutes your acceptance of the revised policies and terms.</p>
+      <p><strong>We are committed to keeping our policies accurate, transparent, and up to date.</strong></p>
+    `
+  },
+  {
+    title: "THANK YOU",
+    content: `
+      <p>Thank you for visiting BAS Charity International and for taking the time to learn about our mission and values.</p>
+      <p>Your support, trust, and participation help us move closer to our goal of creating a better world through responsible everyday shopping and meaningful humanitarian action.</p>
+      <p>Whether you are a visitor, customer, affiliate partner, volunteer, or supporter, your contribution is truly valued and appreciated.</p>
+      <p>We look forward to serving our global community with integrity, transparency, and compassion for many years to come.</p>
+      <p><strong>Thank you for being part of our journey. Together, we can make every purchase a step toward a brighter future.</strong></p>
+    `
   }
 ];
 
@@ -467,7 +542,7 @@ const stage = document.getElementById('bookStage');
 
 function makePage(data, index) {
   const page = document.createElement('div');
-  page.className = 'page' + (index === 0 ? ' cover-page hint-wiggle' : '');
+  page.className = 'page' + (index === 0 ? ' cover-page breeze-animation' : '');
   page.dataset.index = index;
   page.dataset.state = 'closed';
   
@@ -590,7 +665,7 @@ function clearPageVisuals(page) {
 
 pages.forEach((page) => {
   page.addEventListener('pointerdown', (e) => {
-    page.classList.remove('hint-wiggle');
+    page.classList.remove('breeze-animation');
     const pt = getPoint(e);
     draggingPage = page;
     startX = pt.x;
