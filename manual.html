@@ -28,13 +28,13 @@ body {
   padding: 0;
 }
 
-/* Book Stage - Maximized Fit for Mobile */
+/* Book Stage - Top Margin set to 2.5cm below header elements */
 .stage {
   position: relative;
   width: min(88vw, 420px);
-  height: calc(100vh - 140px);       /* സ്ക്രീനിന്റെ ലഭ്യമായ പരമാവധി ഉയരം */
-  max-height: 520px;
-  margin-top: 10px !important;
+  height: calc(100vh - 180px);       
+  max-height: 500px;
+  margin-top: 2.5cm !important;       /* പ്രാർത്ഥനാ ബോക്സിൽ നിന്ന് 2.5 cm താഴേക്ക് മാറ്റി */
   margin-bottom: 5px;
   margin-left: auto;
   margin-right: auto;
@@ -99,7 +99,7 @@ body {
   justify-content: space-between;
   align-items: center;
   text-align: center;
-  padding: 6% 4% 8%;               /* അടിയിലെ പേര് കൃത്യമായി കാണാൻ */
+  padding: 6% 4% 8%;
   z-index: 10;
   pointer-events: none;
 }
