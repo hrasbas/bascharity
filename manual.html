@@ -28,17 +28,17 @@ body {
 .stage {
   position: relative;
   width: 520px;
-  height: 850px; /* 650px എന്നത് 850px ആക്കി നീട്ടിയിട്ടുണ്ട് */
-  margin-top: 40px;
+  height: 650px;
+  margin-top: 10px; /* മുകളിലെ ഗ്യാപ്പ് കുറയ്ക്കുമ്പോൾ പുസ്തകത്തിന്റെ അടിഭാഗം സ്വയം താഴേക്ക് നീങ്ങും */
   margin-left: auto;
   margin-right: auto;
   perspective: 2500px;
   perspective-origin: 50% 50%;
   transform-style: preserve-3d;
   touch-action: none;
-  transform: rotateY(-18deg) rotateX(6deg);
+  /* scale(0.9) അല്ലെങ്കിൽ അനുയോജ്യമായ വലിപ്പം നൽകിയാൽ പുസ്തകത്തിന്റെ അടിഭാഗം കട്ടാവാതെ താഴെ വ്യക്തമായി കാണാം */
+  transform: scale(0.9) rotateY(-18deg) rotateX(6deg);
 }
-
 
 .back-cover-base {
   position: absolute;
