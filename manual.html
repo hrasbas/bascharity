@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8" />
@@ -75,7 +75,7 @@ body {
 .page {
   position: absolute;
   inset: 0;
-  transform-origin: bottom center;
+  transform-origin: left center;
   transform-style: preserve-3d;
   transition: transform .65s cubic-bezier(.25, 1, .5, 1);
   will-change: transform;
@@ -706,8 +706,8 @@ function setPageVisuals(page, rotateY, px, py) {
   const curve = Math.sin(progress * Math.PI);
   
   const curveZ = curve * 28; 
-page.style.transform = `translate3d(0, 40px, ${curveZ}px) rotateY(${rotateY}deg) scale(1.1)`;
-page.style.transformOrigin = 'bottom center';
+  
+  page.style.transform = `translate3d(0, 0, ${curveZ}px) rotateY(${rotateY}deg)`;
   page.style.filter = `drop-shadow(${curve * -18}px ${curve * 14}px 22px rgba(0,0,0,0.4))`;
   
   if (wrinkle) wrinkle.style.opacity = String(curve * 1.0);
