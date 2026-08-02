@@ -11,32 +11,35 @@
 
 <style>
 * { box-sizing: border-box; margin: 0; padding: 0; user-select: none; -webkit-user-select: none; }
-html, body { width: 100%; height: 100%; }
+
+/* മൊബൈൽ സ്‌ക്രോളിംഗ് ശരിയാക്കാൻ height: 100% മാറ്റി min-height ആക്കി */
+html, body { 
+  width: 100%; 
+  min-height: 100vh; 
+}
+
 body {
-  min-height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
   background: radial-gradient(circle at top, #1e293b 0%, #0f172a 54%, #020617 100%);
   font-family: Georgia, serif;
-  overflow-y: auto; /* സ്ക്രീൻ താഴേക്ക് ഡ്രാഗ് ചെയ്യാനും നീളാനും */
-  padding: 20px 20px 200px 20px; /* താഴേക്ക് കൂടുതൽ സ്പേസ് (200px) നീട്ടാൻ */
+  /* ഫോൺ സ്‌ക്രീനിൽ സുഗമമായി സ്‌ക്രോൾ ചെയ്യാൻ overflow നിർബന്ധമാക്കി */
+  overflow-y: auto !important; 
+  overflow-x: hidden;
+  padding: 40px 10px 60px 10px;
 }
-
-
 
 .stage {
   position: relative;
   width: 520px;
   height: 650px;
-  top: 120px; /* പുസ്തകത്തെ മുഴുവനായി താഴേക്ക് തള്ളി ബലൂണിന് അടുത്തേക്ക് എത്തിക്കാൻ */
-  margin-left: auto;
-  margin-right: auto;
+  margin: 20mm auto 40px auto; /* കൃത്യമായി 2cm (20mm) ഗ്യാപ്പ് */
   perspective: 2500px;
   perspective-origin: 50% 50%;
   transform-style: preserve-3d;
-  touch-action: none;
+  touch-action: pan-y; /* ഫോണിൽ വിരൽ കൊണ്ട് താഴേക്ക് സ്‌ക്രോൾ ചെയ്യാൻ അനുവാദം നൽകുന്നു */
   transform: rotateY(-18deg) rotateX(6deg);
 }
 
@@ -52,7 +55,6 @@ body {
   box-shadow: inset 0 0 34px rgba(0,0,0,.12), inset -16px 0 30px rgba(0,0,0,.08), -5px 10px 25px rgba(0,0,0,0.3);
   z-index: 1;
 }
-
 
 .spine {
   position: absolute;
@@ -79,16 +81,12 @@ body {
 }
 .page:active { cursor: grabbing; }
 
-@keyframes coverBreeze {
+@keyframes cornerWiggle {
   0%, 100% { transform: rotateY(0deg); }
-  3% { transform: rotateY(-22deg); }
-  6% { transform: rotateY(0deg); }
-  9% { transform: rotateY(-12deg); }
-  12% { transform: rotateY(0deg); }
+  50% { transform: rotateY(-16deg); }
 }
-
-.cover-page.breeze-animation {
-  animation: coverBreeze 10s ease-in-out infinite;
+.page.hint-wiggle {
+  animation: cornerWiggle 1.8s ease-in-out infinite;
 }
 
 .cover-page .page-face {
@@ -433,7 +431,7 @@ const pagesData = [
       <p>You are responsible for verifying all product details, prices, offers, shipping terms, and return policies directly on the respective merchant's website before completing any transaction.</p>
       <p>Users must not engage in any activity that could damage, disable, overburden, or impair the performance, security, or functionality of this website.</p>
       <p>Any attempt to gain unauthorized access, collect user data without permission, or use automated systems to scrape or manipulate content is strictly prohibited.</p>
-      <p><strong>By using this website, you agree to respect our policies and help maintain a safe, fair, and reliable environment for everyone.</strong></p>
+      <p>By using this website, you agree to respect our policies and help maintain a safe, fair, and reliable environment for everyone.</p>
     `
   },
   {
@@ -546,7 +544,7 @@ const stage = document.getElementById('bookStage');
 
 function makePage(data, index) {
   const page = document.createElement('div');
-  page.className = 'page' + (index === 0 ? ' cover-page breeze-animation' : '');
+  page.className = 'page' + (index === 0 ? ' cover-page hint-wiggle' : '');
   page.dataset.index = index;
   page.dataset.state = 'closed';
   
@@ -615,26 +613,6 @@ let startX = 0;
 let startY = 0;
 let currentRotateY = 0;
 
-// 2 Minutes Inactivity Timer for Auto-Close
-let inactivityTimer;
-function resetInactivityTimer() {
-  clearTimeout(inactivityTimer);
-  inactivityTimer = setTimeout(() => {
-    pages.forEach((page) => {
-      page.dataset.state = 'closed';
-      if(page.classList.contains('cover-page')) {
-        page.classList.add('breeze-animation');
-      }
-    });
-    syncStack();
-  }, 120000); // 120 seconds = 2 minutes
-}
-
-['mousemove', 'mousedown', 'touchstart', 'touchmove', 'click'].forEach(eventType => {
-  window.addEventListener(eventType, resetInactivityTimer, { passive: true });
-});
-resetInactivityTimer();
-
 function syncStack() {
   pages.forEach((page, i) => {
     const isFlipped = page.dataset.state === 'open';
@@ -689,7 +667,7 @@ function clearPageVisuals(page) {
 
 pages.forEach((page) => {
   page.addEventListener('pointerdown', (e) => {
-    page.classList.remove('breeze-animation');
+    page.classList.remove('hint-wiggle');
     const pt = getPoint(e);
     draggingPage = page;
     startX = pt.x;
@@ -714,7 +692,6 @@ pages.forEach((page) => {
     }
     
     setPageVisuals(page, currentRotateY, Math.abs(dx), Math.abs(dy));
-    e.preventDefault?.();
   });
 
   const finishTurn = () => {
@@ -725,15 +702,8 @@ pages.forEach((page) => {
     
     if (shouldOpen) {
       page.dataset.state = 'open';
-      // Stop breeze animation permanently once cover is opened
-      if(page.classList.contains('cover-page')) {
-        page.classList.remove('breeze-animation');
-      }
     } else {
       page.dataset.state = 'closed';
-      if(page.classList.contains('cover-page')) {
-        page.classList.add('breeze-animation');
-      }
     }
     
     draggingPage = null;
