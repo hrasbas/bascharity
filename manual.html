@@ -26,10 +26,12 @@ body {
 
 .stage {
   position: relative;
-  width: 520px;
-  height: 650px;
-  margin-top:80px;
-  margin-left: 60px;
+  width: 100%;             /* ബോക്സിന്റെ വീതി കൃത്യമായി കിട്ടാൻ */
+  max-width: 550px;       /* മൊബൈലിലും ഡെസ്ക് ടോപ്പിലും പുസ്തകം ഒരേ വലിപ്പത്തിൽ നിൽക്കാൻ */
+  height: 750px;          /* പുസ്തകത്തിന്റെ നീളം കൂട്ടാൻ (650px എന്നത് 750px ആക്കി) */
+  margin-top: 140px;      /* പുസ്തകം താഴേക്ക് ഇറങ്ങിനിൽക്കാൻ (80px എന്നത് 140px ആക്കി) */
+  margin-left: auto;      /* സെന്ററിലേക്ക് കൊണ്ടുവരാൻ */
+  margin-right: auto;
   perspective: 2500px;
   perspective-origin: 50% 50%;
   transform-style: preserve-3d;
