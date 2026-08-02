@@ -27,24 +27,33 @@ body {
   padding:20px;
   overflow: visible !important;
 }
-
 .stage {
   position: relative;
   left: 50px;
   width: 450px;
-  height:1000px;
-  top: 5cm; 
+  
+  /* ഉയരം കൂട്ടിയാൽ അടിഭാഗം ഇളകാതെ മുകളിലേക്ക് വളരും */
+  height: 1050px; 
+  
+  /* സ്ക്രീനിന്റെ അളവിനനുസരിച്ച് ഫിക്സ് ചെയ്യാൻ top അല്പം മാറ്റി കൊടുക്കുക */
+  top: 3.5cm; 
+  
   margin-left: auto;
   margin-right: auto;
-  margin-top: 2cm; 
-  margin-bottom: 3cm;
+  margin-top: 1cm; 
+  margin-bottom: 2cm;
+  
   perspective: 2500px;
   perspective-origin: 50% 50%;
   transform-style: preserve-3d;
   touch-action: none;
+  
+  /* അടിഭാഗം ഫിക്സ് ചെയ്ത് നിർത്തുന്നു */
   transform-origin: bottom center; 
+  
   transform: translateX(-40px) rotateY(-18deg) rotateX(6deg);
 }
+
 
 
 .back-cover-base {
