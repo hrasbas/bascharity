@@ -32,7 +32,7 @@ body {
 .stage {
   position: relative;
   width: min(95vw, 480px);
-  height: 900px !important;   /* ഇവിടെ കൃത്യമായി 650px ലഭിക്കും */
+  height: 900px !important;
   margin-top: 6.5cm !important;
   margin-bottom: 20px;
   margin-left: auto;
@@ -41,7 +41,8 @@ body {
   perspective-origin: 50% 50%;
   transform-style: preserve-3d;
   touch-action: none;
-  transform: rotateY(-12deg) rotateX(2deg);
+  transform-origin: top center;
+  transform: rotateY(-12deg) rotateX(2deg) scale(1.08);
 }
 
 
