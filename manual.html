@@ -1,0 +1,788 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>BAS CHARITY INTERNATIONAL</title>
+<!-- Font Import -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
+
+<style>
+* { box-sizing: border-box; margin: 0; padding: 0; user-select: none; -webkit-user-select: none; }
+
+html, body { 
+  width: 100%; 
+  height: 100%; 
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  background: radial-gradient(circle at top, #1e293b 0%, #0f172a 54%, #020617 100%);
+  font-family: Georgia, serif;
+  padding:20px;
+  overflow: visible !important;
+}
+
+.stage {
+  position: relative;
+  left: 50px;
+
+  width:450px;
+  height:850px;
+  top:2.5cm;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 3cm;
+
+  perspective: 2500px;
+  perspective-origin: 50% 50%;
+  transform-style: preserve-3d;
+  touch-action: none;
+  transform: translateX(-40px) rotateY(-18deg) rotateX(6deg);
+}
+
+.back-cover-base {
+  position: absolute;
+  top: -2mm;
+  left: 0;
+  width: calc(100% + 2mm);
+  height: calc(100% + 4mm);
+  background: linear-gradient(135deg, #d7e1ee 0%, #c7d2e0 100%);
+  border: 1.5px solid #94a3b8;
+  border-radius: 2px;
+  box-shadow: inset 0 0 34px rgba(0,0,0,.12), inset -16px 0 30px rgba(0,0,0,.08), -6px 12px 28px rgba(0,0,0,0.35);
+  z-index: 1;
+}
+
+.spine {
+  position: absolute;
+  left: -14px;
+  top: -2mm;
+  width: 14px;
+  height: calc(100% + 4mm);
+  background: linear-gradient(to right, #64748b, #94a3b8, #cbd5e1);
+  border-left: 1px solid #475569;
+  border-radius: 4px 0 0 4px;
+  box-shadow: -2px 0 8px rgba(0,0,0,.2);
+  z-index: 80;
+}
+
+.page {
+  position: absolute;
+  inset: 0;
+  transform-origin: left center;
+  transform-style: preserve-3d;
+  transition: transform .65s cubic-bezier(.25, 1, .5, 1);
+  will-change: transform;
+  cursor: grab;
+  pointer-events: auto;
+}
+.page:active { cursor: grabbing; }
+
+.cover-page .page-face {
+  background:
+    radial-gradient(circle at 30% 20%, rgba(255,255,255,.75), transparent 40%),
+    linear-gradient(135deg, #e2e8f0 0%, #cbd5e1 100%);
+  border: 2px solid #94a3b8;
+  box-shadow: inset 0 0 34px rgba(0,0,0,.10), inset -16px 0 30px rgba(0,0,0,.06);
+}
+
+.cover-title {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  padding: 6% 4% 8%;
+  z-index: 10;
+  pointer-events: none;
+}
+
+.brand-logo {
+  width: min(60px, 11vw);
+  height: min(60px, 11vw);
+  margin-bottom: 4px;
+  fill: #000000;
+  filter: drop-shadow(0 2px 4px rgba(212,175,55,0.5));
+}
+
+.main-title-unified {
+  font-family: 'Arial Black', Gadget, sans-serif;
+  font-size: clamp(16px, 5vw, 24px);
+  font-weight: 900;
+  color: #000000;
+  letter-spacing: 1px;
+  line-height: 1.2;
+  text-transform: uppercase;
+  text-shadow: 
+    1px 1px 0px #d4af37,
+    2px 2px 0px #aa7c11,
+    3px 3px 2px rgba(0, 0, 0, 0.4);
+  margin-bottom: 4px;
+}
+
+.sub-title-dark {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: clamp(8px, 2.3vw, 11px);
+  font-weight: 900;
+  color: #000000;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin-top: 4px;
+  border-top: 1.5px solid #000000;
+  border-bottom: 1.5px solid #000000;
+  padding: 3px 6px;
+}
+
+.author-handwriting-3d {
+  font-family: 'Dancing Script', 'Brush Script MT', cursive;
+  font-size: clamp(18px, 5.2vw, 26px);
+  font-weight: 700;
+  font-style: italic;
+  color: #1a1a1a;
+  letter-spacing: 1px;
+  text-transform: none;
+  text-shadow: 
+    1px 1px 0px #ffd700,
+    2px 2px 1px #b8860b,
+    3px 3px 3px rgba(0,0,0,0.3);
+}
+
+.page-face {
+  position: absolute;
+  inset: 0;
+  padding: 5% 5% 4%;
+  background: linear-gradient(135deg, #fffdf8 0%, #f4ede0 100%);
+  border: 1px solid #d6ccb6;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  overflow: hidden;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  pointer-events: none;
+}
+
+.page-face::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to right, rgba(0,0,0,.03), transparent 12px);
+  z-index: 2;
+}
+
+.front-face { z-index: 2; }
+.back-face { 
+  z-index: 1; 
+  transform: rotateY(180deg);
+  background: #fcfbf7;
+}
+
+.right-page-box {
+  width: 100%;
+  text-align: left;
+}
+.content-title {
+  font-size: clamp(12px, 3vw, 15px);
+  color: #000000;
+  font-weight: 900;
+  border-bottom: 2px solid #cbd5e1;
+  padding-bottom: 4px;
+  margin-bottom: 6px;
+  text-transform: uppercase;
+  letter-spacing: .5px;
+}
+.content-body {
+  font-size: clamp(10px, 2.6vw, 13px);
+  line-height: 1.4;
+  color: #1e293b;
+  text-align: justify;
+}
+.content-body p { margin-bottom: 4px; }
+
+.index-list { list-style: none; padding: 0; margin-top: 2px; }
+.index-item {
+  display: flex;
+  justify-content: space-between;
+  font-size: clamp(8.5px, 2.2vw, 10.5px);
+  padding: 2.5px 0;
+  border-bottom: 1px dashed #cbd5e1;
+  color: #000000;
+  font-weight: 700;
+}
+
+.page-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1px dashed #cbd5e1;
+  padding-top: 2px;
+  margin-top: 2px;
+}
+
+.page-number {
+  font-size: clamp(8px, 1.8vw, 10px);
+  color: #000000;
+  font-weight: 900;
+  font-family: sans-serif;
+}
+.flip-hint {
+  font-size: clamp(8px, 1.8vw, 10px);
+  color: #2563eb;
+  font-weight: 700;
+  font-family: sans-serif;
+}
+
+.wrinkle-fold {
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(circle at 100% 50%, rgba(255,255,255,.6) 0, transparent 40%),
+    linear-gradient(110deg, transparent 20%, rgba(0,0,0,.15) 42%, rgba(255,255,255,.65) 50%, rgba(0,0,0,.18) 58%, transparent 80%);
+  pointer-events: none;
+  opacity: 0;
+  z-index: 12;
+  transition: opacity .05s linear;
+}
+
+.corner-curl {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 0;
+  height: 0;
+  pointer-events: none;
+  z-index: 13;
+  opacity: 0;
+  background: linear-gradient(225deg, rgba(255,255,255,.98), rgba(210,200,180,.95));
+  clip-path: polygon(100% 0, 0 0, 100% 100%);
+  box-shadow: -10px 10px 22px rgba(0,0,0,.35);
+}
+
+/* 1. Flexible Opening Hint Animation (Peeking) */
+@keyframes peekAnimation {
+  0%   { transform: rotateY(0deg); }
+  20%  { transform: rotateY(-22deg); }
+  40%  { transform: rotateY(0deg); }
+  60%  { transform: rotateY(-15deg); }
+  80%  { transform: rotateY(0deg); }
+  100% { transform: rotateY(0deg); }
+}
+
+.page.peek-hint {
+  animation: peekAnimation 1.8s ease-in-out;
+}
+</style>
+</head>
+<body>
+
+<div class="stage" id="bookStage">
+  <div class="back-cover-base"></div>
+  <div class="spine"></div>
+</div>
+
+<script>
+const pagesData = [
+  {
+    cover: true,
+    title: 'BAS CHARITY<br>INTERNATIONAL',
+    subtitle: 'OFFICIAL POLICY & DOCUMENTATION MANUAL',
+    author: 'Mohamed Basheer Peringala'
+  },
+  {
+    isIndex: true,
+    title: 'INDEX / സൂചിക (PART 1)',
+    pageNo: 'Page 01',
+    items: [
+      { name: '01. Welcome', page: 'Page 03' },
+      { name: '02. About BAS Charity International', page: 'Page 04' },
+      { name: '03. Founder\'s Message', page: 'Page 05' },
+      { name: '04. Vision', page: 'Page 06' },
+      { name: '05. Mission', page: 'Page 07' },
+      { name: '06. How BAS Charity International Works', page: 'Page 08' },
+      { name: '07. Affiliate Disclosure', page: 'Page 09' },
+      { name: '08. Charity Commitment', page: 'Page 10' },
+      { name: '09. Privacy Policy', page: 'Page 11' },
+      { name: '10. Terms & Conditions', page: 'Page 12' },
+      { name: '11. User Responsibilities', page: 'Page 13' },
+      { name: '12. Disclaimer', page: 'Page 14' }
+    ]
+  },
+  {
+    isIndex: true,
+    title: 'INDEX / സൂചിക (PART 2)',
+    pageNo: 'Page 02',
+    items: [
+      { name: '13. Copyright Notice', page: 'Page 15' },
+      { name: '14. Intellectual Property Rights', page: 'Page 16' },
+      { name: '15. Donations & Charity Policy', page: 'Page 17' },
+      { name: '16. Security & Data Protection', page: 'Page 18' },
+      { name: '17. Community Guidelines', page: 'Page 19' },
+      { name: '18. FAQ', page: 'Page 20' },
+      { name: '19. Contact Information', page: 'Page 21' },
+      { name: '20. Updates & Amendments', page: 'Page 22' },
+      { name: '21. Thank You', page: 'Page 23' }
+    ]
+  },
+  {
+    title: "WELCOME",
+    content: `
+      <p>Welcome to <strong>BAS Charity International</strong>.</p>
+      <p>Thank you for visiting our platform.</p>
+      <p>BAS Charity International is a humanitarian initiative that aims to connect everyday shopping with charitable giving. Our goal is simple: to help people support humanitarian causes without paying anything extra.</p>
+      <p>When you shop through our trusted affiliate partners, you enjoy the same products, prices, offers, and services available on the original websites. If your purchase qualifies, we may receive an affiliate commission from the merchant. A significant portion of this income is intended to support charitable and humanitarian activities.</p>
+      <p>This book explains our mission, policies, commitments, and responsibilities. We encourage every visitor to read it carefully to better understand how our platform operates.</p>
+      <p>Thank you for being part of this meaningful journey.</p>
+      <p style="text-align: center; margin-top: 8px;"><strong>YOUR PURCHASE SATISFIES A HUNGER®</strong></p>
+    `
+  },
+  {
+    title: "ABOUT BAS CHARITY INTERNATIONAL",
+    content: `
+      <p>BAS Charity International is a humanitarian initiative established to promote charitable support through responsible everyday shopping.</p>
+      <p>Our platform connects visitors with trusted affiliate partners, allowing them to purchase products and services at the same prices offered by the original merchants. Eligible purchases may generate affiliate commissions without increasing the customer's cost.</p>
+      <p>We are committed to transparency, integrity, accountability, and respect for all people. Our objective is to encourage sustainable charitable support while maintaining a reliable and user-friendly platform for everyone.</p>
+      <p>BAS Charity International welcomes people of every nationality, religion, language, and culture. We believe that kindness, honesty, and collective participation can create meaningful and lasting positive change.</p>
+      <p><strong>Together, every eligible purchase has the potential to support a better future.</strong></p>
+    `
+  },
+  {
+    title: "FOUNDER'S MESSAGE",
+    content: `
+      <p>Welcome to BAS Charity International, and thank you for being part of this meaningful journey.</p>
+      <p>This initiative was created with a simple vision: to transform everyday shopping into an opportunity to support humanitarian causes. We believe that even the smallest contribution can make a lasting difference when millions of people participate together.</p>
+      <p>Our commitment is to build a platform based on honesty, transparency, integrity, and social responsibility. Every decision we make is guided by our desire to serve humanity with fairness and accountability.</p>
+      <p>I sincerely thank every visitor, supporter, affiliate partner, and well-wisher for your trust and encouragement. Together, we can help create a more compassionate and hopeful world.</p>
+      <p><strong>— Mohamed Basheer Peringala<br>Founder, BAS Charity International</strong></p>
+    `
+  },
+  {
+    title: "VISION",
+    content: `
+      <p>Our vision is to create a world where everyday shopping becomes a powerful force for humanitarian support and positive social change.</p>
+      <p>We aspire to build a trusted global platform that connects millions of people, businesses, and affiliate partners with a shared commitment to helping those in need.</p>
+      <p>By promoting transparency, integrity, and responsible partnerships, we aim to encourage sustainable charitable initiatives that benefit communities across the world.</p>
+      <p>We believe that when people unite with compassion and purpose, even small actions can create a lasting impact for future generations.</p>
+      <p><strong>Our vision is a future where every purchase has the potential to spread hope and transform lives.</strong></p>
+    `
+  },
+  {
+    title: "MISSION",
+    content: `
+      <p>Our mission is to make charitable giving simple, transparent, and sustainable by integrating it into everyday online shopping through trusted affiliate partnerships.</p>
+      <p>We strive to connect people with reliable merchants while encouraging responsible purchasing that can generate support for humanitarian initiatives without increasing the customer's cost.</p>
+      <p>We are committed to maintaining honesty, accountability, fairness, and respect in every aspect of our operations, ensuring that our platform remains trustworthy and beneficial to all users.</p>
+      <p>Through innovation, collaboration, and continuous improvement, we aim to inspire individuals and organizations worldwide to participate in building stronger and more compassionate communities.</p>
+      <p><strong>Our mission is to turn everyday purchases into meaningful opportunities to help others.</strong></p>
+    `
+  },
+  {
+    title: "HOW BAS CHARITY INTERNATIONAL WORKS",
+    content: `
+      <p>BAS Charity International connects users with trusted affiliate partners through a simple and transparent platform.</p>
+      <p>When you select a product or service from our website, you are redirected to the official website of the respective merchant to complete your purchase securely.</p>
+      <p>If your purchase qualifies under the merchant's affiliate program, the merchant may pay us a commission. This commission does not increase the price you pay or reduce any discounts or offers provided by the merchant.</p>
+      <p>A significant portion of eligible affiliate earnings is intended to support humanitarian and charitable initiatives in accordance with our published policies and commitments.</p>
+      <p><strong>Your purchase remains the same—its impact can become much greater.</strong></p>
+    `
+  },
+  {
+    title: "AFFILIATE DISCLOSURE",
+    content: `
+      <p>BAS Charity International participates in affiliate marketing programs with selected merchants and service providers.</p>
+      <p>Some links on this website are affiliate links. If you make a qualifying purchase through these links, we may receive a commission from the merchant at no additional cost to you.</p>
+      <p>The prices, discounts, and promotional offers available through our affiliate links are generally the same as those offered directly by the merchant, unless otherwise stated by the merchant.</p>
+      <p>We recommend products and services based on their relevance and value. However, all purchasing decisions remain entirely the responsibility of the user.</p>
+      <p><strong>Your trust is important to us, and we are committed to full transparency regarding our affiliate relationships.</strong></p>
+    `
+  },
+  {
+    title: "CHARITY COMMITMENT",
+    content: `
+      <p>BAS Charity International is committed to using eligible affiliate earnings to support genuine humanitarian and charitable initiatives in a transparent and responsible manner.</p>
+      <p>Our goal is to create a sustainable model where everyday shopping contributes to helping people in need without increasing the customer's purchase price.</p>
+      <p>We are dedicated to maintaining honesty, accountability, and fairness in all charitable activities. Information about our commitments and updates may be published on our website whenever appropriate.</p>
+      <p>As our organization grows, we will continue to strengthen our charitable programs through responsible partnerships and transparent practices.</p>
+      <p><strong>Every eligible purchase can become a step toward bringing hope, care, and positive change to those who need it most.</strong></p>
+    `
+  },
+  {
+    title: "PRIVACY POLICY",
+    content: `
+      <p>BAS Charity International respects your privacy and is committed to protecting your personal information.</p>
+      <p>We collect only the information necessary to operate our website, improve user experience, and provide our services. We do not sell or rent your personal information to third parties.</p>
+      <p>When you visit external merchant websites through our affiliate links, their privacy policies and terms of service will apply. We encourage you to review those policies before sharing any personal information.</p>
+      <p>We implement reasonable security measures to protect the information under our control. However, no internet transmission or electronic storage system can be guaranteed to be completely secure.</p>
+      <p><strong>By using our website, you acknowledge and accept the practices described in this Privacy Policy.</strong></p>
+    `
+  },
+  {
+    title: "TERMS & CONDITIONS",
+    content: `
+      <p>By accessing and using BAS Charity International, you agree to comply with these Terms & Conditions and all applicable laws and regulations.</p>
+      <p>You are responsible for using this website lawfully and respectfully. Any misuse, fraudulent activity, or attempt to interfere with the operation or security of the website is strictly prohibited.</p>
+      <p>Information provided on this website is for general informational purposes only. We reserve the right to update, modify, or discontinue any part of the website or these Terms & Conditions at any time without prior notice.</p>
+      <p>Your continued use of the website after any changes are published constitutes your acceptance of the revised Terms & Conditions.</p>
+      <p><strong>If you do not agree with these Terms & Conditions, please discontinue using this website.</strong></p>
+    `
+  },
+  {
+    title: "USER RESPONSIBILITIES",
+    content: `
+      <p>As a user of BAS Charity International, you agree to use our website and services responsibly, lawfully, and in good faith.</p>
+      <p>You are responsible for verifying all product details, prices, offers, shipping terms, and return policies directly on the respective merchant's website before completing any transaction.</p>
+      <p>Users must not engage in any activity that could damage, disable, overburden, or impair the performance, security, or functionality of this website.</p>
+      <p>Any attempt to gain unauthorized access, collect user data without permission, or use automated systems to scrape or manipulate content is strictly prohibited.</p>
+      <p>By using this website, you agree to respect our policies and help maintain a safe, fair, and reliable environment for everyone.</p>
+    `
+  },
+  {
+    title: "DISCLAIMER",
+    content: `
+      <p>The information provided on BAS Charity International is for general informational purposes only and should not be considered legal, financial, tax, medical, or professional advice.</p>
+      <p>While we strive to keep the information accurate and up to date, we make no guarantees regarding its completeness, reliability, or accuracy.</p>
+      <p>All products, services, prices, offers, and transactions are managed solely by the respective third-party merchants. BAS Charity International is not responsible for their content, policies, or business practices.</p>
+      <p>Your use of this website and any reliance on its information is entirely at your own discretion and risk.</p>
+      <p><strong>BAS Charity International shall not be liable for any direct or indirect loss or damage arising from the use of this website.</strong></p>
+    `
+  },
+  {
+    title: "COPYRIGHT NOTICE",
+    content: `
+      <p>All content published on BAS Charity International, including text, graphics, logos, icons, images, designs, and other materials, is protected by applicable copyright and intellectual property laws unless otherwise stated.</p>
+      <p>No part of this website may be copied, reproduced, distributed, modified, published, or transmitted without prior written permission from BAS Charity International or the respective copyright owner.</p>
+      <p>Third-party trademarks, logos, product names, and brand names displayed on this website remain the property of their respective owners and are used only for identification and affiliate purposes where applicable.</p>
+      <p>Unauthorized use of our content may result in legal action under applicable copyright and intellectual property laws.</p>
+      <p><strong>We appreciate and encourage respect for intellectual property rights.</strong></p>
+    `
+  },
+  {
+    title: "INTELLECTUAL PROPERTY RIGHTS",
+    content: `
+      <p>BAS Charity International respects the intellectual property rights of others and expects all users to do the same.</p>
+      <p>All original content, designs, logos, graphics, text, software, and other materials created for this website are the intellectual property of BAS Charity International unless otherwise stated.</p>
+      <p>Users may view and use the website for personal, non-commercial purposes only. Any unauthorized copying, modification, distribution, commercial use, or creation of derivative works is prohibited without prior written permission.</p>
+      <p>If you believe that any content on this website infringes your intellectual property rights, please contact us with the relevant details so that we can review and address the matter promptly.</p>
+      <p>We are committed to protecting intellectual property and respecting the rights of creators, owners, and partners.</p>
+    `
+  },
+  {
+    title: "DONATIONS & CHARITY POLICY",
+    content: `
+      <p>BAS Charity International is dedicated to supporting humanitarian and charitable initiatives through eligible affiliate earnings and other lawful sources of funding.</p>
+      <p>Our charitable activities are carried out with a commitment to transparency, accountability, and ethical responsibility. Support will be provided based on available resources and organizational priorities.</p>
+      <p>Where appropriate, updates regarding charitable initiatives, contributions, and community projects may be published through our official website or other authorized communication channels.</p>
+      <p>All charitable activities are subject to applicable laws, regulations, and the operational capacity of BAS Charity International.</p>
+      <p><strong>Our commitment is to transform everyday support into meaningful assistance for those in need.</strong></p>
+    `
+  },
+  {
+    title: "SECURITY & DATA PROTECTION",
+    content: `
+      <p>BAS Charity International is committed to protecting the security of our website and the information entrusted to us by our users.</p>
+      <p>We implement reasonable technical and organizational measures to safeguard data against unauthorized access, misuse, alteration, disclosure, or destruction.</p>
+      <p>Although we strive to maintain a secure online environment, no website or internet transmission can be guaranteed to be completely secure. Users are encouraged to take appropriate precautions while using online services.</p>
+      <p>Any personal information collected through our website will be handled in accordance with our Privacy Policy and applicable data protection laws.</p>
+      <p><strong>Protecting your information is an important part of maintaining your trust.</strong></p>
+    `
+  },
+  {
+    title: "COMMUNITY GUIDELINES",
+    content: `
+      <p>BAS Charity International welcomes everyone to participate in a respectful, honest, and inclusive online community.</p>
+      <p>Users are expected to interact with others politely and must not post or share unlawful, abusive, offensive, misleading, or harmful content through our platform.</p>
+      <p>Any attempt to misuse the website, violate the rights of others, distribute malicious software, or interfere with the operation of the platform may result in restricted access or other appropriate action.</p>
+      <p>We encourage positive participation that reflects compassion, integrity, and respect for people of all backgrounds, cultures, and beliefs.</p>
+      <p><strong>Together, we can build a safe, welcoming, and trustworthy community for everyone.</strong></p>
+    `
+  },
+  {
+    title: "FREQUENTLY ASKED QUESTIONS (FAQ)",
+    content: `
+      <p><strong>Q: Does shopping through BAS Charity International cost me extra?</strong><br>
+      A: No. Eligible purchases are made at the merchant's normal price.</p>
+      <p><strong>Q: Where do I complete my purchase?</strong><br>
+      A: All purchases are completed securely on the official website of the respective merchant.</p>
+      <p><strong>Q: How does BAS Charity International receive support?</strong><br>
+      A: Eligible purchases may generate affiliate commissions paid by participating merchants.</p>
+      <p><strong>Q: Is BAS Charity International responsible for products or services?</strong><br>
+      A: No. Products, services, payments, shipping, and customer support are handled by the respective merchants.</p>
+      <p><strong>For more information, please visit our Contact page or reach out through our official communication channels.</strong></p>
+    `
+  },
+  {
+    title: "CONTACT INFORMATION",
+    content: `
+      <p>BAS Charity International welcomes your questions, suggestions, feedback, and partnership inquiries.</p>
+      <p>If you need assistance or wish to contact us regarding our website, affiliate partnerships, charitable initiatives, or any other matter, please use our official communication channels.</p>
+      <p>We will make every reasonable effort to respond to genuine inquiries as promptly as possible.</p>
+      <p>Please refer to the Contact page on our website for our latest email address, contact form, and other official communication details.</p>
+      <p><strong>We appreciate your interest and thank you for supporting BAS Charity International.</strong></p>
+    `
+  },
+  {
+    title: "UPDATES & AMENDMENTS",
+    content: `
+      <p>BAS Charity International reserves the right to update, modify, or amend its policies, terms, and website content at any time to reflect operational, legal, or regulatory changes.</p>
+      <p>Any revisions will become effective upon publication on our official website unless otherwise stated.</p>
+      <p>Users are encouraged to review these policies periodically to stay informed about any updates that may affect their use of our website and services.</p>
+      <p>Your continued use of BAS Charity International after changes have been published constitutes your acceptance of the revised policies and terms.</p>
+      <p><strong>We are committed to keeping our policies accurate, transparent, and up to date.</strong></p>
+    `
+  },
+  {
+    title: "THANK YOU",
+    content: `
+      <p>Thank you for visiting BAS Charity International and for taking the time to learn about our mission and values.</p>
+      <p>Your support, trust, and participation help us move closer to our goal of creating a better world through responsible everyday shopping and meaningful humanitarian action.</p>
+      <p>Whether you are a visitor, customer, affiliate partner, volunteer, or supporter, your contribution is truly valued and appreciated.</p>
+      <p>We look forward to serving our global community with integrity, transparency, and compassion for many years to come.</p>
+      <p><strong>Thank you for being part of our journey. Together, we can make every purchase a step toward a brighter future.</strong></p>
+    `
+  }
+];
+
+const stage = document.getElementById('bookStage');
+
+function makePage(data, index) {
+  const page = document.createElement('div');
+  page.className = 'page' + (index === 0 ? ' cover-page' : '');
+  page.dataset.index = index;
+  page.dataset.state = 'closed';
+  
+  if (data.cover) {
+    page.innerHTML = `
+      <div class="page-face front-face">
+        <div class="cover-title">
+          <div>
+            <svg class="brand-logo" viewBox="0 0 24 24">
+              <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/>
+            </svg>
+            <div class="main-title-unified">${data.title}</div>
+            <div class="sub-title-dark">${data.subtitle}</div>
+          </div>
+          <div class="author-handwriting-3d">${data.author}</div>
+        </div>
+      </div>
+      <div class="page-face back-face"></div>
+      <div class="wrinkle-fold"></div>
+      <div class="corner-curl"></div>
+    `;
+  } else if (data.isIndex) {
+    page.innerHTML = `
+      <div class="page-face front-face">
+        <div class="right-page-box">
+          <div class="content-title">${data.title}</div>
+          <ul class="index-list">
+            ${data.items.map(item => `<li class="index-item"><span>${item.name}</span><span>${item.page}</span></li>`).join('')}
+          </ul>
+        </div>
+        <div class="page-footer">
+          <span class="page-number">${data.pageNo}</span>
+          <span class="flip-hint">(പേജ് മറിക്കുക)</span>
+        </div>
+      </div>
+      <div class="page-face back-face"></div>
+      <div class="wrinkle-fold"></div>
+      <div class="corner-curl"></div>
+    `;
+  } else {
+    page.innerHTML = `
+      <div class="page-face front-face">
+        <div class="right-page-box">
+          <div class="content-title">${data.title}</div>
+          <div class="content-body">
+            ${data.content}
+          </div>
+        </div>
+        <div class="page-footer">
+          <span class="page-number">Page ${index < 10 ? '0' + index : index}</span>
+        </div>
+      </div>
+      <div class="page-face back-face"></div>
+      <div class="wrinkle-fold"></div>
+      <div class="corner-curl"></div>
+    `;
+  }
+  return page;
+}
+
+pagesData.forEach((p, i) => stage.appendChild(makePage(p, i)));
+
+const pages = Array.from(document.querySelectorAll('.page'));
+let draggingPage = null;
+let startX = 0;
+let startY = 0;
+let currentRotateY = 0;
+
+let peekInterval = null;
+let autoCloseTimer = null;
+
+function isBookOpen() {
+  return pages.some(p => p.dataset.state === 'open');
+}
+
+function closeAllPages() {
+  pages.forEach(p => {
+    p.dataset.state = 'closed';
+  });
+  syncStack();
+  startPeekInterval();
+}
+
+function startPeekInterval() {
+  stopPeekInterval();
+  peekInterval = setInterval(() => {
+    if (!isBookOpen()) {
+      const topClosedPage = pages.find(p => p.dataset.state === 'closed');
+      if (topClosedPage) {
+        topClosedPage.classList.add('peek-hint');
+        setTimeout(() => {
+          topClosedPage.classList.remove('peek-hint');
+        }, 1800);
+      }
+    } else {
+      stopPeekInterval();
+    }
+  }, 10000);
+}
+
+function stopPeekInterval() {
+  if (peekInterval) {
+    clearInterval(peekInterval);
+    peekInterval = null;
+  }
+}
+
+function resetAutoCloseTimer() {
+  if (autoCloseTimer) clearTimeout(autoCloseTimer);
+  if (isBookOpen()) {
+    stopPeekInterval();
+    // 2 Minutes = 120000 ms
+    autoCloseTimer = setTimeout(() => {
+      closeAllPages();
+    }, 120000);
+  } else {
+    startPeekInterval();
+  }
+}
+
+// Reset timer on Scroll or Touch/Mouse Movement
+window.addEventListener('scroll', resetAutoCloseTimer, { passive: true });
+window.addEventListener('touchmove', resetAutoCloseTimer, { passive: true });
+window.addEventListener('mousemove', resetAutoCloseTimer, { passive: true });
+
+function syncStack() {
+  pages.forEach((page, i) => {
+    const isFlipped = page.dataset.state === 'open';
+    if (isFlipped) {
+      page.style.zIndex = i + 2;
+      page.style.transform = 'rotateY(-180deg)';
+    } else {
+      page.style.zIndex = (pages.length - i) + 2;
+      page.style.transform = 'rotateY(0deg)';
+    }
+  });
+}
+
+function getPoint(e) {
+  if (e.clientX !== undefined) return { x: e.clientX, y: e.clientY };
+  if (e.touches && e.touches[0]) return { x: e.touches[0].clientX, y: e.touches[0].clientY };
+  if (e.changedTouches && e.changedTouches[0]) return { x: e.changedTouches[0].clientX, y: e.changedTouches[0].clientY };
+  return { x: 0, y: 0 };
+}
+
+function setPageVisuals(page, rotateY, px, py) {
+  const wrinkle = page.querySelector('.wrinkle-fold');
+  const curl = page.querySelector('.corner-curl');
+  const progress = Math.abs(rotateY) / 180;
+  const curve = Math.sin(progress * Math.PI);
+  
+  const curveZ = curve * 28; 
+  
+  page.style.transform = `translate3d(0, 0, ${curveZ}px) rotateY(${rotateY}deg)`;
+  page.style.filter = `drop-shadow(${curve * -18}px ${curve * 14}px 22px rgba(0,0,0,0.4))`;
+  
+  if (wrinkle) wrinkle.style.opacity = String(curve * 1.0);
+  if (curl) {
+    const curlSize = Math.max(0, Math.min(190, curve * 170));
+    curl.style.width = curlSize + 'px';
+    curl.style.height = curlSize + 'px';
+    curl.style.opacity = String(Math.min(1, curve * 1.6));
+  }
+}
+
+function clearPageVisuals(page) {
+  const wrinkle = page.querySelector('.wrinkle-fold');
+  const curl = page.querySelector('.corner-curl');
+  page.style.filter = 'none';
+  if (wrinkle) wrinkle.style.opacity = '0';
+  if (curl) {
+    curl.style.width = '0px';
+    curl.style.height = '0px';
+    curl.style.opacity = '0';
+  }
+}
+
+pages.forEach((page) => {
+  page.addEventListener('pointerdown', (e) => {
+    resetAutoCloseTimer();
+    const pt = getPoint(e);
+    draggingPage = page;
+    startX = pt.x;
+    startY = pt.y;
+    currentRotateY = page.dataset.state === 'open' ? -180 : 0;
+    
+    page.style.transition = 'none';
+    page.style.zIndex = 999;
+    page.setPointerCapture?.(e.pointerId);
+  });
+
+  page.addEventListener('pointermove', (e) => {
+    if (draggingPage !== page) return;
+    const pt = getPoint(e);
+    const dx = pt.x - startX;
+    const dy = pt.y - startY;
+    
+    if (page.dataset.state === 'open') {
+      currentRotateY = -180 + Math.min(180, Math.max(0, dx * 0.75));
+    } else {
+      currentRotateY = Math.max(-180, Math.min(0, dx * 0.75));
+    }
+    
+    setPageVisuals(page, currentRotateY, Math.abs(dx), Math.abs(dy));
+  });
+
+  const finishTurn = () => {
+    if (draggingPage !== page) return;
+    const shouldOpen = currentRotateY < -90;
+    page.style.transition = 'transform .65s cubic-bezier(.25, 1, .5, 1)';
+    clearPageVisuals(page);
+    
+    if (shouldOpen) {
+      page.dataset.state = 'open';
+    } else {
+      page.dataset.state = 'closed';
+    }
+    
+    draggingPage = null;
+    syncStack();
+    resetAutoCloseTimer();
+  };
+
+  page.addEventListener('pointerup', finishTurn);
+  page.addEventListener('pointercancel', finishTurn);
+});
+
+syncStack();
+startPeekInterval();
+</script>
+</body>
+</html>
