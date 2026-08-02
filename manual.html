@@ -16,29 +16,30 @@ body {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  justify-content: flex-start; /* center മാറ്റി flex-start ആക്കുക */
+  justify-content: flex-start;
   align-items: center;
   background: radial-gradient(circle at top, #1e293b 0%, #0f172a 54%, #020617 100%);
   font-family: Georgia, serif;
-  overflow-y: auto; /* hidden മാറ്റി auto ആക്കുക */
+  overflow: visible; /* hidden മാറ്റി visible ആക്കുക */
   padding: 20px;
 }
+
 
 
 .stage {
   position: relative;
   width: 520px;
-  height: 650px;
-  margin-top: 10px; /* മുകളിലെ ഗ്യാപ്പ് കുറയ്ക്കുമ്പോൾ പുസ്തകത്തിന്റെ അടിഭാഗം സ്വയം താഴേക്ക് നീങ്ങും */
+  height: 780px; /* 650px എന്നത് 780px ആക്കിയാൽ പുസ്തകത്തിന്റെ അടിഭാഗം താഴേക്ക് നീളും */
+  margin-top: 100px; /* മുകളിൽ നിന്ന് താഴേക്ക് തള്ളി ബലൂണിലേക്ക് അടുപ്പിക്കാൻ */
   margin-left: auto;
   margin-right: auto;
   perspective: 2500px;
   perspective-origin: 50% 50%;
   transform-style: preserve-3d;
   touch-action: none;
-  /* scale(0.9) അല്ലെങ്കിൽ അനുയോജ്യമായ വലിപ്പം നൽകിയാൽ പുസ്തകത്തിന്റെ അടിഭാഗം കട്ടാവാതെ താഴെ വ്യക്തമായി കാണാം */
-  transform: scale(0.9) rotateY(-18deg) rotateX(6deg);
+  transform: rotateY(-18deg) rotateX(6deg);
 }
+
 
 .back-cover-base {
   position: absolute;
