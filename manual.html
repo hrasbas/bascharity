@@ -21,15 +21,14 @@ body {
   background: radial-gradient(circle at top, #1e293b 0%, #0f172a 54%, #020617 100%);
   font-family: Georgia, serif;
   overflow: hidden;
-  padding:100px
+  padding: 20px;
 }
-
 
 .stage {
   position: relative;
-  width: 500px;
-  height:1000px;
-  margin-top: 2.5cm; /* ഇവിടെയാണ് 2.5cm നൽകിയിരിക്കുന്നത് */
+  width: 520px;
+  height: 650px;
+  margin-top: -80px;
   margin-left: 60px;
   perspective: 2500px;
   perspective-origin: 50% 50%;
@@ -612,6 +611,7 @@ let startX = 0;
 let startY = 0;
 let currentRotateY = 0;
 
+// 2 Minutes Inactivity Timer for Auto-Close
 let inactivityTimer;
 function resetInactivityTimer() {
   clearTimeout(inactivityTimer);
@@ -623,7 +623,7 @@ function resetInactivityTimer() {
       }
     });
     syncStack();
-  }, 120000);
+  }, 120000); // 120 seconds = 2 minutes
 }
 
 ['mousemove', 'mousedown', 'touchstart', 'touchmove', 'click'].forEach(eventType => {
@@ -721,6 +721,7 @@ pages.forEach((page) => {
     
     if (shouldOpen) {
       page.dataset.state = 'open';
+      // Stop breeze animation permanently once cover is opened
       if(page.classList.contains('cover-page')) {
         page.classList.remove('breeze-animation');
       }
