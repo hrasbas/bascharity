@@ -363,3 +363,274 @@ console.error('SW registration failed:', err);
 });
 }
 </script>
+
+<!DOCTYPE html>   
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BAS Charity International</title> 
+
+<link rel="manifest" href="manifest.json">
+<link rel="icon" type="image/png" href="final_app_icon.png">
+<link rel="apple-touch-icon" href="final_app_icon.png"> 
+
+<meta name="theme-color" content="#ff9800">
+<meta name="apple-mobile-web-app-status-bar-style" content="default"> 
+
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"> 
+
+
+<style>
+/* Google Translate top bar + iframe കഠിനമായി ബ്ലോക്ക് ചെയ്യുന്നു */
+.goog-te-banner-frame.skiptranslate,
+iframe.goog-te-banner-frame,
+.skiptranslate.goog-te-banner-frame {
+    display: none !important;
+    visibility: hidden !important;
+}
+
+/* body top offset Google ചേർക്കുന്നത് reset ചെയ്യുന്നു */
+body {
+    top: 0px !important;
+    position: static !important;
+}
+
+/* Google Translate tooltip / opinion / highlight ഒക്കെ ബ്ലോക്ക് */
+#goog-gt-tt,
+.goog-tooltip,
+.goog-tooltip:hover,
+.goog-text-highlight,
+.goog-gt-highlight,
+.goog-gt-spellmark,
+.gt-baf-container,
+.gt-baf-footer {
+    display: none !important;
+    visibility: hidden !important;
+}
+
+/* Translate wrapper / gadget icon hide */
+.goog-te-gadget-icon {
+    display: none !important;
+}
+</style>
+ 
+ <style>
+ /* CODE NO:1 FIX */
+/* എടുത്തു കാണിക്കേണ്ട പ്രധാന ഹെഡിംഗുകളുടെയും ടെക്സ്റ്റുകളുടെയും കളറുകൾ ലോക്ക് ചെയ്യുന്നു */
+h1 { color:#fff !important; }
+.english-fix { color:#bbb !important; }
+#dedication-text { color:#bbb !important; font-weight:300; line-height: 1.6; }
+/* ഇമേജ് ഗാലറി ഹൊറിസോണ്ടൽ ആയി സ്ക്രോൾ ചെയ്യാനുള്ള ഡിസൈൻ */
+#gallery { display:flex; overflow-x:auto; scroll-behavior:smooth; gap:10px; }
+#gallery::-webkit-scrollbar { display:none; }
+.card { min-width:180px; flex-shrink:0; }
+.card img { width:100%; height:auto; border-radius:10px; display:block; }
+#gallery.zoom { transform:scale(1.05); transition:0.3s; } 
+
+/* വിഭിന്ന ബ്രൗസറുകളിൽ മാർജിനുകൾ തെന്നിമാറാതിരിക്കാൻ ഡിസൈൻ ലോക്ക് ചെയ്യുന്നു */
+* { box-sizing:border-box; } 
+
+/* സൈറ്റിന്റെ ബോഡിയുടെ പൊതുവായ പശ്ചാത്തലവും മിനിമം 23px ഫോണ്ട് സൈസും നിശ്ചയിക്കുന്നു */
+body {
+margin:0;
+background:#000;
+font-family:Arial, sans-serif;
+color:#fff;
+overflow-x:hidden;
+font-size:23px;
+} 
+
+p, span, div { font-size:23px; } 
+
+/* പ്രധാന ബോക്സുകൾ വലിയ സ്ക്രീനുകളിൽ 900px ലേക്ക് ഒതുക്കി നിർത്താനും ഫോണിൽ റെസ്പോൺസിവ് ആക്കാനുമുള്ള ഘടന */
+.bas-dedication, .lang-box, .country-box, .shop-container, .compare-container, .share-container, .mainbox, .info-box, .bas7-wrapper, .trust-container, .peace-wrapper, .vada-wrapper, .vision-wrapper, #bas-mega-portal {
+max-width:900px;
+width:96%;
+margin-left:auto;
+margin-right:auto;
+} 
+
+/* സൈറ്റിന്റെ മുകൾഭാഗത്തെ ഹെഡറും വലിയ ലോഗോ സ്പേസും ഡിസൈൻ ചെയ്യുന്നു */
+.header-box { display:flex; flex-direction:column; align-items:center; background:#000; }
+#logo-space { width:100%; height:340px; }
+.brand-heading { text-align:center; margin-top:-35px; padding:10px 20px; }
+.hunger-message { font-size:13px; letter-spacing:2px; color:#FFD700; font-weight:bold; text-transform:uppercase; margin-bottom:20px; }
+.brand-heading h1 { font-size:clamp(32px,9vw,65px); letter-spacing:1px; text-transform:uppercase; margin:0; font-weight:1000; -webkit-text-stroke:1.5px white; line-height:1.1; } 
+
+/* ലാംഗ്വേജ് ബട്ടണുകൾ ഫോണിന് അനുസരിച്ച് ഒരേ വലിപ്പത്തിൽ ഗ്രിഡ് ആയി കാണിക്കാനുള്ള സ്റ്റൈൽ */
+.top-bar { background:#111; padding:15px 8px; border-top:1px solid #333; border-bottom:1px solid #333; }
+.lang-buttons { display:grid; grid-template-columns:repeat(4,1fr); gap:10px; max-width:600px; margin:auto; }
+.lang-btn { padding:10px 2px; border:none; border-radius:20px; font-size:14px; font-weight:bold; cursor:pointer; color:#fff; }
+.en { background:#007BFF; }
+.hi { background:#FF9933; color:#000; }
+.ml { background:#00C853; }
+.ar { background:#2E7D32; }
+.ta { background:#C62828; }
+.ur { background:#6A1B9A; }
+.es { background:#F4C430; color:#000; }
+.pt { background:#1B5E20; }
+.google-row { text-align:center; font-size:14px; margin-top:15px; color:#bbb; } 
+
+/* സമർപ്പണ ബോക്സിന്റെയും മെയിൻ മെസ്സേജ് ബോക്സിന്റെയും ബോർഡറുകളും കളറുകളും നൽകുന്നു */
+.bas-dedication {
+  text-align:center;
+  margin:10px auto 30px auto;
+  padding:0 20px;
+
+  font-size:30px;
+  font-weight:900;
+  font-style:italic;
+  color:#9a9a9a;
+  line-height:1.8;
+}
+.lang-box { margin: 25px auto; padding: 15px; background: #000; border: 1px solid #ff9800; border-radius: 15px; }
+.lang-title { background: #b3ecff; color: #000; font-weight: 900; text-align: center; padding: 10px; border-radius: 10px; border: 1px solid #ff9800; border-left: 6px solid #ff9800; margin-bottom: 10px; text-transform: uppercase; }
+.msg-container { width:96%; padding:20px 0; margin: auto; }
+.question-box { margin:0 auto; width:96%; max-width:900px; background:#000; color:#00BFFF; padding:25px; border-radius:12px; border:1px solid #00BFFF; text-align:center; line-height:1.8; }
+.english-text { font-size:18px; font-weight:500; display:block; }
+.hunger-footer { text-align:center; color:#FFD700; font-weight:bold; font-size:14px; margin-top:15px; letter-spacing:1px; } 
+
+/* ആപ്പ് ഇൻസ്റ്റാൾ ചെയ്യാനുള്ള ഫ്ലോട്ടിങ് ബട്ടണിന്റെ ഡിസൈൻ നിയമങ്ങൾ */
+#install-div {
+display: none;
+position: fixed;
+bottom: 25px;
+right: 25px;
+z-index: 10000;
+}
+#install-btn {
+background: #ff9800;
+color: #fff;
+border: none;
+padding: 12px 24px;
+border-radius: 50px;
+font-size: 16px;
+font-weight: bold;
+box-shadow: 0 4px 15px rgba(0,0,0,0.4);
+cursor: pointer;
+} 
+
+/* ആനിമേഷനോടെ സ്ക്രീനിൽ പൊങ്ങിവരുന്ന ബലൂൺ റാപ്പറിന്റെ പൊസിഷൻ ലോക്ക് ചെയ്യുന്നു */
+#basBalloonWrap {
+position: fixed;
+bottom: 0;
+left: 0;
+width: 280px;
+height: 400px;
+z-index: 2147483647;
+pointer-events: none;
+transform: translateY(120%);transition: transform 2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+display: block !important;
+} 
+
+/* ബലൂൺ പല സ്റ്റേറ്റുകളിൽ കാണിക്കേണ്ട ട്രാൻസ്ഫോം പൊസിഷനുകൾ */
+.state-up { transform: translateY(0%) !important; }
+.state-hide { transform: translateY(120%) !important; }
+.state-rest { transform: translateY(70%) !important; } 
+
+/* ബലൂണിന്റെ റൗണ്ട് ഷേപ്പും ഉള്ളിലെ നൂലും നിപ്പിളും ഉണ്ടാക്കാനുള്ള CSS */
+.bas-ball {
+position: absolute;
+border-radius: 50% 50% 50% 50% / 40% 40% 60% 60%;
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+cursor: pointer;
+pointer-events: auto;
+box-shadow: inset -8px -8px 20px rgba(0,0,0,0.4);
+} 
+
+.bas-str {
+position: absolute;
+width: 1px;
+background: rgba(255,255,255,0.4);
+bottom: -1000px;
+left: 50%;
+height: 1000px;
+} 
+
+.bas-nipple {
+position: absolute;
+bottom: -10px;
+width: 18px;
+height: 10px;
+background: inherit;
+clip-path: polygon(20% 0, 80% 0, 100% 100%, 0 100%);
+} 
+
+/* വെള്ള, നീല ബലൂണുകളുടെ വലിപ്പവും അവ ഫ്ലോട്ട് ചെയ്യാനുള്ള ആനിമേഷൻ ലിങ്കും */
+.white-b {
+width: 120px; height: 160px;
+background: #ffffff;
+bottom: 220px; left: 60px;
+animation: floatW 25s ease-in-out infinite;
+transition: background 0.4s ease;
+} 
+
+.blue-b {
+width: 105px; height: 135px;
+background: #007bff;
+bottom: 70px; left: 30px;
+animation: floatB 20s ease-in-out infinite;
+} 
+
+.bas-sticker { width: 75px; height: 75px; border-radius: 20px; margin-bottom: 5px; border: 1px solid #ddd; }
+.bas-lbl { font-family: sans-serif; font-size: 11px; font-weight: 900; text-align: center; line-height: 1.2; } 
+
+/* ആപ്പ് ഇൻസ്റ്റാൾ ചെയ്യാൻ റെഡി ആകുമ്പോഴും ഇൻസ്റ്റാൾഡ് ആകുമ്പോഴും മാറേണ്ട കളർ കോഡുകൾ */
+.install-ready {
+color: #cddc39 !important;
+text-shadow: 0 0 6px rgba(205,220,57,0.35);
+} 
+
+.installed-state {
+background: #cddc39 !important;
+} 
+
+.installed-state .bas-nipple {
+background: #cddc39 !important;
+} 
+
+.installed-state #statTxt {
+color: #1f2b00 !important;
+text-shadow: none !important;
+} 
+
+/* ബലൂണുകൾ യാഥാർത്ഥ്യമെന്നോണം അന്തരീക്ഷത്തിൽ ഒഴുകി നടക്കാൻ വേണ്ടിയുള്ള ആനിമേഷൻ ഫ്രെയിമുകൾ */
+@keyframes floatW {
+0%, 100% { transform: translate(0, 0) rotate(-3deg); }
+50% { transform: translate(35px, 45px) rotate(5deg); }
+} 
+
+@keyframes floatB {
+0%, 100% { transform: translate(0, 0) rotate(4deg); }
+50% { transform: translate(25px, -25px) rotate(-4deg); }
+}
+</style>
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-W0NH1KVHHC"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-W0NH1KVHHC', { send_page_view: true });
+function basTrack(eventName, params = {}) {
+  gtag('event', eventName, params);
+}
+document.addEventListener('click', function(e) {
+  const a = e.target.closest('a');
+  if (!a) return;
+  const href = a.getAttribute('href') || '';
+  if (href.startsWith('mailto:')) basTrack('email_click', { link_url: href });
+  if (href.startsWith('tel:')) basTrack('phone_click', { link_url: href });
+  if (href.includes('wa.me') || href.includes('api.whatsapp.com')) basTrack('whatsapp_click', { link_url: href });
+  if (a.classList.contains('donate-btn') || a.classList.contains('donate-link')) basTrack('donate_click', { link_url: href });
+  if (a.classList.contains('affiliate-link') || a.target === '_blank') basTrack('affiliate_click', { link_url: href });
+});
+</script>
+</head> 
+<body>
