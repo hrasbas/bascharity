@@ -632,5 +632,1304 @@ document.addEventListener('click', function(e) {
   if (a.classList.contains('affiliate-link') || a.target === '_blank') basTrack('affiliate_click', { link_url: href });
 });
 </script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+
+function basTrack(eventName, params = {}) {
+    try {
+        if (typeof gtag === "function") {
+            gtag("event", eventName, params);
+        } else if (window.dataLayer) {
+            window.dataLayer.push(Object.assign({ event: eventName }, params));
+        }
+    } catch (e) {}
+}
+
+function basTrackClick(label, url = "", extra = {}) {
+    basTrack("bas_click", Object.assign({
+        event_category: "engagement",
+        event_label: label,
+        link_url: url
+    }, extra));
+}
+
+function basTrackCountry(country) {
+    basTrack("bas_country_select", {
+        event_category: "navigation",
+        country: country
+    });
+}
+
+function basTrackLanguage(langCode) {
+    basTrack("bas_language_change", {
+        event_category: "navigation",
+        language: langCode
+    });
+}
+
+function basTrackCTA(name, extra = {}) {
+    basTrack("bas_cta", Object.assign({
+        event_category: "cta",
+        cta_name: name
+    }, extra));
+}
+
+document.addEventListener("click", function (e) {
+    try {
+        const a = e.target.closest("a");
+        const btn = e.target.closest("button");
+        const el = e.target.closest("[onclick]");
+
+        if (a) {
+            const href = a.getAttribute("href") || "";
+            if (href.includes("wa.me") || href.includes("api.whatsapp.com")) {
+                basTrackClick("whatsapp_share", href, { outbound: true });
+            } else if (href.includes("facebook.com/sharer") || href.includes("telegram.me/share") || href.includes("twitter.com/intent")) {
+                basTrackClick("social_share", href, { outbound: true });
+            } else if (href.startsWith("http")) {
+                basTrackClick("outbound_shop_click", href, { outbound: true });
+            } else if (href.startsWith("mailto:")) {
+                basTrackClick("email_click", href);
+            } else if (href.startsWith("tel:")) {
+                basTrackClick("phone_click", href);
+            }
+        }
+
+        if (btn) {
+            const text = (btn.innerText || btn.textContent || "").trim().toLowerCase();
+
+            if (text.includes("compare prices")) {
+                basTrackCTA("compare_prices");
+            }
+
+            if (text.includes("install")) {
+                basTrackCTA("install_prompt");
+            }
+
+            if (text.includes("read more")) {
+                basTrackCTA("read_more");
+            }
+
+            if (text.includes("less")) {
+                basTrackCTA("read_less");
+            }
+        }
+
+        if (el) {
+            const onclick = el.getAttribute("onclick") || "";
+            if (onclick.includes("copyLink")) basTrackCTA("copy_link");
+            if (onclick.includes("handleInstallTap")) basTrackCTA("install_tap");
+            if (onclick.includes("toggleMore7")) basTrackCTA("section7_toggle");
+            if (onclick.includes("toggleWish")) basTrackCTA("wish_toggle");
+            if (onclick.includes("toggleBas8")) basTrackCTA("section8_toggle");
+        }
+    } catch (err) {}
+}, true);
+
+document.addEventListener("DOMContentLoaded", function () {
+    try {
+        basTrack("page_view", {
+            page_location: location.href,
+            page_path: location.pathname
+        });
+    } catch (e) {}
+});
+
+function copyLink() {
+    try {
+        navigator.clipboard.writeText("https://bascharity.com");
+        alert("Link Copied. Share with friends.");
+        basTrackCTA("copy_link_success", {
+            copied_text: "https://bascharity.com"
+        });
+    } catch (e) {
+        basTrackCTA("copy_link_failed");
+    }
+}
+
+function setSelectedCountry(country) {
+    if (!country) return;
+    const pureCountry = country.trim().toLowerCase();
+
+    allCountries.classList.add("green-select");
+
+    document.querySelectorAll(".country-btn").forEach(btn => {
+        const key = btn.getAttribute("data-country");
+        btn.classList.toggle(
+            "active",
+            key && key.trim().toLowerCase() === pureCountry
+        );
+    });
+
+    const shopBtn = document.getElementById("shopOnCountry");
+    if (shopBtn) {
+        shopBtn.innerHTML =
+            `SHOP ON <span class="green">${pureCountry.toUpperCase()}</span>`;
+    }
+
+    localStorage.setItem("selectedCountry", pureCountry);
+
+    basTrackCountry(pureCountry);
+    fetchExternalCountryJS(pureCountry);
+}
+
+function renderCountry(country) {
+    setSelectedCountry(country);
+}
+
+function changeLang(langCode) {
+    try {
+        let select = document.querySelector('select.goog-te-combo');
+        if (select) {
+            select.value = langCode;
+            select.dispatchEvent(new Event('change'));
+        }
+    } catch (e) {}
+
+    try {
+        const savedCountry = localStorage.getItem("selectedCountry") || "india";
+        if (typeof setSelectedCountry === "function") {
+            setSelectedCountry(savedCountry);
+        }
+    } catch (e) {}
+
+    basTrackLanguage(langCode);
+}
+
+function resetToEnglish() {
+    try {
+        let select = document.querySelector('select.goog-te-combo');
+        if (select) {
+            select.value = 'en';
+            select.dispatchEvent(new Event('change'));
+        }
+    } catch (e) {}
+
+    try {
+        const savedCountry = localStorage.getItem("selectedCountry") || "india";
+        if (typeof setSelectedCountry === "function") {
+            setSelectedCountry(savedCountry);
+        }
+    } catch (e) {}
+
+    basTrackLanguage("en");
+}
+
+function handleInstallTap() {
+    basTrackCTA("install_balloon_tap");
+    if (!basPrompt) return;
+    basPrompt.prompt();
+    basPrompt.userChoice.then((c) => {
+        if (c.outcome === 'accepted') {
+            stat.innerText = "INSTALLED";
+            ball.className = "bas-ball is-pwa-installed";
+            basTrackCTA("install_accepted");
+        } else {
+            basTrackCTA("install_dismissed");
+        }
+        basPrompt = null;
+    });
+}
+
+function goWhatsApp(){
+    let url = "https://bascharity-56f.pages.dev";
+    let text = "Save a beautiful icon to your screen
+
+" + url + "
+
+Chrome → ⋮ 3 dot → Save to Screen → Install";
+    basTrackClick("save_to_whatsapp", "https://wa.me/", { outbound: true });
+    window.open("https://wa.me/?text=" + encodeURIComponent(text), "_blank");
+}
+
+function basOpenFullPage(){
+    document.getElementById('basMainDisplay').style.display='none';
+    document.getElementById('basFullInfoPage').style.display='block';
+    basResetIdleTimer();
+    basTrackCTA("more_info_open");
+}
+
+function basCloseFullPage(){
+    clearTimeout(basIdleTimer);
+    document.getElementById('basFullInfoPage').style.display='none';
+    document.getElementById('basMainDisplay').style.display='block';
+    basTrackCTA("more_info_close");
+}
+
+function toggleMore7() {
+    var moreText = document.getElementById("moreText");
+    var btnText = document.getElementById("readBtn");
+    if (moreText.style.display === "none" || moreText.style.display === "") {
+        moreText.style.display = "block";
+        btnText.style.display = "none";
+        basTrackCTA("section7_read_more");
+    } else {
+        moreText.style.display = "none";
+        btnText.style.display = "inline";
+        basTrackCTA("section7_read_less");
+    }
+}
+
+function toggleWish() {
+    var moreText = document.getElementById("wishMoreText");
+    var btnText = document.getElementById("wishReadBtn");
+    if (moreText.style.display === "none" || moreText.style.display === "") {
+        moreText.style.display = "block";
+        btnText.style.display = "none";
+        basTrackCTA("wish_read_more");
+    } else {
+        moreText.style.display = "none";
+        btnText.style.display = "inline";
+        basTrackCTA("wish_read_less");
+    }
+}
+
+function toggleBas8(){
+    let more=document.getElementById("bas8More");
+    let dots=document.getElementById("bas8Dots");
+    let btn=document.getElementById("bas8Btn");
+    if(opened8){
+        more.style.display="none";
+        dots.style.display="inline";
+        btn.innerText="More Details";
+        opened8=false;
+        basTrackCTA("section8_read_less");
+    } else {
+        more.style.display="inline";
+        dots.style.display="none";
+        btn.innerText="Less Details";
+        opened8=true;
+        basTrackCTA("section8_read_more");
+    }
+}
+
+function loadShops(shopsArray) {
+    featuredShops.innerHTML = "";
+
+    if (!shopsArray || shopsArray.length === 0) {
+        featuredShops.innerHTML =
+            "<div style='text-align:center;font-weight:bold;padding:20px;'>No shops available.</div>";
+        basTrack("bas_no_shops", { event_category: "error" });
+        return;
+    }
+
+    const colors = [
+        "#00C853", "#2196F3", "#F44336", "#FF9800", "#9C27B0",
+        "#00BCD4", "#E91E63", "#FFC107", "#009688", "#795548"
+    ];
+
+    shopsArray.slice(0, 10).forEach((shop, index) => {
+        let host = "";
+        try {
+            host = new URL(shop.u).hostname;
+        } catch (e) {}
+
+        featuredShops.innerHTML += `
+<a href="${shop.u}" target="_blank"
+class="shopCard"
+style="border-left-color:${colors[index % 10]}"
+onclick="basTrackClick('shop_card_click', '${shop.u}', { outbound: true, shop_name: ${JSON.stringify(shop.n || '')} })">
+
+<div class="shopDot">${(shop.a || "").trim() ? "" : "."}</div>
+
+<img class="shopFav"
+src="https://www.google.com/s2/favicons?domain=${host}&sz=64"
+loading="lazy">
+
+<div class="shopName notranslate" translate="no">
+${shop.n}
+</div>
+
+</a>`;
+    });
+
+    basTrack("bas_shops_loaded", {
+        event_category: "engagement",
+        shops_count: Math.min(10, shopsArray.length)
+    });
+}
+
+function fetchExternalCountryJS(countryName) {
+    featuredShops.innerHTML =
+        "<div style='text-align:center;padding:20px;color:#ff9800;font-weight:bold;'>Loading shops...</div>";
+
+    const oldScript = document.getElementById("dynamic-country-script");
+    if (oldScript) oldScript.remove();
+
+    const script = document.createElement("script");
+    script.id = "dynamic-country-script";
+    script.src = "./" + countryName + ".js";
+
+    script.onload = function () {
+        loadedCountries[countryName] = true;
+
+        if (window.countryShops && window.countryShops[countryName]) {
+            loadShops(countryShops[countryName]);
+            syncCategory(countryName);
+            basTrack("bas_country_file_loaded", { country: countryName });
+        } else {
+            featuredShops.innerHTML =
+                "<div style='text-align:center;padding:20px;color:red;'>No shop data</div>";
+            basTrack("bas_country_no_data", { country: countryName });
+        }
+    };
+
+    script.onerror = function () {
+        featuredShops.innerHTML =
+            "<div style='text-align:center;padding:20px;color:red;'>Country file not found</div>";
+        basTrack("bas_country_file_error", { country: countryName });
+    };
+
+    document.body.appendChild(script);
+}
+
+window.addEventListener("beforeinstallprompt", (e) => {
+    e.preventDefault();
+    basPrompt = e;
+    stat.innerText = "INSTALL";
+    ball.className = "bas-ball white-b";
+    basTrack("bas_install_prompt_ready", { event_category: "pwa" });
+});
+
+window.addEventListener("appinstalled", () => {
+    stat.innerText = "INSTALLED";
+    ball.className = "bas-ball is-pwa-installed";
+    basTrack("bas_app_installed", { event_category: "pwa" });
+});
+
+document.addEventListener("visibilitychange", function () {
+    basTrack("bas_visibility_change", {
+        event_category: "engagement",
+        hidden: document.hidden
+    });
+});
+
+window.addEventListener("webglcontextlost", function () {
+    basTrack("bas_webgl_context_lost", { event_category: "error" });
+});
+
+window.addEventListener("webglcontextrestored", function () {
+    basTrack("bas_webgl_context_restored", { event_category: "error" });
+});
+</script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+
+function basTrack(eventName, params = {}) {
+    try {
+        if (typeof gtag === "function") {
+            gtag("event", eventName, params);
+        } else {
+            window.dataLayer.push(Object.assign({ event: eventName }, params));
+        }
+    } catch (e) {}
+}
+
+function basNow() {
+    try {
+        return new Date().toISOString();
+    } catch (e) {
+        return "";
+    }
+}
+
+function basNormalizeUrl(url) {
+    try {
+        return new URL(url, location.href).href;
+    } catch (e) {
+        return url || "";
+    }
+}
+
+function basTrackOutbound(kind, url, extra = {}) {
+    basTrack("bas_outbound_click", Object.assign({
+        event_category: "outbound",
+        event_label: kind,
+        link_url: basNormalizeUrl(url),
+        page_location: location.href,
+        page_path: location.pathname,
+        timestamp: basNow()
+    }, extra, { outbound: true }));
+}
+
+function basTrackCTA(name, extra = {}) {
+    basTrack("bas_cta_click", Object.assign({
+        event_category: "cta",
+        event_label: name,
+        page_location: location.href,
+        page_path: location.pathname,
+        timestamp: basNow()
+    }, extra));
+}
+
+function basTrackSection(sectionName, action, extra = {}) {
+    basTrack("bas_section_action", Object.assign({
+        event_category: "engagement",
+        section_name: sectionName,
+        action_name: action,
+        page_location: location.href,
+        page_path: location.pathname,
+        timestamp: basNow()
+    }, extra));
+}
+
+function basTrackDonation(siteName, amount, action, extra = {}) {
+    basTrack("bas_donation_action", Object.assign({
+        event_category: "donation",
+        charity_site: siteName,
+        amount_value: Number(amount) || 0,
+        action_name: action,
+        page_location: location.href,
+        page_path: location.pathname,
+        timestamp: basNow()
+    }, extra));
+}
+
+function basTrackCountry(country) {
+    basTrack("bas_country_select", {
+        event_category: "navigation",
+        country_name: country,
+        page_location: location.href,
+        page_path: location.pathname,
+        timestamp: basNow()
+    });
+}
+
+function basTrackLanguage(langCode) {
+    basTrack("bas_language_change", {
+        event_category: "navigation",
+        language_code: langCode,
+        page_location: location.href,
+        page_path: location.pathname,
+        timestamp: basNow()
+    });
+}
+
+function basTrackGallery(action, index = -1) {
+    basTrack("bas_gallery_action", {
+        event_category: "engagement",
+        action_name: action,
+        image_index: index,
+        page_location: location.href,
+        page_path: location.pathname,
+        timestamp: basNow()
+    });
+}
+
+function basTrackPWA(action) {
+    basTrack("bas_pwa_action", {
+        event_category: "pwa",
+        action_name: action,
+        page_location: location.href,
+        page_path: location.pathname,
+        timestamp: basNow()
+    });
+}
+
+document.addEventListener("DOMContentLoaded", function () {
+    basTrack("page_view", {
+        page_location: location.href,
+        page_path: location.pathname,
+        page_title: document.title
+    });
+});
+
+document.addEventListener("click", function (e) {
+    try {
+        const a = e.target.closest("a");
+        const btn = e.target.closest("button");
+        const cta = e.target.closest("[onclick]");
+        const card = e.target.closest(".shopCard");
+        const trustBtn = e.target.closest(".trust-btn");
+        const peaceBtn = e.target.closest(".peace-btn");
+        const vadaBtn = e.target.closest(".vada-btn");
+        const visionBtn = e.target.closest(".vision-btn");
+        const charityBtn = e.target.closest(".charity-btn");
+        const cardImg = e.target.closest(".card");
+
+        if (a) {
+            const href = a.getAttribute("href") || "";
+            const text = (a.innerText || a.textContent || "").trim();
+
+            if (href.startsWith("mailto:")) {
+                basTrackOutbound("email", href, { link_text: text });
+            } else if (href.startsWith("tel:")) {
+                basTrackOutbound("phone", href, { link_text: text });
+            } else if (href.includes("wa.me") || href.includes("api.whatsapp.com")) {
+                basTrackOutbound("whatsapp_share", href, { link_text: text });
+            } else if (href.includes("facebook.com/sharer") || href.includes("telegram.me/share") || href.includes("twitter.com/intent")) {
+                basTrackOutbound("social_share", href, { link_text: text });
+            } else if (href.startsWith("http")) {
+                basTrackOutbound("external_link", href, { link_text: text });
+            }
+        }
+
+        if (btn) {
+            const text = (btn.innerText || btn.textContent || "").trim().toLowerCase();
+            if (text.includes("compare prices")) basTrackCTA("compare_prices");
+            if (text.includes("submit")) basTrackCTA("submit_amount");
+            if (text.includes("install")) basTrackPWA("install_button_click");
+        }
+
+        if (cta) {
+            const onclick = cta.getAttribute("onclick") || "";
+            if (onclick.includes("copyLink")) basTrackCTA("copy_link");
+            if (onclick.includes("handleInstallTap")) basTrackPWA("install_balloon_tap");
+            if (onclick.includes("changeLang")) basTrackLanguage(window.__basLastLang || "en");
+            if (onclick.includes("resetToEnglish")) basTrackLanguage("en");
+        }
+
+        if (card) {
+            const href = card.getAttribute("href") || "";
+            const name = card.querySelector(".shopName")?.textContent?.trim() || "";
+            basTrackOutbound("shop_card_click", href, { shop_name: name });
+        }
+
+        if (trustBtn) basTrackSection("trust", "button_click");
+        if (peaceBtn) basTrackSection("peace", "button_click");
+        if (vadaBtn) basTrackSection("vada", "button_click");
+        if (visionBtn) basTrackSection("vision", "button_click");
+        if (charityBtn) basTrackSection("global_support", "button_click");
+
+        if (cardImg) {
+            const idx = Array.from(document.querySelectorAll(".card")).indexOf(cardImg);
+            basTrackGallery("image_click", idx);
+        }
+    } catch (err) {}
+}, true);
+
+function copyLink() {
+    navigator.clipboard.writeText("https://bascharity.com");
+    alert("Link Copied. Share with friends.");
+    basTrackCTA("copy_link_success", { copied_url: "https://bascharity.com" });
+}
+
+function setSelectedCountry(country) {
+    if (!country) return;
+    const pureCountry = country.trim().toLowerCase();
+    window.__basLastCountry = pureCountry;
+
+    allCountries.classList.add("green-select");
+
+    document.querySelectorAll(".country-btn").forEach(btn => {
+        const key = btn.getAttribute("data-country");
+        btn.classList.toggle(
+            "active",
+            key && key.trim().toLowerCase() === pureCountry
+        );
+    });
+
+    const shopBtn = document.getElementById("shopOnCountry");
+    if (shopBtn) {
+        shopBtn.innerHTML = `SHOP ON <span class="green">${pureCountry.toUpperCase()}</span>`;
+    }
+
+    localStorage.setItem("selectedCountry", pureCountry);
+    basTrackCountry(pureCountry);
+    fetchExternalCountryJS(pureCountry);
+}
+
+function changeLang(langCode) {
+    window.__basLastLang = langCode;
+    try {
+        let select = document.querySelector('select.goog-te-combo');
+        if (select) {
+            select.value = langCode;
+            select.dispatchEvent(new Event('change'));
+        }
+    } catch (e) {}
+
+    try {
+        const savedCountry = localStorage.getItem("selectedCountry") || "india";
+        if (typeof setSelectedCountry === "function") {
+            setSelectedCountry(savedCountry);
+        }
+    } catch (e) {}
+
+    basTrackLanguage(langCode);
+}
+
+function resetToEnglish() {
+    window.__basLastLang = "en";
+    try {
+        let select = document.querySelector('select.goog-te-combo');
+        if (select) {
+            select.value = 'en';
+            select.dispatchEvent(new Event('change'));
+        }
+    } catch (e) {}
+
+    try {
+        const savedCountry = localStorage.getItem("selectedCountry") || "india";
+        if (typeof setSelectedCountry === "function") {
+            setSelectedCountry(savedCountry);
+        }
+    } catch (e) {}
+
+    basTrackLanguage("en");
+}
+
+function handleInstallTap() {
+    basTrackPWA("install_balloon_tap");
+    if (!basPrompt) return;
+    basPrompt.prompt();
+    basPrompt.userChoice.then((c) => {
+        if (c.outcome === 'accepted') {
+            stat.innerText = "INSTALLED";
+            ball.className = "bas-ball is-pwa-installed";
+            basTrackPWA("install_accepted");
+        } else {
+            basTrackPWA("install_dismissed");
+        }
+        basPrompt = null;
+    });
+}
+
+function goWhatsApp(){
+    let url = "https://bascharity-56f.pages.dev";
+    let text = "Save a beautiful icon to your screen
+
+" + url + "
+
+Chrome → ⋮ 3 dot → Save to Screen → Install";
+    basTrackOutbound("whatsapp_share", "https://wa.me/", { share_target: "install_guide" });
+    window.open("https://wa.me/?text=" + encodeURIComponent(text), "_blank");
+}
+
+function openDonateModal(siteName, siteUrl) {
+    lastClickedSite = siteName;
+    currentActiveUrl = siteUrl;
+    basTrackDonation(siteName, 0, "modal_open", { click_url: siteUrl });
+
+    document.getElementById('modalDonateLink').href = siteUrl;
+    document.getElementById('modalOverlay').style.display = 'block';
+    document.getElementById('commonDonateModal').style.display = 'block';
+}
+
+function trackFinalClick() {
+    let currentTime = new Date().toISOString();
+    if (typeof gtag === 'function') {
+        gtag('event', 'final_donate_click', {
+            charity_site: lastClickedSite,
+            click_url: currentActiveUrl,
+            click_time: currentTime,
+            page_location: location.href,
+            page_path: location.pathname
+        });
+    }
+    basTrackDonation(lastClickedSite, 0, "final_click", { click_url: currentActiveUrl });
+    closeDonateModal();
+}
+
+function submitDonationAmount() {
+    let amountInput = document.getElementById('donation-amount');
+    pendingAmount = amountInput.value;
+    pendingTime = new Date().toISOString();
+
+    if (!pendingAmount || pendingAmount <= 0) {
+        alert("Please enter a valid amount.");
+        basTrackDonation(lastClickedSite, pendingAmount, "invalid_amount");
+        return;
+    }
+
+    basTrackDonation(lastClickedSite, pendingAmount, "amount_submitted");
+
+    document.getElementById('input-area-wrapper').style.display = 'none';
+    let statusDiv = document.getElementById('save-status-msg');
+
+    statusDiv.innerHTML = `
+      <span class="status-msg" style="color: #FFD600;">₹${pendingAmount} will submit in 1 hour... </span>
+      <button class="btn-undo" onclick="undoSubmission()">UNDO</button>
+    `;
+
+    undoTimeout = setTimeout(sendFinalDataToAnalytics, 3600000);
+}
+
+function undoSubmission() {
+    if (undoTimeout) clearTimeout(undoTimeout);
+    basTrackDonation(lastClickedSite, pendingAmount, "undo");
+    
+    let statusDiv = document.getElementById('save-status-msg');
+    statusDiv.innerHTML = `<span class="status-msg" style="color: #FF3D00;">Cancelled! You can edit now.</span>`;
+
+    setTimeout(() => {
+        statusDiv.innerHTML = "";
+        document.getElementById('input-area-wrapper').style.display = 'flex';
+    }, 1500);
+}
+
+function sendFinalDataToAnalytics() {
+    if (typeof gtag === 'function') {
+        gtag('event', 'total_donation_submit', {
+            last_clicked_site: lastClickedSite,
+            amount: parseFloat(pendingAmount),
+            saved_time: pendingTime,
+            page_location: location.href,
+            page_path: location.pathname
+        });
+    }
+
+    basTrackDonation(lastClickedSite, pendingAmount, "final_submit", { saved_time: pendingTime });
+
+    let statusDiv = document.getElementById('save-status-msg');
+    statusDiv.innerHTML = `<span class="status-msg">Reported ₹${pendingAmount} successfully! Thank you.</span>`;
+
+    document.getElementById('donation-amount').value = "";
+
+    setTimeout(() => {
+        statusDiv.innerHTML = "";
+        document.getElementById('input-area-wrapper').style.display = 'flex';
+    }, 4000);
+}
+
+function showDetails9(){
+    document.getElementById("details9").style.display="block";
+    document.getElementById("donate9").style.display="none";
+    window.scrollBy({top:200, behavior:"smooth"});
+    startTimer9();
+    basTrackSection("trust", "details_open", { institution: "Guidance India" });
+}
+function showDonate9(){
+    document.getElementById("details9").style.display="none";
+    document.getElementById("donate9").style.display="block";
+    window.scrollBy({top:200, behavior:"smooth"});
+    startTimer9();
+    basTrackDonation("Guidance India", 0, "donate_panel_open", { category: "India Only" });
+}
+function reset9(){
+    document.getElementById("details9").style.display="none";
+    document.getElementById("donate9").style.display="none";
+    clearTimeout(timer9);
+    basTrackSection("trust", "panel_close");
+}
+
+function peaceDetails10(){
+    document.getElementById("peaceDetails10").style.display="block";
+    document.getElementById("peaceDonate10").style.display="none";
+    window.scrollBy({top:200, behavior:"smooth"});
+    startTimer10();
+    basTrackSection("peace", "details_open", { institution: "Peace Valley" });
+}
+function peaceReset10(){
+    document.getElementById("peaceDetails10").style.display="none";
+    document.getElementById("peaceDonate10").style.display="none";
+    clearTimeout(timer10);
+    basTrackSection("peace", "panel_close");
+}
+
+function vadaDetails11(){
+    document.getElementById("vadaDetails11").style.display="block";
+    document.getElementById("vadaDonate11").style.display="none";
+    scrollTopSmooth("vadaDetails11");
+    startTimer11();
+    basTrackSection("vada", "details_open", { institution: "Vadanappally Orphanage" });
+}
+function vadaDonate11(){
+    document.getElementById("vadaDetails11").style.display="none";
+    document.getElementById("vadaDonate11").style.display="block";
+    scrollTopSmooth("vadaDonate11");
+    startTimer11();
+    basTrackDonation("Vadanappally Orphanage", 0, "donate_panel_open", { category: "India Only" });
+}
+function vadaReset11(){
+    document.getElementById("vadaDetails11").style.display="none";
+    document.getElementById("vadaDonate11").style.display="none";
+    clearTimeout(timer11);
+    basTrackSection("vada", "panel_close");
+}
+
+function visionDetails12(){
+    document.getElementById("visionDetails12").style.display="block";
+    scrollTopSmooth("visionDetails12");
+    startTimer12();
+    basTrackSection("vision", "details_open", { institution: "Vision 2026" });
+}
+function visionReset12(){
+    document.getElementById("visionDetails12").style.display="none";
+    clearTimeout(timer12);
+    basTrackSection("vision", "panel_close");
+}
+
+function loadImages() {
+    photos.forEach((src, i) => {
+        let card = document.createElement("div");
+        card.className = "card";
+        card.onclick = function() {
+            scrolling = false;
+            this.classList.add("zoom-active");
+            basTrackGallery("zoom_open", i);
+            setTimeout(() => {
+                this.classList.remove("zoom-active");
+                scrolling = true;
+                basTrackGallery("zoom_close", i);
+            }, 4000);
+        };
+
+        let img = document.createElement("img");
+        if (i < 2) { img.className = "rotate"; }
+        img.src = src;
+
+        card.appendChild(img);
+        gallery.appendChild(card);
+    });
+    basTrackGallery("images_loaded", photos.length);
+}
+
+window.addEventListener("beforeinstallprompt", (e) => {
+    e.preventDefault();
+    basPrompt = e;
+    stat.innerText = "INSTALL";
+    ball.className = "bas-ball white-b";
+    basTrackPWA("install_prompt_ready");
+});
+
+window.addEventListener("appinstalled", () => {
+    stat.innerText = "INSTALLED";
+    ball.className = "bas-ball is-pwa-installed";
+    basTrackPWA("app_installed");
+});
+</script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+
+function basNow() {
+    try { return new Date().toISOString(); } catch (e) { return ""; }
+}
+
+function basSafeText(v) {
+    return (v || "").toString().trim();
+}
+
+function basSafeUrl(url) {
+    try { return new URL(url, location.href).href; } catch (e) { return url || ""; }
+}
+
+function basTrack(eventName, params = {}) {
+    try {
+        if (typeof gtag === "function") {
+            gtag("event", eventName, params);
+        } else {
+            window.dataLayer.push(Object.assign({ event: eventName }, params));
+        }
+    } catch (e) {}
+}
+
+function basTrackPage(section) {
+    basTrack("bas_page_view", {
+        page_location: location.href,
+        page_path: location.pathname,
+        page_title: document.title,
+        section_name: section || "main",
+        timestamp: basNow()
+    });
+}
+
+function basTrackClick(name, url = "", extra = {}) {
+    basTrack("bas_click", Object.assign({
+        click_name: name,
+        link_url: basSafeUrl(url),
+        page_location: location.href,
+        page_path: location.pathname,
+        timestamp: basNow()
+    }, extra));
+}
+
+function basTrackCountry(country) {
+    basTrack("bas_country_select", {
+        country_name: basSafeText(country),
+        page_location: location.href,
+        page_path: location.pathname,
+        timestamp: basNow()
+    });
+}
+
+function basTrackCategory(category) {
+    basTrack("bas_category_select", {
+        category_name: basSafeText(category),
+        page_location: location.href,
+        page_path: location.pathname,
+        timestamp: basNow()
+    });
+}
+
+function basTrackSearch(query, resultCount) {
+    basTrack("bas_search", {
+        search_term: basSafeText(query),
+        result_count: Number(resultCount) || 0,
+        page_location: location.href,
+        page_path: location.pathname,
+        timestamp: basNow()
+    });
+}
+
+function basTrackShop(shopName, url, category, country) {
+    basTrack("bas_shop_click", {
+        shop_name: basSafeText(shopName),
+        link_url: basSafeUrl(url),
+        category_name: basSafeText(category),
+        country_name: basSafeText(country),
+        page_location: location.href,
+        page_path: location.pathname,
+        outbound: true,
+        timestamp: basNow()
+    });
+}
+
+function basTrackModal(action, siteName, url) {
+    basTrack("bas_modal_action", {
+        action_name: basSafeText(action),
+        charity_site: basSafeText(siteName),
+        click_url: basSafeUrl(url),
+        page_location: location.href,
+        page_path: location.pathname,
+        timestamp: basNow()
+    });
+}
+
+function basTrackDonation(action, siteName, amount) {
+    basTrack("bas_donation_action", {
+        action_name: basSafeText(action),
+        charity_site: basSafeText(siteName),
+        amount_value: Number(amount) || 0,
+        page_location: location.href,
+        page_path: location.pathname,
+        timestamp: basNow()
+    });
+}
+
+function basTrackPWA(action) {
+    basTrack("bas_pwa_action", {
+        action_name: basSafeText(action),
+        page_location: location.href,
+        page_path: location.pathname,
+        timestamp: basNow()
+    });
+}
+
+function basTrackPanel(name, action) {
+    basTrack("bas_panel_action", {
+        panel_name: basSafeText(name),
+        action_name: basSafeText(action),
+        page_location: location.href,
+        page_path: location.pathname,
+        timestamp: basNow()
+    });
+}
+
+function basTrackGallery(action, index) {
+    basTrack("bas_gallery_action", {
+        action_name: basSafeText(action),
+        image_index: Number(index) || 0,
+        page_location: location.href,
+        page_path: location.pathname,
+        timestamp: basNow()
+    });
+}
+
+document.addEventListener("DOMContentLoaded", function () {
+    basTrackPage("landing");
+});
+
+document.addEventListener("click", function (e) {
+    try {
+        const a = e.target.closest("a");
+        const btn = e.target.closest("button");
+        const div = e.target.closest("div");
+
+        if (a) {
+            const href = a.getAttribute("href") || "";
+            const text = a.textContent || "";
+
+            if (href.startsWith("mailto:")) {
+                basTrackClick("email_link", href, { link_text: text });
+            } else if (href.startsWith("tel:")) {
+                basTrackClick("phone_link", href, { link_text: text });
+            } else if (href.includes("wa.me") || href.includes("api.whatsapp.com")) {
+                basTrackClick("whatsapp_share", href, { link_text: text, outbound: true });
+            } else if (href.includes("facebook.com/sharer") || href.includes("telegram.me/share") || href.includes("twitter.com/intent")) {
+                basTrackClick("social_share", href, { link_text: text, outbound: true });
+            } else if (href.startsWith("http")) {
+                basTrackClick("external_link", href, { link_text: text, outbound: true });
+            }
+        }
+
+        if (btn) {
+            const text = basSafeText(btn.innerText).toLowerCase();
+
+            if (text.includes("submit")) basTrackClick("submit_button");
+            if (text.includes("back")) basTrackClick("back_button");
+            if (text.includes("details")) basTrackClick("details_button");
+            if (text.includes("donate")) basTrackClick("donate_button");
+            if (text.includes("compare")) basTrackClick("compare_button");
+            if (text.includes("install")) basTrackPWA("install_button");
+            if (text.includes("change language")) basTrackPanel("floating_selector", "change_language_button");
+            if (text.includes("change category")) basTrackPanel("floating_selector", "change_category_button");
+        }
+
+        if (div) {
+            const onclick = div.getAttribute("onclick") || "";
+
+            if (onclick.includes("scrollIntoView") && onclick.includes("country-box")) {
+                basTrackPanel("floating_selector", "change_category");
+            }
+            if (onclick.includes("scrollIntoView") && onclick.includes("lang-box")) {
+                basTrackPanel("floating_selector", "change_language");
+            }
+            if (onclick.includes("showDetails9")) basTrackPanel("trust", "details_open");
+            if (onclick.includes("showDonate9")) basTrackPanel("trust", "donate_open");
+            if (onclick.includes("peaceDetails10")) basTrackPanel("peace", "details_open");
+            if (onclick.includes("vadaDetails11")) basTrackPanel("vada", "details_open");
+            if (onclick.includes("vadaDonate11")) basTrackPanel("vada", "donate_open");
+            if (onclick.includes("visionDetails12")) basTrackPanel("vision", "details_open");
+            if (onclick.includes("copyLink")) basTrackClick("copy_link");
+        }
+    } catch (err) {}
+}, true);
+
+function changeCountry(countryName) {
+    try {
+        currentCountry = countryName.toLowerCase().trim();
+        if (selectedCountryBox) {
+            selectedCountryBox.textContent = "SELECTED COUNTRY - " + currentCountry.toUpperCase();
+        }
+        if (categoryCountry) {
+            categoryCountry.innerHTML = `SHOP ON <span class="green">${currentCountry.toUpperCase()}</span>`;
+        }
+        localStorage.setItem("selectedCountry", currentCountry);
+        basTrackCountry(currentCountry);
+        renderCategory(currentCategory);
+    } catch (e) {}
+}
+
+function setCountry(country) {
+    try {
+        currentCountry = country.toLowerCase().trim();
+        if (selectedCountryBox) {
+            selectedCountryBox.textContent = "SELECTED COUNTRY - " + currentCountry.toUpperCase();
+        }
+        if (categoryCountry) {
+            categoryCountry.innerHTML = `SHOP ON <span class="green">${currentCountry.toUpperCase()}</span>`;
+        }
+        localStorage.setItem("selectedCountry", currentCountry);
+        basTrackCountry(currentCountry);
+        triggerBackToAll();
+    } catch (e) {}
+}
+
+function renderCategory(cat) {
+    try {
+        currentCategory = cat;
+        const cfg = categoryConfig[cat] || categoryConfig.all;
+
+        basTrackCategory(cfg.code);
+
+        let shops = countryShops[currentCountry] || [];
+        if (cat !== "all") {
+            shops = shops.filter(shop => (shop.c || "").toLowerCase().includes(cfg.code));
+        }
+
+        categoryHeading.innerHTML = `
+          ${cfg.btn}
+          <span class="catDesc">${cfg.desc}</span>
+          ${cat !== "all" ? '<button class="back-all-btn" onclick="triggerBackToAll()">BACK TO ALL</button>' : ''}
+        `;
+
+        categoryShops.innerHTML = "";
+
+        if (!shops.length) {
+            categoryShops.innerHTML = "<div style='text-align:center;padding:20px;color:#888;'>No shops found!</div>";
+            basTrack("bas_no_shop_result", {
+                category_name: cfg.code,
+                country_name: currentCountry,
+                page_location: location.href,
+                page_path: location.pathname,
+                timestamp: basNow()
+            });
+            return;
+        }
+
+        shops.forEach((shop, index) => createShopCard(shop, index));
+    } catch (e) {}
+}
+
+function createShopCard(shop, index) {
+    let host = "";
+    try { host = new URL(shop.u).hostname; } catch (e) {}
+
+    const leftColor = colorSet[index % colorSet.length];
+    const card = document.createElement("a");
+    card.href = shop.u;
+    card.target = "_blank";
+    card.className = "shopCard";
+    card.style.borderLeftColor = leftColor;
+
+    card.addEventListener("click", function () {
+        basTrackShop(shop.n, shop.u, currentCategory, currentCountry);
+    });
+
+    card.innerHTML = `
+        <div class="shopDot">${(shop.a || "").trim() ? "" : "."}</div>
+        <div class="shopHead">
+            <img class="shopFav" src="https://www.google.com/s2/favicons?domain=${host}&sz=64" loading="lazy" alt="">
+            <div class="shopName" translate="no">${shop.n}</div>
+        </div>
+    `;
+    categoryShops.appendChild(card);
+}
+
+function triggerBackToAll() {
+    currentCategory = "all";
+    document.querySelectorAll(".categoryBtn").forEach(x => x.classList.remove("active"));
+    categorySearch.value = "";
+    basTrackCategory("all");
+    renderCategory("all");
+}
+
+function submitDonationAmount() {
+    let amountInput = document.getElementById('donation-amount');
+    let amount = amountInput.value;
+
+    if (!amount || amount <= 0) {
+        basTrackDonation("invalid_amount", lastClickedSite || "NONE", 0);
+        alert("Please enter a valid amount.");
+        return;
+    }
+
+    basTrackDonation("submit_amount", lastClickedSite || "NONE", amount);
+}
+
+function openDonateModal(siteName, siteUrl) {
+    lastClickedSite = siteName;
+    currentActiveUrl = siteUrl;
+
+    document.getElementById('modalDonateLink').href = siteUrl;
+    document.getElementById('modalOverlay').style.display = 'block';
+    document.getElementById('commonDonateModal').style.display = 'block';
+
+    basTrackModal("open", siteName, siteUrl);
+}
+
+function closeDonateModal() {
+    document.getElementById('modalOverlay').style.display = 'none';
+    document.getElementById('commonDonateModal').style.display = 'none';
+    basTrackModal("close", lastClickedSite || "NONE", currentActiveUrl || "");
+}
+
+function trackFinalClick() {
+    basTrackDonation("final_click", lastClickedSite || "NONE", 0);
+    closeDonateModal();
+}
+
+function showDetails9(){
+    document.getElementById("details9").style.display="block";
+    document.getElementById("donate9").style.display="none";
+    window.scrollBy({top:200, behavior:"smooth"});
+    startTimer9();
+    basTrackPanel("trust", "show_details");
+}
+function showDonate9(){
+    document.getElementById("details9").style.display="none";
+    document.getElementById("donate9").style.display="block";
+    window.scrollBy({top:200, behavior:"smooth"});
+    startTimer9();
+    basTrackPanel("trust", "show_donate");
+}
+function reset9(){
+    document.getElementById("details9").style.display="none";
+    document.getElementById("donate9").style.display="none";
+    clearTimeout(timer9);
+    basTrackPanel("trust", "reset");
+}
+
+function peaceDetails10(){
+    document.getElementById("peaceDetails10").style.display="block";
+    document.getElementById("peaceDonate10").style.display="none";
+    window.scrollBy({top:200, behavior:"smooth"});
+    startTimer10();
+    basTrackPanel("peace", "show_details");
+}
+function peaceReset10(){
+    document.getElementById("peaceDetails10").style.display="none";
+    document.getElementById("peaceDonate10").style.display="none";
+    clearTimeout(timer10);
+    basTrackPanel("peace", "reset");
+}
+
+function vadaDetails11(){
+    document.getElementById("vadaDetails11").style.display="block";
+    document.getElementById("vadaDonate11").style.display="none";
+    scrollTopSmooth("vadaDetails11");
+    startTimer11();
+    basTrackPanel("vada", "show_details");
+}
+function vadaDonate11(){
+    document.getElementById("vadaDetails11").style.display="none";
+    document.getElementById("vadaDonate11").style.display="block";
+    scrollTopSmooth("vadaDonate11");
+    startTimer11();
+    basTrackPanel("vada", "show_donate");
+}
+function vadaReset11(){
+    document.getElementById("vadaDetails11").style.display="none";
+    document.getElementById("vadaDonate11").style.display="none";
+    clearTimeout(timer11);
+    basTrackPanel("vada", "reset");
+}
+
+function visionDetails12(){
+    document.getElementById("visionDetails12").style.display="block";
+    scrollTopSmooth("visionDetails12");
+    startTimer12();
+    basTrackPanel("vision", "show_details");
+}
+function visionReset12(){
+    document.getElementById("visionDetails12").style.display="none";
+    clearTimeout(timer12);
+    basTrackPanel("vision", "reset");
+}
+
+function loadImages() {
+    photos.forEach((src, i) => {
+        let card = document.createElement("div");
+        card.className = "card";
+        card.onclick = function() {
+            scrolling = false;
+            this.classList.add("zoom-active");
+            basTrackGallery("zoom_open", i);
+            setTimeout(() => {
+                this.classList.remove("zoom-active");
+                scrolling = true;
+                basTrackGallery("zoom_close", i);
+            }, 4000);
+        };
+
+        let img = document.createElement("img");
+        if (i < 2) { img.className = "rotate"; }
+        img.src = src;
+
+        card.appendChild(img);
+        gallery.appendChild(card);
+    });
+    basTrackGallery("images_loaded", photos.length);
+}
+
+window.addEventListener("beforeinstallprompt", (e) => {
+    e.preventDefault();
+    basPrompt = e;
+    stat.innerText = "INSTALL";
+    ball.className = "bas-ball white-b";
+    basTrackPWA("install_prompt_ready");
+});
+
+window.addEventListener("appinstalled", () => {
+    stat.innerText = "INSTALLED";
+    ball.className = "bas-ball is-pwa-installed";
+    basTrackPWA("app_installed");
+});
+</script>
+
 </head> 
 <body>
