@@ -1897,6 +1897,7 @@ let counterElement = document.getElementById("counter");
 function runCounter() {
 if (count < target) {
 count += 250; /* കൃത്യമായി 27000 ൽ എത്താൻ 250 ആക്കി */
+  if (count === 250) basTrack("impact_counter_started");
 if (count > target) count = target;
 counterElement.innerText = count.toString().padStart(7, "0");
 setTimeout(runCounter, 120);
