@@ -1,6 +1,59 @@
 <!DOCTYPE html>   
 <html lang="en">
 <head>
+  <!-- ========================================================= -->
+<!-- തലക്കെട്ടിന്റെ ഉടൻ താഴെ ഇടേണ്ടത് -->
+<!-- GA4 / GTM / Search Console / Clarity / Cloudflare / Bing -->
+<!-- ഇനി ഒന്നും ചേർക്കേണ്ട -->
+<!-- ========================================================= -->
+
+<!-- GOOGLE ANALYTICS 4 -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=YOUR_GA4_ID"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){ dataLayer.push(arguments); }
+gtag('js', new Date());
+gtag('config', 'G-S9ZT8HR7GJ', { send_page_view: true });
+</script>
+
+<!-- GOOGLE TAG MANAGER -->
+<script>
+(function(w,d,s,l,i){
+  w[l]=w[l]||[];
+  w[l].push({'gtm.start': new Date().getTime(), event:'gtm.js'});
+  var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),
+      dl=l!='dataLayer' ? '&l='+l : '';
+  j.async=true;
+  j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;
+  f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','YOUR_GTM_ID');
+</script>
+
+<!-- GOOGLE SEARCH CONSOLE -->
+<meta name="google-site-verification" content="YOUR_SEARCH_CONSOLE_CODE">
+
+<!-- MICROSOFT CLARITY -->
+<script type="text/javascript">
+(function(c,l,a,r,i,t,y){
+  c[a]=c[a]||function(){ (c[a].q=c[a].q||[]).push(arguments); };
+  t=l.createElement(r);
+  t.async=1;
+  t.src="https://www.clarity.ms/tag/"+i;
+  y=l.getElementsByTagName(r)[0];
+  y.parentNode.insertBefore(t,y);
+})(window,document,"clarity","script","YOUR_CLARITY_ID");
+</script>
+
+<!-- CLOUDFLARE WEB ANALYTICS -->
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token":"YOUR_CLOUDFLARE_TOKEN"}'></script>
+
+<!-- BING WEBMASTER -->
+<meta name="msvalidate.01" content="YOUR_BING_VERIFICATION_CODE">
+
+<!-- ========================================================= -->
+<!-- മേൽപ്പറഞ്ഞത് മാത്രം -->
+<!-- ========================================================= -->  
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>BAS Charity International</title> 
@@ -244,169 +297,111 @@ text-shadow: none !important;
 50% { transform: translate(25px, -25px) rotate(-4deg); }
 }
 </style>
-<!-- ===========================
-BAS CHARITY GOOGLE ANALYTICS
-Measurement ID : G-W0NH1KVHHC
-=========================== -->
-
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-W0NH1KVHHC"></script>
+ 
+ 
+ 
+ <!-- ========================================================= -->
+<!-- </head> ന് മുമ്പ് ഇടേണ്ടത് -->
+<!-- common helper മാത്രം -->
+<!-- ഇനി ഒന്നും ചേർക്കേണ്ട -->
+<!-- ========================================================= -->
 
 <script>
-window.dataLayer = window.dataLayer || [];
+window.BASAnalytics = window.BASAnalytics || {};
+window.BASAnalytics.version = "1.00";
+window.BASAnalytics.site = "BAS Charity International";
+window.BASAnalytics.status = "Ready";
 
-function gtag(){
-dataLayer.push(arguments);
+function basTrack(eventName, params = {}) {
+  if (typeof gtag !== "function") return;
+  gtag("event", eventName, params);
 }
 
-gtag('js', new Date());
-
-gtag('config','G-W0NH1KVHHC',{
-send_page_view:true
-});
-
-/* ---------- Universal Event Function ---------- */
-
-function basTrack(eventName, params={}){
-gtag('event',eventName,params);
+function basPage(pageName) {
+  basTrack("bas_page_view", { page_name: pageName });
 }
 
-/* ---------- Page Loaded ---------- */
-
-window.addEventListener("load",function(){
-
-basTrack("page_loaded");
-
-});
-
-/* ---------- Shop Click ---------- */
-
-document.addEventListener("click",function(e){
-
-const shop=e.target.closest("a.shopCard");
-
-if(shop){
-
-basTrack("shop_click",{
-shop_name:shop.innerText.trim(),
-shop_url:shop.href
-});
-
+function basShop(shopName, shopURL) {
+  basTrack("bas_shop_click", {
+    shop_name: shopName,
+    shop_url: shopURL
+  });
 }
 
-});
-
-/* ---------- Compare Button ---------- */
-
-document.addEventListener("click",function(e){
-
-const btn=e.target.closest(".compare-btn");
-
-if(btn){
-
-basTrack("compare_click");
-
+function basAffiliate(shopName, affiliateURL) {
+  basTrack("bas_affiliate_click", {
+    shop_name: shopName,
+    affiliate_url: affiliateURL
+  });
 }
 
-});
-
-/* ---------- Share Buttons ---------- */
-
-document.addEventListener("click",function(e){
-
-const share=e.target.closest(".share-grid a");
-
-if(share){
-
-basTrack("share_click",{
-
-platform:share.href
-
-});
-
+function basCountry(country) {
+  basTrack("bas_country_selected", { country: country });
 }
 
-});
-
-/* ---------- Copy Link ---------- */
-
-function analyticsCopyLink(){
-
-basTrack("copy_link");
-
+function basLanguage(language) {
+  basTrack("bas_language_selected", { language: language });
 }
 
-/* ---------- Country ---------- */
-
-function analyticsCountry(country){
-
-basTrack("country_selected",{
-
-country:country
-
-});
-
+function basSearch(keyword) {
+  basTrack("bas_search", { search_term: keyword });
 }
 
-/* ---------- Language ---------- */
-
-function analyticsLanguage(language){
-
-basTrack("language_selected",{
-
-language:language
-
-});
-
+function basExternal(url) {
+  basTrack("bas_external_link", { url: url });
 }
 
-/* ---------- Search ---------- */
-
-function analyticsSearch(text){
-
-basTrack("search",{
-
-search_term:text
-
-});
-
+function basShare(platform) {
+  basTrack("bas_share", { platform: platform });
 }
 
-/* ---------- PWA Install ---------- */
-
-function analyticsPWA(){
-
-basTrack("pwa_install");
-
+function basWhatsApp() {
+  basTrack("bas_whatsapp_share");
 }
 
-/* ---------- Donation ---------- */
-
-function analyticsDonation(name){
-
-basTrack("donation_button",{
-
-charity:name
-
-});
-
+function basCopyLink() {
+  basTrack("bas_copy_link");
 }
 
-/* ---------- External Link ---------- */
+function basCompare() {
+  basTrack("bas_compare_prices");
+}
 
-function analyticsExternal(url){
+function basPWAInstall() {
+  basTrack("bas_pwa_install");
+}
 
-basTrack("external_link",{
+function basReadMore(section) {
+  basTrack("bas_read_more", { section: section });
+}
 
-url:url
+function basGallery(imageName) {
+  basTrack("bas_gallery_open", { image: imageName });
+}
 
-});
+function basImpact(amount) {
+  basTrack("bas_impact_counter", { amount: amount });
+}
 
+function basError(message, file, line) {
+  basTrack("bas_error", {
+    message: message,
+    file: file,
+    line: line
+  });
+}
+
+function basPerformance(metric, value) {
+  basTrack("bas_performance", {
+    metric: metric,
+    value: value
+  });
 }
 </script>
 
-<!-- ===========================
-END OF BAS ANALYTICS
-=========================== -->
+<!-- ========================================================= -->
+<!-- മേൽപ്പറഞ്ഞത് മാത്രം -->
+<!-- ========================================================= -->
   
 </head> 
 
