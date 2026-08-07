@@ -2333,61 +2333,390 @@ body{
 }
 </style>
 
+ <!-- INFINITE AUTO-SCROLL GREETINGS WIDGET START -->
+<style>
+  :root {
+    --gold-gradient: linear-gradient(135deg, #bf953f, #fcf6ba, #b38728, #fbf5b7, #aa771c);
+    --bg-dark: #070d1a;
+    --card-bg: #0b1326;
+    --blue-btn: linear-gradient(135deg, #1d4ed8, #3b82f6);
+  }
 
-<div class="deputy-card">
+  .widget-container {
+    width: 100%;
+    max-width: 1000px;
+    margin: 20px auto;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
 
-<p>
-I have had the opportunity to know Mr. Mohammed M. Basheer personally.
-I believe that his honesty, sincerity, and compassion are truly reflected
-in this initiative.
-</p>
+  .search-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
 
-<p>
-This digital initiative, launched with the noble vision of helping
-vulnerable people who struggle to access even the most basic necessity of
-life—food—is truly commendable. Its message,
-<span class="slogan">"YOUR PURCHASE SATISFIES A HUNGER®"</span>,
-is simple yet deeply meaningful.
-</p>
+  .search-box {
+    width: 100%;
+    max-width: 500px;
+    padding: 12px 24px;
+    border-radius: 30px;
+    border: 2px solid #b38728;
+    background: #09101f;
+    color: #fcf6ba;
+    font-size: 1rem;
+    outline: none;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+    box-sizing: border-box;
+  }
 
-<p>
-By simply saving a small icon and using it for your regular purchases
-whenever possible, everyone has an opportunity to become part of this
-noble humanitarian mission.
-</p>
+  .slider-container {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    padding: 10px 0;
+  }
 
-<p>
-I extend my heartfelt best wishes for the success of this exemplary
-initiative towards building a hunger-free society.
-</p>
+  .slider-track {
+    display: flex;
+    gap: 20px;
+    width: max-content;
+    animation: continuousScroll 35s linear infinite;
+  }
 
-  <!-- CARD TEMPLATE -->
-<div class="greeting-card" data-search="NAME HERE DESIGNATION">
-  <div class="card-inner">
-    <div class="photo-wrapper">
-      <img src="ഫോട്ടോ_ലിങ്ക്_ഇവിടെ_നൽകുക" alt="Person">
-      <button class="zoom-btn" onclick="openZoomModal(this)">🔍 ZOOM</button>
-    </div>
-    <div class="content-wrapper">
-      <div class="greetings-header">GREETINGS</div>
-      <div class="preview-text">"സന്ദേശത്തിന്റെ ചെറിയ ഭാഗം ഇവിടെ നൽകുക..."</div>
-      <button class="more-btn" onclick="openMsgModal('unique_id_here')">MORE &rarr;</button>
+  .slider-container:hover .slider-track {
+    animation-play-state: paused;
+  }
+
+  @keyframes continuousScroll {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(calc(-50% - 10px)); }
+  }
+
+  .greeting-card {
+    width: 580px;
+    background: var(--card-bg);
+    border-radius: 20px;
+    padding: 3px;
+    background-image: var(--gold-gradient);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.8);
+    flex-shrink: 0;
+    box-sizing: border-box;
+  }
+
+  .card-inner {
+    background: var(--bg-dark);
+    border-radius: 17px;
+    display: flex;
+    flex-direction: row;
+    overflow: hidden;
+    border: 1px solid rgba(212, 175, 55, 0.3);
+    height: 100%;
+  }
+
+  .photo-wrapper {
+    width: 38%;
+    position: relative;
+    background: #020612;
+    border-right: 2px solid #b38728;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 240px;
+  }
+
+  .photo-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .zoom-btn {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(0, 0, 0, 0.85);
+    border: 1.5px solid #d4af37;
+    color: #fff;
+    padding: 4px 12px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 0.75rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+    backdrop-filter: blur(4px);
+  }
+
+  .content-wrapper {
+    width: 62%;
+    padding: 18px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-sizing: border-box;
+  }
+
+  .greetings-header {
+    font-size: 1.2rem;
+    font-weight: 800;
+    letter-spacing: 2px;
+    background: var(--gold-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .preview-text {
+    font-size: 0.95rem;
+    line-height: 1.4;
+    color: #e2e8f0;
+    font-style: italic;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    margin: 8px 0;
+  }
+
+  .more-btn {
+    background: var(--blue-btn);
+    color: #fff;
+    border: 1px solid #60a5fa;
+    padding: 6px 16px;
+    border-radius: 15px;
+    font-weight: bold;
+    font-size: 0.85rem;
+    cursor: pointer;
+    align-self: flex-start;
+  }
+
+  .person-name {
+    font-size: 1.05rem;
+    font-weight: 800;
+    background: var(--gold-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .person-designation {
+    font-size: 0.9rem;
+    color: #cbd5e1;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-top: 2px;
+  }
+
+  .person-org {
+    font-size: 0.9rem;
+    font-weight: bold;
+    color: #ffffff;
+    margin-top: 2px;
+    text-transform: uppercase;
+  }
+
+  .message-modal-overlay {
+    display: none;
+    position: fixed;
+    top: 0; left: 0;
+    width: 100vw; height: 100vh;
+    background: rgba(0, 0, 0, 0.88);
+    z-index: 10000;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    box-sizing: border-box;
+  }
+
+  .message-modal-card {
+    background: #070d1a;
+    border: 2px solid #b38728;
+    border-radius: 20px;
+    max-width: 650px;
+    width: 100%;
+    max-height: 85vh;
+    overflow-y: auto;
+    padding: 30px 25px;
+    position: relative;
+  }
+
+  .modal-close-btn {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    color: #fcf6ba;
+    font-size: 2rem;
+    font-weight: bold;
+    cursor: pointer;
+  }
+
+  .modal-body-text {
+    font-family: 'Georgia', serif;
+    font-size: 1.15rem;
+    line-height: 1.8;
+    color: #ffffff;
+    text-align: justify;
+    margin-top: 20px;
+  }
+
+  .zoom-modal {
+    display: none;
+    position: fixed;
+    z-index: 10001;
+    top: 0; left: 0;
+    width: 100vw; height: 100vh;
+    background: rgba(0, 0, 0, 0.92);
+    justify-content: center;
+    align-items: center;
+  }
+
+  .zoom-modal img {
+    max-width: 90%;
+    max-height: 85vh;
+    border-radius: 12px;
+    border: 2px solid #d4af37;
+  }
+
+  @media (max-width: 650px) {
+    .greeting-card { width: 85vw; }
+  }
+</style>
+
+<div class="widget-container">
+  <!-- SEARCH BAR -->
+  <div class="search-container">
+    <input type="text" id="searchInput" class="search-box" placeholder="Search greetings by name or designation..." onkeyup="filterGreetings()">
+  </div>
+
+  <!-- CONTINUOUS AUTO SCROLL -->
+  <div class="slider-container">
+    <div class="slider-track" id="sliderTrack">
       
-      <div style="border-top: 1px solid rgba(212,175,55,0.3); padding-top: 8px; margin-top: 10px;">
-        <div class="person-name">NAME IN CAPITAL</div>
-        <div class="person-designation">DESIGNATION IN CAPITAL</div>
-        <div class="person-org">ORGANIZATION NAME</div>
+      <!-- CARD 1: MATHUKATTY MP -->
+      <div class="greeting-card" data-search="MATHUKATTY MP RETIRED ASSISTANT ENGINEER KSEB">
+        <div class="card-inner">
+          <div class="photo-wrapper">
+            <img src="PHOTO_URL_HERE" alt="MATHUKATTY MP">
+            <button class="zoom-btn" onclick="openZoomModal(this)">🔍 ZOOM</button>
+          </div>
+          <div class="content-wrapper">
+            <div class="greetings-header">GREETINGS</div>
+            <div class="preview-text">
+              "I have had the opportunity to know Mr. Mohammed M. Basheer personally. I believe that his honesty, sincerity, and compassion are truly reflected..."
+            </div>
+            <button class="more-btn" onclick="openMsgModal('modalMathukatty')">MORE &rarr;</button>
+            <div style="border-top: 1px solid rgba(212,175,55,0.3); padding-top: 8px; margin-top: 10px;">
+              <div class="person-name">MATHUKATTY, MP</div>
+              <div class="person-designation">RETIRED ASSISTANT ENGINEER</div>
+              <div class="person-org">KSEB</div>
+            </div>
+          </div>
+        </div>
       </div>
+
+      <!-- DUPLICATE CARD FOR SMOOTH INFINITE LOOP -->
+      <div class="greeting-card" data-search="MATHUKATTY MP RETIRED ASSISTANT ENGINEER KSEB">
+        <div class="card-inner">
+          <div class="photo-wrapper">
+            <img src="PHOTO_URL_HERE" alt="MATHUKATTY MP">
+            <button class="zoom-btn" onclick="openZoomModal(this)">🔍 ZOOM</button>
+          </div>
+          <div class="content-wrapper">
+            <div class="greetings-header">GREETINGS</div>
+            <div class="preview-text">
+              "I have had the opportunity to know Mr. Mohammed M. Basheer personally. I believe that his honesty, sincerity, and compassion are truly reflected..."
+            </div>
+            <button class="more-btn" onclick="openMsgModal('modalMathukatty')">MORE &rarr;</button>
+            <div style="border-top: 1px solid rgba(212,175,55,0.3); padding-top: 8px; margin-top: 10px;">
+              <div class="person-name">MATHUKATTY, MP</div>
+              <div class="person-designation">RETIRED ASSISTANT ENGINEER</div>
+              <div class="person-org">KSEB</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
     </div>
   </div>
 </div>
 
-
-<div class="signature">
-<div class="name">(NAME)</div>
-<div class="designation">RETIRED ASSISTANT ENGINEER</div>
-<div class="office">KERALA STATE ELECTRICITY BOARD (KSEB)</div>
+<!-- MODAL: MATHUKATTY MP -->
+<div id="modalMathukatty" class="message-modal-overlay" onclick="closeMsgModal('modalMathukatty')">
+  <div class="message-modal-card" onclick="event.stopPropagation()">
+    <span class="modal-close-btn" onclick="closeMsgModal('modalMathukatty')">&times;</span>
+    <div style="text-align: center;">
+      <span style="background: var(--gold-gradient); color: #000; font-weight: bold; padding: 6px 24px; border-radius: 20px; font-size: 1rem; letter-spacing: 1px;">GREETINGS</span>
+    </div>
+    <div class="modal-body-text">
+      <p style="font-style: italic; color: #fcf6ba;">
+        I have had the opportunity to know Mr. Mohammed M. Basheer personally. I believe that his honesty, sincerity, and compassion are truly reflected in this initiative.
+      </p>
+      <p>
+        This digital initiative, launched with the noble vision of helping vulnerable people who struggle to access even the most basic necessity of life—food—is truly commendable. Its message, <span style="color: #fcf6ba; font-weight: bold;">"YOUR PURCHASE SATISFIES A HUNGER®"</span>, is simple yet deeply meaningful.
+      </p>
+      <p>
+        By simply saving a small icon and using it for your regular purchases whenever possible, everyone has an opportunity to become part of this noble humanitarian mission.
+      </p>
+      <p style="margin-bottom: 0;">
+        I extend my heartfelt best wishes for the success of this exemplary initiative towards building a hunger-free society.
+      </p>
+    </div>
+    <div style="border-top: 1px solid rgba(212, 175, 55, 0.4); padding-top: 15px; text-align: center; margin-top: 20px;">
+      <div class="person-name" style="font-size: 1.2rem;">MATHUKATTY, MP</div>
+      <div class="person-designation" style="font-size: 0.95rem;">RETIRED ASSISTANT ENGINEER</div>
+      <div class="person-org" style="font-size: 0.95rem;">KERALA STATE ELECTRICITY BOARD (KSEB)</div>
+    </div>
+  </div>
 </div>
+
+<!-- IMAGE ZOOM MODAL -->
+<div id="imageModal" class="zoom-modal" onclick="closeZoomModal()">
+  <span class="modal-close-btn" style="top:20px; right:30px;">&times;</span>
+  <img id="modalImg" src="" alt="Enlarged View">
+</div>
+
+<script>
+  function openMsgModal(id) {
+    document.getElementById(id).style.display = 'flex';
+  }
+
+  function closeMsgModal(id) {
+    document.getElementById(id).style.display = 'none';
+  }
+
+  function openZoomModal(btn) {
+    const imgSrc = btn.previousElementSibling.src;
+    document.getElementById('modalImg').src = imgSrc;
+    document.getElementById('imageModal').style.display = 'flex';
+  }
+
+  function closeZoomModal() {
+    document.getElementById('imageModal').style.display = 'none';
+  }
+
+  function filterGreetings() {
+    let query = document.getElementById('searchInput').value.toLowerCase();
+    let cards = document.getElementsByClassName('greeting-card');
+    let track = document.getElementById('sliderTrack');
+
+    if (query.trim() !== '') {
+      track.style.animation = 'none';
+    } else {
+      track.style.animation = 'continuousScroll 35s linear infinite';
+    }
+
+    for (let card of cards) {
+      let searchData = card.getAttribute('data-search').toLowerCase();
+      if (searchData.includes(query)) {
+        card.style.display = "block";
+      } else {
+        card.style.display = "none";
+      }
+    }
+  }
+</script>
+<!-- INFINITE AUTO-SCROLL GREETINGS WIDGET END -->
+
 
 </div>
 
