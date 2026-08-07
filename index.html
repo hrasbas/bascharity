@@ -2377,9 +2377,148 @@ function toggleWish() {
 
 </div>
 
-<div class="bas7-quote">"YOUR PURCHASE SATISFIES A HUNGER®"</div>
+<div class="bas7-quote">"YOUR PURCHASE SATISFIES A HUNGER ®"</div>
 </div>
 </div>
+    
+<!-- FRONT SCREEN GREETINGS SLIDER START -->
+<style>
+  .front-slider-wrapper {
+    width: 100%;
+    max-width: 1000px;
+    margin: 30px auto;
+    overflow: hidden;
+    position: relative;
+  }
+
+  .front-slider-track {
+    display: flex;
+    gap: 20px;
+    width: max-content;
+    animation: continuousScroll 35s linear infinite;
+  }
+
+  .front-slider-wrapper:hover .front-slider-track {
+    animation-play-state: paused;
+  }
+
+  @keyframes continuousScroll {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(calc(-50% - 10px)); }
+  }
+
+  .front-card {
+    width: 300px;
+    background: #0b1326;
+    border-radius: 16px;
+    padding: 2px;
+    background-image: linear-gradient(135deg, #bf953f, #fcf6ba, #b38728, #fbf5b7, #aa771c);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.6);
+    flex-shrink: 0;
+  }
+
+  .front-card-inner {
+    background: #070d1a;
+    border-radius: 14px;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    border: 1px solid rgba(212, 175, 55, 0.3);
+  }
+
+  .front-photo-box {
+    width: 100%;
+    height: 200px;
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+    border: 1px solid #b38728;
+    background: #020612;
+    margin-bottom: 12px;
+  }
+
+  .front-photo-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .front-zoom-btn {
+    position: absolute;
+    bottom: 8px;
+    right: 8px;
+    background: rgba(0, 0, 0, 0.85);
+    border: 1px solid #d4af37;
+    color: #fff;
+    padding: 3px 10px;
+    border-radius: 12px;
+    cursor: pointer;
+    font-size: 0.7rem;
+    font-weight: bold;
+  }
+
+  .front-person-name {
+    font-size: 1.05rem;
+    font-weight: 800;
+    background: linear-gradient(135deg, #bf953f, #fcf6ba, #b38728);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-top: 5px;
+  }
+
+  .front-person-designation {
+    font-size: 0.85rem;
+    color: #cbd5e1;
+    text-transform: uppercase;
+    margin-top: 4px;
+    letter-spacing: 0.5px;
+  }
+</style>
+
+<div class="front-slider-wrapper">
+  <div class="front-slider-track">
+    
+    <!-- CARD 1: MATHUKATTY M P -->
+    <div class="front-card">
+      <div class="front-card-inner">
+        <div class="front-photo-box">
+          <img src="MATHUKATTY_PHOTO_URL_HERE" alt="MATHUKATTY M P">
+          <button class="front-zoom-btn" onclick="openZoomModal(this)">🔍 ZOOM</button>
+        </div>
+        <div class="front-person-name">MATHUKATTY M P</div>
+        <div class="front-person-designation">RETIRED ASSISTANT ENGINEER</div>
+      </div>
+    </div>
+
+    <!-- CARD 2: DUMMY 1 -->
+    <div class="front-card">
+      <div class="front-card-inner">
+        <div class="front-photo-box">
+          <img src="https://via.placeholder.com/300x300" alt="Person 2">
+          <button class="front-zoom-btn" onclick="openZoomModal(this)">🔍 ZOOM</button>
+        </div>
+        <div class="front-person-name">NAME TWO HERE</div>
+        <div class="front-person-designation">DESIGNATION TWO HERE</div>
+      </div>
+    </div>
+
+    <!-- CARD 3: DUMMY 2 -->
+    <div class="front-card">
+      <div class="front-card-inner">
+        <div class="front-photo-box">
+          <img src="https://via.placeholder.com/300x300" alt="Person 3">
+          <button class="front-zoom-btn" onclick="openZoomModal(this)">🔍 ZOOM</button>
+        </div>
+        <div class="front-person-name">NAME THREE HERE</div>
+        <div class="front-person-designation">DESIGNATION THREE HERE</div>
+      </div>
+    </div>
+
+  </div>
+</div>
+<!-- FRONT SCREEN GREETINGS SLIDER END -->
 
 <script>
 /* SECTION 7 (Required for Observer) */
