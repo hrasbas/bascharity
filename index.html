@@ -2381,46 +2381,83 @@ function toggleWish() {
 </div>
 </div>
     
-<!-- FRONT SCREEN GREETINGS SLIDER START -->
+<!-- FRONT SCREEN GREETINGS SLIDER START --> 
+  
+ <!-- FRONT SCREEN AUTO/MANUAL SLIDER WITH SEARCH & ZOOM START -->
 <style>
-  .front-slider-wrapper {
+  .slider-main-container {
     width: 100%;
     max-width: 1000px;
     margin: 30px auto;
-    overflow: hidden;
-    position: relative;
+    padding: 10px;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
   }
 
-  .front-slider-track {
+  /* SEARCH BAR STYLES */
+  .slider-search-box {
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto 20px auto;
+    display: block;
+    padding: 10px 16px;
+    border-radius: 25px;
+    border: 1px solid #b38728;
+    background: #070d1a;
+    color: #fff;
+    font-size: 0.95rem;
+    outline: none;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+    text-align: center;
+  }
+
+  .slider-search-box::placeholder {
+    color: #a0aec0;
+  }
+
+  /* AUTO & MANUAL SCROLL CONTAINER */
+  .slider-scroll-wrapper {
+    width: 100%;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    padding-bottom: 15px;
+    /* Hide Scrollbar for clean look */
+    scrollbar-width: thin;
+    scrollbar-color: #b38728 #070d1a;
+  }
+
+  .slider-track-fast {
     display: flex;
-    gap: 20px;
+    gap: 18px;
     width: max-content;
-    animation: continuousScroll 35s linear infinite;
+    /* SPEED INCREASED: 18s continuous scroll */
+    animation: fastContinuousScroll 18s linear infinite;
   }
 
-  .front-slider-wrapper:hover .front-slider-track {
+  .slider-scroll-wrapper:hover .slider-track-fast {
     animation-play-state: paused;
   }
 
-  @keyframes continuousScroll {
+  @keyframes fastContinuousScroll {
     0% { transform: translateX(0); }
-    100% { transform: translateX(calc(-50% - 10px)); }
+    100% { transform: translateX(calc(-50% - 9px)); }
   }
 
-  .front-card {
-    width: 300px;
+  /* CARD STYLES */
+  .front-card-item {
+    width: 280px;
     background: #0b1326;
     border-radius: 16px;
     padding: 2px;
     background-image: linear-gradient(135deg, #bf953f, #fcf6ba, #b38728, #fbf5b7, #aa771c);
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.6);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.6);
     flex-shrink: 0;
   }
 
-  .front-card-inner {
+  .front-card-inner-box {
     background: #070d1a;
     border-radius: 14px;
-    padding: 15px;
+    padding: 12px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -2428,97 +2465,192 @@ function toggleWish() {
     border: 1px solid rgba(212, 175, 55, 0.3);
   }
 
-  .front-photo-box {
+  .front-photo-wrapper {
     width: 100%;
-    height: 200px;
+    height: 190px;
     border-radius: 10px;
     overflow: hidden;
     position: relative;
     border: 1px solid #b38728;
     background: #020612;
-    margin-bottom: 12px;
+    margin-bottom: 10px;
   }
 
-  .front-photo-box img {
+  .front-photo-wrapper img {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    cursor: pointer;
   }
 
-  .front-zoom-btn {
+  .zoom-trigger-btn {
     position: absolute;
-    bottom: 8px;
-    right: 8px;
+    bottom: 6px;
+    right: 6px;
     background: rgba(0, 0, 0, 0.85);
     border: 1px solid #d4af37;
     color: #fff;
-    padding: 3px 10px;
-    border-radius: 12px;
+    padding: 3px 8px;
+    border-radius: 10px;
     cursor: pointer;
     font-size: 0.7rem;
     font-weight: bold;
   }
 
-  .front-person-name {
-    font-size: 1.05rem;
+  .person-title-name {
+    font-size: 1rem;
     font-weight: 800;
     background: linear-gradient(135deg, #bf953f, #fcf6ba, #b38728);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    margin-top: 5px;
+    margin-top: 4px;
   }
 
-  .front-person-designation {
-    font-size: 0.85rem;
+  .person-sub-title {
+    font-size: 0.8rem;
     color: #cbd5e1;
     text-transform: uppercase;
-    margin-top: 4px;
+    margin-top: 3px;
     letter-spacing: 0.5px;
+  }
+
+  /* ZOOM MODAL POPUP */
+  .image-zoom-modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.9);
+    z-index: 99999;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .image-zoom-modal img {
+    max-width: 90%;
+    max-height: 85%;
+    border-radius: 12px;
+    border: 2px solid #d4af37;
+    box-shadow: 0 0 20px rgba(212, 175, 55, 0.5);
+  }
+
+  .zoom-close-btn {
+    position: absolute;
+    top: 20px;
+    right: 25px;
+    color: #fff;
+    font-size: 30px;
+    font-weight: bold;
+    cursor: pointer;
+    background: rgba(212, 175, 55, 0.3);
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #d4af37;
   }
 </style>
 
-<div class="front-slider-wrapper">
-  <div class="front-slider-track">
-    
-    <!-- CARD 1: MATHUKATTY M P -->
-    <div class="front-card">
-      <div class="front-card-inner">
-        <div class="front-photo-box">
-          <img src="MATHUKATTY_PHOTO_URL_HERE" alt="MATHUKATTY M P">
-          <button class="front-zoom-btn" onclick="openZoomModal(this)">🔍 ZOOM</button>
-        </div>
-        <div class="front-person-name">MATHUKATTY M P</div>
-        <div class="front-person-designation">RETIRED ASSISTANT ENGINEER</div>
-      </div>
-    </div>
+<div class="slider-main-container">
+  <!-- SEARCH BAR (മുകളിൽ) -->
+  <input type="text" id="greetingSearch" class="slider-search-box" onkeyup="filterGreetings()" placeholder="🔍 Search by name or designation...">
 
-    <!-- CARD 2: DUMMY 1 -->
-    <div class="front-card">
-      <div class="front-card-inner">
-        <div class="front-photo-box">
-          <img src="https://via.placeholder.com/300x300" alt="Person 2">
-          <button class="front-zoom-btn" onclick="openZoomModal(this)">🔍 ZOOM</button>
+  <!-- MANUAL + AUTO SLIDER WRAPPER -->
+  <div class="slider-scroll-wrapper">
+    <div class="slider-track-fast" id="sliderTrack">
+      
+      <!-- CARD 1: MATHUKATTY M P -->
+      <div class="front-card-item greeting-card" data-search="MATHUKATTY M P RETIRED ASSISTANT ENGINEER">
+        <div class="front-card-inner-box">
+          <div class="front-photo-wrapper">
+            <img src="MATHUKATTY_PHOTO_URL_HERE" alt="MATHUKATTY M P" onclick="openZoomImage(this.src)">
+            <button class="zoom-trigger-btn" onclick="openZoomImage('MATHUKATTY_PHOTO_URL_HERE')">🔍 ZOOM</button>
+          </div>
+          <div class="person-title-name">MATHUKATTY M P</div>
+          <div class="person-sub-title">RETIRED ASSISTANT ENGINEER</div>
         </div>
-        <div class="front-person-name">NAME TWO HERE</div>
-        <div class="front-person-designation">DESIGNATION TWO HERE</div>
       </div>
-    </div>
 
-    <!-- CARD 3: DUMMY 2 -->
-    <div class="front-card">
-      <div class="front-card-inner">
-        <div class="front-photo-box">
-          <img src="https://via.placeholder.com/300x300" alt="Person 3">
-          <button class="front-zoom-btn" onclick="openZoomModal(this)">🔍 ZOOM</button>
+      <!-- CARD 2: ADD MORE (പുതിയ ആൾ 1) -->
+      <div class="front-card-item greeting-card" data-search="NAME TWO DESIGNATION TWO">
+        <div class="front-card-inner-box">
+          <div class="front-photo-wrapper">
+            <img src="https://via.placeholder.com/300x300" alt="Person 2" onclick="openZoomImage(this.src)">
+            <button class="zoom-trigger-btn" onclick="openZoomImage('https://via.placeholder.com/300x300')">🔍 ZOOM</button>
+          </div>
+          <div class="person-title-name">NAME TWO HERE</div>
+          <div class="person-sub-title">DESIGNATION TWO HERE</div>
         </div>
-        <div class="front-person-name">NAME THREE HERE</div>
-        <div class="front-person-designation">DESIGNATION THREE HERE</div>
       </div>
-    </div>
 
+      <!-- CARD 3: ADD MORE (പുതിയ ആൾ 2) -->
+      <div class="front-card-item greeting-card" data-search="NAME THREE DESIGNATION THREE">
+        <div class="front-card-inner-box">
+          <div class="front-photo-wrapper">
+            <img src="https://via.placeholder.com/300x300" alt="Person 3" onclick="openZoomImage(this.src)">
+            <button class="zoom-trigger-btn" onclick="openZoomImage('https://via.placeholder.com/300x300')">🔍 ZOOM</button>
+          </div>
+          <div class="person-title-name">NAME THREE HERE</div>
+          <div class="person-sub-title">DESIGNATION THREE HERE</div>
+        </div>
+      </div>
+
+      <!-- ADD MORE CARDS HERE: ഈ ഭാഗത്ത് ഇതേ രീതിയിൽ പുതിയ കാർഡുകൾ നൽകാം -->
+
+    </div>
   </div>
 </div>
-<!-- FRONT SCREEN GREETINGS SLIDER END -->
+
+<!-- PHOTO ZOOM MODAL CONTAINER -->
+<div id="zoomModal" class="image-zoom-modal" onclick="closeZoomModal()">
+  <span class="zoom-close-btn">&times;</span>
+  <img id="zoomedImg" src="" alt="Zoomed Image">
+</div>
+
+<!-- JAVASCRIPT FOR SEARCH & ZOOM -->
+<script>
+  // PHOTO ZOOM FUNCTION
+  function openZoomImage(imgSrc) {
+    var modal = document.getElementById('zoomModal');
+    var zoomedImg = document.getElementById('zoomedImg');
+    modal.style.display = 'flex';
+    zoomedImg.src = imgSrc;
+  }
+
+  function closeZoomModal() {
+    document.getElementById('zoomModal').style.display = 'none';
+  }
+
+  // SEARCH FILTER FUNCTION
+  function filterGreetings() {
+    var input = document.getElementById('greetingSearch').value.toUpperCase();
+    var cards = document.getElementsByClassName('greeting-card');
+    var track = document.getElementById('sliderTrack');
+
+    if (input.trim() !== "") {
+      track.style.animation = "none"; // Stop auto scroll while searching
+    } else {
+      track.style.animation = "fastContinuousScroll 18s linear infinite"; // Resume auto scroll
+    }
+
+    for (var i = 0; i < cards.length; i++) {
+      var searchData = cards[i].getAttribute('data-search');
+      if (searchData.toUpperCase().indexOf(input) > -1) {
+        cards[i].style.display = "";
+      } else {
+        cards[i].style.display = "none";
+      }
+    }
+  }
+</script>
+<!-- FRONT SCREEN AUTO/MANUAL SLIDER END -->
+
+ 
+<!--FRONT SCREEN GREETINGS SLIDER END -->
 
 <script>
 /* SECTION 7 (Required for Observer) */
