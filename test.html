@@ -4809,6 +4809,26 @@ YOUR PURCHASE SATISFIES A HUNGER®
     }
   });
 </script>
-</body>
+    <!-- പേജിലെ മറ്റെല്ലാ കോഡുകളും ഫ്രണ്ട്-എൻഡ് ഘടകങ്ങളും ഇവിടെ അവസാനിക്കുന്നു -->
+
+    <!-- ഈ സെക്യൂരിറ്റി കോഡ് ഇവിടെ ചേർക്കുക -->
+    <script>
+      document.querySelectorAll('a').forEach(link => {
+        if (link.hostname !== window.location.hostname && link.href.startsWith('http')) {
+          link.setAttribute('target', '_blank');
+          link.setAttribute('rel', 'noopener noreferrer');
+        }
+      });
+
+      function sanitizeInput(input) {
+        const div = document.createElement('div');
+        div.innerText = input;
+        return div.innerHTML;
+      }
+    </script>
+
+</body> <!-- ഇതിന് തൊട്ടു മുകളിൽ -->
 </html>
+
+   
 
