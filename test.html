@@ -4800,6 +4800,15 @@ YOUR PURCHASE SATISFIES A HUNGER®
   <iframe src="manual.html" style="width: 100%; max-width:850px; height:700px; border: none; overflow: hidden;"></iframe>
 </div>
 <div style="height:0px;"></div>
+<script>
+  document.querySelectorAll('a').forEach(link => {
+    // ഡൊമെയ്ൻ പേര് സ്വയം പരിശോധിച്ച് പുറത്തേക്കുള്ള ലിങ്കുകൾ മാത്രം കണ്ടെത്തും
+    if (link.hostname !== window.location.hostname && link.href.startsWith('http')) {
+      link.setAttribute('target', '_blank');
+      link.setAttribute('rel', 'noopener noreferrer');
+    }
+  });
+</script>
 </body>
 </html>
 
