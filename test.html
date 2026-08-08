@@ -2207,246 +2207,635 @@ He is supported by his wife, Rasheena K. H, High School English Teacher (India),
 </p>
 <hr>
 <!-- Deputy Chief Engineer Recommendation Plaque -->
-<link href="https://fonts.googleapis.com/css2?family=Kalam:wght@300;400;700&display=swap" rel="stylesheet">
-
+ 
+  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+  <!-- INFINITE AUTO/MANUAL SCROLL GREETINGS WIDGET START -->
 <style>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Deputy CEO Greetings</title>
+  :root {
+    --gb-gold-grad: linear-gradient(135deg, #bf953f, #fcf6ba, #b38728, #fbf5b7, #aa771c);
+    --gb-bg-dark: #070d1a;
+    --gb-card-bg: #0b1326;
+    --gb-blue-btn: linear-gradient(135deg, #1d4ed8, #3b82f6);
+  }
 
-<style>
-body{
-    margin:0;
-    padding:35px;
-    background:#111;
-    font-family:Georgia,serif;
-}
+  .gb-widget-wrapper {
+    width: 100%;
+    max-width: 1100px;
+    margin: 20px auto;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
 
-.deputy-card{
-    max-width:860px;
-    margin:auto;
-    padding:38px;
-    border-radius:22px;
-    background:linear-gradient(160deg,#081a35,#0d3470,#0a2145);
-    border:2px solid #d4af37;
-    box-shadow:
-        0 0 28px rgba(0,150,255,.30),
-        0 0 12px rgba(255,215,0,.25);
-    color:#fff;
-    position:relative;
-}
+  .gb-search-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
 
-.deputy-card::before{
-    content:"Greetings";
-    position:absolute;
-    top:-18px;
-    left:50%;
-    transform:translateX(-50%);
-    padding:9px 28px;
-    border-radius:30px;
-    background:linear-gradient(90deg,#ffe082,#d4af37,#fff5c2);
-    color:#222;
-    font-size:22px;
-    font-weight:bold;
-    letter-spacing:2px;
-}
+  .gb-search-box {
+    width: 100%;
+    max-width: 500px;
+    padding: 12px 24px;
+    border-radius: 30px;
+    border: 2px solid #b38728;
+    background: #09101f;
+    color: #fcf6ba;
+    font-size: 1rem;
+    outline: none;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+    box-sizing: border-box;
+  }
 
-.deputy-card p{
-    font-size:22px;
-    line-height:1.95;
-    text-align:justify;
-    margin:26px 0;
-}
+  .gb-slider-container {
+    width: 100%;
+    overflow-x: auto;
+    position: relative;
+    padding: 10px 0;
+    cursor: grab;
+    scrollbar-width: thin;
+    scrollbar-color: #b38728 #070d1a;
+  }
 
-/* 1st Paragraph - Gold Italic */
-.deputy-card p:nth-of-type(1){
-    color:#ffd84d;
-    font-style:italic;
-}
+  .gb-slider-container:active {
+    cursor: grabbing;
+  }
 
-/* 2nd Paragraph - Silver */
-.deputy-card p:nth-of-type(2){
-    color:#e6e6e6;
-}
+  .gb-slider-track {
+    display: flex;
+    gap: 20px;
+    width: max-content;
+    animation: gbContinuousScroll 18s linear infinite;
+  }
 
-/* 3rd Paragraph - Gold */
-.deputy-card p:nth-of-type(3){
-    color:#ffd84d;
-}
+  .gb-slider-container:hover .gb-slider-track {
+    animation-play-state: paused;
+  }
 
-/* 4th Paragraph - Silver */
-.deputy-card p:nth-of-type(4){
-    color:#e6e6e6;
-}
+  @keyframes gbContinuousScroll {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(calc(-50% - 10px)); }
+  }
 
-/* Slogan */
-.slogan{
-    color:#ffd700;
-    font-weight:700;
-}
+  .gb-card {
+    width: 580px;
+    background: var(--gb-card-bg);
+    border-radius: 20px;
+    padding: 3px;
+    background-image: var(--gb-gold-grad);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.8);
+    flex-shrink: 0;
+    box-sizing: border-box;
+  }
 
-/* Signature */
-.signature{
-    margin-top:45px;
-    text-align:right;
-}
+  .gb-card-inner {
+    background: var(--gb-bg-dark);
+    border-radius: 17px;
+    display: flex;
+    flex-direction: row;
+    overflow: hidden;
+    border: 1px solid rgba(212, 175, 55, 0.3);
+    height: 100%;
+  }
 
-.signature .name{
-    color:#ffd700;
-    font-size:32px;
-    font-weight:700;
-    font-style:normal;
-    text-transform:uppercase;
-}
+  .gb-photo-box {
+    width: 38%;
+    position: relative;
+    background: #020612;
+    border-right: 2px solid #b38728;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 240px;
+  }
 
-.signature .designation{
-    color:#ffd700;
-    font-size:18px;
-    font-style:normal;
-    text-transform:uppercase;
-    margin-top:8px;
-}
+  .gb-photo-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    cursor: pointer;
+  }
 
-.signature .office{
-    color:#ffd700;
-    font-size:18px;
-    font-style:normal;
-    text-transform:uppercase;
-}
+  .gb-zoom-btn {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(0, 0, 0, 0.85);
+    border: 1.5px solid #d4af37;
+    color: #fff;
+    padding: 4px 12px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 0.75rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+    backdrop-filter: blur(4px);
+  }
+
+  .gb-content-box {
+    width: 62%;
+    padding: 18px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-sizing: border-box;
+  }
+
+  .gb-header-title {
+    font-size: 1.2rem;
+    font-weight: 800;
+    letter-spacing: 2px;
+    background: var(--gb-gold-grad);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .gb-preview-text {
+    font-size: 0.95rem;
+    line-height: 1.4;
+    color: #e2e8f0;
+    font-style: italic;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    margin: 8px 0;
+  }
+
+  .gb-more-btn {
+    background: var(--gb-blue-btn);
+    color: #fff;
+    border: 1px solid #60a5fa;
+    padding: 6px 16px;
+    border-radius: 15px;
+    font-weight: bold;
+    font-size: 0.85rem;
+    cursor: pointer;
+    align-self: flex-start;
+  }
+
+  .gb-person-name {
+    font-size: 1.05rem;
+    font-weight: 800;
+    background: var(--gb-gold-grad);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .gb-person-desig {
+    font-size: 0.85rem;
+    color: #cbd5e1;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-top: 2px;
+  }
+
+  .gb-person-org {
+    font-size: 0.85rem;
+    font-weight: bold;
+    color: #ffffff;
+    margin-top: 2px;
+    text-transform: uppercase;
+  }
+
+  /* INDIVIDUAL MODALS */
+  .gb-modal-overlay {
+    display: none;
+    position: fixed;
+    top: 0; left: 0;
+    width: 100vw; height: 100vh;
+    background: rgba(0, 0, 0, 0.88);
+    z-index: 999991;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    box-sizing: border-box;
+  }
+
+  .gb-modal-card {
+    background: #070d1a;
+    border: 2px solid #b38728;
+    border-radius: 20px;
+    max-width: 650px;
+    width: 100%;
+    max-height: 85vh;
+    overflow-y: auto;
+    padding: 30px 25px;
+    position: relative;
+  }
+
+  .gb-modal-close {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    color: #fcf6ba;
+    font-size: 2rem;
+    font-weight: bold;
+    cursor: pointer;
+  }
+
+  .gb-modal-body {
+    font-family: 'Georgia', serif;
+    font-size: 1.1rem;
+    line-height: 1.7;
+    color: #ffffff;
+    text-align: justify;
+    margin-top: 20px;
+  }
+
+  .gb-zoom-modal {
+    display: none;
+    position: fixed;
+    z-index: 999992;
+    top: 0; left: 0;
+    width: 100vw; height: 100vh;
+    background: rgba(0, 0, 0, 0.92);
+    justify-content: center;
+    align-items: center;
+  }
+
+  .gb-zoom-modal img {
+    max-width: 90%;
+    max-height: 85vh;
+    border-radius: 12px;
+    border: 2px solid #d4af37;
+  }
+
+  @media (max-width: 650px) {
+    .gb-card { width: 85vw; }
+    .gb-card-inner { flex-direction: column; }
+    .gb-photo-box { width: 100%; min-height: 200px; border-right: none; border-bottom: 2px solid #b38728; }
+    .gb-content-box { width: 100%; }
+  }
 </style>
 
+<div class="gb-widget-wrapper">
+  <!-- SEARCH BAR -->
+  <div class="gb-search-container">
+    <input type="text" id="gbSearchInput" class="gb-search-box" placeholder="Search greetings by name or designation..." onkeyup="gbFilterGreetings()">
+  </div>
 
-<div class="deputy-card">
+  <!-- CONTINUOUS AUTO & MANUAL SCROLL TRACK -->
+  <div class="gb-slider-container" id="gbSliderContainer">
+    <div class="gb-slider-track" id="gbSliderTrack">
+      
+      <!-- CARD 1: MATHUKATTY MP -->
+      <div class="gb-card" data-search="MATHUKATTY MP RETIRED ASSISTANT ENGINEER KSEB">
+        <div class="gb-card-inner">
+          <div class="gb-photo-box">
+            <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400" alt="MATHUKATTY MP" onclick="gbOpenZoom(this)">
+            <button class="gb-zoom-btn" onclick="gbOpenZoom(this)">🔍 ZOOM</button>
+          </div>
+          <div class="gb-content-box">
+            <div class="gb-header-title">GREETINGS</div>
+            <div class="gb-preview-text">
+              "I have had the opportunity to know Mr. Mohammed M. Basheer personally. I believe that his honesty, sincerity, and compassion are truly reflected..."
+            </div>
+            <button class="gb-more-btn" onclick="gbOpenModal('gbModalMathukatty')">MORE &rarr;</button>
+            <div style="border-top: 1px solid rgba(212,175,55,0.3); padding-top: 8px; margin-top: 10px;">
+              <div class="gb-person-name">MATHUKATTY, MP</div>
+              <div class="gb-person-desig">RETIRED ASSISTANT ENGINEER</div>
+              <div class="gb-person-org">KSEB</div>
+            </div>
+          </div>
+        </div>
+      </div>
 
-<p>
-I have had the opportunity to know Mr. Mohammed M. Basheer personally.
-I believe that his honesty, sincerity, and compassion are truly reflected
-in this initiative.
-</p>
+      <!-- CARD 2: DR. RADHAKRISHNAN NAIR -->
+      <div class="gb-card" data-search="DR RADHAKRISHNAN NAIR SENIOR CONSULTANT SURGEON MEDICAL COLLEGE">
+        <div class="gb-card-inner">
+          <div class="gb-photo-box">
+            <img src="https://images.unsplash.com/photo-1622253692010-333f2da6031d?w=400" alt="DR. RADHAKRISHNAN NAIR" onclick="gbOpenZoom(this)">
+            <button class="gb-zoom-btn" onclick="gbOpenZoom(this)">🔍 ZOOM</button>
+          </div>
+          <div class="gb-content-box">
+            <div class="gb-header-title">GREETINGS</div>
+            <div class="gb-preview-text">
+              "Healthcare extends beyond direct medical care. BAS Charity International bridges the gap between essential everyday living and nutrition..."
+            </div>
+            <button class="gb-more-btn" onclick="gbOpenModal('gbModalDrRadhakrishnan')">MORE &rarr;</button>
+            <div style="border-top: 1px solid rgba(212,175,55,0.3); padding-top: 8px; margin-top: 10px;">
+              <div class="gb-person-name">DR. RADHAKRISHNAN NAIR</div>
+              <div class="gb-person-desig">SENIOR CONSULTANT SURGEON</div>
+              <div class="gb-person-org">MCH TRUST</div>
+            </div>
+          </div>
+        </div>
+      </div>
 
-<p>
-This digital initiative, launched with the noble vision of helping
-vulnerable people who struggle to access even the most basic necessity of
-life—food—is truly commendable. Its message,
-<span class="slogan">"YOUR PURCHASE SATISFIES A HUNGER®"</span>,
-is simple yet deeply meaningful.
-</p>
+      <!-- CARD 3: ADV. ANITA CHACKO -->
+      <div class="gb-card" data-search="ADV ANITA CHACKO SENIOR ADVOCATE HIGH COURT OF KERALA">
+        <div class="gb-card-inner">
+          <div class="gb-photo-box">
+            <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=400" alt="ADV. ANITA CHACKO" onclick="gbOpenZoom(this)">
+            <button class="gb-zoom-btn" onclick="gbOpenZoom(this)">🔍 ZOOM</button>
+          </div>
+          <div class="gb-content-box">
+            <div class="gb-header-title">GREETINGS</div>
+            <div class="gb-preview-text">
+              "Building sustainable models for humanitarian outreach is essential. Converting daily transactions into direct community aid creates transparent welfare..."
+            </div>
+            <button class="gb-more-btn" onclick="gbOpenModal('gbModalAdvAnita')">MORE &rarr;</button>
+            <div style="border-top: 1px solid rgba(212,175,55,0.3); padding-top: 8px; margin-top: 10px;">
+              <div class="gb-person-name">ADV. ANITA CHACKO</div>
+              <div class="gb-person-desig">SENIOR ADVOCATE</div>
+              <div class="gb-person-org">HIGH COURT OF KERALA</div>
+            </div>
+          </div>
+        </div>
+      </div>
 
-<p>
-By simply saving a small icon and using it for your regular purchases
-whenever possible, everyone has an opportunity to become part of this
-noble humanitarian mission.
-</p>
+      <!-- CARD 4: PROF. K. V. RAMANATHAN -->
+      <div class="gb-card" data-search="PROF K V RAMANATHAN RETIRED PRINCIPAL NATIONAL INSTITUTE OF TECHNOLOGY">
+        <div class="gb-card-inner">
+          <div class="gb-photo-box">
+            <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400" alt="PROF. K. V. RAMANATHAN" onclick="gbOpenZoom(this)">
+            <button class="gb-zoom-btn" onclick="gbOpenZoom(this)">🔍 ZOOM</button>
+          </div>
+          <div class="gb-content-box">
+            <div class="gb-header-title">GREETINGS</div>
+            <div class="gb-preview-text">
+              "Education and proper nutrition form the base of an empowered society. Integrating technology seamlessly for hunger relief is visionary..."
+            </div>
+            <button class="gb-more-btn" onclick="gbOpenModal('gbModalProfRamanathan')">MORE &rarr;</button>
+            <div style="border-top: 1px solid rgba(212,175,55,0.3); padding-top: 8px; margin-top: 10px;">
+              <div class="gb-person-name">PROF. K. V. RAMANATHAN</div>
+              <div class="gb-person-desig">RETIRED PRINCIPAL</div>
+              <div class="gb-person-org">NIT CALICUT</div>
+            </div>
+          </div>
+        </div>
+      </div>
 
-<p>
-I extend my heartfelt best wishes for the success of this exemplary
-initiative towards building a hunger-free society.
-</p>
+      <!-- CARD 5: ENG. GEORGE VARGHESE -->
+      <div class="gb-card" data-search="ENG GEORGE VARGHESE CHIEF OPERATIONS OFFICER GLOBAL TECH">
+        <div class="gb-card-inner">
+          <div class="gb-photo-box">
+            <img src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=400" alt="ENG. GEORGE VARGHESE" onclick="gbOpenZoom(this)">
+            <button class="gb-zoom-btn" onclick="gbOpenZoom(this)">🔍 ZOOM</button>
+          </div>
+          <div class="gb-content-box">
+            <div class="gb-header-title">GREETINGS</div>
+            <div class="gb-preview-text">
+              "Modern systems engineering should solve fundamental societal challenges. Channeling automated digital shopping returns into hunger relief is commendable..."
+            </div>
+            <button class="gb-more-btn" onclick="gbOpenModal('gbModalEngGeorge')">MORE &rarr;</button>
+            <div style="border-top: 1px solid rgba(212,175,55,0.3); padding-top: 8px; margin-top: 10px;">
+              <div class="gb-person-name">ENG. GEORGE VARGHESE</div>
+              <div class="gb-person-desig">CHIEF OPERATIONS OFFICER</div>
+              <div class="gb-person-org">GLOBAL TECH SOLUTIONS</div>
+            </div>
+          </div>
+        </div>
+      </div>
 
-<div class="signature">
-<div class="name">(NAME)</div>
-<div class="designation">RETIRED ASSISTANT ENGINEER</div>
-<div class="office">KERALA STATE ELECTRICITY BOARD (KSEB)</div>
+      <!-- CARD 6: DR. MEERA KRISHNAN -->
+      <div class="gb-card" data-search="DR MEERA KRISHNAN DIRECTOR SOCIAL WELFARE FOUNDATION">
+        <div class="gb-card-inner">
+          <div class="gb-photo-box">
+            <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?w=400" alt="DR. MEERA KRISHNAN" onclick="gbOpenZoom(this)">
+            <button class="gb-zoom-btn" onclick="gbOpenZoom(this)">🔍 ZOOM</button>
+          </div>
+          <div class="gb-content-box">
+            <div class="gb-header-title">GREETINGS</div>
+            <div class="gb-preview-text">
+              "Social progress happens when community participation requires zero extra burden. Everyday consumer choices transforming into meals is transformative..."
+            </div>
+            <button class="gb-more-btn" onclick="gbOpenModal('gbModalDrMeera')">MORE &rarr;</button>
+            <div style="border-top: 1px solid rgba(212,175,55,0.3); padding-top: 8px; margin-top: 10px;">
+              <div class="gb-person-name">DR. MEERA KRISHNAN</div>
+              <div class="gb-person-desig">DIRECTOR</div>
+              <div class="gb-person-org">SOCIAL WELFARE FOUNDATION</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- DUPLICATE SET FOR INFINITE LOOP -->
+      <div class="gb-card" data-search="MATHUKATTY MP RETIRED ASSISTANT ENGINEER KSEB">
+        <div class="gb-card-inner">
+          <div class="gb-photo-box">
+            <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400" alt="MATHUKATTY MP" onclick="gbOpenZoom(this)">
+            <button class="gb-zoom-btn" onclick="gbOpenZoom(this)">🔍 ZOOM</button>
+          </div>
+          <div class="gb-content-box">
+            <div class="gb-header-title">GREETINGS</div>
+            <div class="gb-preview-text">
+              "I have had the opportunity to know Mr. Mohammed M. Basheer personally. I believe that his honesty, sincerity, and compassion are truly reflected..."
+            </div>
+            <button class="gb-more-btn" onclick="gbOpenModal('gbModalMathukatty')">MORE &rarr;</button>
+            <div style="border-top: 1px solid rgba(212,175,55,0.3); padding-top: 8px; margin-top: 10px;">
+              <div class="gb-person-name">MATHUKATTY, MP</div>
+              <div class="gb-person-desig">RETIRED ASSISTANT ENGINEER</div>
+              <div class="gb-person-org">KSEB</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
 </div>
 
+<!-- INDIVIDUAL MESSAGE MODALS -->
+<div id="gbModalMathukatty" class="gb-modal-overlay" onclick="gbCloseModal('gbModalMathukatty')">
+  <div class="gb-modal-card" onclick="event.stopPropagation()">
+    <span class="gb-modal-close" onclick="gbCloseModal('gbModalMathukatty')">&times;</span>
+    <div style="text-align: center;"><span style="background: var(--gb-gold-grad); color: #000; font-weight: bold; padding: 6px 24px; border-radius: 20px;">GREETINGS</span></div>
+    <div class="gb-modal-body">
+      <p style="font-style: italic; color: #fcf6ba;">
+        I have had the opportunity to know Mr. Mohammed M. Basheer personally. I believe that his honesty, sincerity, and compassion are truly reflected in this initiative.
+      </p>
+      <p>
+        This digital initiative, launched with the noble vision of helping vulnerable people who struggle to access even the most basic necessity of life—food—is truly commendable. Its message, <span style="color: #fcf6ba; font-weight: bold;">"YOUR PURCHASE SATISFIES A HUNGER®"</span>, is simple yet deeply meaningful.
+      </p>
+      <p>
+        By simply saving a small icon and using it for your regular purchases whenever possible, everyone has an opportunity to become part of this noble humanitarian mission.
+      </p>
+      <p>
+        I extend my heartfelt best wishes for the success of this exemplary initiative towards building a hunger-free society.
+      </p>
+    </div>
+    <div style="border-top: 1px solid rgba(212, 175, 55, 0.4); padding-top: 15px; text-align: center; margin-top: 20px;">
+      <div class="gb-person-name" style="font-size: 1.2rem;">MATHUKATTY, MP</div>
+      <div class="gb-person-desig">RETIRED ASSISTANT ENGINEER</div>
+      <div class="gb-person-org">KERALA STATE ELECTRICITY BOARD (KSEB)</div>
+    </div>
+  </div>
+</div>
+
+<div id="gbModalDrRadhakrishnan" class="gb-modal-overlay" onclick="gbCloseModal('gbModalDrRadhakrishnan')">
+  <div class="gb-modal-card" onclick="event.stopPropagation()">
+    <span class="gb-modal-close" onclick="gbCloseModal('gbModalDrRadhakrishnan')">&times;</span>
+    <div style="text-align: center;"><span style="background: var(--gb-gold-grad); color: #000; font-weight: bold; padding: 6px 24px; border-radius: 20px;">GREETINGS</span></div>
+    <div class="gb-modal-body">
+      <p>Healthcare is not just about treating illnesses; ensuring proper nutrition to vulnerable communities is equally vital. BAS Charity International’s self-sustaining humanitarian effort ensures that every day-to-day transaction turns into a lifeline for someone in need.</p>
+    </div>
+    <div style="border-top: 1px solid rgba(212, 175, 55, 0.4); padding-top: 15px; text-align: center; margin-top: 20px;">
+      <div class="gb-person-name">DR. RADHAKRISHNAN NAIR</div>
+      <div class="gb-person-desig">SENIOR CONSULTANT SURGEON</div>
+      <div class="gb-person-org">MCH TRUST</div>
+    </div>
+  </div>
+</div>
+
+<div id="gbModalAdvAnita" class="gb-modal-overlay" onclick="gbCloseModal('gbModalAdvAnita')">
+  <div class="gb-modal-card" onclick="event.stopPropagation()">
+    <span class="gb-modal-close" onclick="gbCloseModal('gbModalAdvAnita')">&times;</span>
+    <div style="text-align: center;"><span style="background: var(--gb-gold-grad); color: #000; font-weight: bold; padding: 6px 24px; border-radius: 20px;">GREETINGS</span></div>
+    <div class="gb-modal-body">
+      <p>Transparency and ethical alignment are essential for true charitable impact. Connecting global e-commerce seamlessly to charitable causes creates a sustainable model that stands as an example to society.</p>
+    </div>
+    <div style="border-top: 1px solid rgba(212, 175, 55, 0.4); padding-top: 15px; text-align: center; margin-top: 20px;">
+      <div class="gb-person-name">ADV. ANITA CHACKO</div>
+      <div class="gb-person-desig">SENIOR ADVOCATE</div>
+      <div class="gb-person-org">HIGH COURT OF KERALA</div>
+    </div>
+  </div>
+</div>
+
+<div id="gbModalProfRamanathan" class="gb-modal-overlay" onclick="gbCloseModal('gbModalProfRamanathan')">
+  <div class="gb-modal-card" onclick="event.stopPropagation()">
+    <span class="gb-modal-close" onclick="gbCloseModal('gbModalProfRamanathan')">&times;</span>
+    <div style="text-align: center;"><span style="background: var(--gb-gold-grad); color: #000; font-weight: bold; padding: 6px 24px; border-radius: 20px;">GREETINGS</span></div>
+    <div class="gb-modal-body">
+      <p>Empowering humanity begins with solving fundamental needs. Utilizing affiliate revenue mechanisms to channel aid directly without burdens on donors is an extraordinary concept.</p>
+    </div>
+    <div style="border-top: 1px solid rgba(212, 175, 55, 0.4); padding-top: 15px; text-align: center; margin-top: 20px;">
+      <div class="gb-person-name">PROF. K. V. RAMANATHAN</div>
+      <div class="gb-person-desig">RETIRED PRINCIPAL</div>
+      <div class="gb-person-org">NIT CALICUT</div>
+    </div>
+  </div>
+</div>
+
+<div id="gbModalEngGeorge" class="gb-modal-overlay" onclick="gbCloseModal('gbModalEngGeorge')">
+  <div class="gb-modal-card" onclick="event.stopPropagation()">
+    <span class="gb-modal-close" onclick="gbCloseModal('gbModalEngGeorge')">&times;</span>
+    <div style="text-align: center;"><span style="background: var(--gb-gold-grad); color: #000; font-weight: bold; padding: 6px 24px; border-radius: 20px;">GREETINGS</span></div>
+    <div class="gb-modal-body">
+      <p>Integrating modern web engineering into humanitarian missions transforms routine online shopping into continuous social relief. A remarkably practical initiative!</p>
+    </div>
+    <div style="border-top: 1px solid rgba(212, 175, 55, 0.4); padding-top: 15px; text-align: center; margin-top: 20px;">
+      <div class="gb-person-name">ENG. GEORGE VARGHESE</div>
+      <div class="gb-person-desig">CHIEF OPERATIONS OFFICER</div>
+      <div class="gb-person-org">GLOBAL TECH SOLUTIONS</div>
+    </div>
+  </div>
+</div>
+
+<div id="gbModalDrMeera" class="gb-modal-overlay" onclick="gbCloseModal('gbModalDrMeera')">
+  <div class="gb-modal-card" onclick="event.stopPropagation()">
+    <span class="gb-modal-close" onclick="gbCloseModal('gbModalDrMeera')">&times;</span>
+    <div style="text-align: center;"><span style="background: var(--gb-gold-grad); color: #000; font-weight: bold; padding: 6px 24px; border-radius: 20px;">GREETINGS</span></div>
+    <div class="gb-modal-body">
+      <p>Building a hunger-free community needs accessible actions. By converting daily consumer activity into charitable contributions, this movement creates lasting positive social impact.</p>
+    </div>
+    <div style="border-top: 1px solid rgba(212, 175, 55, 0.4); padding-top: 15px; text-align: center; margin-top: 20px;">
+      <div class="gb-person-name">DR. MEERA KRISHNAN</div>
+      <div class="gb-person-desig">DIRECTOR</div>
+      <div class="gb-person-org">SOCIAL WELFARE FOUNDATION</div>
+    </div>
+  </div>
+</div>
+
+<!-- IMAGE ZOOM MODAL -->
+<div id="gbImageZoomModal" class="gb-zoom-modal" onclick="gbCloseZoom()">
+  <span class="gb-modal-close" style="top:20px; right:30px;">&times;</span>
+  <img id="gbModalImg" src="" alt="Enlarged View">
 </div>
 
 <script>
-function toggleWish() {
-    var moreText = document.getElementById("wishMoreText");
-    var btnText = document.getElementById("wishReadBtn");
+  function gbOpenModal(id) {
+    document.getElementById(id).style.display = 'flex';
+  }
 
-    if (moreText.style.display === "none" || moreText.style.display === "") {
-        moreText.style.display = "block";
-        btnText.style.display = "none";
+  function gbCloseModal(id) {
+    document.getElementById(id).style.display = 'none';
+  }
+
+  function gbOpenZoom(el) {
+    let imgSrc = el.tagName === 'IMG' ? el.src : el.previousElementSibling.src;
+    document.getElementById('gbModalImg').src = imgSrc;
+    document.getElementById('gbImageZoomModal').style.display = 'flex';
+  }
+
+  function gbCloseZoom() {
+    document.getElementById('gbImageZoomModal').style.display = 'none';
+  }
+
+  function gbFilterGreetings() {
+    let query = document.getElementById('gbSearchInput').value.toLowerCase();
+    let cards = document.getElementsByClassName('gb-card');
+    let track = document.getElementById('gbSliderTrack');
+
+    if (query.trim() !== '') {
+      track.style.animation = 'none';
     } else {
-        moreText.style.display = "none";
-        btnText.style.display = "inline";
+      track.style.animation = 'gbContinuousScroll 18s linear infinite';
     }
-}
+
+    for (let card of cards) {
+      let searchData = card.getAttribute('data-search').toLowerCase();
+      if (searchData.includes(query)) {
+        card.style.display = "block";
+      } else {
+        card.style.display = "none";
+      }
+    }
+  }
+
+  // MANUAL DRAG & TOUCH SCROLL
+  const gbSlider = document.getElementById('gbSliderContainer');
+  let gbIsDown = false;
+  let gbStartX;
+  let gbScrollLeft;
+
+  gbSlider.addEventListener('mousedown', (e) => {
+    gbIsDown = true;
+    gbStartX = e.pageX - gbSlider.offsetLeft;
+    gbScrollLeft = gbSlider.scrollLeft;
+  });
+  gbSlider.addEventListener('mouseleave', () => { gbIsDown = false; });
+  gbSlider.addEventListener('mouseup', () => { gbIsDown = false; });
+  gbSlider.addEventListener('mousemove', (e) => {
+    if(!gbIsDown) return;
+    e.preventDefault();
+    const x = e.pageX - gbSlider.offsetLeft;
+    const walk = (x - gbStartX) * 2;
+    gbSlider.scrollLeft = gbScrollLeft - walk;
+  });
 </script>
+<!-- INFINITE AUTO/MANUAL SCROLL GREETINGS WIDGET END -->
 
-</div>
-
-</details>
-
-</div>
-
-</details>
-</div>
-</div>
-
-</div>
-
-<div class="bas7-quote">"YOUR PURCHASE SATISFIES A HUNGER®"</div>
-</div>
-</div>
-
-<script>
-/* SECTION 7 (Required for Observer) */
-let opened7=false;
-function toggleMore7(){
-let more=document.getElementById("moreText");
-let btn=document.getElementById("readBtn");
-if(opened7){
-more.style.display="none";
-btn.innerText="Read More...";
-opened7=false;
-} else {
-more.style.display="block";
-btn.innerText="";
-opened7=true;
-}
-}
-
-/* SECTION 8 */
-let opened8=false;
-function toggleBas8(){
-let more=document.getElementById("bas8More");
-let dots=document.getElementById("bas8Dots");
-let btn=document.getElementById("bas8Btn");
-if(opened8){
-more.style.display="none";
-dots.style.display="inline";
-btn.innerText="More Details";
-opened8=false;
-} else {
-more.style.display="inline";
-dots.style.display="none";
-btn.innerText="Less Details";
-opened8=true;
-}
-}
-
-/* IMAGE SLIDER */
-const bas7Images=[ 
-"https://drive.google.com/thumbnail?id=1keyWL0GF-HysweqAYntVaS-vB_fwZj_H&sz=w1000",
-"https://drive.google.com/thumbnail?id=1KdZnPqKlSOXAFY-Lu2FU41B1n7sWtt85&sz=w1000"
-];
-let bas7Index=0;
-const bas7Img=document.getElementById("bas7Img");
-
-setInterval(function(){
-bas7Img.style.opacity=0;
-setTimeout(function(){
-bas7Index=(bas7Index+1)%bas7Images.length;
-bas7Img.src=bas7Images[bas7Index];
-bas7Img.style.opacity=1;
-},800);
-},5000);
-
-/* AUTO RESET */
-const observer78=new IntersectionObserver(entries=>{
-entries.forEach(entry=>{
-if(!entry.isIntersecting){
-if(entry.target.id==="section7" && opened7){ toggleMore7(); }
-if(entry.target.id==="section8" && opened8){ toggleBas8(); }
-}
-});
-},{threshold:0});
-
-if(document.getElementById("section7")) observer78.observe(document.getElementById("section7"));
-if(document.getElementById("section8")) observer78.observe(document.getElementById("section8"));
-</script>
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
  <style>
 .trust-container{
 max-width:900px; /* Responsive Fix */
