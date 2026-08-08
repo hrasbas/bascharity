@@ -2210,8 +2210,8 @@ He is supported by his wife, Rasheena K. H, High School English Teacher (India),
   
   <!-- INFINITE AUTO/MANUAL SCROLL GREETINGS WIDGET START-->
 <!-- INFINITE AUTO/MANUAL SCROLL GREETINGS WIDGET END -->
-<!-- INFINITE AUTO/MANUAL SCROLL GREETINGS WIDGET END -->
-<!-- INFINITE AUTO/MANUAL SCROLL GREETINGS WIDGET START -->
+ 
+        <!-- INFINITE AUTO/MANUAL SCROLL GREETINGS WIDGET START -->
 <style>
   :root {
     --gb-gold-grad: linear-gradient(135deg, #bf953f, #fcf6ba, #b38728, #fbf5b7, #aa771c);
@@ -2236,14 +2236,14 @@ He is supported by his wife, Rasheena K. H, High School English Teacher (India),
   }
 
   .gb-search-box {
-    width: 90%;
-    max-width: 500px;
-    padding: 10px 20px;
+    width: 92%;
+    max-width: 550px;
+    padding: 12px 22px;
     border-radius: 30px;
     border: 2px solid #b38728;
     background: #09101f;
     color: #fcf6ba;
-    font-size: 0.95rem;
+    font-size: 1.05rem;
     outline: none;
     box-shadow: 0 4px 15px rgba(0,0,0,0.5);
     box-sizing: border-box;
@@ -2279,10 +2279,10 @@ He is supported by his wife, Rasheena K. H, High School English Teacher (India),
     100% { transform: translateX(calc(-50% - 10px)); }
   }
 
-  /* DESKTOP CARD SETUP */
+  /* CARD STRUCTURE - ALWAYS HORIZONTAL (PHOTO LEFT, CONTENT RIGHT) */
   .gb-card {
-    width: 520px;
-    height: 250px;
+    width: 540px;
+    height: 270px;
     background: var(--gb-card-bg);
     border-radius: 20px;
     padding: 2px;
@@ -2295,15 +2295,16 @@ He is supported by his wife, Rasheena K. H, High School English Teacher (India),
   .gb-card-inner {
     background: var(--gb-bg-dark);
     border-radius: 18px;
-    display: flex;
-    flex-direction: row;
+    display: flex !important;
+    flex-direction: row !important; /* STRICTLY HORIZONTAL */
     overflow: hidden;
     border: 1px solid rgba(212, 175, 55, 0.3);
     height: 100%;
   }
 
+  /* LEFT SIDE PHOTO BOX */
   .gb-photo-box {
-    width: 40%;
+    width: 42%;
     position: relative;
     background: #020612;
     border-right: 2px solid #b38728;
@@ -2312,12 +2313,15 @@ He is supported by his wife, Rasheena K. H, High School English Teacher (India),
     justify-content: center;
     height: 100%;
     overflow: hidden;
+    flex-shrink: 0;
   }
 
+  /* FIX HEAD CROPPING: object-position top center */
   .gb-photo-box img {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    object-position: top center;
     cursor: pointer;
   }
 
@@ -2329,17 +2333,19 @@ He is supported by his wife, Rasheena K. H, High School English Teacher (India),
     background: rgba(0, 0, 0, 0.85);
     border: 1px solid #d4af37;
     color: #fff;
-    padding: 3px 10px;
+    padding: 4px 12px;
     border-radius: 15px;
     cursor: pointer;
-    font-size: 0.7rem;
+    font-size: 0.8rem;
     font-weight: bold;
     backdrop-filter: blur(4px);
+    white-space: nowrap;
   }
 
+  /* RIGHT SIDE CONTENT BOX */
   .gb-content-box {
-    width: 60%;
-    padding: 14px;
+    width: 58%;
+    padding: 12px 14px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -2347,7 +2353,7 @@ He is supported by his wife, Rasheena K. H, High School English Teacher (India),
   }
 
   .gb-header-title {
-    font-size: 1.1rem;
+    font-size: 1.25rem;
     font-weight: 800;
     letter-spacing: 1.5px;
     background: var(--gb-gold-grad);
@@ -2355,10 +2361,11 @@ He is supported by his wife, Rasheena K. H, High School English Teacher (India),
     -webkit-text-fill-color: transparent;
   }
 
+  /* LARGER FONT FOR PREVIEW TEXT */
   .gb-preview-text {
-    font-size: 0.85rem;
-    line-height: 1.35;
-    color: #e2e8f0;
+    font-size: 0.95rem;
+    line-height: 1.4;
+    color: #f1f5f9;
     font-style: italic;
     display: -webkit-box;
     -webkit-line-clamp: 3;
@@ -2371,16 +2378,16 @@ He is supported by his wife, Rasheena K. H, High School English Teacher (India),
     background: var(--gb-blue-btn);
     color: #fff;
     border: 1px solid #60a5fa;
-    padding: 4px 12px;
+    padding: 5px 14px;
     border-radius: 12px;
     font-weight: bold;
-    font-size: 0.75rem;
+    font-size: 0.85rem;
     cursor: pointer;
     align-self: flex-start;
   }
 
   .gb-person-name {
-    font-size: 0.95rem;
+    font-size: 1.05rem;
     font-weight: 800;
     background: var(--gb-gold-grad);
     -webkit-background-clip: text;
@@ -2388,21 +2395,21 @@ He is supported by his wife, Rasheena K. H, High School English Teacher (India),
   }
 
   .gb-person-desig {
-    font-size: 0.75rem;
+    font-size: 0.8rem;
     color: #cbd5e1;
     text-transform: uppercase;
     margin-top: 2px;
   }
 
   .gb-person-org {
-    font-size: 0.75rem;
+    font-size: 0.8rem;
     font-weight: bold;
     color: #ffffff;
     margin-top: 1px;
     text-transform: uppercase;
   }
 
-  /* MODALS & ZOOM FIX */
+  /* MODALS & ZOOM */
   .gb-modal-overlay {
     display: none;
     position: fixed;
@@ -2440,7 +2447,7 @@ He is supported by his wife, Rasheena K. H, High School English Teacher (India),
 
   .gb-modal-body {
     font-family: 'Georgia', serif;
-    font-size: 0.98rem;
+    font-size: 1.05rem;
     line-height: 1.6;
     color: #ffffff;
     text-align: justify;
@@ -2459,39 +2466,41 @@ He is supported by his wife, Rasheena K. H, High School English Teacher (India),
   }
 
   .gb-zoom-modal img {
-    width: 85vw;
-    max-width: 450px;
+    width: 90vw;
+    max-width: 480px;
     height: auto;
-    max-height: 75vh;
+    max-height: 80vh;
     object-fit: contain;
     border-radius: 12px;
     border: 2px solid #d4af37;
     box-shadow: 0 10px 30px rgba(0,0,0,0.9);
   }
 
-  /* MOBILE RESPONSIVE FIX */
+  /* MOBILE RESPONSIVE FIT - MAINTAIN LEFT PHOTO & RIGHT GREETINGS */
   @media (max-width: 650px) {
     .gb-card { 
-      width: 82vw; 
-      height: 380px; 
-    }
-    .gb-card-inner { 
-      flex-direction: column; 
+      width: 88vw; 
+      height: 250px; 
     }
     .gb-photo-box { 
-      width: 100%; 
-      height: 180px; 
-      border-right: none; 
-      border-bottom: 2px solid #b38728; 
+      width: 40%; 
     }
     .gb-content-box { 
-      width: 100%; 
-      height: 200px; 
-      padding: 10px; 
+      width: 60%; 
+      padding: 8px 10px; 
+    }
+    .gb-header-title {
+      font-size: 1.1rem;
     }
     .gb-preview-text {
-      font-size: 0.8rem;
-      -webkit-line-clamp: 2;
+      font-size: 0.85rem;
+      -webkit-line-clamp: 3;
+    }
+    .gb-person-name {
+      font-size: 0.92rem;
+    }
+    .gb-person-desig, .gb-person-org {
+      font-size: 0.72rem;
     }
   }
 </style>
@@ -2519,7 +2528,7 @@ He is supported by his wife, Rasheena K. H, High School English Teacher (India),
               "I have had the opportunity to know Mr. Mohammed M. Basheer personally. I believe that his honesty, sincerity, and compassion are truly reflected..."
             </div>
             <button class="gb-more-btn" onclick="gbOpenModal('gbModalMathukatty')">MORE &rarr;</button>
-            <div style="border-top: 1px solid rgba(212,175,55,0.3); padding-top: 6px; margin-top: 6px;">
+            <div style="border-top: 1px solid rgba(212,175,55,0.3); padding-top: 4px; margin-top: 4px;">
               <div class="gb-person-name">MATHUKATTY, MP</div>
               <div class="gb-person-desig">RETIRED ASSISTANT ENGINEER</div>
               <div class="gb-person-org">KSEB</div>
@@ -2541,7 +2550,7 @@ He is supported by his wife, Rasheena K. H, High School English Teacher (India),
               "Healthcare extends beyond direct medical care. BAS Charity International bridges the gap between essential everyday living and nutrition..."
             </div>
             <button class="gb-more-btn" onclick="gbOpenModal('gbModalDrRadhakrishnan')">MORE &rarr;</button>
-            <div style="border-top: 1px solid rgba(212,175,55,0.3); padding-top: 6px; margin-top: 6px;">
+            <div style="border-top: 1px solid rgba(212,175,55,0.3); padding-top: 4px; margin-top: 4px;">
               <div class="gb-person-name">DR. RADHAKRISHNAN NAIR</div>
               <div class="gb-person-desig">SENIOR CONSULTANT SURGEON</div>
               <div class="gb-person-org">MCH TRUST</div>
@@ -2563,7 +2572,7 @@ He is supported by his wife, Rasheena K. H, High School English Teacher (India),
               "Building sustainable models for humanitarian outreach is essential. Converting daily transactions into direct community aid creates transparent welfare..."
             </div>
             <button class="gb-more-btn" onclick="gbOpenModal('gbModalAdvAnita')">MORE &rarr;</button>
-            <div style="border-top: 1px solid rgba(212,175,55,0.3); padding-top: 6px; margin-top: 6px;">
+            <div style="border-top: 1px solid rgba(212,175,55,0.3); padding-top: 4px; margin-top: 4px;">
               <div class="gb-person-name">ADV. ANITA CHACKO</div>
               <div class="gb-person-desig">SENIOR ADVOCATE</div>
               <div class="gb-person-org">HIGH COURT OF KERALA</div>
@@ -2585,54 +2594,10 @@ He is supported by his wife, Rasheena K. H, High School English Teacher (India),
               "Education and proper nutrition form the base of an empowered society. Integrating technology seamlessly for hunger relief is visionary..."
             </div>
             <button class="gb-more-btn" onclick="gbOpenModal('gbModalProfRamanathan')">MORE &rarr;</button>
-            <div style="border-top: 1px solid rgba(212,175,55,0.3); padding-top: 6px; margin-top: 6px;">
+            <div style="border-top: 1px solid rgba(212,175,55,0.3); padding-top: 4px; margin-top: 4px;">
               <div class="gb-person-name">PROF. K. V. RAMANATHAN</div>
               <div class="gb-person-desig">RETIRED PRINCIPAL</div>
               <div class="gb-person-org">NIT CALICUT</div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- CARD 5: ENG. GEORGE VARGHESE -->
-      <div class="gb-card" data-search="ENG GEORGE VARGHESE CHIEF OPERATIONS OFFICER GLOBAL TECH">
-        <div class="gb-card-inner">
-          <div class="gb-photo-box">
-            <img src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=400" alt="ENG. GEORGE VARGHESE" onclick="gbOpenZoom(this)">
-            <button class="gb-zoom-btn" onclick="gbOpenZoom(this)">🔍 ZOOM</button>
-          </div>
-          <div class="gb-content-box">
-            <div class="gb-header-title">GREETINGS</div>
-            <div class="gb-preview-text">
-              "Modern systems engineering should solve fundamental societal challenges. Channeling automated digital shopping returns into hunger relief is commendable..."
-            </div>
-            <button class="gb-more-btn" onclick="gbOpenModal('gbModalEngGeorge')">MORE &rarr;</button>
-            <div style="border-top: 1px solid rgba(212,175,55,0.3); padding-top: 6px; margin-top: 6px;">
-              <div class="gb-person-name">ENG. GEORGE VARGHESE</div>
-              <div class="gb-person-desig">CHIEF OPERATIONS OFFICER</div>
-              <div class="gb-person-org">GLOBAL TECH SOLUTIONS</div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- CARD 6: DR. MEERA KRISHNAN -->
-      <div class="gb-card" data-search="DR MEERA KRISHNAN DIRECTOR SOCIAL WELFARE FOUNDATION">
-        <div class="gb-card-inner">
-          <div class="gb-photo-box">
-            <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?w=400" alt="DR. MEERA KRISHNAN" onclick="gbOpenZoom(this)">
-            <button class="gb-zoom-btn" onclick="gbOpenZoom(this)">🔍 ZOOM</button>
-          </div>
-          <div class="gb-content-box">
-            <div class="gb-header-title">GREETINGS</div>
-            <div class="gb-preview-text">
-              "Social progress happens when community participation requires zero extra burden. Everyday consumer choices transforming into meals is transformative..."
-            </div>
-            <button class="gb-more-btn" onclick="gbOpenModal('gbModalDrMeera')">MORE &rarr;</button>
-            <div style="border-top: 1px solid rgba(212,175,55,0.3); padding-top: 6px; margin-top: 6px;">
-              <div class="gb-person-name">DR. MEERA KRISHNAN</div>
-              <div class="gb-person-desig">DIRECTOR</div>
-              <div class="gb-person-org">SOCIAL WELFARE FOUNDATION</div>
             </div>
           </div>
         </div>
@@ -2651,7 +2616,7 @@ He is supported by his wife, Rasheena K. H, High School English Teacher (India),
               "I have had the opportunity to know Mr. Mohammed M. Basheer personally. I believe that his honesty, sincerity, and compassion are truly reflected..."
             </div>
             <button class="gb-more-btn" onclick="gbOpenModal('gbModalMathukatty')">MORE &rarr;</button>
-            <div style="border-top: 1px solid rgba(212,175,55,0.3); padding-top: 6px; margin-top: 6px;">
+            <div style="border-top: 1px solid rgba(212,175,55,0.3); padding-top: 4px; margin-top: 4px;">
               <div class="gb-person-name">MATHUKATTY, MP</div>
               <div class="gb-person-desig">RETIRED ASSISTANT ENGINEER</div>
               <div class="gb-person-org">KSEB</div>
@@ -2668,7 +2633,7 @@ He is supported by his wife, Rasheena K. H, High School English Teacher (India),
 <div id="gbModalMathukatty" class="gb-modal-overlay" onclick="gbCloseModal('gbModalMathukatty')">
   <div class="gb-modal-card" onclick="event.stopPropagation()">
     <span class="gb-modal-close" onclick="gbCloseModal('gbModalMathukatty')">&times;</span>
-    <div style="text-align: center;"><span style="background: var(--gb-gold-grad); color: #000; font-weight: bold; padding: 6px 24px; border-radius: 20px;">GREETINGS</span></div>
+    <div style="text-align: center;"><span style="background: var(--gb-gold-grad); color: #000; font-weight: bold; padding: 6px 24px; border-radius: 20px; font-size: 1.1rem;">GREETINGS</span></div>
     <div class="gb-modal-body">
       <p style="font-style: italic; color: #fcf6ba;">
         I have had the opportunity to know Mr. Mohammed M. Basheer personally. I believe that his honesty, sincerity, and compassion are truly reflected in this initiative.
@@ -2684,9 +2649,9 @@ He is supported by his wife, Rasheena K. H, High School English Teacher (India),
       </p>
     </div>
     <div style="border-top: 1px solid rgba(212, 175, 55, 0.4); padding-top: 15px; text-align: center; margin-top: 20px;">
-      <div class="gb-person-name" style="font-size: 1.2rem;">MATHUKATTY, MP</div>
-      <div class="gb-person-desig">RETIRED ASSISTANT ENGINEER</div>
-      <div class="gb-person-org">KERALA STATE ELECTRICITY BOARD (KSEB)</div>
+      <div class="gb-person-name" style="font-size: 1.25rem;">MATHUKATTY, MP</div>
+      <div class="gb-person-desig" style="font-size: 0.9rem;">RETIRED ASSISTANT ENGINEER</div>
+      <div class="gb-person-org" style="font-size: 0.9rem;">KERALA STATE ELECTRICITY BOARD (KSEB)</div>
     </div>
   </div>
 </div>
@@ -2694,14 +2659,14 @@ He is supported by his wife, Rasheena K. H, High School English Teacher (India),
 <div id="gbModalDrRadhakrishnan" class="gb-modal-overlay" onclick="gbCloseModal('gbModalDrRadhakrishnan')">
   <div class="gb-modal-card" onclick="event.stopPropagation()">
     <span class="gb-modal-close" onclick="gbCloseModal('gbModalDrRadhakrishnan')">&times;</span>
-    <div style="text-align: center;"><span style="background: var(--gb-gold-grad); color: #000; font-weight: bold; padding: 6px 24px; border-radius: 20px;">GREETINGS</span></div>
+    <div style="text-align: center;"><span style="background: var(--gb-gold-grad); color: #000; font-weight: bold; padding: 6px 24px; border-radius: 20px; font-size: 1.1rem;">GREETINGS</span></div>
     <div class="gb-modal-body">
       <p>Healthcare is not just about treating illnesses; ensuring proper nutrition to vulnerable communities is equally vital. BAS Charity International’s self-sustaining humanitarian effort ensures that every day-to-day transaction turns into a lifeline for someone in need.</p>
     </div>
     <div style="border-top: 1px solid rgba(212, 175, 55, 0.4); padding-top: 15px; text-align: center; margin-top: 20px;">
-      <div class="gb-person-name">DR. RADHAKRISHNAN NAIR</div>
-      <div class="gb-person-desig">SENIOR CONSULTANT SURGEON</div>
-      <div class="gb-person-org">MCH TRUST</div>
+      <div class="gb-person-name" style="font-size: 1.25rem;">DR. RADHAKRISHNAN NAIR</div>
+      <div class="gb-person-desig" style="font-size: 0.9rem;">SENIOR CONSULTANT SURGEON</div>
+      <div class="gb-person-org" style="font-size: 0.9rem;">MCH TRUST</div>
     </div>
   </div>
 </div>
@@ -2709,14 +2674,14 @@ He is supported by his wife, Rasheena K. H, High School English Teacher (India),
 <div id="gbModalAdvAnita" class="gb-modal-overlay" onclick="gbCloseModal('gbModalAdvAnita')">
   <div class="gb-modal-card" onclick="event.stopPropagation()">
     <span class="gb-modal-close" onclick="gbCloseModal('gbModalAdvAnita')">&times;</span>
-    <div style="text-align: center;"><span style="background: var(--gb-gold-grad); color: #000; font-weight: bold; padding: 6px 24px; border-radius: 20px;">GREETINGS</span></div>
+    <div style="text-align: center;"><span style="background: var(--gb-gold-grad); color: #000; font-weight: bold; padding: 6px 24px; border-radius: 20px; font-size: 1.1rem;">GREETINGS</span></div>
     <div class="gb-modal-body">
       <p>Transparency and ethical alignment are essential for true charitable impact. Connecting global e-commerce seamlessly to charitable causes creates a sustainable model that stands as an example to society.</p>
     </div>
     <div style="border-top: 1px solid rgba(212, 175, 55, 0.4); padding-top: 15px; text-align: center; margin-top: 20px;">
-      <div class="gb-person-name">ADV. ANITA CHACKO</div>
-      <div class="gb-person-desig">SENIOR ADVOCATE</div>
-      <div class="gb-person-org">HIGH COURT OF KERALA</div>
+      <div class="gb-person-name" style="font-size: 1.25rem;">ADV. ANITA CHACKO</div>
+      <div class="gb-person-desig" style="font-size: 0.9rem;">SENIOR ADVOCATE</div>
+      <div class="gb-person-org" style="font-size: 0.9rem;">HIGH COURT OF KERALA</div>
     </div>
   </div>
 </div>
@@ -2724,44 +2689,14 @@ He is supported by his wife, Rasheena K. H, High School English Teacher (India),
 <div id="gbModalProfRamanathan" class="gb-modal-overlay" onclick="gbCloseModal('gbModalProfRamanathan')">
   <div class="gb-modal-card" onclick="event.stopPropagation()">
     <span class="gb-modal-close" onclick="gbCloseModal('gbModalProfRamanathan')">&times;</span>
-    <div style="text-align: center;"><span style="background: var(--gb-gold-grad); color: #000; font-weight: bold; padding: 6px 24px; border-radius: 20px;">GREETINGS</span></div>
+    <div style="text-align: center;"><span style="background: var(--gb-gold-grad); color: #000; font-weight: bold; padding: 6px 24px; border-radius: 20px; font-size: 1.1rem;">GREETINGS</span></div>
     <div class="gb-modal-body">
       <p>Empowering humanity begins with solving fundamental needs. Utilizing affiliate revenue mechanisms to channel aid directly without burdens on donors is an extraordinary concept.</p>
     </div>
     <div style="border-top: 1px solid rgba(212, 175, 55, 0.4); padding-top: 15px; text-align: center; margin-top: 20px;">
-      <div class="gb-person-name">PROF. K. V. RAMANATHAN</div>
-      <div class="gb-person-desig">RETIRED PRINCIPAL</div>
-      <div class="gb-person-org">NIT CALICUT</div>
-    </div>
-  </div>
-</div>
-
-<div id="gbModalEngGeorge" class="gb-modal-overlay" onclick="gbCloseModal('gbModalEngGeorge')">
-  <div class="gb-modal-card" onclick="event.stopPropagation()">
-    <span class="gb-modal-close" onclick="gbCloseModal('gbModalEngGeorge')">&times;</span>
-    <div style="text-align: center;"><span style="background: var(--gb-gold-grad); color: #000; font-weight: bold; padding: 6px 24px; border-radius: 20px;">GREETINGS</span></div>
-    <div class="gb-modal-body">
-      <p>Integrating modern web engineering into humanitarian missions transforms routine online shopping into continuous social relief. A remarkably practical initiative!</p>
-    </div>
-    <div style="border-top: 1px solid rgba(212, 175, 55, 0.4); padding-top: 15px; text-align: center; margin-top: 20px;">
-      <div class="gb-person-name">ENG. GEORGE VARGHESE</div>
-      <div class="gb-person-desig">CHIEF OPERATIONS OFFICER</div>
-      <div class="gb-person-org">GLOBAL TECH SOLUTIONS</div>
-    </div>
-  </div>
-</div>
-
-<div id="gbModalDrMeera" class="gb-modal-overlay" onclick="gbCloseModal('gbModalDrMeera')">
-  <div class="gb-modal-card" onclick="event.stopPropagation()">
-    <span class="gb-modal-close" onclick="gbCloseModal('gbModalDrMeera')">&times;</span>
-    <div style="text-align: center;"><span style="background: var(--gb-gold-grad); color: #000; font-weight: bold; padding: 6px 24px; border-radius: 20px;">GREETINGS</span></div>
-    <div class="gb-modal-body">
-      <p>Building a hunger-free community needs accessible actions. By converting daily consumer activity into charitable contributions, this movement creates lasting positive social impact.</p>
-    </div>
-    <div style="border-top: 1px solid rgba(212, 175, 55, 0.4); padding-top: 15px; text-align: center; margin-top: 20px;">
-      <div class="gb-person-name">DR. MEERA KRISHNAN</div>
-      <div class="gb-person-desig">DIRECTOR</div>
-      <div class="gb-person-org">SOCIAL WELFARE FOUNDATION</div>
+      <div class="gb-person-name" style="font-size: 1.25rem;">PROF. K. V. RAMANATHAN</div>
+      <div class="gb-person-desig" style="font-size: 0.9rem;">RETIRED PRINCIPAL</div>
+      <div class="gb-person-org" style="font-size: 0.9rem;">NIT CALICUT</div>
     </div>
   </div>
 </div>
@@ -2835,6 +2770,7 @@ He is supported by his wife, Rasheena K. H, High School English Teacher (India),
     });
   }
 </script>
+<!-- INFINITE AUTO/MANUAL SCROLL GREETINGS WIDGET END -->
 <!-- INFINITE AUTO/MANUAL SCROLL GREETINGS WIDGET END -->
 <style>
 .trust-container{
