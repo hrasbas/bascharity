@@ -2206,7 +2206,7 @@ For more than 10 years, he has also been serving as a humble volunteer of the <a
 He is supported by his wife, Rasheena K. H, High School English Teacher (India), their children, Alif Bayan (India), Amna Bayan (Qatar), Azeem Ahmed (Oman), and their son-in-law, Anees Ameer (Qatar).
 </p>
 <hr>
- 
+  <!-- INFINITE AUTO/MANUAL SCROLL GREETINGS WIDGET START -->
   <!-- INFINITE AUTO/MANUAL SCROLL GREETINGS WIDGET START -->
 <style>
   :root {
@@ -2483,8 +2483,7 @@ He is supported by his wife, Rasheena K. H, High School English Teacher (India),
         <div class="gb-card-inner">
           <div class="gb-photo-box">
             <img src="mathukkutty.jpg" alt="MATHUKATTY MP" onclick="gbOpenZoom(this)">
-
-           <button class="gb-zoom-btn" onclick="gbOpenZoom(this)">🔍 ZOOM</button>
+            <button class="gb-zoom-btn" onclick="gbOpenZoom(this)">🔍 ZOOM</button>
           </div>
           <div class="gb-content-box">
             <div class="gb-header-title">GREETINGS</div>
@@ -2611,11 +2610,11 @@ He is supported by his wife, Rasheena K. H, High School English Teacher (India),
         </div>
       </div>
 
-      <!-- DUPLICATE SET FOR INFINITE LOOP -->
+      <!-- DUPLICATE CARD FOR LOOP -->
       <div class="gb-card" data-search="MATHUKATTY MP RETIRED ASSISTANT ENGINEER KSEB">
         <div class="gb-card-inner">
           <div class="gb-photo-box">
-            <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400" alt="MATHUKATTY MP" onclick="gbOpenZoom(this)">
+            <img src="mathukkutty.jpg" alt="MATHUKATTY MP" onclick="gbOpenZoom(this)">
             <button class="gb-zoom-btn" onclick="gbOpenZoom(this)">🔍 ZOOM</button>
           </div>
           <div class="gb-content-box">
@@ -2791,30 +2790,32 @@ He is supported by his wife, Rasheena K. H, High School English Teacher (India),
   let gbStartX;
   let gbScrollLeft;
 
-  gbSlider.addEventListener('mousedown', (e) => {
-    gbIsDown = true;
-    gbStartX = e.pageX - gbSlider.offsetLeft;
-    gbScrollLeft = gbSlider.scrollLeft;
-  });
-  gbSlider.addEventListener('mouseleave', () => { gbIsDown = false; });
-  gbSlider.addEventListener('mouseup', () => { gbIsDown = false; });
-  gbSlider.addEventListener('mousemove', (e) => {
-    if(!gbIsDown) return;
-    e.preventDefault();
-    const x = e.pageX - gbSlider.offsetLeft;
-    const walk = (x - gbStartX) * 2;
-    gbSlider.scrollLeft = gbScrollLeft - walk;
-  });
+  if (gbSlider) {
+    gbSlider.addEventListener('mousedown', (e) => {
+      gbIsDown = true;
+      gbStartX = e.pageX - gbSlider.offsetLeft;
+      gbScrollLeft = gbSlider.scrollLeft;
+    });
+    gbSlider.addEventListener('mouseleave', () => { gbIsDown = false; });
+    gbSlider.addEventListener('mouseup', () => { gbIsDown = false; });
+    gbSlider.addEventListener('mousemove', (e) => {
+      if(!gbIsDown) return;
+      e.preventDefault();
+      const x = e.pageX - gbSlider.offsetLeft;
+      const walk = (x - gbStartX) * 2;
+      gbSlider.scrollLeft = gbScrollLeft - walk;
+    });
+  }
 </script>
 <!-- INFINITE AUTO/MANUAL SCROLL GREETINGS WIDGET END -->
- 
- <style>
+<!-- INFINITE AUTO/MANUAL SCROLL GREETINGS WIDGET END -->
+<style>
 .trust-container{
 max-width:900px; /* Responsive Fix */
 width:96%;
 margin:auto;
 }
-.trust-title{
+.trust-title{ 
 background:#000;
 color:#00e676;
 font-weight:900;
