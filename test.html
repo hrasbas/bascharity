@@ -2968,6 +2968,14 @@ function toggleWish() {
       gbSlider.scrollLeft = gbScrollLeft - walk;
     });
   }
+   const container = document.querySelector('.gb-card-container'); // കാർഡുകളുടെ Parent Class
+
+container.addEventListener('wheel', (e) => {
+  e.preventDefault();
+  // സ്‌ക്രോൾ ചെയ്യുന്നതിന്റെ എതിർദിശയിലേക്ക് മൂവ് ചെയ്യിക്കുന്നു
+  container.scrollLeft -= e.deltaY; 
+});
+
 </script>
 <!-- INFINITE AUTO/MANUAL SCROLL GREETINGS WIDGET END -->
 
