@@ -2365,6 +2365,24 @@ function toggleWish() {
         btnText.style.display = "inline";
     }
 }
+
+ /* IMAGE SLIDER */
+const bas7Images=[
+"https://drive.google.com/thumbnail?id=1keyWLOGF-HysweqAYntVaS-vB_fwZj_H&sz=w1000",
+"https://drive.google.com/thumbnail?id=1KdZnPqKlSOXAFY-Lu2FU41B1n7sWtt85&sz=w1000"
+];
+let bas7Index=0;
+const bas7Img=document.getElementById("bas7Img");
+
+setInterval(function(){
+  bas7Img.style.opacity=0;
+  setTimeout(function(){
+    bas7Index=(bas7Index+1)%bas7Images.length;
+    bas7Img.src=bas7Images[bas7Index];
+    bas7Img.style.opacity=1;
+  },800);
+},5000);
+
 </script>
 
 </div>
