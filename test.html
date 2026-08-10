@@ -4921,31 +4921,19 @@ YOUR PURCHASE SATISFIES A HUNGER™
       }
     </script>
  <!-- Popup Notification -->
-<!-- Popup Notification -->
-<div id="sealScrollHint" style="
-  display:none;
-  position:fixed;
-  top:20px;
-  left:50%;
-  transform:translateX(-50%);
-  background:#111;
-  color:#fff;
-  padding:8px 16px;
-  border-radius:20px;
-  font-size:13px;
-  font-weight:bold;
-  z-index:99999;
-  box-shadow:0 4px 12px rgba(0,0,0,0.4);
-  pointer-events:none;
-">
-  Scroll UP / DOWN
-</div>
+<button id="scrollLockBtn" onclick="toggleScrollLock()">LOCK SCROLL</button>
 
 <script>
 let scrollTimer;
+let reverseMode = false;
+let scrollLocked = false;
 let userStopped = false;
 let restartDelay = 3000;
-let reverseMode = false;
+
+function setBtn() {
+  const btn = document.getElementById("scrollLockBtn");
+  if (btn) btn.textContent = scrollLocked ? "UNLOCK SCROLL" : "LOCK SCROLL";
+}
 
 function showHint() {
   const hint = document.getElementById("sealScrollHint");
@@ -4958,56 +4946,75 @@ function showHint() {
 }
 
 function autoScrollToBottom(step = 12, delay = 16) {
+  if (scrollLocked) return;
   clearInterval(scrollTimer);
   reverseMode = false;
   showHint();
 
   scrollTimer = setInterval(function () {
+    if (scrollLocked) {
+      clearInterval(scrollTimer);
+      return;
+    }
     const maxScroll = document.documentElement.scrollHeight - window.innerHeight;
     const current = window.scrollY || window.pageYOffset;
-
     if (current >= maxScroll) {
       clearInterval(scrollTimer);
       return;
     }
-
     window.scrollTo(0, Math.min(current + step, maxScroll));
   }, delay);
 }
 
 function autoScrollToTop(step = 12, delay = 16) {
+  if (scrollLocked) return;
   clearInterval(scrollTimer);
   reverseMode = true;
   showHint();
 
   scrollTimer = setInterval(function () {
+    if (scrollLocked) {
+      clearInterval(scrollTimer);
+      return;
+    }
     const current = window.scrollY || window.pageYOffset;
-
     if (current <= 0) {
       clearInterval(scrollTimer);
       return;
     }
-
     window.scrollTo(0, Math.max(current - step, 0));
   }, delay);
 }
 
 function stopAutoScrollTemporarily() {
+  if (scrollLocked) return;
   userStopped = true;
   clearInterval(scrollTimer);
 
   clearTimeout(window.autoScrollRestartTimer);
   window.autoScrollRestartTimer = setTimeout(function () {
     userStopped = false;
-    if (reverseMode) {
-      autoScrollToTop();
-    } else {
-      autoScrollToBottom();
-    }
+    if (scrollLocked) return;
+    if (reverseMode) autoScrollToTop();
+    else autoScrollToBottom();
   }, restartDelay);
 }
 
+function toggleScrollLock() {
+  scrollLocked = !scrollLocked;
+  setBtn();
+
+  if (scrollLocked) {
+    clearInterval(scrollTimer);
+    clearTimeout(window.autoScrollRestartTimer);
+  } else {
+    if (reverseMode) autoScrollToTop();
+    else autoScrollToBottom();
+  }
+}
+
 window.addEventListener("load", function () {
+  setBtn();
   setTimeout(function () {
     autoScrollToBottom();
   }, 200);
