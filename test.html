@@ -4923,53 +4923,99 @@ YOUR PURCHASE SATISFIES A HUNGER™
  <!-- Popup Notification -->
 <!-- Popup Notification -->
 <div id="sealScrollHint" style="
-  display: none;
-  position: fixed;
-  top: 20px;
-  left: 50%;
-  transform: translateX(-50%);
-  background-color: #111;
-  color: #fff;
-  padding: 8px 16px;
-  border-radius: 20px;
-  font-size: 13px;
-  font-weight: bold;
-  z-index: 99999;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.4);
-  pointer-events: none;
+  display:none;
+  position:fixed;
+  top:20px;
+  left:50%;
+  transform:translateX(-50%);
+  background:#111;
+  color:#fff;
+  padding:8px 16px;
+  border-radius:20px;
+  font-size:13px;
+  font-weight:bold;
+  z-index:99999;
+  box-shadow:0 4px 12px rgba(0,0,0,0.4);
+  pointer-events:none;
 ">
-  Scroll up & down works only sides of the book
+  Scroll UP / DOWN
 </div>
 
 <script>
-function vadaThankyou11() {
-    const detailsBox = document.getElementById("vadaDetailsBox11");
-    const donateBox = document.getElementById("vadaDonateBox11");
-    const thankyouBox = document.getElementById("vadaThankyouBox11");
+let scrollTimer;
+let userStopped = false;
+let restartDelay = 3000;
+let reverseMode = false;
 
-    if (detailsBox) detailsBox.style.display = "none";
-    if (donateBox) donateBox.style.display = "none";
-    if (thankyouBox) thankyouBox.style.display = "block";
-
-    if (typeof startTimer11 === 'function') {
-        startTimer11();
-    }
-
-    const hint = document.getElementById("sealScrollHint");
-    if (hint) {
-        hint.style.display = "block";
-        setTimeout(function() {
-            hint.style.display = "none";
-        }, 4000);
-    }
-
-    setTimeout(function () {
-        window.scrollTo({
-            top: document.documentElement.scrollHeight,
-            behavior: "smooth"
-        });
-    }, 200);
+function showHint() {
+  const hint = document.getElementById("sealScrollHint");
+  if (!hint) return;
+  hint.style.display = "block";
+  clearTimeout(window.hintTimer);
+  window.hintTimer = setTimeout(function () {
+    hint.style.display = "none";
+  }, 2500);
 }
+
+function autoScrollToBottom(step = 12, delay = 16) {
+  clearInterval(scrollTimer);
+  reverseMode = false;
+  showHint();
+
+  scrollTimer = setInterval(function () {
+    const maxScroll = document.documentElement.scrollHeight - window.innerHeight;
+    const current = window.scrollY || window.pageYOffset;
+
+    if (current >= maxScroll) {
+      clearInterval(scrollTimer);
+      return;
+    }
+
+    window.scrollTo(0, Math.min(current + step, maxScroll));
+  }, delay);
+}
+
+function autoScrollToTop(step = 12, delay = 16) {
+  clearInterval(scrollTimer);
+  reverseMode = true;
+  showHint();
+
+  scrollTimer = setInterval(function () {
+    const current = window.scrollY || window.pageYOffset;
+
+    if (current <= 0) {
+      clearInterval(scrollTimer);
+      return;
+    }
+
+    window.scrollTo(0, Math.max(current - step, 0));
+  }, delay);
+}
+
+function stopAutoScrollTemporarily() {
+  userStopped = true;
+  clearInterval(scrollTimer);
+
+  clearTimeout(window.autoScrollRestartTimer);
+  window.autoScrollRestartTimer = setTimeout(function () {
+    userStopped = false;
+    if (reverseMode) {
+      autoScrollToTop();
+    } else {
+      autoScrollToBottom();
+    }
+  }, restartDelay);
+}
+
+window.addEventListener("load", function () {
+  setTimeout(function () {
+    autoScrollToBottom();
+  }, 200);
+});
+
+window.addEventListener("wheel", stopAutoScrollTemporarily, { passive: true });
+window.addEventListener("touchstart", stopAutoScrollTemporarily, { passive: true });
+window.addEventListener("keydown", stopAutoScrollTemporarily);
 </script>
 </body> <!-- ഇതിന് തൊട്ടു മുകളിൽ -->
 </html>
