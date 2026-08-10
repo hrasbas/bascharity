@@ -4921,7 +4921,65 @@ YOUR PURCHASE SATISFIES A HUNGER™
       }
     </script>
  <!-- Popup Notification -->
-<button id="scrollLockBtn" onclick="toggleScrollLock()">LOCK SCROLL</button>
+ 
+<style>
+#scrollControlPopup{
+  position:fixed;
+  right:16px;
+  bottom:16px;
+  z-index:99999;
+  background:#111;
+  color:#fff;
+  padding:14px 14px 12px;
+  border-radius:14px;
+  width:240px;
+  box-shadow:0 8px 24px rgba(0,0,0,.35);
+  font-family:Arial,sans-serif;
+}
+#scrollControlPopup .row{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  margin-bottom:10px;
+  font-size:13px;
+}
+#scrollControlPopup input[type="range"]{
+  width:100%;
+}
+#scrollControlPopup .btns{
+  display:flex;
+  gap:8px;
+  margin-top:10px;
+}
+#scrollControlPopup button{
+  flex:1;
+  border:none;
+  border-radius:10px;
+  padding:8px 10px;
+  cursor:pointer;
+  font-weight:700;
+}
+#scrollControlPopup .lock{
+  background:#ffd700;
+  color:#111;
+}
+#scrollControlPopup .hide{
+  background:#333;
+  color:#fff;
+}
+</style>
+
+<div id="scrollControlPopup">
+  <div class="row">
+    <span>SCROLL SPEED</span>
+    <span id="scrollSpeedValue">12</span>
+  </div>
+  <input id="scrollSpeedSlider" type="range" min="2" max="30" value="12">
+  <div class="btns">
+    <button class="lock" onclick="toggleScrollLock()">LOCK</button>
+    <button class="hide" onclick="document.getElementById('scrollControlPopup').style.display='none'">HIDE</button>
+  </div>
+</div>
 
 <script>
 let scrollTimer;
@@ -4929,27 +4987,18 @@ let reverseMode = false;
 let scrollLocked = false;
 let userStopped = false;
 let restartDelay = 3000;
+let scrollStep = 12;
 
-function setBtn() {
-  const btn = document.getElementById("scrollLockBtn");
-  if (btn) btn.textContent = scrollLocked ? "UNLOCK SCROLL" : "LOCK SCROLL";
+function setSpeed(v){
+  scrollStep = Number(v) || 12;
+  const out = document.getElementById("scrollSpeedValue");
+  if (out) out.textContent = scrollStep;
 }
 
-function showHint() {
-  const hint = document.getElementById("sealScrollHint");
-  if (!hint) return;
-  hint.style.display = "block";
-  clearTimeout(window.hintTimer);
-  window.hintTimer = setTimeout(function () {
-    hint.style.display = "none";
-  }, 2500);
-}
-
-function autoScrollToBottom(step = 12, delay = 16) {
+function autoScrollToBottom(step = scrollStep, delay = 16) {
   if (scrollLocked) return;
   clearInterval(scrollTimer);
   reverseMode = false;
-  showHint();
 
   scrollTimer = setInterval(function () {
     if (scrollLocked) {
@@ -4966,11 +5015,10 @@ function autoScrollToBottom(step = 12, delay = 16) {
   }, delay);
 }
 
-function autoScrollToTop(step = 12, delay = 16) {
+function autoScrollToTop(step = scrollStep, delay = 16) {
   if (scrollLocked) return;
   clearInterval(scrollTimer);
   reverseMode = true;
-  showHint();
 
   scrollTimer = setInterval(function () {
     if (scrollLocked) {
@@ -5002,8 +5050,6 @@ function stopAutoScrollTemporarily() {
 
 function toggleScrollLock() {
   scrollLocked = !scrollLocked;
-  setBtn();
-
   if (scrollLocked) {
     clearInterval(scrollTimer);
     clearTimeout(window.autoScrollRestartTimer);
@@ -5014,7 +5060,14 @@ function toggleScrollLock() {
 }
 
 window.addEventListener("load", function () {
-  setBtn();
+  const slider = document.getElementById("scrollSpeedSlider");
+  if (slider) {
+    setSpeed(slider.value);
+    slider.addEventListener("input", function () {
+      setSpeed(this.value);
+    });
+  }
+
   setTimeout(function () {
     autoScrollToBottom();
   }, 200);
