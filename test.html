@@ -4927,7 +4927,36 @@ YOUR PURCHASE SATISFIES A HUNGER™
     return div.innerHTML;
   }
 </script>
+<script>
+(function () {
+  const bookFrame = document.querySelector('iframe[src="manual.html"]');
+  const bookSection = bookFrame ? bookFrame.parentElement : null;
 
+  if (!bookFrame || !bookSection) return;
+
+  let done = false;
+
+  setInterval(function () {
+    if (done) return;
+
+    try {
+      const lastPage =
+        bookFrame.contentDocument.querySelector('.page[data-is-last="true"]');
+
+      if (lastPage && lastPage.dataset.state === "open") {
+        done = true;
+
+        setTimeout(function () {
+          bookSection.scrollIntoView({
+            behavior: "smooth",
+            block: "center"
+          });
+        }, 700);
+      }
+    } catch (e) {}
+  }, 250);
+})();
+</script>
 </body> <!-- ഇതിന് തൊട്ടു മുകളിൽ -->
 </html>
 
