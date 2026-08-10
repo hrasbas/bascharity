@@ -4927,36 +4927,81 @@ YOUR PURCHASE SATISFIES A HUNGER™
     return div.innerHTML;
   }
 </script>
+<!-- ചെറിയ Popup / Notification Box (Book-ന് മുകളിൽ കാണിക്കാൻ) -->
+<div id="bookScrollHint" style="
+  display: none; 
+  position: absolute; 
+  top: -35px; 
+  left: 50%; 
+  transform: translateX(-50%); 
+  background-color: rgba(0, 0, 0, 0.8); 
+  color: #fff; 
+  padding: 5px 12px; 
+  border-radius: 15px; 
+  font-size: 12px; 
+  z-index: 1000; 
+  white-space: nowrap;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+  pointer-events: none;
+">
+  Scroll UP / DOWN
+</div>
+
 <script>
-(function () {
-  const bookFrame = document.querySelector('iframe[src="manual.html"]');
-  const bookSection = bookFrame ? bookFrame.parentElement : null;
+function vadaThankyou11() {
+    // താങ്ക്യൂ ബോക്സ് കാണിക്കുന്നു
+    document.getElementById("vadaDetailsBox11").style.display = "none";
+    document.getElementById("vadaDonateBox11").style.display = "none";
+    document.getElementById("vadaThankyouBox11").style.display = "block";
+    
+    // ടൈമർ സ്റ്റാർട്ട് ചെയ്യുന്നു
+    startTimer11();
 
-  if (!bookFrame || !bookSection) return;
+    const bookFrame = document.querySelector('iframe[src="manual.html"]');
+    if (bookFrame) {
+        const bookSection = bookFrame.parentElement;
+        
+        // Parent-ന് position relative കൊടുക്കുന്നു (Popup കൃത്യമായി മുകളിൽ നിൽക്കാൻ)
+        bookSection.style.position = 'relative';
 
-  let done = false;
+        // 1. Popup കാണിക്കുന്നു
+        const hint = document.getElementById("bookScrollHint");
+        if (hint) {
+            bookSection.appendChild(hint);
+            hint.style.display = "block";
+            
+            // 4 സെക്കൻഡിന് ശേഷം Popup താനേ മറയുന്നു
+            setTimeout(function() {
+                hint.style.display = "none";
+            }, 4000);
+        }
 
-  setInterval(function () {
-    if (done) return;
-
-    try {
-      const lastPage =
-        bookFrame.contentDocument.querySelector('.page[data-is-last="true"]');
-
-      if (lastPage && lastPage.dataset.state === "open") {
-        done = true;
-
+        // 2. പുസ്തകത്തിലേക്ക് (iframe) സ്ക്രീനിന്റെ നടുവിലായി (center) ഓട്ടോ സ്ക്രോൾ ചെയ്യുന്നു
         setTimeout(function () {
-          bookSection.scrollIntoView({
-            behavior: "smooth",
-            block: "center"
-          });
-        }, 700);
-      }
-    } catch (e) {}
-  }, 250);
-})();
+            bookSection.scrollIntoView({
+                behavior: "smooth",
+                block: "center"
+            });
+        }, 300);
+    }
+}
+
+// 3. Iframe/Book-ന് പുറത്ത് അല്ലെങ്കിൽ മുകളിലായി Scroll Up / Scroll Down സുഗമമാക്കാൻ
+window.addEventListener('DOMContentLoaded', function() {
+    const bookFrame = document.querySelector('iframe[src="manual.html"]');
+    if (bookFrame) {
+        // Iframe-ന്റെ പുറത്തെ ഭാഗത്ത് സ്ക്രോൾ ഇവന്റ് ലിസൺ ചെയ്യുന്നു
+        bookFrame.parentElement.addEventListener('wheel', function(e) {
+            // ഐഫ്രേമിന്റെ വശങ്ങളിലോ മുകളിലോ വെച്ച് സ്ക്രോൾ ചെയ്യുമ്പോൾ മെയിൻ വിൻഡോ സ്ക്രോൾ ചെയ്യും
+            window.scrollBy({
+                top: e.deltaY,
+                behavior: 'smooth'
+            });
+        }, { passive: true });
+    }
+});
 </script>
+
 </body> <!-- ഇതിന് തൊട്ടു മുകളിൽ -->
 </html>
 
