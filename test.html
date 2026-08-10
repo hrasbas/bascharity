@@ -4921,131 +4921,136 @@ YOUR PURCHASE SATISFIES A HUNGER™
       }
     </script>
  <!-- Popup Notification -->
-<style>
-#scrollControlPopup{
-  position:fixed;
-  left:50%;
-  top:14px;
-  transform:translateX(-50%);
-  z-index:99999;
-  background:#111;
-  color:#fff;
-  padding:10px 14px;
-  border-radius:999px;
-  box-shadow:0 8px 24px rgba(0,0,0,.35);
-  font-family:Arial,sans-serif;
-  display:flex;
-  align-items:center;
-  gap:10px;
-  max-width:calc(100vw - 24px);
-  white-space:nowrap;
-}
-#scrollControlPopup span{
-  font-size:12px;
-  font-weight:700;
-}
-#scrollSpeedSlider{
-  width:180px;
-  max-width:48vw;
-}
-#scrollSpeedValue{
-  min-width:24px;
-  text-align:center;
-}
-#scrollControlPopup button{
-  border:none;
-  border-radius:999px;
-  padding:6px 10px;
-  cursor:pointer;
-  font-weight:700;
-}
-#scrollControlPopup .lock{
-  background:#ffd700;
-  color:#111;
-}
-#scrollControlPopup .hide{
-  background:#333;
-  color:#fff;
-}
-</style>
+<!-- Floating Scroll Bar Unit -->
+<div id="customScrollControlBar" style="
+  position: fixed;
+  bottom: 25px;
+  right: -220px; /* തുടക്കത്തിൽ പകുതി അകത്ത് കേറി നിൽക്കാൻ */
+  display: flex;
+  align-items: center;
+  background: rgba(17, 17, 17, 0.95);
+  color: #fff;
+  border-radius: 30px 0 0 30px;
+  padding: 6px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+  z-index: 999999;
+  transition: right 0.4s ease;
+  font-family: sans-serif;
+">
+  <!-- ഉള്ളിലേക്ക് കേറാനും പുറത്തേക്ക് വരാനുമുള്ള തള്ളു ബട്ടൺ (Toggle Tab) -->
+  <button id="toggleBarBtn" onclick="toggleScrollControlBar()" style="
+    background: #008cba;
+    color: white;
+    border: none;
+    padding: 10px 12px;
+    border-radius: 20px 0 0 20px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 14px;
+    outline: none;
+    margin-right: 8px;
+  ">
+    &lt;
+  </button>
 
-<div id="scrollControlPopup">
-  <span>SCROLL SPEED</span>
-  <span id="scrollSpeedValue">12</span>
-  <input id="scrollSpeedSlider" type="range" min="2" max="30" value="12">
-  <button class="lock" onclick="toggleScrollLock()">LOCK</button>
-  <button class="hide" onclick="document.getElementById('scrollControlPopup').style.display='none'">HIDE</button>
+  <!-- സ്ക്രോൾ കൺട്രോളുകൾ -->
+  <div style="display: flex; align-items: center; gap: 8px; padding-right: 10px;">
+    <!-- ഇടത്തെ അറ്റം: Scroll UP -->
+    <button onclick="doCustomScroll('up')" style="
+      background: #333;
+      color: #fff;
+      border: 1px solid #555;
+      padding: 6px 12px;
+      border-radius: 15px;
+      cursor: pointer;
+      font-size: 12px;
+    ">
+      ▲ UP
+    </button>
+
+    <!-- സെന്റർ: Speed Toggle (L / H) -->
+    <button id="scrollSpeedBtn" onclick="toggleScrollSpeed()" style="
+      background: #444;
+      color: #ffeb3b;
+      border: 1px solid #666;
+      padding: 6px 10px;
+      border-radius: 15px;
+      cursor: pointer;
+      font-size: 11px;
+      font-weight: bold;
+    ">
+      L &gt; ---.-- &lt; H
+    </button>
+
+    <!-- വലത്തെ അറ്റം: Scroll DOWN -->
+    <button onclick="doCustomScroll('down')" style="
+      background: #333;
+      color: #fff;
+      border: 1px solid #555;
+      padding: 6px 12px;
+      border-radius: 15px;
+      cursor: pointer;
+      font-size: 12px;
+    ">
+      ▼ DOWN
+    </button>
+  </div>
 </div>
 
 <script>
-let scrollTimer;
-let reverseMode = false;
-let scrollLocked = false;
-let scrollStep = 12;
+let isBarExpanded = false;
+let isHighSpeed = false;
 
-function setSpeed(v){
-  scrollStep = Number(v) || 12;
-  const out = document.getElementById("scrollSpeedValue");
-  if (out) out.textContent = scrollStep;
+// Bar ഉള്ളിലേക്കും പുറത്തേക്കും തള്ളുന്ന ഫങ്ഷൻ
+function toggleScrollControlBar() {
+    const bar = document.getElementById("customScrollControlBar");
+    const btn = document.getElementById("toggleBarBtn");
+    
+    if (!isBarExpanded) {
+        bar.style.right = "0px";
+        btn.innerHTML = "&gt;"; // പുറത്തുവരുമ്പോൾ ഉള്ളിലേക്ക് തിരിയാൻ
+        isBarExpanded = true;
+    } else {
+        bar.style.right = "-220px";
+        btn.innerHTML = "&lt;"; // അകത്ത് കേറുമ്പോൾ പുറത്തേക്ക് തിരിയാൻ
+        isBarExpanded = false;
+    }
 }
 
-function autoScrollToBottom(step = scrollStep, delay = 16) {
-  if (scrollLocked) return;
-  clearInterval(scrollTimer);
-  reverseMode = false;
-  scrollTimer = setInterval(function () {
-    if (scrollLocked) return clearInterval(scrollTimer);
-    const maxScroll = document.documentElement.scrollHeight - window.innerHeight;
-    const current = window.scrollY || window.pageYOffset;
-    if (current >= maxScroll) return clearInterval(scrollTimer);
-    window.scrollTo(0, Math.min(current + step, maxScroll));
-  }, delay);
+// Speed Toggle (Low / High Speed)
+function toggleScrollSpeed() {
+    const speedBtn = document.getElementById("scrollSpeedBtn");
+    isHighSpeed = !isHighSpeed;
+    
+    if (isHighSpeed) {
+        speedBtn.style.color = "#00ffcc";
+        speedBtn.style.borderColor = "#00ffcc";
+        speedBtn.innerText = "SPEED: HIGH";
+    } else {
+        speedBtn.style.color = "#ffeb3b";
+        speedBtn.style.borderColor = "#666";
+        speedBtn.innerText = "L > ---.-- < H";
+    }
 }
 
-function autoScrollToTop(step = scrollStep, delay = 16) {
-  if (scrollLocked) return;
-  clearInterval(scrollTimer);
-  reverseMode = true;
-  scrollTimer = setInterval(function () {
-    if (scrollLocked) return clearInterval(scrollTimer);
-    const current = window.scrollY || window.pageYOffset;
-    if (current <= 0) return clearInterval(scrollTimer);
-    window.scrollTo(0, Math.max(current - step, 0));
-  }, delay);
+// Up / Down Scroll
+function doCustomScroll(direction) {
+    const distance = isHighSpeed ? 600 : 250; // Speed അനുസരിച്ച് സ്ക്രോൾ ദൂരം മാറും
+    
+    if (direction === 'up') {
+        window.scrollBy({
+            top: -distance,
+            behavior: 'smooth'
+        });
+    } else if (direction === 'down') {
+        window.scrollBy({
+            top: distance,
+            behavior: 'smooth'
+        });
+    }
 }
-
-function stopAutoScrollTemporarily() {
-  if (scrollLocked) return;
-  clearInterval(scrollTimer);
-}
-
-function toggleScrollLock() {
-  scrollLocked = !scrollLocked;
-  if (scrollLocked) {
-    clearInterval(scrollTimer);
-  } else {
-    if (reverseMode) autoScrollToTop();
-    else autoScrollToBottom();
-  }
-}
-
-window.addEventListener("load", function () {
-  const slider = document.getElementById("scrollSpeedSlider");
-  if (slider) {
-    setSpeed(slider.value);
-    slider.addEventListener("input", function () {
-      setSpeed(this.value);
-    });
-  }
-  setTimeout(function () {
-    autoScrollToBottom();
-  }, 200);
-});
-
-window.addEventListener("wheel", stopAutoScrollTemporarily, { passive: true });
-window.addEventListener("touchstart", stopAutoScrollTemporarily, { passive: true });
-window.addEventListener("keydown", stopAutoScrollTemporarily);
 </script>
+
 </body> <!-- ഇതിന് തൊട്ടു മുകളിൽ -->
 </html>
 
