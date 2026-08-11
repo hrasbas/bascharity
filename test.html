@@ -5121,110 +5121,66 @@ YOUR PURCHASE SATISFIES A HUNGER™
 </script>
 
 <!-- Button Control Script (ഡ്യൂപ്ലിക്കേഷൻ ഒഴിവാക്കി തിരുത്തിയത്) -->
-<script>
-  let isPopupOpen = false;
+  <script>
+(function() {
+    let scrollSpeed = 0.5;
+    let autoScrollInterval = null;
+    let isUserInteracting = false;
+    let resumeTimeout = null;
 
-  function togglePopupBar() {
-    const popup = document.getElementById("scrollControlPopup");
-    const arrow = document.getElementById("popupToggleArrow");
+    function startAutoScroll() {
+        if (autoScrollInterval || isUserInteracting) return;
 
-    if (!isPopupOpen) {
-      popup.classList.add("open");
-      arrow.innerText = "▶";
-      arrow.classList.remove("flicker");
-      isPopupOpen = true;
-    } else {
-      popup.classList.remove("open");
-      arrow.innerText = "◀";
-      arrow.classList.add("flicker");
-      isPopupOpen = false;
-    }
-  }
-
-  let scrollTimer = null;
-  let scrollStep = 6;
-  let scrollLocked = false;
-  let manualDir = 0;
-
-  function updateSpeed(v){
-    scrollStep = Number(v) || 1;
-    const out = document.getElementById("scrollSpeedValue");
-    if (out) out.textContent = scrollStep;
-  }
-
-  function doScroll(dir){
-    const maxScroll = Math.max(0, document.documentElement.scrollHeight - window.innerHeight);
-    const current = window.scrollY || window.pageYOffset || 0;
-    const next = Math.max(0, Math.min(current + (dir * scrollStep), maxScroll));
-    window.scrollTo(0, next);
-  }
-
-  function startDefaultScroll(dir){
-    if (scrollLocked) return;
-    clearInterval(scrollTimer);
-
-    // സ്ലൈഡറിൽ കൊടുത്ത അതേ സ്പീഡ് എടുക്കുന്നു
-    const slider = document.getElementById("scrollSpeedSlider");
-    if (slider) scrollStep = Number(slider.value) || 1;
-
-    manualDir = dir;
-    scrollTimer = setInterval(function(){
-      doScroll(manualDir);
-    }, 16);
-  }
-
-  function stopManualScroll(){
-    clearInterval(scrollTimer);
-    scrollTimer = null;
-    manualDir = 0;
-  }
-
-  function bindPress(btn, dir){
-    if (!btn) return;
-
-    const start = function(e){
-      e.preventDefault();
-      startDefaultScroll(dir);
-    };
-
-    const stop = function(){
-      stopManualScroll();
-    };
-
-    btn.addEventListener("touchstart", start, {passive:false});
-    btn.addEventListener("touchend", stop);
-    btn.addEventListener("touchcancel", stop);
-
-    btn.addEventListener("mousedown", start);
-    btn.addEventListener("mouseup", stop);
-    btn.addEventListener("mouseleave", stop);
-  }
-
-  function toggleScrollLock(){
-    scrollLocked = !scrollLocked;
-    const btn = document.getElementById("lockStateBtn");
-    if (btn) btn.textContent = scrollLocked ? "UNLOCK" : "LOCK";
-    if (scrollLocked) stopManualScroll();
-  }
-
-  window.addEventListener("load", function(){
-    const slider = document.getElementById("scrollSpeedSlider");
-    if (slider){
-      updateSpeed(slider.value);
-      slider.addEventListener("input", function(){
-        updateSpeed(this.value);
-      });
+        autoScrollInterval = setInterval(function() {
+            // പേജിന്റെ ഏറ്റവും അടിയിൽ എത്തിയാൽ സ്ക്രോൾ സ്റ്റോപ്പ് ചെയ്യും
+            if ((window.innerHeight + window.scrollY) >= document.documentElement.scrollHeight - 2) {
+                stopAutoScroll();
+            } else {
+                window.scrollBy(0, scrollSpeed);
+            }
+        }, 20);
     }
 
-    bindPress(document.getElementById("upBtn"), -1);
-    bindPress(document.getElementById("downBtn"), 1);
-  });
+    function stopAutoScroll() {
+        if (autoScrollInterval) {
+            clearInterval(autoScrollInterval);
+            autoScrollInterval = null;
+        }
+    }
+
+    function handleUserTouchStart() {
+        isUserInteracting = true;
+        stopAutoScroll();
+        clearTimeout(resumeTimeout);
+    }
+
+    function handleUserTouchEnd() {
+        isUserInteracting = false;
+        clearTimeout(resumeTimeout);
+        
+        // യൂസർ കൈയെടുത്ത ശേഷം പേജ് ഏറ്റവും അടിയിൽ അല്ലെങ്കിൽ മാത്രം വീണ്ടും സ്ക്രോൾ സ്റ്റാർട്ട് ചെയ്യും
+        resumeTimeout = setTimeout(function() {
+            if ((window.innerHeight + window.scrollY) < document.documentElement.scrollHeight - 10) {
+                startAutoScroll();
+            }
+        }, 1500);
+    }
+
+    window.addEventListener('touchstart', handleUserTouchStart, { passive: true });
+    window.addEventListener('touchend', handleUserTouchEnd, { passive: true });
+    window.addEventListener('mousedown', handleUserTouchStart, { passive: true });
+    window.addEventListener('mouseup', handleUserTouchEnd, { passive: true });
+    window.addEventListener('wheel', function() {
+        handleUserTouchStart();
+        handleUserTouchEnd();
+    }, { passive: true });
+
+    window.addEventListener('load', function() {
+        setTimeout(startAutoScroll, 1000);
+    });
+})();
 </script>
-
-</body>
-</html>
-                      
-
+  
 </body> <!-- ഇതിന് തൊട്ടു മുകളിൽ -->
 </html>
 
