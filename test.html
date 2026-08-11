@@ -5145,6 +5145,10 @@ YOUR PURCHASE SATISFIES A HUNGER™
     dir = 0;
   }
 
+  function dragScroll(dy){
+    window.scrollBy(0, dy);
+  }
+
   window.addEventListener("wheel", function(e){
     e.preventDefault();
     if (e.deltaY > 0) startAuto(1);
@@ -5164,9 +5168,9 @@ YOUR PURCHASE SATISFIES A HUNGER™
     const t = e.touches[0];
     if (!t) return;
     const dy = lastY - t.clientY;
-    if (Math.abs(dy) > 2){
+    if (Math.abs(dy) > 1){
       e.preventDefault();
-      window.scrollBy(0, dy);
+      dragScroll(dy);
       lastY = t.clientY;
     }
   }, {passive:false});
@@ -5188,8 +5192,8 @@ YOUR PURCHASE SATISFIES A HUNGER™
   window.addEventListener("mousemove", function(e){
     if (!active) return;
     const dy = lastY - e.clientY;
-    if (Math.abs(dy) > 2){
-      window.scrollBy(0, dy);
+    if (Math.abs(dy) > 1){
+      dragScroll(dy);
       lastY = e.clientY;
     }
   });
