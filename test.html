@@ -5125,88 +5125,67 @@ YOUR PURCHASE SATISFIES A HUNGER™
   }
 </style>
 <script>
-(function(){
-  let autoTimer = null;
-  let active = false;
-  let lastY = 0;
-  let dir = 0;
+(function() {
+    let scrollSpeed = 0.5; // സ്ക്രോൾ വേഗത (ആവശ്യമെങ്കിൽ മാറ്റാം)
+    let autoScrollInterval = null;
+    let isUserInteracting = false;
+    let resumeTimeout = null;
 
-  function startAuto(d){
-    dir = d;
-    if (autoTimer) return;
-    autoTimer = setInterval(function(){
-      window.scrollBy(0, dir * 2);
-    }, 16);
-  }
+    // ഓട്ടോ സ്ക്രോൾ പതുക്കെ സ്റ്റാർട്ട് ചെയ്യുന്ന ഫങ്ഷൻ
+    function startAutoScroll() {
+        if (autoScrollInterval || isUserInteracting) return;
 
-  function stopAuto(){
-    clearInterval(autoTimer);
-    autoTimer = null;
-    dir = 0;
-  }
-
-  function dragScroll(dy){
-    window.scrollBy(0, dy);
-  }
-
-  window.addEventListener("wheel", function(e){
-    e.preventDefault();
-    if (e.deltaY > 0) startAuto(1);
-    else if (e.deltaY < 0) startAuto(-1);
-  }, {passive:false});
-
-  window.addEventListener("touchstart", function(e){
-    const t = e.touches[0];
-    if (!t) return;
-    active = true;
-    lastY = t.clientY;
-    stopAuto();
-  }, {passive:true});
-
-  window.addEventListener("touchmove", function(e){
-    if (!active) return;
-    const t = e.touches[0];
-    if (!t) return;
-    const dy = lastY - t.clientY;
-    if (Math.abs(dy) > 1){
-      e.preventDefault();
-      dragScroll(dy);
-      lastY = t.clientY;
+        autoScrollInterval = setInterval(function() {
+            // പേജിന്റെ അവസാനം എത്തിയാൽ തിരികെ മുകളിലേക്ക് സ്ക്രോൾ തുടരുക അല്ലെങ്കിൽ നിൽക്കുക
+            if ((window.innerHeight + window.scrollY) >= document.body.offsetHeight) {
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            } else {
+                window.scrollBy(0, scrollSpeed);
+            }
+        }, 20);
     }
-  }, {passive:false});
 
-  window.addEventListener("touchend", function(){
-    active = false;
-  }, {passive:true});
-
-  window.addEventListener("touchcancel", function(){
-    active = false;
-  }, {passive:true});
-
-  window.addEventListener("mousedown", function(e){
-    active = true;
-    lastY = e.clientY;
-    stopAuto();
-  });
-
-  window.addEventListener("mousemove", function(e){
-    if (!active) return;
-    const dy = lastY - e.clientY;
-    if (Math.abs(dy) > 1){
-      dragScroll(dy);
-      lastY = e.clientY;
+    // ഓട്ടോ സ്ക്രോൾ സ്റ്റോപ്പ് ചെയ്യുന്ന ഫങ്ഷൻ
+    function stopAutoScroll() {
+        if (autoScrollInterval) {
+            clearInterval(autoScrollInterval);
+            autoScrollInterval = null;
+        }
     }
-  });
 
-  window.addEventListener("mouseup", function(){
-    active = false;
-  });
+    // ഉപയോക്താവ് സ്ക്രീനിൽ തൊടുമ്പോഴോ സ്ക്രോൾ ചെയ്യുമ്പോഴോ ട്രിഗർ ചെയ്യപ്പെടുന്ന ഇവന്റുകൾ
+    function handleUserTouchStart() {
+        isUserInteracting = true;
+        stopAutoScroll();
+        clearTimeout(resumeTimeout);
+    }
 
-  window.addEventListener("mouseleave", function(){
-    active = false;
-  });
+    function handleUserTouchEnd() {
+        isUserInteracting = false;
+        // കൈയെടുത്ത് 1.5 സെക്കൻഡിന് ശേഷം പതുക്കെ ഓട്ടോ സ്ക്രോൾ പുനരാരംഭിക്കും
+        clearTimeout(resumeTimeout);
+        resumeTimeout = setTimeout(function() {
+            startAutoScroll();
+        }, 1500);
+    }
+
+    // Touch / Interaction Events ചേർക്കുന്നു
+    window.addEventListener('touchstart', handleUserTouchStart, { passive: true });
+    window.addEventListener('touchend', handleUserTouchEnd, { passive: true });
+    window.addEventListener('mousedown', handleUserTouchStart, { passive: true });
+    window.addEventListener('mouseup', handleUserTouchEnd, { passive: true });
+    window.addEventListener('wheel', function() {
+        handleUserTouchStart();
+        handleUserTouchEnd();
+    }, { passive: true });
+
+    // പേജ് ലോഡ് ആകുമ്പോൾ ഓട്ടോ സ്ക്രോൾ പതുക്കെ സ്റ്റാർട്ട് ചെയ്യുന്നു
+    window.addEventListener('load', function() {
+        setTimeout(startAutoScroll, 1000);
+    });
 })();
 </script>
+
 </body> <!-- ഇതിന് തൊട്ടു മുകളിൽ -->
 </html>
 
