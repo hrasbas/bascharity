@@ -4921,7 +4921,8 @@ YOUR PURCHASE SATISFIES A HUNGER™
       }
     </script>
  <!-- Popup Notification -->
-               <style>
+       <!-- Popup Notification -->
+<style>
   /* Arrow Flicker Animation */
   @keyframes flicker {
     0%, 100% { opacity: 1; }
@@ -5035,6 +5036,10 @@ YOUR PURCHASE SATISFIES A HUNGER™
     flex: 0 0 auto;
     cursor: pointer;
   }
+
+  body {
+    overflow: auto;
+  }
 </style>
 
 <div id="scrollControlPopup">
@@ -5058,129 +5063,7 @@ YOUR PURCHASE SATISFIES A HUNGER™
   <button class="arrowBtn" id="downBtn" aria-label="Scroll down">▼</button>
 </div>
 
-<script>
-  let isPopupOpen = false;
-
-  function togglePopupBar() {
-    const popup = document.getElementById("scrollControlPopup");
-    const arrow = document.getElementById("popupToggleArrow");
-
-    if (!isPopupOpen) {
-      popup.classList.add("open");
-      arrow.innerText = "▶";
-      arrow.classList.remove("flicker");
-      isPopupOpen = true;
-    } else {
-      popup.classList.remove("open");
-      arrow.innerText = "◀";
-      arrow.classList.add("flicker");
-      isPopupOpen = false;
-    }
-  }
-
-  let scrollTimer = null;
-  let scrollStep = 6;
-  let scrollLocked = false;
-  let manualDir = 0;
-  let pressTimer = null;
-
-  function updateSpeed(v){
-    scrollStep = Number(v) || 6;
-    const out = document.getElementById("scrollSpeedValue");
-    if (out) out.textContent = scrollStep;
-  }
-
-  function doScroll(dir){
-    const maxScroll = Math.max(0, document.documentElement.scrollHeight - window.innerHeight);
-    const current = window.scrollY || window.pageYOffset || 0;
-    const next = Math.max(0, Math.min(current + (dir * scrollStep), maxScroll));
-    window.scrollTo(0, next);
-  }
-
-  function startDefaultScroll(dir){
-    if (scrollLocked) return;
-    clearTimeout(pressTimer);
-    clearInterval(scrollTimer);
-    scrollStep = 2;
-    const out = document.getElementById("scrollSpeedValue");
-    if (out) out.textContent = scrollStep;
-    manualDir = dir;
-    scrollTimer = setInterval(function(){
-      doScroll(manualDir);
-    }, 16);
-  }
-
-  function startMediumScroll(dir){
-    if (scrollLocked) return;
-    clearTimeout(pressTimer);
-    clearInterval(scrollTimer);
-    scrollStep = 6;
-    const out = document.getElementById("scrollSpeedValue");
-    if (out) out.textContent = scrollStep;
-    manualDir = dir;
-    scrollTimer = setInterval(function(){
-      doScroll(manualDir);
-    }, 16);
-  }
-
-  function stopManualScroll(){
-    clearTimeout(pressTimer);
-    clearInterval(scrollTimer);
-    scrollTimer = null;
-    manualDir = 0;
-  }
-
-  function bindPress(btn, dir){
-    if (!btn) return;
-
-    const start = function(e){
-      e.preventDefault();
-      startDefaultScroll(dir);
-      pressTimer = setTimeout(function(){
-        startMediumScroll(dir);
-      }, 450);
-    };
-
-    const stop = function(){
-      stopManualScroll();
-    };
-
-    btn.addEventListener("touchstart", start, {passive:false});
-    btn.addEventListener("touchend", stop);
-    btn.addEventListener("touchcancel", stop);
-
-    btn.addEventListener("mousedown", start);
-    btn.addEventListener("mouseup", stop);
-    btn.addEventListener("mouseleave", stop);
-  }
-
-  function toggleScrollLock(){
-    scrollLocked = !scrollLocked;
-    const btn = document.getElementById("lockStateBtn");
-    if (btn) btn.textContent = scrollLocked ? "UNLOCK" : "LOCK";
-    if (scrollLocked) stopManualScroll();
-  }
-
-  window.addEventListener("load", function(){
-    const slider = document.getElementById("scrollSpeedSlider");
-    if (slider){
-      updateSpeed(slider.value);
-      slider.addEventListener("input", function(){
-        updateSpeed(this.value);
-      });
-    }
-
-    bindPress(document.getElementById("upBtn"), -1);
-    bindPress(document.getElementById("downBtn"), 1);
-  });
-</script>
-
-<style>
-  body {
-    overflow: auto;
-  }
-</style>
-
+<!-- Auto Scroll Script -->
 <script>
 (function() {
     let scrollSpeed = 0.5;
@@ -5235,7 +5118,9 @@ YOUR PURCHASE SATISFIES A HUNGER™
     });
 })();
 </script>
- <script>
+
+<!-- Button Control Script (ഡ്യൂപ്ലിക്കേഷൻ ഒഴിവാക്കി തിരുത്തിയത്) -->
+<script>
   let isPopupOpen = false;
 
   function togglePopupBar() {
@@ -5256,7 +5141,7 @@ YOUR PURCHASE SATISFIES A HUNGER™
   }
 
   let scrollTimer = null;
-  let scrollStep = 1;
+  let scrollStep = 6;
   let scrollLocked = false;
   let manualDir = 0;
 
@@ -5277,7 +5162,7 @@ YOUR PURCHASE SATISFIES A HUNGER™
     if (scrollLocked) return;
     clearInterval(scrollTimer);
 
-    // സ്ലൈഡറിൽ കൊടുത്ത അതേ സ്പീഡ് തന്നെ കൃത്യമായി എടുക്കുന്നു
+    // സ്ലൈഡറിൽ കൊടുത്ത അതേ സ്പീഡ് എടുക്കുന്നു
     const slider = document.getElementById("scrollSpeedSlider");
     if (slider) scrollStep = Number(slider.value) || 1;
 
@@ -5334,6 +5219,10 @@ YOUR PURCHASE SATISFIES A HUNGER™
     bindPress(document.getElementById("downBtn"), 1);
   });
 </script>
+
+</body>
+</html>
+                      
 
 </body> <!-- ഇതിന് തൊട്ടു മുകളിൽ -->
 </html>
