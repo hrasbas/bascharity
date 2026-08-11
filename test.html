@@ -5197,6 +5197,68 @@ YOUR PURCHASE SATISFIES A HUNGER™
     });
 })();
 </script>
+   
+<style>
+@keyframes arrowFlicker {
+  0% { opacity: 1; }
+  50% { opacity: 0.2; }
+  100% { opacity: 1; }
+}
+.flicker {
+  animation: arrowFlicker 1s infinite;
+}
+</style>
+
+<div id="simpleSlideBar" style="
+  position: fixed;
+  bottom: 30px;
+  right: -160px;
+  display: flex;
+  align-items: center;
+  background: #222;
+  color: #fff;
+  border-radius: 20px 0 0 20px;
+  padding: 5px;
+  transition: right 0.4s ease;
+  z-index: 99999;
+">
+  <button onclick="toggleSlideBar()" style="
+    background: #008cba;
+    color: white;
+    border: none;
+    padding: 10px 12px;
+    border-radius: 15px 0 0 15px;
+    cursor: pointer;
+    font-size: 16px;
+  ">
+    <span id="arrow" class="flicker">◀</span>
+  </button>
+
+  <div style="padding: 0 15px; font-weight: bold; font-size: 13px;">
+    SCROLL BAR
+  </div>
+</div>
+
+<script>
+let isBarOpen = false;
+
+function toggleSlideBar() {
+    const bar = document.getElementById("simpleSlideBar");
+    const arrow = document.getElementById("arrow");
+    
+    if (!isBarOpen) {
+        bar.style.right = "0px";
+        arrow.innerText = "▶";
+        arrow.classList.remove("flicker");
+        isBarOpen = true;
+    } else {
+        bar.style.right = "-160px";
+        arrow.innerText = "◀";
+        arrow.classList.add("flicker");
+        isBarOpen = false;
+    }
+}
+</script>
 
 </body> <!-- ഇതിന് തൊട്ടു മുകളിൽ -->
 </html>
