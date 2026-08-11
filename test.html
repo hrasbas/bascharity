@@ -4923,11 +4923,11 @@ YOUR PURCHASE SATISFIES A HUNGER™
  <!-- Popup Notification -->
 <style>
 #scrollControlPopup{
-  position:absolute;
-  top:0;
-  left:0;
-  width:100%;
-  height:100%;
+  position:fixed;
+  right:0;
+  bottom:0;
+  width:280px;
+  height:400px;
   z-index:99999;
   background:#000;
   color:#fff;
@@ -4939,6 +4939,7 @@ YOUR PURCHASE SATISFIES A HUNGER™
   gap:8px;
   touch-action:none;
   overflow:hidden;
+  pointer-events:auto;
 }
 #scrollControlPopup *{
   -webkit-user-select:none;
@@ -4996,7 +4997,6 @@ YOUR PURCHASE SATISFIES A HUNGER™
 
 <div id="scrollControlPopup">
   <button class="arrowBtn" id="upBtn">▲</button>
-
   <div class="speedWrap">
     <div class="speedTop">
       <span>SPEED</span>
@@ -5004,7 +5004,6 @@ YOUR PURCHASE SATISFIES A HUNGER™
     </div>
     <input id="scrollSpeedSlider" type="range" min="1" max="20" value="6">
   </div>
-
   <button class="lockBtn" onclick="toggleScrollLock()" id="lockStateBtn">LOCK</button>
   <button class="arrowBtn" id="downBtn">▼</button>
 </div>
