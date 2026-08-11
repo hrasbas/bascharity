@@ -4921,82 +4921,94 @@ YOUR PURCHASE SATISFIES A HUNGER™
       }
     </script>
  <!-- Popup Notification -->
+    }
 <style>
-#scrollControlPopup{
-  position:fixed;
-  right:0;
-  bottom:0;
-  width:280px;
-  height:400px;
-  z-index:99999;
-  background:#000;
-  color:#fff;
-  border-radius:18px;
-  box-shadow:0 8px 24px rgba(0,0,0,.35);
-  padding:10px 12px;
-  display:flex;
-  align-items:center;
-  gap:8px;
-  touch-action:none;
-  overflow:hidden;
-  pointer-events:auto;
-}
-#scrollControlPopup *{
-  -webkit-user-select:none;
-  user-select:none;
-  -webkit-touch-callout:none;
-}
-#scrollControlPopup .arrowBtn{
-  width:44px;
-  height:44px;
-  border:none;
-  border-radius:14px;
-  background:#111;
-  color:#fff;
-  font-size:20px;
-  font-weight:900;
-  flex:0 0 auto;
-  animation:flicker 1.2s infinite;
-}
-#scrollControlPopup .speedWrap{
-  flex:1;
-  display:flex;
-  flex-direction:column;
-  gap:4px;
-  min-width:0;
-}
-#scrollControlPopup .speedTop{
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  font-size:11px;
-  font-weight:700;
-  letter-spacing:.5px;
-}
-#scrollControlPopup input[type="range"]{
-  width:100%;
-  margin:0;
-  accent-color:#fff;
-}
-#scrollControlPopup .lockBtn{
-  width:64px;
-  height:44px;
-  border:none;
-  border-radius:14px;
-  background:#222;
-  color:#fff;
-  font-size:12px;
-  font-weight:800;
-  flex:0 0 auto;
-}
-@keyframes flicker{
-  0%,100%{opacity:1}
-  50%{opacity:.35}
-}
+  #scrollControlPopup{
+    position:fixed;
+    right:12px;
+    bottom:12px;
+    width:280px;
+    height:400px;
+    z-index:99999;
+    background:#000;
+    color:#fff;
+    border-radius:18px;
+    box-shadow:0 8px 24px rgba(0,0,0,.35);
+    padding:10px 12px;
+    display:flex;
+    align-items:center;
+    gap:8px;
+    touch-action:none;
+    overflow:hidden;
+    pointer-events:auto;
+  }
+
+  #scrollControlPopup *{
+    -webkit-user-select:none;
+    user-select:none;
+    -webkit-touch-callout:none;
+    box-sizing:border-box;
+  }
+
+  #scrollControlPopup .arrowBtn{
+    width:44px;
+    height:44px;
+    border:none;
+    border-radius:14px;
+    background:#111;
+    color:#fff;
+    font-size:20px;
+    font-weight:900;
+    flex:0 0 auto;
+    animation:flicker 1.2s infinite;
+    cursor:pointer;
+  }
+
+  #scrollControlPopup .speedWrap{
+    flex:1;
+    display:flex;
+    flex-direction:column;
+    gap:4px;
+    min-width:0;
+  }
+
+  #scrollControlPopup .speedTop{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    font-size:11px;
+    font-weight:700;
+    letter-spacing:.5px;
+  }
+
+  #scrollControlPopup input[type="range"]{
+    width:100%;
+    margin:0;
+    accent-color:#fff;
+  }
+
+  #scrollControlPopup .lockBtn{
+    width:64px;
+    height:44px;
+    border:none;
+    border-radius:14px;
+    background:#222;
+    color:#fff;
+    font-size:12px;
+    font-weight:800;
+    flex:0 0 auto;
+    cursor:pointer;
+  }
+
+  @keyframes flicker{
+    0%,100%{opacity:1}
+    50%{opacity:.35}
+  }
 </style>
 
 <div id="scrollControlPopup">
-  <button class="arrowBtn" id="upBtn">▲</button>
+  <button class="arrowBtn" id="upBtn" aria-label="Scroll up">▲</button>
+
   <div class="speedWrap">
     <div class="speedTop">
       <span>SPEED</span>
@@ -5004,117 +5016,107 @@ YOUR PURCHASE SATISFIES A HUNGER™
     </div>
     <input id="scrollSpeedSlider" type="range" min="1" max="20" value="6">
   </div>
-  <button class="lockBtn" onclick="toggleScrollLock()" id="lockStateBtn">LOCK</button>
-  <button class="arrowBtn" id="downBtn">▼</button>
+
+  <button class="lockBtn" id="lockStateBtn" onclick="toggleScrollLock()">LOCK</button>
+  <button class="arrowBtn" id="downBtn" aria-label="Scroll down">▼</button>
 </div>
 
 <script>
-let scrollTimer = null;
-let scrollStep = 6;
-let scrollLocked = false;
-let manualDir = 0;
-let pressTimer = null;
+  let scrollTimer = null;
+  let scrollStep = 6;
+  let scrollLocked = false;
+  let manualDir = 0;
+  let pressTimer = null;
 
-function updateSpeed(v){
-  scrollStep = Number(v) || 6;
-  const out = document.getElementById("scrollSpeedValue");
-  if (out) out.textContent = scrollStep;
-}
-
-function doScroll(dir){
-  const maxScroll = document.documentElement.scrollHeight - window.innerHeight;
-  const current = window.scrollY || window.pageYOffset;
-  const next = Math.max(0, Math.min(current + (dir * scrollStep), maxScroll));
-  window.scrollTo(0, next);
-}
-
-function startDefaultScroll(dir){
-  if (scrollLocked) return;
-  clearTimeout(pressTimer);
-  clearInterval(scrollTimer);
-  scrollStep = 2;
-  const out = document.getElementById("scrollSpeedValue");
-  if (out) out.textContent = scrollStep;
-  manualDir = dir;
-  scrollTimer = setInterval(function(){
-    doScroll(manualDir);
-  }, 16);
-}
-
-function startMediumScroll(dir){
-  if (scrollLocked) return;
-  clearTimeout(pressTimer);
-  clearInterval(scrollTimer);
-  scrollStep = 6;
-  const out = document.getElementById("scrollSpeedValue");
-  if (out) out.textContent = scrollStep;
-  manualDir = dir;
-  scrollTimer = setInterval(function(){
-    doScroll(manualDir);
-  }, 16);
-}
-
-function stopManualScroll(){
-  clearTimeout(pressTimer);
-  clearInterval(scrollTimer);
-  scrollTimer = null;
-  manualDir = 0;
-}
-
-function bindPress(btn, dir){
-  if (!btn) return;
-
-  btn.addEventListener("touchstart", function(e){
-    e.preventDefault();
-    startDefaultScroll(dir);
-    pressTimer = setTimeout(function(){
-      startMediumScroll(dir);
-    }, 450);
-  }, {passive:false});
-
-  btn.addEventListener("touchend", function(){
-    stopManualScroll();
-  });
-
-  btn.addEventListener("touchcancel", function(){
-    stopManualScroll();
-  });
-
-  btn.addEventListener("mousedown", function(e){
-    e.preventDefault();
-    startDefaultScroll(dir);
-    pressTimer = setTimeout(function(){
-      startMediumScroll(dir);
-    }, 450);
-  });
-
-  btn.addEventListener("mouseup", function(){
-    stopManualScroll();
-  });
-
-  btn.addEventListener("mouseleave", function(){
-    stopManualScroll();
-  });
-}
-
-function toggleScrollLock(){
-  scrollLocked = !scrollLocked;
-  const btn = document.getElementById("lockStateBtn");
-  if (btn) btn.textContent = scrollLocked ? "UNLOCK" : "LOCK";
-  if (scrollLocked) stopManualScroll();
-}
-
-window.addEventListener("load", function(){
-  const slider = document.getElementById("scrollSpeedSlider");
-  if (slider){
-    updateSpeed(slider.value);
-    slider.addEventListener("input", function(){
-      updateSpeed(this.value);
-    });
+  function updateSpeed(v){
+    scrollStep = Number(v) || 6;
+    const out = document.getElementById("scrollSpeedValue");
+    if (out) out.textContent = scrollStep;
   }
-  bindPress(document.getElementById("upBtn"), -1);
-  bindPress(document.getElementById("downBtn"), 1);
-});
+
+  function doScroll(dir){
+    const maxScroll = Math.max(0, document.documentElement.scrollHeight - window.innerHeight);
+    const current = window.scrollY || window.pageYOffset || 0;
+    const next = Math.max(0, Math.min(current + (dir * scrollStep), maxScroll));
+    window.scrollTo(0, next);
+  }
+
+  function startDefaultScroll(dir){
+    if (scrollLocked) return;
+    clearTimeout(pressTimer);
+    clearInterval(scrollTimer);
+    scrollStep = 2;
+    const out = document.getElementById("scrollSpeedValue");
+    if (out) out.textContent = scrollStep;
+    manualDir = dir;
+    scrollTimer = setInterval(function(){
+      doScroll(manualDir);
+    }, 16);
+  }
+
+  function startMediumScroll(dir){
+    if (scrollLocked) return;
+    clearTimeout(pressTimer);
+    clearInterval(scrollTimer);
+    scrollStep = 6;
+    const out = document.getElementById("scrollSpeedValue");
+    if (out) out.textContent = scrollStep;
+    manualDir = dir;
+    scrollTimer = setInterval(function(){
+      doScroll(manualDir);
+    }, 16);
+  }
+
+  function stopManualScroll(){
+    clearTimeout(pressTimer);
+    clearInterval(scrollTimer);
+    scrollTimer = null;
+    manualDir = 0;
+  }
+
+  function bindPress(btn, dir){
+    if (!btn) return;
+
+    const start = function(e){
+      e.preventDefault();
+      startDefaultScroll(dir);
+      pressTimer = setTimeout(function(){
+        startMediumScroll(dir);
+      }, 450);
+    };
+
+    const stop = function(){
+      stopManualScroll();
+    };
+
+    btn.addEventListener("touchstart", start, {passive:false});
+    btn.addEventListener("touchend", stop);
+    btn.addEventListener("touchcancel", stop);
+
+    btn.addEventListener("mousedown", start);
+    btn.addEventListener("mouseup", stop);
+    btn.addEventListener("mouseleave", stop);
+  }
+
+  function toggleScrollLock(){
+    scrollLocked = !scrollLocked;
+    const btn = document.getElementById("lockStateBtn");
+    if (btn) btn.textContent = scrollLocked ? "UNLOCK" : "LOCK";
+    if (scrollLocked) stopManualScroll();
+  }
+
+  window.addEventListener("load", function(){
+    const slider = document.getElementById("scrollSpeedSlider");
+    if (slider){
+      updateSpeed(slider.value);
+      slider.addEventListener("input", function(){
+        updateSpeed(this.value);
+      });
+    }
+
+    bindPress(document.getElementById("upBtn"), -1);
+    bindPress(document.getElementById("downBtn"), 1);
+  });
 </script>
 </body> <!-- ഇതിന് തൊട്ടു മുകളിൽ -->
 </html>
