@@ -4921,22 +4921,13 @@ YOUR PURCHASE SATISFIES A HUNGER™
       }
     </script>
  <!-- Popup Notification -->
- 
 <style>
-html,body{
-  -webkit-user-select:none;
-  user-select:none;
-  -webkit-touch-callout:none;
-  -webkit-tap-highlight-color:transparent;
-  overscroll-behavior:none;
-}
 #scrollControlPopup{
-  position:fixed;
-  left:50%;
-  top:10px;
-  transform:translateX(-50%);
-  width:calc(100vw - 20px);
-  max-width:520px;
+  position:absolute;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
   z-index:99999;
   background:#000;
   color:#fff;
@@ -5004,7 +4995,8 @@ html,body{
 </style>
 
 <div id="scrollControlPopup">
-  <button class="arrowBtn" id="upBtn" onmousedown="startManualScroll(-1)" onmouseup="stopManualScroll()" onmouseleave="stopManualScroll()" ontouchstart="startManualScroll(-1)" ontouchend="stopManualScroll()">▲</button>
+  <button class="arrowBtn" id="upBtn">▲</button>
+
   <div class="speedWrap">
     <div class="speedTop">
       <span>SPEED</span>
@@ -5012,8 +5004,9 @@ html,body{
     </div>
     <input id="scrollSpeedSlider" type="range" min="1" max="20" value="6">
   </div>
+
   <button class="lockBtn" onclick="toggleScrollLock()" id="lockStateBtn">LOCK</button>
-  <button class="arrowBtn" id="downBtn" onmousedown="startManualScroll(1)" onmouseup="stopManualScroll()" onmouseleave="stopManualScroll()" ontouchstart="startManualScroll(1)" ontouchend="stopManualScroll()">▼</button>
+  <button class="arrowBtn" id="downBtn">▼</button>
 </div>
 
 <script>
@@ -5021,6 +5014,7 @@ let scrollTimer = null;
 let scrollStep = 6;
 let scrollLocked = false;
 let manualDir = 0;
+let pressTimer = null;
 
 function updateSpeed(v){
   scrollStep = Number(v) || 6;
@@ -5035,19 +5029,73 @@ function doScroll(dir){
   window.scrollTo(0, next);
 }
 
-function startManualScroll(dir){
+function startDefaultScroll(dir){
   if (scrollLocked) return;
-  manualDir = dir;
+  clearTimeout(pressTimer);
   clearInterval(scrollTimer);
+  scrollStep = 2;
+  const out = document.getElementById("scrollSpeedValue");
+  if (out) out.textContent = scrollStep;
+  manualDir = dir;
+  scrollTimer = setInterval(function(){
+    doScroll(manualDir);
+  }, 16);
+}
+
+function startMediumScroll(dir){
+  if (scrollLocked) return;
+  clearTimeout(pressTimer);
+  clearInterval(scrollTimer);
+  scrollStep = 6;
+  const out = document.getElementById("scrollSpeedValue");
+  if (out) out.textContent = scrollStep;
+  manualDir = dir;
   scrollTimer = setInterval(function(){
     doScroll(manualDir);
   }, 16);
 }
 
 function stopManualScroll(){
+  clearTimeout(pressTimer);
   clearInterval(scrollTimer);
   scrollTimer = null;
   manualDir = 0;
+}
+
+function bindPress(btn, dir){
+  if (!btn) return;
+
+  btn.addEventListener("touchstart", function(e){
+    e.preventDefault();
+    startDefaultScroll(dir);
+    pressTimer = setTimeout(function(){
+      startMediumScroll(dir);
+    }, 450);
+  }, {passive:false});
+
+  btn.addEventListener("touchend", function(){
+    stopManualScroll();
+  });
+
+  btn.addEventListener("touchcancel", function(){
+    stopManualScroll();
+  });
+
+  btn.addEventListener("mousedown", function(e){
+    e.preventDefault();
+    startDefaultScroll(dir);
+    pressTimer = setTimeout(function(){
+      startMediumScroll(dir);
+    }, 450);
+  });
+
+  btn.addEventListener("mouseup", function(){
+    stopManualScroll();
+  });
+
+  btn.addEventListener("mouseleave", function(){
+    stopManualScroll();
+  });
 }
 
 function toggleScrollLock(){
@@ -5065,14 +5113,10 @@ window.addEventListener("load", function(){
       updateSpeed(this.value);
     });
   }
+  bindPress(document.getElementById("upBtn"), -1);
+  bindPress(document.getElementById("downBtn"), 1);
 });
 </script>
-            behavior: 'smooth'
-        });
-    }
-}
-</script>
-
 </body> <!-- ഇതിന് തൊട്ടു മുകളിൽ -->
 </html>
 
