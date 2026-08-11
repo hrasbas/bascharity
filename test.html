@@ -4921,104 +4921,128 @@ YOUR PURCHASE SATISFIES A HUNGER™
       }
     </script>
  <!-- Popup Notification -->
-    }
-<style>
-  #scrollControlPopup{
-  position:fixed;
-  right:12px;
-  bottom:5cm; !important
-  width:800px !important;
-  height:60px !important;
-  z-index:99999;
-    background:#6DC3FF;
-    color:#fff;
-    border-radius:18px;
-    box-shadow:0 8px 24px rgba(0,0,0,.35);
-    padding:10px 12px;
-    display:flex;
-    align-items:center;
-    gap:8px;
-    touch-action:none;
-    overflow:hidden;
-    pointer-events:auto;
-     #scrollControlPopup{
-  transform:translateX(70%);
-  transition:transform .25s ease;
-}
-
-#scrollControlPopup:hover,
-#scrollControlPopup:focus-within{
-  transform:translateX(0);
-}
-
-#scrollControlPopup .arrowBtn{
-  animation:flicker 1.2s infinite;
-}
+    <style>
+  /* Arrow Flicker Animation */
+  @keyframes flicker {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.2; }
   }
 
-  #scrollControlPopup *{
-    -webkit-user-select:none;
-    user-select:none;
-    -webkit-touch-callout:none;
-    box-sizing:border-box;
+  .flicker {
+    animation: flicker 1s infinite !important;
   }
 
-  #scrollControlPopup .arrowBtn{
-    width:44px;
-    height:44px;
-    border:none;
-    border-radius:14px;
-    background:#000;
-    color:#fff;
-    font-size:20px;
-    font-weight:900;
-    flex:0 0 auto;
-    cursor:pointer;
+  /* Main Popup Structure */
+  #scrollControlPopup {
+    position: fixed;
+    right: 0;
+    bottom: 5cm;
+    width: 320px;
+    height: 60px;
+    z-index: 99999;
+    background: #6DC3FF;
+    color: #fff;
+    border-radius: 18px 0 0 18px;
+    box-shadow: 0 8px 24px rgba(0,0,0,.35);
+    padding: 8px 12px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    touch-action: none;
+    overflow: visible;
+    pointer-events: auto;
+    /* പാനൽ അകത്ത് കേറി നിൽക്കാൻ */
+    transform: translateX(calc(100% - 48px));
+    transition: transform 0.3s ease;
   }
 
-  #scrollControlPopup .speedWrap{
-    flex:1;
-    display:flex;
-    flex-direction:column;
-    gap:4px;
-    min-width:0;
+  /* പുറത്തിറങ്ങി നിൽക്കുമ്പോൾ */
+  #scrollControlPopup.open {
+    transform: translateX(0);
   }
 
-  #scrollControlPopup .speedTop{
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    font-size:11px;
-    font-weight:700;
-    letter-spacing:.5px;
+  /* Toggle Slide Button (അറ്റത്ത് Flicker ചെയ്യുന്ന ബട്ടൺ) */
+  #scrollControlPopup .slideToggleBtn {
+    width: 44px;
+    height: 44px;
+    border: none;
+    border-radius: 12px;
+    background: #000;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 900;
+    flex: 0 0 auto;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 
-  #scrollControlPopup input[type="range"]{
-    width:100%;
-    margin:0;
-    accent-color:#fff;
+  #scrollControlPopup * {
+    -webkit-user-select: none;
+    user-select: none;
+    -webkit-touch-callout: none;
+    box-sizing: border-box;
   }
 
-  #scrollControlPopup .lockBtn{
-    width:64px;
-    height:44px;
-    border:none;
-    border-radius:14px;
-    background:#222;
-    color:#fff;
-    font-size:12px;
-    font-weight:800;
-    flex:0 0 auto;
-    cursor:pointer;
+  #scrollControlPopup .arrowBtn {
+    width: 44px;
+    height: 44px;
+    border: none;
+    border-radius: 14px;
+    background: #000;
+    color: #fff;
+    font-size: 20px;
+    font-weight: 900;
+    flex: 0 0 auto;
+    cursor: pointer;
   }
 
-  @keyframes flicker{
-    0%,100%{opacity:1}
-    50%{opacity:.35}
+  #scrollControlPopup .speedWrap {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    min-width: 0;
+  }
+
+  #scrollControlPopup .speedTop {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: .5px;
+    color: #000;
+  }
+
+  #scrollControlPopup input[type="range"] {
+    width: 100%;
+    margin: 0;
+    accent-color: #fff;
+  }
+
+  #scrollControlPopup .lockBtn {
+    width: 60px;
+    height: 44px;
+    border: none;
+    border-radius: 14px;
+    background: #222;
+    color: #fff;
+    font-size: 11px;
+    font-weight: 800;
+    flex: 0 0 auto;
+    cursor: pointer;
   }
 </style>
 
 <div id="scrollControlPopup">
+  <!-- 1. അകത്ത് കേറ്റാനും പുറത്തിറക്കാനുമുള്ള Flicker Arrow Button -->
+  <button class="slideToggleBtn" onclick="togglePopupBar()" aria-label="Toggle Bar">
+    <span id="popupToggleArrow" class="flicker">◀</span>
+  </button>
+
+  <!-- 2. നിങ്ങളുടെ പഴയ സ്ക്രോൾ കൺട്രോളുകൾ -->
   <button class="arrowBtn" id="upBtn" aria-label="Scroll up">▲</button>
 
   <div class="speedWrap">
@@ -5034,6 +5058,27 @@ YOUR PURCHASE SATISFIES A HUNGER™
 </div>
 
 <script>
+  // Popup അകത്തേക്ക് കേറ്റാനും പുറത്തിറക്കാനുമുള്ള ലോജിക്
+  let isPopupOpen = false;
+
+  function togglePopupBar() {
+    const popup = document.getElementById("scrollControlPopup");
+    const arrow = document.getElementById("popupToggleArrow");
+
+    if (!isPopupOpen) {
+      popup.classList.add("open");
+      arrow.innerText = "▶";
+      arrow.classList.remove("flicker"); // പുറത്തു വരുമ്പോൾ മിന്നുന്നത് നിൽക്കും
+      isPopupOpen = true;
+    } else {
+      popup.classList.remove("open");
+      arrow.innerText = "◀";
+      arrow.classList.add("flicker"); // അകത്ത് കേറുമ്പോൾ വീണ്ടും മിന്നും
+      isPopupOpen = false;
+    }
+  }
+
+  // നിങ്ങളുടെ പഴയ മാനുവൽ സ്ക്രോൾ ലോജിക്
   let scrollTimer = null;
   let scrollStep = 6;
   let scrollLocked = false;
@@ -5131,24 +5176,24 @@ YOUR PURCHASE SATISFIES A HUNGER™
   });
 </script>
 
-   <style>
-  body{
-    overflow:auto;
+<style>
+  body {
+    overflow: auto;
   }
 </style>
+
 <script>
+// ആട്ടോ സ്ക്രോൾ ലോജിക്
 (function() {
-    let scrollSpeed = 0.5; // സ്ക്രോൾ വേഗത (ആവശ്യമെങ്കിൽ മാറ്റാം)
+    let scrollSpeed = 0.5;
     let autoScrollInterval = null;
     let isUserInteracting = false;
     let resumeTimeout = null;
 
-    // ഓട്ടോ സ്ക്രോൾ പതുക്കെ സ്റ്റാർട്ട് ചെയ്യുന്ന ഫങ്ഷൻ
     function startAutoScroll() {
         if (autoScrollInterval || isUserInteracting) return;
 
         autoScrollInterval = setInterval(function() {
-            // പേജിന്റെ അവസാനം എത്തിയാൽ തിരികെ മുകളിലേക്ക് സ്ക്രോൾ തുടരുക അല്ലെങ്കിൽ നിൽക്കുക
             if ((window.innerHeight + window.scrollY) >= document.body.offsetHeight) {
                 window.scrollTo({ top: 0, behavior: 'smooth' });
             } else {
@@ -5157,7 +5202,6 @@ YOUR PURCHASE SATISFIES A HUNGER™
         }, 20);
     }
 
-    // ഓട്ടോ സ്ക്രോൾ സ്റ്റോപ്പ് ചെയ്യുന്ന ഫങ്ഷൻ
     function stopAutoScroll() {
         if (autoScrollInterval) {
             clearInterval(autoScrollInterval);
@@ -5165,7 +5209,6 @@ YOUR PURCHASE SATISFIES A HUNGER™
         }
     }
 
-    // ഉപയോക്താവ് സ്ക്രീനിൽ തൊടുമ്പോഴോ സ്ക്രോൾ ചെയ്യുമ്പോഴോ ട്രിഗർ ചെയ്യപ്പെടുന്ന ഇവന്റുകൾ
     function handleUserTouchStart() {
         isUserInteracting = true;
         stopAutoScroll();
@@ -5174,14 +5217,12 @@ YOUR PURCHASE SATISFIES A HUNGER™
 
     function handleUserTouchEnd() {
         isUserInteracting = false;
-        // കൈയെടുത്ത് 1.5 സെക്കൻഡിന് ശേഷം പതുക്കെ ഓട്ടോ സ്ക്രോൾ പുനരാരംഭിക്കും
         clearTimeout(resumeTimeout);
         resumeTimeout = setTimeout(function() {
             startAutoScroll();
         }, 1500);
     }
 
-    // Touch / Interaction Events ചേർക്കുന്നു
     window.addEventListener('touchstart', handleUserTouchStart, { passive: true });
     window.addEventListener('touchend', handleUserTouchEnd, { passive: true });
     window.addEventListener('mousedown', handleUserTouchStart, { passive: true });
@@ -5191,75 +5232,11 @@ YOUR PURCHASE SATISFIES A HUNGER™
         handleUserTouchEnd();
     }, { passive: true });
 
-    // പേജ് ലോഡ് ആകുമ്പോൾ ഓട്ടോ സ്ക്രോൾ പതുക്കെ സ്റ്റാർട്ട് ചെയ്യുന്നു
     window.addEventListener('load', function() {
         setTimeout(startAutoScroll, 1000);
     });
 })();
 </script>
-   
-<style>
-@keyframes arrowFlicker {
-  0% { opacity: 1; }
-  50% { opacity: 0.2; }
-  100% { opacity: 1; }
-}
-.flicker {
-  animation: arrowFlicker 1s infinite;
-}
-</style>
-
-<div id="simpleSlideBar" style="
-  position: fixed;
-  bottom: 30px;
-  right: -160px;
-  display: flex;
-  align-items: center;
-  background: #222;
-  color: #fff;
-  border-radius: 20px 0 0 20px;
-  padding: 5px;
-  transition: right 0.4s ease;
-  z-index: 99999;
-">
-  <button onclick="toggleSlideBar()" style="
-    background: #008cba;
-    color: white;
-    border: none;
-    padding: 10px 12px;
-    border-radius: 15px 0 0 15px;
-    cursor: pointer;
-    font-size: 16px;
-  ">
-    <span id="arrow" class="flicker">◀</span>
-  </button>
-
-  <div style="padding: 0 15px; font-weight: bold; font-size: 13px;">
-    SCROLL BAR
-  </div>
-</div>
-
-<script>
-let isBarOpen = false;
-
-function toggleSlideBar() {
-    const bar = document.getElementById("simpleSlideBar");
-    const arrow = document.getElementById("arrow");
-    
-    if (!isBarOpen) {
-        bar.style.right = "0px";
-        arrow.innerText = "▶";
-        arrow.classList.remove("flicker");
-        isBarOpen = true;
-    } else {
-        bar.style.right = "-160px";
-        arrow.innerText = "◀";
-        arrow.classList.add("flicker");
-        isBarOpen = false;
-    }
-}
-</script>
-
 </body> <!-- ഇതിന് തൊട്ടു മുകളിൽ -->
 </html>
 
