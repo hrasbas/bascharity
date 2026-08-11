@@ -5065,9 +5065,34 @@ YOUR PURCHASE SATISFIES A HUNGER™
 </div>
 
 <!-- Auto Scroll Script -->
+ 
+
+<!-- Fully Corrected Auto-Scroll & Floating Buttons Code Start -->
+<style>
+  /* ഫ്ലോട്ടിംഗ് ബട്ടണുകൾ സ്ക്രീനിന്റെ ഉള്ളിൽ കൃത്യമായി പുറത്തേക്ക് വരാൻ */
+  .floating-buttons-wrapper {
+    position: fixed !important;
+    bottom: 20px !important;
+    right: 15px !important;
+    z-index: 99999 !important;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    max-width: calc(100vw - 30px);
+    pointer-events: auto;
+  }
+
+  .floating-buttons-wrapper button, 
+  .floating-buttons-wrapper a {
+    display: inline-block;
+    max-width: 100%;
+    box-sizing: border-box;
+  }
+</style>
+
 <script>
 (function() {
-    let scrollSpeed = 0.5;
+    let scrollSpeed = 0.8;
     let autoScrollInterval = null;
     let isUserInteracting = false;
     let resumeTimeout = null;
@@ -5076,64 +5101,11 @@ YOUR PURCHASE SATISFIES A HUNGER™
         if (autoScrollInterval || isUserInteracting) return;
 
         autoScrollInterval = setInterval(function() {
-            if ((window.innerHeight + window.scrollY) >= document.body.offsetHeight) {
-                window.scrollTo({ top: 0, behavior: 'smooth' });
-            } else {
-                window.scrollBy(0, scrollSpeed);
-            }
-        }, 20);
-    }
+            let totalHeight = document.documentElement.scrollHeight;
+            let currentScroll = window.innerHeight + window.scrollY;
 
-    function stopAutoScroll() {
-        if (autoScrollInterval) {
-            clearInterval(autoScrollInterval);
-            autoScrollInterval = null;
-        }
-    }
-
-    function handleUserTouchStart() {
-        isUserInteracting = true;
-        stopAutoScroll();
-        clearTimeout(resumeTimeout);
-    }
-
-    function handleUserTouchEnd() {
-        isUserInteracting = false;
-        clearTimeout(resumeTimeout);
-        resumeTimeout = setTimeout(function() {
-            startAutoScroll();
-        }, 1500);
-    }
-
-    window.addEventListener('touchstart', handleUserTouchStart, { passive: true });
-    window.addEventListener('touchend', handleUserTouchEnd, { passive: true });
-    window.addEventListener('mousedown', handleUserTouchStart, { passive: true });
-    window.addEventListener('mouseup', handleUserTouchEnd, { passive: true });
-    window.addEventListener('wheel', function() {
-        handleUserTouchStart();
-        handleUserTouchEnd();
-    }, { passive: true });
-
-    window.addEventListener('load', function() {
-        setTimeout(startAutoScroll, 1000);
-    });
-})();
-</script>
-
-<!-- Button Control Script (ഡ്യൂപ്ലിക്കേഷൻ ഒഴിവാക്കി തിരുത്തിയത്) -->
-  <script>
-(function() {
-    let scrollSpeed = 0.5;
-    let autoScrollInterval = null;
-    let isUserInteracting = false;
-    let resumeTimeout = null;
-
-    function startAutoScroll() {
-        if (autoScrollInterval || isUserInteracting) return;
-
-        autoScrollInterval = setInterval(function() {
-            // പേജിന്റെ ഏറ്റവും അടിയിൽ എത്തിയാൽ സ്ക്രോൾ സ്റ്റോപ്പ് ചെയ്യും
-            if ((window.innerHeight + window.scrollY) >= document.documentElement.scrollHeight - 2) {
+            // പേജിന്റെ അടിയിൽ എത്തുമ്പോൾ കൃത്യമായി സ്ക്രോൾ നിൽക്കും
+            if (currentScroll >= totalHeight - 15) {
                 stopAutoScroll();
             } else {
                 window.scrollBy(0, scrollSpeed);
@@ -5148,38 +5120,51 @@ YOUR PURCHASE SATISFIES A HUNGER™
         }
     }
 
-    function handleUserTouchStart() {
+    function handleUserStart() {
         isUserInteracting = true;
         stopAutoScroll();
         clearTimeout(resumeTimeout);
     }
 
-    function handleUserTouchEnd() {
+    function handleUserEnd() {
         isUserInteracting = false;
         clearTimeout(resumeTimeout);
-        
-        // യൂസർ കൈയെടുത്ത ശേഷം പേജ് ഏറ്റവും അടിയിൽ അല്ലെങ്കിൽ മാത്രം വീണ്ടും സ്ക്രോൾ സ്റ്റാർട്ട് ചെയ്യും
+
+        // യൂസർ സ്ക്രീനിൽ നിന്ന് കൈയെടുത്ത് 1.5 സെക്കൻഡിന് ശേഷം സ്ക്രോളിംഗ് തുടരും
         resumeTimeout = setTimeout(function() {
-            if ((window.innerHeight + window.scrollY) < document.documentElement.scrollHeight - 10) {
+            let totalHeight = document.documentElement.scrollHeight;
+            let currentScroll = window.innerHeight + window.scrollY;
+
+            if (currentScroll < totalHeight - 20) {
                 startAutoScroll();
             }
         }, 1500);
     }
 
-    window.addEventListener('touchstart', handleUserTouchStart, { passive: true });
-    window.addEventListener('touchend', handleUserTouchEnd, { passive: true });
-    window.addEventListener('mousedown', handleUserTouchStart, { passive: true });
-    window.addEventListener('mouseup', handleUserTouchEnd, { passive: true });
+    // touch & mouse events
+    window.addEventListener('touchstart', handleUserStart, { passive: true });
+    window.addEventListener('touchend', handleUserEnd, { passive: true });
+    window.addEventListener('touchcancel', handleUserEnd, { passive: true });
+    
+    window.addEventListener('mousedown', handleUserStart, { passive: true });
+    window.addEventListener('mouseup', handleUserEnd, { passive: true });
+    
     window.addEventListener('wheel', function() {
-        handleUserTouchStart();
-        handleUserTouchEnd();
+        handleUserStart();
+        handleUserEnd();
     }, { passive: true });
 
-    window.addEventListener('load', function() {
+    if (document.readyState === 'complete') {
         setTimeout(startAutoScroll, 1000);
-    });
+    } else {
+        window.addEventListener('load', function() {
+            setTimeout(startAutoScroll, 1000);
+        });
+    }
 })();
 </script>
+<!-- Fully Corrected Auto-Scroll & Floating Buttons Code End -->
+
   
 </body> <!-- ഇതിന് തൊട്ടു മുകളിൽ -->
 </html>
