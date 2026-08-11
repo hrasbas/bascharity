@@ -4941,6 +4941,19 @@ YOUR PURCHASE SATISFIES A HUNGER™
     touch-action:none;
     overflow:hidden;
     pointer-events:auto;
+     #scrollControlPopup{
+  transform:translateX(70%);
+  transition:transform .25s ease;
+}
+
+#scrollControlPopup:hover,
+#scrollControlPopup:focus-within{
+  transform:translateX(0);
+}
+
+#scrollControlPopup .arrowBtn{
+  animation:flicker 1.2s infinite;
+}
   }
 
   #scrollControlPopup *{
