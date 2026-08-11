@@ -5104,7 +5104,7 @@ YOUR PURCHASE SATISFIES A HUNGER™
             let totalHeight = document.documentElement.scrollHeight;
             let currentScroll = window.innerHeight + window.scrollY;
 
-            // പേജിന്റെ അടിയിൽ എത്തുമ്പോൾ കൃത്യമായി സ്ക്രോൾ നിൽക്കും
+            // പേജിന്റെ അടിയിൽ എത്തുമ്പോൾ സ്ക്രോളിംഗ് സ്വയം നിൽക്കും
             if (currentScroll >= totalHeight - 15) {
                 stopAutoScroll();
             } else {
@@ -5130,7 +5130,6 @@ YOUR PURCHASE SATISFIES A HUNGER™
         isUserInteracting = false;
         clearTimeout(resumeTimeout);
 
-        // യൂസർ സ്ക്രീനിൽ നിന്ന് കൈയെടുത്ത് 1.5 സെക്കൻഡിന് ശേഷം സ്ക്രോളിംഗ് തുടരും
         resumeTimeout = setTimeout(function() {
             let totalHeight = document.documentElement.scrollHeight;
             let currentScroll = window.innerHeight + window.scrollY;
@@ -5141,14 +5140,11 @@ YOUR PURCHASE SATISFIES A HUNGER™
         }, 1500);
     }
 
-    // touch & mouse events
     window.addEventListener('touchstart', handleUserStart, { passive: true });
     window.addEventListener('touchend', handleUserEnd, { passive: true });
     window.addEventListener('touchcancel', handleUserEnd, { passive: true });
-    
     window.addEventListener('mousedown', handleUserStart, { passive: true });
     window.addEventListener('mouseup', handleUserEnd, { passive: true });
-    
     window.addEventListener('wheel', function() {
         handleUserStart();
         handleUserEnd();
@@ -5163,7 +5159,6 @@ YOUR PURCHASE SATISFIES A HUNGER™
     }
 })();
 </script>
-<!-- Fully Corrected Auto-Scroll & Floating Buttons Code End -->
 
   
 </body> <!-- ഇതിന് തൊട്ടു മുകളിൽ -->
