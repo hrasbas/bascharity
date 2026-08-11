@@ -4921,7 +4921,7 @@ YOUR PURCHASE SATISFIES A HUNGER™
       }
     </script>
  <!-- Popup Notification -->
-    <style>
+               <style>
   /* Arrow Flicker Animation */
   @keyframes flicker {
     0%, 100% { opacity: 1; }
@@ -4932,12 +4932,13 @@ YOUR PURCHASE SATISFIES A HUNGER™
     animation: flicker 1s infinite !important;
   }
 
-  /* Main Popup Structure */
+  /* Main Popup Structure (ബാറിന്റെ മൊത്തം വീതി 480px ആക്കി) */
   #scrollControlPopup {
     position: fixed;
     right: 0;
     bottom: 5cm;
-    width: 320px;
+    width: 480px;
+    max-width: 95vw;
     height: 60px;
     z-index: 99999;
     background: #6DC3FF;
@@ -4951,7 +4952,6 @@ YOUR PURCHASE SATISFIES A HUNGER™
     touch-action: none;
     overflow: visible;
     pointer-events: auto;
-    /* പാനൽ അകത്ത് കേറി നിൽക്കാൻ */
     transform: translateX(calc(100% - 48px));
     transition: transform 0.3s ease;
   }
@@ -4961,7 +4961,7 @@ YOUR PURCHASE SATISFIES A HUNGER™
     transform: translateX(0);
   }
 
-  /* Toggle Slide Button (അറ്റത്ത് Flicker ചെയ്യുന്ന ബട്ടൺ) */
+  /* Toggle Button (അറ്റത്ത് Flicker ചെയ്യുന്ന ബട്ടൺ) */
   #scrollControlPopup .slideToggleBtn {
     width: 44px;
     height: 44px;
@@ -4985,8 +4985,9 @@ YOUR PURCHASE SATISFIES A HUNGER™
     box-sizing: border-box;
   }
 
+  /* നിലവിലുള്ള Scroll Buttons (▲ / ▼) നീളം 90px ആയി കൂട്ടി */
   #scrollControlPopup .arrowBtn {
-    width: 44px;
+    width: 90px !important;
     height: 44px;
     border: none;
     border-radius: 14px;
@@ -5037,12 +5038,12 @@ YOUR PURCHASE SATISFIES A HUNGER™
 </style>
 
 <div id="scrollControlPopup">
-  <!-- 1. അകത്ത് കേറ്റാനും പുറത്തിറക്കാനുമുള്ള Flicker Arrow Button -->
+  <!-- 1. Flicker ചെയ്യുന്ന Toggle Button -->
   <button class="slideToggleBtn" onclick="togglePopupBar()" aria-label="Toggle Bar">
     <span id="popupToggleArrow" class="flicker">◀</span>
   </button>
 
-  <!-- 2. നിങ്ങളുടെ പഴയ സ്ക്രോൾ കൺട്രോളുകൾ -->
+  <!-- 2. നിലവിലുള്ള സ്ക്രോൾ കൺട്രോളുകൾ -->
   <button class="arrowBtn" id="upBtn" aria-label="Scroll up">▲</button>
 
   <div class="speedWrap">
@@ -5058,7 +5059,6 @@ YOUR PURCHASE SATISFIES A HUNGER™
 </div>
 
 <script>
-  // Popup അകത്തേക്ക് കേറ്റാനും പുറത്തിറക്കാനുമുള്ള ലോജിക്
   let isPopupOpen = false;
 
   function togglePopupBar() {
@@ -5068,17 +5068,16 @@ YOUR PURCHASE SATISFIES A HUNGER™
     if (!isPopupOpen) {
       popup.classList.add("open");
       arrow.innerText = "▶";
-      arrow.classList.remove("flicker"); // പുറത്തു വരുമ്പോൾ മിന്നുന്നത് നിൽക്കും
+      arrow.classList.remove("flicker");
       isPopupOpen = true;
     } else {
       popup.classList.remove("open");
       arrow.innerText = "◀";
-      arrow.classList.add("flicker"); // അകത്ത് കേറുമ്പോൾ വീണ്ടും മിന്നും
+      arrow.classList.add("flicker");
       isPopupOpen = false;
     }
   }
 
-  // നിങ്ങളുടെ പഴയ മാനുവൽ സ്ക്രോൾ ലോജിക്
   let scrollTimer = null;
   let scrollStep = 6;
   let scrollLocked = false;
@@ -5183,7 +5182,6 @@ YOUR PURCHASE SATISFIES A HUNGER™
 </style>
 
 <script>
-// ആട്ടോ സ്ക്രോൾ ലോജിക്
 (function() {
     let scrollSpeed = 0.5;
     let autoScrollInterval = null;
@@ -5237,6 +5235,7 @@ YOUR PURCHASE SATISFIES A HUNGER™
     });
 })();
 </script>
+ 
 </body> <!-- ഇതിന് തൊട്ടു മുകളിൽ -->
 </html>
 
