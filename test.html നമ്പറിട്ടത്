@@ -5165,3 +5165,133 @@
 <!-- 5098 -->         stopAutoScroll();
 <!-- 5099 -->         clearTimeout(resumeTimeout);
 <!-- 5100 -->         resumeTimeout = setTimeout(function() {
+<!-- 5101 -->     }
+<!-- 5102 -->
+<!-- 5103 -->     function handleUserTouchEnd() {
+<!-- 5104 -->         isUserInteracting = false;
+<!-- 5105 -->         clearTimeout(resumeTimeout);
+<!-- 5106 -->         resumeTimeout = setTimeout(function() {
+<!-- 5107 -->             startAutoScroll();
+<!-- 5108 -->         }, 1500);
+<!-- 5109 -->     }
+<!-- 5110 -->
+<!-- 5111 -->     window.addEventListener('touchstart', handleUserTouchStart, { passive: true });
+<!-- 5112 -->     window.addEventListener('touchend', handleUserTouchEnd, { passive: true });
+<!-- 5113 -->     window.addEventListener('mousedown', handleUserTouchStart, { passive: true });
+<!-- 5114 -->     window.addEventListener('mouseup', handleUserTouchEnd, { passive: true });
+<!-- 5115 -->     window.addEventListener('wheel', function() {
+<!-- 5116 -->         handleUserTouchStart();
+<!-- 5117 -->         handleUserTouchEnd();
+<!-- 5118 -->     }, { passive: true });
+<!-- 5119 -->
+<!-- 5120 -->     window.addEventListener('load', function() {
+<!-- 5121 -->         setTimeout(startAutoScroll, 1000);
+<!-- 5122 -->     });
+<!-- 5123 --> })();
+<!-- 5124 --> </script>
+<!-- 5125 -->
+<!-- 5126 --> <!-- Button Control Script (ഡ്യൂപ്ലിക്കേഷൻ ഒഴിവാക്കി തിരുത്തിയത്) -->
+<!-- 5127 --> <script>
+<!-- 5128 -->   let isPopupOpen = false;
+<!-- 5129 -->
+<!-- 5130 -->   function togglePopupBar() {
+<!-- 5131 -->     const popup = document.getElementById("scrollControlPopup");
+<!-- 5132 -->     const arrow = document.getElementById("popupToggleArrow");
+<!-- 5133 -->
+<!-- 5134 -->     if (!isPopupOpen) {
+<!-- 5135 -->       popup.classList.add("open");
+<!-- 5136 -->       arrow.innerText = "▶";
+<!-- 5137 -->       arrow.classList.remove("flicker");
+<!-- 5138 -->       isPopupOpen = true;
+<!-- 5139 -->     } else {
+<!-- 5140 -->       popup.classList.remove("open");
+<!-- 5141 -->       arrow.innerText = "◀";
+<!-- 5142 -->       arrow.classList.add("flicker");
+<!-- 5143 -->       isPopupOpen = false;
+<!-- 5144 -->     }
+<!-- 5145 -->   }
+<!-- 5146 -->
+<!-- 5147 -->   let scrollTimer = null;
+<!-- 5148 -->   let scrollStep = 6;
+<!-- 5149 -->   let scrollLocked = false;
+<!-- 5150 -->   let manualDir = 0;
+<!-- 5151 -->
+<!-- 5152 -->   function updateSpeed(v){
+<!-- 5153 -->     scrollStep = Number(v) || 1;
+<!-- 5154 -->     const out = document.getElementById("scrollSpeedValue");
+<!-- 5155 -->     if (out) out.textContent = scrollStep;
+<!-- 5156 -->   }
+<!-- 5157 -->
+<!-- 5158 -->   function doScroll(dir){
+<!-- 5159 -->     const maxScroll = Math.max(0, document.documentElement.scrollHeight - window.innerHeight);
+<!-- 5160 -->     const current = window.scrollY || window.pageYOffset || 0;
+<!-- 5161 -->     const next = Math.max(0, Math.min(current + (dir * scrollStep), maxScroll));
+<!-- 5162 -->     window.scrollTo(0, next);
+<!-- 5163 -->   }
+<!-- 5164 -->
+<!-- 5165 -->   function startDefaultScroll(dir){
+<!-- 5166 -->     if (scrollLocked) return;
+<!-- 5167 -->     clearInterval(scrollTimer);
+<!-- 5168 -->
+<!-- 5169 -->     // സ്ലൈഡറിൽ കൊടുത്ത അതേ സ്പീഡ് എടുക്കുന്നു
+<!-- 5170 -->     const slider = document.getElementById("scrollSpeedSlider");
+<!-- 5171 -->     if (slider) scrollStep = Number(slider.value) || 1;
+<!-- 5172 -->
+<!-- 5173 -->     manualDir = dir;
+<!-- 5174 -->     scrollTimer = setInterval(function(){
+<!-- 5175 -->       doScroll(manualDir);
+<!-- 5176 -->     }, 16);
+<!-- 5177 -->   }
+<!-- 5178 -->
+<!-- 5179 -->   function stopManualScroll(){
+<!-- 5180 -->     clearInterval(scrollTimer);
+<!-- 5181 -->     scrollTimer = null;
+<!-- 5182 -->     manualDir = 0;
+<!-- 5183 -->   }
+<!-- 5184 -->
+<!-- 5185 -->   function bindPress(btn, dir){
+<!-- 5186 -->     if (!btn) return;
+<!-- 5187 -->
+<!-- 5188 -->     const start = function(e){
+<!-- 5189 -->       e.preventDefault();
+<!-- 5190 -->       startDefaultScroll(dir);
+<!-- 5191 -->     };
+<!-- 5192 -->
+<!-- 5193 -->     const stop = function(){
+<!-- 5194 -->       stopManualScroll();
+<!-- 5195 -->     };
+<!-- 5196 -->
+<!-- 5197 -->     btn.addEventListener("touchstart", start, {passive:false});
+<!-- 5198 -->     btn.addEventListener("touchend", stop);
+<!-- 5199 -->     btn.addEventListener("touchcancel", stop);
+<!-- 5200 --> }
+<!-- 5201 -->     btn.addEventListener("mousedown", start);
+<!-- 5202 -->     btn.addEventListener("mouseup", stop);
+<!-- 5203 -->     btn.addEventListener("mouseleave", stop);
+<!-- 5204 -->   }
+<!-- 5205 -->
+<!-- 5206 -->   function toggleScrollLock(){
+<!-- 5207 -->     scrollLocked = !scrollLocked;
+<!-- 5208 -->     const btn = document.getElementById("lockStateBtn");
+<!-- 5209 -->     if (btn) btn.textContent = scrollLocked ? "UNLOCK" : "LOCK";
+<!-- 5210 -->     if (scrollLocked) stopManualScroll();
+<!-- 5211 -->   }
+<!-- 5212 -->
+<!-- 5213 -->   window.addEventListener("load", function(){
+<!-- 5214 -->     const slider = document.getElementById("scrollSpeedSlider");
+<!-- 5215 -->     if (slider){
+<!-- 5216 -->       updateSpeed(slider.value);
+<!-- 5217 -->       slider.addEventListener("input", function(){
+<!-- 5218 -->         updateSpeed(this.value);
+<!-- 5219 -->       });
+<!-- 5220 -->     }
+<!-- 5221 -->
+<!-- 5222 -->     bindPress(document.getElementById("upBtn"), -1);
+<!-- 5223 -->     bindPress(document.getElementById("downBtn"), 1);
+<!-- 5224 -->   });
+<!-- 5225 --> </script>
+<!-- 5226 -->                
+<!-- 5227 --> </body> <!-- ഇതിന് തൊട്ടു മുകളിൽ -->
+<!-- 5228 --> </html>
+<!-- 5229 -->
+<!-- 5230 -->     
