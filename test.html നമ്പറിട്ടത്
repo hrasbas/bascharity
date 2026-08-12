@@ -1,0 +1,2068 @@
+ <!-- 001 -->     <!DOCTYPE html>   
+<!-- 002 --> <html lang="en">
+<!-- 003 --> <head>
+<!-- 004 -->    <style>
+<!-- 005 --> body {
+<!-- 006 -->     font-size: 19px;
+<!-- 007 --> }
+<!-- 008 --> </style>
+<!-- 009 --> <meta charset="UTF-8">
+<!-- 010 --> <meta http-equiv="Content-Security-Policy" content="default-src 'self' 'unsafe-inline' 'unsafe-eval' https: data: blob:;">
+<!-- 011 --> <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- 012 --> <title>BAS Charity International™ </title> 
+<!-- 013 --> <meta http-equiv="X-Frame-Options" content="DENY"><link rel="manifest" href="manifest.json">
+<!-- 014 --> <meta name="referrer" content="strict-origin-when-cross-origin">
+<!-- 015 -->
+<!-- 016 --> <link rel="icon" type="image/png" href="final_app_icon.png">
+<!-- 017 --> <link rel="apple-touch-icon" href="final_app_icon.png"> 
+<!-- 018 -->
+<!-- 019 --> <meta name="theme-color" content="#ff9800">
+<!-- 020 --> <meta name="apple-mobile-web-app-status-bar-style" content="default"> 
+<!-- 021 -->
+<!-- 022 --> <link rel="stylesheet" href="style.css">
+<!-- 023 --> <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<!-- 024 -->
+<!-- 025 -->
+<!-- 026 --> <style>
+<!-- 027 --> /* Google Translate top bar + iframe കഠിനമായി ബ്ലോക്ക് ചെയ്യുന്നു */
+<!-- 028 --> .goog-te-banner-frame.skiptranslate,
+<!-- 029 --> iframe.goog-te-banner-frame,
+<!-- 030 --> .skiptranslate.goog-te-banner-frame {
+<!-- 031 -->     display: none !important;
+<!-- 032 -->     visibility: hidden !important;
+<!-- 033 --> }
+<!-- 034 -->
+<!-- 035 --> /* body top offset Google ചേർക്കുന്നത് reset ചെയ്യുന്നു */
+<!-- 036 --> body {
+<!-- 037 -->     top: 0px !important;
+<!-- 038 -->     position: static !important;
+<!-- 039 --> }
+<!-- 040 -->
+<!-- 041 --> /* Google Translate tooltip / opinion / highlight ഒക്കെ ബ്ലോക്ക് */
+<!-- 042 --> #goog-gt-tt,
+<!-- 043 --> .goog-tooltip,
+<!-- 044 --> .goog-tooltip:hover,
+<!-- 045 --> .goog-text-highlight,
+<!-- 046 --> .goog-gt-highlight,
+<!-- 047 --> .goog-gt-spellmark,
+<!-- 048 --> .gt-baf-container,
+<!-- 049 --> .gt-baf-footer {
+<!-- 050 -->     display: none !important;
+<!-- 051 -->     visibility: hidden !important;
+<!-- 052 --> }
+<!-- 053 -->
+<!-- 054 --> /* Translate wrapper / gadget icon hide */
+<!-- 055 --> .goog-te-gadget-icon {
+<!-- 056 -->     display: none !important;
+<!-- 057 --> }
+<!-- 058 --> </style>
+<!-- 059 -->  
+<!-- 060 -->  <style>
+<!-- 061 -->  /* CODE NO:1 FIX */
+<!-- 062 --> /* എടുത്തു കാണിക്കേണ്ട പ്രധാന ഹെഡിംഗുകളുടെയും ടെക്സ്റ്റുകളുടെയും കളറുകൾ ലോക്ക് ചെയ്യുന്നു */
+<!-- 063 --> h1 { color:#fff !important; }
+<!-- 064 --> .english-fix { color:#bbb !important; }
+<!-- 065 --> #dedication-text { color:#bbb !important; font-weight:300; line-height: 1.6; }
+<!-- 066 --> /* ഇമേജ് ഗാലറി ഹൊറിസോണ്ടൽ ആയി സ്ക്രോൾ ചെയ്യാനുള്ള ഡിസൈൻ */
+<!-- 067 --> #gallery { display:flex; overflow-x:auto; scroll-behavior:smooth; gap:10px; }
+<!-- 068 --> #gallery::-webkit-scrollbar { display:none; }
+<!-- 069 --> .card { min-width:180px; flex-shrink:0; }
+<!-- 070 --> .card img { width:100%; height:auto; border-radius:10px; display:block; }
+<!-- 071 --> #gallery.zoom { transform:scale(1.05); transition:0.3s; } 
+<!-- 072 -->
+<!-- 073 --> /* വിഭിന്ന ബ്രൗസറുകളിൽ മാർജിനുകൾ തെന്നിമാറാതിരിക്കാൻ ഡിസൈൻ ലോക്ക് ചെയ്യുന്നു */
+<!-- 074 --> * { box-sizing:border-box; } 
+<!-- 075 -->
+<!-- 076 --> /* സൈറ്റിന്റെ ബോഡിയുടെ പൊതുവായ പശ്ചാത്തലവും മിനിമം 23px ഫോണ്ട് സൈസും നിശ്ചയിക്കുന്നു */
+<!-- 077 --> body {
+<!-- 078 --> margin:0;
+<!-- 079 --> background:#000;
+<!-- 080 --> font-family:Arial, sans-serif;
+<!-- 081 --> color:#fff;
+<!-- 082 --> overflow-x:hidden;
+<!-- 083 --> } 
+<!-- 084 --> /* പ്രധാന ബോക്സുകൾ വലിയ സ്ക്രീനുകളിൽ 900px ലേക്ക് ഒതുക്കി നിർത്താനും ഫോണിൽ റെസ്പോൺസിവ് ആക്കാനുമുള്ള ഘടന */
+<!-- 085 --> .bas-dedication, .lang-box, .country-box, .shop-container, .compare-container, .share-container, .mainbox, .info-box, .bas7-wrapper, .trust-container, .peace-wrapper, .vada-wrapper, .vision-wrapper, #bas-mega-portal {
+<!-- 086 --> max-width:900px;
+<!-- 087 --> width:96%;
+<!-- 088 --> margin-left:auto;
+<!-- 089 --> margin-right:auto;
+<!-- 090 --> } 
+<!-- 091 -->
+<!-- 092 --> /* സൈറ്റിന്റെ മുകൾഭാഗത്തെ ഹെഡറും വലിയ ലോഗോ സ്പേസും ഡിസൈൻ ചെയ്യുന്നു */
+<!-- 093 --> .header-box { display:flex; flex-direction:column; align-items:center; background:#000; }
+<!-- 094 --> #logo-space { width:100%; height:340px; }
+<!-- 095 --> .brand-heading { text-align:center; margin-top:-35px; padding:10px 20px; }
+<!-- 096 --> .hunger-message { font-size:13px; letter-spacing:2px; color:#FFD700; font-weight:bold; text-transform:uppercase; margin-bottom:20px; }
+<!-- 097 --> .brand-heading h1 { font-size:clamp(32px,9vw,65px); letter-spacing:1px; text-transform:uppercase; margin:0; font-weight:1000; -webkit-text-stroke:1.5px white; line-height:1.1; } 
+<!-- 098 -->
+<!-- 099 --> /* ലാംഗ്വേജ് ബട്ടണുകൾ ഫോണിന് അനുസരിച്ച് ഒരേ വലിപ്പത്തിൽ ഗ്രിഡ് ആയി കാണിക്കാനുള്ള സ്റ്റൈൽ */
+<!-- 100 --> .top-bar { background:#111; padding:15px 8px; border-top:1px solid #333; border-bottom:1px solid #333; }
+
+
+  <!-- 101 --> .lang-buttons { display:grid; grid-template-columns:repeat(4,1fr); gap:10px; max-width:600px; margin:auto; }
+<!-- 102 --> .lang-btn { padding:10px 2px; border:none; border-radius:20px; font-size:14px; font-weight:bold; cursor:pointer; color:#fff; }
+<!-- 103 --> .en { background:#007BFF; }
+<!-- 104 --> .hi { background:#FF9933; color:#000; }
+<!-- 105 --> .ml { background:#00C853; }
+<!-- 106 --> .ar { background:#2E7D32; }
+<!-- 107 --> .ta { background:#C62828; }
+<!-- 108 --> .ur { background:#6A1B9A; }
+<!-- 109 --> .es { background:#F4C430; color:#000; }
+<!-- 110 --> .pt { background:#1B5E20; }
+<!-- 111 --> .google-row { text-align:center; font-size:14px; margin-top:15px; color:#bbb; } 
+
+<!-- 112 -->
+<!-- 113 --> /* സമർപ്പണ ബോക്സിന്റെയും മെയിൻ മെസ്സേജ് ബോക്സിന്റെയും ബോർഡറുകളും കളറുകളും നൽകുന്നു */
+<!-- 114 --> .bas-dedication {
+<!-- 115 -->   text-align:center;
+<!-- 116 -->   margin:10px auto 30px auto;
+<!-- 117 -->   padding:0 20px;
+<!-- 118 -->
+<!-- 119 -->   font-size:30px;
+<!-- 120 -->   font-weight:900;
+<!-- 121 -->   font-style:italic;
+<!-- 122 -->   color:#9a9a9a;
+<!-- 123 -->   line-height:1.8;
+<!-- 124 --> }
+<!-- 125 --> .lang-box { margin: 25px auto; padding: 15px; background: #000; border: 1px solid #ff9800; border-radius: 15px; }
+<!-- 126 --> .lang-title { background: #b3ecff; color: #000; font-weight: 900; text-align: center; padding: 10px; border-radius: 10px; border: 1px solid #ff9800; border-left: 6px solid #ff9800; margin-bottom: 10px; text-transform: uppercase; }
+<!-- 127 --> .msg-container { width:96%; padding:20px 0; margin: auto; }
+<!-- 128 --> .question-box { margin:0 auto; width:96%; max-width:900px; background:#000; color:#00BFFF; padding:25px; border-radius:12px; border:1px solid #00BFFF; text-align:center; line-height:1.8; }
+<!-- 129 --> .english-text { font-size:19px; font-weight:500; display:block; }
+<!-- 130 --> .hunger-footer { text-align:center; color:#FFD700; font-weight:bold; font-size:14px; margin-top:15px; letter-spacing:1px; } 
+
+<!-- 131 -->
+<!-- 132 --> /* ആപ്പ് ഇൻസ്റ്റാൾ ചെയ്യാനുള്ള ഫ്ലോട്ടിങ് ബട്ടണിന്റെ ഡിസൈൻ നിയമങ്ങൾ */
+<!-- 133 --> #install-div {
+<!-- 134 --> display: none;
+<!-- 135 --> position: fixed;
+<!-- 136 --> bottom: 25px;
+<!-- 137 --> right: 25px;
+<!-- 138 --> z-index: 10000;
+<!-- 139 --> }
+<!-- 140 --> #install-btn {
+<!-- 141 --> background: #ff9800;
+<!-- 142 --> color: #fff;
+<!-- 143 --> border: none;
+<!-- 144 --> padding: 12px 24px;
+<!-- 145 --> border-radius: 50px;
+<!-- 146 --> font-size: 16px;
+<!-- 147 --> font-weight: bold;
+<!-- 148 --> box-shadow: 0 4px 15px rgba(0,0,0,0.4);
+<!-- 149 --> cursor: pointer;
+<!-- 150 --> } 
+
+<!-- 151 -->
+<!-- 152 --> /* ആനിമേഷനോടെ സ്ക്രീനിൽ പൊങ്ങിവരുന്ന ബലൂൺ റാപ്പറിന്റെ പൊസിഷൻ ലോക്ക് ചെയ്യുന്നു */
+<!-- 153 --> #basBalloonWrap {
+<!-- 154 --> position: fixed;
+<!-- 155 --> bottom: 0;
+<!-- 156 --> left: 0;
+<!-- 157 --> width: 280px;
+<!-- 158 --> height: 400px;
+<!-- 159 --> z-index: 2147483647;
+<!-- 160 --> pointer-events: none;
+<!-- 161 --> transform: translateY(120%);transition: transform 2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+<!-- 162 --> display: block !important;
+<!-- 163 --> } 
+
+<!-- 164 -->
+<!-- 165 --> /* ബലൂൺ പല സ്റ്റേറ്റുകളിൽ കാണിക്കേണ്ട ട്രാൻസ്ഫോം പൊസിഷനുകൾ */
+<!-- 166 --> .state-up { transform: translateY(0%) !important; }
+<!-- 167 --> .state-hide { transform: translateY(120%) !important; }
+<!-- 168 --> .state-rest { transform: translateY(70%) !important; } 
+
+<!-- 169 -->
+<!-- 170 --> /* ബലൂണിന്റെ റൗണ്ട് ഷേപ്പും ഉള്ളിലെ നൂലും നിപ്പിളും ഉണ്ടാക്കാനുള്ള CSS */
+<!-- 171 --> .bas-ball {
+<!-- 172 --> position: absolute;
+<!-- 173 --> border-radius: 50% 50% 50% 50% / 40% 40% 60% 60%;
+<!-- 174 --> display: flex;
+<!-- 175 --> flex-direction: column;
+<!-- 176 --> align-items: center;
+<!-- 177 --> justify-content: center;
+<!-- 178 --> cursor: pointer;
+<!-- 179 --> pointer-events: auto;
+<!-- 180 --> box-shadow: inset -8px -8px 20px rgba(0,0,0,0.4);
+<!-- 181 --> } 
+
+<!-- 182 -->
+<!-- 183 --> .bas-str {
+<!-- 184 --> position: absolute;
+<!-- 185 --> width: 1px;
+<!-- 186 --> background: rgba(255,255,255,0.4);
+<!-- 187 --> bottom: -1000px;
+<!-- 188 --> left: 50%;
+<!-- 189 --> height: 1000px;
+<!-- 190 --> } 
+
+<!-- 191 --> .bas-nipple {
+<!-- 192 --> position: absolute;
+<!-- 193 --> bottom: -10px;
+<!-- 194 --> width: 18px;
+<!-- 195 --> height: 10px;
+<!-- 196 --> background: inherit;
+<!-- 197 --> clip-path: polygon(20% 0, 80% 0, 100% 100%, 0 100%);
+<!-- 198 --> }
+ <!-- 201 --> /* വെള്ള, നീല ബലൂണുകളുടെ വലിപ്പവും അവ ഫ്ലോട്ട് ചെയ്യാനുള്ള ആനിമേഷൻ ലിങ്കും */
+<!-- 202 --> .white-b {
+<!-- 203 --> width: 120px; height: 160px;
+<!-- 204 --> background: #ffffff;
+<!-- 205 --> bottom: 220px; left: 60px;
+<!-- 206 --> animation: floatW 25s ease-in-out infinite;
+<!-- 207 --> transition: background 0.4s ease;
+<!-- 208 --> } 
+<!-- 209 -->
+<!-- 210 --> .blue-b {
+<!-- 211 --> width: 105px; height: 135px;
+<!-- 212 --> background: #007bff;
+<!-- 213 --> bottom: 70px; left: 30px;
+<!-- 214 --> animation: floatB 20s ease-in-out infinite;
+<!-- 215 --> } 
+<!-- 216 -->
+<!-- 217 --> .bas-sticker { width: 75px; height: 75px; border-radius: 20px; margin-bottom: 5px; border: 1px solid #ddd; }
+<!-- 218 --> .bas-lbl { font-family: sans-serif; font-size: 11px; font-weight: 900; text-align: center; line-height: 1.2; } 
+<!-- 219 -->
+<!-- 220 --> /* ആപ്പ് ഇൻസ്റ്റാൾ ചെയ്യാൻ റെഡി ആകുമ്പോഴും ഇൻസ്റ്റാൾഡ് ആകുമ്പോഴും മാറേണ്ട കളർ കോഡുകൾ */
+<!-- 221 --> .install-ready {
+<!-- 222 --> color: #cddc39 !important;
+<!-- 223 --> text-shadow: 0 0 6px rgba(205,220,57,0.35);
+<!-- 224 --> } 
+<!-- 225 -->
+<!-- 226 --> .installed-state {
+<!-- 227 --> background: #cddc39 !important;
+<!-- 228 --> } 
+<!-- 229 -->
+<!-- 230 --> .installed-state .bas-nipple { 
+<!-- 231 --> background: #cddc39 !important;
+<!-- 232 --> } 
+<!-- 233 -->
+<!-- 234 --> .installed-state #statTxt {
+<!-- 235 --> color: #1f2b00 !important;
+<!-- 236 --> text-shadow: none !important;
+<!-- 237 --> } 
+<!-- 238 -->
+<!-- 239 --> /* ബലൂണുകൾ യാഥാർത്ഥ്യമെന്നോണം അന്തരീക്ഷത്തിൽ ഒഴുകി നടക്കാൻ വേണ്ടിയുള്ള ആനിമേഷൻ ഫ്രെയിമുകൾ */
+<!-- 240 --> @keyframes floatW {
+<!-- 241 --> 0%, 100% { transform: translate(0, 0) rotate(-3deg); }
+<!-- 242 --> 50% { transform: translate(35px, 45px) rotate(5deg); }
+<!-- 243 --> } 
+<!-- 244 -->
+<!-- 245 --> @keyframes floatB {
+<!-- 246 --> 0%, 100% { transform: translate(0, 0) rotate(4deg); }
+<!-- 247 --> 50% { transform: translate(25px, -25px) rotate(-4deg); }
+<!-- 248 --> }
+<!-- 249 --> </style>
+<!-- 250 --> <!-- ===========================
+<!-- 251 --> BAS CHARITY GOOGLE ANALYTICS
+<!-- 252 --> Measurement ID : G-W0NH1KVHHC
+<!-- 253 --> =========================== -->
+<!-- 254 -->
+<!-- 255 --> <script async src="https://www.googletagmanager.com/gtag/js?id=G-W0NH1KVHHC"></script>
+<!-- 256 -->
+<!-- 257 --> <script>
+<!-- 258 --> window.dataLayer = window.dataLayer || [];
+<!-- 259 -->
+<!-- 260 --> function gtag(){
+<!-- 261 --> dataLayer.push(arguments);
+<!-- 262 --> }
+<!-- 263 -->
+<!-- 264 --> gtag('js', new Date());
+<!-- 265 -->
+<!-- 266 --> gtag('config','G-W0NH1KVHHC',{
+<!-- 267 --> send_page_view:true
+<!-- 268 --> });
+<!-- 269 -->
+<!-- 270 --> /* ---------- Universal Event Function ---------- */
+<!-- 271 -->
+<!-- 272 --> function basTrack(eventName, params={}){
+<!-- 273 --> gtag('event',eventName,params);
+<!-- 274 --> }
+<!-- 275 -->
+<!-- 276 --> /* ---------- Page Loaded ---------- */
+<!-- 277 -->
+<!-- 278 --> window.addEventListener("load",function(){
+<!-- 279 -->
+<!-- 280 --> basTrack("page_loaded");
+<!-- 281 -->
+<!-- 282 --> });
+<!-- 283 -->
+<!-- 284 --> /* ---------- Shop Click ---------- */
+<!-- 285 -->
+<!-- 286 --> document.addEventListener("click",function(e){
+<!-- 287 -->
+<!-- 288 --> const shop=e.target.closest("a.shopCard");
+<!-- 289 -->
+<!-- 290 --> if(shop){
+<!-- 291 -->
+<!-- 292 --> basTrack("shop_click",{
+<!-- 293 --> shop_name:shop.innerText.trim(),
+<!-- 294 --> shop_url:shop.href
+<!-- 295 --> });
+<!-- 296 -->
+<!-- 297 --> }
+<!-- 298 -->
+<!-- 299 --> });
+<!-- 300 --> 
+  
+  <!-- 301 --> /* ---------- Compare Button ---------- */
+
+<!-- 302 --> document.addEventListener("click",function(e){
+
+<!-- 303 --> const btn=e.target.closest(".compare-btn");
+
+<!-- 304 --> if(btn){
+
+<!-- 305 --> basTrack("compare_click");
+
+<!-- 306 --> }
+
+<!-- 307 --> });
+
+<!-- 308 --> /* ---------- Share Buttons ---------- */
+
+<!-- 309 --> document.addEventListener("click",function(e){
+
+<!-- 310 --> const share=e.target.closest(".share-grid a");
+
+<!-- 311 --> if(share){
+
+<!-- 312 --> basTrack("share_click",{
+
+<!-- 313 --> platform:share.href
+
+<!-- 314 --> });
+
+<!-- 315 --> }
+
+<!-- 316 --> });
+
+<!-- 317 --> /* ---------- Copy Link ---------- */
+
+<!-- 318 --> function analyticsCopyLink(){
+
+<!-- 319 --> basTrack("copy_link");
+
+<!-- 320 --> }
+
+<!-- 321 --> /* ---------- Country ---------- */
+
+<!-- 322 --> function analyticsCountry(country){
+
+<!-- 323 --> basTrack("country_selected",{
+
+<!-- 324 --> country:country
+
+<!-- 325 --> });
+
+<!-- 326 --> }
+
+<!-- 327 --> /* ---------- Language ---------- */
+
+<!-- 328 --> function analyticsLanguage(language){
+
+<!-- 329 --> basTrack("language_selected",{
+
+<!-- 330 --> language:language
+
+<!-- 331 --> });
+
+<!-- 332 --> }
+
+<!-- 333 --> /* ---------- Search ---------- */
+
+<!-- 334 --> function analyticsSearch(text){
+
+<!-- 335 --> basTrack("search",{
+
+<!-- 336 --> search_term:text
+
+<!-- 337 --> });
+
+<!-- 338 --> }
+
+<!-- 339 --> /* ---------- PWA Install ---------- */
+
+<!-- 340 --> function analyticsPWA(){
+
+<!-- 341 --> basTrack("pwa_install");
+
+<!-- 342 --> }
+
+<!-- 343 --> /* ---------- Donation ---------- */
+
+<!-- 344 --> function analyticsDonation(name){
+
+<!-- 345 --> basTrack("donation_button",{
+
+<!-- 346 --> charity:name
+
+<!-- 347 --> });
+
+<!-- 348 --> }
+
+<!-- 349 --> /* ---------- External Link ---------- */
+
+<!-- 350 --> function analyticsExternal(url){
+
+  <!-- 351 --> }
+<!-- 352 -->
+<!-- 353 --> /* ---------- Language ---------- */
+<!-- 354 -->
+<!-- 355 --> function analyticsLanguage(language){
+<!-- 356 -->
+<!-- 357 --> basTrack("language_selected",{
+<!-- 358 -->
+<!-- 359 --> language:language
+<!-- 360 -->
+<!-- 361 --> });
+<!-- 362 -->
+<!-- 363 --> }
+<!-- 364 -->
+<!-- 365 --> /* ---------- Search ---------- */
+<!-- 366 -->
+<!-- 367 --> function analyticsSearch(text){
+<!-- 368 -->
+<!-- 369 --> basTrack("search",{
+<!-- 370 -->
+<!-- 371 --> search_term:text
+<!-- 372 -->
+<!-- 373 --> });
+<!-- 374 -->
+<!-- 375 --> }
+<!-- 376 -->
+<!-- 377 --> /* ---------- PWA Install ---------- */
+<!-- 378 -->
+<!-- 379 --> function analyticsPWA(){
+<!-- 380 -->
+<!-- 381 --> basTrack("pwa_install");
+<!-- 382 -->
+<!-- 383 --> }
+<!-- 384 -->
+<!-- 385 --> /* ---------- Donation ---------- */
+<!-- 386 -->
+<!-- 387 --> function analyticsDonation(name){
+<!-- 388 -->
+<!-- 389 --> basTrack("donation_button",{
+<!-- 390 -->
+<!-- 391 --> charity:name
+<!-- 392 -->
+<!-- 393 --> });
+<!-- 394 -->
+<!-- 395 --> }
+<!-- 396 -->
+<!-- 397 --> /* ---------- External Link ---------- */
+<!-- 398 -->
+<!-- 399 --> function analyticsExternal(url){
+<!-- 400 -->
+  
+
+  <!-- 401 --> basTrack("external_link",{
+<!-- 402 -->
+<!-- 403 --> url:url
+<!-- 404 -->
+<!-- 405 --> });
+<!-- 406 -->
+<!-- 407 --> }
+<!-- 408 --> </script>
+<!-- 409 -->
+<!-- 410 --> <!-- ===========================
+<!-- 411 --> END OF BAS ANALYTICS
+<!-- 412 --> =========================== -->
+<!-- 413 -->   
+<!-- 414 --> </head> 
+<!-- 415 -->
+<!-- 416 --> <body> 
+<!-- 417 -->
+<!-- 418 --> <div class="header-box">
+<!-- 419 --> <div id="logo-space"></div>
+<!-- 420 --> <div class="brand-heading">
+<!-- 421 --> <div class="hunger-message">YOUR PURCHASE SATISFIES A HUNGER™  </div>
+<!-- 422 --> <h1 class="notranslate" translate="no">BAS CHARITY INTERNATIONAL</h1>
+<!-- 423 --> </div>
+<!-- 424 --> </div> 
+<!-- 425 -->
+<!-- 426 --> <div class="bas-dedication">
+<!-- 427 --> <div id="dedication-text" class="english-fix">
+<!-- 428 -->
+<!-- 429 --> dedicated to the good, well-being, and peace of all human beings, their parents, other ancestors, and above all, all souls
+<!-- 430 --> </div>
+<!-- 431 --> </div> 
+<!-- 432 -->
+<!-- 433 --> <div class="top-bar">
+<!-- 434 --> <div class="lang-box">
+<!-- 435 --> <div class="lang-title">SELECT LANGUAGE</div>
+<!-- 436 --> </div>
+<!-- 437 --> <div class="lang-buttons">
+<!-- 438 --> <button class="lang-btn en" onclick="resetToEnglish()">English</button>
+<!-- 439 --> <button class="lang-btn hi" onclick="changeLang('hi')">Hindi Language</button>
+<!-- 440 --> <button class="lang-btn ml" onclick="changeLang('ml')">Malayalam</button>
+<!-- 441 --> <button class="lang-btn ar" onclick="changeLang('ar')">Arabic</button>
+<!-- 442 --> <button class="lang-btn ta" onclick="changeLang('ta')">Tamil</button>
+<!-- 443 --> <button class="lang-btn ur" onclick="changeLang('ur')">Urdu</button>
+<!-- 444 --> <button class="lang-btn es" onclick="changeLang('es')">Spanish</button>
+<!-- 445 --> <button class="lang-btn pt" onclick="changeLang('pt')">Portuguese</button>
+<!-- 446 --> </div>
+<!-- 447 --> <div class="google-row">
+<!-- 448 --> 🌐 All Languages : <span id="google_translate_element"></span>
+<!-- 449 --> </div>
+<!-- 450 --> </div> 
+<!-- 451 -->
+<!-- 452 --> <div class="msg-container">
+<!-- 453 --> <div class="question-box">
+<!-- 454 --> <span class="english-text">
+<!-- 455 --> "What if someone's hunger in some corner of the world is satisfied by purchasing through the BAS Charity International links below, without spending a single extra penny, at the same price, and with the same offers...?"
+<!-- 456 --> </span>
+<!-- 457 --> </div>
+<!-- 458 --> <div class="hunger-footer notranslate" translate="no">YOUR PURCHASE SATISFIES A HUNGER</div>
+<!-- 459 --> </div> 
+<!-- 460 -->
+<!-- 461 --> <div id="install-div">
+<!-- 462 --> <button id="install-btn" type="button">Install App</button>
+<!-- 463 --> </div> 
+<!-- 464 -->
+<!-- 465 --> <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script> 
+<!-- 466 -->
+<!-- 467 --> <script>
+<!-- 468 --> // വെബ്സൈറ്റ് മൊബൈലിലേക്ക് ഇൻസ്റ്റാൾ ചെയ്യാനുള്ള പ്രോംപ്റ്റ് നിയന്ത്രിക്കുന്ന ലോജിക്
+<!-- 469 --> let deferredPrompt;
+<!-- 470 --> const installDiv = document.getElementById('install-div');
+<!-- 471 --> const installBtn = document.getElementById('install-btn'); 
+<!-- 472 -->
+<!-- 473 --> window.addEventListener('beforeinstallprompt', (e) => {
+<!-- 474 --> e.preventDefault();
+<!-- 475 --> deferredPrompt = e;
+<!-- 476 --> if (installDiv) installDiv.style.display = 'block';
+<!-- 477 --> }); 
+<!-- 478 -->
+<!-- 479 --> if (installBtn) {
+<!-- 480 --> installBtn.addEventListener('click', async () => {
+<!-- 481 --> try {
+<!-- 482 --> if (!deferredPrompt) return;
+<!-- 483 --> if (installDiv) installDiv.style.display = 'none';
+<!-- 484 --> const result = await deferredPrompt.prompt();
+<!-- 485 --> if (result && result.outcome === 'accepted') {
+<!-- 486 --> console.log('App Installed');
+<!-- 487 --> }
+<!-- 488 --> deferredPrompt = null;
+<!-- 489 --> } catch (err) {
+<!-- 490 --> deferredPrompt = null;
+<!-- 491 --> console.error('Install prompt error:', err);
+<!-- 492 --> }
+<!-- 493 --> });
+<!-- 494 --> } 
+<!-- 495 -->
+<!-- 496 --> window.addEventListener('appinstalled', () => {
+<!-- 497 --> deferredPrompt = null;
+<!-- 498 --> if (installDiv) installDiv.style.display = 'none';
+<!-- 499 --> });
+<!-- 500 -->
+  <!-- 501 --> // ബാക്ക്ഗ്രൗണ്ടിൽ ഓഫ്‌ലൈൻ സപ്പോർട്ടിനായി സർവീസ് വർക്കർ രജിസ്റ്റർ ചെയ്യുന്നു
+<!-- 502 --> if ('serviceWorker' in navigator) {
+<!-- 503 --> window.addEventListener('load', () => {
+<!-- 504 --> navigator.serviceWorker.register('sw.js').catch((err) => {
+<!-- 505 --> console.error('SW registration failed:', err);
+<!-- 506 --> });
+<!-- 507 --> });
+<!-- 508 --> } 
+<!-- 509 -->
+<!-- 510 --> // 3D ഭൂമിയും (Earth) അതിനു ചുറ്റും കറങ്ങുന്ന ചന്ദ്രനും (Moon) നിർമ്മിക്കുന്നതിനുള്ള ത്രീ-ജെഎസ് കോഡ്
+<!-- 511 --> let scene, camera, renderer, ambient, loader, earthGroup, earth, moon, angle = 0, running = true, logoSpace, animateRef = null; 
+<!-- 512 -->
+<!-- 513 --> try {
+<!-- 514 --> if (window.THREE) {
+<!-- 515 --> logoSpace = document.getElementById('logo-space'); 
+<!-- 516 -->
+<!-- 517 --> scene = new THREE.Scene();
+<!-- 518 --> camera = new THREE.PerspectiveCamera(50, window.innerWidth / 340, 0.1, 1000);
+<!-- 519 --> renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true, powerPreference: "high-performance" });
+<!-- 520 --> renderer.setSize(window.innerWidth, 340);
+<!-- 521 --> renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2)); 
+<!-- 522 -->
+<!-- 523 --> if (logoSpace) {
+<!-- 524 --> logoSpace.appendChild(renderer.domElement);
+<!-- 525 --> } 
+<!-- 526 -->
+<!-- 527 --> ambient = new THREE.AmbientLight(0xffffff, 1.2);
+<!-- 528 --> scene.add(ambient); 
+<!-- 529 -->
+<!-- 530 --> loader = new THREE.TextureLoader();
+<!-- 531 --> earthGroup = new THREE.Group(); 
+<!-- 532 -->
+<!-- 533 --> // ഗ്ലോബിലേക്ക് ഭൂമിയുടെ സാറ്റലൈറ്റ് മാപ്പ് ടെക്സ്ചർ ലോഡ് ചെയ്യുന്നു
+<!-- 534 --> earth = new THREE.Mesh(
+<!-- 535 --> new THREE.SphereGeometry(2, 32, 32),
+<!-- 536 --> new THREE.MeshStandardMaterial({
+<!-- 537 --> map: loader.load(
+<!-- 538 --> 'https://raw.githubusercontent.com/mrdoob/three.js/master/examples/textures/planets/earth_atmos_2048.jpg',
+<!-- 539 --> undefined,
+<!-- 540 --> undefined,
+<!-- 541 --> function () { console.error('Earth texture failed to load'); }
+<!-- 542 --> ),
+<!-- 543 --> metalness: 0.2,
+<!-- 544 --> roughness: 0.8
+<!-- 545 --> })
+<!-- 546 --> );
+<!-- 547 --> earthGroup.add(earth); 
+<!-- 548 -->
+<!-- 549 --> // ഭൂമിക്ക് മുകളിലായി കറങ്ങുന്ന രീതിയിൽ BAS എന്ന അക്ഷരങ്ങൾ ക്യാൻവാസ് വഴി വരച്ച് ചേർക്കുന്നു
+<!-- 550 --> let canvas = document.createElement('canvas');
+<!-- 551 --> let ctx = canvas.getContext('2d');
+<!-- 552 --> if (ctx) {
+<!-- 553 --> canvas.width = 1024;
+<!-- 554 --> canvas.height = 256;
+<!-- 555 --> ctx.fillStyle = "#FFFFFF";
+<!-- 556 --> ctx.font = "Bold 140px Arial";
+<!-- 557 --> ctx.textAlign = "center";
+<!-- 558 --> ctx.fillText("BAS", 256, 160);
+<!-- 559 --> ctx.fillText("BAS", 768, 160); 
+<!-- 560 -->
+<!-- 561 --> let textTexture = new THREE.CanvasTexture(canvas);
+<!-- 562 --> let textMesh = new THREE.Mesh(
+<!-- 563 --> new THREE.CylinderGeometry(2.05, 2.05, 0.8, 64, 1, true),
+<!-- 564 --> new THREE.MeshBasicMaterial({ map: textTexture, transparent: true, side: THREE.DoubleSide })
+<!-- 565 --> );
+<!-- 566 --> earthGroup.add(textMesh);
+<!-- 567 --> } 
+<!-- 568 -->
+<!-- 569 --> scene.add(earthGroup); 
+<!-- 570 -->
+<!-- 571 --> // ഭൂമിക്ക് പുറത്ത് കറങ്ങുന്ന ചെറിയ ചന്ദ്രനെ (Moon Sphere) ഉണ്ടാക്കുന്നു
+<!-- 572 --> moon = new THREE.Mesh(
+<!-- 573 --> new THREE.SphereGeometry(0.35, 16, 16),
+<!-- 574 --> new THREE.MeshStandardMaterial({ color: 0xcccccc })
+<!-- 575 --> );
+<!-- 576 --> scene.add(moon); 
+<!-- 577 -->
+<!-- 578 --> camera.position.z = 8; 
+<!-- 579 -->
+<!-- 580 --> // ഫോൺ തിരിക്കുമ്പോഴും സ്ക്രീൻ സൈസ് മാറുമ്പോഴും 3D ഗ്ലോബ് തകരാതെ കൃത്യമായി ക്രമീകരിക്കുന്നു
+<!-- 581 --> function resizeRenderer() {
+<!-- 582 --> try {
+<!-- 583 --> const box = document.getElementById("logo-space");
+<!-- 584 --> if (!box || !renderer || !camera) return;
+<!-- 585 --> const width = box.clientWidth || window.innerWidth;
+<!-- 586 --> renderer.setSize(width, 340);
+<!-- 587 --> camera.aspect = width / 340;
+<!-- 588 --> camera.updateProjectionMatrix();
+<!-- 589 --> } catch (e) {
+<!-- 590 --> console.error('Resize error:', e);
+<!-- 591 --> }
+<!-- 592 --> } 
+<!-- 593 -->
+<!-- 594 --> window.addEventListener("resize", resizeRenderer); 
+<!-- 595 -->
+<!-- 596 --> // ನಿರ്ഥാദെ 3D ഗ്ലോബും ചന്ദ്രനും ആനിമേറ്റ് ചെയ്ത് കറക്കാനുള്ള ലൂപ്പ് ഫംഗ്ഷൻ
+<!-- 597 --> function animate() {
+<!-- 598 --> if (!running || !renderer || !scene || !camera || !earthGroup || !moon) return;
+<!-- 599 --> animateRef = requestAnimationFrame(animate);
+<!-- 600 --> earthGroup.rotation.y += 0.003;
+<!-- 601 --> angle -= 0.01;
+<!-- 602 --> moon.position.x = Math.cos(angle) * 4.5;
+<!-- 603 --> moon.position.z = Math.sin(angle) * 2.8;
+<!-- 604 --> renderer.render(scene, camera);
+<!-- 605 --> }
+<!-- 606 --> animate(); 
+<!-- 607 -->
+<!-- 608 --> // യൂസർ സ്ക്രീൻ സ്ക്രോൾ ചെയ്ത് ലോഗോ കാണുമ്പോൾ മാത്രം 3D റൺ ചെയ്യിച്ച് ബാറ്ററി ലാഭിക്കാനുള്ള ലോജിക്
+<!-- 609 --> if ('IntersectionObserver' in window && logoSpace) {
+<!-- 610 --> let observer = new IntersectionObserver(entries => {
+<!-- 611 --> entries.forEach(entry => {
+<!-- 612 --> if (entry.isIntersecting) {
+<!-- 613 --> const wasStopped = !running;
+<!-- 614 --> running = true;
+<!-- 615 --> if (wasStopped) animate();
+<!-- 616 --> } else {
+<!-- 617 --> running = false;
+<!-- 618 --> }
+<!-- 619 --> });
+<!-- 620 --> });
+<!-- 621 --> observer.observe(logoSpace);
+<!-- 622 --> } 
+<!-- 623 -->
+<!-- 624 --> // സിസ്റ്റം ലോഡ് കാരണം WebGL ക്രാഷായാൽ അത് കണ്ടെത്തി റീസ്റ്റാർട്ട് ചെയ്യാനുള്ള സുരക്ഷാ കോഡ്
+<!-- 625 --> if (renderer && renderer.domElement) {
+<!-- 626 --> renderer.domElement.addEventListener('webglcontextlost', function (event) {
+<!-- 627 --> event.preventDefault();
+<!-- 628 --> running = false;
+<!-- 629 --> console.error('WebGL context lost');
+<!-- 630 --> }, false); 
+<!-- 631 -->
+<!-- 632 --> renderer.domElement.addEventListener('webglcontextrestored', function () {
+<!-- 633 --> running = true;
+<!-- 634 --> animate();
+<!-- 635 --> }, false);
+<!-- 636 --> }
+<!-- 637 --> }
+<!-- 638 --> } catch (e) {
+<!-- 639 --> console.error('Three.js init error:', e);
+<!-- 640 --> } 
+<!-- 641 -->
+<!-- 642 --> // ഗൂഗിൾ ട്രാൻസ്ലേഷൻ എലമെന്റ് സൈറ്റിലേക്ക് ഇനിഷ്യലൈസ് ചെയ്യുന്ന ഫംഗ്ഷൻ
+<!-- 643 -->  
+<!-- 644 --> // ഗൂഗിൾ ട്രാൻസ്ലേഷൻ എലമെന്റ് സൈറ്റിലേക്ക് ഇനിഷ്യലൈസ് ചെയ്യുന്ന ഫംഗ്ഷൻ
+<!-- 645 --> function googleTranslateElementInit() {
+<!-- 646 --> try {
+<!-- 647 --> if (window.google && google.translate && google.translate.TranslateElement) {
+<!-- 648 --> new google.translate.TranslateElement({ pageLanguage: 'en', autoDisplay: false }, 'google_translate_element');
+<!-- 649 --> }
+<!-- 650 --> } catch (e) {
+<!-- 651 --> console.error('Google Translate init error:', e);
+<!-- 652 --> }
+<!-- 653 --> } 
+<!-- 654 -->
+<!-- 655 --> // RULE: Language മാറുമ്പോഴും shop/country മാറരുത്.
+<!-- 656 --> // => last selectedCountry വീണ്ടും load ചെയ്യണം.
+<!-- 657 -->
+<!-- 658 --> // ബട്ടണുകളിൽ ക്ലിക്ക് ചെയ്യുമ്പോൾ ഓരോ പ്രത്യേക ഭാഷകളിലേക്ക് സൈറ്റ് മാറ്റാനുള്ള ലോജിക്
+<!-- 659 --> function changeLang(langCode) {
+<!-- 660 --> try {
+<!-- 661 --> let select = document.querySelector('select.goog-te-combo');
+<!-- 662 --> if (select) {
+<!-- 663 --> select.value = langCode;
+<!-- 664 --> select.dispatchEvent(new Event('change'));
+<!-- 665 --> }
+<!-- 666 --> } catch (e) {
+<!-- 667 --> console.error('Language change error:', e);
+<!-- 668 --> }
+<!-- 669 -->
+<!-- 670 --> // ഭാഷ മാറിയാലും അവസാനമായി തിരഞ്ഞ country വീണ്ടും load ചെയ്യുക
+<!-- 671 --> try {
+<!-- 672 --> const savedCountry = localStorage.getItem("selectedCountry") || "india";
+<!-- 673 --> if (typeof setSelectedCountry === "function") {
+<!-- 674 --> setSelectedCountry(savedCountry);
+<!-- 675 --> }
+<!-- 676 --> } catch (e) {
+<!-- 677 --> console.error('Country reapply after language change error:', e);
+<!-- 678 --> }
+<!-- 679 --> } 
+<!-- 680 -->
+<!-- 681 --> // RULE: English-ലേക്ക് reset ചെയ്താലും shop/country മാറരുത്.
+<!-- 682 -->
+<!-- 683 --> // തിരികെ ഇംഗ്ലീഷ് ഭാഷയിലേക്ക് തന്നെ മാറ്റാനുള്ള റീസെറ്റ് ഫംഗ്ഷൻ
+<!-- 684 --> function resetToEnglish() {
+<!-- 685 --> try {
+<!-- 686 --> let select = document.querySelector('select.goog-te-combo');
+<!-- 687 --> if (select) {
+<!-- 688 --> select.value = 'en';
+<!-- 689 --> select.dispatchEvent(new Event('change'));
+<!-- 690 --> }
+<!-- 691 --> } catch (e) {
+<!-- 692 --> console.error('Reset language error:', e);
+<!-- 693 --> }
+<!-- 694 -->
+<!-- 695 --> // ഇംഗ്ലീഷിലേക്ക് reset ചെയ്താലും shops വീണ്ടും വരണം
+<!-- 696 --> try {
+<!-- 697 --> const savedCountry = localStorage.getItem("selectedCountry") || "india";
+<!-- 698 --> if (typeof setSelectedCountry === "function") {
+<!-- 699 --> setSelectedCountry(savedCountry);
+<!-- 700 --> }
+
+  <!-- 701 --> } catch (e) {
+<!-- 702 --> console.error('Country reapply after reset error:', e);
+<!-- 703 --> }
+<!-- 704 --> } 
+<!-- 705 -->
+<!-- 706 --> // ഗൂഗിളിന്റെ മുകളിലെ അനാവശ്യ ട്രാൻസ്ലേഷൻ ബാനർ ബാർ നിരന്തരം ചെക്ക് ചെയ്ത് ഹൈഡ് ചെയ്യാനുള്ള ടൈമർ
+<!-- 707 --> let translateBannerInterval = setInterval(function () {
+<!-- 708 --> try {
+<!-- 709 --> const frame = document.querySelector('.goog-te-banner-frame');
+<!-- 710 --> if (frame) {
+<!-- 711 --> frame.style.display = 'none';
+<!-- 712 --> }
+<!-- 713 --> } catch (e) {}
+<!-- 714 --> }, 500); 
+<!-- 715 -->
+<!-- 716 --> // യൂസർ മൊബൈലിൽ മറ്റൊരു ആപ്പിലേക്ക് മാറുമ്പോൾ അനിമേഷൻ നിർത്തിവെച്ച് പ്രോസസ്സർ സ്പീഡ് കൂട്ടുന്നു
+<!-- 717 --> document.addEventListener('visibilitychange', function () {
+<!-- 718 --> if (document.hidden) {
+<!-- 719 --> running = false;
+<!-- 720 --> } else {
+<!-- 721 --> if (renderer && scene && camera && earthGroup && moon) {
+<!-- 722 --> const wasStopped = !running;
+<!-- 723 --> running = true;
+<!-- 724 --> if (wasStopped) animate();
+<!-- 725 --> }
+<!-- 726 --> }
+<!-- 727 --> }); 
+<!-- 728 -->
+<!-- 729 --> // പേജ് അടയ്ക്കുകയോ റീലോഡ് ചെയ്യുകയോ ചെയ്യുമ്പോൾ മെമ്മറി ഫ്രീ ചെയ്യാനുള്ള ക്ലീനപ്പ് കോഡ്
+<!-- 730 --> window.addEventListener('beforeunload', function () {
+<!-- 731 --> try {
+<!-- 732 --> clearInterval(translateBannerInterval);
+<!-- 733 --> if (renderer) renderer.dispose();
+<!-- 734 --> if (animateRef) cancelAnimationFrame(animateRef);
+<!-- 735 --> } catch (e) {}
+<!-- 736 --> });
+<!-- 737 --> </script>
+<!-- 738 --> <!-- ========================= -->
+<!-- 739 --> <!-- BAS DEDICATION INTEGRATION -->
+<!-- 740 --> <!-- ========================= -->
+<!-- 741 -->
+<!-- 742 --> <script src="dedication.js"></script>
+<!-- 743 -->
+<!-- 744 -->  
+<!-- 745 --> <script>
+<!-- 746 --> (function () {
+<!-- 747 -->
+<!-- 748 --> const map = {
+<!-- 749 --> en:"english",
+<!-- 750 --> ml:"malayalam",
+<!-- 751 --> hi:"hindi",
+<!-- 752 --> ar:"arabic",
+<!-- 753 --> ta:"tamil",
+<!-- 754 --> ur:"urdu",
+<!-- 755 --> es:"spanish",
+<!-- 756 --> pt:"portuguese",
+<!-- 757 --> zh:"chinese",
+<!-- 758 --> bn:"bengali",
+<!-- 759 --> ru:"russian",
+<!-- 760 --> ja:"japanese",
+<!-- 761 --> de:"german",
+<!-- 762 --> fr:"french",
+<!-- 763 --> ko:"korean",
+<!-- 764 --> te:"telugu",
+<!-- 765 --> kn:"kannada",
+<!-- 766 --> mr:"marathi",
+<!-- 767 --> gu:"gujarati",
+<!-- 768 --> pa:"punjabi",
+<!-- 769 --> id:"indonesian",
+<!-- 770 --> tr:"turkish",
+<!-- 771 --> vi:"vietnamese",
+<!-- 772 --> th:"thai",
+<!-- 773 --> it:"italian",
+<!-- 774 --> fa:"persian",
+<!-- 775 --> pl:"polish",
+<!-- 776 --> nl:"dutch",
+<!-- 777 --> uk:"ukrainian",
+<!-- 778 --> el:"greek",
+<!-- 779 --> he:"hebrew",
+<!-- 780 --> sw:"swahili",
+<!-- 781 --> fil:"filipino"
+<!-- 782 --> };
+<!-- 783 -->
+<!-- 784 --> window.updateDedication = function(langCode){
+<!-- 785 -->
+<!-- 786 -->     const key = map[langCode] || "english";
+<!-- 787 -->
+<!-- 788 -->     if(
+<!-- 789 -->         window.dedicationData &&
+<!-- 790 -->         window.dedicationData[key] &&
+<!-- 791 -->         document.getElementById("dedication-text")
+<!-- 792 -->     ){
+<!-- 793 -->         document.getElementById("dedication-text").innerHTML =
+<!-- 794 -->         window.dedicationData[key].content;
+<!-- 795 -->     }
+<!-- 796 -->
+<!-- 797 --> };
+<!-- 798 -->
+<!-- 799 --> const oldChangeLang = window.changeLang;
+<!-- 800 -->
+<!-- 801 --> 
+<!-- 802 --> window.changeLang = function(langCode){
+<!-- 803 -->
+<!-- 804 -->     if(typeof oldChangeLang === "function"){
+<!-- 805 -->         oldChangeLang(langCode);
+<!-- 806 -->     }
+<!-- 807 -->
+<!-- 808 -->     setTimeout(function(){
+<!-- 809 -->         updateDedication(langCode);
+<!-- 810 -->     },800);
+<!-- 811 -->
+<!-- 812 --> };
+<!-- 813 -->
+<!-- 814 --> const oldReset = window.resetToEnglish;
+<!-- 815 -->
+<!-- 816 --> window.resetToEnglish = function(){
+<!-- 817 -->
+<!-- 818 -->     if(typeof oldReset === "function"){
+<!-- 819 -->         oldReset();
+<!-- 820 -->     }
+<!-- 821 -->
+<!-- 822 -->     setTimeout(function(){
+<!-- 823 -->         updateDedication("en");
+<!-- 824 -->     },800);
+<!-- 825 -->
+<!-- 826 --> };
+<!-- 827 -->
+<!-- 828 --> document.addEventListener("DOMContentLoaded",function(){
+<!-- 829 -->
+<!-- 830 -->     updateDedication("en");
+<!-- 831 -->
+<!-- 832 -->     const timer = setInterval(function(){
+<!-- 833 -->
+<!-- 834 -->         const s = document.querySelector(".goog-te-combo");
+<!-- 835 -->
+<!-- 836 -->         if(s){
+<!-- 837 -->
+<!-- 838 -->             s.addEventListener("change",function(){
+<!-- 839 -->
+<!-- 840 -->                 setTimeout(function(){
+<!-- 841 -->                     updateDedication(s.value);
+<!-- 842 -->                 },800);
+<!-- 843 -->
+<!-- 844 -->             },{once:false});
+<!-- 845 -->
+<!-- 846 -->             clearInterval(timer);
+<!-- 847 -->         }
+<!-- 848 -->
+<!-- 849 -->     },300);
+<!-- 850 -->
+<!-- 851 --> });
+<!-- 852 -->
+<!-- 853 --> })(); 
+<!-- 854 --> </script>
+<!-- 855 -->
+<!-- 856 --> <!-- ========================= -->
+<!-- 857 --> <!-- END BAS DEDICATION -->
+<!-- 858 --> <!-- ========================= -->
+<!-- 859 -->   
+<!-- 860 --> <script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit">
+<!-- 861 --> </script>
+<!-- 862 -->  <div id="basBalloonWrap" class="notranslate"> 
+<!-- 863 -->
+<!-- 864 --> <div id="installBall" class="bas-ball white-b" onclick="handleInstallTap()">
+<!-- 865 --> <img src="icon-512.png" class="bas-sticker">
+<!-- 866 --> <div id="statTxt" class="bas-lbl">INSTALL</div>
+<!-- 867 --> <div class="bas-nipple"></div>
+<!-- 868 --> <div class="bas-str"></div>
+<!-- 869 --> </div> 
+<!-- 870 -->
+<!-- 871 --> <div class="bas-ball blue-b" onclick="goWhatsApp()">
+<!-- 872 --> <div class="bas-lbl" style="color:#fff;">SAVE TO<br>WHATSAPP</div>
+<!-- 873 --> <div class="bas-nipple"></div>
+<!-- 874 --> <div class="bas-str"></div>
+<!-- 875 --> </div> 
+<!-- 876 -->
+<!-- 877 --> </div> 
+<!-- 878 -->
+<!-- 879 --> <style>
+<!-- 880 --> /* ബലൂണുകൾ സ്ക്രീനിന്റെ താഴെ മറഞ്ഞുപോകാതിരിക്കാൻ ബോഡിക്ക് നൽകുന്ന പാഡിങ് */
+<!-- 881 --> body {
+<!-- 882 --> padding-bottom: 160px !important;
+<!-- 883 --> } 
+<!-- 884 -->
+<!-- 885 --> /* ബലൂൺ റാപ്പറിന്റെ സ്ക്രീനിലെ പൊസിഷനും ആനിമേഷൻ സ്പീഡും നിശ്ചയിക്കുന്ന സ്റ്റൈൽ */
+<!-- 886 --> #basBalloonWrap {
+<!-- 887 --> position: fixed;
+<!-- 888 --> bottom: 0; left: 0;
+<!-- 889 --> width: 280px; height: 400px;
+<!-- 890 --> z-index: 2147483647;
+<!-- 891 --> pointer-events: none;
+<!-- 892 --> transform: translateY(120%);
+<!-- 893 --> transition: transform 10s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+<!-- 894 --> display: block !important;
+<!-- 895 --> } 
+<!-- 896 -->
+<!-- 897 --> /* ബലൂണുകൾ പല സമയങ്ങളിൽ സ്ക്രീനിൽ കാണിക്കേണ്ട ട്രാൻസ്ഫോം പൊസിഷനുകൾ */
+<!-- 898 --> .state-up { transform: translateY(0%) !important; }
+<!-- 899 --> .state-hide { transform: translateY(120%) !important; }
+<!-- 900 --> .state-rest { transform: translateY(70%) !important; }
+  <!-- 901 --> /* ബലൂണിന്റെ കൃത്യമായ റൗണ്ട് ഷേപ്പും ഉള്ളിലെ നൂലും നിപ്പിളും ഉണ്ടാക്കാനുള്ള സ്റ്റൈൽ */
+<!-- 902 --> .bas-ball {
+<!-- 903 --> position: absolute;
+<!-- 904 --> border-radius: 50% 50% 50% 50% / 40% 40% 60% 60%;
+<!-- 905 --> display: flex; flex-direction: column; align-items: center; justify-content: center;
+<!-- 906 --> cursor: pointer; pointer-events: auto;
+<!-- 907 --> box-shadow: inset -8px -8px 20px rgba(0,0,0,0.4);
+<!-- 908 --> } 
+<!-- 909 -->
+<!-- 910 --> .bas-str { position: absolute; width: 1px; background: rgba(255,255,255,0.4); bottom: -1000px; left: 50%; height: 1000px; }
+<!-- 911 --> .bas-nipple { position: absolute; bottom: -10px; width: 18px; height: 10px; background: inherit; clip-path: polygon(20% 0, 80% 0, 100% 100%, 0 100%); } 
+<!-- 912 -->
+<!-- 913 --> /* 1. ഇൻസ്റ്റാൾ ബട്ടൺ ഉള്ളപ്പോൾ കാണിക്കേണ്ട വെള്ള ബലൂണിന്റെയും പച്ചകലർന്ന മഞ്ഞ എഴുത്തിന്റെയും സ്റ്റൈൽ */
+<!-- 914 --> .white-b {
+<!-- 915 --> width: 120px; height: 160px;
+<!-- 916 --> background: #ffffff !important;
+<!-- 917 --> bottom: 220px; left: 60px;
+<!-- 918 --> animation: floatW 5s ease-in-out infinite;
+<!-- 919 --> }
+<!-- 920 --> .white-b .bas-lbl {
+<!-- 921 --> color: #adff2f !important;
+<!-- 922 --> text-shadow: 1px 1px 2px rgba(0,0,0,0.8) !important;
+<!-- 923 --> } 
+<!-- 924 -->
+<!-- 925 --> /* 2. ആപ്പ് ഇൻസ്റ്റാൾഡ് ആയിക്കഴിഞ്ഞാൽ കാണിക്കേണ്ട പച്ചകലർന്ന മഞ്ഞ ബലൂണിന്റെയും കറുത്ത എഴുത്തിന്റെയും സ്റ്റൈൽ */
+<!-- 926 --> .is-pwa-installed {
+<!-- 927 --> width: 120px; height: 170Px;
+<!-- 928 --> background: #adff2f !important;
+<!-- 929 --> bottom: 220px; left: 60px;
+<!-- 930 --> animation: floatW 5s ease-in-out infinite;
+<!-- 931 --> }
+<!-- 932 --> .is-pwa-installed .bas-lbl {
+<!-- 933 --> color: #000000 !important;
+<!-- 934 --> text-shadow: none !important;
+<!-- 935 --> } 
+<!-- 936 -->
+<!-- 937 --> /* നീല ബലൂണിന്റെ വലിപ്പവും അത് ഫ്ലോട്ട് ചെയ്യാനുള്ള ആനിമേഷൻ ലിങ്കും */
+<!-- 938 --> .blue-b { width: 105px; height: 135px; background: #007bff; bottom: 70px; left: 30px; animation: floatB 20s ease-in-out infinite; }
+<!-- 939 --> .bas-sticker { width: 75px; height: 75px; border-radius: 20px; margin-bottom: 5px; border: 1px solid #ddd; }
+<!-- 940 --> .bas-lbl { font-family: sans-serif; font-size: 15px; font-weight: 900; text-align: center; line-height: 1.2; } 
+<!-- 941 -->
+<!-- 942 --> /* ബലൂണുകൾ അന്തരീക്ഷത്തിൽ ഒഴുകി നടക്കാൻ വേണ്ടിയുള്ള ആനിമേഷൻ കീഫ്രെയിമുകൾ */
+<!-- 943 --> @keyframes floatW { 0%, 100% { transform: translate(0, 0) rotate(-3deg); } 50% { transform: translate(35px, 45px) rotate(5deg); } }
+<!-- 944 --> @keyframes floatB { 0%, 100% { transform: translate(0, 0) rotate(4deg); } 50% { transform: translate(25px, -25px) rotate(-4deg); } }
+<!-- 945 --> </style> 
+<!-- 946 -->
+<!-- 947 --> <script>
+<!-- 948 --> // ബലൂൺ സ്റ്റാറ്റസ് നിയന്ത്രിക്കുന്നതിനുള്ള ഗ്ലോബൽ വേരിയബിളുകൾ
+<!-- 949 --> let basPrompt;
+<!-- 950 --> const wrap = document.getElementById('basBalloonWrap');
+<!-- 951 --> const stat = document.getElementById('statTxt');
+<!-- 952 --> const ball = document.getElementById('installBall'); 
+<!-- 953 -->
+<!-- 954 --> // 1. ബ്രൗസറിൽ ഇൻസ്റ്റാൾ പ്രോംപ്റ്റ് ലഭ്യമാകുമ്പോൾ വെള്ള ബലൂൺ സെറ്റ് ചെയ്യുന്ന ലോജിക്
+<!-- 955 --> window.addEventListener('beforeinstallprompt', (e) => {
+<!-- 956 --> e.preventDefault();
+<!-- 957 --> basPrompt = e;
+<!-- 958 --> stat.innerText = "INSTALL";
+<!-- 959 --> ball.className = "bas-ball white-b";
+<!-- 960 --> }); 
+<!-- 961 -->
+<!-- 962 --> // 2. ആപ്പ് മുൻപേ ഇൻസ്റ്റാൾ ചെയ്തിട്ടുണ്ടെങ്കിൽ പച്ചകലർന്ന മഞ്ഞ ബലൂൺ കാണിക്കുന്ന ലോജിക്
+<!-- 963 --> window.addEventListener('DOMContentLoaded', () => {
+<!-- 964 --> setTimeout(() => {
+<!-- 965 --> if (!basPrompt) {
+<!-- 966 --> stat.innerText = "INSTALLED";
+<!-- 967 --> ball.className = "bas-ball is-pwa-installed";
+<!-- 968 --> }
+<!-- 969 --> }, 3000); // ബ്രൗസറിന് ലോഡ് ആകാൻ നൽകുന്ന സമയം
+<!-- 970 --> }); 
+<!-- 971 -->
+<!-- 972 --> // ബലൂണുകൾ കൃത്യമായ സമയക്രമത്തിൽ സ്ക്രീനിൽ പൊങ്ങി വരാനും താഴാനും ഉള്ള ടൈമർ ഫങ്ഷൻ
+<!-- 973 --> function initBalloons() {
+<!-- 974 --> setTimeout(() => {
+<!-- 975 --> wrap.classList.add('state-up');
+<!-- 976 --> setTimeout(() => { wrap.classList.replace('state-up', 'state-hide');
+<!-- 977 --> setTimeout(() => { wrap.classList.replace('state-hide', 'state-rest'); }, 30000); }, 15000); }, 5000);
+<!-- 978 --> } 
+<!-- 979 -->
+<!-- 980 --> // യൂസർ ബലൂണിൽ തൊടുമ്പോൾ അതിനെ വീണ്ടും സ്ക്രീനിലേക്ക് പൂർണ്ണമായി കൊണ്ടുവരുന്ന ഫങ്ഷൻ
+<!-- 981 --> const wake = () => { wrap.classList.remove('state-hide', 'state-rest'); wrap.classList.add('state-up'); };
+<!-- 982 --> wrap.addEventListener('click', wake); wrap.addEventListener('touchstart', wake);
+<!-- 983 --> window.addEventListener('load', initBalloons); 
+<!-- 984 -->
+<!-- 985 --> // സൈറ്റ് ഇൻസ്റ്റാൾ ചെയ്യാനുള്ള ഗൈഡ് ലിങ്ക് വാട്സാപ്പിലേക്ക് ഷെയർ ചെയ്യുന്ന ഫങ്ഷൻ
+<!-- 986 --> function goWhatsApp(){
+<!-- 987 --> let url = "https://bascharity-56f.pages.dev";
+<!-- 988 --> let text = "Save a beautiful icon to your screen\n\n" + url + "\n\nChrome → ⋮ 3 dot → Save to Screen → Install";
+<!-- 989 --> window.open("https://wa.me/?text=" + encodeURIComponent(text), "_blank");
+<!-- 990 --> } 
+<!-- 991 -->
+<!-- 992 --> // ഇൻസ്റ്റാൾ ബലൂണിൽ ക്ലിക്ക് ചെയ്യുമ്പോൾ ഇൻസ്റ്റാളേഷൻ വിൻഡോ കാണിക്കുന്ന ഫങ്ഷൻ
+<!-- 993 --> function handleInstallTap() {
+<!-- 994 --> if (!basPrompt) return; // ഇൻസ്റ്റാൾഡ് ആണെങ്കിൽ ക്ലിക്ക് പ്രവർത്തിക്കില്ല
+<!-- 995 --> basPrompt.prompt();
+<!-- 996 --> basPrompt.userChoice.then((c) => {
+<!-- 997 --> if (c.outcome === 'accepted') {
+<!-- 998 --> stat.innerText = "INSTALLED";
+<!-- 999 --> ball.className = "bas-ball is-pwa-installed";
+<!-- 1000 --> } 
+<!-- 1001 --> basPrompt = null;
+<!-- 1002 --> });
+<!-- 1003 --> } 
+<!-- 1004 -->
+<!-- 1005 --> // സിസ്റ്റം വഴി ആപ്പ് വിജയകരമായി ഇൻസ്റ്റാൾ ചെയ്യപ്പെട്ടു കഴിഞ്ഞാൽ ബലൂൺ പച്ചയാക്കുന്ന ലോജിക്
+<!-- 1006 --> window.addEventListener('appinstalled', () => {
+<!-- 1007 --> stat.innerText = "INSTALLED";
+<!-- 1008 --> ball.className = "bas-ball is-pwa-installed";
+<!-- 1009 --> });
+<!-- 1010 --> </script>
+<!-- 1011 -->
+<!-- 1012 --> <!-- COUNTRY BOX START -->
+<!-- 1013 -->
+<!-- 1014 --> <style>
+<!-- 1015 --> .country-board{width:96%;max-width:900px;margin:14px auto;padding:14px;border:1px solid #cfcfcf;border-radius:16px;background:#111;color:#fff;font-family:Arial,sans-serif}
+<!-- 1016 --> .country-title{width:100%;background:#4a4a4a;color:#fff;border:2px solid #dfe6eb;border-radius:14px;padding:14px 8px;text-align:center;font-size:16px;font-weight:800;margin-bottom:12px}
+<!-- 1017 --> .country-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-bottom:12px}
+<!-- 1018 --> .country-btn{background:#4a4a4a;border:1px solid #666;border-radius:14px;padding:14px 8px;color:#fff;font-size:16px;font-weight:800;text-align:center;cursor:pointer;border-left-width:6px}
+<!-- 1019 --> .country-btn.active{color:#00ff66}
+<!-- 1020 --> .india{border-left-color:#FF9933}.usa{border-left-color:#2196F3}.uk{border-left-color:#E91E63}.uae{border-left-color:#00C853}.saudi{border-left-color:#4CAF50}.canada{border-left-color:#F44336}.germany{border-left-color:#9C27B0}.france{border-left-color:#3F51B5}.australia{border-left-color:#FFC107}
+<!-- 1021 --> #allCountries{width:100%;background:#5a5a5a;color:#fff;border:2px solid #dfe6eb;border-radius:14px;padding:14px 8px;font-size:16px;font-weight:800;text-align:center;text-align-last:center;margin-bottom:12px}
+<!-- 1022 --> #allCountries.green-select{color:#00ff66}
+<!-- 1023 --> #shopOnCountry{width:100%;padding:14px 8px;background:#5a5a5a;border:2px solid #dfe6eb;border-radius:14px;text-align:center;font-size:18px;font-weight:800;color:#fff;margin-bottom:12px}
+<!-- 1024 --> #shopOnCountry .green{color:#00ff66}
+<!-- 1025 --> #featuredShops{display:flex;flex-direction:column;gap:10px}
+<!-- 1026 --> .shopCard{background:#2b2b2b;border:1px solid #c0c0c0;border-left:8px solid #00C853;border-radius:14px;padding:14px 16px;display:flex;align-items:center;gap:12px;min-height:78px;text-decoration:none;box-shadow:0 2px 10px rgba(0,0,0,.25)}
+<!-- 1027 --> .shopCard:nth-child(10n+1){border-left-color:#00C853}.shopCard:nth-child(10n+2){border-left-color:#2196F3}.shopCard:nth-child(10n+3){border-left-color:#F44336}.shopCard:nth-child(10n+4){border-left-color:#FF9800}.shopCard:nth-child(10n+5){border-left-color:#9C27B0}.shopCard:nth-child(10n+6){border-left-color:#00BCD4}.shopCard:nth-child(10n+7){border-left-color:#E91E63}.shopCard:nth-child(10n+8){border-left-color:#FFC107}.shopCard:nth-child(10n+9){border-left-color:#009688}.shopCard:nth-child(10n+10){border-left-color:#795548}
+<!-- 1028 --> .shopDot{width:18px;flex:0 0 18px;color:#fff;font-weight:900;text-align:center;font-size:20px;line-height:1}
+<!-- 1029 --> .shopFav{width:42px;height:42px;object-fit:contain;flex:0 0 42px;border-radius:8px;background:#fff}
+<!-- 1030 --> .shopName{flex:1;color:#fff;font-size:30px;font-weight:800;line-height:1.2;text-align:left}
+<!-- 1031 --> .shop-button-container{display:inline-flex;align-items:center;position:relative}
+<!-- 1032 --> .shop-icon{font-size:50px!important;width:50px!important;height:50px!important;display:flex;align-items:center;justify-content:center;position:absolute;left:0;top:0;z-index:10}
+<!-- 1033 --> .shop-button{padding:15px 30px;font-size:16px;background-color:blue;color:white;border:none;margin-left:50px;cursor:pointer;position:relative}
+<!-- 1034 --> </style>
+<!-- 1035 -->
+<!-- 1036 --> <div class="country-board">
+<!-- 1037 -->   <div class="country-title">SELECT COUNTRY</div>
+<!-- 1038 -->   <div class="country-grid">
+<!-- 1039 -->     <button class="country-btn india" data-country="india" onclick="renderCountry('india')">INDIA</button>
+<!-- 1040 -->     <button class="country-btn usa" data-country="usa" onclick="renderCountry('usa')">USA</button>
+<!-- 1041 -->     <button class="country-btn uk" data-country="uk" onclick="renderCountry('uk')">UK</button>
+<!-- 1042 -->     <button class="country-btn uae" data-country="uae" onclick="renderCountry('uae')">UAE</button>
+<!-- 1043 -->     <button class="country-btn saudi" data-country="saudi arabia" onclick="renderCountry('saudi arabia')">SAUDI ARABIA</button>
+<!-- 1044 -->     <button class="country-btn canada" data-country="canada" onclick="renderCountry('canada')">CANADA</button>
+<!-- 1045 -->     <button class="country-btn germany" data-country="germany" onclick="renderCountry('germany')">GERMANY</button>
+<!-- 1046 -->     <button class="country-btn france" data-country="france" onclick="renderCountry('france')">FRANCE</button>
+<!-- 1047 -->     <button class="country-btn australia" data-country="australia" onclick="renderCountry('australia')">AUSTRALIA</button>
+<!-- 1048 -->   </div>
+<!-- 1049 -->
+<!-- 1050 -->   <select id="allCountries">
+<!-- 1051 -->     <option value="">SEARCH / SELECT ALL COUNTRIES ▼</option>
+<!-- 1052 -->   </select>
+<!-- 1053 --> <!-- PATENT SEAL — BEFORE SHOP -->
+<!-- 1054 --> <div style="
+<!-- 1055 -->   width:100%;
+<!-- 1056 -->   text-align:center;
+<!-- 1057 -->   margin:18px auto 10px;
+<!-- 1058 -->   overflow:hidden;
+<!-- 1059 --> ">
+<!-- 1060 -->   <img
+<!-- 1061 -->     src="patent.png"
+<!-- 1062 -->     alt="Patent Soon Global"
+<!-- 1063 -->     style="
+<!-- 1064 -->       width:92%;
+<!-- 1065 -->       max-width:700px;
+<!-- 1066 -->       height:auto;
+<!-- 1067 -->       display:block;
+<!-- 1068 -->       margin:0 auto 20px;
+<!-- 1069 -->       transform:rotate(-20deg);
+<!-- 1070 -->       filter:drop-shadow(0 4px 8px rgba(0,0,0,.6));
+<!-- 1071 -->     "
+<!-- 1072 -->   >
+<!-- 1073 --> </div>
+<!-- 1074 --> <!-- END PATENT SEAL -->
+<!-- 1075 --> <div id="shopOnCountry">SHOP ON INDIA</div>
+<!-- 1076 -->
+<!-- 1077 -->
+<!-- 1078 -->     <div id="featuredShops"></div>
+<!-- 1079 -->     <!-- Language Box -->
+<!-- 1080 --> <div style="max-width:900px;margin:20px auto;padding:18px;background:#ffffff;border-left:6px solid #FF9800;border-radius:12px;box-shadow:0 4px 12px rgba(0,0,0,.12);text-align:center;">
+<!-- 1081 -->
+<!-- 1082 --> <div style="font-size:24px;font-weight:800;color:#1565C0;margin-bottom:8px;">
+<!-- 1083 --> Basic Language: English
+<!-- 1084 --> </div>
+<!-- 1085 -->
+<!-- 1086 --> <div style="font-size:22px;font-weight:800;color:#E65100;">
+<!-- 1087 --> Translations May Not Be Accurate
+<!-- 1088 --> </div>
+<!-- 1089 -->
+<!-- 1090 --> </div>
+<!-- 1091 -->
+<!-- 1092 --> <!-- Thousands of Shops Box -->
+<!-- 1093 --> <div style="max-width:900px;margin:20px auto;padding:18px;background:#ffffff;border-left:6px solid #1E88E5;border-radius:12px;box-shadow:0 4px 12px rgba(0,0,0,.12);text-align:center;">
+<!-- 1094 -->
+<!-- 1095 --> <div style="font-size:30px;font-weight:900;line-height:1.25;background:linear-gradient(90deg,#ff0000,#ff9800,#00c853,#0091ea,#7b1fa2);-webkit-background-clip:text;-webkit-text-fill-color:transparent;">
+<!-- 1096 --> Thousands of Shops Categorized Below
+<!-- 1097 --> </div>
+<!-- 1098 -->
+<!-- 1099 --> </div>
+<!-- 1100 --> </div>
+<!-- 1101 --> <div id="basCompleteWrapper" style="width: 96%; max-width: 900px; margin: 20px auto; font-family: 'Segoe UI', Roboto, sans-serif; color: #fff; text-align: center; border: 3px solid #ff9800; padding: 50px 40px; border-radius: 28px; background: #111111; box-shadow: 0 20px 50px rgba(255, 152, 0, 0.15);">
+<!-- 1102 --> <div id="basMainDisplay" style="width:100%;">
+<!-- 1103 -->     
+<!-- 1104 -->  
+<!-- 1105 -->     <h1 style="font-size:34px; color:#ff9800; margin-bottom:30px; font-weight:bold; line-height:1.4;">
+<!-- 1106 -->      Why Do People
+<!-- 1107 --> <span onclick="handleInstallTap()" style="color:#2196F3!important;text-decoration:underline;cursor:pointer;display:inline-block;pointer-events:auto;">Install</span>
+<!-- 1108 --> This
+<!-- 1109 --> <img src="icon-512.png"
+<!-- 1110 --> style="width:42px;height:42px;vertical-align:middle;margin:0 8px;border-radius:10px;">
+<!-- 1111 --> <span onclick="handleInstallTap()" style="color:#2196F3!important;text-decoration:underline;cursor:pointer;display:inline-block;pointer-events:auto;">Icon</span>
+<!-- 1112 -->     </h1>
+<!-- 1113 -->
+<!-- 1114 -->     <div style="text-align:left; font-size:23px; line-height:1.7; padding:0 10px;">
+<!-- 1115 -->
+<!-- 1116 -->         <div style="margin-bottom:25px;">
+<!-- 1117 -->             <strong style="color:#ff9800;">1.</strong>
+<!-- 1118 -->             First of all, it is free to use and requires very little phone memory. It can be used as an alternative to installing thousands of high-memory shopping apps.
+<!-- 1119 -->         </div>
+<!-- 1120 -->
+<!-- 1121 -->         <div style="margin-bottom:25px;">
+<!-- 1122 -->             <strong style="color:#ff9800;">2.</strong>
+<!-- 1123 -->             It provides access to 50,000+ shops across different countries and languages, giving users the opportunity to shop and purchase products from different locations around the world.
+<!-- 1124 -->         </div>
+<!-- 1125 -->
+<!-- 1126 -->         <div style="margin-bottom:25px;">
+<!-- 1127 -->             <strong style="color:#ff9800;">3.</strong>
+<!-- 1128 -->             It helps users compare prices across multiple shops and buy products at lower prices.
+<!-- 1129 -->         </div>
+<!-- 1130 -->
+<!-- 1131 -->     </div>
+<!-- 1132 -->
+<!-- 1133 -->     <div onclick="basOpenFullPage()" 
+<!-- 1134 -->          style="color:#00ff00; font-size:27px; font-weight:bold; cursor:pointer; text-decoration:underline; display:inline-block; margin-top:10px;">
+<!-- 1135 -->         More....
+<!-- 1136 -->     </div>
+<!-- 1137 -->
+<!-- 1138 --> </div>
+<!-- 1139 -->
+<!-- 1140 -->
+<!-- 1141 --> <div id="basFullInfoPage" style="display:none; width:100%; text-align:left;">
+<!-- 1142 -->
+<!-- 1143 -->     <div style="text-align:left; font-size:23px; line-height:1.7; padding:20px 10px 0;">
+<!-- 1144 -->
+<!-- 1145 -->         <div style="margin-bottom:25px;">
+<!-- 1146 -->             <strong style="color:#ff9800;">4.</strong>
+<!-- 1147 -->             By shopping and sharing links, users can become part of the Hunger Relief charity mission.
+<!-- 1148 -->         </div>
+<!-- 1149 -->
+<!-- 1150 -->         <div style="margin-bottom:25px;">
+<!-- 1151 -->             <strong style="color:#ff9800;">5.</strong>
+<!-- 1152 -->             It helps people understand products, prices, offers, and shopping cultures in different countries.
+<!-- 1153 -->         </div>
+<!-- 1154 -->
+<!-- 1155 -->         <div style="margin-bottom:25px;">
+<!-- 1156 -->             <strong style="color:#ff9800;">6.</strong>
+<!-- 1157 -->             Since everything can be accessed anytime through a single icon, it reduces the need to repeatedly install new apps or constantly update them.
+<!-- 1158 -->         </div>
+<!-- 1159 -->
+<!-- 1160 -->         <div style="margin-bottom:25px;">
+<!-- 1161 -->             <strong style="color:#ff9800;">7.</strong>
+<!-- 1162 -->             It provides a way to send your donations directly to trusted organisations worldwide and helps protect people from fraudulent charity advertisements.
+<!-- 1163 -->         </div>
+<!-- 1164 -->
+<!-- 1165 -->         <div style="margin-bottom:25px;">
+<!-- 1166 -->             <strong style="color:#ff9800;">8.</strong>
+<!-- 1167 -->             It can also be shared as a useful gift with relatives and friends, enabling them to become part of this good cause.
+<!-- 1168 -->         </div>
+<!-- 1169 -->
+<!-- 1170 -->         <div style="margin-bottom:25px;">
+<!-- 1171 -->             <strong style="color:#ff9800;">9.</strong>
+<!-- 1172 -->             It can also serve as a Global Shopping Guide for students, expatriates, travellers, and anyone interested in understanding the global market.
+<!-- 1173 -->         </div>
+<!-- 1174 -->
+<!-- 1175 -->         <div style="margin-bottom:25px;">
+<!-- 1176 -->             <strong style="color:#ff9800;">10.</strong>
+<!-- 1177 -->             Links to government institutions and public services will be made available in the next update.
+<!-- 1178 -->             <strong style="color:#00ff00;">(In Progress)</strong>
+<!-- 1179 -->         </div>
+<!-- 1180 -->
+<!-- 1181 -->     </div>
+<!-- 1182 -->
+<!-- 1183 -->     <button onclick="basCloseFullPage()" 
+<!-- 1184 -->             style="background:#ff9800; color:#000; padding:14px 40px; border-radius:30px; font-size:23px; font-weight:bold; border:none; cursor:pointer; display:block; margin:30px auto 10px;">
+<!-- 1185 -->         Back
+<!-- 1186 -->     </button>
+<!-- 1187 -->
+<!-- 1188 --> </div>
+<!-- 1189 -->
+<!-- 1190 -->
+<!-- 1191 --> <script>
+<!-- 1192 -->
+<!-- 1193 --> let basIdleTimer;
+<!-- 1194 -->
+<!-- 1195 --> function basOpenFullPage(){
+<!-- 1196 -->
+<!-- 1197 -->     document.getElementById('basMainDisplay').style.display='none';
+<!-- 1198 -->     document.getElementById('basFullInfoPage').style.display='block';
+<!-- 1199 -->     clearTimeout(basIdleTimer);
+<!-- 1200 -->     basIdleTimer = setTimeout(basCloseFullPage, 12000);
+
+  <!-- 1201 -->     basResetIdleTimer();
+<!-- 1202 --> }
+<!-- 1203 -->
+<!-- 1204 --> function basCloseFullPage(){
+<!-- 1205 -->
+<!-- 1206 -->     clearTimeout(basIdleTimer);
+<!-- 1207 -->
+<!-- 1208 -->     document.getElementById('basFullInfoPage').style.display='none';
+<!-- 1209 -->     document.getElementById('basMainDisplay').style.display='block';
+<!-- 1210 --> }
+<!-- 1211 -->
+<!-- 1212 --> function basResetIdleTimer(){
+<!-- 1213 -->
+<!-- 1214 -->     clearTimeout(basIdleTimer);
+<!-- 1215 -->
+<!-- 1216 -->     basIdleTimer=setTimeout(
+<!-- 1217 -->         basCloseFullPage,
+<!-- 1218 -->         35000
+<!-- 1219 -->     );
+<!-- 1220 --> }
+<!-- 1221 -->
+<!-- 1222 --> </script>
+<!-- 1223 --> </div>
+<!-- 1224 -->
+<!-- 1225 -->   
+<!-- 1226 --> <script>
+<!-- 1227 -->  
+<!-- 1228 --> /* ================================================= */
+<!-- 1229 --> /* FIXED 10 COUNTRIES */
+<!-- 1230 --> /* ================================================= */
+<!-- 1231 --> const fixedCountries=[
+<!-- 1232 --> "india",
+<!-- 1233 --> "usa",
+<!-- 1234 --> "uk",
+<!-- 1235 --> "uae",
+<!-- 1236 --> "canada",
+<!-- 1237 --> "australia",
+<!-- 1238 --> "germany",
+<!-- 1239 --> "france",
+<!-- 1240 --> "saudi arabia"
+<!-- 1241 --> ];
+<!-- 1242 -->
+<!-- 1243 -->
+<!-- 1244 -->
+<!-- 1245 --> const allCountriesList=[
+<!-- 1246 -->  
+<!-- 1247 --> "afghanistan",
+<!-- 1248 --> "albania",
+<!-- 1249 --> "algeria",
+<!-- 1250 --> "andorra",
+<!-- 1251 --> "angola",
+<!-- 1252 --> "antigua_and_barbuda",
+<!-- 1253 --> "argentina",
+<!-- 1254 --> "armenia",
+<!-- 1255 --> "australia",
+<!-- 1256 --> "austria",
+<!-- 1257 --> "azerbaijan",
+<!-- 1258 --> "bahamas",
+<!-- 1259 --> "bahrain",
+<!-- 1260 --> "bangladesh",
+<!-- 1261 --> "barbados",
+<!-- 1262 --> "belarus",
+<!-- 1263 --> "belgium",
+<!-- 1264 --> "belize",
+<!-- 1265 --> "benin",
+<!-- 1266 --> "bhutan",
+<!-- 1267 --> "bolivia",
+<!-- 1268 --> "bosnia_and_herzegovina",
+<!-- 1269 --> "botswana",
+<!-- 1270 --> "brazil",
+<!-- 1271 --> "brunei",
+<!-- 1272 --> "bulgaria",
+<!-- 1273 --> "burkina_faso",
+<!-- 1274 --> "burundi",
+<!-- 1275 --> "cabo_verde",
+<!-- 1276 --> "cambodia",
+<!-- 1277 --> "cameroon",
+<!-- 1278 --> "canada",
+<!-- 1279 --> "central_african_republic",
+<!-- 1280 --> "chad",
+<!-- 1281 --> "chile",
+<!-- 1282 --> "china",
+<!-- 1283 --> "colombia",
+<!-- 1284 --> "comoros",
+<!-- 1285 --> "congo",
+<!-- 1286 --> "costa_rica",
+<!-- 1287 --> "cote_d'ivoire",
+<!-- 1288 --> "croatia",
+<!-- 1289 --> "cuba",
+<!-- 1290 --> "cyprus",
+<!-- 1291 --> "czechia",
+<!-- 1292 --> "democratic_republic_of_the_congo",
+<!-- 1293 --> "denmark",
+<!-- 1294 --> "djibouti",
+<!-- 1295 --> "dominica",
+<!-- 1296 --> "dominican_republic",
+<!-- 1297 --> "ecuador",
+<!-- 1298 --> "egypt",
+<!-- 1299 --> "el_salvador",
+<!-- 1300 --> "equatorial_guinea",
+  <!-- 1301 --> "eritrea",
+<!-- 1302 --> "estonia",
+<!-- 1303 --> "eswatini",
+<!-- 1304 --> "ethiopia",
+<!-- 1305 --> "fiji",
+<!-- 1306 --> "finland",
+<!-- 1307 --> "france",
+<!-- 1308 --> "gabon",
+<!-- 1309 --> "gambia",
+<!-- 1310 --> "georgia",
+<!-- 1311 --> "germany",
+<!-- 1312 --> "ghana",
+<!-- 1313 --> "greece",
+<!-- 1314 --> "grenada",
+<!-- 1315 --> "guatemala",
+<!-- 1316 --> "guinea",
+<!-- 1317 --> "guinea-bissau",
+<!-- 1318 --> "guyana",
+<!-- 1319 --> "haiti",
+<!-- 1320 --> "honduras",
+<!-- 1321 --> "hungary",
+<!-- 1322 --> "iceland",
+<!-- 1323 --> "india",
+<!-- 1324 --> "indonesia",
+<!-- 1325 --> "iran",
+<!-- 1326 --> "iraq",
+<!-- 1327 --> "ireland",
+<!-- 1328 --> "israel",
+<!-- 1329 --> "italy",
+<!-- 1330 --> "jamaica",
+<!-- 1331 --> "japan",
+<!-- 1332 --> "jordan",
+<!-- 1333 --> "kazakhstan",
+<!-- 1334 --> "kenya",
+<!-- 1335 --> "kiribati",
+<!-- 1336 --> "kuwait",
+<!-- 1337 --> "kyrgyzstan",
+<!-- 1338 --> "laos",
+<!-- 1339 --> "latvia",
+<!-- 1340 --> "lebanon",
+<!-- 1341 --> "lesotho",
+<!-- 1342 --> "liberia",
+<!-- 1343 --> "libya",
+<!-- 1344 --> "liechtenstein",
+<!-- 1345 --> "lithuania",
+<!-- 1346 --> "luxembourg",
+<!-- 1347 --> "madagascar",
+<!-- 1348 --> "malawi",
+<!-- 1349 --> "malaysia",
+<!-- 1350 --> "maldives",
+<!-- 1351 --> "mali",
+<!-- 1352 --> "malta",
+<!-- 1353 --> "marshall_islands",
+<!-- 1354 --> "mauritania",
+<!-- 1355 --> "mauritius",
+<!-- 1356 --> "mexico",
+<!-- 1357 --> "micronesia",
+<!-- 1358 --> "moldova",
+<!-- 1359 --> "monaco",
+<!-- 1360 --> "mongolia",
+<!-- 1361 --> "montenegro",
+<!-- 1362 --> "morocco",
+<!-- 1363 --> "mozambique",
+<!-- 1364 --> "myanmar",
+<!-- 1365 --> "namibia",
+<!-- 1366 --> "nauru",
+<!-- 1367 --> "nepal",
+<!-- 1368 --> "netherlands",
+<!-- 1369 --> "new_zealand",
+<!-- 1370 --> "nicaragua",
+<!-- 1371 --> "niger",
+<!-- 1372 --> "nigeria",
+<!-- 1373 --> "north_korea",
+<!-- 1374 --> "north_macedonia",
+<!-- 1375 --> "norway",
+<!-- 1376 --> "oman",
+<!-- 1377 --> "pakistan",
+<!-- 1378 --> "palau",
+<!-- 1379 --> "panama",
+<!-- 1380 --> "papua_new_guinea",
+<!-- 1381 --> "paraguay",
+<!-- 1382 --> "peru",
+<!-- 1383 --> "philippines",
+<!-- 1384 --> "poland",
+<!-- 1385 --> "portugal",
+<!-- 1386 --> "qatar",
+<!-- 1387 --> "romania",
+<!-- 1388 --> "russia",
+<!-- 1389 --> "rwanda",
+<!-- 1390 --> "saint_kitts_and_nevis",
+<!-- 1391 --> "saint_lucia",
+<!-- 1392 --> "saint_vincent_and_the_grenadines",
+<!-- 1393 --> "samoa",
+<!-- 1394 --> "san_marino",
+<!-- 1395 --> "sao_tome_and_principe",
+<!-- 1396 --> "saudi arabia",
+<!-- 1397 --> "senegal",
+<!-- 1398 --> "serbia",
+<!-- 1399 --> "seychelles",
+<!-- 1400 --> "sierra_leone",
+  <!-- 1401 --> "singapore",
+<!-- 1402 --> "slovakia",
+<!-- 1403 --> "slovenia",
+<!-- 1404 --> "solomon_islands",
+<!-- 1405 --> "somalia",
+<!-- 1406 --> "south_africa",
+<!-- 1407 --> "south_korea",
+<!-- 1408 --> "south_sudan",
+<!-- 1409 --> "spain",
+<!-- 1410 --> "sri_lanka",
+<!-- 1411 --> "sudan",
+<!-- 1412 --> "suriname",
+<!-- 1413 --> "sweden",
+<!-- 1414 --> "switzerland",
+<!-- 1415 --> "syria",
+<!-- 1416 --> "tajikistan",
+<!-- 1417 --> "tanzania",
+<!-- 1418 --> "thailand",
+<!-- 1419 --> "timor-leste",
+<!-- 1420 --> "togo",
+<!-- 1421 --> "tonga",
+<!-- 1422 --> "trinidad_and_tobago",
+<!-- 1423 --> "tunisia",
+<!-- 1424 --> "turkey",
+<!-- 1425 --> "turkmenistan",
+<!-- 1426 --> "tuvalu",
+<!-- 1427 --> "uganda",
+<!-- 1428 --> "uk",
+<!-- 1429 --> "uae",
+<!-- 1430 --> "usa",
+<!-- 1431 --> "uruguay",
+<!-- 1432 --> "uzbekistan",
+<!-- 1433 --> "vanuatu",
+<!-- 1434 --> "venezuela",
+<!-- 1435 --> "vietnam",
+<!-- 1436 --> "yemen",
+<!-- 1437 --> "zambia",
+<!-- 1438 --> "zimbabwe",
+<!-- 1439 --> "cook_islands",
+<!-- 1440 --> "niue",
+<!-- 1441 --> "palestine",
+<!-- 1442 --> "kosovo",
+<!-- 1443 --> "taiwan",
+<!-- 1444 --> "vatican_city",
+<!-- 1445 --> "hong_kong",
+<!-- 1446 --> "macau",
+<!-- 1447 --> "greenland",
+<!-- 1448 --> "faroe_islands",
+<!-- 1449 --> "puerto_rico",
+<!-- 1450 --> "guam",
+<!-- 1451 --> "new_caledonia"
+<!-- 1452 --> ];
+<!-- 1453 -->
+<!-- 1454 --> </script>
+<!-- 1455 -->
+<!-- 1456 --> <script>
+<!-- 1457 --> const allCountries = document.getElementById("allCountries");
+<!-- 1458 --> const featuredShops = document.getElementById("featuredShops");
+<!-- 1459 -->
+<!-- 1460 --> window.countryShops = window.countryShops || {};
+<!-- 1461 --> const loadedCountries = {};
+<!-- 1462 -->
+<!-- 1463 --> // dropdown നിറയ്ക്കുന്നു
+<!-- 1464 --> allCountriesList.forEach(country => {
+<!-- 1465 -->     const option = document.createElement("option");
+<!-- 1466 -->     option.value = country;
+<!-- 1467 -->     option.textContent = country.toUpperCase();
+<!-- 1468 -->     allCountries.appendChild(option);
+<!-- 1469 --> });
+<!-- 1470 -->
+<!-- 1471 --> // രാജ്യം തിരഞ്ഞെടുക്കുന്നു
+<!-- 1472 --> function setSelectedCountry(country) {
+<!-- 1473 -->
+<!-- 1474 -->     if (!country) return;
+<!-- 1475 -->
+<!-- 1476 -->     const pureCountry = country.trim().toLowerCase();
+<!-- 1477 -->
+<!-- 1478 -->     allCountries.classList.add("green-select");
+<!-- 1479 -->
+<!-- 1480 -->     // CHANGE: textContent → data-country
+<!-- 1481 -->     document.querySelectorAll(".country-btn").forEach(btn => {
+<!-- 1482 -->         const key = btn.getAttribute("data-country");
+<!-- 1483 -->         btn.classList.toggle(
+<!-- 1484 -->             "active",
+<!-- 1485 -->             key && key.trim().toLowerCase() === pureCountry
+<!-- 1486 -->         );
+<!-- 1487 -->     });
+<!-- 1488 -->
+<!-- 1489 -->     const shopBtn = document.getElementById("shopOnCountry");
+<!-- 1490 -->     if (shopBtn) {
+<!-- 1491 -->         shopBtn.innerHTML =
+<!-- 1492 -->             `SHOP ON <span class="green">${pureCountry.toUpperCase()}</span>`;
+<!-- 1493 -->     }
+<!-- 1494 -->
+<!-- 1495 -->     localStorage.setItem("selectedCountry", pureCountry);
+<!-- 1496 -->
+<!-- 1497 -->     fetchExternalCountryJS(pureCountry);
+<!-- 1498 --> }
+<!-- 1499 -->
+<!-- 1500 --> // helper
+  <!-- 1501 --> function renderCountry(country) {
+<!-- 1502 -->     setSelectedCountry(country);
+<!-- 1503 --> }
+<!-- 1504 -->
+<!-- 1505 --> function syncCategory(countryName) {
+<!-- 1506 -->     if (typeof changeCountry === "function") {
+<!-- 1507 -->         changeCountry(countryName);
+<!-- 1508 -->     }
+<!-- 1509 --> }
+<!-- 1510 -->
+<!-- 1511 --> function fetchExternalCountryJS(countryName) {
+<!-- 1512 -->
+<!-- 1513 -->     // already loaded
+<!-- 1514 -->     if (loadedCountries[countryName]) {
+<!-- 1515 -->
+<!-- 1516 -->         loadShops(countryShops[countryName]);
+<!-- 1517 -->         syncCategory(countryName);
+<!-- 1518 -->         return;
+<!-- 1519 -->     }
+<!-- 1520 -->
+<!-- 1521 -->     // already exists in window.countryShops
+<!-- 1522 -->     if (window.countryShops && window.countryShops[countryName]) {
+<!-- 1523 -->
+<!-- 1524 -->         loadedCountries[countryName] = true;
+<!-- 1525 -->
+<!-- 1526 -->         loadShops(countryShops[countryName]);
+<!-- 1527 -->         syncCategory(countryName);
+<!-- 1528 -->         return;
+<!-- 1529 -->     }
+<!-- 1530 -->
+<!-- 1531 -->     featuredShops.innerHTML =
+<!-- 1532 -->         "<div style='text-align:center;padding:20px;color:#ff9800;font-weight:bold;'>Loading shops...</div>";
+<!-- 1533 -->
+<!-- 1534 -->     const oldScript = document.getElementById("dynamic-country-script");
+<!-- 1535 -->     if (oldScript) oldScript.remove();
+<!-- 1536 -->
+<!-- 1537 -->     const script = document.createElement("script");
+<!-- 1538 -->
+<!-- 1539 -->     script.id = "dynamic-country-script";
+<!-- 1540 -->
+<!-- 1541 -->     // FIXED REGEX (small correction: s instead of s)
+<!-- 1542 -->     script.src = "./" + countryName + ".js";
+<!-- 1543 -->     script.onload = function () {
+<!-- 1544 -->
+<!-- 1545 -->         loadedCountries[countryName] = true;
+<!-- 1546 -->
+<!-- 1547 -->         if (window.countryShops && window.countryShops[countryName]) {
+<!-- 1548 -->
+<!-- 1549 -->             loadShops(countryShops[countryName]);
+<!-- 1550 -->             syncCategory(countryName);
+<!-- 1551 -->
+<!-- 1552 -->         } else {
+<!-- 1553 -->
+<!-- 1554 -->             featuredShops.innerHTML =
+<!-- 1555 -->                 "<div style='text-align:center;padding:20px;color:red;'>No shop data</div>";
+<!-- 1556 -->
+<!-- 1557 -->         }
+<!-- 1558 -->
+<!-- 1559 -->     };
+<!-- 1560 -->
+<!-- 1561 -->     script.onerror = function () {
+<!-- 1562 -->
+<!-- 1563 -->         featuredShops.innerHTML =
+<!-- 1564 -->             "<div style='text-align:center;padding:20px;color:red;'>Country file not found</div>";
+<!-- 1565 -->
+<!-- 1566 -->     };
+<!-- 1567 -->
+<!-- 1568 -->     document.body.appendChild(script);
+<!-- 1569 -->
+<!-- 1570 --> }
+<!-- 1571 -->
+<!-- 1572 --> function loadShops(shopsArray) {
+<!-- 1573 -->
+<!-- 1574 -->     featuredShops.innerHTML = "";
+<!-- 1575 -->
+<!-- 1576 -->     if (!shopsArray || shopsArray.length === 0) {
+<!-- 1577 -->
+<!-- 1578 -->         featuredShops.innerHTML =
+<!-- 1579 -->             "<div style='text-align:center;font-weight:bold;padding:20px;'>No shops available.</div>";
+<!-- 1580 -->
+<!-- 1581 -->         return;
+<!-- 1582 -->     }
+<!-- 1583 -->
+<!-- 1584 -->     const colors = [
+<!-- 1585 -->         "#00C853", "#2196F3", "#F44336", "#FF9800", "#9C27B0",
+<!-- 1586 -->         "#00BCD4", "#E91E63", "#FFC107", "#009688", "#795548"
+<!-- 1587 -->     ];
+<!-- 1588 -->
+<!-- 1589 -->     shopsArray.slice(0, 10).forEach((shop, index) => {
+<!-- 1590 -->
+<!-- 1591 -->         let host = "";
+<!-- 1592 -->         try {
+<!-- 1593 -->             host = new URL(shop.u).hostname;
+<!-- 1594 -->         } catch (e) { }
+<!-- 1595 -->
+<!-- 1596 -->         featuredShops.innerHTML += `
+<!-- 1597 --> <a href="${shop.u}" target="_blank"
+<!-- 1598 --> class="shopCard"
+<!-- 1599 --> style="border-left-color:${colors[index % 10]}">
+<!-- 1600 -->
+<!-- 1601 --> <div class="shopDot">${(shop.a || "").trim() ? "" : "."}</div>
+<!-- 1602 -->
+<!-- 1603 --> <img class="shopFav"
+<!-- 1604 --> src="https://www.google.com/s2/favicons?domain=${host}&sz=64"
+<!-- 1605 --> loading="lazy">
+<!-- 1606 -->
+<!-- 1607 --> <div class="shopName notranslate" translate="no">
+<!-- 1608 --> ${shop.n}
+<!-- 1609 --> </div>
+<!-- 1610 -->
+<!-- 1611 --> </a>`;
+<!-- 1612 -->     });
+<!-- 1613 -->
+<!-- 1614 --> }
+<!-- 1615 -->
+<!-- 1616 -->
+<!-- 1617 --> document.addEventListener("DOMContentLoaded", () => {
+<!-- 1618 -->
+<!-- 1619 -->     const savedCountry =
+<!-- 1620 -->         localStorage.getItem("selectedCountry") || "india";
+<!-- 1621 -->
+<!-- 1622 -->     setSelectedCountry(savedCountry);
+<!-- 1623 -->
+<!-- 1624 -->     document.querySelectorAll(".country-btn").forEach(btn => {
+<!-- 1625 -->
+<!-- 1626 -->         btn.addEventListener("click", function () {
+<!-- 1627 -->             // CHANGE: textContent → data-country
+<!-- 1628 -->             const key = this.getAttribute("data-country") || this.textContent;
+<!-- 1629 -->             setSelectedCountry(
+<!-- 1630 -->                 key.trim().toLowerCase()
+<!-- 1631 -->             );
+<!-- 1632 -->         });
+<!-- 1633 -->
+<!-- 1634 -->     });
+<!-- 1635 -->
+<!-- 1636 -->     allCountries.addEventListener("change", e => {
+<!-- 1637 -->
+<!-- 1638 -->         if (e.target.value) {
+<!-- 1639 -->             setSelectedCountry(e.target.value);
+<!-- 1640 -->             allCountries.selectedIndex = 0;
+<!-- 1641 -->         }
+<!-- 1642 -->
+<!-- 1643 -->     });
+<!-- 1644 -->
+<!-- 1645 --> });
+<!-- 1646 --> </script>
+<!-- 1647 --> <!-- SL NO 37 : HTML END -->
+<!-- 1648 --> <!-- ================================================= -->
+<!-- 1649 -->
+<!-- 1650 -->   <style>
+<!-- 1651 --> .country-btn.active{
+<!-- 1652 --> color:#00ff66;
+<!-- 1653 --> }
+<!-- 1654 --> .compare-box{
+<!-- 1655 --> background:#000;
+<!-- 1656 --> border:1px solid #00BFFF;
+<!-- 1657 --> border-radius:12px;
+<!-- 1658 --> padding:20px;
+<!-- 1659 --> text-align:center;
+<!-- 1660 --> line-height:1.6;
+<!-- 1661 --> }
+<!-- 1662 -->
+<!-- 1663 --> .compare-btn{
+<!-- 1664 --> width:96%;
+<!-- 1665 --> padding:14px;
+<!-- 1666 --> border-radius:10px;
+<!-- 1667 --> border:none;
+<!-- 1668 --> font-weight:bold;
+<!-- 1669 --> font-size: 27px;
+<!-- 1670 --> background:#00BFFF;
+<!-- 1671 --> color:#000;
+<!-- 1672 --> cursor:pointer;
+<!-- 1673 --> margin-bottom:15px;
+<!-- 1674 --> }
+<!-- 1675 -->
+<!-- 1676 --> .return-note{
+<!-- 1677 --> font-size:19px;
+<!-- 1678 --> color:#fff;
+<!-- 1679 --> text-align:center;
+<!-- 1680 --> }
+<!-- 1681 -->
+<!-- 1682 --> .return-note b{
+<!-- 1683 --> color:#FFD700;
+<!-- 1684 --> font-size:19px;
+<!-- 1685 --> }
+<!-- 1686 --> </style>
+<!-- 1687 -->
+<!-- 1688 --> <div class="compare-container">
+<!-- 1689 --> <div class="compare-box">
+<!-- 1690 --> <button class="compare-btn" onclick="window.open('https://www.google.com/shopping','_blank')">
+<!-- 1691 --> COMPARE PRICES ON TRUSTED SITES 🔁
+<!-- 1692 --> </button>
+<!-- 1693 --> <div class="compare-message">
+<!-- 1694 -->
+<!-- 1695 -->   <h2>After Comparing Prices, Please Return Here</h2>
+<!-- 1696 -->
+<!-- 1697 -->   <p>Check the price on trusted sites and return here to complete your purchase through our shop links.</p>
+<!-- 1698 -->
+
+<!-- 1699 --> </div>
+<!-- 1700 --> </div>
+  <!-- 1701 -->   <p>
+<!-- 1702 -->     The same product may be available at different prices in different stores.
+<!-- 1703 -->     After comparing prices, please return here and search for the product or use
+<!-- 1704 -->     the product link to purchase it from the same store where you found the best price.
+<!-- 1705 -->   </p>
+<!-- 1706 -->
+<!-- 1707 -->   <p><strong>Remember</strong></p>
+<!-- 1708 -->
+<!-- 1709 -->   <p style="color:#FFD700;font-weight:bold;font-size:1.2em;">
+<!-- 1710 -->     YOUR PURCHASE SATISFIES A HUNGER®
+<!-- 1711 -->   </p>
+<!-- 1712 -->
+<!-- 1713 --> </div>
+<!-- 1714 --> <style>
+<!-- 1715 --> .share-container {
+<!-- 1716 --> max-width: 900px;
+<!-- 1717 --> width: 96%;
+<!-- 1718 --> margin: 25px auto;
+<!-- 1719 --> padding: 20px;
+<!-- 1720 --> background: #000;
+<!-- 1721 --> border: 1px solid #00BFFF;
+<!-- 1722 --> border-radius: 12px;
+<!-- 1723 --> text-align: center;
+<!-- 1724 --> }
+<!-- 1725 -->
+<!-- 1726 --> .share-text {
+<!-- 1727 --> font-size: 19px;
+<!-- 1728 --> line-height: 1.7;
+<!-- 1729 --> color: #fff;
+<!-- 1730 --> margin-bottom: 20px;
+<!-- 1731 --> }
+<!-- 1732 -->
+<!-- 1733 --> .share-grid {
+<!-- 1734 --> display: grid;
+<!-- 1735 --> grid-template-columns: repeat(5, 1fr);
+<!-- 1736 --> gap: 10px;
+<!-- 1737 --> margin-top: 15px;
+<!-- 1738 --> }
+<!-- 1739 -->
+<!-- 1740 --> .share-grid a {
+<!-- 1741 --> display: flex;
+<!-- 1742 --> align-items: center;
+<!-- 1743 --> justify-content: center;
+<!-- 1744 --> font-size: 22px;
+<!-- 1745 --> height: 50px;
+<!-- 1746 --> background: #111;
+<!-- 1747 --> border-radius: 10px;
+<!-- 1748 --> border: 1px solid #333;
+<!-- 1749 --> text-decoration: none;
+<!-- 1750 --> }
+<!-- 1751 -->
+<!-- 1752 --> .share-grid a:hover {
+<!-- 1753 --> transform: scale(1.08);
+<!-- 1754 --> transition: 0.2s;
+<!-- 1755 --> }
+<!-- 1756 -->
+<!-- 1757 --> .share-sign {
+<!-- 1758 --> margin-top: 20px;
+<!-- 1759 --> padding-top: 15px;
+<!-- 1760 --> border-top: 1px solid #333;
+<!-- 1761 --> color: #FFD700;
+<!-- 1762 --> font-weight: bold;
+<!-- 1763 --> letter-spacing: 2px;
+<!-- 1764 --> font-size: 22px;
+<!-- 1765 --> }
+<!-- 1766 --> </style>
+<!-- 1767 -->
+<!-- 1768 --> <div class="share-container">
+<!-- 1769 --> <p class="share-text">
+<!-- 1770 --> Even if you are not buying anything right now, you can still support this charity mission.
+<!-- 1771 --> <br><br>Simply share this page with your friends and groups.
+<!-- 1772 --> <br><br>When someone purchases through these links, most of the income helps provide food for a hungry person somewhere in the world.
+<!-- 1773 --> <br><br>Through your share, you and your parents become part of this act of kindness.
+<!-- 1774 --> </p>
+<!-- 1775 -->
+<!-- 1776 --> <div class="share-grid">
+<!-- 1777 --> <a href="https://api.whatsapp.com/send?text=https://bascharity.com" target="_blank"><i class="fab fa-whatsapp" style="color:#25D366"></i></a>
+<!-- 1778 --> <a href="https://www.facebook.com/sharer/sharer.php?u=https://bascharity.com" target="_blank"><i class="fab fa-facebook" style="color:#1877F2"></i></a>
+<!-- 1779 --> <a href="https://telegram.me/share/url?url=https://bascharity.com" target="_blank"><i class="fab fa-telegram" style="color:#0088cc"></i></a>
+<!-- 1780 --> <a href="https://twitter.com/intent/tweet?url=https://bascharity.com" target="_blank"><svg width="20" height="20" viewBox="0 0 24 24" fill="#ffffff" style="vertical-align:middle;"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></a>
+<!-- 1781 --> <a href="javascript:void(0)" onclick="copyLink()"><i class="fas fa-link" style="color:#FFD700"></i></a>
+<!-- 1782 --> </div>
+<!-- 1783 -->
+<!-- 1784 --> <div class="share-sign">YOUR PURCHASE SATISFIES A HUNGER®</div>
+<!-- 1785 --> </div>
+<!-- 1786 -->
+<!-- 1787 --> <script>
+<!-- 1788 --> function copyLink() {
+<!-- 1789 --> navigator.clipboard.writeText("https://bascharity.com");
+<!-- 1790 --> alert("Link Copied. Share with friends.");
+<!-- 1791 --> }
+<!-- 1792 --> </script>
+<!-- 1793 -->  <style>
+<!-- 1794 --> .mainbox {
+<!-- 1795 --> max-width: 900px;
+<!-- 1796 --> width: 96%;
+<!-- 1797 --> margin: 20px auto;
+<!-- 1798 --> padding: 25px 15px;
+<!-- 1799 --> border: 2px solid #ff4500;
+<!-- 1800 --> border-radius: 15px;
+
+  
+  <!-- 1801 --> background: #050505;
+<!-- 1802 --> box-sizing: border-box;
+<!-- 1803 --> text-align: center;
+<!-- 1804 --> }
+<!-- 1805 -->
+<!-- 1806 --> .mainbox h1 {
+<!-- 1807 --> color: #ff4500;
+<!-- 1808 --> font-size: clamp(24px, 8vw, 36px);
+<!-- 1809 --> margin-top: 0;
+<!-- 1810 --> }
+<!-- 1811 -->
+<!-- 1812 --> .sub {
+<!-- 1813 --> color: #aaa;
+<!-- 1814 --> font-size: clamp(16px, 5vw, 22px);
+<!-- 1815 --> margin-bottom: 20px;
+<!-- 1816 --> }
+<!-- 1817 -->
+<!-- 1818 --> .impact {
+<!-- 1819 --> width: 100%;
+<!-- 1820 --> max-width: 420px;
+<!-- 1821 --> margin: auto;
+<!-- 1822 --> padding: 20px;
+<!-- 1823 --> border: 2px solid #555;
+<!-- 1824 --> background: #111;
+<!-- 1825 --> box-sizing: border-box;
+<!-- 1826 --> }
+<!-- 1827 -->
+<!-- 1828 --> .amount {
+<!-- 1829 --> display: flex;
+<!-- 1830 --> justify-content: center;
+<!-- 1831 --> align-items: center;
+<!-- 1832 --> gap: 10px;
+<!-- 1833 --> }
+<!-- 1834 -->
+<!-- 1835 --> .rs {
+<!-- 1836 --> font-size: 36px;
+<!-- 1837 --> color: #00ff00;
+<!-- 1838 --> }
+<!-- 1839 -->
+<!-- 1840 --> .counter {
+<!-- 1841 --> font-size: 44px;
+<!-- 1842 --> color: #00ff00;
+<!-- 1843 --> border: 2px solid #333;
+<!-- 1844 --> padding: 5px 12px;
+<!-- 1845 --> background: #000;
+<!-- 1846 --> }
+<!-- 1847 -->
+<!-- 1848 --> .till {
+<!-- 1849 --> color: #ff4500;
+<!-- 1850 --> font-size: 16px;
+<!-- 1851 --> margin-top: 8px;
+<!-- 1852 --> }
+<!-- 1853 -->
+<!-- 1854 --> .gallery {
+<!-- 1855 --> display: flex;
+<!-- 1856 --> overflow: hidden;
+<!-- 1857 --> gap: 20px;
+<!-- 1858 --> padding: 40px 20px; /* സൂം ചെയ്യുമ്പോൾ കട്ടാവാതിരിക്കാൻ മാറ്റിയത് */
+<!-- 1859 --> margin: 25px auto;
+<!-- 1860 --> width: 100%;
+<!-- 1861 --> position: relative;
+<!-- 1862 --> box-sizing: border-box;
+<!-- 1863 --> scroll-behavior: auto !important;
+<!-- 1864 --> }
+<!-- 1865 -->
+<!-- 1866 --> .card {
+<!-- 1867 --> min-width: 280px;
+<!-- 1868 --> height: 230px;
+<!-- 1869 --> border: 3px solid #ff4500;
+<!-- 1870 --> display: flex;
+<!-- 1871 --> align-items: center;
+<!-- 1872 --> justify-content: center;
+<!-- 1873 --> background: #000;
+<!-- 1874 --> border-radius: 10px;
+<!-- 1875 --> overflow: hidden;
+<!-- 1876 --> transition: transform 0.4s ease, z-index 0.4s;
+<!-- 1877 --> cursor: pointer;
+<!-- 1878 --> position: relative;
+<!-- 1879 --> flex-shrink: 0;
+<!-- 1880 --> }
+<!-- 1881 -->
+<!-- 1882 --> .card.zoom-active {
+<!-- 1883 --> transform: scale(2);
+<!-- 1884 --> z-index: 100;
+<!-- 1885 --> border-color: #00ff00;
+<!-- 1886 --> box-shadow: 0 0 20px rgba(0,255,0,0.5);
+<!-- 1887 --> }
+<!-- 1888 -->
+<!-- 1889 --> .card img {
+<!-- 1890 --> width: 100%;
+<!-- 1891 --> height: 100%;
+<!-- 1892 --> object-fit: contain;
+<!-- 1893 --> }
+<!-- 1894 -->
+<!-- 1895 --> .rotate { transform: rotate(-90deg); }
+<!-- 1896 --> </style>
+<!-- 1897 -->
+<!-- 1898 --> <div class="mainbox"> 
+<!-- 1899 --> <h1>IMPACT</h1>
+<!-- 1900 --> <div class="sub">Amount Distributed for Hunger Relief & Food Support</div>
+<!-- 1901 --> <div class="impact">
+<!-- 1902 --> <div class="amount">
+<!-- 1903 --> <div class="rs">Rs</div>
+<!-- 1904 --> <div class="counter" id="counter">0000000</div>
+<!-- 1905 --> <div class="rs">/-</div>
+<!-- 1906 --> </div>
+<!-- 1907 --> <div class="till">TILL TODAY</div>
+<!-- 1908 --> </div>
+<!-- 1909 -->
+<!-- 1910 --> <div class="gallery" id="gallery"></div>
+<!-- 1911 -->
+<!-- 1912 --> <div style="margin-top:10px; font-size:16px; color:#bbb; line-height:1.6; text-align:center;">
+<!-- 1913 --> Updated weekly/monthly.<br>
+<!-- 1914 --> Affiliate income may take 2–3 months to reflect after purchase.<br>
+<!-- 1915 --> Your direct donations are not included in this impact.
+<!-- 1916 --> </div>
+<!-- 1917 --> </div>
+<!-- 1918 -->
+<!-- 1919 --> <script>
+<!-- 1920 --> let count = 0;
+<!-- 1921 --> let target = 27000;
+<!-- 1922 --> let counterElement = document.getElementById("counter");
+<!-- 1923 -->
+<!-- 1924 --> function runCounter() {
+<!-- 1925 --> if (count < target) {
+<!-- 1926 --> count += 250; /* കൃത്യമായി 27000 ൽ എത്താൻ 250 ആക്കി */
+<!-- 1927 --> if (count > target) count = target;
+<!-- 1928 --> counterElement.innerText = count.toString().padStart(7, "0");
+<!-- 1929 --> setTimeout(runCounter, 120);
+<!-- 1930 --> }
+<!-- 1931 --> }
+<!-- 1932 --> runCounter();
+<!-- 1933 -->
+<!-- 1934 --> const photos = [
+<!-- 1935 --> "https://pub-168159db07cc407eaa28228eb2520ea5.r2.dev/1.jpg",
+<!-- 1936 --> "https://pub-168159db07cc407eaa28228eb2520ea5.r2.dev/p1.jpg",
+<!-- 1937 --> "https://pub-168159db07cc407eaa28228eb2520ea5.r2.dev/2.jpg",
+<!-- 1938 --> "https://pub-168159db07cc407eaa28228eb2520ea5.r2.dev/p2.jpg",
+<!-- 1939 --> "https://pub-168159db07cc407eaa28228eb2520ea5.r2.dev/3.jpg",
+<!-- 1940 --> "https://pub-168159db07cc407eaa28228eb2520ea5.r2.dev/p3.jpg",
+<!-- 1941 --> ];
+<!-- 1942 -->
+<!-- 1943 --> const gallery = document.getElementById("gallery");
+<!-- 1944 -->
+<!-- 1945 --> function loadImages() {
+<!-- 1946 --> photos.forEach((src, i) => {
+<!-- 1947 --> let card = document.createElement("div");
+<!-- 1948 --> card.className = "card";
+<!-- 1949 --> card.onclick = function() {
+<!-- 1950 --> scrolling = false;
+<!-- 1951 --> this.classList.add("zoom-active");
+<!-- 1952 --> setTimeout(() => {
+<!-- 1953 --> this.classList.remove("zoom-active");
+<!-- 1954 --> scrolling = true;
+<!-- 1955 --> }, 4000);
+<!-- 1956 --> };
+<!-- 1957 -->
+<!-- 1958 --> let img = document.createElement("img");
+<!-- 1959 --> if (i < 2) { img.className = "rotate"; }
+<!-- 1960 --> img.src = src;
+<!-- 1961 -->
+<!-- 1962 --> card.appendChild(img);
+<!-- 1963 --> gallery.appendChild(card);
+<!-- 1964 --> });
+<!-- 1965 --> }
+<!-- 1966 -->
+<!-- 1967 --> loadImages();
+<!-- 1968 --> loadImages();
+<!-- 1969 -->
+<!-- 1970 --> let scrolling = true;
+<!-- 1971 --> function scrollGallery() {
+<!-- 1972 --> if (scrolling) {
+<!-- 1973 --> gallery.scrollLeft += 1.5;
+<!-- 1974 --> if (gallery.scrollLeft >= (gallery.scrollWidth / 2)) {
+<!-- 1975 --> gallery.scrollLeft = 0;
+<!-- 1976 --> }
+<!-- 1977 --> }
+<!-- 1978 --> }
+<!-- 1979 --> setInterval(scrollGallery, 20);
+<!-- 1980 --> </script>
+<!-- 1981 --> <style>
+<!-- 1982 --> .info-box{
+<!-- 1983 --> /* ലാപ്ടോപ്പിൽ 900px വരെ വരാൻ max-width മാറ്റി */
+<!-- 1984 --> max-width: 900px;
+<!-- 1985 --> width: 96%;
+<!-- 1986 --> margin: 30px auto;
+<!-- 1987 --> padding: 20px;
+<!-- 1988 --> background: #000;
+<!-- 1989 --> border: 1px solid #00BFFF;
+<!-- 1990 --> border-radius: 12px;
+<!-- 1991 --> text-align: center;
+<!-- 1992 --> line-height: 1.7;
+<!-- 1993 --> box-sizing: border-box;
+<!-- 1994 --> }
+<!-- 1995 -->
+<!-- 1996 --> .info-title{
+<!-- 1997 --> font-size: 25px;
+<!-- 1998 --> color: #FFD700;
+<!-- 1999 --> margin-bottom: 10px;
+<!-- 2000 --> }
+  
+  
+  
