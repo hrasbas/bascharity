@@ -5076,13 +5076,16 @@ YOUR PURCHASE SATISFIES A HUNGER™
         if (autoScrollInterval || isUserInteracting) return;
 
         autoScrollInterval = setInterval(function() {
-            if ((window.innerHeight + window.scrollY) >= document.body.offsetHeight) {
-                window.scrollTo({ top: 0, behavior: 'smooth' });
+            let maxScroll = document.documentElement.scrollHeight - window.innerHeight;
+            
+            if (window.scrollY >= maxScroll - 2) {
+                stopAutoScroll();
             } else {
                 window.scrollBy(0, scrollSpeed);
             }
         }, 20);
     }
+
 
     function stopAutoScroll() {
         if (autoScrollInterval) {
@@ -5220,11 +5223,7 @@ YOUR PURCHASE SATISFIES A HUNGER™
     bindPress(document.getElementById("downBtn"), 1);
   });
 </script>
-
-</body>
-</html>
-                      
-
+               
 </body> <!-- ഇതിന് തൊട്ടു മുകളിൽ -->
 </html>
 
