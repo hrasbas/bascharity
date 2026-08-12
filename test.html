@@ -4923,172 +4923,47 @@ YOUR PURCHASE SATISFIES A HUNGER™
     </script>
  <!-- Popup Notification -->
        <!-- Popup Notification -->
-<style>
-  /* Arrow Flicker Animation */
-  @keyframes flicker {
-    0%, 100% { opacity: 1; }
-    50% { opacity: 0.2; }
-  }
-
-  .flicker {
-    animation: flicker 1s infinite !important;
-  }
-
-  /* Main Popup Structure (ബാറിന്റെ മൊത്തം വീതി 480px ആക്കി) */
-  #scrollControlPopup {
+      <style>
+#scrollControlPopup{
     position: fixed;
     right: 0;
-    bottom: 5cm;
-    width: 480px;
-    max-width: 95vw;
-    height: 60px;
-    z-index: 99999;
-    background: #6DC3FF;
-    color: #fff;
-    border-radius: 18px 0 0 18px;
-    box-shadow: 0 8px 24px rgba(0,0,0,.35);
-    padding: 8px 12px;
+    top: 40%;
+    transform: translateX(70%);
+    transition: transform .25s ease;
+    z-index: 9999;
+    overflow: visible;
     display: flex;
     align-items: center;
     gap: 8px;
-    touch-action: none;
-    overflow: visible;
-    pointer-events: auto;
-    transform: translateX(calc(100% - 48px));
-    transition: transform 0.3s ease;
-  }
+    background: rgba(0,0,0,0.75);
+    padding: 10px 14px;
+    border-radius: 12px 0 0 12px;
+}
 
-  /* പുറത്തിറങ്ങി നിൽക്കുമ്പോൾ */
-  #scrollControlPopup.open {
+#scrollControlPopup:hover,
+#scrollControlPopup:focus-within{
     transform: translateX(0);
-  }
+}
 
-  /* Toggle Button (അറ്റത്ത് Flicker ചെയ്യുന്ന ബട്ടൺ) */
-  #scrollControlPopup .slideToggleBtn {
-    width: 44px;
-    height: 44px;
-    border: none;
-    border-radius: 12px;
-    background: #000;
-    color: #fff;
-    font-size: 18px;
-    font-weight: 900;
-    flex: 0 0 auto;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-
-  #scrollControlPopup * {
-    -webkit-user-select: none;
-    user-select: none;
-    -webkit-touch-callout: none;
-    box-sizing: border-box;
-  }
-
-  /* നിലവിലുള്ള Scroll Buttons (▲ / ▼) നീളം 90px ആയി കൂട്ടി */
-  #scrollControlPopup .arrowBtn {
-    width: 90px !important;
-    height: 44px;
-    border: none;
-    border-radius: 14px;
-    background: #000;
-    color: #fff;
-    font-size: 20px;
-    font-weight: 900;
-    flex: 0 0 auto;
-    cursor: pointer;
-  }
-
-  #scrollControlPopup .speedWrap {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    gap: 4px;
-    min-width: 0;
-  }
-
-  #scrollControlPopup .speedTop {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    font-size: 11px;
-    font-weight: 700;
-    letter-spacing: .5px;
+#scrollControlPopup .arrowBtn{
+    background: #fff;
     color: #000;
-  }
-
-  #scrollControlPopup input[type="range"] {
-    width: 100%;
-    margin: 0;
-    accent-color: #fff;
-  }
-
-  #scrollControlPopup .lockBtn {
-    width: 60px;
-    height: 44px;
     border: none;
-    border-radius: 14px;
-    background: #222;
-    color: #fff;
-    font-size: 11px;
-    font-weight: 800;
-    flex: 0 0 auto;
+    padding: 8px 12px;
+    border-radius: 8px;
     cursor: pointer;
-  }
+    animation: flicker 1.2s infinite;
+}
 
-  body {
-    overflow: auto;
-  }
+@keyframes flicker{
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.35; }
+}
 </style>
 
-<div id="scrollControlPopup">
-  <!-- 1. Flicker ചെയ്യുന്ന Toggle Button -->
-  <button class="slideToggleBtn" onclick="togglePopupBar()" aria-label="Toggle Bar">
-    <span id="popupToggleArrow" class="flicker">◀</span>
-  </button>
-
-  <!-- 2. നിലവിലുള്ള സ്ക്രോൾ കൺട്രോളുകൾ -->
-  <button class="arrowBtn" id="upBtn" aria-label="Scroll up">▲</button>
-
-  <div class="speedWrap">
-    <div class="speedTop">
-      <span>SPEED</span>
-      <span id="scrollSpeedValue">6</span>
-    </div>
-    <input id="scrollSpeedSlider" type="range" min="1" max="20" value="6">
-  </div>
-
-  <button class="lockBtn" id="lockStateBtn" onclick="toggleScrollLock()">LOCK</button>
-  <button class="arrowBtn" id="downBtn" aria-label="Scroll down">▼</button>
+<div id="scrollControlPopup" tabindex="0">
+    <button class="arrowBtn">→</button>
 </div>
-
-<!-- Auto Scroll Script -->
- 
-
-<!-- Fully Corrected Auto-Scroll & Floating Buttons Code Start -->
-<style>
-  /* ഫ്ലോട്ടിംഗ് ബട്ടണുകൾ സ്ക്രീനിന്റെ ഉള്ളിൽ കൃത്യമായി പുറത്തേക്ക് വരാൻ */
-  .floating-buttons-wrapper {
-    position: fixed !important;
-    bottom: 20px !important;
-    right: 15px !important;
-    z-index: 99999 !important;
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    max-width: calc(100vw - 30px);
-    pointer-events: auto;
-  }
-
-  .floating-buttons-wrapper button, 
-  .floating-buttons-wrapper a {
-    display: inline-block;
-    max-width: 100%;
-    box-sizing: border-box;
-  }
-</style>
 
 <script>
 (function() {
@@ -5104,7 +4979,6 @@ YOUR PURCHASE SATISFIES A HUNGER™
             let totalHeight = document.documentElement.scrollHeight;
             let currentScroll = window.innerHeight + window.scrollY;
 
-            // പേജിന്റെ അടിയിൽ എത്തുമ്പോൾ സ്ക്രോളിംഗ് സ്വയം നിൽക്കും
             if (currentScroll >= totalHeight - 15) {
                 stopAutoScroll();
             } else {
@@ -5159,8 +5033,6 @@ YOUR PURCHASE SATISFIES A HUNGER™
     }
 })();
 </script>
-
-  
 </body> <!-- ഇതിന് തൊട്ടു മുകളിൽ -->
 </html>
 
