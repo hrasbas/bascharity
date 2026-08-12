@@ -2063,6 +2063,3105 @@
 <!-- 1998 --> color: #FFD700;
 <!-- 1999 --> margin-bottom: 10px;
 <!-- 2000 --> }
-  
-  
-  
+  <!-- 2001 --> font-weight: bold;
+<!-- 2002 --> }
+<!-- 2003 -->
+<!-- 2004 --> .info-text{
+<!-- 2005 --> font-size: 25px;
+<!-- 2006 --> color: #ccc;
+<!-- 2007 --> }
+<!-- 2008 -->
+<!-- 2009 --> .readmore-btn{
+<!-- 2010 --> color: #00BFFF;
+<!-- 2011 --> font-size: 26px;
+<!-- 2012 --> font-weight: bold;
+<!-- 2013 --> cursor: pointer;
+<!-- 2014 --> }
+<!-- 2015 -->
+<!-- 2016 --> .more-text{
+<!-- 2017 --> display: none;
+<!-- 2018 --> }
+<!-- 2019 -->
+<!-- 2020 --> .signature{
+<!-- 2021 --> margin-top: 15px;
+<!-- 2022 --> font-size: 25px;
+<!-- 2023 --> color: #FFD700;
+<!-- 2024 --> font-weight: bold;
+<!-- 2025 --> }
+<!-- 2026 --> </style>
+<!-- 2027 -->
+<!-- 2028 --> <div class="info-box" id="section7">
+<!-- 2029 --> <div class="info-title">BAS CHARITY PURPOSE</div>
+<!-- 2030 --> <div class="info-text">
+<!-- 2031 --> Our mission is to ensure that support reaches those who truly need it.
+<!-- 2032 --> Through affiliate partnerships with 50,000+ online shops worldwide,
+<!-- 2033 --> a significant portion of the income generated is used for hunger relief
+<!-- 2034 --> and similar humanitarian activities</div><br><div class="info-text">
+<!-- 2035 --> At present,100% of the<span class="readmore-btn" id="readBtn" onclick="toggleMore7()">Read More...</span>
+<!-- 2036 --> </div><div class="more-text" id="moreText"><div class="info-text">
+<!-- 2037 --> affiliate income is directed towards helping people in need.
+<!-- 2038 --> In the future, a minimum of 51% or more will always be dedicated to
+<!-- 2039 --> charity and hunger relief.
+<!-- 2040 --> The remaining portion may be used for platform maintenance, staff support,
+<!-- 2041 --> development, and operational expenses ,etc
+<!-- 2042 --> </div>
+<!-- 2043 --> <br>
+<!-- 2044 --> <div class="info-text">
+<!-- 2045 --> Many people have expressed their willingness to donate through this platform.
+<!-- 2046 --> However,we do not accept any donations through this website.
+<!-- 2047 --> </div>
+<!-- 2048 --> <br>
+<!-- 2049 --> <div class="info-text">
+<!-- 2050 --> Anyone who wishes to support hunger relief may do so directly through
+<!-- 2051 --> some trusted organisations listed below.
+<!-- 2052 --> </div>
+<!-- 2053 --> <br>
+<!-- 2054 --> <div class="info-text">
+<!-- 2055 --> The widespread misuse and scams carried out in the name of charity on many
+<!-- 2056 --> online platforms inspired us to start this initiative.
+<!-- 2057 --> </div>
+<!-- 2058 --> <br>
+<!-- 2059 --> <div class="info-text">
+<!-- 2060 --> In any case, our goal is to ensure that 100% of your donation reaches those
+<!-- 2061 --> who truly need it.
+<!-- 2062 --> </div>
+<!-- 2063 --> <div class="readmore-btn" onclick="toggleMore7()">Less</div>
+<!-- 2064 --> </div>
+<!-- 2065 -->
+<!-- 2066 --> <div class="signature">
+<!-- 2067 --> Give your donations only through trusted hands
+<!-- 2068 --> </div>
+<!-- 2069 --> </div>
+<!-- 2070 -->
+<!-- 2071 --> <script>
+<!-- 2072 --> function toggleMore7() {
+<!-- 2073 --> var moreText = document.getElementById("moreText");
+<!-- 2074 --> var btnText = document.getElementById("readBtn");
+<!-- 2075 --> if (moreText.style.display === "none" || moreText.style.display === "") {
+<!-- 2076 --> moreText.style.display = "block";
+<!-- 2077 --> btnText.style.display = "none";
+<!-- 2078 --> } else {
+<!-- 2079 --> moreText.style.display = "none";
+<!-- 2080 --> btnText.style.display = "inline";
+<!-- 2081 --> }
+<!-- 2082 --> }
+<!-- 2083 --> </script>
+<!-- 2084 -->
+<!-- 2085 --> <style>
+<!-- 2086 --> .bas7-wrapper{
+<!-- 2087 --> max-width:900px; /* Responsive Fix */
+<!-- 2088 --> width:96%;
+<!-- 2089 --> margin:30px auto;
+<!-- 2090 --> font-family:Arial,sans-serif;
+<!-- 2091 --> }
+<!-- 2092 -->
+<!-- 2093 --> .bas7-box{
+<!-- 2094 -->     background:#1b1b1b;
+<!-- 2095 -->     border-radius:16px;
+<!-- 2096 -->     border:1.5px solid #D3D3D3;
+<!-- 2097 -->     overflow:hidden;
+<!-- 2098 -->     color:#fff;
+<!-- 2099 -->     box-shadow:0 0 12px rgba(255,255,255,0.06);
+<!-- 2100 --> }
+<!-- 2101 -->
+<!-- 2102 --> .bas7-header{
+<!-- 2103 --> padding:18px;
+<!-- 2104 --> text-align:center;
+<!-- 2105 --> background:#111;
+<!-- 2106 --> border-bottom:1px solid #333;
+<!-- 2107 --> }
+<!-- 2108 -->
+<!-- 2109 --> .title-main{
+<!-- 2110 --> margin:0;
+<!-- 2111 --> font-size:22px;
+<!-- 2112 --> font-weight:900;
+<!-- 2113 --> color:#E5E5E5;
+<!-- 2114 --> }
+<!-- 2115 -->
+<!-- 2116 --> .title-name{
+<!-- 2117 --> margin:8px 0 0;
+<!-- 2118 --> font-size:20px;
+<!-- 2119 --> font-weight:800;
+<!-- 2120 --> }
+<!-- 2121 -->
+<!-- 2122 --> .title-sub{
+<!-- 2123 --> margin:5px 0 0;
+<!-- 2124 --> font-size:16px;
+<!-- 2125 --> }
+<!-- 2126 -->
+<!-- 2127 --> .bas7-slider{
+<!-- 2128 --> width:100%;
+<!-- 2129 --> height:420px;
+<!-- 2130 --> overflow:hidden;
+<!-- 2131 --> background:#000;
+<!-- 2132 --> }
+<!-- 2133 -->
+<!-- 2134 --> .bas7-slider img{
+<!-- 2135 --> width:100%;
+<!-- 2136 --> height:100%;
+<!-- 2137 --> object-fit:cover;
+<!-- 2138 --> transition:opacity .8s;
+<!-- 2139 --> }
+<!-- 2140 -->
+<!-- 2141 --> .bas7-content{
+<!-- 2142 --> padding:18px;
+<!-- 2143 --> font-size:20px;
+<!-- 2144 --> line-height:1.7;
+<!-- 2145 --> color:#ccc;
+<!-- 2146 --> text-align:justify;
+<!-- 2147 --> }
+<!-- 2148 -->
+<!-- 2149 --> .bas8-more{
+<!-- 2150 --> display:none;
+<!-- 2151 --> }
+<!-- 2152 -->
+<!-- 2153 --> .bas8-toggle{
+<!-- 2154 --> color:#39FF14;
+<!-- 2155 --> cursor:pointer;
+<!-- 2156 --> font-weight:bold;
+<!-- 2157 --> font-size:18px;
+<!-- 2158 --> display:block;
+<!-- 2159 --> margin-top:15px;
+<!-- 2160 --> }
+<!-- 2161 -->
+<!-- 2162 --> .bas7-quote{
+<!-- 2163 --> margin:15px;
+<!-- 2164 --> padding:12px;
+<!-- 2165 --> background:#111;
+<!-- 2166 --> border-radius:10px;
+<!-- 2167 --> border-left:4px solid #e91e63;
+<!-- 2168 --> font-weight:bold;
+<!-- 2169 --> text-align:center;
+<!-- 2170 --> color:#FFD700;
+<!-- 2171 --> font-size:14px;
+<!-- 2172 --> }
+<!-- 2173 -->
+<!-- 2174 --> /* ഡെപ്യൂട്ടി ചീഫ് എഞ്ചിനീയറുടെ നോട്ട് സ്റ്റൈൽ */
+<!-- 2175 --> .officer-note {
+<!-- 2176 --> margin-top: 20px;
+<!-- 2177 --> padding: 15px;
+<!-- 2178 --> background: #151515;
+<!-- 2179 --> border-radius: 8px;
+<!-- 2180 --> border: 1px dashed #333;
+<!-- 2181 --> font-size: 19px;
+<!-- 2182 --> line-height: 1.6;
+<!-- 2183 --> color: #e0e0e0;
+<!-- 2184 --> }
+<!-- 2185 -->
+<!-- 2186 --> .officer-sign {
+<!-- 2187 --> margin-top: 10px;
+<!-- 2188 --> text-align: right;
+<!-- 2189 --> font-size: 18px;
+<!-- 2190 --> font-weight: bold;
+<!-- 2191 --> color: #FFD700;
+<!-- 2192 --> }
+<!-- 2193 --> </style>
+<!-- 2194 -->
+<!-- 2195 --> <div class="bas7-wrapper" id="section8">
+<!-- 2196 --> <div class="bas7-box">
+<!-- 2197 --> <div class="bas7-header">
+<!-- 2198 -->
+<!-- 2199 --> <div class="bas7-header">
+<!-- 2200 -->
+<!-- 2201 -->   <h2 class="title-main">
+<!-- 2202 -->     BEST WISHES FOR BAS CHARITY INTERNATIONAL
+<!-- 2203 -->   </h2>
+<!-- 2204 -->
+<!-- 2205 --> </div>
+<!-- 2206 -->
+<!-- 2207 --> <hr class="section-divider">
+<!-- 2208 -->
+<!-- 2209 --> </div>
+<!-- 2210 --> <div class="bas7-slider">
+<!-- 2211 --> <img id="bas7Img" src="https://drive.google.com/thumbnail?id=1keyWL0GF-HysweqAYntVaS-vB_fwZj_H&sz=w1000">
+<!-- 2212 --> </div>
+<!-- 2213 --> <h2 class="title-name">
+<!-- 2214 --> MOHAMMED M BASHEER
+<!-- 2215 --> </h2><h3 class="title-sub">
+<!-- 2216 --> Retired Assistant Engineer,KSEB
+<!-- 2217 --> </h3>
+<!-- 2218 --> <div class="bas7-content">
+<!-- 2219 --> <p>
+<!-- 2220 --> <p>
+<!-- 2221 --> <p>
+<!-- 2222 --> Mr. Mohammed M. Basheer, a retired Assistant Engineer from KSEB, residing in India, has over three decades of involvement in social service activities. Alongside this, he completed 20 years of government service in the power sector, covering Generation, Transmission and Distribution, as well as five years of international work experience in various Arabian countries.
+<!-- 2223 --> <span class="readmore-btn" id="wishReadBtn" onclick="toggleWish()">Read More...</span>
+<!-- 2224 -->
+<!-- 2225 --> <div id="wishMoreText" style="display:none;">
+<!-- 2226 --> For more than 10 years, he has also been serving as a humble volunteer of the <a href="https://www.irwkerala.org" target="_blank" rel="noopener noreferrer" style="color:#00A2FF; font-weight:bold; text-decoration:none;">Ideal Relief Wing (IRW)</a>, a Government-recognized and registered NGO actively engaged in disaster management, disaster relief and humanitarian activities.
+<!-- 2227 -->     <br><br>
+<!-- 2228 --> <p>
+<!-- 2229 --> He is supported by his wife, Rasheena K. H, High School English Teacher (India), their children, Alif Bayan (India), Amna Bayan (Qatar), Azeem Ahmed (Oman), and their son-in-law, Anees Ameer (Qatar).
+<!-- 2230 --> </p>
+<!-- 2231 --> <hr>
+<!-- 2232 --> <!-- Deputy Chief Engineer Recommendation Plaque -->
+<!-- 2233 --> <link href="https://fonts.googleapis.com/css2?family=Kalam:wght@300;400;700&display=swap" rel="stylesheet">
+<!-- 2234 -->
+<!-- 2235 --> <style>
+<!-- 2236 --> <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- 2237 --> <title>Deputy CEO Greetings</title>
+<!-- 2238 -->
+<!-- 2239 --> <style>
+<!-- 2240 --> body{
+<!-- 2241 -->     margin:0;
+<!-- 2242 -->     padding:35px;
+<!-- 2243 -->     background:#111;
+<!-- 2244 -->     font-family:Georgia,serif;
+<!-- 2245 --> }
+<!-- 2246 -->
+<!-- 2247 --> .deputy-card{
+<!-- 2248 -->     max-width:860px;
+<!-- 2249 -->     margin:auto;
+<!-- 2250 -->     padding:38px;
+<!-- 2251 -->     border-radius:22px;
+<!-- 2252 -->     background:linear-gradient(160deg,#081a35,#0d3470,#0a2145);
+<!-- 2253 -->     border:2px solid #d4af37;
+<!-- 2254 -->     box-shadow:
+<!-- 2255 -->         0 0 28px rgba(0,150,255,.30),
+<!-- 2256 -->         0 0 12px rgba(255,215,0,.25);
+<!-- 2257 -->     color:#fff;
+<!-- 2258 -->     position:relative;
+<!-- 2259 --> }
+<!-- 2260 -->
+<!-- 2261 --> .deputy-card::before{
+<!-- 2262 -->     content:"Greetings";
+<!-- 2263 -->     position:absolute;
+<!-- 2264 -->     top:-18px;
+<!-- 2265 -->     left:50%;
+<!-- 2266 -->     transform:translateX(-50%);
+<!-- 2267 -->     padding:9px 28px;
+<!-- 2268 -->     border-radius:30px;
+<!-- 2269 -->     background:linear-gradient(90deg,#ffe082,#d4af37,#fff5c2);
+<!-- 2270 -->     color:#222;
+<!-- 2271 -->     font-size:22px;
+<!-- 2272 -->     font-weight:bold;
+<!-- 2273 -->     letter-spacing:2px;
+<!-- 2274 --> }
+<!-- 2275 -->
+<!-- 2276 --> .deputy-card p{
+<!-- 2277 -->     font-size:22px;
+<!-- 2278 -->     line-height:1.95;
+<!-- 2279 -->     text-align:justify;
+<!-- 2280 -->     margin:26px 0;
+<!-- 2281 --> }
+<!-- 2282 -->
+<!-- 2283 --> /* 1st Paragraph - Gold Italic */
+<!-- 2284 --> .deputy-card p:nth-of-type(1){
+<!-- 2285 -->     color:#ffd84d;
+<!-- 2286 -->     font-style:italic;
+<!-- 2287 --> }
+<!-- 2288 -->
+<!-- 2289 --> /* 2nd Paragraph - Silver */
+<!-- 2290 --> .deputy-card p:nth-of-type(2){
+<!-- 2291 -->     color:#e6e6e6;
+<!-- 2292 --> }
+<!-- 2293 -->
+<!-- 2294 --> /* 3rd Paragraph - Gold */
+<!-- 2295 --> .deputy-card p:nth-of-type(3){
+<!-- 2296 -->     color:#ffd84d;
+<!-- 2297 --> }
+<!-- 2298 -->
+<!-- 2299 --> /* 4th Paragraph - Silver */
+<!-- 2300 -->
+
+  <!-- 2301 --> .deputy-card p:nth-of-type(4){
+<!-- 2302 -->     color:#e6e6e6;
+<!-- 2303 --> }
+<!-- 2304 -->
+<!-- 2305 --> /* Slogan */
+<!-- 2306 --> .slogan{
+<!-- 2307 -->     color:#ffd700;
+<!-- 2308 -->     font-weight:700;
+<!-- 2309 --> }
+<!-- 2310 -->
+<!-- 2311 --> /* Signature */
+<!-- 2312 --> .signature{
+<!-- 2313 -->     margin-top:45px;
+<!-- 2314 -->     text-align:right;
+<!-- 2315 --> }
+<!-- 2316 -->
+<!-- 2317 --> .signature .name{
+<!-- 2318 -->     color:#ffd700;
+<!-- 2319 -->     font-size:32px;
+<!-- 2320 -->     font-weight:700;
+<!-- 2321 -->     font-style:normal;
+<!-- 2322 -->     text-transform:uppercase;
+<!-- 2323 --> }
+<!-- 2324 -->
+<!-- 2325 --> .signature .designation{
+<!-- 2326 -->     color:#ffd700;
+<!-- 2327 -->     font-size:18px;
+<!-- 2328 -->     font-style:normal;
+<!-- 2329 -->     text-transform:uppercase;
+<!-- 2330 -->     margin-top:8px;
+<!-- 2331 --> }
+<!-- 2332 -->
+<!-- 2333 --> .signature .office{
+<!-- 2334 -->     color:#ffd700;
+<!-- 2335 -->     font-size:18px;
+<!-- 2336 -->     font-style:normal;
+<!-- 2337 -->     text-transform:uppercase;
+<!-- 2338 --> }
+<!-- 2339 --> </style>
+<!-- 2340 -->
+<!-- 2341 -->
+<!-- 2342 --> <div class="deputy-card">
+<!-- 2343 -->
+<!-- 2344 --> <p>
+<!-- 2345 --> I have had the opportunity to know Mr. Mohammed M. Basheer personally.
+<!-- 2346 --> I believe that his honesty, sincerity, and compassion are truly reflected
+<!-- 2347 --> in this initiative.
+<!-- 2348 --> </p>
+<!-- 2349 -->
+<!-- 2350 --> <p>
+<!-- 2351 --> This digital initiative, launched with the noble vision of helping
+<!-- 2352 --> vulnerable people who struggle to access even the most basic necessity of
+<!-- 2353 --> life—food—is truly commendable. Its message,
+<!-- 2354 --> <span class="slogan">"YOUR PURCHASE SATISFIES A HUNGER®"</span>,
+<!-- 2355 --> is simple yet deeply meaningful.
+<!-- 2356 --> </p>
+<!-- 2357 -->
+<!-- 2358 --> <p>
+<!-- 2359 --> By simply saving a small icon and using it for your regular purchases
+<!-- 2360 --> whenever possible, everyone has an opportunity to become part of this
+<!-- 2361 --> noble humanitarian mission.
+<!-- 2362 --> </p>
+<!-- 2363 -->
+<!-- 2364 --> <p>
+<!-- 2365 --> I extend my heartfelt best wishes for the success of this exemplary
+<!-- 2366 --> initiative towards building a hunger-free society.
+<!-- 2367 --> </p>
+<!-- 2368 -->
+<!-- 2369 --> <div class="signature">
+<!-- 2370 --> <div class="name">MATHUKKUTTY MP</div>
+<!-- 2371 --> <div class="designation">RETIRED ASSISTANT ENGINEER</div>
+<!-- 2372 --> <div class="office">KERALA STATE ELECTRICITY BOARD (KSEB)</div>
+<!-- 2373 --> </div>
+<!-- 2374 -->
+<!-- 2375 --> </div>
+<!-- 2376 -->
+<!-- 2377 --> <script>
+<!-- 2378 --> function toggleWish() {
+<!-- 2379 -->     var moreText = document.getElementById("wishMoreText");
+<!-- 2380 -->     var btnText = document.getElementById("wishReadBtn");
+<!-- 2381 -->
+<!-- 2382 -->     if (moreText.style.display === "none" || moreText.style.display === "") {
+<!-- 2383 -->         moreText.style.display = "block";
+<!-- 2384 -->         btnText.style.display = "none";
+<!-- 2385 -->     } else {
+<!-- 2386 -->         moreText.style.display = "none";
+<!-- 2387 -->         btnText.style.display = "inline";
+<!-- 2388 -->     }
+<!-- 2389 --> }
+<!-- 2390 -->
+<!-- 2391 --> /* IMAGE SLIDER */
+<!-- 2392 --> const bas7Images=[
+<!-- 2393 --> "https://drive.google.com/thumbnail?id=1keyWL0GF-HysweqAYntVaS-vB_fwZj_H&sz=w1000",
+<!-- 2394 --> "https://drive.google.com/thumbnail?id=1KdZnPqKlSOXAFY-Lu2FU41B1n7sWtt85&sz=w1000"
+<!-- 2395 --> ];
+<!-- 2396 --> let bas7Index=0;
+<!-- 2397 --> const bas7Img=document.getElementById("bas7Img");
+<!-- 2398 -->
+<!-- 2399 --> setInterval(function(){
+<!-- 2400 -->     bas7Img.style.opacity=0;
+<!-- 2401 --> setTimeout(function(){
+<!-- 2402 --> bas7Index=(bas7Index+1)%bas7Images.length;
+<!-- 2403 --> bas7Img.src=bas7Images[bas7Index];
+<!-- 2404 --> bas7Img.style.opacity=1;
+<!-- 2405 --> },800);
+<!-- 2406 --> },5000);
+<!-- 2407 -->
+<!-- 2408 --> /* AUTO RESET */
+<!-- 2409 --> const observer78=new IntersectionObserver(entries=>{
+<!-- 2410 --> entries.forEach(entry=>{
+<!-- 2411 --> if(!entry.isIntersecting){
+<!-- 2412 --> if(entry.target.id==="section7" && opened7){ toggleMore7(); }
+<!-- 2413 --> if(entry.target.id==="section8" && opened8){ toggleBas8(); }
+<!-- 2414 --> }
+<!-- 2415 --> });
+<!-- 2416 --> },{threshold:0});
+<!-- 2417 -->
+<!-- 2418 --> if(document.getElementById("section7")) observer78.observe(document.getElementById("section7"));
+<!-- 2419 --> if(document.getElementById("section8")) observer78.observe(document.getElementById("section8"));
+<!-- 2420 -->
+<!-- 2421 --> </script>
+<!-- 2422 -->
+<!-- 2423 --> </div>
+<!-- 2424 -->
+<!-- 2425 --> </details>
+<!-- 2426 -->
+<!-- 2427 --> </div>
+<!-- 2428 -->
+<!-- 2429 --> </details>
+<!-- 2430 --> </div>
+<!-- 2431 --> </div>
+<!-- 2432 -->
+<!-- 2433 --> </div>
+<!-- 2434 -->
+<!-- 2435 -->   
+<!-- 2436 -->   <!-- INFINITE AUTO/MANUAL SCROLL GREETINGS WIDGET START-->
+<!-- 2437 --> <!-- INFINITE AUTO/MANUAL SCROLL GREETINGS WIDGET START -->
+<!-- 2438 --> <style>
+<!-- 2439 -->   :root {
+<!-- 2440 -->     --gb-gold-grad: linear-gradient(135deg, #bf953f, #fcf6ba, #b38728, #fbf5b7, #aa771c);
+<!-- 2441 -->     --gb-bg-dark: #070d1a;
+<!-- 2442 -->     --gb-card-bg: #0b1326;
+<!-- 2443 -->     --gb-blue-btn: linear-gradient(135deg, #1d4ed8, #3b82f6);
+<!-- 2444 -->   }
+<!-- 2445 -->
+<!-- 2446 -->   .gb-widget-wrapper {
+<!-- 2447 -->     width: 100%;
+<!-- 2448 -->     max-width: 1100px;
+<!-- 2449 -->     margin: 20px auto;
+<!-- 2450 -->     display: flex;
+<!-- 2451 -->     flex-direction: column;
+<!-- 2452 -->     gap: 20px;
+<!-- 2453 -->   }
+<!-- 2454 -->
+<!-- 2455 -->   .gb-search-container {
+<!-- 2456 -->     width: 100%;
+<!-- 2457 -->     display: flex;
+<!-- 2458 -->     justify-content: center;
+<!-- 2459 -->   }
+<!-- 2460 -->
+<!-- 2461 -->   .gb-search-box {
+<!-- 2462 -->     width: 92%;
+<!-- 2463 -->     max-width: 550px;
+<!-- 2464 -->     padding: 12px 22px;
+<!-- 2465 -->     border-radius: 30px;
+<!-- 2466 -->     border: 2px solid #b38728;
+<!-- 2467 -->     background: #09101f;
+<!-- 2468 -->     color: #fcf6ba;
+<!-- 2469 -->     font-size: 1.05rem;
+<!-- 2470 -->     outline: none;
+<!-- 2471 -->     box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+<!-- 2472 -->     box-sizing: border-box;
+<!-- 2473 -->   }
+<!-- 2474 -->
+<!-- 2475 -->   .gb-slider-container {
+<!-- 2476 -->     width: 100%;
+<!-- 2477 -->     overflow-x: auto;
+<!-- 2478 -->     position: relative;
+<!-- 2479 -->     padding: 10px 0;
+<!-- 2480 -->    padding-left: 100px;
+<!-- 2481 -->
+<!-- 2482 -->     cursor: grab;
+<!-- 2483 -->     scrollbar-width: thin;
+<!-- 2484 -->     scrollbar-color: #b38728 #070d1a;
+<!-- 2485 -->   }
+<!-- 2486 -->
+<!-- 2487 -->   .gb-slider-container:active {
+<!-- 2488 -->     cursor: grabbing;
+<!-- 2489 -->   }
+<!-- 2490 -->
+<!-- 2491 -->   .gb-slider-track {
+<!-- 2492 -->     display: flex;
+<!-- 2493 -->     gap: 20px;
+<!-- 2494 -->     width: max-content;
+<!-- 2495 -->     animation: gbContinuousScroll 20s linear infinite;
+<!-- 2496 -->   }
+<!-- 2497 -->
+<!-- 2498 -->   .gb-slider-container:hover .gb-slider-track {
+<!-- 2499 -->     animation-play-state: paused;
+<!-- 2500 -->   }
+<!-- 2501 -->   @keyframes gbContinuousScroll {
+<!-- 2502 -->     0% { transform: translateX(0); }
+<!-- 2503 -->     100% { transform: translateX(calc(-50% - 10px)); }
+<!-- 2504 -->   }
+<!-- 2505 -->
+<!-- 2506 -->   /* CARD STRUCTURE - ALWAYS HORIZONTAL (PHOTO LEFT, CONTENT RIGHT) */
+<!-- 2507 -->   .gb-card {
+<!-- 2508 -->     width: 540px;
+<!-- 2509 -->     height: 450px;
+<!-- 2510 -->     background: var(--gb-card-bg);
+<!-- 2511 -->     border-radius: 20px;
+<!-- 2512 -->     padding: 2px;
+<!-- 2513 -->     background-image: var(--gb-gold-grad);
+<!-- 2514 -->     box-shadow: 0 8px 25px rgba(0, 0, 0, 0.8);
+<!-- 2515 -->     flex-shrink: 0;
+<!-- 2516 -->     box-sizing: border-box;
+<!-- 2517 -->    scroll-snap-align: unset !important;
+<!-- 2518 -->
+<!-- 2519 -->   }
+<!-- 2520 -->
+<!-- 2521 -->   .gb-card-inner {
+<!-- 2522 -->     background: var(--gb-bg-dark);
+<!-- 2523 -->     border-radius: 18px;
+<!-- 2524 -->     display: flex !important;
+<!-- 2525 -->     flex-direction: row !important;
+<!-- 2526 -->     overflow: hidden;
+<!-- 2527 -->     border: 1px solid rgba(212, 175, 55, 0.3);
+<!-- 2528 -->     height: 100%;
+<!-- 2529 -->   }
+<!-- 2530 -->
+<!-- 2531 -->   /* LEFT SIDE PHOTO BOX */
+<!-- 2532 -->   .gb-photo-box {
+<!-- 2533 -->     width: 42%;
+<!-- 2534 -->     position: relative;
+<!-- 2535 -->     background: #020612;
+<!-- 2536 -->     border-right: 2px solid #b38728;
+<!-- 2537 -->     display: flex;
+<!-- 2538 -->     align-items: center;
+<!-- 2539 -->     justify-content: center;
+<!-- 2540 -->     height: 100%;
+<!-- 2541 -->     overflow: hidden;
+<!-- 2542 -->     flex-shrink: 0;
+<!-- 2543 -->   }
+<!-- 2544 -->
+<!-- 2545 -->   .gb-photo-box img {
+<!-- 2546 -->     width: 100%;
+<!-- 2547 -->     height: 100%;
+<!-- 2548 -->     object-fit: cover;
+<!-- 2549 -->     object-position: top center;
+<!-- 2550 -->     cursor: pointer;
+<!-- 2551 -->   }
+<!-- 2552 -->
+<!-- 2553 -->   .gb-zoom-btn {
+<!-- 2554 -->     position: absolute;
+<!-- 2555 -->     bottom: 8px;
+<!-- 2556 -->     left: 50%;
+<!-- 2557 -->     transform: translateX(-50%);
+<!-- 2558 -->     background: rgba(0, 0, 0, 0.85);
+<!-- 2559 -->     border: 1px solid #d4af37;
+<!-- 2560 -->     color: #fff;
+<!-- 2561 -->     padding: 4px 12px;
+<!-- 2562 -->     border-radius: 15px;
+<!-- 2563 -->     cursor: pointer;
+<!-- 2564 -->     font-size: 0.8rem;
+<!-- 2565 -->     font-weight: bold;
+<!-- 2566 -->     backdrop-filter: blur(4px);
+<!-- 2567 -->     white-space: nowrap;
+<!-- 2568 -->   }
+<!-- 2569 -->
+<!-- 2570 -->   /* RIGHT SIDE CONTENT BOX */
+<!-- 2571 -->   .gb-content-box {
+<!-- 2572 -->     width: 58%;
+<!-- 2573 -->     padding: 12px 14px;
+<!-- 2574 -->     display: flex;
+<!-- 2575 -->     flex-direction: column;
+<!-- 2576 -->     justify-content: space-between;
+<!-- 2577 -->     box-sizing: border-box;
+<!-- 2578 -->   }
+<!-- 2579 -->
+<!-- 2580 -->   .gb-header-title {
+<!-- 2581 -->     font-size: 1.25rem;
+<!-- 2582 -->     font-weight: 800;
+<!-- 2583 -->     letter-spacing: 1.5px;
+<!-- 2584 -->     background: var(--gb-gold-grad);
+<!-- 2585 -->     -webkit-background-clip: text;
+<!-- 2586 -->     -webkit-text-fill-color: transparent;
+<!-- 2587 -->   }
+<!-- 2588 -->
+<!-- 2589 -->   .gb-preview-text {
+<!-- 2590 -->     font-size: 0.95rem;
+<!-- 2591 -->     line-height: 1.4;
+<!-- 2592 -->     color: #f1f5f9;
+<!-- 2593 -->     font-style: italic;
+<!-- 2594 -->     display: -webkit-box;
+<!-- 2595 -->     -webkit-line-clamp: 3;
+<!-- 2596 -->     -webkit-box-orient: vertical;
+<!-- 2597 -->     overflow: hidden;
+<!-- 2598 -->     margin: 4px 0;
+<!-- 2599 -->   }
+<!-- 2600 -->
+<!-- 2601 -->   .gb-more-btn {
+<!-- 2602 -->     background: var(--gb-blue-btn);
+<!-- 2603 -->     color: #fff;
+<!-- 2604 -->     border: 1px solid #60a5fa;
+<!-- 2605 -->     padding: 5px 14px;
+<!-- 2606 -->     border-radius: 12px;
+<!-- 2607 -->     font-weight: bold;
+<!-- 2608 -->     font-size: 0.85rem;
+<!-- 2609 -->     cursor: pointer;
+<!-- 2610 -->     align-self: flex-start;
+<!-- 2611 -->   }
+<!-- 2612 -->
+<!-- 2613 -->   .gb-person-name {
+<!-- 2614 -->     font-size: 1.05rem;
+<!-- 2615 -->     font-weight: 800;
+<!-- 2616 -->     background: var(--gb-gold-grad);
+<!-- 2617 -->     -webkit-background-clip: text;
+<!-- 2618 -->     -webkit-text-fill-color: transparent;
+<!-- 2619 -->   }
+<!-- 2620 -->
+<!-- 2621 -->   .gb-person-desig {
+<!-- 2622 -->   font-size: 0.85rem;
+<!-- 2623 -->   font-weight: bold;
+<!-- 2624 -->   color: #cbd5e1;
+<!-- 2625 -->   text-transform: uppercase;
+<!-- 2626 -->   letter-spacing: 0.5px;
+<!-- 2627 -->   margin-top: 2px;
+<!-- 2628 -->
+<!-- 2629 -->   }
+<!-- 2630 -->
+<!-- 2631 -->   .gb-person-org {
+<!-- 2632 -->     font-size: 0.8rem;
+<!-- 2633 -->     font-weight: bold;
+<!-- 2634 -->     color: #ffffff;
+<!-- 2635 -->     margin-top: 1px;
+<!-- 2636 -->     text-transform: uppercase;
+<!-- 2637 -->   }
+<!-- 2638 -->
+<!-- 2639 -->   /* MODALS & ZOOM */
+<!-- 2640 -->   .gb-modal-overlay {
+<!-- 2641 -->     display: none;
+<!-- 2642 -->     position: fixed;
+<!-- 2643 -->     top: 0; left: 0;
+<!-- 2644 -->     width: 100vw; height: 100vh;
+<!-- 2645 -->     background: rgba(0, 0, 0, 0.88);
+<!-- 2646 -->     z-index: 999991;
+<!-- 2647 -->     justify-content: center;
+<!-- 2648 -->     align-items: center;
+<!-- 2649 -->     padding: 15px;
+<!-- 2650 -->     box-sizing: border-box;
+<!-- 2651 -->   }
+<!-- 2652 -->
+<!-- 2653 -->   .gb-modal-card {
+<!-- 2654 -->     background: #070d1a;
+<!-- 2655 -->     border: 2px solid #b38728;
+<!-- 2656 -->     border-radius: 16px;
+<!-- 2657 -->     max-width: 550px;
+<!-- 2658 -->     width: 100%;
+<!-- 2659 -->     max-height: 80vh;
+<!-- 2660 -->     overflow-y: auto;
+<!-- 2661 -->     padding: 20px;
+<!-- 2662 -->     position: relative;
+<!-- 2663 -->   }
+<!-- 2664 -->
+<!-- 2665 -->   .gb-modal-close {
+<!-- 2666 -->     position: absolute;
+<!-- 2667 -->     top: 10px;
+<!-- 2668 -->     right: 15px;
+<!-- 2669 -->     color: #fcf6ba;
+<!-- 2670 -->     font-size: 1.8rem;
+<!-- 2671 -->     font-weight: bold;
+<!-- 2672 -->     cursor: pointer;
+<!-- 2673 -->   }
+<!-- 2674 -->
+<!-- 2675 -->   .gb-modal-body {
+<!-- 2676 -->     font-family: 'Georgia', serif;
+<!-- 2677 -->     font-size: 1.05rem;
+<!-- 2678 -->     line-height: 1.6;
+<!-- 2679 -->     color: #ffffff;
+<!-- 2680 -->     text-align: justify;
+<!-- 2681 -->     margin-top: 15px;
+<!-- 2682 -->   }
+<!-- 2683 -->
+<!-- 2684 -->   .gb-zoom-modal {
+<!-- 2685 -->     display: none;
+<!-- 2686 -->     position: fixed;
+<!-- 2687 -->     z-index: 999992;
+<!-- 2688 -->     top: 0; left: 0;
+<!-- 2689 -->     width: 100vw; height: 100vh;
+<!-- 2690 -->     background: rgba(0, 0, 0, 0.92);
+<!-- 2691 -->     justify-content: center;
+<!-- 2692 -->     align-items: center;
+<!-- 2693 -->   }
+<!-- 2694 -->
+<!-- 2695 -->   .gb-zoom-modal img {
+<!-- 2696 -->     width: 90vw;
+<!-- 2697 -->     max-width: 480px;
+<!-- 2698 -->     height: auto;
+<!-- 2699 -->     max-height: 80vh;
+<!-- 2700 -->     object-fit: contain;
+<!-- 2701 -->     border-radius: 12px;
+<!-- 2702 -->     border: 2px solid #d4af37;
+<!-- 2703 -->     box-shadow: 0 10px 30px rgba(0,0,0,0.9);
+<!-- 2704 -->   }
+<!-- 2705 -->
+<!-- 2706 -->   /* MOBILE RESPONSIVE FIT */
+<!-- 2707 -->   @media (max-width: 650px) {
+<!-- 2708 -->     .gb-card { 
+<!-- 2709 -->       width: 88vw; 
+<!-- 2710 -->       height:350px; 
+<!-- 2711 -->     }
+<!-- 2712 -->     .gb-photo-box { 
+<!-- 2713 -->       width: 40%; 
+<!-- 2714 -->     }
+<!-- 2715 -->     .gb-content-box { 
+<!-- 2716 -->       width: 60%; 
+<!-- 2717 -->       padding: 8px 10px; 
+<!-- 2718 -->     }
+<!-- 2719 -->     .gb-header-title {
+<!-- 2720 -->       font-size: 1.1rem;
+<!-- 2721 -->     }
+<!-- 2722 -->     .gb-preview-text {
+<!-- 2723 -->       font-size: 0.85rem;
+<!-- 2724 -->       -webkit-line-clamp: 3;
+<!-- 2725 -->     }
+<!-- 2726 -->     .gb-person-name {
+<!-- 2727 -->       font-size: 0.92rem;
+<!-- 2728 -->     }
+<!-- 2729 -->     .gb-person-desig, .gb-person-org {
+<!-- 2730 -->       font-size: 0.72rem;
+<!-- 2731 -->     }
+<!-- 2732 -->   }
+<!-- 2733 --> </style>
+<!-- 2734 -->
+<!-- 2735 --> <div class="gb-widget-wrapper">
+<!-- 2736 -->   <!-- SEARCH BAR -->
+<!-- 2737 -->   <div class="gb-search-container">
+<!-- 2738 -->     <input type="text" id="gbSearchInput" class="gb-search-box" placeholder="Search greetings by name or designation..." onkeyup="gbFilterGreetings()">
+<!-- 2739 -->   </div>
+<!-- 2740 -->
+<!-- 2741 -->   <!-- CONTINUOUS AUTO & MANUAL SCROLL TRACK -->
+<!-- 2742 -->   <div class="gb-slider-container" id="gbSliderContainer">
+<!-- 2743 -->     <div class="gb-slider-track" id="gbSliderTrack">
+<!-- 2744 -->
+<!-- 2745 -->
+<!-- 2746 -->        
+<!-- 2747 -->       
+<!-- 2748 -->       <!-- CARD 1: DR. RADHAKRISHNAN NAIR -->
+<!-- 2749 -->       <div class="gb-card" data-search="DR RADHAKRISHNAN  SENIOR RESEARCH CONSULTANT CENTER FOR GLOBAL HUMANITARIAN STUDIES">
+<!-- 2750 -->         <div class="gb-card-inner">
+<!-- 2751 -->           <div class="gb-photo-box">
+<!-- 2752 -->             <img src="radhakrishnan.jpg" alt="DR. RADHAKRISHNAN " onclick="gbOpenZoom(this)">
+<!-- 2753 -->             <button class="gb-zoom-btn" onclick="gbOpenZoom(this)">🔍 ZOOM</button>
+<!-- 2754 -->           </div>
+<!-- 2755 -->           <div class="gb-content-box">
+<!-- 2756 -->             <div class="gb-header-title">VISION</div>
+<!-- 2757 -->             <div class="gb-preview-text">
+<!-- 2758 -->               "Healthcare extends beyond direct medical care. Connecting basic nutrition to daily activities bridges the gap between survival and empowerment..."
+<!-- 2759 -->             </div>
+<!-- 2760 -->             <button class="gb-more-btn" onclick="gbOpenModal('radhakrishnan')">MORE &rarr;</button>
+<!-- 2761 -->             <div style="border-top: 1px solid rgba(212,175,55,0.3); padding-top: 4px; margin-top: 4px;">
+<!-- 2762 -->               <div class="gb-person-name">DR. RADHAKRISHNAN </div>
+<!-- 2763 -->               <div class="gb-person-desig">SENIOR RESEARCH CONSULTANT</div>
+<!-- 2764 -->               <div class="gb-person-org">CENTER FOR GLOBAL HUMANITARIAN STUDIES</div>
+<!-- 2765 -->             </div>
+<!-- 2766 -->           </div>
+<!-- 2767 -->         </div>
+<!-- 2768 -->       </div>
+<!-- 2769 -->
+<!-- 2770 -->       <!-- CARD 2: MATHUKATTY MP (രണ്ടാമത്തെ സ്ഥാനത്ത്) -->
+<!-- 2771 -->       <div class="gb-card" data-search="MATHUKUTTY MP RETIRED ASSISTANT ENGINEER KSEB">
+<!-- 2772 -->         <div class="gb-card-inner">
+<!-- 2773 -->           <div class="gb-photo-box">
+<!-- 2774 -->             <img src="mathukkutty.jpg" alt="MATHUKUTTY MP" onclick="gbOpenZoom(this)">
+<!-- 2775 -->             <button class="gb-zoom-btn" onclick="gbOpenZoom(this)">🔍 ZOOM</button>
+<!-- 2776 -->           </div>
+<!-- 2777 -->           <div class="gb-content-box">
+<!-- 2778 -->             <div class="gb-header-title">GREETINGS</div>
+<!-- 2779 -->             <div class="gb-preview-text">
+<!-- 2780 -->               "I have had the opportunity to know Mr. Mohammed M. Basheer personally. I believe that his honesty, sincerity, and compassion are truly reflected..."
+<!-- 2781 -->             </div>
+<!-- 2782 -->             <button class="gb-more-btn" onclick="gbOpenModal('mathukkutty')">MORE &rarr;</button>
+<!-- 2783 -->             <div style="border-top: 1px solid rgba(212,175,55,0.3); padding-top: 4px; margin-top: 4px;">
+<!-- 2784 -->               <div class="gb-person-name">MATHUKUTTY MP</div>
+<!-- 2785 -->               <div class="gb-person-desig">RETIRED ASSISTANT ENGINEER</div>
+<!-- 2786 -->               <div class="gb-person-org">KSEB</div>
+<!-- 2787 -->             </div>
+<!-- 2788 -->           </div>
+<!-- 2789 -->         </div>
+<!-- 2790 -->       </div>
+<!-- 2791 -->
+<!-- 2792 -->       <!-- CARD 3: ADV. ANITA CHACKO -->
+<!-- 2793 -->     <!--<div class="gb-card" data-search="ADV ANITA CHACKO CHIEF LEGAL STRATEGIST GLOBAL POLICY WELFARE FORUM">
+<!-- 2794 -->         <div class="gb-card-inner">
+<!-- 2795 -->           <div class="gb-photo-box">
+<!-- 2796 -->             <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=500&q=80" alt="ADV. ANITA CHACKO" onclick="gbOpenZoom(this)">
+<!-- 2797 -->             <button class="gb-zoom-btn" onclick="gbOpenZoom(this)">🔍 ZOOM</button>
+<!-- 2798 -->           </div>
+<!-- 2799 -->           <div class="gb-content-box">
+<!-- 2800 -->             <div class="gb-header-title">VISION</div>
+<!-- 2801 -->             <div class="gb-preview-text">
+<!-- 2802 -->               "Building sustainable models for humanitarian outreach is essential. Converting daily transactions into direct community aid creates transparent welfare..."
+<!-- 2803 -->             </div>
+<!-- 2804 -->             <button class="gb-more-btn" onclick="gbOpenModal('anita')">MORE &rarr;</button>
+<!-- 2805 -->             <div style="border-top: 1px solid rgba(212,175,55,0.3); padding-top: 4px; margin-top: 4px;">
+<!-- 2806 -->               <div class="gb-person-name">ADV. ANITA CHACKO</div>
+<!-- 2807 -->               <div class="gb-person-desig">CHIEF LEGAL STRATEGIST</div>
+<!-- 2808 -->               <div class="gb-person-org">GLOBAL POLICY & WELFARE FORUM</div>
+<!-- 2809 -->             </div>
+<!-- 2810 -->           </div>
+<!-- 2811 -->         </div>
+<!-- 2812 -->       </div>-->
+<!-- 2813 -->
+<!-- 2814 -->       <!-- CARD 4: PROF. K. V. RAMANATHAN -->
+<!-- 2815 -->       <div class="gb-card" data-search="PROF K V RAMANATHAN RETIRED PRINCIPAL TECHNICAL CONSULTANT INFRASTRUCTURE DEVELOPMENT NETWORK">
+<!-- 2816 -->         <div class="gb-card-inner">
+<!-- 2817 -->           <div class="gb-photo-box">
+<!-- 2818 -->             <img src="ramanandan.jpg" alt="PROF. K. V. RAMANATHAN" onclick="gbOpenZoom(this)">
+<!-- 2819 -->             <button class="gb-zoom-btn" onclick="gbOpenZoom(this)">🔍 ZOOM</button>
+<!-- 2820 -->           </div>
+<!-- 2821 -->           <div class="gb-content-box">
+<!-- 2822 -->             <div class="gb-header-title">GREETINGS</div>
+<!-- 2823 -->             <div class="gb-preview-text">
+<!-- 2824 -->               "Education and proper nutrition form the base of an empowered society. Integrating technology seamlessly for hunger relief is visionary... I wish you all the best"
+<!-- 2825 -->             </div>
+<!-- 2826 -->             <button class="gb-more-btn" onclick="gbOpenModal('ramanathan')">MORE &rarr;</button>
+<!-- 2827 -->             <div style="border-top: 1px solid rgba(212,175,55,0.3); padding-top: 4px; margin-top: 4px;">
+<!-- 2828 -->               <div class="gb-person-name"> PROF. K. V. RAMANATHAN</div>
+<!-- 2829 -->               <div class="gb-person-desig"> RETIRED PRINCIPAL TECHNICAL CONSULTANT</div>
+<!-- 2830 -->               <div class="gb-person-org">INFRASTRUCTURE DEVELOPMENT NETWORK</div>
+<!-- 2831 -->             </div>
+<!-- 2832 -->           </div>
+<!-- 2833 -->         </div>
+<!-- 2834 -->       </div>
+<!-- 2835 -->
+<!-- 2836 -->       <!-- DUPLICATE CARDS FOR SEAMLESS LOOPING -->
+<!-- 2837 -->       <!--<div class="gb-card" data-search="DR RADHAKRISHNAN NAIR SENIOR FELLOW RESEARCH CONSULTANT CENTER FOR GLOBAL HUMANITARIAN STUDIES">
+<!-- 2838 -->         <div class="gb-card-inner">
+<!-- 2839 -->           <div class="gb-photo-box">
+<!-- 2840 -->             <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=500&q=80" alt="DR. RADHAKRISHNAN NAIR" onclick="gbOpenZoom(this)">
+<!-- 2841 -->             <button class="gb-zoom-btn" onclick="gbOpenZoom(this)">🔍 ZOOM</button>
+<!-- 2842 -->           </div>
+<!-- 2843 -->           <div class="gb-content-box">
+<!-- 2844 -->             <div class="gb-header-title">VISION</div>
+<!-- 2845 -->             <div class="gb-preview-text">
+<!-- 2846 -->               "Healthcare extends beyond direct medical care. Connecting basic nutrition to daily activities bridges the gap between survival and empowerment..."
+<!-- 2847 -->             </div>
+<!-- 2848 -->             <button class="gb-more-btn" onclick="gbOpenModal('radhakrishnan')">MORE &rarr;</button>
+<!-- 2849 -->             <div style="border-top: 1px solid rgba(212,175,55,0.3); padding-top: 4px; margin-top: 4px;">
+<!-- 2850 -->               <div class="gb-person-name">DR. RADHAKRISHNAN NAIR</div>
+<!-- 2851 -->               <div class="gb-person-desig">SENIOR FELLOW & RESEARCH CONSULTANT</div>
+<!-- 2852 -->               <div class="gb-person-org">CENTER FOR GLOBAL HUMANITARIAN STUDIES</div>
+<!-- 2853 -->             </div>
+<!-- 2854 -->           </div>
+<!-- 2855 -->         </div>
+<!-- 2856 -->       </div>-->
+<!-- 2857 -->
+<!-- 2858 -->       <div class="gb-card" data-search="MATHUKATTY MP RETIRED ASSISTANT ENGINEER KSEB">
+<!-- 2859 -->         <div class="gb-card-inner">
+<!-- 2860 -->           <div class="gb-photo-box">
+<!-- 2861 -->             <img src="mathukkutty.jpg" alt="MATHUKATTY MP" onclick="gbOpenZoom(this)">
+<!-- 2862 -->             <button class="gb-zoom-btn" onclick="gbOpenZoom(this)">🔍 ZOOM</button>
+<!-- 2863 -->           </div>
+<!-- 2864 -->           <div class="gb-content-box">
+<!-- 2865 -->             <div class="gb-header-title">GREETINGS</div>
+<!-- 2866 -->             <div class="gb-preview-text">
+<!-- 2867 -->               "I have had the opportunity to know Mr. Mohammed M. Basheer personally. I believe that his honesty, sincerity, and compassion are truly reflected..."
+<!-- 2868 -->             </div>
+<!-- 2869 -->             <button class="gb-more-btn" onclick="gbOpenModal('mathukkutty')">MORE &rarr;</button>
+<!-- 2870 -->             <div style="border-top: 1px solid rgba(212,175,55,0.3); padding-top: 4px; margin-top: 4px;">
+<!-- 2871 -->               <div class="gb-person-name">MATHUKUTTY, MP</div>
+<!-- 2872 -->               <div class="gb-person-desig">RETIRED ASSISTANT ENGINEER</div>
+<!-- 2873 -->               <div class="gb-person-org">KSEB</div>
+<!-- 2874 -->             </div>
+<!-- 2875 -->           </div>
+<!-- 2876 -->         </div>
+<!-- 2877 -->       </div>
+<!-- 2878 -->
+<!-- 2879 -->     </div>
+<!-- 2880 -->   </div>
+<!-- 2881 --> </div>
+<!-- 2882 -->
+<!-- 2883 -->
+<!-- 2884 --> <!-- INDIVIDUAL MESSAGE MODALS -->
+<!-- 2885 -->
+<!-- 2886 --> <!-- MODAL 1: MATHUKATTY MP -->
+<!-- 2887 --> <div id="mathukkutty" class="gb-modal-overlay" onclick="gbCloseModal('mathukkutty')">
+<!-- 2888 -->   <div class="gb-modal-card" onclick="event.stopPropagation()">
+<!-- 2889 -->     <span class="gb-modal-close" onclick="gbCloseModal('mathukkutty')">&times;</span>
+<!-- 2890 -->     <div style="text-align: center;"><span style="background: var(--gb-gold-grad); color: #000; font-weight: bold; padding: 6px 24px; border-radius: 20px; font-size: 1.1rem;">GREETINGS</span></div>
+<!-- 2891 -->     <div class="gb-modal-body">
+<!-- 2892 -->       <p style="font-style: italic; color: #fcf6ba;">
+<!-- 2893 -->         I have had the opportunity to know Mr. Mohammed M. Basheer personally. I believe that his honesty, sincerity, and compassion are truly reflected in this initiative.
+<!-- 2894 -->       </p>
+<!-- 2895 -->       <p>
+<!-- 2896 -->         This digital initiative, launched with the noble vision of helping vulnerable people who struggle to access even the most basic necessity of life—food—is truly commendable. Its message, <span style="color: #fcf6ba; font-weight: bold;">"YOUR PURCHASE SATISFIES A HUNGER®"</span>, is simple yet deeply meaningful.
+<!-- 2897 -->       </p>
+<!-- 2898 -->       <p>
+<!-- 2899 -->         By simply saving a small icon and using it for your regular purchases whenever possible, everyone has an opportunity to become part of this noble humanitarian mission.
+<!-- 2900 -->       </p>
+<!-- 2901 -->       <p>
+<!-- 2902 -->         I extend my heartfelt best wishes for the success of this exemplary initiative towards building a hunger-free society.
+<!-- 2903 -->       </p>
+<!-- 2904 -->     </div>
+<!-- 2905 -->     <div style="border-top: 1px solid rgba(212, 175, 55, 0.4); padding-top: 15px; text-align: center; margin-top: 20px;">
+<!-- 2906 -->       <div class="gb-person-name" style="font-size: 1.25rem;">MATHUKUTTY, MP</div>
+<!-- 2907 -->       <div class="gb-person-desig" style="font-size: 0.9rem;">RETIRED ASSISTANT ENGINEER</div>
+<!-- 2908 -->       <div class="gb-person-org" style="font-size: 0.9rem;">KERALA STATE ELECTRICITY BOARD (KSEB)</div>
+<!-- 2909 -->     </div>
+<!-- 2910 -->   </div>
+<!-- 2911 --> </div>
+<!-- 2912 -->
+<!-- 2913 --> <!-- MODAL 2: DR. RADHAKRISHNAN NAIR -->
+<!-- 2914 --> <div id="radhakrishnan" class="gb-modal-overlay" onclick="gbCloseModal('radhakrishnan')">
+<!-- 2915 -->   <div class="gb-modal-card" onclick="event.stopPropagation()">
+<!-- 2916 -->     <span class="gb-modal-close" onclick="gbCloseModal('radhakrishnan')">&times;</span>
+<!-- 2917 -->     <div style="text-align: center;"><span style="background: var(--gb-gold-grad); color: #000; font-weight: bold; padding: 6px 24px; border-radius: 20px; font-size: 1.1rem;">VISION</span></div>
+<!-- 2918 -->     <div class="gb-modal-body">
+<!-- 2919 -->       <p>Healthcare is not just about treating illnesses; ensuring proper nutrition to vulnerable communities is equally vital. BAS Charity International’s self-sustaining humanitarian effort ensures that every day-to-day transaction turns into a lifeline for someone in need.</p>
+<!-- 2920 -->     </div>
+<!-- 2921 -->     <div style="border-top: 1px solid rgba(212, 175, 55, 0.4); padding-top: 15px; text-align: center; margin-top: 20px;">
+<!-- 2922 -->       <div class="gb-person-name" style="font-size: 1.25rem;">DR. RADHAKRISHNAN NAIR</div>
+<!-- 2923 -->       <div class="gb-person-desig" style="font-size: 0.9rem;">SENIOR FELLOW & RESEARCH CONSULTANT</div>
+<!-- 2924 -->       <div class="gb-person-org" style="font-size: 0.9rem;">CENTER FOR GLOBAL HUMANITARIAN STUDIES</div>
+<!-- 2925 -->     </div>
+<!-- 2926 -->   </div>
+<!-- 2927 --> </div>
+<!-- 2928 -->
+<!-- 2929 --> <!-- MODAL 3: ADV. ANITA CHACKO -->
+<!-- 2930 --> <!--<div id="anita" class="gb-modal-overlay" onclick="gbCloseModal('anita')">
+<!-- 2931 -->   <div class="gb-modal-card" onclick="event.stopPropagation()">
+<!-- 2932 -->     <span class="gb-modal-close" onclick="gbCloseModal('anita')">&times;</span>
+<!-- 2933 -->     <div style="text-align: center;"><span style="background: var(--gb-gold-grad); color: #000; font-weight: bold; padding: 6px 24px; border-radius: 20px; font-size: 1.1rem;">VISION</span></div>
+<!-- 2934 -->     <div class="gb-modal-body">
+<!-- 2935 -->       <p>Transparency and ethical alignment are essential for true charitable impact. Connecting global e-commerce seamlessly to charitable causes creates a sustainable model that stands as an example to society.</p>
+<!-- 2936 -->     </div>
+<!-- 2937 -->     <div style="border-top: 1px solid rgba(212, 175, 55, 0.4); padding-top: 15px; text-align: center; margin-top: 20px;">
+<!-- 2938 -->       <div class="gb-person-name" style="font-size: 1.25rem;">ADV. ANITA CHACKO</div>
+<!-- 2939 -->       <div class="gb-person-desig" style="font-size: 0.9rem;">CHIEF LEGAL STRATEGIST</div>
+<!-- 2940 -->       <div class="gb-person-org" style="font-size: 0.9rem;">GLOBAL POLICY & WELFARE FORUM</div>
+<!-- 2941 -->     </div>
+<!-- 2942 -->   </div>
+<!-- 2943 --> </div>-->
+<!-- 2944 -->
+<!-- 2945 --> <!-- MODAL 4: PROF. K. V. RAMANATHAN -->
+<!-- 2946 --> <div id="ramanathan" class="gb-modal-overlay" onclick="gbCloseModal('ramanathan')">
+<!-- 2947 -->   <div class="gb-modal-card" onclick="event.stopPropagation()">
+<!-- 2948 -->     <span class="gb-modal-close" onclick="gbCloseModal('ramanathan')">&times;</span>
+<!-- 2949 -->     <div style="text-align: center;"><span style="background: var(--gb-gold-grad); color: #000; font-weight: bold; padding: 6px 24px; border-radius: 20px; font-size: 1.1rem;">VISION</span></div>
+<!-- 2950 -->     <div class="gb-modal-body">
+<!-- 2951 -->       <p>Empowering humanity begins with solving fundamental needs. Utilizing affiliate revenue mechanisms to channel aid directly without burdens on donors is an extraordinary concept.</p>
+<!-- 2952 -->     </div>
+<!-- 2953 -->     <div style="border-top: 1px solid rgba(212, 175, 55, 0.4); padding-top: 15px; text-align: center; margin-top: 20px;">
+<!-- 2954 -->       <div class="gb-person-name" style="font-size: 1.25rem;">PROF. K. V. RAMANATHAN</div>
+<!-- 2955 -->       <div class="gb-person-desig" style="font-size: 0.9rem;">PRINCIPAL TECHNICAL CONSULTANT</div>
+<!-- 2956 -->       <div class="gb-person-org" style="font-size: 0.9rem;">INFRASTRUCTURE DEVELOPMENT NETWORK</div>
+<!-- 2957 -->     </div>
+<!-- 2958 -->   </div>
+<!-- 2959 --> </div>
+<!-- 2960 -->
+<!-- 2961 --> <!-- IMAGE ZOOM MODAL -->
+<!-- 2962 --> <div id="gbImageZoomModal" class="gb-zoom-modal" onclick="gbCloseZoom()">
+<!-- 2963 -->   <span class="gb-modal-close" style="top:20px; right:30px;">&times;</span>
+<!-- 2964 -->   <img id="gbModalImg" src="" alt="Enlarged View">
+<!-- 2965 --> </div>
+<!-- 2966 -->
+<!-- 2967 --> <script>
+<!-- 2968 -->   function gbOpenModal(id) {
+<!-- 2969 -->     document.getElementById(id).style.display = 'flex';
+<!-- 2970 -->   }
+<!-- 2971 -->
+<!-- 2972 -->   function gbCloseModal(id) {
+<!-- 2973 -->     document.getElementById(id).style.display = 'none';
+<!-- 2974 -->   }
+<!-- 2975 -->
+<!-- 2976 -->   function gbOpenZoom(el) {
+<!-- 2977 -->     let imgSrc = el.tagName === 'IMG' ? el.src : el.previousElementSibling.src;
+<!-- 2978 -->     document.getElementById('gbModalImg').src = imgSrc;
+<!-- 2979 -->     document.getElementById('gbImageZoomModal').style.display = 'flex';
+<!-- 2980 -->   }
+<!-- 2981 -->
+<!-- 2982 -->   function gbCloseZoom() {
+<!-- 2983 -->     document.getElementById('gbImageZoomModal').style.display = 'none';
+<!-- 2984 -->   }
+<!-- 2985 -->
+<!-- 2986 -->   function gbFilterGreetings() {
+<!-- 2987 -->     let query = document.getElementById('gbSearchInput').value.toLowerCase();
+<!-- 2988 -->     let cards = document.getElementsByClassName('gb-card');
+<!-- 2989 -->     let track = document.getElementById('gbSliderTrack');
+<!-- 2990 -->
+<!-- 2991 -->     if (query.trim() !== '') {
+<!-- 2992 -->       track.style.animation = 'none';
+<!-- 2993 -->     } else {
+<!-- 2994 -->       track.style.animation = 'gbContinuousScroll 20s linear infinite';
+<!-- 2995 -->     }
+<!-- 2996 -->
+<!-- 2997 -->     for (let card of cards) {
+<!-- 2998 -->       let searchData = card.getAttribute('data-search').toLowerCase();
+<!-- 2999 -->       if (searchData.includes(query)) {
+<!-- 3000 -->         card.style.display = "block";  
+
+<!-- 3001 -->       } else {
+<!-- 3002 -->         card.style.display = "none";
+<!-- 3003 -->       }
+<!-- 3004 -->     }
+<!-- 3005 -->   }
+<!-- 3006 -->
+<!-- 3007 -->   // MANUAL DRAG & TOUCH SCROLL
+<!-- 3008 -->   const gbSlider = document.getElementById('gbSliderContainer');
+<!-- 3009 -->   let gbIsDown = false;
+<!-- 3010 -->   let gbStartX;
+<!-- 3011 -->   let gbScrollLeft;
+<!-- 3012 -->
+<!-- 3013 -->   if (gbSlider) {
+<!-- 3014 -->     gbSlider.addEventListener('mousedown', (e) => {
+<!-- 3015 -->       gbIsDown = true;
+<!-- 3016 -->       gbStartX = e.pageX - gbSlider.offsetLeft;
+<!-- 3017 -->       gbScrollLeft = gbSlider.scrollLeft;
+<!-- 3018 -->     });
+<!-- 3019 -->     gbSlider.addEventListener('mouseleave', () => { gbIsDown = false; });
+<!-- 3020 -->     gbSlider.addEventListener('mouseup', () => { gbIsDown = false; });
+<!-- 3021 -->     gbSlider.addEventListener('mousemove', (e) => {
+<!-- 3022 -->       if(!gbIsDown) return;
+<!-- 3023 -->       e.preventDefault();
+<!-- 3024 -->       const x = e.pageX - gbSlider.offsetLeft;
+<!-- 3025 -->       const walk = (x - gbStartX) * 2;
+<!-- 3026 -->       gbSlider.scrollLeft = gbScrollLeft - walk;
+<!-- 3027 -->     });
+<!-- 3028 -->   }
+<!-- 3029 -->    const container = document.querySelector('.gb-card-container'); // കാർഡുകളുടെ Parent Class
+<!-- 3030 -->
+<!-- 3031 --> container.addEventListener('wheel', (e) => {
+<!-- 3032 -->   e.preventDefault();
+<!-- 3033 -->   // സ്‌ക്രോൾ ചെയ്യുന്നതിന്റെ എതിർദിശയിലേക്ക് മൂവ് ചെയ്യിക്കുന്നു
+<!-- 3034 -->   container.scrollLeft -= e.deltaY; 
+<!-- 3035 --> });
+<!-- 3036 -->
+<!-- 3037 --> </script>
+<!-- 3038 --> <!-- INFINITE AUTO/MANUAL SCROLL GREETINGS WIDGET END -->
+<!-- 3039 -->
+<!-- 3040 -->    
+<!-- 3041 --> <!-- INFINITE AUTO/MANUAL SCROLL GREETINGS WIDGET END -->
+<!-- 3042 -->  <!-- INFINITE AUTO/MANUAL SCROLL GREETINGS WIDGET END -->
+<!-- 3043 --> <style>
+<!-- 3044 --> .trust-container{
+<!-- 3045 --> max-width:900px; /* Responsive Fix */
+<!-- 3046 --> width:96%;
+<!-- 3047 --> margin:auto;
+<!-- 3048 --> }
+<!-- 3049 --> .trust-title{ 
+<!-- 3050 --> background:#000;
+<!-- 3051 --> color:#00e676;
+<!-- 3052 --> font-weight:900;
+<!-- 3053 --> font-size:28px;
+<!-- 3054 --> text-align:center;
+<!-- 3055 --> padding:20px;
+<!-- 3056 --> border-radius:12px;
+<!-- 3057 --> margin-bottom:25px;
+<!-- 3058 --> border: 1.5px solid #C0C0C0;
+<!-- 3059 --> box-shadow: 0 0 8px rgba(192,192,192,0.18);
+<!-- 3060 --> border-left:6px solid #00e676;
+<!-- 3061 --> }
+<!-- 3062 --> .trust-title{
+<!-- 3063 --> background:#000;
+<!-- 3064 --> color:#00e676;
+<!-- 3065 --> font-weight:900;
+<!-- 3066 --> font-size:28px;
+<!-- 3067 --> text-align:center;
+<!-- 3068 --> padding:20px;
+<!-- 3069 --> border-radius:12px;
+<!-- 3070 --> margin-bottom:25px;
+<!-- 3071 --> border: 1px solid #C0C0C0;
+<!-- 3072 --> border-left:6px solid #00e676;
+<!-- 3073 --> }
+<!-- 3074 --> .trust-box {
+<!-- 3075 -->   background: #1a1a1a;
+<!-- 3076 -->   padding: 22px;
+<!-- 3077 -->   border-radius: 12px;
+<!-- 3078 -->   border: 1.5px solid #C0C0C0;
+<!-- 3079 -->   box-shadow: 0 0 8px rgba(192,192,192,0.18); 
+<!-- 3080 -->   border-left: 6px solid #e91e63;
+<!-- 3081 -->   box-shadow: 0px 0px 6px rgba(255, 255, 255, 0.15); 
+<!-- 3082 -->   margin-bottom: 20px;
+<!-- 3083 --> }
+<!-- 3084 --> .trust-box h1{
+<!-- 3085 --> font-size:26px;
+<!-- 3086 --> margin-bottom:10px;
+<!-- 3087 --> color:#fff;
+<!-- 3088 --> }
+<!-- 3089 --> .trust-sub{
+<!-- 3090 --> font-size:22px;
+<!-- 3091 --> color:#4fc3f7;
+<!-- 3092 --> margin-bottom:15px;
+<!-- 3093 --> display:block;
+<!-- 3094 --> }
+<!-- 3095 --> .trust-box p{
+<!-- 3096 --> font-size:22px;
+<!-- 3097 --> color:#ddd;
+<!-- 3098 --> line-height:1.7;
+<!-- 3099 --> }
+<!-- 3100 --> .btn-row{
+<!-- 3101 --> display:flex;
+<!-- 3102 --> gap:10px;
+<!-- 3103 --> margin-top:20px;
+<!-- 3104 --> }
+<!-- 3105 --> .trust-btn{
+<!-- 3106 --> padding:16px;
+<!-- 3107 --> border-radius:10px;
+<!-- 3108 --> font-size:22px;
+<!-- 3109 --> font-weight:bold;
+<!-- 3110 --> text-align:center;
+<!-- 3111 --> cursor:pointer;
+<!-- 3112 --> display:flex;
+<!-- 3113 --> align-items:center;
+<!-- 3114 --> justify-content:center;
+<!-- 3115 --> flex-direction: column;
+<!-- 3116 --> }
+<!-- 3117 --> .btn-row{
+<!-- 3118 --> display:flex;
+<!-- 3119 --> gap:10px;
+<!-- 3120 --> margin-top:20px;
+<!-- 3121 --> }
+<!-- 3122 --> .trust-btn{
+<!-- 3123 --> padding:16px;
+<!-- 3124 --> border-radius:10px;
+<!-- 3125 --> font-size:22px;
+<!-- 3126 --> font-weight:bold;
+<!-- 3127 --> text-align:center;
+<!-- 3128 --> cursor:pointer;
+<!-- 3129 --> display:flex;
+<!-- 3130 --> align-items:center;
+<!-- 3131 --> justify-content:center;
+<!-- 3132 --> flex-direction: column;
+<!-- 3133 --> }
+<!-- 3134 --> .btn-red{ background:#8b0000; color:#fff; flex:1; }
+<!-- 3135 --> .btn-green{ background:#006400; color:#fff; flex:2; }
+<!-- 3136 --> .inner-card{
+<!-- 3137 --> background:#111;
+<!-- 3138 --> padding:18px;
+<!-- 3139 --> border-radius:10px;
+<!-- 3140 --> border:1px solid #333;
+<!-- 3141 --> margin-top:15px;
+<!-- 3142 --> font-size:22px;
+<!-- 3143 --> line-height:1.7;
+<!-- 3144 --> border-left:4px solid #00e676;
+<!-- 3145 --> color:#fff;
+<!-- 3146 --> }
+<!-- 3147 --> .sub-view{display:none;}
+<!-- 3148 --> .back-btn{
+<!-- 3149 --> margin-top:20px;
+<!-- 3150 --> background:#333;
+<!-- 3151 --> color:#fff;
+<!-- 3152 --> padding:14px;
+<!-- 3153 --> border-radius:10px;
+<!-- 3154 --> text-align:center;
+<!-- 3155 --> font-size:22px;
+<!-- 3156 --> font-weight:bold;
+<!-- 3157 --> cursor:pointer;
+<!-- 3158 --> }
+<!-- 3159 --> </style>
+<!-- 3160 -->
+<!-- 3161 --> <div class="trust-container">
+<!-- 3162 --> <div class="trust-title"> A Few Trusted Organizations Worldwide </div>
+<!-- 3163 -->
+<!-- 3164 --> <div class="trust-box">
+<!-- 3165 --> <h1>Guidance India Education and Charitable Trust</h1>
+<!-- 3166 --> <span class="trust-sub"> Paracode welfare program </span>
+<!-- 3167 -->
+<!-- 3168 --> <p>
+<!-- 3169 --> A welfare initiative focusing on pain and palliative care, orphan support, ration aid, education assistance, de addiction awareness and sustainable welfare.
+<!-- 3170 --> </p>
+<!-- 3171 -->
+<!-- 3172 --> <div class="btn-row">
+<!-- 3173 --> <div class="trust-btn btn-red" onclick="showDetails9()">DETAILS</div>
+<!-- 3174 --> <div class="trust-btn btn-green" onclick="showDonate9()">
+<!-- 3175 --> Donate Directly→
+<!-- 3176 --> <span style="font-size:18px;">(India Only)</span>
+<!-- 3177 --> </div>
+<!-- 3178 --> </div>
+<!-- 3179 -->
+<!-- 3180 --> <div id="details9" class="sub-view">
+<!-- 3181 --> <div class="trust-box">
+<!-- 3182 --> <h1>Project Details</h1>
+<!-- 3183 --> <div class="inner-card">
+<!-- 3184 --> The Paracode Rehabilitation Project supports individuals and families through pain and palliative care, orphan care, ration distribution, education support and rehabilitation awareness.
+<!-- 3185 --> </div>
+<!-- 3186 --> <div class="inner-card">
+<!-- 3187 --> Even a small daily contribution can relieve hunger and bring dignity to lives in need.
+<!-- 3188 --> </div>
+<!-- 3189 --> <div class="back-btn" onclick="reset9()">BACK</div>
+<!-- 3190 --> </div>
+<!-- 3191 --> </div>
+<!-- 3192 -->
+<!-- 3193 --> <div id="donate9" class="sub-view">
+<!-- 3194 --> <div class="trust-box">
+<!-- 3195 --> <h1>Donation Categories</h1>
+<!-- 3196 --> <div class="inner-card">
+<!-- 3197 --> <b>Pain and Palliative Care</b><br>
+<!-- 3198 --> Medical support, medicines and comfort care.
+<!-- 3199 --> </div>
+<!-- 3200 --> <div class="inner-card">
+<!-- 3201 --> <b>Orphan Support</b><br>
+<!-- 3202 --> Food, shelter, education and basic needs.
+<!-- 3203 --> </div>
+<!-- 3204 --> <div class="inner-card">
+<!-- 3205 --> <b>Building Fund Contribution - Sustainable Income (Sadaqa Jaria)</b>
+<!-- 3206 --> <br><br>
+<!-- 3207 --> 1 sq.ft - Rs 1500<br>
+<!-- 3208 --> 100 sq.ft - Rs 150000
+<!-- 3209 --> <br><br>
+<!-- 3210 --> One Flat Sponsorship - Rs 1500000<br>
+<!-- 3211 --> Total Project - Rs 7500000
+<!-- 3212 --> </div>
+<!-- 3213 --> <div class="inner-card">
+<!-- 3214 --> <b>Bank Transfer Details</b><br><br>
+<!-- 3215 --> Account Name : Guidance India Education and Charitable Trust<br>
+<!-- 3216 --> Account Number : 10350200008909<br>
+<!-- 3217 --> IFSC : FDRL0001035<br>
+<!-- 3218 --> Federal Bank Kizhakkambalam Branch
+<!-- 3219 --> </div>
+<!-- 3220 --> <div class="back-btn" onclick="reset9()">BACK</div>
+<!-- 3221 --> </div>
+<!-- 3222 --> </div>
+<!-- 3223 --> </div>
+<!-- 3224 --> </div>
+<!-- 3225 -->
+<!-- 3226 --> <script>
+<!-- 3227 --> let timer9;
+<!-- 3228 --> function showDetails9(){
+<!-- 3229 --> document.getElementById("details9").style.display="block";
+<!-- 3230 --> document.getElementById("donate9").style.display="none";
+<!-- 3231 --> window.scrollBy({top:200, behavior:"smooth"});
+<!-- 3232 --> startTimer9();
+<!-- 3233 --> }
+<!-- 3234 --> function showDonate9(){
+<!-- 3235 --> document.getElementById("details9").style.display="none";
+<!-- 3236 --> document.getElementById("donate9").style.display="block";
+<!-- 3237 --> window.scrollBy({top:200, behavior:"smooth"});
+<!-- 3238 --> startTimer9();
+<!-- 3239 --> }
+<!-- 3240 --> function reset9(){
+<!-- 3241 --> document.getElementById("details9").style.display="none";
+<!-- 3242 --> document.getElementById("donate9").style.display="none";
+<!-- 3243 --> clearTimeout(timer9);
+<!-- 3244 --> }
+<!-- 3245 --> function startTimer9(){
+<!-- 3246 --> clearTimeout(timer9);
+<!-- 3247 --> timer9=setTimeout(reset9,15000);
+<!-- 3248 --> }
+<!-- 3249 --> </script>
+<!-- 3250 -->
+<!-- 3251 --> <style>
+<!-- 3252 --> .peace-wrapper{
+<!-- 3253 --> max-width:900px; /* Responsive Fix */
+<!-- 3254 --> width:96%;
+<!-- 3255 --> margin:30px auto;
+<!-- 3256 --> }
+<!-- 3257 --> .peace-box {
+<!-- 3258 -->   background: #1a1a1a;
+<!-- 3259 -->   padding: 22px;
+<!-- 3260 -->   border-radius: 12px;
+<!-- 3261 -->   border: 1.5px solid #C0C0C0;
+<!-- 3262 -->   box-shadow: 0 0 8px rgba(192,192,192,0.18);
+<!-- 3263 -->   border-left: 6px solid #e91e63;
+<!-- 3264 -->   box-shadow: 0px 0px 6px rgba(255, 255, 255, 0.15); 
+<!-- 3265 -->   color: #fff;
+<!-- 3266 -->   margin-bottom: 20px;
+<!-- 3267 --> }
+<!-- 3268 --> .peace-box h1{ font-size:26px; margin-bottom:12px; }
+<!-- 3269 --> .peace-sub{ font-size:22px; color:#4fc3f7; margin-bottom:14px; display:block; font-weight:700; }
+<!-- 3270 --> .peace-box p{ font-size:22px; line-height:1.7; color:#ccc; }
+<!-- 3271 --> .peace-btn-row{ display:flex; gap:10px; margin-top:20px; }
+<!-- 3272 --> .peace-btn{ padding:16px; border-radius:10px; font-weight:800; cursor:pointer; font-size:22px; text-align:center; }
+<!-- 3273 --> .peace-btn-details{ background:#8b0000; color:#fff; flex:1; }
+<!-- 3274 --> .peace-section{ display:none; }
+<!-- 3275 --> .peace-card{ background:#111; padding:16px; border-radius:10px; border:1px solid #333; margin-bottom:14px; font-size:22px; line-height:1.7; border-left:4px solid #00e676; }
+<!-- 3276 --> .peace-link{ display:inline-block; margin-top:10px; padding:12px 18px; background:#00c853; color:#000; border-radius:10px; font-weight:bold; text-decoration:none; font-size:22px; }
+<!-- 3277 --> .peace-back{ margin-top:20px; background:#333; color:#fff; padding:14px; border-radius:10px; text-align:center; cursor:pointer; font-weight:bold; font-size:22px; }
+<!-- 3278 --> </style>
+<!-- 3279 -->
+<!-- 3280 --> <div class="peace-wrapper">
+<!-- 3281 --> <div class="peace-box">
+<!-- 3282 --> <h1>Peace Valley – Kothamangalam</h1>
+<!-- 3283 --> <span class="peace-sub"> Charitable Care Institution </span>
+<!-- 3284 --> <p>
+<!-- 3285 --> A humanitarian institution providing shelter, medical care, rehabilitation and daily support for the needy and vulnerable.
+<!-- 3286 --> </p>
+<!-- 3287 -->
+<!-- 3288 --> <div class="peace-btn-row">
+<!-- 3289 --> <div class="peace-btn peace-btn-details" onclick="peaceDetails10()">Details</div>
+<!-- 3290 --> <a class="peace-link" href="https://peacevalley.org.in/donation/" target="_blank">
+<!-- 3291 --> Donate Directly ➜
+<!-- 3292 --> <br><span style="font-size:18px;">(Global)</span>
+<!-- 3293 --> </a>
+<!-- 3294 --> </div>
+<!-- 3295 -->
+<!-- 3296 --> <div id="peaceDetails10" class="peace-section">
+<!-- 3297 --> <div class="peace-box">
+<!-- 3298 --> <h1>About Peace Valley</h1>
+<!-- 3299 --> <div class="peace-card">
+<!-- 3300 --> Peace Valley Charitable Trust in Kothamangalam provides long-term shelter, food, medical care and rehabilitation support.
+<!-- 3301 --> </div>
+<!-- 3302 --> <div class="peace-card">
+<!-- 3303 --> Visit official website for full information.<br>
+<!-- 3304 --> <a class="peace-link" href="https://peacevalley.org.in/" target="_blank">Visit Website</a>
+<!-- 3305 --> </div>
+<!-- 3306 --> <div class="peace-back" onclick="peaceReset10()">BACK</div>
+<!-- 3307 --> </div>
+<!-- 3308 --> </div>
+<!-- 3309 -->
+<!-- 3310 --> <div id="peaceDonate10" class="peace-section">
+<!-- 3311 --> <div class="peace-box">
+<!-- 3312 --> <h1>Support Categories</h1>
+<!-- 3313 --> <div class="peace-card">
+<!-- 3314 --> <b>Food and Daily Care</b><br>
+<!-- 3315 --> Providing nutritious meals and daily essentials.<br>
+<!-- 3316 --> <a class="peace-link" href="https://peacevalley.org.in/donation/" target="_blank">Donate Directly</a>
+<!-- 3317 --> </div>
+<!-- 3318 --> <div class="peace-back" onclick="peaceReset10()">BACK</div>
+<!-- 3319 --> </div>
+<!-- 3320 --> </div>
+<!-- 3321 --> </div>
+<!-- 3322 --> </div>
+<!-- 3323 -->
+<!-- 3324 --> <script>
+<!-- 3325 --> let timer10;
+<!-- 3326 --> function peaceDetails10(){
+<!-- 3327 --> document.getElementById("peaceDetails10").style.display="block";
+<!-- 3328 --> document.getElementById("peaceDonate10").style.display="none";
+<!-- 3329 --> window.scrollBy({top:200, behavior:"smooth"});
+<!-- 3330 --> startTimer10();
+<!-- 3331 --> }
+<!-- 3332 --> function peaceReset10(){
+<!-- 3333 --> document.getElementById("peaceDetails10").style.display="none";
+<!-- 3334 --> document.getElementById("peaceDonate10").style.display="none";
+<!-- 3335 --> clearTimeout(timer10);
+<!-- 3336 --> }
+<!-- 3337 --> function startTimer10(){
+<!-- 3338 --> clearTimeout(timer10);
+<!-- 3339 --> timer10=setTimeout(peaceReset10,15000);
+<!-- 3340 --> }
+<!-- 3341 --> </script>
+<!-- 3342 --> <style>
+<!-- 3343 --> .vada-wrapper {
+<!-- 3344 --> max-width: 900px;
+<!-- 3345 --> width:96%;
+<!-- 3346 --> margin: 30px auto;
+<!-- 3347 --> }
+<!-- 3348 --> .vada-box {
+<!-- 3349 --> background: #1a1a1a;
+<!-- 3350 --> padding: 22px;
+<!-- 3351 --> border-radius: 12px;
+<!-- 3352 --> border:1.5px solid #C0C0C0;
+<!-- 3353 --> box-shadow: 0 0 8px rgba(192,192,192,0.18);
+<!-- 3354 --> border-left: 6px solid #e53935;
+<!-- 3355 --> box-shadow: 0px 0px 6px rgba(255, 255, 255, 0.15); 
+<!-- 3356 --> color: #fff;
+<!-- 3357 --> margin-bottom: 20px;
+<!-- 3358 --> }
+<!-- 3359 --> .vada-box h1 { font-size: 26px; margin-bottom: 10px; }
+<!-- 3360 --> .vada-box h2 { font-size: 22px; color: #ffd54f; margin-bottom: 12px; }
+<!-- 3361 --> .vada-box p { font-size: 22px; line-height: 1.7; color: #ccc; }
+<!-- 3362 --> .vada-btn-row { display: flex; gap: 10px; margin-top: 20px; }
+<!-- 3363 --> .vada-btn {
+<!-- 3364 --> padding: 16px;
+<!-- 3365 --> border-radius: 10px;
+<!-- 3366 --> font-size: 22px;
+<!-- 3367 --> font-weight: bold;
+<!-- 3368 --> text-align: center;
+<!-- 3369 --> cursor: pointer;
+<!-- 3370 --> display: flex;
+<!-- 3371 --> align-items: center;
+<!-- 3372 --> justify-content: center;
+<!-- 3373 --> flex-direction: column;
+<!-- 3374 --> }
+<!-- 3375 --> .vada-details { background: #b71c1c; color: #fff; flex: 1; }
+<!-- 3376 --> .vada-donate { background: #0b5e20; color: #fff; flex: 2; }
+<!-- 3377 --> .vada-section { display: none; }
+<!-- 3378 --> .vada-card {
+<!-- 3379 --> background: #111;
+<!-- 3380 --> padding: 18px;
+<!-- 3381 --> border-radius: 10px;
+<!-- 3382 --> border: 1px solid #C0C0C0;
+<!-- 3383 --> box-shadow: 0 0 8px rgba(192,192,192,0.18);margin-bottom: 14px;
+<!-- 3384 --> font-size: 22px;
+<!-- 3385 --> line-height: 1.7;
+<!-- 3386 --> border-left: 4px solid #00e676;
+<!-- 3387 --> }
+<!-- 3388 --> .vada-back {
+<!-- 3389 --> margin-top: 20px;
+<!-- 3390 --> background: #333;
+<!-- 3391 --> color: #fff;
+<!-- 3392 --> padding: 14px;
+<!-- 3393 --> border-radius: 10px;
+<!-- 3394 --> text-align: center;
+<!-- 3395 --> cursor: pointer;
+<!-- 3396 --> font-weight: bold;
+<!-- 3397 --> font-size: 22px;
+<!-- 3398 --> }
+<!-- 3399 --> </style>
+<!-- 3400 --> 
+<!-- 3401 --> <div class="vada-wrapper">
+<!-- 3402 --> <div class="vada-box">
+<!-- 3403 --> <h1>Vadanappally Orphanage</h1>
+<!-- 3404 --> <p>A charitable institution dedicated to the care, protection and upbringing of orphaned and destitute children through education, shelter and moral support.</p>
+<!-- 3405 --> <div class="vada-btn-row">
+<!-- 3406 --> <div class="vada-btn vada-details" onclick="vadaDetails11()">Details</div>
+<!-- 3407 --> <div class="vada-btn vada-donate" onclick="vadaDonate11()">
+<!-- 3408 --> Donate Directly→
+<!-- 3409 --> <span style="font-size:18px;">(India Only)</span>
+<!-- 3410 --> </div>
+<!-- 3411 --> </div>
+<!-- 3412 --> </div>
+<!-- 3413 -->
+<!-- 3414 --> <div id="vadaDetails11" class="vada-section">
+<!-- 3415 --> <div class="vada-box">
+<!-- 3416 --> <h2>About Vadanappally Orphanage</h2>
+<!-- 3417 --> <div class="vada-card">Vadanappally Orphanage Committee is a community-based charitable organisation functioning in Thrissur district, Kerala. The institution provides shelter, education and emotional care for orphaned and vulnerable children.</div>
+<!-- 3418 --> <div class="vada-card">Their activities focus on long-term child welfare, education support and social upliftment.</div>
+<!-- 3419 --> <div class="vada-back" onclick="vadaReset11()">BACK</div>
+<!-- 3420 --> </div>
+<!-- 3421 --> </div>
+<!-- 3422 -->
+<!-- 3423 --> <div id="vadaDonate11" class="vada-section">
+<!-- 3424 --> <div class="vada-box">
+<!-- 3425 --> <h2>Support Their Work</h2>
+<!-- 3426 --> <div class="vada-card"><b>Orphan Care & Shelter</b><br>Providing food, clothing, accommodation and daily care for orphaned children.</div>
+<!-- 3427 --> <div class="vada-card"><b>Education Support</b><br>Schooling, books, uniforms and guidance to help children build a better future.</div>
+<!-- 3428 --> <div class="vada-card">
+<!-- 3429 --> <b>Bank Details</b><br><br>
+<!-- 3430 --> A/c Name : VATANAPPALLY ORPHANAGE COMMITTEE<br><br>
+<!-- 3431 --> A/c No : 917020025053101<br>Bank : Axis Bank<br>Branch : Vatanappally, Thrissur<br>IFSC : UTIB0003224<br><br>
+<!-- 3432 --> A/c No : 10532244438<br>Bank : SBI<br>Branch : Vatanappally, Thrissur<br>IFSC : SBIN0008683
+<!-- 3433 --> </div>
+<!-- 3434 --> <div class="vada-back" onclick="vadaReset11()">BACK</div>
+<!-- 3435 --> </div>
+<!-- 3436 --> </div>
+<!-- 3437 --> </div>
+<!-- 3438 -->
+<!-- 3439 --> <script>
+<!-- 3440 --> let timer11;
+<!-- 3441 --> function vadaDetails11(){
+<!-- 3442 --> document.getElementById("vadaDetails11").style.display="block";
+<!-- 3443 --> document.getElementById("vadaDonate11").style.display="none";
+<!-- 3444 --> scrollTopSmooth("vadaDetails11");
+<!-- 3445 --> startTimer11();
+<!-- 3446 --> }
+<!-- 3447 --> function vadaDonate11(){
+<!-- 3448 --> document.getElementById("vadaDetails11").style.display="none";
+<!-- 3449 --> document.getElementById("vadaDonate11").style.display="block";
+<!-- 3450 --> scrollTopSmooth("vadaDonate11");
+<!-- 3451 --> startTimer11();
+<!-- 3452 --> }
+<!-- 3453 --> function vadaReset11(){
+<!-- 3454 --> document.getElementById("vadaDetails11").style.display="none";
+<!-- 3455 --> document.getElementById("vadaDonate11").style.display="none";
+<!-- 3456 --> clearTimeout(timer11);
+<!-- 3457 --> }
+<!-- 3458 --> function startTimer11(){
+<!-- 3459 --> clearTimeout(timer11);
+<!-- 3460 --> timer11=setTimeout(vadaReset11,20000);
+<!-- 3461 --> }
+<!-- 3462 --> </script>
+<!-- 3463 -->
+<!-- 3464 --> <style>
+<!-- 3465 --> .vision-wrapper {
+<!-- 3466 --> max-width: 900px;
+<!-- 3467 --> width: 96%;
+<!-- 3468 --> margin: 30px auto;
+<!-- 3469 --> }
+<!-- 3470 --> .vision-box {
+<!-- 3471 -->   background: #121212;
+<!-- 3472 -->   padding: 22px;
+<!-- 3473 -->   border-radius: 16px;
+<!-- 3474 --> border: 1px solid #C0C0C0;
+<!-- 3475 --> box-shadow: 0 0 8px rgba(192,192,192,0.18);
+<!-- 3476 -->   border-left: 6px solid #e91e63; /* ഇടത് വശത്തെ ബോർഡർ കളർ */
+<!-- 3477 -->   box-shadow: 0px 0px 6px rgba(255, 255, 255, 0.15); /* നേർത്ത തിളക്കം നൽകുന്നു */
+<!-- 3478 -->   color: #fff;
+<!-- 3479 -->   margin-bottom: 22px;
+<!-- 3480 -->   position: relative;
+<!-- 3481 -->   overflow: hidden;
+<!-- 3482 --> }
+<!-- 3483 -->
+<!-- 3484 --> .vision-box h1 { font-size: 26px; margin: 0 0 12px; }
+<!-- 3485 --> .vision-box h2 { font-size: 22px; color: #ffd54f; margin-bottom: 10px; }
+<!-- 3486 --> .vision-box p { font-size: 22px; line-height: 1.6; color: #ddd; }
+<!-- 3487 --> .vision-impact { margin-top: 14px; font-size: 18px; line-height: 1.8; color: #ffd54f; }
+<!-- 3488 --> .vision-btn-row { display: flex; gap: 14px; margin-top: 18px; }
+<!-- 3489 --> .vision-btn {
+<!-- 3490 --> flex: 1;
+<!-- 3491 --> padding: 14px 0;
+<!-- 3492 --> text-align: center;
+<!-- 3493 --> border-radius: 12px;
+<!-- 3494 --> font-weight: bold;
+<!-- 3495 --> cursor: pointer;
+<!-- 3496 --> display: flex;
+<!-- 3497 --> align-items: center;
+<!-- 3498 --> justify-content: center;
+<!-- 3499 --> flex-direction: column;
+<!-- 3500 --> }
+<!-- 3501 --> .vision-details { background: #b71c1c; color: #fff; }
+<!-- 3502 --> .vision-link {
+<!-- 3503 --> display: flex;
+<!-- 3504 --> flex: 1;
+<!-- 3505 --> align-items: center;
+<!-- 3506 --> justify-content: center;
+<!-- 3507 --> flex-direction: column;
+<!-- 3508 --> padding: 14px 0;
+<!-- 3509 --> background: #0b5e20;
+<!-- 3510 --> color: #fff;
+<!-- 3511 --> border-radius: 12px;
+<!-- 3512 --> font-weight: bold;
+<!-- 3513 --> text-decoration: none;
+<!-- 3514 --> text-align: center;
+<!-- 3515 --> }
+<!-- 3516 --> .vision-section { display: none; margin-top: 18px; }
+<!-- 3517 --> .vision-card {
+<!-- 3518 --> background: #181818;
+<!-- 3519 --> padding: 18px;
+<!-- 3520 --> border-radius: 12px;
+<!-- 3521 --> margin-bottom: 12px;
+<!-- 3522 --> font-size: 20px;
+<!-- 3523 --> line-height: 1.6;
+<!-- 3524 --> }
+<!-- 3525 --> .vision-back {
+<!-- 3526 --> margin-top: 20px;
+<!-- 3527 --> background: #333;
+<!-- 3528 --> color: #fff;
+<!-- 3529 --> padding: 14px;
+<!-- 3530 --> border-radius: 10px;
+<!-- 3531 --> text-align: center;
+<!-- 3532 --> cursor: pointer;
+<!-- 3533 --> font-weight: bold;
+<!-- 3534 --> font-size: 22px;
+<!-- 3535 --> }
+<!-- 3536 --> </style>
+<!-- 3537 -->
+<!-- 3538 --> <div class="vision-wrapper">
+<!-- 3539 --> <div class="vision-box">
+<!-- 3540 --> <h1>Vision 2026 – Human Welfare Foundation</h1>
+<!-- 3541 --> <p>Humanitarian initiatives focusing on hunger relief, education, healthcare, orphan care and disaster response.</p>
+<!-- 3542 --> <div class="vision-impact">
+<!-- 3543 --> ✔️ <b>20,000,000+</b> Lives Impacted<br>
+<!-- 3544 --> ✔️ <b>6000+</b> Projects Implemented<br>
+<!-- 3545 --> ✔️ <b>200+</b> Partner Organisations<br>
+<!-- 3546 --> ✔️ <b>23+</b> States Covered<br>
+<!-- 3547 --> ✔️ <b>16+</b> Years of Service
+<!-- 3548 --> </div>
+<!-- 3549 --> <div class="vision-btn-row">
+<!-- 3550 --> <div class="vision-btn vision-details" onclick="visionDetails12()">Details</div>
+<!-- 3551 --> <a class="vision-link" href="https://www.hwfindia.org/donate/" target="_blank">
+<!-- 3552 --> Donate Directly⇒
+<!-- 3553 --> <span style="font-size:18px;">(Global)</span>
+<!-- 3554 --> </a>
+<!-- 3555 --> </div>
+<!-- 3556 --> </div> 
+<!-- 3557 -->
+<!-- 3558 --> <div id="visionDetails12" class="vision-section">
+<!-- 3559 --> <div class="vision-box">
+<!-- 3560 --> <h2>About Vision 2026 – HWF</h2>
+<!-- 3561 --> <p>Vision 2026 is a flagship humanitarian mission of Human Welfare Foundation, addressing hunger, education, healthcare, orphan care, disaster relief and sustainable livelihood development.</p>
+<!-- 3562 --> <p><a href="https://www.hwfindia.org/about-hwf/" target="_blank" style="color:#4fc3f7;">For more details →</a></p>
+<!-- 3563 --> <div class="vision-back" onclick="visionReset12()">BACK</div>
+<!-- 3564 --> </div>
+<!-- 3565 --> </div>
+<!-- 3566 --> </div>
+<!-- 3567 -->
+<!-- 3568 --> <script>
+<!-- 3569 --> let timer12;
+<!-- 3570 --> function visionDetails12(){
+<!-- 3571 --> document.getElementById("visionDetails12").style.display="block";
+<!-- 3572 --> scrollTopSmooth("visionDetails12");
+<!-- 3573 --> startTimer12();
+<!-- 3574 --> }
+<!-- 3575 --> function visionReset12(){
+<!-- 3576 --> document.getElementById("visionDetails12").style.display="none";
+<!-- 3577 --> clearTimeout(timer12);
+<!-- 3578 --> }
+<!-- 3579 --> function startTimer12(){
+<!-- 3580 --> clearTimeout(timer12);
+<!-- 3581 --> timer12=setTimeout(visionReset12,20000);
+<!-- 3582 --> }
+<!-- 3583 -->
+<!-- 3584 --> function scrollTopSmooth(el){
+<!-- 3585 --> const target = document.getElementById(el);
+<!-- 3586 --> if(target) target.scrollIntoView({ behavior:"smooth", block:"start" });
+<!-- 3587 --> }
+<!-- 3588 --> </script>
+<!-- 3589 -->     <style>
+<!-- 3590 --> .global-support-container {
+<!-- 3591 -->     width: 96%;
+<!-- 3592 -->     max-width: 900px;
+<!-- 3593 -->     margin: 20px auto;
+<!-- 3594 -->     border: 1.5px solid #C0C0C0;
+<!-- 3595 -->     box-shadow: 0 0 8px rgba(192,192,192,0.18);
+<!-- 3596 -->     border-radius: 16px;
+<!-- 3597 -->     padding: 22px;
+<!-- 3598 -->     background: #121212;
+<!-- 3599 -->     box-shadow: 0 0 8px rgba(192,192,192,0.18);
+<!-- 3600 -->     box-sizing: border-box;
+<!-- 3601 --> }
+<!-- 3602 -->
+<!-- 3603 --> .support-title {
+<!-- 3604 -->   text-align: center;
+<!-- 3605 -->   color: #fff;
+<!-- 3606 -->   font-size: 24px;
+<!-- 3607 -->   margin-bottom: 25px;
+<!-- 3608 -->   text-transform: uppercase;
+<!-- 3609 -->   letter-spacing: 1px;
+<!-- 3610 --> }
+<!-- 3611 -->
+<!-- 3612 --> .charity-block {
+<!-- 3613 -->   margin-bottom: 15px;
+<!-- 3614 -->   text-align: center;
+<!-- 3615 --> }
+<!-- 3616 -->
+<!-- 3617 --> .charity-btn {
+<!-- 3618 -->   width: 100%;
+<!-- 3619 -->   padding: 16px;
+<!-- 3620 -->   background: #1a1a1a;
+<!-- 3621 -->   color: #fff;
+<!-- 3622 -->   font-weight: bold;
+<!-- 3623 -->   border-radius: 12px;
+<!-- 3624 -->   border: 1px solid #D8D8D8;
+<!-- 3625 -->   box-shadow: 0 0 8px rgba(192,192,192,0.15);
+<!-- 3626 -->   text-transform: uppercase;
+<!-- 3627 -->   cursor: pointer;
+<!-- 3628 -->   font-size: 15px; /* എല്ലാ ബട്ടണുകൾക്കും ഒരേ ഫോണ്ട് സൈസ് */
+<!-- 3629 -->   transition: background 0.2s;
+<!-- 3630 -->   letter-spacing: 0.5px;
+<!-- 3631 --> }
+<!-- 3632 -->
+<!-- 3633 --> .charity-btn:hover {
+<!-- 3634 -->   background: #262626;
+<!-- 3635 --> }
+<!-- 3636 -->
+<!-- 3637 --> /* പേജിന്റെ അടിയിൽ വരുന്ന റിപ്പോർട്ട് ബോക്സ് */
+<!-- 3638 --> .bottom-report-section {
+<!-- 3639 -->   text-align: center;
+<!-- 3640 -->   color: #e0e0e0;
+<!-- 3641 -->   font-size: 15px;
+<!-- 3642 -->   margin-top: 35px;
+<!-- 3643 -->   border-top: 1px solid rgba(255, 255, 255, 0.1);
+<!-- 3644 -->   padding-top: 25px;
+<!-- 3645 --> }
+<!-- 3646 -->
+<!-- 3647 --> .report-input-wrapper {
+<!-- 3648 -->   display: flex;
+<!-- 3649 -->   justify-content: center;
+<!-- 3650 -->   align-items: center;
+<!-- 3651 -->   gap: 10px;
+<!-- 3652 -->   margin-top: 10px;
+<!-- 3653 -->   flex-wrap: wrap;
+<!-- 3654 --> }
+<!-- 3655 -->
+<!-- 3656 --> .input-dash {
+<!-- 3657 -->   background: transparent;
+<!-- 3658 -->   border: none;
+<!-- 3659 -->   border-bottom: 2px solid #ffffff;
+<!-- 3660 -->   color: #00E676;
+<!-- 3661 -->   font-size: 20px;
+<!-- 3662 -->   width: 120px;
+<!-- 3663 -->   text-align: center;
+<!-- 3664 -->   outline: none;
+<!-- 3665 -->   padding: 2px;
+<!-- 3666 -->   font-weight: bold;
+<!-- 3667 --> }
+<!-- 3668 -->
+<!-- 3669 --> .btn-submit-amount {
+<!-- 3670 -->   background: #00E676;
+<!-- 3671 -->   color: #000;
+<!-- 3672 -->   border: none;
+<!-- 3673 -->   padding: 8px 16px;
+<!-- 3674 -->   font-weight: bold;
+<!-- 3675 -->   border-radius: 8px;
+<!-- 3676 -->   cursor: pointer;
+<!-- 3677 -->   text-transform: uppercase;
+<!-- 3678 -->   font-size: 13px;
+<!-- 3679 -->   transition: opacity 0.2s;
+<!-- 3680 --> }
+<!-- 3681 -->
+<!-- 3682 --> .btn-submit-amount:hover {
+<!-- 3683 -->   opacity: 0.9;
+<!-- 3684 --> }
+<!-- 3685 -->
+<!-- 3686 --> /* അൺഡൂ ഏരിയ */
+<!-- 3687 --> .status-container {
+<!-- 3688 -->   margin-top: 15px;
+<!-- 3689 -->   min-height: 30px;
+<!-- 3690 --> }
+<!-- 3691 -->
+<!-- 3692 --> .status-msg {
+<!-- 3693 -->   color: #00E676;
+<!-- 3694 -->   font-size: 14px;
+<!-- 3695 -->   font-weight: bold;
+<!-- 3696 -->   display: inline-block;
+<!-- 3697 --> }
+<!-- 3698 -->
+<!-- 3699 --> .btn-undo {
+<!-- 3700 -->   background: #FF3D00;
+<!-- 3701 --> }
+<!-- 3702 -->
+<!-- 3703 --> .btn-undo {
+<!-- 3704 -->   background: #FF3D00;
+<!-- 3705 -->   color: #fff;
+<!-- 3706 -->   border: none;
+<!-- 3707 -->   padding: 5px 12px;
+<!-- 3708 -->   margin-left: 10px;
+<!-- 3709 -->   font-size: 12px;
+<!-- 3710 -->   font-weight: bold;
+<!-- 3711 -->   border-radius: 4px;
+<!-- 3712 -->   cursor: pointer;
+<!-- 3713 -->   text-transform: uppercase;
+<!-- 3714 --> }
+<!-- 3715 -->
+<!-- 3716 --> /* COMMON POP-UP (MODAL) STYLING */
+<!-- 3717 --> .modal-overlay {
+<!-- 3718 -->   display: none;
+<!-- 3719 -->   position: fixed;
+<!-- 3720 -->   top: 0;
+<!-- 3721 -->   left: 0;
+<!-- 3722 -->   width: 100%;
+<!-- 3723 -->   height: 100%;
+<!-- 3724 -->   background: rgba(0, 0, 0, 0.7);
+<!-- 3725 -->   z-index: 999;
+<!-- 3726 --> }
+<!-- 3727 -->
+<!-- 3728 --> .common-modal {
+<!-- 3729 -->   display: none;
+<!-- 3730 -->   position: fixed;
+<!-- 3731 -->   top: 15%;
+<!-- 3732 -->   left: 50%;
+<!-- 3733 -->   transform: translateX(-50%);
+<!-- 3734 -->   width: 90%;
+<!-- 3735 -->   max-width: 500px;
+<!-- 3736 -->   background: #1c1c1c;
+<!-- 3737 -->   border: 1.5px solid #C0C0C0;
+<!-- 3738 -->   box-shadow: 0 0 8px rgba(192,192,192,0.18);
+<!-- 3739 -->   border-radius: 16px;
+<!-- 3740 -->   padding: 24px;
+<!-- 3741 -->   box-shadow: 0px 5px 15px rgba(255, 255, 255, 0.1);
+<!-- 3742 -->   z-index: 1000;
+<!-- 3743 -->   box-sizing: border-box;
+<!-- 3744 --> }
+<!-- 3745 -->
+<!-- 3746 --> .modal-title {
+<!-- 3747 -->   color: #FFD600;
+<!-- 3748 -->   text-align: center;
+<!-- 3749 -->   margin-top: 0;
+<!-- 3750 -->   font-size: 20px;
+<!-- 3751 -->   text-transform: uppercase;
+<!-- 3752 --> }
+<!-- 3753 -->
+<!-- 3754 --> .modal-text {
+<!-- 3755 -->   color: #fff;
+<!-- 3756 -->   font-size: 15px;
+<!-- 3757 -->   line-height: 1.6;
+<!-- 3758 -->   text-align: center;
+<!-- 3759 -->   margin-bottom: 15px;
+<!-- 3760 --> }
+<!-- 3761 -->
+<!-- 3762 --> .modal-buttons {
+<!-- 3763 -->   display: flex;
+<!-- 3764 -->   flex-direction: column;
+<!-- 3765 -->   gap: 12px;
+<!-- 3766 -->   margin-top: 25px;
+<!-- 3767 --> }
+<!-- 3768 -->
+<!-- 3769 --> .btn-donate-now {
+<!-- 3770 -->   padding: 14px;
+<!-- 3771 -->   background: #0b5e20;
+<!-- 3772 -->   color: #fff;
+<!-- 3773 -->   font-weight: bold;
+<!-- 3774 -->   border-radius: 12px;
+<!-- 3775 -->   text-decoration: none;
+<!-- 3776 -->   text-transform: uppercase;
+<!-- 3777 -->   text-align: center;
+<!-- 3778 -->   font-size: 15px; /* ബട്ടൺ ഫോണ്ട് സെയിം ആക്കി */
+<!-- 3779 -->   transition: background 0.2s;
+<!-- 3780 --> }
+<!-- 3781 -->
+<!-- 3782 --> .btn-donate-now:hover {
+<!-- 3783 -->   background: #0f822c;
+<!-- 3784 --> }
+<!-- 3785 -->
+<!-- 3786 --> .btn-close-modal {
+<!-- 3787 -->   padding: 12px;
+<!-- 3788 -->   background: #333;
+<!-- 3789 -->   color: #fff;
+<!-- 3790 -->   font-weight: bold;
+<!-- 3791 -->   border-radius: 12px;
+<!-- 3792 -->   border: none;
+<!-- 3793 -->   text-transform: uppercase;
+<!-- 3794 -->   cursor: pointer;
+<!-- 3795 -->   font-size: 15px; /* ബട്ടൺ ഫോണ്ട് സെയിം ആക്കി */
+<!-- 3796 --> }
+<!-- 3797 --> </style>
+<!-- 3798 -->
+<!-- 3799 --> <div class="global-support-container">
+<!-- 3800 -->
+<!-- 3801 -->   <button onclick="openDonateModal('RED_CRESCENT', 'https://www.ifrc.org/donate')" class="charity-btn notranslate" style="border-left: 6px solid #00E676;">
+<!-- 3802 -->     RED CRESCENT (IFRC)
+<!-- 3803 -->   </button>
+<!-- 3804 --> </div>
+<!-- 3805 -->
+<!-- 3806 --> <!-- 2. Red Cross (പ്രത്യേകം വേർതിരിച്ചത്) -->
+<!-- 3807 --> <div class="charity-block">
+<!-- 3808 -->   <button onclick="openDonateModal('RED_CROSS', 'https://www.icrc.org/donate')" class="charity-btn notranslate" style="border-left: 6px solid #DD2C00;">
+<!-- 3809 -->     RED CROSS (ICRC)
+<!-- 3810 -->   </button>
+<!-- 3811 --> </div>
+<!-- 3812 -->
+<!-- 3813 --> <!-- 3. UNICEF -->
+<!-- 3814 --> <div class="charity-block">
+<!-- 3815 -->   <button onclick="openDonateModal('UNICEF', 'https://www.unicef.org/donate')" class="charity-btn notranslate" style="border-left: 6px solid #FFD600;">
+<!-- 3816 -->     UNICEF
+<!-- 3817 -->   </button>
+<!-- 3818 --> </div>
+<!-- 3819 -->
+<!-- 3820 --> <!-- 4. WORLD FOOD PROGRAMME (WFP) -->
+<!-- 3821 --> <div class="charity-block">
+<!-- 3822 -->   <button onclick="openDonateModal('WFP', 'https://www.wfp.org')" class="charity-btn notranslate" style="border-left: 6px solid #00B0FF;">
+<!-- 3823 -->     WORLD FOOD PROGRAMME (WFP)
+<!-- 3824 -->   </button>
+<!-- 3825 --> </div>
+<!-- 3826 -->
+<!-- 3827 --> <!-- 5. UNHCR -->
+<!-- 3828 --> <div class="charity-block">
+<!-- 3829 -->   <button onclick="openDonateModal('UNHCR', 'https://www.unhcr.org')" class="charity-btn notranslate" style="border-left: 6px solid #FF9100;">
+<!-- 3830 -->     UNHCR
+<!-- 3831 -->   </button>
+<!-- 3832 --> </div>
+<!-- 3833 -->
+<!-- 3834 --> <!-- 6. MSF (Doctors Without Borders) -->
+<!-- 3835 --> <div class="charity-block">
+<!-- 3836 -->   <button onclick="openDonateModal('MSF', 'https://www.doctorswithoutborders.org/donate')" class="charity-btn notranslate" style="border-left: 6px solid #AA00FF;">
+<!-- 3837 -->     MSF (DOCTORS WITHOUT BORDERS)
+<!-- 3838 -->   </button>
+<!-- 3839 --> </div>
+<!-- 3840 -->
+<!-- 3841 --> <!-- 7. UNRWA -->
+<!-- 3842 --> <div class="charity-block">
+<!-- 3843 -->   <button onclick="openDonateModal('UNRWA', 'https://donate.unrwa.org')" class="charity-btn notranslate" style="border-left: 6px solid #00E5FF;">
+<!-- 3844 -->     UNRWA
+<!-- 3845 -->   </button>
+<!-- 3846 --> </div>
+<!-- 3847 -->
+<!-- 3848 --> <!-- 8. IRC -->
+<!-- 3849 --> <div class="charity-block">
+<!-- 3850 -->   <button onclick="openDonateModal('IRC', 'https://www.rescue.org/donate')" class="charity-btn notranslate" style="border-left: 6px solid #FFEA00;">
+<!-- 3851 -->     IRC (INTERNATIONAL RESCUE COMMITTEE)
+<!-- 3852 -->   </button>
+<!-- 3853 --> </div>
+<!-- 3854 -->
+<!-- 3855 --> <!-- 9. CARE -->
+<!-- 3856 --> <div class="charity-block">
+<!-- 3857 -->   <button onclick="openDonateModal('CARE', 'https://www.care.org/donate')" class="charity-btn notranslate" style="border-left: 6px solid #FF6D00;">
+<!-- 3858 -->     CARE
+<!-- 3859 -->   </button>
+<!-- 3860 --> </div>
+<!-- 3861 -->
+<!-- 3862 --> <!-- 10. SAVE THE CHILDREN -->
+<!-- 3863 --> <div class="charity-block">
+<!-- 3864 -->   <button onclick="openDonateModal('SAVE_THE_CHILDREN', 'https://www.savethechildren.org/donate')" class="charity-btn notranslate" style="border-left: 6px solid #FF1744;">
+<!-- 3865 -->     SAVE THE CHILDREN
+<!-- 3866 -->   </button>
+<!-- 3867 --> </div>
+<!-- 3868 -->
+<!-- 3869 --> <!-- 11. ISLAMIC RELIEF WORLDWIDE -->
+<!-- 3870 --> <div class="charity-block">
+<!-- 3871 -->   <button onclick="openDonateModal('ISLAMIC_RELIEF', 'https://www.islamic-relief.org/donate')" class="charity-btn notranslate" style="border-left: 6px solid #00BFA5;">
+<!-- 3872 -->     ISLAMIC RELIEF WORLDWIDE
+<!-- 3873 -->   </button>
+<!-- 3874 --> </div>
+<!-- 3875 -->
+<!-- 3876 --> <!-- പേജിന്റെ താഴെയുള്ള റിപ്പോർട്ട് ബോക്സ് -->
+<!-- 3877 --> <div class="bottom-report-section">
+<!-- 3878 -->   <p style="margin-bottom: 10px; font-style: italic;">if you donated Write the amount here for report Thank you</p>
+<!-- 3879 -->   
+<!-- 3880 -->   <div id="input-area-wrapper" class="report-input-wrapper">
+<!-- 3881 -->     <span>₹</span>
+<!-- 3882 -->     <input type="number" id="donation-amount" class="input-dash" placeholder="______">
+<!-- 3883 -->     <button onclick="submitDonationAmount()" class="btn-submit-amount">SUBMIT</button>
+<!-- 3884 -->   </div>
+<!-- 3885 -->
+<!-- 3886 -->   <div class="status-container">
+<!-- 3887 -->     <div id="save-status-msg"></div>
+<!-- 3888 -->   </div>
+<!-- 3889 --> </div>
+<!-- 3890 -->
+<!-- 3891 --> </div>
+<!-- 3892 -->
+<!-- 3893 --> <!-- BACKGROUND OVERLAY & COMMON POP-UP WINDOW -->
+<!-- 3894 --> <div id="modalOverlay" class="modal-overlay" onclick="closeDonateModal()"></div>
+<!-- 3895 -->
+<!-- 3896 --> <div id="commonDonateModal" class="common-modal">
+<!-- 3897 -->   <h3 class="modal-title">Details & Donate</h3>
+<!-- 3898 -->   <p class="modal-text">
+<!-- 3899 -->     Many people want to help, but are afraid of scams. This platform helps you reach trusted humanitarian organisations safely.
+<!-- 3900 -->   </p>
+<!-- 3901 -->   <p class="modal-text" style="font-weight: bold;">
+<!-- 3902 -->     Remember: Your support can save lives and satisfy someone's hunger.
+<!-- 3903 -->   </p>
+<!-- 3904 -->   
+<!-- 3905 -->   <div class="modal-buttons">
+<!-- 3906 -->     <a id="modalDonateLink" href="#" target="_blank" onclick="trackFinalClick()" class="btn-donate-now">
+<!-- 3907 -->       DONATE DIRECTLY
+<!-- 3908 -->     </a>
+<!-- 3909 -->     <button onclick="closeDonateModal()" class="btn-close-modal">
+<!-- 3910 -->       CLOSE
+<!-- 3911 -->     </button>
+<!-- 3912 -->   </div>
+<!-- 3913 --> </div>
+<!-- 3914 -->
+<!-- 3915 --> <script>
+<!-- 3916 -->   let lastClickedSite = "NONE";
+<!-- 3917 -->   let currentActiveUrl = "";
+<!-- 3918 -->   let undoTimeout = null;
+<!-- 3919 -->   let pendingAmount = 0;
+<!-- 3920 -->   let pendingTime = "";
+<!-- 3921 -->
+<!-- 3922 -->   function openDonateModal(siteName, siteUrl) {
+<!-- 3923 -->     lastClickedSite = siteName;
+<!-- 3924 -->     currentActiveUrl = siteUrl;
+<!-- 3925 -->     
+<!-- 3926 -->     document.getElementById('modalDonateLink').href = siteUrl;
+<!-- 3927 -->     document.getElementById('modalOverlay').style.display = 'block';
+<!-- 3928 -->     document.getElementById('commonDonateModal').style.display = 'block';
+<!-- 3929 -->   }
+<!-- 3930 -->
+<!-- 3931 -->   function closeDonateModal() {
+<!-- 3932 -->     document.getElementById('modalOverlay').style.display = 'none';
+<!-- 3933 -->     document.getElementById('commonDonateModal').style.display = 'none';
+<!-- 3934 -->   }
+<!-- 3935 -->
+<!-- 3936 -->   function trackFinalClick() {
+<!-- 3937 -->     let currentTime = new Date().toISOString();
+<!-- 3938 -->     console.log(`[GA CLICK] Site: ${lastClickedSite} | URL: ${currentActiveUrl} | Time: ${currentTime}`);
+<!-- 3939 -->     
+<!-- 3940 -->     if (typeof gtag === 'function') {
+<!-- 3941 -->       gtag('event', 'final_donate_click', {
+<!-- 3942 -->         'charity_site': lastClickedSite,
+<!-- 3943 -->         'click_url': currentActiveUrl,
+<!-- 3944 -->         'click_time': currentTime
+<!-- 3945 -->       });
+<!-- 3946 -->     }
+<!-- 3947 -->     closeDonateModal();
+<!-- 3948 -->   }
+<!-- 3949 -->
+<!-- 3950 -->   function submitDonationAmount() {
+<!-- 3951 -->     let amountInput = document.getElementById('donation-amount');
+<!-- 3952 -->     pendingAmount = amountInput.value;
+<!-- 3953 -->     pendingTime = new Date().toISOString();
+<!-- 3954 -->
+<!-- 3955 -->     if (!pendingAmount || pendingAmount <= 0) {
+<!-- 3956 -->       alert("Please enter a valid amount.");
+<!-- 3957 -->       return;
+<!-- 3958 -->     }
+<!-- 3959 -->
+<!-- 3960 -->     document.getElementById('input-area-wrapper').style.display = 'none';
+<!-- 3961 -->     let statusDiv = document.getElementById('save-status-msg');
+<!-- 3962 -->     
+<!-- 3963 -->     statusDiv.innerHTML = `
+<!-- 3964 -->       <span class="status-msg" style="color: #FFD600;">₹${pendingAmount} will submit in 1 hour... </span>
+<!-- 3965 -->       <button class="btn-undo" onclick="undoSubmission()">UNDO</button>
+<!-- 3966 -->     `;
+<!-- 3967 -->
+<!-- 3968 -->     undoTimeout = setTimeout(sendFinalDataToAnalytics, 3600000);
+<!-- 3969 -->   }
+<!-- 3970 -->
+<!-- 3971 -->   function undoSubmission() {
+<!-- 3972 -->     if (undoTimeout) clearTimeout(undoTimeout);
+<!-- 3973 -->     
+<!-- 3974 -->     let statusDiv = document.getElementById('save-status-msg');
+<!-- 3975 -->     statusDiv.innerHTML = `<span class="status-msg" style="color: #FF3D00;">Cancelled! You can edit now.</span>`;
+<!-- 3976 -->     
+<!-- 3977 -->     setTimeout(() => {
+<!-- 3978 -->       statusDiv.innerHTML = "";
+<!-- 3979 -->       document.getElementById('input-area-wrapper').style.display = 'flex';
+<!-- 3980 -->     }, 1500);
+<!-- 3981 -->   }
+<!-- 3982 -->
+<!-- 3983 -->   function sendFinalDataToAnalytics() {
+<!-- 3984 -->     console.log(`[GA TIMEOUT SUBMITTED] Last Clicked Site: ${lastClickedSite} | Amount: ₹${pendingAmount} | Time: ${pendingTime}`);
+<!-- 3985 -->
+<!-- 3986 -->     if (typeof gtag === 'function') {
+<!-- 3987 -->       gtag('event', 'total_donation_submit', {
+<!-- 3988 -->         'last_clicked_site': lastClickedSite,
+<!-- 3989 -->         'amount': parseFloat(pendingAmount),
+<!-- 3990 -->         'saved_time': pendingTime
+<!-- 3991 -->       });
+<!-- 3992 -->     }
+<!-- 3993 -->
+<!-- 3994 -->     let statusDiv = document.getElementById('save-status-msg');
+<!-- 3995 -->     statusDiv.innerHTML = `<span class="status-msg">Reported ₹${pendingAmount} successfully! Thank you.</span>`;
+<!-- 3996 -->     
+<!-- 3997 -->     document.getElementById('donation-amount').value = "";
+<!-- 3998 -->
+<!-- 3999 -->     setTimeout(() => {
+<!-- 4000 -->       statusDiv.innerHTML = "";
+<!-- 4001 -->       document.getElementById('input-area-wrapper').style.display = 'flex';
+<!-- 4002 -->     }, 4000);
+<!-- 4003 -->   }
+<!-- 4004 --> </script>
+<!-- 4005 -->
+<!-- 4006 -->
+<!-- 4007 --> <div id="bas-charity-total-dark-info" style="
+<!-- 4008 -->     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+<!-- 4009 -->     line-height: 1.8;
+<!-- 4010 -->     color: #eeeeee;
+<!-- 4011 -->     background-color: #121212; /* Full Black Background */
+<!-- 4012 -->     border: 1.5px solid #D8D8D8;
+<!-- 4013 --> box-shadow: 0 0 8px rgba(192,192,192,0.15);/* Glowing Gray Border */
+<!-- 4014 -->     border-radius: 15px;
+<!-- 4015 -->     max-width: 900px;
+<!-- 4016 -->     margin: 25px auto;
+<!-- 4017 -->     box-shadow: 0 0 20px rgba(255,255,255,0.05), 0 10px 30px rgba(0,0,0,0.7);
+<!-- 4018 -->     box-sizing: border-box;
+<!-- 4019 -->     width: 96%;
+<!-- 4020 -->     overflow: hidden;
+<!-- 4021 --> ">
+<!-- 4022 -->
+<!-- 4023 -->     <div style="padding: 35px 25px;">
+<!-- 4024 -->
+<!-- 4025 -->         <div style="margin-bottom: 40px; text-align: center;">
+<!-- 4026 -->           <div style="height:3px;background:#2ecc71;border-radius:3px;margin:18px auto 30px auto;width:92%;"></div>
+<!-- 4027 -->             <h2 style="color: #2ecc71; border-bottom: 3px solid #27ae60; display: inline-block; padding-bottom: 8px; margin-bottom: 15px; letter-spacing: 1px;">TRANSPARENCY & LEGAL DISCLOSURES</h2>
+<!-- 4028 -->             <p style="font-weight: bold; color: #27ae60; font-size: 1.15em; margin: 15px 0;">"YOUR PURCHASE SATISFIES A HUNGER" </p>
+<!-- 4029 -->             <p style="text-align: justify; color: #cccccc; font-size: 0.98em; margin: 0 auto; max-width: 800px;">
+<!-- 4030 -->                 <strong>BAS Charity International</strong> acts as a bridge between global commerce and humanitarian aid. Our mission is to ensure that support reaches those who truly need it through affiliate partnerships with <strong>50,000+ online shops</strong> worldwide
+<!-- 4031 -->             </p>
+<!-- 4032 -->         </div>
+<!-- 4033 -->
+<!-- 4034 --> <div style="background:linear-gradient(135deg,#161616 0%,#1e1e1e 100%); border:1px solid #c0c0c0; border-radius:12px; box-shadow:0 0 8px rgba(192,192,192,.20); padding:20px; margin-bottom:22px; box-sizing:border-box;">        
+<!-- 4035 -->   <h3 style="color: #2ecc71; margin-top: 0; font-size: 1.25em; margin-bottom: 12px;">Financial Governance</h3>
+<!-- 4036 -->             <p style="margin-bottom: 10px;"><strong>Initially, 100% of the affiliate income</strong> generated through this platform was dedicated entirely to hunger relief [cite: 2026-01-01]. As we scale, a <strong>minimum of 51% or more</strong> will always be strictly dedicated to these noble causes.</p>
+<!-- 4037 -->             <p style="font-style: italic; color: #999999; font-size: 0.95em; margin-bottom: 0;">The remaining portion is utilized for platform maintenance, technical development, staff support, and operational expenses to ensure long-term sustainability .</p>
+<!-- 4038 -->         </div>
+<!-- 4039 -->
+<!-- 4040 -->         <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 25px; margin-bottom: 30px;">
+<!-- 4041 -->             <div style="background:linear-gradient(135deg,#161616 0%,#1e1e1e 100%); border:1px solid #c0c0c0; border-radius:12px; box-shadow:0 0 8px rgba(192,192,192,.20); padding:20px; margin-bottom:22px; box-sizing:border-box;">
+<!-- 4042 -->             <h3 style="color: #2ecc71; margin-top: 0; margin-bottom: 12px; font-size: 1.15em;">Privacy Commitment</h3>
+<!-- 4043 -->                 <p style="font-size: 0.95em; text-align: justify; color: #bbbbbb; margin-bottom: 0;">
+<!-- 4044 -->                     We value your digital safety. <strong>BAS Charity International</strong> does not collect or store your personal financial information. When you click the <strong>above links</strong>, your transaction happens directly on the official retailer's secure website.
+<!-- 4045 -->                 </p>
+<!-- 4046 -->             </div>
+<!-- 4047 -->
+<!-- 4048 -->            <div style="background:linear-gradient(135deg,#161616 0%,#1e1e1e 100%); border:1px solid #c0c0c0; border-radius:12px; box-shadow:0 0 8px rgba(192,192,192,.20); padding:20px; margin-bottom:22px; box-sizing:border-box;">
+<!-- 4049 -->              <h3 style="color: #2ecc71; margin-top: 0; margin-bottom: 12px; font-size: 1.15em;">Affiliate Disclosure</h3>
+<!-- 4050 -->                 <p style="font-size: 0.95em; text-align: justify; color: #bbbbbb; margin-bottom: 0;">
+<!-- 4051 -->                     Shopping through the <strong>above links</strong> costs you <strong>nothing extra</strong> [cite: 2026-01-01]. The retailers pay a commission to us, which we use for our humanitarian missions to fight hunger and help those in need.
+<!-- 4052 -->                 </p>
+<!-- 4053 -->             </div>
+<!-- 4054 -->
+<!-- 4055 -->         </div>
+<!-- 4056 -->
+<!-- 4057 -->         <div style="padding: 20px; border: 2px solid #c0392b; border-radius: 12px; background-color: #1a0d0d; text-align: center;">
+<!-- 4058 -->             <h3 style="color: #e74c3c; margin-top: 0; font-size: 1.15em; margin-bottom: 10px;">Direct Donations Notice</h3>
+<!-- 4059 -->             <p style="font-weight: 500; margin-bottom: 8px;"> we <strong>do not accept any  donations</strong> through this website.</p>
+<!-- 4060 -->             <p style="font-size: 0.92em; color: #a5a5a5; font-weight: bold; letter-spacing: 0.5px;">"Give your donations only through trusted hands."</p>
+<!-- 4061 -->         </div>
+<!-- 4062 -->
+<!-- 4063 -->     </div>
+<!-- 4064 --> </div>
+<!-- 4065 -->
+<!-- 4066 -->
+<!-- 4067 --> </div>
+<!-- 4068 -->
+<!-- 4069 --> <div style="text-align: center; background-color: #0a0a0a; color: #ffffff; padding: 35px 20px; border-top: 1px solid #222222;">
+<!-- 4070 --> <p style="font-size: 1.1em; color: #2ecc71; margin: 0;"><strong>Contact:</strong> <a href="mailto:support@bascharity.com" style="color: #27ae60; text-decoration: none; font-weight: bold; border-bottom: 1px dashed #27ae60;">support@bascharity.com</a> | Kerala, India</p>
+<!-- 4071 --> <p style="font-size: 0.85em; color: #666666; margin-top: 20px; letter-spacing: 1px;">&copy; 2026 BAS Charity International. All Rights Reserved.</p>
+<!-- 4072 --> </div>
+<!-- 4073 --> </div>
+<!-- 4074 --> <div id="floating-selector" style="position: fixed; bottom: 30px; right: 20px; display: flex; flex-direction: column; gap: 15px; z-index: 9999;">
+<!-- 4075 -->
+<!-- 4076 --> <div onclick="document.querySelector('.lang-box').scrollIntoView({behavior: 'smooth'})"
+<!-- 4077 --> style="background: linear-gradient(135deg, #FF5722, #E64A19);
+<!-- 4078 --> color: white;
+<!-- 4079 --> padding: 15px 20px;
+<!-- 4080 --> border-radius: 50px;
+<!-- 4081 --> cursor: pointer;
+<!-- 4082 --> font-weight: bold;
+<!-- 4083 --> box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+<!-- 4084 --> display: flex;
+<!-- 4085 --> align-items: center;
+<!-- 4086 --> gap: 10px;
+<!-- 4087 --> animation: float-anim 3s ease-in-out infinite;">
+<!-- 4088 --> <span style="font-size: 20px;">🌐</span> <span>Change Language/Country
+<!-- 4089 -->  </span>
+<!-- 4090 --> </div>
+<!-- 4091 -->
+<!-- 4092 --> <div onclick="document.querySelector('.country-box').scrollIntoView({behavior: 'smooth'})"
+<!-- 4093 --> style="background: linear-gradient(135deg, #2196F3, #1976D2);
+<!-- 4094 --> color: white;
+<!-- 4095 --> padding: 15px 20px;
+<!-- 4096 --> border-radius: 50px;
+<!-- 4097 --> cursor: pointer;
+<!-- 4098 --> font-weight: bold;
+<!-- 4099 --> box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+<!-- 4100 --> display: flex;
+<!-- 4101 --> align-items: center;
+<!-- 4102 --> gap: 10px;
+<!-- 4103 --> animation: float-anim 3s ease-in-out infinite 1.5s;">
+<!-- 4104 --> <span style="font-size: 20px;">📍</span> <span>Change Category</span>
+<!-- 4105 --> </div>
+<!-- 4106 -->
+<!-- 4107 --> </div>
+<!-- 4108 -->
+<!-- 4109 --> <style>
+<!-- 4110 --> /* ബലൂൺ പോലെ ചെറുതായി കറങ്ങാനും പൊങ്ങാനും ഉള്ള ആനിമേഷൻ */
+<!-- 4111 --> @keyframes float-anim {
+<!-- 4112 --> 0%, 100% { transform: translateY(0) rotate(0deg); }
+<!-- 4113 --> 50% { transform: translateY(-10px) rotate(2deg); }
+<!-- 4114 --> }
+<!-- 4115 -->
+<!-- 4116 -->
+<!-- 4117 --> /* ക്ലിക്ക് ചെയ്യുമ്പോൾ ഉള്ള എഫക്ട് */
+<!-- 4118 --> #floating-selector div:active {
+<!-- 4119 --> transform: scale(0.9);
+<!-- 4120 --> }
+<!-- 4121 --> </style>
+<!-- 4122 -->
+<!-- 4123 -->
+<!-- 4124 -->   <!-- PART 2 : CATEGORY -->
+<!-- 4125 --> <!-- ================================================= -->
+<!-- 4126 --> <!-- PART 2 : CATEGORY SECTION -->
+<!-- 4127 -->
+<!-- 4128 --> <!-- ================================================= -->
+<!-- 4129 --> <!-- PART 2 : CATEGORY SECTION -->
+<!-- 4130 -->
+<!-- 4131 --> <div id="selectedCountryBox">SELECTED COUNTRY - INDIA</div>
+<!-- 4132 --> <div id="categoryCountry">SHOP ON <span class="green">INDIA</span></div>
+<!-- 4133 -->
+<!-- 4134 --> <div class="country-box">
+<!-- 4135 --> <input id="categorySearch" type="text" placeholder="🔍 SEARCH 50,000+ SHOPS">
+<!-- 4136 -->   <div class="section-label">SELECT CATOGARY</div>
+<!-- 4137 -->   <div id="categoryButtons" class="category-grid"></div>
+<!-- 4138 -->
+<!-- 4139 -->   <select id="allCategories">
+<!-- 4140 -->     <option value="all">SELECT ALL CATO GARIES</option>
+<!-- 4141 -->   </select>
+<!-- 4142 -->
+<!-- 4143 -->   <div id="categoryHeading">ALL</div>
+<!-- 4144 -->   <div id="categoryShops"></div>
+<!-- 4145 --> </div>
+<!-- 4146 -->
+<!-- 4147 --> <style>
+<!-- 4148 --> #selectedCountryBox{
+<!-- 4149 -->   width:90%;
+<!-- 4150 -->   max-width:900px;
+<!-- 4151 -->   margin:14px auto 10px;
+<!-- 4152 -->   padding:14px 16px;
+<!-- 4153 -->   background:#3f3f3f;
+<!-- 4154 -->   border:1px solid #8a8a8a;
+<!-- 4155 -->   border-radius:12px;
+<!-- 4156 -->   color:#00ff66;
+<!-- 4157 -->   font-size:18px;
+<!-- 4158 -->   font-weight:800;
+<!-- 4159 -->   text-align:center;
+<!-- 4160 -->   box-sizing:border-box;
+<!-- 4161 --> }
+<!-- 4162 -->
+<!-- 4163 --> .country-box{
+<!-- 4164 -->   width:96%;
+<!-- 4165 -->   max-width:900px;
+<!-- 4166 -->   margin:0 auto 18px;
+<!-- 4167 -->   padding:14px;
+<!-- 4168 -->   border:1px solid #3a3a3a;
+<!-- 4169 -->   border-radius:16px;
+<!-- 4170 -->   background:#111;
+<!-- 4171 -->   color:#fff;
+<!-- 4172 -->   font-family:Arial,sans-serif;
+<!-- 4173 -->   box-sizing:border-box;
+<!-- 4174 --> }
+<!-- 4175 --> #categoryCountry{
+<!-- 4176 -->     width:100%;
+<!-- 4177 -->     text-align:center;
+<!-- 4178 -->     display:flex;
+<!-- 4179 -->     justify-content:center;
+<!-- 4180 -->     align-items:center;
+<!-- 4181 -->     gap:8px;
+<!-- 4182 -->     color:#ffffff;
+<!-- 4183 -->     font-size:20px;
+<!-- 4184 -->     font-weight:800;
+<!-- 4185 --> }
+<!-- 4186 -->
+<!-- 4187 --> #categoryCountry .green{
+<!-- 4188 -->     color:#FFC107;
+<!-- 4189 --> }
+<!-- 4190 -->
+<!-- 4191 -->
+<!-- 4192 --> #categorySearch{
+<!-- 4193 -->   width:100%;
+<!-- 4194 -->   height:48px;
+<!-- 4195 -->   border:1px solid #666;
+<!-- 4196 -->   border-radius:12px;
+<!-- 4197 -->   padding:0 14px;
+<!-- 4198 -->   margin-bottom:12px;
+<!-- 4199 -->   background:#fff;
+<!-- 4200 -->   color:#111;
+<!-- 4201 -->   font-size:16px;
+<!-- 4202 -->   box-sizing:border-box;
+<!-- 4203 --> }
+<!-- 4204 --> #categorySearch::placeholder{
+<!-- 4205 -->     color:#00C853;
+<!-- 4206 -->     font-weight:700;
+<!-- 4207 -->     opacity:1;
+<!-- 4208 --> }
+<!-- 4209 -->
+<!-- 4210 -->
+<!-- 4211 --> .section-label{
+<!-- 4212 -->   width:100%;
+<!-- 4213 -->   background:#3f3f3f;
+<!-- 4214 -->   border:1px solid #8a8a8a;
+<!-- 4215 -->   border-radius:12px;
+<!-- 4216 -->   color:#fff;
+<!-- 4217 -->   font-size:18px;
+<!-- 4218 -->   font-weight:800;
+<!-- 4219 -->   text-align:center;
+<!-- 4220 -->   padding:12px 10px;
+<!-- 4221 -->   margin-bottom:12px;
+<!-- 4222 -->   box-sizing:border-box;
+<!-- 4223 --> }
+<!-- 4224 -->
+<!-- 4225 --> .category-grid{
+<!-- 4226 -->   display:grid;
+<!-- 4227 -->   grid-template-columns:repeat(3,1fr);
+<!-- 4228 -->   gap:10px;
+<!-- 4229 -->   margin-bottom:12px;
+<!-- 4230 --> }
+<!-- 4231 -->
+<!-- 4232 --> .categoryBtn{
+<!-- 4233 -->   background:#4a4a4a;
+<!-- 4234 -->   border:1px solid #666;
+<!-- 4235 -->   border-left-width:6px;
+<!-- 4236 -->   border-radius:14px;
+<!-- 4237 -->   padding:14px 8px;
+<!-- 4238 -->   color:#fff;
+<!-- 4239 -->   font-size:15px;
+<!-- 4240 -->   font-weight:800;
+<!-- 4241 -->   text-align:center;
+<!-- 4242 -->   cursor:pointer;
+<!-- 4243 -->   min-height:50px;
+<!-- 4244 --> }
+<!-- 4245 -->
+<!-- 4246 --> .categoryBtn.active{
+<!-- 4247 -->   color:#00ff66;
+<!-- 4248 --> }
+<!-- 4249 -->
+<!-- 4250 --> .categoryBtn:nth-child(1){border-left-color:#FF9933;}
+<!-- 4251 --> .categoryBtn:nth-child(2){border-left-color:#2196F3;}
+<!-- 4252 --> .categoryBtn:nth-child(3){border-left-color:#E91E63;}
+<!-- 4253 --> .categoryBtn:nth-child(4){border-left-color:#00C853;}
+<!-- 4254 --> .categoryBtn:nth-child(5){border-left-color:#4CAF50;}
+<!-- 4255 --> .categoryBtn:nth-child(6){border-left-color:#F44336;}
+<!-- 4256 --> .categoryBtn:nth-child(7){border-left-color:#9C27B0;}
+<!-- 4257 --> .categoryBtn:nth-child(8){border-left-color:#3F51B5;}
+<!-- 4258 --> .categoryBtn:nth-child(9){border-left-color:#FFC107;}
+<!-- 4259 --> .categoryBtn:nth-child(10){border-left-color:#009688;}
+<!-- 4260 --> .categoryBtn:nth-child(11){border-left-color:#795548;}
+<!-- 4261 --> .categoryBtn:nth-child(12){border-left-color:#FF5722;}
+<!-- 4262 -->
+<!-- 4263 --> #allCategories{
+<!-- 4264 -->   width:100%;
+<!-- 4265 -->   height:48px;
+<!-- 4266 -->   border:1px solid #666;
+<!-- 4267 -->   border-radius:12px;
+<!-- 4268 -->   padding:0 12px;
+<!-- 4269 -->   margin-bottom:12px;
+<!-- 4270 -->   background:#4a4a4a;
+<!-- 4271 -->   color:#fff;
+<!-- 4272 -->   font-size:16px;
+<!-- 4273 -->   font-weight:800;
+<!-- 4274 -->   box-sizing:border-box;
+<!-- 4275 --> }
+<!-- 4276 -->
+<!-- 4277 --> #categoryHeading{
+<!-- 4278 -->   margin:10px 0 14px;
+<!-- 4279 -->   padding:12px;
+<!-- 4280 -->   background:#4a4a4a;
+<!-- 4281 -->   border:1px solid #8a8a8a;
+<!-- 4282 -->   border-radius:12px;
+<!-- 4283 -->   color:#00ff66;
+<!-- 4284 -->   font-size:20px;
+<!-- 4285 -->   font-weight:800;
+<!-- 4286 -->   text-align:center;
+<!-- 4287 -->   text-transform:uppercase;
+<!-- 4288 -->   display: flex;
+<!-- 4289 -->   justify-content: center;
+<!-- 4290 -->   align-items: center;
+<!-- 4291 -->   gap: 15px;
+<!-- 4292 --> }
+<!-- 4293 -->
+<!-- 4294 --> .back-all-btn {
+<!-- 4295 -->   background: #ff3b30;
+<!-- 4296 -->   color: #fff;
+<!-- 4297 -->   border: none;
+<!-- 4298 -->   padding: 6px 12px;
+<!-- 4299 -->   border-radius: 6px;
+<!-- 4300 -->   font-size: 14px;
+<!-- 4301 -->   font-size: 12px;
+<!-- 4302 -->   cursor: pointer;
+<!-- 4303 -->   font-weight: bold;
+<!-- 4304 --> }
+<!-- 4305 -->
+<!-- 4306 --> #categoryShops{
+<!-- 4307 -->   display:flex;
+<!-- 4308 -->   flex-direction:column;
+<!-- 4309 -->   gap:10px;
+<!-- 4310 --> }
+<!-- 4311 -->
+<!-- 4312 --> .shopCard{
+<!-- 4313 -->   background:#2b2b2b;
+<!-- 4314 -->   border:1px solid #c0c0c0;
+<!-- 4315 -->   border-left:8px solid #00C853;
+<!-- 4316 -->   border-radius:14px;
+<!-- 4317 -->   padding:14px 16px;
+<!-- 4318 -->   display:flex;
+<!-- 4319 -->   align-items:center;
+<!-- 4320 -->   gap:12px;
+<!-- 4321 -->   min-height:78px;
+<!-- 4322 -->   text-decoration:none;
+<!-- 4323 -->   box-shadow:0 2px 10px rgba(0,0,0,.25);
+<!-- 4324 -->   box-sizing:border-box;
+<!-- 4325 --> }
+<!-- 4326 -->
+<!-- 4327 --> .shopCard:nth-child(10n+1){border-left-color:#00C853;}
+<!-- 4328 --> .shopCard:nth-child(10n+2){border-left-color:#2196F3;}
+<!-- 4329 --> .shopCard:nth-child(10n+3){border-left-color:#F44336;}
+<!-- 4330 --> .shopCard:nth-child(10n+4){border-left-color:#FF9800;}
+<!-- 4331 --> .shopCard:nth-child(10n+5){border-left-color:#9C27B0;}
+<!-- 4332 --> .shopCard:nth-child(10n+6){border-left-color:#00BCD4;}
+<!-- 4333 --> .shopCard:nth-child(10n+7){border-left-color:#E91E63;}
+<!-- 4334 --> .shopCard:nth-child(10n+8){border-left-color:#FFC107;}
+<!-- 4335 --> .shopCard:nth-child(10n+9){border-left-color:#009688;}
+<!-- 4336 --> .shopCard:nth-child(10n+10){border-left-color:#795548;}
+<!-- 4337 -->
+<!-- 4338 --> .shopDot{
+<!-- 4339 -->   width:18px;
+<!-- 4340 -->   flex:0 0 18px;
+<!-- 4341 -->   color:#555; /* താങ്കൾ ആവശ്യപ്പെട്ട പ്രകാരം ലൈറ്റ് ഗ്രേ കളർ നമുക്ക് മാത്രം കാണാൻ */
+<!-- 4342 -->   font-weight:900;
+<!-- 4343 -->   text-align:center;
+<!-- 4344 -->   font-size:20px;
+<!-- 4345 -->   line-height:1;
+<!-- 4346 --> }
+<!-- 4347 -->
+<!-- 4348 --> .shopFav{
+<!-- 4349 -->   width:42px;
+<!-- 4350 -->   height:42px;
+<!-- 4351 -->   object-fit:contain;
+<!-- 4352 -->   flex:0 0 42px;
+<!-- 4353 -->   border-radius:8px;
+<!-- 4354 -->   background:#fff;
+<!-- 4355 --> }
+<!-- 4356 -->
+<!-- 4357 --> .shopName{
+<!-- 4358 -->   flex:1;
+<!-- 4359 -->   color:#fff;
+<!-- 4360 -->   font-size:28px;
+<!-- 4361 -->   font-weight:800;
+<!-- 4362 -->   line-height:1.2;
+<!-- 4363 -->   text-align:left;
+<!-- 4364 --> }
+<!-- 4365 -->
+<!-- 4366 --> .shopHead{
+<!-- 4367 -->   display:flex;
+<!-- 4368 -->   align-items:center;
+<!-- 4369 -->   gap:12px;
+<!-- 4370 -->   width:100%;
+<!-- 4371 --> }
+<!-- 4372 -->
+<!-- 4373 --> </style>
+<!-- 4374 --> <script>
+<!-- 4375 --> let currentCountry = localStorage.getItem("selectedCountry") || "india";
+<!-- 4376 --> let currentCategory = "all";
+<!-- 4377 --> let resetTimer = null;
+<!-- 4378 -->
+<!-- 4379 --> // MASTER CATEGORY CONFIG (button + dropdown + touch window എല്ലാം ഇതിൽ നിന്ന്)
+<!-- 4380 --> const categoryConfig = {
+<!-- 4381 -->   all: {
+<!-- 4382 -->     code: "all",
+<!-- 4383 -->     btn: "ALL",
+<!-- 4384 -->     label: "all",
+<!-- 4385 -->     desc: "all shops & commercial services"
+<!-- 4386 -->   },
+<!-- 4387 -->   electronics: {
+<!-- 4388 -->     code: "electronics",
+<!-- 4389 -->     btn: "ELECTRONICS",
+<!-- 4390 -->     label: "electronics",
+<!-- 4391 -->     desc: "electronics, mobiles, computers, gadgets & accessories"
+<!-- 4392 -->   },
+<!-- 4393 -->   home: {
+<!-- 4394 -->     code: "home",
+<!-- 4395 -->     btn: "HOME",
+<!-- 4396 -->     label: "home",
+<!-- 4397 -->     desc: "home appliances, kitchen, furniture, decor, garden, tools & home essentials"
+<!-- 4398 -->   },
+<!-- 4399 -->   fashion: {
+<!-- 4400 -->     code: "fashion",
+<!-- 4401 -->     btn: "FASHION",
+<!-- 4402 -->     label: "fashion",
+<!-- 4403 -->     desc: "men, women, kids, baby, clothing, footwear, bags & fashion accessories"
+<!-- 4404 -->   },
+<!-- 4405 -->   beauty: {
+<!-- 4406 -->     code: "beauty",
+<!-- 4407 -->     btn: "BEAUTY",
+<!-- 4408 -->     label: "beauty",
+<!-- 4409 -->     desc: "skincare, haircare, cosmetics, makeup, fragrances & personal care"
+<!-- 4410 -->   },
+<!-- 4411 -->   health: {
+<!-- 4412 -->     code: "health",
+<!-- 4413 -->     btn: "HEALTH",
+<!-- 4414 -->     label: "health",
+<!-- 4415 -->     desc: "pharmacy, hospitals, clinics, medical equipment, wellness, ayurveda & supplements"
+<!-- 4416 -->   },
+<!-- 4417 -->   food: {
+<!-- 4418 -->     code: "food",
+<!-- 4419 -->     btn: "FOOD",
+<!-- 4420 -->     label: "food",
+<!-- 4421 -->     desc: "grocery, daily needs, fruits, vegetables, dairy, bakery, meat, seafood, restaurants & food delivery"
+<!-- 4422 -->   },
+<!-- 4423 -->   sports: {
+<!-- 4424 -->     code: "sports",
+<!-- 4425 -->     btn: "SPORTS",
+<!-- 4426 -->     label: "sports",
+<!-- 4427 -->     desc: "sports, fitness, gym, outdoor, camping, cycling & exercise equipment"
+<!-- 4428 -->   },
+<!-- 4429 -->   travel: {
+<!-- 4430 -->     code: "travel",
+<!-- 4431 -->     btn: "TRAVEL",
+<!-- 4432 -->     label: "travel",
+<!-- 4433 -->     desc: "flights, hotels, bus, train, taxi, holidays, visa, cruises & car rental"
+<!-- 4434 -->   },
+<!-- 4435 -->   books: {
+<!-- 4436 -->     code: "books",
+<!-- 4437 -->     btn: "BOOKS",
+<!-- 4438 -->     label: "books",
+<!-- 4439 -->     desc: "books, education, courses, ebooks, learning, exams, stationery & study materials"
+<!-- 4440 -->   },
+<!-- 4441 -->   software: {
+<!-- 4442 -->     code: "software",
+<!-- 4443 -->     btn: "SOFTWARE",
+<!-- 4444 -->     label: "software",
+<!-- 4445 -->     desc: "apps, ai tools, saas, hosting, domains, cloud, security & digital services"
+<!-- 4446 -->   },
+<!-- 4447 -->   business: {
+<!-- 4448 -->     code: "business",
+<!-- 4449 -->     btn: "BUSINESS",
+<!-- 4450 -->     label: "business",
+<!-- 4451 -->     desc: "office supplies, wholesale, b2b, printing, packaging, industrial products & business services"
+<!-- 4452 -->   },
+<!-- 4453 -->   jewellery: {
+<!-- 4454 -->     code: "jewellery",
+<!-- 4455 -->     btn: "JEWELLERY",
+<!-- 4456 -->     label: "jewellery",
+<!-- 4457 -->     desc: "gold, diamond, silver, platinum, gemstones, bridal jewellery, luxury jewellery & watches"
+<!-- 4458 -->   },
+<!-- 4459 -->   automotive: {
+<!-- 4460 -->     code: "automotive",
+<!-- 4461 -->     btn: "AUTOMOTIVE",
+<!-- 4462 -->     label: "automotive",
+<!-- 4463 -->     desc: "cars, bikes, evs, tyres, batteries, spare parts, accessories, oils, lubricants & vehicle services"
+<!-- 4464 -->   }
+<!-- 4465 --> };
+<!-- 4466 -->
+<!-- 4467 --> // ബട്ടൺ ഓർഡർ (12 main buttons)
+<!-- 4468 --> const buttonOrder = [
+<!-- 4469 -->   "all",
+<!-- 4470 -->   "electronics",
+<!-- 4471 -->   "home",
+<!-- 4472 -->   "fashion",
+<!-- 4473 -->   "beauty",
+<!-- 4474 -->   "health",
+<!-- 4475 -->   "food",
+<!-- 4476 -->   "sports",
+<!-- 4477 -->   "travel",
+<!-- 4478 -->   "books",
+<!-- 4479 -->   "software",
+<!-- 4480 -->   "business"
+<!-- 4481 --> ];
+<!-- 4482 -->
+<!-- 4483 --> const categoryButtons   = document.getElementById("categoryButtons");
+<!-- 4484 --> const categorySearch    = document.getElementById("categorySearch");
+<!-- 4485 --> const allCategoriesSelect = document.getElementById("allCategories");
+<!-- 4486 --> const categoryHeading   = document.getElementById("categoryHeading");
+<!-- 4487 --> const categoryShops     = document.getElementById("categoryShops");
+<!-- 4488 --> const selectedCountryBox = document.getElementById("selectedCountryBox");
+<!-- 4489 --> const categoryCountry   = document.getElementById("categoryCountry");
+<!-- 4490 -->
+<!-- 4491 --> // existing colours 그대로
+<!-- 4492 --> const colorSet = [
+<!-- 4493 -->   "#00C853","#2196F3","#F44336","#FF9800","#9C27B0",
+<!-- 4494 -->   "#00BCD4","#E91E63","#FFC107","#009688","#795548"
+<!-- 4495 --> ];
+<!-- 4496 -->
+<!-- 4497 --> // ഇൻ-ആക്റ്റിവിറ്റി ടൈംഔട്ട് റീസെറ്റ് ലോജിക്ക് (3 മിനിറ്റ് ഉപയോഗിച്ചില്ലെങ്കിൽ ALL ലോട്ട് മാറും)
+<!-- 4498 --> function startInactivityTimer() {
+<!-- 4499 -->   clearTimeout(resetTimer);
+<!-- 4500 -->   resetTimer = setTimeout(() => {
+<!-- 4501 -->     if (currentCategory !== "all") {
+<!-- 4502 -->       triggerBackToAll();
+<!-- 4503 -->     }
+<!-- 4504 -->   }, 180000); // 3 മിനിറ്റ്
+<!-- 4505 --> }
+<!-- 4506 -->
+<!-- 4507 --> // CATEGORY BUTTONS SETUP
+<!-- 4508 --> function setupCategoryButtons() {
+<!-- 4509 -->   categoryButtons.innerHTML = "";
+<!-- 4510 -->   buttonOrder.forEach((key, i) => {
+<!-- 4511 -->     const cfg = categoryConfig[key];
+<!-- 4512 -->     if (!cfg) return;
+<!-- 4513 -->
+<!-- 4514 -->     const btn = document.createElement("button");
+<!-- 4515 -->     btn.className = "categoryBtn";
+<!-- 4516 -->     btn.textContent = cfg.btn; // uppercase label
+<!-- 4517 -->     btn.style.borderLeftColor = colorSet[i % colorSet.length];
+<!-- 4518 -->
+<!-- 4519 -->     btn.onclick = () => {
+<!-- 4520 -->       document.querySelectorAll(".categoryBtn").forEach(x => x.classList.remove("active"));
+<!-- 4521 -->       btn.classList.add("active");
+<!-- 4522 -->       currentCategory = cfg.code;
+<!-- 4523 -->       renderCategory(cfg.code);
+<!-- 4524 -->       startInactivityTimer();
+<!-- 4525 -->     };
+<!-- 4526 -->
+<!-- 4527 -->     categoryButtons.appendChild(btn);
+<!-- 4528 -->   });
+<!-- 4529 --> }
+<!-- 4530 -->
+<!-- 4531 --> // DROPDOWN / TOUCH WINDOW MASTER
+<!-- 4532 --> function setupCategoryDropdown() {
+<!-- 4533 -->   allCategoriesSelect.innerHTML = "";
+<!-- 4534 -->
+<!-- 4535 -->   // top ALL option
+<!-- 4536 -->   const allOpt = document.createElement("option");
+<!-- 4537 -->   allOpt.value = "all";
+<!-- 4538 -->   allOpt.textContent = "ALL CATEGORIES";
+<!-- 4539 -->   allCategoriesSelect.appendChild(allOpt);
+<!-- 4540 -->
+<!-- 4541 -->   // rest from master config
+<!-- 4542 -->   Object.keys(categoryConfig).forEach(key => {
+<!-- 4543 -->     if (key === "all") return;
+<!-- 4544 -->     const cfg = categoryConfig[key];
+<!-- 4545 -->     const opt = document.createElement("option");
+<!-- 4546 -->     opt.value = cfg.code;
+<!-- 4547 -->     opt.textContent = cfg.btn; // same as button
+<!-- 4548 -->     allCategoriesSelect.appendChild(opt);
+<!-- 4549 -->   });
+<!-- 4550 -->
+<!-- 4551 -->   allCategoriesSelect.onchange = () => {
+<!-- 4552 -->     const val = allCategoriesSelect.value;
+<!-- 4553 -->     if (val === "all") {
+<!-- 4554 -->       triggerBackToAll();
+<!-- 4555 -->       return;
+<!-- 4556 -->     }
+<!-- 4557 -->
+<!-- 4558 -->     currentCategory = val;
+<!-- 4559 -->
+<!-- 4560 -->     // button active sync
+<!-- 4561 -->     document.querySelectorAll(".categoryBtn").forEach(btn => {
+<!-- 4562 -->       btn.classList.remove("active");
+<!-- 4563 -->       const cfg = categoryConfig[val];
+<!-- 4564 -->       if (cfg && btn.textContent === cfg.btn) {
+<!-- 4565 -->         btn.classList.add("active");
+<!-- 4566 -->       }
+<!-- 4567 -->     });
+<!-- 4568 -->
+<!-- 4569 -->     renderCategory(currentCategory);
+<!-- 4570 -->
+<!-- 4571 -->     // dropdown reset to ALL text
+<!-- 4572 -->     allCategoriesSelect.value = "all";
+<!-- 4573 -->     startInactivityTimer();
+<!-- 4574 -->   };
+<!-- 4575 --> }
+<!-- 4576 -->
+<!-- 4577 --> // SEARCH
+<!-- 4578 --> categorySearch.addEventListener("input", function () {
+<!-- 4579 -->   const value = this.value.toLowerCase().trim();
+<!-- 4580 -->   startInactivityTimer();
+<!-- 4581 -->
+<!-- 4582 -->   if (value === "") {
+<!-- 4583 -->     renderCategory(currentCategory);
+<!-- 4584 -->     return;
+<!-- 4585 -->   }
+<!-- 4586 -->
+<!-- 4587 -->   let allShopsOfCountry = countryShops[currentCountry] || [];
+<!-- 4588 -->   let filtered = allShopsOfCountry.filter(shop =>
+<!-- 4589 -->     (shop.n || "").toLowerCase().includes(value)
+<!-- 4590 -->   );
+<!-- 4591 -->
+<!-- 4592 -->   categoryHeading.innerHTML = `
+<!-- 4593 -->     SEARCH RESULTS (${filtered.length})
+<!-- 4594 -->     <button class="back-all-btn" onclick="triggerBackToAll()">BACK TO ALL</button>
+<!-- 4595 -->   `;
+<!-- 4596 -->
+<!-- 4597 -->   categoryShops.innerHTML = "";
+<!-- 4598 -->
+<!-- 4599 -->   filtered.forEach((shop, index) => {
+<!-- 4600 -->     createShopCard(shop, index);
+<!-- 4601 -->   });
+<!-- 4602 --> });
+<!-- 4603 -->
+<!-- 4604 --> // COUNTRY CHANGE (PART 1)
+<!-- 4605 --> function changeCountry(countryName) {
+<!-- 4606 -->   currentCountry = countryName.toLowerCase().trim();
+<!-- 4607 -->   if (selectedCountryBox) {
+<!-- 4608 -->     selectedCountryBox.textContent = "SELECTED COUNTRY - " + currentCountry.toUpperCase();
+<!-- 4609 -->   }
+<!-- 4610 -->   if (categoryCountry) {
+<!-- 4611 -->     categoryCountry.innerHTML = `SHOP ON <span class="green">${currentCountry.toUpperCase()}</span>`;
+<!-- 4612 -->   }
+<!-- 4613 -->   renderCategory(currentCategory);
+<!-- 4614 --> }
+<!-- 4615 -->
+<!-- 4616 --> function triggerBackToAll() {
+<!-- 4617 -->   currentCategory = "all";
+<!-- 4618 -->   document.querySelectorAll(".categoryBtn").forEach(x => x.classList.remove("active"));
+<!-- 4619 -->   categorySearch.value = "";
+<!-- 4620 -->   renderCategory("all");
+<!-- 4621 --> }
+<!-- 4622 -->
+<!-- 4623 --> // MAIN RENDER
+<!-- 4624 --> function renderCategory(cat) {
+<!-- 4625 -->   const isAll = (cat === "all");
+<!-- 4626 -->   const cfg = categoryConfig[cat] || categoryConfig.all;
+<!-- 4627 -->
+<!-- 4628 -->   if (isAll) {
+<!-- 4629 -->     categoryHeading.innerHTML = `
+<!-- 4630 -->       ALL
+<!-- 4631 -->       <span class="catDesc">${cfg.desc}</span>
+<!-- 4632 -->     `;
+<!-- 4633 -->   } else {
+<!-- 4634 -->     categoryHeading.innerHTML = `
+<!-- 4635 -->       ${cfg.btn}
+<!-- 4636 -->       <span class="catDesc">${cfg.desc}</span>
+<!-- 4637 -->       <button class="back-all-btn" onclick="triggerBackToAll()">BACK TO ALL</button>
+<!-- 4638 -->     `;
+<!-- 4639 -->   }
+<!-- 4640 -->
+<!-- 4641 -->   categoryShops.innerHTML = "";
+<!-- 4642 -->
+<!-- 4643 -->   let shops = countryShops[currentCountry] || [];
+<!-- 4644 -->
+<!-- 4645 -->   if (!isAll) {
+<!-- 4646 -->     // ഇപ്പോൾ simple includes; later നമുക്ക് c logic fine-tune ചെയ്യാം
+<!-- 4647 -->     shops = shops.filter(shop =>
+<!-- 4648 -->       (shop.c || "").toLowerCase().includes(cfg.code)
+<!-- 4649 -->     );
+<!-- 4650 -->   }
+<!-- 4651 -->
+<!-- 4652 -->   if (shops.length === 0) {
+<!-- 4653 -->     categoryShops.innerHTML =
+<!-- 4654 -->       "<div style='text-align:center;padding:20px;color:#888;'>No shops found!</div>";
+<!-- 4655 -->     return;
+<!-- 4656 -->   }
+<!-- 4657 -->
+<!-- 4658 -->   shops.forEach((shop, index) => {
+<!-- 4659 -->     createShopCard(shop, index);
+<!-- 4660 -->   });
+<!-- 4661 --> /* categoryShops.innerHTML += `
+<!-- 4662 -->  <div style="
+<!-- 4663 --> max-width:900px;
+<!-- 4664 --> margin:20px auto;
+<!-- 4665 --> padding:20px;
+<!-- 4666 --> background:#2b2b2b;
+<!-- 4667 --> border:1px solid #c0c0c0;
+<!-- 4668 --> border-left:8px solid #FFD700;
+<!-- 4669 --> border-radius:14px;
+<!-- 4670 --> box-shadow:0 2px 10px rgba(0,0,0,.25);
+<!-- 4671 --> color:#fff;
+<!-- 4672 --> line-height:1.8;
+<!-- 4673 --> ">
+<!-- 4674 -->
+<!-- 4675 --> <h2 style="
+<!-- 4676 --> margin:0 0 18px;
+<!-- 4677 --> color:#FFD700;
+<!-- 4678 --> font-size:30px;
+<!-- 4679 --> font-weight:900;
+<!-- 4680 --> text-transform:uppercase;">
+<!-- 4681 --> 🔄 SHOP UPDATES
+<!-- 4682 --> </h2>
+<!-- 4683 -->
+<!-- 4684 --> <p>We continue adding new shops regularly.</p>
+<!-- 4685 -->
+<!-- 4686 --> <p>Due to our automated system and thousands of shop entries, the same original shop may occasionally appear more than once.</p>
+<!-- 4687 -->
+<!-- 4688 --> <p>All links continue to direct you to the original official shop.</p>
+<!-- 4689 -->
+<!-- 4690 --> <p>We continuously review and improve our shop list.</p>
+<!-- 4691 -->
+<!-- 4692 --> <p style="margin-bottom:0;"><b>Thank you for your patience and understanding.</b></p>
+<!-- 4693 -->
+<!-- 4694 --> </div>
+<!-- 4695 --> `;*/
+<!-- 4696 -->  }
+<!-- 4697 --> // SHOP CARD
+<!-- 4698 --> function createShopCard(shop, index) {
+<!-- 4699 -->   let host = "";
+<!-- 4700 -->   try {
+<!-- 4701 -->     host = new URL(shop.u).hostname;
+<!-- 4702 -->   } catch (e) {}
+<!-- 4703 -->
+<!-- 4704 -->   const leftColor = colorSet[index % colorSet.length];
+<!-- 4705 -->
+<!-- 4706 -->   const card = document.createElement("a");
+<!-- 4707 -->   card.href = shop.u;
+<!-- 4708 -->   card.target = "_blank";
+<!-- 4709 -->   card.className = "shopCard";
+<!-- 4710 -->   card.style.borderLeftColor = leftColor;
+<!-- 4711 -->
+<!-- 4712 -->   card.innerHTML = `
+<!-- 4713 -->     <div class="shopDot">${(shop.a || "").trim() ? "" : "."}</div>
+<!-- 4714 -->     <div class="shopHead">
+<!-- 4715 -->       <img class="shopFav"
+<!-- 4716 -->            src="https://www.google.com/s2/favicons?domain=${host}&sz=64"
+<!-- 4717 -->            loading="lazy" alt="">
+<!-- 4718 -->       <div class="shopName" translate="no">${shop.n}</div>
+<!-- 4719 -->     </div>
+<!-- 4720 -->   `;
+<!-- 4721 -->   categoryShops.appendChild(card);
+<!-- 4722 --> }
+<!-- 4723 -->
+<!-- 4724 --> // SET COUNTRY (used on load)
+<!-- 4725 --> function setCountry(country) {
+<!-- 4726 -->   currentCountry = country.toLowerCase().trim();
+<!-- 4727 -->   if (selectedCountryBox) {
+<!-- 4728 -->     selectedCountryBox.textContent = "SELECTED COUNTRY - " + currentCountry.toUpperCase();
+<!-- 4729 -->   }
+<!-- 4730 -->   if (categoryCountry) {
+<!-- 4731 -->     categoryCountry.innerHTML = `SHOP ON <span class="green">${currentCountry.toUpperCase()}</span>`;
+<!-- 4732 -->   }
+<!-- 4733 -->   triggerBackToAll();
+<!-- 4734 --> }
+<!-- 4735 -->
+<!-- 4736 --> document.addEventListener("DOMContentLoaded", () => {
+<!-- 4737 -->   setupCategoryButtons();
+<!-- 4738 -->   setupCategoryDropdown();
+<!-- 4739 -->
+<!-- 4740 -->   const saved = localStorage.getItem("selectedCountry") || "india";
+<!-- 4741 -->   setCountry(saved);
+<!-- 4742 -->
+<!-- 4743 -->   // global change hook
+<!-- 4744 -->   window.renderCountry = function (c) {
+<!-- 4745 -->     setCountry(c);
+<!-- 4746 -->   };
+<!-- 4747 --> });
+<!-- 4748 -->
+<!-- 4749 --> </script>
+<!-- 4750 -->     
+<!-- 4751 --> <div style="
+<!-- 4752 --> max-width:900px;
+<!-- 4753 --> width: 96%;
+<!-- 4754 --> margin:20px auto;
+<!-- 4755 --> padding:20px;
+<!-- 4756 --> background:#2b2b2b;
+<!-- 4757 --> border:1px solid #c0c0c0;
+<!-- 4758 --> border-left:8px solid #FFD700;
+<!-- 4759 --> border-radius:14px;
+<!-- 4760 --> box-shadow:0 2px 10px rgba(0,0,0,.25);
+<!-- 4761 --> color:#fff;
+<!-- 4762 --> line-height:1.8;
+<!-- 4763 --> ">
+<!-- 4764 -->
+<!-- 4765 --> <h2 style="
+<!-- 4766 --> margin:0 0 18px;
+<!-- 4767 --> color:#FFD700;
+<!-- 4768 --> font-size:30px;
+<!-- 4769 --> font-weight:1000;
+<!-- 4770 --> text-transform:uppercase;">
+<!-- 4771 --> 🔄 SHOP UPDATES
+<!-- 4772 --> </h2>
+<!-- 4773 -->
+<!-- 4774 --> <p>We continue adding new shops regularly.</p>
+<!-- 4775 -->
+<!-- 4776 --> <p>Due to our automated system and thousands of shop entries, the same original shop may occasionally appear more than once.</p>
+<!-- 4777 -->
+<!-- 4778 --> <p>All links continue to direct you to the original official shop.</p>
+<!-- 4779 -->
+<!-- 4780 --> <p>We continuously review and improve our shop list.</p>
+<!-- 4781 -->
+<!-- 4782 --> <p style="margin-bottom:0;"><b>Thank you for your patience and understanding.</b></p>
+<!-- 4783 -->
+<!-- 4784 --> </div>
+<!-- 4785 -->
+<!-- 4786 -->
+<!-- 4787 --> <style>
+<!-- 4788 --> .bas-thank-box{
+<!-- 4789 --> width:96%;
+<!-- 4790 --> max-width:900px;
+<!-- 4791 --> margin:auto 10px;
+<!-- 4792 --> background:#2b2b2b;
+<!-- 4793 --> border:1px solid #c0c0c0;
+<!-- 4794 --> border-left:8px solid #FFD700;
+<!-- 4795 --> border-radius:14px;
+<!-- 4796 --> padding:22px;
+<!-- 4797 --> text-align:center;
+<!-- 4798 --> box-shadow:0 2px 10px rgba(0,0,0,.25);
+<!-- 4799 --> }
+<!-- 4800 --> .bas-photo-space{
+<!-- 4801 --> width:100%;
+<!-- 4802 --> height:180px;
+<!-- 4803 --> background:#111;
+<!-- 4804 --> border:1px dashed #666;
+<!-- 4805 --> border-radius:10px;
+<!-- 4806 --> display:flex;
+<!-- 4807 --> align-items:center;
+<!-- 4808 --> justify-content:center;
+<!-- 4809 --> color:#777;
+<!-- 4810 --> font-size:18px;
+<!-- 4811 --> margin-bottom:12px;
+<!-- 4812 --> }
+<!-- 4813 --> .bas-caption{
+<!-- 4814 --> margin-top:10px;
+<!-- 4815 --> color:#cccccc;
+<!-- 4816 --> font-size:18px;
+<!-- 4817 --> font-weight:600;
+<!-- 4818 --> letter-spacing:1px;
+<!-- 4819 --> }
+<!-- 4820 --> .bas-thanks{
+<!-- 4821 --> margin:18px 0 12px;
+<!-- 4822 --> font-family:"Brush Script MT","Segoe Script","Lucida Handwriting",cursive;
+<!-- 4823 --> font-size:52px;
+<!-- 4824 --> font-weight:bold;
+<!-- 4825 --> background:linear-gradient(90deg,#FFD700,#FFA500,#FF5722,#FFD700);
+<!-- 4826 --> -webkit-background-clip:text;
+<!-- 4827 --> -webkit-text-fill-color:transparent;
+<!-- 4828 --> }
+<!-- 4829 --> .bas-name{
+<!-- 4830 --> font-size:26px;
+<!-- 4831 --> font-weight:700;
+<!-- 4832 --> color:#ffffff;
+<!-- 4833 --> letter-spacing:1px;
+<!-- 4834 --> }
+<!-- 4835 --> .bas-tag{
+<!-- 4836 --> margin-top:8px;
+<!-- 4837 --> font-size:14px;
+<!-- 4838 --> color:#bdbdbd;
+<!-- 4839 --> letter-spacing:1px;
+<!-- 4840 --> text-transform:uppercase;
+<!-- 4841 --> }
+<!-- 4842 --> </style>
+<!-- 4843 -->
+<!-- 4844 --> <div class="bas-thank-box" style="margin-bottom:4cm;">
+<!-- 4845 -->
+<!-- 4846 -->
+<!-- 4847 --> <div class="bas-photo-space" style="background:none;border:none;height:auto;padding:0;">
+<!-- 4848 -->
+<!-- 4849 --> <img src="thanks.jpg"
+<!-- 4850 --> alt="Thank You"
+<!-- 4851 --> style="width:100%;height:auto;display:block;border-radius:10px;">
+<!-- 4852 -->
+<!-- 4853 --> </div>
+<!-- 4854 -->
+<!-- 4855 --> <div class="bas-caption">
+<!-- 4856 --> HUNGER HAS HOPE IN YOU
+<!-- 4857 --> </div>
+<!-- 4858 -->
+<!-- 4859 --> <div class="bas-thanks">
+<!-- 4860 --> THANK YOU FOR YOUR VISIT
+<!-- 4861 --> </div>
+<!-- 4862 -->
+<!-- 4863 --> <div class="bas-name">
+<!-- 4864 --> BAS CHARITY INTERNATIONAL™ 
+<!-- 4865 --> </div>
+<!-- 4866 -->
+<!-- 4867 --> <div class="bas-tag">
+<!-- 4868 --> YOUR PURCHASE SATISFIES A HUNGER™  
+<!-- 4869 --> </div>
+<!-- 4870 --> </div>    
+<!-- 4871 -->   <!-- PATENT SEAL — BEFORE SHOP -->
+<!-- 4872 --> <div style="
+<!-- 4873 -->   width:100%;
+<!-- 4874 -->   text-align:center;
+<!-- 4875 -->   margin:18px auto 10px;
+<!-- 4876 -->   overflow:hidden;
+<!-- 4877 --> ">
+<!-- 4878 -->   <img
+<!-- 4879 -->     src="patent.png"
+<!-- 4880 -->     alt="Patent Soon Global"
+<!-- 4881 -->     style="
+<!-- 4882 -->       width:92%;
+<!-- 4883 -->       max-width:700px;
+<!-- 4884 -->       height:auto;
+<!-- 4885 -->       display:block;
+<!-- 4886 -->       margin:0 auto;
+<!-- 4887 -->       transform:rotate(-2deg);
+<!-- 4888 -->       filter:drop-shadow(0 4px 8px rgba(0,0,0,.6));
+<!-- 4889 -->     "
+<!-- 4890 -->   >
+<!-- 4891 --> </div>
+<!-- 4892 --> <!-- END PATENT SEAL --> 
+<!-- 4893 --> <!-- index.html-ൽ manual.html നേരിട്ട് കാണിക്കാൻ -->
+<!-- 4894 --> <div style="width: 100%; height:1100px; display: flex; justify-content: center; align-items: center;scroll-margin-top:30px; margin-top:40px;">
+<!-- 4895 -->   <iframe src="manual.html" style="width: 100%; max-width:850px; height:700px; border: none; overflow: hidden;"></iframe>
+<!-- 4896 --> </div>
+<!-- 4897 --> <div style="height:0px;"></div>
+<!-- 4898 --> <script>
+<!-- 4899 -->   document.querySelectorAll('a').forEach(link => {
+<!-- 4900 -->     // ഡൊമെയ്ൻ പേര് സ്വയം പരിശോധിച്ച് പുറത്തേക്കുള്ള ലിങ്കുകൾ മാത്രം കണ്ടെത്തും
+<!-- 4901 -->     if (link.hostname !== window.location.hostname && link.href.startsWith('http')) {
+<!-- 4902 -->       link.setAttribute('target', '_blank');
+<!-- 4903 -->       link.setAttribute('rel', 'noopener noreferrer');
+<!-- 4904 -->     }
+<!-- 4905 -->   });
+<!-- 4906 --> </script>
+<!-- 4907 -->     <!-- പേജിലെ മറ്റെല്ലാ കോഡുകളും ഫ്രണ്ട്-എൻഡ് ഘടകങ്ങളും ഇവിടെ അവസാനിക്കുന്നു -->
+<!-- 4908 -->
+<!-- 4909 -->     <!-- ഈ സെക്യൂരിറ്റി കോഡ് ഇവിടെ ചേർക്കുക -->
+<!-- 4910 -->     <script>
+<!-- 4911 -->       document.querySelectorAll('a').forEach(link => {
+<!-- 4912 -->         if (link.hostname !== window.location.hostname && link.href.startsWith('http')) {
+<!-- 4913 -->           link.setAttribute('target', '_blank');
+<!-- 4914 -->           link.setAttribute('rel', 'noopener noreferrer');
+<!-- 4915 -->         }
+<!-- 4916 -->       });
+<!-- 4917 -->
+<!-- 4918 -->       function sanitizeInput(input) {
+<!-- 4919 -->         const div = document.createElement('div');
+<!-- 4920 -->         div.innerText = input;
+<!-- 4921 -->         return div.innerHTML;
+<!-- 4922 -->       }
+<!-- 4923 -->     </script>
+<!-- 4924 -->  <!-- Popup Notification -->
+<!-- 4925 -->        <!-- Popup Notification -->
+<!-- 4926 --> <style>
+<!-- 4927 -->   /* Arrow Flicker Animation */
+<!-- 4928 -->   @keyframes flicker {
+<!-- 4929 -->     0%, 100% { opacity: 1; }
+<!-- 4930 -->     50% { opacity: 0.2; }
+<!-- 4931 -->   }
+<!-- 4932 -->
+<!-- 4933 -->   .flicker {
+<!-- 4934 -->     animation: flicker 1s infinite !important;
+<!-- 4935 -->   }
+<!-- 4936 -->
+<!-- 4937 -->   /* Main Popup Structure (ബാറിന്റെ മൊത്തം വീതി 480px ആക്കി) */
+<!-- 4938 -->   #scrollControlPopup {
+<!-- 4939 -->     position: fixed;
+<!-- 4940 -->     right: 0;
+<!-- 4941 -->     bottom: 5cm;
+<!-- 4942 -->     width: 480px;
+<!-- 4943 -->     max-width: 95vw;
+<!-- 4944 -->     height: 60px;
+<!-- 4945 -->     z-index: 99999;
+<!-- 4946 -->     background: #6DC3FF;
+<!-- 4947 -->     color: #fff;
+<!-- 4948 -->     border-radius: 18px 0 0 18px;
+<!-- 4949 -->     box-shadow: 0 8px 24px rgba(0,0,0,.35);
+<!-- 4950 -->     padding: 8px 12px;
+<!-- 4951 -->     display: flex;
+<!-- 4952 -->     align-items: center;
+<!-- 4953 -->     gap: 8px;
+<!-- 4954 -->     touch-action: none;
+<!-- 4955 -->     overflow: visible;
+<!-- 4956 -->     pointer-events: auto;
+<!-- 4957 -->     transform: translateX(calc(100% - 48px));
+<!-- 4958 -->     transition: transform 0.3s ease;
+<!-- 4959 -->   }
+<!-- 4960 -->
+<!-- 4961 -->   /* പുറത്തിറങ്ങി നിൽക്കുമ്പോൾ */
+<!-- 4962 -->   #scrollControlPopup.open {
+<!-- 4963 -->     transform: translateX(0);
+<!-- 4964 -->   }
+<!-- 4965 -->
+<!-- 4966 -->   /* Toggle Button (അറ്റത്ത് Flicker ചെയ്യുന്ന ബട്ടൺ) */
+<!-- 4967 -->   #scrollControlPopup .slideToggleBtn {
+<!-- 4968 -->     width: 44px;
+<!-- 4969 -->     height: 44px;
+<!-- 4970 -->     border: none;
+<!-- 4971 -->     border-radius: 12px;
+<!-- 4972 -->     background: #000;
+<!-- 4973 -->     color: #fff;
+<!-- 4974 -->     font-size: 18px;
+<!-- 4975 -->     font-weight: 900;
+<!-- 4976 -->     flex: 0 0 auto;
+<!-- 4977 -->     cursor: pointer;
+<!-- 4978 -->     display: flex;
+<!-- 4979 -->     align-items: center;
+<!-- 4980 -->     justify-content: center;
+<!-- 4981 -->   }
+<!-- 4982 -->
+<!-- 4983 -->   #scrollControlPopup * {
+<!-- 4984 -->     -webkit-user-select: none;
+<!-- 4985 -->     user-select: none;
+<!-- 4986 -->     -webkit-touch-callout: none;
+<!-- 4987 -->     box-sizing: border-box;
+<!-- 4988 -->   }
+<!-- 4989 -->
+<!-- 4990 -->   /* നിലവിലുള്ള Scroll Buttons (▲ / ▼) നീളം 90px ആയി കൂട്ടി */
+<!-- 4991 -->   #scrollControlPopup .arrowBtn {
+<!-- 4992 -->     width: 90px !important;
+<!-- 4993 -->     height: 44px;
+<!-- 4994 -->     border: none;
+<!-- 4995 -->     border-radius: 14px;
+<!-- 4996 -->     background: #000;
+<!-- 4997 -->     color: #fff;
+<!-- 4998 -->     font-size: 20px;
+<!-- 4999 -->     font-weight: 900;
+<!-- 5000 -->     flex: 0 0 auto;
+<!-- 5001 -->   cursor: pointer;
+<!-- 5002 --> }
+<!-- 5003 -->
+<!-- 5004 --> #scrollControlPopup .speedWrap {
+<!-- 5005 -->   flex: 1;
+<!-- 5006 -->   display: flex;
+<!-- 5007 -->   flex-direction: column;
+<!-- 5008 -->   gap: 4px;
+<!-- 5009 -->   min-width: 0;
+<!-- 5010 --> }
+<!-- 5011 -->
+<!-- 5012 --> #scrollControlPopup .speedTop {
+<!-- 5013 -->   display: flex;
+<!-- 5014 -->   justify-content: space-between;
+<!-- 5015 -->   align-items: center;
+<!-- 5016 -->   font-size: 11px;
+<!-- 5017 -->   font-weight: 700;
+<!-- 5018 -->   letter-spacing: .5px;
+<!-- 5019 -->   color: #000;
+<!-- 5020 --> }
+<!-- 5021 -->
+<!-- 5022 --> #scrollControlPopup input[type="range"] {
+<!-- 5023 -->   width: 100%;
+<!-- 5024 -->   margin: 0;
+<!-- 5025 -->   accent-color: #fff;
+<!-- 5026 --> }
+<!-- 5027 -->
+<!-- 5028 --> #scrollControlPopup .lockBtn {
+<!-- 5029 -->   width: 60px;
+<!-- 5030 -->   height: 44px;
+<!-- 5031 -->   border: none;
+<!-- 5032 -->   border-radius: 14px;
+<!-- 5033 -->   background: #222;
+<!-- 5034 -->   color: #fff;
+<!-- 5035 -->   font-size: 11px;
+<!-- 5036 -->   font-weight: 800;
+<!-- 5037 -->   flex: 0 0 auto;
+<!-- 5038 -->   cursor: pointer;
+<!-- 5039 --> }
+<!-- 5040 -->
+<!-- 5041 --> body {
+<!-- 5042 -->   overflow: auto;
+<!-- 5043 --> }
+<!-- 5044 --> </style>
+<!-- 5045 -->
+<!-- 5046 --> <div id="scrollControlPopup">
+<!-- 5047 -->   <!-- 1. Flicker ചെയ്യുന്ന Toggle Button -->
+<!-- 5048 -->   <button class="slideToggleBtn" onclick="togglePopupBar()" aria-label="Toggle Bar">
+<!-- 5049 -->     <span id="popupToggleArrow" class="flicker">◀</span>
+<!-- 5050 -->   </button>
+<!-- 5051 -->
+<!-- 5052 -->   <!-- 2. നിലവിലുള്ള സ്ക്രോൾ കൺട്രോളുകൾ -->
+<!-- 5053 -->   <button class="arrowBtn" id="upBtn" aria-label="Scroll up">▲</button>
+<!-- 5054 -->
+<!-- 5055 -->   <div class="speedWrap">
+<!-- 5056 -->     <div class="speedTop">
+<!-- 5057 -->       <span>SPEED</span>
+<!-- 5058 -->       <span id="scrollSpeedValue">6</span>
+<!-- 5059 -->     </div>
+<!-- 5060 -->     <input id="scrollSpeedSlider" type="range" min="1" max="20" value="6">
+<!-- 5061 -->   </div>
+<!-- 5062 -->
+<!-- 5063 -->   <button class="lockBtn" id="lockStateBtn" onclick="toggleScrollLock()">LOCK</button>
+<!-- 5064 -->   <button class="arrowBtn" id="downBtn" aria-label="Scroll down">▼</button>
+<!-- 5065 --> </div>
+<!-- 5066 -->
+<!-- 5067 --> <!-- Auto Scroll Script -->
+<!-- 5068 --> <script>
+<!-- 5069 --> (function() {
+<!-- 5070 -->     let scrollSpeed = 0.5;
+<!-- 5071 -->     let autoScrollInterval = null;
+<!-- 5072 -->     let isUserInteracting = false;
+<!-- 5073 -->     let resumeTimeout = null;
+<!-- 5074 -->
+<!-- 5075 -->     function startAutoScroll() {
+<!-- 5076 -->         if (autoScrollInterval || isUserInteracting) return;
+<!-- 5077 -->
+<!-- 5078 -->         autoScrollInterval = setInterval(function() {
+<!-- 5079 -->             let maxScroll = document.documentElement.scrollHeight - window.innerHeight;
+<!-- 5080 -->
+<!-- 5081 -->             if (window.scrollY >= maxScroll - 2) {
+<!-- 5082 -->                 stopAutoScroll();
+<!-- 5083 -->             } else {
+<!-- 5084 -->                 window.scrollBy(0, scrollSpeed);
+<!-- 5085 -->             }
+<!-- 5086 -->         }, 20);
+<!-- 5087 -->     }
+<!-- 5088 -->
+<!-- 5089 -->     function stopAutoScroll() {
+<!-- 5090 -->         if (autoScrollInterval) {
+<!-- 5091 -->             clearInterval(autoScrollInterval);
+<!-- 5092 -->             autoScrollInterval = null;
+<!-- 5093 -->         }
+<!-- 5094 -->     }
+<!-- 5095 -->
+<!-- 5096 -->     function handleUserTouchStart() {
+<!-- 5097 -->         isUserInteracting = true;
+<!-- 5098 -->         stopAutoScroll();
+<!-- 5099 -->         clearTimeout(resumeTimeout);
+<!-- 5100 -->         resumeTimeout = setTimeout(function() {
