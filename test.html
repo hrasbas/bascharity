@@ -4907,64 +4907,6 @@ YOUR PURCHASE SATISFIES A HUNGER™
     <!-- പേജിലെ മറ്റെല്ലാ കോഡുകളും ഫ്രണ്ട്-എൻഡ് ഘടകങ്ങളും ഇവിടെ അവസാനിക്കുന്നു -->
 
     <!-- ഈ സെക്യൂരിറ്റി കോഡ് ഇവിടെ ചേർക്കുക -->
-    <script>
-      document.querySelectorAll('a').forEach(link => {
-        if (link.hostname !== window.location.hostname && link.href.startsWith('http')) {
-          link.setAttribute('target', '_blank');
-          link.setAttribute('rel', 'noopener noreferrer');
-        }
-      });
-
-      function sanitizeInput(input) {
-        const div = document.createElement('div');
-        div.innerText = input;
-        return div.innerHTML;
-      }
-    </script>
- <!-- Popup Notification -->
-       <!-- Popup Notification -->
-      <style>
-#scrollControlPopup{
-    position: fixed;
-    right: 0;
-    top: 40%;
-    transform: translateX(70%);
-    transition: transform .25s ease;
-    z-index: 9999;
-    overflow: visible;
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    background: rgba(0,0,0,0.75);
-    padding: 10px 14px;
-    border-radius: 12px 0 0 12px;
-}
-
-#scrollControlPopup:hover,
-#scrollControlPopup:focus-within{
-    transform: translateX(0);
-}
-
-#scrollControlPopup .arrowBtn{
-    background: #fff;
-    color: #000;
-    border: none;
-    padding: 8px 12px;
-    border-radius: 8px;
-    cursor: pointer;
-    animation: flicker 1.2s infinite;
-}
-
-@keyframes flicker{
-    0%, 100% { opacity: 1; }
-    50% { opacity: 0.35; }
-}
-</style>
-
-<div id="scrollControlPopup" tabindex="0">
-    <button class="arrowBtn">→</button>
-</div>
-
 <script>
 (function() {
     let scrollSpeed = 0.8;
@@ -4979,6 +4921,7 @@ YOUR PURCHASE SATISFIES A HUNGER™
             let totalHeight = document.documentElement.scrollHeight;
             let currentScroll = window.innerHeight + window.scrollY;
 
+            // പേജിന്റെ അടിയിൽ എത്തുമ്പോൾ സ്ക്രോളിംഗ് സ്വയം നിൽക്കും
             if (currentScroll >= totalHeight - 15) {
                 stopAutoScroll();
             } else {
@@ -5033,6 +4976,7 @@ YOUR PURCHASE SATISFIES A HUNGER™
     }
 })();
 </script>
+
 </body> <!-- ഇതിന് തൊട്ടു മുകളിൽ -->
 </html>
 
