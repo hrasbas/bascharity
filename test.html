@@ -599,18 +599,6 @@ navigator.serviceWorker.register('sw.js').catch((err) => {
 console.error('SW registration failed:', err);
 });
 });
-}
-
-
-
-    
-// ബാക്ക്ഗ്രൗണ്ടിൽ ഓഫ്‌ലൈൻ സപ്പോർട്ടിനായി സർവീസ് വർക്കർ രജിസ്റ്റർ ചെയ്യുന്നു
-if ('serviceWorker' in navigator) {
-window.addEventListener('load', () => {
-navigator.serviceWorker.register('sw.js').catch((err) => {
-console.error('SW registration failed:', err);
-});
-});
 } 
 
 // 3D ഭൂമിയും (Earth) അതിനു ചുറ്റും കറങ്ങുന്ന ചന്ദ്രനും (Moon) നിർമ്മിക്കുന്നതിനുള്ള ത്രീ-ജെഎസ് കോഡ്
