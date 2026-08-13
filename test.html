@@ -2,6 +2,62 @@
 <html lang="en">
 <head>
    <style>
+.lang-box{
+    width:96% !important;
+    max-width:900px !important;
+    margin:25px auto 15px auto !important;
+    padding:15px !important;
+    background:#000 !important;
+    border:1px solid #ff9800 !important;
+    border-radius:15px !important;
+    box-sizing:border-box !important;
+}
+
+.lang-title{
+    background:#b3ecff !important;
+    color:#000 !important;
+    font-weight:900 !important;
+    text-align:center !important;
+    padding:10px !important;
+    border-radius:10px !important;
+    border:1px solid #ff9800 !important;
+    border-left:6px solid #ff9800 !important;
+    margin-bottom:10px !important;
+    text-transform:uppercase !important;
+}
+
+.lang-buttons{
+    width:96% !important;
+    max-width:900px !important;
+    margin:0 auto !important;
+    display:grid !important;
+    grid-template-columns:repeat(4, minmax(0, 1fr)) !important;
+    gap:10px !important;
+    box-sizing:border-box !important;
+}
+
+.lang-btn{
+    display:block !important;
+    width:100% !important;
+    max-width:100% !important;
+    min-width:0 !important;
+    padding:12px 8px !important;
+    border:none !important;
+    border-radius:20px !important;
+    font-size:14px !important;
+    font-weight:bold !important;
+    cursor:pointer !important;
+    color:#fff !important;
+    box-sizing:border-box !important;
+}
+
+@media (max-width:600px){
+    .lang-buttons{
+        grid-template-columns:repeat(2, minmax(0, 1fr)) !important;
+    }
+}
+</style>  
+   <style>
 body {
     font-size: 19px;
 }
