@@ -151,8 +151,17 @@ margin-right:auto;
     0 6px 8px #000000;
 }
       .top-bar { background:#111; padding:15px 8px; border-top:1px solid #333; border-bottom:1px solid #333; }
-.lang-buttons { display:grid; grid-template-columns:repeat(4,1fr); gap:10px; max-width:600px; margin:auto; }
-.lang-btn { padding:10px 2px; border:none; border-radius:20px; font-size:14px; font-weight:bold; cursor:pointer; color:#fff; }
+.lang-buttons{
+    display:grid;
+    grid-template-columns:repeat(4, minmax(0, 1fr));
+    gap:10px;
+    width:96%;
+    max-width:900px;
+    margin:0 auto;
+    box-sizing:border-box;
+}
+      
+      .lang-btn { padding:10px 2px; border:none; border-radius:20px; font-size:14px; font-weight:bold; cursor:pointer; color:#fff; }
 .en { background:#007BFF; }
 .hi { background:#FF9933; color:#000; }
 .ml { background:#00C853; }
@@ -1135,8 +1144,7 @@ ball.className = "bas-ball is-pwa-installed";
  
     <div id="featuredShops"></div> 
     <!-- Language Box -->
-<div style="max-width:900px;margin:20px auto;padding:18px;background:#ffffff;border-left:6px solid #FF9800;border-radius:12px;box-shadow:0 4px 12px rgba(0,0,0,.12);text-align:center;">
-
+<div style="width:96%;max-width:900px;margin:20px auto;padding:18px;background:#ffffff;border-left:6px solid #FF9800;border-radius:12px;box-shadow:0 4px 12px rgba(0,0,0,.12);text-align:center;box-sizing:border-box;">
 <div style="font-size:24px;font-weight:800;color:#1565C0;margin-bottom:8px;">
 Basic Language: English
 </div>
