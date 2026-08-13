@@ -1,5 +1,5 @@
-
-     <!DOCTYPE html>   
+ 
+<!DOCTYPE html>   
 <html lang="en">
 <head>
    <style>
@@ -90,6 +90,10 @@ width:96%;
 margin-left:auto;
 margin-right:auto;
 } 
+
+/* സൈറ്റിന്റെ മുകൾഭാഗത്തെ ഹെഡറും ഗ്ലോബ് സ്പേസും ഡിസൈൻ ചെയ്യുന്നു */
+.header-box { display:flex; flex-direction:column; align-items:center; background:#000; padding-top: 25px; }
+#logo-space { width:100%; height:340px; }
 
 .heading {
   width: 100%;
@@ -232,7 +236,7 @@ box-shadow: 0 4px 15px rgba(0,0,0,0.4);
 cursor: pointer;
 } 
 
-/* ആനിമേഷനോടെ സ്ക്രീനിൽ പൊങ്ങിവരുന്ന ബലൂൺ റാപ്പറിന്റെ പൊസിഷൻ ലോക്ക് ചെയ്യുന്നു */
+/* ആനിമേഷനോടെ സ്ക്രീനിൽ പൊങ്ങിവരുന്ന ബലൂൺ റാപ്പറിന്റെ പൊസിഷൻ Лоക്ക് ചെയ്യുന്നു */
 #basBalloonWrap {
 position: fixed;
 bottom: 0;
@@ -498,23 +502,26 @@ END OF BAS ANALYTICS
 
 <body> 
 
-<div class="heading">
+<div class="header-box">
+  <div id="logo-space"></div>
+  <div class="heading">
 
-  <div class="food">
-    FOOD WITHOUT SPENDING MONEY
-  </div>
-
-  <div class="brand">
-    <div>BAS CHARITY</div>
-    <div class="international">
-      INTERNATIONAL<span class="tm">™</span>
+    <div class="food">
+      FOOD WITHOUT SPENDING MONEY
     </div>
-  </div>
 
-  <div class="hub">
-    AN INTERNATIONAL SHOPPING HUB
-  </div>
+    <div class="brand">
+      <div>BAS CHARITY</div>
+      <div class="international">
+        INTERNATIONAL<span class="tm">™</span>
+      </div>
+    </div>
 
+    <div class="hub">
+      AN INTERNATIONAL SHOPPING HUB
+    </div>
+
+  </div>
 </div> 
 
 <div class="bas-dedication">
@@ -591,7 +598,7 @@ window.addEventListener('appinstalled', () => {
 deferredPrompt = null;
 if (installDiv) installDiv.style.display = 'none';
 }); 
-
+     
 // ബാക്ക്ഗ്രൗണ്ടിൽ ഓഫ്‌ലൈൻ സപ്പോർട്ടിനായി സർവീസ് വർക്കർ രജിസ്റ്റർ ചെയ്യുന്നു
 if ('serviceWorker' in navigator) {
 window.addEventListener('load', () => {
