@@ -691,25 +691,37 @@ Reset
 </div>
 
 <!-- 006 -->
+<!-- 001 -->
 <script>
-let messageTimer;
-
+<!-- 002 -->
 function showFullMessage() {
-    document.getElementById("messagePreview").style.display = "none";
-    document.getElementById("messageFull").style.display = "block";
-
-    clearTimeout(messageTimer);
-
-    messageTimer = setTimeout(function () {
-        resetMessage();
-    }, 10000);
-}
-
-function resetMessage() {
-    document.getElementById("messageFull").style.display = "none";
+<!-- 003 -->
     document.getElementById("messagePreview").style.display = "block";
-    clearTimeout(messageTimer);
+<!-- 004 -->
+    document.getElementById("messageFull").style.display = "block";
+<!-- 005 -->
+
+<!-- 006 -->
+    const moreButton = document.querySelector("#messagePreview button");
+<!-- 007 -->
+    if (moreButton) moreButton.style.display = "none";
+<!-- 008 -->
 }
+<!-- 009 -->
+
+<!-- 010 -->
+function resetMessage() {
+<!-- 011 -->
+    document.getElementById("messageFull").style.display = "none";
+<!-- 012 -->
+
+<!-- 013 -->
+    const moreButton = document.querySelector("#messagePreview button");
+<!-- 014 -->
+    if (moreButton) moreButton.style.display = "inline-block";
+<!-- 015 -->
+}
+<!-- 016 -->
 </script>
 
 <!-- 013 -->
