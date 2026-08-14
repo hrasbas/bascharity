@@ -100,17 +100,61 @@ margin-right:auto;
   width: 100%;
   text-align: center;
   padding: 20px;
-}
-  .food {
-  color:#d4af37;
+}.food {
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:14px;
+  margin-bottom:32px;
+  font-family:Georgia,serif;
+  font-size:25px;
   font-weight:400;
-  font-size:35px;
+  letter-spacing:1px;
+  text-transform:uppercase;
+
+  background:linear-gradient(
+    180deg,
+    #8b6914 0%,
+    #d4af37 22%,
+    #fff1a8 42%,
+    #ffd75a 50%,
+    #d4af37 68%,
+    #8b6914 100%
+  );
+
+  -webkit-background-clip:text;
+  background-clip:text;
+  -webkit-text-fill-color:transparent;
+  color:transparent;
+
   text-shadow:
-    0 1px 0 #fff4b0,
-    0 2px 0 #b8860b,
-    0 3px 0 #8a6508,
-    0 0 5px #d4af37,
-    0 0 10px rgba(212,175,55,.8);
+    0 1px 1px rgba(255,235,150,.45),
+    0 2px 2px rgba(80,50,0,.35);
+}
+
+.food::before,
+.food::after {
+  content:"";
+  width:55px;
+  height:2px;
+  background:linear-gradient(
+    to right,
+    transparent,
+    #b8860b,
+    #ffd700,
+    #fff1a8
+  );
+  box-shadow:0 0 5px rgba(255,215,0,.55);
+}
+
+.food::after {
+  background:linear-gradient(
+    to left,
+    transparent,
+    #b8860b,
+    #ffd700,
+    #fff1a8
+  );
 }
  /* FOOD — WITH GLOWING GRADIENT SIDE LINES */
 /*.food {
@@ -132,24 +176,24 @@ margin-right:auto;
 }*/
 
 /* ഇടത് വശത്തെ ഗ്രാഡിയന്റ് ലൈൻ */
-.food::before {
+/*.food::before {
   content: "";
   height: 3px;
   width: 60px; /* ലൈനിന്റെ നീളം */
-  background: linear-gradient(to left, #ffd700, rgba(255, 215, 0, 0));
+  /*background: linear-gradient(to left, #ffd700, rgba(255, 215, 0, 0));
   box-shadow: 0 0 10px #ffd700;
   border-radius: 2px;
-}
+}*/
 
 /* വലത് വശത്തെ ഗ്രാഡിയന്റ് ലൈൻ */
-.food::after {
+/*.food::after {
   content: "";
   height: 3px;
   width: 60px; /* ലൈനിന്റെ നീളം */
-  background: linear-gradient(to right, #ffd700, rgba(255, 215, 0, 0));
+ /* background: linear-gradient(to right, #ffd700, rgba(255, 215, 0, 0));
   box-shadow: 0 0 10px #ffd700;
   border-radius: 2px;
-}
+}*/
 
 /* MAIN TITLE — MAXIMUM DEEP 3D */
 .brand {
