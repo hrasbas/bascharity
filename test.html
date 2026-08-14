@@ -102,15 +102,43 @@ margin-right:auto;
   padding: 20px;
 }
 .food {
-  font-size:25px;
-  font-weight:900;
-  color:#f5d36a;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:14px;
   margin-bottom:32px;
+  font-family:Georgia,serif;
+  font-size:25px;
+  font-weight:700;
   letter-spacing:1px;
-  text-shadow:none;
-  border-left:1px solid #d7dce5;
-  border-right:1px solid #d7dce5;
-  padding:8px 15px;
+  color:#d7dce5;
+  text-transform:uppercase;
+  text-shadow:
+    0 1px 0 #ffffff,
+    0 2px 3px rgba(0,0,0,.55);
+}
+
+.food::before,
+.food::after {
+  content:"";
+  width:55px;
+  height:2px;
+  background:linear-gradient(
+    to right,
+    transparent,
+    #7ddcff,
+    #d7dce5
+  );
+  box-shadow:0 0 5px rgba(125,220,255,.45);
+}
+
+.food::after {
+  background:linear-gradient(
+    to left,
+    transparent,
+    #7ddcff,
+    #d7dce5
+  );
 }
 /* MAIN TITLE — MAXIMUM DEEP 3D */
 .brand {
