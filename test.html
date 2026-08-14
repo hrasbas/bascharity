@@ -1,5 +1,4 @@
- 
-<!DOCTYPE html>   
+ <!DOCTYPE html>   
 <html lang="en">
 <head>
    <style>
@@ -156,44 +155,6 @@ margin-right:auto;
     #fff1a8
   );
 }
- /* FOOD — WITH GLOWING GRADIENT SIDE LINES */
-/*.food {
-  font-size: 25px;
-  font-weight: 900;
-  color: #f5d36a;
-  margin-bottom: 32px;
-  letter-spacing: 1px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 15px; /* ലൈനുകളും ടെക്സ്റ്റും തമ്മിലുള്ള ഗ്യാപ്പ് *
-  text-shadow:
-    0 1px 0 #fff0a0,
-    0 2px 0 #b8860b,
-    0 4px 0 #765000,
-    0 6px 8px #000,
-    0 0 25px rgba(255, 215, 0, 1);
-}*/
-
-/* ഇടത് വശത്തെ ഗ്രാഡിയന്റ് ലൈൻ */
-/*.food::before {
-  content: "";
-  height: 3px;
-  width: 60px; /* ലൈനിന്റെ നീളം */
-  /*background: linear-gradient(to left, #ffd700, rgba(255, 215, 0, 0));
-  box-shadow: 0 0 10px #ffd700;
-  border-radius: 2px;
-}*/
-
-/* വലത് വശത്തെ ഗ്രാഡിയന്റ് ലൈൻ */
-/*.food::after {
-  content: "";
-  height: 3px;
-  width: 60px; /* ലൈനിന്റെ നീളം */
- /* background: linear-gradient(to right, #ffd700, rgba(255, 215, 0, 0));
-  box-shadow: 0 0 10px #ffd700;
-  border-radius: 2px;
-}*/
 
 /* MAIN TITLE — MAXIMUM DEEP 3D */
 .brand {
@@ -431,7 +392,7 @@ text-shadow: none !important;
 } 
 
 @keyframes floatB {
-0%, 100% { transform: translate(0, 0) rotate(4deg); }
+0%, 100% { transform: translate(0, 0) rotate(-4deg); }
 50% { transform: translate(25px, -25px) rotate(-4deg); }
 }
 </style>
@@ -699,20 +660,162 @@ dedicated to the good, well-being, and peace of all human beings, their parents,
       <div class="hunger-footer notranslate" translate="no">YOUR PURCHASE SATISFIES A HUNGER™</div>
     </div>
 
-<!--<div class="msg-container">
-<div class="question-box">
-<span class="english-text">
-"What if someone's hunger in some corner of the world is satisfied by purchasing through the BAS Charity International links below, without spending a single extra penny, at the same price, and with the same offers...?"
-</span>
-</div>
-<div class="hunger-footer notranslate" translate="no">YOUR PURCHASE SATISFIES A HUNGER</div>
-</div>*/
-
 <div id="install-div">
 <button id="install-btn" type="button">Install App</button>
 </div> 
 
+<div id="basBalloonWrap" class="notranslate"> 
+
+<div id="installBall" class="bas-ball white-b" onclick="handleInstallTap()">
+<img src="icon-512.png" class="bas-sticker">
+<div id="statTxt" class="bas-lbl">INSTALL</div>
+<div class="bas-nipple"></div>
+<div class="bas-str"></div>
+</div> 
+
+<div class="bas-ball blue-b" onclick="goWhatsApp()">
+<div class="bas-lbl" style="color:#fff;">SAVE TO<br>WHATSAPP</div>
+<div class="bas-nipple"></div>
+<div class="bas-str"></div>
+</div> 
+
+</div> 
+
+<style>
+/* ബലൂണുകൾ സ്ക്രീനിന്റെ താഴെ മറഞ്ഞുപോകാതിരിക്കാൻ ബോഡിക്ക് നൽകുന്ന പാഡിങ് */
+body {
+padding-bottom: 160px !important;
+} 
+
+/* ബലൂൺ റാപ്പറിന്റെ സ്ക്രീനിലെ പൊസിഷനും ആനിമേഷൻ സ്പീഡും നിശ്ചയിക്കുന്ന സ്റ്റൈൽ */
+#basBalloonWrap {
+position: fixed;
+bottom: 0; left: 0;
+width: 280px; height: 400px;
+z-index: 2147483647;
+pointer-events: none;
+transform: translateY(120%);
+transition: transform 10s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+display: block !important;
+} 
+
+/* ബലൂണുകൾ പല സമയങ്ങളിൽ സ്ക്രീനിൽ കാണിക്കേണ്ട ട്രാൻസ്ഫോം പൊസിഷനുകൾ */
+.state-up { transform: translateY(0%) !important; }
+.state-hide { transform: translateY(120%) !important; }
+.state-rest { transform: translateY(70%) !important; } 
+
+/* ബലൂണിന്റെ കൃത്യമായ റൗണ്ട് ഷേപ്പും ഉള്ളിലെ നൂലും നിപ്പിളും ഉണ്ടാക്കാനുള്ള സ്റ്റൈൽ */
+.bas-ball {
+position: absolute;
+border-radius: 50% 50% 50% 50% / 40% 40% 60% 60%;
+display: flex; flex-direction: column; align-items: center; justify-content: center;
+cursor: pointer; pointer-events: auto;
+box-shadow: inset -8px -8px 20px rgba(0,0,0,0.4);
+} 
+
+.bas-str { position: absolute; width: 1px; background: rgba(255,255,255,0.4); bottom: -1000px; left: 50%; height: 1000px; }
+.bas-nipple { position: absolute; bottom: -10px; width: 18px; height: 10px; background: inherit; clip-path: polygon(20% 0, 80% 0, 100% 100%, 0 100%); } 
+
+/* 1. ഇൻസ്റ്റാൾ ബട്ടൺ ഉള്ളപ്പോൾ കാണിക്കേണ്ട വെള്ള ബലൂണിന്റെയും പച്ചകലർന്ന മഞ്ഞ എഴുത്തിന്റെയും സ്റ്റൈൽ */
+.white-b {
+width: 120px; height: 160px;
+background: #ffffff !important;
+bottom: 220px; left: 60px;
+animation: floatW 5s ease-in-out infinite;
+}
+.white-b .bas-lbl {
+color: #adff2f !important;
+text-shadow: 1px 1px 2px rgba(0,0,0,0.8) !important;
+} 
+
+/* 2. ആപ്പ് ഇൻസ്റ്റാൾഡ് ആയിക്കഴിഞ്ഞാൽ കാണിക്കേണ്ട പച്ചകലർന്ന മഞ്ഞ ബലൂണിന്റെയും കറുത്ത എഴുത്തിന്റെയും സ്റ്റൈൽ */
+.is-pwa-installed {
+width: 120px; height: 170Px;
+background: #adff2f !important;
+bottom: 220px; left: 60px;
+animation: floatW 5s ease-in-out infinite;
+}
+.is-pwa-installed .bas-lbl {
+color: #000000 !important;
+text-shadow: none !important;
+} 
+
+/* നീല ബലൂണിന്റെ വലിപ്പവും അത് ഫ്ലോട്ട് ചെയ്യാനുള്ള ആനിമേഷൻ ലിങ്കും */
+.blue-b { width: 105px; height: 135px; background: #007bff; bottom: 70px; left: 30px; animation: floatB 20s ease-in-out infinite; }
+.bas-sticker { width: 75px; height: 75px; border-radius: 20px; margin-bottom: 5px; border: 1px solid #ddd; }
+.bas-lbl { font-family: sans-serif; font-size: 15px; font-weight: 900; text-align: center; line-height: 1.2; } 
+
+/* ബലൂണുകൾ അന്തരീക്ഷത്തിൽ ഒഴുകി നടക്കാൻ വേണ്ടിയുള്ള ആനിമേഷൻ കീഫ്രെയിമുകൾ */
+@keyframes floatW { 0%, 100% { transform: translate(0, 0) rotate(-3deg); } 50% { transform: translate(35px, 45px) rotate(5deg); } }
+@keyframes floatB { 0%, 100% { transform: translate(0, 0) rotate(4deg); } 50% { transform: translate(25px, -25px) rotate(-4deg); } }
+</style>
+
 <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script> 
+
+<script>
+// ബലൂൺ സ്റ്റാറ്റസ് നിയന്ത്രിക്കുന്നതിനുള്ള ഗ്ലോബൽ വേരിയബിളുകൾ
+let basPrompt;
+const wrap = document.getElementById('basBalloonWrap');
+const stat = document.getElementById('statTxt');
+const ball = document.getElementById('installBall'); 
+
+// 1. ബ്രൗസറിൽ ഇൻസ്റ്റാൾ പ്രോംപ്റ്റ് ലഭ്യമാകുമ്പോൾ വെള്ള ബലൂൺ സെറ്റ് ചെയ്യുന്ന ലോജിക്
+window.addEventListener('beforeinstallprompt', (e) => {
+e.preventDefault();
+basPrompt = e;
+stat.innerText = "INSTALL";
+ball.className = "bas-ball white-b";
+}); 
+
+// 2. ആപ്പ് മുൻപേ ഇൻസ്റ്റാൾ ചെയ്തിട്ടുണ്ടെങ്കിൽ പച്ചകലർന്ന മഞ്ഞ ബലൂൺ കാണിക്കുന്ന ലോജിക്
+window.addEventListener('DOMContentLoaded', () => {
+setTimeout(() => {
+if (!basPrompt) {
+stat.innerText = "INSTALLED";
+ball.className = "bas-ball is-pwa-installed";
+}
+}, 3000); // ബ്രൗസറിന് ലോഡ് ആകാൻ നൽകുന്ന സമയം
+}); 
+
+// ബലൂണുകൾ കൃത്യമായ സമയക്രമത്തിൽ സ്ക്രീനിൽ പൊങ്ങി വരാനും താഴാനും ഉള്ള ടൈമർ ഫങ്ഷൻ
+function initBalloons() {
+setTimeout(() => {
+wrap.classList.add('state-up');
+setTimeout(() => { wrap.classList.replace('state-up', 'state-hide');
+setTimeout(() => { wrap.classList.replace('state-hide', 'state-rest'); }, 30000); }, 15000); }, 5000);
+} 
+
+// യൂസർ ബലൂണിൽ തൊടുമ്പോൾ അതിനെ വീണ്ടും സ്ക്രീനിലേക്ക് പൂർണ്ണമായി കൊണ്ടുവരുന്ന ഫങ്ഷൻ
+const wake = () => { wrap.classList.remove('state-hide', 'state-rest'); wrap.classList.add('state-up'); };
+wrap.addEventListener('click', wake); wrap.addEventListener('touchstart', wake);
+window.addEventListener('load', initBalloons); 
+
+// സൈറ്റ് ഇൻസ്റ്റാൾ ചെയ്യാനുള്ള ഗൈഡ് ലിങ്ക് വാട്സാപ്പിലേക്ക് ഷെയർ ചെയ്യുന്ന ഫങ്ഷൻ
+function goWhatsApp(){
+let url = "https://bascharity-56f.pages.dev";
+let text = "Save a beautiful icon to your screen\n\n" + url + "\n\nChrome → ⋮ 3 dot → Save to Screen → Install";
+window.open("https://wa.me/?text=" + encodeURIComponent(text), "_blank");
+} 
+
+// ഇൻസ്റ്റാൾ ബലൂണിൽ ക്ലിക്ക് ചെയ്യുമ്പോൾ ഇൻസ്റ്റാളേഷൻ വിൻഡോ കാണിക്കുന്ന ഫങ്ഷൻ
+function handleInstallTap() {
+if (!basPrompt) return; // ഇൻസ്റ്റാൾഡ് ആണെങ്കിൽ ക്ലിക്ക് പ്രവർത്തിക്കില്ല
+basPrompt.prompt();
+basPrompt.userChoice.then((c) => {
+if (c.outcome === 'accepted') {
+stat.innerText = "INSTALLED";
+ball.className = "bas-ball is-pwa-installed";
+}
+basPrompt = null;
+});
+} 
+
+// സിസ്റ്റം വഴി ആപ്പ് വിജയകരമായി ഇൻസ്റ്റാൾ ചെയ്യപ്പെട്ടു കഴിഞ്ഞാൽ ബലൂൺ പച്ചയാക്കുന്ന ലോജിക്
+window.addEventListener('appinstalled', () => {
+stat.innerText = "INSTALLED";
+ball.className = "bas-ball is-pwa-installed";
+});
+</script>
 
 <script>
 // വെബ്സൈറ്റ് മൊബൈലിലേക്ക് ഇൻസ്റ്റാൾ ചെയ്യാനുള്ള പ്രോംപ്റ്റ് നിയന്ത്രിക്കുന്ന ലോജിക്
@@ -843,7 +946,7 @@ console.error('Resize error:', e);
 
 window.addEventListener("resize", resizeRenderer); 
 
-// ನಿರ್ಥಾದೆ 3D ഗ്ലോബും ചന്ദ്രനും ആനിമേറ്റ് ചെയ്ത് കറക്കാനുള്ള ലൂപ്പ് ഫംഗ്ഷൻ
+// നിർത്ഥാതെ 3D ഗ്ലോബും ചന്ദ്രനും ആനിമേറ്റ് ചെയ്ത് കറക്കാനുള്ള ലൂപ്പ് ഫംഗ്ഷൻ
 function animate() {
 if (!running || !renderer || !scene || !camera || !earthGroup || !moon) return;
 animateRef = requestAnimationFrame(animate);
@@ -889,8 +992,6 @@ animate();
 console.error('Three.js init error:', e);
 } 
 
-// ഗൂഗിൾ ട്രാൻസ്ലേഷൻ എലമെന്റ് സൈറ്റിലേക്ക് ഇനിഷ്യലൈസ് ചെയ്യുന്ന ഫംഗ്ഷൻ
- 
 // ഗൂഗിൾ ട്രാൻസ്ലേഷൻ എലമെന്റ് സൈറ്റിലേക്ക് ഇനിഷ്യലൈസ് ചെയ്യുന്ന ഫംഗ്ഷൻ
 function googleTranslateElementInit() {
 try {
@@ -985,13 +1086,16 @@ if (animateRef) cancelAnimationFrame(animateRef);
 } catch (e) {}
 });
 </script>
+
+<script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit">
+</script>
+
 <!-- ========================= -->
 <!-- BAS DEDICATION INTEGRATION -->
 <!-- ========================= -->
 
 <script src="dedication.js"></script>
 
- 
 <script>
 (function () {
 
