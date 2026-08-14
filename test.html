@@ -101,48 +101,46 @@ margin-right:auto;
   text-align: center;
   padding: 20px;
 }
+ 
+ /* FOOD — WITH GLOWING GRADIENT SIDE LINES */
 .food {
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  gap:14px;
-  margin-bottom:32px;
-  font-family:Georgia,serif;
-  font-size:40px;
-  font-weight:400;
-  letter-spacing:1px;
-  font-color:#e5e4e2;
-  text-transform:uppercase;
+  font-size: 25px;
+  font-weight: 900;
+  color: #f5d36a;
+  margin-bottom: 32px;
+  letter-spacing: 1px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px; /* ലൈനുകളും ടെക്സ്റ്റും തമ്മിലുള്ള ഗ്യാപ്പ് */
   text-shadow:
-    0 1px 0 #ffffff,
-    0 2px 3px #777777,
-    0 0 8px rgba(255,255,255,.7);
+    0 1px 0 #fff0a0,
+    0 2px 0 #b8860b,
+    0 4px 0 #765000,
+    0 6px 8px #000,
+    0 0 25px rgba(255, 215, 0, 1);
 }
 
-.food::before,
-.food::after {
-  content:"";
-  width:55px;
-  height:2px;
-  background:linear-gradient(
-    to right,
-    transparent,
-    #ffd700,
-    #fff4a3
-  );
-  box-shadow:
-    0 0 5px #ffd700,
-    0 0 10px rgba(255,215,0,.7);
+/* ഇടത് വശത്തെ ഗ്രാഡിയന്റ് ലൈൻ */
+.food::before {
+  content: "";
+  height: 3px;
+  width: 60px; /* ലൈനിന്റെ നീളം */
+  background: linear-gradient(to left, #ffd700, rgba(255, 215, 0, 0));
+  box-shadow: 0 0 10px #ffd700;
+  border-radius: 2px;
 }
 
+/* വലത് വശത്തെ ഗ്രാഡിയന്റ് ലൈൻ */
 .food::after {
-  background:linear-gradient(
-    to left,
-    transparent,
-    #ffd700,
-    #fff4a3
-  );
+  content: "";
+  height: 3px;
+  width: 60px; /* ലൈനിന്റെ നീളം */
+  background: linear-gradient(to right, #ffd700, rgba(255, 215, 0, 0));
+  box-shadow: 0 0 10px #ffd700;
+  border-radius: 2px;
 }
+
 /* MAIN TITLE — MAXIMUM DEEP 3D */
 .brand {
   font-size: 65px;
