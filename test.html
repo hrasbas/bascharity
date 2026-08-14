@@ -615,65 +615,102 @@ dedicated to the good, well-being, and peace of all human beings, their parents,
       <div class="question-box">
         <span class="english-text">
           <!-- INTRODUCTION / CONTENT SECTION -->
-         <!-- 001 -->
-<div class="info-box notranslate" translate="no" style="background:#000; border:1px solid #C0C0C0; border-radius:15px; padding:25px; margin:25px auto; max-width:800px; color:#C0C0C0; font-size:19px; line-height:1.8; text-align:left; box-shadow:0 0 15px rgba(192,192,192,0.2);">
+<!-- 001 -->
+<div class="info-box notranslate" translate="no" style="background:#000; border:1px solid #C0C0C0; border-radius:15px; padding:25px; margin:25px auto; max-width:800px; color:#C0C0C0; font-size:19px; line-height:1.8; text-align:left; box-shadow:0 0 18px rgba(192,192,192,0.18);">
 
 <!-- 002 -->
-<h2 style="color:#fff; text-align:center; font-size:22px; margin-bottom:20px; font-weight:bold;">
+<h2 style="color:#FFFFFF; text-align:center; font-size:22px; margin-bottom:20px; font-weight:bold;">
 Welcome to BAS CHARITY INTERNATIONAL.
 </h2>
 
 <!-- 003 -->
+<div id="messagePreview">
+
 <p>
 One of the objectives of this initiative is to bring leading 50000 + online shopping platforms from around the world together under one roof through the simple concept of SHOPPING + CHARITY, while making the majority of the affiliate income generated through them available for HUNGER RELIEF and other similar initiatives.
 </p>
 
-<!-- 004 -->
 <p>
 Secondly, along with creating awareness among the public about online scams associated with charitable activities, we also introduce certain trusted websites, organisations, and initiatives.
 </p>
 
-<!-- 005 -->
+<div style="text-align:center; margin-top:10px;">
+<button onclick="showFullMessage()" style="background:none; border:none; color:#4DA6FF; font-size:19px; font-weight:bold; cursor:pointer; padding:5px 10px;">
+More...
+</button>
+</div>
+
+</div>
+
+<!-- 004 -->
+<div id="messageFull" style="display:none;">
+
 <p>
 Priority is given to organisations that provide rehabilitation, food, medical care, and support to vulnerable sections of society, regardless of caste or religion. Necessary links are also provided for those who wish to support such initiatives.
 </p>
 
-<!-- 006 -->
 <p>
 This site does not accept any donations.
 </p>
 
-<!-- 007 -->
 <p>
 What if, without spending even a single rupee extra, you could purchase from your preferred shop at the same price and with the same offers through the bas charity links listed below—and that purchase could help relieve the hunger of someone somewhere in the world...?
 </p>
 
-<!-- 008 -->
 <div style="text-align:center; color:#FFD700; font-weight:bold; font-size:18px; letter-spacing:1px; margin:25px 0;">
 YOUR PURCHASE SATISFIES A HUNGER™
 </div>
 
-<!-- 009 -->
 <p>
 We sincerely request everyone to support these enduring acts of goodness, save the website Icon, and share these links as widely as possible with others.
 </p>
 
-<!-- 010 -->
 <div style="text-align:center; margin-top:25px; padding-top:15px; border-top:1px solid #C0C0C0;">
 <p style="margin-bottom:4px; color:#C0C0C0;">
 With love and respect,
 </p>
 
-<!-- 011 -->
-<h3 style="font-size:16px; color:#fff; margin:0; font-weight:bold;">
+<h3 style="font-size:16px; color:#FFFFFF; margin:0; font-weight:bold;">
 Mohammed Basheer Peringala
 </h3>
 
-<!-- 012 -->
 <p style="font-size:14px; color:#C0C0C0; margin-top:3px;">
 Founder, BAS CHARITY INTERNATIONAL
 </p>
 </div>
+
+<div style="text-align:center; margin-top:15px;">
+<button onclick="resetMessage()" style="background:none; border:none; color:#4DA6FF; font-size:17px; font-weight:bold; cursor:pointer; padding:5px 10px;">
+Reset
+</button>
+</div>
+
+</div>
+
+<!-- 005 -->
+</div>
+
+<!-- 006 -->
+<script>
+let messageTimer;
+
+function showFullMessage() {
+    document.getElementById("messagePreview").style.display = "none";
+    document.getElementById("messageFull").style.display = "block";
+
+    clearTimeout(messageTimer);
+
+    messageTimer = setTimeout(function () {
+        resetMessage();
+    }, 10000);
+}
+
+function resetMessage() {
+    document.getElementById("messageFull").style.display = "none";
+    document.getElementById("messagePreview").style.display = "block";
+    clearTimeout(messageTimer);
+}
+</script>
 
 <!-- 013 -->
 </div>
