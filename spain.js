@@ -8,7 +8,8 @@ window.countryShops["spain"] = [
     u:"https://www.amazon.es/",
     d:"amazon.es is one of the largest online marketplaces in spain where customers can buy millions of products including electronics, home appliances, fashion, books, groceries, beauty and automotive items with fast delivery options.[web:654][web:655][web:656][web:660][web:661]",
     k:"amazon.es spain,online marketplace spain,electronics mobiles computers and gadgets,home appliances fashion books and groceries,prime delivery ecommerce platform",
-    a:""
+    a:"https://www.amazon.es/?tag=bascharity-20"
+
   },
   {
     i:2,
