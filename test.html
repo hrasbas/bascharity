@@ -555,42 +555,78 @@ url:url
 
 }
 </script>
- <style>
-/* DARK SILVER PREMIUM — COMMON BUTTON STYLE */
+<style>
+/* 001 — BAS CHARITY — DARK SILVER PREMIUM COMMON BUTTON */
 
-/* 001 */
-button {
-    background: linear-gradient(145deg, #4b4f54, #25282c) !important;
-    color: #111111 !important;
+/* 002 — എല്ലാ സാധാരണ button / button-like links */
+button:not(#speedScrollBtn),
+a.btn,
+a.button,
+a[class*="btn"]:not(.speed-scroll),
+a[class*="button"]:not(.speed-scroll),
+a[role="button"] {
+    background: linear-gradient(
+        145deg,
+        #5b6066 0%,
+        #3f444a 48%,
+        #292d32 100%
+    ) !important;
 
-    border: 1.5px solid #c7cbd0 !important;
+    color: #d7dce2 !important;
+
+    border: 2px solid #bfc4c9 !important;
     border-radius: 10px !important;
 
     box-shadow:
         inset 0 1px 2px rgba(255,255,255,0.28),
-        0 0 5px rgba(190,195,200,0.35) !important;
+        inset 0 -2px 4px rgba(0,0,0,0.45),
+        0 0 6px rgba(190,195,200,0.38) !important;
 
-    font-weight: 600 !important;
-    transition: all 0.25s ease !important;
-    font-color: #C7CBD0 !important; 
+    font-weight: 700 !important;
+    text-decoration: none !important;
+    transition: all 0.2s ease !important;
 }
 
-/* 002 */
-button:hover {
-    background: linear-gradient(145deg, #5a5f65, #30343a) !important;
+/* 003 — button-ന്റെ ഉള്ളിലെ text */
+button:not(#speedScrollBtn) *,
+a.btn *,
+a.button *,
+a[class*="btn"]:not(.speed-scroll) *,
+a[class*="button"]:not(.speed-scroll) *,
+a[role="button"] * {
+    color: #d7dce2 !important;
+}
 
-    border-color: #e0e3e6 !important;
+/* 004 — Hover / Touch */
+button:not(#speedScrollBtn):hover,
+a.btn:hover,
+a.button:hover,
+a[class*="btn"]:not(.speed-scroll):hover,
+a[class*="button"]:not(.speed-scroll):hover,
+a[role="button"]:hover {
+    background: linear-gradient(
+        145deg,
+        #666b72 0%,
+        #484d54 48%,
+        #30353b 100%
+    ) !important;
+
+    border-color: #e1e4e7 !important;
 
     box-shadow:
-        inset 0 1px 3px rgba(255,255,255,0.32),
-        0 0 7px rgba(210,215,220,0.45) !important;
+        inset 0 1px 3px rgba(255,255,255,0.35),
+        inset 0 -2px 4px rgba(0,0,0,0.45),
+        0 0 8px rgba(210,215,220,0.5) !important;
 }
 
-/* 003 */
-button:active {
+/* 005 — Press */
+button:not(#speedScrollBtn):active,
+a.btn:active,
+a.button:active,
+a[class*="btn"]:not(.speed-scroll):active,
+a[class*="button"]:not(.speed-scroll):active,
+a[role="button"]:active {
     transform: scale(0.98);
-    box-shadow:
-        inset 0 2px 4px rgba(0,0,0,0.45) !important;
 }
   </style>
 <!-- ===========================
