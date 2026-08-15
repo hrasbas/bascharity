@@ -8,7 +8,8 @@ window.countryShops["germany"] = [
     u:"https://www.amazon.de/",
     d:"amazon germany is a major online marketplace where customers in germany can buy electronics, books, fashion, beauty, home goods, groceries, automotive parts and more with prime delivery options.[web:1643][web:1647]",
     k:"amazon germany,online shopping germany,electronics books fashion beauty home goods,groceries automotive parts prime delivery,german ecommerce marketplace amazon.de",
-    a:""
+    a:"https://www.amazon.de/?tag=bascharity-20"
+
   },
 
   {
