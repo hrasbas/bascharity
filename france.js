@@ -8,7 +8,8 @@ window.countryShops["france"] = [
     u:"https://www.amazon.fr/",
     d:"amazon france is a leading online marketplace in france where customers can buy millions of products including electronics, books, fashion, beauty, home goods, groceries, sports items and automotive accessories with prime delivery options.[web:1681][web:1684][web:1687][web:1690]",
     k:"amazon france,online shopping france,electronics books fashion beauty home goods,groceries sports items automotive accessories,prime delivery french ecommerce marketplace amazon.fr",
-    a:""
+    a:"https://www.amazon.fr/?tag=bascharity-20"
+"
   },
 {
 i:"1a",
