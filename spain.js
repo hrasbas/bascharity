@@ -1,6 +1,6 @@
 // spain.js
 window.countryShops = window.countryShops || {};
-window.countryShops["spain"] = [
+window.countryShops["spain"] = [ 
   {
     i:1,
     n:"amazon.es",
