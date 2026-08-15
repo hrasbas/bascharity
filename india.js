@@ -7,7 +7,7 @@ c:"electronics,home,fashion,beauty,health,food,sports,travel,books,software,busi
 u:"https://www.amazon.in",
 d:"Amazon India is a multi-category online marketplace offering electronics, mobiles, computers, home and kitchen goods, furniture, fashion, groceries, medicines, travel bookings and more across India.",
 k:"amazon india, online shopping, electronics, mobiles, computers, home kitchen, furniture, fashion, grocery, pharmacy, sports, toys, travel, business services",
-a:"https://www.amazon.in?tag=vmmbaslinks-21"
+a:"https://www.amazon.in/?tag=bascharity-21"
 },
 
 {
