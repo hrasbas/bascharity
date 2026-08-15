@@ -8,7 +8,8 @@ window.countryShops["italy"] = [
     u:"https://www.amazon.it/",
     d:"amazon italy is a leading online marketplace where italian shoppers can buy electronics, books, fashion, music, dvds, videogames, appliances, groceries and many other products with fast delivery and prime benefits.[web:1475][web:1476][web:1479]",
     k:"amazon italy,online shopping italy,electronics books fashion music dvds videogames,appliances groceries and more,amazon.it ecommerce marketplace",
-    a:""
+    a:"https://www.amazon.it/?tag=bascharity-20"
+
   },
   {
 i:"1a",
