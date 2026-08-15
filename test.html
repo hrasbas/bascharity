@@ -555,32 +555,80 @@ url:url
 
 }
 </script>
- <style>
-/* 001 — COMMON PREMIUM BUTTON TEST */
-button {
-    background: linear-gradient(145deg, #cbd5e1, #94a3b8, #dbeafe) !important;
-    color: #ffffff !important;
-    border: 2px solid #ffd700 !important;
+<style>
+/* 001 — BAS CHARITY DARK SILVER PREMIUM BUTTONS */
+
+button,
+a.btn,
+a.button,
+a[class*="btn"],
+a[class*="button"],
+a[role="button"] {
+    background: linear-gradient(
+        145deg,
+        #60656d 0%,
+        #4a4f57 45%,
+        #343941 100%
+    ) !important;
+
+    color: #000000 !important;
+
+    border: 2px solid #FFD700 !important;
     border-radius: 10px !important;
+
     box-shadow:
-        0 0 6px rgba(255,215,0,0.95),
-        0 0 14px rgba(255,215,0,0.75),
-        inset 0 1px 3px rgba(255,255,255,0.8) !important;
+        0 0 5px rgba(255,215,0,0.95),
+        0 0 10px rgba(255,215,0,0.55),
+        inset 0 1px 2px rgba(255,255,255,0.35),
+        inset 0 -2px 4px rgba(0,0,0,0.45) !important;
+
     font-weight: 700 !important;
+    transition: all 0.2s ease !important;
 }
 
-/* 002 — TOUCH / HOVER */
+/* 002 — BUTTON TEXT */
+button *,
+a.btn *,
+a.button *,
+a[class*="btn"] *,
+a[class*="button"] *,
+a[role="button"] * {
+    color: #000000 !important;
+}
+
+/* 003 — HOVER */
 button:hover,
-button:active {
-    background: linear-gradient(145deg, #dbeafe, #a8b5c7, #e2e8f0) !important;
-    border-color: #ffd700 !important;
+a.btn:hover,
+a.button:hover,
+a[class*="btn"]:hover,
+a[class*="button"]:hover,
+a[role="button"]:hover {
+    background: linear-gradient(
+        145deg,
+        #6d737c 0%,
+        #555b64 45%,
+        #3d424a 100%
+    ) !important;
+
+    border-color: #FFD700 !important;
+
     box-shadow:
-        0 0 8px rgba(255,215,0,1),
-        0 0 18px rgba(255,215,0,0.85),
-        inset 0 1px 4px rgba(255,255,255,0.9) !important;
+        0 0 7px rgba(255,215,0,1),
+        0 0 14px rgba(255,215,0,0.7),
+        inset 0 1px 3px rgba(255,255,255,0.4),
+        inset 0 -2px 4px rgba(0,0,0,0.5) !important;
+}
+
+/* 004 — PRESS */
+button:active,
+a.btn:active,
+a.button:active,
+a[class*="btn"]:active,
+a[class*="button"]:active,
+a[role="button"]:active {
+    transform: scale(0.98);
 }
 </style>
-
 <!-- ===========================
 END OF BAS ANALYTICS
 =========================== -->
