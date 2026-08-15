@@ -8,7 +8,8 @@ window.countryShops["japan"] = [
     u:"https://www.rakuten.co.jp/",
     d:"rakuten ichiba is japan's largest online marketplace where shoppers can buy electronics, fashion, beauty, groceries, books, sports gear and home goods with points cashback and nationwide delivery.[web:1454][web:1459][web:1455]",
     k:"rakuten ichiba japan,japan online marketplace,electronics fashion beauty groceries,books sports gear home goods,rakuten points cashback shopping",
-    a:""
+    a:"https://www.amazon.co.jp/?tag=bascharity-22"
+"
   },
 
   {
