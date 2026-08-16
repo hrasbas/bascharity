@@ -433,7 +433,7 @@ function analyticsExternal(url){ basTrack("external_link",{ url:url }); }
 </script>
 
 <style>
-/* BAS CHARITY — DARK SILVER BUTTON FIX & GREEN TEXT */
+/* BAS CHARITY — DARK SILVER BUTTON WITH GREEN TEXT */
 
 button:not(#speedScrollBtn),
 a.btn,
@@ -448,7 +448,8 @@ a[role="button"] {
         #292d32 100%
     ) !important;
 
-    color: #d7dce2 !important;
+    /* അക്ഷരങ്ങൾക്ക് മാത്രം തെളിഞ്ഞ പച്ച നിറം */
+    color: #00FF66 !important; 
     border: 2px solid #bfc4c9 !important;
     border-radius: 10px !important;
 
@@ -462,13 +463,14 @@ a[role="button"] {
     transition: all 0.2s ease !important;
 }
 
+/* ബട്ടണിനുള്ളിലെ എല്ലാ ചൈൽഡ് എലിമെന്റുകളുടെയും അക്ഷരങ്ങൾക്ക് പച്ച നിറം നൽകുന്നു */
 button:not(#speedScrollBtn) *,
 a.btn *,
 a.button *,
 a[class*="btn"]:not(.speed-scroll) *,
 a[class*="button"]:not(.speed-scroll) *,
 a[role="button"] * {
-    color: #d7dce2 !important;
+    color: #00FF66 !important;
 }
 
 button:not(#speedScrollBtn):hover,
@@ -501,15 +503,8 @@ a[role="button"]:active {
     transform: scale(0.96) !important;
     filter: brightness(1.2) !important;
 }
-
-/* Country & Language ബട്ടണുകളിലെ നടുവിലുള്ള അക്ഷരങ്ങൾ ('Shop on' പോലെയുള്ള) എപ്പോഴും പച്ചയായി നിൽക്കാൻ */
-.country-btn, 
-.lang-btn,
-.country-btn *, 
-.lang-btn * {
-    color: #00C853 !important;
-}
 </style>
+
 
 </head>
 
