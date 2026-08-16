@@ -20,6 +20,16 @@ d:"Alibaba.com is a global online marketplace for wholesale products, business s
 k:"alibaba,online shopping,wholesale,business sourcing,global marketplace,manufacturing,ecommerce",  
 a:"https://rzekl.com/g/pm1aev55clcf9d224bea219aa26f6f/"  
 },  
+  
+  {
+  i:"1c",
+  n:"Boardmix",
+  c:"tools",
+  u:"https://boardmix.com/",
+  d:"Boardmix is an online collaborative whiteboard and visual collaboration platform for teams, meetings, brainstorming and project planning.",
+  k:"boardmix,online whiteboard,collaboration tools,visual collaboration,brainstorming,teamwork,project planning",
+  a:"https://axavl.com/g/3tevoaw5qqcf9d224bead12233f6f4/?ulp=https%3A%2F%2Fboardmix.com%2F"
+},
   {
     i:2,
     n:"aliexpress spain",
