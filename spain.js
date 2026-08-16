@@ -11,6 +11,15 @@ window.countryShops["spain"] = [
     a:"https://www.amazon.es/?tag=bascharity-20"
 
   },
+  {  
+i:"1b",  
+n:"Alibaba",  
+c:"business,electronics,home,fashion,beauty,health,food,sports,books,jewellery,automotive,travel,software",  
+u:"https://www.alibaba.com/",  
+d:"Alibaba.com is a global online marketplace for wholesale products, business sourcing, manufacturing and a wide range of commercial goods.",  
+k:"alibaba,online shopping,wholesale,business sourcing,global marketplace,manufacturing,ecommerce",  
+a:"https://rzekl.com/g/pm1aev55clcf9d224bea219aa26f6f/"  
+},  
   {
     i:2,
     n:"aliexpress spain",
