@@ -29,7 +29,15 @@ d:"Alibaba.com is a global online marketplace for wholesale products, business s
 k:"alibaba,online shopping,wholesale,business sourcing,global marketplace,manufacturing,ecommerce",
 a:"https://rzekl.com/g/pm1aev55clcf9d224bea219aa26f6f/"
 },
-  
+  {
+  i:"1c",
+  n:"Body Lab",
+  c:"business,electronics,home,fashion,beauty,health,food,sports,books,jewellery,automotive,travel,software",
+  u:"https://www.bodylab.com/",
+  d:"Body Lab is an online shopping destination offering a range of products across health, fitness, beauty and everyday lifestyle categories.",
+  k:"body lab,online shopping,health,fitness,beauty,lifestyle,wellness",
+  a:"https://rzekl.com/g/1e8d114494cf9d224bea16525dc3e8/?ulp=https%3A%2F%2Fwww.bodylab.com/"
+},
   {
     i:2,
     n:"cdiscount france",
