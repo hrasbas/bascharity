@@ -1,7 +1,8 @@
-<!DOCTYPE html>   
+  
+   <!DOCTYPE html>   
 <html lang="en">
 <head>
-   <style>
+<style>
 body {
     font-size: 19px;
 }
@@ -22,9 +23,8 @@ body {
 <link rel="stylesheet" href="style.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-
 <style>
-/* Google Translate top bar + iframe കഠിനമായി ബ്ലോക്ക് ചെയ്യുന്നു */
+/* Google Translate top bar + iframe ബ്ലോക്ക് ചെയ്യുന്നു */
 .goog-te-banner-frame.skiptranslate,
 iframe.goog-te-banner-frame,
 .skiptranslate.goog-te-banner-frame {
@@ -32,13 +32,11 @@ iframe.goog-te-banner-frame,
     visibility: hidden !important;
 }
 
-/* body top offset Google ചേർക്കുന്നത് reset ചെയ്യുന്നു */
 body {
     top: 0px !important;
     position: static !important;
 }
 
-/* Google Translate tooltip / opinion / highlight ഒക്കെ ബ്ലോക്ക് */
 #goog-gt-tt,
 .goog-tooltip,
 .goog-tooltip:hover,
@@ -51,29 +49,24 @@ body {
     visibility: hidden !important;
 }
 
-/* Translate wrapper / gadget icon hide */
 .goog-te-gadget-icon {
     display: none !important;
 }
 </style>
- 
- <style>
- /* CODE NO:1 FIX */
-/* എടുത്തു കാണിക്കേണ്ട പ്രധാന ഹെഡിംഗുകളുടെയും ടെക്സ്റ്റുകളുടെയും കളറുകൾ ലോക്ക് ചെയ്യുന്നു */
+
+<style>
+/* CODE NO:1 FIX */
 h1 { color:#fff !important; }
 .english-fix { color:#bbb !important; }
 #dedication-text { color:#bbb !important; font-weight:300; line-height: 1.6; }
-/* ഇമേജ് ഗാലറി ഹൊറിസോണ്ടൽ ആയി സ്ക്രോൾ ചെയ്യാനുള്ള ഡിസൈൻ */
 #gallery { display:flex; overflow-x:auto; scroll-behavior:smooth; gap:10px; }
 #gallery::-webkit-scrollbar { display:none; }
 .card { min-width:180px; flex-shrink:0; }
 .card img { width:100%; height:auto; border-radius:10px; display:block; }
 #gallery.zoom { transform:scale(1.05); transition:0.3s; } 
 
-/* വിഭിന്ന ബ്രൗസറുകളിൽ മാർജിനുകൾ തെന്നിമാറാതിരിക്കാൻ ഡിസൈൻ ലോക്ക് ചെയ്യുന്നു */
 * { box-sizing:border-box; } 
 
-/* സൈറ്റിന്റെ ബോഡിയുടെ പൊതുവായ പശ്ചാത്തലവും മിനിമം 23px ഫോണ്ട് സൈസും നിശ്ചയിക്കുന്നു */
 body {
 margin:0;
 min-height: 100vh;
@@ -83,7 +76,7 @@ color:#fff;
 overflow-x:hidden;
 padding-top: 3cm;  
 } 
-/* പ്രധാന ബോക്സുകൾ വലിയ സ്ക്രീനുകളിൽ 900px ലേക്ക് ഒതുക്കി നിർത്താനും ഫോണിൽ റെസ്പോൺസിവ് ആക്കാനുമുള്ള ഘടന */
+
 .bas-dedication, .lang-box, .country-box, .shop-container, .compare-container, .share-container, .mainbox, .info-box, .bas7-wrapper, .trust-container, .peace-wrapper, .vada-wrapper, .vision-wrapper, #bas-mega-portal {
 max-width:900px;
 width:96%;
@@ -91,7 +84,6 @@ margin-left:auto;
 margin-right:auto;
 } 
 
-/* സൈറ്റിന്റെ മുകൾഭാഗത്തെ ഹെഡറും ഗ്ലോബ് സ്പേസും ഡിസൈൻ ചെയ്യുന്നു */
 .header-box { display:flex; flex-direction:column; align-items:center; background:#000; padding-top: 25px; }
 #logo-space { width:100%; height:340px; }
 
@@ -99,7 +91,8 @@ margin-right:auto;
   width: 100%;
   text-align: center;
   padding: 20px;
-}.food {
+}
+.food {
   display:flex;
   align-items:center;
   justify-content:center;
@@ -156,7 +149,6 @@ margin-right:auto;
   );
 }
 
-/* MAIN TITLE — MAXIMUM DEEP 3D */
 .brand {
   font-size: 65px;
   font-weight: 900;
@@ -226,26 +218,12 @@ margin-right:auto;
   );
 }
 @media (max-width: 600px) {
-
-  .food {
-    font-size: 27px;
-  }
-
-  .brand {
-    font-size: 48px;
-  }
-
-  .tm {
-    font-size: 13px;
-  }
-
-  .hub {
-    font-size: 18px;
-    letter-spacing: 2px;
-  }
+  .food { font-size: 27px; }
+  .brand { font-size: 48px; }
+  .tm { font-size: 13px; }
+  .hub { font-size: 18px; letter-spacing: 2px; }
 }
 
-/* ലാംഗ്വേജ് ബട്ടണുകൾ ഫോണിന് അനുസരിച്ച് ഒരേ വലിപ്പത്തിൽ ഗ്രിഡ് ആയി കാണിക്കാനുള്ള സ്റ്റൈൽ */
 .top-bar { background:#111; padding:15px 8px; border-top:1px solid #333;}
 .lang-buttons { display:grid; grid-template-columns:repeat(4,1fr); gap:10px; max-width:600px; margin:auto; }
 .lang-btn { padding:10px 2px; border:none; border-radius:20px; font-size:14px; font-weight:bold; cursor:pointer; color:#fff; }
@@ -259,30 +237,25 @@ margin-right:auto;
 .pt { background:#1B5E20; }
 .google-row { text-align:center; font-size:14px; margin-top:15px; color:#bbb; } 
 
-/* സമർപ്പണ ബോക്സിന്റെയും മെയിൻ മെസ്സേജ് ബോക്സിന്റെയും ബോർഡറുകളും കളറുകളും നൽകുന്നു */
 .bas-dedication {
   text-align:center;
   margin:10px auto 30px auto;
   padding:0 20px;
-
   font-size:30px;
   font-weight:900;
   font-style:italic;
   color:#9a9a9a;
   line-height:1.8;
 }
-//* 274 */
-/* 274 */
-/* 274 */
-.lang-box {margin: 0 auto 28px;
+
+.lang-box {
+  margin: 0 auto 28px;
   padding: 0;
   background: transparent;
   border: none;
   text-align: center;
 }
 
-/* 275 */
-/* SELECT LANGUAGE button — border same as language buttons */
 .lang-title {
   background: #3e464f;
   color: #fff;
@@ -294,12 +267,11 @@ margin-right:auto;
   box-shadow: 0 0 6px #AEB7C2;
   margin: 0 auto 22px;
 }
-  .msg-container { width:96%; padding:20px 0; margin: auto; }
+.msg-container { width:96%; padding:20px 0; margin: auto; }
 .question-box { margin:0 auto; width:96%; max-width:900px; background:#000; color:#00BFFF; padding:25px; border-radius:12px; border:1px solid #00BFFF; text-align:center; line-height:1.8; }
 .english-text { font-size:19px; font-weight:500; display:block; }
 .hunger-footer { text-align:center; color:#FFD700; font-weight:bold; font-size:14px; margin-top:15px; letter-spacing:1px; } 
 
-/* ആപ്പ് ഇൻസ്റ്റാൾ ചെയ്യാനുള്ള ഫ്ലോട്ടിങ് ബട്ടണിന്റെ ഡിസൈൻ നിയമങ്ങൾ */
 #install-div {
 display: none;
 position: fixed;
@@ -319,7 +291,6 @@ box-shadow: 0 4px 15px rgba(0,0,0,0.4);
 cursor: pointer;
 } 
 
-/* ആനിമേഷനോടെ സ്ക്രീനിൽ പൊങ്ങിവരുന്ന ബലൂൺ റാപ്പറിന്റെ പൊസിഷൻ Лоക്ക് ചെയ്യുന്നു */
 #basBalloonWrap {
 position: fixed;
 bottom: 0;
@@ -328,16 +299,15 @@ width: 280px;
 height: 400px;
 z-index: 2147483647;
 pointer-events: none;
-transform: translateY(120%);transition: transform 2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+transform: translateY(120%);
+transition: transform 2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 display: block !important;
 } 
 
-/* ബലൂൺ പല സ്റ്റേറ്റുകളിൽ കാണിക്കേണ്ട ട്രാൻസ്ഫോം പൊസിഷനുകൾ */
 .state-up { transform: translateY(0%) !important; }
 .state-hide { transform: translateY(120%) !important; }
 .state-rest { transform: translateY(70%) !important; } 
 
-/* ബലൂണിന്റെ റൗണ്ട് ഷേപ്പും ഉള്ളിലെ നൂലും നിപ്പിളും ഉണ്ടാക്കാനുള്ള CSS */
 .bas-ball {
 position: absolute;
 border-radius: 50% 50% 50% 50% / 40% 40% 60% 60%;
@@ -368,7 +338,6 @@ background: inherit;
 clip-path: polygon(20% 0, 80% 0, 100% 100%, 0 100%);
 } 
 
-/* വെള്ള, നീല ബലൂണുകളുടെ വലിപ്പവും അവ ഫ്ലോട്ട് ചെയ്യാനുള്ള ആനിമേഷൻ ലിങ്കും */
 .white-b {
 width: 120px; height: 160px;
 background: #ffffff;
@@ -387,7 +356,6 @@ animation: floatB 20s ease-in-out infinite;
 .bas-sticker { width: 75px; height: 75px; border-radius: 20px; margin-bottom: 5px; border: 1px solid #ddd; }
 .bas-lbl { font-family: sans-serif; font-size: 11px; font-weight: 900; text-align: center; line-height: 1.2; } 
 
-/* ആപ്പ് ഇൻസ്റ്റാൾ ചെയ്യാൻ റെഡി ആകുമ്പോഴും ഇൻസ്റ്റാൾഡ് ആകുമ്പോഴും മാറേണ്ട കളർ കോഡുകൾ */
 .install-ready {
 color: #cddc39 !important;
 text-shadow: 0 0 6px rgba(205,220,57,0.35);
@@ -406,7 +374,6 @@ color: #1f2b00 !important;
 text-shadow: none !important;
 } 
 
-/* ബലൂണുകൾ യാഥാർത്ഥ്യമെന്നോണം അന്തരീക്ഷത്തിൽ ഒഴുകി നടക്കാൻ വേണ്ടിയുള്ള ആനിമേഷൻ ഫ്രെയിമുകൾ */
 @keyframes floatW {
 0%, 100% { transform: translate(0, 0) rotate(-3deg); }
 50% { transform: translate(35px, 45px) rotate(5deg); }
@@ -417,169 +384,57 @@ text-shadow: none !important;
 50% { transform: translate(25px, -25px) rotate(-4deg); }
 }
 </style>
-<!-- ===========================
-BAS CHARITY GOOGLE ANALYTICS
-Measurement ID : G-W0NH1KVHHC
-=========================== -->
 
+<!-- GOOGLE ANALYTICS -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-W0NH1KVHHC"></script>
-
 <script>
 window.dataLayer = window.dataLayer || [];
-
-function gtag(){
-dataLayer.push(arguments);
-}
-
+function gtag(){dataLayer.push(arguments);}
 gtag('js', new Date());
-
-gtag('config','G-W0NH1KVHHC',{
-send_page_view:true
-});
-
-/* ---------- Universal Event Function ---------- */
+gtag('config','G-W0NH1KVHHC',{send_page_view:true});
 
 function basTrack(eventName, params={}){
-gtag('event',eventName,params);
+  gtag('event',eventName,params);
 }
-
-/* ---------- Page Loaded ---------- */
 
 window.addEventListener("load",function(){
-
-basTrack("page_loaded");
-
+  basTrack("page_loaded");
 });
-
-/* ---------- Shop Click ---------- */
 
 document.addEventListener("click",function(e){
-
-const shop=e.target.closest("a.shopCard");
-
-if(shop){
-
-basTrack("shop_click",{
-shop_name:shop.innerText.trim(),
-shop_url:shop.href
+  const shop=e.target.closest("a.shopCard");
+  if(shop){
+    basTrack("shop_click",{
+      shop_name:shop.innerText.trim(),
+      shop_url:shop.href
+    });
+  }
 });
-
-}
-
-});
-
-/* ---------- Compare Button ---------- */
 
 document.addEventListener("click",function(e){
-
-const btn=e.target.closest(".compare-btn");
-
-if(btn){
-
-basTrack("compare_click");
-
-}
-
+  const btn=e.target.closest(".compare-btn");
+  if(btn){ basTrack("compare_click"); }
 });
-
-/* ---------- Share Buttons ---------- */
 
 document.addEventListener("click",function(e){
-
-const share=e.target.closest(".share-grid a");
-
-if(share){
-
-basTrack("share_click",{
-
-platform:share.href
-
+  const share=e.target.closest(".share-grid a");
+  if(share){
+    basTrack("share_click",{ platform:share.href });
+  }
 });
 
-}
-
-});
-
-/* ---------- Copy Link ---------- */
-
-function analyticsCopyLink(){
-
-basTrack("copy_link");
-
-}
-
-/* ---------- Country ---------- */
-
-function analyticsCountry(country){
-
-basTrack("country_selected",{
-
-country:country
-
-});
-
-}
-
-/* ---------- Language ---------- */
-
-function analyticsLanguage(language){
-
-basTrack("language_selected",{
-
-language:language
-
-});
-
-}
-
-/* ---------- Search ---------- */
-
-function analyticsSearch(text){
-
-basTrack("search",{
-
-search_term:text
-
-});
-
-}
-
-/* ---------- PWA Install ---------- */
-
-function analyticsPWA(){
-
-basTrack("pwa_install");
-
-}
-
-/* ---------- Donation ---------- */
-
-function analyticsDonation(name){
-
-basTrack("donation_button",{
-
-charity:name
-
-});
-
-}
-
-/* ---------- External Link ---------- */
-
-function analyticsExternal(url){
-
-basTrack("external_link",{
-
-url:url
-
-});
-
-}
+function analyticsCopyLink(){ basTrack("copy_link"); }
+function analyticsCountry(country){ basTrack("country_selected",{ country:country }); }
+function analyticsLanguage(language){ basTrack("language_selected",{ language:language }); }
+function analyticsSearch(text){ basTrack("search",{ search_term:text }); }
+function analyticsPWA(){ basTrack("pwa_install"); }
+function analyticsDonation(name){ basTrack("donation_button",{ charity:name }); }
+function analyticsExternal(url){ basTrack("external_link",{ url:url }); }
 </script>
-<style>
-/* 001 — BAS CHARITY — DARK SILVER PREMIUM COMMON BUTTON */
 
-/* 002 — എല്ലാ സാധാരണ button / button-like links */
+<style>
+/* BAS CHARITY — DARK SILVER BUTTON FIX & GREEN TEXT */
+
 button:not(#speedScrollBtn),
 a.btn,
 a.button,
@@ -594,7 +449,6 @@ a[role="button"] {
     ) !important;
 
     color: #d7dce2 !important;
-
     border: 2px solid #bfc4c9 !important;
     border-radius: 10px !important;
 
@@ -608,7 +462,6 @@ a[role="button"] {
     transition: all 0.2s ease !important;
 }
 
-/* 003 — button-ന്റെ ഉള്ളിലെ text */
 button:not(#speedScrollBtn) *,
 a.btn *,
 a.button *,
@@ -618,7 +471,6 @@ a[role="button"] * {
     color: #d7dce2 !important;
 }
 
-/* 004 — Hover / Touch */
 button:not(#speedScrollBtn):hover,
 a.btn:hover,
 a.button:hover,
@@ -640,52 +492,35 @@ a[role="button"]:hover {
         0 0 8px rgba(210,215,220,0.5) !important;
 }
 
-/* 005 — Press */
 button:not(#speedScrollBtn):active,
 a.btn:active,
 a.button:active,
 a[class*="btn"]:not(.speed-scroll):active,
 a[class*="button"]:not(.speed-scroll):active,
 a[role="button"]:active {
-    transform: scale(0.98);
+    transform: scale(0.96) !important;
+    filter: brightness(1.2) !important;
 }
 
-/* Select ചെയ്ത അക്ഷരങ്ങൾ (Text) മാത്രം സ്ഥിരമായി പച്ചയാക്കാൻ */
-.country-btn.active,
-.lang-btn.active {
-    color: #00FF66 !important;
-    border-color: #00FF66 !important;
-    box-shadow: 0 0 8px #00FF66 !important;
+/* Country & Language ബട്ടണുകളിലെ നടുവിലുള്ള അക്ഷരങ്ങൾ ('Shop on' പോലെയുള്ള) എപ്പോഴും പച്ചയായി നിൽക്കാൻ */
+.country-btn, 
+.lang-btn,
+.country-btn *, 
+.lang-btn * {
+    color: #00C853 !important;
 }
+</style>
 
-.country-btn.active *,
-.lang-btn.active * {
-    color: #00FF66 !important;
-}
-  </style>
-
-<script>
-document.addEventListener("DOMContentLoaded", function() {
-    const countryButtons = document.querySelectorAll('.country-btn');
-    countryButtons.forEach(btn => {
-        btn.addEventListener('click', function() {
-            countryButtons.forEach(b => b.classList.remove('active'));
-            this.classList.add('active');
-        });
-    });
-
-    const langButtons = document.querySelectorAll('.lang-btn');
-    langButtons.forEach(btn => {
-        btn.addEventListener('click', function() {
-            langButtons.forEach(b => b.classList.remove('active'));
-            this.classList.add('active');
-        });
-    });
-});
-</script>
 </head>
 
-<style>
+   
+   
+   
+   
+   
+   
+   
+   <style>
 /* 001 — ALL CHARITY DETAILS / DONATE BUTTONS — DARK SILVER PREMIUM */
 .trust-btn,
 .peace-btn,
