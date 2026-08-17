@@ -1,5 +1,4 @@
 countryShops.india = [
-
 {
 i:1,
 n:"amazon india",
