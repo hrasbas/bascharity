@@ -11,6 +11,24 @@ window.countryShops["romania"] = [
     k:"ubuy romania,international online shopping romania,imported electronics mobiles tablets clothing shoes,beauty personal care home kitchen goods,toys games office school supplies gardening tools,baby care pet supplies travel outdoors automotive accessories",
     a:""
   },
+    {
+i:"1a",
+n:"AliExpress",
+c:"business,electronics,home,fashion,beauty,health,food,sports,books,jewellery,automotive,travel,software",
+u:"https://www.aliexpress.com/",
+d:"AliExpress is a global online shopping marketplace with a huge variety of products including electronics, fashion, home items, beauty products and everyday purchases.",
+k:"aliexpress,online shopping,global marketplace,electronics shopping,fashion shopping,home goods,general shopping,online bazaar",
+a:"https://rzekl.com/g/1e8d114494cf9d224bea16525dc3e8/?ulp=https%3A%2F%2Fwww.aliexpress.com%2F"
+},
+{
+i:"1b",
+n:"Alibaba",
+c:"business,electronics,home,fashion,beauty,health,food,sports,books,jewellery,automotive,travel,software",
+u:"https://www.alibaba.com/",
+d:"Alibaba.com is a global online marketplace for wholesale products, business sourcing, manufacturing and a wide range of commercial goods.",
+k:"alibaba,online shopping,wholesale,business sourcing,global marketplace,manufacturing,ecommerce",
+a:"https://rzekl.com/g/pm1aev55clcf9d224bea219aa26f6f/"
+},
   {
     i:2,
     n:"emag romania online marketplace",
