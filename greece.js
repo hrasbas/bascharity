@@ -10,6 +10,7 @@ window.countryShops["greece"] = [
     k:"ubuy greece,international online shopping greece,imported electronics mobiles and gadgets,apparel jewellery beauty home kitchen,books sports gear automotive accessories groceries,cross border ecommerce platform greece",
     a:""
   },
+  
   {
     i:2,
     n:"ubuy greece greek store",
