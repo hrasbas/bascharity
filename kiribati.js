@@ -109,7 +109,7 @@ a:"https://rzekl.com/g/pm1aev55clcf9d224bea219aa26f6f/"
     k:"ubuy kiribati grocery and snacks,packaged foods snacks pantry items,imported food products for households,online grocery shopping kiribati,cross border food marketplace",
     a:""
   },
-  {
+   {
     i:11,
     n:"aliexpress kiribati via pokupar",
     c:"electronics,fashion,home,business",
