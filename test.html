@@ -927,7 +927,7 @@ dedicated to the good, well-being, and peace of all human beings, their parents,
 
 </div>
 
-<!-- SCRIPT FOR EXPAND, RESET & 2-MINUTE AUTO RESET -->
+<!-- SCRIPT FOR EXPAND, RESET & 2-MINUTE AUTO RESET (NO JUMPING & NO DUPLICATE) -->
 <script>
 let welcomeTimer = null;
 
@@ -944,14 +944,13 @@ function expandWelcomeMessage() {
 }
 
 function resetWelcomeMessage() {
-    let topElem = document.getElementById('welcomeTop');
-    
+    // സ്ക്രീൻ ചാടാതിരിക്കാൻ നിലവിലെ Scroll Position ഉറപ്പിക്കുന്നു
+    let currentScroll = window.scrollY;
+
     document.getElementById('welcomeExtra').style.display = 'none';
     document.getElementById('moreBtnContainer').style.display = 'block';
 
-    if (topElem) {
-        topElem.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
-    }
+    window.scrollTo(0, currentScroll);
 
     if (welcomeTimer) clearTimeout(welcomeTimer);
 }
