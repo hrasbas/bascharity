@@ -5207,6 +5207,7 @@ function setupCategoryDropdown() {
 
   allCategoriesSelect.onchange = () => {
     const val = allCategoriesSelect.value;
+     /* 001 */ basTrack("category_dropdown", { category: val });
     if (val === "all") {
       triggerBackToAll();
       return;
