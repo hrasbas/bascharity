@@ -838,7 +838,7 @@ dedicated to the good, well-being, and peace of all human beings, their parents,
       <div class="question-box">
         <span class="english-text">
   <!-- INTRODUCTION / CONTENT SECTION -->
-<!-- INTRODUCTION / CONTENT SECTION -->
+ <!-- INTRODUCTION / CONTENT SECTION -->
 <!-- 001 -->
 <div class="info-box" style="background:#000; border:1px solid #C0C0C0; border-radius:15px; padding:25px; margin:25px auto; max-width:800px; color:#C0C0C0; font-size:19px; line-height:1.8; text-align:left; box-shadow:0 0 18px rgba(192,192,192,0.18);">
 
@@ -868,7 +868,7 @@ dedicated to the good, well-being, and peace of all human beings, their parents,
   <!-- EXPANDABLE EXTRA CONTENT -->
   <div id="welcomeExtra" style="display:none;">
     <p>
-      Without considering caste or religion, we have endeavoured to give priority to institutions that provide rehabilitation / accommodation / food / patient assistance / care / to vulnerable sections of society. Necessary links are also provided for those who wish to cooperate with or support such initiatives.
+      <span style="background-color: #ffd700; color: #000000; font-weight: bold; padding: 2px 6px; border-radius: 4px;">Without considering caste or religion,</span> we have endeavoured to give priority to institutions that provide rehabilitation / accommodation / food / patient assistance / care / to vulnerable sections of society. Necessary links are also provided for those who wish to cooperate with or support such initiatives.
     </p>
 
     <p>
@@ -876,12 +876,18 @@ dedicated to the good, well-being, and peace of all human beings, their parents,
     </p>
 
     <p>
-      What if, without spending even one rupee extra, you could purchase from your preferred shop at the same price and with the same offers through the shopping links listed below, and that purchase could help relieve the hunger of someone somewhere in the world?!
+      What if, without spending even one rupee extra, you could purchase from your preferred shop at the same price and with the same offers <span style="background-color: #00ff66; color: #000000; font-weight: bold; padding: 2px 6px; border-radius: 4px;">through the shopping links listed below</span>, and that purchase could help relieve the hunger of someone somewhere in the world?!
     </p>
 
-    <div style="text-align:center; color:#FFD700; font-weight:bold; font-size:18px; letter-spacing:1px; margin:25px 0;">
-      YOUR PURCHASE SATISFIES A HUNGER™<br>
-      <span style="font-size:16px; color:#00FF66;">നിങ്ങളുടെ വാങ്ങൽ ഒരു വിശപ്പിനെ തൃപ്തിപ്പെടുത്തുന്നു™</span>
+    <div style="text-align:center; margin:25px 0;">
+      <!-- NO TRANSLATE FOR CAPITAL TEXT -->
+      <div class="notranslate" style="color:#FFD700; font-weight:bold; font-size:18px; letter-spacing:1px;">
+        YOUR PURCHASE SATISFIES A HUNGER™
+      </div>
+      <!-- TRANSLATABLE SMALL TEXT -->
+      <div style="font-size:15px; color:#00FF66; font-weight:bold; margin-top:4px;">
+        Your purchase satisfies a hunger™
+      </div>
     </div>
 
     <p>
@@ -893,7 +899,7 @@ dedicated to the good, well-being, and peace of all human beings, their parents,
     </p>
 
     <p>
-      Whether one understands its significance or not, I sincerely request every individual to cooperate with such enduring acts of goodness, save the icon on the screen, and share the links as widely as possible.
+      Whether one understands its significance or not, I sincerely request every individual to cooperate with such enduring acts of goodness, <span style="background-color: #00bfff; color: #000000; font-weight: bold; padding: 2px 6px; border-radius: 4px;">save the icon on the screen</span>, and <span style="background-color: #00bfff; color: #000000; font-weight: bold; padding: 2px 6px; border-radius: 4px;">share the links as widely as possible</span>.
     </p>
 
     <p style="font-weight:bold; color:#FFFFFF;">
@@ -911,7 +917,7 @@ dedicated to the good, well-being, and peace of all human beings, their parents,
       </p>
     </div>
 
-    <!-- RESET BUTTON -->
+    <!-- SINGLE RESET BUTTON -->
     <div style="text-align:center; margin-top:20px;">
       <button onclick="resetWelcomeMessage()" style="background:#222; border:1px solid #FF4D4D; color:#FF4D4D; font-size:15px; font-weight:bold; cursor:pointer; padding:6px 16px; border-radius:8px;">
         Reset ✕
@@ -920,6 +926,36 @@ dedicated to the good, well-being, and peace of all human beings, their parents,
   </div>
 
 </div>
+
+<!-- SCRIPT FOR EXPAND, RESET & 2-MINUTE AUTO RESET -->
+<script>
+let welcomeTimer = null;
+
+function expandWelcomeMessage() {
+    document.getElementById('welcomeExtra').style.display = 'block';
+    document.getElementById('moreBtnContainer').style.display = 'none';
+
+    if (welcomeTimer) clearTimeout(welcomeTimer);
+
+    // 2 മിനിറ്റിനു ശേഷം സ്വയം Reset ആകുന്നു
+    welcomeTimer = setTimeout(function() {
+        resetWelcomeMessage();
+    }, 120000);
+}
+
+function resetWelcomeMessage() {
+    let topElem = document.getElementById('welcomeTop');
+    
+    document.getElementById('welcomeExtra').style.display = 'none';
+    document.getElementById('moreBtnContainer').style.display = 'block';
+
+    if (topElem) {
+        topElem.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+    }
+
+    if (welcomeTimer) clearTimeout(welcomeTimer);
+}
+</script>
 
 <!-- SCRIPT FOR EXPAND, RESET & 2-MINUTE AUTO RESET -->
 <script>
