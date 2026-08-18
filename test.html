@@ -837,83 +837,113 @@ dedicated to the good, well-being, and peace of all human beings, their parents,
     <div class="msg-container">
       <div class="question-box">
         <span class="english-text">
-          <!-- INTRODUCTION / CONTENT SECTION -->
+  <!-- INTRODUCTION / CONTENT SECTION -->
 <!-- 001 -->
-<div id="messageFull">
+<div class="info-box" style="background:#000; border:1px solid #C0C0C0; border-radius:15px; padding:25px; margin:25px auto; max-width:800px; color:#C0C0C0; font-size:19px; line-height:1.8; text-align:left; box-shadow:0 0 18px rgba(192,192,192,0.18);">
 
-<!-- 002 -->
-<p>
-Welcome to BAS CHARITY INTERNATIONAL.
-</p>
+  <!-- 002 -->
+  <h2 style="color:#FFFFFF; text-align:center; font-size:22px; margin-bottom:20px; font-weight:bold;">
+    Welcome to BAS CHARITY INTERNATIONAL.
+  </h2>
 
-<!-- 003 -->
-<p>
-Through the simple concept of “Buying + Service” (Shopping + Charity), one of the objectives of this initiative is to bring leading online shopping platforms from around the world under one roof and, at the same time, make the majority of the affiliate income generated through them available for HUNGER RELIEF and other similar initiatives.
-</p>
+  <!-- 003: PREVIEW MESSAGE -->
+  <div id="welcomePreview">
+    <p>
+      Through the simple concept of “Buying + Service” (Shopping + Charity), one of the objectives of this initiative is to bring leading online shopping platforms from around the world under one roof and, at the same time, make the majority of the affiliate income generated through them available for HUNGER RELIEF and other similar initiatives.
+    </p>
 
-<!-- 004 -->
-<p>
-Secondly, along with creating public awareness about online scams related to charitable activities, we also introduce certain trusted websites, institutions, and initiatives.
-</p>
+    <p>
+      Secondly, along with creating public awareness about online scams related to charitable activities, we also introduce certain trusted websites, institutions, and initiatives.
+    </p>
 
-<!-- 005 -->
-<button class="more-btn" onclick="showFullMessage()">More...</button>
+    <div style="text-align:center; margin-top:10px;">
+      <button onclick="expandWelcomeMessage()" style="background:none; border:none; color:#4DA6FF; font-size:19px; font-weight:bold; cursor:pointer; padding:5px 10px;">
+        More...
+      </button>
+    </div>
+  </div>
 
-<!-- 006 -->
-<div id="messageRest">
+  <!-- 004: FULL MESSAGE -->
+  <div id="welcomeFull" style="display:none;">
+    <p>
+      Without considering caste or religion, we have endeavoured to give priority to institutions that provide rehabilitation / accommodation / food / patient assistance / care / to vulnerable sections of society. Necessary links are also provided for those who wish to cooperate with or support such initiatives.
+    </p>
 
-<!-- 007 -->
-<p>
-Regardless of caste or religion, we have endeavoured to give priority to institutions that provide rehabilitation / accommodation / food / patient assistance / care / to vulnerable sections of society. Necessary links are also provided for those who wish to cooperate with or support such initiatives.
-</p>
+    <p>
+      We do not accept any donations through this site. Those who wish to provide assistance may do so directly through the links provided to the respective institutions.
+    </p>
 
-<!-- 008 -->
-<p>
-We do not accept any donations through this site. Those who wish to provide assistance may do so directly through the links provided to the respective institutions.
-</p>
+    <p>
+      What if, without spending even one rupee extra, you could purchase from your preferred shop at the same price and with the same offers through the shopping links listed below, and that purchase could help relieve the hunger of someone somewhere in the world?!
+    </p>
 
-<!-- 009 -->
-<p>
-What if, without spending even one rupee extra, you could purchase from your preferred shop at the same price and with the same offers through the shopping links listed below, and that purchase could help relieve the hunger of someone somewhere in the world?!
-</p>
+    <div style="text-align:center; color:#FFD700; font-weight:bold; font-size:18px; letter-spacing:1px; margin:25px 0;">
+      YOUR PURCHASE SATISFIES A HUNGER™<br>
+      <span style="font-size:16px; color:#00FF66;">നിങ്ങളുടെ വാങ്ങൽ ഒരു വിശപ്പിനെ തൃപ്തിപ്പെടുത്തുന്നു™</span>
+    </div>
 
-<!-- 010 -->
-<div style="text-align:center; font-weight:bold; margin:20px 0;">
-YOUR PURCHASE SATISFIES A HUNGER™
-<br>
-നിങ്ങളുടെ വാങ്ങൽ ഒരു വിശപ്പിനെ തൃപ്തിപ്പെടുത്തുന്നു™
+    <p>
+      Using international connections, numerous important Shoping links have been gathered with considerable effort, and they need to be brought to the people. For this, the cooperation of each and every one of you is essential. Therefore,
+    </p>
+
+    <p>
+      This initiative, which was originally planned to be dedicated to my beloved parents (Dedication), was reorganized with the intention that everyone should have an opportunity to participate in this goodness. With the wish that no one should be left without receiving even a part of the goodness of this initiative, it had been dedicated to each one of us, our parents, and our ancestors (Dedicated).
+    </p>
+
+    <p>
+      Whether one understands its significance or not, I sincerely request every individual to cooperate with such enduring acts of goodness, save the icon on the screen, and share the links as widely as possible.
+    </p>
+
+    <p style="font-weight:bold; color:#FFFFFF;">
+      Heartfelt thanks to those who have cooperated and to those who have not.
+    </p>
+
+    <div style="text-align:center; margin-top:25px; padding-top:15px; border-top:1px solid #C0C0C0;">
+      <h3 style="font-size:16px; color:#FFFFFF; margin:0; font-weight:bold;">
+        Mohammed Basheer Peringala
+      </h3>
+
+      <p style="font-size:14px; color:#C0C0C0; margin-top:3px;">
+        Founder & Director<br>
+        BAS CHARITY INTERNATIONAL
+      </p>
+    </div>
+
+    <!-- RESET BUTTON -->
+    <div style="text-align:center; margin-top:20px;">
+      <button onclick="resetWelcomeMessage()" style="background:#222; border:1px solid #FF4D4D; color:#FF4D4D; font-size:15px; font-weight:bold; cursor:pointer; padding:6px 16px; border-radius:8px;">
+        Reset ✕
+      </button>
+    </div>
+  </div>
+
 </div>
 
-<!-- 011 -->
-<p>
-Using international connections, numerous important Shopping links have been gathered with considerable effort, and they need to be brought to the people. For this, the cooperation of each and every one of you is essential. Therefore,
-</p>
+<!-- SCRIPT FOR MORE, RESET & 3-MINUTE AUTO RESET -->
+<script>
+let welcomeTimer = null;
 
-<!-- 012 -->
-<p>
-This initiative, which was originally planned to be dedicated to my beloved parents (Dedication), was reorganized with the intention that everyone should have an opportunity to participate in this goodness. With the wish that no one should be left without receiving even a part of the goodness of this initiative, it has been dedicated to each one of us, our parents, and our ancestors (Dedicated).
-</p>
+function expandWelcomeMessage() {
+    document.getElementById('welcomePreview').style.display = 'none';
+    document.getElementById('welcomeFull').style.display = 'block';
 
-<!-- 013 -->
-<p>
-Whether one understands its significance or not, I sincerely request every individual to cooperate with such enduring acts of goodness, save the icon on the screen, and share the links as widely as possible.
-</p>
+    // പഴയ ടൈമർ ഉണ്ടെങ്കിൽ ക്ലിയർ ചെയ്യുന്നു
+    if (welcomeTimer) clearTimeout(welcomeTimer);
 
-<!-- 014 -->
-<p>
-Heartfelt thanks to those who have cooperated and to those who have not.
-</p>
+    // 3 മിനിറ്റിനു ശേഷം (180,000 milliseconds) സ്വയം Reset ആകുന്നു
+    welcomeTimer = setTimeout(function() {
+        resetWelcomeMessage();
+    }, 180000);
+}
 
-<!-- 015 -->
-<p>
-Mohammed Basheer Peringala<br>
-Founder &amp; Director<br>
-BAS CHARITY INTERNATIONAL
-</p>
+function resetWelcomeMessage() {
+    document.getElementById('welcomeFull').style.display = 'none';
+    document.getElementById('welcomePreview').style.display = 'block';
 
-<!-- 016 -->
-</div>
-</div>
+    if (welcomeTimer) clearTimeout(welcomeTimer);
+}
+</script>
+
 <script>
 <!-- 002 -->
 function showFullMessage() {
