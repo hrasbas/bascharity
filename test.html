@@ -5911,7 +5911,62 @@ YOUR PURCHASE SATISFIES A HUNGER ™
     bindPress(document.getElementById("downBtn"), 1);
   });
 </script>
-               
+
+<style>
+.bas-more-shops-soon {
+    text-align: center;
+    margin: 20px auto 25px;
+    padding: 10px 15px;
+    color: #00FF66;
+    font-size: 18px;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+}
+</style>
+
+<script>
+(function () {
+
+    function addMoreShopsSoon(container) {
+        if (!container) return;
+
+        if (
+            container.nextElementSibling &&
+            container.nextElementSibling.classList.contains("bas-more-shops-soon")
+        ) {
+            return;
+        }
+
+        const message = document.createElement("div");
+        message.className = "bas-more-shops-soon";
+        message.textContent = "MORE SHOPS WILL BE ADDED SOON";
+
+        container.insertAdjacentElement("afterend", message);
+    }
+
+    function updateShopLists() {
+
+        document.querySelectorAll(
+            "#featuredShops, #categoryShops, .shop-container, .shop-list"
+        ).forEach(function (container) {
+            addMoreShopsSoon(container);
+        });
+
+    }
+
+    document.addEventListener("DOMContentLoaded", function () {
+
+        updateShopLists();
+
+        new MutationObserver(updateShopLists).observe(document.body, {
+            childList: true,
+            subtree: true
+        });
+
+    });
+
+})();
+</script>   
 </body> <!-- ഇതിന് തൊട്ടു മുകളിൽ -->
 </html>
 
