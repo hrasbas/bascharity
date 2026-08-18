@@ -5262,6 +5262,7 @@ categorySearch.addEventListener("input", function () {
 // COUNTRY CHANGE (PART 1)
 function changeCountry(countryName) {
   currentCountry = countryName.toLowerCase().trim();
+   /* 001 */ basTrack("country_change", { country: currentCountry });
   if (selectedCountryBox) {
     selectedCountryBox.textContent = "SELECTED COUNTRY - " + currentCountry.toUpperCase();
   }
