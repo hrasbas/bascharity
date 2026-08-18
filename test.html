@@ -838,7 +838,6 @@ dedicated to the good, well-being, and peace of all human beings, their parents,
       <div class="question-box">
         <span class="english-text">
   <!-- INTRODUCTION / CONTENT SECTION -->
-<!-- INTRODUCTION / CONTENT SECTION -->
 <!-- 001 -->
 <div class="info-box" style="background:#000; border:1px solid #C0C0C0; border-radius:15px; padding:25px; margin:25px auto; max-width:800px; color:#C0C0C0; font-size:19px; line-height:1.8; text-align:left; box-shadow:0 0 18px rgba(192,192,192,0.18);">
 
@@ -884,6 +883,7 @@ dedicated to the good, well-being, and peace of all human beings, their parents,
       <div class="notranslate" style="color:#FFD700; font-weight:bold; font-size:18px; letter-spacing:1px;">
         YOUR PURCHASE SATISFIES A HUNGER™
       </div>
+
       <!-- TRANSLATABLE SMALL TEXT -->
       <div style="font-size:15px; color:#00FF66; font-weight:bold; margin-top:4px;">
         Your purchase satisfies a hunger™
@@ -927,165 +927,50 @@ dedicated to the good, well-being, and peace of all human beings, their parents,
 
 </div>
 
-<!-- SCRIPT FOR EXPAND, RESET & 2-MINUTE AUTO RESET (NO JUMPING & NO DUPLICATE) -->
+<!-- SCRIPT FOR EXPAND, RESET & 2-MINUTE AUTO RESET -->
 <script>
 let welcomeTimer = null;
 
 function expandWelcomeMessage() {
-    document.getElementById('welcomeExtra').style.display = 'block';
-    document.getElementById('moreBtnContainer').style.display = 'none';
+    const welcomeExtra = document.getElementById('welcomeExtra');
+    const moreBtnContainer = document.getElementById('moreBtnContainer');
 
-    if (welcomeTimer) clearTimeout(welcomeTimer);
+    if (!welcomeExtra || !moreBtnContainer) return;
 
-    // 2 മിനിറ്റിനു ശേഷം സ്വയം Reset ആകുന്നു
+    welcomeExtra.style.display = 'block';
+    moreBtnContainer.style.display = 'none';
+
+    if (welcomeTimer) {
+        clearTimeout(welcomeTimer);
+    }
+
     welcomeTimer = setTimeout(function() {
         resetWelcomeMessage();
     }, 120000);
 }
 
 function resetWelcomeMessage() {
-    // സ്ക്രീൻ ചാടാതിരിക്കാൻ നിലവിലെ Scroll Position ഉറപ്പിക്കുന്നു
-    let currentScroll = window.scrollY;
+    const welcomeExtra = document.getElementById('welcomeExtra');
+    const moreBtnContainer = document.getElementById('moreBtnContainer');
 
-    document.getElementById('welcomeExtra').style.display = 'none';
-    document.getElementById('moreBtnContainer').style.display = 'block';
+    if (!welcomeExtra || !moreBtnContainer) return;
+
+    const currentScroll = window.scrollY;
+
+    welcomeExtra.style.display = 'none';
+    moreBtnContainer.style.display = 'block';
 
     window.scrollTo(0, currentScroll);
 
-    if (welcomeTimer) clearTimeout(welcomeTimer);
-}
-</script>
-
-<!-- SCRIPT FOR EXPAND, RESET & 2-MINUTE AUTO RESET -->
-<script>
-let welcomeTimer = null;
-
-function expandWelcomeMessage() {
-    document.getElementById('welcomeExtra').style.display = 'block';
-    document.getElementById('moreBtnContainer').style.display = 'none';
-
-    if (welcomeTimer) clearTimeout(welcomeTimer);
-
-    // 2 മിനിറ്റിനു ശേഷം സ്വയം Reset ആകുന്നു
-    welcomeTimer = setTimeout(function() {
-        resetWelcomeMessage();
-    }, 120000);
-}
-
-function resetWelcomeMessage() {
-    let topElem = document.getElementById('welcomeTop');
-    
-    document.getElementById('welcomeExtra').style.display = 'none';
-    document.getElementById('moreBtnContainer').style.display = 'block';
-
-    if (topElem) {
-        topElem.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+    if (welcomeTimer) {
+        clearTimeout(welcomeTimer);
+        welcomeTimer = null;
     }
-
-    if (welcomeTimer) clearTimeout(welcomeTimer);
 }
-</script>
-
-<!-- SCRIPT FOR EXPAND, RESET & 2-MINUTE AUTO RESET -->
-<script>
-let welcomeTimer = null;
-
-function expandWelcomeMessage() {
-    document.getElementById('welcomeExtra').style.display = 'block';
-    document.getElementById('moreBtnContainer').style.display = 'none';
-
-    if (welcomeTimer) clearTimeout(welcomeTimer);
-
-    // 2 മിനിറ്റിനു (120,000 ms) ശേഷം സ്വയം Reset ആകുന്നു
-    welcomeTimer = setTimeout(function() {
-        resetWelcomeMessage();
-    }, 120000);
-}
-
-function resetWelcomeMessage() {
-    let topElem = document.getElementById('welcomeTop');
-    
-    document.getElementById('welcomeExtra').style.display = 'none';
-    document.getElementById('moreBtnContainer').style.display = 'block';
-
-    // Screen ചാടാതെ ബോക്സിന്റെ മുകളിൽ തന്നെ ഉറപ്പിച്ചു നിർത്താൻ
-    if (topElem) {
-        topElem.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
-    }
-
-    if (welcomeTimer) clearTimeout(welcomeTimer);
-}
-</script>
-
-
-    <!-- RESET BUTTON -->
-    <div style="text-align:center; margin-top:20px;">
-      <button onclick="resetWelcomeMessage()" style="background:#222; border:1px solid #FF4D4D; color:#FF4D4D; font-size:15px; font-weight:bold; cursor:pointer; padding:6px 16px; border-radius:8px;">
-        Reset ✕
-      </button>
-    </div>
-  </div>
-
-</div>
-
-<!-- SCRIPT FOR MORE, RESET & 3-MINUTE AUTO RESET -->
-<script>
-let welcomeTimer = null;
-
-function expandWelcomeMessage() {
-    document.getElementById('welcomePreview').style.display = 'none';
-    document.getElementById('welcomeFull').style.display = 'block';
-
-    // പഴയ ടൈമർ ഉണ്ടെങ്കിൽ ക്ലിയർ ചെയ്യുന്നു
-    if (welcomeTimer) clearTimeout(welcomeTimer);
-
-    // 3 മിനിറ്റിനു ശേഷം (180,000 milliseconds) സ്വയം Reset ആകുന്നു
-    welcomeTimer = setTimeout(function() {
-        resetWelcomeMessage();
-    }, 180000);
-}
-
-function resetWelcomeMessage() {
-    document.getElementById('welcomeFull').style.display = 'none';
-    document.getElementById('welcomePreview').style.display = 'block';
-
-    if (welcomeTimer) clearTimeout(welcomeTimer);
-}
-</script>
-
-<script>
-<!-- 002 -->
-function showFullMessage() {
-<!-- 003 -->
-    document.getElementById("messagePreview").style.display = "block";
-<!-- 004 -->
-    document.getElementById("messageFull").style.display = "block";
-<!-- 005 -->
-
-<!-- 006 -->
-    const moreButton = document.querySelector("#messagePreview button");
-<!-- 007 -->
-    if (moreButton) moreButton.style.display = "none";
-<!-- 008 -->
-}
-<!-- 009 -->
-
-<!-- 010 -->
-function resetMessage() {
-<!-- 011 -->
-    document.getElementById("messageFull").style.display = "none";
-<!-- 012 -->
-
-<!-- 013 -->
-    const moreButton = document.querySelector("#messagePreview button");
-<!-- 014 -->
-    if (moreButton) moreButton.style.display = "inline-block";
-<!-- 015 -->
-}
-<!-- 016 -->
 </script>
 
 <!-- 013 -->
+  <!-- 013 -->
 </div>
       </div>
       <div class="hunger-footer notranslate" translate="no">YOUR PURCHASE SATISFIES A HUNGER™</div>
