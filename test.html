@@ -455,7 +455,23 @@ function analyticsAffiliate(shopName, url){
     shop: shopName,
     url: url
   });
-}   
+}
+   /* 001 */
+document.addEventListener("click", function(e){
+  const card = e.target.closest(".shopCard");
+  if (!card) return;
+
+  const shopName = card.querySelector(".shopName")?.innerText || "unknown";
+
+  const shop = shopsArray.find(s => s.n === shopName);
+  if (!shop) return;
+
+  if ((shop.a || "").trim() === "") {
+     analyticsExternal(shop.u);
+  } else {
+   analyticsAffiliate(shopName, shop.u);
+  }
+});
 </script>
 
 <style>
