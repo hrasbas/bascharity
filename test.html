@@ -983,6 +983,8 @@ function expandWelcomeMessage() {
     if (!welcomeExtra || !moreBtnContainer) return;
 
     welcomeExtra.style.display = 'block';
+   
+basTrack("welcome_more_click");
     moreBtnContainer.style.display = 'none';
 
     if (welcomeTimer) {
