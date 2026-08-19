@@ -6000,12 +6000,16 @@ YOUR PURCHASE SATISFIES A HUNGER™
 
 })();
 </script>  
-<!-- SHOP LIST: 50 + MORE / LESS -->
+             <!-- PERFECT SHOP LIMIT & MORE/LESS + SOON MESSAGE SCRIPT -->
 <style>
-.bas-shop-more-btn {
-    display: block;
-    margin: 18px auto;
-    padding: 9px 22px;
+  .bas-shop-btn-container {
+    text-align: center;
+    margin: 20px auto;
+  }
+  .bas-shop-more-btn {
+    display: inline-block;
+    margin: 10px auto;
+    padding: 10px 24px;
     background: #34383D;
     color: #00FF66;
     border: 1px solid #AEB4BC;
@@ -6013,125 +6017,115 @@ YOUR PURCHASE SATISFIES A HUNGER™
     font-size: 18px;
     font-weight: bold;
     cursor: pointer;
-}
-
-.bas-shop-more-btn:hover {
+    transition: background 0.3s;
+  }
+  .bas-shop-more-btn:hover {
     background: #454A50;
-}
+  }
+  .bas-more-shops-soon {
+    text-align: center;
+    margin: 15px auto 25px;
+    padding: 10px 15px;
+    color: #00FF66;
+    font-size: 18px;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+  }
 </style>
 
 <script>
 (function () {
+  const SHOW_COUNT = 50;
 
-    const SHOW_COUNT = 50;
+  function setupShopControls() {
+    const shopList = document.getElementById("categoryShops");
+    if (!shopList) return;
 
-    function setupShopLimit() {
+    // പഴയ കൺട്രോളുകൾ ഉണ്ടെങ്കിൽ നീക്കം ചെയ്യുക
+    const oldWrapper = document.getElementById("basShopControlsWrapper");
+    if (oldWrapper) oldWrapper.remove();
 
-        const shopList = document.getElementById("categoryShops");
+    const shops = Array.from(shopList.querySelectorAll(":scope > .shopCard"));
+    if (shops.length === 0) return;
 
-        if (!shopList) return;
+    // കൺട്രോളുകൾ വെക്കാനുള്ള പ്രധാന കണ്ടെയ്നർ
+    const wrapper = document.createElement("div");
+    wrapper.id = "basShopControlsWrapper";
 
-        /*
-         * Remove old controls if the country/category is changed.
-         */
-        const oldMore = document.getElementById("basShopMoreBtn");
-        if (oldMore) oldMore.remove();
+    // 1. "MORE SHOPS WILL BE ADDED SOON" മെസ്സേജ്
+    const soonMsg = document.createElement("div");
+    soonMsg.className = "bas-more-shops-soon notranslate";
+    soonMsg.textContent = "MORE SHOPS WILL BE ADDED SOON";
 
-        const oldLess = document.getElementById("basShopLessBtn");
-        if (oldLess) oldLess.remove();
-
-        const shops = Array.from(
-            shopList.querySelectorAll(":scope > .shopCard")
-        );
-
-        if (shops.length <= SHOW_COUNT) return;
-
-        /*
-         * First 50 visible.
-         * Remaining shops hidden.
-         */
-        shops.forEach(function (shop, index) {
-            shop.style.display = index < SHOW_COUNT ? "" : "none";
-        });
-
-        /*
-         * MORE button
-         */
-        const more = document.createElement("button");
-        more.id = "basShopMoreBtn";
-        more.className = "bas-shop-more-btn";
-        more.textContent = "MORE";
-
-        more.onclick = function () {
-
-            shops.forEach(function (shop) {
-                shop.style.display = "";
-            });
-
-            more.style.display = "none";
-            less.style.display = "block";
-        };
-
-        /*
-         * LESS button
-         */
-        const less = document.createElement("button");
-        less.id = "basShopLessBtn";
-        less.className = "bas-shop-more-btn";
-        less.textContent = "LESS";
-        less.style.display = "none";
-
-        less.onclick = function () {
-
-            shops.forEach(function (shop, index) {
-                shop.style.display = index < SHOW_COUNT ? "" : "none";
-            });
-
-            less.style.display = "none";
-            more.style.display = "block";
-
-            shopList.scrollIntoView({
-                behavior: "smooth",
-                block: "start"
-            });
-        };
-
-        shopList.insertAdjacentElement("afterend", more);
-        more.insertAdjacentElement("afterend", less);
+    // 50-ൽ കുറവ് ഷോപ്പുകൾ മാത്രമാണെങ്കിൽ
+    if (shops.length <= SHOW_COUNT) {
+      shops.forEach(shop => shop.style.display = "");
+      wrapper.appendChild(soonMsg);
+      shopList.insertAdjacentElement("afterend", wrapper);
+      return;
     }
 
-
-    /*
-     * Watch for country/category shop-list changes.
-     */
-    let timer;
-
-    const observer = new MutationObserver(function () {
-
-        clearTimeout(timer);
-
-        timer = setTimeout(function () {
-            setupShopLimit();
-        }, 100);
-
+    // 50-ൽ കൂടുതൽ ഉണ്ടെങ്കിൽ ആദ്യ 50 മാത്രം കാണിക്കുക
+    shops.forEach((shop, index) => {
+      shop.style.display = index < SHOW_COUNT ? "" : "none";
     });
 
-    document.addEventListener("DOMContentLoaded", function () {
+    // MORE / LESS ബട്ടൺ
+    const btn = document.createElement("button");
+    btn.className = "bas-shop-more-btn notranslate";
+    btn.textContent = "MORE SHOPS";
 
-        const shopList = document.getElementById("categoryShops");
+    let isExpanded = false;
 
-        if (!shopList) return;
-
-        observer.observe(shopList, {
-            childList: true
+    btn.onclick = function () {
+      if (!isExpanded) {
+        // MORE അമർത്തുമ്പോൾ (എല്ലാ ഷോപ്പുകളും കാണിക്കും)
+        shops.forEach(shop => shop.style.display = "");
+        btn.textContent = "LESS SHOPS";
+        soonMsg.style.display = "block"; // മെസ്സേജ് ഏറ്റവും താഴെ തെളിയും
+        isExpanded = true;
+      } else {
+        // LESS അമർത്തുമ്പോൾ (വീണ്ടും 50 ആക്കും)
+        shops.forEach((shop, index) => {
+          shop.style.display = index < SHOW_COUNT ? "" : "none";
         });
+        btn.textContent = "MORE SHOPS";
+        soonMsg.style.display = "none"; // മെസ്സേജ് മറയ്ക്കും
+        isExpanded = false;
 
-        setTimeout(setupShopLimit, 300);
+        shopList.scrollIntoView({ behavior: "smooth", block: "start" });
+      }
+    };
 
-    });
+    const btnContainer = document.createElement("div");
+    btnContainer.className = "bas-shop-btn-container";
+    btnContainer.appendChild(btn);
 
+    soonMsg.style.display = "none"; // തുടക്കത്തിൽ മെസ്സേജ് മറച്ചു വെക്കുന്നു
+
+    wrapper.appendChild(btnContainer);
+    wrapper.appendChild(soonMsg);
+    
+    shopList.insertAdjacentElement("afterend", wrapper);
+  }
+
+  // ലിസ്റ്റിലെ മാറ്റങ്ങൾ നിരീക്ഷിക്കാൻ (Category/Country മാറമ്പോൾ)
+  let timer;
+  const observer = new MutationObserver(function () {
+    clearTimeout(timer);
+    timer = setTimeout(setupShopControls, 150);
+  });
+
+  document.addEventListener("DOMContentLoaded", function () {
+    const shopList = document.getElementById("categoryShops");
+    if (shopList) {
+      observer.observe(shopList, { childList: true });
+    }
+    setTimeout(setupShopControls, 300);
+  });
 })();
 </script>
+
    
 </body> <!-- ഇതിന് തൊട്ടു മുകളിൽ -->
 </html>
