@@ -5999,7 +5999,140 @@ YOUR PURCHASE SATISFIES A HUNGER™
     });
 
 })();
-</script>   
+</script>  
+<!-- SHOP LIST: 50 + MORE / LESS -->
+<style>
+.bas-shop-more-btn {
+    display: block;
+    margin: 18px auto;
+    padding: 9px 22px;
+    background: #34383D;
+    color: #00FF66;
+    border: 1px solid #AEB4BC;
+    border-radius: 10px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.bas-shop-more-btn:hover {
+    background: #454A50;
+}
+</style>
+
+<script>
+(function () {
+
+    const SHOW_COUNT = 50;
+
+    function setupShopLimit() {
+
+        const shopList = document.getElementById("categoryShops");
+
+        if (!shopList) return;
+
+        /*
+         * Remove old controls if the country/category is changed.
+         */
+        const oldMore = document.getElementById("basShopMoreBtn");
+        if (oldMore) oldMore.remove();
+
+        const oldLess = document.getElementById("basShopLessBtn");
+        if (oldLess) oldLess.remove();
+
+        const shops = Array.from(
+            shopList.querySelectorAll(":scope > .shopCard")
+        );
+
+        if (shops.length <= SHOW_COUNT) return;
+
+        /*
+         * First 50 visible.
+         * Remaining shops hidden.
+         */
+        shops.forEach(function (shop, index) {
+            shop.style.display = index < SHOW_COUNT ? "" : "none";
+        });
+
+        /*
+         * MORE button
+         */
+        const more = document.createElement("button");
+        more.id = "basShopMoreBtn";
+        more.className = "bas-shop-more-btn";
+        more.textContent = "MORE";
+
+        more.onclick = function () {
+
+            shops.forEach(function (shop) {
+                shop.style.display = "";
+            });
+
+            more.style.display = "none";
+            less.style.display = "block";
+        };
+
+        /*
+         * LESS button
+         */
+        const less = document.createElement("button");
+        less.id = "basShopLessBtn";
+        less.className = "bas-shop-more-btn";
+        less.textContent = "LESS";
+        less.style.display = "none";
+
+        less.onclick = function () {
+
+            shops.forEach(function (shop, index) {
+                shop.style.display = index < SHOW_COUNT ? "" : "none";
+            });
+
+            less.style.display = "none";
+            more.style.display = "block";
+
+            shopList.scrollIntoView({
+                behavior: "smooth",
+                block: "start"
+            });
+        };
+
+        shopList.insertAdjacentElement("afterend", more);
+        more.insertAdjacentElement("afterend", less);
+    }
+
+
+    /*
+     * Watch for country/category shop-list changes.
+     */
+    let timer;
+
+    const observer = new MutationObserver(function () {
+
+        clearTimeout(timer);
+
+        timer = setTimeout(function () {
+            setupShopLimit();
+        }, 100);
+
+    });
+
+    document.addEventListener("DOMContentLoaded", function () {
+
+        const shopList = document.getElementById("categoryShops");
+
+        if (!shopList) return;
+
+        observer.observe(shopList, {
+            childList: true
+        });
+
+        setTimeout(setupShopLimit, 300);
+
+    });
+
+})();
+</script>
+   
 </body> <!-- ഇതിന് തൊട്ടു മുകളിൽ -->
 </html>
 
