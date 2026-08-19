@@ -6056,7 +6056,7 @@ YOUR PURCHASE SATISFIES A HUNGER™
     let isExpanded = false;
 
     btn.onclick = function () {
-      if (!isExpanded) {/* 6032 */ basTrack("more_shops_click");
+      if (!isExpanded) { basTrack("more_shops_click");
         shops.forEach(shop => shop.style.display = "");
         btn.textContent = "LESS SHOPS";
         soonMsg.style.display = "block";
