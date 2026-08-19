@@ -3,18 +3,22 @@
 <html lang="en">
 <head>
 <style>
-
-  /* പേജിലെ എല്ലാത്തിനും ബാധകമാക്കുന്നു */
+/* പേജിലെ എല്ലാ അനാവശ്യ സെലക്ഷനും തടയാൻ */
   * {
-    -webkit-user-select: none; /* Safari */
-    -moz-user-select: none;    /* Firefox */
-    -ms-user-select: none;     /* IE/Edge */
-    user-select: none;         /* Standard */
-    
-    /* ടച്ച് ചെയ്യുമ്പോൾ വരുന്ന ഹൈലൈറ്റ് കളയാൻ */
-    -webkit-tap-highlight-color: transparent; 
+    -webkit-user-select: none !important;
+    -moz-user-select: none !important;
+    -ms-user-select: none !important;
+    user-select: none !important;
+    -webkit-tap-highlight-color: transparent !important;
   }
-   
+
+  /* സെർച്ച് ബാറുകൾ സാധാരണ പോലെ പ്രവർത്തിക്കാൻ */
+  input, textarea {
+    -webkit-user-select: auto !important;
+    -moz-user-select: auto !important;
+    -ms-user-select: auto !important;
+    user-select: auto !important;
+  }   
 body {
     font-size: 19px;
 }
