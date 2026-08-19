@@ -450,6 +450,12 @@ function analyticsSearch(text){ basTrack("search",{ search_term:text }); }
 function analyticsPWA(){ basTrack("pwa_install"); }
 function analyticsDonation(name){ basTrack("donation_button",{ charity:name }); }
 function analyticsExternal(url){ basTrack("external_link",{ url:url }); }
+function analyticsAffiliate(shopName, url){
+  basTrack("affiliate_click", {
+    shop: shopName,
+    url: url
+  });
+}   
 </script>
 
 <style>
