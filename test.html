@@ -5954,7 +5954,7 @@ YOUR PURCHASE SATISFIES A HUNGER™
   }
 
   function toggleScrollLock(){
-    scrollLocked = !scrollLocked;
+    scrollLocked = !scrollLocked;basTrack(scrollLocked ? "lock" : "unlock");
     const btn = document.getElementById("lockStateBtn");
     if (btn) btn.textContent = scrollLocked ? "UNLOCK" : "LOCK";
     if (scrollLocked) stopManualScroll();
