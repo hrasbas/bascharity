@@ -4,15 +4,16 @@
 <head>
 <style>
 
-  /* അക്ഷരങ്ങൾ സെലക്ട് ആകുന്നത് തടയാൻ */
-    p, span, div, h1, h2, h3, h4, h5, h6 {
-      -webkit-user-select: none;
-      -moz-user-select: none;
-      -ms-user-select: none;
-      user-select: none;
-    }
-
-    /* നിങ്ങളുടെ മറ്റ് CSS കോഡുകൾ ഇവിടെ ഉണ്ടാകും... */
+  /* പേജിലെ എല്ലാത്തിനും ബാധകമാക്കുന്നു */
+  * {
+    -webkit-user-select: none; /* Safari */
+    -moz-user-select: none;    /* Firefox */
+    -ms-user-select: none;     /* IE/Edge */
+    user-select: none;         /* Standard */
+    
+    /* ടച്ച് ചെയ്യുമ്പോൾ വരുന്ന ഹൈലൈറ്റ് കളയാൻ */
+    -webkit-tap-highlight-color: transparent; 
+  }
    
 body {
     font-size: 19px;
