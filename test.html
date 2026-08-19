@@ -1196,7 +1196,7 @@ if (installDiv) installDiv.style.display = 'block';
 
 if (installBtn) {
 installBtn.addEventListener('click', async () => {
-try {
+ analyticsPWA();try {
 if (!deferredPrompt) return;
 if (installDiv) installDiv.style.display = 'none';
 const result = await deferredPrompt.prompt();
