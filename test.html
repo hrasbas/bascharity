@@ -3889,8 +3889,8 @@ A welfare initiative focusing on pain and palliative care, orphan support, ratio
 </p>
 
 <div class="btn-row">
-<div class="trust-btn btn-red" onclick="showDetails9(); basTrack('paracode_details_click')">DETAILS</div> <div class="trust-btn btn-green" onclick="showDonate9()">
-<div class="trust-btn btn-green" onclick="showDonate9(); basTrack('paracode_donation_click')">
+<div class="trust-btn btn-red" onclick="showDetails9(); typeof basTrack === 'function' && basTrack('details_click', {org: 'Guidance India'});">DETAILS</div>
+<div class="trust-btn btn-green" onclick="showDonate9(); typeof basTrack === 'function' && basTrack('donate_click', {org: 'Paracode Welfare'});">
 <span style="font-size:18px;">(India Only)</span>
 </div>
 </div>
