@@ -1,8 +1,19 @@
-   
+    
 <!DOCTYPE html>   
 <html lang="en">
 <head>
 <style>
+
+  /* അക്ഷരങ്ങൾ സെലക്ട് ആകുന്നത് തടയാൻ */
+    p, span, div, h1, h2, h3, h4, h5, h6 {
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+    }
+
+    /* നിങ്ങളുടെ മറ്റ് CSS കോഡുകൾ ഇവിടെ ഉണ്ടാകും... */
+   
 body {
     font-size: 19px;
 }
@@ -5752,27 +5763,27 @@ YOUR PURCHASE SATISFIES A HUNGER™
     overflow: auto;
   }
 </style>
-
-<div id="scrollControlPopup">
+<div id="scrollControlPopup" class="notranslate">
   <!-- 1. Flicker ചെയ്യുന്ന Toggle Button -->
-  <button class="slideToggleBtn" onclick="togglePopupBar()" aria-label="Toggle Bar">
-    <span id="popupToggleArrow" class="flicker">◀</span>
+  <button class="slideToggleBtn notranslate" onclick="togglePopupBar()" aria-label="Toggle Bar">
+    <span id="popupToggleArrow" class="flicker notranslate">◀</span>
   </button>
 
   <!-- 2. നിലവിലുള്ള സ്ക്രോൾ കൺട്രോളുകൾ -->
-  <button class="arrowBtn" id="upBtn" aria-label="Scroll up">▲</button>
+  <button class="arrowBtn notranslate" id="upBtn" aria-label="Scroll up">▲</button>
 
-  <div class="speedWrap">
-    <div class="speedTop">
+  <div class="speedWrap notranslate">
+    <div class="speedTop notranslate">
       <span>SPEED</span>
       <span id="scrollSpeedValue">6</span>
     </div>
     <input id="scrollSpeedSlider" type="range" min="1" max="20" value="6">
   </div>
 
-  <button class="lockBtn" id="lockStateBtn" onclick="toggleScrollLock()">LOCK</button>
-  <button class="arrowBtn" id="downBtn" aria-label="Scroll down">▼</button>
+  <button class="lockBtn notranslate" id="lockStateBtn" onclick="toggleScrollLock()">LOCK</button>
+  <button class="arrowBtn notranslate" id="downBtn" aria-label="Scroll down">▼</button>
 </div>
+
 
 <!-- Auto Scroll Script -->
 <script>
