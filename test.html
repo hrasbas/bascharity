@@ -5252,6 +5252,7 @@ function setupCategoryDropdown() {
 // SEARCH
 categorySearch.addEventListener("input", function () {
   const value = this.value.toLowerCase().trim();
+   analyticsSearch(value);
   startInactivityTimer();
 
   if (value === "") {
