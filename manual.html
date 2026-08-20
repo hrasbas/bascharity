@@ -794,6 +794,59 @@ pages.forEach((page) => {
 
 syncStack();
 startPeekInterval();
+
+<script>
+// ==========================================
+// GOOGLE ANALYTICS TRACKING CODE (CORRECTED)
+// ==========================================
+let sessionStartTime = Date.now();
+let bookOpenCount = 0;
+
+function trackBookOpen() {
+  bookOpenCount++;
+  if (typeof gtag === 'function') {
+    gtag('event', 'book_open', {
+      'event_category': 'BAS Manual',
+      'open_count': bookOpenCount
+    });
+  }
+}
+
+function trackPageView(pageIndex) {
+  let pageName = pageIndex === 1 ? 'Cover Page' : 'Page ' + (pageIndex - 1);
+  if (typeof gtag === 'function') {
+    gtag('event', 'page_view_manual', {
+      'event_category': 'BAS Manual Page Turn',
+      'page_number': pageName,
+      'event_label': pageName
+    });
+  }
+}
+
+pages.forEach((page, index) => {
+  page.addEventListener('pointerup', () => {
+    setTimeout(() => {
+      if (page.dataset.state === 'open') {
+        if (bookOpenCount === 0) {
+          trackBookOpen();
+        }
+        trackPageView(index + 1);
+      }
+    }, 700);
+  });
+});
+
+window.addEventListener('beforeunload', () => {
+  let timeSpentSeconds = Math.round((Date.now() - sessionStartTime) / 1000);
+  if (typeof gtag === 'function') {
+    gtag('event', 'time_spent_manual', {
+      'event_category': 'BAS Manual Engagement',
+      'time_in_seconds': timeSpentSeconds,
+      'event_label': timeSpentSeconds + ' seconds'
+    });
+  }
+});
 </script>
 </body>
 </html>
+
