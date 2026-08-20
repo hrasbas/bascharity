@@ -3728,13 +3728,21 @@ if(document.getElementById("section8")) observer78.observe(document.getElementBy
       gbSlider.scrollLeft = gbScrollLeft - walk;
     });
   }
-   const container = document.querySelector('.gb-card-container'); // കാർഡുകളുടെ Parent Class
+  /*const container = document.querySelector('.gb-card-container'); // കാർഡുകളുടെ Parent Class
 
 container.addEventListener('wheel', (e) => {
   e.preventDefault();
   // സ്‌ക്രോൾ ചെയ്യുന്നതിന്റെ എതിർദിശയിലേക്ക് മൂവ് ചെയ്യിക്കുന്നു
   container.scrollLeft -= e.deltaY; 
-});
+});*/
+      const gbContainer = document.getElementById('gbSliderContainer');
+
+   if (gbContainer) {
+     gbContainer.addEventListener('wheel', (e) => {
+       e.preventDefault();
+       gbContainer.scrollLeft -= e.deltaY; 
+     }, { passive: false });
+   }
 
 </script>
 <!-- INFINITE AUTO/MANUAL SCROLL GREETINGS WIDGET END -->
