@@ -3756,11 +3756,11 @@ container.addEventListener('wheel', (e) => {
 <!-- INFINITE AUTO/MANUAL SCROLL GREETINGS WIDGET END -->
 
    
+            
 <!-- INFINITE AUTO/MANUAL SCROLL GREETINGS WIDGET END -->
- <!-- INFINITE AUTO/MANUAL SCROLL GREETINGS WIDGET END -->
 <style>
 .trust-container{
-max-width:900px; /* Responsive Fix */
+max-width:900px;
 width:96%;
 margin:auto;
 }
@@ -3773,31 +3773,18 @@ text-align:center;
 padding:20px;
 border-radius:12px;
 margin-bottom:25px;
-border: 1.5px solid #C0C0C0;
-box-shadow: 0 0 8px rgba(192,192,192,0.18);
-border-left:6px solid #00e676;
-}
-.trust-title{
-background:#000;
-color:#00e676;
-font-weight:900;
-font-size:28px;
-text-align:center;
-padding:20px;
-border-radius:12px;
-margin-bottom:25px;
-border: 1px solid #C0C0C0;
+border:1.5px solid #C0C0C0;
+box-shadow:0 0 8px rgba(192,192,192,0.18);
 border-left:6px solid #00e676;
 }
 .trust-box {
-  background: #1a1a1a;
-  padding: 22px;
-  border-radius: 12px;
-  border: 1.5px solid #C0C0C0;
-  box-shadow: 0 0 8px rgba(192,192,192,0.18); 
-  border-left: 6px solid #e91e63;
-  box-shadow: 0px 0px 6px rgba(255, 255, 255, 0.15); 
-  margin-bottom: 20px;
+background:#1a1a1a;
+padding:22px;
+border-radius:12px;
+border:1.5px solid #C0C0C0;
+box-shadow:0 0 8px rgba(192,192,192,0.18);
+border-left:6px solid #e91e63;
+margin-bottom:20px;
 }
 .trust-box h1{
 font-size:26px;
@@ -3830,27 +3817,10 @@ cursor:pointer;
 display:flex;
 align-items:center;
 justify-content:center;
-flex-direction: column;
+flex-direction:column;
 }
-.btn-row{
-display:flex;
-gap:10px;
-margin-top:20px;
-}
-.trust-btn{
-padding:16px;
-border-radius:10px;
-font-size:22px;
-font-weight:bold;
-text-align:center;
-cursor:pointer;
-display:flex;
-align-items:center;
-justify-content:center;
-flex-direction: column;
-}
-.btn-red{ background:#8b0000; color:#fff; flex:1; }
-.btn-green{ background:#006400; color:#fff; flex:2; }
+.btn-red{background:#8b0000;color:#fff;flex:1;}
+.btn-green{background:#006400;color:#fff;flex:2;}
 .inner-card{
 background:#111;
 padding:18px;
@@ -3874,6 +3844,179 @@ font-size:22px;
 font-weight:bold;
 cursor:pointer;
 }
+
+.peace-wrapper,
+.vada-wrapper,
+.vision-wrapper{
+max-width:900px;
+width:96%;
+margin:30px auto;
+}
+
+.peace-box,
+.vada-box,
+.vision-box{
+background:#1a1a1a;
+padding:22px;
+border-radius:12px;
+border:1.5px solid #C0C0C0;
+box-shadow:0 0 8px rgba(192,192,192,0.18);
+border-left:6px solid #e91e63;
+color:#fff;
+margin-bottom:20px;
+}
+
+.peace-box h1,
+.vada-box h1,
+.vision-box h1{
+font-size:26px;
+margin-bottom:12px;
+}
+
+.vada-box h2,
+.vision-box h2{
+font-size:22px;
+color:#ffd54f;
+margin-bottom:12px;
+}
+
+.peace-box p,
+.vada-box p,
+.vision-box p{
+font-size:22px;
+line-height:1.7;
+color:#ccc;
+}
+
+.peace-btn-row,
+.vada-btn-row,
+.vision-btn-row{
+display:flex;
+gap:10px;
+margin-top:20px;
+}
+
+.peace-btn,
+.vada-btn,
+.vision-btn,
+.peace-link,
+.vision-link{
+padding:16px;
+border-radius:10px;
+font-size:22px;
+font-weight:bold;
+text-align:center;
+cursor:pointer;
+display:flex;
+align-items:center;
+justify-content:center;
+flex-direction:column;
+text-decoration:none;
+box-sizing:border-box;
+}
+
+.peace-details,
+.vada-details,
+.vision-details{
+background:#8b0000;
+color:#fff;
+flex:1;
+}
+
+.peace-donate,
+.vada-donate,
+.vision-link{
+background:#006400;
+color:#fff;
+flex:2;
+}
+
+.peace-section,
+.vada-section,
+.vision-section{
+display:none;
+}
+
+.peace-card,
+.vada-card,
+.vision-card{
+background:#111;
+padding:18px;
+border-radius:10px;
+border:1px solid #333;
+margin-bottom:14px;
+font-size:22px;
+line-height:1.7;
+border-left:4px solid #00e676;
+color:#fff;
+box-sizing:border-box;
+}
+
+.peace-back,
+.vada-back,
+.vision-back{
+margin-top:20px;
+background:#333;
+color:#fff;
+padding:14px;
+border-radius:10px;
+text-align:center;
+cursor:pointer;
+font-weight:bold;
+font-size:22px;
+}
+
+.vision-impact{
+margin-top:14px;
+font-size:18px;
+line-height:1.8;
+color:#ffd54f;
+}
+
+@media (max-width:600px){
+.trust-title{
+font-size:22px;
+padding:16px;
+}
+.trust-box,
+.peace-box,
+.vada-box,
+.vision-box{
+padding:16px;
+}
+.trust-box h1,
+.peace-box h1,
+.vada-box h1,
+.vision-box h1{
+font-size:20px;
+}
+.trust-sub,
+.trust-box p,
+.peace-box p,
+.vada-box p,
+.vision-box p,
+.inner-card,
+.peace-card,
+.vada-card{
+font-size:16px;
+line-height:1.55;
+}
+.trust-btn,
+.peace-btn,
+.vada-btn,
+.vision-btn,
+.peace-link,
+.vision-link{
+font-size:16px;
+padding:12px 8px;
+}
+.btn-row,
+.peace-btn-row,
+.vada-btn-row,
+.vision-btn-row{
+gap:8px;
+}
+}
 </style>
 
 <div class="trust-container">
@@ -3888,13 +4031,12 @@ A welfare initiative focusing on pain and palliative care, orphan support, ratio
 </p>
 
 <div class="btn-row">
-  <div class="trust-btn btn-red" onclick="showDetails9(); typeof basTrack === 'function' && basTrack('details_click', {org: 'Guidance India'});">DETAILS</div>
-  <div class="trust-btn btn-green" onclick="showDonate9(); typeof basTrack === 'function' && basTrack('donate_click', {org: 'Guidance India'});">
-    Donate Directly &rarr;<br>
-    <span style="font-size:13px;">(India Only)</span>
-  </div>
+<div class="trust-btn btn-red" onclick="showDetails9(); typeof basTrack === 'function' && basTrack('details_click', {org: 'Guidance India'});">DETAILS</div>
+<div class="trust-btn btn-green" onclick="showDonate9(); typeof basTrack === 'function' && basTrack('donate_click', {org: 'Guidance India'});">
+Donate Directly &rarr;<br>
+<span style="font-size:13px;">(India Only)</span>
 </div>
-
+</div>
 
 <div id="details9" class="sub-view">
 <div class="trust-box">
@@ -3944,180 +4086,102 @@ Federal Bank Kizhakkambalam Branch
 
 <script>
 let timer9;
+
 function showDetails9(){
 document.getElementById("details9").style.display="block";
 document.getElementById("donate9").style.display="none";
 window.scrollBy({top:200, behavior:"smooth"});
 startTimer9();
 }
+
 function showDonate9(){
 document.getElementById("details9").style.display="none";
 document.getElementById("donate9").style.display="block";
 window.scrollBy({top:200, behavior:"smooth"});
 startTimer9();
 }
+
 function reset9(){
 document.getElementById("details9").style.display="none";
 document.getElementById("donate9").style.display="none";
 clearTimeout(timer9);
 }
+
 function startTimer9(){
 clearTimeout(timer9);
 timer9=setTimeout(reset9,15000);
 }
 </script>
 
-<style>
-.peace-wrapper{
-max-width:900px; /* Responsive Fix */
-width:96%;
-margin:30px auto;
-}
-.peace-box {
-  background: #1a1a1a;
-  padding: 22px;
-  border-radius: 12px;
-  border: 1.5px solid #C0C0C0;
-  box-shadow: 0 0 8px rgba(192,192,192,0.18);
-  border-left: 6px solid #e91e63;
-  box-shadow: 0px 0px 6px rgba(255, 255, 255, 0.15); 
-  color: #fff;
-  margin-bottom: 20px;
-}
-.peace-box h1{ font-size:26px; margin-bottom:12px; }
-.peace-sub{ font-size:22px; color:#4fc3f7; margin-bottom:14px; display:block; font-weight:700; }
-.peace-box p{ font-size:22px; line-height:1.7; color:#ccc; }
-.peace-btn-row{ display:flex; gap:10px; margin-top:20px; }
-.peace-btn{ padding:16px; border-radius:10px; font-weight:800; cursor:pointer; font-size:22px; text-align:center; }
-.peace-btn-details{ background:#8b0000; color:#fff; flex:1; }
-.peace-section{ display:none; }
-.peace-card{ background:#111; padding:16px; border-radius:10px; border:1px solid #333; margin-bottom:14px; font-size:22px; line-height:1.7; border-left:4px solid #00e676; }
-.peace-link{ display:inline-block; margin-top:10px; padding:12px 18px; background:#00c853; color:#000; border-radius:10px; font-weight:bold; text-decoration:none; font-size:22px; }
-.peace-back{ margin-top:20px; background:#333; color:#fff; padding:14px; border-radius:10px; text-align:center; cursor:pointer; font-weight:bold; font-size:22px; }
-</style>
 <div class="peace-wrapper">
-  <div class="peace-box">
-    <h1>Peace Valley – Kothamangalam</h1>
-    <p>A humanitarian institution providing shelter, medical care, rehabilitation and daily support for the needy and vulnerable.</p>
-    <div class="peace-btn-row">
-      <div class="peace-btn peace-details" onclick="peaceDetails10()">Details</div>
-      <a href="https://peacevalley.org.in/donation/" target="_blank" class="peace-btn peace-donate">
-        Donate Directly &rarr;
-        <span style="font-size:18px;">(Global)</span>
-      </a>
-    </div>
-  </div>
+<div class="peace-box">
+<h1>Peace Valley – Kothamangalam</h1>
+<p>A humanitarian institution providing shelter, medical care, rehabilitation and daily support for the needy and vulnerable.</p>
 
+<div class="peace-btn-row">
+<div class="peace-btn peace-details" onclick="peaceDetails10(); typeof basTrack === 'function' && basTrack('details_click', {org: 'Peace Valley'});">Details</div>
 
-  <div id="peaceDetails10" class="peace-section">
-    <div class="peace-box">
-      <h2>About Peace Valley</h2>
-      <div class="peace-card">Peace Valley is a humanitarian organization dedicated to providing care...</div>
-      <div class="peace-back" onclick="peaceReset10()">BACK</div>
-    </div>
-  </div>
-
-  <div id="peaceDonate10" class="peace-section">
-    <div class="peace-box">
-      <h1>Support Categories</h1>
-      <div class="peace-card">
-        <b>Food and Daily Care</b><br>
-        <a class="trust-btn" href="https://peacevalley.org.in/donation/" target="_blank">
-          Donate Directly &rarr;
-          <span style="font-size:13px;">(Global)</span>
-        </a>
-      </div>
-      <div class="peace-back" onclick="peaceReset10()">BACK</div>
-    </div>
-  </div>
+<a href="https://peacevalley.org.in/donation/" target="_blank" class="peace-btn peace-donate" onclick="typeof basTrack === 'function' && basTrack('donate_click', {org: 'Peace Valley', link_url: this.href});">
+Donate Directly &rarr;
+<span style="font-size:18px;">(Global)</span>
+</a>
+</div>
 </div>
 
+<div id="peaceDetails10" class="peace-section">
+<div class="peace-box">
+<h2>About Peace Valley</h2>
+<div class="peace-card">Peace Valley is a humanitarian organization dedicated to providing care...</div>
+<div class="peace-back" onclick="peaceReset10()">BACK</div>
+</div>
+</div>
+
+<div id="peaceDonate10" class="peace-section">
+<div class="peace-box">
+<h1>Support Categories</h1>
+<div class="peace-card">
+<b>Food and Daily Care</b><br>
+<a class="trust-btn" href="https://peacevalley.org.in/donation/" target="_blank" onclick="typeof basTrack === 'function' && basTrack('donate_click', {org: 'Peace Valley', link_url: this.href});">
+Donate Directly &rarr;
+<span style="font-size:13px;">(Global)</span>
+</a>
+</div>
+<div class="peace-back" onclick="peaceReset10()">BACK</div>
+</div>
+</div>
+</div>
 
 <script>
 let timer10;
+
 function peaceDetails10(){
 document.getElementById("peaceDetails10").style.display="block";
 document.getElementById("peaceDonate10").style.display="none";
 window.scrollBy({top:200, behavior:"smooth"});
 startTimer10();
 }
+
 function peaceReset10(){
 document.getElementById("peaceDetails10").style.display="none";
 document.getElementById("peaceDonate10").style.display="none";
 clearTimeout(timer10);
 }
+
 function startTimer10(){
 clearTimeout(timer10);
 timer10=setTimeout(peaceReset10,15000);
 }
 </script>
 
- <style>
-.vada-wrapper {
-max-width: 900px;
-width:96%;
-margin: 30px auto;
-}
-.vada-box {
-  background: #1a1a1a;
-  padding: 22px;
-  border-radius: 12px;
-  border:1.5px solid #C0C0C0;
- box-shadow: 0 0 8px rgba(192,192,192,0.18);
-  border-left: 6px solid #e53935;
-  box-shadow: 0px 0px 6px rgba(255, 255, 255, 0.15); 
-  color: #fff;
-  margin-bottom: 20px;
-}
-.vada-box h1 { font-size: 26px; margin-bottom: 10px; }
-.vada-box h2 { font-size: 22px; color: #ffd54f; margin-bottom: 12px; }
-.vada-box p { font-size: 22px; line-height: 1.7; color: #ccc; }
-.vada-btn-row { display: flex; gap: 10px; margin-top: 20px; }
-.vada-btn {
-padding: 16px;
-border-radius: 10px;
-font-size: 22px;
-font-weight: bold;
-text-align: center;
-cursor: pointer;
-display: flex;
-align-items: center;
-justify-content: center;
-flex-direction: column;
-}
-.vada-details { background: #b71c1c; color: #fff; flex: 1; }
-.vada-donate { background: #0b5e20; color: #fff; flex: 2; }
-.vada-section { display: none; }
-.vada-card {
-background: #111;
-padding: 18px;
-border-radius: 10px;
-border: 1px solid #C0C0C0;
-box-shadow: 0 0 8px rgba(192,192,192,0.18);margin-bottom: 14px;
-font-size: 22px;
-line-height: 1.7;
-border-left: 4px solid #00e676;
-}
-.vada-back {
-margin-top: 20px;
-background: #333;
-color: #fff;
-padding: 14px;
-border-radius: 10px;
-text-align: center;
-cursor: pointer;
-font-weight: bold;
-font-size: 22px;
-}
-</style>
-
 <div class="vada-wrapper">
 <div class="vada-box">
 <h1>Vadanappally Orphanage</h1>
 <p>A charitable institution dedicated to the care, protection and upbringing of orphaned and destitute children through education, shelter and moral support.</p>
+
 <div class="vada-btn-row">
-<div class="vada-btn vada-details" onclick="vadaDetails11()">Details</div>
-<div class="vada-btn vada-donate" onclick="vadaDonate11()">
+<div class="vada-btn vada-details" onclick="vadaDetails11(); typeof basTrack === 'function' && basTrack('details_click', {org: 'Vadanappally Orphanage'});">Details</div>
+
+<div class="vada-btn vada-donate" onclick="vadaDonate11(); typeof basTrack === 'function' && basTrack('donate_click', {org: 'Vadanappally Orphanage'});">
 Donate Directly→
 <span style="font-size:18px;">(India Only)</span>
 </div>
@@ -4141,8 +4205,14 @@ Donate Directly→
 <div class="vada-card">
 <b>Bank Details</b><br><br>
 A/c Name : VATANAPPALLY ORPHANAGE COMMITTEE<br><br>
-A/c No : 917020025053101<br>Bank : Axis Bank<br>Branch : Vatanappally, Thrissur<br>IFSC : UTIB0003224<br><br>
-A/c No : 10532244438<br>Bank : SBI<br>Branch : Vatanappally, Thrissur<br>IFSC : SBIN0008683
+A/c No : 917020025053101<br>
+Bank : Axis Bank<br>
+Branch : Vatanappally, Thrissur<br>
+IFSC : UTIB0003224<br><br>
+A/c No : 10532244438<br>
+Bank : SBI<br>
+Branch : Vatanappally, Thrissur<br>
+IFSC : SBIN0008683
 </div>
 <div class="vada-back" onclick="vadaReset11()">BACK</div>
 </div>
@@ -4151,18 +4221,21 @@ A/c No : 10532244438<br>Bank : SBI<br>Branch : Vatanappally, Thrissur<br>IFSC : 
 
 <script>
 let timer11;
+
 function vadaDetails11(){
 document.getElementById("vadaDetails11").style.display="block";
 document.getElementById("vadaDonate11").style.display="none";
 scrollTopSmooth("vadaDetails11");
 startTimer11();
 }
+
 function vadaDonate11(){
 document.getElementById("vadaDetails11").style.display="none";
 document.getElementById("vadaDonate11").style.display="block";
 scrollTopSmooth("vadaDonate11");
 startTimer11();
 }
+
 function vadaReset11(){
 document.getElementById("vadaDetails11").style.display="none";
 document.getElementById("vadaDonate11").style.display="none";
@@ -4174,84 +4247,11 @@ timer11=setTimeout(vadaReset11,20000);
 }
 </script>
 
-<style>
-.vision-wrapper {
-max-width: 900px;
-width: 96%;
-margin: 30px auto;
-}
-.vision-box {
-  background: #121212;
-  padding: 22px;
-  border-radius: 16px;
-border: 1px solid #C0C0C0;
-box-shadow: 0 0 8px rgba(192,192,192,0.18);
-  border-left: 6px solid #e91e63; /* ഇടത് വശത്തെ ബോർഡർ കളർ */
-  box-shadow: 0px 0px 6px rgba(255, 255, 255, 0.15); /* നേർത്ത തിളക്കം നൽകുന്നു */
-  color: #fff;
-  margin-bottom: 22px;
-  position: relative;
-  overflow: hidden;
-}
-
-.vision-box h1 { font-size: 26px; margin: 0 0 12px; }
-.vision-box h2 { font-size: 22px; color: #ffd54f; margin-bottom: 10px; }
-.vision-box p { font-size: 22px; line-height: 1.6; color: #ddd; }
-.vision-impact { margin-top: 14px; font-size: 18px; line-height: 1.8; color: #ffd54f; }
-.vision-btn-row { display: flex; gap: 14px; margin-top: 18px; }
-.vision-btn {
-flex: 1;
-padding: 14px 0;
-text-align: center;
-border-radius: 12px;
-font-weight: bold;
-cursor: pointer;
-display: flex;
-align-items: center;
-justify-content: center;
-flex-direction: column;
-}
-.vision-details { background: #b71c1c; color: #fff; }
-.vision-link {
-display: flex;
-flex: 1;
-align-items: center;
-justify-content: center;
-flex-direction: column;
-padding: 14px 0;
-background: #0b5e20;
-color: #fff;
-border-radius: 12px;
-font-weight: bold;
-text-decoration: none;
-text-align: center;
-}
-.vision-section { display: none; margin-top: 18px; }
-.vision-card {
-background: #181818;
-padding: 18px;
-border-radius: 12px;
-margin-bottom: 12px;
-font-size: 20px;
-line-height: 1.6;
-}
-.vision-back {
-margin-top: 20px;
-background: #333;
-color: #fff;
-padding: 14px;
-border-radius: 10px;
-text-align: center;
-cursor: pointer;
-font-weight: bold;
-font-size: 22px;
-}
-</style>
-
 <div class="vision-wrapper">
 <div class="vision-box">
 <h1>Vision 2026 – Human Welfare Foundation</h1>
 <p>Humanitarian initiatives focusing on hunger relief, education, healthcare, orphan care and disaster response.</p>
+
 <div class="vision-impact">
 ✔️ <b>20,000,000+</b> Lives Impacted<br>
 ✔️ <b>6000+</b> Projects Implemented<br>
@@ -4259,20 +4259,26 @@ font-size: 22px;
 ✔️ <b>23+</b> States Covered<br>
 ✔️ <b>16+</b> Years of Service
 </div>
+
 <div class="vision-btn-row">
-<div class="vision-btn vision-details" onclick="visionDetails12()">Details</div>
-<a class="vision-link" href="https://www.hwfindia.org/donate/" target="_blank">
+<div class="vision-btn vision-details" onclick="visionDetails12(); typeof basTrack === 'function' && basTrack('details_click', {org: 'Vision 2026'});">Details</div>
+
+<a class="vision-link" href="https://www.hwfindia.org/donate/" target="_blank" onclick="typeof basTrack === 'function' && basTrack('donate_click', {org: 'Vision 2026', link_url: this.href});">
 Donate Directly⇒
 <span style="font-size:18px;">(Global)</span>
 </a>
 </div>
-</div> 
+</div>
 
 <div id="visionDetails12" class="vision-section">
 <div class="vision-box">
 <h2>About Vision 2026 – HWF</h2>
 <p>Vision 2026 is a flagship humanitarian mission of Human Welfare Foundation, addressing hunger, education, healthcare, orphan care, disaster relief and sustainable livelihood development.</p>
-<p><a href="https://www.hwfindia.org/about-hwf/" target="_blank" style="color:#4fc3f7;">For more details →</a></p>
+<p>
+<a href="https://www.hwfindia.org/about-hwf/" target="_blank" style="color:#4fc3f7;" onclick="typeof basTrack === 'function' && basTrack('outbound_click', {org: 'Vision 2026', link_url: this.href});">
+For more details →
+</a>
+</p>
 <div class="vision-back" onclick="visionReset12()">BACK</div>
 </div>
 </div>
@@ -4280,47 +4286,33 @@ Donate Directly⇒
 
 <script>
 let timer12;
+
 function visionDetails12(){
 document.getElementById("visionDetails12").style.display="block";
 scrollTopSmooth("visionDetails12");
 startTimer12();
 }
+
 function visionReset12(){
 document.getElementById("visionDetails12").style.display="none";
 clearTimeout(timer12);
 }
+
 function startTimer12(){
 clearTimeout(timer12);
 timer12=setTimeout(visionReset12,20000);
 }
 
 function scrollTopSmooth(el){
-const target = document.getElementById(el);
-if(target) target.scrollIntoView({ behavior:"smooth", block:"start" });
+const target=document.getElementById(el);
+if(target){
+target.scrollIntoView({
+behavior:"smooth",
+block:"start"
+});
+}
 }
 </script>
-    <style>
-.global-support-container {
-    width: 96%;
-    max-width: 900px;
-    margin: 20px auto;
-    border: 1.5px solid #C0C0C0;
-    box-shadow: 0 0 8px rgba(192,192,192,0.18);
-    border-radius: 16px;
-    padding: 22px;
-    background: #121212;
-    box-shadow: 0 0 8px rgba(192,192,192,0.18);
-    box-sizing: border-box;
-}
-
-  .support-title {
-    text-align: center;
-    color: #fff;
-    font-size: 24px;
-    margin-bottom: 25px;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-  }
 
   .charity-block {
     margin-bottom: 15px;
