@@ -6115,8 +6115,18 @@ YOUR PURCHASE SATISFIES A HUNGER™
       observer.observe(shopList, { childList: true });
     }
     setTimeout(setupShopControls, 300);
+     document.querySelectorAll('.global-support-btn').forEach(button => {
+  button.addEventListener('click', function() {
+    gtag('event', 'click', {
+      event_category: 'BAS Global Support',
+      event_label: 'donate_details'
+    });
+  });
+});
   });
 })();
+
+   
 </script>
 
    
