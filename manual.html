@@ -30,21 +30,22 @@ body {
 
 .stage {
   position: relative;
-  left: 50px;
-
-  width:480px;
-  height:1000px;
-  top:2.5cm;
+  left:50px;
+  width: 550px;
+  height: 1200px; 
+  top:1.1cm; 
   margin-left: auto;
   margin-right: auto;
-  margin-bottom: 3cm;
-
+  margin-top: 1cm; 
+  margin-bottom: 2cm;
   perspective: 2500px;
   perspective-origin: 50% 50%;
   transform-style: preserve-3d;
   touch-action: none;
-  transform: translateX(-40px) rotateY(-18deg) rotateX(6deg);
+  transform-origin: bottom center; 
+  transform: translateX(-40px) rotateY(-18deg) rotateX(6deg) scale(1.2);
 }
+
 
 .back-cover-base {
   position: absolute;
