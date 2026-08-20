@@ -3994,44 +3994,42 @@ margin:30px auto;
 .peace-card{ background:#111; padding:16px; border-radius:10px; border:1px solid #333; margin-bottom:14px; font-size:22px; line-height:1.7; border-left:4px solid #00e676; }
 .peace-link{ display:inline-block; margin-top:10px; padding:12px 18px; background:#00c853; color:#000; border-radius:10px; font-weight:bold; text-decoration:none; font-size:22px; }
 .peace-back{ margin-top:20px; background:#333; color:#fff; padding:14px; border-radius:10px; text-align:center; cursor:pointer; font-weight:bold; font-size:22px; }
-</style>
-<div class="peace-wrapper">
+</style><div class="peace-wrapper">
   <div class="peace-box">
     <h1>Peace Valley – Kothamangalam</h1>
     <p>A humanitarian institution providing shelter, medical care, rehabilitation and daily support for the needy and vulnerable.</p>
-     <div class="peace-btn-row">
+    <div class="peace-btn-row">
       <div class="peace-btn peace-details" onclick="peaceDetails10()">Details</div>
-      <a href="https://peacevalley.org.in/donation/" target="_blank" class="peace-btn peace-donate" onclick="typeof basTrack === 'function' && basTrack('donate_click', {org: 'Peace Valley'});">
+      <a href="https://peacevalley.org.in/donation/" target="_blank" class="peace-btn peace-donate">
         Donate Directly &rarr;
         <span style="font-size:18px;">(Global)</span>
       </a>
     </div>
   </div>
- <div id="peaceDetails10" class="peace-section">
+
+  <div id="peaceDetails10" class="peace-section">
     <div class="peace-box">
       <h2>About Peace Valley</h2>
-      <div class="peace-card">Peace Valley is a humanitarian organization dedicated to providing care, treatment, and rehabilitation for the destitute, mentally ill, and needy.</div>
+      <div class="peace-card">Peace Valley is a humanitarian organization dedicated to providing care...</div>
+      <div class="peace-back" onclick="peaceReset10()">BACK</div>
+    </div>
+  </div>
+
+  <div id="peaceDonate10" class="peace-section">
+    <div class="peace-box">
+      <h1>Support Categories</h1>
+      <div class="peace-card">
+        <b>Food and Daily Care</b><br>
+        <a class="trust-btn" href="https://peacevalley.org.in/donation/" target="_blank">
+          Donate Directly &rarr;
+          <span style="font-size:13px;">(Global)</span>
+        </a>
+      </div>
       <div class="peace-back" onclick="peaceReset10()">BACK</div>
     </div>
   </div>
 </div>
 
-
-<div id="peaceDonate10" class="peace-section">
-<div class="peace-box">
-<h1>Support Categories</h1>
-<div class="peace-card">
-<b>Food and Daily Care</b><br>
-<a class="trust-btn" href="https://peacevalley.org.in/donation/" target="_blank" style="display: flex; flex-direction: column; align-items: center; justify-content: center; text-decoration: none;" onclick="typeof basTrack === 'function' && basTrack('donate_click', {org: 'Peace Valley'});">
-  Donate Directly &rarr;
-  <span style="font-size:13px;">(Global)</span>
-</a>
-</div>
-<div class="peace-back" onclick="peaceReset10()">BACK</div>
-</div>
-</div>
-</div>
-</div>
 
 <script>
 let timer10;
