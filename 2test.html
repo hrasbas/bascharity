@@ -6096,7 +6096,16 @@ YOUR PURCHASE SATISFIES A HUNGER™
   });
 })();
 </script>
-
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  document.querySelectorAll("*").forEach(el => {
+    const size = parseFloat(getComputedStyle(el).fontSize);
+    if (size < 19) {
+      el.style.fontSize = "19px";
+    }
+  });
+});
+</script>
    
 </body> <!-- ഇതിന് തൊട്ടു മുകളിൽ -->
 </html>
