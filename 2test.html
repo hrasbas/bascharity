@@ -1,4 +1,5 @@
- <!DOCTYPE html>   
+    
+<!DOCTYPE html>   
 <html lang="en">
 <head>
 <style>
@@ -259,10 +260,13 @@ margin-right:auto;
   font-size:30px;
   font-weight:900;
   font-style:italic;
-  color: #6B7280;
+  /*color:#9a9a9a;*/
+  Color: #6B7280
   line-height:1.8; 
-  margin-bottom:1.5cm;
+  /* 001 */
+margin-bottom:1.5cm;
 }
+
 
 .lang-box {
   margin: 0 auto 28px;
@@ -452,6 +456,7 @@ function analyticsAffiliate(shopName, url){
     url: url
   });
 }
+   /* 001 */
 document.addEventListener("click", function(e){
   const card = e.target.closest(".shopCard");
   if (!card) return;
@@ -471,6 +476,7 @@ document.addEventListener("click", function(e){
 
 <style>
 /* BAS CHARITY — DARK SILVER BUTTON WITH GREEN TEXT */
+
 button:not(#speedScrollBtn),
 a.btn,
 a.button,
@@ -484,6 +490,7 @@ a[role="button"] {
         #292d32 100%
     ) !important;
 
+    /* അക്ഷരങ്ങൾക്ക് മാത്രം തെളിഞ്ഞ പച്ച നിറം */
     color: #00FF66 !important; 
     border: 2px solid #bfc4c9 !important;
     border-radius: 10px !important;
@@ -498,6 +505,7 @@ a[role="button"] {
     transition: all 0.2s ease !important;
 }
 
+/* ബട്ടണിനുള്ളിലെ എല്ലാ ചൈൽഡ് എലിമെന്റുകളുടെയും അക്ഷരങ്ങൾക്ക് പച്ച നിറം നൽകുന്നു */
 button:not(#speedScrollBtn) *,
 a.btn *,
 a.button *,
@@ -538,8 +546,8 @@ a[role="button"]:active {
     filter: brightness(1.2) !important;
 }
 </style>  
-
-<style>
+   <style>
+/* 001 — ALL CHARITY DETAILS / DONATE BUTTONS — DARK SILVER PREMIUM */
 .trust-btn,
 .peace-btn,
 .peace-link,
@@ -569,6 +577,7 @@ a[role="button"]:active {
     text-decoration: none !important;
 }
 
+/* 002 — BUTTON-ന്റെ ഉള്ളിലെ എഴുത്ത് */
 .trust-btn *,
 .peace-btn *,
 .peace-link *,
@@ -580,6 +589,7 @@ a[role="button"]:active {
     color: #d7dce2 !important;
 }
 
+/* 003 — HOVER */
 .trust-btn:hover,
 .peace-btn:hover,
 .peace-link:hover,
@@ -603,8 +613,9 @@ a[role="button"]:active {
         0 0 8px rgba(210,215,220,0.5) !important;
 }
 </style>
-
 <style>
+/* --- COMMON SILVER PREMIUM BORDER --- */
+
 button,
 .lang-btn,
 .country-btn,
@@ -625,6 +636,7 @@ select,
         inset 0 0 2px rgba(255,255,255,0.18) !important;
 }
 
+/* Premium silver button surface */
 button,
 .lang-btn,
 .country-btn,
@@ -641,6 +653,7 @@ button,
     color: #F1F3F5 !important;
 }
 
+/* Hover / touch */
 button:hover,
 .lang-btn:hover,
 .country-btn:hover,
@@ -653,6 +666,7 @@ button:hover,
         inset 0 0 3px rgba(255,255,255,0.22) !important;
 }
 
+/* Silver border for main content boxes */
 .msg-container,
 .question-box,
 .info-box,
@@ -661,13 +675,14 @@ button:hover,
 .charity-card {
     border-color: #AEB4BC !important;
 }
-</style> 
-
-<style>
-* {
+ </style> 
+<!-- <style>
+/* ALL EXISTING BORDERS — SILVER ASH PREMIUM */
+ {
     border-color: #AEB4BC !important;
 }
 
+/* Premium silver glow — buttons only */
 button,
 select,
 a[class*="btn"],
@@ -677,15 +692,54 @@ a[class*="btn"],
     box-shadow:
         0 0 4px rgba(174,180,188,0.55),
         inset 0 0 2px rgba(255,255,255,0.15) !important;
+}
+</style>-->
+<style>
+/* ===== BAS CHARITY — COMMON SILVER PREMIUM THEME ===== */
+
+/* ALL EXISTING BORDER LINES */
+* {
+    border-color: #AEB4BC !important;
+}
+
+/* PREMIUM BUTTONS */
+button,
+select,
+a[class*="btn"],
+[class*="btn"],
+[class*="button"] {
+    border-color: #AEB4BC !important;
+    box-shadow:
+        0 0 4px rgba(174,180,188,0.55),
+        inset 0 0 2px rgba(255,255,255,0.15) !important;
+}
+
+/* BUTTON TEXT */
+button,
+select,
+a[class*="btn"],
+[class*="btn"],
+[class*="button"] {
     color: #F1F3F5 !important;
 }
 
-h1, h2, h3, h4, h5, h6,
+/* ALL HEADINGS — REMOVE DARK GREEN */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: #F1F3F5 !important;
+}
+
+/* HEADING-STYLE ELEMENTS */
 [class*="heading"],
 [class*="title"] {
     color: #F1F3F5 !important;
 }
 
+/* SILVER PREMIUM MAIN BOXES */
 .msg-container,
 .question-box,
 .info-box,
@@ -693,13 +747,24 @@ h1, h2, h3, h4, h5, h6,
 .shop-card,
 .charity-card {
     border-color: #AEB4BC !important;
+}
+
+/* PREMIUM SILVER BORDER GLOW */
+.msg-container,
+.question-box,
+.info-box,
+.country-container,
+.shop-card,
+.charity-card {
     box-shadow:
         0 0 4px rgba(174,180,188,0.35),
         inset 0 0 2px rgba(255,255,255,0.08) !important;
 }
 </style>
-
+ 
 <style> 
+/* BAS CHARITY — FINAL ACTIVE LANGUAGE AND COUNTRY BUTTON */
+
 button.lang-btn.active,
 button.country-btn.active {
     background: linear-gradient(
@@ -752,6 +817,10 @@ button.country-btn.active * {
     });
 })();
 </script>
+  <!-- ===========================
+END OF BAS ANALYTICS
+=========================== -->
+  
 </head> 
 
 <body> 
@@ -765,11 +834,11 @@ button.country-btn.active * {
     </div>
 
     <div class="brand notranslate" translate="no">
-      <div>BAS CHARITY</div>
-      <div class="international">
-        INTERNATIONAL<span class="tm">™</span>
-      </div>
-    </div>
+  <div>BAS CHARITY</div>
+  <div class="international">
+    INTERNATIONAL<span class="tm">™</span>
+  </div>
+</div>
 
     <div class="hub">
       AN INTERNATIONAL SHOPPING HUB
@@ -780,6 +849,7 @@ button.country-btn.active * {
 
 <div class="bas-dedication">
 <div id="dedication-text" class="english-fix">
+
 dedicated to the good, well-being, and peace of all human beings, their parents, other ancestors, and above all, all souls
 </div>
 </div> 
@@ -805,27 +875,36 @@ dedicated to the good, well-being, and peace of all human beings, their parents,
     <div class="msg-container">
       <div class="question-box">
         <span class="english-text">
+          <!-- INTRODUCTION / CONTENT SECTION -->
+ <!-- INTRODUCTION / CONTENT SECTION -->
+<!-- 001 -->
 <div class="info-box" style="background:#000; border:1px solid #C0C0C0; border-radius:15px; padding:25px; margin:25px auto; max-width:800px; color:#C0C0C0; font-size:19px; line-height:1.8; text-align:left; box-shadow:0 0 18px rgba(192,192,192,0.18);">
 
+  <!-- 002 -->
   <h2 style="color:#FFFFFF; text-align:center; font-size:22px; margin-bottom:20px; font-weight:bold;">
     Welcome to BAS CHARITY INTERNATIONAL.
   </h2>
 
+  <!-- ALWAYS VISIBLE TOP SECTION -->
   <div id="welcomeTop">
     <p>
-      Through the simple concept of Buying + Service <span class="notranslate">(Shopping + Charity)</span>, one of the objectives of this initiative is to bring leading online shopping platforms from around the world under one roof and, at the same time, make the majority of the affiliate income generated through them available for HUNGER RELIEF and other similar initiatives.
-    </p>
-    <p>
+      <p>
+  Through the simple concept of Buying + Service <span class="notranslate">(Shopping + Charity)</span>, one of the objectives of this initiative is to bring leading online shopping platforms from around the world under one roof and, at the same time, make the majority of the affiliate income generated through them available for HUNGER RELIEF and other similar initiatives.
+</p>
+  </p>
+  <p>
       Secondly, along with creating public awareness about online scams related to charitable activities, we also introduce certain trusted websites, institutions, and initiatives.
     </p>
   </div>
 
+  <!-- MORE BUTTON CONTAINER -->
   <div id="moreBtnContainer" style="text-align:center; margin-top:10px;">
     <button onclick="expandWelcomeMessage()" style="background:none; border:none; color:#4DA6FF; font-size:19px; font-weight:bold; cursor:pointer; padding:5px 10px;">
       More...
     </button>
   </div>
 
+  <!-- EXPANDABLE EXTRA CONTENT -->
   <div id="welcomeExtra" style="display:none;">
     <p>
       <span style="font-weight:bold; color:#FFFFFF;">Without considering caste or religion,</span> we have endeavoured to give priority to institutions that provide rehabilitation / accommodation / food / patient assistance / care / to vulnerable sections of society. Necessary links are also provided for those who wish to cooperate with or support such initiatives.
@@ -840,21 +919,28 @@ dedicated to the good, well-being, and peace of all human beings, their parents,
     </p>
 
     <div style="text-align:center; margin:25px 0;">
+      <!-- NO TRANSLATE FOR CAPITAL TEXT -->
       <div class="notranslate" style="color:#FFD700; font-weight:bold; font-size:18px; letter-spacing:1px;">
         YOUR PURCHASE SATISFIES A HUNGER™
       </div>
 
+      <!-- TRANSLATABLE SMALL TEXT -->
       <div style="font-size:15px; color:#00FF66; font-weight:bold; margin-top:4px;">
         Your purchase satisfies a hunger™
       </div>
     </div>
 
     <p>
-      Using international connections, numerous important Shoping links have been gathered with considerable effort, and they need to be brought to the people. For this, the cooperation of each and every one of you is essential.
+      Using international connections, numerous important Shoping links have been gathered with considerable effort, and they need to be brought to the people. For this, the cooperation of each and every one of you is essential. Therefore,
     </p>
 
-    <p>
-      This initiative, which was originally planned to be dedicated to my beloved parents <span class="notranslate">(Dedication)</span>, was reorganized so that everyone could participate in this goodness. With the hope that everyone may share in the blessings of this noble cause, it has been dedicated to each one of us, our parents, and our ancestors <span class="notranslate">(Dedicated)</span>.
+    <p><p>
+<p>
+  This initiative, which was originally planned to be dedicated to my beloved parents <span class="notranslate">(Dedication)</span>, was reorganized so that everyone could participate in this goodness. With the hope that everyone may share in the blessings of this noble cause, it has been dedicated to each one of us, our parents, and our ancestors <span class="notranslate">(Dedicated)</span>.
+</p>
+
+   </p>
+
     </p>
 
     <p>
@@ -876,6 +962,7 @@ dedicated to the good, well-being, and peace of all human beings, their parents,
       </p>
     </div>
 
+    <!-- SINGLE RESET BUTTON -->
     <div style="text-align:center; margin-top:20px;">
       <button onclick="resetWelcomeMessage()" style="background:#222; border:1px solid #FF4D4D; color:#FF4D4D; font-size:15px; font-weight:bold; cursor:pointer; padding:6px 16px; border-radius:8px;">
         Reset ✕
@@ -885,6 +972,7 @@ dedicated to the good, well-being, and peace of all human beings, their parents,
 
 </div>
 
+<!-- SCRIPT FOR EXPAND, RESET & 2-MINUTE AUTO RESET -->
 <script>
 let welcomeTimer = null;
 
@@ -929,12 +1017,15 @@ function resetWelcomeMessage() {
     }
 }
 </script>
-</span>
+<!-- 013 -->
 </div>
-<div class="hunger-footer notranslate" translate="no">YOUR PURCHASE SATISFIES A HUNGER™</div>
-</div>
+      </div>
+      <div class="hunger-footer notranslate" translate="no">YOUR PURCHASE SATISFIES A HUNGER™</div>
+    </div>
    
-<div id="install-div">
+ 
+   
+   <div id="install-div">
 <button id="install-btn" type="button">Install App</button>
 </div> 
 
@@ -955,14 +1046,85 @@ function resetWelcomeMessage() {
 
 </div> 
 
+<style>
+/* ബലൂണുകൾ സ്ക്രീനിന്റെ താഴെ മറഞ്ഞുപോകാതിരിക്കാൻ ബോഡിക്ക് നൽകുന്ന പാഡിങ് */
+body {
+padding-bottom: 160px !important;
+} 
+
+/* ബലൂൺ റാപ്പറിന്റെ സ്ക്രീനിലെ പൊസിഷനും ആനിമേഷൻ സ്പീഡും നിശ്ചയിക്കുന്ന സ്റ്റൈൽ */
+#basBalloonWrap {
+position: fixed;
+bottom: 0; left: 0;
+width: 280px; height: 400px;
+z-index: 2147483647;
+pointer-events: none;
+transform: translateY(120%);
+transition: transform 10s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+display: block !important;
+} 
+
+/* ബലൂണുകൾ പല സമയങ്ങളിൽ സ്ക്രീനിൽ കാണിക്കേണ്ട ട്രാൻസ്ഫോം പൊസിഷനുകൾ */
+.state-up { transform: translateY(0%) !important; }
+.state-hide { transform: translateY(120%) !important; }
+.state-rest { transform: translateY(70%) !important; } 
+
+/* ബലൂണിന്റെ കൃത്യമായ റൗണ്ട് ഷേപ്പും ഉള്ളിലെ നൂലും നിപ്പിളും ഉണ്ടാക്കാനുള്ള സ്റ്റൈൽ */
+.bas-ball {
+position: absolute;
+border-radius: 50% 50% 50% 50% / 40% 40% 60% 60%;
+display: flex; flex-direction: column; align-items: center; justify-content: center;
+cursor: pointer; pointer-events: auto;
+box-shadow: inset -8px -8px 20px rgba(0,0,0,0.4);
+} 
+
+.bas-str { position: absolute; width: 1px; background: rgba(255,255,255,0.4); bottom: -1000px; left: 50%; height: 1000px; }
+.bas-nipple { position: absolute; bottom: -10px; width: 18px; height: 10px; background: inherit; clip-path: polygon(20% 0, 80% 0, 100% 100%, 0 100%); } 
+
+/* 1. ഇൻസ്റ്റാൾ ബട്ടൺ ഉള്ളപ്പോൾ കാണിക്കേണ്ട വെള്ള ബലൂണിന്റെയും പച്ചകലർന്ന മഞ്ഞ എഴുത്തിന്റെയും സ്റ്റൈൽ */
+.white-b {
+width: 120px; height: 160px;
+background: #ffffff !important;
+bottom: 220px; left: 60px;
+animation: floatW 5s ease-in-out infinite;
+}
+.white-b .bas-lbl {
+color: #adff2f !important;
+text-shadow: 1px 1px 2px rgba(0,0,0,0.8) !important;
+} 
+
+/* 2. ആപ്പ് ഇൻസ്റ്റാൾഡ് ആയിക്കഴിഞ്ഞാൽ കാണിക്കേണ്ട പച്ചകലർന്ന മഞ്ഞ ബലൂണിന്റെയും കറുത്ത എഴുത്തിന്റെയും സ്റ്റൈൽ */
+.is-pwa-installed {
+width: 120px; height: 170Px;
+background: #adff2f !important;
+bottom: 220px; left: 60px;
+animation: floatW 5s ease-in-out infinite;
+}
+.is-pwa-installed .bas-lbl {
+color: #000000 !important;
+text-shadow: none !important;
+} 
+
+/* നീല ബലൂണിന്റെ വലിപ്പവും അത് ഫ്ലോട്ട് ചെയ്യാനുള്ള ആനിമേഷൻ ലിങ്കും */
+.blue-b { width: 105px; height: 135px; background: #007bff; bottom: 70px; left: 30px; animation: floatB 20s ease-in-out infinite; }
+.bas-sticker { width: 75px; height: 75px; border-radius: 20px; margin-bottom: 5px; border: 1px solid #ddd; }
+.bas-lbl { font-family: sans-serif; font-size: 15px; font-weight: 900; text-align: center; line-height: 1.2; } 
+
+/* ബലൂണുകൾ അന്തരീക്ഷത്തിൽ ഒഴുകി നടക്കാൻ വേണ്ടിയുള്ള ആനിമേഷൻ കീഫ്രെയിമുകൾ */
+@keyframes floatW { 0%, 100% { transform: translate(0, 0) rotate(-3deg); } 50% { transform: translate(35px, 45px) rotate(5deg); } }
+@keyframes floatB { 0%, 100% { transform: translate(0, 0) rotate(4deg); } 50% { transform: translate(25px, -25px) rotate(-4deg); } }
+</style>
+
 <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script> 
 
 <script>
+// ബലൂൺ സ്റ്റാറ്റസ് നിയന്ത്രിക്കുന്നതിനുള്ള ഗ്ലോബൽ വേരിയബിളുകൾ
 let basPrompt;
 const wrap = document.getElementById('basBalloonWrap');
 const stat = document.getElementById('statTxt');
 const ball = document.getElementById('installBall'); 
 
+// 1. ബ്രൗസറിൽ ഇൻസ്റ്റാൾ പ്രോംപ്റ്റ് ലഭ്യമാകുമ്പോൾ വെള്ള ബലൂൺ സെറ്റ് ചെയ്യുന്ന ലോജിക്
 window.addEventListener('beforeinstallprompt', (e) => {
 e.preventDefault();
 basPrompt = e;
@@ -970,15 +1132,17 @@ stat.innerText = "INSTALL";
 ball.className = "bas-ball white-b";
 }); 
 
+// 2. ആപ്പ് മുൻപേ ഇൻസ്റ്റാൾ ചെയ്തിട്ടുണ്ടെങ്കിൽ പച്ചകലർന്ന മഞ്ഞ ബലൂൺ കാണിക്കുന്ന ലോജിക്
 window.addEventListener('DOMContentLoaded', () => {
 setTimeout(() => {
 if (!basPrompt) {
 stat.innerText = "INSTALLED";
 ball.className = "bas-ball is-pwa-installed";
 }
-}, 3000);
+}, 3000); // ബ്രൗസറിന് ലോഡ് ആകാൻ നൽകുന്ന സമയം
 }); 
 
+// ബലൂണുകൾ കൃത്യമായ സമയക്രമത്തിൽ സ്ക്രീനിൽ പൊങ്ങി വരാനും താഴാനും ഉള്ള ടൈമർ ഫങ്ഷൻ
 function initBalloons() {
 setTimeout(() => {
 wrap.classList.add('state-up');
@@ -986,20 +1150,21 @@ setTimeout(() => { wrap.classList.replace('state-up', 'state-hide');
 setTimeout(() => { wrap.classList.replace('state-hide', 'state-rest'); }, 30000); }, 15000); }, 5000);
 } 
 
+// യൂസർ ബലൂണിൽ തൊടുമ്പോൾ അതിനെ വീണ്ടും സ്ക്രീനിലേക്ക് പൂർണ്ണമായി കൊണ്ടുവരുന്ന ഫങ്ഷൻ
 const wake = () => { wrap.classList.remove('state-hide', 'state-rest'); wrap.classList.add('state-up'); };
-if (wrap) {
-  wrap.addEventListener('click', wake); wrap.addEventListener('touchstart', wake);
-}
+wrap.addEventListener('click', wake); wrap.addEventListener('touchstart', wake);
 window.addEventListener('load', initBalloons); 
 
+// സൈറ്റ് ഇൻസ്റ്റാൾ ചെയ്യാനുള്ള ഗൈഡ് ലിങ്ക് വാട്സാപ്പിലേക്ക് ഷെയർ ചെയ്യുന്ന ഫങ്ഷൻ
 function goWhatsApp(){
 let url = "https://bascharity-56f.pages.dev";
 let text = "Save a beautiful icon to your screen\n\n" + url + "\n\nChrome → ⋮ 3 dot → Save to Screen → Install";
 window.open("https://wa.me/?text=" + encodeURIComponent(text), "_blank");
 } 
 
+// ഇൻസ്റ്റാൾ ബലൂണിൽ ക്ലിക്ക് ചെയ്യുമ്പോൾ ഇൻസ്റ്റാളേഷൻ വിൻഡോ കാണിക്കുന്ന ഫങ്ഷൻ
 function handleInstallTap() {
-if (!basPrompt) return;
+if (!basPrompt) return; // ഇൻസ്റ്റാൾഡ് ആണെങ്കിൽ ക്ലിക്ക് പ്രവർത്തിക്കില്ല
 basPrompt.prompt();
 basPrompt.userChoice.then((c) => {
 if (c.outcome === 'accepted') {
@@ -1010,6 +1175,7 @@ basPrompt = null;
 });
 } 
 
+// സിസ്റ്റം വഴി ആപ്പ് വിജയകരമായി ഇൻസ്റ്റാൾ ചെയ്യപ്പെട്ടു കഴിഞ്ഞാൽ ബലൂൺ പച്ചയാക്കുന്ന ലോജിക്
 window.addEventListener('appinstalled', () => {
 stat.innerText = "INSTALLED";
 ball.className = "bas-ball is-pwa-installed";
@@ -1017,6 +1183,7 @@ ball.className = "bas-ball is-pwa-installed";
 </script>
 
 <script>
+// വെബ്സൈറ്റ് മൊബൈലിലേക്ക് ഇൻസ്റ്റാൾ ചെയ്യാനുള്ള പ്രോംപ്റ്റ് നിയന്ത്രിക്കുന്ന ലോജിക്
 let deferredPrompt;
 const installDiv = document.getElementById('install-div');
 const installBtn = document.getElementById('install-btn'); 
@@ -1049,6 +1216,7 @@ deferredPrompt = null;
 if (installDiv) installDiv.style.display = 'none';
 }); 
      
+// ബാക്ക്ഗ്രൗണ്ടിൽ ഓഫ്‌ലൈൻ സപ്പോർട്ടിനായി സർവീസ് വർക്കർ രജിസ്റ്റർ ചെയ്യുന്നു
 if ('serviceWorker' in navigator) {
 window.addEventListener('load', () => {
 navigator.serviceWorker.register('sw.js').catch((err) => {
@@ -1057,6 +1225,7 @@ console.error('SW registration failed:', err);
 });
 } 
 
+// 3D ഭൂമിയും (Earth) അതിനു ചുറ്റും കറങ്ങുന്ന ചന്ദ്രനും (Moon) നിർമ്മിക്കുന്നതിനുള്ള ത്രീ-ജെഎസ് കോഡ്
 let scene, camera, renderer, ambient, loader, earthGroup, earth, moon, angle = 0, running = true, logoSpace, animateRef = null; 
 
 try {
@@ -1079,6 +1248,7 @@ scene.add(ambient);
 loader = new THREE.TextureLoader();
 earthGroup = new THREE.Group(); 
 
+// ഗ്ലോബിലേക്ക് ഭൂമിയുടെ സാറ്റലൈറ്റ് മാപ്പ് ടെക്സ്ചർ ലോഡ് ചെയ്യുന്നു
 earth = new THREE.Mesh(
 new THREE.SphereGeometry(2, 32, 32),
 new THREE.MeshStandardMaterial({
@@ -1094,6 +1264,7 @@ roughness: 0.8
 );
 earthGroup.add(earth); 
 
+// ഭൂമിക്ക് മുകളിലായി കറങ്ങുന്ന രീതിയിൽ BAS എന്ന അക്ഷരങ്ങൾ ക്യാൻവാസ് വഴി വരച്ച് ചേർക്കുന്നു
 let canvas = document.createElement('canvas');
 let ctx = canvas.getContext('2d');
 if (ctx) {
@@ -1115,6 +1286,7 @@ earthGroup.add(textMesh);
 
 scene.add(earthGroup); 
 
+// ഭൂമിക്ക് പുറത്ത് കറങ്ങുന്ന ചെറിയ ചന്ദ്രനെ (Moon Sphere) ഉണ്ടാക്കുന്നു
 moon = new THREE.Mesh(
 new THREE.SphereGeometry(0.35, 16, 16),
 new THREE.MeshStandardMaterial({ color: 0xcccccc })
@@ -1123,6 +1295,7 @@ scene.add(moon);
 
 camera.position.z = 8; 
 
+// ഫോൺ തിരിക്കുമ്പോഴും സ്ക്രീൻ സൈസ് മാറുമ്പോഴും 3D ഗ്ലോബ് തകരാതെ കൃത്യമായി ക്രമീകരിക്കുന്നു
 function resizeRenderer() {
 try {
 const box = document.getElementById("logo-space");
@@ -1138,6 +1311,7 @@ console.error('Resize error:', e);
 
 window.addEventListener("resize", resizeRenderer); 
 
+// നിർത്ഥാതെ 3D ഗ്ലോബും ചന്ദ്രനും ആനിമേറ്റ് ചെയ്ത് കറക്കാനുള്ള ലൂപ്പ് ഫംഗ്ഷൻ
 function animate() {
 if (!running || !renderer || !scene || !camera || !earthGroup || !moon) return;
 animateRef = requestAnimationFrame(animate);
@@ -1149,6 +1323,7 @@ renderer.render(scene, camera);
 }
 animate(); 
 
+// യൂസർ സ്ക്രീൻ സ്ക്രോൾ ചെയ്ത് ലോഗോ കാണുമ്പോൾ മാത്രം 3D റൺ ചെയ്യിച്ച് ബാറ്ററി ലാഭിക്കാനുള്ള ലോജിക്
 if ('IntersectionObserver' in window && logoSpace) {
 let observer = new IntersectionObserver(entries => {
 entries.forEach(entry => {
@@ -1164,6 +1339,7 @@ running = false;
 observer.observe(logoSpace);
 } 
 
+// സിസ്റ്റം ലോഡ് കാരണം WebGL ക്രാഷായാൽ അത് കണ്ടെത്തി റീസ്റ്റാർട്ട് ചെയ്യാനുള്ള സുരക്ഷാ കോഡ്
 if (renderer && renderer.domElement) {
 renderer.domElement.addEventListener('webglcontextlost', function (event) {
 event.preventDefault();
@@ -1181,6 +1357,7 @@ animate();
 console.error('Three.js init error:', e);
 } 
 
+// ഗൂഗിൾ ട്രാൻസ്ലേഷൻ എലമെന്റ് സൈറ്റിലേക്ക് ഇനിഷ്യലൈസ് ചെയ്യുന്ന ഫംഗ്ഷൻ
 function googleTranslateElementInit() {
 try {
 if (window.google && google.translate && google.translate.TranslateElement) {
@@ -1191,6 +1368,10 @@ console.error('Google Translate init error:', e);
 }
 } 
 
+// RULE: Language മാറുമ്പോഴും shop/country മാറരുത്.
+// => last selectedCountry വീണ്ടും load ചെയ്യണം.
+
+// ബട്ടണുകളിൽ ക്ലിക്ക് ചെയ്യുമ്പോൾ ഓരോ പ്രത്യേക ഭാഷകളിലേക്ക് സൈറ്റ് മാറ്റാനുള്ള ലോജിക്
 function changeLang(langCode) {
 try {
 let select = document.querySelector('select.goog-te-combo');
@@ -1202,6 +1383,7 @@ select.dispatchEvent(new Event('change'));
 console.error('Language change error:', e);
 }
 
+// ഭാഷ മാറിയാലും അവസാനമായി തിരഞ്ഞ country വീണ്ടും load ചെയ്യുക
 try {
 const savedCountry = localStorage.getItem("selectedCountry") || "india";
 if (typeof setSelectedCountry === "function") {
@@ -1212,6 +1394,9 @@ console.error('Country reapply after language change error:', e);
 }
 } 
 
+// RULE: English-ലേക്ക് reset ചെയ്താലും shop/country മാറരുത്.
+
+// തിരികെ ഇംഗ്ലീഷ് ഭാഷയിലേക്ക് തന്നെ മാറ്റാനുള്ള റീസെറ്റ് ഫംഗ്ഷൻ
 function resetToEnglish() {
 try {
 let select = document.querySelector('select.goog-te-combo');
@@ -1223,6 +1408,7 @@ select.dispatchEvent(new Event('change'));
 console.error('Reset language error:', e);
 }
 
+// ഇംഗ്ലീഷിലേക്ക് reset ചെയ്താലും shops വീണ്ടും വരണം
 try {
 const savedCountry = localStorage.getItem("selectedCountry") || "india";
 if (typeof setSelectedCountry === "function") {
@@ -1233,6 +1419,7 @@ console.error('Country reapply after reset error:', e);
 }
 } 
 
+// ഗൂഗിളിന്റെ മുകളിലെ അനാവശ്യ ട്രാൻസ്ലേഷൻ ബാനർ ബാർ നിരന്തരം ചെക്ക് ചെയ്ത് ഹൈഡ് ചെയ്യാനുള്ള ടൈമർ
 let translateBannerInterval = setInterval(function () {
 try {
 const frame = document.querySelector('.goog-te-banner-frame');
@@ -1242,6 +1429,7 @@ frame.style.display = 'none';
 } catch (e) {}
 }, 500); 
 
+// യൂസർ മൊബൈലിൽ മറ്റൊരു ആപ്പിലേക്ക് മാറുമ്പോൾ അനിമേഷൻ നിർത്തിവെച്ച് പ്രോസസ്സർ സ്പീഡ് കൂട്ടുന്നു
 document.addEventListener('visibilitychange', function () {
 if (document.hidden) {
 running = false;
@@ -1254,6 +1442,7 @@ if (wasStopped) animate();
 }
 }); 
 
+// പേജ് അടയ്ക്കുകയോ റീലോഡ് ചെയ്യുകയോ ചെയ്യുമ്പോൾ മെമ്മറി ഫ്രീ ചെയ്യാനുള്ള ക്ലീനപ്പ് കോഡ്
 window.addEventListener('beforeunload', function () {
 try {
 clearInterval(translateBannerInterval);
@@ -1263,53 +1452,284 @@ if (animateRef) cancelAnimationFrame(animateRef);
 });
 </script>
 
-<script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+<script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit">
+</script>
+
+<!-- ========================= -->
+<!-- BAS DEDICATION INTEGRATION -->
+<!-- ========================= -->
+
 <script src="dedication.js"></script>
 
 <script>
 (function () {
 
 const map = {
-en:"english", ml:"malayalam", hi:"hindi", ar:"arabic", ta:"tamil", ur:"urdu", es:"spanish", pt:"portuguese"
+en:"english",
+ml:"malayalam",
+hi:"hindi",
+ar:"arabic",
+ta:"tamil",
+ur:"urdu",
+es:"spanish",
+pt:"portuguese",
+zh:"chinese",
+bn:"bengali",
+ru:"russian",
+ja:"japanese",
+de:"german",
+fr:"french",
+ko:"korean",
+te:"telugu",
+kn:"kannada",
+mr:"marathi",
+gu:"gujarati",
+pa:"punjabi",
+id:"indonesian",
+tr:"turkish",
+vi:"vietnamese",
+th:"thai",
+it:"italian",
+fa:"persian",
+pl:"polish",
+nl:"dutch",
+uk:"ukrainian",
+el:"greek",
+he:"hebrew",
+sw:"swahili",
+fil:"filipino"
 };
 
 window.updateDedication = function(langCode){
+
     const key = map[langCode] || "english";
-    if(window.dedicationData && window.dedicationData[key] && document.getElementById("dedication-text")){
-        document.getElementById("dedication-text").innerHTML = window.dedicationData[key].content;
+
+    if(
+        window.dedicationData &&
+        window.dedicationData[key] &&
+        document.getElementById("dedication-text")
+    ){
+        document.getElementById("dedication-text").innerHTML =
+        window.dedicationData[key].content;
     }
+
 };
 
 const oldChangeLang = window.changeLang;
+
 window.changeLang = function(langCode){
-    if(typeof oldChangeLang === "function"){ oldChangeLang(langCode); }
-    setTimeout(function(){ updateDedication(langCode); },800);
+
+    if(typeof oldChangeLang === "function"){
+        oldChangeLang(langCode);
+    }
+
+    setTimeout(function(){
+        updateDedication(langCode);
+    },800);
+
 };
 
 const oldReset = window.resetToEnglish;
+
 window.resetToEnglish = function(){
-    if(typeof oldReset === "function"){ oldReset(); }
-    setTimeout(function(){ updateDedication("en"); },800);
+
+    if(typeof oldReset === "function"){
+        oldReset();
+    }
+
+    setTimeout(function(){
+        updateDedication("en");
+    },800);
+
 };
 
 document.addEventListener("DOMContentLoaded",function(){
+
     updateDedication("en");
+
     const timer = setInterval(function(){
+
         const s = document.querySelector(".goog-te-combo");
+
         if(s){
+
             s.addEventListener("change",function(){
-                setTimeout(function(){ updateDedication(s.value); },800);
+
+                setTimeout(function(){
+                    updateDedication(s.value);
+                },800);
+
             },{once:false});
+
             clearInterval(timer);
         }
+
     },300);
+
 });
 
 })(); 
 </script>
 
-<!-- COUNTRY BOX START -->
+<!-- ========================= -->
+<!-- END BAS DEDICATION -->
+<!-- ========================= -->
+  
+ 
+ <div id="basBalloonWrap" class="notranslate"> 
+
+<div id="installBall" class="bas-ball white-b" onclick="handleInstallTap()">
+<img src="icon-512.png" class="bas-sticker">
+<div id="statTxt" class="bas-lbl">INSTALL</div>
+<div class="bas-nipple"></div>
+<div class="bas-str"></div>
+</div> 
+
+<div class="bas-ball blue-b" onclick="goWhatsApp()">
+<div class="bas-lbl" style="color:#fff;">SAVE TO<br>WHATSAPP</div>
+<div class="bas-nipple"></div>
+<div class="bas-str"></div>
+</div> 
+
+</div> 
+
 <style>
+/* ബലൂണുകൾ സ്ക്രീനിന്റെ താഴെ മറഞ്ഞുപോകാതിരിക്കാൻ ബോഡിക്ക് നൽകുന്ന പാഡിങ് */
+body {
+padding-bottom: 160px !important;
+} 
+
+/* ബലൂൺ റാപ്പറിന്റെ സ്ക്രീനിലെ പൊസിഷനും ആനിമേഷൻ സ്പീഡും നിശ്ചയിക്കുന്ന സ്റ്റൈൽ */
+#basBalloonWrap {
+position: fixed;
+bottom: 0; left: 0;
+width: 280px; height: 400px;
+z-index: 2147483647;
+pointer-events: none;
+transform: translateY(120%);
+transition: transform 10s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+display: block !important;
+} 
+
+/* ബലൂണുകൾ പല സമയങ്ങളിൽ സ്ക്രീനിൽ കാണിക്കേണ്ട ട്രാൻസ്ഫോം പൊസിഷനുകൾ */
+.state-up { transform: translateY(0%) !important; }
+.state-hide { transform: translateY(120%) !important; }
+.state-rest { transform: translateY(70%) !important; } 
+
+/* ബലൂണിന്റെ കൃത്യമായ റൗണ്ട് ഷേപ്പും ഉള്ളിലെ നൂലും നിപ്പിളും ഉണ്ടാക്കാനുള്ള സ്റ്റൈൽ */
+.bas-ball {
+position: absolute;
+border-radius: 50% 50% 50% 50% / 40% 40% 60% 60%;
+display: flex; flex-direction: column; align-items: center; justify-content: center;
+cursor: pointer; pointer-events: auto;
+box-shadow: inset -8px -8px 20px rgba(0,0,0,0.4);
+} 
+
+.bas-str { position: absolute; width: 1px; background: rgba(255,255,255,0.4); bottom: -1000px; left: 50%; height: 1000px; }
+.bas-nipple { position: absolute; bottom: -10px; width: 18px; height: 10px; background: inherit; clip-path: polygon(20% 0, 80% 0, 100% 100%, 0 100%); } 
+
+/* 1. ഇൻസ്റ്റാൾ ബട്ടൺ ഉള്ളപ്പോൾ കാണിക്കേണ്ട വെള്ള ബലൂണിന്റെയും പച്ചകലർന്ന മഞ്ഞ എഴുത്തിന്റെയും സ്റ്റൈൽ */
+.white-b {
+width: 120px; height: 160px;
+background: #ffffff !important;
+bottom: 220px; left: 60px;
+animation: floatW 5s ease-in-out infinite;
+}
+.white-b .bas-lbl {
+color: #adff2f !important;
+text-shadow: 1px 1px 2px rgba(0,0,0,0.8) !important;
+} 
+
+/* 2. ആപ്പ് ഇൻസ്റ്റാൾഡ് ആയിക്കഴിഞ്ഞാൽ കാണിക്കേണ്ട പച്ചകലർന്ന മഞ്ഞ ബലൂണിന്റെയും കറുത്ത എഴുത്തിന്റെയും സ്റ്റൈൽ */
+.is-pwa-installed {
+width: 120px; height: 170Px;
+background: #adff2f !important;
+bottom: 220px; left: 60px;
+animation: floatW 5s ease-in-out infinite;
+}
+.is-pwa-installed .bas-lbl {
+color: #000000 !important;
+text-shadow: none !important;
+} 
+
+/* നീല ബലൂണിന്റെ വലിപ്പവും അത് ഫ്ലോട്ട് ചെയ്യാനുള്ള ആനിമേഷൻ ലിങ്കും */
+.blue-b { width: 105px; height: 135px; background: #007bff; bottom: 70px; left: 30px; animation: floatB 20s ease-in-out infinite; }
+.bas-sticker { width: 75px; height: 75px; border-radius: 20px; margin-bottom: 5px; border: 1px solid #ddd; }
+.bas-lbl { font-family: sans-serif; font-size: 15px; font-weight: 900; text-align: center; line-height: 1.2; } 
+
+/* ബലൂണുകൾ അന്തരീക്ഷത്തിൽ ഒഴുകി നടക്കാൻ വേണ്ടിയുള്ള ആനിമേഷൻ കീഫ്രെയിമുകൾ */
+@keyframes floatW { 0%, 100% { transform: translate(0, 0) rotate(-3deg); } 50% { transform: translate(35px, 45px) rotate(5deg); } }
+@keyframes floatB { 0%, 100% { transform: translate(0, 0) rotate(4deg); } 50% { transform: translate(25px, -25px) rotate(-4deg); } }
+</style> 
+
+<script>
+// ബലൂൺ സ്റ്റാറ്റസ് നിയന്ത്രിക്കുന്നതിനുള്ള ഗ്ലോബൽ വേരിയബിളുകൾ
+let basPrompt;
+const wrap = document.getElementById('basBalloonWrap');
+const stat = document.getElementById('statTxt');
+const ball = document.getElementById('installBall'); 
+
+// 1. ബ്രൗസറിൽ ഇൻസ്റ്റാൾ പ്രോംപ്റ്റ് ലഭ്യമാകുമ്പോൾ വെള്ള ബലൂൺ സെറ്റ് ചെയ്യുന്ന ലോജിക്
+window.addEventListener('beforeinstallprompt', (e) => {
+e.preventDefault();
+basPrompt = e;
+stat.innerText = "INSTALL";
+ball.className = "bas-ball white-b";
+}); 
+
+// 2. ആപ്പ് മുൻപേ ഇൻസ്റ്റാൾ ചെയ്തിട്ടുണ്ടെങ്കിൽ പച്ചകലർന്ന മഞ്ഞ ബലൂൺ കാണിക്കുന്ന ലോജിക്
+window.addEventListener('DOMContentLoaded', () => {
+setTimeout(() => {
+if (!basPrompt) {
+stat.innerText = "INSTALLED";
+ball.className = "bas-ball is-pwa-installed";
+}
+}, 3000); // ബ്രൗസറിന് ലോഡ് ആകാൻ നൽകുന്ന സമയം
+}); 
+
+// ബലൂണുകൾ കൃത്യമായ സമയക്രമത്തിൽ സ്ക്രീനിൽ പൊങ്ങി വരാനും താഴാനും ഉള്ള ടൈമർ ഫങ്ഷൻ
+function initBalloons() {
+setTimeout(() => {
+wrap.classList.add('state-up');
+setTimeout(() => { wrap.classList.replace('state-up', 'state-hide');
+setTimeout(() => { wrap.classList.replace('state-hide', 'state-rest'); }, 30000); }, 15000); }, 5000);
+} 
+
+// യൂസർ ബലൂണിൽ തൊടുമ്പോൾ അതിനെ വീണ്ടും സ്ക്രീനിലേക്ക് പൂർണ്ണമായി കൊണ്ടുവരുന്ന ഫങ്ഷൻ
+const wake = () => { wrap.classList.remove('state-hide', 'state-rest'); wrap.classList.add('state-up'); };
+wrap.addEventListener('click', wake); wrap.addEventListener('touchstart', wake);
+window.addEventListener('load', initBalloons); 
+
+// സൈറ്റ് ഇൻസ്റ്റാൾ ചെയ്യാനുള്ള ഗൈഡ് ലിങ്ക് വാട്സാപ്പിലേക്ക് ഷെയർ ചെയ്യുന്ന ഫങ്ഷൻ
+function goWhatsApp(){
+let url = "https://bascharity-56f.pages.dev";
+let text = "Save a beautiful icon to your screen\n\n" + url + "\n\nChrome → ⋮ 3 dot → Save to Screen → Install";
+window.open("https://wa.me/?text=" + encodeURIComponent(text), "_blank");
+} 
+
+// ഇൻസ്റ്റാൾ ബലൂണിൽ ക്ലിക്ക് ചെയ്യുമ്പോൾ ഇൻസ്റ്റാളേഷൻ വിൻഡോ കാണിക്കുന്ന ഫങ്ഷൻ
+function handleInstallTap() {
+if (!basPrompt) return; // ഇൻസ്റ്റാൾഡ് ആണെങ്കിൽ ക്ലിക്ക് പ്രവർത്തിക്കില്ല
+basPrompt.prompt();
+basPrompt.userChoice.then((c) => {
+if (c.outcome === 'accepted') {
+stat.innerText = "INSTALLED";
+ball.className = "bas-ball is-pwa-installed";
+}
+basPrompt = null;
+});
+} 
+
+// സിസ്റ്റം വഴി ആപ്പ് വിജയകരമായി ഇൻസ്റ്റാൾ ചെയ്യപ്പെട്ടു കഴിഞ്ഞാൽ ബലൂൺ പച്ചയാക്കുന്ന ലോജിക്
+window.addEventListener('appinstalled', () => {
+stat.innerText = "INSTALLED";
+ball.className = "bas-ball is-pwa-installed";
+});
+</script>
+
+<!-- COUNTRY BOX START -->
+
+                     <style>
 .country-board{width:96%;max-width:900px;margin:14px auto;padding:14px;border:1px solid #cfcfcf;border-radius:16px;background:#111;color:#fff;font-family:Arial,sans-serif}
 .country-title{width:100%;background:#4a4a4a;color:#fff;border:2px solid #dfe6eb;border-radius:14px;padding:14px 8px;text-align:center;font-size:16px;font-weight:800;margin-bottom:12px}
 .country-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-bottom:12px}
@@ -1322,9 +1742,13 @@ document.addEventListener("DOMContentLoaded",function(){
 #shopOnCountry .green{color:#00ff66}
 #featuredShops{display:flex;flex-direction:column;gap:10px}
 .shopCard{background:#2b2b2b;border:1px solid #c0c0c0;border-left:8px solid #00C853;border-radius:14px;padding:14px 16px;display:flex;align-items:center;gap:12px;min-height:78px;text-decoration:none;box-shadow:0 2px 10px rgba(0,0,0,.25)}
+.shopCard:nth-child(10n+1){border-left-color:#00C853}.shopCard:nth-child(10n+2){border-left-color:#2196F3}.shopCard:nth-child(10n+3){border-left-color:#F44336}.shopCard:nth-child(10n+4){border-left-color:#FF9800}.shopCard:nth-child(10n+5){border-left-color:#9C27B0}.shopCard:nth-child(10n+6){border-left-color:#00BCD4}.shopCard:nth-child(10n+7){border-left-color:#E91E63}.shopCard:nth-child(10n+8){border-left-color:#FFC107}.shopCard:nth-child(10n+9){border-left-color:#009688}.shopCard:nth-child(10n+10){border-left-color:#795548}
 .shopDot{width:18px;flex:0 0 18px;color:#fff;font-weight:900;text-align:center;font-size:20px;line-height:1}
 .shopFav{width:42px;height:42px;object-fit:contain;flex:0 0 42px;border-radius:8px;background:#fff}
 .shopName{flex:1;color:#fff;font-size:30px;font-weight:800;line-height:1.2;text-align:left}
+.shop-button-container{display:inline-flex;align-items:center;position:relative}
+.shop-icon{font-size:50px!important;width:50px!important;height:50px!important;display:flex;align-items:center;justify-content:center;position:absolute;left:0;top:0;z-index:10}
+.shop-button{padding:15px 30px;font-size:16px;background-color:blue;color:white;border:none;margin-left:50px;cursor:pointer;position:relative}
 </style>
 
 <div class="country-board">
@@ -1344,85 +1768,417 @@ document.addEventListener("DOMContentLoaded",function(){
   <select id="allCountries">
     <option value="">SEARCH / SELECT ALL COUNTRIES ▼</option>
   </select>
-
-<div style="width:100%;text-align:center;margin:18px auto 10px;overflow:hidden;">
-  <img src="patent.png" alt="Patent Soon Global" style="width:92%;max-width:700px;height:auto;display:block;margin:0 auto 20px;transform:rotate(-20deg);filter:drop-shadow(0 4px 8px rgba(0,0,0,.6));">
+<!-- PATENT SEAL — BEFORE SHOP -->
+<div style="
+  width:100%;
+  text-align:center;
+  margin:18px auto 10px;
+  overflow:hidden;
+">
+  <img
+    src="patent.png"
+    alt="Patent Soon Global"
+    style="
+      width:92%;
+      max-width:700px;
+      height:auto;
+      display:block;
+      margin:0 auto 20px;
+      transform:rotate(-20deg);
+      filter:drop-shadow(0 4px 8px rgba(0,0,0,.6));
+    "
+  >
 </div>
-
+<!-- END PATENT SEAL -->
 <div id="shopOnCountry">SHOP ON INDIA</div>
-<div id="featuredShops"></div> 
-
+ 
+ 
+    <div id="featuredShops"></div> 
+    <!-- Language Box -->
 <div style="max-width:900px;margin:20px auto;padding:18px;background:#ffffff;border-left:6px solid #FF9800;border-radius:12px;box-shadow:0 4px 12px rgba(0,0,0,.12);text-align:center;">
-<div style="font-size:24px;font-weight:800;color:#1565C0;margin-bottom:8px;">Basic Language: English</div>
-<div style="font-size:22px;font-weight:800;color:#E65100;">Translations May Not Be Accurate</div>
+
+<div style="font-size:24px;font-weight:800;color:#1565C0;margin-bottom:8px;">
+Basic Language: English
 </div>
 
+<div style="font-size:22px;font-weight:800;color:#E65100;">
+Translations May Not Be Accurate
+</div>
+
+</div>
+
+<!-- Thousands of Shops Box -->
 <div style="max-width:900px;margin:20px auto;padding:18px;background:#ffffff;border-left:6px solid #1E88E5;border-radius:12px;box-shadow:0 4px 12px rgba(0,0,0,.12);text-align:center;">
-<div style="font-size:30px;font-weight:900;line-height:1.25;background:linear-gradient(90deg,#ff0000,#ff9800,#00c853,#0091ea,#7b1fa2);-webkit-background-clip:text;-webkit-text-fill-color:transparent;">Thousands of Shops Categorized Below</div>
+
+<div style="font-size:30px;font-weight:900;line-height:1.25;background:linear-gradient(90deg,#ff0000,#ff9800,#00c853,#0091ea,#7b1fa2);-webkit-background-clip:text;-webkit-text-fill-color:transparent;">
+Thousands of Shops Categorized Below
+</div>
+
 </div>
 </div>
 
 <div id="basCompleteWrapper" style="width: 96%; max-width: 900px; margin: 20px auto; font-family: 'Segoe UI', Roboto, sans-serif; color: #fff; text-align: center; border: 3px solid #ff9800; padding: 50px 40px; border-radius: 28px; background: #111111; box-shadow: 0 20px 50px rgba(255, 152, 0, 0.15);">
 <div id="basMainDisplay" style="width:100%;">
+    
+ 
     <h1 style="font-size:34px; color:#ff9800; margin-bottom:30px; font-weight:bold; line-height:1.4;">
      Why Do People
 <span onclick="handleInstallTap()" style="color:#2196F3!important;text-decoration:underline;cursor:pointer;display:inline-block;pointer-events:auto;">Install</span>
 This
-<img src="icon-512.png" style="width:42px;height:42px;vertical-align:middle;margin:0 8px;border-radius:10px;">
+<img src="icon-512.png"
+style="width:42px;height:42px;vertical-align:middle;margin:0 8px;border-radius:10px;">
 <span onclick="handleInstallTap()" style="color:#2196F3!important;text-decoration:underline;cursor:pointer;display:inline-block;pointer-events:auto;">Icon</span>
     </h1>
 
     <div style="text-align:left; font-size:23px; line-height:1.7; padding:0 10px;">
-        <div style="margin-bottom:25px;"><strong style="color:#ff9800;">1.</strong> First of all, it is free to use and requires very little phone memory. It can be used as an alternative to installing thousands of high-memory shopping apps.</div>
-        <div style="margin-bottom:25px;"><strong style="color:#ff9800;">2.</strong> It provides access to 50,000+ shops across different countries and languages, giving users the opportunity to shop and purchase products from different locations around the world.</div>
-        <div style="margin-bottom:25px;"><strong style="color:#ff9800;">3.</strong> It helps users compare prices across multiple shops and buy products at lower prices.</div>
+
+        <div style="margin-bottom:25px;">
+            <strong style="color:#ff9800;">1.</strong>
+            First of all, it is free to use and requires very little phone memory. It can be used as an alternative to installing thousands of high-memory shopping apps.
+        </div>
+
+        <div style="margin-bottom:25px;">
+            <strong style="color:#ff9800;">2.</strong>
+            It provides access to 50,000+ shops across different countries and languages, giving users the opportunity to shop and purchase products from different locations around the world.
+        </div>
+
+        <div style="margin-bottom:25px;">
+            <strong style="color:#ff9800;">3.</strong>
+            It helps users compare prices across multiple shops and buy products at lower prices.
+        </div>
+
     </div>
 
-    <div onclick="basOpenFullPage()" style="color:#00ff00; font-size:27px; font-weight:bold; cursor:pointer; text-decoration:underline; display:inline-block; margin-top:10px;">More....</div>
+    <div onclick="basOpenFullPage()" 
+         style="color:#00ff00; font-size:27px; font-weight:bold; cursor:pointer; text-decoration:underline; display:inline-block; margin-top:10px;">
+        More....
+    </div>
+
 </div>
+
 
 <div id="basFullInfoPage" style="display:none; width:100%; text-align:left;">
+
     <div style="text-align:left; font-size:23px; line-height:1.7; padding:20px 10px 0;">
-        <div style="margin-bottom:25px;"><strong style="color:#ff9800;">4.</strong> By shopping and sharing links, users can become part of the Hunger Relief charity mission.</div>
-        <div style="margin-bottom:25px;"><strong style="color:#ff9800;">5.</strong> It helps people understand products, prices, offers, and shopping cultures in different countries.</div>
-        <div style="margin-bottom:25px;"><strong style="color:#ff9800;">6.</strong> Since everything can be accessed anytime through a single icon, it reduces the need to repeatedly install new apps or constantly update them.</div>
-        <div style="margin-bottom:25px;"><strong style="color:#ff9800;">7.</strong> It provides a way to send your donations directly to trusted organisations worldwide and helps protect people from fraudulent charity advertisements.</div>
-        <div style="margin-bottom:25px;"><strong style="color:#ff9800;">8.</strong> It can also be shared as a useful gift with relatives and friends, enabling them to become part of this good cause.</div>
-        <div style="margin-bottom:25px;"><strong style="color:#ff9800;">9.</strong> It can also serve as a Global Shopping Guide for students, expatriates, travellers, and anyone interested in understanding the global market.</div>
-        <div style="margin-bottom:25px;"><strong style="color:#ff9800;">10.</strong> Links to government institutions and public services will be made available in the next update. <strong style="color:#00ff00;">(In Progress)</strong></div>
+
+        <div style="margin-bottom:25px;">
+            <strong style="color:#ff9800;">4.</strong>
+            By shopping and sharing links, users can become part of the Hunger Relief charity mission.
+        </div>
+
+        <div style="margin-bottom:25px;">
+            <strong style="color:#ff9800;">5.</strong>
+            It helps people understand products, prices, offers, and shopping cultures in different countries.
+        </div>
+
+        <div style="margin-bottom:25px;">
+            <strong style="color:#ff9800;">6.</strong>
+            Since everything can be accessed anytime through a single icon, it reduces the need to repeatedly install new apps or constantly update them.
+        </div>
+
+        <div style="margin-bottom:25px;">
+            <strong style="color:#ff9800;">7.</strong>
+            It provides a way to send your donations directly to trusted organisations worldwide and helps protect people from fraudulent charity advertisements.
+        </div>
+
+        <div style="margin-bottom:25px;">
+            <strong style="color:#ff9800;">8.</strong>
+            It can also be shared as a useful gift with relatives and friends, enabling them to become part of this good cause.
+        </div>
+
+        <div style="margin-bottom:25px;">
+            <strong style="color:#ff9800;">9.</strong>
+            It can also serve as a Global Shopping Guide for students, expatriates, travellers, and anyone interested in understanding the global market.
+        </div>
+
+        <div style="margin-bottom:25px;">
+            <strong style="color:#ff9800;">10.</strong>
+            Links to government institutions and public services will be made available in the next update.
+            <strong style="color:#00ff00;">(In Progress)</strong>
+        </div>
+
     </div>
 
-    <button onclick="basCloseFullPage()" style="background:#ff9800; color:#000; padding:14px 40px; border-radius:30px; font-size:23px; font-weight:bold; border:none; cursor:pointer; display:block; margin:30px auto 10px;">Back</button>
+    <button onclick="basCloseFullPage()" 
+            style="background:#ff9800; color:#000; padding:14px 40px; border-radius:30px; font-size:23px; font-weight:bold; border:none; cursor:pointer; display:block; margin:30px auto 10px;">
+        Back
+    </button>
+
 </div>
 
+
 <script>
+
 let basIdleTimer;
+
 function basOpenFullPage(){
+
     document.getElementById('basMainDisplay').style.display='none';
     document.getElementById('basFullInfoPage').style.display='block';
+
     basResetIdleTimer();
 }
+
 function basCloseFullPage(){
+
     clearTimeout(basIdleTimer);
+
     document.getElementById('basFullInfoPage').style.display='none';
     document.getElementById('basMainDisplay').style.display='block';
 }
+
 function basResetIdleTimer(){
+
     clearTimeout(basIdleTimer);
-    basIdleTimer=setTimeout(basCloseFullPage, 35000);
+
+    basIdleTimer=setTimeout(
+        basCloseFullPage,
+        35000
+    );
 }
+
 </script>
 </div>
 
+  
 <script>
-const fixedCountries=["india","usa","uk","uae","canada","australia","germany","france","saudi arabia"];
-const allCountriesList=["afghanistan","albania","algeria","andorra","angola","argentina","australia","austria","bahrain","bangladesh","belgium","brazil","canada","china","denmark","egypt","france","germany","india","indonesia","ireland","italy","japan","kuwait","malaysia","mexico","netherlands","new_zealand","nigeria","norway","oman","pakistan","philippines","qatar","russia","saudi arabia","singapore","south_africa","spain","sri_lanka","sweden","switzerland","thailand","turkey","uae","uk","usa","vietnam"];
+ 
+/* ================================================= */
+/* FIXED 10 COUNTRIES */
+/* ================================================= */
+const fixedCountries=[
+"india",
+"usa",
+"uk",
+"uae",
+"canada",
+"australia",
+"germany",
+"france",
+"saudi arabia"
+];
 
+
+
+const allCountriesList=[
+ 
+"afghanistan",
+"albania",
+"algeria",
+"andorra",
+"angola",
+"antigua_and_barbuda",
+"argentina",
+"armenia",
+"australia",
+"austria",
+"azerbaijan",
+"bahamas",
+"bahrain",
+"bangladesh",
+"barbados",
+"belarus",
+"belgium",
+"belize",
+"benin",
+"bhutan",
+"bolivia",
+"bosnia_and_herzegovina",
+"botswana",
+"brazil",
+"brunei",
+"bulgaria",
+"burkina_faso",
+"burundi",
+"cabo_verde",
+"cambodia",
+"cameroon",
+"canada",
+"central_african_republic",
+"chad",
+"chile",
+"china",
+"colombia",
+"comoros",
+"congo",
+"costa_rica",
+"cote_d'ivoire",
+"croatia",
+"cuba",
+"cyprus",
+"czechia",
+"democratic_republic_of_the_congo",
+"denmark",
+"djibouti",
+"dominica",
+"dominican_republic",
+"ecuador",
+"egypt",
+"el_salvador",
+"equatorial_guinea",
+"eritrea",
+"estonia",
+"eswatini",
+"ethiopia",
+"fiji",
+"finland",
+"france",
+"gabon",
+"gambia",
+"georgia",
+"germany",
+"ghana",
+"greece",
+"grenada",
+"guatemala",
+"guinea",
+"guinea-bissau",
+"guyana",
+"haiti",
+"honduras",
+"hungary",
+"iceland",
+"india",
+"indonesia",
+"iran",
+"iraq",
+"ireland",
+"israel",
+"italy",
+"jamaica",
+"japan",
+"jordan",
+"kazakhstan",
+"kenya",
+"kiribati",
+"kuwait",
+"kyrgyzstan",
+"laos",
+"latvia",
+"lebanon",
+"lesotho",
+"liberia",
+"libya",
+"liechtenstein",
+"lithuania",
+"luxembourg",
+"madagascar",
+"malawi",
+"malaysia",
+"maldives",
+"mali",
+"malta",
+"marshall_islands",
+"mauritania",
+"mauritius",
+"mexico",
+"micronesia",
+"moldova",
+"monaco",
+"mongolia",
+"montenegro",
+"morocco",
+"mozambique",
+"myanmar",
+"namibia",
+"nauru",
+"nepal",
+"netherlands",
+"new_zealand",
+"nicaragua",
+"niger",
+"nigeria",
+"north_korea",
+"north_macedonia",
+"norway",
+"oman",
+"pakistan",
+"palau",
+"panama",
+"papua_new_guinea",
+"paraguay",
+"peru",
+"philippines",
+"poland",
+"portugal",
+"qatar",
+"romania",
+"russia",
+"rwanda",
+"saint_kitts_and_nevis",
+"saint_lucia",
+"saint_vincent_and_the_grenadines",
+"samoa",
+"san_marino",
+"sao_tome_and_principe",
+"saudi arabia",
+"senegal",
+"serbia",
+"seychelles",
+"sierra_leone",
+"singapore",
+"slovakia",
+"slovenia",
+"solomon_islands",
+"somalia",
+"south_africa",
+"south_korea",
+"south_sudan",
+"spain",
+"sri_lanka",
+"sudan",
+"suriname",
+"sweden",
+"switzerland",
+"syria",
+"tajikistan",
+"tanzania",
+"thailand",
+"timor-leste",
+"togo",
+"tonga",
+"trinidad_and_tobago",
+"tunisia",
+"turkey",
+"turkmenistan",
+"tuvalu",
+"uganda",
+"uk",
+"uae",
+"usa",
+"uruguay",
+"uzbekistan",
+"vanuatu",
+"venezuela",
+"vietnam",
+"yemen",
+"zambia",
+"zimbabwe",
+"cook_islands",
+"niue",
+"palestine",
+"kosovo",
+"taiwan",
+"vatican_city",
+"hong_kong",
+"macau",
+"greenland",
+"faroe_islands",
+"puerto_rico",
+"guam",
+"new_caledonia"
+];
+
+</script>
+
+  <script>
 const allCountries = document.getElementById("allCountries");
 const featuredShops = document.getElementById("featuredShops");
+
 window.countryShops = window.countryShops || {};
 const loadedCountries = {};
 
+// dropdown നിറയ്ക്കുന്നു
 allCountriesList.forEach(country => {
     const option = document.createElement("option");
     option.value = country;
@@ -1430,120 +2186,302 @@ allCountriesList.forEach(country => {
     allCountries.appendChild(option);
 });
 
+// രാജ്യം തിരഞ്ഞെടുക്കുന്നു
 function setSelectedCountry(country) {
+
     if (!country) return;
+
     const pureCountry = country.trim().toLowerCase();
+
     allCountries.classList.add("green-select");
 
+    // CHANGE: textContent → data-country
     document.querySelectorAll(".country-btn").forEach(btn => {
         const key = btn.getAttribute("data-country");
-        btn.classList.toggle("active", key && key.trim().toLowerCase() === pureCountry);
+        btn.classList.toggle(
+            "active",
+            key && key.trim().toLowerCase() === pureCountry
+        );
     });
 
     const shopBtn = document.getElementById("shopOnCountry");
     if (shopBtn) {
-        shopBtn.innerHTML = `SHOP ON <span class="green">${pureCountry.toUpperCase()}</span>`;
+        shopBtn.innerHTML =
+            `SHOP ON <span class="green">${pureCountry.toUpperCase()}</span>`;
     }
 
     localStorage.setItem("selectedCountry", pureCountry);
+
     fetchExternalCountryJS(pureCountry);
 }
 
-function renderCountry(country) { setSelectedCountry(country); }
-function syncCategory(countryName) { if (typeof changeCountry === "function") { changeCountry(countryName); } }
+// helper
+function renderCountry(country) {
+    setSelectedCountry(country);
+}
+
+function syncCategory(countryName) {
+    if (typeof changeCountry === "function") {
+        changeCountry(countryName);
+    }
+}
 
 function fetchExternalCountryJS(countryName) {
+
+    // already loaded
     if (loadedCountries[countryName]) {
+
         loadShops(countryShops[countryName]);
         syncCategory(countryName);
         return;
     }
 
+    // already exists in window.countryShops
     if (window.countryShops && window.countryShops[countryName]) {
+
         loadedCountries[countryName] = true;
+
         loadShops(countryShops[countryName]);
         syncCategory(countryName);
         return;
     }
 
-    featuredShops.innerHTML = "<div style='text-align:center;padding:20px;color:#ff9800;font-weight:bold;'>Loading shops...</div>";
+    featuredShops.innerHTML =
+        "<div style='text-align:center;padding:20px;color:#ff9800;font-weight:bold;'>Loading shops...</div>";
 
     const oldScript = document.getElementById("dynamic-country-script");
     if (oldScript) oldScript.remove();
 
     const script = document.createElement("script");
+
     script.id = "dynamic-country-script";
+
+    // FIXED REGEX (small correction: s instead of s)
     script.src = "./" + countryName + ".js";
     script.onload = function () {
+
         loadedCountries[countryName] = true;
+
         if (window.countryShops && window.countryShops[countryName]) {
+
             loadShops(countryShops[countryName]);
             syncCategory(countryName);
+
         } else {
-            featuredShops.innerHTML = "<div style='text-align:center;padding:20px;color:red;'>No shop data</div>";
+
+            featuredShops.innerHTML =
+                "<div style='text-align:center;padding:20px;color:red;'>No shop data</div>";
+
         }
+
     };
+
     script.onerror = function () {
-        featuredShops.innerHTML = "<div style='text-align:center;padding:20px;color:red;'>Country file not found</div>";
+
+        featuredShops.innerHTML =
+            "<div style='text-align:center;padding:20px;color:red;'>Country file not found</div>";
+
     };
+
     document.body.appendChild(script);
+
 }
 
 function loadShops(shopsArray) {
+
     featuredShops.innerHTML = "";
+
     if (!shopsArray || shopsArray.length === 0) {
-        featuredShops.innerHTML = "<div style='text-align:center;font-weight:bold;padding:20px;'>No shops available.</div>";
+
+        featuredShops.innerHTML =
+            "<div style='text-align:center;font-weight:bold;padding:20px;'>No shops available.</div>";
+
         return;
     }
 
-    const colors = ["#00C853", "#2196F3", "#F44336", "#FF9800", "#9C27B0", "#00BCD4", "#E91E63", "#FFC107", "#009688", "#795548"];
+    const colors = [
+        "#00C853", "#2196F3", "#F44336", "#FF9800", "#9C27B0",
+        "#00BCD4", "#E91E63", "#FFC107", "#009688", "#795548"
+    ];
 
     shopsArray.slice(0, 10).forEach((shop, index) => {
+
         let host = "";
-        try { host = new URL(shop.u).hostname; } catch (e) { }
+
+        try {
+            host = new URL(shop.u).hostname;
+        } catch (e) { }
 
         featuredShops.innerHTML += `
-<a href="${shop.u}" target="_blank" class="shopCard" style="border-left-color:${colors[index % 10]}">
+<a href="${shop.u}" target="_blank"
+class="shopCard"
+style="border-left-color:${colors[index % 10]}">
+
 <div class="shopDot">${(shop.a || "").trim() ? "" : "."}</div>
-<img class="shopFav" src="https://www.google.com/s2/favicons?domain=${host}&sz=64" loading="lazy">
-<div class="shopName notranslate" translate="no">${shop.n}</div>
+
+<img class="shopFav"
+src="https://www.google.com/s2/favicons?domain=${host}&sz=64"
+loading="lazy">
+
+<div class="shopName notranslate" translate="no">
+${shop.n}
+</div>
+
 </a>`;
     });
+ 
 }
+       
+
 
 document.addEventListener("DOMContentLoaded", () => {
-    const savedCountry = localStorage.getItem("selectedCountry") || "india";
+
+    const savedCountry =
+        localStorage.getItem("selectedCountry") || "india";
+
     setSelectedCountry(savedCountry);
 
     document.querySelectorAll(".country-btn").forEach(btn => {
+
         btn.addEventListener("click", function () {
+            // CHANGE: textContent → data-country
             const key = this.getAttribute("data-country") || this.textContent;
-            setSelectedCountry(key.trim().toLowerCase());
+            setSelectedCountry(
+                key.trim().toLowerCase()
+            );
         });
+
     });
 
     allCountries.addEventListener("change", e => {
+
         if (e.target.value) {
+
             setSelectedCountry(e.target.value);
+
             allCountries.selectedIndex = 0;
+
         }
+
     });
+
 });
 </script>
+<!-- SL NO 37 : HTML END -->
+<!-- ================================================= -->
 
+  <style>
+.country-btn.active{
+color:#00ff66;
+}
+.compare-box{
+background:#000;
+border:1px solid #00BFFF;
+border-radius:12px;
+padding:20px;
+text-align:center;
+line-height:1.6;
+}
+
+.compare-btn{
+width:96%;
+padding:14px;
+border-radius:10px;
+border:none;
+font-weight:bold;
+font-size: 27px;
+background:#00BFFF;
+color:#000;
+cursor:pointer;
+margin-bottom:15px;
+}
+
+.return-note{
+font-size:19px;
+color:#fff;
+text-align:center;
+}
+
+.return-note b{
+color:#FFD700;
+font-size:19px;
+}
+</style>
+    
 <div class="compare-container">
 <div class="compare-box">
 <button class="compare-btn" onclick="window.open('https://www.google.com/shopping','_blank')">
 COMPARE PRICES ON TRUSTED SITES 🔁
 </button>
 <div class="compare-message">
+
   <h2>After Comparing Prices, Please Return Here</h2>
-  <p>The same product may be available at different prices in different stores. After comparing prices, please return here and search for the product or use the product link to purchase it from the same store where you found the best price.</p>
+  <p>
+    The same product may be available at different prices in different stores.
+    After comparing prices, please return here and search for the product or use
+    the product link to purchase it from the same store where you found the best price.
+  </p>
+
   <p><strong>Remember</strong></p>
-  <p style="color:#FFD700;font-weight:bold;font-size:1.2em;">YOUR PURCHASE SATISFIES A HUNGER™</p>
+
+  <p style="color:#FFD700;font-weight:bold;font-size:1.2em;">
+    YOUR PURCHASE SATISFIES A HUNGER™
+  </p>
+
 </div>
-</div>
-</div>
+<style>
+.share-container {
+max-width: 900px;
+width: 96%;
+margin: 25px auto;
+padding: 20px;
+background: #000;
+border: 1px solid #00BFFF;
+border-radius: 12px;
+text-align: center;
+}
+
+.share-text {
+font-size: 19px;
+line-height: 1.7;
+color: #fff;
+margin-bottom: 20px;
+}
+
+.share-grid {
+display: grid;
+grid-template-columns: repeat(5, 1fr);
+gap: 10px;
+margin-top: 15px;
+}
+
+.share-grid a {
+display: flex;
+align-items: center;
+justify-content: center;
+font-size: 22px;
+height: 50px;
+background: #111;
+border-radius: 10px;
+border: 1px solid #333;
+text-decoration: none;
+}
+
+.share-grid a:hover {
+transform: scale(1.08);
+transition: 0.2s;
+}
+
+.share-sign {
+margin-top: 20px;
+padding-top: 15px;
+border-top: 1px solid #333;
+color: #FFD700;
+font-weight: bold;
+letter-spacing: 2px;
+font-size: 22px;
+}
+</style>
 
 <div class="share-container">
 <p class="share-text">
@@ -1571,6 +2509,110 @@ analyticsCopyLink();
 alert("Link Copied. Share with friends.");
 }
 </script>
+ <style>
+.mainbox {
+max-width: 900px;
+width: 96%;
+margin: 20px auto;
+padding: 25px 15px;
+border: 2px solid #ff4500;
+border-radius: 15px;
+background: #050505;
+box-sizing: border-box;
+text-align: center;
+}
+
+.mainbox h1 {
+color: #ff4500;
+font-size: clamp(24px, 8vw, 36px);
+margin-top: 0;
+}
+
+.sub {
+color: #aaa;
+font-size: clamp(16px, 5vw, 22px);
+margin-bottom: 20px;
+}
+
+.impact {
+width: 100%;
+max-width: 420px;
+margin: auto;
+padding: 20px;
+border: 2px solid #555;
+background: #111;
+box-sizing: border-box;
+}
+
+.amount {
+display: flex;
+justify-content: center;
+align-items: center;
+gap: 10px;
+}
+
+.rs {
+font-size: 36px;
+color: #00ff00;
+}
+
+.counter {
+font-size: 44px;
+color: #00ff00;
+border: 2px solid #333;
+padding: 5px 12px;
+background: #000;
+}
+
+.till {
+color: #ff4500;
+font-size: 16px;
+margin-top: 8px;
+}
+
+.gallery {
+display: flex;
+overflow: hidden;
+gap: 20px;
+padding: 40px 20px; /* സൂം ചെയ്യുമ്പോൾ കട്ടാവാതിരിക്കാൻ മാറ്റിയത് */
+margin: 25px auto;
+width: 100%;
+position: relative;
+box-sizing: border-box;
+scroll-behavior: auto !important;
+}
+
+.card {
+min-width: 280px;
+height: 230px;
+border: 3px solid #ff4500;
+display: flex;
+align-items: center;
+justify-content: center;
+background: #000;
+border-radius: 10px;
+overflow: hidden;
+transition: transform 0.4s ease, z-index 0.4s;
+cursor: pointer;
+position: relative;
+flex-shrink: 0;
+}
+
+.card.zoom-active {
+transform: scale(2);
+z-index: 100;
+border-color: #00ff00;
+box-shadow: 0 0 20px rgba(0,255,0,0.5);
+}
+
+.card img {
+width: 100%;
+height: 100%;
+object-fit: contain;
+}
+
+.rotate { transform: rotate(-90deg); }
+</style>
 
 <div class="mainbox">
 <h1>IMPACT</h1>
@@ -1601,7 +2643,7 @@ let counterElement = document.getElementById("counter");
 
 function runCounter() {
 if (count < target) {
-count += 250;
+count += 250; /* കൃത്യമായി 27000 ൽ എത്താൻ 250 ആക്കി */
 if (count > target) count = target;
 counterElement.innerText = count.toString().padStart(7, "0");
 setTimeout(runCounter, 120);
@@ -1656,6 +2698,3416 @@ gallery.scrollLeft = 0;
 }
 setInterval(scrollGallery, 20);
 </script>
+ <style>
+.info-box{
+/* ലാപ്ടോപ്പിൽ 900px വരെ വരാൻ max-width മാറ്റി */
+max-width: 900px;
+width: 96%;
+margin: 30px auto;
+padding: 20px;
+background: #000;
+border: 1px solid #00BFFF;
+border-radius: 12px;
+text-align: center;
+line-height: 1.7;
+box-sizing: border-box;
+}
 
-</body>
+.info-title{
+font-size: 25px;
+color: #FFD700;
+margin-bottom: 10px;
+font-weight: bold;
+}
+
+.info-text{
+font-size: 25px;
+color: #ccc;
+}
+
+.readmore-btn{
+color: #00BFFF;
+font-size: 26px;
+font-weight: bold;
+cursor: pointer;
+}
+
+.more-text{
+display: none;
+}
+
+.signature{
+margin-top: 15px;
+font-size: 25px;
+color: #FFD700;
+font-weight: bold;
+}
+</style>
+
+<div class="info-box" id="section7">
+<div class="info-title">BAS CHARITY PURPOSE</div>
+<div class="info-text">
+Our mission is to ensure that support reaches those who truly need it.
+Through affiliate partnerships with 50,000+ online shops worldwide,
+a significant portion of the income generated is used for hunger relief
+and similar humanitarian activities</div><br><div class="info-text">
+At present,100% of the<span class="readmore-btn" id="readBtn" onclick="toggleMore7()">Read More...</span>
+</div><div class="more-text" id="moreText"><div class="info-text">
+affiliate income is directed towards helping people in need.
+In the future, a minimum of 51% or more will always be dedicated to
+charity and hunger relief.
+The remaining portion may be used for platform maintenance, staff support,
+development, and operational expenses ,etc
+</div>
+<br>
+<div class="info-text">
+Many people have expressed their willingness to donate through this platform.
+However,we do not accept any donations through this website.
+</div>
+<br>
+<div class="info-text">
+Anyone who wishes to support hunger relief may do so directly through
+some trusted organisations listed below.
+</div>
+<br>
+<div class="info-text">
+The widespread misuse and scams carried out in the name of charity on many
+online platforms inspired us to start this initiative.
+</div>
+<br>
+<div class="info-text">
+In any case, our goal is to ensure that 100% of your donation reaches those
+who truly need it.
+</div>
+<div class="readmore-btn" onclick="toggleMore7()">Less</div>
+</div>
+<div class="signature" style="text-align: center; color: #ffcc00; font-weight: bold;">
+  Give your donations only through trusted hands
+</div>
+
+</div>
+
+<script>
+function toggleMore7() {
+var moreText = document.getElementById("moreText");
+var btnText = document.getElementById("readBtn");
+if (moreText.style.display === "none" || moreText.style.display === "") {
+moreText.style.display = "block";
+btnText.style.display = "none";
+} else {
+moreText.style.display = "none";
+btnText.style.display = "inline";
+}
+}
+</script>
+
+<style>
+.bas7-wrapper{
+max-width:900px; /* Responsive Fix */
+width:96%;
+margin:30px auto;
+font-family:Arial,sans-serif;
+}
+
+.bas7-box{
+    background:#1b1b1b;
+    border-radius:16px;
+    border:1.5px solid #D3D3D3;
+    overflow:hidden;
+    color:#fff;
+    box-shadow:0 0 12px rgba(255,255,255,0.06);
+}
+
+.bas7-header{
+padding:18px;
+text-align:center;
+background:#111;
+border-bottom:1px solid #333;
+}
+
+.title-main{
+margin:0;
+font-size:22px;
+font-weight:900;
+color:#E5E5E5;
+}
+
+.title-name{
+margin:8px 0 0;
+font-size:20px;
+font-weight:800;
+}
+
+.title-sub{
+margin:5px 0 0;
+font-size:16px;
+}
+
+.bas7-slider{
+width:100%;
+height:420px;
+overflow:hidden;
+background:#000;
+}
+
+.bas7-slider img{
+width:100%;
+height:100%;
+object-fit:cover;
+transition:opacity .8s;
+}
+
+.bas7-content{
+padding:18px;
+font-size:20px;
+line-height:1.7;
+color:#ccc;
+text-align:justify;
+}
+
+.bas8-more{
+display:none;
+}
+
+.bas8-toggle{
+color:#39FF14;
+cursor:pointer;
+font-weight:bold;
+font-size:18px;
+display:block;
+margin-top:15px;
+}
+
+.bas7-quote{
+margin:15px;
+padding:12px;
+background:#111;
+border-radius:10px;
+border-left:4px solid #e91e63;
+font-weight:bold;
+text-align:center;
+color:#FFD700;
+font-size:14px;
+}
+
+/* ഡെപ്യൂട്ടി ചീഫ് എഞ്ചിനീയറുടെ നോട്ട് സ്റ്റൈൽ */
+.officer-note {
+margin-top: 20px;
+padding: 15px;
+background: #151515;
+border-radius: 8px;
+border: 1px dashed #333;
+font-size: 19px;
+line-height: 1.6;
+color: #e0e0e0;
+}
+
+.officer-sign {
+margin-top: 10px;
+text-align: right;
+font-size: 18px;
+font-weight: bold;
+color: #FFD700;
+}
+</style>
+
+<div class="bas7-wrapper" id="section8">
+<div class="bas7-box">
+<div class="bas7-header">
+
+<div class="bas7-header">
+
+  <h2 class="title-main">
+    BEST WISHES FOR BAS CHARITY INTERNATIONAL
+  </h2>
+
+</div>
+
+<hr class="section-divider">
+
+
+</div>
+<div class="bas7-slider">
+<img id="bas7Img" src="https://drive.google.com/thumbnail?id=1keyWL0GF-HysweqAYntVaS-vB_fwZj_H&sz=w1000">
+</div>
+<h2 class="title-name">
+MOHAMMED M BASHEER
+</h2><h3 class="title-sub">
+Retired Assistant Engineer,KSEB
+</h3>
+<div class="bas7-content">
+<p>
+<p>
+<p>
+Mr. Mohammed M. Basheer, a retired Assistant Engineer from KSEB, residing in India, has over three decades of involvement in social service activities. Alongside this, he completed 20 years of government service in the power sector, covering Generation, Transmission and Distribution, as well as five years of international work experience in various Arabian countries.
+<span class="readmore-btn" id="wishReadBtn" onclick="toggleWish()">Read More...</span>
+
+<div id="wishMoreText" style="display:none;">
+For more than 10 years, he has also been serving as a humble volunteer of the <a href="https://www.irwkerala.org" target="_blank" rel="noopener noreferrer" style="color:#00A2FF; font-weight:bold; text-decoration:none;">Ideal Relief Wing (IRW)</a>, a Government-recognized and registered NGO actively engaged in disaster management, disaster relief and humanitarian activities.
+    <br><br>
+<p>
+He is supported by his wife, Rasheena K. H, High School English Teacher (India), their children, Alif Bayan (India), Amna Bayan (Qatar), Azeem Ahmed (Oman), and their son-in-law, Anees Ameer (Qatar).
+</p>
+<hr>
+<!-- Deputy Chief Engineer Recommendation Plaque -->
+<link href="https://fonts.googleapis.com/css2?family=Kalam:wght@300;400;700&display=swap" rel="stylesheet">
+
+<style>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Deputy CEO Greetings</title>
+
+<style>
+body{
+    margin:0;
+    padding:35px;
+    background:#111;
+    font-family:Georgia,serif;
+}
+
+.deputy-card{
+    max-width:860px;
+    margin:auto;
+    padding:38px;
+    border-radius:22px;
+    background:linear-gradient(160deg,#081a35,#0d3470,#0a2145);
+    border:2px solid #d4af37;
+    box-shadow:
+        0 0 28px rgba(0,150,255,.30),
+        0 0 12px rgba(255,215,0,.25);
+    color:#fff;
+    position:relative;
+}
+
+.deputy-card::before{
+    content:"Greetings";
+    position:absolute;
+    top:-18px;
+    left:50%;
+    transform:translateX(-50%);
+    padding:9px 28px;
+    border-radius:30px;
+    background:linear-gradient(90deg,#ffe082,#d4af37,#fff5c2);
+    color:#222;
+    font-size:22px;
+    font-weight:bold;
+    letter-spacing:2px;
+}
+
+.deputy-card p{
+    font-size:22px;
+    line-height:1.95;
+    text-align:justify;
+    margin:26px 0;
+}
+
+/* 1st Paragraph - Gold Italic */
+.deputy-card p:nth-of-type(1){
+    color:#ffd84d;
+    font-style:italic;
+}
+
+/* 2nd Paragraph - Silver */
+.deputy-card p:nth-of-type(2){
+    color:#e6e6e6;
+}
+
+/* 3rd Paragraph - Gold */
+.deputy-card p:nth-of-type(3){
+    color:#ffd84d;
+}
+
+/* 4th Paragraph - Silver */
+.deputy-card p:nth-of-type(4){
+    color:#e6e6e6;
+}
+
+/* Slogan */
+.slogan{
+    color:#ffd700;
+    font-weight:700;
+}
+
+/* Signature */
+.signature{
+    margin-top:45px;
+    text-align:right;
+}
+
+.signature .name{
+    color:#ffd700;
+    font-size:32px;
+    font-weight:700;
+    font-style:normal;
+    text-transform:uppercase;
+}
+
+.signature .designation{
+    color:#ffd700;
+    font-size:18px;
+    font-style:normal;
+    text-transform:uppercase;
+    margin-top:8px;
+}
+
+.signature .office{
+    color:#ffd700;
+    font-size:18px;
+    font-style:normal;
+    text-transform:uppercase;
+}
+</style>
+
+
+<div class="deputy-card">
+
+<p>
+I have had the opportunity to know Mr. Mohammed M. Basheer personally.
+I believe that his honesty, sincerity, and compassion are truly reflected
+in this initiative.
+</p>
+
+<p>
+This digital initiative, launched with the noble vision of helping
+vulnerable people who struggle to access even the most basic necessity of
+life—food—is truly commendable. Its message,
+<span class="slogan">"YOUR PURCHASE SATISFIES A HUNGER®"</span>,
+is simple yet deeply meaningful.
+</p>
+
+<p>
+By simply saving a small icon and using it for your regular purchases
+whenever possible, everyone has an opportunity to become part of this
+noble humanitarian mission.
+</p>
+
+<p>
+I extend my heartfelt best wishes for the success of this exemplary
+initiative towards building a hunger-free society.
+</p>
+
+<div class="signature">
+<div class="name">MATHUKKUTTY MP</div>
+<div class="designation">RETIRED ASSISTANT ENGINEER</div>
+<div class="office">KERALA STATE ELECTRICITY BOARD (KSEB)</div>
+</div>
+
+</div>
+
+<script>
+function toggleWish() {
+    var moreText = document.getElementById("wishMoreText");
+    var btnText = document.getElementById("wishReadBtn");
+
+    if (moreText.style.display === "none" || moreText.style.display === "") {
+        moreText.style.display = "block";
+        btnText.style.display = "none";
+    } else {
+        moreText.style.display = "none";
+        btnText.style.display = "inline";
+    }
+}
+
+/* IMAGE SLIDER */
+const bas7Images=[ 
+"https://drive.google.com/thumbnail?id=1keyWL0GF-HysweqAYntVaS-vB_fwZj_H&sz=w1000",
+"https://drive.google.com/thumbnail?id=1KdZnPqKlSOXAFY-Lu2FU41B1n7sWtt85&sz=w1000"
+];
+let bas7Index=0;
+const bas7Img=document.getElementById("bas7Img");
+
+setInterval(function(){
+bas7Img.style.opacity=0;
+setTimeout(function(){
+bas7Index=(bas7Index+1)%bas7Images.length;
+bas7Img.src=bas7Images[bas7Index];
+bas7Img.style.opacity=1;
+},800);
+},5000);
+
+/* AUTO RESET */
+const observer78=new IntersectionObserver(entries=>{
+entries.forEach(entry=>{
+if(!entry.isIntersecting){
+if(entry.target.id==="section7" && opened7){ toggleMore7(); }
+if(entry.target.id==="section8" && opened8){ toggleBas8(); }
+}
+});
+},{threshold:0});
+
+if(document.getElementById("section7")) observer78.observe(document.getElementById("section7"));
+if(document.getElementById("section8")) observer78.observe(document.getElementById("section8"));
+
+</script>
+
+</div>
+
+</details>
+
+</div>
+
+</details>
+</div>
+</div>
+
+</div>
+  
+  <!-- INFINITE AUTO/MANUAL SCROLL GREETINGS WIDGET START-->
+<!-- INFINITE AUTO/MANUAL SCROLL GREETINGS WIDGET START -->
+<style>
+  :root {
+    --gb-gold-grad: linear-gradient(135deg, #bf953f, #fcf6ba, #b38728, #fbf5b7, #aa771c);
+    --gb-bg-dark: #070d1a;
+    --gb-card-bg: #0b1326;
+    --gb-blue-btn: linear-gradient(135deg, #1d4ed8, #3b82f6);
+  }
+
+  .gb-widget-wrapper {
+    width: 100%;
+    max-width: 1100px;
+    margin: 20px auto;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .gb-search-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .gb-search-box {
+    width: 92%;
+    max-width: 550px;
+    padding: 12px 22px;
+    border-radius: 30px;
+    border: 2px solid #b38728;
+    background: #09101f;
+    color: #fcf6ba;
+    font-size: 1.05rem;
+    outline: none;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+    box-sizing: border-box;
+  }
+
+  .gb-slider-container {
+    width: 100%;
+    overflow-x: auto;
+    position: relative;
+    padding: 10px 0;
+   padding-left: 100px;
+
+    cursor: grab;
+    scrollbar-width: thin;
+    scrollbar-color: #b38728 #070d1a;
+  }
+
+  .gb-slider-container:active {
+    cursor: grabbing;
+  }
+
+  .gb-slider-track {
+    display: flex;
+    gap: 20px;
+    width: max-content;
+    animation: gbContinuousScroll 20s linear infinite;
+  }
+
+  .gb-slider-container:hover .gb-slider-track {
+    animation-play-state: paused;
+  }
+
+  @keyframes gbContinuousScroll {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(calc(-50% - 10px)); }
+  }
+
+  /* CARD STRUCTURE - ALWAYS HORIZONTAL (PHOTO LEFT, CONTENT RIGHT) */
+  .gb-card {
+    width: 540px;
+    height: 450px;
+    background: var(--gb-card-bg);
+    border-radius: 20px;
+    padding: 2px;
+    background-image: var(--gb-gold-grad);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.8);
+    flex-shrink: 0;
+    box-sizing: border-box;
+   scroll-snap-align: unset !important;
+
+  }
+
+  .gb-card-inner {
+    background: var(--gb-bg-dark);
+    border-radius: 18px;
+    display: flex !important;
+    flex-direction: row !important;
+    overflow: hidden;
+    border: 1px solid rgba(212, 175, 55, 0.3);
+    height: 100%;
+  }
+
+  /* LEFT SIDE PHOTO BOX */
+  .gb-photo-box {
+    width: 42%;
+    position: relative;
+    background: #020612;
+    border-right: 2px solid #b38728;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    overflow: hidden;
+    flex-shrink: 0;
+  }
+
+  .gb-photo-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top center;
+    cursor: pointer;
+  }
+
+  .gb-zoom-btn {
+    position: absolute;
+    bottom: 8px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(0, 0, 0, 0.85);
+    border: 1px solid #d4af37;
+    color: #fff;
+    padding: 4px 12px;
+    border-radius: 15px;
+    cursor: pointer;
+    font-size: 0.8rem;
+    font-weight: bold;
+    backdrop-filter: blur(4px);
+    white-space: nowrap;
+  }
+
+  /* RIGHT SIDE CONTENT BOX */
+  .gb-content-box {
+    width: 58%;
+    padding: 12px 14px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-sizing: border-box;
+  }
+
+  .gb-header-title {
+    font-size: 1.25rem;
+    font-weight: 800;
+    letter-spacing: 1.5px;
+    background: var(--gb-gold-grad);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .gb-preview-text {
+    font-size: 0.95rem;
+    line-height: 1.4;
+    color: #f1f5f9;
+    font-style: italic;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    margin: 4px 0;
+  }
+
+  .gb-more-btn {
+    background: var(--gb-blue-btn);
+    color: #fff;
+    border: 1px solid #60a5fa;
+    padding: 5px 14px;
+    border-radius: 12px;
+    font-weight: bold;
+    font-size: 0.85rem;
+    cursor: pointer;
+    align-self: flex-start;
+  }
+
+  .gb-person-name {
+    font-size: 1.05rem;
+    font-weight: 800;
+    background: var(--gb-gold-grad);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .gb-person-desig {
+  font-size: 0.85rem;
+  font-weight: bold;
+  color: #cbd5e1;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-top: 2px;
+
+  }
+
+  .gb-person-org {
+    font-size: 0.8rem;
+    font-weight: bold;
+    color: #ffffff;
+    margin-top: 1px;
+    text-transform: uppercase;
+  }
+
+  /* MODALS & ZOOM */
+  .gb-modal-overlay {
+    display: none;
+    position: fixed;
+    top: 0; left: 0;
+    width: 100vw; height: 100vh;
+    background: rgba(0, 0, 0, 0.88);
+    z-index: 999991;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+    box-sizing: border-box;
+  }
+
+  .gb-modal-card {
+    background: #070d1a;
+    border: 2px solid #b38728;
+    border-radius: 16px;
+    max-width: 550px;
+    width: 100%;
+    max-height: 80vh;
+    overflow-y: auto;
+    padding: 20px;
+    position: relative;
+  }
+
+  .gb-modal-close {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    color: #fcf6ba;
+    font-size: 1.8rem;
+    font-weight: bold;
+    cursor: pointer;
+  }
+
+  .gb-modal-body {
+    font-family: 'Georgia', serif;
+    font-size: 1.05rem;
+    line-height: 1.6;
+    color: #ffffff;
+    text-align: justify;
+    margin-top: 15px;
+  }
+
+  .gb-zoom-modal {
+    display: none;
+    position: fixed;
+    z-index: 999992;
+    top: 0; left: 0;
+    width: 100vw; height: 100vh;
+    background: rgba(0, 0, 0, 0.92);
+    justify-content: center;
+    align-items: center;
+  }
+
+  .gb-zoom-modal img {
+    width: 90vw;
+    max-width: 480px;
+    height: auto;
+    max-height: 80vh;
+    object-fit: contain;
+    border-radius: 12px;
+    border: 2px solid #d4af37;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.9);
+  }
+
+  /* MOBILE RESPONSIVE FIT */
+  @media (max-width: 650px) {
+    .gb-card { 
+      width: 88vw; 
+      height:350px; 
+    }
+    .gb-photo-box { 
+      width: 40%; 
+    }
+    .gb-content-box { 
+      width: 60%; 
+      padding: 8px 10px; 
+    }
+    .gb-header-title {
+      font-size: 1.1rem;
+    }
+    .gb-preview-text {
+      font-size: 0.85rem;
+      -webkit-line-clamp: 3;
+    }
+    .gb-person-name {
+      font-size: 0.92rem;
+    }
+    .gb-person-desig, .gb-person-org {
+      font-size: 0.72rem;
+    }
+  }
+</style>
+
+<div class="gb-widget-wrapper">
+  <!-- SEARCH BAR -->
+  <div class="gb-search-container">
+    <input type="text" id="gbSearchInput" class="gb-search-box" placeholder="Search greetings by name or designation..." onkeyup="gbFilterGreetings()">
+  </div>
+
+  <!-- CONTINUOUS AUTO & MANUAL SCROLL TRACK -->
+  <div class="gb-slider-container" id="gbSliderContainer">
+    <div class="gb-slider-track" id="gbSliderTrack">
+
+
+       
+      
+      <!-- CARD 1: DR. RADHAKRISHNAN NAIR -->
+      <div class="gb-card" data-search="DR RADHAKRISHNAN  SENIOR RESEARCH CONSULTANT CENTER FOR GLOBAL HUMANITARIAN STUDIES">
+        <div class="gb-card-inner">
+          <div class="gb-photo-box">
+            <img src="radhakrishnan.jpg" alt="DR. RADHAKRISHNAN " onclick="gbOpenZoom(this)">
+            <button class="gb-zoom-btn" onclick="gbOpenZoom(this)">🔍 ZOOM</button>
+          </div>
+          <div class="gb-content-box">
+            <div class="gb-header-title">VISION</div>
+            <div class="gb-preview-text">
+              "Healthcare extends beyond direct medical care. Connecting basic nutrition to daily activities bridges the gap between survival and empowerment..."
+            </div>
+            <button class="gb-more-btn" onclick="gbOpenModal('radhakrishnan')">MORE &rarr;</button>
+            <div style="border-top: 1px solid rgba(212,175,55,0.3); padding-top: 4px; margin-top: 4px;">
+              <div class="gb-person-name">DR. RADHAKRISHNAN </div>
+              <div class="gb-person-desig">SENIOR RESEARCH CONSULTANT</div>
+              <div class="gb-person-org">CENTER FOR GLOBAL HUMANITARIAN STUDIES</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- CARD 2: MATHUKATTY MP (രണ്ടാമത്തെ സ്ഥാനത്ത്) -->
+      <div class="gb-card" data-search="MATHUKUTTY MP RETIRED ASSISTANT ENGINEER KSEB">
+        <div class="gb-card-inner">
+          <div class="gb-photo-box">
+            <img src="mathukkutty.jpg" alt="MATHUKUTTY MP" onclick="gbOpenZoom(this)">
+            <button class="gb-zoom-btn" onclick="gbOpenZoom(this)">🔍 ZOOM</button>
+          </div>
+          <div class="gb-content-box">
+            <div class="gb-header-title">GREETINGS</div>
+            <div class="gb-preview-text">
+              "I have had the opportunity to know Mr. Mohammed M. Basheer personally. I believe that his honesty, sincerity, and compassion are truly reflected..."
+            </div>
+            <button class="gb-more-btn" onclick="gbOpenModal('mathukkutty')">MORE &rarr;</button>
+            <div style="border-top: 1px solid rgba(212,175,55,0.3); padding-top: 4px; margin-top: 4px;">
+              <div class="gb-person-name">MATHUKUTTY MP</div>
+              <div class="gb-person-desig">RETIRED ASSISTANT ENGINEER</div>
+              <div class="gb-person-org">KSEB</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- CARD 3: ADV. ANITA CHACKO -->
+    <!--<div class="gb-card" data-search="ADV ANITA CHACKO CHIEF LEGAL STRATEGIST GLOBAL POLICY WELFARE FORUM">
+        <div class="gb-card-inner">
+          <div class="gb-photo-box">
+            <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=500&q=80" alt="ADV. ANITA CHACKO" onclick="gbOpenZoom(this)">
+            <button class="gb-zoom-btn" onclick="gbOpenZoom(this)">🔍 ZOOM</button>
+          </div>
+          <div class="gb-content-box">
+            <div class="gb-header-title">VISION</div>
+            <div class="gb-preview-text">
+              "Building sustainable models for humanitarian outreach is essential. Converting daily transactions into direct community aid creates transparent welfare..."
+            </div>
+            <button class="gb-more-btn" onclick="gbOpenModal('anita')">MORE &rarr;</button>
+            <div style="border-top: 1px solid rgba(212,175,55,0.3); padding-top: 4px; margin-top: 4px;">
+              <div class="gb-person-name">ADV. ANITA CHACKO</div>
+              <div class="gb-person-desig">CHIEF LEGAL STRATEGIST</div>
+              <div class="gb-person-org">GLOBAL POLICY & WELFARE FORUM</div>
+            </div>
+          </div>
+        </div>
+      </div>-->
+
+      <!-- CARD 4: PROF. K. V. RAMANATHAN -->
+      <div class="gb-card" data-search="PROF K V RAMANATHAN RETIRED PRINCIPAL TECHNICAL CONSULTANT INFRASTRUCTURE DEVELOPMENT NETWORK">
+        <div class="gb-card-inner">
+          <div class="gb-photo-box">
+            <img src="ramanandan.jpg" alt="PROF. K. V. RAMANATHAN" onclick="gbOpenZoom(this)">
+            <button class="gb-zoom-btn" onclick="gbOpenZoom(this)">🔍 ZOOM</button>
+          </div>
+          <div class="gb-content-box">
+            <div class="gb-header-title">GREETINGS</div>
+            <div class="gb-preview-text">
+              "Education and proper nutrition form the base of an empowered society. Integrating technology seamlessly for hunger relief is visionary... I wish you all the best"
+            </div>
+            <button class="gb-more-btn" onclick="gbOpenModal('ramanathan')">MORE &rarr;</button>
+            <div style="border-top: 1px solid rgba(212,175,55,0.3); padding-top: 4px; margin-top: 4px;">
+              <div class="gb-person-name"> PROF. K. V. RAMANATHAN</div>
+              <div class="gb-person-desig"> RETIRED PRINCIPAL TECHNICAL CONSULTANT</div>
+              <div class="gb-person-org">INFRASTRUCTURE DEVELOPMENT NETWORK</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- DUPLICATE CARDS FOR SEAMLESS LOOPING -->
+      <!--<div class="gb-card" data-search="DR RADHAKRISHNAN NAIR SENIOR FELLOW RESEARCH CONSULTANT CENTER FOR GLOBAL HUMANITARIAN STUDIES">
+        <div class="gb-card-inner">
+          <div class="gb-photo-box">
+            <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=500&q=80" alt="DR. RADHAKRISHNAN NAIR" onclick="gbOpenZoom(this)">
+            <button class="gb-zoom-btn" onclick="gbOpenZoom(this)">🔍 ZOOM</button>
+          </div>
+          <div class="gb-content-box">
+            <div class="gb-header-title">VISION</div>
+            <div class="gb-preview-text">
+              "Healthcare extends beyond direct medical care. Connecting basic nutrition to daily activities bridges the gap between survival and empowerment..."
+            </div>
+            <button class="gb-more-btn" onclick="gbOpenModal('radhakrishnan')">MORE &rarr;</button>
+            <div style="border-top: 1px solid rgba(212,175,55,0.3); padding-top: 4px; margin-top: 4px;">
+              <div class="gb-person-name">DR. RADHAKRISHNAN NAIR</div>
+              <div class="gb-person-desig">SENIOR FELLOW & RESEARCH CONSULTANT</div>
+              <div class="gb-person-org">CENTER FOR GLOBAL HUMANITARIAN STUDIES</div>
+            </div>
+          </div>
+        </div>
+      </div>-->
+
+      <div class="gb-card" data-search="MATHUKATTY MP RETIRED ASSISTANT ENGINEER KSEB">
+        <div class="gb-card-inner">
+          <div class="gb-photo-box">
+            <img src="mathukkutty.jpg" alt="MATHUKATTY MP" onclick="gbOpenZoom(this)">
+            <button class="gb-zoom-btn" onclick="gbOpenZoom(this)">🔍 ZOOM</button>
+          </div>
+          <div class="gb-content-box">
+            <div class="gb-header-title">GREETINGS</div>
+            <div class="gb-preview-text">
+              "I have had the opportunity to know Mr. Mohammed M. Basheer personally. I believe that his honesty, sincerity, and compassion are truly reflected..."
+            </div>
+            <button class="gb-more-btn" onclick="gbOpenModal('mathukkutty')">MORE &rarr;</button>
+            <div style="border-top: 1px solid rgba(212,175,55,0.3); padding-top: 4px; margin-top: 4px;">
+              <div class="gb-person-name">MATHUKUTTY, MP</div>
+              <div class="gb-person-desig">RETIRED ASSISTANT ENGINEER</div>
+              <div class="gb-person-org">KSEB</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+
+<!-- INDIVIDUAL MESSAGE MODALS -->
+
+<!-- MODAL 1: MATHUKATTY MP -->
+<div id="mathukkutty" class="gb-modal-overlay" onclick="gbCloseModal('mathukkutty')">
+  <div class="gb-modal-card" onclick="event.stopPropagation()">
+    <span class="gb-modal-close" onclick="gbCloseModal('mathukkutty')">&times;</span>
+    <div style="text-align: center;"><span style="background: var(--gb-gold-grad); color: #000; font-weight: bold; padding: 6px 24px; border-radius: 20px; font-size: 1.1rem;">GREETINGS</span></div>
+    <div class="gb-modal-body">
+      <p style="font-style: italic; color: #fcf6ba;">
+        I have had the opportunity to know Mr. Mohammed M. Basheer personally. I believe that his honesty, sincerity, and compassion are truly reflected in this initiative.
+      </p>
+      <p>
+        This digital initiative, launched with the noble vision of helping vulnerable people who struggle to access even the most basic necessity of life—food—is truly commendable. Its message, <span style="color: #fcf6ba; font-weight: bold;">"YOUR PURCHASE SATISFIES A HUNGER®"</span>, is simple yet deeply meaningful.
+      </p>
+      <p>
+        By simply saving a small icon and using it for your regular purchases whenever possible, everyone has an opportunity to become part of this noble humanitarian mission.
+      </p>
+      <p>
+        I extend my heartfelt best wishes for the success of this exemplary initiative towards building a hunger-free society.
+      </p>
+    </div>
+    <div style="border-top: 1px solid rgba(212, 175, 55, 0.4); padding-top: 15px; text-align: center; margin-top: 20px;">
+      <div class="gb-person-name" style="font-size: 1.25rem;">MATHUKUTTY, MP</div>
+      <div class="gb-person-desig" style="font-size: 0.9rem;">RETIRED ASSISTANT ENGINEER</div>
+      <div class="gb-person-org" style="font-size: 0.9rem;">KERALA STATE ELECTRICITY BOARD (KSEB)</div>
+    </div>
+  </div>
+</div>
+
+<!-- MODAL 2: DR. RADHAKRISHNAN NAIR -->
+<div id="radhakrishnan" class="gb-modal-overlay" onclick="gbCloseModal('radhakrishnan')">
+  <div class="gb-modal-card" onclick="event.stopPropagation()">
+    <span class="gb-modal-close" onclick="gbCloseModal('radhakrishnan')">&times;</span>
+    <div style="text-align: center;"><span style="background: var(--gb-gold-grad); color: #000; font-weight: bold; padding: 6px 24px; border-radius: 20px; font-size: 1.1rem;">VISION</span></div>
+    <div class="gb-modal-body">
+      <p>Healthcare is not just about treating illnesses; ensuring proper nutrition to vulnerable communities is equally vital. BAS Charity International’s self-sustaining humanitarian effort ensures that every day-to-day transaction turns into a lifeline for someone in need.</p>
+    </div>
+    <div style="border-top: 1px solid rgba(212, 175, 55, 0.4); padding-top: 15px; text-align: center; margin-top: 20px;">
+      <div class="gb-person-name" style="font-size: 1.25rem;">DR. RADHAKRISHNAN NAIR</div>
+      <div class="gb-person-desig" style="font-size: 0.9rem;">SENIOR FELLOW & RESEARCH CONSULTANT</div>
+      <div class="gb-person-org" style="font-size: 0.9rem;">CENTER FOR GLOBAL HUMANITARIAN STUDIES</div>
+    </div>
+  </div>
+</div>
+
+<!-- MODAL 3: ADV. ANITA CHACKO -->
+<!--<div id="anita" class="gb-modal-overlay" onclick="gbCloseModal('anita')">
+  <div class="gb-modal-card" onclick="event.stopPropagation()">
+    <span class="gb-modal-close" onclick="gbCloseModal('anita')">&times;</span>
+    <div style="text-align: center;"><span style="background: var(--gb-gold-grad); color: #000; font-weight: bold; padding: 6px 24px; border-radius: 20px; font-size: 1.1rem;">VISION</span></div>
+    <div class="gb-modal-body">
+      <p>Transparency and ethical alignment are essential for true charitable impact. Connecting global e-commerce seamlessly to charitable causes creates a sustainable model that stands as an example to society.</p>
+    </div>
+    <div style="border-top: 1px solid rgba(212, 175, 55, 0.4); padding-top: 15px; text-align: center; margin-top: 20px;">
+      <div class="gb-person-name" style="font-size: 1.25rem;">ADV. ANITA CHACKO</div>
+      <div class="gb-person-desig" style="font-size: 0.9rem;">CHIEF LEGAL STRATEGIST</div>
+      <div class="gb-person-org" style="font-size: 0.9rem;">GLOBAL POLICY & WELFARE FORUM</div>
+    </div>
+  </div>
+</div>-->
+
+<!-- MODAL 4: PROF. K. V. RAMANATHAN -->
+<div id="ramanathan" class="gb-modal-overlay" onclick="gbCloseModal('ramanathan')">
+  <div class="gb-modal-card" onclick="event.stopPropagation()">
+    <span class="gb-modal-close" onclick="gbCloseModal('ramanathan')">&times;</span>
+    <div style="text-align: center;"><span style="background: var(--gb-gold-grad); color: #000; font-weight: bold; padding: 6px 24px; border-radius: 20px; font-size: 1.1rem;">VISION</span></div>
+    <div class="gb-modal-body">
+      <p>Empowering humanity begins with solving fundamental needs. Utilizing affiliate revenue mechanisms to channel aid directly without burdens on donors is an extraordinary concept.</p>
+    </div>
+    <div style="border-top: 1px solid rgba(212, 175, 55, 0.4); padding-top: 15px; text-align: center; margin-top: 20px;">
+      <div class="gb-person-name" style="font-size: 1.25rem;">PROF. K. V. RAMANATHAN</div>
+      <div class="gb-person-desig" style="font-size: 0.9rem;">PRINCIPAL TECHNICAL CONSULTANT</div>
+      <div class="gb-person-org" style="font-size: 0.9rem;">INFRASTRUCTURE DEVELOPMENT NETWORK</div>
+    </div>
+  </div>
+</div>
+
+<!-- IMAGE ZOOM MODAL -->
+<div id="gbImageZoomModal" class="gb-zoom-modal" onclick="gbCloseZoom()">
+  <span class="gb-modal-close" style="top:20px; right:30px;">&times;</span>
+  <img id="gbModalImg" src="" alt="Enlarged View">
+</div>
+
+<script>
+  function gbOpenModal(id) {
+    document.getElementById(id).style.display = 'flex';
+  }
+
+  function gbCloseModal(id) {
+    document.getElementById(id).style.display = 'none';
+  }
+
+  function gbOpenZoom(el) {
+    let imgSrc = el.tagName === 'IMG' ? el.src : el.previousElementSibling.src;
+    document.getElementById('gbModalImg').src = imgSrc;
+    document.getElementById('gbImageZoomModal').style.display = 'flex';
+  }
+
+  function gbCloseZoom() {
+    document.getElementById('gbImageZoomModal').style.display = 'none';
+  }
+
+  function gbFilterGreetings() {
+    let query = document.getElementById('gbSearchInput').value.toLowerCase();
+    let cards = document.getElementsByClassName('gb-card');
+    let track = document.getElementById('gbSliderTrack');
+
+    if (query.trim() !== '') {
+      track.style.animation = 'none';
+    } else {
+      track.style.animation = 'gbContinuousScroll 20s linear infinite';
+    }
+
+    for (let card of cards) {
+      let searchData = card.getAttribute('data-search').toLowerCase();
+      if (searchData.includes(query)) {
+        card.style.display = "block";
+      } else {
+        card.style.display = "none";
+      }
+    }
+  }
+
+  // MANUAL DRAG & TOUCH SCROLL
+  const gbSlider = document.getElementById('gbSliderContainer');
+  let gbIsDown = false;
+  let gbStartX;
+  let gbScrollLeft;
+
+  if (gbSlider) {
+    gbSlider.addEventListener('mousedown', (e) => {
+      gbIsDown = true;
+      gbStartX = e.pageX - gbSlider.offsetLeft;
+      gbScrollLeft = gbSlider.scrollLeft;
+    });
+    gbSlider.addEventListener('mouseleave', () => { gbIsDown = false; });
+    gbSlider.addEventListener('mouseup', () => { gbIsDown = false; });
+    gbSlider.addEventListener('mousemove', (e) => {
+      if(!gbIsDown) return;
+      e.preventDefault();
+      const x = e.pageX - gbSlider.offsetLeft;
+      const walk = (x - gbStartX) * 2;
+      gbSlider.scrollLeft = gbScrollLeft - walk;
+    });
+  }
+   const container = document.querySelector('.gb-card-container'); // കാർഡുകളുടെ Parent Class
+
+container.addEventListener('wheel', (e) => {
+  e.preventDefault();
+  // സ്‌ക്രോൾ ചെയ്യുന്നതിന്റെ എതിർദിശയിലേക്ക് മൂവ് ചെയ്യിക്കുന്നു
+  container.scrollLeft -= e.deltaY; 
+});
+
+</script>
+<!-- INFINITE AUTO/MANUAL SCROLL GREETINGS WIDGET END -->
+
+   
+<!-- INFINITE AUTO/MANUAL SCROLL GREETINGS WIDGET END -->
+ <!-- INFINITE AUTO/MANUAL SCROLL GREETINGS WIDGET END -->
+<style>
+.trust-container{
+max-width:900px; /* Responsive Fix */
+width:96%;
+margin:auto;
+}
+.trust-title{ 
+background:#000;
+color:#00e676;
+font-weight:900;
+font-size:28px;
+text-align:center;
+padding:20px;
+border-radius:12px;
+margin-bottom:25px;
+border: 1.5px solid #C0C0C0;
+box-shadow: 0 0 8px rgba(192,192,192,0.18);
+border-left:6px solid #00e676;
+}
+.trust-title{
+background:#000;
+color:#00e676;
+font-weight:900;
+font-size:28px;
+text-align:center;
+padding:20px;
+border-radius:12px;
+margin-bottom:25px;
+border: 1px solid #C0C0C0;
+border-left:6px solid #00e676;
+}
+.trust-box {
+  background: #1a1a1a;
+  padding: 22px;
+  border-radius: 12px;
+  border: 1.5px solid #C0C0C0;
+  box-shadow: 0 0 8px rgba(192,192,192,0.18); 
+  border-left: 6px solid #e91e63;
+  box-shadow: 0px 0px 6px rgba(255, 255, 255, 0.15); 
+  margin-bottom: 20px;
+}
+.trust-box h1{
+font-size:26px;
+margin-bottom:10px;
+color:#fff;
+}
+.trust-sub{
+font-size:22px;
+color:#4fc3f7;
+margin-bottom:15px;
+display:block;
+}
+.trust-box p{
+font-size:22px;
+color:#ddd;
+line-height:1.7;
+}
+.btn-row{
+display:flex;
+gap:10px;
+margin-top:20px;
+}
+.trust-btn{
+padding:16px;
+border-radius:10px;
+font-size:22px;
+font-weight:bold;
+text-align:center;
+cursor:pointer;
+display:flex;
+align-items:center;
+justify-content:center;
+flex-direction: column;
+}
+.btn-row{
+display:flex;
+gap:10px;
+margin-top:20px;
+}
+.trust-btn{
+padding:16px;
+border-radius:10px;
+font-size:22px;
+font-weight:bold;
+text-align:center;
+cursor:pointer;
+display:flex;
+align-items:center;
+justify-content:center;
+flex-direction: column;
+}
+.btn-red{ background:#8b0000; color:#fff; flex:1; }
+.btn-green{ background:#006400; color:#fff; flex:2; }
+.inner-card{
+background:#111;
+padding:18px;
+border-radius:10px;
+border:1px solid #333;
+margin-top:15px;
+font-size:22px;
+line-height:1.7;
+border-left:4px solid #00e676;
+color:#fff;
+}
+.sub-view{display:none;}
+.back-btn{
+margin-top:20px;
+background:#333;
+color:#fff;
+padding:14px;
+border-radius:10px;
+text-align:center;
+font-size:22px;
+font-weight:bold;
+cursor:pointer;
+}
+</style>
+
+<div class="trust-container">
+<div class="trust-title"> A Few Trusted Organizations Worldwide </div>
+
+<div class="trust-box">
+<h1>Guidance India Education and Charitable Trust</h1>
+<span class="trust-sub"> Paracode welfare program </span>
+
+<p>
+A welfare initiative focusing on pain and palliative care, orphan support, ration aid, education assistance, de addiction awareness and sustainable welfare.
+</p>
+
+<div class="btn-row">
+<div class="trust-btn btn-red" onclick="showDetails9()">DETAILS</div>
+<div class="trust-btn btn-green" onclick="showDonate9()">
+Donate Directly→
+<span style="font-size:18px;">(India Only)</span>
+</div>
+</div>
+
+<div id="details9" class="sub-view">
+<div class="trust-box">
+<h1>Project Details</h1>
+<div class="inner-card">
+The Paracode Rehabilitation Project supports individuals and families through pain and palliative care, orphan care, ration distribution, education support and rehabilitation awareness.
+</div>
+<div class="inner-card">
+Even a small daily contribution can relieve hunger and bring dignity to lives in need.
+</div>
+<div class="back-btn" onclick="reset9()">BACK</div>
+</div>
+</div>
+
+<div id="donate9" class="sub-view">
+<div class="trust-box">
+<h1>Donation Categories</h1>
+<div class="inner-card">
+<b>Pain and Palliative Care</b><br>
+Medical support, medicines and comfort care.
+</div>
+<div class="inner-card">
+<b>Orphan Support</b><br>
+Food, shelter, education and basic needs.
+</div>
+<div class="inner-card">
+<b>Building Fund Contribution - Sustainable Income (Sadaqa Jaria)</b>
+<br><br>
+1 sq.ft - Rs 1500<br>
+100 sq.ft - Rs 150000
+<br><br>
+One Flat Sponsorship - Rs 1500000<br>
+Total Project - Rs 7500000
+</div>
+<div class="inner-card">
+<b>Bank Transfer Details</b><br><br>
+Account Name : Guidance India Education and Charitable Trust<br>
+Account Number : 10350200008909<br>
+IFSC : FDRL0001035<br>
+Federal Bank Kizhakkambalam Branch
+</div>
+<div class="back-btn" onclick="reset9()">BACK</div>
+</div>
+</div>
+</div>
+</div>
+
+<script>
+let timer9;
+function showDetails9(){
+document.getElementById("details9").style.display="block";
+document.getElementById("donate9").style.display="none";
+window.scrollBy({top:200, behavior:"smooth"});
+startTimer9();
+}
+function showDonate9(){
+document.getElementById("details9").style.display="none";
+document.getElementById("donate9").style.display="block";
+window.scrollBy({top:200, behavior:"smooth"});
+startTimer9();
+}
+function reset9(){
+document.getElementById("details9").style.display="none";
+document.getElementById("donate9").style.display="none";
+clearTimeout(timer9);
+}
+function startTimer9(){
+clearTimeout(timer9);
+timer9=setTimeout(reset9,15000);
+}
+</script>
+
+<style>
+.peace-wrapper{
+max-width:900px; /* Responsive Fix */
+width:96%;
+margin:30px auto;
+}
+.peace-box {
+  background: #1a1a1a;
+  padding: 22px;
+  border-radius: 12px;
+  border: 1.5px solid #C0C0C0;
+  box-shadow: 0 0 8px rgba(192,192,192,0.18);
+  border-left: 6px solid #e91e63;
+  box-shadow: 0px 0px 6px rgba(255, 255, 255, 0.15); 
+  color: #fff;
+  margin-bottom: 20px;
+}
+.peace-box h1{ font-size:26px; margin-bottom:12px; }
+.peace-sub{ font-size:22px; color:#4fc3f7; margin-bottom:14px; display:block; font-weight:700; }
+.peace-box p{ font-size:22px; line-height:1.7; color:#ccc; }
+.peace-btn-row{ display:flex; gap:10px; margin-top:20px; }
+.peace-btn{ padding:16px; border-radius:10px; font-weight:800; cursor:pointer; font-size:22px; text-align:center; }
+.peace-btn-details{ background:#8b0000; color:#fff; flex:1; }
+.peace-section{ display:none; }
+.peace-card{ background:#111; padding:16px; border-radius:10px; border:1px solid #333; margin-bottom:14px; font-size:22px; line-height:1.7; border-left:4px solid #00e676; }
+.peace-link{ display:inline-block; margin-top:10px; padding:12px 18px; background:#00c853; color:#000; border-radius:10px; font-weight:bold; text-decoration:none; font-size:22px; }
+.peace-back{ margin-top:20px; background:#333; color:#fff; padding:14px; border-radius:10px; text-align:center; cursor:pointer; font-weight:bold; font-size:22px; }
+</style>
+
+<div class="peace-wrapper">
+<div class="peace-box">
+<h1>Peace Valley – Kothamangalam</h1>
+<span class="peace-sub"> Charitable Care Institution </span>
+<p>
+A humanitarian institution providing shelter, medical care, rehabilitation and daily support for the needy and vulnerable.
+</p>
+
+<div class="peace-btn-row">
+<div class="peace-btn peace-btn-details" onclick="peaceDetails10()">Details</div>
+<a class="peace-link" href="https://peacevalley.org.in/donation/" target="_blank">
+Donate Directly ➜
+<br><span style="font-size:18px;">(Global)</span>
+</a>
+</div>
+
+<div id="peaceDetails10" class="peace-section">
+<div class="peace-box">
+<h1>About Peace Valley</h1>
+<div class="peace-card">
+Peace Valley Charitable Trust in Kothamangalam provides long-term shelter, food, medical care and rehabilitation support.
+</div>
+<div class="peace-card">
+Visit official website for full information.<br>
+<a class="peace-link" href="https://peacevalley.org.in/" target="_blank">Visit Website</a>
+</div>
+<div class="peace-back" onclick="peaceReset10()">BACK</div>
+</div>
+</div>
+
+<div id="peaceDonate10" class="peace-section">
+<div class="peace-box">
+<h1>Support Categories</h1>
+<div class="peace-card">
+<b>Food and Daily Care</b><br>
+Providing nutritious meals and daily essentials.<br>
+<a class="peace-link" href="https://peacevalley.org.in/donation/" target="_blank">Donate Directly</a>
+</div>
+<div class="peace-back" onclick="peaceReset10()">BACK</div>
+</div>
+</div>
+</div>
+</div>
+
+<script>
+let timer10;
+function peaceDetails10(){
+document.getElementById("peaceDetails10").style.display="block";
+document.getElementById("peaceDonate10").style.display="none";
+window.scrollBy({top:200, behavior:"smooth"});
+startTimer10();
+}
+function peaceReset10(){
+document.getElementById("peaceDetails10").style.display="none";
+document.getElementById("peaceDonate10").style.display="none";
+clearTimeout(timer10);
+}
+function startTimer10(){
+clearTimeout(timer10);
+timer10=setTimeout(peaceReset10,15000);
+}
+</script>
+ <style>
+.vada-wrapper {
+max-width: 900px;
+width:96%;
+margin: 30px auto;
+}
+.vada-box {
+  background: #1a1a1a;
+  padding: 22px;
+  border-radius: 12px;
+  border:1.5px solid #C0C0C0;
+ box-shadow: 0 0 8px rgba(192,192,192,0.18);
+  border-left: 6px solid #e53935;
+  box-shadow: 0px 0px 6px rgba(255, 255, 255, 0.15); 
+  color: #fff;
+  margin-bottom: 20px;
+}
+.vada-box h1 { font-size: 26px; margin-bottom: 10px; }
+.vada-box h2 { font-size: 22px; color: #ffd54f; margin-bottom: 12px; }
+.vada-box p { font-size: 22px; line-height: 1.7; color: #ccc; }
+.vada-btn-row { display: flex; gap: 10px; margin-top: 20px; }
+.vada-btn {
+padding: 16px;
+border-radius: 10px;
+font-size: 22px;
+font-weight: bold;
+text-align: center;
+cursor: pointer;
+display: flex;
+align-items: center;
+justify-content: center;
+flex-direction: column;
+}
+.vada-details { background: #b71c1c; color: #fff; flex: 1; }
+.vada-donate { background: #0b5e20; color: #fff; flex: 2; }
+.vada-section { display: none; }
+.vada-card {
+background: #111;
+padding: 18px;
+border-radius: 10px;
+border: 1px solid #C0C0C0;
+box-shadow: 0 0 8px rgba(192,192,192,0.18);margin-bottom: 14px;
+font-size: 22px;
+line-height: 1.7;
+border-left: 4px solid #00e676;
+}
+.vada-back {
+margin-top: 20px;
+background: #333;
+color: #fff;
+padding: 14px;
+border-radius: 10px;
+text-align: center;
+cursor: pointer;
+font-weight: bold;
+font-size: 22px;
+}
+</style>
+
+<div class="vada-wrapper">
+<div class="vada-box">
+<h1>Vadanappally Orphanage</h1>
+<p>A charitable institution dedicated to the care, protection and upbringing of orphaned and destitute children through education, shelter and moral support.</p>
+<div class="vada-btn-row">
+<div class="vada-btn vada-details" onclick="vadaDetails11()">Details</div>
+<div class="vada-btn vada-donate" onclick="vadaDonate11()">
+Donate Directly→
+<span style="font-size:18px;">(India Only)</span>
+</div>
+</div>
+</div>
+
+<div id="vadaDetails11" class="vada-section">
+<div class="vada-box">
+<h2>About Vadanappally Orphanage</h2>
+<div class="vada-card">Vadanappally Orphanage Committee is a community-based charitable organisation functioning in Thrissur district, Kerala. The institution provides shelter, education and emotional care for orphaned and vulnerable children.</div>
+<div class="vada-card">Their activities focus on long-term child welfare, education support and social upliftment.</div>
+<div class="vada-back" onclick="vadaReset11()">BACK</div>
+</div>
+</div>
+
+<div id="vadaDonate11" class="vada-section">
+<div class="vada-box">
+<h2>Support Their Work</h2>
+<div class="vada-card"><b>Orphan Care & Shelter</b><br>Providing food, clothing, accommodation and daily care for orphaned children.</div>
+<div class="vada-card"><b>Education Support</b><br>Schooling, books, uniforms and guidance to help children build a better future.</div>
+<div class="vada-card">
+<b>Bank Details</b><br><br>
+A/c Name : VATANAPPALLY ORPHANAGE COMMITTEE<br><br>
+A/c No : 917020025053101<br>Bank : Axis Bank<br>Branch : Vatanappally, Thrissur<br>IFSC : UTIB0003224<br><br>
+A/c No : 10532244438<br>Bank : SBI<br>Branch : Vatanappally, Thrissur<br>IFSC : SBIN0008683
+</div>
+<div class="vada-back" onclick="vadaReset11()">BACK</div>
+</div>
+</div>
+</div>
+
+<script>
+let timer11;
+function vadaDetails11(){
+document.getElementById("vadaDetails11").style.display="block";
+document.getElementById("vadaDonate11").style.display="none";
+scrollTopSmooth("vadaDetails11");
+startTimer11();
+}
+function vadaDonate11(){
+document.getElementById("vadaDetails11").style.display="none";
+document.getElementById("vadaDonate11").style.display="block";
+scrollTopSmooth("vadaDonate11");
+startTimer11();
+}
+function vadaReset11(){
+document.getElementById("vadaDetails11").style.display="none";
+document.getElementById("vadaDonate11").style.display="none";
+clearTimeout(timer11);
+}
+function startTimer11(){
+clearTimeout(timer11);
+timer11=setTimeout(vadaReset11,20000);
+}
+</script>
+
+<style>
+.vision-wrapper {
+max-width: 900px;
+width: 96%;
+margin: 30px auto;
+}
+.vision-box {
+  background: #121212;
+  padding: 22px;
+  border-radius: 16px;
+border: 1px solid #C0C0C0;
+box-shadow: 0 0 8px rgba(192,192,192,0.18);
+  border-left: 6px solid #e91e63; /* ഇടത് വശത്തെ ബോർഡർ കളർ */
+  box-shadow: 0px 0px 6px rgba(255, 255, 255, 0.15); /* നേർത്ത തിളക്കം നൽകുന്നു */
+  color: #fff;
+  margin-bottom: 22px;
+  position: relative;
+  overflow: hidden;
+}
+
+.vision-box h1 { font-size: 26px; margin: 0 0 12px; }
+.vision-box h2 { font-size: 22px; color: #ffd54f; margin-bottom: 10px; }
+.vision-box p { font-size: 22px; line-height: 1.6; color: #ddd; }
+.vision-impact { margin-top: 14px; font-size: 18px; line-height: 1.8; color: #ffd54f; }
+.vision-btn-row { display: flex; gap: 14px; margin-top: 18px; }
+.vision-btn {
+flex: 1;
+padding: 14px 0;
+text-align: center;
+border-radius: 12px;
+font-weight: bold;
+cursor: pointer;
+display: flex;
+align-items: center;
+justify-content: center;
+flex-direction: column;
+}
+.vision-details { background: #b71c1c; color: #fff; }
+.vision-link {
+display: flex;
+flex: 1;
+align-items: center;
+justify-content: center;
+flex-direction: column;
+padding: 14px 0;
+background: #0b5e20;
+color: #fff;
+border-radius: 12px;
+font-weight: bold;
+text-decoration: none;
+text-align: center;
+}
+.vision-section { display: none; margin-top: 18px; }
+.vision-card {
+background: #181818;
+padding: 18px;
+border-radius: 12px;
+margin-bottom: 12px;
+font-size: 20px;
+line-height: 1.6;
+}
+.vision-back {
+margin-top: 20px;
+background: #333;
+color: #fff;
+padding: 14px;
+border-radius: 10px;
+text-align: center;
+cursor: pointer;
+font-weight: bold;
+font-size: 22px;
+}
+</style>
+
+<div class="vision-wrapper">
+<div class="vision-box">
+<h1>Vision 2026 – Human Welfare Foundation</h1>
+<p>Humanitarian initiatives focusing on hunger relief, education, healthcare, orphan care and disaster response.</p>
+<div class="vision-impact">
+✔️ <b>20,000,000+</b> Lives Impacted<br>
+✔️ <b>6000+</b> Projects Implemented<br>
+✔️ <b>200+</b> Partner Organisations<br>
+✔️ <b>23+</b> States Covered<br>
+✔️ <b>16+</b> Years of Service
+</div>
+<div class="vision-btn-row">
+<div class="vision-btn vision-details" onclick="visionDetails12()">Details</div>
+<a class="vision-link" href="https://www.hwfindia.org/donate/" target="_blank">
+Donate Directly⇒
+<span style="font-size:18px;">(Global)</span>
+</a>
+</div>
+</div> 
+
+<div id="visionDetails12" class="vision-section">
+<div class="vision-box">
+<h2>About Vision 2026 – HWF</h2>
+<p>Vision 2026 is a flagship humanitarian mission of Human Welfare Foundation, addressing hunger, education, healthcare, orphan care, disaster relief and sustainable livelihood development.</p>
+<p><a href="https://www.hwfindia.org/about-hwf/" target="_blank" style="color:#4fc3f7;">For more details →</a></p>
+<div class="vision-back" onclick="visionReset12()">BACK</div>
+</div>
+</div>
+</div>
+
+<script>
+let timer12;
+function visionDetails12(){
+document.getElementById("visionDetails12").style.display="block";
+scrollTopSmooth("visionDetails12");
+startTimer12();
+}
+function visionReset12(){
+document.getElementById("visionDetails12").style.display="none";
+clearTimeout(timer12);
+}
+function startTimer12(){
+clearTimeout(timer12);
+timer12=setTimeout(visionReset12,20000);
+}
+
+function scrollTopSmooth(el){
+const target = document.getElementById(el);
+if(target) target.scrollIntoView({ behavior:"smooth", block:"start" });
+}
+</script>
+    <style>
+.global-support-container {
+    width: 96%;
+    max-width: 900px;
+    margin: 20px auto;
+    border: 1.5px solid #C0C0C0;
+    box-shadow: 0 0 8px rgba(192,192,192,0.18);
+    border-radius: 16px;
+    padding: 22px;
+    background: #121212;
+    box-shadow: 0 0 8px rgba(192,192,192,0.18);
+    box-sizing: border-box;
+}
+
+  .support-title {
+    text-align: center;
+    color: #fff;
+    font-size: 24px;
+    margin-bottom: 25px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+
+  .charity-block {
+    margin-bottom: 15px;
+    text-align: center;
+  }
+
+  .charity-btn {
+    width: 100%;
+    padding: 16px;
+    background: #1a1a1a;
+    color: #fff;
+    font-weight: bold;
+    border-radius: 12px;
+   border: 1px solid #D8D8D8;
+   box-shadow: 0 0 8px rgba(192,192,192,0.15);
+    text-transform: uppercase;
+    cursor: pointer;
+    font-size: 15px; /* എല്ലാ ബട്ടണുകൾക്കും ഒരേ ഫോണ്ട് സൈസ് */
+    transition: background 0.2s;
+    letter-spacing: 0.5px;
+  }
+
+  .charity-btn:hover {
+    background: #262626;
+  }
+
+  /* പേജിന്റെ അടിയിൽ വരുന്ന റിപ്പോർട്ട് ബോക്സ് */
+  .bottom-report-section {
+    text-align: center;
+    color: #e0e0e0;
+    font-size: 15px;
+    margin-top: 35px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding-top: 25px;
+  }
+
+  .report-input-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-top: 10px;
+    flex-wrap: wrap;
+  }
+
+  .input-dash {
+    background: transparent;
+    border: none;
+    border-bottom: 2px solid #ffffff;
+    color: #00E676;
+    font-size: 20px;
+    width: 120px;
+    text-align: center;
+    outline: none;
+    padding: 2px;
+    font-weight: bold;
+  }
+
+  .btn-submit-amount {
+    background: #00E676;
+    color: #000;
+    border: none;
+    padding: 8px 16px;
+    font-weight: bold;
+    border-radius: 8px;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-size: 13px;
+    transition: opacity 0.2s;
+  }
+
+  .btn-submit-amount:hover {
+    opacity: 0.9;
+  }
+
+  /* അൺഡൂ ഏരിയ */
+  .status-container {
+    margin-top: 15px;
+    min-height: 30px;
+  }
+
+  .status-msg {
+    color: #00E676;
+    font-size: 14px;
+    font-weight: bold;
+    display: inline-block;
+  }
+
+  .btn-undo {
+    background: #FF3D00;
+    color: #fff;
+    border: none;
+    padding: 5px 12px;
+    margin-left: 10px;
+    font-size: 12px;
+    font-weight: bold;
+    border-radius: 4px;
+    cursor: pointer;
+    text-transform: uppercase;
+  }
+
+  /* COMMON POP-UP (MODAL) STYLING */
+  .modal-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: 999;
+  }
+
+  .common-modal {
+    display: none;
+    position: fixed;
+    top: 15%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90%;
+    max-width: 500px;
+    background: #1c1c1c;
+    border: 1.5px solid #C0C0C0;
+    box-shadow: 0 0 8px rgba(192,192,192,0.18);
+    border-radius: 16px;
+    padding: 24px;
+    box-shadow: 0px 5px 15px rgba(255, 255, 255, 0.1);
+    z-index: 1000;
+    box-sizing: border-box;
+  }
+
+  .modal-title {
+    color: #FFD600;
+    text-align: center;
+    margin-top: 0;
+    font-size: 20px;
+    text-transform: uppercase;
+  }
+
+  .modal-text {
+    color: #fff;
+    font-size: 15px;
+    line-height: 1.6;
+    text-align: center;
+    margin-bottom: 15px;
+  }
+
+  .modal-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 25px;
+  }
+
+  .btn-donate-now {
+    padding: 14px;
+    background: #0b5e20;
+    color: #fff;
+    font-weight: bold;
+    border-radius: 12px;
+    text-decoration: none;
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 15px; /* ബട്ടൺ ഫോണ്ട് സെയിം ആക്കി */
+    transition: background 0.2s;
+  }
+
+  .btn-donate-now:hover {
+    background: #0f822c;
+  }
+
+  .btn-close-modal {
+    padding: 12px;
+    background: #333;
+    color: #fff;
+    font-weight: bold;
+    border-radius: 12px;
+    border: none;
+    text-transform: uppercase;
+    cursor: pointer;
+    font-size: 15px; /* ബട്ടൺ ഫോണ്ട് സെയിം ആക്കി */
+  }
+</style>
+
+<div class="global-support-container">
+  
+  <h2 class="support-title"><span class="notranslate">BAS</span> GLOBAL SUPPORT</h2>
+
+  <!-- 1. Red Crescent (പ്രത്യേകം വേർതിരിച്ചത്) -->
+  <div class="charity-block">
+    <button onclick="openDonateModal('RED_CRESCENT', 'https://www.ifrc.org/donate')" class="charity-btn notranslate" style="border-left: 6px solid #00E676;">
+      RED CRESCENT (IFRC)
+    </button>
+  </div>
+
+  <!-- 2. Red Cross (പ്രത്യേകം വേർതിരിച്ചത്) -->
+  <div class="charity-block">
+    <button onclick="openDonateModal('RED_CROSS', 'https://www.icrc.org/donate')" class="charity-btn notranslate" style="border-left: 6px solid #DD2C00;">
+      RED CROSS (ICRC)
+    </button>
+  </div>
+
+  <!-- 3. UNICEF -->
+  <div class="charity-block">
+    <button onclick="openDonateModal('UNICEF', 'https://www.unicef.org/donate')" class="charity-btn notranslate" style="border-left: 6px solid #FFD600;">
+      UNICEF
+    </button>
+  </div>
+
+  <!-- 4. WORLD FOOD PROGRAMME (WFP) -->
+  <div class="charity-block">
+    <button onclick="openDonateModal('WFP', 'https://www.wfp.org')" class="charity-btn notranslate" style="border-left: 6px solid #00B0FF;">
+      WORLD FOOD PROGRAMME (WFP)
+    </button>
+  </div>
+
+  <!-- 5. UNHCR -->
+  <div class="charity-block">
+    <button onclick="openDonateModal('UNHCR', 'https://www.unhcr.org')" class="charity-btn notranslate" style="border-left: 6px solid #FF9100;">
+      UNHCR
+    </button>
+  </div>
+
+  <!-- 6. MSF (Doctors Without Borders) -->
+  <div class="charity-block">
+    <button onclick="openDonateModal('MSF', 'https://www.doctorswithoutborders.org/donate')" class="charity-btn notranslate" style="border-left: 6px solid #AA00FF;">
+      MSF (DOCTORS WITHOUT BORDERS)
+    </button>
+  </div>
+
+  <!-- 7. UNRWA -->
+  <div class="charity-block">
+    <button onclick="openDonateModal('UNRWA', 'https://donate.unrwa.org')" class="charity-btn notranslate" style="border-left: 6px solid #00E5FF;">
+      UNRWA
+    </button>
+  </div>
+
+  <!-- 8. IRC -->
+  <div class="charity-block">
+    <button onclick="openDonateModal('IRC', 'https://www.rescue.org/donate')" class="charity-btn notranslate" style="border-left: 6px solid #FFEA00;">
+      IRC (INTERNATIONAL RESCUE COMMITTEE)
+    </button>
+  </div>
+
+  <!-- 9. CARE -->
+  <div class="charity-block">
+    <button onclick="openDonateModal('CARE', 'https://www.care.org/donate')" class="charity-btn notranslate" style="border-left: 6px solid #FF6D00;">
+      CARE
+    </button>
+  </div>
+
+  <!-- 10. SAVE THE CHILDREN -->
+  <div class="charity-block">
+    <button onclick="openDonateModal('SAVE_THE_CHILDREN', 'https://www.savethechildren.org/donate')" class="charity-btn notranslate" style="border-left: 6px solid #FF1744;">
+      SAVE THE CHILDREN
+    </button>
+  </div>
+
+  <!-- 11. ISLAMIC RELIEF WORLDWIDE -->
+  <div class="charity-block">
+    <button onclick="openDonateModal('ISLAMIC_RELIEF', 'https://www.islamic-relief.org/donate')" class="charity-btn notranslate" style="border-left: 6px solid #00BFA5;">
+      ISLAMIC RELIEF WORLDWIDE
+    </button>
+  </div>
+
+  <!-- പേജിന്റെ താഴെയുള്ള റിപ്പോർട്ട് ബോക്സ് -->
+  <div class="bottom-report-section">
+    <p style="margin-bottom: 10px; font-style: italic;">if you donated Write the amount here for report Thank you</p>
+    
+    <div id="input-area-wrapper" class="report-input-wrapper">
+      <span>₹</span>
+      <input type="number" id="donation-amount" class="input-dash" placeholder="______">
+      <button onclick="submitDonationAmount()" class="btn-submit-amount">SUBMIT</button>
+    </div>
+
+    <div class="status-container">
+      <div id="save-status-msg"></div>
+    </div>
+  </div>
+
+</div>
+
+<!-- BACKGROUND OVERLAY & COMMON POP-UP WINDOW -->
+<div id="modalOverlay" class="modal-overlay" onclick="closeDonateModal()"></div>
+
+<div id="commonDonateModal" class="common-modal">
+  <h3 class="modal-title">Details & Donate</h3>
+  <p class="modal-text">
+    Many people want to help, but are afraid of scams. This platform helps you reach trusted humanitarian organisations safely.
+  </p>
+  <p class="modal-text" style="font-weight: bold;">
+    Remember: Your support can save lives and satisfy someone's hunger.
+  </p>
+  
+  <div class="modal-buttons">
+    <a id="modalDonateLink" href="#" target="_blank" onclick="trackFinalClick()" class="btn-donate-now">
+      DONATE DIRECTLY
+    </a>
+    <button onclick="closeDonateModal()" class="btn-close-modal">
+      CLOSE
+    </button>
+  </div>
+</div>
+
+<script>
+  let lastClickedSite = "NONE";
+  let currentActiveUrl = "";
+  let undoTimeout = null;
+  let pendingAmount = 0;
+  let pendingTime = "";
+
+  function openDonateModal(siteName, siteUrl) {
+    lastClickedSite = siteName;
+    currentActiveUrl = siteUrl;
+    
+    document.getElementById('modalDonateLink').href = siteUrl;
+    document.getElementById('modalOverlay').style.display = 'block';
+    document.getElementById('commonDonateModal').style.display = 'block';
+  }
+
+  function closeDonateModal() {
+    document.getElementById('modalOverlay').style.display = 'none';
+    document.getElementById('commonDonateModal').style.display = 'none';
+  }
+
+  function trackFinalClick() {
+    let currentTime = new Date().toISOString();
+    console.log(`[GA CLICK] Site: ${lastClickedSite} | URL: ${currentActiveUrl} | Time: ${currentTime}`);
+    
+    if (typeof gtag === 'function') {
+      gtag('event', 'final_donate_click', {
+        'charity_site': lastClickedSite,
+        'click_url': currentActiveUrl,
+        'click_time': currentTime
+      });
+    }
+    closeDonateModal();
+  }
+
+  function submitDonationAmount() {
+    let amountInput = document.getElementById('donation-amount');
+    pendingAmount = amountInput.value;
+    pendingTime = new Date().toISOString();
+
+    if (!pendingAmount || pendingAmount <= 0) {
+      alert("Please enter a valid amount.");
+      return;
+    }
+
+    document.getElementById('input-area-wrapper').style.display = 'none';
+    let statusDiv = document.getElementById('save-status-msg');
+    
+    statusDiv.innerHTML = `
+      <span class="status-msg" style="color: #FFD600;">₹${pendingAmount} will submit in 1 hour... </span>
+      <button class="btn-undo" onclick="undoSubmission()">UNDO</button>
+    `;
+
+    undoTimeout = setTimeout(sendFinalDataToAnalytics, 3600000);
+  }
+
+  function undoSubmission() {
+    if (undoTimeout) clearTimeout(undoTimeout);
+    
+    let statusDiv = document.getElementById('save-status-msg');
+    statusDiv.innerHTML = `<span class="status-msg" style="color: #FF3D00;">Cancelled! You can edit now.</span>`;
+    
+    setTimeout(() => {
+      statusDiv.innerHTML = "";
+      document.getElementById('input-area-wrapper').style.display = 'flex';
+    }, 1500);
+  }
+
+  function sendFinalDataToAnalytics() {
+    console.log(`[GA TIMEOUT SUBMITTED] Last Clicked Site: ${lastClickedSite} | Amount: ₹${pendingAmount} | Time: ${pendingTime}`);
+
+    if (typeof gtag === 'function') {
+      gtag('event', 'total_donation_submit', {
+        'last_clicked_site': lastClickedSite,
+        'amount': parseFloat(pendingAmount),
+        'saved_time': pendingTime
+      });
+    }
+
+    let statusDiv = document.getElementById('save-status-msg');
+    statusDiv.innerHTML = `<span class="status-msg">Reported ₹${pendingAmount} successfully! Thank you.</span>`;
+    
+    document.getElementById('donation-amount').value = "";
+
+    setTimeout(() => {
+      statusDiv.innerHTML = "";
+      document.getElementById('input-area-wrapper').style.display = 'flex';
+    }, 4000);
+  }
+</script>
+
+
+<div id="bas-charity-total-dark-info" style="
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.8;
+    color: #eeeeee;
+    background-color: #121212; /* Full Black Background */
+    border: 1.5px solid #D8D8D8;
+box-shadow: 0 0 8px rgba(192,192,192,0.15);/* Glowing Gray Border */
+    border-radius: 15px;
+    max-width: 900px;
+    margin: 25px auto;
+    box-shadow: 0 0 20px rgba(255,255,255,0.05), 0 10px 30px rgba(0,0,0,0.7);
+    box-sizing: border-box;
+    width: 96%;
+    overflow: hidden;
+">
+
+    <div style="padding: 35px 25px;">
+
+        <div style="margin-bottom: 40px; text-align: center;">
+          <div style="height:3px;background:#2ecc71;border-radius:3px;margin:18px auto 30px auto;width:92%;"></div>
+            <h2 style="color: #2ecc71; border-bottom: 3px solid #27ae60; display: inline-block; padding-bottom: 8px; margin-bottom: 15px; letter-spacing: 1px;">TRANSPARENCY & LEGAL DISCLOSURES</h2>
+            <p style="font-weight: bold; color: #27ae60; font-size: 1.15em; margin: 15px 0;">"YOUR PURCHASE SATISFIES A HUNGER" </p>
+            <p style="text-align: justify; color: #cccccc; font-size: 0.98em; margin: 0 auto; max-width: 800px;">
+                <strong>BAS Charity International</strong> acts as a bridge between global commerce and humanitarian aid. Our mission is to ensure that support reaches those who truly need it through affiliate partnerships with <strong>50,000+ online shops</strong> worldwide
+            </p>
+        </div>
+
+<div style="background:linear-gradient(135deg,#161616 0%,#1e1e1e 100%); border:1px solid #c0c0c0; border-radius:12px; box-shadow:0 0 8px rgba(192,192,192,.20); padding:20px; margin-bottom:22px; box-sizing:border-box;">        
+  <h3 style="color: #2ecc71; margin-top: 0; font-size: 1.25em; margin-bottom: 12px;">Financial Governance</h3>
+            <p style="margin-bottom: 10px;"><strong>Initially, 100% of the affiliate income</strong> generated through this platform was dedicated entirely to hunger relief [cite: 2026-01-01]. As we scale, a <strong>minimum of 51% or more</strong> will always be strictly dedicated to these noble causes.</p>
+            <p style="font-style: italic; color: #999999; font-size: 0.95em; margin-bottom: 0;">The remaining portion is utilized for platform maintenance, technical development, staff support, and operational expenses to ensure long-term sustainability .</p>
+        </div>
+
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 25px; margin-bottom: 30px;">
+            <div style="background:linear-gradient(135deg,#161616 0%,#1e1e1e 100%); border:1px solid #c0c0c0; border-radius:12px; box-shadow:0 0 8px rgba(192,192,192,.20); padding:20px; margin-bottom:22px; box-sizing:border-box;">
+            <h3 style="color: #2ecc71; margin-top: 0; margin-bottom: 12px; font-size: 1.15em;">Privacy Commitment</h3>
+                <p style="font-size: 0.95em; text-align: justify; color: #bbbbbb; margin-bottom: 0;">
+                    We value your digital safety. <strong>BAS Charity International</strong> does not collect or store your personal financial information. When you click the <strong>above links</strong>, your transaction happens directly on the official retailer's secure website.
+                </p>
+            </div>
+
+           <div style="background:linear-gradient(135deg,#161616 0%,#1e1e1e 100%); border:1px solid #c0c0c0; border-radius:12px; box-shadow:0 0 8px rgba(192,192,192,.20); padding:20px; margin-bottom:22px; box-sizing:border-box;">
+             <h3 style="color: #2ecc71; margin-top: 0; margin-bottom: 12px; font-size: 1.15em;">Affiliate Disclosure</h3>
+                <p style="font-size: 0.95em; text-align: justify; color: #bbbbbb; margin-bottom: 0;">
+                    Shopping through the <strong>above links</strong> costs you <strong>nothing extra</strong> [cite: 2026-01-01]. The retailers pay a commission to us, which we use for our humanitarian missions to fight hunger and help those in need.
+                </p>
+            </div>
+
+        </div>
+
+        <div style="padding: 20px; border: 2px solid #c0392b; border-radius: 12px; background-color: #1a0d0d; text-align: center;">
+            <h3 style="color: #e74c3c; margin-top: 0; font-size: 1.15em; margin-bottom: 10px;">Direct Donations Notice</h3>
+            <p style="font-weight: 500; margin-bottom: 8px;"> we <strong>do not accept any  donations</strong> through this website.</p>
+            <p style="font-size: 0.92em; color: #a5a5a5; font-weight: bold; letter-spacing: 0.5px;">"Give your donations only through trusted hands."</p>
+        </div>
+
+    </div>
+</div>
+
+
+</div>
+<div style="text-align: center; background-color: #0a0a0a; color: #ffffff; padding: 35px 20px; border-top: 1px solid #222222;">
+  <p style="font-size: 1.1em; color: #2ecc71; margin: 0;"><strong>Contact:</strong> <a href="mailto:bascharityinternational@gmail.com" style="color: #27ae60; text-decoration: none; font-weight: bold; border-bottom: 1px dashed #27ae60;">bascharityinternational@gmail.com</a> | Kerala, India</p>
+  <p style="font-size: 0.85em; color: #666666; margin-top: 20px; letter-spacing: 1px;">&copy; 2026 BAS Charity International. All Rights Reserved.</p>
+</div>
+
+<div id="floating-selector" style="position: fixed; bottom: 30px; right: 20px; display: flex; flex-direction: column; gap: 15px; z-index: 9999;">
+
+  <div onclick="document.querySelector('.lang-box').scrollIntoView({behavior: 'smooth'})"
+  style="background: #FFFFFF; color: #000000; padding: 15px 20px; border-radius: 50px; cursor: pointer; font-weight: bold; box-shadow: 0 10px 20px rgba(0,0,0,0.3); display: flex; align-items: center; gap: 10px; animation: float-anim 3s ease-in-out infinite;">
+    <span style="font-size: 20px;">🌐</span> <span>Change Language/Country</span>
+  </div>
+
+  <div onclick="document.querySelector('.country-box').scrollIntoView({behavior: 'smooth'})"
+  style="background: #FF0000; color: white; padding: 15px 20px; border-radius: 50px; cursor: pointer; font-weight: bold; box-shadow: 0 10px 20px rgba(0,0,0,0.3); display: flex; align-items: center; gap: 10px; animation: float-anim 3s ease-in-out infinite 1.5s;">
+    <span style="font-size: 20px;">📍</span> <span>Change Category</span>
+  </div>
+
+</div>
+
+<style>
+/* ബലൂൺ പോലെ ചെറുതായി കറങ്ങാനും പൊങ്ങാനും ഉള്ള ആനിമേഷൻ */
+@keyframes float-anim {
+  0%, 100% { transform: translateY(0) rotate(0deg); }
+  50% { transform: translateY(-10px) rotate(2deg); }
+}
+
+/* ക്ലിക്ക് ചെയ്യുമ്പോൾ ഉള്ള എഫക്ട് */
+#floating-selector div:active {
+  transform: scale(0.9);
+}
+</style>
+
+ 
+  <!-- PART 2 : CATEGORY -->
+<!-- ================================================= -->
+<!-- PART 2 : CATEGORY SECTION -->
+ 
+ <!-- ================================================= -->
+<!-- PART 2 : CATEGORY SECTION -->
+ 
+<div id="selectedCountryBox">SELECTED COUNTRY - INDIA</div>  
+<div id="categoryCountry">SHOP ON <span class="green">INDIA</span></div>  
+
+<div class="country-box">  
+<input id="categorySearch" type="text" placeholder="🔍 SEARCH 50,000+ SHOPS">
+  <div class="section-label">SELECT CATOGARY</div>  
+  <div id="categoryButtons" class="category-grid"></div>    
+  
+  <select id="allCategories">  
+    <option value="all">SELECT ALL CATO GARIES</option>  
+  </select>    
+  
+  <div id="categoryHeading">ALL</div>    
+  <div id="categoryShops"></div>  
+</div>  
+
+<style>  
+#selectedCountryBox{  
+  width:90%;  
+  max-width:900px;  
+  margin:14px auto 10px;  
+  padding:14px 16px;  
+  background:#3f3f3f;  
+  border:1px solid #8a8a8a;  
+  border-radius:12px;  
+  color:#00ff66;  
+  font-size:18px;  
+  font-weight:800;  
+  text-align:center;  
+  box-sizing:border-box;  
+}  
+  
+.country-box{  
+  width:96%;  
+  max-width:900px;  
+  margin:0 auto 18px;  
+  padding:14px;  
+  border:1px solid #3a3a3a;  
+  border-radius:16px;  
+  background:#111;  
+  color:#fff;  
+  font-family:Arial,sans-serif;  
+  box-sizing:border-box;  
+}  
+#categoryCountry{
+    width:100%;
+    text-align:center;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:8px;
+    color:#ffffff;
+    font-size:20px;
+    font-weight:800;
+}
+
+#categoryCountry .green{
+    color:#FFC107;
+}
+   
+  
+#categorySearch{  
+  width:100%;  
+  height:48px;  
+  border:1px solid #666;  
+  border-radius:12px;  
+  padding:0 14px;  
+  margin-bottom:12px;  
+  background:#fff;  
+  color:#111;  
+  font-size:16px;  
+  box-sizing:border-box;  
+}  
+#categorySearch::placeholder{
+    color:#00C853;
+    font-weight:700;
+    opacity:1;
+}
+
+   
+   
+.section-label{  
+  width:100%;  
+  background:#3f3f3f;  
+  border:1px solid #8a8a8a;  
+  border-radius:12px;  
+  color:#fff;  
+  font-size:18px;  
+  font-weight:800;  
+  text-align:center;  
+  padding:12px 10px;  
+  margin-bottom:12px;  
+  box-sizing:border-box;  
+}  
+  
+.category-grid{  
+  display:grid;  
+  grid-template-columns:repeat(3,1fr);  
+  gap:10px;  
+  margin-bottom:12px;  
+}  
+  
+.categoryBtn{  
+  background:#4a4a4a;  
+  border:1px solid #666;  
+  border-left-width:6px;  
+  border-radius:14px;  
+  padding:14px 8px;  
+  color:#fff;  
+  font-size:15px;  
+  font-weight:800;  
+  text-align:center;  
+  cursor:pointer;  
+  min-height:50px;  
+}  
+  
+.categoryBtn.active{  
+  color:#00ff66;  
+}  
+  
+.categoryBtn:nth-child(1){border-left-color:#FF9933;}  
+.categoryBtn:nth-child(2){border-left-color:#2196F3;}  
+.categoryBtn:nth-child(3){border-left-color:#E91E63;}  
+.categoryBtn:nth-child(4){border-left-color:#00C853;}  
+.categoryBtn:nth-child(5){border-left-color:#4CAF50;}  
+.categoryBtn:nth-child(6){border-left-color:#F44336;}  
+.categoryBtn:nth-child(7){border-left-color:#9C27B0;}  
+.categoryBtn:nth-child(8){border-left-color:#3F51B5;}  
+.categoryBtn:nth-child(9){border-left-color:#FFC107;}  
+.categoryBtn:nth-child(10){border-left-color:#009688;}  
+.categoryBtn:nth-child(11){border-left-color:#795548;}  
+.categoryBtn:nth-child(12){border-left-color:#FF5722;}  
+  
+#allCategories{  
+  width:100%;  
+  height:48px;  
+  border:1px solid #666;  
+  border-radius:12px;  
+  padding:0 12px;  
+  margin-bottom:12px;  
+  background:#4a4a4a;  
+  color:#fff;  
+  font-size:16px;  
+  font-weight:800;  
+  box-sizing:border-box;  
+}  
+  
+#categoryHeading{  
+  margin:10px 0 14px;  
+  padding:12px;  
+  background:#4a4a4a;  
+  border:1px solid #8a8a8a;  
+  border-radius:12px;  
+  color:#00ff66;  
+  font-size:20px;  
+  font-weight:800;  
+  text-align:center;  
+  text-transform:uppercase;  
+  display: flex;  
+  justify-content: center;  
+  align-items: center;  
+  gap: 15px;  
+}  
+
+.back-all-btn {  
+  background: #ff3b30;  
+  color: #fff;  
+  border: none;  
+  padding: 6px 12px;  
+  border-radius: 6px;  
+  font-size: 12px;  
+  cursor: pointer;  
+  font-weight: bold;  
+}  
+  
+#categoryShops{  
+  display:flex;  
+  flex-direction:column;  
+  gap:10px;  
+}  
+  
+.shopCard{  
+  background:#2b2b2b;  
+  border:1px solid #c0c0c0;  
+  border-left:8px solid #00C853;  
+  border-radius:14px;  
+  padding:14px 16px;  
+  display:flex;  
+  align-items:center;  
+  gap:12px;  
+  min-height:78px;  
+  text-decoration:none;  
+  box-shadow:0 2px 10px rgba(0,0,0,.25);  
+  box-sizing:border-box;  
+}  
+  
+.shopCard:nth-child(10n+1){border-left-color:#00C853;}  
+.shopCard:nth-child(10n+2){border-left-color:#2196F3;}  
+.shopCard:nth-child(10n+3){border-left-color:#F44336;}  
+.shopCard:nth-child(10n+4){border-left-color:#FF9800;}  
+.shopCard:nth-child(10n+5){border-left-color:#9C27B0;}  
+.shopCard:nth-child(10n+6){border-left-color:#00BCD4;}  
+.shopCard:nth-child(10n+7){border-left-color:#E91E63;}  
+.shopCard:nth-child(10n+8){border-left-color:#FFC107;}  
+.shopCard:nth-child(10n+9){border-left-color:#009688;}  
+.shopCard:nth-child(10n+10){border-left-color:#795548;}  
+  
+.shopDot{  
+  width:18px;  
+  flex:0 0 18px;  
+  color:#555; /* താങ്കൾ ആവശ്യപ്പെട്ട പ്രകാരം ലൈറ്റ് ഗ്രേ കളർ നമുക്ക് മാത്രം കാണാൻ */  
+  font-weight:900;  
+  text-align:center;  
+  font-size:20px;  
+  line-height:1;  
+}  
+  
+.shopFav{  
+  width:42px;  
+  height:42px;  
+  object-fit:contain;  
+  flex:0 0 42px;  
+  border-radius:8px;  
+  background:#fff;  
+}  
+  
+.shopName{  
+  flex:1;  
+  color:#fff;  
+  font-size:28px;  
+  font-weight:800;  
+  line-height:1.2;  
+  text-align:left;  
+}  
+  
+.shopHead{  
+  display:flex;  
+  align-items:center;  
+  gap:12px;  
+  width:100%;  
+}  
+
+</style>            
+<script>
+let currentCountry = localStorage.getItem("selectedCountry") || "india";
+let currentCategory = "all";
+let resetTimer = null;
+
+// MASTER CATEGORY CONFIG (button + dropdown + touch window എല്ലാം ഇതിൽ നിന്ന്)
+const categoryConfig = {
+  all: {
+    code: "all",
+    btn: "ALL",
+    label: "all",
+    desc: "all shops & commercial services"
+  },
+  electronics: {
+    code: "electronics",
+    btn: "ELECTRONICS",
+    label: "electronics",
+    desc: "electronics, mobiles, computers, gadgets & accessories"
+  },
+  home: {
+    code: "home",
+    btn: "HOME",
+    label: "home",
+    desc: "home appliances, kitchen, furniture, decor, garden, tools & home essentials"
+  },
+  fashion: {
+    code: "fashion",
+    btn: "FASHION",
+    label: "fashion",
+    desc: "men, women, kids, baby, clothing, footwear, bags & fashion accessories"
+  },
+  beauty: {
+    code: "beauty",
+    btn: "BEAUTY",
+    label: "beauty",
+    desc: "skincare, haircare, cosmetics, makeup, fragrances & personal care"
+  },
+  health: {
+    code: "health",
+    btn: "HEALTH",
+    label: "health",
+    desc: "pharmacy, hospitals, clinics, medical equipment, wellness, ayurveda & supplements"
+  },
+  food: {
+    code: "food",
+    btn: "FOOD",
+    label: "food",
+    desc: "grocery, daily needs, fruits, vegetables, dairy, bakery, meat, seafood, restaurants & food delivery"
+  },
+  sports: {
+    code: "sports",
+    btn: "SPORTS",
+    label: "sports",
+    desc: "sports, fitness, gym, outdoor, camping, cycling & exercise equipment"
+  },
+  travel: {
+    code: "travel",
+    btn: "TRAVEL",
+    label: "travel",
+    desc: "flights, hotels, bus, train, taxi, holidays, visa, cruises & car rental"
+  },
+  books: {
+    code: "books",
+    btn: "BOOKS",
+    label: "books",
+    desc: "books, education, courses, ebooks, learning, exams, stationery & study materials"
+  },
+  software: {
+    code: "software",
+    btn: "SOFTWARE",
+    label: "software",
+    desc: "apps, ai tools, saas, hosting, domains, cloud, security & digital services"
+  },
+  business: {
+    code: "business",
+    btn: "BUSINESS",
+    label: "business",
+    desc: "office supplies, wholesale, b2b, printing, packaging, industrial products & business services"
+  },
+  jewellery: {
+    code: "jewellery",
+    btn: "JEWELLERY",
+    label: "jewellery",
+    desc: "gold, diamond, silver, platinum, gemstones, bridal jewellery, luxury jewellery & watches"
+  },
+  automotive: {
+    code: "automotive",
+    btn: "AUTOMOTIVE",
+    label: "automotive",
+    desc: "cars, bikes, evs, tyres, batteries, spare parts, accessories, oils, lubricants & vehicle services"
+  }
+};
+
+// ബട്ടൺ ഓർഡർ (12 main buttons)
+const buttonOrder = [
+  "all",
+  "electronics",
+  "home",
+  "fashion",
+  "beauty",
+  "health",
+  "food",
+  "sports",
+  "travel",
+  "books",
+  "software",
+  "business"
+];
+
+const categoryButtons   = document.getElementById("categoryButtons");
+const categorySearch    = document.getElementById("categorySearch");
+const allCategoriesSelect = document.getElementById("allCategories");
+const categoryHeading   = document.getElementById("categoryHeading");
+const categoryShops     = document.getElementById("categoryShops");
+const selectedCountryBox = document.getElementById("selectedCountryBox");
+const categoryCountry   = document.getElementById("categoryCountry");
+
+// existing colours 그대로
+const colorSet = [
+  "#00C853","#2196F3","#F44336","#FF9800","#9C27B0",
+  "#00BCD4","#E91E63","#FFC107","#009688","#795548"
+];
+
+// ഇൻ-ആക്റ്റിവിറ്റി ടൈംഔട്ട് റീസെറ്റ് ലോജിക്ക് (3 മിനിറ്റ് ഉപയോഗിച്ചില്ലെങ്കിൽ ALL ലോട്ട് മാറും)
+function startInactivityTimer() {
+  clearTimeout(resetTimer);
+  resetTimer = setTimeout(() => {
+    if (currentCategory !== "all") {
+      triggerBackToAll();
+    }
+  }, 180000); // 3 മിനിറ്റ്
+}
+
+// CATEGORY BUTTONS SETUP
+function setupCategoryButtons() {
+  categoryButtons.innerHTML = "";
+  buttonOrder.forEach((key, i) => {
+    const cfg = categoryConfig[key];
+    if (!cfg) return;
+
+    const btn = document.createElement("button");
+    btn.className = "categoryBtn";
+    btn.textContent = cfg.btn; // uppercase label
+    btn.style.borderLeftColor = colorSet[i % colorSet.length];
+
+    btn.onclick = () => {
+      document.querySelectorAll(".categoryBtn").forEach(x => x.classList.remove("active"));
+      btn.classList.add("active");
+      currentCategory = cfg.code;
+      renderCategory(cfg.code);
+      startInactivityTimer();
+    };
+
+    categoryButtons.appendChild(btn);
+  });
+}
+
+// DROPDOWN / TOUCH WINDOW MASTER
+function setupCategoryDropdown() {
+  allCategoriesSelect.innerHTML = "";
+
+  // top ALL option
+  const allOpt = document.createElement("option");
+  allOpt.value = "all";
+  allOpt.textContent = "ALL CATEGORIES";
+  allCategoriesSelect.appendChild(allOpt);
+
+  // rest from master config
+  Object.keys(categoryConfig).forEach(key => {
+    if (key === "all") return;
+    const cfg = categoryConfig[key];
+    const opt = document.createElement("option");
+    opt.value = cfg.code;
+    opt.textContent = cfg.btn; // same as button
+    allCategoriesSelect.appendChild(opt);
+  });
+
+  allCategoriesSelect.onchange = () => {
+    const val = allCategoriesSelect.value;
+     /* 001 */ basTrack("category_dropdown", { category: val });
+    if (val === "all") {
+      triggerBackToAll();
+      return;
+    }
+
+    currentCategory = val;
+
+    // button active sync
+    document.querySelectorAll(".categoryBtn").forEach(btn => {
+      btn.classList.remove("active");
+      const cfg = categoryConfig[val];
+      if (cfg && btn.textContent === cfg.btn) {
+        btn.classList.add("active");
+      }
+    });
+
+    renderCategory(currentCategory);
+
+    // dropdown reset to ALL text
+    allCategoriesSelect.value = "all";
+    startInactivityTimer();
+  };
+}
+
+// SEARCH
+categorySearch.addEventListener("input", function () {
+  const value = this.value.toLowerCase().trim();
+   analyticsSearch(value);
+  startInactivityTimer();
+
+  if (value === "") {
+    renderCategory(currentCategory);
+    return;
+  }
+
+  let allShopsOfCountry = countryShops[currentCountry] || [];
+  let filtered = allShopsOfCountry.filter(shop =>
+    (shop.n || "").toLowerCase().includes(value)
+  );
+
+  categoryHeading.innerHTML = `
+    SEARCH RESULTS (${filtered.length})
+    <button class="back-all-btn" onclick="triggerBackToAll()">BACK TO ALL</button>
+  `;
+
+  categoryShops.innerHTML = "";
+
+  filtered.forEach((shop, index) => {
+    createShopCard(shop, index);
+  });
+});
+
+// COUNTRY CHANGE (PART 1)
+function changeCountry(countryName) {
+  currentCountry = countryName.toLowerCase().trim();
+   /* 001 */ basTrack("country_change", { country: currentCountry });
+  if (selectedCountryBox) {
+    selectedCountryBox.textContent = "SELECTED COUNTRY - " + currentCountry.toUpperCase();
+  }
+  if (categoryCountry) {
+    categoryCountry.innerHTML = `SHOP ON <span class="green">${currentCountry.toUpperCase()}</span>`;
+  }
+  renderCategory(currentCategory);
+}
+
+function triggerBackToAll() {
+  currentCategory = "all";
+  document.querySelectorAll(".categoryBtn").forEach(x => x.classList.remove("active"));
+  categorySearch.value = "";
+  renderCategory("all");
+}
+
+// MAIN RENDER
+function renderCategory(cat) {
+  const isAll = (cat === "all");
+  const cfg = categoryConfig[cat] || categoryConfig.all;
+
+  if (isAll) {
+    categoryHeading.innerHTML = `
+      ALL
+      <span class="catDesc">${cfg.desc}</span>
+    `;
+  } else {
+    categoryHeading.innerHTML = `
+      ${cfg.btn}
+      <span class="catDesc">${cfg.desc}</span>
+      <button class="back-all-btn" onclick="triggerBackToAll()">BACK TO ALL</button>
+    `;
+  }
+
+  categoryShops.innerHTML = "";
+
+  let shops = countryShops[currentCountry] || [];
+
+  if (!isAll) {
+    // ഇപ്പോൾ simple includes; later നമുക്ക് c logic fine-tune ചെയ്യാം
+    shops = shops.filter(shop =>
+      (shop.c || "").toLowerCase().includes(cfg.code)
+    );
+  }
+
+  if (shops.length === 0) {
+    categoryShops.innerHTML =
+      "<div style='text-align:center;padding:20px;color:#888;'>No shops found!</div>";
+    return;
+  }
+
+  shops.forEach((shop, index) => {
+    createShopCard(shop, index);
+  });
+/* categoryShops.innerHTML += `
+ <div style="
+max-width:900px;
+margin:20px auto;
+padding:20px;
+background:#2b2b2b;
+border:1px solid #c0c0c0;
+border-left:8px solid #FFD700;
+border-radius:14px;
+box-shadow:0 2px 10px rgba(0,0,0,.25);
+color:#fff;
+line-height:1.8;
+">
+
+<h2 style="
+margin:0 0 18px;
+color:#FFD700;
+font-size:30px;
+font-weight:900;
+text-transform:uppercase;">
+🔄 SHOP UPDATES
+</h2>
+
+<p>We continue adding new shops regularly.</p>
+
+<p>Due to our automated system and thousands of shop entries, the same original shop may occasionally appear more than once.</p>
+
+<p>All links continue to direct you to the original official shop.</p>
+
+<p>We continuously review and improve our shop list.</p>
+
+<p style="margin-bottom:0;"><b>Thank you for your patience and understanding.</b></p>
+
+</div>
+`;*/
+ }
+// SHOP CARD
+function createShopCard(shop, index) {
+  let host = "";
+  try {
+    host = new URL(shop.u).hostname;
+  } catch (e) {}
+
+  const leftColor = colorSet[index % colorSet.length];
+
+  const card = document.createElement("a");
+  card.href = shop.u;
+  card.target = "_blank";
+  card.className = "shopCard";
+  card.style.borderLeftColor = leftColor;
+
+  card.innerHTML = `
+    <div class="shopDot">${(shop.a || "").trim() ? "" : "."}</div>
+    <div class="shopHead">
+      <img class="shopFav"
+           src="https://www.google.com/s2/favicons?domain=${host}&sz=64"
+           loading="lazy" alt="">
+      <div class="shopName" translate="no">${shop.n}</div>
+    </div>
+  `;
+  categoryShops.appendChild(card);
+}
+
+// SET COUNTRY (used on load)
+function setCountry(country) {
+  currentCountry = country.toLowerCase().trim();
+  if (selectedCountryBox) {
+    selectedCountryBox.textContent = "SELECTED COUNTRY - " + currentCountry.toUpperCase();
+  }
+  if (categoryCountry) {
+    categoryCountry.innerHTML = `SHOP ON <span class="green">${currentCountry.toUpperCase()}</span>`;
+  }
+  triggerBackToAll();
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+  setupCategoryButtons();
+  setupCategoryDropdown();
+
+  const saved = localStorage.getItem("selectedCountry") || "india";
+  setCountry(saved);
+
+  // global change hook
+  window.renderCountry = function (c) {
+    setCountry(c);
+  };
+});
+
+</script>
+<!-- 05409 -->
+<!-- Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-S9ZT8HR7GJ"></script>
+
+<!-- 05410 -->
+<script>
+  // 05411
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+
+  // 05412
+  gtag('js', new Date());
+
+  // 05413
+  gtag('config', 'G-S9ZT8HR7GJ');
+</script>
+
+<!-- 05414 -->    
+<div style="
+max-width:900px;
+width: 96%;
+margin:20px auto;
+padding:20px;
+background:#2b2b2b;
+border:1px solid #c0c0c0;
+border-left:8px solid #FFD700;
+border-radius:14px;
+box-shadow:0 2px 10px rgba(0,0,0,.25);
+color:#fff;
+line-height:1.8;
+">
+
+<h2 style="
+margin:0 0 18px;
+color:#FFD700;
+font-size:30px;
+font-weight:1000;
+text-transform:uppercase;">
+🔄 SHOP UPDATES
+</h2>
+
+<div style="background:#222; color:#fff; padding:20px; border-radius:12px; border:1px solid #444; font-family:sans-serif; line-height:1.6; max-width:900px; margin:auto;">
+
+  <h3 style="color:#FFD700; margin-top:0; font-size:20px;">
+    🔄 ഷാപ്പ് അപ്‌ഡേറ്റുകൾ
+  </h3>
+
+  <h4 style="color:#00FF66; margin-bottom:10px; font-size:17px;">
+    📌 പ്രധാന അറിയിപ്പ്
+  </h4>
+
+  <p style="margin-bottom:10px;">
+    ഓൺലൈൻ ഷോപ്പിംഗിന്റെ വേഗതയിലും ആവേശത്തിലും നമ്മുടെ തൊട്ടടുത്തുള്ള ലോക്കൽ ഷോപ്പുകളെ നാം ഒരിക്കലും മറക്കാതിരിക്കുക. നമുക്കൊരു ആപത്തോ രോഗമോ വന്നാൽ ആദ്യം ഓടിയെത്തുന്നതും, പ്രതിസന്ധികളിൽ എന്നും കൂടെനിൽക്കുന്നതും, എന്തിന് നമ്മളെ ഇന്നത്തെ നമ്മളാക്കി മാറ്റുന്നതിൽ വലിയ പങ്കുവഹിച്ചതും നമ്മുടെ നാട്ടിലെ ഈ പച്ചമനുഷ്യരാണ്. അതിനാൽ അവർക്ക് എപ്പോഴും ആദ്യ പരിഗണന നൽകാൻ ശ്രമിക്കുക. ഓൺലൈൻ ഷോപ്പിംഗ് തീർത്തും അനിവാര്യമാകുന്ന സാഹചര്യങ്ങളിൽ മാത്രം ഈ പോർട്ടലിലെ ലിങ്കുകൾ ഉപയോഗപ്പെടുത്താൻ അഭ്യർത്ഥിക്കുന്നു...
+  </p>
+
+  <!-- More ക്ലിക്ക് ചെയ്യുമ്പോൾ തുറന്നുവരുന്ന ഭാഗം -->
+  <details>
+    <summary style="color:#00BFFF; cursor:pointer; font-weight:bold; margin-bottom:15px; outline:none;">
+      More...
+    </summary>
+
+    <div style="margin-top:15px; border-top:1px dashed #555; padding-top:15px; color:#ddd;">
+      <p style="margin-bottom:12px;">
+        ഞങ്ങൾ പതിവായി പുതിയ കടകൾ ചേർക്കുന്നത് തുടരുന്നു.
+      </p>
+
+      <p style="margin-bottom:12px;">
+        ഞങ്ങളുടെ ഓട്ടോമേറ്റഡ് സിസ്റ്റവും ആയിരക്കണക്കിന് ഷോപ്പ് എൻട്രികളും കാരണം, ഒരേ യഥാർത്ഥ ഷോപ്പ് ഇടയ്ക്കിടെ ഒന്നിലധികം തവണ പ്രത്യക്ഷപ്പെട്ടേക്കാം.
+      </p>
+
+      <p style="margin-bottom:12px;">
+        എല്ലാ ലിങ്കുകളും നിങ്ങളെ യഥാർത്ഥ ഔദ്യോഗിക ഷോപ്പിലേക്ക് നയിക്കുന്നത് തുടരുന്നു.
+      </p>
+
+      <p style="margin-bottom:12px;">
+        ഞങ്ങളുടെ ഷോപ്പ് ലിസ്റ്റ് ഞങ്ങൾ തുടർച്ചയായി അവലോകനം ചെയ്യുകയും മെച്ചപ്പെടുത്തുകയും ചെയ്യുന്നു.
+      </p>
+
+      <p style="color:#fff; font-weight:bold; margin-top:15px;">
+        നിങ്ങളുടെ ക്ഷമയ്ക്കും മനസ്സിലാക്കലിനും നന്ദി.
+      </p>
+    </div>
+  </details>
+
+</div>
+
+
+
+<style>
+.bas-thank-box{
+width:96%;
+max-width:900px;
+margin:40px auto 10px auto;
+background:#2b2b2b;
+border:1px solid #c0c0c0;
+border-left:8px solid #FFD700;
+border-radius:14px;
+padding:22px;
+text-align:center;
+box-shadow:0 2px 10px rgba(0,0,0,.25);
+}
+.bas-photo-space{
+width:100%;
+height:180px;
+background:#111;
+border:1px dashed #666;
+border-radius:10px;
+display:flex;
+align-items:center;
+justify-content:center;
+color:#777;
+font-size:18px;
+margin-bottom:12px;
+}
+.bas-caption{
+margin-top:10px;
+color:#cccccc;
+font-size:18px;
+font-weight:600;
+letter-spacing:1px;
+}
+.bas-thanks{
+margin:18px 0 12px;
+font-family:"Brush Script MT","Segoe Script","Lucida Handwriting",cursive;
+font-size:52px;
+font-weight:bold;
+background:linear-gradient(90deg,#FFD700,#FFA500,#FF5722,#FFD700);
+-webkit-background-clip:text;
+-webkit-text-fill-color:transparent;
+}
+.bas-name{
+font-size:26px;
+font-weight:700;
+color:#ffffff;
+letter-spacing:1px;
+}
+.bas-tag{
+margin-top:8px;
+font-size:14px;
+color:#bdbdbd;
+letter-spacing:1px;
+text-transform:uppercase;
+}
+</style>
+
+<div class="bas-thank-box" style="margin-bottom:4cm;">
+
+
+<div class="bas-photo-space" style="background:none;border:none;height:auto;padding:0;">
+
+<img src="thanks.jpg"
+alt="Thank You"
+style="width:100%;height:auto;display:block;border-radius:10px;">
+
+</div>
+
+<div class="bas-caption">
+HUNGER HAS HOPE IN YOU
+</div>
+
+<div class="bas-thanks">
+THANK YOU FOR YOUR VISIT
+</div>
+
+<div class="bas-name notranslate" translate="no">
+  BAS CHARITY INTERNATIONAL™
+</div>
+
+<div class="bas-tag">
+YOUR PURCHASE SATISFIES A HUNGER™  
+</div>
+</div>    
+  <!-- PATENT SEAL — BEFORE SHOP -->
+<div style="
+  width:100%;
+  text-align:center;
+  margin:18px auto 10px;
+  overflow:hidden;
+">
+  <img
+    src="patent.png"
+    alt="Patent Soon Global"
+    style="
+      width:92%;
+      max-width:700px;
+      height:auto;
+      display:block;
+      margin:0 auto;
+      transform:rotate(-2deg);
+      filter:drop-shadow(0 4px 8px rgba(0,0,0,.6));
+    "
+  >
+</div>
+<!-- END PATENT SEAL --> 
+<!-- index.html-ൽ manual.html നേരിട്ട് കാണിക്കാൻ -->
+<!--<div style="width: 100%; height:1100px; display: flex; justify-content: center; align-items: center;scroll-margin-top:30px; margin-top:10px;">
+  <iframe src="manual.html" style="width: 100%; max-width:850px; height:700px; border: none; overflow: hidden;"></iframe>
+</div>-->
+<div style="width: 100%; height:1300px; display: flex; justify-content: center; align-items: center;scroll-margin-top:30px; margin-top:10px;">
+  <iframe src="manual.html" style="width: 100%; max-width:850px; height:900px; border: none; overflow: hidden;"></iframe>
+</div>
+
+   
+<div style="height:0px;"></div>
+<script>
+  document.querySelectorAll('a').forEach(link => {
+    // ഡൊമെയ്ൻ പേര് സ്വയം പരിശോധിച്ച് പുറത്തേക്കുള്ള ലിങ്കുകൾ മാത്രം കണ്ടെത്തും
+    if (link.hostname !== window.location.hostname && link.href.startsWith('http')) {
+      link.setAttribute('target', '_blank');
+      link.setAttribute('rel', 'noopener noreferrer');
+    }
+  });
+</script>
+    <!-- പേജിലെ മറ്റെല്ലാ കോഡുകളും ഫ്രണ്ട്-എൻഡ് ഘടകങ്ങളും ഇവിടെ അവസാനിക്കുന്നു -->
+
+    <!-- ഈ സെക്യൂരിറ്റി കോഡ് ഇവിടെ ചേർക്കുക -->
+    <script>
+      document.querySelectorAll('a').forEach(link => {
+        if (link.hostname !== window.location.hostname && link.href.startsWith('http')) {
+          link.setAttribute('target', '_blank');
+          link.setAttribute('rel', 'noopener noreferrer');
+        }
+      });
+
+      function sanitizeInput(input) {
+        const div = document.createElement('div');
+        div.innerText = input;
+        return div.innerHTML;
+      }
+    </script>
+ <!-- Popup Notification -->
+       <!-- Popup Notification -->
+<style>
+  /* Arrow Flicker Animation */
+  @keyframes flicker {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.2; }
+  }
+
+  .flicker {
+    animation: flicker 1s infinite !important;
+  }
+
+  /* Main Popup Structure (ബാറിന്റെ മൊത്തം വീതി 480px ആക്കി) */
+  #scrollControlPopup {
+    position: fixed;
+    right: 0;
+    bottom: 5cm;
+    width: 480px;
+    max-width: 95vw;
+    height: 60px;
+    z-index: 99999;
+    background: #6DC3FF;
+    color: #fff;
+    border-radius: 18px 0 0 18px;
+    box-shadow: 0 8px 24px rgba(0,0,0,.35);
+    padding: 8px 12px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    touch-action: none;
+    overflow: visible;
+    pointer-events: auto;
+    transform: translateX(calc(100% - 48px));
+    transition: transform 0.3s ease;
+  }
+
+  /* പുറത്തിറങ്ങി നിൽക്കുമ്പോൾ */
+  #scrollControlPopup.open {
+    transform: translateX(0);
+  }
+
+  /* Toggle Button (അറ്റത്ത് Flicker ചെയ്യുന്ന ബട്ടൺ) */
+  #scrollControlPopup .slideToggleBtn {
+    width: 44px;
+    height: 44px;
+    border: none;
+    border-radius: 12px;
+    background: #000;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 900;
+    flex: 0 0 auto;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  #scrollControlPopup * {
+    -webkit-user-select: none;
+    user-select: none;
+    -webkit-touch-callout: none;
+    box-sizing: border-box;
+  }
+
+  /* നിലവിലുള്ള Scroll Buttons (▲ / ▼) നീളം 90px ആയി കൂട്ടി */
+  #scrollControlPopup .arrowBtn {
+    width: 90px !important;
+    height: 44px;
+    border: none;
+    border-radius: 14px;
+    background: #000;
+    color: #fff;
+    font-size: 20px;
+    font-weight: 900;
+    flex: 0 0 auto;
+    cursor: pointer;
+  }
+
+  #scrollControlPopup .speedWrap {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    min-width: 0;
+  }
+
+  #scrollControlPopup .speedTop {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: .5px;
+    color: #000;
+  }
+
+  #scrollControlPopup input[type="range"] {
+    width: 100%;
+    margin: 0;
+    accent-color: #fff;
+  }
+
+  #scrollControlPopup .lockBtn {
+    width: 60px;
+    height: 44px;
+    border: none;
+    border-radius: 14px;
+    background: #222;
+    color: #fff;
+    font-size: 11px;
+    font-weight: 800;
+    flex: 0 0 auto;
+    cursor: pointer;
+  }
+
+  body {
+    overflow: auto;
+  }
+</style>
+<div id="scrollControlPopup" class="notranslate">
+  <!-- 1. Flicker ചെയ്യുന്ന Toggle Button -->
+  <button class="slideToggleBtn notranslate" onclick="togglePopupBar()" aria-label="Toggle Bar">
+    <span id="popupToggleArrow" class="flicker notranslate">◀</span>
+  </button>
+
+  <!-- 2. നിലവിലുള്ള സ്ക്രോൾ കൺട്രോളുകൾ -->
+  <button class="arrowBtn notranslate" id="upBtn" aria-label="Scroll up">▲</button>
+
+  <div class="speedWrap notranslate">
+    <div class="speedTop notranslate">
+      <span>SPEED</span>
+      <span id="scrollSpeedValue">6</span>
+    </div>
+    <input id="scrollSpeedSlider" type="range" min="1" max="20" value="6">
+  </div>
+
+  <button class="lockBtn notranslate" id="lockStateBtn" onclick="toggleScrollLock()">LOCK</button>
+  <button class="arrowBtn notranslate" id="downBtn" aria-label="Scroll down">▼</button>
+</div>
+
+
+<!-- Auto Scroll Script -->
+<script>
+(function() {
+    let scrollSpeed = 0.5;
+    let autoScrollInterval = null;
+    let isUserInteracting = false;
+    let resumeTimeout = null;
+
+    function startAutoScroll() {
+        if (autoScrollInterval || isUserInteracting) return;
+
+        autoScrollInterval = setInterval(function() {
+            let maxScroll = document.documentElement.scrollHeight - window.innerHeight;
+            
+            if (window.scrollY >= maxScroll - 2) {
+                stopAutoScroll();
+            } else {
+                window.scrollBy(0, scrollSpeed);
+            }
+        }, 20);
+    }
+
+
+    function stopAutoScroll() {
+        if (autoScrollInterval) {
+            clearInterval(autoScrollInterval);
+            autoScrollInterval = null;
+        }
+    }
+
+    function handleUserTouchStart() {
+        isUserInteracting = true;
+        stopAutoScroll();
+        clearTimeout(resumeTimeout);
+    }
+
+    function handleUserTouchEnd() {
+        isUserInteracting = false;
+        clearTimeout(resumeTimeout);
+        resumeTimeout = setTimeout(function() {
+            startAutoScroll();
+        }, 1500);
+    }
+
+    window.addEventListener('touchstart', handleUserTouchStart, { passive: true });
+    window.addEventListener('touchend', handleUserTouchEnd, { passive: true });
+    window.addEventListener('mousedown', handleUserTouchStart, { passive: true });
+    window.addEventListener('mouseup', handleUserTouchEnd, { passive: true });
+    window.addEventListener('wheel', function() {
+        handleUserTouchStart();
+        handleUserTouchEnd();
+    }, { passive: true });
+
+    window.addEventListener('load', function() {
+        setTimeout(startAutoScroll, 1000);
+    });
+})();
+</script>
+
+<!-- Button Control Script (ഡ്യൂപ്ലിക്കേഷൻ ഒഴിവാക്കി തിരുത്തിയത്) -->
+<script>
+  let isPopupOpen = false;
+
+  function togglePopupBar() {
+    const popup = document.getElementById("scrollControlPopup");
+    const arrow = document.getElementById("popupToggleArrow");
+
+    if (!isPopupOpen) {
+      popup.classList.add("open");
+      arrow.innerText = "▶";
+      arrow.classList.remove("flicker");
+      isPopupOpen = true;
+    } else {
+      popup.classList.remove("open");
+      arrow.innerText = "◀";
+      arrow.classList.add("flicker");
+      isPopupOpen = false;
+    }
+  }
+
+  let scrollTimer = null;
+  let scrollStep = 6;
+  let scrollLocked = false;
+  let manualDir = 0;
+
+  function updateSpeed(v){
+    scrollStep = Number(v) || 1;
+    const out = document.getElementById("scrollSpeedValue");
+    if (out) out.textContent = scrollStep;
+  }
+
+  function doScroll(dir){
+    const maxScroll = Math.max(0, document.documentElement.scrollHeight - window.innerHeight);
+    const current = window.scrollY || window.pageYOffset || 0;
+    const next = Math.max(0, Math.min(current + (dir * scrollStep), maxScroll));
+    window.scrollTo(0, next);
+  }
+
+  function startDefaultScroll(dir){
+    if (scrollLocked) return;
+    clearInterval(scrollTimer);
+
+    // സ്ലൈഡറിൽ കൊടുത്ത അതേ സ്പീഡ് എടുക്കുന്നു
+    const slider = document.getElementById("scrollSpeedSlider");
+    if (slider) scrollStep = Number(slider.value) || 1;
+
+    manualDir = dir;
+    scrollTimer = setInterval(function(){
+      doScroll(manualDir);
+    }, 16);
+  }
+
+  function stopManualScroll(){
+    clearInterval(scrollTimer);
+    scrollTimer = null;
+    manualDir = 0;
+  }
+
+  function bindPress(btn, dir){
+    if (!btn) return;
+
+    const start = function(e){
+      e.preventDefault();
+      startDefaultScroll(dir);
+    };
+
+    const stop = function(){
+      stopManualScroll();
+    };
+
+    btn.addEventListener("touchstart", start, {passive:false});
+    btn.addEventListener("touchend", stop);
+    btn.addEventListener("touchcancel", stop);
+
+    btn.addEventListener("mousedown", start);
+    btn.addEventListener("mouseup", stop);
+    btn.addEventListener("mouseleave", stop);
+  }
+
+  function toggleScrollLock(){
+    scrollLocked = !scrollLocked;basTrack(scrollLocked ? "lock" : "unlock");
+    const btn = document.getElementById("lockStateBtn");
+    if (btn) btn.textContent = scrollLocked ? "UNLOCK" : "LOCK";
+    if (scrollLocked) stopManualScroll();
+  }
+
+  window.addEventListener("load", function(){
+    const slider = document.getElementById("scrollSpeedSlider");
+    if (slider){
+      updateSpeed(slider.value);
+      slider.addEventListener("input", function(){
+        updateSpeed(this.value);
+      });
+    }
+
+    bindPress(document.getElementById("upBtn"), -1);
+    bindPress(document.getElementById("downBtn"), 1);
+  });
+</script>
+
+<!-- PERFECT SHOP LIMIT CODE -->
+<style>
+  .bas-shop-btn-container {
+    text-align: center;
+    margin: 20px auto;
+  }
+  .bas-shop-more-btn {
+    display: inline-block;
+    margin: 10px auto;
+    padding: 10px 24px;
+    background: #34383D;
+    color: #00FF66;
+    border: 1px solid #AEB4BC;
+    border-radius: 10px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s;
+  }
+  .bas-shop-more-btn:hover {
+    background: #454A50;
+  }
+  .bas-more-shops-soon {
+    text-align: center;
+    margin: 15px auto 25px;
+    padding: 10px 15px;
+    color: #00FF66;
+    font-size: 18px;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+  }
+</style>
+
+<script>
+(function () {
+  const SHOW_COUNT = 50;
+
+  function setupShopControls() {
+    const shopList = document.getElementById("categoryShops");
+    if (!shopList) return;
+
+    // പഴയ കൺട്രോളുകൾ നീക്കം ചെയ്യുന്നു
+    const oldWrapper = document.getElementById("basShopControlsWrapper");
+    if (oldWrapper) oldWrapper.remove();
+
+    // പഴയ രീതിയിലുള്ള മെസ്സേജുകൾ പേജിൽ കിടപ്പുണ്ടെങ്കിൽ അവയും നീക്കം ചെയ്യുന്നു
+    document.querySelectorAll('.bas-more-shops-soon').forEach(el => el.remove());
+    const oldMore = document.getElementById("basShopMoreBtn");
+    if (oldMore) oldMore.remove();
+    const oldLess = document.getElementById("basShopLessBtn");
+    if (oldLess) oldLess.remove();
+
+    const shops = Array.from(shopList.querySelectorAll(":scope > .shopCard"));
+    if (shops.length === 0) return;
+
+    const wrapper = document.createElement("div");
+    wrapper.id = "basShopControlsWrapper";
+
+    const soonMsg = document.createElement("div");
+    soonMsg.className = "bas-more-shops-soon notranslate";
+    soonMsg.textContent = "MORE SHOPS WILL BE ADDED SOON";
+
+    // 50-ൽ കുറവ് ഷോപ്പുകൾ ആണെങ്കിൽ
+    if (shops.length <= SHOW_COUNT) {
+      shops.forEach(shop => shop.style.display = "");
+      wrapper.appendChild(soonMsg);
+      shopList.insertAdjacentElement("afterend", wrapper);
+      return;
+    }
+
+    // 50-ൽ കൂടുതൽ ഉണ്ടെങ്കിൽ ആദ്യ 50 മാത്രം കാണിക്കുക
+    shops.forEach((shop, index) => {
+      shop.style.display = index < SHOW_COUNT ? "" : "none";
+    });
+
+    const btn = document.createElement("button");
+    btn.className = "bas-shop-more-btn notranslate";
+    btn.textContent = "MORE SHOPS";
+
+    let isExpanded = false;
+
+    btn.onclick = function () {
+      if (!isExpanded) {
+        shops.forEach(shop => shop.style.display = "");
+        btn.textContent = "LESS SHOPS";
+        soonMsg.style.display = "block";
+        isExpanded = true;
+      } else {
+        shops.forEach((shop, index) => {
+          shop.style.display = index < SHOW_COUNT ? "" : "none";
+        });
+        btn.textContent = "MORE SHOPS";
+        soonMsg.style.display = "none";
+        isExpanded = false;
+
+        shopList.scrollIntoView({ behavior: "smooth", block: "start" });
+      }
+    };
+
+    const btnContainer = document.createElement("div");
+    btnContainer.className = "bas-shop-btn-container";
+    btnContainer.appendChild(btn);
+
+    soonMsg.style.display = "none";
+
+    wrapper.appendChild(btnContainer);
+    wrapper.appendChild(soonMsg);
+    
+    shopList.insertAdjacentElement("afterend", wrapper);
+  }
+
+  let timer;
+  const observer = new MutationObserver(function () {
+    clearTimeout(timer);
+    timer = setTimeout(setupShopControls, 150);
+  });
+
+  document.addEventListener("DOMContentLoaded", function () {
+    const shopList = document.getElementById("categoryShops");
+    if (shopList) {
+      observer.observe(shopList, { childList: true });
+    }
+    setTimeout(setupShopControls, 300);
+  });
+})();
+</script>
+
+   
+</body> <!-- ഇതിന് തൊട്ടു മുകളിൽ -->
 </html>
+
+   
