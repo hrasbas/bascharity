@@ -1172,6 +1172,15 @@ basPrompt = null;
 } 
 
 // സിസ്റ്റം വഴി ആപ്പ് വിജയകരമായി ഇൻസ്റ്റാൾ ചെയ്യപ്പെട്ടു കഴിഞ്ഞാൽ ബലൂൺ പച്ചയാക്കുന്ന ലോജിക്
+/* 001 */
+const alreadyInstalled =
+  window.matchMedia('(display-mode: standalone)').matches ||
+  window.navigator.standalone === true;
+
+if (alreadyInstalled) {
+  stat.innerText = "INSTALLED";
+  ball.className = "bas-ball is-pwa-installed";
+}
 window.addEventListener('appinstalled', () => {
 stat.innerText = "INSTALLED";
 ball.className = "bas-ball is-pwa-installed";
