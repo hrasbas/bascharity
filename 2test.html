@@ -1,4 +1,4 @@
-    
+     
 <!DOCTYPE html>   
 <html lang="en">
 <head>
@@ -18,7 +18,12 @@
     -moz-user-select: auto !important;
     -ms-user-select: auto !important;
     user-select: auto !important;
-  }   
+  } 
+/* 001 */
+html {
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}    
 body {
     font-size: 19px;
 }
@@ -182,10 +187,9 @@ margin-right:auto;
     10px 10px 0 #1c1c1c,
     13px 14px 18px rgba(0,0,0,.95),
     0 0 22px rgba(255,255,255,.35);
-  max-width: 100%;
+    max-width: 100%;
   overflow-wrap: break-word;
 }
-
 
 .international {
   margin-top: 18px;
@@ -820,12 +824,6 @@ button.country-btn.active * {
     });
 })();
 </script>
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-W0NH1KVHHC"></script><script>
-window.dataLayer = window.dataLayer || [];
-function gtag(){dataLayer.push(arguments);}
-gtag('js', new Date());
-gtag('config', 'G-W0NH1KVHHC');
-</script>
   <!-- ===========================
 END OF BAS ANALYTICS
 =========================== -->
@@ -922,7 +920,7 @@ dedicated to the good, well-being, and peace of all human beings, their parents,
   </p>
 
   <p>
-    Without spending even one rupee extra, what if someone hungry somewhere in the world gets food when you purchase from your preferred shop at the same price and with the same offers <span style="font-weight:bold; color:#FFFFFF;">through the shopping links listed below</span>?!
+    Without spending even one rupee extra, what if someone hungry somewhere in the world gets food when you purchase anything from your preferred shop at the same price and with the same offers <span style="font-weight:bold; color:#FFFFFF;">through the shopping links listed below</span>?!
   </p>
 
   <div style="text-align:center; margin:25px 0;">
@@ -1136,14 +1134,14 @@ ball.className = "bas-ball white-b";
 }); 
 
 // 2. ആപ്പ് മുൻപേ ഇൻസ്റ്റാൾ ചെയ്തിട്ടുണ്ടെങ്കിൽ പച്ചകലർന്ന മഞ്ഞ ബലൂൺ കാണിക്കുന്ന ലോജിക്
-window.addEventListener('DOMContentLoaded', () => {
+/*window.addEventListener('DOMContentLoaded', () => {
 setTimeout(() => {
 if (!basPrompt) {
 stat.innerText = "INSTALLED";
 ball.className = "bas-ball is-pwa-installed";
 }
 }, 3000); // ബ്രൗസറിന് ലോഡ് ആകാൻ നൽകുന്ന സമയം
-}); 
+});*/
 
 // ബലൂണുകൾ കൃത്യമായ സമയക്രമത്തിൽ സ്ക്രീനിൽ പൊങ്ങി വരാനും താഴാനും ഉള്ള ടൈമർ ഫങ്ഷൻ
 function initBalloons() {
@@ -1179,6 +1177,15 @@ basPrompt = null;
 } 
 
 // സിസ്റ്റം വഴി ആപ്പ് വിജയകരമായി ഇൻസ്റ്റാൾ ചെയ്യപ്പെട്ടു കഴിഞ്ഞാൽ ബലൂൺ പച്ചയാക്കുന്ന ലോജിക്
+/* 001 */
+const alreadyInstalled =
+  window.matchMedia('(display-mode: standalone)').matches ||
+  window.navigator.standalone === true;
+
+if (alreadyInstalled) {
+  stat.innerText = "INSTALLED";
+  ball.className = "bas-ball is-pwa-installed";
+}
 window.addEventListener('appinstalled', () => {
 stat.innerText = "INSTALLED";
 ball.className = "bas-ball is-pwa-installed";
@@ -2368,7 +2375,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
 });
-</script>
+</script> 
 <!-- SL NO 37 : HTML END -->
 <!-- ================================================= -->
 
@@ -2417,7 +2424,7 @@ COMPARE PRICES ON TRUSTED SITES 🔁
 </button>
 <div class="compare-message">
 
-  <h2>After Comparing Prices, Please Return Here</h2>
+  <h2>After Comparing Prices, Please Come Back</h2>
   <p>
     The same product may be available at different prices in different stores.
     After comparing prices, please return here and search for the product or use
@@ -5492,8 +5499,7 @@ text-transform:uppercase;">
 <div style="background:#222; color:#fff; padding:20px; border-radius:12px; border:1px solid #444; font-family:sans-serif; line-height:1.6; max-width:900px; margin:auto;">
 
   <h3 style="color:#FFD700; margin-top:0; font-size:20px;">
-    🔄 ഷാപ്പ് അപ്‌ഡേറ്റുകൾ
-  </h3>
+    🔄 ഷോപ്പ് അപ്‌ഡേറ്റുകൾ
 
   <h4 style="color:#00FF66; margin-bottom:10px; font-size:17px;">
     📌 പ്രധാന അറിയിപ്പ്
