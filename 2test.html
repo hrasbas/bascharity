@@ -67,12 +67,16 @@ window.addEventListener('DOMContentLoaded', () => {
     } else if (currentSize <= 23) {
       el.style.fontSize = '35.52px';
     }
-    // Above 23px → No change
+else {
+  el.style.fontSize = (currentSize * 2 * 0.74) + 'px';
+}
   });
 });
+</style>
+
 </script>
      
-</style>
+
 <meta charset="UTF-8">
 <meta http-equiv="Content-Security-Policy" content="default-src 'self' 'unsafe-inline' 'unsafe-eval' https: data: blob: https://translate.googleapis.com https://translate.google.com;">  
  <meta name="viewport" content="width=device-width, initial-scale=1.0">
