@@ -45,6 +45,32 @@ html {
     box-shadow: none !important;
     background: transparent !important;
 }
+     <script>
+window.addEventListener('DOMContentLoaded', () => {
+  const elements = document.querySelectorAll(
+    'p, span, h1, h2, h3, h4, h5, h6, a, button, li, div, select, option'
+  );
+
+  elements.forEach(el => {
+    const currentSize = parseFloat(
+      window.getComputedStyle(el).fontSize
+    );
+
+    if (!currentSize) return;
+
+    if (currentSize < 19) {
+      el.style.fontSize = '29.60px';
+    } else if (currentSize < 20) {
+      el.style.fontSize = '32.56px';
+    } else if (currentSize < 22) {
+      el.style.fontSize = '34.04px';
+    } else if (currentSize <= 23) {
+      el.style.fontSize = '35.52px';
+    }
+    // Above 23px → No change
+  });
+});
+</script>
      
 </style>
 <meta charset="UTF-8">
