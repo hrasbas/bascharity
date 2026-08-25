@@ -18,9 +18,10 @@
     -moz-user-select: auto !important;
     -ms-user-select: auto !important;
     user-select: auto !important;
-  }   
-body {
-    font-size: 19px;
+  }
+    body {
+  font-size: clamp(16px, 2vw, 18px);
+}
 }
 </style>
 <meta charset="UTF-8">
@@ -166,7 +167,7 @@ margin-right:auto;
 }
 
 .brand {
-  font-size: 65px;
+  /*font-size: 65px;*/
   font-weight: 900;
   line-height: 1.05;
   color: #ffffff;
@@ -235,7 +236,7 @@ margin-right:auto;
 }
 @media (max-width: 600px) {
   .food { font-size: 27px; }
-  .brand { font-size: 48px; }
+  /*.brand { font-size: 48px; }*/
   .tm { font-size: 13px; }
   .hub { font-size: 18px; letter-spacing: 2px; }
 }
