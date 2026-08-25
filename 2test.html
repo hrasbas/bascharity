@@ -1,30 +1,8 @@
      
-<!DOCTYPE html>     
+<!DOCTYPE html>   
 <html lang="en">
 <head>
 <style>
-html {
-  font-size: 19px;
-}
-
-* {
-  font-size: 1.3rem;
-}
-
-
-html {
-  width: 100%;
-  overflow-x: hidden;
-}
-
-body {
-  zoom: 0.37;
-  width: 100%;
-  margin: 0;
-  overflow-x: hidden;
-}
-
-
 /* പേജിലെ എല്ലാ അനാവശ്യ സെലക്ഷനും തടയാൻ */
   * {
     -webkit-user-select: none !important;
@@ -46,45 +24,13 @@ html {
   -webkit-text-size-adjust: 100%;
   text-size-adjust: 100%;
 }    
-
-#basCompleteWrapper,
-#basMainDisplay {
-    border: none !important;
-    box-shadow: none !important;
-    background: transparent !important;
+body {
+    font-size: 19px;
 }
-     </style>
-     <!--<script>
-window.addEventListener('DOMContentLoaded', () => {
-  const elements = document.querySelectorAll(
-    'p, span, h1, h2, h3, h4, h5, h6, a, button, li, div, select, option'
-  );
-
-  elements.forEach(el => {
-    const currentSize = parseFloat(
-      window.getComputedStyle(el).fontSize
-    );
-
-    if (!currentSize) return;
-
-   /* if (currentSize < 19) {
-      el.style.fontSize = '29.60px';
-    } else if (currentSize < 20) {
-      el.style.fontSize = '32.56px';
-    } else if (currentSize < 22) {
-      el.style.fontSize = '34.04px';
-    } else if (currentSize <= 23) {
-      el.style.fontSize = '35.52px';
-    }
-else {
-  el.style.fontSize = (currentSize * 2 * 0.74) + 'px';
-}
-  });
-});*/el.style.fontSize = (currentSize * 2 * 0.20) + 'x';
-});
-</script>-->
+</style>
 <meta charset="UTF-8">
-<meta http-equiv="Content-Security-Policy" content="default-src 'self' 'unsafe-inline' 'unsafe-eval' https: data: blob: https://translate.googleapis.com https://translate.google.com;">   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self' 'unsafe-inline' 'unsafe-eval' https: data: blob: https://translate.googleapis.com https://translate.google.com;">  
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>BAS Charity</title> 
 <meta http-equiv="X-Frame-Options" content="DENY"><link rel="manifest" href="manifest.json">
 <meta name="referrer" content="strict-origin-when-cross-origin">
@@ -160,13 +106,7 @@ margin-right:auto;
 } 
 
 .header-box { display:flex; flex-direction:column; align-items:center; background:#000; padding-top: 25px; }
-#logo-space {
-  width: 100%;
-  height: 340px;
-  display: flex !important;
-  justify-content: center !important;
-  align-items: center !important;
-}
+#logo-space { width:100%; height:340px; }
 
 .heading {
   width: 100%;
@@ -231,7 +171,7 @@ margin-right:auto;
 }
 
 .brand {
- font-size:97.5px
+  font-size: 65px;
   font-weight: 900;
   line-height: 1.05;
   color: #ffffff;
@@ -300,11 +240,12 @@ margin-right:auto;
     #d7dce5
   );
 }
-/*@media (max-width: 600px) {
+@media (max-width: 600px) {
   .food { font-size: 27px; }
+  .brand { font-size: 48px; }
   .tm { font-size: 13px; }
   .hub { font-size: 18px; letter-spacing: 2px; }
-}*/
+}
 
 .top-bar { background:#111; padding:15px 8px; border-top:1px solid #333;}
 .lang-buttons { display:grid; grid-template-columns:repeat(4,1fr); gap:10px; max-width:600px; margin:auto; }
@@ -351,10 +292,8 @@ margin-bottom:1.5cm;
   border: 2px solid #AEB7C2;
   border-radius: 12px;
   box-shadow: 0 0 6px #AEB7C2;
-  margin: 0 5px 22px 5px !important;
-  width: auto !important;
+  margin: 0 auto 22px;
 }
-
 .msg-container { width:96%; padding:20px 0; margin: auto; }
 .question-box { margin:0 auto; width:96%; max-width:900px; background:#000; color:#00BFFF; padding:25px; border-radius:12px; border:1px solid #00BFFF; text-align:center; line-height:1.8; }
 .english-text { font-size:19px; font-weight:500; display:block; }
@@ -885,14 +824,6 @@ button.country-btn.active * {
     });
 })();
 </script>
-     <style>
-  /* 6000 വരികൾക്ക് താഴെയുള്ള എല്ലാ റൂളുകളെയും മറികടക്കാൻ */
-  .brand, .brand div {
-    font-size:100px !important;
-    line-height: 1.1 !important;
-  }
-</style>
-
   <!-- ===========================
 END OF BAS ANALYTICS
 =========================== -->
