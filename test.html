@@ -662,5 +662,549 @@ body {
     bottom:15px;
   }
 }
+<!-- 402 -->
+}
+<!-- 403 -->
+<!-- 404 -->
+@keyframes floatW {
+  /* 405 */
+  0%, 100% { transform: translate(0, 0) rotate(-3deg); }
+  /* 406 */
+  50% { transform: translate(35px, 45px) rotate(5deg); }
+  /* 407 */
+}
+<!-- 408 -->
+<!-- 409 -->
+@keyframes floatB {
+  /* 410 */
+  0%, 100% { transform: translate(0, 0) rotate(-4deg); }
+  /* 411 */
+  50% { transform: translate(25px, -25px) rotate(-4deg); }
+  /* 412 */
+}
+<!-- 413 -->
+</style>
+
+<!-- 414 -->
+<!-- GOOGLE ANALYTICS -->
+<!-- 415 -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-W0NH1KVHHC"></script>
+<!-- 416 -->
+<script>
+/* 417 */
+window.dataLayer = window.dataLayer || [];
+/* 418 */
+function gtag(){dataLayer.push(arguments);}
+/* 419 */
+gtag('js', new Date());
+/* 420 */
+gtag('config','G-W0NH1KVHHC',{send_page_view:true});
+
+/* 421 */
+function basTrack(eventName, params={}){
+  gtag('event',eventName,params);
+}
+
+/* 422 */
+window.addEventListener("load",function(){
+  basTrack("page_loaded");
+});
+
+/* 423 */
+document.addEventListener("click",function(e){
+  const shop=e.target.closest("a.shopCard");
+  if(shop){
+    basTrack("shop_click",{
+      shop_name:shop.innerText.trim(),
+      shop_url:shop.href
+    });
+  }
+});
+
+/* 424 */
+document.addEventListener("click",function(e){
+  const btn=e.target.closest(".compare-btn");
+  if(btn){ basTrack("compare_click"); }
+});
+
+/* 425 */
+document.addEventListener("click",function(e){
+  const share=e.target.closest(".share-grid a");
+  if(share){
+    basTrack("share_click",{ platform:share.href });
+  }
+});
+
+/* 426 */
+function analyticsCopyLink(){ basTrack("copy_link"); }
+function analyticsCountry(country){ basTrack("country_selected",{ country:country }); }
+function analyticsLanguage(language){ basTrack("language_selected",{ language:language }); }
+function analyticsSearch(text){ basTrack("search",{ search_term:text }); }
+function analyticsPWA(){ basTrack("pwa_install"); }
+function analyticsDonation(name){ basTrack("donation_button",{ charity:name }); }
+function analyticsExternal(url){ basTrack("external_link",{ url:url }); }
+function analyticsAffiliate(shopName, url){
+  basTrack("affiliate_click", {
+    shop: shopName,
+    url: url
+  });
+}
+
+/* 427 */
+document.addEventListener("click", function(e){
+  const card = e.target.closest(".shopCard");
+  if (!card) return;
+
+  const shopName = card.querySelector(".shopName")?.innerText || "unknown";
+
+  const shop = shopsArray.find(s => s.n === shopName);
+  if (!shop) return;
+
+  if ((shop.a || "").trim() === "") {
+     analyticsExternal(shop.u);
+  } else {
+   analyticsAffiliate(shopName, shop.u);
+  }
+});
+/* 428 */
+</script>
+
+/* 429 */
+<style>
+/* 430 */
+/* BAS CHARITY — DARK SILVER BUTTON WITH GREEN TEXT */
+
+button:not(#speedScrollBtn),
+a.btn,
+a.button,
+a[class*="btn"]:not(.speed-scroll),
+a[class*="button"]:not(.speed-scroll),
+a[role="button"] {
+    background: linear-gradient(
+        145deg,
+        #5b6066 0%,
+        #3f444a 48%,
+        #292d32 100%
+    ) !important;
+
+    /* അക്ഷരങ്ങൾക്ക് മാത്രം തെളിഞ്ഞ പച്ച നിറം */
+    color: #00FF66 !important;
+
+ <!-- ===== ഭാഗം 4 | Original Lines 502–701 ===== -->
+
+    border: 2px solid #bfc4c9 !important;
+    border-radius: 10px !important;
+
+    box-shadow:
+        inset 0 1px 2px rgba(255,255,255,0.28),
+        inset 0 -2px 4px rgba(0,0,0,0.45),
+        0 0 6px rgba(190,195,200,0.38) !important;
+
+    font-weight: 700 !important;
+    text-decoration: none !important;
+    transition: all 0.2s ease !important;
+}
+
+/* ബട്ടണിനുള്ളിലെ എല്ലാ ചൈൽഡ് എലിമെന്റുകളുടെയും അക്ഷരങ്ങൾക്ക് പച്ച നിറം നൽകുന്നു */
+button:not(#speedScrollBtn) *,
+a.btn *,
+a.button *,
+a[class*="btn"]:not(.speed-scroll) *,
+a[class*="button"]:not(.speed-scroll) *,
+a[role="button"] * {
+    color: #00FF66 !important;
+}
+
+button:not(#speedScrollBtn):hover,
+a.btn:hover,
+a.button:hover,
+a[class*="btn"]:not(.speed-scroll):hover,
+a[class*="button"]:not(.speed-scroll):hover,
+a[role="button"]:hover {
+    background: linear-gradient(
+        145deg,
+        #666b72 0%,
+        #484d54 48%,
+        #30353b 100%
+    ) !important;
+
+    border-color: #e1e4e7 !important;
+
+    box-shadow:
+        inset 0 1px 3px rgba(255,255,255,0.35),
+        inset 0 -2px 4px rgba(0,0,0,0.45),
+        0 0 8px rgba(210,215,220,0.5) !important;
+}
+
+button:not(#speedScrollBtn):active,
+a.btn:active,
+a.button:active,
+a[class*="btn"]:not(.speed-scroll):active,
+a[class*="button"]:not(.speed-scroll):active,
+a[role="button"]:active {
+    transform: scale(0.96) !important;
+    filter: brightness(1.2) !important;
+}
+</style>
+
+<style>
+/* 001 — ALL CHARITY DETAILS / DONATE BUTTONS — DARK SILVER PREMIUM */
+.trust-btn,
+.peace-btn,
+.peace-link,
+.vada-btn,
+.vision-btn,
+.vision-link,
+.btn-donate-now,
+.btn-close-modal {
+    background: linear-gradient(
+        145deg,
+        #5b6066 0%,
+        #3f444a 48%,
+        #292d32 100%
+    ) !important;
+
+    color: #d7dce2 !important;
+
+    border: 2px solid #bfc4c9 !important;
+    border-radius: 10px !important;
+
+    box-shadow:
+        inset 0 1px 2px rgba(255,255,255,0.28),
+        inset 0 -2px 4px rgba(0,0,0,0.45),
+        0 0 6px rgba(190,195,200,0.38) !important;
+
+    font-weight: 700 !important;
+    text-decoration: none !important;
+}
+
+/* 002 — BUTTON-ന്റെ ഉള്ളിലെ എഴുത്ത് */
+.trust-btn *,
+.peace-btn *,
+.peace-link *,
+.vada-btn *,
+.vision-btn *,
+.vision-link *,
+.btn-donate-now *,
+.btn-close-modal * {
+    color: #d7dce2 !important;
+}
+
+/* 003 — HOVER */
+.trust-btn:hover,
+.peace-btn:hover,
+.peace-link:hover,
+.vada-btn:hover,
+.vision-btn:hover,
+.vision-link:hover,
+.btn-donate-now:hover,
+.btn-close-modal:hover {
+    background: linear-gradient(
+        145deg,
+        #666b72 0%,
+        #484d54 48%,
+        #30353b 100%
+    ) !important;
+
+    border-color: #e1e4e7 !important;
+
+    box-shadow:
+        inset 0 1px 3px rgba(255,255,255,0.35),
+        inset 0 -2px 4px rgba(0,0,0,0.45),
+        0 0 8px rgba(210,215,220,0.5) !important;
+}
+</style>
+
+<style>
+/* --- COMMON SILVER PREMIUM BORDER --- */
+
+button,
+.lang-btn,
+.country-btn,
+.info-btn,
+.shop-btn,
+.more-btn,
+select,
+.msg-container,
+.question-box,
+.info-box,
+.country-container,
+.shop-card,
+.charity-card,
+.category-box {
+    border: 1px solid #AEB4BC !important;
+    box-shadow:
+        0 0 3px rgba(220,225,230,0.65),
+        inset 0 0 2px rgba(255,255,255,0.18) !important;
+}
+
+/* Premium silver button surface */
+button,
+.lang-btn,
+.country-btn,
+.info-btn,
+.shop-btn,
+.more-btn {
+    background: linear-gradient(
+        145deg,
+        #555A60,
+        #34383D,
+        #555A60
+    ) !important;
+
+    color: #F1F3F5 !important;
+}
+
+/* Hover / touch */
+button:hover,
+.lang-btn:hover,
+.country-btn:hover,
+.info-btn:hover,
+.shop-btn:hover,
+.more-btn:hover {
+    border-color: #C7CCD2 !important;
+    box-shadow:
+        0 0 5px rgba(220,225,230,0.75),
+        inset 0 0 3px rgba(255,255,255,0.22) !important;
+}
+
+/* Silver border for main content boxes */
+.msg-container,
+.question-box,
+.info-box,
+.country-container,
+.shop-card,
+.charity-card {
+    border-color: #AEB4BC !important;
+}
+</style>
+
+ </style>
+
+<style>
+/* ===== BAS CHARITY — COMMON SILVER PREMIUM THEME ===== */
+
+/* ALL EXISTING BORDER LINES */
+* {
+    border-color: #AEB4BC !important;
+}
+
+/* PREMIUM BUTTONS */
+button,
+select,
+a[class*="btn"],
+[class*="btn"],
+[class*="button"] {
+    border-color: #AEB4BC !important;
+    box-shadow:
+        0 0 4px rgba(174,180,188,0.55),
+        inset 0 0 2px rgba(255,255,255,0.15) !important;
+}
+
+/* BUTTON TEXT */
+button,
+select,
+a[class*="btn"],
+[class*="btn"],
+[class*="button"] {
+    color: #F1F3F5 !important;
+}
+
+/* ALL HEADINGS — REMOVE DARK GREEN */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: #F1F3F5 !important;
+}
+
+/* HEADING-STYLE ELEMENTS */
+[class*="heading"],
+[class*="title"] {
+    color: #F1F3F5 !important;
+}
+
+/* SILVER PREMIUM MAIN BOXES */
+.msg-container,
+.question-box,
+.info-box,
+.country-container,
+.shop-card,
+.charity-card {
+    border-color: #AEB4BC !important;
+}
+
+/* PREMIUM SILVER BORDER GLOW */
+.msg-container,
+.question-box,
+.info-box,
+.country-container,
+.shop-card,
+.charity-card {
+    box-shadow:
+        0 0 4px rgba(174,180,188,0.35),
+        inset 0 0 2px rgba(255,255,255,0.08) !important;
+}
+</style>
+
+<style>
+/* BAS CHARITY — FINAL ACTIVE LANGUAGE AND COUNTRY BUTTON */
+
+button.lang-btn.active,
+button.country-btn.active {
+    background: linear-gradient(
+        145deg,
+        #fff3a0 0%,
+        #d4af37 28%,
+        #8b6914 58%,
+        #050505 100%
+    ) !important;
+
+    color: #00FF66 !important;
+    border: 2px solid #ffd700 !important;
+
+    box-shadow:
+        inset 0 1px 2px rgba(255,255,255,0.65),
+        inset 0 -4px 8px rgba(0,0,0,0.85),
+        0 0 8px rgba(255,215,0,1),
+        0 8px 18px rgba(0,0,0,1) !important;
+
+    transform: translateY(-2px) !important;
+}
+
+button.lang-btn.active *,
+button.country-btn.active * {
+    color: #00FF66 !important;
+}
+</style>
+
+<script>
+(function () {
+    if (window.basActiveButtonCodeLoaded) return;
+    window.basActiveButtonCodeLoaded = true;
+
+    document.addEventListener("click", function (event) {
+        const button = event.target.closest(
+            "button.lang-btn, button.country-btn"
+        );
+
+        if (!button) return;
+
+        const selector = button.classList.contains("lang-btn")
+            ? "button.lang-btn"
+            : "button.country-btn";
+
+        document.querySelectorAll(selector).forEach(function (item) {
+            item.classList.remove("active");
+        });
+
+        button.classList.add("active");
+    });
+})();
+</script>
+
+<!-- ===========================
+END OF BAS ANALYTICS
+=========================== -->
+
+</head>
+
+<body>
+
+<div class="header-box">
+  <div id="logo-space"></div>
+
+  <div class="heading">
+
+    <div class="food">
+      FOOD WITHOUT SPENDING MONEY
+    </div>
+
+    <div class="brand notranslate" translate="no">
+      <div>BAS CHARITY</div>
+
+      <div class="international">
+        INTERNATIONAL<span class="tm">™</span>
+      </div>
+    </div>
+
+    <div class="hub">
+      AN INTERNATIONAL SHOPPING HUB
+    </div>
+
+  </div>
+</div>
+
+<div class="bas-dedication">
+  <div id="dedication-text" class="english-fix">
+
+    dedicated to the good, well-being, and peace of all human beings, their parents, other ancestors, and above all, all souls
+
+  </div>
+</div>
+
+<div class="top-bar">
+
+  <div class="lang-box">
+    <div class="lang-title">SELECT LANGUAGE</div>
+  </div>
+
+  <div class="lang-buttons">
+    <button class="lang-btn en" onclick="resetToEnglish()">English</button>
+    <button class="lang-btn hi" onclick="changeLang('hi')">Hindi Language</button>
+    <button class="lang-btn ml" onclick="changeLang('ml')">Malayalam</button>
+    <button class="lang-btn ar" onclick="changeLang('ar')">Arabic</button>
+    <button class="lang-btn ta" onclick="changeLang('ta')">Tamil</button>
+    <button class="lang-btn ur" onclick="changeLang('ur')">Urdu</button>
+    <button class="lang-btn es" onclick="changeLang('es')">Spanish</button>
+    <button class="lang-btn pt" onclick="changeLang('pt')">Portuguese</button>
+  </div>
+
+  <div class="google-row">
+    🌐 All Languages : <span id="google_translate_element"></span>
+  </div>
+
+</div>
+
+<div class="msg-container">
+
+  <div class="question-box">
+
+    <span class="english-text">
+
+      <!-- INTRODUCTION / CONTENT SECTION -->
+
+      <!-- INTRODUCTION / CONTENT SECTION -->
+
+      <!-- 001 -->
+
+      <div
+        class="info-box"
+        style="background:#000; border:1px solid #C0C0C0; border-radius:15px; padding:25px; margin:25px auto; max-width:800px; color:#C0C0C0; font-size:19px; line-height:1.8; text-align:left; box-shadow:0 0 18px rgba(192,192,192,0.18);"
+      >
+
+        <!-- 002 -->
+
+        <h2
+          style="color:#FFFFFF; text-align:center; font-size:22px; margin-bottom:20px; font-weight:bold;"
+        >
+          Welcome to BAS CHARITY INTERNATIONAL.
+        </h2>
+
+        <!-- ALWAYS VISIBLE TOP SECTION -->
+
+        <!-- ALWAYS VISIBLE TOP SECTION -->
+
+        <div id="welcomeTop">
+
+          <p>
+            Through the simple concept of Buying + Service <span class="notranslate">(Shopping + Charity)</span>, one of the objectives of this initiative is to bring leading online shopping platforms from around the world under one roof and, at the same time, make the majority of the affiliate income generated through them available for HUNGER RELIEF and other similar initiatives.
+          </p>
+
+          <p>
+            Secondly, along with creating public awareness about online scams related to charitable activities, we also introduce certain trusted websites, institutions, and initiatives.
+          </p>
  </body>
 </html>
