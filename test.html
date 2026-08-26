@@ -919,10 +919,260 @@ svg {
     max-width: 100%;
     overflow-wrap: anywhere;
   }*/
+/* =========================================================
+   BAS CHARITY — RESPONSIVE FONT OVERRIDE
+   Add this block at the VERY END of the CSS
+   ========================================================= */
 
+
+/* =========================================================
+   001 — MAIN TEXT
+   Old 19px–23px text → responsive 23px target
+   ========================================================= */
+
+body :where(
+  .english-text,
+  .info-box,
+  .share-text,
+  .officer-note,
+  .deputy-card p,
+  .trust-box p,
+  .peace-box p,
+  .peace-card,
+  .vada-box p,
+  .vision-box p,
+  .vision-card,
+  .gb-modal-body,
+  .bas7-content
+) {
+  font-size: clamp(
+    20px,
+    calc(1rem + 1.7vw),
+    23px
+  ) !important;
+}
+
+
+/* =========================================================
+   002 — SMALL TEXT
+   Old 19px and below → responsive 20px target
+   ========================================================= */
+
+body :where(
+  .lang-btn,
+  .google-row,
+  .hunger-footer,
+  .bas-lbl,
+  .country-title,
+  .country-btn,
+  #allCountries,
+  .shop-button,
+  .charity-btn,
+  .bottom-report-section,
+  .status-msg,
+  .btn-undo,
+  .modal-text,
+  .btn-donate-now,
+  .btn-close-modal,
+  .title-name,
+  .title-sub,
+  .bas8-toggle,
+  .bas7-quote,
+  .officer-sign,
+  .signature .designation,
+  .signature .office,
+  .vision-impact,
+  .bas-tag,
+  .gb-preview-text,
+  .gb-person-desig,
+  .gb-person-org,
+  .bas-more-shops-soon,
+  .bas-caption,
+  .shopDot,
+  #scrollControlPopup .speedTop,
+  #scrollControlPopup .lockBtn
+) {
+  font-size: clamp(
+    10px,
+    calc(0.75rem + 1.5vw),
+    20px
+  ) !important;
+}
+
+
+/* =========================================================
+   003 — SUB HEADINGS
+   Old 20px–23px → responsive 25px target
+   ========================================================= */
+
+body :where(
+  .sub,
+  .title-main,
+  .trust-sub,
+  .peace-sub,
+  .vada-box h2,
+  .vision-box h2,
+  .support-title,
+  .info-title,
+  .info-text,
+  .signature,
+  #categoryHeading,
+  #shopOnCountry,
+  .country-title
+) {
+  font-size: clamp(
+    22px,
+    calc(1.25rem + 1.25vw),
+    25px
+  ) !important;
+}
+
+
+/* =========================================================
+   004 — MAIN HEADINGS
+   Old 23px and above → responsive 27px target
+   ========================================================= */
+
+body :where(
+  .mainbox h1,
+  .trust-title,
+  .trust-box h1,
+  .peace-box h1,
+  .vada-box h1,
+  .vision-box h1,
+  .readmore-btn,
+  .title,
+  .heading,
+  .section-title,
+  .section-heading,
+  #basMainDisplay h1
+) {
+  font-size: clamp(
+    25px,
+    calc(1.6875rem + 1.35vw),
+    40px
+  ) !important;
+}
+
+
+/* =========================================================
+   005 — LARGE SPECIAL HEADINGS
+   ========================================================= */
+
+body :where(
+  .rs,
+  .counter,
+  .bas-thanks,
+  .bas-name,
+  .shopName,
+  .shop-icon
+) {
+  font-size: clamp(
+    27px,
+    calc(1.7rem + 2vw),
+    52px
+  ) !important;
+}
+
+
+/* =========================================================
+   006 — CATEGORY / SHOP CONTROLS
+   ========================================================= */
+
+body :where(
+  #categoryCountry,
+  #categorySearch,
+  #categoryShops,
+  #categoryHeading,
+  .bas-shop-more-btn,
+  .bas-more-shops-soon
+) {
+  font-size: clamp(
+    10px,
+    calc(0.75rem + 1.5vw),
+    20px
+  ) !important;
+}
+
+
+/* =========================================================
+   007 — SCROLL CONTROL
+   ========================================================= */
+
+body :where(
+  #scrollControlPopup .arrowBtn,
+  #scrollControlPopup .speedTop,
+  #scrollControlPopup .lockBtn
+) {
+  font-size: clamp(
+    10px,
+    calc(0.75rem + 1.5vw),
+    20px
+  ) !important;
+}
+
+
+/* =========================================================
+   008 — GREETING WIDGET
+   ========================================================= */
+
+body :where(
+  .gb-header-title,
+  .gb-preview-text,
+  .gb-person-name,
+  .gb-person-desig,
+  .gb-person-org,
+  .gb-modal-close,
+  .gb-modal-body
+) {
+  font-size: clamp(
+    10px,
+    calc(0.75rem + 1.5vw),
+    20px
+  ) !important;
+}
+
+
+/* =========================================================
+   009 — INSTALL / MORE INFORMATION
+   ========================================================= */
+
+body :where(
+  #install-btn,
+  #basMainDisplay > div,
+  #basMainDisplay [onclick="basOpenFullPage()"],
+  #basFullInfoPage button
+) {
+  font-size: clamp(
+    20px,
+    calc(1rem + 1.7vw),
+    27px
+  ) !important;
+}
+
+
+/* =========================================================
+   010 — DEDICATION
+   Keep its existing responsive range
+   ========================================================= */
+
+.bas-dedication {
+  font-size: clamp(
+    15px,
+    calc(0.75rem + 1vw),
+    20px
+  ) !important;
+}
+
+
+/* =========================================================
+   IMPORTANT
+   brand / food / hub are NOT included here.
+   Their own responsive rules remain active.
+   ========================================================= */
 </style>
-</head>      
-</style>
+     
+
   <!-- ===========================
 END OF BAS ANALYTICS
 =========================== -->
