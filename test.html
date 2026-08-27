@@ -2034,7 +2034,9 @@ earthGroup.rotation.y += 0.003;
 angle -= 0.01;
 moon.position.x = Math.cos(angle) * 4.5;
 moon.position.z = Math.sin(angle) * 2.8;
-renderer.render(scene, camera);
+/* 2037 */
+moon.position.y = 1.0;
+    renderer.render(scene, camera);
 }
 animate(); 
 
