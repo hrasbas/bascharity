@@ -103,37 +103,55 @@ margin-right:auto;
 
 .header-box { display:flex; flex-direction:column; align-items:center; background:#000; padding-top: 25px; }
 /* 070 */
-/* 070 */
-/* Globe മുകളിൽ നിന്ന് താഴേക്ക് ഇറക്കാൻ */
+/* ALL DEVICES - standard responsive setup */
 #logo-space { 
   width: 100%; 
   height: auto;
-  margin-top: 35px !important; 
+  margin-top: 0px !important;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  justify-content: center !important;
 }
 
-/* Heading Setup */
 .heading {
   width: 100%;
   text-align: center;
   padding: 0px;
 }
 
-/* Food Text - Globe-ന് താഴെ കൃത്യമായ ഗ്യാപ്പിൽ (Golden Text) */
 .food {
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 14px;
-  margin-top: 20px !important;
-  margin-bottom: 15px !important;
+  margin-top: 15px !important;
+  margin-bottom: 10px !important;
   position: relative !important;
   z-index: 10 !important;
 
-  /* Golden Text Color (No background box) */
+  /* Golden Text Color */
   background: linear-gradient(180deg, #8b6914 0%, #d4af37 22%, #fff1a8 42%, #ffd75a 50%) !important;
   -webkit-background-clip: text !important;
   -webkit-text-fill-color: transparent !important;
   background-clip: text !important;
+
+  font-family: Georgia, serif;
+  font-size: clamp(10px, calc(0.5rem + 1vw), 18px);
+  font-weight: 400;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+/* RESPONSIVE + MOBILE SPECIFIC FIX (mobile tweaking) */
+@media (max-width: 600px) {
+  #logo-space {
+    margin-top: 5px !important; /* ഫോൺ സ്ക്രീനിൽ മുകളിൽ തട്ടാതെ കൃത്യമായി നിൽക്കാൻ */
+  }
+  .food {
+    margin-top: 10px !important; /* ഫോണിലെ വിഷ്വൽ ബാലൻസിന് */
+  }
+}
 
   font-family: Georgia, serif;
   font-size: clamp(10px, calc(0.5rem + 1vw), 18px);
