@@ -104,7 +104,7 @@ margin-right:auto;
 .header-box { display:flex; flex-direction:column; align-items:center; background:#000; padding-top: 25px; }
 /* 070 */
 /* ALL DEVICES - Responsive Alignment*/
-/*#logo-space { 
+#logo-space { 
   width: 100%; 
   height: auto;
   margin-top: 50px !important; 
@@ -161,71 +161,11 @@ margin-right:auto;
 }
 
 /* MAIN TITLE - FOOD-ന് താഴെ നിൽക്കാൻ */
-/*.brand, 
+.brand, 
 .main-title, 
 h1 {
   margin-top: 25px !important;
-}*/
-/* ================= NEW REALISTIC ORBIT CODE ================= */
-
-/* 1. GLOBE RESPONSIVE SIZE */
-#logo-space, .globe-container {
-  width: 100% !important;
-  max-width: 280px !important;
-  height: auto !important;
-  margin: 40px auto 0 auto !important;
-  display: flex !important;
-  justify-content: center !important;
-  align-items: center !important;
-  position: relative !important;
-  perspective: 1000px;
 }
-
-/* 2. CHANDRAN ORBIT (23.5 TILTED 3D ANIMATION) */
-.moon-orbit {
-  position: absolute;
-  width: 340px;
-  height: 340px;
-  border-radius: 50%;
-  transform-style: preserve-3d;
-  transform: rotateX(75deg) rotateY(-23.5deg);
-  animation: rotateMoon 40s linear infinite;
-}
-
-.moon {
-  position: absolute;
-  top: 0;
-  left: 50%;
-  width: 18px;
-  height: 18px;
-  background: #ffffff;
-  border-radius: 50%;
-  box-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
-  transform: translate(-50%, -50%);
-}
-
-/* 3. ROTATION KEYFRAMES */
-@keyframes rotateMoon {
-  0% {
-    transform: rotateX(75deg) rotateY(-23.5deg) rotateZ(0deg);
-  }
-  100% {
-    transform: rotateX(75deg) rotateY(-23.5deg) rotateZ(360deg);
-  }
-}
-
-/* 4. MOBILE SPECIFIC ADJUSTMENT */
-@media (max-width: 600px) {
-  #logo-space, .globe-container {
-    max-width: 220px !important;
-    margin-top: 30px !important;
-  }
-  .moon-orbit {
-    width: 270px;
-    height: 270px;
-  }
-}
-
   font-family:Georgia,serif;
   font-size: clamp(10px, calc(0.5rem + 1.7vw), 20px) !important;
   font-weight:400;
