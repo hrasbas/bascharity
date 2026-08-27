@@ -103,11 +103,11 @@ margin-right:auto;
 
 .header-box { display:flex; flex-direction:column; align-items:center; background:#000; padding-top: 25px; }
 /* 070 */
-/* ALL DEVICES - standard responsive setup */
+/* ALL DEVICES - Responsive Alignment */
 #logo-space { 
   width: 100%; 
   height: auto;
-  margin-top: 0px !important;
+  margin-top: 50px !important; /* ഗ്ലോബ് താഴേക്ക് ഇറക്കാൻ */
   display: flex !important;
   flex-direction: column !important;
   align-items: center !important;
@@ -118,6 +118,7 @@ margin-right:auto;
   width: 100%;
   text-align: center;
   padding: 0px;
+  margin-top: -15px !important; /* ടൈറ്റിൽ മുഴുവനായി മുകളിലേക്ക് പൊങ്ങാൻ */
 }
 
 .food {
@@ -125,8 +126,8 @@ margin-right:auto;
   align-items: center;
   justify-content: center;
   gap: 14px;
-  margin-top: 15px !important;
-  margin-bottom: 10px !important;
+  margin-top: 10px !important;
+  margin-bottom: 5px !important;
   position: relative !important;
   z-index: 10 !important;
 
@@ -142,7 +143,6 @@ margin-right:auto;
   letter-spacing: 1px;
   text-transform: uppercase;
 }
-
 /* RESPONSIVE + MOBILE SPECIFIC FIX (mobile tweaking) */
 @media (max-width: 600px) {
   #logo-space {
