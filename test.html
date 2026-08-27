@@ -104,34 +104,42 @@ margin-right:auto;
 .header-box { display:flex; flex-direction:column; align-items:center; background:#000; padding-top: 25px; }
 /* 070 */
 /* 070 */
-#logo-space { width:100%; height:340px; margin-top:1px; } margin-top:40px; }
-.heading {
-  width: 100%;
-  text-align: center;
-  padding: 20px;
+/* Globe മുകളിൽ നിന്ന് താഴേക്ക് ഇറക്കാൻ */
+#logo-space { 
+  width: 100%; 
+  height: auto;
+  margin-top: 35px !important; 
 }
-/* HEADING NORMAL POSITION */
+
+/* Heading Setup */
 .heading {
   width: 100%;
   text-align: center;
   padding: 0px;
 }
 
-/* FOOD TEXT - GLOBE-ന് തൊട്ടടുത്ത് കയറാൻ */
+/* Food Text - Globe-ന് താഴെ കൃത്യമായ ഗ്യാപ്പിൽ (Golden Text) */
 .food {
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 14px;
-  margin-top: -160px !important; /* മുകളിലേക്ക് ഗ്ലോബിന്റെ അടുത്തേക്ക് കയറ്റാൻ */
+  margin-top: 20px !important;
+  margin-bottom: 15px !important;
   position: relative !important;
   z-index: 10 !important;
+
+  /* Golden Text Color (No background box) */
+  background: linear-gradient(180deg, #8b6914 0%, #d4af37 22%, #fff1a8 42%, #ffd75a 50%) !important;
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+  background-clip: text !important;
+
   font-family: Georgia, serif;
   font-size: clamp(10px, calc(0.5rem + 1vw), 18px);
   font-weight: 400;
   letter-spacing: 1px;
   text-transform: uppercase;
-  background: linear-gradient(180deg, #8b6914 0%, #d4af37 22%, #fff1a8 42%, #ffd75a 50%);
 }
 
 /* MAIN TITLE - FOOD-ന് താഴെ നിൽക്കാൻ */
