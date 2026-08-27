@@ -3,6 +3,14 @@
 <html lang="en">
 <head>
 <style>
+    /* GLOBAL TRANSLATIONS & OVERFLOW FIX */
+*, *::before, *::after {
+  max-width: 100% !important;
+  box-sizing: border-box !important;
+  overflow-wrap: anywhere !important;
+  word-break: normal !important;
+}
+
 /* പേജിലെ എല്ലാ അനാവശ്യ സെലക്ഷനും തടയാൻ */
   * {
     -webkit-user-select: none !important;
