@@ -110,18 +110,37 @@ margin-right:auto;
   text-align: center;
   padding: 20px;
 }
-/* Heading മുകളിലേക്ക് മാറ്റാൻ */
-
-  position:relative !important;
-  top:-45px !important;
+/* HEADING NORMAL POSITION */
+.heading {
+  width: 100%;
+  text-align: center;
+  padding: 0px;
 }
+
+/* FOOD TEXT - GLOBE-ന് തൊട്ടടുത്ത് കയറാൻ */
 .food {
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  gap:14px;
- margin-top:-52px;
- /* margin-bottom:32px;*/
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  margin-top: -160px !important; /* മുകളിലേക്ക് ഗ്ലോബിന്റെ അടുത്തേക്ക് കയറ്റാൻ */
+  position: relative !important;
+  z-index: 10 !important;
+  font-family: Georgia, serif;
+  font-size: clamp(10px, calc(0.5rem + 1vw), 18px);
+  font-weight: 400;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  background: linear-gradient(180deg, #8b6914 0%, #d4af37 22%, #fff1a8 42%, #ffd75a 50%);
+}
+
+/* MAIN TITLE - FOOD-ന് താഴെ നിൽക്കാൻ */
+.brand, 
+.main-title, 
+h1 {
+  margin-top: 25px !important;
+}
+
   font-family:Georgia,serif;
   font-size: clamp(10px, calc(0.5rem + 1.7vw), 20px) !important;
   font-weight:400;
