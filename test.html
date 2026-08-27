@@ -112,11 +112,15 @@ margin-right:auto;
 .header-box { display:flex; flex-direction:column; align-items:center; background:#000; padding-top: 25px; }
 /* 070 */
 /* ALL DEVICES - Responsive Alignment*/
-#logo-space { 
+#logo-space {
   width: clamp(150px, 50vw, 220px);
   aspect-ratio: 1 / 1;
-  height: auto;
-  margin-top: 50px !important; 
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 
   display: flex !important;
   flex-direction: column !important;
