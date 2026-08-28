@@ -280,6 +280,22 @@ body {
 .page.peek-hint {
   animation: peekAnimation 1.8s ease-in-out;
 }
+ @media (max-width: 700px){
+  body{padding:12px;}
+  .stage{
+    left:0;
+    width:min(96vw,530px);
+    height:calc(min(96vw,530px) * 1.79);
+    top:12px;
+    transform:none;
+    margin-bottom:1rem;
+  }
+  .back-cover-base{
+    width:calc(100% + 2mm);
+    height:calc(100% + 4mm);
+  }
+  .spine{left:-10px;width:10px;}
+}
 </style>
 </head>
 <body>
