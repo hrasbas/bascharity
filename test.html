@@ -6818,7 +6818,66 @@ YOUR PURCHASE SATISFIES A HUNGER™
 })();
 </script>
 
-   
+   <!-- existing code -->
+<script>
+  document.querySelectorAll('a').forEach(link => {
+    if (link.hostname !== window.location.hostname && link.href.startsWith('http')) {
+      link.setAttribute('target', '_blank');
+      link.setAttribute('rel', 'noopener noreferrer');
+    }
+  });
+</script>
+
+<style>
+#basBalloonWrap .bas-str,
+.bas-str{
+  height:260px !important;
+  bottom:-260px !important;
+}
+
+.heading{
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+}
+
+.food,
+.brand,
+.hub{
+  width:100%;
+  text-align:center;
+}
+
+.brand{
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+}
+
+.brand > div,
+.brand .international{
+  width:100%;
+  text-align:center;
+}
+
+#logo-space{
+  display:flex;
+  justify-content:center;
+  align-items:center;
+}
+
+#logo-space canvas,
+#logo-space svg,
+#logo-space > *{
+  margin:0 auto;
+  display:block;
+}
+</style>
+
+ 
 </body> <!-- ഇതിന് തൊട്ടു മുകളിൽ -->
 </html>
 
