@@ -6826,6 +6826,31 @@ YOUR PURCHASE SATISFIES A HUNGER™
       link.setAttribute('rel', 'noopener noreferrer');
     }
   });
+
+    let scrollLocked = false;
+let lastScrollY = window.scrollY;
+
+function watchBookCenter() {
+  const rect = stage.getBoundingClientRect();
+  const stageCenter = rect.top + rect.height / 2;
+  const viewportCenter = window.innerHeight / 2;
+
+  if (!scrollLocked && Math.abs(stageCenter - viewportCenter) < 30) {
+    scrollLocked = true;
+    window.scrollTo(window.scrollX, window.scrollY);
+  }
+}
+
+window.addEventListener('scroll', () => {
+  const currentY = window.scrollY;
+
+  if (scrollLocked && currentY !== lastScrollY) {
+    scrollLocked = false;
+  }
+
+  lastScrollY = currentY;
+  watchBookCenter();
+}, { passive: true });
 </script>
 
 <style>
@@ -6877,7 +6902,6 @@ YOUR PURCHASE SATISFIES A HUNGER™
 }
 </style>
 
- 
 </body> <!-- ഇതിന് തൊട്ടു മുകളിൽ -->
 </html>
 
