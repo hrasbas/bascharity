@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>BAS Globe Test</title>
+
+<style>
+
+/* ================================================================
+   GLOBE — മലയാളം NOTE
+   ഈ CSS 3D Globe നിൽക്കുന്ന സ്ഥലം, alignment,
+   responsive position എന്നിവ നിയന്ത്രിക്കുന്നു.
+   ================================================================ */
+
+.header-box {
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  background:#000;
+  padding-top:25px;
+}
+
+#logo-space {
+  width:100%;
+  margin:0 auto !important;
+  height:auto;
+  margin-top:50px !important;
+  position:relative !important;
+  display:flex !important;
+  flex-direction:column !important;
+  align-items:center !important;
+  justify-content:center !important;
+}
+
+@media (max-width:600px) {
+  #logo-space {
+    margin-top:5px !important;
+  }
+}
+
+</style>
+
+</head>
+
+<body>
+
+<!-- ================================================================
+     GLOBE HTML — മലയാളം NOTE
+     JavaScript 3D Globe render ചെയ്യുന്നത് ഈ സ്ഥലത്താണ്.
+     ================================================================ -->
+
+<div class="header-box">
+
+  <div id="logo-space"></div>
+
+</div>
+
+
+<!-- ================================================================
+     GLOBE JAVASCRIPT — മലയാളം NOTE
+     Earth + BAS + Moon + rotation + resize +
+     visibility + WebGL safety എന്നിവ നിയന്ത്രിക്കുന്നു.
+     ================================================================ -->
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+
+<script>
+
+let scene, camera, renderer, ambient, loader,
+    earthGroup, earth, moon,
+    angle = 0,
+    running = true,
+    logoSpace,
+    animateRef = null;
+
+try {
+
+  if (window.THREE) {
+
+    logoSpace =
+      document.getElementById('logo-space');
+
+    scene =
+      new THREE.Scene();
+
+    camera =
+      new THREE.PerspectiveCamera(
+        50,
+        window.innerWidth / 340,
+        0.1,
+        1000
+      );
+
+    renderer =
+      new THREE.WebGLRenderer({
+        antialias:true,
+        alpha:true,
+        powerPreference:"high-performance"
+      });
+
+    renderer.setSize(
+      window.innerWidth,
+      340
+    );
+
+    renderer.setPixelRatio(
+      Math.min(window.devicePixelRatio, 2)
+    );
+
+    if (logoSpace) {
+      logoSpace.appendChild(
+        renderer.domElement
+      );
+    }
+
+    ambient =
+      new THREE.AmbientLight(
+        0xffffff,
+        1.2
+      );
+
+    scene.add(ambient);
+
+    loader =
+      new THREE.TextureLoader();
+
+    earthGroup =
+      new THREE.Group();
+
+
+    /* Earth */
+
+    earth =
+      new THREE.Mesh(
+        new THREE.SphereGeometry(
+          2,
+          32,
+          32
+        ),
+
+        new THREE.MeshStandardMaterial({
+
+          map:loader.load(
+            'https://raw.githubusercontent.com/mrdoob/three.js/master/examples/textures/planets/earth_atmos_2048.jpg'
+          ),
+
+          metalness:0.2,
+          roughness:0.8
+
+        })
+      );
+
+    earthGroup.add(earth);
+
+
+    /* BAS */
+
+    let canvas =
+      document.createElement('canvas');
+
+    let ctx =
+      canvas.getContext('2d');
+
+    if (ctx) {
+
+      canvas.width = 1024;
+      canvas.height = 256;
+
+      ctx.fillStyle = "#FFFFFF";
+      ctx.font = "Bold 140px Arial";
+      ctx.textAlign = "center";
+
+      ctx.fillText(
+        "BAS",
+        256,
+        160
+      );
+
+      ctx.fillText(
+        "BAS",
+        768,
+        160
+      );
+
+      let textTexture =
+        new THREE.CanvasTexture(canvas);
+
+      let textMesh =
+        new THREE.Mesh(
+
+          new THREE.CylinderGeometry(
+            2.05,
+            2.05,
+            0.8,
+            64,
+            1,
+            true
+          ),
+
+          new THREE.MeshBasicMaterial({
+            map:textTexture,
+            transparent:true,
+            side:THREE.DoubleSide
+          })
+
+        );
+
+      earthGroup.add(textMesh);
+    }
+
+
+    /* Globe position */
+
+    earthGroup.position.y = 1.5;
+
+    scene.add(earthGroup);
+
+
+    /* Moon */
+
+    moon =
+      new THREE.Mesh(
+        new THREE.SphereGeometry(
+          0.35,
+          16,
+          16
+        ),
+
+        new THREE.MeshStandardMaterial({
+          color:0xcccccc
+        })
+      );
+
+    scene.add(moon);
+
+
+    /* Camera */
+
+    camera.position.z = 8;
+
+
+    /* Responsive resize */
+
+    function resizeRenderer() {
+
+      try {
+
+        const box =
+          document.getElementById(
+            "logo-space"
+          );
+
+        if (
+          !box ||
+          !renderer ||
+          !camera
+        ) return;
+
+        const width =
+          box.clientWidth ||
+          window.innerWidth;
+
+        renderer.setSize(
+          width,
+          340
+        );
+
+        camera.aspect =
+          width / 340;
+
+        camera.updateProjectionMatrix();
+
+      } catch (e) {
+
+        console.error(
+          'Resize error:',
+          e
+        );
+
+      }
+
+    }
+
+    window.addEventListener(
+      "resize",
+      resizeRenderer
+    );
+
+
+    /* Animation */
+
+    function animate() {
+
+      if (
+        !running ||
+        !renderer ||
+        !scene ||
+        !camera ||
+        !earthGroup ||
+        !moon
+      ) return;
+
+      animateRef =
+        requestAnimationFrame(
+          animate
+        );
+
+      earthGroup.rotation.y += 0.003;
+
+      angle -= 0.01;
+
+      moon.position.x =
+        Math.cos(angle) * 4.5;
+
+      moon.position.z =
+        Math.sin(angle) * 2.8;
+
+      moon.position.y = 1.2;
+
+      renderer.render(
+        scene,
+        camera
+      );
+
+    }
+
+    animate();
+
+
+    /* Screen visibility */
+
+    if (
+      'IntersectionObserver' in window &&
+      logoSpace
+    ) {
+
+      let observer =
+        new IntersectionObserver(
+          entries => {
+
+            entries.forEach(
+              entry => {
+
+                if (
+                  entry.isIntersecting
+                ) {
+
+                  const wasStopped =
+                    !running;
+
+                  running = true;
+
+                  if (wasStopped) {
+                    animate();
+                  }
+
+                } else {
+
+                  running = false;
+
+                }
+
+              }
+            );
+
+          }
+        );
+
+      observer.observe(
+        logoSpace
+      );
+
+    }
+
+
+    /* WebGL safety */
+
+    if (
+      renderer &&
+      renderer.domElement
+    ) {
+
+      renderer.domElement.addEventListener(
+        'webglcontextlost',
+        function(event) {
+
+          event.preventDefault();
+
+          running = false;
+
+          console.error(
+            'WebGL context lost'
+          );
+
+        },
+        false
+      );
+
+      renderer.domElement.addEventListener(
+        'webglcontextrestored',
+        function() {
+
+          running = true;
+
+          animate();
+
+        }
+      );
+
+    }
+
+  }
+
+} catch (e) {
+
+  console.error(
+    'Three.js init error:',
+    e
+  );
+
+}
+
+
+/* Mobile app switch */
+
+document.addEventListener(
+  'visibilitychange',
+  function() {
+
+    if (document.hidden) {
+
+      running = false;
+
+    } else {
+
+      if (
+        renderer &&
+        scene &&
+        camera &&
+        earthGroup &&
+        moon
+      ) {
+
+        const wasStopped =
+          !running;
+
+        running = true;
+
+        if (wasStopped) {
+          animate();
+        }
+
+      }
+
+    }
+
+  }
+);
+
+
+/* Cleanup */
+
+window.addEventListener(
+  'beforeunload',
+  function() {
+
+    try {
+
+      if (renderer) {
+        renderer.dispose();
+      }
+
+      if (animateRef) {
+        cancelAnimationFrame(
+          animateRef
+        );
+      }
+
+    } catch (e) {}
+
+  }
+);
+
+</script>
+
+</body>
+</html>
