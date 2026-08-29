@@ -3,13 +3,80 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Scroll Controller Component</title>
+  <title>Your Website</title>
+  
+  <!-- ALL CSS STYLES IN ONE PLACE -->
   <style>
-    /* Trigger Button Styles */
+    /* ---- 1. FLOATING FLAGS (LEFT SIDE) ---- */
+    .floating-flags-container {
+      position: fixed;
+      left: 0;
+      bottom: 120px;
+      display: flex;
+      flex-direction: column;
+      gap: 11px; /* 3mm gap */
+      z-index: 9997;
+    }
+
+    .flag-btn {
+      width: 30px; /* 0.8 cm */
+      height: 113px; /* 3 cm */
+      border: none;
+      cursor: pointer;
+      box-shadow: 3px 3px 8px rgba(0,0,0,0.3);
+      writing-mode: vertical-rl;
+      text-orientation: mixed;
+      text-align: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+      font-size: 12px;
+      letter-spacing: 2px;
+      border-radius: 0 10px 10px 0;
+      animation: flagWaveFloat 2.5s infinite ease-in-out;
+      transform-origin: left center;
+      transition: width 0.3s;
+    }
+
+    .flag-btn:hover, .flag-btn:active {
+      width: 45px;
+    }
+
+    .flag-lang {
+      background-color: #007bff; /* നീല */
+      color: white;
+      animation-delay: 0s;
+    }
+
+    .flag-country {
+      background-color: #ffffff; /* വെള്ള */
+      color: black;
+      border: 1px solid #e0e0e0;
+      border-left: none;
+      animation-delay: 0.3s;
+    }
+
+    .flag-category {
+      background-color: #ff3d00; /* ചുവപ്പ് */
+      color: white;
+      animation-delay: 0.6s;
+    }
+
+    @keyframes flagWaveFloat {
+      0%, 100% {
+        transform: perspective(200px) rotateY(0deg) translateY(0px) skewY(0deg);
+      }
+      50% {
+        transform: perspective(200px) rotateY(18deg) translateY(-5px) skewY(-3deg);
+      }
+    }
+
+    /* ---- 2. RIGHT SIDE SCROLL CONTROLLER ---- */
     .scroll-trigger-btn {
       position: fixed;
       right: 0;
-      bottom: 120px; /* സ്ക്രീനിന്റെ താഴെ വശത്തായി വരും */
+      bottom: 120px;
       z-index: 9999;
       width: 32px;
       height: 48px;
@@ -22,18 +89,11 @@
       box-shadow: -2px 2px 8px rgba(0,0,0,0.3);
       animation: blinkGlow 1.5s infinite alternate;
       border: none;
-      outline: none;
     }
 
     @keyframes blinkGlow {
-      0% {
-        background-color: #00e676;
-        box-shadow: 0 0 5px #00e676;
-      }
-      100% {
-        background-color: #00a843;
-        box-shadow: 0 0 15px #00e676;
-      }
+      0% { background-color: #00e676; box-shadow: 0 0 5px #00e676; }
+      100% { background-color: #00a843; box-shadow: 0 0 15px #00e676; }
     }
 
     .scroll-trigger-btn svg {
@@ -42,7 +102,6 @@
       fill: #ffffff;
     }
 
-    /* Side Scroll Panel Styles */
     .scroll-panel {
       position: fixed;
       right: -100px;
@@ -66,7 +125,6 @@
       right: 12px;
     }
 
-    /* Small Control Buttons */
     .scroll-btn {
       width: 34px;
       height: 34px;
@@ -78,30 +136,13 @@
       align-items: center;
       justify-content: center;
       cursor: pointer;
-      user-select: none;
-      transition: background 0.2s, transform 0.1s;
     }
 
-    .scroll-btn:active {
-      transform: scale(0.9);
-      background: #00e676;
-      color: #000;
-    }
-
-    .scroll-btn svg {
-      width: 16px;
-      height: 16px;
-      fill: currentColor;
-    }
-
-    /* Lock Button Active State */
     .scroll-btn.locked {
       background: #ff3d00;
       border-color: #ff3d00;
-      color: #fff;
     }
 
-    /* Vertical Speed Slider */
     .speed-slider-container {
       height: 70px;
       display: flex;
@@ -115,7 +156,6 @@
       width: 60px;
       height: 4px;
       background: #444;
-      outline: none;
       border-radius: 2px;
       transform: rotate(-90deg);
       cursor: pointer;
@@ -128,40 +168,40 @@
       height: 12px;
       border-radius: 50%;
       background: #00e676;
-      cursor: pointer;
     }
   </style>
 </head>
 <body>
 
-  <!-- Side Trigger Button -->
-  <button class="scroll-trigger-btn" id="scrollTrigger" aria-label="Open Scroll Controls">
+  <!-- 1. LEFT SIDE FLAGS -->
+  <div class="floating-flags-container">
+    <button class="flag-btn flag-lang">ഭാഷ</button>
+    <button class="flag-btn flag-country">COUNTRY</button>
+    <button class="flag-btn flag-category">CATEGORY</button>
+  </div>
+
+  <!-- 2. RIGHT SIDE SCROLL TRIGGER -->
+  <button class="scroll-trigger-btn" id="scrollTrigger">
     <svg viewBox="0 0 24 24"><path d="M15.41 16.59L10.83 12l4.58-4.59L14 6l-6 6 6 6 1.41-1.41z"/></svg>
   </button>
 
-  <!-- Sliding Scroll Panel -->
+  <!-- 3. RIGHT SIDE SCROLL PANEL -->
   <div class="scroll-panel" id="scrollPanel">
-    <!-- Up Arrow -->
-    <button class="scroll-btn" id="btnUp" title="Scroll Up">
-      <svg viewBox="0 0 24 24"><path d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"/></svg>
+    <button class="scroll-btn" id="btnUp">
+      <svg viewBox="0 0 24 24" width="16" height="16" fill="white"><path d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"/></svg>
     </button>
-
-    <!-- Speed Bar -->
     <div class="speed-slider-container">
-      <input type="range" id="speedBar" class="speed-slider" min="1" max="10" value="3" title="Speed Control">
+      <input type="range" id="speedBar" class="speed-slider" min="1" max="10" value="3">
     </div>
-
-    <!-- Lock Button -->
-    <button class="scroll-btn" id="btnLock" title="Toggle Scroll Lock">
-      <svg viewBox="0 0 24 24"><path d="M18 8h-1V6c0-2.76-2.24-5-5-5S7 3.24 7 6v2H6c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V10c0-1.1-.9-2-2-2zm-6 9c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2zm3.1-9H8.9V6c0-1.71 1.39-3.1 3.1-3.1 1.71 0 3.1 1.39 3.1 3.1v2z"/></svg>
+    <button class="scroll-btn" id="btnLock">
+      <svg viewBox="0 0 24 24" width="16" height="16" fill="white"><path d="M18 8h-1V6c0-2.76-2.24-5-5-5S7 3.24 7 6v2H6c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V10c0-1.1-.9-2-2-2zm-6 9c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2zm3.1-9H8.9V6c0-1.71 1.39-3.1 3.1-3.1 1.71 0 3.1 1.39 3.1 3.1v2z"/></svg>
     </button>
-
-    <!-- Down Arrow -->
-    <button class="scroll-btn" id="btnDown" title="Scroll Down">
-      <svg viewBox="0 0 24 24"><path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6z"/></svg>
+    <button class="scroll-btn" id="btnDown">
+      <svg viewBox="0 0 24 24" width="16" height="16" fill="white"><path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6z"/></svg>
     </button>
   </div>
 
+  <!-- ALL JAVASCRIPT LOGIC IN ONE PLACE -->
   <script>
     const trigger = document.getElementById('scrollTrigger');
     const panel = document.getElementById('scrollPanel');
@@ -173,28 +213,22 @@
     let scrollInterval = null;
     let isLocked = false;
 
-    // Toggle Panel Open/Close
     trigger.addEventListener('click', (e) => {
       e.stopPropagation();
       panel.classList.toggle('open');
     });
 
-    // Close panel when clicking outside
     document.addEventListener('click', (e) => {
       if (!panel.contains(e.target) && !trigger.contains(e.target)) {
         panel.classList.remove('open');
       }
     });
 
-    // Manual Scroll Logic
     function startContinuousScroll(direction) {
       stopContinuousScroll();
       const speed = parseInt(speedBar.value) * 3;
       scrollInterval = setInterval(() => {
-        window.scrollBy({
-          top: direction * speed,
-          behavior: 'instant'
-        });
+        window.scrollBy({ top: direction * speed, behavior: 'instant' });
       }, 16);
     }
 
@@ -202,7 +236,6 @@
       if (scrollInterval) clearInterval(scrollInterval);
     }
 
-    // Up / Down Click & Hold Listeners
     btnUp.addEventListener('mousedown', () => startContinuousScroll(-1));
     btnUp.addEventListener('mouseup', stopContinuousScroll);
     btnUp.addEventListener('mouseleave', stopContinuousScroll);
@@ -215,15 +248,10 @@
     btnDown.addEventListener('touchstart', (e) => { e.preventDefault(); startContinuousScroll(1); });
     btnDown.addEventListener('touchend', stopContinuousScroll);
 
-    // Scroll Lock Logic
     btnLock.addEventListener('click', () => {
       isLocked = !isLocked;
       btnLock.classList.toggle('locked', isLocked);
-      if (isLocked) {
-        document.body.style.overflow = 'hidden';
-      } else {
-        document.body.style.overflow = '';
-      }
+      document.body.style.overflow = isLocked ? 'hidden' : '';
     });
   </script>
 </body>
