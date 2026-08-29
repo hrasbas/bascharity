@@ -7107,17 +7107,16 @@ body [style*="font-size:1.25rem"] {
   font-size: 21px !important;
 }
     </style>
-        
-      <!-- ========================================== -->
-<!-- BAS 3D FLAG BUTTONS (PERMANENT COLORS FIX) -->
+           <!-- ========================================== -->
+<!-- BAS 3D FLAG BUTTONS (FORCE COLOR FIX)     -->
 <!-- ========================================== -->
 <style>
   /* 1. MAIN CONTAINER */
-  .flag-cloth-container {
+  #bas-flag-container {
     position: fixed !important;
     right: 0 !important;
     bottom: 0px !important; 
-    z-index: 99999 !important;
+    z-index: 9999999 !important;
     display: flex !important;
     flex-direction: column !important;
     gap: 0.2mm !important;
@@ -7131,8 +7130,8 @@ body [style*="font-size:1.25rem"] {
     pointer-events: auto !important;
   }
 
-  /* 2. BASE BUTTON STYLES */
-  .flag-cloth-container button.flag-segment {
+  /* 2. BASE DIV SEGMENT STYLES */
+  #bas-flag-container .flag-segment {
     width: 4cm !important;
     height: 3cm !important;
     max-width: none !important;
@@ -7151,6 +7150,7 @@ body [style*="font-size:1.25rem"] {
     text-align: center !important;
     padding: 5px !important;
     outline: none !important;
+    box-sizing: border-box !important;
     clip-path: polygon(
       0% 0%, 
       25% 4%, 
@@ -7170,52 +7170,16 @@ body [style*="font-size:1.25rem"] {
     user-select: none !important;
   }
 
-  /* 3. PERMANENT COLORS (CLICK/ACTIVE/FOCUS ചെയ്താലും മാറില്ല) */
-  
-  /* --- SKY BLUE (Top Button) --- */
-  .flag-cloth-container button.flag-skyblue,
-  .flag-cloth-container button.flag-skyblue:focus,
-  .flag-cloth-container button.flag-skyblue:active,
-  .flag-cloth-container button.flag-skyblue.active {
-    background: #00BFFF !important;
-    background: linear-gradient(135deg, #87CEEB 0%, #00BFFF 100%) !important;
-    color: #000000 !important;
-    text-shadow: 0px 0px 2px rgba(255, 255, 255, 0.8) !important;
-  }
-  .flag-cloth-container button.flag-skyblue * { color: #000000 !important; }
+  /* 3. ANIMATION DELAYS */
+  #bas-flag-container .flag-white { animation-delay: 0.2s !important; }
+  #bas-flag-container .flag-red { animation-delay: 0.4s !important; }
 
-  /* --- WHITE (Middle Button) --- */
-  .flag-cloth-container button.flag-white,
-  .flag-cloth-container button.flag-white:focus,
-  .flag-cloth-container button.flag-white:active,
-  .flag-cloth-container button.flag-white.active {
-    background: #ffffff !important;
-    background: linear-gradient(135deg, #ffffff 0%, #f0f0f0 100%) !important;
-    color: #000000 !important;
-    text-shadow: 0px 0px 1px rgba(0, 0, 0, 0.2) !important;
-    animation-delay: 0.2s !important;
-  }
-  .flag-cloth-container button.flag-white * { color: #000000 !important; }
-
-  /* --- RED (Bottom Button) --- */
-  .flag-cloth-container button.flag-red,
-  .flag-cloth-container button.flag-red:focus,
-  .flag-cloth-container button.flag-red:active,
-  .flag-cloth-container button.flag-red.active {
-    background: #ff3d00 !important;
-    background: linear-gradient(135deg, #ff3d00 0%, #dd2c00 100%) !important;
-    color: #ffffff !important;
-    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8) !important;
-    animation-delay: 0.4s !important;
-  }
-  .flag-cloth-container button.flag-red * { color: #ffffff !important; }
-
-  /* 4. HOVER EFFECT (കയ്യുകൊണ്ട് തൊടുമ്പോൾ മാത്രം ചെറിയ തെളിച്ചം) */
-  .flag-cloth-container button.flag-segment:hover {
+  /* 4. HOVER EFFECT */
+  #bas-flag-container .flag-segment:hover {
     filter: brightness(1.15) !important;
   }
 
-  /* 5. 3D organic Wave Animation */
+  /* 5. 3D ORGANIC WAVE ANIMATION */
   @keyframes real3DOrganicWave {
     0% { transform: rotateY(0deg) rotateZ(0deg) skewY(0deg) translateY(0px); }
     33% { transform: rotateY(28deg) rotateZ(-2deg) skewY(-4deg) translateY(-5px); }
@@ -7225,7 +7189,7 @@ body [style*="font-size:1.25rem"] {
 
   /* 6. RESPONSIVE FOR MOBILE */
   @media (max-width: 480px) {
-    .flag-cloth-container button.flag-segment {
+    #bas-flag-container .flag-segment {
       width: clamp(2.8cm, 28vw, 4cm) !important;
       height: clamp(2cm, 10vh, 3cm) !important;
       font-size: clamp(14px, 4.2vw, 23px) !important;
@@ -7233,11 +7197,25 @@ body [style*="font-size:1.25rem"] {
   }
 </style>
 
-<!-- HTML STRUCTURE -->
-<div class="flag-cloth-container">
-  <button type="button" class="flag-segment flag-skyblue" onclick="handleLangClick(event)">Change Language</button>
-  <button type="button" class="flag-segment flag-white" onclick="handleCountryClick(event)">Change Country</button>
-  <button type="button" class="flag-segment flag-red" onclick="handleCategoryClick(event)">Change Category</button>
+<!-- HTML STRUCTURE (DIV TAGS WITH INLINE COLOR STYLES) -->
+<div id="bas-flag-container">
+  <div class="flag-segment flag-skyblue" 
+       style="background: linear-gradient(135deg, #87CEEB 0%, #00BFFF 100%) !important; color: #000000 !important; text-shadow: 0px 0px 2px rgba(255, 255, 255, 0.8) !important;" 
+       onclick="handleLangClick(event)">
+    Change Language
+  </div>
+  
+  <div class="flag-segment flag-white" 
+       style="background: linear-gradient(135deg, #ffffff 0%, #f0f0f0 100%) !important; color: #000000 !important; text-shadow: 0px 0px 1px rgba(0, 0, 0, 0.2) !important;" 
+       onclick="handleCountryClick(event)">
+    Change Country
+  </div>
+  
+  <div class="flag-segment flag-red" 
+       style="background: linear-gradient(135deg, #ff3d00 0%, #dd2c00 100%) !important; color: #ffffff !important; text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8) !important;" 
+       onclick="handleCategoryClick(event)">
+    Change Category
+  </div>
 </div>
 
 <!-- JAVASCRIPT & ANALYTICS -->
@@ -7272,6 +7250,7 @@ body [style*="font-size:1.25rem"] {
     if (categoryEl) categoryEl.scrollIntoView({ behavior: 'smooth' });
   }
 </script>
+
 
 </body> <!-- ഇതിന് തൊട്ടു മുകളിൽ -->
 </html>
