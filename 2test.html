@@ -2,65 +2,89 @@
 <!-- 1. CSS STYLES (ഡിസൈനും 3D അനിമേഷനും) -->
 <!-- ========================================== -->
 <style>
-  /* 3 ബട്ടണുകളും ഉൾപ്പെടുന്ന ഒറ്റ കൊടി (Right Side Wrapper) */
+  /* പ്രധാന കൊടി (Right Side Wrapper) */
   .flag-cloth-container {
     position: fixed;
-    right: 0; /* വലതുവശത്ത് ഉറപ്പിച്ചു നിർത്തിയിരിക്കുന്നു */
+    right: 0;
     bottom: 0px; 
     z-index: 9997;
     display: flex;
     flex-direction: column;
-    gap: 0px; /* തുണി കീറിയതുപോലെ തോന്നാതിരിക്കാൻ gap 0 ആക്കി */
+    gap: 0.5px; /* ആവശ്യപ്പെട്ട ചെറിയ gap (0.5px) */
     
-    /* വലതുവശത്തുനിന്ന് ഇടത്തോട്ട് ഒറ്റപ്പീസായി 3D അലയടിക്കാൻ */
     transform-origin: right center;
-    perspective: 1000px;
-    animation: singlePiece3DClothWave 2.5s infinite ease-in-out alternate;
+    perspective: 1200px;
+    
+    /* ഉയർന്ന 3D Flexible എഫക്റ്റോടെയുള്ള പൂർണ്ണ അനിമേഷൻ */
+    animation: superFlexibleClothWave 2s infinite ease-in-out alternate;
   }
 
   /* കൊടിയുടെ സ്ട്രിപ്പുകൾ (Segments) */
   .flag-segment {
+    position: relative;
     width: 4cm;   
     height: 3cm;  
     border: none;
     cursor: pointer;
     box-shadow: -4px 2px 8px rgba(0, 0, 0, 0.3);
     
-    /* Horizontal Text / ബോക്സിന് അനുയോജ്യമായ മാക്സിമം ഫോണ്ട് വലിപ്പം */
     writing-mode: horizontal-tb;
     display: flex;
     align-items: center;
     justify-content: center;
     font-weight: 900;
-    font-size: 26px; /* മാക്സിമം റീഡബിൾ വലിപ്പം */
+    font-size: 26px;
     text-align: center;
     line-height: 1.1;
     padding: 0 8px;
     
+    transform-origin: right center;
     transition: filter 0.2s ease;
   }
 
-  /* മുകൾവശത്തെ സ്ട്രിപ്പ് (Sky Blue) - മുകളിലെ അരികുകൾ വളഞ്ഞത് */
+  /* 🧵 നൂല് കൊണ്ട് ബന്ധിപ്പിച്ചത് പോലെയുള്ള തുന്നൽ ഡിസൈൻ (Stitch Line Effect) */
+  .flag-segment::after {
+    content: '';
+    position: absolute;
+    bottom: -1px;
+    left: 10px;
+    right: 10px;
+    height: 1px;
+    border-bottom: 2px dashed rgba(0, 0, 0, 0.35); /* തുന്നൽ വരികൾ */
+    z-index: 10;
+  }
+
+  .flag-red::after {
+    display: none; /* ഏറ്റവും താഴത്തെ ഭാഗത്ത് തുന്നൽ വരി വേണ്ട */
+  }
+
+  /* മുകൾവശം (Sky Blue) */
   .flag-skyblue {
     background: linear-gradient(135deg, #87CEEB, #00BFFF);
     color: #000000;
     border-radius: 12px 0 0 0;
     text-shadow: 0px 0px 2px rgba(255, 255, 255, 0.8);
+    /* തുണിക്ക് കൂടുതൽ ഫ്ലെക്സിബിലിറ്റി തോന്നിപ്പിക്കാൻ സമയം മാറ്റി പാറ്റേൺ അനിമേഷൻ നൽകുന്നു */
+    animation: segmentFlex 2s infinite ease-in-out alternate;
   }
 
-  /* നടുവിലത്തെ സ്ട്രിപ്പ് (White) */
+  /* നടുഭാഗം (White) */
   .flag-white {
     background: linear-gradient(135deg, #ffffff, #f0f0f0);
     color: #000000;
     text-shadow: 0px 0px 1px rgba(0, 0, 0, 0.2);
+    animation: segmentFlex 2s infinite ease-in-out alternate;
+    animation-delay: 0.15s; /* ചെറിയ delay നൽകിയാൽ ഒറിജിനൽ തുണിപോലെ വളയും */
   }
 
-  /* താഴത്തെ സ്ട്രിപ്പ് (Red) - താഴത്തെ അരികുകൾ വളഞ്ഞത് */
+  /* താഴ്ഭാഗം (Red) */
   .flag-red {
     background: linear-gradient(135deg, #ff3d00, #dd2c00);
     color: #ffffff;
     border-radius: 0 0 0 12px;
     text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8);
+    animation: segmentFlex 2s infinite ease-in-out alternate;
+    animation-delay: 0.3s;
   }
 
   .flag-segment:hover,
@@ -68,19 +92,35 @@
     filter: brightness(1.08);
   }
 
-  /* മുഴുവൻ തുണിയും ഒന്നിച്ച് flexible ആയി അലയടിക്കുന്ന 3D അനിമേഷൻ */
-  @keyframes singlePiece3DClothWave {
+  /* പ്രധാന 3D അനിമേഷൻ (മുമ്പ് ഉണ്ടായിരുന്ന ഫുൾ ഫ്ലെക്സിബിൾ മൂവ്മെന്റ്) */
+  @keyframes superFlexibleClothWave {
     0% {
       transform: rotateY(0deg) rotateZ(0deg) skewY(0deg) translateY(0px);
     }
-    33% {
-      transform: rotateY(-25deg) rotateZ(2deg) skewY(3deg) translateY(-4px);
+    25% {
+      transform: rotateY(-35deg) rotateZ(3deg) skewY(6deg) translateY(-8px);
     }
-    66% {
-      transform: rotateY(15deg) rotateZ(-2deg) skewY(-3deg) translateY(3px);
+    50% {
+      transform: rotateY(20deg) rotateZ(-2deg) skewY(-4deg) translateY(5px);
+    }
+    75% {
+      transform: rotateY(-40deg) rotateZ(4deg) skewY(7deg) translateY(-10px);
     }
     100% {
-      transform: rotateY(-30deg) rotateZ(3deg) skewY(4deg) translateY(-5px);
+      transform: rotateY(0deg) rotateZ(0deg) skewY(0deg) translateY(0px);
+    }
+  }
+
+  /* ഓരോ പീസും ഒന്നിച്ച് ബന്ധിക്കപ്പെട്ട് ഫ്ലെക്സിബിളായി വേവ് ചെയ്യാനുള്ള സബ് അനിമേഷൻ */
+  @keyframes segmentFlex {
+    0% {
+      transform: skewX(0deg);
+    }
+    50% {
+      transform: skewX(-2deg);
+    }
+    100% {
+      transform: skewX(2deg);
     }
   }
 </style>
