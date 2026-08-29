@@ -7107,12 +7107,12 @@ body [style*="font-size:1.25rem"] {
   font-size: 21px !important;
 }
     </style>
-            
- <!-- ========================================== -->
-<!-- BAS 3D FLAG BUTTONS (SECURE & RESPONSIVE)  -->
+  <!-- ========================================== -->
+<!-- BAS 3D FLAG BUTTONS (GUARANTEED COLORS)    -->
 <!-- ========================================== -->
 <style>
-  /* 3 ബട്ടണുകളും ഉൾപ്പെടുന്ന പ്രധാന കൊടി (Flag Wrapper) */
+  /* 1. MAIN CONTAINER */
+  div.flag-cloth-container,
   .flag-cloth-container {
     position: fixed !important;
     right: 0 !important;
@@ -7121,11 +7121,9 @@ body [style*="font-size:1.25rem"] {
     display: flex !important;
     flex-direction: column !important;
     gap: 0.2mm !important;
-    
-    /* ഒറിജിനൽ കൊടി ഉറപ്പിച്ചു നിർത്തി 3D അലയടിക്കാൻ */
     transform-origin: right center !important;
     perspective: 800px !important;
-    background: transparent !important;
+    background: none !important;
     border: none !important;
     box-shadow: none !important;
     padding: 0 !important;
@@ -7133,30 +7131,26 @@ body [style*="font-size:1.25rem"] {
     pointer-events: auto !important;
   }
 
-  /* കൊടിയുടെ ഓരോ കഷണത്തിന്റെ ഡിസൈൻ (Original Color, Size & Wave) */
-  button.flag-segment,
-  .flag-segment {
-    width: 4cm !important;   /* ഒറിജിനൽ നീളം: 4cm */
-    height: 3cm !important;  /* ഒറിജിനൽ ഉയരം: 3cm */
+  /* 2. BASE BUTTON STYLES */
+  div.flag-cloth-container button.flag-segment,
+  button.flag-segment {
+    width: 4cm !important;
+    height: 3cm !important;
     max-width: none !important;
     border: none !important;
     border-radius: 0 !important;
     cursor: pointer !important;
     box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.4) !important;
-    
-    /* Horizontal Text / സൂപ്പർ വിസിബിൾ ഫോണ്ട് */
     writing-mode: horizontal-tb !important;
     display: flex !important;
     align-items: center !important;
     justify-content: center !important;
     font-weight: 900 !important;
-    font-size: 23px !important; /* ഒറിജിനൽ Font Size: 23px */
+    font-size: 23px !important;
     letter-spacing: 0.5px !important;
     line-height: 1.2 !important;
     text-align: center !important;
     padding: 5px !important;
-    
-    /* മുകളിലും താഴെയും ഒറിജിനൽ തിരമാല പോലെയുള്ള ആകൃതി (Wave Shape Edges) */
     clip-path: polygon(
       0% 0%, 
       25% 4%, 
@@ -7169,72 +7163,65 @@ body [style*="font-size:1.25rem"] {
       25% 100%, 
       0% 96%
     ) !important;
-    
     transform-origin: right center !important;
     animation: real3DOrganicWave 2.2s infinite ease-in-out alternate !important;
-    transition: filter 0.2s ease, transform 0.2s ease !important;
-    
-    /* Security Fix (Unwanted Selections & Dragging) */
+    transition: filter 0.2s ease !important;
     -webkit-user-select: none !important;
     user-select: none !important;
-    -webkit-touch-callout: none !important;
   }
 
-  /* വിരൽ തൊടുമ്പോൾ ഒറിജിനൽ ഫീൽ */
-  .flag-segment:hover,
-  .flag-segment:active {
-    filter: brightness(1.1) !important;
-  }
-
-  /* 1. മുകൾഭാഗം: Original Sky Blue */
-  button.flag-skyblue,
-  .flag-skyblue {
-    background: linear-gradient(135deg, #87CEEB, #00BFFF) !important;
+  /* 3. STRICT COLOR OVERRIDES (മറ്റ് കോഡുകൾ മാറ്റാതിരിക്കാൻ) */
+  
+  /* --- SKY BLUE (Top Button) --- */
+  div.flag-cloth-container button.flag-skyblue,
+  button.flag-skyblue {
+    background-color: #00BFFF !important;
+    background-image: linear-gradient(135deg, #87CEEB, #00BFFF) !important;
     color: #000000 !important;
     text-shadow: 0px 0px 2px rgba(255, 255, 255, 0.8) !important;
   }
-  button.flag-skyblue * { color: #000000 !important; }
+  div.flag-cloth-container button.flag-skyblue * { color: #000000 !important; }
 
-  /* 2. നടുഭാഗം: Original White */
-  button.flag-white,
-  .flag-white {
-    background: linear-gradient(135deg, #ffffff, #f0f0f0) !important;
+  /* --- WHITE (Middle Button) --- */
+  div.flag-cloth-container button.flag-white,
+  button.flag-white {
+    background-color: #ffffff !important;
+    background-image: linear-gradient(135deg, #ffffff, #f0f0f0) !important;
     color: #000000 !important;
     text-shadow: 0px 0px 1px rgba(0, 0, 0, 0.2) !important;
     animation-delay: 0.2s !important;
   }
-  button.flag-white * { color: #000000 !important; }
+  div.flag-cloth-container button.flag-white * { color: #000000 !important; }
 
-  /* 3. താഴ്ഭാഗം: Original Red */
-  button.flag-red,
-  .flag-red {
-    background: linear-gradient(135deg, #ff3d00, #dd2c00) !important;
+  /* --- RED (Bottom Button) --- */
+  div.flag-cloth-container button.flag-red,
+  button.flag-red {
+    background-color: #ff3d00 !important;
+    background-image: linear-gradient(135deg, #ff3d00, #dd2c00) !important;
     color: #ffffff !important;
     text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8) !important;
     animation-delay: 0.4s !important;
   }
-  button.flag-red * { color: #ffffff !important; }
+  div.flag-cloth-container button.flag-red * { color: #ffffff !important; }
 
-  /* ഒറിജിനൽ 3D തിരമാല അനിമേഷൻ */
-  @keyframes real3DOrganicWave {
-    0% {
-      transform: rotateY(0deg) rotateZ(0deg) skewY(0deg) translateY(0px);
-    }
-    33% {
-      transform: rotateY(28deg) rotateZ(-2deg) skewY(-4deg) translateY(-5px);
-    }
-    66% {
-      transform: rotateY(-18deg) rotateZ(3deg) skewY(5deg) translateY(4px);
-    }
-    100% {
-      transform: rotateY(32deg) rotateZ(-3deg) skewY(-6deg) translateY(-6px);
-    }
+  /* 4. HOVER EFFECT */
+  div.flag-cloth-container button.flag-segment:hover,
+  div.flag-cloth-container button.flag-segment:active {
+    filter: brightness(1.15) !important;
   }
 
-  /* PERFECT RESPONSIVE (എല്ലാ സൈസ് ഫോണുകൾക്കും അനുയോജ്യമായ രീതിയിൽ) */
+  /* 5. 3D WAVE ANIMATION */
+  @keyframes real3DOrganicWave {
+    0% { transform: rotateY(0deg) rotateZ(0deg) skewY(0deg) translateY(0px); }
+    33% { transform: rotateY(28deg) rotateZ(-2deg) skewY(-4deg) translateY(-5px); }
+    66% { transform: rotateY(-18deg) rotateZ(3deg) skewY(5deg) translateY(4px); }
+    100% { transform: rotateY(32deg) rotateZ(-3deg) skewY(-6deg) translateY(-6px); }
+  }
+
+  /* 6. RESPONSIVE FOR MOBILE */
   @media (max-width: 480px) {
-    button.flag-segment,
-    .flag-segment {
+    div.flag-cloth-container button.flag-segment,
+    button.flag-segment {
       width: clamp(2.8cm, 28vw, 4cm) !important;
       height: clamp(2cm, 10vh, 3cm) !important;
       font-size: clamp(14px, 4.2vw, 23px) !important;
@@ -7242,34 +7229,25 @@ body [style*="font-size:1.25rem"] {
   }
 </style>
 
-<!-- HTML Structure (Original Buttons) -->
+<!-- HTML STRUCTURE -->
 <div class="flag-cloth-container">
-  <!-- Original Sky Blue - Change Language -->
   <button type="button" class="flag-segment flag-skyblue" onclick="handleLangClick(event)">Change Language</button>
-  
-  <!-- Original White - Change Country -->
   <button type="button" class="flag-segment flag-white" onclick="handleCountryClick(event)">Change Country</button>
-  
-  <!-- Original Red - Change Category -->
   <button type="button" class="flag-segment flag-red" onclick="handleCategoryClick(event)">Change Category</button>
 </div>
 
-<!-- Secure Script & Analytics Tracking -->
+<!-- JAVASCRIPT & ANALYTICS -->
 <script>
-  /* Analytics Event Tracker Helper */
   function trackFlagClick(eventName, categoryData) {
     if (typeof basTrack === 'function') {
       basTrack(eventName, { category: categoryData, timestamp: new Date().toISOString() });
     }
   }
 
-  /* Secure Click Handlers with Analytics */
   function handleLangClick(e) {
     if (e) e.preventDefault();
     console.log("Change Language clicked");
     trackFlagClick("flag_navigation_click", "language");
-    
-    /* നിങ്ങളുടെ സൈറ്റിലെ ഭാഷാ സെക്ഷനിലേക്ക് സ്ക്രോൾ ചെയ്യാൻ (ആവശ്യമെങ്കിൽ) */
     var langEl = document.querySelector('.lang-box, #lang-section, .lang-container');
     if (langEl) langEl.scrollIntoView({ behavior: 'smooth' });
   }
@@ -7278,8 +7256,6 @@ body [style*="font-size:1.25rem"] {
     if (e) e.preventDefault();
     console.log("Change Country clicked");
     trackFlagClick("flag_navigation_click", "country");
-    
-    /* രാജ്യത്തിന്റെ സെക്ഷനിലേക്ക് സ്ക്രോൾ ചെയ്യാൻ (ആവശ്യമെങ്കിൽ) */
     var countryEl = document.querySelector('.country-box, #country-section, .country-container');
     if (countryEl) countryEl.scrollIntoView({ behavior: 'smooth' });
   }
@@ -7288,14 +7264,12 @@ body [style*="font-size:1.25rem"] {
     if (e) e.preventDefault();
     console.log("Change Category clicked");
     trackFlagClick("flag_navigation_click", "category");
-    
-    /* കാറ്റഗറി സെക്ഷനിലേക്ക് സ്ക്രോൾ ചെയ്യാൻ (ആവശ്യമെങ്കിൽ) */
     var categoryEl = document.querySelector('.category-box, #category-section, .category-container');
     if (categoryEl) categoryEl.scrollIntoView({ behavior: 'smooth' });
   }
 </script>
-
-
+          
+ 
 </body> <!-- ഇതിന് തൊട്ടു മുകളിൽ -->
 </html>
 
