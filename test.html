@@ -7197,6 +7197,93 @@ body [style*="font-size:1.25rem"] {
   }
 </style>
 
+<!-- ========================================== -->
+<!-- BAS 3D FLAG BUTTONS & SCROLL BRIDGE       -->
+<!-- ========================================== -->
+<style>
+  /* 1. MAIN CONTAINER */
+  #bas-flag-container {
+    position: fixed !important;
+    right: 0 !important;
+    bottom: 0px !important; 
+    z-index: 9999999 !important;
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 0.2mm !important;
+    transform-origin: right center !important;
+    perspective: 800px !important;
+    background: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    pointer-events: auto !important;
+  }
+
+  /* 2. BASE DIV SEGMENT STYLES */
+  #bas-flag-container .flag-segment {
+    width: 4cm !important;
+    height: 3cm !important;
+    max-width: none !important;
+    border: none !important;
+    border-radius: 0 !important;
+    cursor: pointer !important;
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.4) !important;
+    writing-mode: horizontal-tb !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    font-weight: 900 !important;
+    font-size: 23px !important;
+    letter-spacing: 0.5px !important;
+    line-height: 1.2 !important;
+    text-align: center !important;
+    padding: 5px !important;
+    outline: none !important;
+    box-sizing: border-box !important;
+    clip-path: polygon(
+      0% 0%, 
+      25% 4%, 
+      50% 0%, 
+      75% 4%, 
+      100% 0%, 
+      100% 96%, 
+      75% 100%, 
+      50% 96%, 
+      25% 100%, 
+      0% 96%
+    ) !important;
+    transform-origin: right center !important;
+    animation: real3DOrganicWave 2.2s infinite ease-in-out alternate !important;
+    transition: filter 0.2s ease !important;
+    -webkit-user-select: none !important;
+    user-select: none !important;
+  }
+
+  #bas-flag-container .flag-white { animation-delay: 0.2s !important; }
+  #bas-flag-container .flag-red { animation-delay: 0.4s !important; }
+
+  #bas-flag-container .flag-segment:hover {
+    filter: brightness(1.15) !important;
+  }
+
+  @keyframes real3DOrganicWave {
+    0% { transform: rotateY(0deg) rotateZ(0deg) skewY(0deg) translateY(0px); }
+    33% { transform: rotateY(28deg) rotateZ(-2deg) skewY(-4deg) translateY(-5px); }
+    66% { transform: rotateY(-18deg) rotateZ(3deg) skewY(5deg) translateY(4px); }
+    100% { transform: rotateY(32deg) rotateZ(-3deg) skewY(-6deg) translateY(-6px); }
+  }
+
+  @media (max-width: 480px) {
+    #bas-flag-container .flag-segment {
+      width: clamp(2.8cm, 28vw, 4cm) !important;
+      height: clamp(2cm, 10vh, 3cm) !important;
+      font-size: clamp(14px, 4.2vw, 23px) !important;
+    }
+  }
+</style>
+
+<!-- HTML STRUCTURE -->
 <div id="bas-flag-container">
   <!-- 1. SKY BLUE: Language -->
   <div class="flag-segment flag-skyblue" 
@@ -7219,6 +7306,48 @@ body [style*="font-size:1.25rem"] {
     Change Category
   </div>
 </div>
+
+<!-- JAVASCRIPT & SCROLL BRIDGE -->
+<script>
+  function trackFlagClick(eventName, categoryData) {
+    if (typeof basTrack === 'function') {
+      basTrack(eventName, { category: categoryData, timestamp: new Date().toISOString() });
+    }
+  }
+
+  function handleLangClick(e) {
+    if (e) e.preventDefault();
+    trackFlagClick("flag_navigation_click", "language");
+    
+    // .lang-box സെക്ഷനിലേക്ക് സ്ക്രോൾ ചെയ്യുന്നു
+    var langEl = document.querySelector('.lang-box');
+    if (langEl) {
+      langEl.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    }
+  }
+
+  function handleCountryClick(e) {
+    if (e) e.preventDefault();
+    trackFlagClick("flag_navigation_click", "country");
+    
+    // .country-box സെക്ഷനിലേക്ക് സ്ക്രോൾ ചെയ്യുന്നു
+    var countryEl = document.querySelector('.country-box');
+    if (countryEl) {
+      countryEl.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    }
+  }
+
+  function handleCategoryClick(e) {
+    if (e) e.preventDefault();
+    trackFlagClick("flag_navigation_click", "category");
+    
+    // Category സെക്ഷനിലേക്ക് സ്ക്രോൾ ചെയ്യുന്നു
+    var categoryEl = document.querySelector('.category-box, .category-container, #category-section, [data-category]');
+    if (categoryEl) {
+      categoryEl.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    }
+  }
+</script>
 
 
 <!-- JAVASCRIPT & ANALYTICS -->
