@@ -5,27 +5,25 @@
   /* 3 ബട്ടണുകളും ഉൾപ്പെടുന്ന പ്രധാന കൊടി (Flag Wrapper) */
   .flag-cloth-container {
     position: fixed;
-    right: 0;
-    bottom:2px; /* സ്ക്രീനിന്റെ ഏറ്റവും താഴെയായി നിൽക്കും */
+    right: 0; /* വലതുവശത്തേക്ക് മാറ്റാൻ right: 0 നൽകുക */
+    bottom: 0px; 
     z-index: 9997;
     display: flex;
     flex-direction: column;
-    gap: 3mm; /* ബട്ടണുകൾ തമ്മിലുള്ള ഗ്യാപ്പ് (3mm) */
+    gap: 3mm;
     
-    /* 3D പെർസ്പെക്റ്റീവും കൊടി പാറുന്ന അനിമേഷനും */
-    transform-origin: left bottom;
-    animation: realFlagWave 3s infinite ease-in-out;
+    transform-origin: right bottom; /* അനിമേഷൻ റൈറ്റ് വശത്ത് നിന്ന് തുടങ്ങാൻ */
+    animation: realFlagWaveRight 2s infinite ease-in-out;
   }
 
-  /* കൊടിയുടെ തുണിപോലെ പ്രവർത്തിക്കുന്ന പൊതുവായ ബട്ടൺ ഡിസൈൻ */
+  /* കൊടിയുടെ ബട്ടൺ ഡിസൈൻ */
   .flag-segment {
-    width: 4cm;  /* 0.8 cm വീതി */
-    height: 3cm;   /* 3 cm നീളം */
+    width: 1cm;  
+    height: 3cm;   
     border: none;
     cursor: pointer;
-    box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.3);
+    box-shadow: -2px 2px 6px rgba(0, 0, 0, 0.3);
     
-    /* ടെക്സ്റ്റ് താഴേക്ക് വായിക്കാൻ */
     writing-mode: vertical-rl;
     text-orientation: mixed;
     text-align: center;
@@ -33,53 +31,49 @@
     align-items: center;
     justify-content: center;
     font-weight: bold;
-    font-size: 11px;
+    font-size: 14px; 
     letter-spacing: 1px;
     
-    /* കൊടിയുടെ അറ്റം വളഞ്ഞ ഡിസൈൻ */
-    radius: 8px 0 0 8px;
+    /* വളഞ്ഞ വശം ഇടതുവശത്തേക്ക് ആക്കാൻ (Left side rounded) */
+    border-radius: 8px 0 0 8px;
     transition: width 0.2s ease;
   }
 
-  /* വിരൽ തൊടുമ്പോൾ വീതി സ്വൽപ്പം കൂടും */
   .flag-segment:active,
   .flag-segment:hover {
-    width: 4.1cm;
+    width: 1.4cm;
   }
 
-  /* 1. നീല (Language) */
   .flag-blue {
     background-color: #007bff;
     color: #ffffff;
   }
 
-  /* 2. വെള്ള (Country) */
   .flag-white {
     background-color: #ffffff;
     color: #000000;
     border: 1px solid #dcdcdc;
-    border-left: none;
+    border-right: none;
   }
 
-  /* 3. ചുവപ്പ് (Category) */
   .flag-red {
     background-color: #ff3d00;
     color: #ffffff;
   }
 
-  /* ഒരേസമയം കൊടിയുടെ അറ്റം കാറ്റിൽ അലയടിക്കുന്ന അനിമേഷൻ */
-  @keyframes realFlagWave {
+  /* വലതുവശത്തിരിക്കുമ്പോൾ കൊടി പാറാനുള്ള അനിമേഷൻ */
+  @keyframes realFlagWaveRight {
     0% {
       transform: perspective(300px) rotateY(0deg) skewY(0deg) translateY(0px);
     }
     25% {
-      transform: perspective(300px) rotateY(12deg) skewY(-2deg) translateY(-3px);
+      transform: perspective(300px) rotateY(-25deg) skewY(5deg) translateY(-6px);
     }
     50% {
-      transform: perspective(300px) rotateY(-8deg) skewY(2deg) translateY(2px);
+      transform: perspective(300px) rotateY(15deg) skewY(-4deg) translateY(4px);
     }
     75% {
-      transform: perspective(300px) rotateY(15deg) skewY(-3deg) translateY(-4px);
+      transform: perspective(300px) rotateY(-30deg) skewY(6deg) translateY(-8px);
     }
     100% {
       transform: perspective(300px) rotateY(0deg) skewY(0deg) translateY(0px);
@@ -92,13 +86,8 @@
 <!-- 2. HTML STRUCTURE (കൊടിയുടെ ഭാഗങ്ങൾ) -->
 <!-- ========================================== -->
 <div class="flag-cloth-container">
-  <!-- നീല - ഭാഷ -->
   <button class="flag-segment flag-blue" onclick="handleLangClick()">ഭാഷ</button>
-  
-  <!-- വെള്ള - Country -->
   <button class="flag-segment flag-white" onclick="handleCountryClick()">Country</button>
-  
-  <!-- ചുവപ്പ് - Category -->
   <button class="flag-segment flag-red" onclick="handleCategoryClick()">Category</button>
 </div>
 
@@ -108,17 +97,14 @@
 <!-- ========================================== -->
 <script>
   function handleLangClick() {
-    // ഭാഷ മാറ്റാനുള്ള കോഡ് ഇവിടെ നൽകാം
     console.log("Language button clicked");
   }
 
   function handleCountryClick() {
-    // രാജ്യം മാറ്റാനുള്ള കോഡ് ഇവിടെ നൽകാം
     console.log("Country button clicked");
   }
 
   function handleCategoryClick() {
-    // കാറ്റഗറി മാറ്റാനുള്ള കോഡ് ഇവിടെ നൽകാം
     console.log("Category button clicked");
   }
 </script>
