@@ -7107,23 +7107,23 @@ body [style*="font-size:1.25rem"] {
   font-size: 21px !important;
 }
     </style>
-  <!-- ========================================== -->
-<!-- BAS 3D FLAG BUTTONS (GUARANTEED COLORS)    -->
+        
+   <!-- ========================================== -->
+<!-- BAS 3D FLAG BUTTONS (FIXED COLORS)        -->
 <!-- ========================================== -->
 <style>
   /* 1. MAIN CONTAINER */
-  div.flag-cloth-container,
   .flag-cloth-container {
     position: fixed !important;
     right: 0 !important;
     bottom: 0px !important; 
-    z-index: 9997 !important;
+    z-index: 99999 !important; /* ഏറ്റവും മുകളിൽ നിൽക്കാൻ */
     display: flex !important;
     flex-direction: column !important;
     gap: 0.2mm !important;
     transform-origin: right center !important;
     perspective: 800px !important;
-    background: none !important;
+    background: transparent !important;
     border: none !important;
     box-shadow: none !important;
     padding: 0 !important;
@@ -7132,8 +7132,7 @@ body [style*="font-size:1.25rem"] {
   }
 
   /* 2. BASE BUTTON STYLES */
-  div.flag-cloth-container button.flag-segment,
-  button.flag-segment {
+  .flag-cloth-container button.flag-segment {
     width: 4cm !important;
     height: 3cm !important;
     max-width: none !important;
@@ -7170,43 +7169,40 @@ body [style*="font-size:1.25rem"] {
     user-select: none !important;
   }
 
-  /* 3. STRICT COLOR OVERRIDES (മറ്റ് കോഡുകൾ മാറ്റാതിരിക്കാൻ) */
+  /* 3. STRICT COLOR OVERRIDES (SILVER THEME OVERRIDE FIX) */
   
   /* --- SKY BLUE (Top Button) --- */
-  div.flag-cloth-container button.flag-skyblue,
-  button.flag-skyblue {
-    background-color: #00BFFF !important;
-    background-image: linear-gradient(135deg, #87CEEB, #00BFFF) !important;
+  .flag-cloth-container button.flag-skyblue,
+  button.flag-segment.flag-skyblue {
+    background: #00BFFF !important;
+    background: linear-gradient(135deg, #87CEEB 0%, #00BFFF 100%) !important;
     color: #000000 !important;
     text-shadow: 0px 0px 2px rgba(255, 255, 255, 0.8) !important;
   }
-  div.flag-cloth-container button.flag-skyblue * { color: #000000 !important; }
 
   /* --- WHITE (Middle Button) --- */
-  div.flag-cloth-container button.flag-white,
-  button.flag-white {
-    background-color: #ffffff !important;
-    background-image: linear-gradient(135deg, #ffffff, #f0f0f0) !important;
+  .flag-cloth-container button.flag-white,
+  button.flag-segment.flag-white {
+    background: #ffffff !important;
+    background: linear-gradient(135deg, #ffffff 0%, #f0f0f0 100%) !important;
     color: #000000 !important;
     text-shadow: 0px 0px 1px rgba(0, 0, 0, 0.2) !important;
     animation-delay: 0.2s !important;
   }
-  div.flag-cloth-container button.flag-white * { color: #000000 !important; }
 
   /* --- RED (Bottom Button) --- */
-  div.flag-cloth-container button.flag-red,
-  button.flag-red {
-    background-color: #ff3d00 !important;
-    background-image: linear-gradient(135deg, #ff3d00, #dd2c00) !important;
+  .flag-cloth-container button.flag-red,
+  button.flag-segment.flag-red {
+    background: #ff3d00 !important;
+    background: linear-gradient(135deg, #ff3d00 0%, #dd2c00 100%) !important;
     color: #ffffff !important;
     text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8) !important;
     animation-delay: 0.4s !important;
   }
-  div.flag-cloth-container button.flag-red * { color: #ffffff !important; }
 
   /* 4. HOVER EFFECT */
-  div.flag-cloth-container button.flag-segment:hover,
-  div.flag-cloth-container button.flag-segment:active {
+  .flag-cloth-container button.flag-segment:hover,
+  .flag-cloth-container button.flag-segment:active {
     filter: brightness(1.15) !important;
   }
 
@@ -7220,8 +7216,7 @@ body [style*="font-size:1.25rem"] {
 
   /* 6. RESPONSIVE FOR MOBILE */
   @media (max-width: 480px) {
-    div.flag-cloth-container button.flag-segment,
-    button.flag-segment {
+    .flag-cloth-container button.flag-segment {
       width: clamp(2.8cm, 28vw, 4cm) !important;
       height: clamp(2cm, 10vh, 3cm) !important;
       font-size: clamp(14px, 4.2vw, 23px) !important;
@@ -7268,8 +7263,7 @@ body [style*="font-size:1.25rem"] {
     if (categoryEl) categoryEl.scrollIntoView({ behavior: 'smooth' });
   }
 </script>
-          
- 
+
 </body> <!-- ഇതിന് തൊട്ടു മുകളിൽ -->
 </html>
 
