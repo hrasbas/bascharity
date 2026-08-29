@@ -2,7 +2,7 @@
 <!-- 1. CSS STYLES (ഡിസൈനും 3D അനിമേഷനും) -->
 <!-- ========================================== -->
 <style>
-  /* പ്രധാന കൊടി (Right Side Wrapper) */
+  /* 3 ബട്ടണുകളും ഉൾപ്പെടുന്ന പ്രധാന കൊടി (Flag Wrapper) */
   .flag-cloth-container {
     position: fixed;
     right: 0;
@@ -10,117 +10,90 @@
     z-index: 9997;
     display: flex;
     flex-direction: column;
-    gap: 0.5px; /* ആവശ്യപ്പെട്ട ചെറിയ gap (0.5px) */
+    gap:0.2mm;
     
+    /* ഒറിജിനൽ കൊടി ഉറപ്പിച്ചു നിർത്തി 3D അലയടിക്കാൻ */
     transform-origin: right center;
-    perspective: 1200px;
-    
-    /* ഉയർന്ന 3D Flexible എഫക്റ്റോടെയുള്ള പൂർണ്ണ അനിമേഷൻ */
-    animation: superFlexibleClothWave 2s infinite ease-in-out alternate;
+    perspective: 800px;
   }
 
-  /* കൊടിയുടെ സ്ട്രിപ്പുകൾ (Segments) */
+  /* കൊടിയുടെ ഓരോ കഷണത്തിന്റെ ഡിസൈൻ */
   .flag-segment {
-    position: relative;
-    width: 4cm;   
-    height: 3cm;  
+    width: 4cm;   /* ആവശ്യപ്പെട്ട നീളം (Length): 4cm */
+    height: 3cm;  /* ആവശ്യപ്പെട്ട ഉയരം (Height): 3cm */
     border: none;
     cursor: pointer;
-    box-shadow: -4px 2px 8px rgba(0, 0, 0, 0.3);
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.4);
     
+    /* Horizontal Text / സൂപ്പർ വിസിബിൾ ഫോണ്ട് */
     writing-mode: horizontal-tb;
     display: flex;
     align-items: center;
     justify-content: center;
     font-weight: 900;
-    font-size: 26px;
-    text-align: center;
-    line-height: 1.1;
-    padding: 0 8px;
+    font-size: 23px; /* ആവശ്യപ്പെട്ട Font Size: 23px */
+    letter-spacing: 0.5px;
+    
+    /* മുകളിലും താഴെയും ഒറിജിനൽ തിരമാല പോലെയുള്ള ആകൃതി (Wave Shape Edges) */
+    clip-path: polygon(
+      0% 0%, 
+      25% 4%, 
+      50% 0%, 
+      75% 4%, 
+      100% 0%, 
+      100% 96%, 
+      75% 100%, 
+      50% 96%, 
+      25% 100%, 
+      0% 96%
+    );
     
     transform-origin: right center;
-    transition: filter 0.2s ease;
+    animation: real3DOrganicWave 2.2s infinite ease-in-out alternate;
   }
 
-  /* 🧵 നൂല് കൊണ്ട് ബന്ധിപ്പിച്ചത് പോലെയുള്ള തുന്നൽ ഡിസൈൻ (Stitch Line Effect) */
-  .flag-segment::after {
-    content: '';
-    position: absolute;
-    bottom: -1px;
-    left: 10px;
-    right: 10px;
-    height: 1px;
-    border-bottom: 2px dashed rgba(0, 0, 0, 0.35); /* തുന്നൽ വരികൾ */
-    z-index: 10;
-  }
-
-  .flag-red::after {
-    display: none; /* ഏറ്റവും താഴത്തെ ഭാഗത്ത് തുന്നൽ വരി വേണ്ട */
-  }
-
-  /* മുകൾവശം (Sky Blue) */
-  .flag-skyblue {
-    background: linear-gradient(135deg, #87CEEB, #00BFFF);
-    color: #000000;
-    border-radius: 12px 0 0 0;
-    text-shadow: 0px 0px 2px rgba(255, 255, 255, 0.8);
-    /* തുണിക്ക് കൂടുതൽ ഫ്ലെക്സിബിലിറ്റി തോന്നിപ്പിക്കാൻ സമയം മാറ്റി പാറ്റേൺ അനിമേഷൻ നൽകുന്നു */
-    animation: segmentFlex 2s infinite ease-in-out alternate;
-  }
-
-  /* നടുഭാഗം (White) */
-  .flag-white {
-    background: linear-gradient(135deg, #ffffff, #f0f0f0);
-    color: #000000;
-    text-shadow: 0px 0px 1px rgba(0, 0, 0, 0.2);
-    animation: segmentFlex 2s infinite ease-in-out alternate;
-    animation-delay: 0.15s; /* ചെറിയ delay നൽകിയാൽ ഒറിജിനൽ തുണിപോലെ വളയും */
-  }
-
-  /* താഴ്ഭാഗം (Red) */
-  .flag-red {
-    background: linear-gradient(135deg, #ff3d00, #dd2c00);
-    color: #ffffff;
-    border-radius: 0 0 0 12px;
-    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8);
-    animation: segmentFlex 2s infinite ease-in-out alternate;
-    animation-delay: 0.3s;
-  }
-
+  /* വിരൽ തൊടുമ്പോൾ ചെറിയ മാറ്റം */
   .flag-segment:hover,
   .flag-segment:active {
-    filter: brightness(1.08);
+    filter: brightness(1.1);
   }
 
-  /* പ്രധാന 3D അനിമേഷൻ (മുമ്പ് ഉണ്ടായിരുന്ന ഫുൾ ഫ്ലെക്സിബിൾ മൂവ്മെന്റ്) */
-  @keyframes superFlexibleClothWave {
+  /* 1. മുകൾഭാഗം: Original Sky Blue (ഡാർക്ക് ടെക്സ്റ്റ് വിസിബിലിറ്റിക്ക്) */
+  .flag-skyblue {
+    background: linear-gradient(135deg, #87CEEB, #00BFFF);
+    color: #000000; /* സൂപ്പർ വിസിബിൾ ബ്ലാക്ക് ഫോണ്ട് */
+    text-shadow: 0px 0px 2px rgba(255, 255, 255, 0.8);
+  }
+
+  /* 2. നടുഭാഗം: വെള്ള */
+  .flag-white {
+    background: linear-gradient(135deg, #ffffff, #f0f0f0);
+    color: #000000; /* സൂപ്പർ വിസിബിൾ ബ്ലാക്ക് ഫോണ്ട് */
+    text-shadow: 0px 0px 1px rgba(0, 0, 0, 0.2);
+    animation-delay: 0.2s; /* അല്പം മാറ്റത്തോടെ പാറും */
+  }
+
+  /* 3. താഴ്ഭാഗം: ചുവപ്പ് */
+  .flag-red {
+    background: linear-gradient(135deg, #ff3d00, #dd2c00);
+    color: #ffffff; /* സൂപ്പർ വിസിബിൾ വൈറ്റ് ഫോണ്ട് */
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8);
+    animation-delay: 0.4s;
+  }
+
+  /* ഒറിജിനൽ 3D തിരമാല പോലെ Top, Bottom & End അലയടിക്കുന്ന അനിമേഷൻ */
+  @keyframes real3DOrganicWave {
     0% {
       transform: rotateY(0deg) rotateZ(0deg) skewY(0deg) translateY(0px);
     }
-    25% {
-      transform: rotateY(-35deg) rotateZ(3deg) skewY(6deg) translateY(-8px);
+    33% {
+      transform: rotateY(28deg) rotateZ(-2deg) skewY(-4deg) translateY(-5px);
     }
-    50% {
-      transform: rotateY(20deg) rotateZ(-2deg) skewY(-4deg) translateY(5px);
-    }
-    75% {
-      transform: rotateY(-40deg) rotateZ(4deg) skewY(7deg) translateY(-10px);
+    66% {
+      transform: rotateY(-18deg) rotateZ(3deg) skewY(5deg) translateY(4px);
     }
     100% {
-      transform: rotateY(0deg) rotateZ(0deg) skewY(0deg) translateY(0px);
-    }
-  }
-
-  /* ഓരോ പീസും ഒന്നിച്ച് ബന്ധിക്കപ്പെട്ട് ഫ്ലെക്സിബിളായി വേവ് ചെയ്യാനുള്ള സബ് അനിമേഷൻ */
-  @keyframes segmentFlex {
-    0% {
-      transform: skewX(0deg);
-    }
-    50% {
-      transform: skewX(-2deg);
-    }
-    100% {
-      transform: skewX(2deg);
+      transform: rotateY(32deg) rotateZ(-3deg) skewY(-6deg) translateY(-6px);
     }
   }
 </style>
@@ -130,7 +103,7 @@
 <!-- 2. HTML STRUCTURE (കൊടിയുടെ ഭാഗങ്ങൾ) -->
 <!-- ========================================== -->
 <div class="flag-cloth-container">
-  <!-- Sky Blue - Change Language -->
+  <!-- Original Sky Blue - Change Language -->
   <button class="flag-segment flag-skyblue" onclick="handleLangClick()">Change Language</button>
   
   <!-- White - Change Country -->
