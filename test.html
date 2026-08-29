@@ -7196,12 +7196,10 @@ body [style*="font-size:1.25rem"] {
     }
   }
 </style>
-
 <!-- ========================================== -->
 <!-- BAS 3D FLAG BUTTONS & SCROLL BRIDGE       -->
 <!-- ========================================== -->
 <style>
-  /* 1. MAIN CONTAINER */
   #bas-flag-container {
     position: fixed !important;
     right: 0 !important;
@@ -7220,7 +7218,6 @@ body [style*="font-size:1.25rem"] {
     pointer-events: auto !important;
   }
 
-  /* 2. BASE DIV SEGMENT STYLES */
   #bas-flag-container .flag-segment {
     width: 4cm !important;
     height: 3cm !important;
@@ -7319,7 +7316,6 @@ body [style*="font-size:1.25rem"] {
     if (e) e.preventDefault();
     trackFlagClick("flag_navigation_click", "language");
     
-    // .lang-box സെക്ഷനിലേക്ക് സ്ക്രോൾ ചെയ്യുന്നു
     var langEl = document.querySelector('.lang-box');
     if (langEl) {
       langEl.scrollIntoView({ behavior: 'smooth', block: 'center' });
@@ -7330,7 +7326,6 @@ body [style*="font-size:1.25rem"] {
     if (e) e.preventDefault();
     trackFlagClick("flag_navigation_click", "country");
     
-    // .country-box സെക്ഷനിലേക്ക് സ്ക്രോൾ ചെയ്യുന്നു
     var countryEl = document.querySelector('.country-box');
     if (countryEl) {
       countryEl.scrollIntoView({ behavior: 'smooth', block: 'center' });
@@ -7341,8 +7336,12 @@ body [style*="font-size:1.25rem"] {
     if (e) e.preventDefault();
     trackFlagClick("flag_navigation_click", "category");
     
-    // Category സെക്ഷനിലേക്ക് സ്ക്രോൾ ചെയ്യുന്നു
-    var categoryEl = document.querySelector('.category-box, .category-container, #category-section, [data-category]');
+    var categoryEl = document.querySelector('.category-box, .categories, #category-section, [data-category]');
+    if (!categoryEl) {
+      var catBtn = document.querySelector('button[onclick*="Category"], .cat-btn, .category-btn');
+      if (catBtn) categoryEl = catBtn.closest('div') || catBtn;
+    }
+    
     if (categoryEl) {
       categoryEl.scrollIntoView({ behavior: 'smooth', block: 'center' });
     }
