@@ -7107,6 +7107,141 @@ body [style*="font-size:1.25rem"] {
   font-size: 21px !important;
 }
     </style>
+    <style>
+
+        <!-- ========================================== -->
+<!-- 1. CSS STYLES (ഡിസൈനും 3D അനിമേഷനും) -->
+<!-- ========================================== -->
+<style>
+  /* 3 ബട്ടണുകളും ഉൾപ്പെടുന്ന പ്രധാന കൊടി (Flag Wrapper) */
+  .flag-cloth-container {
+    position: fixed;
+    left: 0;
+    bottom: 0px; 
+    z-index: 9997;
+    display: flex;
+    flex-direction: column;
+    gap: 3mm;
+    
+    /* ഒറിജിനൽ കൊടി ഉറപ്പിച്ചു നിർത്തി 3D അലയടിക്കാൻ */
+    transform-origin: left center;
+    perspective: 800px;
+  }
+
+  /* കൊടിയുടെ ഓരോ കഷണത്തിന്റെ ഡിസൈൻ */
+  .flag-segment {
+    width: 4cm;   /* ആവശ്യപ്പെട്ട നീളം (Length): 4cm */
+    height: 3cm;  /* ആവശ്യപ്പെട്ട ഉയരം (Height): 3cm */
+    border: none;
+    cursor: pointer;
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.4);
+    
+    /* Horizontal Text / സൂപ്പർ വിസിബിൾ ഫോണ്ട് */
+    writing-mode: horizontal-tb;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 900;
+    font-size: 23px; /* ആവശ്യപ്പെട്ട Font Size: 23px */
+    letter-spacing: 0.5px;
+    
+    /* മുകളിലും താഴെയും ഒറിജിനൽ തിരമാല പോലെയുള്ള ആകൃതി (Wave Shape Edges) */
+    clip-path: polygon(
+      0% 0%, 
+      25% 4%, 
+      50% 0%, 
+      75% 4%, 
+      100% 0%, 
+      100% 96%, 
+      75% 100%, 
+      50% 96%, 
+      25% 100%, 
+      0% 96%
+    );
+    
+    transform-origin: left center;
+    animation: real3DOrganicWave 2.2s infinite ease-in-out alternate;
+  }
+
+  /* വിരൽ തൊടുമ്പോൾ ചെറിയ മാറ്റം */
+  .flag-segment:hover,
+  .flag-segment:active {
+    filter: brightness(1.1);
+  }
+
+  /* 1. മുകൾഭാഗം: Original Sky Blue (ഡാർക്ക് ടെക്സ്റ്റ് വിസിബിലിറ്റിക്ക്) */
+  .flag-skyblue {
+    background: linear-gradient(135deg, #87CEEB, #00BFFF);
+    color: #000000; /* സൂപ്പർ വിസിബിൾ ബ്ലാക്ക് ഫോണ്ട് */
+    text-shadow: 0px 0px 2px rgba(255, 255, 255, 0.8);
+  }
+
+  /* 2. നടുഭാഗം: വെള്ള */
+  .flag-white {
+    background: linear-gradient(135deg, #ffffff, #f0f0f0);
+    color: #000000; /* സൂപ്പർ വിസിബിൾ ബ്ലാക്ക് ഫോണ്ട് */
+    text-shadow: 0px 0px 1px rgba(0, 0, 0, 0.2);
+    animation-delay: 0.2s; /* അല്പം മാറ്റത്തോടെ പാറും */
+  }
+
+  /* 3. താഴ്ഭാഗം: ചുവപ്പ് */
+  .flag-red {
+    background: linear-gradient(135deg, #ff3d00, #dd2c00);
+    color: #ffffff; /* സൂപ്പർ വിസിബിൾ വൈറ്റ് ഫോണ്ട് */
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8);
+    animation-delay: 0.4s;
+  }
+
+  /* ഒറിജിനൽ 3D തിരമാല പോലെ Top, Bottom & End അലയടിക്കുന്ന അനിമേഷൻ */
+  @keyframes real3DOrganicWave {
+    0% {
+      transform: rotateY(0deg) rotateZ(0deg) skewY(0deg) translateY(0px);
+    }
+    33% {
+      transform: rotateY(28deg) rotateZ(-2deg) skewY(-4deg) translateY(-5px);
+    }
+    66% {
+      transform: rotateY(-18deg) rotateZ(3deg) skewY(5deg) translateY(4px);
+    }
+    100% {
+      transform: rotateY(32deg) rotateZ(-3deg) skewY(-6deg) translateY(-6px);
+    }
+  }
+</style>
+
+
+<!-- ========================================== -->
+<!-- 2. HTML STRUCTURE (കൊടിയുടെ ഭാഗങ്ങൾ) -->
+<!-- ========================================== -->
+<div class="flag-cloth-container">
+  <!-- Original Sky Blue - Change Language -->
+  <button class="flag-segment flag-skyblue" onclick="handleLangClick()">Change Language</button>
+  
+  <!-- White - Change Country -->
+  <button class="flag-segment flag-white" onclick="handleCountryClick()">Change Country</button>
+  
+  <!-- Red - Change Category -->
+  <button class="flag-segment flag-red" onclick="handleCategoryClick()">Change Category</button>
+</div>
+
+
+<!-- ========================================== -->
+<!-- 3. JAVASCRIPT (ഫങ്ഷനുകൾ) -->
+<!-- ========================================== -->
+<script>
+  function handleLangClick() {
+    console.log("Change Language clicked");
+  }
+
+  function handleCountryClick() {
+    console.log("Change Country clicked");
+  }
+
+  function handleCategoryClick() {
+    console.log("Change Category clicked");
+  }
+</script>
+
 </body> <!-- ഇതിന് തൊട്ടു മുകളിൽ -->
 </html>
 
