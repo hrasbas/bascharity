@@ -5,8 +5,8 @@
   /* 3 ബട്ടണുകളും ഉൾപ്പെടുന്ന പ്രധാന കൊടി (Flag Wrapper) */
   .flag-cloth-container {
     position: fixed;
-    left: 0;
-    bottom: 0px; /* സ്ക്രീനിന്റെ ഏറ്റവും താഴെയായി നിൽക്കും */
+    right: 0;
+    bottom:2px; /* സ്ക്രീനിന്റെ ഏറ്റവും താഴെയായി നിൽക്കും */
     z-index: 9997;
     display: flex;
     flex-direction: column;
@@ -37,14 +37,14 @@
     letter-spacing: 1px;
     
     /* കൊടിയുടെ അറ്റം വളഞ്ഞ ഡിസൈൻ */
-    border-radius: 0 8px 8px 0;
+    radius: 8px 0 0 8px;
     transition: width 0.2s ease;
   }
 
   /* വിരൽ തൊടുമ്പോൾ വീതി സ്വൽപ്പം കൂടും */
   .flag-segment:active,
   .flag-segment:hover {
-    width: 1.2cm;
+    width: 4.1cm;
   }
 
   /* 1. നീല (Language) */
