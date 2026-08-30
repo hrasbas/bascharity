@@ -7276,7 +7276,277 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 </script>
- 
+ <!-- ========================================== -->
+<!-- BAS HORIZONTAL SLIDING AUTO-SCROLLER       -->
+<!-- ========================================== -->
+<style>
+  /* Wrapper Position (Left Bottom) */
+  #bas-scroller-wrapper {
+    position: fixed;
+    left: 12px;
+    bottom: 80px;
+    z-index: 9999999;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    user-select: none;
+  }
+
+  /* Horizontal Sliding Panel */
+  #bas-scroll-panel {
+    height: 44px;
+    background: linear-gradient(90deg, #1c1c1c 0%, #0d0d0d 100%);
+    border: 1px solid #333333;
+    border-radius: 22px;
+    padding: 0 12px;
+    box-shadow: 4px 10px 25px rgba(0, 0, 0, 0.7);
+    
+    /* Horizontal Slide-Out Animation */
+    opacity: 0;
+    visibility: hidden;
+    transform: translateX(-40px) scaleX(0.8);
+    transform-origin: left center;
+    transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+    
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  /* Panel Open State */
+  #bas-scroll-panel.open {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(0) scaleX(1);
+  }
+
+  /* Buttons Inside Panel */
+  .bas-scroll-btn {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background: #262626;
+    border: 1px solid #444444;
+    color: #ffffff;
+    font-size: 12px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s ease;
+    outline: none;
+    flex-shrink: 0;
+  }
+
+  .bas-scroll-btn:hover {
+    background: #333333;
+    border-color: #00ff66;
+  }
+
+  .bas-scroll-btn:active {
+    background: #00ff66 !important;
+    color: #000000 !important;
+    box-shadow: 0 0 10px #00ff66;
+  }
+
+  .bas-scroll-btn.locked {
+    border-color: #ff3333 !important;
+    color: #ff3333 !important;
+    box-shadow: 0 0 8px rgba(255, 51, 51, 0.6) !important;
+  }
+
+  /* Speed Slider Horizontal Container */
+  .bas-slider-container {
+    width: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .bas-slider {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 100%;
+    height: 4px;
+    background: #444;
+    border-radius: 2px;
+    outline: none;
+    cursor: pointer;
+  }
+
+  .bas-slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: #00ff66;
+    box-shadow: 0 0 8px #00ff66;
+    cursor: pointer;
+  }
+
+  /* Main Side Lighted Arrow Trigger Button */
+  #bas-scroll-trigger {
+    width: 44px;
+    height: 44px;
+    background: #141414;
+    border: 2px solid #333333;
+    border-radius: 50%;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.6);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.2s ease, border-color 0.2s ease;
+    flex-shrink: 0;
+  }
+
+  #bas-scroll-trigger:hover {
+    border-color: #00ff66;
+  }
+
+  #bas-scroll-trigger:active {
+    transform: scale(0.90);
+  }
+
+  /* Side Lighted Arrow (Right Facing Flicker Arrow) */
+  .bas-side-arrow {
+    width: 0;
+    height: 0;
+    border-top: 6px solid transparent;
+    border-bottom: 6px solid transparent;
+    border-left: 11px solid #00ff66;
+    filter: drop-shadow(0 0 5px #00ff66);
+    animation: basFlickerHorizontal 1.2s infinite alternate ease-in-out;
+  }
+
+  @keyframes basFlickerHorizontal {
+    0% { opacity: 0.3; transform: scale(0.85); }
+    100% { opacity: 1; transform: scale(1.1); filter: drop-shadow(0 0 8px #00ff66); }
+  }
+
+  @media (max-width: 480px) {
+    #bas-scroller-wrapper { left: 8px; bottom: 70px; }
+    #bas-scroll-panel { height: 38px; padding: 0 8px; gap: 6px; }
+    #bas-scroll-trigger { width: 38px; height: 38px; }
+    .bas-scroll-btn { width: 26px; height: 26px; font-size: 10px; }
+    .bas-slider-container { width: 55px; }
+  }
+</style>
+
+<!-- MAIN WIDGET STRUCTURE -->
+<div id="bas-scroller-wrapper">
+  <!-- Main Left Trigger Button (Side Lighted Arrow) -->
+  <div id="bas-scroll-trigger" onclick="BAS_HORIZ_SCROLLER.togglePanel()" title="Scroll Menu">
+    <div class="bas-side-arrow"></div>
+  </div>
+
+  <!-- Horizontal Sliding Control Panel -->
+  <div id="bas-scroll-panel">
+    <!-- Fast Up Button -->
+    <button class="bas-scroll-btn" id="btn-scroll-up" onclick="BAS_HORIZ_SCROLLER.fastScroll(-1)" title="Fast Scroll Up">▲</button>
+    
+    <!-- Speed Controller Slider -->
+    <div class="bas-slider-container">
+      <input type="range" min="1" max="10" value="1" class="bas-slider" id="bas-speed-slider" oninput="BAS_HORIZ_SCROLLER.updateSpeed()" title="Speed Control">
+    </div>
+
+    <!-- Lock/Unlock Button -->
+    <button class="bas-scroll-btn" id="btn-scroll-lock" onclick="BAS_HORIZ_SCROLLER.toggleLock()" title="Lock / Pause Auto-Scroll">🔓</button>
+
+    <!-- Fast Down Button -->
+    <button class="bas-scroll-btn" id="btn-scroll-down" onclick="BAS_HORIZ_SCROLLER.fastScroll(1)" title="Fast Scroll Down">▼</button>
+  </div>
+</div>
+
+<!-- JAVASCRIPT ENGINE -->
+<script>
+  // 1. പഴയ സ്ക്രോളിംഗ് ഇന്റർവലുകളെ സ്വയം ബ്ലോക്ക് ചെയ്യുന്ന ഫങ്ഷൻ
+  (function killOldScrolls() {
+    try {
+      let highestId = window.setInterval(function(){}, 9999);
+      for (let i = 1; i < highestId; i++) {
+        window.clearInterval(i);
+      }
+    } catch(e) {}
+  })();
+
+  // 2. പുതിയ ഹൊറിസോണ്ടൽ സ്ക്രോളർ മൊഡ്യൂൾ
+  const BAS_HORIZ_SCROLLER = (function() {
+    let scrollInterval = null;
+    let isUserInteracting = false;
+    let isLocked = false;
+    let pauseTimeout = null;
+    let currentSpeed = 0.4; // അൾട്രാ സ്ലോ വേഗത
+
+    function safeTrack(action, detail) {
+      if (typeof basTrack === 'function') {
+        basTrack(action, { detail: detail, timestamp: new Date().toISOString() });
+      }
+    }
+
+    function startAutoLoop() {
+      if (scrollInterval) clearInterval(scrollInterval);
+      scrollInterval = setInterval(function() {
+        if (!isUserInteracting && !isLocked) {
+          window.scrollBy({ top: currentSpeed, behavior: 'instant' });
+        }
+      }, 30);
+    }
+
+    function pauseOnInteraction() {
+      if (isLocked) return;
+      isUserInteracting = true;
+      if (pauseTimeout) clearTimeout(pauseTimeout);
+      
+      pauseTimeout = setTimeout(function() {
+        isUserInteracting = false;
+      }, 1200);
+    }
+
+    window.addEventListener('touchstart', pauseOnInteraction, { passive: true });
+    window.addEventListener('touchmove', pauseOnInteraction, { passive: true });
+    window.addEventListener('wheel', pauseOnInteraction, { passive: true });
+
+    startAutoLoop();
+
+    return {
+      togglePanel: function() {
+        const panel = document.getElementById('bas-scroll-panel');
+        const isOpen = panel.classList.toggle('open');
+        safeTrack('scroller_panel_toggle', isOpen ? 'opened' : 'closed');
+      },
+
+      fastScroll: function(dir) {
+        pauseOnInteraction();
+        window.scrollBy({ top: dir * 180, behavior: 'smooth' });
+        safeTrack('manual_fast_scroll', dir === 1 ? 'down' : 'up');
+      },
+
+      toggleLock: function() {
+        isLocked = !isLocked;
+        const lockBtn = document.getElementById('btn-scroll-lock');
+        
+        if (isLocked) {
+          lockBtn.innerText = '🔒';
+          lockBtn.classList.add('locked');
+          safeTrack('autoscroll_lock', 'locked');
+        } else {
+          lockBtn.innerText = '🔓';
+          lockBtn.classList.remove('locked');
+          safeTrack('autoscroll_lock', 'unlocked');
+        }
+      },
+
+      updateSpeed: function() {
+        const sliderVal = document.getElementById('bas-speed-slider').value;
+        currentSpeed = parseFloat(sliderVal) * 0.4;
+        safeTrack('autoscroll_speed_change', currentSpeed);
+      }
+    };
+  })();
+</script>
+
                
     </body> <!-- ഇതിന് തൊട്ടു മുകളിൽ -->
 </html>
