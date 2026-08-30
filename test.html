@@ -7314,7 +7314,15 @@ body [style*="font-size:1.25rem"] {
     padding: 2px !important;
   }
 </style>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  const flags = document.querySelectorAll("#bas-flag-container .flag-segment");
 
+  flags.forEach(flag => {
+    flag.style.cssText += ";width:1.6cm !important;height:1.2cm !important;font-size:10px !important;padding:0 !important;";
+  });
+});
+</script>
     </body> <!-- ഇതിന് തൊട്ടു മുകളിൽ -->
 </html>
 
