@@ -7285,20 +7285,20 @@ body [style*="font-size:1.25rem"] {
   }
 
   function handleCategoryClick(e) {
-    if (e) e.preventDefault();
+  if (e) e.preventDefault();
 
-    trackFlagClick("flag_navigation_click", "category");
+  trackFlagClick("flag_navigation_click", "category");
 
-    var categoryEl = document.querySelector(".country-box");
+  var categoryEl = document.querySelector("#categoryButtons");
 
-    if (categoryEl) {
-      categoryEl.scrollIntoView({
-        behavior: "smooth",
-        block: "center",
-        inline: "nearest"
-      });
-    }
+  if (categoryEl) {
+    categoryEl.scrollIntoView({
+      behavior: "smooth",
+      block: "center",
+      inline: "nearest"
+    });
   }
+}
 </script>       
     </body> <!-- ഇതിന് തൊട്ടു മുകളിൽ -->
 </html>
