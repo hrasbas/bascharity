@@ -7110,11 +7110,15 @@ body [style*="font-size:1.25rem"] {
        <!-- ========================================== -->
 <!-- BAS 3D FLAG BUTTONS & SCROLL BRIDGE       -->
 <!-- ========================================== -->
+       <!-- ========================================== -->
+<!-- BAS 3D FLAG BUTTONS & SCROLL BRIDGE       -->
+<!-- ========================================== -->
+
 <style>
   #bas-flag-container {
     position: fixed !important;
     right: 0 !important;
-    bottom: 0px !important; 
+    bottom: 0px !important;
     z-index: 9999999 !important;
     display: flex !important;
     flex-direction: column !important;
@@ -7150,15 +7154,15 @@ body [style*="font-size:1.25rem"] {
     outline: none !important;
     box-sizing: border-box !important;
     clip-path: polygon(
-      0% 0%, 
-      25% 4%, 
-      50% 0%, 
-      75% 4%, 
-      100% 0%, 
-      100% 96%, 
-      75% 100%, 
-      50% 96%, 
-      25% 100%, 
+      0% 0%,
+      25% 4%,
+      50% 0%,
+      75% 4%,
+      100% 0%,
+      100% 96%,
+      75% 100%,
+      50% 96%,
+      25% 100%,
       0% 96%
     ) !important;
     transform-origin: right center !important;
@@ -7168,18 +7172,34 @@ body [style*="font-size:1.25rem"] {
     user-select: none !important;
   }
 
-  #bas-flag-container .flag-white { animation-delay: 0.2s !important; }
-  #bas-flag-container .flag-red { animation-delay: 0.4s !important; }
+  #bas-flag-container .flag-white {
+    animation-delay: 0.2s !important;
+  }
+
+  #bas-flag-container .flag-red {
+    animation-delay: 0.4s !important;
+  }
 
   #bas-flag-container .flag-segment:hover {
     filter: brightness(1.15) !important;
   }
 
   @keyframes real3DOrganicWave {
-    0% { transform: rotateY(0deg) rotateZ(0deg) skewY(0deg) translateY(0px); }
-    33% { transform: rotateY(28deg) rotateZ(-2deg) skewY(-4deg) translateY(-5px); }
-    66% { transform: rotateY(-18deg) rotateZ(3deg) skewY(5deg) translateY(4px); }
-    100% { transform: rotateY(32deg) rotateZ(-3deg) skewY(-6deg) translateY(-6px); }
+    0% {
+      transform: rotateY(0deg) rotateZ(0deg) skewY(0deg) translateY(0px);
+    }
+
+    33% {
+      transform: rotateY(28deg) rotateZ(-2deg) skewY(-4deg) translateY(-5px);
+    }
+
+    66% {
+      transform: rotateY(-18deg) rotateZ(3deg) skewY(5deg) translateY(4px);
+    }
+
+    100% {
+      transform: rotateY(32deg) rotateZ(-3deg) skewY(-6deg) translateY(-6px);
+    }
   }
 
   @media (max-width: 480px) {
@@ -7191,74 +7211,95 @@ body [style*="font-size:1.25rem"] {
   }
 </style>
 
-<!-- HTML STRUCTURE -->
 <div id="bas-flag-container">
-  <!-- 1. SKY BLUE: Language -->
-  <div class="flag-segment flag-skyblue" 
-       style="background: linear-gradient(135deg, #87CEEB 0%, #00BFFF 100%) !important; color: #000000 !important; text-shadow: 0px 0px 2px rgba(255, 255, 255, 0.8) !important;" 
-       onclick="handleLangClick(event)">
+
+  <!-- 1. SKY BLUE: LANGUAGE -->
+  <div
+    class="flag-segment flag-skyblue"
+    style="background: linear-gradient(135deg, #87CEEB 0%, #00BFFF 100%) !important; color: #000000 !important; text-shadow: 0px 0px 2px rgba(255, 255, 255, 0.8) !important;"
+    onclick="handleLangClick(event)"
+  >
     Change Language
   </div>
-  
-  <!-- 2. WHITE: Country -->
-  <div class="flag-segment flag-white" 
-       style="background: linear-gradient(135deg, #ffffff 0%, #f0f0f0 100%) !important; color: #000000 !important; text-shadow: 0px 0px 1px rgba(0, 0, 0, 0.2) !important;" 
-       onclick="handleCountryClick(event)">
+
+  <!-- 2. WHITE: COUNTRY -->
+  <div
+    class="flag-segment flag-white"
+    style="background: linear-gradient(135deg, #ffffff 0%, #f0f0f0 100%) !important; color: #000000 !important; text-shadow: 0px 0px 1px rgba(0, 0, 0, 0.2) !important;"
+    onclick="handleCountryClick(event)"
+  >
     Change Country
   </div>
-  
-  <!-- 3. RED: Category -->
-  <div class="flag-segment flag-red" 
-       style="background: linear-gradient(135deg, #ff3d00 0%, #dd2c00 100%) !important; color: #ffffff !important; text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8) !important;" 
-       onclick="handleCategoryClick(event)">
+
+  <!-- 3. RED: CATEGORY -->
+  <div
+    class="flag-segment flag-red"
+    style="background: linear-gradient(135deg, #ff3d00 0%, #dd2c00 100%) !important; color: #ffffff !important; text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8) !important;"
+    onclick="handleCategoryClick(event)"
+  >
     Change Category
   </div>
+
 </div>
 
-<!-- JAVASCRIPT & SCROLL BRIDGE -->
 <script>
   function trackFlagClick(eventName, categoryData) {
-    if (typeof basTrack === 'function') {
-      basTrack(eventName, { category: categoryData, timestamp: new Date().toISOString() });
+    if (typeof basTrack === "function") {
+      basTrack(eventName, {
+        category: categoryData,
+        timestamp: new Date().toISOString()
+      });
     }
   }
 
   function handleLangClick(e) {
     if (e) e.preventDefault();
+
     trackFlagClick("flag_navigation_click", "language");
-    
-    var langEl = document.querySelector('.lang-box');
+
+    var langEl = document.querySelector(".lang-box");
+
     if (langEl) {
-      langEl.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      langEl.scrollIntoView({
+        behavior: "smooth",
+        block: "center",
+        inline: "nearest"
+      });
     }
   }
 
   function handleCountryClick(e) {
     if (e) e.preventDefault();
+
     trackFlagClick("flag_navigation_click", "country");
-    
-    var countryEl = document.querySelector('.country-box');
+
+    var countryEl = document.querySelector("#allCountries");
+
     if (countryEl) {
-      countryEl.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      countryEl.scrollIntoView({
+        behavior: "smooth",
+        block: "center",
+        inline: "nearest"
+      });
     }
   }
 
   function handleCategoryClick(e) {
     if (e) e.preventDefault();
+
     trackFlagClick("flag_navigation_click", "category");
-    
-    var categoryEl = document.querySelector('.category-box, .categories, #category-section, [data-category]');
-    if (!categoryEl) {
-      var catBtn = document.querySelector('button[onclick*="Category"], .cat-btn, .category-btn');
-      if (catBtn) categoryEl = catBtn.closest('div') || catBtn;
-    }
-    
+
+    var categoryEl = document.querySelector(".country-box");
+
     if (categoryEl) {
-      categoryEl.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      categoryEl.scrollIntoView({
+        behavior: "smooth",
+        block: "center",
+        inline: "nearest"
+      });
     }
   }
-</script>
-           
+</script>       
     </body> <!-- ഇതിന് തൊട്ടു മുകളിൽ -->
 </html>
 
