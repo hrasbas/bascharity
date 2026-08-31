@@ -3,17 +3,6 @@
 <html lang="en">
 <head>
 <style>
-
-  /* അക്ഷരങ്ങൾ സെലക്ട് ആകുന്നത് തടയാൻ */
-    p, span, div, h1, h2, h3, h4, h5, h6 {
-      -webkit-user-select: none;
-      -moz-user-select: none;
-      -ms-user-select: none;
-      user-select: none;
-    }
-
-    /* നിങ്ങളുടെ മറ്റ് CSS കോഡുകൾ ഇവിടെ ഉണ്ടാകും... */
-   
 body {
     font-size: 19px;
 }
@@ -888,7 +877,7 @@ dedicated to the good, well-being, and peace of all human beings, their parents,
     </p>
 
     <p>
-    Without spending even one rupee extra, you could purchase from your preferred shop at the same price and with the same offers <span style="font-weight:bold; color:#FFFFFF;">through the shopping links listed below</span>, and that purchase could help relieve the hunger of someone somewhere in the world?!
+      What if, without spending even one rupee extra, you could purchase from your preferred shop at the same price and with the same offers <span style="font-weight:bold; color:#FFFFFF;">through the shopping links listed below</span>, and that purchase could help relieve the hunger of someone somewhere in the world?!
     </p>
 
     <div style="text-align:center; margin:25px 0;">
@@ -908,11 +897,8 @@ dedicated to the good, well-being, and peace of all human beings, their parents,
     </p>
 
     <p><p>
-<p>
-  This initiative, which was originally planned to be dedicated to my beloved parents <span class="notranslate">(Dedication)</span>, was reorganized so that everyone could participate in this goodness. With the hope that everyone may share in the blessings of this noble cause, it has been dedicated to each one of us, our parents, and our ancestors <span class="notranslate">(Dedicated)</span>.
+  This initiative, which was originally planned to be dedicated to my beloved parents <span class="notranslate">(Dedication)</span>, was reorganized with the intention that everyone should have an opportunity to participate in this goodness. With the wish that no one should be left without receiving even a part of the goodness of this initiative, it had been dedicated to each one of us, our parents, and our ancestors <span class="notranslate">(Dedicated)</span>.
 </p>
-
-   </p>
 
     </p>
 
@@ -2398,7 +2384,7 @@ COMPARE PRICES ON TRUSTED SITES 🔁
   <p><strong>Remember</strong></p>
 
   <p style="color:#FFD700;font-weight:bold;font-size:1.2em;">
-    YOUR PURCHASE SATISFIES A HUNGER™
+    YOUR PURCHASE SATISFIES A HUNGER®
   </p>
 
 </div>
@@ -2472,7 +2458,7 @@ Even if you are not buying anything right now, you can still support this charit
 <a href="javascript:void(0)" onclick="copyLink()"><i class="fas fa-link" style="color:#FFD700"></i></a>
 </div>
 
-<div class="share-sign">YOUR PURCHASE SATISFIES A HUNGER™</div>
+<div class="share-sign">YOUR PURCHASE SATISFIES A HUNGER®</div>
 </div>
 
 <script>
@@ -2753,10 +2739,10 @@ who truly need it.
 </div>
 <div class="readmore-btn" onclick="toggleMore7()">Less</div>
 </div>
-<div class="signature" style="text-align: center; color: #ffcc00; font-weight: bold;">
-  Give your donations only through trusted hands
-</div>
 
+<div class="signature">
+Give your donations only through trusted hands
+</div>
 </div>
 
 <script>
@@ -5218,7 +5204,6 @@ function setupCategoryDropdown() {
 
   allCategoriesSelect.onchange = () => {
     const val = allCategoriesSelect.value;
-     /* 001 */ basTrack("category_dropdown", { category: val });
     if (val === "all") {
       triggerBackToAll();
       return;
@@ -5273,7 +5258,6 @@ categorySearch.addEventListener("input", function () {
 // COUNTRY CHANGE (PART 1)
 function changeCountry(countryName) {
   currentCountry = countryName.toLowerCase().trim();
-   /* 001 */ basTrack("country_change", { country: currentCountry });
   if (selectedCountryBox) {
     selectedCountryBox.textContent = "SELECTED COUNTRY - " + currentCountry.toUpperCase();
   }
@@ -5417,24 +5401,7 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 </script>
-<!-- 05409 -->
-<!-- Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-S9ZT8HR7GJ"></script>
-
-<!-- 05410 -->
-<script>
-  // 05411
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-
-  // 05412
-  gtag('js', new Date());
-
-  // 05413
-  gtag('config', 'G-S9ZT8HR7GJ');
-</script>
-
-<!-- 05414 -->    
+    
 <div style="
 max-width:900px;
 width: 96%;
@@ -5509,7 +5476,7 @@ text-transform:uppercase;">
 .bas-thank-box{
 width:96%;
 max-width:900px;
-margin:40px auto 10px auto;
+margin:auto 10px;
 background:#2b2b2b;
 border:1px solid #c0c0c0;
 border-left:8px solid #FFD700;
@@ -5586,7 +5553,7 @@ THANK YOU FOR YOUR VISIT
 </div>
 
 <div class="bas-tag">
-YOUR PURCHASE SATISFIES A HUNGER™  
+YOUR PURCHASE SATISFIES A HUNGER ™  
 </div>
 </div>    
   <!-- PATENT SEAL — BEFORE SHOP -->
@@ -5612,7 +5579,7 @@ YOUR PURCHASE SATISFIES A HUNGER™
 </div>
 <!-- END PATENT SEAL --> 
 <!-- index.html-ൽ manual.html നേരിട്ട് കാണിക്കാൻ -->
-<div style="width: 100%; height:1100px; display: flex; justify-content: center; align-items: center;scroll-margin-top:30px; margin-top:10px;">
+<div style="width: 100%; height:1100px; display: flex; justify-content: center; align-items: center;scroll-margin-top:30px; margin-top:40px;">
   <iframe src="manual.html" style="width: 100%; max-width:850px; height:700px; border: none; overflow: hidden;"></iframe>
 </div>
 <div style="height:0px;"></div>
@@ -5763,27 +5730,27 @@ YOUR PURCHASE SATISFIES A HUNGER™
     overflow: auto;
   }
 </style>
-<div id="scrollControlPopup" class="notranslate">
+
+<div id="scrollControlPopup">
   <!-- 1. Flicker ചെയ്യുന്ന Toggle Button -->
-  <button class="slideToggleBtn notranslate" onclick="togglePopupBar()" aria-label="Toggle Bar">
-    <span id="popupToggleArrow" class="flicker notranslate">◀</span>
+  <button class="slideToggleBtn" onclick="togglePopupBar()" aria-label="Toggle Bar">
+    <span id="popupToggleArrow" class="flicker">◀</span>
   </button>
 
   <!-- 2. നിലവിലുള്ള സ്ക്രോൾ കൺട്രോളുകൾ -->
-  <button class="arrowBtn notranslate" id="upBtn" aria-label="Scroll up">▲</button>
+  <button class="arrowBtn" id="upBtn" aria-label="Scroll up">▲</button>
 
-  <div class="speedWrap notranslate">
-    <div class="speedTop notranslate">
+  <div class="speedWrap">
+    <div class="speedTop">
       <span>SPEED</span>
       <span id="scrollSpeedValue">6</span>
     </div>
     <input id="scrollSpeedSlider" type="range" min="1" max="20" value="6">
   </div>
 
-  <button class="lockBtn notranslate" id="lockStateBtn" onclick="toggleScrollLock()">LOCK</button>
-  <button class="arrowBtn notranslate" id="downBtn" aria-label="Scroll down">▼</button>
+  <button class="lockBtn" id="lockStateBtn" onclick="toggleScrollLock()">LOCK</button>
+  <button class="arrowBtn" id="downBtn" aria-label="Scroll down">▼</button>
 </div>
-
 
 <!-- Auto Scroll Script -->
 <script>
@@ -5945,134 +5912,61 @@ YOUR PURCHASE SATISFIES A HUNGER™
   });
 </script>
 
-<!-- PERFECT SHOP LIMIT CODE -->
 <style>
-  .bas-shop-btn-container {
+.bas-more-shops-soon {
     text-align: center;
-    margin: 20px auto;
-  }
-  .bas-shop-more-btn {
-    display: inline-block;
-    margin: 10px auto;
-    padding: 10px 24px;
-    background: #34383D;
-    color: #00FF66;
-    border: 1px solid #AEB4BC;
-    border-radius: 10px;
-    font-size: 18px;
-    font-weight: bold;
-    cursor: pointer;
-    transition: background 0.3s;
-  }
-  .bas-shop-more-btn:hover {
-    background: #454A50;
-  }
-  .bas-more-shops-soon {
-    text-align: center;
-    margin: 15px auto 25px;
+    margin: 20px auto 25px;
     padding: 10px 15px;
     color: #00FF66;
     font-size: 18px;
     font-weight: bold;
     letter-spacing: 0.5px;
-  }
+}
 </style>
 
 <script>
 (function () {
-  const SHOW_COUNT = 50;
 
-  function setupShopControls() {
-    const shopList = document.getElementById("categoryShops");
-    if (!shopList) return;
+    function addMoreShopsSoon(container) {
+        if (!container) return;
 
-    // പഴയ കൺട്രോളുകൾ നീക്കം ചെയ്യുന്നു
-    const oldWrapper = document.getElementById("basShopControlsWrapper");
-    if (oldWrapper) oldWrapper.remove();
+        if (
+            container.nextElementSibling &&
+            container.nextElementSibling.classList.contains("bas-more-shops-soon")
+        ) {
+            return;
+        }
 
-    // പഴയ രീതിയിലുള്ള മെസ്സേജുകൾ പേജിൽ കിടപ്പുണ്ടെങ്കിൽ അവയും നീക്കം ചെയ്യുന്നു
-    document.querySelectorAll('.bas-more-shops-soon').forEach(el => el.remove());
-    const oldMore = document.getElementById("basShopMoreBtn");
-    if (oldMore) oldMore.remove();
-    const oldLess = document.getElementById("basShopLessBtn");
-    if (oldLess) oldLess.remove();
+        const message = document.createElement("div");
+        message.className = "bas-more-shops-soon";
+        message.textContent = "MORE SHOPS WILL BE ADDED SOON";
 
-    const shops = Array.from(shopList.querySelectorAll(":scope > .shopCard"));
-    if (shops.length === 0) return;
-
-    const wrapper = document.createElement("div");
-    wrapper.id = "basShopControlsWrapper";
-
-    const soonMsg = document.createElement("div");
-    soonMsg.className = "bas-more-shops-soon notranslate";
-    soonMsg.textContent = "MORE SHOPS WILL BE ADDED SOON";
-
-    // 50-ൽ കുറവ് ഷോപ്പുകൾ ആണെങ്കിൽ
-    if (shops.length <= SHOW_COUNT) {
-      shops.forEach(shop => shop.style.display = "");
-      wrapper.appendChild(soonMsg);
-      shopList.insertAdjacentElement("afterend", wrapper);
-      return;
+        container.insertAdjacentElement("afterend", message);
     }
 
-    // 50-ൽ കൂടുതൽ ഉണ്ടെങ്കിൽ ആദ്യ 50 മാത്രം കാണിക്കുക
-    shops.forEach((shop, index) => {
-      shop.style.display = index < SHOW_COUNT ? "" : "none";
+    function updateShopLists() {
+
+        document.querySelectorAll(
+            "#featuredShops, #categoryShops, .shop-container, .shop-list"
+        ).forEach(function (container) {
+            addMoreShopsSoon(container);
+        });
+
+    }
+
+    document.addEventListener("DOMContentLoaded", function () {
+
+        updateShopLists();
+
+        new MutationObserver(updateShopLists).observe(document.body, {
+            childList: true,
+            subtree: true
+        });
+
     });
 
-    const btn = document.createElement("button");
-    btn.className = "bas-shop-more-btn notranslate";
-    btn.textContent = "MORE SHOPS";
-
-    let isExpanded = false;
-
-    btn.onclick = function () {
-      if (!isExpanded) {
-        shops.forEach(shop => shop.style.display = "");
-        btn.textContent = "LESS SHOPS";
-        soonMsg.style.display = "block";
-        isExpanded = true;
-      } else {
-        shops.forEach((shop, index) => {
-          shop.style.display = index < SHOW_COUNT ? "" : "none";
-        });
-        btn.textContent = "MORE SHOPS";
-        soonMsg.style.display = "none";
-        isExpanded = false;
-
-        shopList.scrollIntoView({ behavior: "smooth", block: "start" });
-      }
-    };
-
-    const btnContainer = document.createElement("div");
-    btnContainer.className = "bas-shop-btn-container";
-    btnContainer.appendChild(btn);
-
-    soonMsg.style.display = "none";
-
-    wrapper.appendChild(btnContainer);
-    wrapper.appendChild(soonMsg);
-    
-    shopList.insertAdjacentElement("afterend", wrapper);
-  }
-
-  let timer;
-  const observer = new MutationObserver(function () {
-    clearTimeout(timer);
-    timer = setTimeout(setupShopControls, 150);
-  });
-
-  document.addEventListener("DOMContentLoaded", function () {
-    const shopList = document.getElementById("categoryShops");
-    if (shopList) {
-      observer.observe(shopList, { childList: true });
-    }
-    setTimeout(setupShopControls, 300);
-  });
 })();
-</script>
-
-   
+</script>   
 </body> <!-- ഇതിന് തൊട്ടു മുകളിൽ -->
 </html>
 
