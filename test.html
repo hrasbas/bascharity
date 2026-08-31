@@ -1575,7 +1575,464 @@ END OF BAS ANALYTICS
 <body> 
 
 <div class="header-box">
+<!-- ================================================================= -->
+<!-- BAS INTERNATIONAL - ALL-IN-ONE COMPLETE COMPONENT                 -->
+<!-- Includes: 3D Celestial Header, Dual Planet Buttons & Matte Scroller -->
+<!-- ================================================================= -->
+
+<style>
+  /* ----------------------------------------------------------------- */
+  /* 1. CONTAINER & LAYOUT STYLES                                      */
+  /* ----------------------------------------------------------------- */
+  .bas-space-container {
+    position: relative;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 340px;
+    overflow: hidden;
+  }
+
+  #logo-space {
+    width: 100%;
+    height: 340px;
+  }
+
+  .bas-side-planet {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+    text-decoration: none;
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent !important;
+  }
+
+  .bas-left-planet { left: 15px; }
+  .bas-right-planet { right: 15px; }
+
+  /* ----------------------------------------------------------------- */
+  /* 2. LEFT PLANET: JUPITER (50,000+ SHOPS)                           */
+  /* ----------------------------------------------------------------- */
+  .bas-jupiter-body {
+    position: relative;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background: repeating-linear-gradient(
+      180deg,
+      #2d180b 0px, #a26a42 12px, #e1b382 24px, 
+      #8c5127 36px, #d19760 48px, #2d180b 60px
+    );
+    background-size: 100% 120px;
+    animation: jupiterSpin 6s linear infinite;
+    box-shadow: -8px 12px 25px rgba(0, 0, 0, 0.7),
+                inset 3px 3px 8px rgba(255, 255, 255, 0.5),
+                inset -8px -8px 12px rgba(0, 0, 0, 0.85);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  @keyframes jupiterSpin {
+    0% { background-position: 0 0; }
+    100% { background-position: 0 120px; }
+  }
+
+  .bas-jupiter-text {
+    position: absolute;
+    z-index: 5;
+    color: #ffffff;
+    font-family: 'Montserrat', Arial, sans-serif;
+    font-size: 10px;
+    font-weight: 900;
+    text-transform: uppercase;
+    text-align: center;
+    line-height: 1.2;
+    text-shadow: 2px 2px 3px #000, -1px -1px 2px #000;
+  }
+
+  /* ----------------------------------------------------------------- */
+  /* 3. RIGHT PLANET: SATURN (ANIMATED SHOP NOW)                      */
+  /* ----------------------------------------------------------------- */
+  .bas-saturn-system {
+    position: relative;
+    width: 160px;
+    height: 130px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .bas-saturn-ring-back {
+    position: absolute;
+    width: 155px;
+    height: 34px;
+    border: 5px solid #e6c200;
+    border-radius: 50%;
+    transform: rotate(-18deg);
+    z-index: 1;
+    box-shadow: 0 0 10px rgba(230, 194, 0, 0.3);
+  }
+
+  .bas-saturn-body-rotating {
+    position: absolute;
+    width: 95px;
+    height: 95px;
+    border-radius: 50%;
+    z-index: 2;
+    background: repeating-linear-gradient(
+      170deg,
+      #1f1600 0px, #4a3500 10px, #b8860b 20px,
+      #ffd700 30px, #fff3a8 40px, #ffd700 50px,
+      #b8860b 60px, #1f1600 70px
+    );
+    background-size: 200% 200%;
+    animation: planetSelfSpin 8s linear infinite;
+    box-shadow: -10px 15px 25px rgba(0, 0, 0, 0.65),
+                inset 4px 4px 10px rgba(255, 255, 255, 0.8),
+                inset -8px -8px 15px rgba(0, 0, 0, 0.85);
+  }
+
+  @keyframes planetSelfSpin {
+    0% { background-position: 0% 0%; }
+    100% { background-position: 100% 100%; }
+  }
+
+  .bas-saturn-ring-front {
+    position: absolute;
+    width: 155px;
+    height: 34px;
+    border: 5px solid #ffd700;
+    border-bottom-color: transparent;
+    border-left-color: transparent;
+    border-radius: 50%;
+    transform: rotate(-18deg);
+    z-index: 3;
+    filter: drop-shadow(0px 3px 2px rgba(0, 0, 0, 0.4));
+  }
+
+  .bas-moon-orbit-ring {
+    position: absolute;
+    width: 170px;
+    height: 45px;
+    border: 1px dashed rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+    transform: rotate(-15deg);
+    z-index: 4;
+    animation: moonOrbitSpin 4s linear infinite;
+  }
+
+  .bas-saturn-moon-dot {
+    position: absolute;
+    top: -5px;
+    left: 50%;
+    width: 10px;
+    height: 10px;
+    background: radial-gradient(circle at 30% 30%, #ffffff, #888888);
+    border-radius: 50%;
+    box-shadow: 0 0 8px rgba(255, 255, 255, 0.9);
+  }
+
+  @keyframes moonOrbitSpin {
+    0% { transform: rotate(-15deg) rotate(0deg); }
+    100% { transform: rotate(-15deg) rotate(360deg); }
+  }
+
+  .bas-saturn-stable-text {
+    position: absolute;
+    z-index: 6;
+    font-family: 'Montserrat', 'Arial Black', sans-serif;
+    font-size: 12px;
+    font-weight: 900;
+    letter-spacing: 1.2px;
+    text-transform: uppercase;
+    text-align: center;
+    line-height: 1.15;
+    animation: textColorGlow 3s infinite alternate;
+    text-shadow: 2px 2px 0px #000, -1px -1px 0px #000, 1px -1px 0px #000, 0px 3px 6px rgba(0, 0, 0, 0.9);
+  }
+
+  @keyframes textColorGlow {
+    0% { color: #ffffff; }
+    33% { color: #00ffff; }
+    66% { color: #00ff66; }
+    100% { color: #ffd700; }
+  }
+
+  /* Responsive Adjustments for Mobile */
+  @media (max-width: 768px) {
+    .bas-side-planet {
+      transform: translateY(-50%) scale(0.7);
+    }
+    .bas-left-planet { left: -5px; }
+    .bas-right-planet { right: -5px; }
+  }
+
+  /* ----------------------------------------------------------------- */
+  /* 4. COMPACT SCROLLER BAR STYLES (250px WIDTH)                      */
+  /* ----------------------------------------------------------------- */
+  #basMatteScrollerBar {
+    position: fixed;
+    bottom: 25px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 9998;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 250px;
+    height: 54px;
+    padding: 0 8px;
+    border-radius: 10px;
+    background: #1e2228;
+    border: 1px solid #323842;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+    -webkit-tap-highlight-color: transparent !important;
+    user-select: none !important;
+    box-sizing: border-box;
+  }
+
+  .bas-scroll-btn {
+    width: 38px;
+    height: 38px;
+    background: #2a3038;
+    border: 1px solid #3d4450;
+    border-radius: 6px;
+    color: #e0e6ed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-size: 16px;
+    touch-action: manipulation;
+  }
+
+  .bas-slider-wrap {
+    flex: 1;
+    margin: 0 10px;
+    display: flex;
+    align-items: center;
+  }
+
+  .bas-slider-wrap input[type=range] {
+    width: 100%;
+    accent-color: #00ff66;
+    cursor: pointer;
+  }
+
+  @media (max-width: 480px) {
+    #basMatteScrollerBar {
+      width: 230px;
+      height: 50px;
+      bottom: 18px;
+    }
+  }
+</style>
+
+<!-- ================================================================= -->
+<!-- HTML STRUCTURE                                                    -->
+<!-- ================================================================= -->
+
+<!-- 1. THREE.JS GLOBE CONTAINER WITH PLANETS -->
+<div class="bas-space-container">
+  
+  <!-- LEFT PLANET: JUPITER -->
+  <a href="#basMainShopsSection" class="bas-side-planet bas-left-planet" id="basJupiterBtn">
+    <div class="bas-jupiter-body"></div>
+    <div class="bas-jupiter-text">50,000+<br>SHOPS<br>HERE</div>
+  </a>
+
+  <!-- CENTER: THREE.JS GLOBE CANVAS TARGET -->
   <div id="logo-space"></div>
+
+  <!-- RIGHT PLANET: SATURN -->
+  <a href="#basMainShopsSection" class="bas-side-planet bas-right-planet" id="basSaturnBtn">
+    <div class="bas-saturn-system">
+      <div class="bas-saturn-ring-back"></div>
+      <div class="bas-saturn-body-rotating"></div>
+      <div class="bas-saturn-ring-front"></div>
+      <div class="bas-moon-orbit-ring"><div class="bas-saturn-moon-dot"></div></div>
+      <div class="bas-saturn-stable-text">SHOP<br>NOW</div>
+    </div>
+  </a>
+
+</div>
+
+<!-- 2. SCROLLER BAR -->
+<div id="basMatteScrollerBar">
+  <div class="bas-scroll-btn" id="basScrollUp">▲</div>
+  <div class="bas-slider-wrap">
+    <input type="range" id="basSpeedSlider" min="1" max="5" value="2">
+  </div>
+  <div class="bas-scroll-btn" id="basScrollDown">▼</div>
+</div>
+
+<!-- ================================================================= -->
+<!-- JAVASCRIPT LOGIC (THREE.JS + SCROLLER + TRACKING)                 -->
+<!-- ================================================================= -->
+<script>
+(function() {
+  /* ----------------------------------------------------------------- */
+  /* 1. THREE.JS GLOBE & MOON ENGINE                                  */
+  /* ----------------------------------------------------------------- */
+  let scene, camera, renderer, ambient, loader, earthGroup, earth, moon;
+  let angle = 0, running = true, logoSpace;
+
+  try {
+    if (window.THREE) {
+      logoSpace = document.getElementById('logo-space');
+      scene = new THREE.Scene();
+
+      camera = new THREE.PerspectiveCamera(50, window.innerWidth / 340, 0.1, 1000);
+      renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true, powerPreference: "high-performance" });
+
+      renderer.setSize(window.innerWidth, 340);
+      renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+
+      if (logoSpace) {
+        logoSpace.appendChild(renderer.domElement);
+      }
+
+      ambient = new THREE.AmbientLight(0xffffff, 1.2);
+      scene.add(ambient);
+
+      loader = new THREE.TextureLoader();
+      earthGroup = new THREE.Group();
+
+      earth = new THREE.Mesh(
+        new THREE.SphereGeometry(2, 32, 32),
+        new THREE.MeshStandardMaterial({
+          map: loader.load('https://raw.githubusercontent.com/mrdoob/three.js/master/examples/textures/planets/earth_atmos_2048.jpg'),
+          metalness: 0.2,
+          roughness: 0.8
+        })
+      );
+      earthGroup.add(earth);
+
+      let canvas = document.createElement('canvas');
+      let ctx = canvas.getContext('2d');
+
+      if (ctx) {
+        canvas.width = 1024;
+        canvas.height = 256;
+        ctx.fillStyle = "#FFFFFF";
+        ctx.font = "Bold 140px Arial";
+        ctx.textAlign = "center";
+        ctx.fillText("BAS", 256, 160);
+        ctx.fillText("BAS", 768, 160);
+
+        let textTexture = new THREE.CanvasTexture(canvas);
+        let textMesh = new THREE.Mesh(
+          new THREE.CylinderGeometry(2.05, 2.05, 0.8, 64, 1, true),
+          new THREE.MeshBasicMaterial({ map: textTexture, transparent: true, side: THREE.DoubleSide })
+        );
+        earthGroup.add(textMesh);
+      }
+
+      earthGroup.position.y = 1.5;
+      scene.add(earthGroup);
+
+      moon = new THREE.Mesh(
+        new THREE.SphereGeometry(0.35, 16, 16),
+        new THREE.MeshStandardMaterial({ color: 0xcccccc })
+      );
+      scene.add(moon);
+
+      camera.position.z = 8;
+
+      function resizeRenderer() {
+        if (!logoSpace || !renderer || !camera) return;
+        const width = logoSpace.clientWidth || window.innerWidth;
+        renderer.setSize(width, 340);
+        camera.aspect = width / 340;
+        camera.updateProjectionMatrix();
+      }
+
+      window.addEventListener("resize", resizeRenderer);
+
+      function animateGlobe() {
+        if (!running || !renderer || !scene || !camera || !earthGroup || !moon) return;
+        requestAnimationFrame(animateGlobe);
+
+        earthGroup.rotation.y += 0.003;
+        angle -= 0.01;
+
+        moon.position.x = Math.cos(angle) * 4.5;
+        moon.position.z = Math.sin(angle) * 2.8;
+        moon.position.y = 1.2;
+
+        renderer.render(scene, camera);
+      }
+      animateGlobe();
+    }
+  } catch (e) {
+    console.error('Three.js Init Error:', e);
+  }
+
+  /* ----------------------------------------------------------------- */
+  /* 2. PRESS & HOLD SCROLLER LOGIC                                    */
+  /* ----------------------------------------------------------------- */
+  const upBtn = document.getElementById("basScrollUp");
+  const downBtn = document.getElementById("basScrollDown");
+  const speedSlider = document.getElementById("basSpeedSlider");
+
+  let scrollInterval = null;
+
+  function startFastScroll(direction) {
+    stopFastScroll();
+    const speed = parseInt(speedSlider.value) || 2;
+    const step = direction === 'up' ? -(speed * 8) : (speed * 8);
+
+    scrollInterval = setInterval(() => {
+      window.scrollBy({ top: step, behavior: 'smooth' });
+    }, 30);
+  }
+
+  function stopFastScroll() {
+    if (scrollInterval) {
+      clearInterval(scrollInterval);
+      scrollInterval = null;
+    }
+  }
+
+  function bindPressHold(btn, dir) {
+    if (!btn) return;
+    btn.addEventListener("mousedown", () => startFastScroll(dir));
+    btn.addEventListener("mouseup", stopFastScroll);
+    btn.addEventListener("mouseleave", stopFastScroll);
+
+    btn.addEventListener("touchstart", (e) => {
+      e.preventDefault();
+      startFastScroll(dir);
+    }, { passive: false });
+    btn.addEventListener("touchend", stopFastScroll);
+  }
+
+  bindPressHold(upBtn, 'up');
+  bindPressHold(downBtn, 'down');
+
+  /* ----------------------------------------------------------------- */
+  /* 3. ANALYTICS EVENT TRACKING                                       */
+  /* ----------------------------------------------------------------- */
+  document.getElementById("basJupiterBtn")?.addEventListener("click", function() {
+    if (typeof window.basTrack === 'function') {
+      window.basTrack("jupiter_50k_shops_clicked", { destination: "main_shops_section" });
+    }
+  });
+
+  document.getElementById("basSaturnBtn")?.addEventListener("click", function() {
+    if (typeof window.basTrack === 'function') {
+      window.basTrack("saturn_shop_now_clicked", { destination: "main_shops_section" });
+    }
+  });
+
+})();
+</script>
+
   <div class="heading">
 
     <div class="food">
