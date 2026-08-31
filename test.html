@@ -7416,7 +7416,25 @@ document.addEventListener("DOMContentLoaded", function () {
   -webkit-tap-highlight-color: transparent !important;
 }
 </style>
-  
+  <script>
+["basInstallBalloon", "basWhatsAppBalloon"].forEach(function (id) {
+  var button = document.getElementById(id);
+
+  if (button) {
+    button.addEventListener("click", function () {
+      this.blur();
+    });
+
+    button.addEventListener("pointerup", function () {
+      var self = this;
+
+      setTimeout(function () {
+        self.blur();
+      }, 0);
+    });
+  }
+});
+</script>
     </body> <!-- ഇതിന് തൊട്ടു മുകളിൽ -->
 </html>
 
