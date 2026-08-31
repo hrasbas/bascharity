@@ -7407,8 +7407,30 @@ document.addEventListener("DOMContentLoaded", function () {
       transform: translateX(-7px);
     }
   }
+  
+</style>
+<style>
+#basInstallBalloon,
+#basWhatsAppBalloon {
+  appearance: none !important;
+  -webkit-appearance: none !important;
+  -webkit-tap-highlight-color: transparent !important;
+}
 </style>
 
+<script>
+document.addEventListener("click", function (event) {
+  const balloon = event.target.closest(
+    "#basInstallBalloon, #basWhatsAppBalloon"
+  );
+
+  if (balloon) {
+    setTimeout(function () {
+      balloon.blur();
+    }, 0);
+  }
+});
+</script>
     </body> <!-- ഇതിന് തൊട്ടു മുകളിൽ -->
 </html>
 
