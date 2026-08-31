@@ -7360,7 +7360,54 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
 })();
-</script>                            
+</script>   
+    <!-- 025 — BALLOON TOUCH + SMALL SIDE MOVEMENT -->
+<style>
+  /* Touch / click സമയത്ത് gray ആകരുത് */
+  #basInstallBalloon,
+  #basInstallBalloon:hover,
+  #basInstallBalloon:focus,
+  #basInstallBalloon:focus-visible,
+  #basInstallBalloon:active {
+    outline: none !important;
+  }
+
+  #basWhatsAppBalloon,
+  #basWhatsAppBalloon:hover,
+  #basWhatsAppBalloon:focus,
+  #basWhatsAppBalloon:focus-visible,
+  #basWhatsAppBalloon:active {
+    background: #00BFFF !important;
+    outline: none !important;
+  }
+
+  /* ചെറിയ side-to-side movement മാത്രം */
+  #basInstallBalloon {
+    animation: basInstallFloat 4s ease-in-out infinite !important;
+  }
+
+  #basWhatsAppBalloon {
+    animation: basWhatsAppFloat 4.5s ease-in-out infinite !important;
+  }
+
+  @keyframes basInstallFloat {
+    0%, 100% {
+      transform: translateX(0);
+    }
+    50% {
+      transform: translateX(8px);
+    }
+  }
+
+  @keyframes basWhatsAppFloat {
+    0%, 100% {
+      transform: translateX(0);
+    }
+    50% {
+      transform: translateX(-7px);
+    }
+  }
+</style>
 
     </body> <!-- ഇതിന് തൊട്ടു മുകളിൽ -->
 </html>
