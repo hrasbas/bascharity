@@ -7435,6 +7435,251 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 });
 </script>
+  <!-- ======================================================== -->
+<!-- MATTE SLATE 3D SQUARE SCROLLER WITH SLIDING SPEED CONTROL -->
+<!-- ======================================================== -->
+<style>
+  /* 1. MAIN CONTAINER (Clean Matte Finish - No Outer Glow) */
+  #basMatteScrollerBar {
+    position: fixed;
+    bottom: 25px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 9998;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 320px;
+    height: 60px;
+    padding: 0 10px;
+    border-radius: 10px;
+
+    /* Clean Matte Slate Dark Surface */
+    background: #1e2228;
+    border: 1px solid #323842;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+    
+    -webkit-tap-highlight-color: transparent !important;
+    user-select: none !important;
+    box-sizing: border-box;
+  }
+
+  @media (max-width: 480px) {
+    #basMatteScrollerBar {
+      width: 295px;
+      height: 56px;
+      bottom: 18px;
+    }
+  }
+
+  /* 2. HEAVY 3D PRESSING SQUARE BUTTONS */
+  .bas-m-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    border-radius: 8px;
+    border: 1px solid #3a424e;
+    background: linear-gradient(180deg, #2a303a 0%, #1a1e24 100%);
+    box-shadow: 0 4px 0px #101216, 0 5px 10px rgba(0,0,0,0.4);
+    cursor: pointer;
+    outline: none !important;
+    transition: all 0.08s ease;
+  }
+
+  /* Real Pressing Down Effect */
+  .bas-m-btn:active, .bas-m-btn.is-pressed {
+    transform: translateY(3px);
+    box-shadow: 0 1px 0px #101216, inset 0 2px 4px rgba(0,0,0,0.6);
+    background: #181b20;
+  }
+
+  .bas-m-btn svg {
+    width: 22px;
+    height: 22px;
+    fill: #00ff66;
+  }
+
+  /* 3. CENTER SLIDING SPEED CONTROL PANEL */
+  .bas-m-center {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: #14171c;
+    padding: 6px 10px;
+    border-radius: 8px;
+    border: 1px solid #282e36;
+  }
+
+  .bas-slider-label {
+    color: #a0abb8;
+    font-size: 11px;
+    font-weight: bold;
+    font-family: Arial, sans-serif;
+  }
+
+  /* Custom Smooth Range Slider */
+  .bas-m-slider {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 70px;
+    height: 6px;
+    background: #2a303a;
+    border-radius: 3px;
+    outline: none;
+  }
+
+  .bas-m-slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 16px;
+    height: 16px;
+    border-radius: 4px;
+    background: #00ff66;
+    cursor: pointer;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.4);
+  }
+
+  .bas-m-slider::-moz-range-thumb {
+    width: 16px;
+    height: 16px;
+    border-radius: 4px;
+    background: #00ff66;
+    cursor: pointer;
+    border: none;
+  }
+
+  .bas-m-lock-btn {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    outline: none !important;
+    display: flex;
+    align-items: center;
+    padding: 2px;
+  }
+
+  .bas-m-lock-btn svg {
+    width: 18px;
+    height: 18px;
+    fill: #6c788a;
+  }
+</style>
+
+<!-- MATTE SCROLLER WIDGET HTML -->
+<div id="basMatteScrollerBar">
+  <!-- Scroll Up Button -->
+  <button class="bas-m-btn" id="basMUpBtn" title="Press & Hold Scroll Up">
+    <svg viewBox="0 0 24 24"><path d="M12 4l-8 8h6v8h4v-8h6z"/></svg>
+  </button>
+
+  <!-- Center Sliding Control & Lock -->
+  <div class="bas-m-center">
+    <span class="bas-slider-label" id="basSpeedText">2x</span>
+    <input type="range" class="bas-m-slider" id="basSpeedRange" min="1" max="5" value="2">
+    <button class="bas-m-lock-btn" id="basMLockBtn" title="Lock / Unlock">
+      <svg id="basMLockIcon" viewBox="0 0 24 24"><path d="M18 8h-1V6c0-2.76-2.24-5-5-5S7 3.24 7 6v2H6c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V10c0-1.1-.9-2-2-2zm-6 9c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2zm3.1-9H8.9V6c0-1.71 1.39-3.1 3.1-3.1 1.71 0 3.1 1.39 3.1 3.1v2z"/></svg>
+    </button>
+  </div>
+
+  <!-- Scroll Down Button -->
+  <button class="bas-m-btn" id="basMDownBtn" title="Press & Hold Scroll Down">
+    <svg viewBox="0 0 24 24"><path d="M12 20l8-8h-6V4h-4v8H6z"/></svg>
+  </button>
+</div>
+
+<script>
+(function() {
+    "use strict";
+
+    window.addEventListener("load", function() {
+        const upBtn = document.getElementById("basMUpBtn");
+        const downBtn = document.getElementById("basMDownBtn");
+        const speedRange = document.getElementById("basSpeedRange");
+        const speedText = document.getElementById("basSpeedText");
+        const lockBtn = document.getElementById("basMLockBtn");
+        const lockIcon = document.getElementById("basMLockIcon");
+
+        let isLocked = false;
+        let scrollInterval = null;
+        let creepingInterval = null;
+        let touchTimeout = null;
+        let speedMultiplier = 2;
+        let isInteracting = false;
+
+        // 1. CREEPING SCROLL
+        function startCreep() {
+            if (creepingInterval) clearInterval(creepingInterval);
+            creepingInterval = setInterval(function() {
+                if (!isLocked && !isInteracting) {
+                    window.scrollBy({ top: 1, behavior: 'smooth' });
+                }
+            }, 35);
+        }
+
+        function pauseCreep() {
+            isInteracting = true;
+            if (touchTimeout) clearTimeout(touchTimeout);
+            touchTimeout = setTimeout(function() {
+                isInteracting = false;
+            }, 2500);
+        }
+
+        window.addEventListener("touchstart", pauseCreep, { passive: true });
+        window.addEventListener("wheel", pauseCreep, { passive: true });
+
+        // 2. SLIDING SPEED CONTROL
+        speedRange.addEventListener("input", function() {
+            speedMultiplier = parseInt(this.value);
+            speedText.innerText = speedMultiplier + "x";
+        });
+
+        // 3. PRESS & HOLD SCROLLING
+        function startContinuousScroll(direction, btnElement) {
+            if (isLocked) return;
+            pauseCreep();
+            stopContinuousScroll();
+
+            if (btnElement) btnElement.classList.add("is-pressed");
+
+            const step = (direction === "up" ? -10 : 10) * speedMultiplier;
+            scrollInterval = setInterval(function() {
+                window.scrollBy({ top: step, behavior: 'auto' });
+            }, 16);
+        }
+
+        function stopContinuousScroll() {
+            if (scrollInterval) clearInterval(scrollInterval);
+            upBtn.classList.remove("is-pressed");
+            downBtn.classList.remove("is-pressed");
+        }
+
+        // UP BUTTON EVENTS
+        upBtn.addEventListener("mousedown", function() { startContinuousScroll("up", upBtn); });
+        upBtn.addEventListener("mouseup", stopContinuousScroll);
+        upBtn.addEventListener("mouseleave", stopContinuousScroll);
+        upBtn.addEventListener("touchstart", function(e) { e.preventDefault(); startContinuousScroll("up", upBtn); });
+        upBtn.addEventListener("touchend", stopContinuousScroll);
+
+        // DOWN BUTTON EVENTS
+        downBtn.addEventListener("mousedown", function() { startContinuousScroll("down", downBtn); });
+        downBtn.addEventListener("mouseup", stopContinuousScroll);
+        downBtn.addEventListener("mouseleave", stopContinuousScroll);
+        downBtn.addEventListener("touchstart", function(e) { e.preventDefault(); startContinuousScroll("down", downBtn); });
+        downBtn.addEventListener("touchend", stopContinuousScroll);
+
+        // 4. LOCK TOGGLE
+        lockBtn.addEventListener("click", function() {
+            isLocked = !isLocked;
+            lockIcon.style.fill = isLocked ? "#e74c3c" : "#6c788a";
+        });
+
+        startCreep();
+    });
+})();
+</script>
+
     </body> <!-- ഇതിന് തൊട്ടു മുകളിൽ -->
 </html>
 
