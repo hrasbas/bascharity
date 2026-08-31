@@ -7038,6 +7038,9 @@ document.addEventListener("DOMContentLoaded", function () {
          <!-- ======================================================== -->
 <!-- BAS BALLOON WIDGET (FULL RESPONSIVE, SECURE & ANALYTICS) -->
 <!-- ======================================================== -->
+          <!-- ======================================================== -->
+<!-- BAS BALLOON WIDGET (FULL RESPONSIVE, SECURE & ANALYTICS) -->
+<!-- ======================================================== -->
 <style>
   /* 1. TOUCH & SECURITY STYLES - Gray highlight പൂർണ്ണമായും തടയാൻ */
   #basInstallBalloon,
@@ -7116,6 +7119,21 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     }
 
+    // EXTRA BALLOON BLOCKER (നാലാമത്തെ ബലൂൺ വരുന്നത് തടയാൻ)
+    function blockExtraBalloons(wrap) {
+        if (!wrap) return;
+        const children = Array.from(wrap.children);
+        children.forEach(function(child) {
+            const isInstall = child.id === "basInstallBalloon" || child.id === "installBall";
+            const isWA = child.id === "basWhatsAppBalloon" || child.id === "waSaveBall";
+            
+            // ആവശ്യമുള്ള 2 ബലൂണുകൾ അല്ലങ്കിൽ അവ മായ്ച്ചു കളയുന്നു
+            if (!isInstall && !isWA) {
+                child.remove();
+            }
+        });
+    }
+
     // MAIN INITIALIZATION FUNCTION
     window.addEventListener("load", function () {
         const wrap = document.getElementById("basBalloonWrap");
@@ -7130,13 +7148,21 @@ document.addEventListener("DOMContentLoaded", function () {
             if (window.innerWidth <= 480) {
                 wrap.style.setProperty("transform", "translateY(0) scale(0.38)", "important");
             }
+
+            // വീണ്ടും ബലൂണുകൾ വരുന്നത് തടയുന്നു
+            blockExtraBalloons(wrap);
+
+            // പുതിയ ബലൂണുകൾ ഡൈനാമിക്കായി ഉണ്ടാക്കാൻ ശ്രമിച്ചാൽ തടയാൻ
+            const observer = new MutationObserver(function() {
+                blockExtraBalloons(wrap);
+            });
+            observer.observe(wrap, { childList: true, subtree: true });
         }
 
         // 1. INSTALL BALLOON SETUP (Green -> White on Install Click)
         const installBtn = document.getElementById("basInstallBalloon") || document.getElementById("installBall");
         
         if (installBtn) {
-            // Initial Green Style Force
             if (installBtn.getAttribute("data-installed") !== "true") {
                 installBtn.style.setProperty("background", "#00ff66", "important");
                 installBtn.style.setProperty("color", "#000000", "important");
@@ -7145,7 +7171,6 @@ document.addEventListener("DOMContentLoaded", function () {
             installBtn.addEventListener("click", function () {
                 safeTrack("install_balloon_clicked", { elementId: installBtn.id });
 
-                // ക്ലിക്ക് ചെയ്ത് 1 സെക്കൻഡിന് ശേഷം പച്ച മാറി വെള്ളയാകുന്നു
                 setTimeout(function () {
                     installBtn.style.setProperty("background", "#ffffff", "important");
                     installBtn.style.setProperty("color", "#000000", "important");
@@ -7168,13 +7193,11 @@ document.addEventListener("DOMContentLoaded", function () {
             }, { passive: true });
         }
 
-        // Analytics Widget Loaded Event
         safeTrack("balloon_widget_fully_loaded", { status: "active" });
     });
 })();
 </script>
-          
-
+ 
     </body> <!-- ഇതിന് തൊട്ടു മുകളിൽ -->
 </html>
 
