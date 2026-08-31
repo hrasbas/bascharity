@@ -7679,6 +7679,246 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 })();
 </script>
+  <!-- ======================================================== -->
+<!-- REAL PLANET ROTATING CELESTIAL BUTTONS                   -->
+<!-- ======================================================== -->
+<style>
+  .bas-celestial-stage {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 35px;
+    margin: 40px auto;
+    flex-wrap: wrap;
+  }
+
+  .bas-planet-wrap {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent !important;
+  }
+
+  /* ---------------------------------------------------- */
+  /* 1. LEFT PLANET: JUPITER (50,000+ SHOPS)               */
+  /* ---------------------------------------------------- */
+  .bas-jupiter-body {
+    position: relative;
+    width: 110px;
+    height: 110px;
+    border-radius: 50%;
+    
+    /* Jupiter Surface Texture Rotation */
+    background: repeating-linear-gradient(
+      180deg,
+      #2d180b 0px, #a26a42 12px, #e1b382 24px, 
+      #8c5127 36px, #d19760 48px, #2d180b 60px
+    );
+    background-size: 100% 120px;
+    animation: jupiterSpin 6s linear infinite;
+    
+    box-shadow: -8px 12px 25px rgba(0, 0, 0, 0.7),
+                inset 3px 3px 8px rgba(255, 255, 255, 0.5),
+                inset -8px -8px 12px rgba(0, 0, 0, 0.85);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  @keyframes jupiterSpin {
+    0% { background-position: 0 0; }
+    100% { background-position: 0 120px; }
+  }
+
+  .bas-jupiter-text {
+    position: absolute;
+    z-index: 5;
+    color: #ffffff;
+    font-family: 'Montserrat', Arial, sans-serif;
+    font-size: 11px;
+    font-weight: 900;
+    text-transform: uppercase;
+    text-align: center;
+    line-height: 1.2;
+    text-shadow: 2px 2px 3px #000, -1px -1px 2px #000;
+  }
+
+  /* ---------------------------------------------------- */
+  /* 2. RIGHT PLANET: SATURN (PLANET ROTATING ONLY)        */
+  /* ---------------------------------------------------- */
+  .bas-saturn-system {
+    position: relative;
+    width: 180px;
+    height: 140px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  /* BACK RING LAYER (ROTATING ORBIT) */
+  .bas-saturn-ring-back {
+    position: absolute;
+    width: 175px;
+    height: 38px;
+    border: 6px solid #e6c200;
+    border-radius: 50%;
+    transform: rotate(-18deg);
+    z-index: 1;
+    box-shadow: 0 0 10px rgba(230, 194, 0, 0.3);
+  }
+
+  /* SATURN SPHERE (PLANET SURFACE SELF ROTATION) */
+  .bas-saturn-body-rotating {
+    position: absolute;
+    width: 105px;
+    height: 105px;
+    border-radius: 50%;
+    z-index: 2;
+
+    /* Repeating Bands Gradient for Visible Spin Effect */
+    background: repeating-linear-gradient(
+      170deg,
+      #1f1600 0px, #4a3500 10px, #b8860b 20px,
+      #ffd700 30px, #fff3a8 40px, #ffd700 50px,
+      #b8860b 60px, #1f1600 70px
+    );
+    background-size: 200% 200%;
+    animation: planetSelfSpin 8s linear infinite;
+
+    box-shadow: -10px 15px 25px rgba(0, 0, 0, 0.65),
+                inset 4px 4px 10px rgba(255, 255, 255, 0.8),
+                inset -8px -8px 15px rgba(0, 0, 0, 0.85);
+  }
+
+  @keyframes planetSelfSpin {
+    0% { background-position: 0% 0%; }
+    100% { background-position: 100% 100%; }
+  }
+
+  /* FRONT RING LAYER */
+  .bas-saturn-ring-front {
+    position: absolute;
+    width: 175px;
+    height: 38px;
+    border: 6px solid #ffd700;
+    border-bottom-color: transparent;
+    border-left-color: transparent;
+    border-radius: 50%;
+    transform: rotate(-18deg);
+    z-index: 3;
+    filter: drop-shadow(0px 3px 2px rgba(0, 0, 0, 0.4));
+  }
+
+  /* CONTINUOUS MOON ORBIT ROTATION (ഉപഗ്രഹം കറങ്ങുന്നത്) */
+  .bas-moon-orbit-ring {
+    position: absolute;
+    width: 195px;
+    height: 50px;
+    border: 1px dashed rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+    transform: rotate(-15deg);
+    z-index: 4;
+    animation: moonOrbitSpin 4s linear infinite;
+  }
+
+  .bas-saturn-moon-dot {
+    position: absolute;
+    top: -6px;
+    left: 50%;
+    width: 12px;
+    height: 12px;
+    background: radial-gradient(circle at 30% 30%, #ffffff, #888888);
+    border-radius: 50%;
+    box-shadow: 0 0 8px rgba(255, 255, 255, 0.9);
+  }
+
+  @keyframes moonOrbitSpin {
+    0% { transform: rotate(-15deg) rotate(0deg); }
+    100% { transform: rotate(-15deg) rotate(360deg); }
+  }
+
+  /* STABLE MULTI-COLOR PRINTED TEXT (അനങ്ങാതെ തെളിഞ്ഞു നിൽക്കുന്നത്) */
+  .bas-saturn-stable-text {
+    position: absolute;
+    z-index: 6; /* Always on top */
+    font-family: 'Montserrat', 'Arial Black', sans-serif;
+    font-size: 13px;
+    font-weight: 900;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    text-align: center;
+    line-height: 1.15;
+    
+    /* Text Color Animation Only - No Movement */
+    animation: textColorGlow 3s infinite alternate;
+    text-shadow: 2px 2px 0px #000, -1px -1px 0px #000, 1px -1px 0px #000, 0px 3px 6px rgba(0, 0, 0, 0.9);
+  }
+
+  @keyframes textColorGlow {
+    0% { color: #ffffff; }
+    33% { color: #00ffff; } /* Cyan Glow */
+    66% { color: #00ff66; } /* Lime Glow */
+    100% { color: #ffd700; } /* Gold Glow */
+  }
+
+  .bas-planet-wrap:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s ease;
+  }
+</style>
+
+<!-- BUTTONS HTML -->
+<div class="bas-celestial-stage">
+
+  <!-- 1. LEFT JUPITER PLANET -->
+  <a href="#basMainShopsSection" class="bas-planet-wrap" id="basJupiterBtn">
+    <div class="bas-jupiter-body"></div>
+    <div class="bas-jupiter-text">
+      50,000+<br>SHOPS<br>HERE
+    </div>
+  </a>
+
+  <!-- 2. RIGHT SATURN PLANET -->
+  <a href="#basMainShopsSection" class="bas-planet-wrap" id="basSaturnBtn">
+    <div class="bas-saturn-system">
+      <div class="bas-saturn-ring-back"></div>
+      
+      <!-- Planet Surface Rotating -->
+      <div class="bas-saturn-body-rotating"></div>
+      
+      <div class="bas-saturn-ring-front"></div>
+      
+      <!-- Revolving Moon & Orbit Line -->
+      <div class="bas-moon-orbit-ring">
+        <div class="bas-saturn-moon-dot"></div>
+      </div>
+      
+      <!-- Fixed Stable Text -->
+      <div class="bas-saturn-stable-text">
+        SHOP<br>NOW
+      </div>
+    </div>
+  </a>
+
+</div>
+
+<script>
+  document.getElementById("basJupiterBtn")?.addEventListener("click", function() {
+    if (typeof window.basTrack === 'function') {
+      window.basTrack("jupiter_shops_clicked", { target: "main_shops" });
+    }
+  });
+
+  document.getElementById("basSaturnBtn")?.addEventListener("click", function() {
+    if (typeof window.basTrack === 'function') {
+      window.basTrack("saturn_shop_now_clicked", { target: "main_shops" });
+    }
+  });
+</script>
+
 
     </body> <!-- ഇതിന് തൊട്ടു മുകളിൽ -->
 </html>
