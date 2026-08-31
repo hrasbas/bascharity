@@ -7037,70 +7037,245 @@ document.addEventListener("DOMContentLoaded", function () {
  <!-- ========================================== -->
 <!-- BAS HORIZONTAL SLIDING AUTO-SCROLLER       -->
 <!--========================================== -->
-<style>        
-    /* 001 — BALLOONS SMALL + RESPONSIVE */
+<!-- BAS BALLOON: SMALL + RESPONSIVE + EVENTS + SAFE BEHAVIOUR -->
 
+<style>
+/* Balloon മാത്രം scale ചെയ്യുന്നു */
 #basBalloonWrap {
-    width: 190px !important;
-    height: 280px !important;
+    width: 280px !important;
+    height: 400px !important;
+    transform: translateY(120px) scale(0.72) !important;
+    transform-origin: bottom left !important;
 }
 
-#basBalloonWrap .is-pwa-installed,
-#basBalloonWrap .white-b {
-    width: 90px !important;
-    height: 125px !important;
-    left: 45px !important;
-    bottom: 150px !important;
+/* Existing movement states നിലനിർത്തുന്നു */
+#basBalloonWrap.state-up {
+    transform: translateY(0) scale(0.72) !important;
 }
 
-#basBalloonWrap .blue-b {
-    width: 80px !important;
-    height: 105px !important;
-    left: 20px !important;
-    bottom: 45px !important;
-    background: #25D366 !important;
+#basBalloonWrap.state-hide {
+    transform: translateY(120px) scale(0.72) !important;
 }
 
-#basBalloonWrap .bas-sticker {
-    width: 58px !important;
-    height: 58px !important;
+#basBalloonWrap.state-rest {
+    transform: translateY(70px) scale(0.72) !important;
 }
 
-#basBalloonWrap .bas-lbl {
-    font-size: 13px !important;
-}
-
-@media (max-width: 480px) {
+/* Mobile responsive */
+@media (max-width: 600px) {
     #basBalloonWrap {
-        width: 170px !important;
-        height: 240px !important;
+        transform: translateY(120px) scale(0.58) !important;
+        transform-origin: bottom left !important;
     }
 
-    #basBalloonWrap .is-pwa-installed,
-    #basBalloonWrap .white-b {
-        width: 82px !important;
-        height: 115px !important;
-        left: 38px !important;
-        bottom: 125px !important;
+    #basBalloonWrap.state-up {
+        transform: translateY(0) scale(0.58) !important;
     }
 
-    #basBalloonWrap .blue-b {
-        width: 74px !important;
-        height: 98px !important;
-        left: 15px !important;
-        bottom: 35px !important;
+    #basBalloonWrap.state-hide {
+        transform: translateY(120px) scale(0.58) !important;
     }
 
-    #basBalloonWrap .bas-sticker {
-        width: 52px !important;
-        height: 52px !important;
+    #basBalloonWrap.state-rest {
+        transform: translateY(70px) scale(0.58) !important;
+    }
+}
+
+/* Very small phones */
+@media (max-width: 360px) {
+    #basBalloonWrap {
+        transform: translateY(120px) scale(0.50) !important;
     }
 
-    #basBalloonWrap .bas-lbl {
-        font-size: 12px !important;
+    #basBalloonWrap.state-up {
+        transform: translateY(0) scale(0.50) !important;
     }
-}   
-   </style> 
+
+    #basBalloonWrap.state-hide {
+        transform: translateY(120px) scale(0.50) !important;
+    }
+
+    #basBalloonWrap.state-rest {
+        transform: translateY(70px) scale(0.50) !important;
+    }
+}
+
+/* Balloon clickable area മാത്രം */
+#basBalloonWrap .bas-ball {
+    pointer-events: auto !important;
+    touch-action: manipulation;
+    -webkit-tap-highlight-color: transparent;
+}
+</style>
+
+<script>
+(function () {
+    "use strict";
+
+    const balloonWrap = document.getElementById("basBalloonWrap");
+    const installBall = document.getElementById("installBall");
+
+    if (!balloonWrap) return;
+
+    /*
+     * Existing basTrack() ഉണ്ടെങ്കിൽ അത് ഉപയോഗിക്കും.
+     * ഇല്ലെങ്കിൽ GA dataLayer വഴി event അയക്കും.
+     */
+    function balloonTrack(eventName, params) {
+        try {
+            if (typeof window.basTrack === "function") {
+                window.basTrack(eventName, params || {});
+                return;
+            }
+
+            window.dataLayer = window.dataLayer || [];
+
+            if (typeof window.gtag === "function") {
+                window.gtag("event", eventName, params || {});
+            } else {
+                window.dataLayer.push([
+                    "event",
+                    eventName,
+                    params || {}
+                ]);
+            }
+        } catch (error) {
+            console.warn("Balloon analytics error:", error);
+        }
+    }
+
+    /* Balloon തുറക്കുക */
+    function showBalloon(source) {
+        balloonWrap.classList.remove("state-hide", "state-rest");
+        balloonWrap.classList.add("state-up");
+
+        balloonTrack("balloon_open", {
+            source: source || "unknown"
+        });
+    }
+
+    /* Balloon മറയ്ക്കുക */
+    function hideBalloon(source) {
+        balloonWrap.classList.remove("state-up", "state-rest");
+        balloonWrap.classList.add("state-hide");
+
+        balloonTrack("balloon_hide", {
+            source: source || "unknown"
+        });
+    }
+
+    window.showBasBalloon = showBalloon;
+    window.hideBasBalloon = hideBalloon;
+
+    /* Balloon-ൽ click ചെയ്താൽ track ചെയ്യുക */
+    balloonWrap.addEventListener("click", function (event) {
+        const clickedBalloon = event.target.closest(".bas-ball");
+
+        if (!clickedBalloon) return;
+
+        if (clickedBalloon.classList.contains("blue-b")) {
+            balloonTrack("balloon_whatsapp_click", {
+                button: "whatsapp"
+            });
+        } else if (clickedBalloon.classList.contains("white-b")) {
+            balloonTrack("balloon_install_click", {
+                button: "install"
+            });
+        } else if (clickedBalloon.classList.contains("is-pwa-installed")) {
+            balloonTrack("balloon_installed_click", {
+                button: "installed"
+            });
+        }
+    }, { passive: true });
+
+    /* PWA install prompt */
+    window.addEventListener("beforeinstallprompt", function () {
+        balloonTrack("pwa_install_prompt_available", {
+            source: "balloon"
+        });
+    });
+
+    window.addEventListener("appinstalled", function () {
+        balloonTrack("pwa_installed", {
+            source: "balloon"
+        });
+    });
+
+    /*
+     * Existing goWhatsApp() function മാറ്റുന്നില്ല.
+     * Function ഉണ്ടെങ്കിൽ wrapper വഴി event മാത്രം add ചെയ്യും.
+     */
+    if (typeof window.goWhatsApp === "function") {
+        const oldGoWhatsApp = window.goWhatsApp;
+
+        window.goWhatsApp = function () {
+            balloonTrack("whatsapp_open", {
+                source: "balloon"
+            });
+
+            return oldGoWhatsApp.apply(this, arguments);
+        };
+    }
+
+    /*
+     * Existing handleInstallTap() function മാറ്റുന്നില്ല.
+     * Install event മാത്രം track ചെയ്യുന്നു.
+     */
+    if (typeof window.handleInstallTap === "function") {
+        const oldHandleInstallTap = window.handleInstallTap;
+
+        window.handleInstallTap = function () {
+            balloonTrack("install_prompt_open", {
+                source: "balloon"
+            });
+
+            return oldHandleInstallTap.apply(this, arguments);
+        };
+    }
+
+    /*
+     * Existing balloon animation timer-നെ തടസ്സപ്പെടുത്താതെ
+     * initial visibility track ചെയ്യുന്നു.
+     */
+    window.addEventListener("load", function () {
+        balloonTrack("balloon_loaded", {
+            screen_width: window.innerWidth,
+            screen_height: window.innerHeight
+        });
+    });
+
+    /* Responsive resize event */
+    let lastWidth = window.innerWidth;
+
+    window.addEventListener("resize", function () {
+        if (Math.abs(window.innerWidth - lastWidth) < 40) return;
+
+        lastWidth = window.innerWidth;
+
+        balloonTrack("balloon_responsive_resize", {
+            screen_width: window.innerWidth,
+            screen_height: window.innerHeight
+        });
+    }, { passive: true });
+
+    /*
+     * External WhatsApp navigation സുരക്ഷിതമാക്കുന്നു.
+     * Existing URL/function മാറ്റുന്നില്ല.
+     */
+    if (installBall) {
+        installBall.setAttribute("role", "button");
+        installBall.setAttribute("aria-label", "Install BAS Charity app");
+        installBall.setAttribute("tabindex", "0");
+
+        installBall.addEventListener("keydown", function (event) {
+            if (event.key === "Enter" || event.key === " ") {
+                event.preventDefault();
+                installBall.click();
+            }
+        });
+    }
+})();
+</script>
     </body> <!-- ഇതിന് തൊട്ടു മുകളിൽ -->
 </html>
 
