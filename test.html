@@ -7369,6 +7369,88 @@ window.addEventListener("load", function () {
     }
 });
 </script>
+    <script>
+(function() {
+    "use strict";
+
+    // Analytics Tracker Helper Function
+    function safeTrack(eventName, eventDetails) {
+        if (typeof window.basTrack === 'function') {
+            try {
+                window.basTrack(eventName, {
+                    detail: eventDetails,
+                    timestamp: new Date().toISOString()
+                });
+            } catch (err) {
+                console.warn("Analytics error:", err);
+            }
+        }
+    }
+
+    window.addEventListener("load", function () {
+        const wrap = document.getElementById("basBalloonWrap");
+
+        if (!wrap) return;
+
+        // 1. Responsive & Base Security Styling
+        wrap.style.setProperty("transform", "translateY(0) scale(0.45)", "important");
+        wrap.style.setProperty("width", "200px", "important");
+        wrap.style.setProperty("height", "280px", "important");
+        wrap.style.setProperty("user-select", "none", "important");
+
+        // Dynamic Responsive Adjustment for Smaller Screens
+        if (window.innerWidth <= 480) {
+            wrap.style.setProperty("transform", "translateY(0) scale(0.38)", "important");
+        }
+
+        // 2. Remove Unwanted Small Balloons (Clear 3rd Balloon)
+        const whiteBalloons = wrap.querySelectorAll(".white-b");
+        whiteBalloons.forEach(function (balloon) {
+            if (balloon && balloon.id !== "installBall") {
+                balloon.remove();
+            }
+        });
+
+        // 3. Setup Install Balloon (Starts Green -> Changes to White post-install)
+        const installBall = document.getElementById("installBall");
+        if (installBall) {
+            // Initial State: Green Color
+            installBall.style.setProperty("background", "#00ff66", "important");
+            installBall.style.setProperty("color", "#000000", "important");
+            installBall.style.setProperty("transition", "background 0.4s ease, color 0.4s ease", "important");
+
+            // Event Listener for Install Action
+            installBall.addEventListener("click", function (e) {
+                safeTrack("install_balloon_clicked", { buttonId: "installBall" });
+
+                // Simulate/Handle Install Completion -> Change to White Color
+                setTimeout(function () {
+                    installBall.style.setProperty("background", "#ffffff", "important");
+                    installBall.style.setProperty("color", "#000000", "important");
+                    installBall.setAttribute("data-installed", "true");
+                    
+                    safeTrack("install_completed", { buttonId: "installBall", status: "success" });
+                }, 1200);
+            }, { passive: true });
+        }
+
+        // 4. Setup WhatsApp Save Balloon (Blue Color)
+        const waSaveBall = document.getElementById("waSaveBall") || wrap.querySelector(".wa-balloon");
+        if (waSaveBall) {
+            waSaveBall.style.setProperty("background", "#0088cc", "important");
+            waSaveBall.style.setProperty("color", "#ffffff", "important");
+
+            waSaveBall.addEventListener("click", function () {
+                safeTrack("whatsapp_save_balloon_clicked", { action: "save_contact" });
+            }, { passive: true });
+        }
+
+        // Widget Initialized Event
+        safeTrack("balloon_widget_loaded", { status: "active" });
+    });
+})();
+</script>
+
     </body> <!-- ഇതിന് തൊട്ടു മുകളിൽ -->
 </html>
 
