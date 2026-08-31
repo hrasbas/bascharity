@@ -7408,37 +7408,15 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   }
   
-</style>
-<style>
-#basInstallBalloon,
-#basWhatsAppBalloon {
-  appearance: none !important;
-  -webkit-appearance: none !important;
+
+#basInstallBalloon:active,
+#basWhatsAppBalloon:active {
+  opacity: 1 !important;
+  filter: none !important;
   -webkit-tap-highlight-color: transparent !important;
 }
-</style> 
-  <style>
-#basInstallBalloon,
-#basWhatsAppBalloon {
-  -webkit-tap-highlight-color: transparent !important;
-  appearance: none !important;
-  -webkit-appearance: none !important;
-}
 </style>
-
-<script>
-document.addEventListener("click", function (event) {
-  const balloon = event.target.closest(
-    "#basInstallBalloon, #basWhatsAppBalloon"
-  );
-
-  if (balloon) {
-    setTimeout(function () {
-      balloon.blur();
-    }, 0);
-  }
-});
-</script>
+  
     </body> <!-- ഇതിന് തൊട്ടു മുകളിൽ -->
 </html>
 
