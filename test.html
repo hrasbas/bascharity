@@ -7328,6 +7328,47 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 })();
 </script>
+    <script>
+window.addEventListener("load", function () {
+    const wrap = document.getElementById("basBalloonWrap");
+
+    if (wrap) {
+        wrap.style.setProperty(
+            "transform",
+            "translateY(0) scale(0.45)",
+            "important"
+        );
+
+        wrap.style.setProperty(
+            "width",
+            "200px",
+            "important"
+        );
+
+        wrap.style.setProperty(
+            "height",
+            "280px",
+            "important"
+        );
+
+        wrap.querySelectorAll(".white-b").forEach(function (balloon) {
+            if (balloon.id !== "installBall") {
+                balloon.remove();
+            }
+        });
+
+        const install = document.getElementById("installBall");
+
+        if (install) {
+            install.style.setProperty(
+                "background",
+                "#ADFF2F",
+                "important"
+            );
+        }
+    }
+});
+</script>
     </body> <!-- ഇതിന് തൊട്ടു മുകളിൽ -->
 </html>
 
