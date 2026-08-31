@@ -1,4 +1,4 @@
-<!DOCTYPE html>    
+  <!DOCTYPE html>    
 <html lang="en">
 <head>
 <style>
@@ -7035,169 +7035,380 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 </script>
  <!-- ========================================== -->
-         <!-- ======================================================== -->
-<!-- BAS BALLOON WIDGET (FULL RESPONSIVE, SECURE & ANALYTICS) -->
-<!-- ======================================================== -->
-          <!-- ======================================================== -->
-<!-- BAS BALLOON WIDGET (FULL RESPONSIVE, SECURE & ANALYTICS) -->
-<!-- ======================================================== -->
+      <!-- 001 — CLEAN BAS BALLOONS : ONLY 2 -->
 <style>
-  /* 1. TOUCH & SECURITY STYLES - Gray highlight പൂർണ്ണമായും തടയാൻ */
-  #basInstallBalloon,
-  #basWhatsAppBalloon {
-    -webkit-tap-highlight-color: transparent !important;
-    -webkit-touch-callout: none !important;
+  /* 002 — BALLOON WRAPPER */
+  #basBalloonWrap {
+    position: fixed !important;
+    left: 0 !important;
+    bottom: 0 !important;
+    width: 220px !important;
+    height: 300px !important;
+    z-index: 2147483647 !important;
+    pointer-events: none !important;
+    display: block !important;
+    transform: scale(.55) !important;
+    transform-origin: bottom left !important;
+  }
+
+  /* 003 — COMMON BALLOON */
+  .bas-final-balloon {
+    position: absolute !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    border: 0 !important;
+    border-radius: 50% 50% 50% 50% / 40% 40% 60% 60% !important;
+    cursor: pointer !important;
+    pointer-events: auto !important;
+    touch-action: manipulation !important;
     user-select: none !important;
-    outline: none !important;
-    cursor: pointer;
+    -webkit-user-select: none !important;
+    box-shadow:
+      inset -8px -8px 20px rgba(0,0,0,.30),
+      0 4px 14px rgba(0,0,0,.45) !important;
+    transition: background-color .4s ease, color .4s ease !important;
   }
 
-  /* Focus & Active സമയത്ത് Gray കളർ വരുന്നത് ഒഴിവാക്കാൻ */
-  #basInstallBalloon:hover,
-  #basInstallBalloon:focus,
-  #basInstallBalloon:focus-visible,
-  #basInstallBalloon:active,
-  #basWhatsAppBalloon:hover,
-  #basWhatsAppBalloon:focus,
-  #basWhatsAppBalloon:focus-visible,
-  #basWhatsAppBalloon:active {
-    outline: none !important;
-    box-shadow: none !important;
-  }
-
-  /* 2. INITIAL COLORS & TRANSITION */
-  /* Install Balloon (ആദ്യം പച്ച നിറം) */
+  /* 004 — INSTALL BALLOON */
   #basInstallBalloon {
-    background: #00ff66 !important;
-    color: #000000 !important;
-    animation: basInstallFloat 4s ease-in-out infinite !important;
-    transition: background 0.5s ease, color 0.5s ease, transform 0.3s ease !important;
+    width: 120px !important;
+    height: 160px !important;
+    left: 55px !important;
+    bottom: 125px !important;
+    background: #25D366 !important;
+    color: #000 !important;
   }
 
-  /* WhatsApp Balloon (നീല നിറം) */
+  /* 005 — AFTER REAL INSTALL */
+  #basInstallBalloon.bas-installed {
+    background: #fff !important;
+    color: #000 !important;
+  }
+
+  /* 006 — WHATSAPP BALLOON */
   #basWhatsAppBalloon {
+    width: 105px !important;
+    height: 135px !important;
+    left: 15px !important;
+    bottom: 10px !important;
     background: #00BFFF !important;
-    color: #ffffff !important;
-    animation: basWhatsAppFloat 4.5s ease-in-out infinite !important;
-    transition: transform 0.3s ease !important;
+    color: #fff !important;
   }
 
-  /* 3. SIDE-TO-SIDE MOVEMENT ANIMATIONS */
-  @keyframes basInstallFloat {
-    0%, 100% { transform: translateX(0); }
-    50% { transform: translateX(8px); }
+  /* 007 — APP ICON */
+  #basBalloonWrap .bas-sticker {
+    width: 68px !important;
+    height: 68px !important;
+    margin-bottom: 6px !important;
+    border-radius: 16px !important;
+    object-fit: cover !important;
+    background: #fff !important;
   }
 
-  @keyframes basWhatsAppFloat {
-    0%, 100% { transform: translateX(0); }
-    50% { transform: translateX(-7px); }
+  /* 008 — TEXT */
+  #basBalloonWrap .bas-label {
+    font-family: Arial, sans-serif !important;
+    font-size: 15px !important;
+    font-weight: 900 !important;
+    line-height: 1.15 !important;
+    text-align: center !important;
   }
 
-  /* 4. RESPONSIVE DESIGN ADJUSTMENTS */
-  @media (max-width: 480px) {
+  #basInstallBalloon.bas-installed .bas-label {
+    color: #000 !important;
+  }
+
+  #basWhatsAppBalloon .bas-label {
+    color: #fff !important;
+  }
+
+  /* 009 — BALLOON NECK */
+  #basBalloonWrap .bas-nipple {
+    position: absolute !important;
+    bottom: -10px !important;
+    width: 18px !important;
+    height: 10px !important;
+    background: inherit !important;
+    clip-path: polygon(20% 0,80% 0,100% 100%,0 100%) !important;
+  }
+
+  /* 010 — STRING */
+  #basBalloonWrap .bas-string {
+    position: absolute !important;
+    bottom: -350px !important;
+    left: 50% !important;
+    width: 1px !important;
+    height: 350px !important;
+    background: rgba(255,255,255,.45) !important;
+    pointer-events: none !important;
+  }
+
+  /* 011 — MOBILE */
+  @media (max-width: 600px) {
     #basBalloonWrap {
-      transform: translateY(0) scale(0.38) !important;
+      transform: scale(.48) !important;
+    }
+  }
+
+  @media (max-width: 360px) {
+    #basBalloonWrap {
+      transform: scale(.42) !important;
     }
   }
 </style>
 
 <script>
-(function() {
-    "use strict";
+(function () {
+  "use strict";
 
-    // ANALYTICS TRACKING SYSTEM (Safe Engine)
-    function safeTrack(eventName, eventDetails) {
-        if (typeof window.basTrack === 'function') {
-            try {
-                window.basTrack(eventName, {
-                    detail: eventDetails,
-                    timestamp: new Date().toISOString()
-                });
-            } catch (err) {
-                console.warn("Analytics tracking error:", err);
-            }
-        }
+  /* 012 — REMOVE OLD BALLOON SYSTEMS */
+  document.querySelectorAll(
+    "#basBalloonWrap .bas-ball, " +
+    "#basBalloonWrap .white-b, " +
+    "#basBalloonWrap .blue-b, " +
+    "#basBalloonWrap .is-pwa-installed, " +
+    "#installBall, " +
+    "#waSaveBall, " +
+    ".wa-balloon"
+  ).forEach(function (el) {
+    if (el.closest("#basBalloonWrap")) el.remove();
+  });
+
+  /* 013 — REMOVE OLD GENERATED WRAPPER */
+  var oldWrap = document.getElementById("basBalloonWrap");
+  if (oldWrap) oldWrap.remove();
+
+  /* 014 — CREATE ONE CLEAN WRAPPER */
+  var wrap = document.createElement("div");
+  wrap.id = "basBalloonWrap";
+  wrap.className = "notranslate";
+  wrap.setAttribute("aria-label", "BAS Charity actions");
+
+  /* 015 — INSTALL BALLOON */
+  var install = document.createElement("button");
+  install.id = "basInstallBalloon";
+  install.type = "button";
+  install.className = "bas-final-balloon";
+  install.setAttribute("aria-label", "Install BAS Charity app");
+
+  install.innerHTML =
+    '<img src="icon-512.png" class="bas-sticker" alt="BAS Charity app icon">' +
+    '<span class="bas-label">INSTALL</span>' +
+    '<span class="bas-nipple"></span>' +
+    '<span class="bas-string"></span>';
+
+  /* 016 — WHATSAPP BALLOON */
+  var whatsapp = document.createElement("button");
+  whatsapp.id = "basWhatsAppBalloon";
+  whatsapp.type = "button";
+  whatsapp.className = "bas-final-balloon";
+  whatsapp.setAttribute("aria-label", "Save BAS Charity to WhatsApp");
+
+  whatsapp.innerHTML =
+    '<span class="bas-label">SAVE TO<br>WHATSAPP</span>' +
+    '<span class="bas-nipple"></span>' +
+    '<span class="bas-string"></span>';
+
+  wrap.appendChild(install);
+  wrap.appendChild(whatsapp);
+  document.body.appendChild(wrap);
+
+  /* 017 — ANALYTICS */
+  function safeTrack(eventName, details) {
+    try {
+      var data = Object.assign({
+        source: "bas_balloons",
+        timestamp: new Date().toISOString()
+      }, details || {});
+
+      if (typeof window.basTrack === "function") {
+        window.basTrack(eventName, data);
+      } else if (typeof window.gtag === "function") {
+        window.gtag("event", eventName, data);
+      } else {
+        window.dataLayer = window.dataLayer || [];
+        window.dataLayer.push(
+          Object.assign({ event: eventName }, data)
+        );
+      }
+    } catch (error) {
+      console.warn("Balloon analytics error");
+    }
+  }
+
+  /* 018 — INSTALL STATE */
+  var installPrompt = null;
+
+  function setInstallReady() {
+    install.classList.remove("bas-installed");
+    install.classList.add("bas-not-installed");
+
+    install.querySelector(".bas-label").textContent = "INSTALL";
+    install.setAttribute(
+      "aria-label",
+      "Install BAS Charity app"
+    );
+  }
+
+  function setInstalled() {
+    install.classList.remove("bas-not-installed");
+    install.classList.add("bas-installed");
+
+    install.querySelector(".bas-label").textContent = "INSTALLED";
+    install.setAttribute(
+      "aria-label",
+      "BAS Charity app installed"
+    );
+  }
+
+  function isAlreadyInstalled() {
+    return (
+      window.matchMedia &&
+      window.matchMedia("(display-mode: standalone)").matches
+    ) || window.navigator.standalone === true;
+  }
+
+  if (isAlreadyInstalled()) {
+    setInstalled();
+  } else {
+    setInstallReady();
+  }
+
+  /* 019 — PWA INSTALL EVENT */
+  window.addEventListener("beforeinstallprompt", function (event) {
+    event.preventDefault();
+    installPrompt = event;
+    setInstallReady();
+
+    safeTrack("pwa_install_prompt_available");
+  });
+
+  /* 020 — INSTALL CLICK */
+  install.addEventListener("click", async function () {
+    safeTrack("balloon_install_click");
+
+    if (!installPrompt) {
+      safeTrack("pwa_install_unavailable");
+      return;
     }
 
-    // EXTRA BALLOON BLOCKER (നാലാമത്തെ ബലൂൺ വരുന്നത് തടയാൻ)
-    function blockExtraBalloons(wrap) {
-        if (!wrap) return;
-        const children = Array.from(wrap.children);
-        children.forEach(function(child) {
-            const isInstall = child.id === "basInstallBalloon" || child.id === "installBall";
-            const isWA = child.id === "basWhatsAppBalloon" || child.id === "waSaveBall";
-            
-            // ആവശ്യമുള്ള 2 ബലൂണുകൾ അല്ലങ്കിൽ അവ മായ്ച്ചു കളയുന്നു
-            if (!isInstall && !isWA) {
-                child.remove();
-            }
-        });
+    try {
+      await installPrompt.prompt();
+
+      var result = await installPrompt.userChoice;
+
+      safeTrack("pwa_install_result", {
+        outcome: result.outcome
+      });
+
+      if (result.outcome === "accepted") {
+        installPrompt = null;
+      }
+    } catch (error) {
+      safeTrack("pwa_install_error", {
+        error: error && error.name
+          ? error.name
+          : "unknown"
+      });
     }
+  });
 
-    // MAIN INITIALIZATION FUNCTION
-    window.addEventListener("load", function () {
-        const wrap = document.getElementById("basBalloonWrap");
+  /* 021 — REAL INSTALL COMPLETED */
+  window.addEventListener("appinstalled", function () {
+    installPrompt = null;
+    setInstalled();
 
-        if (wrap) {
-            // Responsive Container Scaling Setup
-            wrap.style.setProperty("transform", "translateY(0) scale(0.45)", "important");
-            wrap.style.setProperty("width", "200px", "important");
-            wrap.style.setProperty("height", "280px", "important");
-            wrap.style.setProperty("user-select", "none", "important");
+    safeTrack("pwa_installed");
+  });
 
-            if (window.innerWidth <= 480) {
-                wrap.style.setProperty("transform", "translateY(0) scale(0.38)", "important");
-            }
+  /* 022 — WHATSAPP */
+  whatsapp.addEventListener("click", function () {
+    safeTrack("balloon_whatsapp_click");
 
-            // വീണ്ടും ബലൂണുകൾ വരുന്നത് തടയുന്നു
-            blockExtraBalloons(wrap);
+    var text =
+      "Save BAS Charity to your screen:\n" +
+      window.location.href;
 
-            // പുതിയ ബലൂണുകൾ ഡൈനാമിക്കായി ഉണ്ടാക്കാൻ ശ്രമിച്ചാൽ തടയാൻ
-            const observer = new MutationObserver(function() {
-                blockExtraBalloons(wrap);
-            });
-            observer.observe(wrap, { childList: true, subtree: true });
-        }
+    var url =
+      "https://wa.me/?text=" +
+      encodeURIComponent(text);
 
-        // 1. INSTALL BALLOON SETUP (Green -> White on Install Click)
-        const installBtn = document.getElementById("basInstallBalloon") || document.getElementById("installBall");
-        
-        if (installBtn) {
-            if (installBtn.getAttribute("data-installed") !== "true") {
-                installBtn.style.setProperty("background", "#00ff66", "important");
-                installBtn.style.setProperty("color", "#000000", "important");
-            }
+    window.open(
+      url,
+      "_blank",
+      "noopener,noreferrer"
+    );
+  });
 
-            installBtn.addEventListener("click", function () {
-                safeTrack("install_balloon_clicked", { elementId: installBtn.id });
-
-                setTimeout(function () {
-                    installBtn.style.setProperty("background", "#ffffff", "important");
-                    installBtn.style.setProperty("color", "#000000", "important");
-                    installBtn.setAttribute("data-installed", "true");
-                    
-                    safeTrack("install_completed", { status: "success", color: "white" });
-                }, 1000);
-            }, { passive: true });
-        }
-
-        // 2. WHATSAPP BALLOON SETUP (Static Blue)
-        const waBtn = document.getElementById("basWhatsAppBalloon") || document.getElementById("waSaveBall");
-        
-        if (waBtn) {
-            waBtn.style.setProperty("background", "#00BFFF", "important");
-            waBtn.style.setProperty("color", "#ffffff", "important");
-
-            waBtn.addEventListener("click", function () {
-                safeTrack("whatsapp_balloon_clicked", { action: "save_contact" });
-            }, { passive: true });
-        }
-
-        safeTrack("balloon_widget_fully_loaded", { status: "active" });
+  /* 023 — KEYBOARD ACCESSIBILITY */
+  [install, whatsapp].forEach(function (button) {
+    button.addEventListener("keydown", function (event) {
+      if (event.key === "Enter" || event.key === " ") {
+        event.preventDefault();
+        button.click();
+      }
     });
+  });
+
+  /* 024 — LOADED EVENT */
+  window.addEventListener("load", function () {
+    safeTrack("balloons_loaded", {
+      balloon_count: 2
+    });
+  });
+
 })();
-</script>
- 
+</script>   
+    <!-- 025 — BALLOON TOUCH + SMALL SIDE MOVEMENT -->
+<style>
+  /* Touch / click സമയത്ത് gray ആകരുത് */
+  #basInstallBalloon,
+  #basInstallBalloon:hover,
+  #basInstallBalloon:focus,
+  #basInstallBalloon:focus-visible,
+  #basInstallBalloon:active {
+    outline: none !important;
+  }
+
+  #basWhatsAppBalloon,
+  #basWhatsAppBalloon:hover,
+  #basWhatsAppBalloon:focus,
+  #basWhatsAppBalloon:focus-visible,
+  #basWhatsAppBalloon:active {
+    background: #00BFFF !important;
+    outline: none !important;
+  }
+
+  /* ചെറിയ side-to-side movement മാത്രം */
+  #basInstallBalloon {
+    animation: basInstallFloat 4s ease-in-out infinite !important;
+  }
+
+  #basWhatsAppBalloon {
+    animation: basWhatsAppFloat 4.5s ease-in-out infinite !important;
+  }
+
+  @keyframes basInstallFloat {
+    0%, 100% {
+      transform: translateX(0);
+    }
+    50% {
+      transform: translateX(8px);
+    }
+  }
+
+  @keyframes basWhatsAppFloat {
+    0%, 100% {
+      transform: translateX(0);
+    }
+    50% {
+      transform: translateX(-7px);
+    }
+  }
+</style>
+
     </body> <!-- ഇതിന് തൊട്ടു മുകളിൽ -->
 </html>
 
