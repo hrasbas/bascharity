@@ -8060,6 +8060,38 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 })();
 </script>
+   <script>
+(function () {
+  "use strict";
+
+  const slider = document.querySelector('.bas-m-slider');
+  let scrollInterval = null;
+
+  // വളരെ കുറഞ്ഞ വേഗതയിൽ (Very Low Speed) സ്ക്രോൾ ചെയ്യുന്ന ഫംഗ്ഷൻ
+  function applyVeryLowSpeedScroll() {
+    if (scrollInterval) clearInterval(scrollInterval);
+
+    // സ്ലൈഡർ വാല്യൂ അനുസരിച്ച് മാത്രം
+    const val = slider ? parseFloat(slider.value) : 1;
+
+    // വാല്യൂ 0 അല്ലങ്കിൽ മാത്രം വളരെ പതുക്കെ സ്ക്രോൾ ചെയ്യും
+    if (val > 0) {
+      // 80ms ഇടവേളയിൽ 1px വീതം മാത്രം നീങ്ങുന്നു (Very Slow & Smooth)
+      scrollInterval = setInterval(function () {
+        window.scrollBy(0, 1);
+      }, 80);
+    }
+  }
+
+  if (slider) {
+    slider.addEventListener('input', applyVeryLowSpeedScroll);
+  }
+
+  // തുടക്കത്തിൽ തന്നെ പതുക്കെയുള്ള സ്ക്രോൾ സ്റ്റാർട്ട് ചെയ്യും
+  applyVeryLowSpeedScroll();
+})();
+</script>
+
  
 </body> <!-- ഇതിന് തൊട്ടു മുകളിൽ -->
 </html>
