@@ -8061,18 +8061,124 @@ document.addEventListener("DOMContentLoaded", function () {
 })();
 </script>
     
+<script>
+(function () {
+  "use strict";
 
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-     
+  // 1. പഴയ സ്ക്രോൾ കൺട്രോളുകൾ ഡിസേബിൾ ചെയ്യുന്നു
+  try {
+    if (window.basAutoScrollCleanup) {
+      window.basAutoScrollCleanup();
+    }
+  } catch (e) {}
+
+  ["upBtn", "downBtn", "lockStateBtn", "scrollSpeedSlider"].forEach(function (id) {
+    const el = document.getElementById(id);
+    if (el) {
+      el.disabled = true;
+      el.onclick = null;
+      el.onmousedown = null;
+      el.ontouchstart = null;
+    }
+  });
+
+  let scrollTimer = null;
+  let resumeTimeout = null;
+  let isAutoScrollFinished = false;
+
+  const stage = document.querySelector('#stage') || document.querySelector('.stage') || document.querySelector('iframe');
+
+  // 2. Analytics Event Tracker (Google Analytics / dataLayer)
+  function trackAnalytics(eventName, details) {
+    if (typeof gtag === 'function') {
+      gtag('event', eventName, details);
+    } else if (window.dataLayer && Array.isArray(window.dataLayer)) {
+      window.dataLayer.push({ event: eventName, ...details });
+    }
+    console.log("Analytics Event Triggered:", eventName, details);
+  }
+
+  // 3. Responsive Center Calculation (ബുക്ക് കൃത്യം സ്ക്രീനിന്റെ മധ്യത്തിൽ എത്തുമ്പോൾ)
+  function checkBookCentered() {
+    if (!stage) return false;
+
+    const rect = stage.getBoundingClientRect();
+    const bookCenter = rect.top + (rect.height / 2);
+    const windowCenter = window.innerHeight / 2;
+
+    if (bookCenter <= windowCenter) {
+      isAutoScrollFinished = true;
+      if (scrollTimer) clearInterval(scrollTimer);
+
+      // Analytics Event: Auto Scroll Completed
+      trackAnalytics('auto_scroll_completed_at_center', {
+        'event_category': 'AutoScroll',
+        'event_label': 'Book Reached Viewport Center'
+      });
+
+      return true;
+    }
+    return false;
+  }
+
+  // 4. Auto Scroll Control
+  function startSlowScroll() {
+    if (isAutoScrollFinished || document.hidden) return;
+    if (scrollTimer) clearInterval(scrollTimer);
+
+    scrollTimer = setInterval(function () {
+      if (checkBookCentered()) return;
+      window.scrollBy(0, 1);
+    }, 70);
+  }
+
+  // 5. Touch / Pause and Resume Logic (3 Seconds)
+  function pauseAndResume() {
+    if (isAutoScrollFinished) return;
+
+    clearInterval(scrollTimer);
+    clearTimeout(resumeTimeout);
+
+    // Analytics Event: Auto Scroll Paused
+    trackAnalytics('auto_scroll_paused', {
+      'event_category': 'AutoScroll',
+      'pause_duration': '3s'
+    });
+
+    resumeTimeout = setTimeout(function () {
+      if (!isAutoScrollFinished) {
+        // Analytics Event: Auto Scroll Resumed
+        trackAnalytics('auto_scroll_resumed', {
+          'event_category': 'AutoScroll'
+        });
+        startSlowScroll();
+      }
+    }, 3000);
+  }
+
+  // Security & Performance: Tab Switch Guard
+  document.addEventListener('visibilitychange', function () {
+    if (document.hidden) {
+      if (scrollTimer) clearInterval(scrollTimer);
+    } else if (!isAutoScrollFinished) {
+      startSlowScroll();
+    }
+  });
+
+  // User Interaction Listeners
+  window.addEventListener('touchstart', pauseAndResume, { passive: true });
+  window.addEventListener('mousedown', pauseAndResume);
+
+  const slider = document.querySelector('.bas-m-slider');
+  if (slider) {
+    slider.addEventListener('input', pauseAndResume);
+  }
+
+  // Start Auto Scroll
+  startSlowScroll();
+
+})();
+</script>
 
 </body> <!-- ഇതിന് തൊട്ടു മുകളിൽ -->
 </html>
