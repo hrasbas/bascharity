@@ -1,4 +1,4 @@
-<!DOCTYPE html>    
+    <!DOCTYPE html>    
 <html lang="en">
 <head>
 <style>
@@ -8060,64 +8060,39 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 })();
 </script>
- <script>
+   <script>
 (function () {
   "use strict";
 
-  // 1. പഴയ സ്ക്രോൾ സ്ക്രിപ്റ്റ് മാത്രം ഡിസേബിൾ ചെയ്യുന്നു (Shop Now ബട്ടണിനെയോ മറ്റ് എലമെന്റുകളെയോ ബാധിക്കില്ല)
-  try {
-    if (window.basAutoScrollCleanup) {
-      window.basAutoScrollCleanup();
-    }
-  } catch (e) {}
-
-  ["upBtn", "downBtn", "lockStateBtn", "scrollSpeedSlider"].forEach(function (id) {
-    const el = document.getElementById(id);
-    if (el) {
-      el.disabled = true;
-      el.onclick = null;
-      el.onmousedown = null;
-      el.ontouchstart = null;
-    }
-  });
-
-  // 2. പുതിയ സ്ലോ ഓട്ടോ സ്ക്രോൾ (3 സെക്കൻഡ് പോസ് ഉള്ളത്)
-  let scrollTimer = null;
-  let resumeTimeout = null;
-
-  function startSlowScroll() {
-    if (scrollTimer) clearInterval(scrollTimer);
-    scrollTimer = setInterval(function () {
-      window.scrollBy(0, 1); // പതുക്കെ നീങ്ങുന്നു
-    }, 70);
-  }
-
-  function pauseAndResume() {
-    clearInterval(scrollTimer);
-    clearTimeout(resumeTimeout);
-
-    // യൂസർ തൊട്ടാൽ 3 സെക്കൻഡ് നിൽക്കും
-    resumeTimeout = setTimeout(function () {
-      startSlowScroll();
-    }, 3000);
-  }
-
-  // സ്ലൈഡറിലോ സ്ക്രീനിലോ തൊടുമ്പോൾ 3 സെക്കൻഡ് നിൽക്കും
   const slider = document.querySelector('.bas-m-slider');
-  if (slider) {
-    slider.addEventListener('touchstart', pauseAndResume, { passive: true });
-    slider.addEventListener('mousedown', pauseAndResume);
-    slider.addEventListener('input', pauseAndResume);
+  let scrollInterval = null;
+
+  // വളരെ കുറഞ്ഞ വേഗതയിൽ (Very Low Speed) സ്ക്രോൾ ചെയ്യുന്ന ഫംഗ്ഷൻ
+  function applyVeryLowSpeedScroll() {
+    if (scrollInterval) clearInterval(scrollInterval);
+
+    // സ്ലൈഡർ വാല്യൂ അനുസരിച്ച് മാത്രം
+    const val = slider ? parseFloat(slider.value) : 1;
+
+    // വാല്യൂ 0 അല്ലങ്കിൽ മാത്രം വളരെ പതുക്കെ സ്ക്രോൾ ചെയ്യും
+    if (val > 0) {
+      // 80ms ഇടവേളയിൽ 1px വീതം മാത്രം നീങ്ങുന്നു (Very Slow & Smooth)
+      scrollInterval = setInterval(function () {
+        window.scrollBy(0, 1);
+      }, 80);
+    }
   }
 
-  window.addEventListener('touchstart', pauseAndResume, { passive: true });
+  if (slider) {
+    slider.addEventListener('input', applyVeryLowSpeedScroll);
+  }
 
-  // ഓട്ടോ സ്ക്രോൾ സ്റ്റാർട്ട് ചെയ്യുന്നു
-  startSlowScroll();
-
+  // തുടക്കത്തിൽ തന്നെ പതുക്കെയുള്ള സ്ക്രോൾ സ്റ്റാർട്ട് ചെയ്യും
+  applyVeryLowSpeedScroll();
 })();
 </script>
 
+ 
 </body> <!-- ഇതിന് തൊട്ടു മുകളിൽ -->
 </html>
 
