@@ -7830,8 +7830,8 @@ document.addEventListener("DOMContentLoaded", function () {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    width:240px;
-    height: 50px;
+    width:260px;
+    height: 60px;
     padding: 0 10px;
     border-radius: 10px;
 
@@ -7847,8 +7847,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
   @media (max-width: 480px) {
     #basMatteScrollerBar {
-      width: 240px;
-      height: 50px;
+      width: 260px;
+      height: 56px;
       bottom: 18px;
     }
   }
@@ -7858,8 +7858,8 @@ document.addEventListener("DOMContentLoaded", function () {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 30px;
-    height: 30px;
+    width: 44px;
+    height: 44px;
     border-radius: 8px;
     border: 1px solid #3a424e;
     background: linear-gradient(180deg, #2a303a 0%, #1a1e24 100%);
@@ -7877,8 +7877,8 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   .bas-m-btn svg {
-    width: 15px;
-    height: 15px;
+    width: 22px;
+    height: 22px;
     fill: #00ff66;
   }
 
@@ -7904,7 +7904,7 @@ document.addEventListener("DOMContentLoaded", function () {
   .bas-m-slider {
     -webkit-appearance: none;
     appearance: none;
-    width: 60px;
+    width: 70px;
     height: 6px;
     background: #2a303a;
     border-radius: 3px;
@@ -7923,8 +7923,8 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   .bas-m-slider::-moz-range-thumb {
-    width: 12px;
-    height: 12px;
+    width: 16px;
+    height: 16px;
     border-radius: 4px;
     background: #00ff66;
     cursor: pointer;
@@ -7942,8 +7942,8 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   .bas-m-lock-btn svg {
-    width: 12px;
-    height: 12px;
+    width: 18px;
+    height: 18px;
     fill: #6c788a;
   }
 </style>
@@ -8060,38 +8060,6 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 })();
 </script>
-   <script>
-(function () {
-  "use strict";
-
-  const slider = document.querySelector('.bas-m-slider');
-  let scrollInterval = null;
-
-  // വളരെ കുറഞ്ഞ വേഗതയിൽ (Very Low Speed) സ്ക്രോൾ ചെയ്യുന്ന ഫംഗ്ഷൻ
-  function applyVeryLowSpeedScroll() {
-    if (scrollInterval) clearInterval(scrollInterval);
-
-    // സ്ലൈഡർ വാല്യൂ അനുസരിച്ച് മാത്രം
-    const val = slider ? parseFloat(slider.value) : 1;
-
-    // വാല്യൂ 0 അല്ലങ്കിൽ മാത്രം വളരെ പതുക്കെ സ്ക്രോൾ ചെയ്യും
-    if (val > 0) {
-      // 80ms ഇടവേളയിൽ 1px വീതം മാത്രം നീങ്ങുന്നു (Very Slow & Smooth)
-      scrollInterval = setInterval(function () {
-        window.scrollBy(0, 1);
-      }, 80);
-    }
-  }
-
-  if (slider) {
-    slider.addEventListener('input', applyVeryLowSpeedScroll);
-  }
-
-  // തുടക്കത്തിൽ തന്നെ പതുക്കെയുള്ള സ്ക്രോൾ സ്റ്റാർട്ട് ചെയ്യും
-  applyVeryLowSpeedScroll();
-})();
-</script>
-
  
 </body> <!-- ഇതിന് തൊട്ടു മുകളിൽ -->
 </html>
