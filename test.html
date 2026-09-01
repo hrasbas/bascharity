@@ -8060,7 +8060,157 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 })();
 </script>
- 
+    
+ <script>
+(function () {
+  "use strict";
+
+  // 1. പഴയ സ്ക്രോൾ കൺട്രോളുകൾ ഡിസേബിൾ ചെയ്യുന്നു
+  try {
+    if (window.basAutoScrollCleanup) {
+      window.basAutoScrollCleanup();
+    }
+  } catch (e) {}
+
+  ["upBtn", "downBtn", "lockStateBtn", "scrollSpeedSlider"].forEach(function (id) {
+    const el = document.getElementById(id);
+    if (el) {
+      el.disabled = true;
+      el.onclick = null;
+      el.onmousedown = null;
+      el.ontouchstart = null;
+    }
+  });
+
+  // വേരിയബിളുകൾ
+  let scrollTimer = null;
+  let resumeTimeout = null;
+  let isLockedAtCenter = false;
+  let targetScrollY = 0;
+
+  const stage = document.querySelector('#stage') || document.querySelector('.stage') || document.querySelector('iframe');
+
+  // അനലിറ്റിക്സ് ട്രാക്കിംഗ് ഫങ്ഷൻ (Google Analytics / Custom Analytics)
+  function trackEvent(eventName, eventDetails) {
+    if (typeof gtag === 'function') {
+      gtag('event', eventName, eventDetails);
+    } else if (window.dataLayer && Array.isArray(window.dataLayer)) {
+      window.dataLayer.push({ event: eventName, ...eventDetails });
+    }
+    console.log("Analytics Event:", eventName, eventDetails);
+  }
+
+  // 2. റെസ്‌പോൺസീവ് സെന്റർ പോയിന്റ് കണക്കാക്കുന്ന ഫങ്ഷൻ
+  function calculateTargetScrollY() {
+    if (!stage) return 0;
+    const rect = stage.getBoundingClientRect();
+    const stageCenterTop = window.scrollY + rect.top + (rect.height / 2);
+    const windowCenter = window.innerHeight / 2;
+    return stageCenterTop - windowCenter;
+  }
+
+  // 3. ബുക്ക് സെന്ററിൽ എത്തിയോ എന്ന് പരിശോധിച്ച് ലോക്ക് ചെയ്യൽ
+  function lockPageAtCenter() {
+    if (!stage) return false;
+
+    targetScrollY = calculateTargetScrollY();
+
+    if (window.scrollY >= targetScrollY) {
+      window.scrollTo(0, targetScrollY);
+      isLockedAtCenter = true;
+
+      if (scrollTimer) clearInterval(scrollTimer);
+
+      // Analytics Event - ബുക്ക് സെന്ററിൽ എത്തി സൈറ്റ് ലോക്ക് ആയി
+      trackEvent('book_center_reached', {
+        'event_category': 'Navigation',
+        'event_label': 'Book Lock Center Point'
+      });
+
+      return true;
+    }
+    return false;
+  }
+
+  // 4. സ്മൂത്ത് ലോ-സ്പീഡ് ഓട്ടോ സ്ക്രോൾ
+  function startSlowScroll() {
+    if (isLockedAtCenter || document.hidden) return;
+    if (scrollTimer) clearInterval(scrollTimer);
+
+    scrollTimer = setInterval(function () {
+      if (lockPageAtCenter()) return;
+      window.scrollBy(0, 1);
+    }, 70);
+  }
+
+  // 5. ടച്ച് ചെയ്യുമ്പോൾ 3 സെക്കൻഡ് പോസ് ആകൽ
+  function pauseAndResume() {
+    if (isLockedAtCenter) return;
+
+    clearInterval(scrollTimer);
+    clearTimeout(resumeTimeout);
+
+    // Analytics Event - യൂസർ ടച്ച് ചെയ്ത് പോസ് അടിച്ചു
+    trackEvent('auto_scroll_paused', {
+      'event_category': 'Interaction',
+      'pause_duration': '3s'
+    });
+
+    resumeTimeout = setTimeout(function () {
+      if (!isLockedAtCenter) {
+        // Analytics Event - 3 സെക്കൻഡിന് ശേഷം താനേ സ്ക്രോൾ പുനരാരംഭിച്ചു
+        trackEvent('auto_scroll_resumed', {
+          'event_category': 'Interaction'
+        });
+        startSlowScroll();
+      }
+    }, 3000);
+  }
+
+  // 6. സെന്ററിൽ എത്തിയാൽ സ്ക്രോൾ തടയുന്ന ഫങ്ഷൻ (Page Lock Guard)
+  function enforceLock() {
+    if (isLockedAtCenter) {
+      window.scrollTo(0, targetScrollY);
+    }
+  }
+
+  // റെസ്‌പോൺസീവ് സ്ക്രീൻ റീസൈസ് വരുമ്പോൾ വീണ്ടും കണക്കാക്കാൻ
+  window.addEventListener('resize', function () {
+    if (isLockedAtCenter) {
+      targetScrollY = calculateTargetScrollY();
+      window.scrollTo(0, targetScrollY);
+    }
+  });
+
+  // ടാബ് മാറുമ്പോൾ ഓട്ടോ സ്ക്രോൾ പാസ് ചെയ്യൽ (Security/Performance)
+  document.addEventListener('visibilitychange', function () {
+    if (document.hidden) {
+      if (scrollTimer) clearInterval(scrollTimer);
+    } else if (!isLockedAtCenter) {
+      startSlowScroll();
+    }
+  });
+
+  // മാനുവൽ സ്ക്രോൾ കൺട്രോൾസ് തടയാൻ
+  window.addEventListener('scroll', enforceLock, { passive: false });
+  window.addEventListener('touchmove', enforceLock, { passive: false });
+  window.addEventListener('wheel', enforceLock, { passive: false });
+
+  // പോസിങ് ഈവന്റുകൾ
+  window.addEventListener('touchstart', pauseAndResume, { passive: true });
+  window.addEventListener('mousedown', pauseAndResume);
+
+  const slider = document.querySelector('.bas-m-slider');
+  if (slider) {
+    slider.addEventListener('input', pauseAndResume);
+  }
+
+  // ആരംഭിക്കുന്നു
+  startSlowScroll();
+
+})();
+</script>
+
 </body> <!-- ഇതിന് തൊട്ടു മുകളിൽ -->
 </html>
 
