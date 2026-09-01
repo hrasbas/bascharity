@@ -1575,23 +1575,26 @@ END OF BAS ANALYTICS
 <body> 
 
 <div class="header-box">
-<!-- =========================================================
+<!-- =========================================================-->
      BAS PLANETS STYLES (CSS)
-     ========================================================= -->
+   
+   <!-- ========================================================= -->
+<!-- 🪐 BAS CELESTIAL HEADER (WITH FULL ANALYTICS & SECURITY) -->
+<!-- ========================================================= -->
+
 <style>
-  /* 1. കണ്ടെയ്നർ അറേഞ്ച്മെന്റ് */
-  .bas-space-container {
+  /* 1. കണ്ടെയ്നർ (ഗ്ലോബും പ്ലാനറ്റുകളും നിൽക്കുന്ന സ്ഥലം) */
+  .bas-main-header-space {
     position: relative;
     width: 100%;
-    min-height: 280px;
+    min-height: 220px;
     display: flex;
     justify-content: center;
     align-items: center;
-    overflow: visible; /* പ്ലാനറ്റുകൾ അരികുകളിൽ മുറിഞ്ഞുപോകാതിരിക്കാൻ */
-    background: transparent;
+    overflow: visible;
   }
 
-  /* 2. ഗ്രഹങ്ങൾക്ക് പൊതുവായുള്ള ബേസിക് സെറ്റിംഗ്സ് */
+  /* 2. വ്യാഴത്തിനും ശനിക്കും പൊതുവായ സെറ്റിംഗ്സ് */
   .bas-side-planet {
     position: absolute;
     z-index: 10;
@@ -1602,24 +1605,20 @@ END OF BAS ANALYTICS
   }
 
   .bas-side-planet:hover {
-    transform: scale(1.05); /* മൗസ് മുകളിൽ വെക്കുമ്പോൾ ചെറുതായി വലുതാകും */
+    transform: scale(1.05);
   }
-
 
   /* =========================================================
      3. വ്യാഴം ഗ്രഹം (JUPITER - LEFT PLANET)
      ========================================================= */
-
-  /* [വ്യാഴം - പൊസിഷൻ അഡ്ജസ്റ്റ്മെന്റ്] */
   .bas-left-planet {
-    top: 25% !important;   /* [താഴേക്ക്/മുകളിലേക്ക്]: കൂട്ടിയാൽ താഴേക്ക് ഇറങ്ങും, കുറച്ചാൽ മുകളിലേക്ക് കയറും */
-    left: 10px !important;  /* [ഇടത്തോട്ട്/വലത്തോട്ട്]: കുറയ്ക്കുമ്പോൾ കൂടുതൽ ഇടത്തേക്ക് പോകും */
+    top: 35% !important;
+    left: 15px !important;
   }
 
-  /* [വ്യാഴം - പ്ലാനറ്റ് ബോഡി & സൈസ്] */
   .bas-jupiter-body {
-    width: 75px !important;  /* വ്യാഴത്തിന്റെ വീതി */
-    height: 75px !important; /* വ്യാഴത്തിന്റെ ഉയരം */
+    width: 70px !important;
+    height: 70px !important;
     border-radius: 50%;
     position: relative;
     overflow: hidden;
@@ -1629,83 +1628,88 @@ END OF BAS ANALYTICS
     box-shadow: inset -10px -10px 20px rgba(0,0,0,0.8), 0 0 15px rgba(195,142,85,0.4);
   }
 
-  /* [വ്യാഴം - സ്വയം കറങ്ങുന്ന ബാക്ക്ഗ്രൗണ്ട് ടെക്സ്ചർ] */
+  /* വ്യാഴത്തിന്റെ Smooth Rotation (റീസെറ്റ് ആവാത്ത രീതിയിൽ) */
   .bas-jupiter-rotating-bg {
     position: absolute;
     width: 200%;
     height: 100%;
     top: 0;
     left: 0;
-    background: repeating-linear-gradient(
-      180deg,
-      #3d200b 0px,
-      #8b5329 8px,
-      #c38e55 16px,
-      #fff0d4 22px,
-      #c38e55 28px,
-      #8b5329 36px,
-      #3d200b 44px
+    background: linear-gradient(
+      90deg,
+      #3d200b 0%,
+      #8b5329 15%,
+      #c38e55 30%,
+      #fff0d4 45%,
+      #c38e55 60%,
+      #8b5329 75%,
+      #3d200b 90%,
+      #8b5329 100%
     );
-    opacity: 0.85;
-    animation: rotateJupiterBg 8s linear infinite; /* വ്യാഴത്തിന്റെ ബാക്ക്ഗ്രൗണ്ട് സ്വയം കറങ്ങുന്നു */
+    opacity: 0.9;
+    animation: rotateJupiterBg 10s linear infinite !important;
     z-index: 1;
   }
 
-  /* [വ്യാഴം - ഫിക്സഡ് ടെക്സ്റ്റ് (TEXT FIXED)] */
   .bas-jupiter-text {
     position: relative;
-    z-index: 2; /* ടെക്സ്റ്റ് കറങ്ങാതെ മുകളിൽ നിശ്ചലമായി നിൽക്കും */
-    color: #ffffff;
-    font-size: 10px !important;
-    font-weight: 800;
+    z-index: 2;
+    color: #ffffff !important;
+    font-size: 9.5px !important;
+    font-weight: 900 !important;
     text-align: center;
     line-height: 1.1;
     width: 90% !important;
     text-transform: uppercase;
-    text-shadow: 1px 1px 3px rgba(0,0,0,0.9), 0 0 5px rgba(0,0,0,1);
+    text-shadow: 0 0 5px #000000, 0 0 8px #000000, 1px 1px 3px #000000;
     pointer-events: none;
   }
 
-
   /* =========================================================
-     4. ശനി ഗ്രഹം (SATURN - RIGHT PLANET)
+     4. ശനി ഗ്രഹം (SATURN WITH MOON - RIGHT PLANET)
      ========================================================= */
-
-  /* [ശനി - പൊസിഷൻ അഡ്ജസ്റ്റ്മെന്റ്] */
   .bas-right-planet {
-    top: 55% !important;    /* [താഴേക്ക്/മുകളിലേക്ക്]: വ്യാഴത്തിന് താഴെ ബ്ലാങ്ക് സ്ഥലത്ത് നിൽക്കാൻ 55% കൊടുത്തു */
-    right: 10px !important; /* [ഇടത്തോട്ട്/വലത്തോട്ട്]: കുറയ്ക്കുമ്പോൾ കൂടുതൽ വലത്തേക്ക് പോകും */
+    top: 15% !important;
+    right: 15px !important;
   }
 
-  /* [ശനി - മെയിൻ സിസ്റ്റം കണ്ടെയ്നർ] */
   .bas-saturn-system {
     position: relative;
-    width: 110px !important;
-    height: 90px !important;
+    width: 105px !important;
+    height: 85px !important;
     display: flex;
     align-items: center;
     justify-content: center;
   }
 
-  /* [ശനി - പ്ലാനറ്റ് ബോഡി & സൈസ്] */
+  /* ശനിയുടെ സ്വയം തിരിയൽ */
   .bas-saturn-body-rotating {
-    width: 65px !important;  /* ശനിയുടെ വീതി */
-    height: 65px !important; /* ശനിയുടെ ഉയരം */
+    width: 58px !important;
+    height: 58px !important;
     border-radius: 50%;
-    background: radial-gradient(circle at 30% 30%, #ffeaa7 0%, #dfe6e9 20%, #fdcb6e 40%, #e17055 70%, #2d3436 100%);
     position: absolute;
     z-index: 2;
-    box-shadow: inset -8px -8px 15px rgba(0,0,0,0.7);
+    background: repeating-linear-gradient(
+      180deg,
+      #ffeaa7 0px,
+      #fdcb6e 6px,
+      #e17055 12px,
+      #dfe6e9 18px,
+      #fdcb6e 24px
+    );
+    background-size: 100% 200%;
+    animation: saturnSelfRotate 12s linear infinite;
+    box-shadow: inset -8px -8px 15px rgba(0, 0, 0, 0.7), 0 0 10px rgba(253, 203, 110, 0.4);
   }
 
-  /* [ശനി - വളയങ്ങൾ (SATURN RINGS)] */
+  /* ശനിയുടെ വളയങ്ങൾ */
   .bas-saturn-ring-back,
   .bas-saturn-ring-front {
     position: absolute;
-    width: 115px !important; /* വളയത്തിന്റെ വീതി */
-    height: 24px !important;  /* വളയത്തിന്റെ ഉയരം */
+    width: 105px !important;
+    height: 22px !important;
     border-radius: 50%;
-    border: 4px solid rgba(253, 203, 110, 0.85);
+    border: 3.5px solid rgba(253, 203, 110, 0.85);
     transform: rotate(-15deg);
   }
 
@@ -1719,85 +1723,98 @@ END OF BAS ANALYTICS
     clip-path: inset(50% 0 0 0);
   }
 
-  /* [ശനി - ഉള്ളിലെ SHOP NOW ടെക്സ്റ്റ്] */
+  /* ശനിയെ ചുറ്റുന്ന ഉപഗ്രഹം (Orbiting Moon) */
+  .bas-saturn-moon-orbit {
+    position: absolute;
+    width: 90px;
+    height: 38px;
+    border-radius: 50%;
+    z-index: 4;
+    pointer-events: none;
+    animation: moonOrbit 5s linear infinite;
+  }
+
+  .bas-saturn-moon {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 6.5px;
+    height: 6.5px;
+    background: #ffffff;
+    border-radius: 50%;
+    box-shadow: 0 0 6px #ffffff;
+    transform: translate(-50%, -50%);
+  }
+
   .bas-saturn-stable-text {
     position: absolute;
-    z-index: 4;
-    color: #00ffcc;
-    font-size: 13px !important;
-    font-weight: 900;
+    z-index: 5;
+    color: #00ffcc !important;
+    font-size: 12px !important;
+    font-weight: 900 !important;
     text-align: center;
     line-height: 1.1 !important;
-    text-shadow: 0 0 5px rgba(0,0,0,1), 0 0 8px rgba(0,255,204,0.8);
+    text-shadow: 0 0 5px #000000, 0 0 8px rgba(0, 255, 204, 0.9);
     pointer-events: none;
   }
 
-
-  /* =========================================================
-     5. ആനിമേഷൻ & റെസ്പോൺസീവ്
-     ========================================================= */
+  /* 5. ആനിമേഷൻ ഫ്രെയിമുകൾ */
   @keyframes rotateJupiterBg {
     0% { transform: translateX(0); }
     100% { transform: translateX(-50%); }
   }
 
+  @keyframes saturnSelfRotate {
+    0% { background-position: 0 0; }
+    100% { background-position: 0 100%; }
+  }
+
+  @keyframes moonOrbit {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+
+  /* മൊബൈൽ റെസ്പോൺസീവ് */
   @media (max-width: 480px) {
-    .bas-left-planet {
-      top: 22% !important;
-      left: 5px !important;
-    }
-
-    .bas-right-planet {
-      top: 58% !important;
-      right: 5px !important;
-    }
-
-    .bas-jupiter-body {
-      width: 65px !important;
-      height: 65px !important;
-    }
-
-    .bas-jupiter-text {
-      font-size: 8.5px !important;
-    }
-
-    .bas-saturn-body-rotating {
-      width: 55px !important;
-      height: 55px !important;
-    }
-
-    .bas-saturn-ring-back,
-    .bas-saturn-ring-front {
-      width: 95px !important;
-      height: 20px !important;
-    }
-
-    .bas-saturn-stable-text {
-      font-size: 11px !important;
-    }
+    .bas-left-planet { top: 30% !important; left: 8px !important; }
+    .bas-right-planet { top: 10% !important; right: 8px !important; }
+    .bas-jupiter-body { width: 60px !important; height: 60px !important; }
+    .bas-jupiter-text { font-size: 8px !important; }
+    .bas-saturn-body-rotating { width: 50px !important; height: 50px !important; }
+    .bas-saturn-ring-back, .bas-saturn-ring-front { width: 88px !important; height: 18px !important; }
+    .bas-saturn-moon-orbit { width: 75px; height: 30px; }
+    .bas-saturn-stable-text { font-size: 10px !important; }
   }
 </style>
 
 <!-- =========================================================
-     BAS PLANETS HTML STRUCTURE
+     HTML STRUCTURE
      ========================================================= -->
-<div class="bas-space-container">
+<div class="bas-main-header-space">
 
-  <!-- വ്യാഴം ഗ്രഹം (JUPITER - LEFT PLANET) -->
-  <div class="bas-side-planet bas-left-planet" id="jupiterPlanet" role="button" aria-label="Jupiter Planet">
+  <!-- 1. വ്യാഴം (JUPITER - LEFT) -->
+  <div class="bas-side-planet bas-left-planet" id="jupiterPlanet" role="button" aria-label="Jupiter Planet" data-planet="Jupiter">
     <div class="bas-jupiter-body">
       <div class="bas-jupiter-rotating-bg"></div>
       <div class="bas-jupiter-text">50,000+<br>SHOPS<br>HERE</div>
     </div>
   </div>
-     <!-- CENTER GLOBE CANVAS -->
-  <div id="logo-space"></div>
-<!-- ശനി ഗ്രഹം (SATURN - RIGHT PLANET) -->
-  <div class="bas-side-planet bas-right-planet" id="saturnPlanet" role="button" aria-label="Saturn Planet">
+
+  <!-- 2. ഒറിജിനൽ 3D ഗ്ലോബും ചന്ദ്രനും ലോഡ് ചെയ്യുന്ന മെയിൻ കണ്ടെയ്നർ -->
+  <div class="logo-space" id="logoSpace"></div>
+
+  <!-- 3. ശനി (SATURN WITH MOON - RIGHT) -->
+  <div class="bas-side-planet bas-right-planet" id="saturnPlanet" role="button" aria-label="Saturn Planet" data-planet="Saturn">
     <div class="bas-saturn-system">
       <div class="bas-saturn-ring-back"></div>
       <div class="bas-saturn-body-rotating"></div>
       <div class="bas-saturn-ring-front"></div>
+      
+      <!-- ശനിയെ ചുറ്റുന്ന ഉപഗ്രഹം (Orbiting Moon) -->
+      <div class="bas-saturn-moon-orbit">
+        <div class="bas-saturn-moon"></div>
+      </div>
+
       <div class="bas-saturn-stable-text">SHOP<br>NOW</div>
     </div>
   </div>
@@ -1805,52 +1822,84 @@ END OF BAS ANALYTICS
 </div>
 
 <!-- =========================================================
-     BAS PLANETS CLICK & ANALYTICS JAVASCRIPT
+     JAVASCRIPT (FULL ANALYTICS EVENTS & SECURE CLICK HANDLING)
      ========================================================= -->
 <script>
   (function () {
     'use strict';
 
-    // അനലിറ്റിക്സ് ട്രാക്കിംഗ്
-    function trackEvent(eventName, eventDetails) {
-      console.log(`[Analytics Tracked]: ${eventName}`, eventDetails);
-    }
-
-    // categoryHeading എലിമെന്റിലേക്ക് കൊണ്ടുപോകുന്ന ഫംഗ്ഷൻ
-    function triggerCategoryAction(planetName) {
-      trackEvent('Planet_Clicked', { planet: planetName, timestamp: new Date().toISOString() });
-      
-      var categoryElement = document.getElementById("categoryHeading");
-      if (categoryElement) {
-        // categoryHeading എന്ന സെക്ഷനിലേക്ക് സ്ക്രോൾ ചെയ്യുന്നു
-        categoryElement.scrollIntoView({ behavior: 'smooth' });
-        // ആ എലിമെന്റിൽ ക്ലിക്ക് ഇവന്റ് കൂടി നൽകുന്നു
-        categoryElement.click();
-      } else {
-        console.warn("categoryHeading element found search issue!");
+    // 1. Safe Analytics Tracking Function (Google Analytics / GTM)
+    function trackCelestialEvent(eventName, eventParams) {
+      try {
+        if (typeof gtag === 'function') {
+          gtag('event', eventName, eventParams);
+        } else if (window.dataLayer && Array.isArray(window.dataLayer)) {
+          window.dataLayer.push({
+            event: eventName,
+            ...eventParams
+          });
+        }
+      } catch (e) {
+        console.warn('Analytics Event Error:', e);
       }
     }
 
-    // വ്യാഴവും ശനിയും ബൈൻഡ് ചെയ്യുന്നു
+    // 2. Action Trigger & Click Event Handling
+    function handlePlanetClick(planetName) {
+      // Click Event Track ചെയ്യൽ
+      trackCelestialEvent('celestial_planet_click', {
+        planet_name: planetName,
+        target_action: 'scroll_to_category'
+      });
+
+      var categoryElement = document.getElementById("categoryHeading");
+      if (categoryElement) {
+        categoryElement.scrollIntoView({ behavior: 'smooth' });
+        categoryElement.click();
+
+        trackCelestialEvent('category_auto_trigger', {
+          triggered_by: planetName
+        });
+      }
+    }
+
+    // 3. Elements Initialization & Secure Event Binding
     var jupiter = document.getElementById('jupiterPlanet');
     var saturn = document.getElementById('saturnPlanet');
 
     if (jupiter) {
       jupiter.addEventListener('click', function () {
-        triggerCategoryAction('Jupiter');
+        handlePlanetClick('Jupiter');
       });
     }
 
     if (saturn) {
       saturn.addEventListener('click', function () {
-        triggerCategoryAction('Saturn');
+        handlePlanetClick('Saturn');
       });
     }
 
+    // 4. View Impression Event Tracking (ഉപയോക്താവ് കാണുമ്പോൾ Event അയക്കാൻ)
+    if ('IntersectionObserver' in window) {
+      var observer = new IntersectionObserver(function (entries, obs) {
+        entries.forEach(function (entry) {
+          if (entry.isIntersecting) {
+            var planetName = entry.target.getAttribute('data-planet') || 'Unknown';
+            trackCelestialEvent('celestial_planet_view', {
+              planet_name: planetName
+            });
+            obs.unobserve(entry.target); // ഒരിക്കൽ View ട്രാക്ക് ചെയ്താൽ പിന്നീട് ട്രാക്ക് ചെയ്യാതിരിക്കാൻ
+          }
+        });
+      }, { threshold: 0.5 });
+
+      if (jupiter) observer.observe(jupiter);
+      if (saturn) observer.observe(saturn);
+    }
   })();
 </script>
-
-  <div class="heading">
+<!-- ========================================================= -->
+   <div class="heading">
 
     <div class="food">
       FOOD WITHOUT SPENDING MONEY
