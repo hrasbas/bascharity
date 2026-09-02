@@ -1,4 +1,4 @@
- <!DOCTYPE html>
+    <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8" />
@@ -14,69 +14,63 @@
 
 html, body { 
   width: 100%; 
-  height: 100vh; 
-  overflow: hidden; /* 100% സൂമിൽ സ്ക്രോൾ ബാറുകൾ ഒഴിവാക്കാൻ */
+  height: 100%; 
 }
 
 body {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  justify-content: flex-start;
   align-items: center;
   background: radial-gradient(circle at top, #1e293b 0%, #0f172a 54%, #020617 100%);
   font-family: Georgia, serif;
-  padding: 10px;
+  padding:20px;
+  overflow: visible !important;
 }
 
-/* 100% Zoom-ൽ കൃത്യമായി ഫിറ്റ് ആകാനും Original Dynamic Aspect Ratio നിലനിർത്താനും റെസ്പോൺസീവ് ആക്കി */
 .stage {
   position: relative;
+  left: 50px;
 
-  /* വീതി കൂട്ടി, നീളം proportionally കുറച്ചു */
-  width: min(530px, 92vw);
-  height: min(570px, 78vh);
+  width:480px;
+  height:1000px;
+  top:2.5cm;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 3cm;
 
   perspective: 2500px;
   perspective-origin: 50% 50%;
   transform-style: preserve-3d;
   touch-action: none;
+  transform: translateX(-40px) rotateY(-18deg) rotateX(6deg);
+}
 
-  /* പുസ്തകത്തിന് ചെറിയ natural tilt */
-transform: translateX(10px) rotateY(-12deg) rotateX(3deg);
-
- 
 .back-cover-base {
   position: absolute;
-  top: -3mm;
-  left: -2mm;
-  width: calc(100% + 5mm);
-  height: calc(100% + 6mm);
-  background: linear-gradient(135deg, #cbd5e1 0%, #94a3b8 100%);
-  border: 2px solid #64748b;
-  border-radius: 4px;
-  box-shadow: -15px 20px 35px rgba(0,0,0,0.6);
-  z-index: 0;
+  top: -2mm;
+  left: 0;
+  width: calc(100% + 2mm);
+  height: calc(100% + 4mm);
+  background: linear-gradient(135deg, #d7e1ee 0%, #c7d2e0 100%);
+  border: 1.5px solid #94a3b8;
+  border-radius: 2px;
+  box-shadow: inset 0 0 34px rgba(0,0,0,.12), inset -16px 0 30px rgba(0,0,0,.08), -6px 12px 28px rgba(0,0,0,0.35);
+  z-index: 1;
+  cursor: pointer;
+}
 
 .spine {
   position: absolute;
-  left: -20px;
-  top: -1.5mm;
-
-  width: 20px;
-  height: calc(100% +2mm);
-
-  background: linear-gradient(
-    to right,
-    #526274 0%,
-    #8191a3 42%,
-    #cbd5e1 100%
-  );
-
+  left: -14px;
+  top: -2mm;
+  width: 14px;
+  height: calc(100% + 4mm);
+  background: linear-gradient(to right, #64748b, #94a3b8, #cbd5e1);
   border-left: 1px solid #475569;
   border-radius: 4px 0 0 4px;
-  box-shadow: -2px 0 6px rgba(0,0,0,.18);
-
-  z-index:100px;
-  pointer-events: none;
+  box-shadow: -2px 0 8px rgba(0,0,0,.2);
+  z-index: 80;
 }
 
 .page {
@@ -95,14 +89,8 @@ transform: translateX(10px) rotateY(-12deg) rotateX(3deg);
   background:
     radial-gradient(circle at 30% 20%, rgba(255,255,255,.75), transparent 40%),
     linear-gradient(135deg, #e2e8f0 0%, #cbd5e1 100%);
-
-  /* cover-ൽ മാത്രം 3 side 1.5mm board */
-  border: 1.5mm solid #94a3b8;
-  border-left: 0;
-
-  box-shadow:
-    inset 0 0 24px rgba(0,0,0,.10),
-    inset 7px 0 10px rgba(0,0,0,.08);
+  border: 2px solid #94a3b8;
+  box-shadow: inset 0 0 34px rgba(0,0,0,.10), inset -16px 0 30px rgba(0,0,0,.06);
 }
 
 .cover-title {
@@ -119,8 +107,8 @@ transform: translateX(10px) rotateY(-12deg) rotateX(3deg);
 }
 
 .brand-logo {
-  width: min(50px, 9vw);
-  height: min(50px, 9vw);
+  width: min(60px, 11vw);
+  height: min(60px, 11vw);
   margin-bottom: 4px;
   fill: #000000;
   filter: drop-shadow(0 2px 4px rgba(212,175,55,0.5));
@@ -128,7 +116,7 @@ transform: translateX(10px) rotateY(-12deg) rotateX(3deg);
 
 .main-title-unified {
   font-family: 'Arial Black', Gadget, sans-serif;
-  font-size: clamp(14px, 2.2vw, 22px);
+  font-size: clamp(16px, 5vw, 24px);
   font-weight: 900;
   color: #000000;
   letter-spacing: 1px;
@@ -143,7 +131,7 @@ transform: translateX(10px) rotateY(-12deg) rotateX(3deg);
 
 .sub-title-dark {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  font-size: clamp(8px, 1.1vw, 11px);
+  font-size: clamp(8px, 2.3vw, 11px);
   font-weight: 900;
   color: #000000;
   letter-spacing: 1px;
@@ -156,8 +144,8 @@ transform: translateX(10px) rotateY(-12deg) rotateX(3deg);
 
 .author-handwriting-3d {
   font-family: 'Dancing Script', 'Brush Script MT', cursive;
-  font-size: clamp(16px, 2.4vw, 24px);
-  font-weight: 800;
+  font-size: clamp(18px, 5.2vw, 26px);
+  font-weight:800;
   font-style: italic;
   color: #1a1a1a;
   letter-spacing: 1px;
@@ -182,6 +170,7 @@ transform: translateX(10px) rotateY(-12deg) rotateX(3deg);
   -webkit-backface-visibility: hidden;
   pointer-events: none;
 }
+
 .page-face::before {
   content: '';
   position: absolute;
@@ -202,7 +191,7 @@ transform: translateX(10px) rotateY(-12deg) rotateX(3deg);
   text-align: left;
 }
 .content-title {
-  font-size: clamp(11px, 1.4vw, 14px);
+  font-size: clamp(12px, 3vw, 15px);
   color: #000000;
   font-weight: 900;
   border-bottom: 2px solid #cbd5e1;
@@ -212,19 +201,19 @@ transform: translateX(10px) rotateY(-12deg) rotateX(3deg);
   letter-spacing: .5px;
 }
 .content-body {
-  font-size: clamp(11px, 1.2vw, 13px);
-  line-height: 1.45;
+  font-size: clamp(14px, 2.6vw, 13px);
+  line-height: 1.4;
   color: #1e293b;
   text-align: justify;
 }
-.content-body p { margin-bottom: 6px; }
+.content-body p { margin-bottom: 4px; }
 
 .index-list { list-style: none; padding: 0; margin-top: 2px; }
 .index-item {
   display: flex;
   justify-content: space-between;
-  font-size: clamp(8px, 1.0vw, 10.5px);
-  padding: 2px 0;
+  font-size: clamp(8.5px, 2.2vw, 10.5px);
+  padding: 2.5px 0;
   border-bottom: 1px dashed #cbd5e1;
   color: #000000;
   font-weight: 700;
@@ -235,18 +224,18 @@ transform: translateX(10px) rotateY(-12deg) rotateX(3deg);
   justify-content: space-between;
   align-items: center;
   border-top: 1px dashed #cbd5e1;
-  padding-top: 4px;
+  padding-top: 2px;
   margin-top: 2px;
 }
 
 .page-number {
-  font-size: clamp(9px, 1.0vw, 11px);
+  font-size: clamp(12px, 1.8vw, 10px);
   color: #000000;
   font-weight: 900;
   font-family: sans-serif;
 }
 .flip-hint {
-  font-size: clamp(8px, 0.9vw, 10px);
+  font-size: clamp(8px, 1.8vw, 10px);
   color: #2563eb;
   font-weight: 700;
   font-family: sans-serif;
@@ -278,6 +267,7 @@ transform: translateX(10px) rotateY(-12deg) rotateX(3deg);
   box-shadow: -10px 10px 22px rgba(0,0,0,.35);
 }
 
+/* 1. Flexible Opening Hint Animation (Peeking) */
 @keyframes peekAnimation {
   0%   { transform: rotateY(0deg); }
   20%  { transform: rotateY(-22deg); }
@@ -295,10 +285,7 @@ transform: translateX(10px) rotateY(-12deg) rotateX(3deg);
 <body>
 
 <div class="stage" id="bookStage">
-  <div class="back-cover-base">
-  
-</div>
-
+  <div class="back-cover-base" id="blueCoverBase"></div>
   <div class="spine"></div>
 </div>
 
@@ -514,7 +501,7 @@ const pagesData = [
       <p>Users are expected to interact with others politely and must not post or share unlawful, abusive, offensive, misleading, or harmful content through our platform.</p>
       <p>Any attempt to misuse the website, violate the rights of others, distribute malicious software, or interfere with the operation of the platform may result in restricted access or other appropriate action.</p>
       <p>We encourage positive participation that reflects compassion, integrity, and respect for people of all backgrounds, cultures, and beliefs.</p>
-      <p><strong>Together, we can build a safe, welcoming, and trustworthy community for everyone.</strong></p>
+      <p>Together, we can build a safe, welcoming, and trustworthy community for everyone.</p>
     `
   },
   {
@@ -624,9 +611,6 @@ function makePage(data, index) {
       <div class="wrinkle-fold"></div>
       <div class="corner-curl"></div>
     `;
-    
-</div>
-
   }
   return page;
 }
@@ -682,6 +666,7 @@ function resetAutoCloseTimer() {
   if (autoCloseTimer) clearTimeout(autoCloseTimer);
   if (isBookOpen()) {
     stopPeekInterval();
+    // 2 Minutes = 120000 ms Auto-Close
     autoCloseTimer = setTimeout(() => {
       closeAllPages();
     }, 120000);
@@ -690,7 +675,13 @@ function resetAutoCloseTimer() {
   }
 }
 
-window.addEventListener('scroll', resetAutoCloseTimer, { passive: true });
+// Close Book on Screen Scroll
+window.addEventListener('scroll', () => {
+  if (isBookOpen()) {
+    closeAllPages();
+  }
+}, { passive: true });
+
 window.addEventListener('touchmove', resetAutoCloseTimer, { passive: true });
 window.addEventListener('mousemove', resetAutoCloseTimer, { passive: true });
 
@@ -796,8 +787,74 @@ pages.forEach((page) => {
   page.addEventListener('pointercancel', finishTurn);
 });
 
+// Double Swipe Logic on Blue Base Cover (അവസാന നീല അട്ടി)
+const blueCover = document.getElementById('blueCoverBase');
+let coverSwipeCount = 0;
+let coverStartX = 0;
+let coverSwipeTimer = null;
+
+blueCover.addEventListener('pointerdown', (e) => {
+  coverStartX = getPoint(e).x;
+});
+
+blueCover.addEventListener('pointerup', (e) => {
+  const endX = getPoint(e).x;
+  const diffX = Math.abs(endX - coverStartX);
+
+  // If dragged/swiped horizontally more than 30px
+  if (diffX > 30) {
+    coverSwipeCount++;
+    if (coverSwipeTimer) clearTimeout(coverSwipeTimer);
+
+    if (coverSwipeCount >= 2) {
+      closeAllPages();
+      coverSwipeCount = 0;
+    } else {
+      coverSwipeTimer = setTimeout(() => {
+        coverSwipeCount = 0;
+      }, 1200); // 1.2s time limit for second swipe
+    }
+  }
+});
+
 syncStack();
 startPeekInterval();
+
+// Analytics Tracking
+let sessionStartTime = Date.now();
+let bookOpenCount = 0;
+
+function trackBookOpen() {
+  bookOpenCount++;
+  if (typeof gtag === 'function') {
+    gtag('event', 'book_open', { 'event_category': 'BAS Manual', 'open_count': bookOpenCount });
+  }
+}
+
+function trackPageView(pageIndex) {
+  let pageName = pageIndex === 1 ? 'Cover Page' : 'Page ' + (pageIndex - 1);
+  if (typeof gtag === 'function') {
+    gtag('event', 'page_view_manual', { 'event_category': 'BAS Manual Page Turn', 'page_number': pageName, 'event_label': pageName });
+  }
+}
+
+pages.forEach((page, index) => {
+  page.addEventListener('pointerup', () => {
+    setTimeout(() => {
+      if (page.dataset.state === 'open') {
+        if (bookOpenCount === 0) trackBookOpen();
+        trackPageView(index + 1);
+      }
+    }, 700);
+  });
+});
+
+window.addEventListener('beforeunload', () => {
+  let timeSpentSeconds = Math.round((Date.now() - sessionStartTime) / 1000);
+  if (typeof gtag === 'function') {
+    gtag('event', 'time_spent_manual', { 'event_category': 'BAS Manual Engagement', 'time_in_seconds': timeSpentSeconds, 'event_label': timeSpentSeconds + ' seconds' });
+  }
+});
 </script>
 </body>
 </html>
