@@ -8210,14 +8210,21 @@ document.addEventListener("DOMContentLoaded", function () {
 })();
 </script>
     <style>
-  #stage, .stage, iframe {
-    margin-left: auto !important;
-    margin-right: 20px !important;
-    max-width: 85vw !important;
-    display: block !important;
-  }
-</style>
+html, body {
+  height: auto;
+  min-height: auto;
+}
 
+body {
+  margin: 0 !important;
+  padding: 0 !important;
+  padding-bottom: 0 !important;
+}
+
+body > *:last-child {
+  margin-bottom: 0 !important;
+}
+</style>
 </body> <!-- ഇതിന് തൊട്ടു മുകളിൽ -->
 </html>
 
