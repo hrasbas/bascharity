@@ -45,32 +45,33 @@ body {
   touch-action: none;
   transform: translateX(-40px) rotateY(-18deg) rotateX(6deg);
 }
-
 .back-cover-base {
   position: absolute;
-  top: -2mm;
-  left: 0;
-  width: calc(100% + 2mm);
-  height: calc(100% + 4mm);
-  background: linear-gradient(135deg, #d7e1ee 0%, #c7d2e0 100%);
-  border: 1px solid #94a3b8;
-  border-radius: 2px;
-  box-shadow: inset 0 0 10px rgba(0,0,0,.12), inset -16px 0 30px rgba(0,0,0,.08), -6px 12px 28px rgba(0,0,0,0.35);
+
+  /* 1. അട്ടിയുടെ കൃത്യമായ സൈസും തള്ളിനിൽപ്പും (Overhang) */
+  top: -1.5mm !important;
+  left: -1.5mm !important;
+  width: calc(100% + 3mm) !important;
+  height: calc(100% + 3mm) !important;
+
+  /* 2. ബുക്ക് തുറക്കുമ്പോൾ ബാക്ക്ഗ്രൗണ്ട് കളർ വരാതെ സ്പൈനിൽ വെറും ഷാഡോ മാത്രം വരാൻ */
+  background: transparent !important;
+
+  /* 3. മൂന്ന് വശത്തും ചെറിയ അളവിലുള്ള പ്രൊപ്പോഷനേറ്റ് സ്റ്റിച്ചിങ് (Dashed Border) */
+  border: 1px dashed rgba(148, 163, 184, 0.7) !important;
+
+  /* 4. ബൈൻഡിങ് (Left) വശത്ത് തുന്നലിന് അൽപ്പം കൂടുതൽ കനം നൽകാൻ */
+  border-left: 2px dashed rgba(148, 163, 184, 0.9) !important;
+
+  /* 5. കോർണറുകളിലെ റെസ്പോൺസീവ് ആയ റൗണ്ടിങ് */
+  border-radius: 2px !important;
+
+  /* 6. സ്പൈനിൽ പേജിന്റെ ഉള്ളിലേക്ക് വരുന്ന പ്രകൃതിദത്തമായ ഇൻസൈഡ് ഷാഡോ */
+  box-shadow: inset 8px 0 12px -3px rgba(0, 0, 0, 0.25) !important;
+
+  /* 7. മറ്റ് എലിമെന്റുകൾക്ക് മുകളിൽ കൃത്യമായി നിൽക്കാൻ */
   z-index: 1;
   cursor: pointer;
-}
-
-.spine {
-  position: absolute;
-  left: -14px;
-  top: -2mm;
-  width: 14px;
-  height: calc(100% + 4mm);
-  background: linear-gradient(to right, #64748b, #94a3b8, #cbd5e1);
-  border-left: 1px solid #475569;
-  border-radius: 4px 0 0 4px;
-  box-shadow: -2px 0 8px rgba(0,0,0,.2);
-  z-index: 80;
 }
 
 .page {
