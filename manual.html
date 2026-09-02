@@ -27,24 +27,36 @@ body {
   padding:20px;
   overflow: visible !important;
 }
-
+/* ബുക്ക് സ്ഥിതിചെയ്യുന്ന ഫ്രെയിം (വലിപ്പം കൂട്ടാനും ചരിക്കാനും) */
 .stage {
   position: relative;
-  left: 50px;
-
-  width: 280px;
-  height: 420px;
-  top: 2.5cm;
+  width: 340px !important;            /* ബുക്കിന്റെ വലിപ്പം കൂട്ടിയത് (ആവശ്യമെങ്കിൽ മാറ്റാം) */
+  height: 500px !important;           /* പേജുകൾ കൊള്ളാനായി ഹൈറ്റ് കൂട്ടിയത് */
   margin-left: auto;
   margin-right: auto;
-  margin-bottom:25px;
-
-  perspective: 2500px;
-  perspective-origin: 50% 50%;
-  transform-style: preserve-3d;
-  touch-action: none;
-  transform: translateX(-40px) rotateY(-18deg) rotateX(6deg);
+  transform: rotate(-1.5deg) !important; /* പ്രൊഫഷണൽ ലുക്കിനായി ബുക്ക് അല്പം ചരിച്ചത് */
 }
+
+/* കവറിന്റെയും ബൈൻഡിങ്ങിന്റെയും ഡിസൈൻ */
+.back-cover-base {
+  position: absolute;
+  top: -2mm;
+  left: 0;
+  width: calc(100% + 2mm);
+  height: calc(100% + 4mm);
+  
+  /* നിങ്ങളുടെ ഒറിജിനൽ കവർ കളർ തന്നെ നിലനിർത്തുന്നു */
+  border: 1.5px solid #94a3b8;        /* മൂന്ന് വശത്തെയും 1.5mm സ്റ്റിച്ചിങ്/ലൈൻ */
+  border-left: 5px solid #94a3b8;     /* ബൈൻഡിങ് വശത്ത് മാത്രം വീതി കൂട്ടിയത് */
+  border-radius: 2px;
+  
+  /* നിങ്ങൾ ഓക്കെ പറഞ്ഞ പെർഫെക്റ്റ് ഇൻസൈഡ് ഷാഡോ */
+  box-shadow: inset 0 0 34px rgba(0, 0, 0, 0.45);
+  
+  z-index: 1;
+  cursor: pointer;
+}
+
 .back-cover-base {
   position: absolute;
 
