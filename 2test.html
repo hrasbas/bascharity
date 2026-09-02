@@ -1,4 +1,4 @@
- <!DOCTYPE html>
+   <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8" />
@@ -57,6 +57,7 @@ body {
   border-radius: 2px;
   box-shadow: inset 0 0 34px rgba(0,0,0,.12), inset -16px 0 30px rgba(0,0,0,.08), -6px 12px 28px rgba(0,0,0,0.35);
   z-index: 1;
+  cursor: pointer;
 }
 
 .spine {
@@ -284,7 +285,7 @@ body {
 <body>
 
 <div class="stage" id="bookStage">
-  <div class="back-cover-base"></div>
+  <div class="back-cover-base" id="blueCoverBase"></div>
   <div class="spine"></div>
 </div>
 
@@ -500,7 +501,7 @@ const pagesData = [
       <p>Users are expected to interact with others politely and must not post or share unlawful, abusive, offensive, misleading, or harmful content through our platform.</p>
       <p>Any attempt to misuse the website, violate the rights of others, distribute malicious software, or interfere with the operation of the platform may result in restricted access or other appropriate action.</p>
       <p>We encourage positive participation that reflects compassion, integrity, and respect for people of all backgrounds, cultures, and beliefs.</p>
-      <p><strong>Together, we can build a safe, welcoming, and trustworthy community for everyone.</strong></p>
+      <p>Together, we can build a safe, welcoming, and trustworthy community for everyone.</p>
     `
   },
   {
@@ -665,7 +666,7 @@ function resetAutoCloseTimer() {
   if (autoCloseTimer) clearTimeout(autoCloseTimer);
   if (isBookOpen()) {
     stopPeekInterval();
-    // 2 Minutes = 120000 ms
+    // 2 Minutes = 120000 ms Auto-Close
     autoCloseTimer = setTimeout(() => {
       closeAllPages();
     }, 120000);
@@ -674,8 +675,13 @@ function resetAutoCloseTimer() {
   }
 }
 
-// Reset timer on Scroll or Touch/Mouse Movement
-window.addEventListener('scroll', resetAutoCloseTimer, { passive: true });
+// Close Book on Screen Scroll
+window.addEventListener('scroll', () => {
+  if (isBookOpen()) {
+    closeAllPages();
+  }
+}, { passive: true });
+
 window.addEventListener('touchmove', resetAutoCloseTimer, { passive: true });
 window.addEventListener('mousemove', resetAutoCloseTimer, { passive: true });
 
@@ -781,8 +787,74 @@ pages.forEach((page) => {
   page.addEventListener('pointercancel', finishTurn);
 });
 
+// Double Swipe Logic on Blue Base Cover (അവസാന നീല അട്ടി)
+const blueCover = document.getElementById('blueCoverBase');
+let coverSwipeCount = 0;
+let coverStartX = 0;
+let coverSwipeTimer = null;
+
+blueCover.addEventListener('pointerdown', (e) => {
+  coverStartX = getPoint(e).x;
+});
+
+blueCover.addEventListener('pointerup', (e) => {
+  const endX = getPoint(e).x;
+  const diffX = Math.abs(endX - coverStartX);
+
+  // If dragged/swiped horizontally more than 30px
+  if (diffX > 30) {
+    coverSwipeCount++;
+    if (coverSwipeTimer) clearTimeout(coverSwipeTimer);
+
+    if (coverSwipeCount >= 2) {
+      closeAllPages();
+      coverSwipeCount = 0;
+    } else {
+      coverSwipeTimer = setTimeout(() => {
+        coverSwipeCount = 0;
+      }, 1200); // 1.2s time limit for second swipe
+    }
+  }
+});
+
 syncStack();
 startPeekInterval();
+
+// Analytics Tracking
+let sessionStartTime = Date.now();
+let bookOpenCount = 0;
+
+function trackBookOpen() {
+  bookOpenCount++;
+  if (typeof gtag === 'function') {
+    gtag('event', 'book_open', { 'event_category': 'BAS Manual', 'open_count': bookOpenCount });
+  }
+}
+
+function trackPageView(pageIndex) {
+  let pageName = pageIndex === 1 ? 'Cover Page' : 'Page ' + (pageIndex - 1);
+  if (typeof gtag === 'function') {
+    gtag('event', 'page_view_manual', { 'event_category': 'BAS Manual Page Turn', 'page_number': pageName, 'event_label': pageName });
+  }
+}
+
+pages.forEach((page, index) => {
+  page.addEventListener('pointerup', () => {
+    setTimeout(() => {
+      if (page.dataset.state === 'open') {
+        if (bookOpenCount === 0) trackBookOpen();
+        trackPageView(index + 1);
+      }
+    }, 700);
+  });
+});
+
+window.addEventListener('beforeunload', () => {
+  let timeSpentSeconds = Math.round((Date.now() - sessionStartTime) / 1000);
+  if (typeof gtag === 'function') {
+    gtag('event', 'time_spent_manual', { 'event_category': 'BAS Manual Engagement', 'time_in_seconds': timeSpentSeconds, 'event_label': timeSpentSeconds + ' seconds' });
+  }
+});
 </script>
 </body>
 </html>
