@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>BAS CHARITY INTERNATIONAL - Zoomable Book</title>
+<title>BAS CHARITY INTERNATIONAL - Fixed Touch & Zoom Book</title>
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -33,25 +33,25 @@ body {
   padding: 10px;
 }
 
-/* Book Stage Container - initially small, fully proportional */
+/* Book Stage Container */
 .stage {
   position: relative;
-  width: min(260px, 42vw);
-  height: min(370px, 55vh);
+  width: min(500px, 90vw);
+  height: min(660px, 82vh);
   perspective: 2000px;
   perspective-origin: 50% 50%;
   transform-style: preserve-3d;
   touch-action: none;
-  transform: rotateY(-6deg) rotateX(2deg);
-  transition: all 0.5s cubic-bezier(0.2, 0.8, 0.2, 1);
+  
+  /* ചെറുതായിരിക്കുമ്പോൾ ഉള്ള ശരിയായ Scale */
+  transform: scale(0.55) rotateY(-6deg) rotateX(2deg);
+  transition: transform 0.4s cubic-bezier(0.2, 0.8, 0.2, 1);
   cursor: pointer;
 }
 
-/* Zoomed state when touched */
+/* Zoomed State */
 .stage.zoomed {
-  width: min(500px, 92vw);
-  height: min(660px, 82vh);
-  transform: rotateY(0deg) rotateX(0deg);
+  transform: scale(1) rotateY(0deg) rotateX(0deg);
   z-index: 1000;
 }
 
@@ -144,7 +144,7 @@ body {
 
 .main-title {
   font-family: 'Cinzel', serif;
-  font-size: clamp(12px, 2vw, 20px);
+  font-size: clamp(14px, 2vw, 20px);
   font-weight: 800;
   color: #0f172a;
   letter-spacing: 1px;
@@ -153,7 +153,7 @@ body {
 
 .sub-title {
   font-family: sans-serif;
-  font-size: clamp(7px, 0.9vw, 9.5px);
+  font-size: clamp(8px, 0.9vw, 9.5px);
   font-weight: 700;
   color: #475569;
   letter-spacing: 1.5px;
@@ -165,7 +165,7 @@ body {
 
 .author-name {
   font-family: 'Dancing Script', cursive;
-  font-size: clamp(14px, 2.2vw, 24px);
+  font-size: clamp(16px, 2.2vw, 24px);
   font-weight: 700;
   color: #1e293b;
 }
@@ -319,16 +319,6 @@ const pagesData = [
 
 const stage = document.getElementById('bookStage');
 
-// Toggle Zoom Logic
-stage.addEventListener('click', (e) => {
-  e.stopPropagation();
-  stage.classList.add('zoomed');
-});
-
-document.addEventListener('click', () => {
-  stage.classList.remove('zoomed');
-});
-
 function createPageElement(data, index) {
   const page = document.createElement('div');
   page.className = 'page' + (index === 0 ? ' cover-page' : '');
@@ -385,6 +375,7 @@ const pages = Array.from(document.querySelectorAll('.page'));
 let activePage = null;
 let startX = 0;
 let currentRotation = 0;
+let isDragging = false;
 
 function updateStack() {
   pages.forEach((page, i) => {
@@ -399,19 +390,37 @@ function updateStack() {
   });
 }
 
+// Global Touch / Zoom Logic
+stage.addEventListener('pointerdown', (e) => {
+  // പുസ്തകം ചെറുതായിരിക്കുകയാണെങ്കിൽ തൊട്ട ഉടൻ തന്നെ Zoom ഇൻ ആകുന്നു
+  if (!stage.classList.contains('zoomed')) {
+    e.stopPropagation();
+    stage.classList.add('zoomed');
+    return;
+  }
+});
+
 pages.forEach((page) => {
   page.addEventListener('pointerdown', (e) => {
+    // പുസ്തകം വലുതായിരിക്കുമ്പോൾ (zoomed) മാത്രമേ പേജുകൾ ഫ്ലിപ്പ് ചെയ്യാൻ സാധിക്കൂ
+    if (!stage.classList.contains('zoomed')) return;
+
     activePage = page;
     startX = e.clientX;
+    isDragging = false;
     currentRotation = page.dataset.state === 'open' ? -180 : 0;
     page.style.transition = 'none';
     page.setPointerCapture(e.pointerId);
   });
 
   page.addEventListener('pointermove', (e) => {
-    if (activePage !== page) return;
+    if (activePage !== page || !stage.classList.contains('zoomed')) return;
     const deltaX = e.clientX - startX;
     
+    if (Math.abs(deltaX) > 10) {
+      isDragging = true;
+    }
+
     if (page.dataset.state === 'open') {
       currentRotation = -180 + Math.min(180, Math.max(0, deltaX * 0.6));
     } else {
@@ -426,8 +435,16 @@ pages.forEach((page) => {
     page.style.transform = `rotateY(${currentRotation}deg)`;
   });
 
-  const handlePointerUp = () => {
+  const handlePointerUp = (e) => {
     if (activePage !== page) return;
+
+    // വലുതായിരിക്കുമ്പോൾ ഡ്രാഗ് ചെയ്യാതെ വെറുതെ തൊട്ടാൽ (Tap) പഴയപോലെ ചെറുതാവുക (Zoom Out)
+    if (!isDragging && stage.classList.contains('zoomed')) {
+      stage.classList.remove('zoomed');
+      activePage = null;
+      return;
+    }
+
     page.style.transition = 'transform .6s cubic-bezier(.2, .8, .2, 1)';
     const shadow = page.querySelector('.page-shadow');
     if (shadow) shadow.style.opacity = '0';
