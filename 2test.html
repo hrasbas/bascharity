@@ -1,4 +1,4 @@
-  <!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8" />
@@ -15,7 +15,6 @@
 html, body { 
   width: 100%; 
   height: 100%; 
-  overflow: hidden !important; 
 }
 
 body {
@@ -25,25 +24,27 @@ body {
   align-items: center;
   background: radial-gradient(circle at top, #1e293b 0%, #0f172a 54%, #020617 100%);
   font-family: Georgia, serif;
-  padding: 0;
-  overflow-y: auto; /* പുസ്തകത്തിന്റെ വലിപ്പം കൂടുമ്പോൾ സ്ക്രീനിൽ ഒതുങ്ങിപ്പോകാതിരിക്കാൻ */
+  padding:20px;
+  overflow: visible !important;
 }
 
 .stage {
   position: relative;
-  width: min(95vw, 480px);
-  height: 900px !important;   /* ഇവിടെ കൃത്യമായി 650px ലഭിക്കും */
-  margin-top: 2.5cm !important;
-  margin-bottom: 20px;
+  left: 50px;
+
+  width:480px;
+  height:1000px;
+  top:2.5cm;
   margin-left: auto;
   margin-right: auto;
+  margin-bottom: 3cm;
+
   perspective: 2500px;
   perspective-origin: 50% 50%;
   transform-style: preserve-3d;
   touch-action: none;
-  transform: rotateY(-12deg) rotateX(2deg);
+  transform: translateX(-40px) rotateY(-18deg) rotateX(6deg);
 }
-
 
 .back-cover-base {
   position: absolute;
@@ -143,7 +144,7 @@ body {
 .author-handwriting-3d {
   font-family: 'Dancing Script', 'Brush Script MT', cursive;
   font-size: clamp(18px, 5.2vw, 26px);
-  font-weight: 700;
+  font-weight:800;
   font-style: italic;
   color: #1a1a1a;
   letter-spacing: 1px;
@@ -199,7 +200,7 @@ body {
   letter-spacing: .5px;
 }
 .content-body {
-  font-size: clamp(10px, 2.6vw, 13px);
+  font-size: clamp(14px, 2.6vw, 13px);
   line-height: 1.4;
   color: #1e293b;
   text-align: justify;
@@ -227,7 +228,7 @@ body {
 }
 
 .page-number {
-  font-size: clamp(8px, 1.8vw, 10px);
+  font-size: clamp(12px, 1.8vw, 10px);
   color: #000000;
   font-weight: 900;
   font-family: sans-serif;
@@ -263,6 +264,20 @@ body {
   background: linear-gradient(225deg, rgba(255,255,255,.98), rgba(210,200,180,.95));
   clip-path: polygon(100% 0, 0 0, 100% 100%);
   box-shadow: -10px 10px 22px rgba(0,0,0,.35);
+}
+
+/* 1. Flexible Opening Hint Animation (Peeking) */
+@keyframes peekAnimation {
+  0%   { transform: rotateY(0deg); }
+  20%  { transform: rotateY(-22deg); }
+  40%  { transform: rotateY(0deg); }
+  60%  { transform: rotateY(-15deg); }
+  80%  { transform: rotateY(0deg); }
+  100% { transform: rotateY(0deg); }
+}
+
+.page.peek-hint {
+  animation: peekAnimation 1.8s ease-in-out;
 }
 </style>
 </head>
@@ -455,7 +470,7 @@ const pagesData = [
       <p>All original content, designs, logos, graphics, text, software, and other materials created for this website are the intellectual property of BAS Charity International unless otherwise stated.</p>
       <p>Users may view and use the website for personal, non-commercial purposes only. Any unauthorized copying, modification, distribution, commercial use, or creation of derivative works is prohibited without prior written permission.</p>
       <p>If you believe that any content on this website infringes your intellectual property rights, please contact us with the relevant details so that we can review and address the matter promptly.</p>
-      <p><strong>We are committed to protecting intellectual property and respecting the rights of creators, owners, and partners.</strong></p>
+      <p>We are committed to protecting intellectual property and respecting the rights of creators, owners, and partners.</p>
     `
   },
   {
@@ -607,6 +622,63 @@ let startX = 0;
 let startY = 0;
 let currentRotateY = 0;
 
+let peekInterval = null;
+let autoCloseTimer = null;
+
+function isBookOpen() {
+  return pages.some(p => p.dataset.state === 'open');
+}
+
+function closeAllPages() {
+  pages.forEach(p => {
+    p.dataset.state = 'closed';
+  });
+  syncStack();
+  startPeekInterval();
+}
+
+function startPeekInterval() {
+  stopPeekInterval();
+  peekInterval = setInterval(() => {
+    if (!isBookOpen()) {
+      const topClosedPage = pages.find(p => p.dataset.state === 'closed');
+      if (topClosedPage) {
+        topClosedPage.classList.add('peek-hint');
+        setTimeout(() => {
+          topClosedPage.classList.remove('peek-hint');
+        }, 1800);
+      }
+    } else {
+      stopPeekInterval();
+    }
+  }, 5000);
+}
+
+function stopPeekInterval() {
+  if (peekInterval) {
+    clearInterval(peekInterval);
+    peekInterval = null;
+  }
+}
+
+function resetAutoCloseTimer() {
+  if (autoCloseTimer) clearTimeout(autoCloseTimer);
+  if (isBookOpen()) {
+    stopPeekInterval();
+    // 2 Minutes = 120000 ms
+    autoCloseTimer = setTimeout(() => {
+      closeAllPages();
+    }, 120000);
+  } else {
+    startPeekInterval();
+  }
+}
+
+// Reset timer on Scroll or Touch/Mouse Movement
+window.addEventListener('scroll', resetAutoCloseTimer, { passive: true });
+window.addEventListener('touchmove', resetAutoCloseTimer, { passive: true });
+window.addEventListener('mousemove', resetAutoCloseTimer, { passive: true });
+
 function syncStack() {
   pages.forEach((page, i) => {
     const isFlipped = page.dataset.state === 'open';
@@ -661,6 +733,7 @@ function clearPageVisuals(page) {
 
 pages.forEach((page) => {
   page.addEventListener('pointerdown', (e) => {
+    resetAutoCloseTimer();
     const pt = getPoint(e);
     draggingPage = page;
     startX = pt.x;
@@ -701,6 +774,7 @@ pages.forEach((page) => {
     
     draggingPage = null;
     syncStack();
+    resetAutoCloseTimer();
   };
 
   page.addEventListener('pointerup', finishTurn);
@@ -708,6 +782,7 @@ pages.forEach((page) => {
 });
 
 syncStack();
+startPeekInterval();
 </script>
 </body>
 </html>
