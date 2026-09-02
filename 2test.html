@@ -27,7 +27,7 @@ body {
   padding: 10px;
 }
 
-/* 100% Zoom Fit & Dynamic Aspect Ratio */
+/* Stage Area */
 .stage {
   position: relative;
   width: min(440px, 42vw);
@@ -36,41 +36,42 @@ body {
   perspective-origin: 50% 50%;
   transform-style: preserve-3d;
   touch-action: none;
-  transform: translateX(-20px) rotateY(-18deg) rotateX(6deg);
+  transform: translateX(10px) rotateY(-12deg) rotateX(6deg);
 }
 
-/* വീണ്ടെടുത്ത യഥാർത്ഥ ബാക്ക് കവർ (Back Cover Base) */
+/* ബാക്ക് കവറിന്റെ അടിത്തറ */
 .back-cover-base {
   position: absolute;
-  top: -2mm;
-  left: 0;
-  width: calc(100% + 2mm);
-  height: calc(100% + 4mm);
+  top: -3mm;
+  left: -2mm;
+  width: calc(100% + 5mm);
+  height: calc(100% + 6mm);
   background: linear-gradient(135deg, #cbd5e1 0%, #94a3b8 100%);
   border: 2px solid #64748b;
-  border-radius: 2px 4px 4px 2px;
+  border-radius: 4px;
   box-shadow: 
-    inset 0 0 34px rgba(0,0,0,.15), 
-    inset -16px 0 30px rgba(0,0,0,.1), 
-    -10px 15px 30px rgba(0,0,0,0.5);
-  z-index: 0; /* പുസ്തകത്താളുകൾക്ക് ഏറ്റവും അടിയിൽ */
+    inset 0 0 34px rgba(0,0,0,.2), 
+    inset -16px 0 30px rgba(0,0,0,.15), 
+    -15px 20px 35px rgba(0,0,0,0.6);
+  z-index: 0;
+  cursor: pointer;
 }
 
-/* പുസ്തകത്തിന്റെ ബാക്ക് കവറിന്റെ പുറകിലെ ബോഡി */
-.back-cover-base::after {
-  content: '';
+/* പേജുകൾ മറിയുമ്പോൾ വലതുവശത്ത് കാണുന്ന ബാക്ക് കവർ പേജ് */
+.back-cover-face {
   position: absolute;
-  inset: 0;
-  background: radial-gradient(circle at 70% 80%, rgba(255,255,255,.4), transparent 50%);
-  pointer-events: none;
+  inset: 2mm;
+  background: linear-gradient(135deg, #fffdf8 0%, #f4ede0 100%);
+  border: 1px solid #d6ccb6;
+  border-radius: 2px;
 }
 
 .spine {
   position: absolute;
   left: -14px;
-  top: -2mm;
+  top: -3mm;
   width: 14px;
-  height: calc(100% + 4mm);
+  height: calc(100% + 6mm);
   background: linear-gradient(to right, #475569, #64748b, #cbd5e1);
   border-left: 1px solid #334155;
   border-radius: 4px 0 0 4px;
@@ -289,7 +290,9 @@ body {
 <body>
 
 <div class="stage" id="bookStage">
-  <div class="back-cover-base"></div>
+  <div class="back-cover-base" id="backCoverBase">
+    <div class="back-cover-face"></div>
+  </div>
   <div class="spine"></div>
 </div>
 
@@ -630,6 +633,10 @@ let currentRotateY = 0;
 let peekInterval = null;
 let autoCloseTimer = null;
 
+// ഡബിൾ സ്വൈപ്പ് ട്രാക്ക് ചെയ്യുന്നതിനുള്ള വേരിയബിളുകൾ
+let backSwipeCount = 0;
+let lastBackSwipeTime = 0;
+
 function isBookOpen() {
   return pages.some(p => p.dataset.state === 'open');
 }
@@ -733,6 +740,35 @@ function clearPageVisuals(page) {
     curl.style.opacity = '0';
   }
 }
+
+// ബാക്ക് കവറിലെ ഡബിൾ സ്വൈപ്പ് / ക്ലിക്ക് ട്രാക്കിംഗ്
+const backCover = document.getElementById('backCoverBase');
+let backStartX = 0;
+
+backCover.addEventListener('pointerdown', (e) => {
+  const pt = getPoint(e);
+  backStartX = pt.x;
+});
+
+backCover.addEventListener('pointerup', (e) => {
+  const pt = getPoint(e);
+  const diffX = pt.x - backStartX;
+  
+  // ചെറിയ സ്വൈപ്പോ ടാപ്പോ രേഖപ്പെടുത്തുന്നു
+  const now = Date.now();
+  if (now - lastBackSwipeTime < 1000) {
+    backSwipeCount++;
+  } else {
+    backSwipeCount = 1;
+  }
+  lastBackSwipeTime = now;
+
+  // രണ്ടു പ്രാവശ്യം തുടർച്ചയായി സ്വൈപ്പ് ചെയ്യുകയോ തട്ടുകയോ ചെയ്താൽ പുസ്തകം പഴയപോലെ ക്ലോസ് ചെയ്യുന്നു
+  if (backSwipeCount >= 2) {
+    closeAllPages();
+    backSwipeCount = 0;
+  }
+});
 
 pages.forEach((page) => {
   page.addEventListener('pointerdown', (e) => {
