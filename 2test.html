@@ -40,7 +40,6 @@ html, body {
   transform: translateX(5px) rotateY(-10deg) rotateX(4deg);
 }
 
-/* ബാക്ക് കവർ / ബോട്ടം ബേസ് (അടി) */
 .back-cover-base {
   position: absolute;
   top: -3mm;
@@ -48,12 +47,19 @@ html, body {
   width: calc(100% + 5mm);
   height: calc(100% + 6mm);
   background: linear-gradient(135deg, #cbd5e1 0%, #94a3b8 100%);
-  border: 1.5mm solid #64748b; /* 1.5mm Border Edge */
+  border: 2px solid #64748b;
   border-radius: 4px;
-  box-shadow: 
-    inset 0 0 20px rgba(0,0,0,.2), 
-    -15px 20px 30px rgba(0,0,0,0.5);
+  box-shadow: -15px 20px 35px rgba(0,0,0,0.6);
   z-index: 0;
+}
+
+/* പേജുകൾ എല്ലാം ഇടത്തോട്ട് മറിയുമ്പോൾ വലതുവശത്ത് ബാക്ക് കവർ പേജ് കാണാൻ */
+.back-cover-face {
+  position: absolute;
+  inset: 2mm;
+  background: linear-gradient(135deg, #fffdf8 0%, #f4ede0 100%);
+  border: 1px solid #d6ccb6;
+  border-radius: 2px;
 }
 
 /* Spine & Stitch Marking (ബൈൻഡിംഗ് തുന്നൽ അടയാളം) */
@@ -185,7 +191,10 @@ html, body {
 
 <div class="stage" id="bookStage">
   <!-- അടിയിലെ കവർ ബേസ് -->
-  <div class="back-cover-base"></div>
+  <div class="back-cover-base">
+  <div class="back-cover-face"></div>
+</div>
+
   <div class="spine"></div>
 </div>
 
