@@ -856,5 +856,59 @@ window.addEventListener('beforeunload', () => {
   }
 });
 </script>
+    <style>
+/* പുസ്തകം സ്ക്രീനിന്റെ കൃത്യം സെന്ററിലാക്കാനും ചെറുതായി നിർത്താനും */
+#bookStage, .stage {
+  position: fixed !important;
+  top: 50% !important;
+  left: 50% !important;
+  transform: translate(-50%, -50%) scale(0.78) rotateY(-6deg) rotateX(2deg) !important;
+  transform-origin: center center !important;
+  transition: transform 0.4s cubic-bezier(0.2, 0.8, 0.2, 1) !important;
+  cursor: pointer !important;
+  z-index: 100 !important;
+}
+
+/* തൊടുമ്പോൾ ഫുൾ സ്ക്രീനിലേക്ക് സൂം ആവാൻ */
+#bookStage.zoomed, .stage.zoomed {
+  transform: translate(-50%, -50%) scale(1.1) rotateY(0deg) rotateX(0deg) !important;
+  z-index: 1000 !important;
+}
+</style>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  var bookStage = document.getElementById('bookStage') || document.querySelector('.stage');
+  
+  if (bookStage) {
+    // ആക്സസിബിലിറ്റി ആവശ്യത്തിന് (Keyboard Control)
+    bookStage.setAttribute('tabindex', '0');
+    bookStage.setAttribute('role', 'button');
+    bookStage.setAttribute('aria-label', 'Toggle Book Zoom View');
+
+    bookStage.addEventListener('click', function(e) {
+      this.classList.toggle('zoomed');
+      var isZoomed = this.classList.contains('zoomed');
+
+      // Google Analytics (GA4) Event Tracking (ഉണ്ടെങ്കിൽ സ്വയം പ്രവർത്തിക്കും)
+      if (typeof gtag === 'function') {
+        gtag('event', 'book_zoom_toggle', {
+          'event_category': 'Engagement',
+          'event_label': isZoomed ? 'Book Zoom In' : 'Book Zoom Out'
+        });
+      }
+    });
+
+    // Enter Key അമർത്തിയാലും Zoom ആവാൻ
+    bookStage.addEventListener('keydown', function(e) {
+      if (e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault();
+        this.click();
+      }
+    });
+  }
+});
+</script>
+
 </body>
 </html>
