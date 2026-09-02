@@ -41,7 +41,7 @@ body {
   touch-action: none;
 
   /* പുസ്തകത്തിന് ചെറിയ natural tilt */
-transform: translateX(5px) rotateY(-12deg) rotateX(3deg);
+transform: translateX(10px) rotateY(-12deg) rotateX(3deg);
 
 .back-cover-base {
   position: absolute;
@@ -68,10 +68,10 @@ transform: translateX(5px) rotateY(-12deg) rotateX(3deg);
 }
 .spine {
   position: absolute;
-  left: -16px;
+  left: -20px;
   top: -1.5mm;
 
-  width: 16px;
+  width: 20px;
   height: calc(100% +2mm);
 
   background: linear-gradient(
@@ -85,7 +85,7 @@ transform: translateX(5px) rotateY(-12deg) rotateX(3deg);
   border-radius: 4px 0 0 4px;
   box-shadow: -2px 0 6px rgba(0,0,0,.18);
 
-  z-index: 2;
+  z-index:100px;
   pointer-events: none;
 }
 
