@@ -66,6 +66,29 @@ transform: translateX(10px) rotateY(-12deg) rotateX(3deg);
 
   z-index: 1;
 }
+.back-cover-base {
+  position: absolute;
+  top: -3mm;
+  left: -2mm;
+  width: calc(100% + 5mm);
+  height: calc(100% + 6mm);
+  background: linear-gradient(135deg, #cbd5e1 0%, #94a3b8 100%);
+  border: 2px solid #64748b;
+  border-radius: 4px;
+  box-shadow: -15px 20px 35px rgba(0,0,0,0.6);
+  z-index: 0;
+}
+
+/* പേജുകൾ എല്ലാം ഇടത്തോട്ട് മറിയുമ്പോൾ വലതുവശത്ത് ബാക്ക് കവർ പേജ് കാണാൻ */
+.back-cover-face {
+  position: absolute;
+  inset: 2mm;
+  background: linear-gradient(135deg, #fffdf8 0%, #f4ede0 100%);
+  border: 1px solid #d6ccb6;
+  border-radius: 2px;
+}
+
+ 
 .spine {
   position: absolute;
   left: -20px;
@@ -631,6 +654,10 @@ function makePage(data, index) {
       <div class="wrinkle-fold"></div>
       <div class="corner-curl"></div>
     `;
+   <div class="back-cover-base">
+  <div class="back-cover-face"></div>
+</div>
+
   }
   return page;
 }
