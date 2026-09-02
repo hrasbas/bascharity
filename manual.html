@@ -911,7 +911,21 @@ window.addEventListener('beforeunload', () => {
   box-shadow: inset 8px 0 12px -5px rgba(0, 0, 0, 0.12) !important;
 }
 
-    
+    /* ഫോൺ സ്ക്രീനുകളിൽ പുസ്തകത്തിന് അകത്തുള്ള ഫോണ്ട് സൈസ് മാത്രം കുറയ്ക്കാൻ */
+@media (max-width: 600px) {
+  .page-face .content-body,
+  .page-face .content-body p {
+    font-size: 8.5px !important;
+    line-height: 1.35 !important;
+  }
+  .page-face .content-title {
+    font-size: 10.5px !important;
+  }
+  .page-face .index-item {
+    font-size: 8px !important;
+  }
+}
+
 </style>
 
 <script>
