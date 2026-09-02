@@ -14,36 +14,29 @@
 
 html, body { 
   width: 100%; 
-  height: 100%; 
+  height: 100vh; 
+  overflow: hidden; /* 100% സൂമിൽ സ്ക്രോൾ ബാറുകൾ ഒഴിവാക്കാൻ */
 }
 
 body {
   display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
+  justify-content: center;
   align-items: center;
   background: radial-gradient(circle at top, #1e293b 0%, #0f172a 54%, #020617 100%);
   font-family: Georgia, serif;
-  padding:20px;
-  overflow: visible !important;
+  padding: 10px;
 }
 
+/* 100% Zoom-ൽ കൃത്യമായി ഫിറ്റ് ആകാനും Original Dynamic Aspect Ratio നിലനിർത്താനും റെസ്പോൺസീവ് ആക്കി */
 .stage {
   position: relative;
-  left: 50px;
-
-  width:480px;
-  height:1000px;
-  top:2.5cm;
-  margin-left: auto;
-  margin-right: auto;
-  margin-bottom: 3cm;
-
+  width: min(440px, 42vw);
+  height: min(720px, 85vh);
   perspective: 2500px;
   perspective-origin: 50% 50%;
   transform-style: preserve-3d;
   touch-action: none;
-  transform: translateX(-40px) rotateY(-18deg) rotateX(6deg);
+  transform: translateX(-20px) rotateY(-18deg) rotateX(6deg);
 }
 
 .back-cover-base {
@@ -106,8 +99,8 @@ body {
 }
 
 .brand-logo {
-  width: min(60px, 11vw);
-  height: min(60px, 11vw);
+  width: min(50px, 9vw);
+  height: min(50px, 9vw);
   margin-bottom: 4px;
   fill: #000000;
   filter: drop-shadow(0 2px 4px rgba(212,175,55,0.5));
@@ -115,7 +108,7 @@ body {
 
 .main-title-unified {
   font-family: 'Arial Black', Gadget, sans-serif;
-  font-size: clamp(16px, 5vw, 24px);
+  font-size: clamp(14px, 2.2vw, 22px);
   font-weight: 900;
   color: #000000;
   letter-spacing: 1px;
@@ -130,7 +123,7 @@ body {
 
 .sub-title-dark {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  font-size: clamp(8px, 2.3vw, 11px);
+  font-size: clamp(8px, 1.1vw, 11px);
   font-weight: 900;
   color: #000000;
   letter-spacing: 1px;
@@ -143,8 +136,8 @@ body {
 
 .author-handwriting-3d {
   font-family: 'Dancing Script', 'Brush Script MT', cursive;
-  font-size: clamp(18px, 5.2vw, 26px);
-  font-weight:800;
+  font-size: clamp(16px, 2.4vw, 24px);
+  font-weight: 800;
   font-style: italic;
   color: #1a1a1a;
   letter-spacing: 1px;
@@ -190,7 +183,7 @@ body {
   text-align: left;
 }
 .content-title {
-  font-size: clamp(12px, 3vw, 15px);
+  font-size: clamp(11px, 1.4vw, 14px);
   color: #000000;
   font-weight: 900;
   border-bottom: 2px solid #cbd5e1;
@@ -200,19 +193,19 @@ body {
   letter-spacing: .5px;
 }
 .content-body {
-  font-size: clamp(14px, 2.6vw, 13px);
-  line-height: 1.4;
+  font-size: clamp(11px, 1.2vw, 13px);
+  line-height: 1.45;
   color: #1e293b;
   text-align: justify;
 }
-.content-body p { margin-bottom: 4px; }
+.content-body p { margin-bottom: 6px; }
 
 .index-list { list-style: none; padding: 0; margin-top: 2px; }
 .index-item {
   display: flex;
   justify-content: space-between;
-  font-size: clamp(8.5px, 2.2vw, 10.5px);
-  padding: 2.5px 0;
+  font-size: clamp(8px, 1.0vw, 10.5px);
+  padding: 2px 0;
   border-bottom: 1px dashed #cbd5e1;
   color: #000000;
   font-weight: 700;
@@ -223,18 +216,18 @@ body {
   justify-content: space-between;
   align-items: center;
   border-top: 1px dashed #cbd5e1;
-  padding-top: 2px;
+  padding-top: 4px;
   margin-top: 2px;
 }
 
 .page-number {
-  font-size: clamp(12px, 1.8vw, 10px);
+  font-size: clamp(9px, 1.0vw, 11px);
   color: #000000;
   font-weight: 900;
   font-family: sans-serif;
 }
 .flip-hint {
-  font-size: clamp(8px, 1.8vw, 10px);
+  font-size: clamp(8px, 0.9vw, 10px);
   color: #2563eb;
   font-weight: 700;
   font-family: sans-serif;
@@ -266,7 +259,6 @@ body {
   box-shadow: -10px 10px 22px rgba(0,0,0,.35);
 }
 
-/* 1. Flexible Opening Hint Animation (Peeking) */
 @keyframes peekAnimation {
   0%   { transform: rotateY(0deg); }
   20%  { transform: rotateY(-22deg); }
@@ -665,7 +657,6 @@ function resetAutoCloseTimer() {
   if (autoCloseTimer) clearTimeout(autoCloseTimer);
   if (isBookOpen()) {
     stopPeekInterval();
-    // 2 Minutes = 120000 ms
     autoCloseTimer = setTimeout(() => {
       closeAllPages();
     }, 120000);
@@ -674,7 +665,6 @@ function resetAutoCloseTimer() {
   }
 }
 
-// Reset timer on Scroll or Touch/Mouse Movement
 window.addEventListener('scroll', resetAutoCloseTimer, { passive: true });
 window.addEventListener('touchmove', resetAutoCloseTimer, { passive: true });
 window.addEventListener('mousemove', resetAutoCloseTimer, { passive: true });
