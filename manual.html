@@ -1,4 +1,4 @@
- <!DOCTYPE html>
+  <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8" />
@@ -27,68 +27,50 @@ body {
   padding:20px;
   overflow: visible !important;
 }
-/* ബുക്ക് സ്ഥിതിചെയ്യുന്ന ഫ്രെയിം (വലിപ്പം കൂട്ടാനും ചരിക്കാനും) */
+
 .stage {
   position: relative;
-  width: 340px !important;            /* ബുക്കിന്റെ വലിപ്പം കൂട്ടിയത് (ആവശ്യമെങ്കിൽ മാറ്റാം) */
-  height: 500px !important;           /* പേജുകൾ കൊള്ളാനായി ഹൈറ്റ് കൂട്ടിയത് */
+  left: 50px;
+
+  width:250px;
+  height:400px;
+  top:2.5cm;
   margin-left: auto;
   margin-right: auto;
-  transform: rotate(-1.5deg) !important; /* പ്രൊഫഷണൽ ലുക്കിനായി ബുക്ക് അല്പം ചരിച്ചത് */
+  margin-bottom:1.5cm;
+
+  perspective:1250px;
+  perspective-origin: 50% 50%;
+  transform-style: preserve-3d;
+  touch-action: none;
+  transform: translateX(-40px) rotateY(-18deg) rotateX(6deg);
 }
 
 .back-cover-base {
   position: absolute;
-
-  /* 1. പേജിന് ചുറ്റുമുള്ള അട്ടിയുടെ കൃത്യമായ തള്ളിനിൽപ്പ് (Overhang) */
-  top: -2mm !important;
-  left: 0 !important;
-  width: calc(100% + 2mm) !important;
-  height: calc(100% + 4mm) !important;
-
-  /* 2. മൂന്ന് വശത്തെയും നേർത്ത അരികുകൾ (1.5px) */
-  border: 1.5px solid #94a3b8 !important;
-
-  /* 3. ബൈൻഡിങ് (Left) വശത്ത് പ്രൊഫഷണൽ രീതിയിൽ അൽപ്പം വീതി കൂട്ടിയ ലൈൻ */
-  border-left: 5px solid #94a3b8 !important;
-
-  /* 4. കോർണർ റൗണ്ടിങ് */
-  border-radius: 2px !important;
-
-  /* 5. സ്പൈൻ ഭാഗത്ത് ഉള്ളിലേക്ക് വരുന്ന കൃത്യമായ ഇൻസൈഡ് ഷാഡോ */
-  box-shadow: inset 0 0 34px rgba(0, 0, 0, 0.45) !important;
-
+  top: -2mm;
+  left: 0;
+  width: calc(100% + 2mm);
+  height: calc(100% + 4mm);
+  background: linear-gradient(135deg, #d7e1ee 0%, #c7d2e0 100%);
+  border:1.5px solid #94a3b8;
+  border-radius: 2px;
+  box-shadow: inset 0 0 10px rgba(0,0,0,.12), inset -16px 0 30px rgba(0,0,0,.08), -6px 12px 28px rgba(0,0,0,0.35);
   z-index: 1;
   cursor: pointer;
 }
 
-.back-cover-base {
+.spine {
   position: absolute;
-
-  /* 1. അട്ടിയുടെ കൃത്യമായ സൈസും തള്ളിനിൽപ്പും (Overhang) */
-  top: -1.5mm !important;
-  left: -1.5mm !important;
-  width: calc(100% + 3mm) !important;
-  height: calc(100% + 3mm) !important;
-
-  /* 2. ബുക്ക് തുറക്കുമ്പോൾ ബാക്ക്ഗ്രൗണ്ട് കളർ വരാതെ സ്പൈനിൽ വെറും ഷാഡോ മാത്രം വരാൻ */
-  background: transparent !important;
-
-  /* 3. മൂന്ന് വശത്തും ചെറിയ അളവിലുള്ള പ്രൊപ്പോഷനേറ്റ് സ്റ്റിച്ചിങ് (Dashed Border) */
-  border: 1px dashed rgba(148, 163, 184, 0.7) !important;
-
-  /* 4. ബൈൻഡിങ് (Left) വശത്ത് തുന്നലിന് അൽപ്പം കൂടുതൽ കനം നൽകാൻ */
-  border-left: 2px dashed rgba(148, 163, 184, 0.9) !important;
-
-  /* 5. കോർണറുകളിലെ റെസ്പോൺസീവ് ആയ റൗണ്ടിങ് */
-  border-radius: 2px !important;
-
-  /* 6. സ്പൈനിൽ പേജിന്റെ ഉള്ളിലേക്ക് വരുന്ന പ്രകൃതിദത്തമായ ഇൻസൈഡ് ഷാഡോ */
-  box-shadow: inset 8px 0 12px -3px rgba(0, 0, 0, 0.25) !important;
-
-  /* 7. മറ്റ് എലിമെന്റുകൾക്ക് മുകളിൽ കൃത്യമായി നിൽക്കാൻ */
-  z-index: 1;
-  cursor: pointer;
+  left: -14px;
+  top: -2mm;
+  width: 14px;
+  height: calc(100% + 4mm);
+  background: linear-gradient(to right, #64748b, #94a3b8, #cbd5e1);
+  border-left: 1px solid #475569;
+  border-radius: 4px 0 0 4px;
+  box-shadow: -2px 0 8px rgba(0,0,0,.2);
+  z-index: 80;
 }
 
 .page {
@@ -298,56 +280,28 @@ body {
 .page.peek-hint {
   animation: peekAnimation 1.8s ease-in-out;
 }
-@media (max-width: 700px) {
-  body {
-    padding: 0;
+ @media (max-width: 700px){
+  body{padding:12px;}
+  .stage{
+    left:0;
+    width:min(96vw,530px);
+    height:calc(min(96vw,530px) * 1.79);
+    top:12px;
+    transform:none;
+    margin-bottom:1rem;
+  }
+  .back-cover-base{
+    width:calc(100% + 2mm);
+    height:calc(100% + 4mm);
+  }
+  .spine{left:-10px;width:10px;}
+}
+@media (max-width: 700px){
+  body{
     overflow-x: hidden;
   }
 
-  .stage {
-    position: relative;
-    left: 0 !important;
-    top: 0 !important;
-
-    width: 200px !important;
-    height: 300px !important;
-
-    margin: 0 auto !important;
-    transform: translateX(-10px) rotateY(-10deg) rotateX(3deg) !important;
-  }
-
-  .back-cover-base {
-    width: calc(100% + 2mm);
-    height: calc(100% + 4mm);
-  }
-
-  .spine {
-    left: -10px;
-    width: 10px;
-  }
-}
-
-  .stage {
-    left: 0;
-    width: 200px;
-    height: 300px;
-    top: 12px;
-    margin: 0 auto 20px auto;
-    transform: translateX(-10px) rotateY(-10deg) rotateX(3deg);
-  }
-
-  .back-cover-base {
-    width: calc(100% + 2mm);
-    height: calc(100% + 4mm);
-  }
-
-  .spine {
-    left: -10px;
-    width: 10px;
-  }
-}
-
-.stage{
+  .stage{
     left: 0;
     transform: none;
     margin-left: 0;
