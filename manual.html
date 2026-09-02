@@ -25,41 +25,31 @@ body {
   background: radial-gradient(circle at top, #1e293b 0%, #0f172a 54%, #020617 100%);
   font-family: Georgia, serif;
   min-height: 100vh;
-  padding: 15px;
+  padding: 10px;
 }
 
+/* യഥാർത്ഥ ബുക്കിന്റെ കൃത്യമായ അനുപാതം (Aspect Ratio) */
 .stage {
   position: relative;
-  width: min(340px, 88vw);
-  height: min(540px, 78vh);
+  width: min(380px, 90vw);
+  height: min(600px, 84vh);
   perspective: 2000px;
   perspective-origin: 50% 50%;
   transform-style: preserve-3d;
   touch-action: none;
-  transform: rotateY(-10deg) rotateX(3deg);
+  transform: rotateY(-8deg) rotateX(2deg);
   margin: auto;
-}
-
-/* ബാക്ക് കവർ (ബുക്കിന്റെ തൊട്ടു അടിയിൽ മാത്രം കാണാൻ പാകത്തിന്) */
-.back-cover-base {
-  position: absolute;
-  top: -2px;
-  left: -2px;
-  width: calc(100% + 4px);
-  height: calc(100% + 4px);
-  background: linear-gradient(135deg, #cbd5e1 0%, #94a3b8 100%);
+  box-shadow: -15px 20px 30px rgba(0,0,0,0.6);
   border-radius: 4px;
-  box-shadow: -10px 15px 25px rgba(0,0,0,0.5);
-  z-index: 1;
 }
 
 .spine {
   position: absolute;
-  left: -10px;
-  top: -2px;
-  width: 10px;
-  height: calc(100% + 4px);
-  background: linear-gradient(to right, #475569, #94a3b8, #cbd5e1);
+  left: -8px;
+  top: 0;
+  width: 8px;
+  height: 100%;
+  background: linear-gradient(to right, #334155, #64748b, #94a3b8);
   border-radius: 4px 0 0 4px;
   z-index: 80;
 }
@@ -81,8 +71,7 @@ body {
     radial-gradient(circle at 30% 20%, rgba(255,255,255,.75), transparent 40%),
     linear-gradient(135deg, #e2e8f0 0%, #cbd5e1 100%);
   border: 1px solid #94a3b8;
-  border-left: 2px solid #64748b;
-  box-shadow: inset 0 0 16px rgba(0,0,0,.10), inset -8px 0 15px rgba(0,0,0,.06);
+  border-left: 3px solid #475569;
 }
 
 .cover-title {
@@ -93,22 +82,22 @@ body {
   justify-content: space-between;
   align-items: center;
   text-align: center;
-  padding: 8% 6% 8%;
+  padding: 10% 8%;
   z-index: 10;
   pointer-events: none;
 }
 
 .brand-logo {
-  width: min(50px, 12vw);
-  height: min(50px, 12vw);
-  margin-bottom: 6px;
+  width: min(55px, 14vw);
+  height: min(55px, 14vw);
+  margin-bottom: 8px;
   fill: #000000;
   filter: drop-shadow(0 2px 4px rgba(212,175,55,0.5));
 }
 
 .main-title-unified {
   font-family: 'Arial Black', Gadget, sans-serif;
-  font-size: clamp(14px, 4.2vw, 20px);
+  font-size: clamp(15px, 4.5vw, 21px);
   font-weight: 900;
   color: #000000;
   letter-spacing: 1px;
@@ -118,12 +107,12 @@ body {
     1px 1px 0px #d4af37,
     2px 2px 0px #aa7c11,
     3px 3px 2px rgba(0, 0, 0, 0.4);
-  margin-bottom: 6px;
+  margin-bottom: 8px;
 }
 
 .sub-title-dark {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  font-size: clamp(8px, 2vw, 9.5px);
+  font-size: clamp(8.5px, 2.2vw, 10px);
   font-weight: 900;
   color: #000000;
   letter-spacing: 0.8px;
@@ -131,12 +120,12 @@ body {
   margin-top: 4px;
   border-top: 1.5px solid #000000;
   border-bottom: 1.5px solid #000000;
-  padding: 3px 6px;
+  padding: 4px 6px;
 }
 
 .author-handwriting-3d {
   font-family: 'Dancing Script', 'Brush Script MT', cursive;
-  font-size: clamp(16px, 4.5vw, 21px);
+  font-size: clamp(17px, 5vw, 23px);
   font-weight: 800;
   font-style: italic;
   color: #1a1a1a;
@@ -151,10 +140,10 @@ body {
 .page-face {
   position: absolute;
   inset: 0;
-  padding: 6% 7% 5%;
+  padding: 7% 8% 6%;
   background: linear-gradient(135deg, #fffdf8 0%, #f4ede0 100%);
   border: 1px solid #cbd5e1;
-  border-left: 2px solid #94a3b8;
+  border-left: 3px solid #94a3b8;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -162,15 +151,8 @@ body {
   backface-visibility: hidden;
   -webkit-backface-visibility: hidden;
   pointer-events: none;
-  border-radius: 0 3px 3px 0;
-}
-
-.page-face::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(to right, rgba(0,0,0,.05), transparent 12px);
-  z-index: 2;
+  border-radius: 0 4px 4px 0;
+  box-shadow: inset 12px 0 15px -5px rgba(0,0,0,0.15); /* ബൈൻഡിങ് ഷാഡോ മാത്രം */
 }
 
 .front-face { z-index: 2; }
@@ -179,42 +161,46 @@ body {
   transform: rotateY(180deg);
   background: #fcfbf7;
   border-left: 1px solid #cbd5e1;
-  border-right: 2px solid #94a3b8;
-  border-radius: 3px 0 0 3px;
+  border-right: 3px solid #94a3b8;
+  border-radius: 4px 0 0 4px;
+  box-shadow: inset -12px 0 15px -5px rgba(0,0,0,0.15);
 }
 
 .right-page-box {
   width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
   text-align: left;
-  overflow: hidden;
 }
 
 .content-title {
-  font-size: clamp(11px, 2.7vw, 13.5px);
+  font-size: clamp(11.5px, 2.8vw, 14px);
   color: #000000;
   font-weight: 900;
   border-bottom: 1.5px solid #cbd5e1;
-  padding-bottom: 4px;
-  margin-bottom: 8px;
+  padding-bottom: 5px;
+  margin-bottom: 10px;
   text-transform: uppercase;
   letter-spacing: .5px;
 }
 
 .content-body {
-  font-size: clamp(10px, 2.3vw, 11.5px);
-  line-height: 1.38;
+  font-size: clamp(10px, 2.4vw, 11.8px);
+  line-height: 1.45;
   color: #1e293b;
   text-align: justify;
-  word-break: break-word;
+  flex-grow: 1;
 }
-.content-body p { margin-bottom: 6px; }
+.content-body p { margin-bottom: 8px; }
 
 .index-list { list-style: none; padding: 0; margin-top: 2px; }
 .index-item {
   display: flex;
   justify-content: space-between;
-  font-size: clamp(8px, 1.9vw, 9.5px);
-  padding: 2.5px 0;
+  font-size: clamp(8.5px, 2vw, 10px);
+  padding: 3.5px 0;
   border-bottom: 1px dashed #cbd5e1;
   color: #000000;
   font-weight: 700;
@@ -225,18 +211,18 @@ body {
   justify-content: space-between;
   align-items: center;
   border-top: 1px dashed #cbd5e1;
-  padding-top: 3px;
-  margin-top: 4px;
+  padding-top: 4px;
+  margin-top: 6px;
 }
 
 .page-number {
-  font-size: clamp(8.5px, 1.6vw, 9.5px);
+  font-size: clamp(9px, 1.8vw, 10px);
   color: #000000;
   font-weight: 900;
   font-family: sans-serif;
 }
 .flip-hint {
-  font-size: clamp(8px, 1.5vw, 9px);
+  font-size: clamp(8.5px, 1.6vw, 9.5px);
   color: #2563eb;
   font-weight: 700;
   font-family: sans-serif;
@@ -285,7 +271,6 @@ body {
 <body>
 
 <div class="stage" id="bookStage">
-  <div class="back-cover-base" id="blueCoverBase"></div>
   <div class="spine"></div>
 </div>
 
@@ -341,7 +326,7 @@ const pagesData = [
       <p>When you shop through our trusted affiliate partners, you enjoy the same products, prices, offers, and services available on the original websites. If your purchase qualifies, we may receive an affiliate commission from the merchant. A significant portion of this income is intended to support charitable and humanitarian activities.</p>
       <p>This book explains our mission, policies, commitments, and responsibilities. We encourage every visitor to read it carefully to better understand how our platform operates.</p>
       <p>Thank you for being part of this meaningful journey.</p>
-      <p style="text-align: center; margin-top: 8px;"><strong>YOUR PURCHASE SATISFIES A HUNGER®</strong></p>
+      <p style="text-align: center; margin-top: 10px;"><strong>YOUR PURCHASE SATISFIES A HUNGER®</strong></p>
     `
   },
   {
@@ -361,7 +346,7 @@ const pagesData = [
       <p>This initiative was created with a simple vision: to transform everyday shopping into an opportunity to support humanitarian causes. We believe that even the smallest contribution can make a lasting difference when millions of people participate together.</p>
       <p>Our commitment is to build a platform based on honesty, transparency, integrity, and social responsibility. Every decision we make is guided by our desire to serve humanity with fairness and accountability.</p>
       <p>I sincerely thank every visitor, supporter, affiliate partner, and well-wisher for your trust and encouragement. Together, we can help create a more compassionate and hopeful world.</p>
-      <p><strong>— Mohamed Basheer Peringala<br>Founder, BAS Charity International</strong></p>
+      <p style="margin-top: 10px;"><strong>— Mohamed Basheer Peringala<br>Founder, BAS Charity International</strong></p>
     `
   },
   {
@@ -783,34 +768,6 @@ pages.forEach((page) => {
 
   page.addEventListener('pointerup', finishTurn);
   page.addEventListener('pointercancel', finishTurn);
-});
-
-const blueCover = document.getElementById('blueCoverBase');
-let coverSwipeCount = 0;
-let coverStartX = 0;
-let coverSwipeTimer = null;
-
-blueCover.addEventListener('pointerdown', (e) => {
-  coverStartX = getPoint(e).x;
-});
-
-blueCover.addEventListener('pointerup', (e) => {
-  const endX = getPoint(e).x;
-  const diffX = Math.abs(endX - coverStartX);
-
-  if (diffX > 30) {
-    coverSwipeCount++;
-    if (coverSwipeTimer) clearTimeout(coverSwipeTimer);
-
-    if (coverSwipeCount >= 2) {
-      closeAllPages();
-      coverSwipeCount = 0;
-    } else {
-      coverSwipeTimer = setTimeout(() => {
-        coverSwipeCount = 0;
-      }, 1200);
-    }
-  }
 });
 
 syncStack();
