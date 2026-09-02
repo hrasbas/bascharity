@@ -1,4 +1,4 @@
-    <!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8" />
@@ -879,6 +879,39 @@ window.addEventListener('beforeunload', () => {
   transform: scale(1) !important;
   z-index: 9999 !important;
 }
+/* പുസ്തകം സെന്ററിൽ കുറച്ചുകൂടി കാണാൻ പാകത്തിൽ വലിയ സൈസിൽ നിൽക്കാൻ (scale: 0.68) */
+#bookStage, .stage {
+  width: min(450px, 85vw) !important;
+  height: min(600px, 75vh) !important;
+  margin: 0 auto !important;
+  position: relative !important;
+  top: 0 !important;
+  left: 0 !important;
+  transform: scale(0.68) !important;
+  transform-origin: center center !important;
+  transition: transform 0.4s ease-in-out !important;
+  cursor: pointer !important;
+}
+
+/* തൊടുമ്പോൾ ഫുൾ സൈസിലേക്ക് (Zoom In) */
+#bookStage.zoomed, .stage.zoomed {
+  transform: scale(1) !important;
+  z-index: 9999 !important;
+}
+
+/* PVC പൈപ്പ് ലുക്ക് മാറ്റി ജോയിന്റിൽ ലൈറ്റ് ഷാഡോ നൽകാൻ */
+.book-spine {
+  background: linear-gradient(to right, rgba(0,0,0,0.15) 0%, rgba(0,0,0,0.02) 50%, transparent 100%) !important;
+  box-shadow: none !important;
+  border: none !important;
+}
+
+/* പേജിന്റെ ഉള്ളിലെ വശങ്ങളിൽ വരുന്ന ലൈറ്റ് ഷാഡോ */
+.page-face {
+  box-shadow: inset 8px 0 12px -5px rgba(0, 0, 0, 0.12) !important;
+}
+
+    
 </style>
 
 <script>
@@ -893,7 +926,6 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 </script>
 <!-- SAFE CONTAINER ZOOM CODE END -->
-
 
 </body>
 </html>
