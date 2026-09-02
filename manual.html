@@ -282,9 +282,32 @@ body {
 }
 @media (max-width: 700px) {
   body {
-    padding: 8px;
+    padding: 0;
     overflow-x: hidden;
   }
+
+  .stage {
+    position: relative;
+    left: 0 !important;
+    top: 0 !important;
+
+    width: 200px !important;
+    height: 300px !important;
+
+    margin: 0 auto !important;
+    transform: translateX(-10px) rotateY(-10deg) rotateX(3deg) !important;
+  }
+
+  .back-cover-base {
+    width: calc(100% + 2mm);
+    height: calc(100% + 4mm);
+  }
+
+  .spine {
+    left: -10px;
+    width: 10px;
+  }
+}
 
   .stage {
     left: 0;
@@ -305,12 +328,8 @@ body {
     width: 10px;
   }
 }
-@media (max-width: 700px){
-  body{
-    overflow-x: hidden;
-  }
 
-  .stage{
+.stage{
     left: 0;
     transform: none;
     margin-left: 0;
