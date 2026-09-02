@@ -37,22 +37,27 @@ body {
   transform: rotate(-1.5deg) !important; /* പ്രൊഫഷണൽ ലുക്കിനായി ബുക്ക് അല്പം ചരിച്ചത് */
 }
 
-/* കവറിന്റെയും ബൈൻഡിങ്ങിന്റെയും ഡിസൈൻ */
 .back-cover-base {
   position: absolute;
-  top: -2mm;
-  left: 0;
-  width: calc(100% + 2mm);
-  height: calc(100% + 4mm);
-  
-  /* നിങ്ങളുടെ ഒറിജിനൽ കവർ കളർ തന്നെ നിലനിർത്തുന്നു */
-  border: 1.5px solid #94a3b8;        /* മൂന്ന് വശത്തെയും 1.5mm സ്റ്റിച്ചിങ്/ലൈൻ */
-  border-left: 5px solid #94a3b8;     /* ബൈൻഡിങ് വശത്ത് മാത്രം വീതി കൂട്ടിയത് */
-  border-radius: 2px;
-  
-  /* നിങ്ങൾ ഓക്കെ പറഞ്ഞ പെർഫെക്റ്റ് ഇൻസൈഡ് ഷാഡോ */
-  box-shadow: inset 0 0 34px rgba(0, 0, 0, 0.45);
-  
+
+  /* 1. പേജിന് ചുറ്റുമുള്ള അട്ടിയുടെ കൃത്യമായ തള്ളിനിൽപ്പ് (Overhang) */
+  top: -2mm !important;
+  left: 0 !important;
+  width: calc(100% + 2mm) !important;
+  height: calc(100% + 4mm) !important;
+
+  /* 2. മൂന്ന് വശത്തെയും നേർത്ത അരികുകൾ (1.5px) */
+  border: 1.5px solid #94a3b8 !important;
+
+  /* 3. ബൈൻഡിങ് (Left) വശത്ത് പ്രൊഫഷണൽ രീതിയിൽ അൽപ്പം വീതി കൂട്ടിയ ലൈൻ */
+  border-left: 5px solid #94a3b8 !important;
+
+  /* 4. കോർണർ റൗണ്ടിങ് */
+  border-radius: 2px !important;
+
+  /* 5. സ്പൈൻ ഭാഗത്ത് ഉള്ളിലേക്ക് വരുന്ന കൃത്യമായ ഇൻസൈഡ് ഷാഡോ */
+  box-shadow: inset 0 0 34px rgba(0, 0, 0, 0.45) !important;
+
   z-index: 1;
   cursor: pointer;
 }
