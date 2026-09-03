@@ -8061,6 +8061,198 @@ document.addEventListener("DOMContentLoaded", function () {
 })();
 </script>
     <style>
+/* ======================================
+   ONLY LANGUAGE + GREETINGS PHONE FIX
+   ====================================== */
+@media (max-width: 650px) {
+
+  /* LANGUAGE SELECTION */
+  .top-bar {
+    width: 100% !important;
+    padding: 10px 0 !important;
+    overflow-x: hidden !important;
+  }
+
+  .lang-box {
+    width: calc(100% - 20px) !important;
+    max-width: 900px !important;
+    margin: 10px auto !important;
+    padding: 12px 10px !important;
+    box-sizing: border-box !important;
+  }
+
+  .lang-buttons {
+    width: 100% !important;
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    gap: 8px !important;
+    box-sizing: border-box !important;
+  }
+
+  .lang-btn {
+    min-width: 0 !important;
+    padding: 10px 4px !important;
+    font-size: 13px !important;
+    white-space: normal !important;
+    overflow-wrap: anywhere !important;
+  }
+
+  .google-row,
+  #google_translate_element,
+  #google_translate_element select,
+  select.goog-te-combo {
+    width: 100% !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+  }
+
+  /* GREETINGS: complete gold border box */
+  .gb-widget-wrapper {
+    width: calc(100% - 20px) !important;
+    max-width: 900px !important;
+    margin: 20px auto !important;
+    padding: 12px !important;
+    box-sizing: border-box !important;
+    overflow: hidden !important;
+    border: 2px solid #b38728 !important;
+    border-radius: 18px !important;
+    background: #070d1a !important;
+  }
+
+  .gb-search-container,
+  .gb-search-box {
+    width: 100% !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+  }
+
+  /* Side-to-side photo/card overflow ഒഴിവാക്കുക */
+  .gb-slider-container {
+    width: 100% !important;
+    max-width: 100% !important;
+    padding: 10px 0 !important;
+    overflow-x: hidden !important;
+    box-sizing: border-box !important;
+  }
+
+  .gb-slider-track {
+    display: block !important;
+    width: 100% !important;
+    animation: none !important;
+    transform: none !important;
+  }
+
+  .gb-card {
+    width: 100% !important;
+    max-width: 100% !important;
+    height: 300px !important;
+    margin: 0 0 14px 0 !important;
+    box-sizing: border-box !important;
+  }
+
+  .gb-card-inner {
+    width: 100% !important;
+    box-sizing: border-box !important;
+  }
+
+  .gb-photo-box {
+    width: 40% !important;
+  }
+
+  .gb-content-box {
+    width: 60% !important;
+    min-width: 0 !important;
+    padding: 8px !important;
+  }
+
+  .gb-photo-box img {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
+  }
+
+  .gb-header-title {
+    font-size: 16px !important;
+  }
+
+  .gb-preview-text {
+    font-size: 13px !important;
+  }
+
+  .gb-person-name {
+    font-size: 14px !important;
+  }
+
+  .gb-person-desig,
+  .gb-person-org {
+    font-size: 11px !important;
+  }
+}
+</style>
+    <script>
+(function () {
+  function track(eventName, params) {
+    try {
+      if (typeof window.basTrack === "function") {
+        window.basTrack(eventName, params || {});
+      }
+    } catch (error) {
+      console.warn("Analytics event skipped:", error);
+    }
+  }
+
+  document.addEventListener("DOMContentLoaded", function () {
+
+    /* Search text അല്ല; search length മാത്രം */
+    var searchBox = document.getElementById("gbSearchInput");
+
+    if (searchBox) {
+      var searchTimer;
+
+      searchBox.addEventListener("input", function () {
+        clearTimeout(searchTimer);
+
+        searchTimer = setTimeout(function () {
+          var text = (searchBox.value || "").trim();
+
+          if (text.length >= 2) {
+            track("greetings_search", {
+              query_length: text.length
+            });
+          }
+        }, 900);
+      });
+    }
+
+    document.addEventListener("click", function (event) {
+
+      var moreButton = event.target.closest(".gb-more-btn");
+
+      if (moreButton) {
+        var card = moreButton.closest(".gb-card");
+        var nameElement = card
+          ? card.querySelector(".gb-person-name")
+          : null;
+
+        track("greeting_read_more", {
+          greeting_name: nameElement
+            ? nameElement.textContent.trim().slice(0, 80)
+            : "unknown"
+        });
+      }
+
+      var greetingPhoto = event.target.closest(".gb-photo-box img");
+
+      if (greetingPhoto) {
+        track("greeting_photo_zoom", {
+          image_section: "greetings"
+        });
+      }
+    });
+
+  });
+})();
+</script>
+    <style>
 /* IMPACT amount size reduction */
 .mainbox .amount {
   gap: 5px !important;
