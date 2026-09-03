@@ -929,6 +929,23 @@ window.addEventListener('beforeunload', () => {
 .page-face, .front-face, .back-face { border-left: none !important; }
 #bookStage, .stage { margin-top: 9cm !important; }
 #bookStage, .stage { margin-top: 3cm !important; }
+/* PVC പൈപ്പ് ഉണ്ടാക്കുന്ന 3D ലെയറും ഷേഡിംഗും പൂർണ്ണമായി മാറ്റി പേപ്പർ കളറാക്കാൻ */
+.book-spine,
+.spine,
+.page-bind,
+.page-depth {
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+
+/* പേജിന്റെ ഇടത് ഭാഗത്തുള്ള ബാക്ക്ഗ്രൗണ്ട് പേപ്പറിന്റെ അതേ കളറിലേക്ക് മാറ്റി സെറ്റ് ചെയ്യാൻ */
+.page-face::before,
+.page-face::after {
+  background: inherit !important;
+  border: none !important;
+  box-shadow: none !important;
+}
 
 </style>
 
