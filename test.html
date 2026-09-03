@@ -8224,6 +8224,51 @@ body > *:last-child {
   margin-bottom: 25px !important;
 }
 </style>
+
+<!-- =========================================================
+     DISABLE OLD MANUAL SCROLL CONTROLS
+     EXISTING AUTO SCROLL WILL CONTINUE
+     ========================================================= -->
+<style>
+  #scrollControlPopup {
+    display: none !important;
+    pointer-events: none !important;
+  }
+</style>
+
+<script>
+(function () {
+  "use strict";
+
+  /* പഴയ manual scroll timer നിർത്തുന്നു */
+  try {
+    if (typeof stopManualScroll === "function") {
+      stopManualScroll();
+    }
+  } catch (e) {}
+
+  /* LOCK state കാരണം Auto Scroll തടയാതിരിക്കാൻ */
+  try {
+    if (typeof scrollLocked !== "undefined") {
+      scrollLocked = false;
+    }
+  } catch (e) {}
+
+  /* പഴയ manual buttons പ്രവർത്തനരഹിതമാക്കുന്നു */
+  ["upBtn", "downBtn", "lockStateBtn", "scrollSpeedSlider"].forEach(function(id) {
+    const el = document.getElementById(id);
+    if (el) {
+      el.disabled = true;
+      el.onclick = null;
+      el.onmousedown = null;
+      el.onmouseup = null;
+      el.ontouchstart = null;
+      el.ontouchend = null;
+    }
+  });
+})();
+</script>
+    
 </body> <!-- ഇതിന് തൊട്ടു മുകളിൽ -->
 </html>
 
