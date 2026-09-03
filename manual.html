@@ -899,13 +899,12 @@ window.addEventListener('beforeunload', () => {
   z-index: 9999 !important;
 }
 
-/* പിവിസി പൈപ്പ് ഷേഡിംഗ് മാറ്റി, കൃത്യമായ ബൈൻഡിംഗ് മാർക്കും 1cm സ്പൈൻ വിഡ്തും തിരികെ കൊണ്ടുവരാൻ */
-.book-spine, .spine, .page-bind {
-  background: #d8d2c2 !important; /* ബൈൻഡിംഗിന്റെ യഥാർത്ഥ കളർ */
-  width: 1cm !important;
-  border-right: 1px solid rgba(0, 0, 0, 0.15) !important; /* പേപ്പറും ബൈൻഡിംഗും വേർതിരിക്കുന്ന ചെറിയ ലൈൻ */
-  box-shadow: none !important; /* അനാവശ്യ സിലിണ്ടർ നിഴൽ ഒഴിവാക്കാൻ */
+/* പുറത്തെ ബൈൻഡിംഗിൽ ഡയറി സ്റ്റിച്ച് (Stitch Mark) കൊണ്ടുവരാൻ */
+.page-bind, .spine {
+  border-left: 2px dashed rgba(0, 0, 0, 0.25) !important;
+  box-shadow: inset 2px 0 3px rgba(0, 0, 0, 0.1) !important;
 }
+
 
 
 </style>
