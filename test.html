@@ -8064,94 +8064,83 @@ document.addEventListener("DOMContentLoaded", function () {
 /* ======================================
    ONLY LANGUAGE + GREETINGS PHONE FIX
    ====================================== */
+ 
+<style>
+/* =========================================
+   GREETINGS: SEAMLESS LEFT-RIGHT SCROLL
+   ========================================= */
+
+.gb-widget-wrapper {
+  width: calc(100% - 20px) !important;
+  max-width: 1100px !important;
+  margin: 20px auto !important;
+  padding: 12px !important;
+  box-sizing: border-box !important;
+  overflow: hidden !important;
+  border: 2px solid #b38728 !important;
+  border-radius: 18px !important;
+  background: #070d1a !important;
+}
+
+/* Scroll only inside greetings box */
+.gb-slider-container {
+  width: 100% !important;
+  max-width: 100% !important;
+  overflow: hidden !important;
+  padding: 10px 0 !important;
+  box-sizing: border-box !important;
+  touch-action: pan-y !important;
+}
+
+/* Cards remain in one horizontal row */
+.gb-slider-track {
+  display: flex !important;
+  flex-wrap: nowrap !important;
+  width: max-content !important;
+  gap: 14px !important;
+  animation: gbSeamlessScroll 35s linear infinite !important;
+  will-change: transform;
+}
+
+/* Pause movement while a card is touched */
+.gb-slider-container:active .gb-slider-track,
+.gb-slider-container:hover .gb-slider-track {
+  animation-play-state: paused !important;
+}
+
+/* Cards must never drop to next row */
+.gb-card {
+  flex: 0 0 auto !important;
+  margin: 0 !important;
+}
+
+/* Seamless loop: cloned second half starts here */
+@keyframes gbSeamlessScroll {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+/* Phone size only */
 @media (max-width: 650px) {
-
-  /* LANGUAGE SELECTION */
-  .top-bar {
-    width: 100% !important;
-    padding: 10px 0 !important;
-    overflow-x: hidden !important;
-  }
-
-  .lang-box {
-    width: calc(100% - 20px) !important;
-    max-width: 900px !important;
-    margin: 10px auto !important;
-    padding: 12px 10px !important;
-    box-sizing: border-box !important;
-  }
-
-  .lang-buttons {
-    width: 100% !important;
-    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
-    gap: 8px !important;
-    box-sizing: border-box !important;
-  }
-
-  .lang-btn {
-    min-width: 0 !important;
-    padding: 10px 4px !important;
-    font-size: 13px !important;
-    white-space: normal !important;
-    overflow-wrap: anywhere !important;
-  }
-
-  .google-row,
-  #google_translate_element,
-  #google_translate_element select,
-  select.goog-te-combo {
-    width: 100% !important;
-    max-width: 100% !important;
-    box-sizing: border-box !important;
-  }
-
-  /* GREETINGS: complete gold border box */
   .gb-widget-wrapper {
-    width: calc(100% - 20px) !important;
-    max-width: 900px !important;
-    margin: 20px auto !important;
-    padding: 12px !important;
-    box-sizing: border-box !important;
-    overflow: hidden !important;
-    border: 2px solid #b38728 !important;
-    border-radius: 18px !important;
-    background: #070d1a !important;
-  }
-
-  .gb-search-container,
-  .gb-search-box {
-    width: 100% !important;
-    max-width: 100% !important;
-    box-sizing: border-box !important;
-  }
-
-  /* Side-to-side photo/card overflow ഒഴിവാക്കുക */
-  .gb-slider-container {
-    width: 100% !important;
-    max-width: 100% !important;
-    padding: 10px 0 !important;
-    overflow-x: hidden !important;
-    box-sizing: border-box !important;
+    width: calc(100% - 16px) !important;
+    padding: 10px !important;
   }
 
   .gb-slider-track {
-    display: block !important;
-    width: 100% !important;
-    animation: none !important;
-    transform: none !important;
+    gap: 10px !important;
+    animation-duration: 28s !important;
   }
 
   .gb-card {
-    width: 100% !important;
-    max-width: 100% !important;
+    width: 86vw !important;
+    max-width: 320px !important;
     height: 300px !important;
-    margin: 0 0 14px 0 !important;
-    box-sizing: border-box !important;
-  }
-
-  .gb-card-inner {
-    width: 100% !important;
-    box-sizing: border-box !important;
   }
 
   .gb-photo-box {
@@ -8162,12 +8151,6 @@ document.addEventListener("DOMContentLoaded", function () {
     width: 60% !important;
     min-width: 0 !important;
     padding: 8px !important;
-  }
-
-  .gb-photo-box img {
-    width: 100% !important;
-    height: 100% !important;
-    object-fit: cover !important;
   }
 
   .gb-header-title {
@@ -8188,71 +8171,34 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 }
 </style>
-    <script>
-(function () {
-  function track(eventName, params) {
-    try {
-      if (typeof window.basTrack === "function") {
-        window.basTrack(eventName, params || {});
-      }
-    } catch (error) {
-      console.warn("Analytics event skipped:", error);
-    }
-  }
 
-  document.addEventListener("DOMContentLoaded", function () {
+<script>
+/* Duplicate greeting cards once: no blank gap at scroll end */
+document.addEventListener("DOMContentLoaded", function () {
+  var track = document.getElementById("gbSliderTrack");
 
-    /* Search text അല്ല; search length മാത്രം */
-    var searchBox = document.getElementById("gbSearchInput");
+  if (!track || track.dataset.seamlessReady === "true") return;
 
-    if (searchBox) {
-      var searchTimer;
+  var originalCards = Array.from(track.querySelectorAll(".gb-card"));
 
-      searchBox.addEventListener("input", function () {
-        clearTimeout(searchTimer);
+  originalCards.forEach(function (card) {
+    var copy = card.cloneNode(true);
 
-        searchTimer = setTimeout(function () {
-          var text = (searchBox.value || "").trim();
-
-          if (text.length >= 2) {
-            track("greetings_search", {
-              query_length: text.length
-            });
-          }
-        }, 900);
-      });
-    }
-
-    document.addEventListener("click", function (event) {
-
-      var moreButton = event.target.closest(".gb-more-btn");
-
-      if (moreButton) {
-        var card = moreButton.closest(".gb-card");
-        var nameElement = card
-          ? card.querySelector(".gb-person-name")
-          : null;
-
-        track("greeting_read_more", {
-          greeting_name: nameElement
-            ? nameElement.textContent.trim().slice(0, 80)
-            : "unknown"
-        });
-      }
-
-      var greetingPhoto = event.target.closest(".gb-photo-box img");
-
-      if (greetingPhoto) {
-        track("greeting_photo_zoom", {
-          image_section: "greetings"
-        });
-      }
+    /* Duplicate IDs ഇല്ലാതാക്കാൻ */
+    copy.querySelectorAll("[id]").forEach(function (element) {
+      element.removeAttribute("id");
     });
 
+    /* Screen reader duplicate greeting വീണ്ടും വായിക്കാതിരിക്കാൻ */
+    copy.setAttribute("aria-hidden", "true");
+
+    track.appendChild(copy);
   });
-})();
+
+  track.dataset.seamlessReady = "true";
+});
 </script>
-    <style>
+     <style>
 /* IMPACT amount size reduction */
 .mainbox .amount {
   gap: 5px !important;
