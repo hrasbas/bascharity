@@ -8340,6 +8340,86 @@ body > *:last-child {
     position: static !important;
   }
 </style>
+<!-- 1. GOOGLE TRANSLATE BANNER BLOCKER -->
+<style>
+  iframe.goog-te-banner-frame,
+  iframe.goog-te-menu-frame,
+  .goog-te-banner-frame,
+  .goog-te-menu-frame,
+  .goog-te-gadget-icon,
+  .goog-te-gadget-simple,
+  #google_translate_element,
+  .skiptranslate,
+  .goog-te-gadget {
+    display: none !important;
+    visibility: hidden !important;
+    height: 0 !important;
+    width: 0 !important;
+    opacity: 0 !important;
+    pointer-events: none !important;
+  }
+
+  body {
+    top: 0px !important;
+    position: static !important;
+  }
+</style>
+
+<!-- 2. ISOLATED AUTO-SCROLLER -->
+<script>
+(function() {
+  "use strict";
+
+  window.BAS_SYSTEM = window.BAS_SYSTEM || {};
+
+  if (window.BAS_SYSTEM.scrollTimer) {
+    clearInterval(window.BAS_SYSTEM.scrollTimer);
+  }
+  window.BAS_SYSTEM.scrollTimer = null;
+
+  // താഴേക്ക് സ്ക്രോൾ ചെയ്യാൻ
+  window.BAS_SYSTEM.scrollToBottom = function(speed) {
+    window.BAS_SYSTEM.stopAutoScroll();
+    const scrollSpeed = speed || 20;
+    
+    window.BAS_SYSTEM.scrollTimer = setInterval(function() {
+      const maxScroll = document.documentElement.scrollHeight - window.innerHeight;
+      if (window.scrollY >= maxScroll - 2) {
+        window.BAS_SYSTEM.stopAutoScroll();
+      } else {
+        window.scrollBy(0, 3);
+      }
+    }, scrollSpeed);
+  };
+
+  // മുകളിലേക്ക് സ്ക്രോൾ ചെയ്യാൻ
+  window.BAS_SYSTEM.scrollToTop = function(speed) {
+    window.BAS_SYSTEM.stopAutoScroll();
+    const scrollSpeed = speed || 20;
+    
+    window.BAS_SYSTEM.scrollTimer = setInterval(function() {
+      if (window.scrollY <= 0) {
+        window.BAS_SYSTEM.stopAutoScroll();
+      } else {
+        window.scrollBy(0, -3);
+      }
+    }, scrollSpeed);
+  };
+
+  // സ്ക്രോളിംഗ് നിർത്താൻ
+  window.BAS_SYSTEM.stopAutoScroll = function() {
+    if (window.BAS_SYSTEM.scrollTimer !== null) {
+      clearInterval(window.BAS_SYSTEM.scrollTimer);
+      window.BAS_SYSTEM.scrollTimer = null;
+    }
+  };
+
+  ['touchstart', 'wheel', 'mousedown'].forEach(function(evtName) {
+    window.addEventListener(evtName, window.BAS_SYSTEM.stopAutoScroll, { passive: true });
+  });
+
+})();
+</script>
 
 </body> <!-- ഇതിന് തൊട്ടു മുകളിൽ -->
 </html>
