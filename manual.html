@@ -899,51 +899,11 @@ window.addEventListener('beforeunload', () => {
   z-index: 9999 !important;
 }
 
-/* PVC പൈപ്പ് ലുക്ക് മാറ്റി ജോയിന്റിൽ ലൈറ്റ് ഷാഡോ നൽകാൻ */
-.book-spine {
-  background: linear-gradient(to right, rgba(0,0,0,0.15) 0%, rgba(0,0,0,0.02) 50%, transparent 100%) !important;
-  box-shadow: none !important;
-  border: none !important;
-}
-
-/* പേജിന്റെ ഉള്ളിലെ വശങ്ങളിൽ വരുന്ന ലൈറ്റ് ഷാഡോ */
-.page-face {
-  box-shadow: inset 8px 0 12px -5px rgba(0, 0, 0, 0.12) !important;
-}
-
-    /* ഫോൺ സ്ക്രീനുകളിൽ പുസ്തകത്തിന് അകത്തുള്ള ഫോണ്ട് സൈസ് മാത്രം കുറയ്ക്കാൻ */
-@media (max-width: 600px) {
-  .page-face .content-body,
-  .page-face .content-body p {
-    font-size: 8.5px !important;
-    line-height: 1.35 !important;
-  }
-  .page-face .content-title {
-    font-size: 10.5px !important;
-  }
-  .page-face .index-item {
-    font-size: 8px !important;
-  }
-}
-.book-spine { display: none !important; }
-.page-face, .front-face, .back-face { border-left: none !important; }
-#bookStage, .stage { margin-top: 9cm !important; }
-#bookStage, .stage { margin-top: 3cm !important; }
-/* PVC പൈപ്പ് ഉണ്ടാക്കുന്ന 3D ലെയറും ഷേഡിംഗും പൂർണ്ണമായി മാറ്റി പേപ്പർ കളറാക്കാൻ */
+/* ഉള്ളിലെ ടെക്സ്റ്റും ബൈൻഡിംഗും നഷ്ടപ്പെടാതെ സിലിണ്ടർ ഷേഡ് മാത്രം മായ്ക്കാൻ */
 .book-spine,
 .spine,
-.page-bind,
-.page-depth {
-  background: transparent !important;
-  border: none !important;
-  box-shadow: none !important;
-}
-
-/* പേജിന്റെ ഇടത് ഭാഗത്തുള്ള ബാക്ക്ഗ്രൗണ്ട് പേപ്പറിന്റെ അതേ കളറിലേക്ക് മാറ്റി സെറ്റ് ചെയ്യാൻ */
-.page-face::before,
-.page-face::after {
-  background: inherit !important;
-  border: none !important;
+.page-bind {
+  background-image: none !important;
   box-shadow: none !important;
 }
 
