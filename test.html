@@ -8224,7 +8224,97 @@ body > *:last-child {
   margin-bottom: 25px !important;
 }
 </style>
+<script>
+(function () {
+  const IDLE_TIME = 60 * 1000;
+  let idleTimer = null;
 
+  function isBookVisible() {
+    const book = document.querySelector(
+      'iframe[src="manual.html"], #bookStage, .stage'
+    );
+
+    if (!book) return false;
+
+    const r = book.getBoundingClientRect();
+
+    return (
+      r.bottom > 0 &&
+      r.top < window.innerHeight &&
+      r.right > 0 &&
+      r.left < window.innerWidth
+    );
+  }
+
+  function resetBookIdleTimer() {
+    clearTimeout(idleTimer);
+
+    idleTimer = setTimeout(function () {
+      if (
+        typeof isBookOpen === "function" &&
+        isBookOpen() &&
+        isBookVisible()
+      ) {
+        if (typeof closeAllPages === "function") {
+          closeAllPages();
+        }
+      }
+    }, IDLE_TIME);
+  }
+
+  function checkBookVisibility() {
+    if (
+      typeof isBookOpen === "function" &&
+      isBookOpen() &&
+      !isBookVisible()
+    ) {
+      clearTimeout(idleTimer);
+
+      if (typeof closeAllPages === "function") {
+        closeAllPages();
+      }
+    }
+  }
+
+  ["touchstart", "touchmove", "mousedown", "mousemove"].forEach(function (event) {
+    document.addEventListener(event, function () {
+      if (
+        typeof isBookOpen === "function" &&
+        isBookOpen() &&
+        isBookVisible()
+      ) {
+        resetBookIdleTimer();
+      }
+    }, { passive: true });
+  });
+
+  window.addEventListener("scroll", checkBookVisibility, { passive: true });
+
+  document.addEventListener("visibilitychange", function () {
+    if (!document.hidden) {
+      checkBookVisibility();
+      if (
+        typeof isBookOpen === "function" &&
+        isBookOpen() &&
+        isBookVisible()
+      ) {
+        resetBookIdleTimer();
+      }
+    }
+  });
+
+  const observer = new MutationObserver(function () {
+    if (typeof isBookOpen === "function" && isBookOpen()) {
+      resetBookIdleTimer();
+    }
+  });
+
+  observer.observe(document.body, {
+    childList: true,
+    subtree: true
+  });
+})();
+</script>
  
 </body> <!-- ഇതിന് തൊട്ടു മുകളിൽ -->
 </html>
