@@ -1,4 +1,4 @@
- <!DOCTYPE html>    
+    <!DOCTYPE html>    
 <html lang="en">
 <head>
 <style>
@@ -2179,7 +2179,7 @@ function resetWelcomeMessage() {
 <style>
 /* ബലൂണുകൾ സ്ക്രീനിന്റെ താഴെ മറഞ്ഞുപോകാതിരിക്കാൻ ബോഡിക്ക് നൽകുന്ന പാഡിങ് */
 body {
-padding-bottom: 25px !important;
+padding-bottom: 160px !important;
 } 
 
 /* ബലൂൺ റാപ്പറിന്റെ സ്ക്രീനിലെ പൊസിഷനും ആനിമേഷൻ സ്പീഡും നിശ്ചയിക്കുന്ന സ്റ്റൈൽ */
@@ -2729,7 +2729,7 @@ document.addEventListener("DOMContentLoaded",function(){
 <style>
 /* ബലൂണുകൾ സ്ക്രീനിന്റെ താഴെ മറഞ്ഞുപോകാതിരിക്കാൻ ബോഡിക്ക് നൽകുന്ന പാഡിങ് */
 body {
-padding-bottom: 25px !important;
+padding-bottom: 160px !important;
 } 
 
 /* ബലൂൺ റാപ്പറിന്റെ സ്ക്രീനിലെ പൊസിഷനും ആനിമേഷൻ സ്പീഡും നിശ്ചയിക്കുന്ന സ്റ്റൈൽ */
@@ -6774,7 +6774,8 @@ YOUR PURCHASE SATISFIES A HUNGER™
 </div>
 <!-- END PATENT SEAL --> 
 <!-- index.html-ൽ manual.html നേരിട്ട് കാണിക്കാൻ -->
-  <iframe src="manual.html" style="width: 100%; max-width:900px; height:500px; border: none; overflow: hidden;"></iframe>
+<div style="width: 100%; height:1100px; display: flex; justify-content: center; align-items: center;scroll-margin-top:30px; margin-top:10px;">
+  <iframe src="manual.html" style="width: 100%; max-width:850px; height:700px; border: none; overflow: hidden;"></iframe>
 </div>
 <div style="height:0px;"></div>
 <script>
@@ -7829,8 +7830,8 @@ document.addEventListener("DOMContentLoaded", function () {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    width:260px;
-    height: 60px;
+    width:240px;
+    height: 50px;
     padding: 0 10px;
     border-radius: 10px;
 
@@ -7846,8 +7847,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
   @media (max-width: 480px) {
     #basMatteScrollerBar {
-      width: 260px;
-      height: 56px;
+      width: 240px;
+      height: 50px;
       bottom: 18px;
     }
   }
@@ -7857,8 +7858,8 @@ document.addEventListener("DOMContentLoaded", function () {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 44px;
-    height: 44px;
+    width: 30px;
+    height: 30px;
     border-radius: 8px;
     border: 1px solid #3a424e;
     background: linear-gradient(180deg, #2a303a 0%, #1a1e24 100%);
@@ -7876,8 +7877,8 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   .bas-m-btn svg {
-    width: 22px;
-    height: 22px;
+    width: 15px;
+    height: 15px;
     fill: #00ff66;
   }
 
@@ -7903,7 +7904,7 @@ document.addEventListener("DOMContentLoaded", function () {
   .bas-m-slider {
     -webkit-appearance: none;
     appearance: none;
-    width: 70px;
+    width: 60px;
     height: 6px;
     background: #2a303a;
     border-radius: 3px;
@@ -7922,8 +7923,8 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   .bas-m-slider::-moz-range-thumb {
-    width: 16px;
-    height: 16px;
+    width: 12px;
+    height: 12px;
     border-radius: 4px;
     background: #00ff66;
     cursor: pointer;
@@ -7941,8 +7942,8 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   .bas-m-lock-btn svg {
-    width: 18px;
-    height: 18px;
+    width: 12px;
+    height: 12px;
     fill: #6c788a;
   }
 </style>
@@ -8063,167 +8064,35 @@ document.addEventListener("DOMContentLoaded", function () {
 (function () {
   "use strict";
 
-  // 1. പഴയ സ്ക്രോളുകൾ ഡിസേബിൾ ചെയ്യുന്നു
-  try {
-    if (window.basAutoScrollCleanup) {
-      window.basAutoScrollCleanup();
-    }
-  } catch (e) {}
-
-  ["upBtn", "downBtn", "lockStateBtn", "scrollSpeedSlider"].forEach(function (id) {
-    const el = document.getElementById(id);
-    if (el) {
-      el.disabled = true;
-      el.onclick = null;
-      el.onmousedown = null;
-      el.ontouchstart = null;
-    }
-  });
-
-  // 2. ബുക്ക് റൈറ്റിലേക്ക് നീക്കാനും പേജ് ഫ്ലിപ്പ് വ്യക്തമാക്കാനുമുള്ള CSS ശരിയാക്കുന്നു
-  const style = document.createElement('style');
-  style.innerHTML = `
-    #stage, .stage, iframe {
-      display: block !important;
-      margin-left: auto !important;
-      margin-right: 5px !important;
-      max-width: 90vw !important;
-      position: relative !important;
-      z-index: 10 !important;
-    }
-  `;
-  document.head.appendChild(style);
-
-  let scrollTimer = null;
-  let resumeTimeout = null;
-  let isAutoScrollFinished = false;
-
-  const stage = document.querySelector('#stage') || document.querySelector('.stage') || document.querySelector('iframe');
-
-  // Analytics Tracker
-  function trackAnalytics(eventName, details) {
-    if (typeof gtag === 'function') {
-      gtag('event', eventName, details);
-    } else if (window.dataLayer && Array.isArray(window.dataLayer)) {
-      window.dataLayer.push({ event: eventName, ...details });
-    }
-  }
-
-  // 3. സൈറ്റിന്റെ നീളം (Height) കുറച്ച് ബുക്ക് നടുവിലാകുമ്പോൾ എൻഡ് ആക്കുന്ന ഫങ്ഷൻ
-  function setExactPageEnd() {
-    if (!stage) return;
-    
-    // ബുക്കിന്റെ ബാക്ക്ഗ്രൗണ്ട് പൊസിഷൻ അടിസ്ഥാനമാക്കി സൈറ്റിന്റെ ബോഡി ഹൈറ്റ് സെറ്റ് ചെയ്യുന്നു
-    const rect = stage.getBoundingClientRect();
-    const stageAbsoluteTop = window.scrollY + rect.top;
-    const stageHeight = rect.height;
-    
-    // ബുക്ക് സ്ക്രീനിന്റെ സെന്ററിൽ നിൽക്കാനാവശ്യമായ ടോട്ടൽ പേജ് ഹൈറ്റ്
-    const totalRequiredHeight = stageAbsoluteTop + (stageHeight / 2) + (window.innerHeight / 2);
-    
-    document.body.style.minHeight = totalRequiredHeight + "px";
-    document.body.style.maxHeight = totalRequiredHeight + "px";
-    document.body.style.overflowX = "hidden";
-  }
-
-  // പേജ് ലോഡ് ചെയ്യുമ്പോഴും വിൻഡോ റീസൈസ് ചെയ്യുമ്പോഴും പേജിന്റെ എൻഡ് പോയിന്റ് കൃത്യമാക്കുന്നു (Responsive)
-  setExactPageEnd();
-  window.addEventListener('resize', setExactPageEnd);
-  window.addEventListener('load', setExactPageEnd);
-
-  // 4. ബുക്ക് സെന്ററിൽ എത്തിയോ എന്ന് ചെക്ക് ചെയ്യുന്നു
-  function checkBookCentered() {
-    if (!stage) return false;
-
-    const rect = stage.getBoundingClientRect();
-    const bookCenter = rect.top + (rect.height / 2);
-    const windowCenter = window.innerHeight / 2;
-
-    // ബുക്ക് സെന്ററിൽ എത്തുമ്പോൾ സ്ക്രോളിംഗ് പൂർണ്ണമായി നിൽക്കുന്നു
-    if (Math.abs(bookCenter - windowCenter) <= 2 || bookCenter <= windowCenter) {
-      isAutoScrollFinished = true;
-      if (scrollTimer) clearInterval(scrollTimer);
-
-      trackAnalytics('auto_scroll_completed_at_center', {
-        'event_category': 'AutoScroll',
-        'event_label': 'Book Reached Viewport Center'
-      });
-
-      return true;
-    }
-    return false;
-  }
-
-  // 5. ഓട്ടോ സ്ക്രോൾ
-  function startSlowScroll() {
-    if (isAutoScrollFinished || document.hidden) return;
-    if (scrollTimer) clearInterval(scrollTimer);
-
-    scrollTimer = setInterval(function () {
-      if (checkBookCentered()) return;
-      window.scrollBy(0, 1);
-    }, 70);
-  }
-
-  // 6. 3 സെക്കൻഡ് പോസിംഗ്
-  function pauseAndResume() {
-    if (isAutoScrollFinished) return;
-
-    clearInterval(scrollTimer);
-    clearTimeout(resumeTimeout);
-
-    trackAnalytics('auto_scroll_paused', {
-      'event_category': 'AutoScroll',
-      'pause_duration': '3s'
-    });
-
-    resumeTimeout = setTimeout(function () {
-      if (!isAutoScrollFinished) {
-        trackAnalytics('auto_scroll_resumed', {
-          'event_category': 'AutoScroll'
-        });
-        startSlowScroll();
-      }
-    }, 3000);
-  }
-
-  // Security Guard: Tab switch
-  document.addEventListener('visibilitychange', function () {
-    if (document.hidden) {
-      if (scrollTimer) clearInterval(scrollTimer);
-    } else if (!isAutoScrollFinished) {
-      startSlowScroll();
-    }
-  });
-
-  window.addEventListener('touchstart', pauseAndResume, { passive: true });
-  window.addEventListener('mousedown', pauseAndResume);
-
   const slider = document.querySelector('.bas-m-slider');
-  if (slider) {
-    slider.addEventListener('input', pauseAndResume);
+  let scrollInterval = null;
+
+  // വളരെ കുറഞ്ഞ വേഗതയിൽ (Very Low Speed) സ്ക്രോൾ ചെയ്യുന്ന ഫംഗ്ഷൻ
+  function applyVeryLowSpeedScroll() {
+    if (scrollInterval) clearInterval(scrollInterval);
+
+    // സ്ലൈഡർ വാല്യൂ അനുസരിച്ച് മാത്രം
+    const val = slider ? parseFloat(slider.value) : 1;
+
+    // വാല്യൂ 0 അല്ലങ്കിൽ മാത്രം വളരെ പതുക്കെ സ്ക്രോൾ ചെയ്യും
+    if (val > 0) {
+      // 80ms ഇടവേളയിൽ 1px വീതം മാത്രം നീങ്ങുന്നു (Very Slow & Smooth)
+      scrollInterval = setInterval(function () {
+        window.scrollBy(0, 1);
+      }, 80);
+    }
   }
 
-  startSlowScroll();
+  if (slider) {
+    slider.addEventListener('input', applyVeryLowSpeedScroll);
+  }
 
+  // തുടക്കത്തിൽ തന്നെ പതുക്കെയുള്ള സ്ക്രോൾ സ്റ്റാർട്ട് ചെയ്യും
+  applyVeryLowSpeedScroll();
 })();
 </script>
-    <style>
-html, body {
-  height: auto;
-  min-height: auto;
-}
 
-body {
-  margin: 0 !important;
-  padding: 0 !important;
-  padding-bottom:25px!important;
-}
-
-body > *:last-child {
-  margin-bottom: 25px !important;
-}
-</style>
+ 
 </body> <!-- ഇതിന് തൊട്ടു മുകളിൽ -->
 </html>
 
