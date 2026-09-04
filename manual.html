@@ -858,6 +858,7 @@ window.addEventListener('beforeunload', () => {
 </script>
 <!-- SAFE CONTAINER ZOOM CODE START -->
 <!-- SAFE CONTAINER ZOOM CODE START -->
+<!-- SAFE CONTAINER ZOOM CODE START -->
 <style>
 /* പുസ്തകം അടങ്ങിയിരിക്കുന്ന Main Stage മുകളിലെ സ്റ്റൈൽ മാറ്റുന്നു */
 #bookStage, .stage {
@@ -869,7 +870,7 @@ window.addEventListener('beforeunload', () => {
   left: 0 !important;
   
   /* ആദ്യത്തെ 50% ചെറുതാക്കിയ അവസ്ഥ (Proportional Small View) */
-  transform: scale(0.5) !important;
+  transform: translateX(25px) scale(0.5) !important;
   transform-origin: center center !important;
   transition: transform 0.4s ease-in-out !important;
   cursor: pointer !important;
@@ -877,9 +878,10 @@ window.addEventListener('beforeunload', () => {
 
 /* തൊടുമ്പോൾ 100% ഫുൾ സൈസിലേക്ക് (Zoom In) മാറുന്നു */
 #bookStage.zoomed, .stage.zoomed {
-  transform: scale(1) !important;
+  transform: translateX(25px) scale(1) !important;
   z-index: 9999 !important;
 }
+
 /* പുസ്തകം സെന്ററിൽ കുറച്ചുകൂടി കാണാൻ പാകത്തിൽ വലിയ സൈസിൽ നിൽക്കാൻ (scale: 0.68) */
 #bookStage, .stage {
   width: min(450px, 85vw) !important;
@@ -888,7 +890,7 @@ window.addEventListener('beforeunload', () => {
   position: relative !important;
   top: 0 !important;
   left: 0 !important;
-  transform: scale(0.68) !important;
+  transform: translateX(25px) scale(0.68) !important;
   transform-origin: center center !important;
   transition: transform 0.4s ease-in-out !important;
   cursor: pointer !important;
@@ -896,7 +898,7 @@ window.addEventListener('beforeunload', () => {
 
 /* തൊടുമ്പോൾ ഫുൾ സൈസിലേക്ക് (Zoom In) */
 #bookStage.zoomed, .stage.zoomed {
-  transform: scale(1) !important;
+  transform: translateX(25px) scale(1) !important;
   z-index: 9999 !important;
 }
 
@@ -906,10 +908,12 @@ window.addEventListener('beforeunload', () => {
   box-shadow: inset 2px 0 3px rgba(0, 0, 0, 0.1) !important;
 }
 
-
+/* പുസ്തകത്തിന്റെ pages വലതുവശത്തേക്ക് shift ചെയ്യാൻ */
+.page.open {
+  transform: translateX(25px) scale(1) !important;
+}
 
 </style>
-
 <script>
 document.addEventListener('DOMContentLoaded', function() {
   var bookStage = document.getElementById('bookStage') || document.querySelector('.stage');
