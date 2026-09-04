@@ -926,6 +926,91 @@ body {
 }
 </style>
 <!-- SAFE CONTAINER ZOOM CODE END -->
+<script>
+/* =========================================
+   BOOK: 1-MINUTE IDLE AUTO-CLOSE
+   + MAIN PAGE SCROLL CLOSE RECEIVER
+   ========================================= */
 
+(function () {
+  let idleTimer = null;
+  let lastBookTouchTime = 0;
+  const IDLE_LIMIT = 60000; /* 1 minute */
+
+  function bookIsOpen() {
+    return typeof isBookOpen === "function" && isBookOpen();
+  }
+
+  function closeBook() {
+    if (typeof closeAllPages === "function") {
+      closeAllPages();
+    }
+  }
+
+  function startOrResetIdleTimer() {
+    if (idleTimer) {
+      clearTimeout(idleTimer);
+    }
+
+    if (!bookIsOpen()) {
+      return;
+    }
+
+    lastBookTouchTime = Date.now();
+
+    idleTimer = setTimeout(function checkIdle() {
+      if (!bookIsOpen()) {
+        return;
+      }
+
+      const inactiveFor = Date.now() - lastBookTouchTime;
+
+      if (inactiveFor >= IDLE_LIMIT) {
+        closeBook();
+      } else {
+        idleTimer = setTimeout(checkIdle, IDLE_LIMIT - inactiveFor);
+      }
+    }, IDLE_LIMIT);
+  }
+
+  /* Book page-ൽ touch/click/page flip ഉണ്ടായാൽ timer reset */
+  document.addEventListener("pointerdown", startOrResetIdleTimer, { passive: true });
+  document.addEventListener("touchstart", startOrResetIdleTimer, { passive: true });
+  document.addEventListener("click", startOrResetIdleTimer, { passive: true });
+
+  /* App/browser background-ൽ നിന്ന് തിരികെ വരുമ്പോൾ elapsed time check */
+  document.addEventListener("visibilitychange", function () {
+    if (!document.hidden && bookIsOpen()) {
+      if (Date.now() - lastBookTouchTime >= IDLE_LIMIT) {
+        closeBook();
+      } else {
+        startOrResetIdleTimer();
+      }
+    }
+  });
+
+  window.addEventListener("focus", function () {
+    if (bookIsOpen()) {
+      if (Date.now() - lastBookTouchTime >= IDLE_LIMIT) {
+        closeBook();
+      } else {
+        startOrResetIdleTimer();
+      }
+    }
+  });
+
+  /* Main/Index HTML scroll message സ്വീകരിച്ച് book close */
+  window.addEventListener("message", function (event) {
+    if (event.data && event.data.type === "close_book") {
+      closeBook();
+    }
+  });
+
+  /* ആദ്യ page flip/open കഴിഞ്ഞ് timer ആരംഭിക്കാൻ */
+  document.addEventListener("pointerup", function () {
+    setTimeout(startOrResetIdleTimer, 50);
+  }, { passive: true });
+})();
+</script>
 </body>
 </html>
