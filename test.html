@@ -8268,20 +8268,25 @@ body, body * {
 
 /* Default font size - 19px for small text */
 * {
-  font-size: 19px !important;
+  font-size: 10px !important;
 }
 
 /* Medium text - 20px */
 p, span, a, li, td, th, label, input, textarea {
-  font-size: 20px !important;
+  font-size: 11px !important;
 }
 
 /* Large text - 23px for headings and buttons */
 h1, h2, h3, h4, h5, h6,
 button, .btn, select, .selector, [class*="select"], [class*="button"] {
-  font-size: 23px !important;
+  font-size:12px !important;
+}
+    /* Exempt heading elements from font size reduction */
+.food, .brand, .hub, .tm, .main-title, .heading, .international {
+  font-size: revert !important;
 }
 </style>
+    
     
 </body> <!-- ഇതിന് തൊട്ടു മുകളിൽ -->
 </html>
