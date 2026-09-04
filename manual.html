@@ -666,10 +666,10 @@ function resetAutoCloseTimer() {
   if (autoCloseTimer) clearTimeout(autoCloseTimer);
   if (isBookOpen()) {
     stopPeekInterval();
-    // 2 Minutes = 120000 ms Auto-Close
+    // 1 Minutes = 60000 ms Auto-Close
     autoCloseTimer = setTimeout(() => {
       closeAllPages();
-    }, 120000);
+    }, 60000);
   } else {
     startPeekInterval();
   }
