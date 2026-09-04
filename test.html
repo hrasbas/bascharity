@@ -8260,33 +8260,46 @@ body, body * {
 }
 </style>
 <style>
-/* Font size rules:
-   19px → small text
-   20px → medium text
-   23px+ → large text (headings, buttons)
-*/
+/* Font size rules */
 
 /* Default font size - 19px for small text */
 * {
-  font-size: 10px !important;
+  font-size: 11px !important;
 }
 
 /* Medium text - 20px */
 p, span, a, li, td, th, label, input, textarea {
-  font-size: 11px !important;
+  font-size: 12px !important;
 }
 
 /* Large text - 23px for headings and buttons */
 h1, h2, h3, h4, h5, h6,
 button, .btn, select, .selector, [class*="select"], [class*="button"] {
-  font-size:12px !important;
+  font-size:13px !important;
 }
-    /* Exempt heading elements from font size reduction */
+
+/* Exempt Title, Food, Hub - keep original size */
 .food, .brand, .hub, .tm, .main-title, .heading, .international {
-  font-size: revert !important;
+  font-size: initial !important;
+}
+
+/* Specific font sizes for headings */
+.food {
+  font-size: clamp(8px, calc(0.5rem + 0.5vw), 12px) !important;
+}
+
+.brand {
+  font-size: clamp(28px, calc(1.25rem + 3.6vw), 65px) !important;
+}
+
+.hub {
+  font-size: clamp(11px, calc(0.5rem + 1.7vw), 20px) !important;
+}
+
+.tm {
+  font-size: 25px !important;
 }
 </style>
-    
     
 </body> <!-- ഇതിന് തൊട്ടു മുകളിൽ -->
 </html>
