@@ -11,21 +11,24 @@
 
 <style>
 
-    /* നിങ്ങളുടെ മറ്റ് CSS code */
-    
-    #book .page {
-      background-color: white !important; /* അകത്ത് white */
-    }
+    /* ബുക്ക് തുറന്നാൽ അകത്ത് white */
+#book .page,
+#book .page.-left,
+#book .page.-right {
+  background-color: white !important;
+}
 
-    #book .page.-left,
-    #book .page.-right {
-      background-color: white !important; /* അകത്ത് white */
-    }
+/* ബുക്ക് തുറന്നാൽ binding ഭാഗം white */
+#book .page .gradient,
+#book .page.-left .gradient,
+#book .page.-right .gradient {
+  background-color: white !important;
+}
 
-    #book .hard {
-      background-color: #your-dark-color !important; /* പുറത്ത് dark */
-    }
-
+/* ബുക്ക് അടഞ്ഞാൽ പുറത്ത് binding color */
+#book .hard {
+  background-color: #333 !important; /* dark color */
+}
 
 * { box-sizing: border-box; margin: 0; padding: 0; user-select: none; -webkit-user-select: none; }
 
