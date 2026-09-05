@@ -1044,6 +1044,23 @@ body {
   });
 })();
 </script>
- 
+ <script>
+$(document).ready(function() {
+  var $book = $("#book");
+  
+  // പേജുകൾ കൂട്ടി നിർത്തുന്നു
+  $book.turn("size", $book.width(), $book.height());
+  $book.turn("display", $book.turn("page"));
+  
+  // പേജ് മാറി കഴിഞ്ഞാൽ
+  $book.bind("turned", function(event, page, view) {
+    setTimeout(function() {
+      $book.turn("resize");
+      $book.turn("size", $book.width(), $book.height());
+      $book.turn("display", $book.turn("page"));
+    }, 100);
+  });
+});
+</script>
 </body>
 </html>
