@@ -11,20 +11,7 @@
 
 <style>
 
- /* ബുക്ക് തുറന്നാൽ അകത്ത് white */
-#book .page,
-#book .page.-left,
-#book .page.-right {
-  background-color: white !important;
-}
-
-/* ബുക്ക് തുറന്നാൽ binding ഭാഗം white */
-#book .page .gradient,
-#book .page.-left .gradient,
-#book .page.-right .gradient {
-  background-color: white !important;
-}
-
+ 
 * { box-sizing: border-box; margin: 0; padding: 0; user-select: none; -webkit-user-select: none; }
 
 html, body { 
@@ -1035,6 +1022,61 @@ body {
 })();
 </script>
  
+  <style>
+  /* രണ്ട് പേജുകളുടെ അറ്റങ്ങൾ തമ്മിൽ കൃത്യമായി മുട്ടിനിൽക്കാൻ (Binding Gap Removal) */
+  #book .turn-page {
+    margin: 0 !important;
+    padding: 0 !important;
+  }
   
+  /* ഇടത്-വലത് പേജുകൾക്കിടയിലെ വിടവ് പൂർണ്ണമായി ഇല്ലാതാക്കുന്നു */
+  #book .p-left {
+    right: 0 !important;
+  }
+  #book .p-right {
+    left: 0 !important;
+  }
+
+  /* ബാക്ക്ഗ്രൗണ്ട് എപ്പോഴും വെള്ളയായി നിലനിർത്താൻ */
+  #book, .turn-page, #book .page {
+    background-color: #ffffff !important;
+  }
+</style>
+
+<script>
+(function() {
+  "use strict";
+
+  document.addEventListener("DOMContentLoaded", function() {
+    var checkBook = setInterval(function() {
+      var $book = $("#book"); // നിങ്ങളുടെ ഫ്ലിപ്പ് ബുക്ക് ID
+
+      if ($book.length && $book.turn) {
+        clearInterval(checkBook);
+
+        // പേജ് മറിഞ്ഞു കഴിയുമ്പോൾ (turned event) ലെഫ്റ്റ് പേജിൽ ഒരു ഫോഴ്സ് ആക്റ്റീവ് ടച്ച് നൽകുന്നു
+        $book.bind("turned", function(event, page, view) {
+          
+          // 1. വിരലമർത്തുന്ന എഫക്ട് കോഡിലൂടെ സൃഷ്ടിക്കുന്നു
+          var leftPageNum = view[0];
+          if (leftPageNum) {
+            var $leftPage = $book.find('.page-wrapper[page="' + leftPageNum + '"]');
+            
+            // Artificial Hold Effect
+            $leftPage.trigger("touchstart").trigger("mousedown");
+          }
+
+          // 2. പേജ് എൻഡുകൾ തമ്മിൽ മുട്ടാൻ ലെഫ്റ്റ്, റൈറ്റ് പൊസിഷൻ റീ-കാൽക്കുലേറ്റ് ചെയ്യുന്നു
+          setTimeout(function() {
+            $book.turn("resize");
+          }, 10);
+        });
+
+      }
+    }, 100);
+  });
+})();
+</script>
+
 </body>
 </html>
