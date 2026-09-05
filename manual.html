@@ -1020,31 +1020,6 @@ body {
   }, { passive: true });
 })();
 </script>
- <script>
-(function() {
-  "use strict";
-
-  // Flipbook റെഡിയായ ശേഷം പേജ് ഡ്രാഗ് ചെയ്യുമ്പോഴോ റിലീസ് ചെയ്യുമ്പോഴോ അലൈൻമെന്റ് കാത്തുസൂക്ഷിക്കാൻ
-  document.addEventListener("DOMContentLoaded", function() {
-    var checkBookExists = setInterval(function() {
-      var $book = $("#book"); // നിങ്ങളുടെ ഫ്ലിപ്പ്ബുക്ക് കണ്ടെയ്നർ
-      if ($book.length && $book.turn) {
-        clearInterval(checkBookExists);
-
-        // പേജ് മാറി കഴിഞ്ഞ ശേഷം ലെഫ്റ്റ് പേജിലെ ഗാപ്പ് ഒഴിവാക്കാൻ അലൈൻമെന്റ് അപ്ഡേറ്റ് ചെയ്യുന്നു
-        $book.bind("turned", function(event, page, view) {
-          setTimeout(function() {
-            $book.turn("resize");
-            $book.turn("size", $book.width(), $book.height());
-            $book.turn("display", $book.turn("page"));
-          }, 50);
-        });
-
-      }
-    }, 100);
-  });
-})();
-</script>
  
  <script>
 $("#book").turn({
