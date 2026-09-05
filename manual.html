@@ -11,25 +11,6 @@
 
 <style>
 
-    /* ബുക്ക് തുറന്നാൽ അകത്ത് white */
-#book .page,
-#book .page.-left,
-#book .page.-right {
-  background-color: white !important;
-}
-
-/* ബുക്ക് തുറന്നാൽ binding ഭാഗം white */
-#book .page .gradient,
-#book .page.-left .gradient,
-#book .page.-right .gradient {
-  background-color: white !important;
-}
-
-/* ബുക്ക് അടഞ്ഞാൽ പുറത്ത് binding color */
-#book .hard {
-  background-color: #333 !important; /* dark color */
-}
-
 * { box-sizing: border-box; margin: 0; padding: 0; user-select: none; -webkit-user-select: none; }
 
 html, body { 
@@ -1064,6 +1045,21 @@ body {
   });
 })();
 </script>
+<script>
+$(document).ready(function() {
+  var $book = $("#book");
+  
+  // ബുക്ക് തുറന്നാൽ അകത്ത് white
+  $book.bind("turned", function(event, page, view) {
+    setTimeout(function() {
+      $(".page").css("background-color", "white");
+      $(".page .gradient").css("background-color", "white");
+      $(".page .shadow").css("background-color", "white");
+    }, 100);
+  });
+});
+</script>
+ 
  
 </body>
 </html>
