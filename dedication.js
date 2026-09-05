@@ -8,13 +8,14 @@ Object.assign(window.dedicationData, {
   malayalam: {
     language: "Malayalam",
     title: "സമർപ്പണം",
-    content: "നമ്മളിൽ ഓരോരുത്തരുടെയും, നമ്മുടെ മാതാപിതാക്കളുടെയും,മുത്തശ്ശന്മാരുടേയും മുത്തശ്ശിമാരുടേയും,നനമുക്ക്മുമ്പ് ഈ ലോകത്തുനിന്ന് വിടപറഞ്ഞ സകല ആത്മാക്കളുടെയും പാവനമായ ഓർമ്മയ്ക്കും, നിത്യശാന്തിക്കും, ക്ഷേമത്തിനും നന്മക്കും വേണ്ടി ഇത് സ്നേഹപൂർവ്വം സമർപ്പിക്കുന്നു."
+    content: "നമ്മളിൽ ഓരോരുത്തരുടെയും, നമ്മുടെ മാതാപിതാക്കളുടേയും, മുത്തശ്ശി മുത്തശ്ശന്മാരുടേയും  നമുക്കു മുമ്പ് ലോകത്ത് നിന്ന് വിട പറഞ്ഞ  സകല ആത്മാക്കളുടേയും പാവനമായ ഓർമ്മയ്ക്കും, നിത്യശാന്തിക്കും, ക്ഷേമത്തിനും നന്മക്കും വേണ്ടി ഇത് സ്നേഹപൂർവ്വം സമർപ്പിക്കുന്നു."
   },
-
+  
   english: {
     language: "English",
     title: "Dedication",
     content: "This is lovingly dedicated to each one of us, our parents, our grandparents, and all the souls who departed from this world before us, in their sacred memory, for their eternal peace, well-being, and goodness."
+ 
   },
 
   chinese: {
