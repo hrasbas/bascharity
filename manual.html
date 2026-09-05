@@ -1045,20 +1045,6 @@ body {
   });
 })();
 </script>
-<script>
-$(document).ready(function() {
-  var $book = $("#book");
-  
-  // ബുക്ക് തുറന്നാൽ അകത്ത് white
-  $book.bind("turned", function(event, page, view) {
-    setTimeout(function() {
-      $(".page").css("background-color", "white");
-      $(".page .gradient").css("background-color", "white");
-      $(".page .shadow").css("background-color", "white");
-    }, 100);
-  });
-});
-</script>
  
  <script>
 $("#book").turn({
