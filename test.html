@@ -1565,25 +1565,38 @@ body :where(
    Their own responsive rules remain active.
    ========================================================= */
 </style>
-     <style> 
-/* പുസ്തകം തുറന്നിരിക്കുമ്പോൾ (is-open) മാത്രം ഉള്ളിലെ ബാക്ക്ഗ്രൗണ്ടും ഷാഡോകളും വെള്ളയാക്കുന്നു */
-#book.is-open,
-#book.is-open .page,
-#book.is-open .turn-page,
-#book.is-open .page-wrapper,
-#book.is-open .p-left,
-#book.is-open .p-right {
-  background-color: #ffffff !important;
-  background-image: none !important;
-  box-shadow: none !important;
-}
+      <style>
+  /* 1. ഇടതുവശത്തെ ചാരനിറത്തിലുള്ള ബൈൻഡിംഗ് സ്ട്രിപ്പും ഷേഡിംഗും പൂജ്യമാക്കുന്നു */
+  #book .hard,
+  #book .binding,
+  #book .spine,
+  #book .p-left,
+  #book .p-right,
+  #book .turn-page {
+    border-left: none !important;
+    border-right: none !important;
+    box-shadow: none !important;
+    background-image: none !important;
+  }
 
-#book.is-open .shadow,
-#book.is-open .gradient {
-  display: none !important;
-  opacity: 0 !important;
-}
+  /* 2. ബൈൻഡിംഗ് വശങ്ങളിലെ ഗ്രേഡിയന്റ് പശ്ചാത്തലം പേജിന്റെ കളറിലേക്ക് മാറ്റുന്നു */
+  #book .turn-page-wrapper div[style*="gradient"],
+  #book .gradient,
+  #book .shadow {
+    display: none !important;
+    background: transparent !important;
+  }
+
+  /* 3. പുസ്തകത്തിന്റെ പ്രധാന പശ്ചാത്തലവും പേജുകളുടെ ബാക്ക്ഗ്രൗണ്ടും വെള്ളയാക്കുന്നു (White) */
+  #book,
+  #book .page-wrapper,
+  #book .page,
+  .magazine-viewport {
+    background-color: #ffffff !important;
+    background-image: none !important;
+  }
 </style>
+
   <!-- ===========================
 END OF BAS ANALYTICS
 =========================== -->
@@ -8353,20 +8366,7 @@ font-size: clamp(10px, calc(0.5rem + 1.7vw), 20px) !important;
   });
 })();
 </script>
-  <script>
-$(document).ready(function() {
-  // പേജ് മറിയാൻ തുടങ്ങുമ്പോൾ (തുറന്നിരിക്കുന്ന അവസ്ഥ)
-  $("#book").bind("turning", function(event, page, view) {
-    if (page == 1 || page == $(this).turn("pages")) {
-      // പുസ്തകം അടഞ്ഞിരിക്കുമ്പോൾ (കവർ പേജിൽ)
-      $(this).removeClass("is-open");
-    } else {
-      // പുസ്തകം തുറന്നിരിക്കുമ്പോൾ
-      $(this).addClass("is-open");
-    }
-  });
-});
-</script>
+ 
 
 </body> <!-- ഇതിന് തൊട്ടു മുകളിൽ -->
 </html>
