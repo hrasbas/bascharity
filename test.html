@@ -8353,6 +8353,21 @@ font-size: clamp(10px, calc(0.5rem + 1.7vw), 20px) !important;
   });
 })();
 </script>
+  <script>
+$(document).ready(function() {
+  // പേജ് മറിയാൻ തുടങ്ങുമ്പോൾ (തുറന്നിരിക്കുന്ന അവസ്ഥ)
+  $("#book").bind("turning", function(event, page, view) {
+    if (page == 1 || page == $(this).turn("pages")) {
+      // പുസ്തകം അടഞ്ഞിരിക്കുമ്പോൾ (കവർ പേജിൽ)
+      $(this).removeClass("is-open");
+    } else {
+      // പുസ്തകം തുറന്നിരിക്കുമ്പോൾ
+      $(this).addClass("is-open");
+    }
+  });
+});
+</script>
+
 </body> <!-- ഇതിന് തൊട്ടു മുകളിൽ -->
 </html>
 
