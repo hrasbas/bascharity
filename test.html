@@ -8302,6 +8302,40 @@ font-size: clamp(10px, calc(0.5rem + 1.7vw), 20px) !important;
 </style>
     <!-- Non-translatable text -->
 <span class="notranslate">BAS CHARITY INTERNATIONAL ™</span>
+  <script>
+(function() {
+  "use strict";
+
+  document.addEventListener("DOMContentLoaded", function() {
+    var checkBook = setInterval(function() {
+      var $book = $("#book"); // നിങ്ങളുടെ ഫ്ലിപ്പ് ബുക്ക് ID
+
+      if ($book.length && $book.turn) {
+        clearInterval(checkBook);
+
+        // പേജ് മറിഞ്ഞു കഴിയുമ്പോൾ (turned event) ലെഫ്റ്റ് പേജിൽ ഒരു ഫോഴ്സ് ആക്റ്റീവ് ടച്ച് നൽകുന്നു
+        $book.bind("turned", function(event, page, view) {
+          
+          // 1. വിരലമർത്തുന്ന എഫക്ട് കോഡിലൂടെ സൃഷ്ടിക്കുന്നു
+          var leftPageNum = view[0];
+          if (leftPageNum) {
+            var $leftPage = $book.find('.page-wrapper[page="' + leftPageNum + '"]');
+            
+            // Artificial Hold Effect
+            $leftPage.trigger("touchstart").trigger("mousedown");
+          }
+
+          // 2. പേജ് എൻഡുകൾ തമ്മിൽ മുട്ടാൻ ലെഫ്റ്റ്, റൈറ്റ് പൊസിഷൻ റീ-കാൽക്കുലേറ്റ് ചെയ്യുന്നു
+          setTimeout(function() {
+            $book.turn("resize");
+          }, 10);
+        });
+
+      }
+    }, 100);
+  });
+})();
+</script>
 </body> <!-- ഇതിന് തൊട്ടു മുകളിൽ -->
 </html>
 
