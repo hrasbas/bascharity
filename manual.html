@@ -281,22 +281,6 @@ body {
   animation: peekAnimation 1.8s ease-in-out;
 }
 </style>
-<style>
-/* ALL-IN-ONE RESPONSIVE FLIPBOOK ALIGNMENT FIX */
-@media screen and (max-width: 1024px) {
-  .page-wrapper, .page, .p-left, .p-right, #book .turn-page {
-    pointer-events: auto !important;
-    transform: translate3d(0, 0, 0) !important;
-    -webkit-transform: translate3d(0, 0, 0) !important;
-    left: 0 !important;
-    margin-left: 0 !important;
-    box-shadow: none !important;
-    width: 100% !important;
-    max-width: 100% !important;
-    height: auto !important;
-  }
-}
-</style>
  
 </head>
 <body>
@@ -1035,5 +1019,29 @@ body {
   }, { passive: true });
 })();
 </script>
+ <script>
+(function() {
+  "use strict";
+
+  // Flipbook റെഡിയായ ശേഷം പേജ് ഡ്രാഗ് ചെയ്യുമ്പോഴോ റിലീസ് ചെയ്യുമ്പോഴോ അലൈൻമെന്റ് കാത്തുസൂക്ഷിക്കാൻ
+  document.addEventListener("DOMContentLoaded", function() {
+    var checkBookExists = setInterval(function() {
+      var $book = $("#book"); // നിങ്ങളുടെ ഫ്ലിപ്പ്ബുക്ക് കണ്ടെയ്നർ
+      if ($book.length && $book.turn) {
+        clearInterval(checkBookExists);
+
+        // പേജ് മാറി കഴിഞ്ഞ ശേഷം ലെഫ്റ്റ് പേജിലെ ഗാപ്പ് ഒഴിവാക്കാൻ അലൈൻമെന്റ് അപ്ഡേറ്റ് ചെയ്യുന്നു
+        $book.bind("turned", function(event, page, view) {
+          setTimeout(function() {
+            $book.turn("resize");
+          }, 50);
+        });
+
+      }
+    }, 100);
+  });
+})();
+</script>
+
 </body>
 </html>
