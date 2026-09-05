@@ -1565,8 +1565,25 @@ body :where(
    Their own responsive rules remain active.
    ========================================================= */
 </style>
-     
+     <style> 
+/* പുസ്തകം തുറന്നിരിക്കുമ്പോൾ (is-open) മാത്രം ഉള്ളിലെ ബാക്ക്ഗ്രൗണ്ടും ഷാഡോകളും വെള്ളയാക്കുന്നു */
+#book.is-open,
+#book.is-open .page,
+#book.is-open .turn-page,
+#book.is-open .page-wrapper,
+#book.is-open .p-left,
+#book.is-open .p-right {
+  background-color: #ffffff !important;
+  background-image: none !important;
+  box-shadow: none !important;
+}
 
+#book.is-open .shadow,
+#book.is-open .gradient {
+  display: none !important;
+  opacity: 0 !important;
+}
+</style>
   <!-- ===========================
 END OF BAS ANALYTICS
 =========================== -->
