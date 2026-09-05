@@ -3,6 +3,19 @@
 <head>
   
 <style>
+/* 001 */
+button:active {
+    background-color: gold !important;
+    color: #000 !important;
+    transform: scale(0.98);
+}
+
+/* 002 */
+button.active {
+    background-color: gold !important;
+    color: #000 !important;
+}
+  
     /* GLOBAL TRANSLATIONS & OVERFLOW FIX */
 *, *::before, *::after {
   max-width: 100% !important;
@@ -8263,6 +8276,23 @@ button, .btn, select, .selector, [class*="select"], [class*="button"] {
         el.classList.add('notranslate');
       }
     });
+
+    // 001
+document.querySelectorAll('button').forEach(button => {
+
+    // 002
+    button.addEventListener('click', function () {
+
+        // 003
+        document.querySelectorAll('button.active')
+            .forEach(btn => btn.classList.remove('active'));
+
+        // 004
+        this.classList.add('active');
+
+    });
+
+});  
   </script>
 
 </body> <!-- ഇതിന് തൊട്ടു മുകളിൽ -->
