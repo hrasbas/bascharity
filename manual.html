@@ -1035,16 +1035,15 @@ body {
           setTimeout(function() {
             $book.turn("resize");
             $book.turn("size", $book.width(), $book.height());
+            $book.turn("display", $book.turn("page"));
           }, 50);
         });
-
-        // സ്ഥിരമായിട്ട് പേജുകൾ കൂട്ടി നിർത്തുന്നു
-        $book.turn("display", $book.turn("page"));
 
       }
     }, 100);
   });
 })();
 </script>
+ 
 </body>
 </html>
