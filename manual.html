@@ -11,6 +11,20 @@
 
 <style>
 
+ /* ബുക്ക് തുറന്നാൽ അകത്ത് white */
+#book .page,
+#book .page.-left,
+#book .page.-right {
+  background-color: white !important;
+}
+
+/* ബുക്ക് തുറന്നാൽ binding ഭാഗം white */
+#book .page .gradient,
+#book .page.-left .gradient,
+#book .page.-right .gradient {
+  background-color: white !important;
+}
+
 * { box-sizing: border-box; margin: 0; padding: 0; user-select: none; -webkit-user-select: none; }
 
 html, body { 
