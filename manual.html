@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="en" translate="no" class="notranslate">
 <head>
 <meta charset="UTF-8" />
@@ -13,289 +13,276 @@
 
 <style>
   /* ലെഫ്റ്റ് പേജ് ഒഴിവാക്കുക */
-    #book .page.-left {
-      display: none !important;
-    }
+  #book .page.-left {
+    display: none !important;
+  }
 
-    /* റൈറ്റ് പേജ് മാത്രം കാണിക്കുക */
-    #book .page.-right {
-      display: block !important;
-      color: black !important;
-      font-weight: bold !important; 
-    }
-  
+  /* റൈറ്റ് പേജ് മാത്രം കാണിക്കുക */
+  #book .page.-right {
+    display: block !important;
+    color: black !important;
+    font-weight: bold !important; 
+  }
 
- 
-* { box-sizing: border-box; margin: 0; padding: 0; user-select: none; -webkit-user-select: none; }
+  /* FIX: എല്ലാ എലമെന്റുകളെയും ബാധിച്ചിരുന്ന * ടാഗിന് പകരം #bookStage എന്ന് മാത്രം ആക്കി */
+  #bookStage, #bookStage * { 
+    box-sizing: border-box; 
+    user-select: none; 
+    -webkit-user-select: none; 
+  }
 
-html, body { 
-  width: 100%; 
-  height: 100%; 
-}
+  /* FIX: global body touch-action ഒഴിവാക്കി, stage-ന് മാത്രം ആക്കി */
+  .stage {
+    position: relative;
+    left: 50px;
+    width: 480px;
+    height: 520px;
+    top: 2cm;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 32px;
+    margin-top: 2cm;
+    perspective: 2500px;
+    perspective-origin: 50% 50%;
+    transform-style: preserve-3d;
+    touch-action: pan-y; /* FIX: പേജ് സ്ക്രോളിംഗ് തടയില്ല */
+    transform: translateX(-40px) rotateY(-18deg) rotateX(6deg);
+  }
 
-body {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: center;
-  background: radial-gradient(circle at top, #1e293b 0%, #0f172a 54%, #020617 100%);
-  font-family: Georgia, serif;
-  padding:20px;
-  overflow: visible !important;
-}
+  .back-cover-base {
+    position: absolute;
+    top: -2mm;
+    left: 0;
+    width: calc(100% + 2mm);
+    height: calc(100% + 4mm);
+    background: linear-gradient(135deg, #d7e1ee 0%, #c7d2e0 100%);
+    border: 1.5px solid #ece7de;
+    border-radius: 2px;
+    box-shadow: inset 0 0 34px rgba(0,0,0,.06), inset -16px 0 30px rgba(0,0,0,.04), -6px 12px 28px rgba(0,0,0,0.22);
+    z-index: 1;
+    cursor: pointer;
+  }
 
-.stage {
-  position: relative;
-  left: 50px;
+  .spine {
+    position: absolute;
+    left: -14px;
+    top: -2mm;
+    width: 14px;
+    height: calc(100% + 4mm);
+    background: linear-gradient(to right, #64748b, #94a3b8, #cbd5e1);
+    border-left: 1px solid #ece7de;
+    border-radius: 4px 0 0 4px;
+    box-shadow: -2px 0 8px rgba(0,0,0,.2);
+    z-index: 80;
+  }
 
-  width:480px;
-  height:520px;
-  top:2cm;
-  margin-left: auto,10px;
-  margin-right: auto;
-  margin-bottom:32px;
-  margin-top:2cm;
-  perspective: 2500px;
-  perspective-origin: 50% 50%;
-  transform-style: preserve-3d;
-  touch-action: none;
-  transform: translateX(-40px) rotateY(-18deg) rotateX(6deg);
-}
+  .page {
+    position: absolute;
+    inset: 0;
+    transform-origin: left center;
+    transform-style: preserve-3d;
+    transition: transform .65s cubic-bezier(.25, 1, .5, 1);
+    will-change: transform;
+    cursor: grab;
+    pointer-events: auto;
+    touch-action: none; /* കേവലം പുസ്തകത്താളിന് മാത്രം */
+  }
+  .page:active { cursor: grabbing; }
 
-.back-cover-base {
-  position: absolute;
-  top: -2mm;
-  left: 0;
-  width: calc(100% + 2mm);
-  height: calc(100% + 4mm);
-  background: linear-gradient(135deg, #d7e1ee 0%, #c7d2e0 100%);
-  border: 1.5px solid #ece7de;
-  border-radius: 2px;
-  box-shadow: inset 0 0 34px rgba(0,0,0,.06), inset -16px 0 30px rgba(0,0,0,.04), -6px 12px 28px rgba(0,0,0,0.22);
-  z-index: 1;
-  cursor: pointer;
-}
+  .cover-page .page-face {
+    background:
+      radial-gradient(circle at 30% 20%, rgba(255,255,255,.75), transparent 40%),
+      linear-gradient(135deg, #e2e8f0 0%, #cbd5e1 100%);
+    border: 2px solid #94a3b8;
+    box-shadow: inset 0 0 34px rgba(0,0,0,.10), inset -16px 0 30px rgba(0,0,0,.06);
+  }
 
-.spine {
-  position: absolute;
-  left: -14px;
-  top: -2mm;
-  width: 14px;
-  height: calc(100% + 4mm);
-  background: linear-gradient(to right, #64748b, #94a3b8, #cbd5e1);
-  border-left: 1px solid #ece7de;
-  border-radius: 4px 0 0 4px;
-  box-shadow: -2px 0 8px rgba(0,0,0,.2);
-  z-index: 80;
-}
+  .cover-title {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    padding: 6% 4% 8%;
+    z-index: 10;
+    pointer-events: none;
+  }
 
-.page {
-  position: absolute;
-  inset: 0;
-  transform-origin: left center;
-  transform-style: preserve-3d;
-  transition: transform .65s cubic-bezier(.25, 1, .5, 1);
-  will-change: transform;
-  cursor: grab;
-  pointer-events: auto;
-}
-.page:active { cursor: grabbing; }
+  .brand-logo {
+    width: min(60px, 11vw);
+    height: min(60px, 11vw);
+    margin-bottom: 4px;
+    fill: #000000;
+    filter: drop-shadow(0 2px 4px rgba(212,175,55,0.5));
+  }
 
-.cover-page .page-face {
-  background:
-    radial-gradient(circle at 30% 20%, rgba(255,255,255,.75), transparent 40%),
-    linear-gradient(135deg, #e2e8f0 0%, #cbd5e1 100%);
-  border: 2px solid #94a3b8;
-  box-shadow: inset 0 0 34px rgba(0,0,0,.10), inset -16px 0 30px rgba(0,0,0,.06);
-}
+  .main-title-unified {
+    font-family: 'Arial Black', Gadget, sans-serif;
+    font-size: clamp(16px, 5vw, 24px);
+    font-weight: 900;
+    color: #000000;
+    letter-spacing: 1px;
+    line-height: 1.2;
+    text-transform: uppercase;
+    text-shadow: 
+      1px 1px 0px #d4af37,
+      2px 2px 0px #aa7c11,
+      3px 3px 2px rgba(0, 0, 0, 0.4);
+    margin-bottom: 4px;
+  }
 
-.cover-title {
-  position: absolute;
-  inset: 0;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-  text-align: center;
-  padding: 6% 4% 8%;
-  z-index: 10;
-  pointer-events: none;
-}
+  .sub-title-dark {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: clamp(8px, 2.3vw, 11px);
+    font-weight: 900;
+    color: #000000;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin-top: 4px;
+    border-top: 1.5px solid #000000;
+    border-bottom: 1.5px solid #000000;
+    padding: 3px 6px;
+  }
 
-.brand-logo {
-  width: min(60px, 11vw);
-  height: min(60px, 11vw);
-  margin-bottom: 4px;
-  fill: #000000;
-  filter: drop-shadow(0 2px 4px rgba(212,175,55,0.5));
-}
+  .author-handwriting-3d {
+    font-family: 'Dancing Script', 'Brush Script MT', cursive;
+    font-size: clamp(18px, 5.2vw, 26px);
+    font-weight:800;
+    font-style: italic;
+    color: #1a1a1a;
+    letter-spacing: 1px;
+    text-transform: none;
+    text-shadow: 
+      1px 1px 0px #ffd700,
+      2px 2px 1px #b8860b,
+      3px 3px 3px rgba(0,0,0,0.3);
+  }
 
-.main-title-unified {
-  font-family: 'Arial Black', Gadget, sans-serif;
-  font-size: clamp(16px, 5vw, 24px);
-  font-weight: 900;
-  color: #000000;
-  letter-spacing: 1px;
-  line-height: 1.2;
-  text-transform: uppercase;
-  text-shadow: 
-    1px 1px 0px #d4af37,
-    2px 2px 0px #aa7c11,
-    3px 3px 2px rgba(0, 0, 0, 0.4);
-  margin-bottom: 4px;
-}
+  .page-face {
+    position: absolute;
+    inset: 0;
+    padding: 5% 5% 4%;
+    background: linear-gradient(135deg, #fffdf8 0%, #f4ede0 100%);
+    border: 1px solid #d6ccb6;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    overflow: hidden;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    pointer-events: none;
+  }
 
-.sub-title-dark {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  font-size: clamp(8px, 2.3vw, 11px);
-  font-weight: 900;
-  color: #000000;
-  letter-spacing: 1px;
-  text-transform: uppercase;
-  margin-top: 4px;
-  border-top: 1.5px solid #000000;
-  border-bottom: 1.5px solid #000000;
-  padding: 3px 6px;
-}
+  .page-face::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to right, rgba(0,0,0,.03), transparent 12px);
+    z-index: 2;
+  }
 
-.author-handwriting-3d {
-  font-family: 'Dancing Script', 'Brush Script MT', cursive;
-  font-size: clamp(18px, 5.2vw, 26px);
-  font-weight:800;
-  font-style: italic;
-  color: #1a1a1a;
-  letter-spacing: 1px;
-  text-transform: none;
-  text-shadow: 
-    1px 1px 0px #ffd700,
-    2px 2px 1px #b8860b,
-    3px 3px 3px rgba(0,0,0,0.3);
-}
+  .front-face { z-index: 2; }
+  .back-face { 
+    z-index: 1; 
+    transform: rotateY(180deg);
+    background: #fcfbf7;
+  }
 
-.page-face {
-  position: absolute;
-  inset: 0;
-  padding: 5% 5% 4%;
-  background: linear-gradient(135deg, #fffdf8 0%, #f4ede0 100%);
-  border: 1px solid #d6ccb6;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  overflow: hidden;
-  backface-visibility: hidden;
-  -webkit-backface-visibility: hidden;
-  pointer-events: none;
-}
+  .right-page-box {
+    width: 100%;
+    text-align: left;
+  }
+  .content-title {
+    font-size: clamp(12px, 3vw, 15px);
+    color: #000000;
+    font-weight: 900;
+    border-bottom: 2px solid #cbd5e1;
+    padding-bottom: 4px;
+    margin-bottom: 6px;
+    text-transform: uppercase;
+    letter-spacing: .5px;
+  }
+  .content-body {
+    font-size: clamp(8px, 2.6vw, 12px);
+    line-height: 1.4;
+    color: #1e293b;
+    text-align: justify;
+  }
+  .content-body p { margin-bottom: 4px; }
 
-.page-face::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(to right, rgba(0,0,0,.03), transparent 12px);
-  z-index: 2;
-}
+  .index-list { list-style: none; padding: 0; margin-top: 2px; }
+  .index-item {
+    display: flex;
+    justify-content: space-between;
+    font-size: clamp(8.5px, 2.2vw, 10.5px);
+    padding: 2.5px 0;
+    border-bottom: 1px dashed #cbd5e1;
+    color: #000000;
+    font-weight: 700;
+  }
 
-.front-face { z-index: 2; }
-.back-face { 
-  z-index: 1; 
-  transform: rotateY(180deg);
-  background: #fcfbf7;
-}
+  .page-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px dashed #cbd5e1;
+    padding-top: 2px;
+    margin-top: 2px;
+  }
 
-.right-page-box {
-  width: 100%;
-  text-align: left;
-}
-.content-title {
-  font-size: clamp(12px, 3vw, 15px);
-  color: #000000;
-  font-weight: 900;
-  border-bottom: 2px solid #cbd5e1;
-  padding-bottom: 4px;
-  margin-bottom: 6px;
-  text-transform: uppercase;
-  letter-spacing: .5px;
-}
-.content-body {
-  font-size: clamp(8px, 2.6vw, 12px);
-  line-height: 1.4;
-  color: #1e293b;
-  text-align: justify;
-}
-.content-body p { margin-bottom: 4px; }
+  .page-number {
+    font-size: clamp(12px, 1.8vw, 10px);
+    color: #000000;
+    font-weight: 900;
+    font-family: sans-serif;
+  }
+  .flip-hint {
+    font-size: clamp(8px, 1.8vw, 10px);
+    color: #2563eb;
+    font-weight: 700;
+    font-family: sans-serif;
+  }
 
-.index-list { list-style: none; padding: 0; margin-top: 2px; }
-.index-item {
-  display: flex;
-  justify-content: space-between;
-  font-size: clamp(8.5px, 2.2vw, 10.5px);
-  padding: 2.5px 0;
-  border-bottom: 1px dashed #cbd5e1;
-  color: #000000;
-  font-weight: 700;
-}
+  .wrinkle-fold {
+    position: absolute;
+    inset: 0;
+    background:
+      radial-gradient(circle at 100% 50%, rgba(255,255,255,.6) 0, transparent 40%),
+      linear-gradient(110deg, transparent 20%, rgba(0,0,0,.15) 42%, rgba(255,255,255,.65) 50%, rgba(0,0,0,.18) 58%, transparent 80%);
+    pointer-events: none;
+    opacity: 0;
+    z-index: 12;
+    transition: opacity .05s linear;
+  }
 
-.page-footer {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  border-top: 1px dashed #cbd5e1;
-  padding-top: 2px;
-  margin-top: 2px;
-}
+  .corner-curl {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 0;
+    height: 0;
+    pointer-events: none;
+    z-index: 13;
+    opacity: 0;
+    background: linear-gradient(225deg, rgba(255,255,255,.98), rgba(210,200,180,.95));
+    clip-path: polygon(100% 0, 0 0, 100% 100%);
+    box-shadow: -10px 10px 22px rgba(0,0,0,.35);
+  }
 
-.page-number {
-  font-size: clamp(12px, 1.8vw, 10px);
-  color: #000000;
-  font-weight: 900;
-  font-family: sans-serif;
-}
-.flip-hint {
-  font-size: clamp(8px, 1.8vw, 10px);
-  color: #2563eb;
-  font-weight: 700;
-  font-family: sans-serif;
-}
+  @keyframes peekAnimation {
+    0%   { transform: rotateY(0deg); }
+    20%  { transform: rotateY(-22deg); }
+    40%  { transform: rotateY(0deg); }
+    60%  { transform: rotateY(-15deg); }
+    80%  { transform: rotateY(0deg); }
+    100% { transform: rotateY(0deg); }
+  }
 
-.wrinkle-fold {
-  position: absolute;
-  inset: 0;
-  background:
-    radial-gradient(circle at 100% 50%, rgba(255,255,255,.6) 0, transparent 40%),
-    linear-gradient(110deg, transparent 20%, rgba(0,0,0,.15) 42%, rgba(255,255,255,.65) 50%, rgba(0,0,0,.18) 58%, transparent 80%);
-  pointer-events: none;
-  opacity: 0;
-  z-index: 12;
-  transition: opacity .05s linear;
-}
-
-.corner-curl {
-  position: absolute;
-  right: 0;
-  top: 0;
-  width: 0;
-  height: 0;
-  pointer-events: none;
-  z-index: 13;
-  opacity: 0;
-  background: linear-gradient(225deg, rgba(255,255,255,.98), rgba(210,200,180,.95));
-  clip-path: polygon(100% 0, 0 0, 100% 100%);
-  box-shadow: -10px 10px 22px rgba(0,0,0,.35);
-}
-
-/* 1. Flexible Opening Hint Animation (Peeking) */
-@keyframes peekAnimation {
-  0%   { transform: rotateY(0deg); }
-  20%  { transform: rotateY(-22deg); }
-  40%  { transform: rotateY(0deg); }
-  60%  { transform: rotateY(-15deg); }
-  80%  { transform: rotateY(0deg); }
-  100% { transform: rotateY(0deg); }
-}
-
-.page.peek-hint {
-  animation: peekAnimation 1.8s ease-in-out;
-}
+  .page.peek-hint {
+    animation: peekAnimation 1.8s ease-in-out;
+  }
 </style>
  
 </head>
@@ -683,7 +670,6 @@ function resetAutoCloseTimer() {
   if (autoCloseTimer) clearTimeout(autoCloseTimer);
   if (isBookOpen()) {
     stopPeekInterval();
-    // 1 Minutes = 60000 ms Auto-Close
     autoCloseTimer = setTimeout(() => {
       closeAllPages();
     }, 60000);
@@ -692,15 +678,9 @@ function resetAutoCloseTimer() {
   }
 }
 
-// Close Book on Screen Scroll
-window.addEventListener('scroll', () => {
-  if (isBookOpen()) {
-    closeAllPages();
-  }
-}, { passive: true });
-
-window.addEventListener('touchmove', resetAutoCloseTimer, { passive: true });
-window.addEventListener('mousemove', resetAutoCloseTimer, { passive: true });
+// FIX: Global events local ആക്കി മാറ്റിയതിനാൽ ബാക്കി സൈറ്റിലെ ടച്ച് സ്ക്രോൾ തടസ്സപ്പെടില്ല.
+stage.addEventListener('touchmove', resetAutoCloseTimer, { passive: true });
+stage.addEventListener('mousemove', resetAutoCloseTimer, { passive: true });
 
 function syncStack() {
   pages.forEach((page, i) => {
@@ -804,7 +784,6 @@ pages.forEach((page) => {
   page.addEventListener('pointercancel', finishTurn);
 });
 
-// Double Swipe Logic on Blue Base Cover (അവസാന നീല അട്ടി)
 const blueCover = document.getElementById('blueCoverBase');
 let coverSwipeCount = 0;
 let coverStartX = 0;
@@ -818,7 +797,6 @@ blueCover.addEventListener('pointerup', (e) => {
   const endX = getPoint(e).x;
   const diffX = Math.abs(endX - coverStartX);
 
-  // If dragged/swiped horizontally more than 30px
   if (diffX > 30) {
     coverSwipeCount++;
     if (coverSwipeTimer) clearTimeout(coverSwipeTimer);
@@ -829,77 +807,16 @@ blueCover.addEventListener('pointerup', (e) => {
     } else {
       coverSwipeTimer = setTimeout(() => {
         coverSwipeCount = 0;
-      }, 1200); // 1.2s time limit for second swipe
+      }, 1200);
     }
   }
 });
 
 syncStack();
 startPeekInterval();
-
-// Analytics Tracking
-let sessionStartTime = Date.now();
-let bookOpenCount = 0;
-
-function trackBookOpen() {
-  bookOpenCount++;
-  if (typeof gtag === 'function') {
-    gtag('event', 'book_open', { 'event_category': 'BAS Manual', 'open_count': bookOpenCount });
-  }
-}
-
-function trackPageView(pageIndex) {
-  let pageName = pageIndex === 1 ? 'Cover Page' : 'Page ' + (pageIndex - 1);
-  if (typeof gtag === 'function') {
-    gtag('event', 'page_view_manual', { 'event_category': 'BAS Manual Page Turn', 'page_number': pageName, 'event_label': pageName });
-  }
-}
-
-pages.forEach((page, index) => {
-  page.addEventListener('pointerup', () => {
-    setTimeout(() => {
-      if (page.dataset.state === 'open') {
-        if (bookOpenCount === 0) trackBookOpen();
-        trackPageView(index + 1);
-      }
-    }, 700);
-  });
-});
-
-window.addEventListener('beforeunload', () => {
-  let timeSpentSeconds = Math.round((Date.now() - sessionStartTime) / 1000);
-  if (typeof gtag === 'function') {
-    gtag('event', 'time_spent_manual', { 'event_category': 'BAS Manual Engagement', 'time_in_seconds': timeSpentSeconds, 'event_label': timeSpentSeconds + ' seconds' });
-  }
-});
 </script>
-<!-- SAFE CONTAINER ZOOM CODE START -->
-<!-- SAFE CONTAINER ZOOM CODE START -->
-<!-- SAFE CONTAINER ZOOM CODE START -->
+
 <style>
-/* പുസ്തകം അടങ്ങിയിരിക്കുന്ന Main Stage മുകളിലെ സ്റ്റൈൽ മാറ്റുന്നു */
-#bookStage, .stage {
-  width: min(450px, 85vw) !important;
-  height: min(600px, 75vh) !important;
-  margin: 0 auto !important;
-  position: relative !important;
-  top: 0 !important;
-  left: 0 !important;
-  
-  /* ആദ്യത്തെ 50% ചെറുതാക്കിയ അവസ്ഥ (Proportional Small View) */
-  transform: translateX(17px) scale(0.5) !important;
-  transform-origin: center center !important;
-  transition: transform 0.4s ease-in-out !important;
-  cursor: pointer !important;
-}
-
-/* തൊടുമ്പോൾ 100% ഫുൾ സൈസിലേക്ക് (Zoom In) മാറുന്നു */
-#bookStage.zoomed, .stage.zoomed {
-  transform: translateX(18px) scale(1) !important;
-  z-index: 9999 !important;
-}
-
-/* പുസ്തകം സെന്ററിൽ കുറച്ചുകൂടി കാണാൻ പാകത്തിൽ വലിയ സൈസിൽ നിൽക്കാൻ (scale: 0.68) */
 #bookStage, .stage {
   width: min(450px, 85vw) !important;
   height: min(600px, 75vh) !important;
@@ -911,54 +828,39 @@ window.addEventListener('beforeunload', () => {
   transform-origin: center center !important;
   transition: transform 0.4s ease-in-out !important;
   cursor: pointer !important;
- width: 85vw !important; height: 75vh !important; 
 }
 
-/* തൊടുമ്പോൾ ഫുൾ സൈസിലേക്ക് (Zoom In) */
 #bookStage.zoomed, .stage.zoomed {
   transform: translateX(17px) scale(1) !important;
   z-index: 9999 !important;
 }
 
-/* പുറത്തെ ബൈൻഡിംഗിൽ ഡയറി സ്റ്റിച്ച് (Stitch Mark) കൊണ്ടുവരാൻ */
 .page-bind, .spine {
   border-left: 2px dashed rgba(0, 0, 0, 0.25) !important;
   box-shadow: inset 2px 0 3px rgba(0, 0, 0, 0.1) !important;
 }
 
-/* പുസ്തകത്തിന്റെ pages വലതുവശത്തേക്ക് shift ചെയ്യാൻ */
 .page.open {
   transform: translateX(17px) scale(1) !important;
 }
-
 </style>
+
 <script>
 document.addEventListener('DOMContentLoaded', function() {
   var bookStage = document.getElementById('bookStage') || document.querySelector('.stage');
   if (bookStage) {
     bookStage.addEventListener('click', function(e) {
-      // ചെറുതായിരിക്കുമ്പോൾ തൊട്ടാൽ മാത്രം Zoom ടോഗിൾ ചെയ്യും
       this.classList.toggle('zoomed');
     });
   }
 });
 </script>
- <style>
-body {
-  padding-bottom: 32px !important;
-}
-</style>
-<!-- SAFE CONTAINER ZOOM CODE END -->
-<script>
-/* =========================================
-   BOOK: 1-MINUTE IDLE AUTO-CLOSE
-   + MAIN PAGE SCROLL CLOSE RECEIVER
-   ========================================= */
 
+<script>
 (function () {
   let idleTimer = null;
   let lastBookTouchTime = 0;
-  const IDLE_LIMIT = 60000; /* 1 minute */
+  const IDLE_LIMIT = 60000;
 
   function bookIsOpen() {
     return typeof isBookOpen === "function" && isBookOpen();
@@ -971,21 +873,13 @@ body {
   }
 
   function startOrResetIdleTimer() {
-    if (idleTimer) {
-      clearTimeout(idleTimer);
-    }
-
-    if (!bookIsOpen()) {
-      return;
-    }
+    if (idleTimer) clearTimeout(idleTimer);
+    if (!bookIsOpen()) return;
 
     lastBookTouchTime = Date.now();
 
     idleTimer = setTimeout(function checkIdle() {
-      if (!bookIsOpen()) {
-        return;
-      }
-
+      if (!bookIsOpen()) return;
       const inactiveFor = Date.now() - lastBookTouchTime;
 
       if (inactiveFor >= IDLE_LIMIT) {
@@ -996,46 +890,20 @@ body {
     }, IDLE_LIMIT);
   }
 
-  /* Book page-ൽ touch/click/page flip ഉണ്ടായാൽ timer reset */
-  document.addEventListener("pointerdown", startOrResetIdleTimer, { passive: true });
-  document.addEventListener("touchstart", startOrResetIdleTimer, { passive: true });
-  document.addEventListener("click", startOrResetIdleTimer, { passive: true });
+  const stageEl = document.getElementById("bookStage");
+  if (stageEl) {
+    stageEl.addEventListener("pointerdown", startOrResetIdleTimer, { passive: true });
+    stageEl.addEventListener("touchstart", startOrResetIdleTimer, { passive: true });
+    stageEl.addEventListener("click", startOrResetIdleTimer, { passive: true });
+  }
 
-  /* App/browser background-ൽ നിന്ന് തിരികെ വരുമ്പോൾ elapsed time check */
-  document.addEventListener("visibilitychange", function () {
-    if (!document.hidden && bookIsOpen()) {
-      if (Date.now() - lastBookTouchTime >= IDLE_LIMIT) {
-        closeBook();
-      } else {
-        startOrResetIdleTimer();
-      }
-    }
-  });
-
-  window.addEventListener("focus", function () {
-    if (bookIsOpen()) {
-      if (Date.now() - lastBookTouchTime >= IDLE_LIMIT) {
-        closeBook();
-      } else {
-        startOrResetIdleTimer();
-      }
-    }
-  });
-
-  /* Main/Index HTML scroll message സ്വീകരിച്ച് book close */
   window.addEventListener("message", function (event) {
     if (event.data && event.data.type === "close_book") {
       closeBook();
     }
   });
-
-  /* ആദ്യ page flip/open കഴിഞ്ഞ് timer ആരംഭിക്കാൻ */
-  document.addEventListener("pointerup", function () {
-    setTimeout(startOrResetIdleTimer, 50);
-  }, { passive: true });
 })();
 </script>
- 
- 
+
 </body>
 </html>
