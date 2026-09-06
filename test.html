@@ -2293,6 +2293,10 @@ basPrompt = null;
 
 // സിസ്റ്റം വഴി ആപ്പ് വിജയകരമായി ഇൻസ്റ്റാൾ ചെയ്യപ്പെട്ടു കഴിഞ്ഞാൽ ബലൂൺ പച്ചയാക്കുന്ന ലോജിക്
 window.addEventListener('appinstalled', () => {
+if (!window.basPwaTracked) {
+    basPwaTracked = true;
+    basTrack("pwa_installed");
+}
 stat.innerText = "INSTALLED";
 ball.className = "bas-ball is-pwa-installed";
 });
