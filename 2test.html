@@ -915,7 +915,22 @@ button.country-btn.active {
     if (window.basActiveButtonCodeLoaded) return;
     window.basActiveButtonCodeLoaded = true;
 
-    
+/* 001 */
+document.addEventListener("pointerdown", function (event) {
+    const button = event.target.closest(
+        "button.lang-btn, button.country-btn"
+    );
+
+    const selector = button.classList.contains("lang-btn")
+        ? "button.lang-btn"
+        : "button.country-btn";
+
+    document.querySelectorAll(selector).forEach(function (item) {
+        item.classList.remove("active");
+    });
+
+    button.classList.add("active");
+});
 
         if (!button) return;
 
