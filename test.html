@@ -8314,6 +8314,24 @@ button.country-btn.active * {
     color: #FFFFFF !important;
 }
 </style>
+  <script>
+  // എല്ലാ ബട്ടണുകളും ക്ലിക്ക് ചെയ്താൽ
+  document.querySelectorAll('.language-btn, .country-btn, .english-btn').forEach(function(button) {
+    button.addEventListener('click', function(e) {
+      e.stopPropagation(); // സ്ക്രീൻ ടച്ച് ഒഴിവാക്കാൻ
+      
+      // എല്ലാ ബട്ടണുകളും ഗോൾഡ് കളർ ലക്ക് മാറാൻ
+      document.querySelectorAll('.language-btn, .country-btn, .english-btn').forEach(function(btn) {
+        btn.style.backgroundColor = '';
+        btn.style.color = '';
+      });
+      
+      // ക്ലിക്ക് ചെയ്ത ബട്ടൺ ഗോൾഡ് കളർ ലക്ക് മാറാൻ
+      this.style.backgroundColor = 'gold';
+      this.style.color = 'black';
+    });
+  });
+</script>
 
 </body> <!-- ഇതിന് തൊട്ടു മുകളിൽ -->
 </html>
