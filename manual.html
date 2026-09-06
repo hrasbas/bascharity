@@ -24,29 +24,47 @@
     font-weight: bold !important; 
   }
 
-  /* FIX: എല്ലാ എലമെന്റുകളെയും ബാധിച്ചിരുന്ന * ടാഗിന് പകരം #bookStage എന്ന് മാത്രം ആക്കി */
-  #bookStage, #bookStage * { 
-    box-sizing: border-box; 
-    user-select: none; 
-    -webkit-user-select: none; 
+  * { box-sizing: border-box; margin: 0; padding: 0; user-select: none; -webkit-user-select: none; }
+
+  html, body { 
+    width: 100%; 
+    height: 100%; 
   }
 
-  /* FIX: global body touch-action ഒഴിവാക്കി, stage-ന് മാത്രം ആക്കി */
+  body {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    background: radial-gradient(circle at top, #1e293b 0%, #0f172a 54%, #020617 100%);
+    font-family: Georgia, serif;
+    padding: 20px;
+    padding-bottom: 32px !important;
+    overflow: visible !important;
+  }
+
+  /* STAGE FIXED & OPTIMIZED */
   .stage {
     position: relative;
-    left: 50px;
-    width: 480px;
-    height: 520px;
-    top: 2cm;
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: 32px;
-    margin-top: 2cm;
+    width: min(450px, 85vw) !important;
+    height: min(600px, 75vh) !important;
+    margin: 0 auto 32px auto !important;
+    top: 0 !important;
+    left: 0 !important;
     perspective: 2500px;
     perspective-origin: 50% 50%;
     transform-style: preserve-3d;
-    touch-action: pan-y; /* FIX: പേജ് സ്ക്രോളിംഗ് തടയില്ല */
-    transform: translateX(-40px) rotateY(-18deg) rotateX(6deg);
+    touch-action: none;
+    transform: translateX(17px) scale(0.68) !important;
+    transform-origin: center center !important;
+    transition: transform 0.4s ease-in-out !important;
+    cursor: pointer !important;
+  }
+
+  /* ZOOM IN EFFECT */
+  .stage.zoomed {
+    transform: translateX(17px) scale(1) !important;
+    z-index: 9999 !important;
   }
 
   .back-cover-base {
@@ -70,9 +88,9 @@
     width: 14px;
     height: calc(100% + 4mm);
     background: linear-gradient(to right, #64748b, #94a3b8, #cbd5e1);
-    border-left: 1px solid #ece7de;
+    border-left: 2px dashed rgba(0, 0, 0, 0.25) !important;
+    box-shadow: inset 2px 0 3px rgba(0, 0, 0, 0.1) !important;
     border-radius: 4px 0 0 4px;
-    box-shadow: -2px 0 8px rgba(0,0,0,.2);
     z-index: 80;
   }
 
@@ -85,7 +103,6 @@
     will-change: transform;
     cursor: grab;
     pointer-events: auto;
-    touch-action: none; /* കേവലം പുസ്തകത്താളിന് മാത്രം */
   }
   .page:active { cursor: grabbing; }
 
@@ -284,7 +301,6 @@
     animation: peekAnimation 1.8s ease-in-out;
   }
 </style>
- 
 </head>
 <body>
 
@@ -474,6 +490,7 @@ const pagesData = [
       <p><strong translate="no" class="notranslate">BAS Charity International</strong> respects the intellectual property rights of others and expects all users to do the same.</p>
       <p>All original content, designs, logos, graphics, text, software, and other materials created for this website are the intellectual property of <span translate="no" class="notranslate">BAS Charity International</span> unless otherwise stated.</p>
       <p>Users may view and use the website for personal, non-commercial purposes only. Any unauthorized copying, modification, distribution, commercial use, or creation of derivative works is prohibited without prior written permission.</p>
+
       <p>If you believe that any content on this website infringes your intellectual property rights, please contact us with the relevant details so that we can review and address the matter promptly.</p>
       <p>We are committed to protecting intellectual property and respecting the rights of creators, owners, and partners.</p>
     `
@@ -678,9 +695,14 @@ function resetAutoCloseTimer() {
   }
 }
 
-// FIX: Global events local ആക്കി മാറ്റിയതിനാൽ ബാക്കി സൈറ്റിലെ ടച്ച് സ്ക്രോൾ തടസ്സപ്പെടില്ല.
-stage.addEventListener('touchmove', resetAutoCloseTimer, { passive: true });
-stage.addEventListener('mousemove', resetAutoCloseTimer, { passive: true });
+window.addEventListener('scroll', () => {
+  if (isBookOpen()) {
+    closeAllPages();
+  }
+}, { passive: true });
+
+window.addEventListener('touchmove', resetAutoCloseTimer, { passive: true });
+window.addEventListener('mousemove', resetAutoCloseTimer, { passive: true });
 
 function syncStack() {
   pages.forEach((page, i) => {
@@ -814,38 +836,8 @@ blueCover.addEventListener('pointerup', (e) => {
 
 syncStack();
 startPeekInterval();
-</script>
 
-<style>
-#bookStage, .stage {
-  width: min(450px, 85vw) !important;
-  height: min(600px, 75vh) !important;
-  margin: 0 auto !important;
-  position: relative !important;
-  top: 0 !important;
-  left: 0 !important;
-  transform: translateX(17px) scale(0.68) !important;
-  transform-origin: center center !important;
-  transition: transform 0.4s ease-in-out !important;
-  cursor: pointer !important;
-}
-
-#bookStage.zoomed, .stage.zoomed {
-  transform: translateX(17px) scale(1) !important;
-  z-index: 9999 !important;
-}
-
-.page-bind, .spine {
-  border-left: 2px dashed rgba(0, 0, 0, 0.25) !important;
-  box-shadow: inset 2px 0 3px rgba(0, 0, 0, 0.1) !important;
-}
-
-.page.open {
-  transform: translateX(17px) scale(1) !important;
-}
-</style>
-
-<script>
+/* Zoom Toggle Logic */
 document.addEventListener('DOMContentLoaded', function() {
   var bookStage = document.getElementById('bookStage') || document.querySelector('.stage');
   if (bookStage) {
@@ -854,9 +846,8 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   }
 });
-</script>
 
-<script>
+/* 1-MINUTE IDLE AUTO-CLOSE SCRIPT */
 (function () {
   let idleTimer = null;
   let lastBookTouchTime = 0;
@@ -873,13 +864,21 @@ document.addEventListener('DOMContentLoaded', function() {
   }
 
   function startOrResetIdleTimer() {
-    if (idleTimer) clearTimeout(idleTimer);
-    if (!bookIsOpen()) return;
+    if (idleTimer) {
+      clearTimeout(idleTimer);
+    }
+
+    if (!bookIsOpen()) {
+      return;
+    }
 
     lastBookTouchTime = Date.now();
 
     idleTimer = setTimeout(function checkIdle() {
-      if (!bookIsOpen()) return;
+      if (!bookIsOpen()) {
+        return;
+      }
+
       const inactiveFor = Date.now() - lastBookTouchTime;
 
       if (inactiveFor >= IDLE_LIMIT) {
@@ -890,20 +889,40 @@ document.addEventListener('DOMContentLoaded', function() {
     }, IDLE_LIMIT);
   }
 
-  const stageEl = document.getElementById("bookStage");
-  if (stageEl) {
-    stageEl.addEventListener("pointerdown", startOrResetIdleTimer, { passive: true });
-    stageEl.addEventListener("touchstart", startOrResetIdleTimer, { passive: true });
-    stageEl.addEventListener("click", startOrResetIdleTimer, { passive: true });
-  }
+  document.addEventListener("pointerdown", startOrResetIdleTimer, { passive: true });
+  document.addEventListener("touchstart", startOrResetIdleTimer, { passive: true });
+  document.addEventListener("click", startOrResetIdleTimer, { passive: true });
+
+  document.addEventListener("visibilitychange", function () {
+    if (!document.hidden && bookIsOpen()) {
+      if (Date.now() - lastBookTouchTime >= IDLE_LIMIT) {
+        closeBook();
+      } else {
+        startOrResetIdleTimer();
+      }
+    }
+  });
+
+  window.addEventListener("focus", function () {
+    if (bookIsOpen()) {
+      if (Date.now() - lastBookTouchTime >= IDLE_LIMIT) {
+        closeBook();
+      } else {
+        startOrResetIdleTimer();
+      }
+    }
+  });
 
   window.addEventListener("message", function (event) {
     if (event.data && event.data.type === "close_book") {
       closeBook();
     }
   });
+
+  document.addEventListener("pointerup", function () {
+    setTimeout(startOrResetIdleTimer, 50);
+  }, { passive: true });
 })();
 </script>
-
 </body>
 </html>
