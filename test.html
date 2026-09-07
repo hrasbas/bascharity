@@ -8280,17 +8280,24 @@ button, .btn, select, .selector, [class*="select"], [class*="button"] {
     });
 
     // 001
-document.querySelectorAll('button').forEach(button => {
+<!-- 8287–8292 ഭാഗം പൂർണ്ണമായി DELETE ചെയ്ത് ഇതു വെക്കുക -->
 
-    // 002
-    button.addEventListener('click', function () {
+<script>
+/* Language / Country buttons — single click active */
+document.querySelectorAll("button.lang-btn, button.country-btn").forEach(button => {
+    button.addEventListener("click", function () {
+        const selector = this.classList.contains("lang-btn")
+            ? "button.lang-btn"
+            : "button.country-btn";
 
-        // 003
-        document.querySelectorAll('button.active')
-            .forEach(btn => btn.classList.remove('active'));
+        document.querySelectorAll(selector).forEach(btn => {
+            btn.classList.remove("active");
+        });
 
-        // 004
-        this.classList.add('active');
+        this.classList.add("active");
+    });
+});
+</script>
 
     });
 
