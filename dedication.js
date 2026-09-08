@@ -14,7 +14,7 @@ Object.assign(window.dedicationData, {
   english: {
     language: "English",
     title: "Dedication",
-    content: "This is lovingly dedicated to each one of us, our parents, our grandparents, and all the souls who departed from this world before us, in their sacred memory, for their eternal peace, well-being, and goodness."
+    content: "This is lovingly dedicated to each one of us, our parents and all the souls who departed from this world before us, in their sacred memory, for their eternal peace, well-being, and goodness."
  
   },
 
