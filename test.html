@@ -7482,7 +7482,120 @@ document.addEventListener("DOMContentLoaded", function () {
   #basWhatsAppBalloon .bas-label {
      color: #FFD700 !important;
   }
+<!-- 026 — BALLOON ENTRANCE + PERIODIC REMINDER -->
 
+<style>
+/* 027 — നിലവിലുള്ള height/position ഒന്നും മാറ്റാതെ entrance movement മാത്രം */
+#basBalloonWrap.bas-reminder-hidden {
+  opacity: 0 !important;
+  pointer-events: none !important;
+  transform: translateY(120%) scale(.55) !important;
+  transition: transform 2.5s ease, opacity .5s ease !important;
+}
+
+/* 028 — നിലവിലുള്ള final position */
+#basBalloonWrap.bas-reminder-show {
+  opacity: 1 !important;
+  pointer-events: none !important;
+  transform: scale(.55) !important;
+  transition: transform 2.5s cubic-bezier(.22,.61,.36,1),
+              opacity .5s ease !important;
+}
+
+/* 029 — Install balloon: അതേ സ്ഥാനത്ത് ചെറിയ natural rocking */
+#basInstallBalloon {
+  animation: basInstallRock 3.8s ease-in-out infinite !important;
+}
+
+/* 030 — WhatsApp balloon: അതേ സ്ഥാനത്ത് ചെറിയ natural rocking */
+#basWhatsAppBalloon {
+  animation: basWhatsAppRock 4.2s ease-in-out infinite !important;
+}
+
+/* 031 — Install balloon rocking */
+@keyframes basInstallRock {
+  0%, 100% {
+    transform: rotate(-2deg);
+  }
+  50% {
+    transform: rotate(2deg);
+  }
+}
+
+/* 032 — WhatsApp balloon rocking */
+@keyframes basWhatsAppRock {
+  0%, 100% {
+    transform: rotate(2deg);
+  }
+  50% {
+    transform: rotate(-2deg);
+  }
+}
+
+/* 033 — INSTALL എഴുത്ത് പച്ച */
+#basInstallBalloon .bas-label {
+  color: #00a651 !important;
+}
+</style>
+
+<script>
+/* 034 — Install ചെയ്യാത്തവർക്കുള്ള periodic reminder */
+
+(function () {
+  var wrap = document.getElementById("basBalloonWrap");
+  var install = document.getElementById("basInstallBalloon");
+
+  if (!wrap || !install) return;
+
+  function isInstalled() {
+    return (
+      install.classList.contains("bas-installed") ||
+      (window.matchMedia &&
+       window.matchMedia("(display-mode: standalone)").matches) ||
+      window.navigator.standalone === true
+    );
+  }
+
+  function showBalloon() {
+    if (isInstalled()) {
+      wrap.classList.remove("bas-reminder-hidden");
+      wrap.classList.add("bas-reminder-show");
+      return;
+    }
+
+    wrap.classList.remove("bas-reminder-hidden");
+    wrap.classList.add("bas-reminder-show");
+
+    /* 15 seconds കഴിഞ്ഞ് താഴേക്ക് പോകും */
+    setTimeout(function () {
+      if (!isInstalled()) {
+        wrap.classList.remove("bas-reminder-show");
+        wrap.classList.add("bas-reminder-hidden");
+      }
+    }, 15000);
+  }
+
+  function startReminder() {
+
+    /* ആദ്യം താഴെ നിന്ന് പൊങ്ങി വരും */
+    wrap.classList.add("bas-reminder-hidden");
+
+    setTimeout(function () {
+      showBalloon();
+    }, 1500);
+
+    /* പിന്നീട് ഓരോ 60 seconds-ലും വീണ്ടും reminder */
+    setInterval(function () {
+      if (!isInstalled()) {
+        showBalloon();
+      }
+    }, 60000);
+  }
+
+  window.addEventListener("load", startReminder);
+
+})();
+</script>
   /* 009 — BALLOON NECK */
   #basBalloonWrap .bas-nipple {
     position: absolute !important;
