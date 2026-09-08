@@ -7835,193 +7835,149 @@ document.addEventListener("DOMContentLoaded", function () {
 })();
 </script> 
   <!-- 026 — SMALL INSTALL STRIP + BALLOON VISUAL / MOTION -->
-
+<!-- 025 — BALLOON RISE / HOLD / FALL / REPEAT -->
 <style>
-/* 001 — OLD INSTALL BUTTON → SMALL TOP STRIP */
-#install-div {
-  display: none;
-  position: fixed !important;
-  top: 10px !important;
-  right: 12px !important;
-  bottom: auto !important;
-  left: auto !important;
-  width: auto !important;
-  z-index: 2147483646 !important;
+/* Touch / click സമയത്ത് gray ആകരുത് */
+#basInstallBalloon,
+#basInstallBalloon:hover,
+#basInstallBalloon:focus,
+#basInstallBalloon:focus-visible,
+#basInstallBalloon:active {
+  outline: none !important;
 }
 
-#install-btn {
-  background: #FFD700 !important;
-  color: #000 !important;
-  border: 1px solid #fff !important;
-  padding: 5px 12px !important;
-  min-width: 82px !important;
-  height: 28px !important;
-  border-radius: 14px !important;
-  font-size: 10px !important;
-  font-weight: 900 !important;
-  line-height: 1 !important;
-  box-shadow: 0 0 8px rgba(255,215,0,.85) !important;
+#basWhatsAppBalloon,
+#basWhatsAppBalloon:hover,
+#basWhatsAppBalloon:focus,
+#basWhatsAppBalloon:focus-visible,
+#basWhatsAppBalloon:active {
+  background: #00BFFF !important;
+  outline: none !important;
 }
 
-/* 002 — INSTALL BALLOON */
+/* INSTALL BALLOON */
 #basInstallBalloon {
-  animation:
-    basInstallFloat 13s ease-in-out infinite !important;
-  animation-delay: 1s !important;
-  transform-origin: 50% 100% !important;
+  animation: basInstallFloat 15s ease-in-out infinite !important;
 }
 
-/* 003 — WHATSAPP BALLOON */
+/* WHATSAPP BALLOON */
 #basWhatsAppBalloon {
-  animation:
-    basWhatsAppFloat 14.5s ease-in-out infinite !important;
-  animation-delay: 2.5s !important;
-  transform-origin: 50% 100% !important;
+  animation: basWhatsAppFloat 15s ease-in-out infinite !important;
 }
 
-/* 004 — INSTALL: RISE → FLOAT → FALL → WAIT → REPEAT */
+/* INSTALL — താഴെ നിന്ന് ഉയരുക → നിൽക്കുക → താഴേക്ക് പോകുക */
 @keyframes basInstallFloat {
 
   0% {
-    transform: translate(0, 310px) rotate(0deg);
-  }
-
-  10% {
-    transform: translate(4px, 220px) rotate(1.5deg);
+    transform: translate(0, 300px);
   }
 
   20% {
-    transform: translate(7px, 0) rotate(-1.5deg);
-  }
-
-  28% {
-    transform: translate(2px, -5px) rotate(1deg);
-  }
-
-  38% {
-    transform: translate(-4px, 3px) rotate(-1.5deg);
-  }
-
-  48% {
-    transform: translate(5px, -2px) rotate(1.2deg);
-  }
-
-  58% {
-    transform: translate(-3px, 4px) rotate(-1deg);
-  }
-
-  68% {
-    transform: translate(3px, 0) rotate(.8deg);
-  }
-
-  78% {
-    transform: translate(0, 120px) rotate(-1deg);
-  }
-
-  88% {
-    transform: translate(-4px, 310px) rotate(1deg);
-  }
-
-  100% {
-    transform: translate(0, 310px) rotate(0deg);
-  }
-}
-
-/* 005 — WHATSAPP: SLIGHTLY DIFFERENT FLOAT */
-@keyframes basWhatsAppFloat {
-
-  0% {
-    transform: translate(0, 310px) rotate(0deg);
-  }
-
-  12% {
-    transform: translate(-4px, 210px) rotate(-1.5deg);
-  }
-
-  23% {
-    transform: translate(-7px, 0) rotate(1.5deg);
-  }
-
-  32% {
-    transform: translate(-2px, -4px) rotate(-1deg);
-  }
-
-  43% {
-    transform: translate(5px, 3px) rotate(1.5deg);
-  }
-
-  54% {
-    transform: translate(-4px, -2px) rotate(-1.2deg);
+    transform: translate(10px, 0);
   }
 
   65% {
-    transform: translate(3px, 4px) rotate(.9deg);
-  }
-
-  76% {
-    transform: translate(0, 115px) rotate(-1deg);
-  }
-
-  88% {
-    transform: translate(4px, 310px) rotate(1deg);
+    transform: translate(0, 0);
   }
 
   100% {
-    transform: translate(0, 310px) rotate(0deg);
+    transform: translate(10px, 300px);
   }
 }
 
-/* 006 — INSTALLED: BRIGHT GREEN */
+/* WHATSAPP — താഴെ നിന്ന് ഉയരുക → നിൽക്കുക → താഴേക്ക് പോകുക */
+@keyframes basWhatsAppFloat {
+
+  0% {
+    transform: translate(0, 300px);
+  }
+
+  20% {
+    transform: translate(-10px, 0);
+  }
+
+  65% {
+    transform: translate(0, 0);
+  }
+
+  100% {
+    transform: translate(-10px, 300px);
+  }
+}
+
+/* GREEN BALLOON — INSTALL */
+#basInstallBalloon:not(.bas-installed) {
+  background: #25D366 !important;
+  color: #000 !important;
+}
+
+#basInstallBalloon:not(.bas-installed) .bas-label {
+  color: #000 !important;
+  text-shadow: none !important;
+  font-weight: 900 !important;
+}
+
+/* INSTALLED — WHITE BALLOON + GREEN TEXT */
 #basInstallBalloon.bas-installed {
-  background: #00E676 !important;
-  color: #FFD700 !important;
-  box-shadow:
-    inset -8px -8px 20px rgba(0,0,0,.25),
-    0 0 14px rgba(0,230,118,.95),
-    0 4px 16px rgba(0,0,0,.45) !important;
+  background: #fff !important;
+  color: #00A83B !important;
 }
 
 #basInstallBalloon.bas-installed .bas-label {
-  color: #FFD700 !important;
-  text-shadow:
-    0 0 4px #fff,
-    0 0 8px #FFD700,
-    0 0 14px #FFD700 !important;
+  color: #00A83B !important;
+  text-shadow: none !important;
+  font-weight: 900 !important;
 }
 
-/* 007 — INSTALL TEXT */
-#basInstallBalloon:not(.bas-installed) .bas-label {
-  color: #FFD700 !important;
-  text-shadow:
-    0 0 4px #fff,
-    0 0 8px #FFD700,
-    0 0 14px #FFD700 !important;
+/* BLUE BALLOON — SAVE TO WHATSAPP */
+#basWhatsAppBalloon {
+  background: #00BFFF !important;
+  color: #fff !important;
 }
 
-/* 008 — WHATSAPP TEXT */
 #basWhatsAppBalloon .bas-label {
-  color: #FFD700 !important;
-  text-shadow:
-    0 0 4px #fff,
-    0 0 8px #FFD700,
-    0 0 14px #FFD700 !important;
+  color: #fff !important;
+  text-shadow: none !important;
+  font-weight: 900 !important;
+  line-height: 1.15 !important;
 }
 
-/* 009 — STRINGS */
-#basBalloonWrap .bas-string {
-  opacity: 1 !important;
-  display: block !important;
+/* NO GLOW */
+#basInstallBalloon,
+#basWhatsAppBalloon,
+#basInstallBalloon.bas-installed {
+  box-shadow:
+    inset -8px -8px 20px rgba(0,0,0,.30),
+    0 4px 14px rgba(0,0,0,.45) !important;
 }
 
-/* 010 — TOUCH */
 #basInstallBalloon:active,
 #basWhatsAppBalloon:active {
   opacity: 1 !important;
   filter: none !important;
   -webkit-tap-highlight-color: transparent !important;
-  transform-origin: 50% 100% !important;
 }
 </style>
+
+<script>
+["basInstallBalloon", "basWhatsAppBalloon"].forEach(function (id) {
+  var button = document.getElementById(id);
+
+  if (button) {
+    button.addEventListener("click", function () {
+      this.blur();
+    });
+
+    button.addEventListener("pointerup", function () {
+      var self = this;
+
+      setTimeout(function () {
+        self.blur();
+      }, 0);
+    });
+  }
+});
+</script>
   <!-- 025 — BALLOON RISE / HOLD / FALL / REPEAT -->
 <!--<style>
 /* Touch / click സമയത്ത് gray ആകരുത് */
