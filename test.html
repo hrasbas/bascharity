@@ -7462,7 +7462,7 @@ document.addEventListener("DOMContentLoaded", function () {
     border-radius: 16px !important;
     object-fit: cover !important;
     background: #fff !important;
-    border: 2px solid red !important;
+    border: 3px solid red !important;
 }
   
 
@@ -7834,8 +7834,104 @@ document.addEventListener("DOMContentLoaded", function () {
 
 })();
 </script>   
-    <!-- 025 — BALLOON TOUCH + SMALL SIDE MOVEMENT -->
+  <!-- 025 — BALLOON RISE / HOLD / FALL / REPEAT -->
 <style>
+/* Touch / click സമയത്ത് gray ആകരുത് */
+#basInstallBalloon,
+#basInstallBalloon:hover,
+#basInstallBalloon:focus,
+#basInstallBalloon:focus-visible,
+#basInstallBalloon:active {
+  outline: none !important;
+}
+
+#basWhatsAppBalloon,
+#basWhatsAppBalloon:hover,
+#basWhatsAppBalloon:focus,
+#basWhatsAppBalloon:focus-visible,
+#basWhatsAppBalloon:active {
+  background: #00BFFF !important;
+  outline: none !important;
+}
+
+/* INSTALL BALLOON */
+#basInstallBalloon {
+  animation: basInstallFloat 12s ease-in-out infinite !important;
+}
+
+/* WHATSAPP BALLOON */
+#basWhatsAppBalloon {
+  animation: basWhatsAppFloat 13s ease-in-out infinite !important;
+}
+
+/* താഴെ നിന്ന് ഉയരുക → നിൽക്കുക → താഴേക്ക് പോകുക */
+@keyframes basInstallFloat {
+
+  0% {
+    transform: translate(0, 300px);
+  }
+
+  20% {
+    transform: translate(8px, 0);
+  }
+
+  65% {
+    transform: translate(0, 0);
+  }
+
+  100% {
+    transform: translate(8px, 300px);
+  }
+}
+
+@keyframes basWhatsAppFloat {
+
+  0% {
+    transform: translate(0, 300px);
+  }
+
+  20% {
+    transform: translate(-7px, 0);
+  }
+
+  65% {
+    transform: translate(0, 0);
+  }
+
+  100% {
+    transform: translate(-7px, 300px);
+  }
+}
+
+#basInstallBalloon:active,
+#basWhatsAppBalloon:active {
+  opacity: 1 !important;
+  filter: none !important;
+  -webkit-tap-highlight-color: transparent !important;
+}
+</style>
+
+<script>
+["basInstallBalloon", "basWhatsAppBalloon"].forEach(function (id) {
+  var button = document.getElementById(id);
+
+  if (button) {
+    button.addEventListener("click", function () {
+      this.blur();
+    });
+
+    button.addEventListener("pointerup", function () {
+      var self = this;
+
+      setTimeout(function () {
+        self.blur();
+      }, 0);
+    });
+  }
+});
+</script>
+    <!-- 025 — BALLOON TOUCH + SMALL SIDE MOVEMENT -->
+ <!--<style>
   /* Touch / click സമയത്ത് gray ആകരുത് */
   #basInstallBalloon,
   #basInstallBalloon:hover,
@@ -7907,7 +8003,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 });
-</script>
+</script>-->
   <!-- ======================================================== -->
 <!-- MATTE SLATE 3D SQUARE SCROLLER WITH SLIDING SPEED CONTROL -->
 <!-- ======================================================== -->
