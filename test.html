@@ -8796,22 +8796,86 @@ body {
 }
 </style>
 
-<script>
-const gbContainer = document.querySelector('.gb-slider-container');
+ <script>
+// 1. ORIGINAL MODAL & ZOOM FUNCTIONS (നിങ്ങളുടെ യഥാർത്ഥ കോഡ്)
+function gbOpenModal(id) {
+  var modal = document.getElementById(id);
+  if (modal) {
+    modal.style.display = 'flex';
+  }
+}
+
+function gbCloseModal(id) {
+  var modal = document.getElementById(id);
+  if (modal) {
+    modal.style.display = 'none';
+  }
+}
+
+function gbOpenZoom(el) {
+  let imgSrc = '';
+  if (el.tagName === 'IMG') {
+    imgSrc = el.src;
+  } else if (el.previousElementSibling && el.previousElementSibling.tagName === 'IMG') {
+    imgSrc = el.previousElementSibling.src;
+  } else {
+    let img = el.closest('.gb-photo-box')?.querySelector('img');
+    if (img) imgSrc = img.src;
+  }
+
+  if (imgSrc) {
+    document.getElementById('gbModalImg').src = imgSrc;
+    document.getElementById('gbImageZoomModal').style.display = 'flex';
+  }
+}
+
+function gbCloseZoom() {
+  document.getElementById('gbImageZoomModal').style.display = 'none';
+}
+
+// 2. SEARCH FILTER FUNCTIONALITY
+function gbFilterGreetings() {
+  let searchInput = document.getElementById('gbSearchInput');
+  if (!searchInput) return;
+  
+  let query = searchInput.value.toLowerCase();
+  let cards = document.getElementsByClassName('gb-card');
+
+  for (let card of cards) {
+    let searchData = card.getAttribute('data-search');
+    if (searchData) {
+      if (searchData.toLowerCase().includes(query)) {
+        card.style.display = "block";
+      } else {
+        card.style.display = "none";
+      }
+    }
+  }
+}
+
+// 3. SMOOTH INFINITE AUTO / MANUAL SCROLL LOGIC
+const gbContainer = document.querySelector('.gb-slider-container') || document.getElementById('gbSliderContainer');
 let gbIsInteracting = false;
 let gbScrollSpeed = 1.5;
 
 function gbSmoothAutoScroll() {
-  // Modal അല്ലെങ്കിൽ Zoom ഓപ്പൺ ആണോ എന്ന് നോക്കുന്നു (ഓപ്പൺ ആണെങ്കിൽ സ്ക്രോൾ പൗസ് ആകും)
-  const isModalOpen = document.getElementById('gbImageZoomModal')?.style.display === 'flex' || 
-                      document.querySelector('.gb-modal[style*="display: block"]') !== null;
+  // ഏതെങ്കിലും Modal അല്ലെങ്കിൽ Zoom പോപ്പ്അപ്പ് തുറന്നിട്ടുണ്ടോ എന്ന് പരിശോധിക്കുന്നു
+  const zoomModal = document.getElementById('gbImageZoomModal');
+  const isZoomActive = zoomModal && (zoomModal.style.display === 'flex' || zoomModal.style.display === 'block');
+  
+  // ഏതെങ്കിലും Overlay Modal തുറന്നിട്ടുണ്ടോ എന്ന് നോക്കുന്നു
+  const activeModal = document.querySelector('.gb-modal-overlay[style*="display: flex"]') || 
+                      document.querySelector('.gb-modal-overlay[style*="display: block"]');
 
-  if (gbContainer && !gbIsInteracting && !isModalOpen) {
+  // പോപ്പ്അപ്പുകൾ ഒന്നും ഓപ്പണല്ലെങ്കിൽ മാത്രം ഓട്ടോ സ്ക്രോൾ ചെയ്യും
+  if (gbContainer && !gbIsInteracting && !isZoomActive && !activeModal) {
     const searchInput = document.getElementById('gbSearchInput');
     const isSearching = searchInput && searchInput.value.trim() !== '';
 
     if (!isSearching) {
       gbContainer.scrollLeft += gbScrollSpeed;
+      
+      // ലൂപ്പ് സ്മൂത്തായി തുടരാൻ
       if (gbContainer.scrollLeft >= gbContainer.scrollWidth / 2) {
         gbContainer.scrollLeft = 0;
       }
@@ -8820,6 +8884,7 @@ function gbSmoothAutoScroll() {
   requestAnimationFrame(gbSmoothAutoScroll);
 }
 
+// യൂസർ ടച്ച് ചെയ്യുമ്പോഴോ മൗസ് വെക്കുമ്പോഴോ ഓട്ടോ-സ്ക്രോൾ നിൽക്കും (Manual scroll ചെയ്യാം)
 if (gbContainer) {
   gbContainer.addEventListener('mouseenter', () => gbIsInteracting = true);
   gbContainer.addEventListener('mouseleave', () => gbIsInteracting = false);
@@ -8828,22 +8893,8 @@ if (gbContainer) {
   
   requestAnimationFrame(gbSmoothAutoScroll);
 }
-
-// Search Filter
-function gbFilterGreetings() {
-  let query = document.getElementById('gbSearchInput').value.toLowerCase();
-  let cards = document.getElementsByClassName('gb-card');
-
-  for (let card of cards) {
-    let searchData = card.getAttribute('data-search') ? card.getAttribute('data-search').toLowerCase() : '';
-    if (searchData.includes(query)) {
-      card.style.display = "block";
-    } else {
-      card.style.display = "none";
-    }
-  }
-}
 </script>
+
 
 </body> <!-- ഇതിന് തൊട്ടു മുകളിൽ -->
 </html>
