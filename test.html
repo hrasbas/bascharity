@@ -1,4 +1,4 @@
-   <!DOCTYPE html>    
+ <!DOCTYPE html> 
 <html lang="en">
 <head>
   
@@ -166,7 +166,7 @@ margin-right:auto;
   align-items: center;
   justify-content: center;
   gap: 14px;
-  margin-top:-100px !important;
+  margin-top:-85px !important;
   margin-bottom:15px !important;
   
 
@@ -279,13 +279,13 @@ h1 {
 }
 
 .international {
-  margin-top:9px;
+  margin-top:6px;
 }
 .tm {
-  font-size:25px;
+  font-size:15px;
   font-weight:400;
   vertical-align:super;
-  margin-left:3px;
+  margin-left:2px;
   color:#ffffff;
   text-shadow:none !important;
   filter:none;
@@ -1955,7 +1955,7 @@ END OF BAS ANALYTICS
 <div class="bas-dedication">
 <div id="dedication-text" class="english-fix">
 
-"This is lovingly dedicated to each one of us, our parents, our grandparents, and all the souls who departed from this world before us, in their sacred memory, for their eternal peace, well-being, and goodness."
+"This is lovingly dedicated to each one of us, our parents and all the souls who departed from this world before us, in their sacred memory, for their eternal peace, well-being, and goodness."
  
 </div>
 </div> 
@@ -2130,10 +2130,9 @@ function resetWelcomeMessage() {
     </div>
    
  
-   
-   <div id="install-div">
+<!--<div id="install-div">
 <button id="install-btn" type="button">Install App</button>
-</div> 
+</div>-->
 
 <div id="basBalloonWrap" class="notranslate"> 
 
@@ -4323,17 +4322,17 @@ if(document.getElementById("section8")) observer78.observe(document.getElementBy
     display: flex;
     gap: 20px;
     width: max-content;
-    animation: gbContinuousScroll 5s linear infinite;
+    /*animation: gbContinuousScroll 5s linear infinite;*/
   }
 
   .gb-slider-container:hover .gb-slider-track {
     animation-play-state: paused;
   }
 
-  @keyframes gbContinuousScroll {
+  /*@keyframes gbContinuousScroll {
     0% { transform: translateX(0); }
     100% { transform: translateX(calc(-50% - 10px)); }
-  }
+  }*/
 
   /* CARD STRUCTURE - ALWAYS HORIZONTAL (PHOTO LEFT, CONTENT RIGHT) */
   .gb-card {
@@ -4823,7 +4822,7 @@ if(document.getElementById("section8")) observer78.observe(document.getElementBy
     if (query.trim() !== '') {
       track.style.animation = 'none';
     } else {
-      track.style.animation = 'gbContinuousScroll 5s linear infinite';
+      /*track.style.animation = 'gbContinuousScroll 5s linear infinite';*/
     }
 
     for (let card of cards) {
@@ -7437,7 +7436,7 @@ document.addEventListener("DOMContentLoaded", function () {
     background: #25D366 !important;
     color: #000 !important;
   }
-
+  /* 026 — SMALL YELLOW INSTALL BUTTON */
   /* 005 — AFTER REAL INSTALL */
   #basInstallBalloon.bas-installed {
     background: #fff !important;
@@ -7462,7 +7461,7 @@ document.addEventListener("DOMContentLoaded", function () {
     border-radius: 16px !important;
     object-fit: cover !important;
     background: #fff !important;
-    border: 2px solid red !important;
+    border: 3px solid red !important;
 }
   
 
@@ -7482,7 +7481,121 @@ document.addEventListener("DOMContentLoaded", function () {
   #basWhatsAppBalloon .bas-label {
      color: #FFD700 !important;
   }
+<!-- 026 — BALLOON ENTRANCE + PERIODIC REMINDER -->
 
+<style>
+/* 027 — നിലവിലുള്ള height/position ഒന്നും മാറ്റാതെ entrance movement മാത്രം */
+#basBalloonWrap.bas-reminder-hidden {
+  opacity: 0 !important;
+  pointer-events: none !important;
+  transform: translateY(120%) scale(.55) !important;
+  transition: transform 2.5s ease, opacity .5s ease !important;
+}
+
+/* 028 — നിലവിലുള്ള final position */
+#basBalloonWrap.bas-reminder-show {
+  opacity: 1 !important;
+  pointer-events: none !important;
+  transform: scale(.55) !important;
+  transition: transform 2.5s cubic-bezier(.22,.61,.36,1),
+              opacity .5s ease !important;
+}
+
+/* 029 — Install balloon: അതേ സ്ഥാനത്ത് ചെറിയ natural rocking */
+#basInstallBalloon {
+  animation: basInstallRock 3.8s ease-in-out infinite !important;
+}
+
+/* 030 — WhatsApp balloon: അതേ സ്ഥാനത്ത് ചെറിയ natural rocking */
+#basWhatsAppBalloon {
+  animation: basWhatsAppRock 4.2s ease-in-out infinite !important;
+}
+
+/* 031 — Install balloon rocking */
+@keyframes basInstallRock {
+  0%, 100% {
+    transform: rotate(-2deg);
+  }
+  50% {
+    transform: rotate(2deg);
+  }
+}
+
+/* 032 — WhatsApp balloon rocking */
+@keyframes basWhatsAppRock {
+  0%, 100% {
+    transform: rotate(2deg);
+  }
+  50% {
+    transform: rotate(-2deg);
+  }
+}
+
+/* 033 — INSTALL എഴുത്ത് പച്ച */
+#basInstallBalloon .bas-label {
+  color: #00a651 !important;
+}
+</style>
+
+<script>
+/* 034 — Install ചെയ്യാത്തവർക്കുള്ള periodic reminder */
+
+(function () {
+  var wrap = document.getElementById("basBalloonWrap");
+  var install = document.getElementById("basInstallBalloon");
+
+  if (!wrap || !install) return;
+
+  function isInstalled() {
+    return (
+      install.classList.contains("bas-installed") ||
+      (window.matchMedia &&
+       window.matchMedia("(display-mode: standalone)").matches) ||
+      window.navigator.standalone === true
+    );
+  }
+
+  function showBalloon() {
+    if (isInstalled()) {
+      wrap.classList.remove("bas-reminder-hidden");
+      wrap.classList.add("bas-reminder-show");
+      return;
+    }
+
+    wrap.classList.remove("bas-reminder-hidden");
+    wrap.classList.add("bas-reminder-show");
+
+    /* 15 seconds കഴിഞ്ഞ് താഴേക്ക് പോകും */
+    setTimeout(function () {
+      if (!isInstalled()) {
+        wrap.classList.remove("bas-reminder-show");
+        wrap.classList.add("bas-reminder-hidden");
+      }
+    }, 15000);
+  }
+
+  function startReminder() {
+
+    /* ആദ്യം താഴെ നിന്ന് പൊങ്ങി വരും */
+    wrap.classList.add("bas-reminder-hidden");
+
+    setTimeout(function () {
+      showBalloon();
+    }, 1500);
+
+    /* പിന്നീട് ഓരോ 60 seconds-ലും വീണ്ടും reminder */
+    setInterval(function () {
+      if (!isInstalled()) {
+        showBalloon();
+      }
+    }, 60000);
+  }
+
+  window.addEventListener("load", startReminder);
+
+})();
+</script>
+  <style>
   /* 009 — BALLOON NECK */
   #basBalloonWrap .bas-nipple {
     position: absolute !important;
@@ -7719,9 +7832,261 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
 })();
-</script>   
-    <!-- 025 — BALLOON TOUCH + SMALL SIDE MOVEMENT -->
+</script> 
+  <!-- 026 — SMALL INSTALL STRIP + BALLOON VISUAL / MOTION -->
+<!-- 025 — BALLOON RISE / HOLD / FALL / REPEAT -->
 <style>
+/* Touch / click സമയത്ത് gray ആകരുത് */
+#basInstallBalloon,
+#basInstallBalloon:hover,
+#basInstallBalloon:focus,
+#basInstallBalloon:focus-visible,
+#basInstallBalloon:active {
+  outline: none !important;
+}
+
+#basWhatsAppBalloon,
+#basWhatsAppBalloon:hover,
+#basWhatsAppBalloon:focus,
+#basWhatsAppBalloon:focus-visible,
+#basWhatsAppBalloon:active {
+  background: #00BFFF !important;
+  outline: none !important;
+}
+
+/* INSTALL BALLOON */
+#basInstallBalloon {
+  animation: basInstallFloat 30s ease-in-out infinite !important;
+}
+  #basInstallBalloon.bas-installed {
+  background: #FFFFFF !important;
+  color: #00A83B !important;
+  filter: none !important;
+  opacity: 1 !important;
+  box-shadow: none !important;
+}
+
+#basInstallBalloon.bas-installed .bas-label {
+  color: #00A83B !important;
+  text-shadow: none !important;
+}
+
+/* WHATSAPP BALLOON */
+#basWhatsAppBalloon {
+  animation: basWhatsAppFloat 30s ease-in-out infinite !important;
+}
+
+/* INSTALL — താഴെ നിന്ന് ഉയരുക → നിൽക്കുക → താഴേക്ക് പോകുക */
+@keyframes basInstallFloat {
+
+  0% {
+    transform: translate(0, 300px);
+  }
+
+  20% {
+    transform: translate(20px, 0);
+  }
+
+  65% {
+    transform: translate(0, 0);
+  }
+
+  100% {
+    transform: translate(20px, 300px);
+  }
+}
+
+/* WHATSAPP — താഴെ നിന്ന് ഉയരുക → നിൽക്കുക → താഴേക്ക് പോകുക */
+@keyframes basWhatsAppFloat {
+
+  0% {
+    transform: translate(0, 300px);
+  }
+
+  20% {
+    transform: translate(-20px, 0);
+  }
+
+  65% {
+    transform: translate(0, 0);
+  }
+
+  100% {
+    transform: translate(-20px, 300px);
+  }
+}
+
+/* GREEN BALLOON — INSTALL */
+#basInstallBalloon:not(.bas-installed) {
+  background: #25D366 !important;
+  color: #000 !important;
+}
+
+#basInstallBalloon:not(.bas-installed) .bas-label {
+  color: #000 !important;
+  text-shadow: none !important;
+  font-weight: 900 !important;
+}
+
+/* INSTALLED — WHITE BALLOON + GREEN TEXT */
+#basInstallBalloon.bas-installed {
+  background: #fff !important;
+  color: #00A83B !important;
+}
+
+#basInstallBalloon.bas-installed .bas-label {
+  color: #00A83B !important;
+  text-shadow: none !important;
+  font-weight: 900 !important;
+}
+
+/* BLUE BALLOON — SAVE TO WHATSAPP */
+#basWhatsAppBalloon {
+  background: #00BFFF !important;
+  color: #fff !important;
+}
+
+#basWhatsAppBalloon .bas-label {
+  color: #fff !important;
+  text-shadow: none !important;
+  font-weight: 900 !important;
+  line-height: 1.15 !important;
+}
+
+/* NO GLOW */
+#basInstallBalloon,
+#basWhatsAppBalloon,
+#basInstallBalloon.bas-installed {
+  box-shadow:
+    inset -8px -8px 20px rgba(0,0,0,.30),
+    0 4px 14px rgba(0,0,0,.45) !important;
+}
+
+#basInstallBalloon:active,
+#basWhatsAppBalloon:active {
+  opacity: 1 !important;
+  filter: none !important;
+  -webkit-tap-highlight-color: transparent !important;
+}
+</style>
+
+<script>
+["basInstallBalloon", "basWhatsAppBalloon"].forEach(function (id) {
+  var button = document.getElementById(id);
+
+  if (button) {
+    button.addEventListener("click", function () {
+      this.blur();
+    });
+
+    button.addEventListener("pointerup", function () {
+      var self = this;
+
+      setTimeout(function () {
+        self.blur();
+      }, 0);
+    });
+  }
+});
+</script>
+  <!-- 025 — BALLOON RISE / HOLD / FALL / REPEAT -->
+<!--<style>
+/* Touch / click സമയത്ത് gray ആകരുത് */
+#basInstallBalloon,
+#basInstallBalloon:hover,
+#basInstallBalloon:focus,
+#basInstallBalloon:focus-visible,
+#basInstallBalloon:active {
+  outline: none !important;
+}
+
+#basWhatsAppBalloon,
+#basWhatsAppBalloon:hover,
+#basWhatsAppBalloon:focus,
+#basWhatsAppBalloon:focus-visible,
+#basWhatsAppBalloon:active {
+  background: #00BFFF !important;
+  outline: none !important;
+}
+
+/* INSTALL BALLOON */
+#basInstallBalloon {
+  animation: basInstallFloat 12s ease-in-out infinite !important;
+}
+
+/* WHATSAPP BALLOON */
+#basWhatsAppBalloon {
+  animation: basWhatsAppFloat 13s ease-in-out infinite !important;
+}
+
+/* താഴെ നിന്ന് ഉയരുക → നിൽക്കുക → താഴേക്ക് പോകുക */
+@keyframes basInstallFloat {
+
+  0% {
+    transform: translate(0, 300px);
+  }
+
+  20% {
+    transform: translate(8px, 0);
+  }
+
+  65% {
+    transform: translate(0, 0);
+  }
+
+  100% {
+    transform: translate(8px, 300px);
+  }
+}
+
+@keyframes basWhatsAppFloat {
+
+  0% {
+    transform: translate(0, 300px);
+  }
+
+  20% {
+    transform: translate(-7px, 0);
+  }
+
+  65% {
+    transform: translate(0, 0);
+  }
+
+  100% {
+    transform: translate(-7px, 300px);
+  }
+}
+
+#basInstallBalloon:active,
+#basWhatsAppBalloon:active {
+  opacity: 1 !important;
+  filter: none !important;
+  -webkit-tap-highlight-color: transparent !important;
+}
+</style>
+
+<script>
+["basInstallBalloon", "basWhatsAppBalloon"].forEach(function (id) {
+  var button = document.getElementById(id);
+
+  if (button) {
+    button.addEventListener("click", function () {
+      this.blur();
+    });
+
+    button.addEventListener("pointerup", function () {
+      var self = this;
+
+      setTimeout(function () {
+        self.blur();
+      }, 0);
+    });
+  }
+});
+</script>-->
+    <!-- 025 — BALLOON TOUCH + SMALL SIDE MOVEMENT -->
+ <!--<style>
   /* Touch / click സമയത്ത് gray ആകരുത് */
   #basInstallBalloon,
   #basInstallBalloon:hover,
@@ -7793,7 +8158,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 });
-</script>
+</script>-->
   <!-- ======================================================== -->
 <!-- MATTE SLATE 3D SQUARE SCROLLER WITH SLIDING SPEED CONTROL -->
 <!-- ======================================================== -->
@@ -7974,7 +8339,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 if (!isLocked && !isInteracting) {
                     window.scrollBy({ top: 1, behavior: 'smooth' });
                 }
-            }, 35);
+            },  45);
         }
 
         function pauseCreep() {
@@ -8112,7 +8477,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   .gb-slider-track {
     gap: 10px !important;
-    animation-duration: 28s !important;
+    animation-duration: 26s !important;
   }
 
   .gb-card {
@@ -8364,18 +8729,56 @@ button.country-btn.active * {
 
 /* 004 */
 .bas-dedication {
-    margin-top: 0 !important;
-    margin-bottom: 0 !important;
-    padding-top: 0 !important;
-    padding-bottom: 0 !important;
+    margin-top: 5px !important;
+    margin-bottom: 5px !important;
+    padding-top: 5px!important;
+    padding-bottom:5px !important;
 }
 
 /* 005 */
 body {
-    padding-top: 0 !important;
+    padding-top: 5px !important;
 }
 </style>
+  
+<style>
+  /* ഗ്രീറ്റിംഗ്സ് ബോക്സ് ഹൊറിസോണ്ടൽ സ്ക്രോളിംഗ് */
+  .greetings-box {
+    overflow-x: auto !important;
+    white-space: nowrap !important;
+    -webkit-overflow-scrolling: touch !important;
+  }
+</style>
 
+<script>
+  // മാനുവൽ സ്ക്രോളിംഗ്
+  const greetingsBox = document.querySelector('.greetings-box');
+  let isDown = false;
+  let startX;
+  let scrollLeft;
+
+  greetingsBox.addEventListener('mousedown', (e) => {
+    isDown = true;
+    startX = e.pageX - greetingsBox.offsetLeft;
+    scrollLeft = greetingsBox.scrollLeft;
+  });
+
+  greetingsBox.addEventListener('mouseleave', () => {
+    isDown = false;
+  });
+
+  greetingsBox.addEventListener('mouseup', () => {
+    isDown = false;
+  });
+
+  greetingsBox.addEventListener('mousemove', (e) => {
+    if (!isDown) return;
+    e.preventDefault();
+    const x = e.pageX - greetingsBox.offsetLeft;
+    const walk = (x - startX) * 2;
+    greetingsBox.scrollLeft = scrollLeft - walk;
+  });
+</script>
 </body> <!-- ഇതിന് തൊട്ടു മുകളിൽ -->
 </html>
 
