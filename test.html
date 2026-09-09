@@ -8740,7 +8740,45 @@ body {
     padding-top: 5px !important;
 }
 </style>
+  
+<style>
+  /* ഗ്രീറ്റിംഗ്സ് ബോക്സ് ഹൊറിസോണ്ടൽ സ്ക്രോളിംഗ് */
+  .greetings-box {
+    overflow-x: auto !important;
+    white-space: nowrap !important;
+    -webkit-overflow-scrolling: touch !important;
+  }
+</style>
 
+<script>
+  // മാനുവൽ സ്ക്രോളിംഗ്
+  const greetingsBox = document.querySelector('.greetings-box');
+  let isDown = false;
+  let startX;
+  let scrollLeft;
+
+  greetingsBox.addEventListener('mousedown', (e) => {
+    isDown = true;
+    startX = e.pageX - greetingsBox.offsetLeft;
+    scrollLeft = greetingsBox.scrollLeft;
+  });
+
+  greetingsBox.addEventListener('mouseleave', () => {
+    isDown = false;
+  });
+
+  greetingsBox.addEventListener('mouseup', () => {
+    isDown = false;
+  });
+
+  greetingsBox.addEventListener('mousemove', (e) => {
+    if (!isDown) return;
+    e.preventDefault();
+    const x = e.pageX - greetingsBox.offsetLeft;
+    const walk = (x - startX) * 2;
+    greetingsBox.scrollLeft = scrollLeft - walk;
+  });
+</script>
 </body> <!-- ഇതിന് തൊട്ടു മുകളിൽ -->
 </html>
 
