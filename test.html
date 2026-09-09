@@ -7429,14 +7429,92 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   /* 004 — INSTALL BALLOON */
-  #basInstallBalloon {
+  /*#basInstallBalloon {
     width: 120px !important;
     height: 160px !important;
     left: 55px !important;
     bottom: 125px !important;
     background: #25D366 !important;
     color: #000 !important;
+  }*/
+  /* 026 — SMALL YELLOW INSTALL BUTTON */
+
+#basInstallBalloon {
+  position: fixed !important;
+  right: 12px !important;
+  left: auto !important;
+  bottom: 145px !important;
+
+  width: 82px !important;
+  height: 38px !important;
+
+  background: #FFD700 !important;
+  color: #000 !important;
+
+  border: 2px solid #b8860b !important;
+  border-radius: 20px !important;
+
+  box-shadow: 0 3px 10px rgba(0,0,0,.45) !important;
+
+  z-index: 9997 !important;
+
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+
+  padding: 0 !important;
+}
+
+/* ഐക്കൺ വേണ്ട — ചെറിയ INSTALL ബട്ടൺ മാത്രം */
+#basInstallBalloon .bas-sticker,
+#basInstallBalloon .bas-nipple,
+#basInstallBalloon .bas-string {
+  display: none !important;
+}
+
+#basInstallBalloon .bas-label {
+  color: #000 !important;
+  font-family: Arial, sans-serif !important;
+  font-size: 13px !important;
+  font-weight: 900 !important;
+  line-height: 1 !important;
+  text-align: center !important;
+}
+
+/* ഇൻസ്റ്റാൾ ചെയ്ത ശേഷം */
+#basInstallBalloon.bas-installed {
+  background: #fff !important;
+  color: #000 !important;
+}
+
+/* ചെറിയ ചലനം മാത്രം */
+#basInstallBalloon {
+  animation: basSmallInstallFloat 4s ease-in-out infinite !important;
+}
+
+@keyframes basSmallInstallFloat {
+  0%, 100% {
+    transform: translateX(0);
   }
+
+  50% {
+    transform: translateX(-4px);
+  }
+}
+
+/* മൊബൈൽ */
+@media (max-width: 600px) {
+  #basInstallBalloon {
+    right: 10px !important;
+    bottom: 120px !important;
+    width: 78px !important;
+    height: 36px !important;
+  }
+
+  #basInstallBalloon .bas-label {
+    font-size: 12px !important;
+  }
+}
 
   /* 005 — AFTER REAL INSTALL */
   #basInstallBalloon.bas-installed {
