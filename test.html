@@ -4302,7 +4302,7 @@ if(document.getElementById("section8")) observer78.observe(document.getElementBy
     box-sizing: border-box;
   }
 
-  .gb-slider-container {
+  /*.gb-slider-container {
     width: 100%;
     overflow-x: auto;
     position: relative;
@@ -4325,8 +4325,8 @@ if(document.getElementById("section8")) observer78.observe(document.getElementBy
     /*animation: gbContinuousScroll 5s linear infinite;*/
   }
 
-  .gb-slider-container:hover .gb-slider-track {
-    animation-play-state: paused;
+  /*.gb-slider-container:hover .gb-slider-track {
+    animation-play-state: paused;*/
   }
 
   /*@keyframes gbContinuousScroll {
@@ -4814,7 +4814,7 @@ if(document.getElementById("section8")) observer78.observe(document.getElementBy
     document.getElementById('gbImageZoomModal').style.display = 'none';
   }
 
-  function gbFilterGreetings() {
+  /*function gbFilterGreetings() {
     let query = document.getElementById('gbSearchInput').value.toLowerCase();
     let cards = document.getElementsByClassName('gb-card');
     let track = document.getElementById('gbSliderTrack');
@@ -4825,7 +4825,7 @@ if(document.getElementById("section8")) observer78.observe(document.getElementBy
       /*track.style.animation = 'gbContinuousScroll 5s linear infinite';*/
     }
 
-    for (let card of cards) {
+    /*for (let card of cards) {
       let searchData = card.getAttribute('data-search').toLowerCase();
       if (searchData.includes(query)) {
         card.style.display = "block";
@@ -4833,7 +4833,7 @@ if(document.getElementById("section8")) observer78.observe(document.getElementBy
         card.style.display = "none";
       }
     }
-  }
+  }*/
 
   // MANUAL DRAG & TOUCH SCROLL
   const gbSlider = document.getElementById('gbSliderContainer');
@@ -8426,7 +8426,7 @@ document.addEventListener("DOMContentLoaded", function () {
 }
 
 /* Scroll only inside greetings box */
-.gb-slider-container {
+/*.gb-slider-container {
   width: 100% !important;
   max-width: 100% !important;
   overflow: hidden !important;
@@ -8436,7 +8436,7 @@ document.addEventListener("DOMContentLoaded", function () {
 }
 
 /* Cards remain in one horizontal row */
-.gb-slider-track {
+/*.gb-slider-track {
   display: flex !important;
   flex-wrap: nowrap !important;
   width: max-content !important;
@@ -8446,19 +8446,19 @@ document.addEventListener("DOMContentLoaded", function () {
 }
 
 /* Pause movement while a card is touched */
-.gb-slider-container:active .gb-slider-track,
+/*.gb-slider-container:active .gb-slider-track,
 .gb-slider-container:hover .gb-slider-track {
   animation-play-state: paused !important;
 }
 
 /* Cards must never drop to next row */
-.gb-card {
+/*.gb-card {
   flex: 0 0 auto !important;
   margin: 0 !important;
 }
 
 /* Seamless loop: cloned second half starts here */
-@keyframes gbSeamlessScroll {
+/*@keyframes gbSeamlessScroll {
   from {
     transform: translateX(0);
   }
@@ -8466,7 +8466,7 @@ document.addEventListener("DOMContentLoaded", function () {
   to {
     transform: translateX(-50%);
   }
-}
+}*/
 
 /* Phone size only */
 @media (max-width: 650px) {
@@ -8475,7 +8475,7 @@ document.addEventListener("DOMContentLoaded", function () {
     padding: 10px !important;
   }
 
-  .gb-slider-track {
+  /*.gb-slider-track {
     gap: 10px !important;
     animation-duration: 26s !important;
   }
@@ -8484,7 +8484,7 @@ document.addEventListener("DOMContentLoaded", function () {
     width: 86vw !important;
     max-width: 320px !important;
     height: 300px !important;
-  }
+  }*/
 
   .gb-photo-box {
     width: 40% !important;
@@ -8518,7 +8518,7 @@ document.addEventListener("DOMContentLoaded", function () {
 <script>
 /* Duplicate greeting cards once: no blank gap at scroll end */
 document.addEventListener("DOMContentLoaded", function () {
-  var track = document.getElementById("gbSliderTrack");
+  /*var track = document.getElementById("gbSliderTrack");
 
   if (!track || track.dataset.seamlessReady === "true") return;
 
@@ -8533,13 +8533,13 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
     /* Screen reader duplicate greeting വീണ്ടും വായിക്കാതിരിക്കാൻ */
-    copy.setAttribute("aria-hidden", "true");
+    /*copy.setAttribute("aria-hidden", "true");
 
     track.appendChild(copy);
   });
 
   track.dataset.seamlessReady = "true";
-});
+});*/
 </script>
      <style>
 /* IMPACT amount size reduction */
@@ -8749,6 +8749,102 @@ body {
     scroll-behavior: smooth !important;
   }
 </style>
+ <style>
+/* Greetings Box Slider Styles */
+.gb-slider-container {
+  width: 100% !important;
+  max-width: 100% !important;
+  overflow-x: auto !important;
+  position: relative;
+  padding: 10px 0 !important;
+  box-sizing: border-box !important;
+  cursor: grab;
+  touch-action: pan-x pan-y !important;
+  scroll-behavior: auto !important;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: thin;
+  scrollbar-color: #b38728 #070d1a;
+}
+
+.gb-slider-container::-webkit-scrollbar {
+  height: 4px;
+}
+
+.gb-slider-container::-webkit-scrollbar-thumb {
+  background: #b38728;
+  border-radius: 4px;
+}
+
+.gb-slider-container:active {
+  cursor: grabbing;
+}
+
+.gb-slider-track {
+  display: flex !important;
+  flex-wrap: nowrap !important;
+  width: max-content !important;
+  gap: 10px !important;
+  will-change: scroll-position;
+}
+
+.gb-card {
+  flex: 0 0 auto !important;
+  margin: 0 !important;
+  width: 86vw !important;
+  max-width: 320px !important;
+  height: 300px !important;
+}
+</style>
+
+<script>
+// Auto Scroll & Manual Touch Control Functionality
+const gbContainer = document.querySelector('.gb-slider-container');
+let gbIsInteracting = false;
+let gbScrollSpeed = 1.5; // സ്പീഡ് മാറ്റാൻ ഈ നമ്പർ കൂട്ടുകയോ കുറയ്ക്കുകയോ ചെയ്യാം
+
+function gbSmoothAutoScroll() {
+  if (gbContainer && !gbIsInteracting) {
+    const searchInput = document.getElementById('gbSearchInput');
+    const isSearching = searchInput && searchInput.value.trim() !== '';
+
+    if (!isSearching) {
+      gbContainer.scrollLeft += gbScrollSpeed;
+      
+      // ചാട്ടം ഒഴിവാക്കി സ്മൂത്തായി വീണ്ടും ആദ്യം മുതൽ ഓടാൻ (Seamless Loop)
+      if (gbContainer.scrollLeft >= gbContainer.scrollWidth / 2) {
+        gbContainer.scrollLeft = 0;
+      }
+    }
+  }
+  requestAnimationFrame(gbSmoothAutoScroll);
+}
+
+// യൂസർ ടച്ച് ചെയ്യുമ്പോഴോ മൗസ് വെക്കുമ്പോഴോ Auto-scroll പൗസ് ആയി Manual Scroll സാധ്യമാകും
+if (gbContainer) {
+  gbContainer.addEventListener('mouseenter', () => gbIsInteracting = true);
+  gbContainer.addEventListener('mouseleave', () => gbIsInteracting = false);
+  gbContainer.addEventListener('touchstart', () => gbIsInteracting = true, { passive: true });
+  gbContainer.addEventListener('touchend', () => gbIsInteracting = false, { passive: true });
+  
+  requestAnimationFrame(gbSmoothAutoScroll);
+}
+
+// Search Filter Function
+function gbFilterGreetings() {
+  let query = document.getElementById('gbSearchInput').value.toLowerCase();
+  let cards = document.getElementsByClassName('gb-card');
+
+  for (let card of cards) {
+    let searchData = card.getAttribute('data-search') ? card.getAttribute('data-search').toLowerCase() : '';
+    if (searchData.includes(query)) {
+      card.style.display = "block";
+    } else {
+      card.style.display = "none";
+    }
+  }
+}
+</script>
+
 </body> <!-- ഇതിന് തൊട്ടു മുകളിൽ -->
 </html>
 
