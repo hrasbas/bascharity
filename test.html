@@ -8743,45 +8743,12 @@ body {
   
 <style>
   .greetings-box {
-    overflow-x: scroll !important;
+    overflow-x: auto !important;
     white-space: nowrap !important;
     -webkit-overflow-scrolling: touch !important;
-    scroll-behavior: auto !important;
+    scroll-behavior: smooth !important;
   }
 </style>
-
-<script>
-  const greetingsBox = document.querySelector('.greetings-box');
-  
-  let isDown = false;
-  let startX;
-  let scrollLeft;
-
-  greetingsBox.addEventListener('mousedown', (e) => {
-    isDown = true;
-    greetingsBox.style.cursor = 'grabbing';
-    startX = e.pageX - greetingsBox.offsetLeft;
-    scrollLeft = greetingsBox.scrollLeft;
-  });
-
-  greetingsBox.addEventListener('mouseleave', () => {
-    isDown = false;
-    greetingsBox.style.cursor = 'grab';
-  });
-
-  greetingsBox.addEventListener('mouseup', () => {
-    isDown = false;
-    greetingsBox.style.cursor = 'grab';
-  });
-
-  greetingsBox.addEventListener('mousemove', (e) => {
-    if (!isDown) return;
-    e.preventDefault();
-    const x = e.pageX - greetingsBox.offsetLeft;
-    const walk = (x - startX) * 3;
-    greetingsBox.scrollLeft = scrollLeft - walk;
-  });
-</script>
 </body> <!-- ഇതിന് തൊട്ടു മുകളിൽ -->
 </html>
 
