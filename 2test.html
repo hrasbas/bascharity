@@ -3,12 +3,11 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>BAS Charity International - Master Ad Template</title>
+<title>BAS Charity International - Ultimate Ad</title>
 <style>
   * { box-sizing: border-box; margin: 0; padding: 0; }
   body {
-    /* ഇവിടെ ബാക്ക്ഗ്രൗണ്ട് കളർ അല്ലെങ്കിൽ ഗ്രാഡിയന്റ് മാറ്റാം */
-    background-color: #0b0f19;
+    background-color: #07090e;
     color: #ffffff;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     display: flex;
@@ -17,88 +16,186 @@
     min-height: 100vh;
     overflow: hidden;
   }
-  .video-container {
+  .ad-container {
     position: relative;
-    width: 900px;
-    height: 506px;
-    background: radial-gradient(circle at center, #1a233a 0%, #080c14 100%);
+    width: 960px;
+    height: 540px;
+    background: radial-gradient(circle at center, #1b263b 0%, #0d1b2a 70%, #04090f 100%);
     border-radius: 16px;
-    box-shadow: 0 20px 50px rgba(0,0,0,0.8), 0 0 30px rgba(212, 175, 55, 0.15);
+    box-shadow: 0 25px 60px rgba(0,0,0,0.9), 0 0 40px rgba(212, 175, 55, 0.2);
     overflow: hidden;
-    border: 1px solid rgba(212, 175, 55, 0.3);
+    border: 1px solid rgba(212, 175, 55, 0.4);
+    display: flex;
   }
-  .crystal-container {
-    position: absolute;
-    top: 45%; left: 50%;
-    transform: translate(-50%, -55%);
-    width: 240px;
-    height: 240px;
+  
+  /* Left side: Rotating Globe & Crystal Prism with Logo */
+  .visual-section {
+    position: relative;
+    width: 45%;
+    height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
-    animation: float 5s ease-in-out infinite;
+    background: radial-gradient(circle, rgba(255,255,255,0.05) 0%, transparent 80%);
+    border-right: 1px solid rgba(255,255,255,0.1);
   }
-  @keyframes float {
-    0%, 100% { transform: translate(-50%, -55%) translateY(0px); }
-    50% { transform: translate(-50%, -55%) translateY(-10px); }
-  }
-  /* പ്രിസത്തിന്റെ ബാക്ക്ഗ്രൗണ്ട് / ഷേപ്പ് ഇവിടെ മാറ്റാം */
-  .crystal-shape {
+  
+  .rotating-globe {
     position: absolute;
+    width: 260px;
+    height: 260px;
+    border-radius: 50%;
+    border: 1px dashed rgba(212, 175, 55, 0.3);
+    animation: spin 20s linear infinite;
+  }
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+
+  .crystal-prism {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    background: linear-gradient(135deg, rgba(255,255,255,0.15), rgba(212,175,55,0.08));
+    clip-path: polygon(50% 0%, 100% 38%, 82% 100%, 18% 100%, 0% 38%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: inset 0 0 20px rgba(255,255,255,0.4), 0 0 25px rgba(212,175,55,0.3);
+    animation: floatPrism 4s ease-in-out infinite;
+  }
+  @keyframes floatPrism {
+    0%, 100% { transform: translateY(0px) rotate(0deg); }
+    50% { transform: translateY(-8px) rotate(2deg); }
+  }
+
+  .rotating-logo {
+    position: absolute;
+    width: 90px;
+    height: 90px;
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+    animation: logoSpin 12s linear infinite;
+    padding: 10px;
+  }
+  @keyframes logoSpin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+  .logo-inner {
     width: 100%;
     height: 100%;
-    background: linear-gradient(135deg, rgba(255,255,255,0.1), rgba(212,175,55,0.05));
-    clip-path: polygon(50% 90%, 10% 45%, 10% 25%, 30% 10%, 50% 25%, 70% 10%, 90% 25%, 90% 45%);
-    border: 1px solid rgba(255,255,255,0.3);
-    box-shadow: inset 0 0 15px rgba(255,255,255,0.2);
+    background: #0d1b2a;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #d4af37;
+    font-weight: bold;
+    font-size: 10px;
+    text-align: center;
   }
-  /* സ്ഥിരമായി നിൽക്കുന്ന ലോഗോ (കൈയും സ്പൂണും കുട്ടിയുടെ മുഖവും) */
-  .fixed-logo {
-    position: relative;
-    z-index: 2;
-    width: 140px;
-    height: 140px;
-    filter: drop-shadow(0 2px 4px rgba(0,0,0,0.3));
+
+  /* Right side: Content & Features */
+  .content-section {
+    width: 55%;
+    height: 100%;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
   }
-  .text-content {
-    position: absolute;
-    bottom: 35px;
+
+  .brand-title {
+    font-size: 22px;
+    font-weight: 800;
+    color: #d4af37;
+    letter-spacing: 1px;
+    margin-bottom: 4px;
+  }
+  
+  .tagline {
+    font-size: 13px;
+    color: #a0aec0;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+
+  .features-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 20px;
+  }
+
+  .feature-item {
+    display: flex;
+    align-items: flex-start;
+    font-size: 13px;
+    color: #e2e8f0;
+    background: rgba(255, 255, 255, 0.03);
+    padding: 8px 12px;
+    border-radius: 8px;
+    border-left: 3px solid #d4af37;
+  }
+
+  .cta-button {
+    display: inline-block;
     width: 100%;
     text-align: center;
-    padding: 0 20px;
+    background: linear-gradient(135deg, #d4af37 0%, #aa7c11 100%);
+    color: #07090e;
+    font-weight: bold;
+    font-size: 15px;
+    padding: 12px;
+    border-radius: 8px;
+    text-decoration: none;
+    box-shadow: 0 4px 15px rgba(212, 175, 55, 0.4);
+    transition: transform 0.2s;
   }
-  .title {
-    font-size: 26px;
-    font-weight: 700;
-    color: #d4af37;
-    letter-spacing: 1.5px;
-    margin-bottom: 6px;
-  }
-  .subtitle {
-    font-size: 16px;
-    color: #e0e0e0;
-    font-weight: 300;
+  .cta-button:hover {
+    transform: translateY(-2px);
   }
 </style>
 </head>
 <body>
-  <div class="video-container">
-    <!-- ബാക്ക്ഗ്രൗണ്ട് പ്രിസം ഡിസൈൻ -->
-    <div class="crystal-container">
-      <div class="crystal-shape"></div>
-      
-      <!-- സ്ഥിരമായ ലോഗോ വെബ് ഇമേജ് അല്ലെങ്കിൽ SVG ആയി ഇവിടെ നൽകാം -->
-      <svg class="fixed-logo" viewBox="0 0 100 100">
-        <!-- നിങ്ങളുടെ ലോഗോ ലൈൻ ആർട്ടുകൾ ഇവിടെ കോഡ് ചെയ്യാം അല്ലെങ്കിൽ ചിത്രം ലിങ്ക് ചെയ്യാം -->
-        <path d="M25,50 Q40,30 55,45 T75,40" fill="none" stroke="#ffffff" stroke-width="2.5" stroke-linecap="round"/>
-      </svg>
+
+  <div class="ad-container">
+    <!-- Left Visual Component -->
+    <div class="visual-section">
+      <div class="rotating-globe"></div>
+      <div class="crystal-prism">
+        <div class="rotating-logo">
+          <div class="logo-inner">BAS</div>
+        </div>
+      </div>
     </div>
 
-    <!-- പരസ്യ വാചകങ്ങൾ -->
-    <div class="text-content">
-      <div class="title">BAS CHARITY INTERNATIONAL</div>
-      <div class="subtitle">YOUR PURCHASE SATISFIES A HUNGER</div>
+    <!-- Right Content Component -->
+    <div class="content-section">
+      <div>
+        <div class="brand-title">BAS CHARITY INTERNATIONAL</div>
+        <div class="tagline">YOUR PURCHASE SATISFIES A HUNGER</div>
+
+        <ul class="features-list">
+          <li class="feature-item">✨ അനേകായിരം ഷോപ്പിംഗ് ആപ്പുകൾക്ക് പകരം ഒരു സിംഗിൾ ഐക്കൺ</li>
+          <li class="feature-item">💰 മികച്ച വിലകൾ എളുപ്പത്തിൽ കംപയർ ചെയ്യാൻ സൗകര്യം</li>
+          <li class="feature-item">🤝 ബാസ് ചാരിറ്റി ലിങ്കുകളിലൂടെ പർച്ചേസ് ചെയ്യുക വഴി</li>
+          <li class="feature-item">❤️ അർഹരായവർക്ക് ഹംഗർ റിലീഫ് (Hunger Relief) ഉറപ്പാക്കാം</li>
+        </ul>
+      </div>
+
+      <!-- Clickable Site Link Button -->
+      <a href="https://example.com" target="_blank" class="cta-button">ഇപ്പോൾ തന്നെ പർച്ചേസ് ചെയ്യൂ (Shop Now)</a>
     </div>
   </div>
+
 </body>
 </html>
