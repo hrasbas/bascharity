@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>BAS Charity International - Ultimate Ad</title>
+<title>BAS Charity International - Animated Ad</title>
 <style>
   * { box-sizing: border-box; margin: 0; padding: 0; }
   body {
@@ -28,7 +28,7 @@
     display: flex;
   }
   
-  /* Left side: Rotating Globe & Crystal Prism with Logo */
+  /* Left side: Animated Glowing Heart Prism & Rotating Logo */
   .visual-section {
     position: relative;
     width: 45%;
@@ -38,14 +38,15 @@
     align-items: center;
     background: radial-gradient(circle, rgba(255,255,255,0.05) 0%, transparent 80%);
     border-right: 1px solid rgba(255,255,255,0.1);
+    overflow: hidden;
   }
   
   .rotating-globe {
     position: absolute;
-    width: 260px;
-    height: 260px;
+    width: 280px;
+    height: 280px;
     border-radius: 50%;
-    border: 1px dashed rgba(212, 175, 55, 0.3);
+    border: 1px dashed rgba(212, 175, 55, 0.4);
     animation: spin 20s linear infinite;
   }
   @keyframes spin {
@@ -53,76 +54,74 @@
     100% { transform: rotate(360deg); }
   }
 
-  .crystal-prism {
+  /* Glowing Heart Crystal */
+  .crystal-heart {
     position: absolute;
-    width: 200px;
-    height: 200px;
-    background: linear-gradient(135deg, rgba(255,255,255,0.15), rgba(212,175,55,0.08));
-    clip-path: polygon(50% 0%, 100% 38%, 82% 100%, 18% 100%, 0% 38%);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    box-shadow: inset 0 0 20px rgba(255,255,255,0.4), 0 0 25px rgba(212,175,55,0.3);
-    animation: floatPrism 4s ease-in-out infinite;
+    width: 220px;
+    height: 220px;
+    filter: drop-shadow(0 0 20px rgba(212, 175, 55, 0.6));
+    animation: floatHeart 4s ease-in-out infinite, glowPulse 2s ease-in-out infinite alternate;
   }
-  @keyframes floatPrism {
-    0%, 100% { transform: translateY(0px) rotate(0deg); }
-    50% { transform: translateY(-8px) rotate(2deg); }
+  @keyframes floatHeart {
+    0%, 100% { transform: translateY(0px) scale(1); }
+    50% { transform: translateY(-10px) scale(1.03); }
+  }
+  @keyframes glowPulse {
+    0% { filter: drop-shadow(0 0 15px rgba(212, 175, 55, 0.4)); }
+    100% { filter: drop-shadow(0 0 30px rgba(255, 223, 0, 0.8)); }
   }
 
-  .rotating-logo {
+  /* Rotating Logo Inside Heart */
+  .rotating-logo-container {
     position: absolute;
-    width: 90px;
-    height: 90px;
-    background: rgba(255, 255, 255, 0.95);
-    border-radius: 50%;
+    width: 100px;
+    height: 100px;
     display: flex;
     justify-content: center;
     align-items: center;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.5);
-    animation: logoSpin 12s linear infinite;
-    padding: 10px;
+    animation: logoRotate 15s linear infinite;
   }
-  @keyframes logoSpin {
+  @keyframes logoRotate {
     0% { transform: rotate(0deg); }
     100% { transform: rotate(360deg); }
   }
+
   .logo-inner {
-    width: 100%;
-    height: 100%;
-    background: #0d1b2a;
+    width: 75px;
+    height: 75px;
+    background: rgba(13, 27, 42, 0.85);
+    border: 1.5px solid #d4af37;
     border-radius: 50%;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    color: #d4af37;
-    font-weight: bold;
-    font-size: 10px;
-    text-align: center;
+    box-shadow: 0 0 15px rgba(212, 175, 55, 0.5);
   }
 
   /* Right side: Content & Features */
   .content-section {
     width: 55%;
     height: 100%;
-    padding: 30px;
+    padding: 25px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    overflow-y: auto;
   }
 
   .brand-title {
-    font-size: 22px;
+    font-size: 20px;
     font-weight: 800;
     color: #d4af37;
     letter-spacing: 1px;
-    margin-bottom: 4px;
+    margin-bottom: 2px;
   }
   
   .tagline {
-    font-size: 13px;
+    font-size: 12px;
     color: #a0aec0;
-    margin-bottom: 15px;
+    margin-bottom: 12px;
     text-transform: uppercase;
     letter-spacing: 0.5px;
   }
@@ -131,18 +130,18 @@
     list-style: none;
     display: flex;
     flex-direction: column;
-    gap: 10px;
-    margin-bottom: 20px;
+    gap: 8px;
+    margin-bottom: 15px;
   }
 
   .feature-item {
     display: flex;
     align-items: flex-start;
-    font-size: 13px;
+    font-size: 12px;
     color: #e2e8f0;
     background: rgba(255, 255, 255, 0.03);
-    padding: 8px 12px;
-    border-radius: 8px;
+    padding: 8px 10px;
+    border-radius: 6px;
     border-left: 3px solid #d4af37;
   }
 
@@ -153,9 +152,9 @@
     background: linear-gradient(135deg, #d4af37 0%, #aa7c11 100%);
     color: #07090e;
     font-weight: bold;
-    font-size: 15px;
-    padding: 12px;
-    border-radius: 8px;
+    font-size: 14px;
+    padding: 10px;
+    border-radius: 6px;
     text-decoration: none;
     box-shadow: 0 4px 15px rgba(212, 175, 55, 0.4);
     transition: transform 0.2s;
@@ -168,12 +167,31 @@
 <body>
 
   <div class="ad-container">
-    <!-- Left Visual Component -->
+    <!-- Left Visual Component with Heart & Rotating Logo -->
     <div class="visual-section">
       <div class="rotating-globe"></div>
-      <div class="crystal-prism">
-        <div class="rotating-logo">
-          <div class="logo-inner">BAS</div>
+      
+      <!-- Glowing Heart Prism SVG -->
+      <svg class="crystal-heart" viewBox="0 0 100 100">
+        <defs>
+          <linearGradient id="goldHeartGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#fff8d6" />
+            <stop offset="50%" stop-color="#d4af37" />
+            <stop offset="100%" stop-color="#aa7c11" />
+          </linearGradient>
+        </defs>
+        <path d="M 50 88 C 20 65 5 45 5 28 C 5 12 18 5 32 5 C 41 5 47 10 50 15 C 53 10 59 5 68 5 C 82 5 95 12 95 28 C 95 45 80 65 50 88 Z" 
+              fill="rgba(255,255,255,0.06)" stroke="url(#goldHeartGrad)" stroke-width="2.5" />
+      </svg>
+
+      <!-- Rotating Logo Inside -->
+      <div class="rotating-logo-container">
+        <div class="logo-inner">
+          <!-- സ്പൂണും കൈയും സൂചിപ്പിക്കുന്ന മിനി ലോഗോ വെക്റ്റർ ആർട്ട് -->
+          <svg width="35" height="35" viewBox="0 0 24 24" fill="none" stroke="#d4af37" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
+          </svg>
+          <span style="font-size: 8px; color: #d4af37; font-weight: bold; margin-top: 2px;">BAS</span>
         </div>
       </div>
     </div>
