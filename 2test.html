@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>BAS Charity International - Animated Ad</title>
+<title>BAS Charity International - Logo Ad</title>
 <style>
   * { box-sizing: border-box; margin: 0; padding: 0; }
   body {
@@ -28,7 +28,7 @@
     display: flex;
   }
   
-  /* Left side: Animated Glowing Heart Prism & Rotating Logo */
+  /* Left side: Globe & Glowing Heart Prism with Feeding Logo */
   .visual-section {
     position: relative;
     width: 45%;
@@ -71,11 +71,11 @@
     100% { filter: drop-shadow(0 0 30px rgba(255, 223, 0, 0.8)); }
   }
 
-  /* Rotating Logo Inside Heart */
+  /* Rotating Logo Container Inside Heart */
   .rotating-logo-container {
     position: absolute;
-    width: 100px;
-    height: 100px;
+    width: 110px;
+    height: 110px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -87,9 +87,9 @@
   }
 
   .logo-inner {
-    width: 75px;
-    height: 75px;
-    background: rgba(13, 27, 42, 0.85);
+    width: 85px;
+    height: 85px;
+    background: rgba(13, 27, 42, 0.9);
     border: 1.5px solid #d4af37;
     border-radius: 50%;
     display: flex;
@@ -97,6 +97,7 @@
     justify-content: center;
     align-items: center;
     box-shadow: 0 0 15px rgba(212, 175, 55, 0.5);
+    padding: 8px;
   }
 
   /* Right side: Content & Features */
@@ -167,7 +168,7 @@
 <body>
 
   <div class="ad-container">
-    <!-- Left Visual Component with Heart & Rotating Logo -->
+    <!-- Left Visual Component with Heart & Rotating Feeding Logo -->
     <div class="visual-section">
       <div class="rotating-globe"></div>
       
@@ -184,14 +185,16 @@
               fill="rgba(255,255,255,0.06)" stroke="url(#goldHeartGrad)" stroke-width="2.5" />
       </svg>
 
-      <!-- Rotating Logo Inside -->
+      <!-- Rotating Logo Inside with Spoon Feeding Art -->
       <div class="rotating-logo-container">
         <div class="logo-inner">
-          <!-- സ്പൂണും കൈയും സൂചിപ്പിക്കുന്ന മിനി ലോഗോ വെക്റ്റർ ആർട്ട് -->
-          <svg width="35" height="35" viewBox="0 0 24 24" fill="none" stroke="#d4af37" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
+          <!-- സ്പൂൺ ഫീഡിംഗ് ലൈൻ ആർട്ട് (Hand holding spoon feeding profile) -->
+          <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#d4af37" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M2 12c2-3 5-4 8-2l3 3c2 2 4 1 6-1"></path>
+            <path d="M13 13l3-3 2 2-3 3"></path>
+            <path d="M19 10c1 2 1 4 0 6"></path>
           </svg>
-          <span style="font-size: 8px; color: #d4af37; font-weight: bold; margin-top: 2px;">BAS</span>
+          <span style="font-size: 7px; color: #d4af37; font-weight: bold; margin-top: 1px;">BAS CHARITY</span>
         </div>
       </div>
     </div>
