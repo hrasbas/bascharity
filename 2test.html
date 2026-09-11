@@ -8898,63 +8898,43 @@ if (gbContainer) {
 </script>
   
 
-<!-- ബലൂൺ ഷേപ്പിലുള്ള ഫ്ലോട്ടിങ് ബോക്സ് -->
-<div id="fb-balloon-guide" style="position: fixed; bottom: 25px; right: 25px; z-index: 99999; background: radial-gradient(circle at 30% 30%, #4facfe, #00f2fe); color: #ffffff; padding: 18px 20px; border-radius: 50% 50% 50% 10% / 50% 50% 50% 50%; box-shadow: 0 10px 25px rgba(0,0,0,0.3); max-width: 240px; font-family: sans-serif; font-size: 13px; display: none; cursor: grab; animation: floatBalloon 3s ease-in-out infinite; border: 2px solid rgba(255,255,255,0.5);">
-  
-  <!-- വായുവിൽ പാറിപ്പറക്കുന്ന പോലെയുള്ള അനിമേഷൻ -->
-  <style>
-    @keyframes floatBalloon {
-      0% { transform: translateY(0px) rotate(0deg); }
-      50% { transform: translateY(-8px) rotate(2deg); }
-      100% { transform: translateY(0px) rotate(0deg); }
-    }
-  </style>
-
-  <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px;">
-    <strong style="font-size: 14px; text-shadow: 1px 1px 2px rgba(0,0,0,0.3);">🎈 ആപ്പ് ഇൻസ്റ്റാൾ ചെയ്യാൻ:</strong>
-    <span onclick="document.getElementById('fb-balloon-guide').style.display='none';" style="cursor: pointer; font-weight: bold; font-size: 18px; color: #fff; background: rgba(0,0,0,0.2); width: 22px; height: 22px; display: flex; align-items: center; justify-content: center; border-radius: 50%;">&times;</span>
+<!-- റൈറ്റ് സൈഡിൽ നിന്ന് ലെഫ്റ്റ് സൈഡിലേക്ക് സ്ലൈഡ് ചെയ്തു വന്നു പോകുന്ന സ്ട്രിപ്പ് -->
+<div id="fb-side-strip" style="position: fixed; top: 15px; right: -100%; width: 90%; max-width: 320px; z-index: 99999; background: #1877f2; color: #ffffff; padding: 12px 15px; border-radius: 8px 0 0 8px; font-family: sans-serif; font-size: 13px; box-shadow: -4px 4px 15px rgba(0,0,0,0.3); transition: right 0.5s ease-in-out; display: none;">
+  <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 4px;">
+    <span style="font-weight: bold; font-size: 14px;">📱 ഐക്കൺ സേവ് ചെയ്യാൻ:</span>
+    <span onclick="document.getElementById('fb-side-strip').style.right='-100%';" style="cursor: pointer; font-weight: bold; font-size: 18px; line-height: 1; padding: 0 4px;">&times;</span>
   </div>
-  <p style="margin: 0; line-height: 1.4; text-shadow: 1px 1px 2px rgba(0,0,0,0.2);">ഫേസ്ബുക്ക് ബ്രൗസറിലാണ് ഉള്ളതെങ്കിൽ, മുകളിലെ ത്രീ ഡോട്ട്സിൽ (⋮) തൊട്ട് <b>'Open in Chrome'</b> കൊടുക്കുക!</p>
+  <p style="margin: 0; line-height: 1.4;">ക്ലിക്ക് ത്രീ ഡോട്ട്സ് ➔ എക്സ്റ്റേർണൽ ബ്രൗസർ ➔ ഗ്രീൻ ബലൂൺ ഇൻസ്റ്റാൾ!</p>
 </div>
 
 <script>
-  // 1. ഹോം സ്ക്രീനിൽ ഇൻസ്റ്റാൾ ചെയ്തു കഴിഞ്ഞോ എന്ന് നോക്കാൻ
+  // 1. ഹോം സ്ക്രീനിൽ ഐക്കൺ സേവ് ചെയ്തു കഴിഞ്ഞോ എന്ന് നോക്കാൻ
   const isInstalled = window.matchMedia('(display-mode: standalone)').matches || window.navigator.standalone;
 
-  // 2. ഫേസ്ബുക്ക് ഇൻ-ആപ്പ് ബ്രൗസറിലാണോ എന്ന് നോക്കാൻ (വാട്സാപ്പിലോ ക്രോമിലോ ഇത് കാണിക്കില്ല)
+  // 2. ഫേസ്ബുക്ക് ഇൻ-ആപ്പ് ബ്രൗസറിലാണോ എന്ന് നോക്കാൻ
   const isFacebookApp = /FBAN|FBAV/.test(navigator.userAgent);
 
-  // ഫേസ്ബുക്കിൽ നിന്ന് വരുമ്പോൾ മാത്രം ബലൂൺ ഡിസൈൻ കാണിക്കുക
+  // ഫേസ്ബുക്കിൽ നിന്ന് വരുമ്പോൾ മാത്രം റൈറ്റിൽ നിന്ന് ലെഫ്റ്റിലേക്ക് വന്നു പോകുന്ന രീതി സെറ്റ് ചെയ്യുന്നു
   if (isFacebookApp && !isInstalled) {
-    const balloon = document.getElementById('fb-balloon-guide');
-    balloon.style.display = 'block';
+    const strip = document.getElementById('fb-side-strip');
+    
+    // പേജ് ലോഡ് ചെയ്ത് 2 സെക്കൻഡിന് ശേഷം റൈറ്റ് സൈഡിൽ നിന്ന് ഉള്ളിലേക്ക് വരും
+    setTimeout(() => {
+      strip.style.display = 'block';
+      strip.style.right = '0';
+    }, 2000);
 
-    // മൊബൈലിൽ വിരൽ വെച്ച് വലിച്ചു നീക്കാൻ (Drag & Drop / Touch Move) പറ്റുന്ന കോഡ്
-    let isDragging = false;
-    let startX, startY, initialX, initialY;
-
-    balloon.addEventListener('touchstart', (e) => {
-      isDragging = true;
-      startX = e.touches[0].clientX;
-      startY = e.touches[0].clientY;
-      initialX = balloon.offsetLeft;
-      initialY = balloon.offsetTop;
-      balloon.style.animation = 'none'; // വലിക്കുമ്പോൾ ആനിമേഷൻ താൽക്കാലികമായി നിർത്തും
-    });
-
-    document.addEventListener('touchmove', (e) => {
-      if (!isDragging) return;
-      let dx = e.touches[0].clientX - startX;
-      let dy = e.touches[0].clientY - startY;
-      balloon.style.left = (initialX + dx) + 'px';
-      balloon.style.top = (initialY + dy) + 'px';
-      balloon.style.right = 'auto';
-      balloon.style.bottom = 'auto';
-    });
-
-    document.addEventListener('touchend', () => {
-      isDragging = false;
-    });
+    // ഓരോ 12 സെക്കൻഡിലും ഉള്ളിലേക്ക് വരികയും പുറത്തേക്ക് പോവുകയും ചെയ്യും
+    setInterval(() => {
+      // പുറത്തേക്ക് (റൈറ്റിലേക്ക്) മറയുന്നു
+      strip.style.right = '-100%';
+      
+      // 4 സെക്കൻഡിന് ശേഷം വീണ്ടും ഉള്ളിലേക്ക് (ലെഫ്റ്റിലേക്ക്) വരുന്നു
+      setTimeout(() => {
+        strip.style.right = '0';
+      }, 4000);
+      
+    }, 12000);
   }
 </script>
 
