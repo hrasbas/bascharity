@@ -8895,8 +8895,7 @@ if (gbContainer) {
   
   requestAnimationFrame(gbSmoothAutoScroll);
 }
-</script>
-              <!-- ========================================== -->
+ </script>    <!-- ========================================== -->
 <!-- 1. ഫേസ്ബുക്ക് ഇൻ-ആപ്പ് ബ്രൗസറിനായി മുകളിൽ വരുന്ന ഗ്ലാസ് പ്രിസം സ്ട്രിപ്പ് -->
 <div id="fb-prism-strip" style="position: fixed; top: 0; left: 0; width: 100%; z-index: 2147483647; background: linear-gradient(135deg, rgba(79, 172, 254, 0.95), rgba(0, 242, 254, 0.95), rgba(106, 17, 203, 0.95)); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); color: #ffffff; padding: 12px 16px; font-family: sans-serif; font-size: 13px; box-shadow: 0 4px 20px rgba(0,0,0,0.4); display: none; border-bottom: 1.5px solid rgba(255,255,255,0.5);">
   <div style="display: flex; justify-content: space-between; align-items: center; max-width: 600px; margin: 0 auto;">
@@ -9116,12 +9115,15 @@ if (gbContainer) {
     localStorage.setItem("baas_app_installed", "true");
   }
 
-  /* ഫസ്റ്റ് ടൈം ലോഡ് ചെയ്യുമ്പോൾ യഥാർത്ഥ സ്റ്റേറ്റ് മാത്രം പരിശോധിക്കും */
-  if (isAlreadyInstalled()) {
-    setInstalled();
-  } else {
-    setInstallReady();
-  }
+  /* ഫസ്റ്റ് ടൈം ലോഡ് ചെയ്യുമ്പോൾ - ആദ്യം പച്ച കാണിക്കും */
+  setInstallReady();
+
+  /* പിന്നെ ഇൻസ്റ്റാൾ ചെയ്തിട്ടുണ്ടെങ്കിൽ മാത്രം വെള്ള ആക്കുക */
+  setTimeout(function() {
+    if (isAlreadyInstalled()) {
+      setInstalled();
+    }
+  }, 100);
 
   /* 4. FACEBOOK PRISM STRIP LOGIC */
   const prismStrip = document.getElementById("fb-prism-strip");
@@ -9153,7 +9155,9 @@ if (gbContainer) {
 
     if (!installPrompt) {
       if (isFacebookApp) {
-        alert("ഫേസ്ബുക്കിൽ നിന്ന് പുറത്തുകടക്കാൻ:\n1. മുകളിലെ ത്രീ ഡോട്ട്സ് (⋮) ക്ലിക്ക് ചെയ്യുക\n2. 'Open in Browser' കൊടുത്ത് പുറത്തുപോയി ഇൻസ്റ്റാൾ ചെയ്യുക!");
+        alert("ഫേസ്ബുക്കിൽ നിന്ന് പുറത്തുകടക്കാൻ:
+1. മുകളിലെ ത്രീ ഡോട്ട്സ് (⋮) ക്ലിക്ക് ചെയ്യുക
+2. 'Open in Browser' കൊടുത്ത് പുറത്തുപോയി ഇൻസ്റ്റാൾ ചെയ്യുക!");
       } else {
         alert("ബ്രൗസർ മെനുവിൽ നിന്ന് 'Add to Home screen' കൊടുത്ത് ആപ്പ് സേവ് ചെയ്യുക!");
       }
@@ -9182,14 +9186,14 @@ if (gbContainer) {
 
   /* 8. WHATSAPP CLICK */
   whatsapp.addEventListener("click", function () {
-    var text = "Save BAS Charity to your screen:\n" + window.location.href;
+    var text = "Save BAS Charity to your screen:
+" + window.location.href;
     var url = "https://wa.me/?text=" + encodeURIComponent(text);
     window.open(url, "_blank", "noopener,noreferrer");
   });
 
 })();
 </script>
-
 </body> <!-- ഇതിന് തൊട്ടു മുകളിൽ -->
 </html>
 
