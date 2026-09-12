@@ -8896,7 +8896,7 @@ if (gbContainer) {
   requestAnimationFrame(gbSmoothAutoScroll);
 }
 </script>
-     <!-- ========================================== -->
+              <!-- ========================================== -->
 <!-- 1. ഫേസ്ബുക്ക് ഇൻ-ആപ്പ് ബ്രൗസറിനായി മുകളിൽ വരുന്ന ഗ്ലാസ് പ്രിസം സ്ട്രിപ്പ് -->
 <div id="fb-prism-strip" style="position: fixed; top: 0; left: 0; width: 100%; z-index: 2147483647; background: linear-gradient(135deg, rgba(79, 172, 254, 0.95), rgba(0, 242, 254, 0.95), rgba(106, 17, 203, 0.95)); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); color: #ffffff; padding: 12px 16px; font-family: sans-serif; font-size: 13px; box-shadow: 0 4px 20px rgba(0,0,0,0.4); display: none; border-bottom: 1.5px solid rgba(255,255,255,0.5);">
   <div style="display: flex; justify-content: space-between; align-items: center; max-width: 600px; margin: 0 auto;">
@@ -8948,7 +8948,7 @@ if (gbContainer) {
     transition: background-color .4s ease, color .4s ease !important;
   }
 
-  /* INSTALL BALLOON */
+  /* INSTALL BALLOON - DEFAULT (NOT INSTALLED) -> GREEN */
   #basInstallBalloon {
     width: 120px !important;
     height: 160px !important;
@@ -8958,9 +8958,17 @@ if (gbContainer) {
     color: #000 !important;
   }
   
-  /* AFTER REAL INSTALL */
+  #basInstallBalloon .bas-label {
+    color: #000 !important;
+  }
+
+  /* INSTALL BALLOON - AFTER REAL INSTALL -> WHITE */
   #basInstallBalloon.bas-installed {
-    background: #fff !important;
+    background: #ffffff !important;
+    color: #00A83B !important;
+  }
+
+  #basInstallBalloon.bas-installed .bas-label {
     color: #00A83B !important;
   }
 
@@ -8972,6 +8980,10 @@ if (gbContainer) {
     bottom: 10px !important;
     background: #00BFFF !important;
     color: #fff !important;
+  }
+
+  #basWhatsAppBalloon .bas-label {
+     color: #fff !important;
   }
 
   /* APP ICON */
@@ -8992,14 +9004,6 @@ if (gbContainer) {
     font-weight: 900 !important;
     line-height: 1.15 !important;
     text-align: center !important;
-  }
-
-  #basInstallBalloon.bas-installed .bas-label {
-    color: #00A83B !important;
-  }
-
-  #basWhatsAppBalloon .bas-label {
-     color: #fff !important;
   }
 
   /* BALLOON NECK */
@@ -9092,30 +9096,27 @@ if (gbContainer) {
   wrap.appendChild(whatsapp);
   document.body.appendChild(wrap);
 
-  /* 3. INSTALL STATE CHECK */
+  /* 3. STRICT INSTALL STATE CHECK */
   function isAlreadyInstalled() {
-    return (
-      (window.matchMedia && window.matchMedia("(display-mode: standalone)").matches) ||
-      window.navigator.standalone === true ||
-      localStorage.getItem("baas_app_installed") === "true"
-    );
+    var isStandalone = (window.matchMedia && window.matchMedia("(display-mode: standalone)").matches) || window.navigator.standalone === true;
+    var isStored = localStorage.getItem("baas_app_installed") === "true";
+    return isStandalone || isStored;
   }
 
   function setInstallReady() {
     install.classList.remove("bas-installed");
-    install.classList.add("bas-not-installed");
     install.querySelector(".bas-label").textContent = "INSTALL";
     install.setAttribute("aria-label", "Install BAS Charity app");
   }
 
   function setInstalled() {
-    install.classList.remove("bas-not-installed");
     install.classList.add("bas-installed");
     install.querySelector(".bas-label").textContent = "INSTALLED";
     install.setAttribute("aria-label", "BAS Charity app installed");
     localStorage.setItem("baas_app_installed", "true");
   }
 
+  /* ഫസ്റ്റ് ടൈം ലോഡ് ചെയ്യുമ്പോൾ യഥാർത്ഥ സ്റ്റേറ്റ് മാത്രം പരിശോധിക്കും */
   if (isAlreadyInstalled()) {
     setInstalled();
   } else {
