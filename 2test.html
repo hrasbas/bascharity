@@ -9126,19 +9126,20 @@ if (gbContainer) {
   }, 100);
 
   /* 4. FACEBOOK PRISM STRIP LOGIC */
-  const prismStrip = document.getElementById("fb-prism-strip");
-  const isFacebookApp = /FBAN|FBAV/.test(navigator.userAgent);
+  /* 4. FACEBOOK PRISM STRIP LOGIC */
+const prismStrip = document.getElementById("fb-prism-strip");
+const isFacebookApp = /FBAN|FBAV/.test(navigator.userAgent);
 
-  if (!isAlreadyInstalled() && isFacebookApp && prismStrip) {
-    setTimeout(() => {
-      prismStrip.style.display = "block";
-    }, 1000);
+// ഫേസ്ബുക്ക് ആപ്പ് ആണെങ്കിൽ സ്ട്രിപ്പ് കാണിക്കുക
+if (isFacebookApp && prismStrip) {
+  setTimeout(() => {
+    prismStrip.style.display = "block";
+  }, 1000);
 
-    document.getElementById("close-prism-strip").addEventListener("click", () => {
-      prismStrip.style.display = "none";
-    });
-  }
-
+  document.getElementById("close-prism-strip").addEventListener("click", () => {
+    prismStrip.style.display = "none";
+  });
+}
   /* 5. PWA INSTALL PROMPT */
   var installPrompt = null;
   window.addEventListener("beforeinstallprompt", function (event) {
