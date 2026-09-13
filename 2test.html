@@ -8896,14 +8896,22 @@ if (gbContainer) {
   requestAnimationFrame(gbSmoothAutoScroll);
 }
  </script>    
-       <!-- ചെറിയ ഫ്ലോട്ടിങ് ബലൂൺ (നീല നിറം / ഇൻസ്റ്റാൾ ചെയ്താൽ വെള്ള നിറം) -->
-<div id="floating-balloon" style="position: fixed; bottom: 20px; right: 20px; z-index: 99999; background: #1877f2; color: #ffffff; padding: 10px 16px; border-radius: 30px; font-family: sans-serif; font-size: 13px; font-weight: bold; box-shadow: 0 4px 15px rgba(0,0,0,0.3); cursor: pointer; display: none; align-items: center; gap: 6px; transition: all 0.3s ease;">
-  <span id="balloon-icon">🎈</span>
-  <span id="balloon-text">Save Icon</span>
+       <!-- മുകളിൽ വന്ന് പോകുന്ന ഗ്ലാസ് പ്രിസം ഡിസൈൻ സ്ട്രിപ്പ് (ഇൻസ്റ്റാൾ ചെയ്യാത്തവർക്ക് മാത്രം) -->
+<div id="fb-prism-strip" style="position: fixed; top: 12px; right: -100%; width: 90%; max-width: 330px; z-index: 99999; background: linear-gradient(135deg, rgba(79, 172, 254, 0.85), rgba(0, 242, 254, 0.85), rgba(106, 17, 203, 0.85)); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); color: #ffffff; padding: 14px 18px; border-radius: 12px 0 0 12px; font-family: sans-serif; font-size: 13px; box-shadow: -5px 5px 25px rgba(0,0,0,0.3); transition: right 0.6s cubic-bezier(0.68, -0.55, 0.27, 1.55); display: none; border: 1px solid rgba(255, 255, 255, 0.5);">
+  
+  <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 6px;">
+    <span style="font-weight: bold; font-size: 14px; text-shadow: 1px 1px 2px rgba(0,0,0,0.3);">✨ F ൽ Very Low Memory Icon</span>
+    <span id="close-prism-strip" style="cursor: pointer; font-weight: bold; font-size: 18px; line-height: 1; background: rgba(0,0,0,0.25); width: 22px; height: 22px; display: flex; align-items: center; justify-content: center; border-radius: 50%;">&times;</span>
+  </div>
+  
+  <p style="margin: 0; line-height: 1.5; text-shadow: 1px 1px 2px rgba(0,0,0,0.3);">
+    <b>Screen ൽ Save ചെയ്യാൻ:</b><br>
+    ⋮ ➔ External Browser > Install
+  </p>
 </div>
 
 <script>
-  // 1. ഡിവൈസിൽ ഇതിനകം ഇൻസ്റ്റാൾ ചെയ്തിട്ടുണ്ടോ എന്ന് പരിശോധിക്കാൻ
+  // 1. ഡിവൈസിൽ ഇതിനകം ഇൻസ്റ്റാൾ ചെയ്തിട്ടുണ്ടോ എന്ന് പരിശോധിക്കുക (Standalone Mode അല്ലെങ്കിൽ LocalStorage)
   const isStandalone = window.matchMedia('(display-mode: standalone)').matches || window.navigator.standalone;
   const isAlreadyInstalled = localStorage.getItem('baas_app_installed') === 'true';
 
@@ -8911,45 +8919,40 @@ if (gbContainer) {
     localStorage.setItem('baas_app_installed', 'true');
   }
 
-  // ഫേസ്ബുക്ക് ഇൻ-ആപ്പ് ബ്രൗസറിലാണോ എന്ന് നോക്കാൻ
+  // 2. ഫേസ്ബുക്ക് ഇൻ-ആപ്പ് ബ്രൗസറിലാണോ എന്ന് പരിശോധിക്കുക
   const isFacebookApp = /FBAN|FBAV/.test(navigator.userAgent);
 
-  if (isFacebookApp) {
-    const balloon = document.getElementById('floating-balloon');
-    const balloonText = document.getElementById('balloon-text');
-    const balloonIcon = document.getElementById('balloon-icon');
+  // ഇൻസ്റ്റാൾ ചെയ്തിട്ടില്ലെങ്കിൽ മാത്രം ഫേസ്ബുക്കിൽ പ്രിസം സ്ട്രിപ്പ് കാണിക്കുക
+  if (isFacebookApp && !isStandalone && !isAlreadyInstalled) {
+    const prismStrip = document.getElementById('fb-prism-strip');
+    
+    // പേജ് ലോഡ് ചെയ്ത് 2 സെക്കൻഡിന് ശേഷം റൈറ്റ് സൈഡിൽ നിന്ന് സ്ലൈഡ് ചെയ്തു വരും
+    setTimeout(() => {
+      prismStrip.style.display = 'block';
+      prismStrip.style.right = '0';
+    }, 2000);
 
-    // 2. ഇതിനകം ഇൻസ്റ്റാൾ ചെയ്തിട്ടുണ്ടെങ്കിൽ:
-    if (isStandalone || isAlreadyInstalled) {
-      // ബലൂൺ വെള്ള കളറിലേക്ക് മാറുന്നു, ഒപ്പം 'Installed' എന്ന് കാണിക്കുന്നു
-      balloon.style.background = '#ffffff';
-      balloon.style.color = '#1877f2';
-      balloon.style.border = '2px solid #1877f2';
-      balloonIcon.innerText = '✅';
-      balloonText.innerText = 'Installed';
-    } else {
-      // ഇൻസ്റ്റാൾ ചെയ്തിട്ടില്ലെങ്കിൽ നീല ബലൂൺ ആയിരിക്കും, ക്ലിക്ക് ചെയ്താൽ ഗൈഡ് കാണിക്കാം
-      balloon.style.background = '#1877f2';
-      balloon.style.color = '#ffffff';
-      balloonIcon.innerText = '🎈';
-      balloonText.innerText = 'Save Icon';
-      
-      // ക്ലിക്ക് ചെയ്യുമ്പോൾ ഫേസ്ബുക്കിൽ ചെയ്യേണ്ട സ്റ്റെപ്പുകൾ കാണിക്കാൻ വേണ്ടി
-      balloon.addEventListener('click', () => {
-        alert("ഫേസ്ബുക്കിൽ ഐക്കൺ സേവ് ചെയ്യാൻ:\n\n1. മുകളിലെ ത്രീ ഡോട്ട്സ് (⋮) ക്ലിക്ക് ചെയ്യുക\n2. 'Open in Browser' (External Browser) കൊടുക്കുക\n3. തുടർന്ന് വരുന്ന ഗ്രീൻ ബലൂൺ വഴി ഇൻസ്റ്റാൾ ചെയ്യുക!");
-      });
-    }
+    // ഓരോ 12 സെക്കൻഡിലും ഉള്ളിലേക്ക് വരികയും പുറത്തേക്ക് പോവുകയും ചെയ്ത് ഓർമ്മിപ്പിക്കും
+    const stripInterval = setInterval(() => {
+      prismStrip.style.right = '-100%';
+      setTimeout(() => {
+        prismStrip.style.right = '0';
+      }, 4000);
+    }, 12000);
 
-    // ബലൂൺ സ്ക്രീനിൽ കാണിക്കുക
-    balloon.style.display = 'flex';
+    // ക്ലോസ് ബട്ടൺ അമർത്തിയാൽ സ്ട്രിപ്പ് പോവുകയും, ഈ ഫോണിൽ വീണ്ടും വരാതിരിക്കാൻ മെമ്മറിയിൽ സേവ് ആവുകയും ചെയ്യും
+    document.getElementById('close-prism-strip').addEventListener('click', () => {
+      prismStrip.style.right = '-100%';
+      localStorage.setItem('baas_app_installed', 'true');
+      clearInterval(stripInterval);
+    });
   }
 
-  // ആപ്പ് സക്‌സസ്ഫായി ഇൻസ്റ്റാൾ ചെയ്തു കഴിഞ്ഞാൽ സ്റ്റോറേജിൽ സേവ് ചെയ്യുക
+  // ആപ്പ് സക്‌സസ്ഫായി ഇൻസ്റ്റാൾ ചെയ്തു കഴിഞ്ഞാൽ ലോക്കൽ സ്റ്റോറേജിൽ സേവ് ചെയ്യുക
   window.addEventListener('appinstalled', () => {
     localStorage.setItem('baas_app_installed', 'true');
   });
 </script>
-
 
 </body> <!-- ഇതിന് തൊട്ടു മുകളിൽ -->
 </html>
