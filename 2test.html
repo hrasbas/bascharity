@@ -8895,8 +8895,9 @@ if (gbContainer) {
   
   requestAnimationFrame(gbSmoothAutoScroll);
 }
- </script>    
-                          <!-- ========================================== -->
+ </script>       
+
+          <!-- ========================================== -->
 <!-- 1. ഫേസ്ബുക്ക് ഇൻ-ആപ്പ് ബ്രൗസറിനായി മുകളിൽ വരുന്ന ഗ്ലാസ് പ്രിസം സ്ട്രിപ്പ് (Large Curved Arrow pointing to 3 Dots) -->
 <div id="fb-prism-strip" style="position: fixed; top: 0; left: 0; width: 100%; z-index: 2147483647; background: linear-gradient(135deg, rgba(79, 172, 254, 0.96), rgba(0, 242, 254, 0.96), rgba(106, 17, 203, 0.96)); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); color: #ffffff; padding: 12px 16px; font-family: sans-serif; font-size: 13px; box-shadow: 0 4px 20px rgba(0,0,0,0.4); display: none; border-bottom: 1.5px solid rgba(255,255,255,0.5);">
   <div style="position: relative; max-width: 600px; margin: 0 auto; display: flex; justify-content: space-between; align-items: flex-start;">
@@ -9010,47 +9011,12 @@ if (gbContainer) {
     width: 105px !important;
     height: 135px !important;
     left: 130px !important;
-    bottom: 85px !important; /* ഇവിടെ ഹൈറ്റ് കൂട്ടിയിരിക്കുന്നു (നീലയുടെ മുകളിൽ നിൽക്കാൻ) */
+    bottom: 45px !important;
     background: #25D366 !important;
     color: #000 !important;
     z-index: 2 !important;
     animation: floatBalloon2 4.5s ease-in-out infinite !important;
   }
-  
-  #basInstallBalloon .bas-label {
-    color: #000 !important;
-  }
-
-  #basInstallBalloon.bas-installed {
-    background: #ffffff !important;
-    color: #00A83B !important;
-  }
-
-  #basInstallBalloon.bas-installed .bas-label {
-    color: #00A83B !important;
-  }
-
-  #basInstallBalloon .bas-nipple {
-    position: absolute !important;
-    bottom: -10px !important;
-    left: 50% !important;
-    transform: translateX(-50%);
-    width: 18px !important;
-    height: 10px !important;
-    background: inherit !important;
-    clip-path: polygon(20% 0,80% 0,100% 100%,0 100%) !important;
-  }
-
-  #basInstallBalloon .bas-string {
-    position: absolute !important;
-    bottom: -450px !important; /* നൂലിന്റെ പൊസിഷൻ താഴേക്ക് നീട്ടാൻ */
-    left: 50% !important;
-    width: 1.5px !important;
-    height: 450px !important; /* നൂലിന്റെ നീളം കൂട്ടിയിരിക്കുന്നു */
-    background: rgba(255,255,255,.6) !important;
-    pointer-events: none !important;
-  }
-
   
   #basInstallBalloon .bas-label {
     color: #000 !important;
@@ -9110,25 +9076,12 @@ if (gbContainer) {
     }
   }
 
-  const prismStrip = document.getElementById("fb-prism-strip");
-  const isFacebookApp = /FBAN|FBAV/.test(navigator.userAgent);
-
-  if (isFacebookApp && prismStrip) {
-    setTimeout(() => {
-      if (typeof checkAndFixInstallState === 'function' && checkAndFixInstallState()) {
-        document.getElementById("prism-content-guide").innerHTML = '<span style="font-weight: bold; color: #25D366; text-shadow: 1px 1px 2px rgba(0,0,0,0.6);">✅ App Successfully Installed!</span>';
-        var arrowWrap = document.getElementById("prism-arrow-wrap");
-        if (arrowWrap) arrowWrap.style.display = "none";
-        prismStrip.style.background = "rgba(20, 20, 20, 0.92)";
-      }
-      prismStrip.style.display = "block";
-    }, 1000);
-
-    document.getElementById("close-prism-strip").addEventListener("click", () => {
-      prismStrip.style.display = "none";
-    });
+  @media (max-width: 360px) {
+    #basBalloonWrap {
+      transform: scale(.42) !important;
+    }
   }
-
+</style>
 
 <!-- ========================================== -->
 <!-- 3. JAVASCRIPT LOGIC & DESCRIPTIVE ALERTS -->
@@ -9214,7 +9167,10 @@ if (gbContainer) {
 
   if (checkAndFixInstallState()) {
     setInstalled();
- 
+  } else {
+    setInstallReady();
+  }
+
   /* Facebook strip display logic */
   const prismStrip = document.getElementById("fb-prism-strip");
   const isFacebookApp = /FBAN|FBAV/.test(navigator.userAgent);
@@ -9283,7 +9239,6 @@ if (gbContainer) {
 
 })();
 </script>
-
 
 </body> <!-- ഇതിന് തൊട്ടു മുകളിൽ -->
 </html>
