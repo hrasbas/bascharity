@@ -8896,30 +8896,22 @@ if (gbContainer) {
   requestAnimationFrame(gbSmoothAutoScroll);
 }
  </script>    
-<!-- 1. ഫേസ്ബുക്ക് ഇൻ-ആപ്പ് ബ്രൗസറിനായി മുകളിൽ വരുന്ന പ്രിസം സ്ട്രിപ്പ് (ഇൻസ്റ്റാൾ ചെയ്യാത്തവർക്ക് മാത്രം) -->
-<div id="fb-top-strip" style="position: fixed; top: 0; left: 0; width: 100%; z-index: 99999; background: linear-gradient(135deg, rgba(79, 172, 254, 0.95), rgba(0, 242, 254, 0.95), rgba(106, 17, 203, 0.95)); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); color: #ffffff; padding: 10px 15px; font-family: sans-serif; font-size: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.3); display: none; border-bottom: 1px solid rgba(255,255,255,0.4);">
+     <!-- മുകളിൽ വന്ന് പോകുന്ന ഗ്ലാസ് പ്രിസം ഡിസൈൻ സ്ട്രിപ്പ് (ഇൻസ്റ്റാൾ ചെയ്യാത്തവർക്ക് മാത്രം) -->
+<div id="fb-prism-strip" style="position: fixed; top: 12px; right: -100%; width: 90%; max-width: 330px; z-index: 99999; background: linear-gradient(135deg, rgba(79, 172, 254, 0.85), rgba(0, 242, 254, 0.85), rgba(106, 17, 203, 0.85)); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); color: #ffffff; padding: 14px 18px; border-radius: 12px 0 0 12px; font-family: sans-serif; font-size: 13px; box-shadow: -5px 5px 25px rgba(0,0,0,0.3); transition: right 0.6s cubic-bezier(0.68, -0.55, 0.27, 1.55); display: none; border: 1px solid rgba(255, 255, 255, 0.5);">
   
-  <div style="display: flex; justify-content: space-between; align-items: center; max-width: 600px; margin: 0 auto;">
-    <div>
-      <span style="font-weight: bold; font-size: 13px; color: #ffeb3b; text-shadow: 1px 1px 2px rgba(0,0,0,0.5);">✨ Facebook Save Icon:</span>
-      <div style="margin-top: 3px; line-height: 1.4; text-shadow: 1px 1px 2px rgba(0,0,0,0.3);">
-        👉 <b>1. Click 3 Dots (Top Right)</b><br>
-        2. External Browser ➔ Click Blue Balloon ➔ Save Icon
-      </div>
-    </div>
-    
-    <span id="close-top-strip" style="cursor: pointer; font-weight: bold; font-size: 18px; background: rgba(0,0,0,0.3); width: 24px; height: 24px; display: flex; align-items: center; justify-content: center; border-radius: 50%; margin-left: 10px; flex-shrink: 0;">&times;</span>
+  <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 6px;">
+    <span style="font-weight: bold; font-size: 14px; text-shadow: 1px 1px 2px rgba(0,0,0,0.3);">✨ F ൽ Very Low Memory Icon</span>
+    <span id="close-prism-strip" style="cursor: pointer; font-weight: bold; font-size: 18px; line-height: 1; background: rgba(0,0,0,0.25); width: 22px; height: 22px; display: flex; align-items: center; justify-content: center; border-radius: 50%;">&times;</span>
   </div>
-</div>
-
-<!-- 2. സ്ക്രീനിൽ നിലനിൽക്കുന്ന ഫ്ലോട്ടിങ് ബലൂൺ (ഇൻസ്റ്റാൾ ചെയ്താൽ വെള്ളയായി 'Installed' എന്ന് മാറും) -->
-<div id="floating-balloon" style="position: fixed; bottom: 20px; right: 20px; z-index: 99999; background: #1877f2; color: #ffffff; padding: 10px 16px; border-radius: 30px; font-family: sans-serif; font-size: 13px; font-weight: bold; box-shadow: 0 4px 15px rgba(0,0,0,0.3); cursor: pointer; display: flex; align-items: center; gap: 6px; transition: all 0.3s ease;">
-  <span id="balloon-icon">🎈</span>
-  <span id="balloon-text">Install</span>
+  
+  <p style="margin: 0; line-height: 1.5; text-shadow: 1px 1px 2px rgba(0,0,0,0.3);">
+    <b>Screen ൽ Save ചെയ്യാൻ:</b><br>
+    ⋮ ➔ External Browser > Install
+  </p>
 </div>
 
 <script>
-  // ഡിവൈസിൽ ഇതിനകം ആപ്പ് ഇൻസ്റ്റാൾ ചെയ്തിട്ടുണ്ടോ എന്ന് പരിശോധിക്കുക
+  // 1. ഡിവൈസിൽ ഇതിനകം ഇൻസ്റ്റാൾ ചെയ്തിട്ടുണ്ടോ എന്ന് പരിശോധിക്കുക (Standalone Mode അല്ലെങ്കിൽ LocalStorage)
   const isStandalone = window.matchMedia('(display-mode: standalone)').matches || window.navigator.standalone;
   const isAlreadyInstalled = localStorage.getItem('baas_app_installed') === 'true';
 
@@ -8927,62 +8919,41 @@ if (gbContainer) {
     localStorage.setItem('baas_app_installed', 'true');
   }
 
-  const balloon = document.getElementById('floating-balloon');
-  const balloonText = document.getElementById('balloon-text');
-  const balloonIcon = document.getElementById('balloon-icon');
-  const topStrip = document.getElementById('fb-top-strip');
+  // 2. ഫേസ്ബുക്ക് ഇൻ-ആപ്പ് ബ്രൗസറിലാണോ എന്ന് പരിശോധിക്കുക
   const isFacebookApp = /FBAN|FBAV/.test(navigator.userAgent);
 
-  // ഫോണിൽ ഇതിനകം ഇൻസ്റ്റാൾ ചെയ്തിട്ടുണ്ടെങ്കിൽ:
-  if (isStandalone || isAlreadyInstalled) {
-    // ബലൂൺ വെള്ളയായി മാറി 'Installed' എന്ന് കാണിക്കും
-    balloon.style.background = '#ffffff';
-    balloon.style.color = '#1877f2';
-    balloon.style.border = '2px solid #1877f2';
-    balloonIcon.innerText = '✅';
-    balloonText.innerText = 'Installed';
+  // ഇൻസ്റ്റാൾ ചെയ്തിട്ടില്ലെങ്കിൽ മാത്രം ഫേസ്ബുക്കിൽ പ്രിസം സ്ട്രിപ്പ് കാണിക്കുക
+  if (isFacebookApp && !isStandalone && !isAlreadyInstalled) {
+    const prismStrip = document.getElementById('fb-prism-strip');
     
-    // മുകളിലെ സ്ട്രിപ്പ് ഒട്ടും കാണിക്കില്ല
-  } else {
-    // ഇൻസ്റ്റാൾ ചെയ്തിട്ടില്ലെങ്കിൽ നീല ബലൂൺ ആയിരിക്കും
-    balloon.style.background = '#1877f2';
-    balloon.style.color = '#ffffff';
-    balloonIcon.innerText = '🎈';
-    balloonText.innerText = 'Install';
+    // പേജ് ലോഡ് ചെയ്ത് 2 സെക്കൻഡിന് ശേഷം റൈറ്റ് സൈഡിൽ നിന്ന് സ്ലൈഡ് ചെയ്തു വരും
+    setTimeout(() => {
+      prismStrip.style.display = 'block';
+      prismStrip.style.right = '0';
+    }, 2000);
 
-    // ഫേസ്ബുക്ക് ഇൻ-ആപ്പ് ബ്രൗസറാണെങ്കിൽ മാത്രം മുകളിൽ സ്ട്രിപ്പ് കാണിക്കുക
-    if (isFacebookApp) {
+    // ഓരോ 12 സെക്കൻഡിലും ഉള്ളിലേക്ക് വരികയും പുറത്തേക്ക് പോവുകയും ചെയ്ത് ഓർമ്മിപ്പിക്കും
+    const stripInterval = setInterval(() => {
+      prismStrip.style.right = '-100%';
       setTimeout(() => {
-        topStrip.style.display = 'block';
-      }, 1500);
+        prismStrip.style.right = '0';
+      }, 4000);
+    }, 12000);
 
-      document.getElementById('close-top-strip').addEventListener('click', () => {
-        topStrip.style.display = 'none';
-        localStorage.setItem('baas_app_installed', 'true');
-      });
-    }
-
-    // ബലൂണിൽ ക്ലിക്ക് ചെയ്യുമ്പോൾ വരുന്ന നിർദ്ദേശം
-    balloon.addEventListener('click', () => {
-      if (!isFacebookApp) {
-        alert("ക്രോമിൽ ഐക്കൺ സേവ് ചെയ്യാൻ ബ്രൗസർ മെനുവിൽ നിന്ന് 'Add to Home screen' കൊടുക്കുക!");
-      } else {
-        alert("ഫേസ്ബുക്കിൽ സേവ് ചെയ്യാൻ:\n\n1. മുകളിലെ ത്രീ ഡോട്ട്സ് (⋮) ക്ലിക്ക് ചെയ്യുക\n2. 'Open in Browser' കൊടുക്കുക!");
-      }
+    // ക്ലോസ് ബട്ടൺ അമർത്തിയാൽ സ്ട്രിപ്പ് പോവുകയും, ഈ ഫോണിൽ വീണ്ടും വരാതിരിക്കാൻ മെമ്മറിയിൽ സേവ് ആവുകയും ചെയ്യും
+    document.getElementById('close-prism-strip').addEventListener('click', () => {
+      prismStrip.style.right = '-100%';
+      localStorage.setItem('baas_app_installed', 'true');
+      clearInterval(stripInterval);
     });
   }
 
-  // ആപ്പ് സക്‌സസ്ഫായി ഇൻസ്റ്റാൾ ചെയ്തു കഴിഞ്ഞാൽ
+  // ആപ്പ് സക്‌സസ്ഫായി ഇൻസ്റ്റാൾ ചെയ്തു കഴിഞ്ഞാൽ ലോക്കൽ സ്റ്റോറേജിൽ സേവ് ചെയ്യുക
   window.addEventListener('appinstalled', () => {
     localStorage.setItem('baas_app_installed', 'true');
-    balloon.style.background = '#ffffff';
-    balloon.style.color = '#1877f2';
-    balloon.style.border = '2px solid #1877f2';
-    balloonIcon.innerText = '✅';
-    balloonText.innerText = 'Installed';
-    if(topStrip) topStrip.style.display = 'none';
   });
 </script>
+
 </body> <!-- ഇതിന് തൊട്ടു മുകളിൽ -->
 </html>
 
