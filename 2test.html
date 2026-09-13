@@ -8896,303 +8896,93 @@ if (gbContainer) {
   requestAnimationFrame(gbSmoothAutoScroll);
 }
  </script>    
-  <!-- ========================================== -->
-<!-- 1. ഫേസ്ബുക്ക് ഇൻ-ആപ്പ് ബ്രൗസറിനായി മുകളിൽ വരുന്ന ഗ്ലാസ് പ്രിസം സ്ട്രിപ്പ് -->
-<div id="fb-prism-strip" style="position: fixed; top: 0; left: 0; width: 100%; z-index: 2147483647; background: linear-gradient(135deg, rgba(79, 172, 254, 0.95), rgba(0, 242, 254, 0.95), rgba(106, 17, 203, 0.95)); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); color: #ffffff; padding: 12px 16px; font-family: sans-serif; font-size: 13px; box-shadow: 0 4px 20px rgba(0,0,0,0.4); display: none; border-bottom: 1.5px solid rgba(255,255,255,0.5);">
+<!-- 1. ഫേസ്ബുക്ക് ഇൻ-ആപ്പ് ബ്രൗസറിനായി മുകളിൽ വരുന്ന പ്രിസം സ്ട്രിപ്പ് (ഇൻസ്റ്റാൾ ചെയ്യാത്തവർക്ക് മാത്രം) -->
+<div id="fb-top-strip" style="position: fixed; top: 0; left: 0; width: 100%; z-index: 99999; background: linear-gradient(135deg, rgba(79, 172, 254, 0.95), rgba(0, 242, 254, 0.95), rgba(106, 17, 203, 0.95)); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); color: #ffffff; padding: 10px 15px; font-family: sans-serif; font-size: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.3); display: none; border-bottom: 1px solid rgba(255,255,255,0.4);">
+  
   <div style="display: flex; justify-content: space-between; align-items: center; max-width: 600px; margin: 0 auto;">
     <div>
-      <span style="font-weight: bold; font-size: 14px; color: #ffeb3b; text-shadow: 1px 1px 2px rgba(0,0,0,0.6);">✨ Facebook Open Guide:</span>
-      <div style="margin-top: 4px; line-height: 1.5; text-shadow: 1px 1px 2px rgba(0,0,0,0.4);">
-        👉 <b>1. Click 3 Dots ( ⋮ ) Top Right</b> ↗<br>
-        2. Open in External Browser ➔ Click Install Balloon
+      <span style="font-weight: bold; font-size: 13px; color: #ffeb3b; text-shadow: 1px 1px 2px rgba(0,0,0,0.5);">✨ Facebook Save Icon:</span>
+      <div style="margin-top: 3px; line-height: 1.4; text-shadow: 1px 1px 2px rgba(0,0,0,0.3);">
+        👉 <b>1. Click 3 Dots (Top Right)</b><br>
+        2. External Browser ➔ Click Blue Balloon ➔ Save Icon
       </div>
     </div>
-    <span id="close-prism-strip" style="cursor: pointer; font-weight: bold; font-size: 18px; background: rgba(0,0,0,0.3); width: 26px; height: 26px; display: flex; align-items: center; justify-content: center; border-radius: 50%; margin-left: 12px; flex-shrink: 0; border: 1px solid rgba(255,255,255,0.4);">&times;</span>
+    
+    <span id="close-top-strip" style="cursor: pointer; font-weight: bold; font-size: 18px; background: rgba(0,0,0,0.3); width: 24px; height: 24px; display: flex; align-items: center; justify-content: center; border-radius: 50%; margin-left: 10px; flex-shrink: 0;">&times;</span>
   </div>
 </div>
 
-<!-- ========================================== -->
-<!-- 2. BAS BALLOONS CSS (Same Size & Overlapping Position) -->
-<style>
-  /* BALLOON WRAPPER */
-  #basBalloonWrap {
-    position: fixed !important;
-    left: 0 !important;
-    bottom: 0 !important;
-    width: 220px !important;
-    height: 300px !important;
-    z-index: 2147483646 !important;
-    pointer-events: none !important;
-    display: block !important;
-    transform: scale(.55) !important;
-    transform-origin: bottom left !important;
-  }
-
-  /* COMMON BALLOON */
-  .bas-final-balloon {
-    position: absolute !important;
-    display: flex !important;
-    flex-direction: column !important;
-    align-items: center !important;
-    justify-content: center !important;
-    border: 0 !important;
-    border-radius: 50% 50% 50% 50% / 40% 40% 60% 60% !important;
-    cursor: pointer !important;
-    pointer-events: auto !important;
-    touch-action: manipulation !important;
-    user-select: none !important;
-    -webkit-user-select: none !important;
-    box-shadow:
-      inset -8px -8px 20px rgba(0,0,0,.30),
-      0 4px 14px rgba(0,0,0,.45) !important;
-    transition: background-color .4s ease, color .4s ease !important;
-  }
-
-  /* INSTALL & WHATSAPP BALLOONS - EXACT SAME SIZE AND POSITION */
-  #basInstallBalloon, #basWhatsAppBalloon {
-    width: 105px !important;
-    height: 135px !important;
-    left: 15px !important;
-    bottom: 10px !important;
-  }
-
-  /* INSTALL BALLOON - DEFAULT (NOT INSTALLED) -> GREEN */
-  #basInstallBalloon {
-    background: #25D366 !important;
-    color: #000 !important;
-    z-index: 2 !important; /* പച്ച ബലൂൺ മുകളിൽ നിൽക്കാൻ */
-  }
-  
-  #basInstallBalloon .bas-label {
-    color: #000 !important;
-  }
-
-  /* INSTALL BALLOON - AFTER REAL INSTALL -> WHITE */
-  #basInstallBalloon.bas-installed {
-    background: #ffffff !important;
-    color: #00A83B !important;
-  }
-
-  #basInstallBalloon.bas-installed .bas-label {
-    color: #00A83B !important;
-  }
-
-  /* WHATSAPP BALLOON (Behind Install Balloon) */
-  #basWhatsAppBalloon {
-    background: #00BFFF !important;
-    color: #fff !important;
-    z-index: 1 !important;
-  }
-
-  #basWhatsAppBalloon .bas-label {
-     color: #fff !important;
-  }
-
-  /* APP ICON */
-  #basBalloonWrap .bas-sticker {
-    width: 48px !important;
-    height: 48px !important;
-    margin-bottom: 4px !important;
-    border-radius: 12px !important;
-    object-fit: cover !important;
-    background: #fff !important;
-    border: 2px solid red !important;
-  }
-
-  /* TEXT */
-  #basBalloonWrap .bas-label {
-    font-family: Arial, sans-serif !important;
-    font-size: 13px !important;
-    font-weight: 900 !important;
-    line-height: 1.15 !important;
-    text-align: center !important;
-  }
-
-  /* BALLOON NECK */
-  #basBalloonWrap .bas-nipple {
-    position: absolute !important;
-    bottom: -10px !important;
-    width: 18px !important;
-    height: 10px !important;
-    background: inherit !important;
-    clip-path: polygon(20% 0,80% 0,100% 100%,0 100%) !important;
-  }
-
-  /* STRING */
-  #basBalloonWrap .bas-string {
-    position: absolute !important;
-    bottom: -350px !important;
-    left: 50% !important;
-    width: 1px !important;
-    height: 350px !important;
-    background: rgba(255,255,255,.45) !important;
-    pointer-events: none !important;
-  }
-
-  /* MOBILE */
-  @media (max-width: 600px) {
-    #basBalloonWrap {
-      transform: scale(.48) !important;
-    }
-  }
-
-  @media (max-width: 360px) {
-    #basBalloonWrap {
-      transform: scale(.42) !important;
-    }
-  }
-</style>
+<!-- 2. സ്ക്രീനിൽ നിലനിൽക്കുന്ന ഫ്ലോട്ടിങ് ബലൂൺ (ഇൻസ്റ്റാൾ ചെയ്താൽ വെള്ളയായി 'Installed' എന്ന് മാറും) -->
+<div id="floating-balloon" style="position: fixed; bottom: 20px; right: 20px; z-index: 99999; background: #1877f2; color: #ffffff; padding: 10px 16px; border-radius: 30px; font-family: sans-serif; font-size: 13px; font-weight: bold; box-shadow: 0 4px 15px rgba(0,0,0,0.3); cursor: pointer; display: flex; align-items: center; gap: 6px; transition: all 0.3s ease;">
+  <span id="balloon-icon">🎈</span>
+  <span id="balloon-text">Install</span>
+</div>
 
 <script>
-(function () {
-  "use strict";
+  // ഡിവൈസിൽ ഇതിനകം ആപ്പ് ഇൻസ്റ്റാൾ ചെയ്തിട്ടുണ്ടോ എന്ന് പരിശോധിക്കുക
+  const isStandalone = window.matchMedia('(display-mode: standalone)').matches || window.navigator.standalone;
+  const isAlreadyInstalled = localStorage.getItem('baas_app_installed') === 'true';
 
-  /* 1. REMOVE OLD BALLOON SYSTEMS */
-  document.querySelectorAll(
-    "#basBalloonWrap .bas-ball, " +
-    "#basBalloonWrap .white-b, " +
-    "#basBalloonWrap .blue-b, " +
-    "#basBalloonWrap .is-pwa-installed, " +
-    "#installBall, " +
-    "#waSaveBall, " +
-    ".wa-balloon"
-  ).forEach(function (el) {
-    if (el.closest("#basBalloonWrap")) el.remove();
-  });
-
-  var oldWrap = document.getElementById("basBalloonWrap");
-  if (oldWrap) oldWrap.remove();
-
-  /* 2. CREATE ONE CLEAN WRAPPER */
-  var wrap = document.createElement("div");
-  wrap.id = "basBalloonWrap";
-  wrap.className = "notranslate";
-  wrap.setAttribute("aria-label", "BAS Charity actions");
-
-  /* INSTALL BALLOON */
-  var install = document.createElement("button");
-  install.id = "basInstallBalloon";
-  install.type = "button";
-  install.className = "bas-final-balloon";
-  install.setAttribute("aria-label", "Install BAS Charity app");
-
-  install.innerHTML =
-    '<img src="icon-512.png" class="bas-sticker" alt="BAS Charity app icon">' +
-    '<span class="bas-label">INSTALL</span>' +
-    '<span class="bas-nipple"></span>' +
-    '<span class="bas-string"></span>';
-
-  /* WHATSAPP BALLOON */
-  var whatsapp = document.createElement("button");
-  whatsapp.id = "basWhatsAppBalloon";
-  whatsapp.type = "button";
-  whatsapp.className = "bas-final-balloon";
-  whatsapp.setAttribute("aria-label", "Save BAS Charity to WhatsApp");
-
-  whatsapp.innerHTML =
-    '<span class="bas-label">SAVE TO<br>WHATSAPP</span>' +
-    '<span class="bas-nipple"></span>' +
-    '<span class="bas-string"></span>';
-
-  /* രണ്ടും ഒരേ സ്ഥലത്ത് വരാൻ ഓർഡർ ക്രമീകരിക്കുന്നു */
-  wrap.appendChild(whatsapp);
-  wrap.appendChild(install);
-  document.body.appendChild(wrap);
-
-  /* 3. STRICT INSTALL STATE CHECK */
-  function isAlreadyInstalled() {
-    var isStandalone = (window.matchMedia && window.matchMedia("(display-mode: standalone)").matches) || window.navigator.standalone === true;
-    var isStored = localStorage.getItem("baas_app_installed") === "true";
-    return isStandalone || isStored;
+  if (isStandalone && !isAlreadyInstalled) {
+    localStorage.setItem('baas_app_installed', 'true');
   }
 
-  function setInstallReady() {
-    install.classList.remove("bas-installed");
-    install.querySelector(".bas-label").textContent = "INSTALL";
-    install.setAttribute("aria-label", "Install BAS Charity app");
-  }
-
-  function setInstalled() {
-    install.classList.add("bas-installed");
-    install.querySelector(".bas-label").textContent = "INSTALLED";
-    install.setAttribute("aria-label", "BAS Charity app installed");
-    localStorage.setItem("baas_app_installed", "true");
-  }
-
-  if (isAlreadyInstalled()) {
-    setInstalled();
-  } else {
-    setInstallReady();
-  }
-
-  /* 4. FACEBOOK PRISM STRIP LOGIC */
-  const prismStrip = document.getElementById("fb-prism-strip");
+  const balloon = document.getElementById('floating-balloon');
+  const balloonText = document.getElementById('balloon-text');
+  const balloonIcon = document.getElementById('balloon-icon');
+  const topStrip = document.getElementById('fb-top-strip');
   const isFacebookApp = /FBAN|FBAV/.test(navigator.userAgent);
 
-  if (!isAlreadyInstalled() && isFacebookApp && prismStrip) {
-    setTimeout(() => {
-      prismStrip.style.display = "block";
-    }, 1000);
+  // ഫോണിൽ ഇതിനകം ഇൻസ്റ്റാൾ ചെയ്തിട്ടുണ്ടെങ്കിൽ:
+  if (isStandalone || isAlreadyInstalled) {
+    // ബലൂൺ വെള്ളയായി മാറി 'Installed' എന്ന് കാണിക്കും
+    balloon.style.background = '#ffffff';
+    balloon.style.color = '#1877f2';
+    balloon.style.border = '2px solid #1877f2';
+    balloonIcon.innerText = '✅';
+    balloonText.innerText = 'Installed';
+    
+    // മുകളിലെ സ്ട്രിപ്പ് ഒട്ടും കാണിക്കില്ല
+  } else {
+    // ഇൻസ്റ്റാൾ ചെയ്തിട്ടില്ലെങ്കിൽ നീല ബലൂൺ ആയിരിക്കും
+    balloon.style.background = '#1877f2';
+    balloon.style.color = '#ffffff';
+    balloonIcon.innerText = '🎈';
+    balloonText.innerText = 'Install';
 
-    document.getElementById("close-prism-strip").addEventListener("click", () => {
-      prismStrip.style.display = "none";
+    // ഫേസ്ബുക്ക് ഇൻ-ആപ്പ് ബ്രൗസറാണെങ്കിൽ മാത്രം മുകളിൽ സ്ട്രിപ്പ് കാണിക്കുക
+    if (isFacebookApp) {
+      setTimeout(() => {
+        topStrip.style.display = 'block';
+      }, 1500);
+
+      document.getElementById('close-top-strip').addEventListener('click', () => {
+        topStrip.style.display = 'none';
+        localStorage.setItem('baas_app_installed', 'true');
+      });
+    }
+
+    // ബലൂണിൽ ക്ലിക്ക് ചെയ്യുമ്പോൾ വരുന്ന നിർദ്ദേശം
+    balloon.addEventListener('click', () => {
+      if (!isFacebookApp) {
+        alert("ക്രോമിൽ ഐക്കൺ സേവ് ചെയ്യാൻ ബ്രൗസർ മെനുവിൽ നിന്ന് 'Add to Home screen' കൊടുക്കുക!");
+      } else {
+        alert("ഫേസ്ബുക്കിൽ സേവ് ചെയ്യാൻ:\n\n1. മുകളിലെ ത്രീ ഡോട്ട്സ് (⋮) ക്ലിക്ക് ചെയ്യുക\n2. 'Open in Browser' കൊടുക്കുക!");
+      }
     });
   }
 
-  /* 5. PWA INSTALL PROMPT */
-  var installPrompt = null;
-  window.addEventListener("beforeinstallprompt", function (event) {
-    event.preventDefault();
-    installPrompt = event;
-    if (!isAlreadyInstalled()) {
-      setInstallReady();
-    }
+  // ആപ്പ് സക്‌സസ്ഫായി ഇൻസ്റ്റാൾ ചെയ്തു കഴിഞ്ഞാൽ
+  window.addEventListener('appinstalled', () => {
+    localStorage.setItem('baas_app_installed', 'true');
+    balloon.style.background = '#ffffff';
+    balloon.style.color = '#1877f2';
+    balloon.style.border = '2px solid #1877f2';
+    balloonIcon.innerText = '✅';
+    balloonText.innerText = 'Installed';
+    if(topStrip) topStrip.style.display = 'none';
   });
-
-  /* 6. INSTALL CLICK */
-  install.addEventListener("click", async function () {
-    if (isAlreadyInstalled()) return;
-
-    if (!installPrompt) {
-      if (isFacebookApp) {
-        alert("ഫേസ്ബുക്കിൽ നിന്ന് പുറത്തുകടക്കാൻ:\n1. മുകളിലെ ത്രീ ഡോട്ട്സ് (⋮) ക്ലിക്ക് ചെയ്യുക\n2. 'Open in Browser' കൊടുത്ത് പുറത്തുപോയി ഇൻസ്റ്റാൾ ചെയ്യുക!");
-      } else {
-        alert("ബ്രൗസർ മെനുവിൽ നിന്ന് 'Add to Home screen' കൊടുത്ത് ആപ്പ് സേവ് ചെയ്യുക!");
-      }
-      return;
-    }
-
-    try {
-      await installPrompt.prompt();
-      var result = await installPrompt.userChoice;
-      if (result.outcome === "accepted") {
-        setInstalled();
-        installPrompt = null;
-        if (prismStrip) prismStrip.style.display = "none";
-      }
-    } catch (error) {
-      console.warn("Install error");
-    }
-  });
-
-  /* 7. REAL INSTALL COMPLETED */
-  window.addEventListener("appinstalled", function () {
-    installPrompt = null;
-    setInstalled();
-    if (prismStrip) prismStrip.style.display = "none";
-  });
-
-  /* 8. WHATSAPP CLICK */
-  whatsapp.addEventListener("click", function () {
-    var text = "Save BAS Charity to your screen:\n" + window.location.href;
-    var url = "https://wa.me/?text=" + encodeURIComponent(text);
-    window.open(url, "_blank", "noopener,noreferrer");
-  });
-
-})();
 </script>
-
-
 
 </body> <!-- ഇതിന് തൊട്ടു മുകളിൽ -->
 </html>
