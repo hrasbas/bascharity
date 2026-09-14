@@ -8898,6 +8898,8 @@ if (gbContainer) {
  </script>       
 <!-- 001 — FACEBOOK PRISM STRIP (TRIANGLE PRISM SHAPE & EFFECT) -->
 
+       <!-- 001 — FACEBOOK PRISM STRIP (TRIANGLE PRISM SHAPE & EFFECT) -->
+
 <style>
 /* 002 — ട്രയാങ്കിൾ ഗ്ലാസ് പ്രിസം രൂപം */
 
@@ -9062,7 +9064,7 @@ body.bas-pwa-installed #fbPrismStrip,
 
 
 <script>
-/* 009 — ഇൻസ്റ്റാൾ ചെയ്തിട്ടുണ്ടോ എന്ന് പരിശോധിക്കുക */
+/* 009 — ഇൻസ്റ്റാൾ ചെയ്തിട്ടുണ്ടോ എന്ന് പരിശോധിക്കുക + മിസ്മാച്ച് ഡിറ്റക്ഷൻ + ലോക്കൽ സ്റ്റോറേജ് ഡിലീറ്റ് */
 
 (function () {
   const strip = document.getElementById("fbPrismStrip");
@@ -9077,13 +9079,37 @@ body.bas-pwa-installed #fbPrismStrip,
     );
   }
 
-  if (basIsPwaInstalled()) {
+  function basCheckMismatchAndFix() {
+    var isStored = localStorage.getItem("baas_app_installed") === "true";
+    var isStandalone = basIsPwaInstalled();
+
+    // മിസ്മാച്ച് ഡിറ്റക്ഷൻ: ലോക്കൽ സ്റ്റോറേജിൽ ഉണ്ട്, പക്ഷെ ഇൻസ്റ്റാൾ ചെയ്തിട്ടില്ല
+    if (isStored && !isStandalone) {
+      console.log("Mismatch detected: LocalStorage has install flag, but app is not installed. Deleting localStorage.");
+      localStorage.removeItem("baas_app_installed");
+      return false;
+    }
+
+    // ശരിയായ സ്ഥിതി: ഇൻസ്റ്റാൾ ചെയ്തിട്ടുണ്ട്
+    if (isStandalone) {
+      return true;
+    }
+
+    // ഇൻസ്റ്റാൾ ചെയ്തിട്ടില്ല
+    return false;
+  }
+
+  // മിസ്മാച്ച് പരിശോധിക്കുക
+  var isReallyInstalled = basCheckMismatchAndFix();
+
+  if (isReallyInstalled) {
     strip.classList.add("bas-install-complete");
     document.body.classList.add("bas-pwa-installed");
     return;
   }
 
   window.addEventListener("appinstalled", function () {
+    localStorage.setItem("baas_app_installed", "true");
     strip.classList.add("bas-install-complete");
     document.body.classList.add("bas-pwa-installed");
   });
