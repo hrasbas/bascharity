@@ -8896,83 +8896,8 @@ if (gbContainer) {
   requestAnimationFrame(gbSmoothAutoScroll);
 }
  </script>       
-     
+     <style>
 
- 
-
- 
- 
-  
-
-     return isStandalone || isStored;
-  }
-  function setInstallReady() {
-    install.classList.remove("bas-installed");
-    install.querySelector(".bas-label").textContent = "INSTALL";
-  }
-  function setInstalled() {
-    install.classList.add("bas-installed");
-    install.querySelector(".bas-label").textContent = "INSTALLED";
-    localStorage.setItem("baas_app_installed", "true");
-  }
-  if (checkAndFixInstallState()) {
-    setInstalled();
-  } else {
-    setInstallReady();
-  }
-
-  /* Facebook strip display logic */
-  const prismStrip = document.getElementById("fb-prism-strip");
-  const isFacebookApp = /FBAN|FBAV/.test(navigator.userAgent);
-  if (!checkAndFixInstallState() && isFacebookApp && prismStrip) {
-    setTimeout(() => {
-      prismStrip.style.display = "block";
-    }, 1000);
-    document.getElementById("close-prism-strip").addEventListener("click", () => {
-      prismStrip.style.display = "none";
-    });
-  }
-
-  var installPrompt = null;
-  window.addEventListener("beforeinstallprompt", function (event) {
-    event.preventDefault();
-    installPrompt = event;
-    if (!checkAndFixInstallState()) {
-      setInstallReady();
-    }
-  });
-
-  /* Descriptive Install Click Guide */
-  install.addEventListener("click", async function () {
-    if (checkAndFixInstallState()) {
-      alert("BAS Charity app is already successfully installed on your device!");
-      return;
-    }
-    if (!installPrompt) {
-      if (isFacebookApp) {
-        alert("⚠️ Facebook In-App Browser Limitation:\n\n1. Tap the 3 Dots (⋮) at the top-right corner.\n2. Select 'Open in External Browser' (Chrome / Safari).\n3. Then tap this green INSTALL balloon to add the app to your home screen!");
-      } else {
-        alert("📌 How to Install:\n\nTap your browser's menu button (three dots/lines) and select 'Add to Home screen' or 'Install app' to save it permanently.");
-      }
-      return;
-    }
-    try {
-      await installPrompt.prompt();
-      var result = await installPrompt.userChoice;
-      if (result.outcome === "accepted") {
-        setInstalled();
-        installPrompt = null;
-        if (prismStrip) prismStrip.style.display = "none";
-      }
-    } catch (error) {
-      console.warn("Install error");
-    }
-  });
-
-  window.addEventListener("appinstalled", function () {
-    installPrompt = null;
-    setInstalled();
-    if (p<style>
 /* 001 — FACEBOOK PRISM STRIP & BALLOON STYLES */
 
 @keyframes bounceArrow { 0%, 100% { transform: translateY(0) scale(1); } 50% { transform: translateY(-4px) scale(1.05); } } 
