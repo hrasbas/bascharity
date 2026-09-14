@@ -8895,11 +8895,11 @@ if (gbContainer) {
   
   requestAnimationFrame(gbSmoothAutoScroll);
 }
- </script>       
-<!-- 001 — FACEBOOK PRISM STRIP (TRIANGLE PRISM SHAPE & EFFECT) -->
+ </script>           
+<!-- 001 — FACEBOOK PRISM STRIP (3D TRIANGLE PRISM + PURE BLACK TEXT) -->
 
 <style>
-/* 002 — ട്രയാങ്കിൾ ഗ്ലാസ് പ്രിസം രൂപം */
+/* 002 — 3D ട്രയാങ്കിൾ ഗ്ലാസ് പ്രിസം രൂപം */
 
 #fbPrismStrip {
   position: fixed;
@@ -8911,83 +8911,97 @@ if (gbContainer) {
   box-sizing: border-box;
   padding: 14px 20px;
 
-  /* ട്രയാങ്കിൾ പ്രിസം ഫീൽ തരുന്ന ഗ്ലാസ് ഗ്രേഡിയന്റ് */
+  /* സ്വരോവ്സ്കി ക്രിസ്റ്റൽ പോലെ ഗ്ലാസ് ട്രാൻസ്പറൻസി */
   background:
     linear-gradient(
       135deg,
-      rgba(255, 255, 255, 0.95),
-      rgba(220, 240, 255, 0.85),
-      rgba(255, 220, 240, 0.90)
+      rgba(255, 255, 255, 0.85),
+      rgba(240, 248, 255, 0.75),
+      rgba(255, 240, 248, 0.80)
     );
 
-  /* പ്രിസത്തിന്റെ കൂർത്ത ട്രയാങ്കിൾ എഡ്ജ് തോന്നിപ്പിക്കുന്ന ബോർഡർ */
-  border: 3px solid rgba(255, 255, 255, 0.95);
-  border-radius: 16px 4px 16px 4px;
+  /* 3D പ്രിസം എഡ്ജ് */
+  border: 2px solid rgba(255, 255, 255, 0.9);
+  border-radius: 12px 6px 12px 6px;
 
   box-shadow:
-    0 0 12px rgba(255, 255, 255, 0.9),
-    0 4px 20px rgba(0, 150, 255, 0.4),
-    inset 0 0 15px rgba(255, 255, 255, 0.8);
+    0 0 15px rgba(255, 255, 255, 0.95),
+    0 4px 25px rgba(0, 150, 255, 0.5),
+    inset 0 0 20px rgba(255, 255, 255, 0.9);
 
-  color: #fff;
+  /* പ്യൂർ ബ്ലാക്ക് എഴുത്തിന് വേണ്ടി */
+  color: #000000;
   text-align: center;
 
-  text-shadow:
-    -1.5px -1.5px 0 #000,
-     1.5px -1.5px 0 #000,
-    -1.5px  1.5px 0 #000,
-     1.5px  1.5px 0 #000;
+  /* എഴുത്തിന് ഷാഡോ വേണ്ട */
+  text-shadow: none;
 
   transform: translateX(110%);
   animation: fbPrismCycle 8s linear infinite;
   will-change: transform;
 }
 
-/* 003 — പ്രിസത്തിന്റെ പ്രകാശ റിഫ്ലക്ഷൻ (Rainbow Edges) */
+/* 003 — ഇടതുവശം: കളർഫുൾ ട്രയാങ്കിൾ പ്രിസം */
 
 #fbPrismStrip::before {
   content: "";
   position: absolute;
   top: 0;
   left: 0;
-  width: 6px;
+  width: 8px;
   height: 100%;
 
-  background: linear-gradient(
-    to bottom,
-    #ff004c,
-    #00d9ff,
-    #8cff00,
-    #fff,
-    #a000ff
-  );
+  /* 3D ട്രയാങ്കിൾ പ്രിസം ഇഫക്റ്റ് */
+  background: 
+    linear-gradient(
+      135deg,
+      transparent 50%,
+      rgba(255, 0, 76, 0.9) 50%
+    ),
+    linear-gradient(
+      to bottom,
+      #ff004c,
+      #00d9ff,
+      #8cff00,
+      #fff,
+      #a000ff
+    );
 
   border-radius: 12px 0 0 12px;
   opacity: 0.95;
 }
+
+/* 004 — വലതുവശം: കളർഫുൾ ട്രയാങ്കിൾ പ്രിസം */
 
 #fbPrismStrip::after {
   content: "";
   position: absolute;
   top: 0;
   right: 0;
-  width: 6px;
+  width: 8px;
   height: 100%;
 
-  background: linear-gradient(
-    to bottom,
-    #a000ff,
-    #fff,
-    #00d9ff,
-    #8cff00,
-    #ff004c
-  );
+  /* 3D ട്രയാങ്കിൾ പ്രിസം ഇഫക്റ്റ് */
+  background: 
+    linear-gradient(
+      135deg,
+      transparent 50%,
+      rgba(160, 0, 255, 0.9) 50%
+    ),
+    linear-gradient(
+      to bottom,
+      #a000ff,
+      #fff,
+      #00d9ff,
+      #8cff00,
+      #ff004c
+    );
 
   border-radius: 0 12px 12px 0;
   opacity: 0.95;
 }
 
-/* 004 — തലക്കെട്ട് */
+/* 005 — തലക്കെട്ട് */
 
 #fbPrismStrip strong {
   display: block;
@@ -8997,7 +9011,7 @@ if (gbContainer) {
   margin-bottom: 6px;
 }
 
-/* 005 — താഴത്തെ നിർദ്ദേശം */
+/* 006 — താഴത്തെ നിർദ്ദേശം */
 
 #fbPrismStrip div:last-child {
   font-size: clamp(14px, 3.6vw, 20px);
@@ -9006,7 +9020,7 @@ if (gbContainer) {
   white-space: normal;
 }
 
-/* 006 — വലതുവശത്ത് നിന്ന് വരിക → നിൽക്കുക → ഇടതുവശത്തേക്ക് പോകുക */
+/* 007 — വലതുവശത്ത് നിന്ന് വരിക → നിൽക്കുക → ഇടതുവശത്തേക്ക് പോകുക */
 
 @keyframes fbPrismCycle {
   0% {
@@ -9026,7 +9040,7 @@ if (gbContainer) {
   }
 }
 
-/* 007 — ഇൻസ്റ്റാൾ ചെയ്ത സിസ്റ്റത്തിൽ ഇനി കാണിക്കരുത് */
+/* 008 — ഇൻസ്റ്റാൾ ചെയ്ത സിസ്റ്റത്തിൽ ഇനി കാണിക്കരുത് */
 
 body.bas-pwa-installed #fbPrismStrip,
 #fbPrismStrip.bas-install-complete {
@@ -9035,7 +9049,7 @@ body.bas-pwa-installed #fbPrismStrip,
 }
 
 
-/* 008 — ചെറിയ സ്ക്രീനിൽ */
+/* 009 — ചെറിയ സ്ക്രീനിൽ */
 
 @media (max-width: 600px) {
   #fbPrismStrip {
@@ -9062,7 +9076,7 @@ body.bas-pwa-installed #fbPrismStrip,
 
 
 <script>
-/* 009 — ഇൻസ്റ്റാൾ ചെയ്തിട്ടുണ്ടോ എന്ന് പരിശോധിക്കുക */
+/* 010 — ഇൻസ്റ്റാൾ ചെയ്തിട്ടുണ്ടോ എന്ന് പരിശോധിക്കുക + മിസ്മാച്ച് ഡിറ്റക്ഷൻ + ലോക്കൽ സ്റ്റോറേജ് ഡിലീറ്റ് */
 
 (function () {
   const strip = document.getElementById("fbPrismStrip");
@@ -9074,16 +9088,42 @@ body.bas-pwa-installed #fbPrismStrip,
        window.matchMedia("(display-mode: standalone)").matches)
       ||
       window.navigator.standalone === true
+      ||
+      localStorage.getItem("baas_app_installed") === "true"
     );
   }
 
-  if (basIsPwaInstalled()) {
+  function basCheckMismatchAndFix() {
+    var isStored = localStorage.getItem("baas_app_installed") === "true";
+    var isStandalone = basIsPwaInstalled();
+
+    // മിസ്മാച്ച് ഡിറ്റക്ഷൻ: ലോക്കൽ സ്റ്റോറേജിൽ ഉണ്ട്, പക്ഷെ ഇൻസ്റ്റാൾ ചെയ്തിട്ടില്ല
+    if (isStored && !isStandalone) {
+      console.log("Mismatch detected: LocalStorage has install flag, but app is not installed. Deleting localStorage.");
+      localStorage.removeItem("baas_app_installed");
+      return false;
+    }
+
+    // ശരിയായ സ്ഥിതി: ഇൻസ്റ്റാൾ ചെയ്തിട്ടുണ്ട്
+    if (isStandalone) {
+      return true;
+    }
+
+    // ഇൻസ്റ്റാൾ ചെയ്തിട്ടില്ല
+    return false;
+  }
+
+  // മിസ്മാച്ച് പരിശോധിക്കുക
+  var isReallyInstalled = basCheckMismatchAndFix();
+
+  if (isReallyInstalled) {
     strip.classList.add("bas-install-complete");
     document.body.classList.add("bas-pwa-installed");
     return;
   }
 
   window.addEventListener("appinstalled", function () {
+    localStorage.setItem("baas_app_installed", "true");
     strip.classList.add("bas-install-complete");
     document.body.classList.add("bas-pwa-installed");
   });
