@@ -8896,47 +8896,74 @@ if (gbContainer) {
   requestAnimationFrame(gbSmoothAutoScroll);
 }
  </script>       
-     <style>
+<!-- 001 — FACEBOOK PRISM STRIP (TRIANGLE PRISM SHAPE & EFFECT) -->
 
-/* 001 — FACEBOOK PRISM STRIP & BALLOON STYLES */
+<style>
+/* 002 — ട്രയാങ്കിൾ ഗ്ലാസ് പ്രിസം രൂപം */
 
-@keyframes bounceArrow { 0%, 100% { transform: translateY(0) scale(1); } 50% { transform: translateY(-4px) scale(1.05); } } 
-@keyframes floatBalloon1 { 0%, 100% { transform: translateY(0px) rotate(-2deg); } 50% { transform: translateY(-7px) rotate(2deg); } } 
-@keyframes floatBalloon2 { 0%, 100% { transform: translateY(0px) rotate(2deg); } 50% { transform: translateY(-9px) rotate(-2deg); } } 
-
-/* 002 — ഗ്ലാസ് പ്രിസം സ്ട്രിപ്പിന്റെ രൂപം */
 #fbPrismStrip {
   position: fixed;
-  top: 8px;
-  right: 0;
-  width: calc(100% - 10px);
-  min-height: 1.8cm;
+  top: 10px;
+  right: 15px;
+  width: min(340px, calc(100% - 30px));
   z-index: 99999;
+
   box-sizing: border-box;
-  padding: 10px 18px;
-  background: linear-gradient(90deg, rgba(255,255,255,0.96), rgba(255,255,255,0.82), rgba(220,240,255,0.92), rgba(255,255,255,0.96));
-  border: 2px solid rgba(255,255,255,0.95);
-  border-radius: 12px;
-  box-shadow: 0 0 8px rgba(255,255,255,0.95), 0 0 18px rgba(180,220,255,0.75), inset 0 0 12px rgba(255,255,255,0.95);
+  padding: 14px 20px;
+
+  /* ട്രയാങ്കിൾ പ്രിസം ഫീൽ തരുന്ന ഗ്ലാസ് ഗ്രേഡിയന്റ് */
+  background:
+    linear-gradient(
+      135deg,
+      rgba(255, 255, 255, 0.95),
+      rgba(220, 240, 255, 0.85),
+      rgba(255, 220, 240, 0.90)
+    );
+
+  /* പ്രിസത്തിന്റെ കൂർത്ത ട്രയാങ്കിൾ എഡ്ജ് തോന്നിപ്പിക്കുന്ന ബോർഡർ */
+  border: 3px solid rgba(255, 255, 255, 0.95);
+  border-radius: 16px 4px 16px 4px;
+
+  box-shadow:
+    0 0 12px rgba(255, 255, 255, 0.9),
+    0 4px 20px rgba(0, 150, 255, 0.4),
+    inset 0 0 15px rgba(255, 255, 255, 0.8);
+
   color: #fff;
   text-align: center;
-  text-shadow: -1.5px -1.5px 0 #000, 1.5px -1.5px 0 #000, -1.5px 1.5px 0 #000, 1.5px 1.5px 0 #000;
+
+  text-shadow:
+    -1.5px -1.5px 0 #000,
+     1.5px -1.5px 0 #000,
+    -1.5px  1.5px 0 #000,
+     1.5px  1.5px 0 #000;
+
   transform: translateX(110%);
-  animation: fbPrismCycle 124s linear infinite;
+  animation: fbPrismCycle 8s linear infinite;
   will-change: transform;
 }
 
-/* 003 — പ്രിസത്തിന്റെ പ്രകാശ റിഫ്ലക്ഷൻ */
+/* 003 — പ്രിസത്തിന്റെ പ്രകാശ റിഫ്ലക്ഷൻ (Rainbow Edges) */
+
 #fbPrismStrip::before {
   content: "";
   position: absolute;
   top: 0;
   left: 0;
-  width: 5px;
+  width: 6px;
   height: 100%;
-  background: linear-gradient(to bottom, #ff004c, #00d9ff, #8cff00, #fff, #a000ff);
+
+  background: linear-gradient(
+    to bottom,
+    #ff004c,
+    #00d9ff,
+    #8cff00,
+    #fff,
+    #a000ff
+  );
+
   border-radius: 12px 0 0 12px;
-  opacity: 0.9;
+  opacity: 0.95;
 }
 
 #fbPrismStrip::after {
@@ -8944,86 +8971,86 @@ if (gbContainer) {
   position: absolute;
   top: 0;
   right: 0;
-  width: 5px;
+  width: 6px;
   height: 100%;
-  background: linear-gradient(to bottom, #a000ff, #fff, #00d9ff, #8cff00, #ff004c);
+
+  background: linear-gradient(
+    to bottom,
+    #a000ff,
+    #fff,
+    #00d9ff,
+    #8cff00,
+    #ff004c
+  );
+
   border-radius: 0 12px 12px 0;
-  opacity: 0.9;
+  opacity: 0.95;
 }
 
 /* 004 — തലക്കെട്ട് */
+
 #fbPrismStrip strong {
   display: block;
-  font-size: clamp(18px, 4.8vw, 30px);
+  font-size: clamp(16px, 4.2vw, 24px);
   font-weight: 900;
   line-height: 1.15;
-  margin-bottom: 7px;
+  margin-bottom: 6px;
 }
 
 /* 005 — താഴത്തെ നിർദ്ദേശം */
+
 #fbPrismStrip div:last-child {
-  font-size: clamp(16px, 4.2vw, 27px);
+  font-size: clamp(14px, 3.6vw, 20px);
   font-weight: 900;
-  line-height: 1.2;
+  line-height: 1.25;
   white-space: normal;
 }
 
-/* 006 — ആനിമേഷൻ സൈക്കിൾ */
+/* 006 — വലതുവശത്ത് നിന്ന് വരിക → നിൽക്കുക → ഇടതുവശത്തേക്ക് പോകുക */
+
 @keyframes fbPrismCycle {
-  0% { transform: translateX(110%); }
-  8% { transform: translateX(0); }
-  56% { transform: translateX(0); }
-  64% { transform: translateX(-110%); }
-  100% { transform: translateX(-110%); }
+  0% {
+    transform: translateX(110%);
+  }
+  8% {
+    transform: translateX(0);
+  }
+  56% {
+    transform: translateX(0);
+  }
+  64% {
+    transform: translateX(-110%);
+  }
+  100% {
+    transform: translateX(-110%);
+  }
 }
 
 /* 007 — ഇൻസ്റ്റാൾ ചെയ്ത സിസ്റ്റത്തിൽ ഇനി കാണിക്കരുത് */
+
 body.bas-pwa-installed #fbPrismStrip,
 #fbPrismStrip.bas-install-complete {
   display: none !important;
   animation: none !important;
 }
 
-/* 008 — ബലൂൺ റാപ്പറും പൊസിഷനും (ഒട്ടും മാറ്റമില്ലാതെ ലെഫ്റ്റ് സൈഡിൽ തന്നെ) */
-#basBalloonWrap { position: fixed !important; left: 0 !important; bottom: 0 !important; width: 260px !important; height: 380px !important; z-index: 2147483646 !important; pointer-events: none !important; display: block !important; transform: scale(.55) !important; transform-origin: bottom left !important; } 
-.bas-final-balloon { position: absolute !important; display: flex !important; flex-direction: column !important; align-items: center !important; justify-content: center !important; border: 0 !important; border-radius: 50% 50% 50% 50% / 40% 40% 60% 60% !important; cursor: pointer !important; pointer-events: auto !important; touch-action: manipulation !important; user-select: none !important; -webkit-user-select: none !important; box-shadow: inset -8px -8px 20px rgba(0,0,0,.30), 0 4px 14px rgba(0,0,0,.45) !important; transition: background-color .4s ease, color .4s ease !important; } 
 
-/* WhatsApp Balloon (Left side) */ 
-#basWhatsAppBalloon { width: 105px !important; height: 135px !important; left: 10px !important; bottom: 15px !important; background: #00BFFF !important; color: #fff !important; z-index: 1 !important; animation: floatBalloon1 4s ease-in-out infinite !important; } 
-#basWhatsAppBalloon .bas-label { color: #fff !important; } 
-#basWhatsAppBalloon .bas-nipple { position: absolute !important; bottom: -10px !important; left: 50% !important; transform: translateX(-50%); width: 18px !important; height: 10px !important; background: #00BFFF !important; clip-path: polygon(20% 0,80% 0,100% 100%,0 100%) !important; } 
-
-/* Install Balloon */ 
-#basInstallBalloon { width: 105px !important; height:135px !important; left:60px !important; bottom:110px !important; background: #25D366 !important; color: #000 !important; z-index: 2 !important; animation: floatBalloon2 4.5s ease-in-out infinite !important; } 
-#basInstallBalloon .bas-label { color: #000 !important; } 
-#basInstallBalloon.bas-installed { background: #ffffff !important; color: #00A83B !important; } 
-#basInstallBalloon.bas-installed .bas-label { color: #00A83B !important; } 
-#basInstallBalloon .bas-nipple { position: absolute !important; bottom: -10px !important; left: 50% !important; transform: translateX(-50%); width: 18px !important; height: 10px !important; background: inherit !important; clip-path: polygon(20% 0,80% 0,100% 100%,0 100%) !important; } 
-#basInstallBalloon .bas-string { position: absolute !important; bottom: -650px !important; left: 50% !important; width: 1.5px !important; height: 650px !important; background: rgba(255,255,255,.6) !important; pointer-events: none !important; } 
-
-#basBalloonWrap .bas-sticker { width: 48px !important; height: 48px !important; margin-bottom: 4px !important; border-radius: 12px !important; object-fit: cover !important; background: #fff !important; border: 2px solid red !important; } 
-#basBalloonWrap .bas-label { font-family: Arial, sans-serif !important; font-size: 13px !important; font-weight: 900 !important; line-height: 1.15 !important; text-align: center !important; } 
+/* 008 — ചെറിയ സ്ക്രീനിൽ */
 
 @media (max-width: 600px) {
   #fbPrismStrip {
-    min-height: 1.8cm;
-    padding: 9px 14px;
+    padding: 10px 14px;
   }
   #fbPrismStrip strong {
-    font-size: 20px;
+    font-size: 17px;
   }
   #fbPrismStrip div:last-child {
-    font-size: 18px;
+    font-size: 15px;
   }
-  #basBalloonWrap { transform: scale(.48) !important; } 
-} 
-
-@media (max-width: 360px) { 
-  #basBalloonWrap { transform: scale(.42) !important; } 
-} 
+}
 </style>
 
-<!-- FACEBOOK PRISM STRIP HTML -->
+
 <div id="fbPrismStrip">
   <div>
     <strong>Bus Charity Icon Installing Guide in FB</strong>
@@ -9033,12 +9060,13 @@ body.bas-pwa-installed #fbPrismStrip,
   </div>
 </div>
 
-<script>
-(function () {
-  "use strict";
 
-  /* 009 — ഇൻസ്റ്റാൾ ചെയ്തിട്ടുണ്ടോ എന്ന് പരിശോധിക്കുക */
+<script>
+/* 009 — ഇൻസ്റ്റാൾ ചെയ്തിട്ടുണ്ടോ എന്ന് പരിശോധിക്കുക */
+
+(function () {
   const strip = document.getElementById("fbPrismStrip");
+  if (!strip) return;
 
   function basIsPwaInstalled() {
     return (
@@ -9049,134 +9077,18 @@ body.bas-pwa-installed #fbPrismStrip,
     );
   }
 
-  if (strip && basIsPwaInstalled()) {
+  if (basIsPwaInstalled()) {
     strip.classList.add("bas-install-complete");
     document.body.classList.add("bas-pwa-installed");
+    return;
   }
 
   window.addEventListener("appinstalled", function () {
-    if (strip) {
-      strip.classList.add("bas-install-complete");
-    }
+    strip.classList.add("bas-install-complete");
     document.body.classList.add("bas-pwa-installed");
-  });
-
-  /* Clear legacy elements for balloons */
-  document.querySelectorAll(
-    "#basBalloonWrap .bas-ball, " +
-    "#basBalloonWrap .white-b, " +
-    "#basBalloonWrap .blue-b, " +
-    "#basBalloonWrap .is-pwa-installed, " +
-    "#installBall, " +
-    "#waSaveBall, " +
-    ".wa-balloon"
-  ).forEach(function (el) {
-    if (el.closest("#basBalloonWrap")) el.remove();
-  });
-  var oldWrap = document.getElementById("basBalloonWrap");
-  if (oldWrap) oldWrap.remove();
-
-  /* Create wrapper & separate balloons on Left side */
-  var wrap = document.createElement("div");
-  wrap.id = "basBalloonWrap";
-  wrap.className = "notranslate";
-
-  var whatsapp = document.createElement("button");
-  whatsapp.id = "basWhatsAppBalloon";
-  whatsapp.type = "button";
-  whatsapp.className = "bas-final-balloon";
-  whatsapp.setAttribute("aria-label", "Save BAS Charity to WhatsApp");
-  whatsapp.innerHTML = '<span class="bas-label">SAVE TO<br>WHATSAPP</span>' + '<span class="bas-nipple"></span>' + '<span class="bas-string"></span>';
-
-  var install = document.createElement("button");
-  install.id = "basInstallBalloon";
-  install.type = "button";
-  install.className = "bas-final-balloon";
-  install.setAttribute("aria-label", "Install BAS Charity app");
-  install.innerHTML = '<img src="icon-512.png" class="bas-sticker" alt="BAS Charity app icon">' + '<span class="bas-label">INSTALL</span>' + '<span class="bas-nipple"></span>' + '<span class="bas-string"></span>';
-
-  wrap.appendChild(whatsapp);
-  wrap.appendChild(install);
-  document.body.appendChild(wrap);
-
-  function isReallyStandalone() {
-    return (window.matchMedia && window.matchMedia("(display-mode: standalone)").matches) || window.navigator.standalone === true;
-  }
-  function checkAndFixInstallState() {
-    var isStored = localStorage.getItem("baas_app_installed") === "true";
-    var isStandalone = isReallyStandalone();
-    if (isStored && !isStandalone) {
-      localStorage.removeItem("baas_app_installed");
-      return false;
-    }
-    return isStandalone || isStored;
-  }
-  function setInstallReady() {
-    install.classList.remove("bas-installed");
-    install.querySelector(".bas-label").textContent = "INSTALL";
-  }
-  function setInstalled() {
-    install.classList.add("bas-installed");
-    install.querySelector(".bas-label").textContent = "INSTALLED";
-    localStorage.setItem("baas_app_installed", "true");
-  }
-  if (checkAndFixInstallState()) {
-    setInstalled();
-  } else {
-    setInstallReady();
-  }
-
-  const isFacebookApp = /FBAN|FBAV/.test(navigator.userAgent);
-  var installPrompt = null;
-  window.addEventListener("beforeinstallprompt", function (event) {
-    event.preventDefault();
-    installPrompt = event;
-    if (!checkAndFixInstallState()) {
-      setInstallReady();
-    }
-  });
-
-  install.addEventListener("click", async function () {
-    if (checkAndFixInstallState()) {
-      alert("BAS Charity app is already successfully installed on your device!");
-      return;
-    }
-    if (!installPrompt) {
-      if (isFacebookApp) {
-        alert("⚠️ Facebook In-App Browser Limitation:\n\n1. Tap the 3 Dots (⋮) at the top-right corner.\n2. Select 'Open in External Browser' (Chrome / Safari).\n3. Then tap this green INSTALL balloon to add the app to your home screen!");
-      } else {
-        alert("📌 How to Install:\n\nTap your browser's menu button (three dots/lines) and select 'Add to Home screen' or 'Install app' to save it permanently.");
-      }
-      return;
-    }
-    try {
-      await installPrompt.prompt();
-      var result = await installPrompt.userChoice;
-      if (result.outcome === "accepted") {
-        setInstalled();
-        installPrompt = null;
-        if (strip) strip.classList.add("bas-install-complete");
-      }
-    } catch (error) {
-      console.warn("Install error");
-    }
-  });
-
-  window.addEventListener("appinstalled", function () {
-    installPrompt = null;
-    setInstalled();
-    if (strip) strip.classList.add("bas-install-complete");
-  });
-
-  whatsapp.addEventListener("click", function () {
-    alert("💬 Save to WhatsApp:\n\nClicking this will open WhatsApp so you can easily share or save the BAS Charity link directly to your chats!");
-    var text = "Save BAS Charity to your screen:\n" + window.location.href;
-    var url = "https://wa.me/?text=" + encodeURIComponent(text);
-    window.open(url, "_blank", "noopener,noreferrer");
   });
 })();
 </script>
-===== -->
 </body> <!-- ഇതിന് തൊട്ടു മുകളിൽ -->
 </html>
 
