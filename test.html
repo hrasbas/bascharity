@@ -1,0 +1,566 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#07152f">
+<meta name="description" content="Shop, compare prices and help satisfy a hunger through BAS Charity International.">
+
+<title>BAS Charity International™ — Shop & Help</title>
+
+<style>
+/* =========================================================
+   001 — PAGE
+   ========================================================= */
+*{
+  box-sizing:border-box;
+  margin:0;
+  padding:0;
+}
+
+html,body{
+  width:100%;
+  min-height:100%;
+  font-family:Arial,Helvetica,sans-serif;
+  background:#07152f;
+}
+
+body{
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  min-height:100vh;
+  overflow-x:hidden;
+}
+
+/* =========================================================
+   002 — POSTER
+   ========================================================= */
+.poster{
+  width:100%;
+  max-width:600px;
+  min-height:100vh;
+  position:relative;
+  overflow:hidden;
+  padding:22px 18px 28px;
+  text-align:center;
+  background:
+    radial-gradient(circle at 15% 15%,rgba(255,255,255,.18),transparent 18%),
+    radial-gradient(circle at 85% 25%,rgba(255,210,50,.22),transparent 22%),
+    linear-gradient(145deg,#07152f,#123d73 48%,#07152f);
+  color:#fff;
+}
+
+/* =========================================================
+   003 — DECORATION
+   ========================================================= */
+.star{
+  position:absolute;
+  color:rgba(255,255,255,.65);
+  font-size:16px;
+  animation:twinkle 2s infinite alternate;
+}
+
+.s1{top:8%;left:8%}
+.s2{top:18%;right:10%}
+.s3{top:48%;left:5%}
+.s4{top:63%;right:7%}
+.s5{bottom:12%;left:12%}
+.s6{bottom:20%;right:13%}
+
+@keyframes twinkle{
+  from{opacity:.3;transform:scale(.8)}
+  to{opacity:1;transform:scale(1.2)}
+}
+
+/* =========================================================
+   004 — BRAND
+   ========================================================= */
+.brand{
+  position:relative;
+  z-index:2;
+  margin-top:4px;
+}
+
+.brand h1{
+  font-size:clamp(25px,7vw,42px);
+  line-height:1.05;
+  font-weight:900;
+  letter-spacing:.5px;
+  text-shadow:0 3px 12px rgba(0,0,0,.45);
+}
+
+.tm{
+  font-size:.42em;
+  vertical-align:top;
+}
+
+.sub{
+  margin-top:8px;
+  font-size:14px;
+  font-weight:bold;
+  letter-spacing:2px;
+  color:#ffe36e;
+}
+
+/* =========================================================
+   005 — MAIN HOOK
+   ========================================================= */
+.hook{
+  position:relative;
+  z-index:2;
+  margin:26px auto 15px;
+  padding:17px 12px;
+  border-radius:22px;
+  background:rgba(255,255,255,.11);
+  border:1px solid rgba(255,255,255,.25);
+  backdrop-filter:blur(8px);
+}
+
+.hook .big{
+  font-size:clamp(28px,8vw,46px);
+  font-weight:900;
+  line-height:1.05;
+  color:#fff;
+}
+
+.hook .yellow{
+  color:#ffe34f;
+}
+
+.hook p{
+  margin-top:10px;
+  font-size:16px;
+  font-weight:bold;
+}
+
+/* =========================================================
+   006 — SHOPPING BOX
+   ========================================================= */
+.shopping{
+  position:relative;
+  z-index:2;
+  margin:18px auto;
+  padding:18px 12px;
+  border-radius:22px;
+  background:#fff;
+  color:#07152f;
+  box-shadow:0 12px 30px rgba(0,0,0,.3);
+}
+
+.shopping .cart{
+  font-size:48px;
+  margin-bottom:6px;
+}
+
+.shopping h2{
+  font-size:25px;
+  font-weight:900;
+}
+
+.shopping p{
+  margin-top:7px;
+  font-size:15px;
+  font-weight:bold;
+  line-height:1.4;
+}
+
+.shops{
+  margin-top:13px;
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:center;
+  gap:7px;
+}
+
+.shop{
+  padding:7px 11px;
+  border-radius:20px;
+  background:#eef3fa;
+  font-size:12px;
+  font-weight:800;
+}
+
+/* =========================================================
+   007 — CHARITY MESSAGE
+   ========================================================= */
+.charity{
+  position:relative;
+  z-index:2;
+  margin:18px auto;
+  padding:18px 12px;
+  border-radius:22px;
+  background:linear-gradient(135deg,#ffcf32,#ff8a00);
+  color:#07152f;
+  box-shadow:0 10px 25px rgba(0,0,0,.25);
+}
+
+.charity .heart{
+  font-size:36px;
+}
+
+.charity h2{
+  margin-top:5px;
+  font-size:22px;
+  font-weight:900;
+}
+
+.charity p{
+  margin-top:7px;
+  font-size:15px;
+  font-weight:bold;
+  line-height:1.4;
+}
+
+/* =========================================================
+   008 — CLICKABLE BUTTONS
+   ========================================================= */
+.buttons{
+  position:relative;
+  z-index:3;
+  display:flex;
+  flex-direction:column;
+  gap:12px;
+  margin:20px auto;
+}
+
+.btn{
+  display:block;
+  width:100%;
+  padding:16px 14px;
+  border:0;
+  border-radius:18px;
+  text-decoration:none;
+  font-size:18px;
+  font-weight:900;
+  cursor:pointer;
+  box-shadow:0 7px 16px rgba(0,0,0,.28);
+  transition:transform .15s ease;
+}
+
+.btn:active{
+  transform:scale(.97);
+}
+
+.shopbtn{
+  background:#fff;
+  color:#07152f;
+}
+
+.savebtn{
+  background:#ffe04a;
+  color:#07152f;
+}
+
+.sitebtn{
+  background:#20d67b;
+  color:#05251a;
+}
+
+/* =========================================================
+   009 — WEBSITE ADDRESS
+   ========================================================= */
+.website{
+  position:relative;
+  z-index:3;
+  margin:12px auto 5px;
+}
+
+.website a{
+  display:inline-block;
+  padding:9px 18px;
+  border-radius:30px;
+  background:rgba(255,255,255,.12);
+  border:1px solid rgba(255,255,255,.3);
+  color:#fff;
+  text-decoration:none;
+  font-size:19px;
+  font-weight:900;
+}
+
+/* =========================================================
+   010 — FOOTER
+   ========================================================= */
+.footer{
+  position:relative;
+  z-index:2;
+  margin-top:18px;
+  font-size:12px;
+  line-height:1.5;
+  color:rgba(255,255,255,.82);
+}
+
+.motto{
+  margin-top:7px;
+  color:#ffe34f;
+  font-size:14px;
+  font-weight:900;
+}
+
+/* =========================================================
+   011 — INSTALL MESSAGE
+   ========================================================= */
+#installMessage{
+  display:none;
+  position:fixed;
+  left:50%;
+  bottom:18px;
+  transform:translateX(-50%);
+  width:calc(100% - 30px);
+  max-width:560px;
+  padding:15px;
+  border-radius:18px;
+  background:#fff;
+  color:#07152f;
+  z-index:20;
+  box-shadow:0 10px 35px rgba(0,0,0,.45);
+  font-size:14px;
+  font-weight:bold;
+}
+
+#installMessage button{
+  margin-top:10px;
+  padding:9px 16px;
+  border:0;
+  border-radius:12px;
+  background:#07152f;
+  color:#fff;
+  font-weight:bold;
+}
+
+/* =========================================================
+   012 — SMALL SCREEN
+   ========================================================= */
+@media(max-width:380px){
+  .poster{
+    padding:18px 13px 22px;
+  }
+
+  .hook{
+    margin-top:20px;
+  }
+
+  .shopping,
+  .charity{
+    margin:13px auto;
+  }
+
+  .btn{
+    padding:14px 10px;
+    font-size:16px;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<div class="poster">
+
+  <!-- 013 — DECORATIVE STARS -->
+  <span class="star s1">✦</span>
+  <span class="star s2">✧</span>
+  <span class="star s3">✦</span>
+  <span class="star s4">✧</span>
+  <span class="star s5">✦</span>
+  <span class="star s6">✧</span>
+
+  <!-- 014 — BRAND -->
+  <div class="brand">
+    <h1>BAS CHARITY INTERNATIONAL<span class="tm">™</span></h1>
+    <div class="sub">SUPER INTERNATIONAL SHOPPING HUB</div>
+  </div>
+
+  <!-- 015 — MAIN HOOK -->
+  <div class="hook">
+    <div class="big">
+      SHOP SMART.<br>
+      <span class="yellow">HELP SOMEONE.</span>
+    </div>
+
+    <p>
+      Compare prices and choose what is best for you.
+    </p>
+  </div>
+
+  <!-- 016 — SHOPPING -->
+  <div class="shopping">
+
+    <div class="cart">🛒</div>
+
+    <h2>SHOP • COMPARE • SAVE</h2>
+
+    <p>
+      Find shopping options from thousands of shops
+      through one simple hub.
+    </p>
+
+    <div class="shops">
+      <span class="shop">Amazon</span>
+      <span class="shop">Walmart</span>
+      <span class="shop">eBay</span>
+      <span class="shop">Target</span>
+      <span class="shop">Best Buy</span>
+      <span class="shop">Etsy</span>
+      <span class="shop">Macy's</span>
+      <span class="shop">And More</span>
+    </div>
+
+  </div>
+
+  <!-- 017 — CHARITY -->
+  <div class="charity">
+
+    <div class="heart">❤️</div>
+
+    <h2>YOUR PURCHASE<br>SATISFIES A HUNGER™</h2>
+
+    <p>
+      When you purchase through BAS Charity links,
+      the associated affiliate benefit can support
+      hunger-relief and charitable work.
+    </p>
+
+  </div>
+
+  <!-- 018 — CLICKABLE ACTIONS -->
+  <div class="buttons">
+
+    <a
+      class="btn shopbtn"
+      href="https://bascharity.com"
+      target="_blank"
+      rel="noopener">
+      🛒 CLICK TO SHOP
+    </a>
+
+    <button
+      class="btn savebtn"
+      id="saveButton"
+      type="button">
+      📲 SAVE THIS ICON
+    </button>
+
+    <a
+      class="btn sitebtn"
+      href="https://bascharity.com"
+      target="_blank"
+      rel="noopener">
+      🌐 OPEN BASCHARITY.COM
+    </a>
+
+  </div>
+
+  <!-- 019 — WEBSITE -->
+  <div class="website">
+    <a
+      href="https://bascharity.com"
+      target="_blank"
+      rel="noopener">
+      bascharity.com
+    </a>
+  </div>
+
+  <!-- 020 — FOOTER -->
+  <div class="footer">
+    🇺🇸 USA &nbsp; 🇨🇦 Canada &nbsp; 🇬🇧 UK &nbsp; 🌎 Worldwide
+
+    <div class="motto">
+      YOUR PURCHASE SATISFIES A HUNGER™
+    </div>
+
+    <div>
+      Free service • No advertising on the shopping hub
+    </div>
+  </div>
+
+</div>
+
+<!-- 021 — INSTALL FALLBACK MESSAGE -->
+<div id="installMessage">
+  <div id="installText"></div>
+  <button onclick="closeInstallMessage()">CLOSE</button>
+</div>
+
+<script>
+/* =========================================================
+   022 — PWA INSTALL
+   ========================================================= */
+
+let deferredPrompt = null;
+
+window.addEventListener("beforeinstallprompt", function(event){
+
+  event.preventDefault();
+
+  deferredPrompt = event;
+
+});
+
+/* =========================================================
+   023 — SAVE BUTTON
+   ========================================================= */
+
+document.getElementById("saveButton").addEventListener("click", async function(){
+
+  if(deferredPrompt){
+
+    deferredPrompt.prompt();
+
+    const result = await deferredPrompt.userChoice;
+
+    deferredPrompt = null;
+
+    return;
+  }
+
+  showInstallMessage();
+
+});
+
+/* =========================================================
+   024 — FALLBACK MESSAGE
+   ========================================================= */
+
+function showInstallMessage(){
+
+  const box = document.getElementById("installMessage");
+  const text = document.getElementById("installText");
+
+  text.innerHTML =
+    "📲 To save BAS Charity on your phone:<br><br>" +
+    "Open <b>bascharity.com</b> in your phone browser, " +
+    "then use the browser menu and choose " +
+    "<b>Add to Home screen</b> or <b>Install app</b>.";
+
+  box.style.display = "block";
+}
+
+/* =========================================================
+   025 — CLOSE MESSAGE
+   ========================================================= */
+
+function closeInstallMessage(){
+
+  document.getElementById("installMessage").style.display = "none";
+
+}
+
+/* =========================================================
+   026 — INSTALLED EVENT
+   ========================================================= */
+
+window.addEventListener("appinstalled", function(){
+
+  const box = document.getElementById("installMessage");
+
+  box.style.display = "block";
+
+  document.getElementById("installText").innerHTML =
+    "✅ BAS Charity has been saved to your device.";
+
+});
+</script>
+
+</body>
+</html>
