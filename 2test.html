@@ -1,672 +1,354 @@
- <!DOCTYPE html>
-<html lang="en">
-<head>
+ <!-- 001 — BAS CHARITY APP ICON : CLICK = SHOPPING -->
+<a href="#"
+   id="basPosterAppIcon"
+   aria-label="Open Shopping">
 
-<!-- 001 -->
-<meta charset="UTF-8">
+  <img src="final_app_icon.png"
+       alt="BAS Charity"
+       class="bas-poster-app-icon">
 
-<!-- 002 -->
-<meta name="viewport"
-      content="width=device-width, initial-scale=1.0">
+</a>
 
-<!-- 003 -->
-<title>BAS Charity — Shopping + Charity</title>
 
-<!-- 004 -->
-<meta name="theme-color" content="#080b0f">
+<!-- 002 — SHOP NOW : SAME ACTION AS SATURN -->
+<a href="#"
+   id="basPosterShopNow"
+   class="bas-poster-shop-now">
 
-<style>
+  🛒 &nbsp; SHOP NOW
+  <span>(50,000+ SHOPS)</span>
+  <b>›</b>
 
-/* =========================================================
-   005 — PAGE
-   ========================================================= */
+</a>
 
-*{
-  box-sizing:border-box;
-}
 
-html,
-body{
-  margin:0;
-  padding:0;
-  width:100%;
-  min-height:100%;
-}
+<!-- 003 — SAVE ICON -->
+<button id="basPosterSave"
+        class="bas-poster-save">
 
-body{
-  background:#05070a;
-  color:#ffffff;
-  font-family:Arial,Helvetica,sans-serif;
-  overflow-x:hidden;
-}
+  <img src="final_app_icon.png"
+       alt="Save Icon">
 
+  <span>
+    <strong>SAVE ICON</strong>
+    <small>Quick Access to Shopping</small>
+  </span>
 
-/* =========================================================
-   006 — PHONE SCREEN
-   ========================================================= */
+  <b>⇩ SAVE</b>
 
-#basPremiumPhone{
-  width:min(92%,390px);
-  min-height:100vh;
+</button>
 
-  margin:0 auto;
-  padding:18px 16px 25px;
 
-  background:
-    linear-gradient(
-      145deg,
-      #18212b 0%,
-      #07090c 55%,
-      #1b2229 100%
-    );
+<!-- 004 — SAVE PROCEDURE BOX -->
+<div id="basSaveHelp" class="bas-save-help">
 
-  border-left:2px solid #aeb4bc;
-  border-right:2px solid #aeb4bc;
+  <div class="bas-save-help-box">
 
-  box-shadow:
-    0 0 18px rgba(220,225,230,.18),
-    inset 0 0 25px rgba(255,255,255,.03);
+    <button id="basSaveClose">×</button>
 
-  text-align:center;
-}
+    <h2>📲 SAVE BAS CHARITY</h2>
 
+    <p><b>Chrome / Android</b></p>
+    <p>
+      Tap <b>⋮</b> → <b>Add to Home screen</b>
+      / <b>Install app</b>
+    </p>
 
-/* =========================================================
-   007 — HEADER
-   ========================================================= */
+    <hr>
 
-.basPhoneHeader{
-  padding:15px 4px 8px;
-}
+    <p><b>Facebook-ൽ തുറന്നാൽ</b></p>
+    <p>
+      Facebook → <b>⋮</b> → 
+      <b>Open in browser / Chrome</b> →
+      <b>SAVE ICON</b>
+    </p>
 
-.basPhoneBrand{
-  color:#ffffff;
+    <hr>
 
-  font-size:
-    clamp(18px,5vw,23px);
-
-  font-weight:900;
-
-  letter-spacing:.8px;
-
-  line-height:1.25;
-}
-
-.basPhoneHub{
-  margin-top:7px;
-
-  color:#aeb7c2;
-
-  font-size:11px;
-
-  font-weight:700;
-
-  letter-spacing:2px;
-}
-
-
-/* =========================================================
-   008 — SMALL LOGO
-   ========================================================= */
-
-.basPhoneLogoBtn{
-
-  display:block;
-
-  width:105px;
-  height:105px;
-
-  margin:15px auto 10px;
-
-  padding:5px;
-
-  border:0 !important;
-
-  background:transparent !important;
-
-  box-shadow:none !important;
-
-  cursor:pointer;
-
-  appearance:none;
-}
-
-.basPhoneLogo{
-
-  width:100%;
-  height:100%;
-
-  object-fit:contain;
-
-  display:block;
-
-  border:0 !important;
-
-  background:transparent;
-}
-
-
-/* =========================================================
-   009 — MAIN MESSAGE
-   ========================================================= */
-
-.basPhoneMessage{
-
-  margin:8px 0 18px;
-
-  padding:19px 10px;
-
-  border-radius:21px;
-
-  background:
-    linear-gradient(
-      145deg,
-      #202832,
-      #11161b
-    );
-
-  border:1px solid #aeb4bc;
-
-  box-shadow:
-    0 0 8px rgba(174,180,188,.20),
-    inset 0 0 12px rgba(255,255,255,.04);
-}
-
-.basPhoneMain{
-
-  color:#ffffff;
-
-  font-size:
-    clamp(20px,6vw,27px);
-
-  line-height:1.16;
-
-  font-weight:900;
-}
-
-.basPhoneSub{
-
-  margin-top:12px;
-
-  color:#d7dce2;
-
-  font-size:14px;
-
-  letter-spacing:2px;
-
-  font-weight:800;
-}
-
-
-/* =========================================================
-   010 — BUTTON COMMON
-   ========================================================= */
-
-.basPhoneAction{
-
-  width:100%;
-
-  min-height:56px;
-
-  margin:9px 0;
-
-  padding:10px 12px;
-
-  border-radius:17px !important;
-
-  border:1px solid #bfc4c9 !important;
-
-  font-family:Arial,Helvetica,sans-serif;
-
-  font-size:18px;
-
-  font-weight:900;
-
-  cursor:pointer;
-
-  transition:
-    transform .16s ease,
-    filter .16s ease,
-    box-shadow .16s ease;
-
-  appearance:none;
-}
-
-
-/* =========================================================
-   011 — SHOP NOW
-   ========================================================= */
-
-.basShopAction{
-
-  background:
-    linear-gradient(
-      145deg,
-      #ffffff,
-      #dce2e7
-    ) !important;
-
-  color:#10151a !important;
-
-  box-shadow:
-    0 0 9px rgba(255,255,255,.25);
-}
-
-
-/* =========================================================
-   012 — SAVE ICON
-   ========================================================= */
-
-.basSaveAction{
-
-  background:
-    linear-gradient(
-      145deg,
-      #5b6066,
-      #292d32
-    ) !important;
-
-  color:#ffffff !important;
-}
-
-
-/* =========================================================
-   013 — OPEN WEBSITE
-   ========================================================= */
-
-.basOpenAction{
-
-  background:
-    linear-gradient(
-      145deg,
-      #3f444a,
-      #171a1e
-    ) !important;
-
-  color:#ffffff !important;
-}
-
-
-/* =========================================================
-   014 — TOUCH EFFECT
-   ========================================================= */
-
-.basPhoneAction:active{
-
-  transform:scale(.97) !important;
-
-  filter:brightness(1.15);
-}
-
-.basPhoneLogoBtn:active{
-
-  transform:scale(.96);
-}
-
-
-/* =========================================================
-   015 — FOOTER
-   ========================================================= */
-
-.basPhoneFooter{
-
-  margin-top:16px;
-
-  color:#9fa8b2;
-
-  font-size:10px;
-
-  font-weight:700;
-
-  letter-spacing:1px;
-
-  line-height:1.5;
-}
-
-
-/* =========================================================
-   016 — SMALL PHONE
-   ========================================================= */
-
-@media(max-width:350px){
-
-  #basPremiumPhone{
-
-    width:96%;
-
-    padding:
-      14px 12px 22px;
-  }
-
-  .basPhoneLogoBtn{
-
-    width:88px;
-    height:88px;
-  }
-
-  .basPhoneMain{
-
-    font-size:19px;
-  }
-
-  .basPhoneAction{
-
-    min-height:51px;
-
-    font-size:16px;
-  }
-}
-
-</style>
-</head>
-
-
-<body>
-
-
-<!-- =========================================================
-     017 — BAS CHARITY PREMIUM PHONE
-     ========================================================= -->
-
-<div id="basPremiumPhone">
-
-
-  <!-- 018 — BRAND -->
-  <div class="basPhoneHeader">
-
-    <div class="basPhoneBrand">
-      BAS CHARITY INTERNATIONAL™
-    </div>
-
-    <div class="basPhoneHub">
-      AN INTERNATIONAL SHOPPING HUB
-    </div>
+    <p><b>WhatsApp-ൽ തുറന്നാൽ</b></p>
+    <p>
+      Link തുറക്കുക → Chrome/browser →
+      <b>SAVE ICON</b> →
+      <b>Add to Home Screen / Install</b>
+    </p>
 
   </div>
-
-
-  <!-- =======================================================
-       019 — LOGO
-       LOGO CLICK → SHOPPING
-       ======================================================= -->
-
-  <button
-    id="basPhoneLogoBtn"
-    class="basPhoneLogoBtn"
-    type="button"
-    aria-label="Open Shopping">
-
-    <img
-      src="bas-diamond-hands-sticker.png"
-      alt="BAS Charity"
-      class="basPhoneLogo">
-
-  </button>
-
-
-  <!-- =======================================================
-       020 — MAIN MESSAGE
-       ======================================================= -->
-
-  <div class="basPhoneMessage">
-
-    <div class="basPhoneMain">
-
-      YOUR PURCHASE<br>
-      SATISFIES A HUNGER™
-
-    </div>
-
-    <div class="basPhoneSub">
-
-      SHOPPING + CHARITY
-
-    </div>
-
-  </div>
-
-
-  <!-- =======================================================
-       021 — SHOP NOW
-       ======================================================= -->
-
-  <button
-    id="basPhoneShopBtn"
-    class="basPhoneAction basShopAction"
-    type="button">
-
-    🛒 &nbsp; SHOP NOW
-
-  </button>
-
-
-  <!-- =======================================================
-       022 — SAVE THIS ICON
-       ======================================================= -->
-
-  <button
-    id="basPhoneSaveBtn"
-    class="basPhoneAction basSaveAction"
-    type="button">
-
-    📲 &nbsp; SAVE THIS ICON
-
-  </button>
-
-
-  <!-- =======================================================
-       023 — OPEN BASCHARITY.COM
-       ======================================================= -->
-
-  <button
-    id="basPhoneOpenBtn"
-    class="basPhoneAction basOpenAction"
-    type="button">
-
-    🌐 &nbsp; OPEN BASCHARITY.COM
-
-  </button>
-
-
-  <!-- =======================================================
-       024 — FOOTER
-       ======================================================= -->
-
-  <div class="basPhoneFooter">
-
-    50,000+ SHOPS • WORLDWIDE • ALL LANGUAGES
-
-  </div>
-
 
 </div>
 
 
+<style>
+/* 005 — APP ICON */
+.bas-poster-app-icon{
+  width:88px;
+  height:88px;
+  object-fit:cover;
+  border-radius:20px;
+  display:block;
+  margin:auto;
+  cursor:pointer;
+  box-shadow:0 5px 18px rgba(0,0,0,.20);
+}
+
+/* 006 — SHOP NOW */
+.bas-poster-shop-now{
+  width:90%;
+  margin:18px auto;
+  min-height:88px;
+  border-radius:50px;
+  background:#103f39;
+  color:#fff;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:12px;
+  text-decoration:none;
+  font-size:29px;
+  font-weight:900;
+  box-shadow:0 6px 18px rgba(0,0,0,.25);
+}
+
+.bas-poster-shop-now span{
+  display:block;
+  font-size:15px;
+  margin-left:-5px;
+}
+
+.bas-poster-shop-now b{
+  font-size:40px;
+}
+
+/* 007 — SAVE BUTTON */
+.bas-poster-save{
+  width:88%;
+  margin:15px auto;
+  padding:13px 16px;
+  border:0;
+  border-radius:22px;
+  background:#eee7dc;
+  display:flex;
+  align-items:center;
+  gap:12px;
+  cursor:pointer;
+}
+
+.bas-poster-save img{
+  width:58px;
+  height:58px;
+  border-radius:13px;
+  object-fit:cover;
+}
+
+.bas-poster-save span{
+  flex:1;
+  text-align:left;
+}
+
+.bas-poster-save strong{
+  display:block;
+  font-size:21px;
+  color:#111;
+}
+
+.bas-poster-save small{
+  display:block;
+  margin-top:4px;
+  color:#333;
+  font-size:13px;
+}
+
+.bas-poster-save>b{
+  background:#103f39;
+  color:#fff;
+  padding:13px 17px;
+  border-radius:28px;
+  font-size:16px;
+}
+
+/* 008 — SAVE HELP */
+.bas-save-help{
+  display:none;
+  position:fixed;
+  inset:0;
+  z-index:999999;
+  background:rgba(0,0,0,.70);
+  align-items:center;
+  justify-content:center;
+  padding:20px;
+}
+
+.bas-save-help.show{
+  display:flex;
+}
+
+.bas-save-help-box{
+  position:relative;
+  width:100%;
+  max-width:420px;
+  background:#fff;
+  color:#111;
+  border-radius:22px;
+  padding:25px 20px;
+  text-align:left;
+  box-shadow:0 10px 40px rgba(0,0,0,.35);
+}
+
+.bas-save-help-box h2{
+  text-align:center;
+  color:#103f39;
+  margin-bottom:20px;
+}
+
+.bas-save-help-box p{
+  font-size:16px;
+  line-height:1.55;
+  margin:8px 0;
+}
+
+.bas-save-help-box hr{
+  border:0;
+  border-top:1px solid #ddd;
+  margin:17px 0;
+}
+
+#basSaveClose{
+  position:absolute;
+  right:12px;
+  top:8px;
+  border:0;
+  background:none;
+  font-size:32px;
+  cursor:pointer;
+}
+</style>
+
+
 <script>
+/* 009 — SAME SHOPPING ACTION AS SATURN */
 
-/* =========================================================
-   025 — LOGO CLICK → SHOPPING
-   ========================================================= */
+function basPosterShoppingAction(){
 
-(function(){
+  var categoryElement =
+      document.getElementById("categoryHeading");
 
-  "use strict";
+  if(categoryElement){
 
+    categoryElement.scrollIntoView({
+      behavior:"smooth",
+      block:"center"
+    });
 
-  const logoBtn =
-    document.getElementById("basPhoneLogoBtn");
-
-
-  if(logoBtn){
-
-    logoBtn.addEventListener(
-      "click",
-      function(){
-
-        /*
-         * Standalone Test version:
-         * logo click opens the Shopping section.
-         */
-
-        const shopSection =
-          document.getElementById("shopSection");
-
-
-        if(shopSection){
-
-          shopSection.scrollIntoView({
-            behavior:"smooth",
-            block:"start"
-          });
-
-        }else{
-
-          alert("SHOPPING");
-
-        }
-
-      }
-    );
+    categoryElement.click();
 
   }
+}
 
 
-  /* =======================================================
-     026 — SHOP NOW
-     ======================================================= */
+/* 010 — SHOP NOW */
+document
+.getElementById("basPosterShopNow")
+.addEventListener("click",function(e){
 
-  const shopBtn =
-    document.getElementById("basPhoneShopBtn");
+  e.preventDefault();
 
+  basPosterShoppingAction();
 
-  if(shopBtn){
-
-    shopBtn.addEventListener(
-      "click",
-      function(){
-
-        /*
-         * Standalone Test:
-         * ഇവിടെ ഇപ്പോൾ Shopping test action.
-         */
-
-        const shopSection =
-          document.getElementById("shopSection");
+});
 
 
-        if(shopSection){
+/* 011 — APP ICON = SHOPPING */
+document
+.getElementById("basPosterAppIcon")
+.addEventListener("click",function(e){
 
-          shopSection.scrollIntoView({
-            behavior:"smooth",
-            block:"start"
-          });
+  e.preventDefault();
 
-        }else{
+  basPosterShoppingAction();
 
-          alert("SHOPPING");
-
-        }
-
-      }
-    );
-
-  }
+});
 
 
-  /* =======================================================
-     027 — SAVE THIS ICON
-     ======================================================= */
+/* 012 — SAVE ICON */
+var basPosterSave =
+    document.getElementById("basPosterSave");
 
-  const saveBtn =
-    document.getElementById("basPhoneSaveBtn");
+var basSaveHelp =
+    document.getElementById("basSaveHelp");
 
+var basSaveClose =
+    document.getElementById("basSaveClose");
 
-  if(saveBtn){
-
-    saveBtn.addEventListener(
-      "click",
-      function(){
-
-        /*
-         * Standalone Test version:
-         * Browser PWA install prompt ലഭിച്ചാൽ ഉപയോഗിക്കും.
-         */
-
-        if(
-          window.basPrompt &&
-          typeof window.basPrompt.prompt === "function"
-        ){
-
-          window.basPrompt.prompt();
-
-          return;
-
-        }
+var basPosterInstallPrompt = null;
 
 
-        /*
-         * Prompt ഇല്ലെങ്കിൽ test message.
-         */
-
-        alert(
-          "Use your browser menu → Add to Home Screen / Install"
-        );
-
-      }
-    );
-
-  }
-
-
-  /* =======================================================
-     028 — OPEN WEBSITE
-     ======================================================= */
-
-  const openBtn =
-    document.getElementById("basPhoneOpenBtn");
-
-
-  if(openBtn){
-
-    openBtn.addEventListener(
-      "click",
-      function(){
-
-        window.open(
-          "https://bascharity.com",
-          "_blank",
-          "noopener,noreferrer"
-        );
-
-      }
-    );
-
-  }
-
-
-})();
-
-
-/* =========================================================
-   029 — PWA INSTALL PROMPT FOR TEST
-   ========================================================= */
-
-window.basPrompt = null;
-
-
+/* 013 — REAL CHROME INSTALL PROMPT */
 window.addEventListener(
   "beforeinstallprompt",
   function(e){
 
     e.preventDefault();
 
-    window.basPrompt = e;
+    basPosterInstallPrompt = e;
 
   }
 );
 
+
+/* 014 — SAVE CLICK */
+basPosterSave.addEventListener(
+  "click",
+  async function(){
+
+    /*
+      Chrome-ൽ യഥാർത്ഥ Install prompt
+      ലഭ്യമാണെങ്കിൽ ആദ്യം അതുതന്നെ കാണിക്കും.
+    */
+
+    if(basPosterInstallPrompt){
+
+      await basPosterInstallPrompt.prompt();
+
+      await basPosterInstallPrompt.userChoice;
+
+      basPosterInstallPrompt = null;
+
+      return;
+
+    }
+
+    /*
+      Facebook / WhatsApp / unsupported browser:
+      ശരിയായ manual procedure കാണിക്കും.
+    */
+
+    basSaveHelp.classList.add("show");
+
+  }
+);
+
+
+/* 015 — CLOSE */
+basSaveClose.addEventListener(
+  "click",
+  function(){
+
+    basSaveHelp.classList.remove("show");
+
+  }
+);
+
+
+/* 016 — OUTSIDE CLICK CLOSE */
+basSaveHelp.addEventListener(
+  "click",
+  function(e){
+
+    if(e.target === basSaveHelp){
+
+      basSaveHelp.classList.remove("show");
+
+    }
+
+  }
+);
 </script>
-
-
-</body>
-</html>
