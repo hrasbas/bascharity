@@ -18,26 +18,28 @@
             justify-content: center;
             align-items: center;
             min-height: 100vh;
+            padding: 10px;
         }
+        /* ഇതാണ് ഫോൺ ഫ്രെയിമും കർവും വീതിയും നിയന്ത്രിക്കുന്ന ഭാഗം */
         .phone-frame {
             width: 100%;
-            max-width: 430px;
+            max-width: 380px; /* വീതി കുറച്ചു */
             background: #faf6f0;
-            border-radius: 40px;
+            border-radius: 35px; /* ഫോൺ കർവ് */
             overflow: hidden;
             box-shadow: 0 10px 30px rgba(0,0,0,0.2);
-            border: 8px solid #222;
+            border: 6px solid #222;
             position: relative;
         }
         /* Top Bar */
         .top-bar {
             background: #1b382b;
             color: #fff;
-            padding: 12px 20px;
+            padding: 10px 15px;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            font-size: 13px;
+            font-size: 12px;
         }
         .home-link {
             color: #fff;
@@ -50,7 +52,7 @@
         
         /* Header Section */
         .header-section {
-            padding: 15px 20px;
+            padding: 12px 15px;
             text-align: center;
             background: #faf6f0;
             border-bottom: 1px solid rgba(0,0,0,0.05);
@@ -59,151 +61,148 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            margin-bottom: 10px;
+            margin-bottom: 8px;
         }
         .menu-icon {
-            font-size: 22px;
+            font-size: 20px;
             cursor: pointer;
         }
         .logo-area {
             display: flex;
             align-items: center;
             justify-content: center;
-            gap: 8px;
+            gap: 6px;
         }
-        /* PNG Placeholder for Logo */
         .logo-png-slot {
-            width: 40px;
-            height: 40px;
+            width: 35px;
+            height: 35px;
             border: 2px dashed #1b382b;
-            border-radius: 8px;
+            border-radius: 6px;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 10px;
+            font-size: 9px;
             color: #1b382b;
             background: rgba(27,56,43,0.05);
         }
         .logo-text h1 {
-            font-size: 18px;
+            font-size: 16px;
             font-weight: 900;
             color: #1b382b;
-            letter-spacing: 0.5px;
         }
         .logo-text span {
-            font-size: 9px;
+            font-size: 8px;
             letter-spacing: 1px;
             color: #555;
             display: block;
         }
         .lang-dropdowns {
             display: flex;
-            gap: 6px;
+            gap: 4px;
         }
         .dropdown-btn {
             background: #fff;
             border: 1px solid #ccc;
-            padding: 4px 8px;
-            border-radius: 6px;
-            font-size: 12px;
+            padding: 3px 6px;
+            border-radius: 4px;
+            font-size: 11px;
             cursor: pointer;
         }
         .hub-tag {
             background: #e6dfd1;
             display: inline-block;
-            padding: 4px 15px;
+            padding: 3px 12px;
             border-radius: 20px;
-            font-size: 11px;
+            font-size: 10px;
             font-weight: 700;
             color: #5c4a32;
-            margin-top: 5px;
+            margin-top: 4px;
         }
 
         /* Hero Banner */
         .hero-banner {
             background: linear-gradient(135deg, #fdfbfa 0%, #f0e6d6 100%);
-            padding: 20px;
+            padding: 15px;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            position: relative;
-            overflow: hidden;
         }
         .hero-content {
             max-width: 55%;
         }
         .hero-content h2 {
-            font-size: 28px;
+            font-size: 24px;
             line-height: 1.1;
             color: #1b382b;
             font-weight: 800;
-            margin-bottom: 10px;
+            margin-bottom: 8px;
         }
         .hero-content p {
-            font-size: 13px;
+            font-size: 12px;
             color: #444;
-            line-height: 1.4;
-            margin-bottom: 10px;
+            line-height: 1.3;
+            margin-bottom: 8px;
         }
         .hero-quote {
             font-style: italic;
-            font-size: 13px;
+            font-size: 11px;
             color: #333;
         }
-        /* PNG Placeholder for Hero Image */
         .hero-png-slot {
-            width: 130px;
-            height: 130px;
+            width: 110px;
+            height: 110px;
             border: 2px dashed #1b382b;
             border-radius: 50%;
             display: flex;
             flex-direction: column;
             align-items: center;
             justify-content: center;
-            font-size: 11px;
+            font-size: 10px;
             color: #1b382b;
             background: rgba(27,56,43,0.05);
             text-align: center;
-            padding: 10px;
+            padding: 8px;
         }
 
-        /* Shops Row */
+        /* Shops Row (Clickable Links) */
         .shops-row {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 15px 20px;
+            padding: 12px 15px;
             background: #fff;
-            gap: 6px;
+            gap: 5px;
         }
         .shop-badge {
             background: #f4f4f4;
-            padding: 8px 6px;
-            border-radius: 8px;
-            font-size: 11px;
+            padding: 6px 4px;
+            border-radius: 6px;
+            font-size: 10px;
             font-weight: 700;
             display: flex;
             align-items: center;
             justify-content: center;
             flex: 1;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.03);
-            cursor: pointer;
+            text-decoration: none;
+            color: #333;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.03);
             border: 1px solid #eaeaea;
-            height: 36px;
+            height: 32px;
         }
         .more-shops {
-            font-size: 10px;
+            font-size: 9px;
             text-align: center;
             font-weight: 700;
             color: #333;
             background: #f4eade;
-            padding: 6px 4px;
-            border-radius: 8px;
+            padding: 4px;
+            border-radius: 6px;
+            text-decoration: none;
         }
 
         /* Shop Now Button Area */
         .shop-now-container {
-            padding: 20px;
+            padding: 15px;
             text-align: center;
             background: #faf6f0;
         }
@@ -211,96 +210,90 @@
             background: #1b382b;
             color: #fff;
             width: 100%;
-            padding: 16px;
-            border-radius: 35px;
+            padding: 14px;
+            border-radius: 30px;
             border: none;
-            font-size: 18px;
+            font-size: 16px;
             font-weight: 700;
             display: flex;
             flex-direction: column;
             align-items: center;
             justify-content: center;
             cursor: pointer;
-            box-shadow: 0 6px 20px rgba(27, 56, 43, 0.25);
-            transition: transform 0.2s;
-        }
-        .shop-now-btn:active {
-            transform: scale(0.98);
+            text-decoration: none;
+            box-shadow: 0 5px 15px rgba(27, 56, 43, 0.25);
         }
         .shop-sub-text {
-            font-size: 12px;
+            font-size: 11px;
             font-weight: 400;
             opacity: 0.85;
             margin-top: 2px;
         }
         .links-info {
-            font-size: 12px;
+            font-size: 11px;
             color: #444;
-            margin-top: 10px;
+            margin-top: 8px;
         }
 
-        /* Save Card / PWA Install */
+        /* Save Card / PWA Install (ഇത് ഇൻസ്റ്റാളിന് മാത്രമാണ്) */
         .bas-save-card {
             display: flex;
             align-items: center;
             justify-content: space-between;
             background: linear-gradient(135deg, #f5efe6 0%, #e8dfd1 100%);
             border: 1px solid rgba(139, 115, 85, 0.2);
-            border-radius: 16px;
-            padding: 14px 18px;
-            margin: 10px 20px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            border-radius: 14px;
+            padding: 12px 15px;
+            margin: 8px 15px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
             cursor: pointer;
         }
         .bas-save-left {
             display: flex;
             align-items: center;
-            gap: 12px;
+            gap: 10px;
         }
         .bas-save-icon-box {
             background: #1b382b;
             color: #fff;
-            width: 42px;
-            height: 42px;
-            border-radius: 10px;
+            width: 38px;
+            height: 38px;
+            border-radius: 8px;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 20px;
+            font-size: 18px;
         }
         .bas-save-text h4 {
             margin: 0;
-            font-size: 16px;
+            font-size: 14px;
             font-weight: 800;
             color: #1b382b;
         }
         .bas-save-text p {
             margin: 2px 0 0 0;
-            font-size: 12px;
+            font-size: 11px;
             color: #555;
         }
         .bas-save-btn {
             background: #1b382b;
             color: #fff;
             border: none;
-            padding: 10px 18px;
-            font-size: 14px;
+            padding: 8px 14px;
+            font-size: 12px;
             font-weight: 700;
-            border-radius: 10px;
+            border-radius: 8px;
             cursor: pointer;
-            display: flex;
-            align-items: center;
-            gap: 6px;
         }
 
         /* Features Footer Icons */
         .features-footer {
             display: flex;
             justify-content: space-around;
-            padding: 15px 10px;
+            padding: 12px 8px;
             background: #fff;
             border-top: 1px solid #eee;
-            font-size: 11px;
+            font-size: 10px;
             color: #333;
             text-align: center;
         }
@@ -308,10 +301,10 @@
             display: flex;
             flex-direction: column;
             align-items: center;
-            gap: 4px;
+            gap: 2px;
         }
         .feature-item span {
-            font-size: 16px;
+            font-size: 14px;
         }
 
         /* Bottom Branding */
@@ -319,69 +312,47 @@
             background: #1b382b;
             color: #fff;
             text-align: center;
-            padding: 20px;
+            padding: 15px;
         }
         .bottom-branding p:first-child {
-            font-size: 13px;
+            font-size: 12px;
             font-weight: 600;
-            margin-bottom: 4px;
+            margin-bottom: 2px;
         }
         .bottom-branding p:last-child {
-            font-size: 12px;
+            font-size: 11px;
             opacity: 0.8;
         }
 
-        /* Facebook In-App Browser Modal */
+        /* Facebook Modal */
         #basFbModal {
             display: none;
             position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
+            top: 0; left: 0; width: 100%; height: 100%;
             background: rgba(0, 0, 0, 0.85);
             z-index: 999999;
             justify-content: center;
             align-items: center;
             padding: 20px;
-            box-sizing: border-box;
         }
         .bas-fb-content {
             background: #ffffff;
-            padding: 25px;
-            border-radius: 20px;
-            max-width: 340px;
+            padding: 20px;
+            border-radius: 16px;
+            max-width: 320px;
             width: 100%;
             text-align: center;
-            color: #222;
-        }
-        .bas-fb-content h3 {
-            margin-top: 0;
-            color: #1b382b;
-            font-size: 20px;
-        }
-        .bas-fb-content p {
-            font-size: 14px;
-            line-height: 1.5;
-            color: #444;
-            text-align: left;
         }
         .bas-fb-close {
-            background: #1b382b;
-            color: #fff;
-            border: none;
-            padding: 10px 20px;
-            border-radius: 8px;
-            font-weight: 700;
-            margin-top: 15px;
-            cursor: pointer;
-            width: 100%;
+            background: #1b382b; color: #fff; border: none;
+            padding: 8px 16px; border-radius: 6px; font-weight: 700;
+            margin-top: 12px; cursor: pointer; width: 100%;
         }
     </style>
 </head>
 <body>
 
-<div class="phone-frame">
+<div class="phone-frame" id="shops-section">
     <!-- Top Bar -->
     <div class="top-bar">
         <span>Your Purchase Satisfies a Hunger™</span>
@@ -393,7 +364,6 @@
         <div class="nav-row">
             <div class="menu-icon">☰</div>
             <div class="logo-area">
-                <!-- PNG Placeholder for Logo (Replace with <img src="logo.png"> later) -->
                 <div class="logo-png-slot">Logo PNG</div>
                 <div class="logo-text">
                     <h1>BAS CHARITY</h1>
@@ -415,34 +385,33 @@
             <p>Without spending even a single penny, you can give food to the poor.</p>
             <div class="hero-quote">Together for<br>a Hunger Free World ♡</div>
         </div>
-        <!-- PNG Placeholder for Hero Image (Replace with <img src="hero.png"> later) -->
         <div class="hero-png-slot">
             <span>Hero PNG</span>
-            <small style="font-size:9px; opacity:0.7;">Space</small>
+            <small style="font-size:8px; opacity:0.7;">Space</small>
         </div>
     </div>
 
-    <!-- Shops Row (Triggers redirect) -->
+    <!-- Shops Row (ലിങ്കുകൾ ചേർത്തത് - ഷോപ്പ് കാറ്റഗറിയിലേക്ക് പോകും) -->
     <div class="shops-row">
-        <div class="shop-badge shop-redirect-trigger" style="color: #000;">amazon</div>
-        <div class="shop-badge shop-redirect-trigger" style="color: #2874f0;">Flipkart</div>
-        <div class="shop-badge shop-redirect-trigger" style="color: #86b817;">ebay</div>
-        <div class="shop-badge shop-redirect-trigger" style="color: #0071dc;">Walmart</div>
-        <div class="more-shops shop-redirect-trigger">& 50,000+<br>Shops</div>
+        <a href="#shops-section" class="shop-badge" style="color: #000;">amazon</a>
+        <a href="#shops-section" class="shop-badge" style="color: #2874f0;">Flipkart</a>
+        <a href="#shops-section" class="shop-badge" style="color: #86b817;">ebay</a>
+        <a href="#shops-section" class="shop-badge" style="color: #0071dc;">Walmart</a>
+        <a href="#shops-section" class="more-shops">& 50,000+<br>Shops</a>
     </div>
 
-    <!-- Shop Now Button Area -->
+    <!-- Shop Now Button (ലിങ്ക് ചെയ്തത്) -->
     <div class="shop-now-container">
-        <button class="shop-now-btn shop-redirect-trigger" id="shopNowBtn">
+        <a href="#shops-section" class="shop-now-btn">
             <span>🛒 SHOP NOW ❯</span>
             <span class="shop-sub-text">(50,000+ SHOPS)</span>
-        </button>
+        </a>
         <div class="links-info">
             Worldwide &nbsp;|&nbsp; All Countries &nbsp;|&nbsp; All Languages
         </div>
     </div>
 
-    <!-- Save Icon / PWA Card -->
+    <!-- Save Icon / PWA Card (ഇത് ഇൻസ്റ്റാളിന് മാത്രമുള്ളതാണ്) -->
     <div class="bas-save-card" id="basInstallTrigger">
         <div class="bas-save-left">
             <div class="bas-save-icon-box">📥</div>
@@ -473,35 +442,16 @@
 <div id="basFbModal">
     <div class="bas-fb-content">
         <h3>⚠️ Open in External Browser</h3>
-        <p>You are using Facebook's in-app browser. To install the app properly:</p>
-        <p><b>1.</b> Click the <b>Three Dots (...)</b> at top right.<br>
+        <p style="font-size:13px; text-align:left; margin-top:10px;">To install the app properly:<br>
+           <b>1.</b> Click <b>Three Dots (...)</b> at top right.<br>
            <b>2.</b> Select <b>"Open in External Browser"</b>.<br>
-           <b>3.</b> Then click the <b>SAVE</b> button!</p>
+           <b>3.</b> Click the <b>SAVE</b> button!</p>
         <button class="bas-fb-close" onclick="document.getElementById('basFbModal').style.display='none'">Got It</button>
     </div>
 </div>
 
 <script>
 document.addEventListener("DOMContentLoaded", function () {
-    // 1. Shops Redirect Logic (ശനി / ഷോപ്പ് സെക്ഷൻ ലക്ഷ്യമാക്കി പോകുന്ന ഭാഗം)
-    function redirectToShops() {
-        // നിങ്ങളുടെ ഷോപ്പുകൾ സ്ഥിതി ചെയ്യുന്ന സെക്ഷൻ ഐഡി നൽകാം (ഉദാഹരണത്തിന്: #shops-section)
-        const shopSection = document.getElementById("shops-section");
-        if (shopSection) {
-            shopSection.scrollIntoView({ behavior: 'smooth' });
-        } else {
-            // സെക്ഷൻ ഇല്ലെങ്കിൽ പുതിയ പേജിലേക്കോ ലിങ്കിലേക്കോ മാറ്റാം
-            console.log("Navigating to Shops Hub...");
-            // window.location.href = "shops.html";
-        }
-    }
-
-    // ഷോപ്പ് ബട്ടണുകൾക്കും ബാഡ്ജുകൾക്കും ഈ ഫങ്ഷൻ കണക്റ്റ് ചെയ്യുന്നു
-    document.querySelectorAll(".shop-redirect-trigger").forEach(item => {
-        item.addEventListener("click", redirectToShops);
-    });
-
-    // 2. PWA Install & Facebook In-App Browser Flow
     let deferredPrompt;
     const installTrigger = document.getElementById("basInstallTrigger");
     const fbModal = document.getElementById("basFbModal");
@@ -522,16 +472,12 @@ document.addEventListener("DOMContentLoaded", function () {
                 if (fbModal) fbModal.style.display = "flex";
                 return;
             }
-
             if (deferredPrompt) {
                 deferredPrompt.prompt();
                 const { outcome } = await deferredPrompt.userChoice;
-                if (outcome === 'accepted') {
-                    console.log('User accepted the install prompt');
-                }
                 deferredPrompt = null;
             } else {
-                alert("App is ready! You can add it to your home screen from your browser settings.");
+                alert("App is ready! You can add it to your home screen from your browser menu.");
             }
         });
     }
