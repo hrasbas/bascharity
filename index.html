@@ -1930,6 +1930,19 @@ END OF BAS ANALYTICS
       if (saturn) observer.observe(saturn);
     }
   })();
+ 
+document.addEventListener('DOMContentLoaded', function () {
+    const params = new URLSearchParams(window.location.search);
+
+    if (params.get('openCategory') === '1') {
+        setTimeout(function () {
+            if (typeof handlePlanetClick === 'function') {
+                handlePlanetClick('ExternalIcon');
+            }
+        }, 100);
+    }
+});
+
 </script>
 <!-- ========================================================= -->
    <div class="heading">
