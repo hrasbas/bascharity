@@ -1,362 +1,247 @@
+ <!-- ==========================================
+     BAS CHARITY - FULL PWA & SHOP INTERACTION CODE
+     ========================================== -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
 <!-- 001 -->
 <meta charset="UTF-8">
 <!-- 002 -->
-<meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- 001 — BAS CHARITY APP ICON : CLICK = SHOPPING -->
-<a href="#"
-   id="basPosterAppIcon"
-   aria-label="Open Shopping">
-
-  <img src="final_app_icon.png"
-       alt="BAS Charity"
-       class="bas-poster-app-icon">
-
-</a>
-
-
-<!-- 002 — SHOP NOW : SAME ACTION AS SATURN -->
-<a href="#"
-   id="basPosterShopNow"
-   class="bas-poster-shop-now">
-
-  🛒 &nbsp; SHOP NOW
-  <span>(50,000+ SHOPS)</span>
-  <b>›</b>
-
-</a>
-
-
-<!-- 003 — SAVE ICON -->
-<button id="basPosterSave"
-        class="bas-poster-save">
-
-  <img src="final_app_icon.png"
-       alt="Save Icon">
-
-  <span>
-    <strong>SAVE ICON</strong>
-    <small>Quick Access to Shopping</small>
-  </span>
-
-  <b>⇩ SAVE</b>
-
-</button>
-
-
-<!-- 004 — SAVE PROCEDURE BOX -->
-<div id="basSaveHelp" class="bas-save-help">
-
-  <div class="bas-save-help-box">
-
-    <button id="basSaveClose">×</button>
-
-    <h2>📲 SAVE BAS CHARITY</h2>
-
-    <p><b>Chrome / Android</b></p>
-    <p>
-      Tap <b>⋮</b> → <b>Add to Home screen</b>
-      / <b>Install app</b>
-    </p>
-
-    <hr>
-
-    <p><b>Facebook-ൽ തുറന്നാൽ</b></p>
-    <p>
-      Facebook → <b>⋮</b> → 
-      <b>Open in browser / Chrome</b> →
-      <b>SAVE ICON</b>
-    </p>
-
-    <hr>
-
-    <p><b>WhatsApp-ൽ തുറന്നാൽ</b></p>
-    <p>
-      Link തുറക്കുക → Chrome/browser →
-      <b>SAVE ICON</b> →
-      <b>Add to Home Screen / Install</b>
-    </p>
-
-  </div>
-
-</div>
-
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- 003 -->
+<title>BAS CHARITY INTERNATIONAL™</title>
+<!-- 004 -->
 
 <style>
-/* 005 — APP ICON */
-.bas-poster-app-icon{
-  width:88px;
-  height:88px;
-  object-fit:cover;
-  border-radius:20px;
-  display:block;
-  margin:auto;
-  cursor:pointer;
-  box-shadow:0 5px 18px rgba(0,0,0,.20);
+/* 1. സേവ് ഐക്കൺ / PWA ഇൻസ്റ്റാൾ കാർഡ് ഡിസൈൻ */
+.bas-save-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: linear-gradient(135deg, #f5efe6 0%, #e8dfd1 100%);
+  border: 1px solid rgba(139, 115, 85, 0.2);
+  border-radius: 16px;
+  padding: 16px 20px;
+  margin: 20px auto;
+  max-width: 90%;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.05);
 }
 
-/* 006 — SHOP NOW */
-.bas-poster-shop-now{
-  width:90%;
-  margin:18px auto;
-  min-height:88px;
-  border-radius:50px;
-  background:#103f39;
-  color:#fff;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  gap:12px;
-  text-decoration:none;
-  font-size:29px;
-  font-weight:900;
-  box-shadow:0 6px 18px rgba(0,0,0,.25);
+.bas-save-left {
+  display: flex;
+  align-items: center;
+  gap: 15px;
 }
 
-.bas-poster-shop-now span{
-  display:block;
-  font-size:15px;
-  margin-left:-5px;
+.bas-save-icon-box {
+  background: #1b382b;
+  color: #fff;
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  box-shadow: 0 4px 10px rgba(27, 56, 43, 0.3);
 }
 
-.bas-poster-shop-now b{
-  font-size:40px;
+.bas-save-text h4 {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 800;
+  color: #1b382b;
 }
 
-/* 007 — SAVE BUTTON */
-.bas-poster-save{
-  width:88%;
-  margin:15px auto;
-  padding:13px 16px;
-  border:0;
-  border-radius:22px;
-  background:#eee7dc;
-  display:flex;
-  align-items:center;
-  gap:12px;
-  cursor:pointer;
+.bas-save-text p {
+  margin: 3px 0 0 0;
+  font-size: 13px;
+  color: #555;
 }
 
-.bas-poster-save img{
-  width:58px;
-  height:58px;
-  border-radius:13px;
-  object-fit:cover;
+.bas-save-btn {
+  background: #1b382b;
+  color: #fff;
+  border: none;
+  padding: 10px 22px;
+  font-size: 15px;
+  font-weight: 700;
+  border-radius: 10px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(27, 56, 43, 0.25);
 }
 
-.bas-poster-save span{
-  flex:1;
-  text-align:left;
+.bas-save-btn:active {
+  transform: scale(0.95);
 }
 
-.bas-poster-save strong{
-  display:block;
-  font-size:21px;
-  color:#111;
+/* 2. ഫേസ്ബുക്ക് ഇൻ-ആപ്പ് ബ്രൗസർ ഗൈഡൻസ് മോഡൽ */
+#basFbModal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.85);
+  z-index: 999999;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  box-sizing: border-box;
 }
 
-.bas-poster-save small{
-  display:block;
-  margin-top:4px;
-  color:#333;
-  font-size:13px;
+.bas-fb-content {
+  background: #ffffff;
+  padding: 25px;
+  border-radius: 20px;
+  max-width: 340px;
+  width: 100%;
+  text-align: center;
+  color: #222;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.3);
 }
 
-.bas-poster-save>b{
-  background:#103f39;
-  color:#fff;
-  padding:13px 17px;
-  border-radius:28px;
-  font-size:16px;
+.bas-fb-content h3 {
+  margin-top: 0;
+  color: #1b382b;
+  font-size: 20px;
 }
 
-/* 008 — SAVE HELP */
-.bas-save-help{
-  display:none;
-  position:fixed;
-  inset:0;
-  z-index:999999;
-  background:rgba(0,0,0,.70);
-  align-items:center;
-  justify-content:center;
-  padding:20px;
+.bas-fb-content p {
+  font-size: 14px;
+  line-height: 1.5;
+  color: #444;
+  text-align: left;
 }
 
-.bas-save-help.show{
-  display:flex;
-}
-
-.bas-save-help-box{
-  position:relative;
-  width:100%;
-  max-width:420px;
-  background:#fff;
-  color:#111;
-  border-radius:22px;
-  padding:25px 20px;
-  text-align:left;
-  box-shadow:0 10px 40px rgba(0,0,0,.35);
-}
-
-.bas-save-help-box h2{
-  text-align:center;
-  color:#103f39;
-  margin-bottom:20px;
-}
-
-.bas-save-help-box p{
-  font-size:16px;
-  line-height:1.55;
-  margin:8px 0;
-}
-
-.bas-save-help-box hr{
-  border:0;
-  border-top:1px solid #ddd;
-  margin:17px 0;
-}
-
-#basSaveClose{
-  position:absolute;
-  right:12px;
-  top:8px;
-  border:0;
-  background:none;
-  font-size:32px;
-  cursor:pointer;
+.bas-fb-close {
+  background: #1b382b;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-weight: 700;
+  margin-top: 15px;
+  cursor: pointer;
+  width: 100%;
 }
 </style>
 
+<!-- HTML STRUCTURE -->
+<!-- ചിത്രത്തിൽ കാണുന്നതുപോലുള്ള Save Icon / PWA ഇൻസ്റ്റാൾ സെക്ഷൻ -->
+<div class="bas-save-card" id="basInstallTrigger">
+  <div class="bas-save-left">
+    <div class="bas-save-icon-box">
+      📥
+    </div>
+    <div class="bas-save-text">
+      <h4>Save Icon</h4>
+      <p>Quick Access to Shopping</p>
+    </div>
+  </div>
+  <button class="bas-save-btn">
+    SAVE 📥
+  </button>
+</div>
+
+<!-- ഫേസ്ബുക്ക് ബ്രൗസർ ഗൈഡൻസ് പോപ്പ്അപ്പ് -->
+<div id="basFbModal">
+  <div class="bas-fb-content">
+    <h3>⚠️ Open in External Browser</h3>
+    <p>You are using Facebook's in-app browser. To install the app properly:</p>
+    <p><b>1.</b> Click the <b>Three Dots (...)</b> at the top right.<br>
+       <b>2.</b> Select <b>"Open in External Browser"</b> (Chrome/Safari).<br>
+       <b>3.</b> Then click the **SAVE** button to install!</p>
+    <button class="bas-fb-close" onclick="document.getElementById('basFbModal').style.display='none'">Got It</button>
+  </div>
+</div>
 
 <script>
-/* 009 — SAME SHOPPING ACTION AS SATURN */
+/* ==========================================
+   JAVASCRIPT LOGIC
+   ========================================== */
 
-function basPosterShoppingAction(){
-
-  var categoryElement =
-      document.getElementById("categoryHeading");
-
-  if(categoryElement){
-
-    categoryElement.scrollIntoView({
-      behavior:"smooth",
-      block:"center"
-    });
-
-    categoryElement.click();
-
+document.addEventListener("DOMContentLoaded", function () {
+  
+  // 1. ഷോപ്പുകളിലേക്ക് / 'ശനി' സെക്ഷനിലേക്ക് റീഡയറക്ട് ചെയ്യുന്ന ഫങ്ഷൻ
+  function redirectToShops() {
+    // നിങ്ങളുടെ വെബ്‌സൈറ്റിലെ ഷോപ്പുകൾ സ്ഥിതി ചെയ്യുന്ന സെക്ഷന്റെ ID അല്ലെങ്കിൽ ലിങ്ക് ഇവിടെ നൽകാം
+    // ഉദാഹരണത്തിന്: window.location.href = "#shops-section"; അല്ലെങ്കിൽ ഒരു പ്രത്യേക പേജ് ലിങ്ക്
+    const shopSection = document.getElementById("shops-section") || document.querySelector(".shops-container");
+    if (shopSection) {
+      shopSection.scrollIntoView({ behavior: 'smooth' });
+    } else {
+      // സെക്ഷൻ ഐഡി ലഭ്യമല്ലെങ്കിൽ ഷോപ്പ് ലിങ്കിലേക്ക് നേരിട്ട് പോകാൻ
+      console.log("Navigating to Shops category...");
+      // നിങ്ങൾക്ക് ആവശ്യമുള്ള ലിങ്ക് ഇവിടെ നൽകാം, ഉദാഹരണത്തിന്:
+      // window.location.href = "shops.html";
+    }
   }
-}
+
+  // 'SHOP NOW' ബട്ടണിനും പുതിയ ഐക്കണുകൾക്കും ഒരേ ഫങ്ഷൻ കണക്റ്റ് ചെയ്യുന്നു
+  const shopNowBtn = document.querySelector(".shop-now-btn") || document.getElementById("shopNowBtn");
+  if (shopNowBtn) {
+    shopNowBtn.addEventListener("click", redirectToShops);
+  }
+
+  // ചിത്രത്തിലുള്ള പുതിയ ഐക്കണുകൾക്കോ മറ്റ് ഷോപ്പ് ബട്ടണുകൾക്കോ ഈ ക്ലാസ് നൽകിയാൽ 'ശനി' ക്ലിക്ക് ചെയ്ത ഫീൽ കിട്ടും
+  document.querySelectorAll(".trigger-shop-navigation").forEach(item => {
+    item.addEventListener("click", redirectToShops);
+  });
 
 
-/* 010 — SHOP NOW */
-document
-.getElementById("basPosterShopNow")
-.addEventListener("click",function(e){
+  // 2. PWA ഇൻസ്റ്റാളേഷൻ & ഫേസ്ബുക്ക് ഇൻ-ആപ്പ് ബ്രൗസർ ഹാൻഡ്‌ലിംഗ്
+  let deferredPrompt;
+  const installTrigger = document.getElementById("basInstallTrigger");
+  const fbModal = document.getElementById("basFbModal");
 
-  e.preventDefault();
+  // ഫേസ്ബുക്ക് ബ്രൗസർ ആണോ എന്ന് പരിശോധിക്കുന്നു
+  function isFacebookApp() {
+    var ua = navigator.userAgent || navigator.vendor || window.opera;
+    return (ua.indexOf("FBAN") > -1) || (ua.indexOf("FBAV") > -1) || (ua.indexOf("Instagram") > -1);
+  }
 
-  basPosterShoppingAction();
-
-});
-
-
-/* 011 — APP ICON = SHOPPING */
-document
-.getElementById("basPosterAppIcon")
-.addEventListener("click",function(e){
-
-  e.preventDefault();
-
-  basPosterShoppingAction();
-
-});
-
-
-/* 012 — SAVE ICON */
-var basPosterSave =
-    document.getElementById("basPosterSave");
-
-var basSaveHelp =
-    document.getElementById("basSaveHelp");
-
-var basSaveClose =
-    document.getElementById("basSaveClose");
-
-var basPosterInstallPrompt = null;
-
-
-/* 013 — REAL CHROME INSTALL PROMPT */
-window.addEventListener(
-  "beforeinstallprompt",
-  function(e){
-
+  window.addEventListener("beforeinstallprompt", (e) => {
     e.preventDefault();
+    deferredPrompt = e;
+  });
 
-    basPosterInstallPrompt = e;
+  if (installTrigger) {
+    installTrigger.addEventListener("click", async () => {
+      // ഫേസ്ബുക്ക് ബ്രൗസറിലാണെങ്കിൽ ഗൈഡൻസ് മോഡൽ കാണിക്കുക
+      if (isFacebookApp()) {
+        if (fbModal) fbModal.style.display = "flex";
+        return;
+      }
 
+      // സാധാരണ ബ്രൗസറാണെങ്കിൽ PWA ഇൻസ്റ്റാൾ പ്രോംപ്റ്റ് ചെയ്യുക
+      if (deferredPrompt) {
+        deferredPrompt.prompt();
+        const { outcome } = await deferredPrompt.userChoice;
+        if (outcome === 'accepted') {
+          console.log('User accepted the install prompt');
+          // Google Analytics Event Tracking
+          if (typeof gtag === 'function') {
+            gtag('event', 'pwa_install', {
+              'event_category': 'Engagement',
+              'event_label': 'App Installed Successfully'
+            });
+          }
+        }
+        deferredPrompt = null;
+      } else {
+        alert("App is already installed or your browser doesn't support direct installation from this button. You can add it to home screen from browser settings!");
+      }
+    });
   }
-);
 
-
-/* 014 — SAVE CLICK */
-basPosterSave.addEventListener(
-  "click",
-  async function(){
-
-    /*
-      Chrome-ൽ യഥാർത്ഥ Install prompt
-      ലഭ്യമാണെങ്കിൽ ആദ്യം അതുതന്നെ കാണിക്കും.
-    */
-
-    if(basPosterInstallPrompt){
-
-      await basPosterInstallPrompt.prompt();
-
-      await basPosterInstallPrompt.userChoice;
-
-      basPosterInstallPrompt = null;
-
-      return;
-
-    }
-
-    /*
-      Facebook / WhatsApp / unsupported browser:
-      ശരിയായ manual procedure കാണിക്കും.
-    */
-
-    basSaveHelp.classList.add("show");
-
-  }
-);
-
-
-/* 015 — CLOSE */
-basSaveClose.addEventListener(
-  "click",
-  function(){
-
-    basSaveHelp.classList.remove("show");
-
-  }
-);
-
-
-/* 016 — OUTSIDE CLICK CLOSE */
-basSaveHelp.addEventListener(
-  "click",
-  function(e){
-
-    if(e.target === basSaveHelp){
-
-      basSaveHelp.classList.remove("show");
-
-    }
-
-  }
-);
+});
 </script>
 </body>
+
 </html>
