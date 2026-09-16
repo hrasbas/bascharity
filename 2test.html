@@ -1,247 +1,542 @@
- <!-- ==========================================
-     BAS CHARITY - FULL PWA & SHOP INTERACTION CODE
-     ========================================== -->
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="en">
 <head>
-<!-- 001 -->
-<meta charset="UTF-8">
-<!-- 002 -->
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<!-- 003 -->
-<title>BAS CHARITY INTERNATIONAL™</title>
-<!-- 004 -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BAS Charity International</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        body {
+            background-color: #f7f3ed;
+            color: #1b382b;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+        .phone-frame {
+            width: 100%;
+            max-width: 430px;
+            background: #faf6f0;
+            border-radius: 40px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            border: 8px solid #222;
+            position: relative;
+        }
+        /* Top Bar */
+        .top-bar {
+            background: #1b382b;
+            color: #fff;
+            padding: 12px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 13px;
+        }
+        .home-link {
+            color: #fff;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 4px;
+            font-weight: 600;
+        }
+        
+        /* Header Section */
+        .header-section {
+            padding: 15px 20px;
+            text-align: center;
+            background: #faf6f0;
+            border-bottom: 1px solid rgba(0,0,0,0.05);
+        }
+        .nav-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+        .menu-icon {
+            font-size: 22px;
+            cursor: pointer;
+        }
+        .logo-area {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+        }
+        /* PNG Placeholder for Logo */
+        .logo-png-slot {
+            width: 40px;
+            height: 40px;
+            border: 2px dashed #1b382b;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 10px;
+            color: #1b382b;
+            background: rgba(27,56,43,0.05);
+        }
+        .logo-text h1 {
+            font-size: 18px;
+            font-weight: 900;
+            color: #1b382b;
+            letter-spacing: 0.5px;
+        }
+        .logo-text span {
+            font-size: 9px;
+            letter-spacing: 1px;
+            color: #555;
+            display: block;
+        }
+        .lang-dropdowns {
+            display: flex;
+            gap: 6px;
+        }
+        .dropdown-btn {
+            background: #fff;
+            border: 1px solid #ccc;
+            padding: 4px 8px;
+            border-radius: 6px;
+            font-size: 12px;
+            cursor: pointer;
+        }
+        .hub-tag {
+            background: #e6dfd1;
+            display: inline-block;
+            padding: 4px 15px;
+            border-radius: 20px;
+            font-size: 11px;
+            font-weight: 700;
+            color: #5c4a32;
+            margin-top: 5px;
+        }
 
-<style>
-/* 1. സേവ് ഐക്കൺ / PWA ഇൻസ്റ്റാൾ കാർഡ് ഡിസൈൻ */
-.bas-save-card {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  background: linear-gradient(135deg, #f5efe6 0%, #e8dfd1 100%);
-  border: 1px solid rgba(139, 115, 85, 0.2);
-  border-radius: 16px;
-  padding: 16px 20px;
-  margin: 20px auto;
-  max-width: 90%;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.05);
-}
+        /* Hero Banner */
+        .hero-banner {
+            background: linear-gradient(135deg, #fdfbfa 0%, #f0e6d6 100%);
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: relative;
+            overflow: hidden;
+        }
+        .hero-content {
+            max-width: 55%;
+        }
+        .hero-content h2 {
+            font-size: 28px;
+            line-height: 1.1;
+            color: #1b382b;
+            font-weight: 800;
+            margin-bottom: 10px;
+        }
+        .hero-content p {
+            font-size: 13px;
+            color: #444;
+            line-height: 1.4;
+            margin-bottom: 10px;
+        }
+        .hero-quote {
+            font-style: italic;
+            font-size: 13px;
+            color: #333;
+        }
+        /* PNG Placeholder for Hero Image */
+        .hero-png-slot {
+            width: 130px;
+            height: 130px;
+            border: 2px dashed #1b382b;
+            border-radius: 50%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            font-size: 11px;
+            color: #1b382b;
+            background: rgba(27,56,43,0.05);
+            text-align: center;
+            padding: 10px;
+        }
 
-.bas-save-left {
-  display: flex;
-  align-items: center;
-  gap: 15px;
-}
+        /* Shops Row */
+        .shops-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 20px;
+            background: #fff;
+            gap: 6px;
+        }
+        .shop-badge {
+            background: #f4f4f4;
+            padding: 8px 6px;
+            border-radius: 8px;
+            font-size: 11px;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex: 1;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.03);
+            cursor: pointer;
+            border: 1px solid #eaeaea;
+            height: 36px;
+        }
+        .more-shops {
+            font-size: 10px;
+            text-align: center;
+            font-weight: 700;
+            color: #333;
+            background: #f4eade;
+            padding: 6px 4px;
+            border-radius: 8px;
+        }
 
-.bas-save-icon-box {
-  background: #1b382b;
-  color: #fff;
-  width: 48px;
-  height: 48px;
-  border-radius: 12px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 24px;
-  box-shadow: 0 4px 10px rgba(27, 56, 43, 0.3);
-}
+        /* Shop Now Button Area */
+        .shop-now-container {
+            padding: 20px;
+            text-align: center;
+            background: #faf6f0;
+        }
+        .shop-now-btn {
+            background: #1b382b;
+            color: #fff;
+            width: 100%;
+            padding: 16px;
+            border-radius: 35px;
+            border: none;
+            font-size: 18px;
+            font-weight: 700;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            box-shadow: 0 6px 20px rgba(27, 56, 43, 0.25);
+            transition: transform 0.2s;
+        }
+        .shop-now-btn:active {
+            transform: scale(0.98);
+        }
+        .shop-sub-text {
+            font-size: 12px;
+            font-weight: 400;
+            opacity: 0.85;
+            margin-top: 2px;
+        }
+        .links-info {
+            font-size: 12px;
+            color: #444;
+            margin-top: 10px;
+        }
 
-.bas-save-text h4 {
-  margin: 0;
-  font-size: 18px;
-  font-weight: 800;
-  color: #1b382b;
-}
+        /* Save Card / PWA Install */
+        .bas-save-card {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background: linear-gradient(135deg, #f5efe6 0%, #e8dfd1 100%);
+            border: 1px solid rgba(139, 115, 85, 0.2);
+            border-radius: 16px;
+            padding: 14px 18px;
+            margin: 10px 20px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            cursor: pointer;
+        }
+        .bas-save-left {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+        .bas-save-icon-box {
+            background: #1b382b;
+            color: #fff;
+            width: 42px;
+            height: 42px;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 20px;
+        }
+        .bas-save-text h4 {
+            margin: 0;
+            font-size: 16px;
+            font-weight: 800;
+            color: #1b382b;
+        }
+        .bas-save-text p {
+            margin: 2px 0 0 0;
+            font-size: 12px;
+            color: #555;
+        }
+        .bas-save-btn {
+            background: #1b382b;
+            color: #fff;
+            border: none;
+            padding: 10px 18px;
+            font-size: 14px;
+            font-weight: 700;
+            border-radius: 10px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
 
-.bas-save-text p {
-  margin: 3px 0 0 0;
-  font-size: 13px;
-  color: #555;
-}
+        /* Features Footer Icons */
+        .features-footer {
+            display: flex;
+            justify-content: space-around;
+            padding: 15px 10px;
+            background: #fff;
+            border-top: 1px solid #eee;
+            font-size: 11px;
+            color: #333;
+            text-align: center;
+        }
+        .feature-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 4px;
+        }
+        .feature-item span {
+            font-size: 16px;
+        }
 
-.bas-save-btn {
-  background: #1b382b;
-  color: #fff;
-  border: none;
-  padding: 10px 22px;
-  font-size: 15px;
-  font-weight: 700;
-  border-radius: 10px;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  transition: all 0.3s ease;
-  box-shadow: 0 4px 12px rgba(27, 56, 43, 0.25);
-}
+        /* Bottom Branding */
+        .bottom-branding {
+            background: #1b382b;
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+        }
+        .bottom-branding p:first-child {
+            font-size: 13px;
+            font-weight: 600;
+            margin-bottom: 4px;
+        }
+        .bottom-branding p:last-child {
+            font-size: 12px;
+            opacity: 0.8;
+        }
 
-.bas-save-btn:active {
-  transform: scale(0.95);
-}
+        /* Facebook In-App Browser Modal */
+        #basFbModal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.85);
+            z-index: 999999;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+        .bas-fb-content {
+            background: #ffffff;
+            padding: 25px;
+            border-radius: 20px;
+            max-width: 340px;
+            width: 100%;
+            text-align: center;
+            color: #222;
+        }
+        .bas-fb-content h3 {
+            margin-top: 0;
+            color: #1b382b;
+            font-size: 20px;
+        }
+        .bas-fb-content p {
+            font-size: 14px;
+            line-height: 1.5;
+            color: #444;
+            text-align: left;
+        }
+        .bas-fb-close {
+            background: #1b382b;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 8px;
+            font-weight: 700;
+            margin-top: 15px;
+            cursor: pointer;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
 
-/* 2. ഫേസ്ബുക്ക് ഇൻ-ആപ്പ് ബ്രൗസർ ഗൈഡൻസ് മോഡൽ */
-#basFbModal {
-  display: none;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.85);
-  z-index: 999999;
-  justify-content: center;
-  align-items: center;
-  padding: 20px;
-  box-sizing: border-box;
-}
-
-.bas-fb-content {
-  background: #ffffff;
-  padding: 25px;
-  border-radius: 20px;
-  max-width: 340px;
-  width: 100%;
-  text-align: center;
-  color: #222;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.3);
-}
-
-.bas-fb-content h3 {
-  margin-top: 0;
-  color: #1b382b;
-  font-size: 20px;
-}
-
-.bas-fb-content p {
-  font-size: 14px;
-  line-height: 1.5;
-  color: #444;
-  text-align: left;
-}
-
-.bas-fb-close {
-  background: #1b382b;
-  color: #fff;
-  border: none;
-  padding: 10px 20px;
-  border-radius: 8px;
-  font-weight: 700;
-  margin-top: 15px;
-  cursor: pointer;
-  width: 100%;
-}
-</style>
-
-<!-- HTML STRUCTURE -->
-<!-- ചിത്രത്തിൽ കാണുന്നതുപോലുള്ള Save Icon / PWA ഇൻസ്റ്റാൾ സെക്ഷൻ -->
-<div class="bas-save-card" id="basInstallTrigger">
-  <div class="bas-save-left">
-    <div class="bas-save-icon-box">
-      📥
+<div class="phone-frame">
+    <!-- Top Bar -->
+    <div class="top-bar">
+        <span>Your Purchase Satisfies a Hunger™</span>
+        <a href="#" class="home-link">🏠 Home</a>
     </div>
-    <div class="bas-save-text">
-      <h4>Save Icon</h4>
-      <p>Quick Access to Shopping</p>
+
+    <!-- Header Section -->
+    <div class="header-section">
+        <div class="nav-row">
+            <div class="menu-icon">☰</div>
+            <div class="logo-area">
+                <!-- PNG Placeholder for Logo (Replace with <img src="logo.png"> later) -->
+                <div class="logo-png-slot">Logo PNG</div>
+                <div class="logo-text">
+                    <h1>BAS CHARITY</h1>
+                    <span>INTERNATIONAL™</span>
+                </div>
+            </div>
+            <div class="lang-dropdowns">
+                <button class="dropdown-btn">🇺🇸 ▾</button>
+                <button class="dropdown-btn">EN ▾</button>
+            </div>
+        </div>
+        <div class="hub-tag">AN INTERNATIONAL SHOPPING HUB</div>
     </div>
-  </div>
-  <button class="bas-save-btn">
-    SAVE 📥
-  </button>
+
+    <!-- Hero Banner -->
+    <div class="hero-banner">
+        <div class="hero-content">
+            <h2>Shopping + Charity</h2>
+            <p>Without spending even a single penny, you can give food to the poor.</p>
+            <div class="hero-quote">Together for<br>a Hunger Free World ♡</div>
+        </div>
+        <!-- PNG Placeholder for Hero Image (Replace with <img src="hero.png"> later) -->
+        <div class="hero-png-slot">
+            <span>Hero PNG</span>
+            <small style="font-size:9px; opacity:0.7;">Space</small>
+        </div>
+    </div>
+
+    <!-- Shops Row (Triggers redirect) -->
+    <div class="shops-row">
+        <div class="shop-badge shop-redirect-trigger" style="color: #000;">amazon</div>
+        <div class="shop-badge shop-redirect-trigger" style="color: #2874f0;">Flipkart</div>
+        <div class="shop-badge shop-redirect-trigger" style="color: #86b817;">ebay</div>
+        <div class="shop-badge shop-redirect-trigger" style="color: #0071dc;">Walmart</div>
+        <div class="more-shops shop-redirect-trigger">& 50,000+<br>Shops</div>
+    </div>
+
+    <!-- Shop Now Button Area -->
+    <div class="shop-now-container">
+        <button class="shop-now-btn shop-redirect-trigger" id="shopNowBtn">
+            <span>🛒 SHOP NOW ❯</span>
+            <span class="shop-sub-text">(50,000+ SHOPS)</span>
+        </button>
+        <div class="links-info">
+            Worldwide &nbsp;|&nbsp; All Countries &nbsp;|&nbsp; All Languages
+        </div>
+    </div>
+
+    <!-- Save Icon / PWA Card -->
+    <div class="bas-save-card" id="basInstallTrigger">
+        <div class="bas-save-left">
+            <div class="bas-save-icon-box">📥</div>
+            <div class="bas-save-text">
+                <h4>Save Icon</h4>
+                <p>Quick Access to Shopping</p>
+            </div>
+        </div>
+        <button class="bas-save-btn">SAVE 📥</button>
+    </div>
+
+    <!-- Features Footer Icons -->
+    <div class="features-footer">
+        <div class="feature-item"><span>🍃</span> Trusted Shops</div>
+        <div class="feature-item"><span>🛡️</span> Safe & Secure</div>
+        <div class="feature-item"><span>♡</span> Real Impact</div>
+        <div class="feature-item"><span>👥</span> A Better Tomorrow</div>
+    </div>
+
+    <!-- Bottom Branding -->
+    <div class="bottom-branding">
+        <p>Your Purchase Satisfies a Hunger™</p>
+        <p>bascharity.com</p>
+    </div>
 </div>
 
-<!-- ഫേസ്ബുക്ക് ബ്രൗസർ ഗൈഡൻസ് പോപ്പ്അപ്പ് -->
+<!-- Facebook In-App Browser Modal -->
 <div id="basFbModal">
-  <div class="bas-fb-content">
-    <h3>⚠️ Open in External Browser</h3>
-    <p>You are using Facebook's in-app browser. To install the app properly:</p>
-    <p><b>1.</b> Click the <b>Three Dots (...)</b> at the top right.<br>
-       <b>2.</b> Select <b>"Open in External Browser"</b> (Chrome/Safari).<br>
-       <b>3.</b> Then click the **SAVE** button to install!</p>
-    <button class="bas-fb-close" onclick="document.getElementById('basFbModal').style.display='none'">Got It</button>
-  </div>
+    <div class="bas-fb-content">
+        <h3>⚠️ Open in External Browser</h3>
+        <p>You are using Facebook's in-app browser. To install the app properly:</p>
+        <p><b>1.</b> Click the <b>Three Dots (...)</b> at top right.<br>
+           <b>2.</b> Select <b>"Open in External Browser"</b>.<br>
+           <b>3.</b> Then click the <b>SAVE</b> button!</p>
+        <button class="bas-fb-close" onclick="document.getElementById('basFbModal').style.display='none'">Got It</button>
+    </div>
 </div>
 
 <script>
-/* ==========================================
-   JAVASCRIPT LOGIC
-   ========================================== */
-
 document.addEventListener("DOMContentLoaded", function () {
-  
-  // 1. ഷോപ്പുകളിലേക്ക് / 'ശനി' സെക്ഷനിലേക്ക് റീഡയറക്ട് ചെയ്യുന്ന ഫങ്ഷൻ
-  function redirectToShops() {
-    // നിങ്ങളുടെ വെബ്‌സൈറ്റിലെ ഷോപ്പുകൾ സ്ഥിതി ചെയ്യുന്ന സെക്ഷന്റെ ID അല്ലെങ്കിൽ ലിങ്ക് ഇവിടെ നൽകാം
-    // ഉദാഹരണത്തിന്: window.location.href = "#shops-section"; അല്ലെങ്കിൽ ഒരു പ്രത്യേക പേജ് ലിങ്ക്
-    const shopSection = document.getElementById("shops-section") || document.querySelector(".shops-container");
-    if (shopSection) {
-      shopSection.scrollIntoView({ behavior: 'smooth' });
-    } else {
-      // സെക്ഷൻ ഐഡി ലഭ്യമല്ലെങ്കിൽ ഷോപ്പ് ലിങ്കിലേക്ക് നേരിട്ട് പോകാൻ
-      console.log("Navigating to Shops category...");
-      // നിങ്ങൾക്ക് ആവശ്യമുള്ള ലിങ്ക് ഇവിടെ നൽകാം, ഉദാഹരണത്തിന്:
-      // window.location.href = "shops.html";
-    }
-  }
-
-  // 'SHOP NOW' ബട്ടണിനും പുതിയ ഐക്കണുകൾക്കും ഒരേ ഫങ്ഷൻ കണക്റ്റ് ചെയ്യുന്നു
-  const shopNowBtn = document.querySelector(".shop-now-btn") || document.getElementById("shopNowBtn");
-  if (shopNowBtn) {
-    shopNowBtn.addEventListener("click", redirectToShops);
-  }
-
-  // ചിത്രത്തിലുള്ള പുതിയ ഐക്കണുകൾക്കോ മറ്റ് ഷോപ്പ് ബട്ടണുകൾക്കോ ഈ ക്ലാസ് നൽകിയാൽ 'ശനി' ക്ലിക്ക് ചെയ്ത ഫീൽ കിട്ടും
-  document.querySelectorAll(".trigger-shop-navigation").forEach(item => {
-    item.addEventListener("click", redirectToShops);
-  });
-
-
-  // 2. PWA ഇൻസ്റ്റാളേഷൻ & ഫേസ്ബുക്ക് ഇൻ-ആപ്പ് ബ്രൗസർ ഹാൻഡ്‌ലിംഗ്
-  let deferredPrompt;
-  const installTrigger = document.getElementById("basInstallTrigger");
-  const fbModal = document.getElementById("basFbModal");
-
-  // ഫേസ്ബുക്ക് ബ്രൗസർ ആണോ എന്ന് പരിശോധിക്കുന്നു
-  function isFacebookApp() {
-    var ua = navigator.userAgent || navigator.vendor || window.opera;
-    return (ua.indexOf("FBAN") > -1) || (ua.indexOf("FBAV") > -1) || (ua.indexOf("Instagram") > -1);
-  }
-
-  window.addEventListener("beforeinstallprompt", (e) => {
-    e.preventDefault();
-    deferredPrompt = e;
-  });
-
-  if (installTrigger) {
-    installTrigger.addEventListener("click", async () => {
-      // ഫേസ്ബുക്ക് ബ്രൗസറിലാണെങ്കിൽ ഗൈഡൻസ് മോഡൽ കാണിക്കുക
-      if (isFacebookApp()) {
-        if (fbModal) fbModal.style.display = "flex";
-        return;
-      }
-
-      // സാധാരണ ബ്രൗസറാണെങ്കിൽ PWA ഇൻസ്റ്റാൾ പ്രോംപ്റ്റ് ചെയ്യുക
-      if (deferredPrompt) {
-        deferredPrompt.prompt();
-        const { outcome } = await deferredPrompt.userChoice;
-        if (outcome === 'accepted') {
-          console.log('User accepted the install prompt');
-          // Google Analytics Event Tracking
-          if (typeof gtag === 'function') {
-            gtag('event', 'pwa_install', {
-              'event_category': 'Engagement',
-              'event_label': 'App Installed Successfully'
-            });
-          }
+    // 1. Shops Redirect Logic (ശനി / ഷോപ്പ് സെക്ഷൻ ലക്ഷ്യമാക്കി പോകുന്ന ഭാഗം)
+    function redirectToShops() {
+        // നിങ്ങളുടെ ഷോപ്പുകൾ സ്ഥിതി ചെയ്യുന്ന സെക്ഷൻ ഐഡി നൽകാം (ഉദാഹരണത്തിന്: #shops-section)
+        const shopSection = document.getElementById("shops-section");
+        if (shopSection) {
+            shopSection.scrollIntoView({ behavior: 'smooth' });
+        } else {
+            // സെക്ഷൻ ഇല്ലെങ്കിൽ പുതിയ പേജിലേക്കോ ലിങ്കിലേക്കോ മാറ്റാം
+            console.log("Navigating to Shops Hub...");
+            // window.location.href = "shops.html";
         }
-        deferredPrompt = null;
-      } else {
-        alert("App is already installed or your browser doesn't support direct installation from this button. You can add it to home screen from browser settings!");
-      }
-    });
-  }
+    }
 
+    // ഷോപ്പ് ബട്ടണുകൾക്കും ബാഡ്ജുകൾക്കും ഈ ഫങ്ഷൻ കണക്റ്റ് ചെയ്യുന്നു
+    document.querySelectorAll(".shop-redirect-trigger").forEach(item => {
+        item.addEventListener("click", redirectToShops);
+    });
+
+    // 2. PWA Install & Facebook In-App Browser Flow
+    let deferredPrompt;
+    const installTrigger = document.getElementById("basInstallTrigger");
+    const fbModal = document.getElementById("basFbModal");
+
+    function isFacebookApp() {
+        var ua = navigator.userAgent || navigator.vendor || window.opera;
+        return (ua.indexOf("FBAN") > -1) || (ua.indexOf("FBAV") > -1) || (ua.indexOf("Instagram") > -1);
+    }
+
+    window.addEventListener("beforeinstallprompt", (e) => {
+        e.preventDefault();
+        deferredPrompt = e;
+    });
+
+    if (installTrigger) {
+        installTrigger.addEventListener("click", async () => {
+            if (isFacebookApp()) {
+                if (fbModal) fbModal.style.display = "flex";
+                return;
+            }
+
+            if (deferredPrompt) {
+                deferredPrompt.prompt();
+                const { outcome } = await deferredPrompt.userChoice;
+                if (outcome === 'accepted') {
+                    console.log('User accepted the install prompt');
+                }
+                deferredPrompt = null;
+            } else {
+                alert("App is ready! You can add it to your home screen from your browser settings.");
+            }
+        });
+    }
 });
 </script>
-</body>
 
+</body>
 </html>
