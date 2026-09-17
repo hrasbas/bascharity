@@ -1,4 +1,4 @@
-  <!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -81,7 +81,6 @@
             gap: 6px;
         }
 
-        /* logo.png — dotted outline removed */
         .logo-png-slot {
             width: 50px;
             height: 50px;
@@ -102,7 +101,6 @@
                 2px 2px 3px rgba(0,0,0,0.18);
         }
 
-        /* INTERNATIONAL™ same heading size */
         .logo-text span {
             font-size: 16px;
             letter-spacing: 0.5px;
@@ -175,7 +173,6 @@
             color: #333;
         }
 
-        /* adv.png — dotted outline removed */
         .hero-png-slot {
             width: 140px;
             height: 140px;
@@ -201,7 +198,7 @@
             background: #f4f4f4;
             padding: 6px 4px;
             border-radius: 6px;
-            font-size: 10px;
+            font-size: 9px;
             font-weight: 700;
             display: flex;
             align-items: center;
@@ -213,6 +210,7 @@
             border: 1px solid #eaeaea;
             height: 32px;
             transition: transform 0.2s ease, box-shadow 0.2s ease;
+            text-align: center;
         }
 
         .shop-badge:hover {
@@ -270,7 +268,6 @@
             transform: translateY(-2px);
         }
 
-        /* ചെറിയ shine effect */
         .shop-now-btn::after {
             content: "";
             position: absolute;
@@ -289,12 +286,8 @@
         }
 
         @keyframes shopShine {
-            0% {
-                left: -80%;
-            }
-            45%, 100% {
-                left: 140%;
-            }
+            0% { left: -80%; }
+            45%, 100% { left: 140%; }
         }
 
         .shop-sub-text {
@@ -310,60 +303,72 @@
             margin-top: 8px;
         }
 
-        /* Save Card / PWA Install */
-        .bas-save-card {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            background: linear-gradient(135deg, #f5efe6 0%, #e8dfd1 100%);
-            border: 1px solid rgba(139, 115, 85, 0.2);
-            border-radius: 14px;
-            padding: 12px 15px;
-            margin: 8px 15px;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
-            cursor: pointer;
+        /* INSTALL BUTTON */
+        .bas-install-container {
+            padding: 5px 15px 15px;
+            text-align: center;
+            background: #faf6f0;
         }
 
-        .bas-save-left {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-
-        .bas-save-icon-box {
-            background: #1b382b;
+        .bas-install-btn {
+            background: linear-gradient(135deg, #2e7d32, #1b382b);
             color: #fff;
-            width: 38px;
-            height: 38px;
-            border-radius: 8px;
+            width: 100%;
+            padding: 14px;
+            border-radius: 30px;
+            border: none;
+            font-size: 16px;
+            font-weight: 700;
             display: flex;
+            flex-direction: column;
             align-items: center;
             justify-content: center;
-            font-size: 18px;
-        }
-
-        .bas-save-text h4 {
-            margin: 0;
-            font-size: 14px;
-            font-weight: 800;
-            color: #1b382b;
-        }
-
-        .bas-save-text p {
-            margin: 2px 0 0 0;
-            font-size: 11px;
-            color: #555;
-        }
-
-        .bas-save-btn {
-            background: #1b382b;
-            color: #fff;
-            border: none;
-            padding: 8px 14px;
-            font-size: 12px;
-            font-weight: 700;
-            border-radius: 8px;
             cursor: pointer;
+            text-decoration: none;
+            box-shadow:
+                0 5px 15px rgba(27, 56, 43, 0.25),
+                0 0 0 rgba(255,255,255,0);
+            position: relative;
+            overflow: hidden;
+            transition: transform 0.2s ease;
+        }
+
+        .bas-install-btn:hover {
+            transform: translateY(-2px);
+        }
+
+        .bas-install-btn::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: -80%;
+            width: 45%;
+            height: 100%;
+            background: linear-gradient(
+                90deg,
+                transparent,
+                rgba(255,255,255,0.35),
+                transparent
+            );
+            transform: skewX(-20deg);
+            animation: installShine 3.5s infinite;
+        }
+
+        @keyframes installShine {
+            0% { left: -80%; }
+            45%, 100% { left: 140%; }
+        }
+
+        .install-main-text {
+            font-size: 16px;
+            font-weight: 800;
+        }
+
+        .install-sub-text {
+            font-size: 11px;
+            font-weight: 400;
+            opacity: 0.9;
+            margin-top: 2px;
         }
 
         /* Features Footer Icons */
@@ -430,6 +435,16 @@
             max-width: 320px;
             width: 100%;
             text-align: center;
+        }
+
+        .bas-fb-content h3 {
+            font-size: 18px;
+            color: #1b382b;
+        }
+
+        .bas-fb-content p {
+            color: #333;
+            line-height: 1.5;
         }
 
         .bas-fb-close {
@@ -500,22 +515,22 @@
         <img src="adv.png" class="hero-png-slot" alt="BAS Charity">
     </div>
 
-    <!-- Shops Row -->
+    <!-- Globally Recognized Shops -->
     <div class="shops-row">
 
-        <a href="#shops-section" class="shop-badge" style="color: #000;">
+        <a href="#shops-section" class="shop-badge" style="color:#000;">
             Amazon
         </a>
 
-        <a href="#shops-section" class="shop-badge" style="color: #2874f0;">
+        <a href="#shops-section" class="shop-badge" style="color:#2874f0;">
             Flipkart
         </a>
 
-        <a href="#shops-section" class="shop-badge" style="color: #86b817;">
+        <a href="#shops-section" class="shop-badge" style="color:#86b817;">
             eBay
         </a>
 
-        <a href="#shops-section" class="shop-badge" style="color: #0071dc;">
+        <a href="#shops-section" class="shop-badge" style="color:#0071dc;">
             Walmart
         </a>
 
@@ -539,25 +554,17 @@
 
     </div>
 
-    <!-- Save Icon / PWA Card -->
-    <div class="bas-save-card" id="basInstallTrigger">
+    <!-- INSTALL BUTTON -->
+    <div class="bas-install-container">
 
-        <div class="bas-save-left">
-
-            <div class="bas-save-icon-box">
-                📥
-            </div>
-
-            <div class="bas-save-text">
-                <h4>Save Icon</h4>
-                <p>Quick Access to Shopping</p>
-            </div>
-
-        </div>
-
-        <button class="bas-save-btn" onclick="window.location.href='index.html#basCompleteWrapper';">
-    SAVE 📥
-</button>
+        <a
+            href="index.html#basCompleteWrapper"
+            class="bas-install-btn"
+            id="basInstallButton"
+        >
+            <span class="install-main-text">INSTALL / SAVE ICON 📥</span>
+            <span class="install-sub-text">Quick Access to Shopping</span>
+        </a>
 
     </div>
 
@@ -602,10 +609,10 @@
         <h3>⚠️ Open in External Browser</h3>
 
         <p style="font-size:13px; text-align:left; margin-top:10px;">
-            To install the app properly:<br>
+            To continue properly:<br>
             <b>1.</b> Click <b>Three Dots (...)</b> at top right.<br>
             <b>2.</b> Select <b>"Open in External Browser"</b>.<br>
-            <b>3.</b> Click the <b>SAVE</b> button!
+            <b>3.</b> Then click <b>INSTALL / SAVE ICON</b>.
         </p>
 
         <button
@@ -622,10 +629,8 @@
 
 document.addEventListener("DOMContentLoaded", function () {
 
-    let deferredPrompt;
-
-    const installTrigger =
-        document.getElementById("basInstallTrigger");
+    const installButton =
+        document.getElementById("basInstallButton");
 
     const fbModal =
         document.getElementById("basFbModal");
@@ -646,20 +651,13 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
 
-    window.addEventListener("beforeinstallprompt", (e) => {
+    if (installButton) {
 
-        e.preventDefault();
-
-        deferredPrompt = e;
-
-    });
-
-
-    if (installTrigger) {
-
-        installTrigger.addEventListener("click", async () => {
+        installButton.addEventListener("click", function (e) {
 
             if (isFacebookApp()) {
+
+                e.preventDefault();
 
                 if (fbModal) {
                     fbModal.style.display = "flex";
@@ -668,23 +666,14 @@ document.addEventListener("DOMContentLoaded", function () {
                 return;
             }
 
-
-            if (deferredPrompt) {
-
-                deferredPrompt.prompt();
-
-                const { outcome } =
-                    await deferredPrompt.userChoice;
-
-                deferredPrompt = null;
-
-            } else {
-
-                alert(
-                    "App is ready! You can add it to your home screen from your browser menu."
-                );
-
-            }
+            /*
+             * Normal browser:
+             * നേരിട്ട് index.html-ലെ യഥാർത്ഥ
+             * Install ഭാഗത്തേക്ക് പോകും.
+             *
+             * href:
+             * index.html#basCompleteWrapper
+             */
 
         });
 
