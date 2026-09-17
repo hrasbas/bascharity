@@ -302,7 +302,7 @@
             margin-top: 8px;
         }
 
-        /* Install Card */
+        /* Install Icon / PWA Card (Changed from Save to Install) */
         .bas-save-card {
             display: flex;
             align-items: center;
@@ -492,7 +492,7 @@
         <img src="adv.png" class="hero-png-slot" alt="BAS Charity">
     </div>
 
-    <!-- Shops Row -->
+    <!-- Shops Row (Linked to basCompleteWrapper section) -->
     <div class="shops-row" id="shops-section">
 
         <a href="#basCompleteWrapper" class="shop-badge" style="color: #000;">
@@ -517,7 +517,7 @@
 
     </div>
 
-    <!-- Shop Now Button -->
+    <!-- Shop Now Button (Linked to basCompleteWrapper section) -->
     <div class="shop-now-container">
 
         <a href="#basCompleteWrapper" class="shop-now-btn">
@@ -531,29 +531,26 @@
 
     </div>
 
-    <!-- Target Element where original install icon/section resides (basCompleteWrapper) -->
-    <div id="basCompleteWrapper" style="padding: 0 15px;">
-        <!-- Install Icon / PWA Card -->
-        <div class="bas-save-card" id="basInstallTrigger">
+    <!-- Install Icon / PWA Card (Updated from Save to Install) -->
+    <div class="bas-save-card" id="basInstallTrigger">
 
-            <div class="bas-save-left">
+        <div class="bas-save-left">
 
-                <div class="bas-save-icon-box">
-                    📥
-                </div>
-
-                <div class="bas-save-text">
-                    <h4>Install Icon</h4>
-                    <p>Quick Access to Shopping</p>
-                </div>
-
+            <div class="bas-save-icon-box">
+                📥
             </div>
 
-            <button class="bas-save-btn">
-                INSTALL 📥
-            </button>
+            <div class="bas-save-text">
+                <h4>Install Icon</h4>
+                <p>Quick Access to Shopping</p>
+            </div>
 
         </div>
+
+        <button class="bas-save-btn">
+            INSTALL 📥
+        </button>
+
     </div>
 
     <!-- Features Footer Icons -->
@@ -620,7 +617,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
     const installTrigger = document.getElementById("basInstallTrigger");
     const fbModal = document.getElementById("basFbModal");
-    const completeWrapper = document.getElementById("basCompleteWrapper");
 
     function isFacebookApp() {
         var ua = navigator.userAgent || navigator.vendor || window.opera;
@@ -638,11 +634,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
     if (installTrigger) {
         installTrigger.addEventListener("click", async () => {
-            // സ്ക്രോൾ ചെയ്ത് ആ ഇൻസ്റ്റാൾ സെക്ഷൻ / ഐക്കൺ ഭാഗത്തേക്ക് കൃത്യമായി കൊണ്ടുപോകും
-            if (completeWrapper) {
-                completeWrapper.scrollIntoView({ behavior: 'smooth' });
-            }
-
             if (isFacebookApp()) {
                 if (fbModal) {
                     fbModal.style.display = "flex";
@@ -655,8 +646,9 @@ document.addEventListener("DOMContentLoaded", function () {
                 const { outcome } = await deferredPrompt.userChoice;
                 deferredPrompt = null;
             } else {
-                // പ്രൊംപ്റ്റ് ലഭ്യമല്ലെങ്കിൽ യൂസർക്ക് ബ്രൗസർ വഴിയുള്ള ഗൈഡൻസ് നൽകും
-                console.log("Install prompt triggered or target section reached.");
+                alert(
+                    "App is ready! You can add it to your home screen from your browser menu."
+                );
             }
         });
     }
