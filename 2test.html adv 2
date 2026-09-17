@@ -555,9 +555,9 @@
 
         </div>
 
-        <button class="bas-save-btn">
-            SAVE 📥
-        </button>
+        <button class="bas-save-btn" onclick="window.location.href='index.html#basCompleteWrapper';">
+    SAVE 📥
+</button>
 
     </div>
 
