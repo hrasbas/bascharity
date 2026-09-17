@@ -1,4 +1,4 @@
- <!DOCTYPE html>
+  <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -81,6 +81,7 @@
             gap: 6px;
         }
 
+        /* logo.png — dotted outline removed */
         .logo-png-slot {
             width: 50px;
             height: 50px;
@@ -101,6 +102,7 @@
                 2px 2px 3px rgba(0,0,0,0.18);
         }
 
+        /* INTERNATIONAL™ same heading size */
         .logo-text span {
             font-size: 16px;
             letter-spacing: 0.5px;
@@ -173,6 +175,7 @@
             color: #333;
         }
 
+        /* adv.png — dotted outline removed */
         .hero-png-slot {
             width: 140px;
             height: 140px;
@@ -267,6 +270,7 @@
             transform: translateY(-2px);
         }
 
+        /* ചെറിയ shine effect */
         .shop-now-btn::after {
             content: "";
             position: absolute;
@@ -285,8 +289,12 @@
         }
 
         @keyframes shopShine {
-            0% { left: -80%; }
-            45%, 100% { left: 140%; }
+            0% {
+                left: -80%;
+            }
+            45%, 100% {
+                left: 140%;
+            }
         }
 
         .shop-sub-text {
@@ -302,7 +310,7 @@
             margin-top: 8px;
         }
 
-        /* Install Icon / PWA Card (Changed from Save to Install) */
+        /* Save Card / PWA Install */
         .bas-save-card {
             display: flex;
             align-items: center;
@@ -440,7 +448,7 @@
 
 <body>
 
-<div class="phone-frame">
+<div class="phone-frame" id="shops-section">
 
     <!-- Top Bar -->
     <div class="top-bar">
@@ -492,35 +500,35 @@
         <img src="adv.png" class="hero-png-slot" alt="BAS Charity">
     </div>
 
-    <!-- Shops Row (Linked to basCompleteWrapper section) -->
-    <div class="shops-row" id="shops-section">
+    <!-- Shops Row -->
+    <div class="shops-row">
 
-        <a href="#basCompleteWrapper" class="shop-badge" style="color: #000;">
+        <a href="#shops-section" class="shop-badge" style="color: #000;">
             Amazon
         </a>
 
-        <a href="#basCompleteWrapper" class="shop-badge" style="color: #2874f0;">
+        <a href="#shops-section" class="shop-badge" style="color: #2874f0;">
             Flipkart
         </a>
 
-        <a href="#basCompleteWrapper" class="shop-badge" style="color: #86b817;">
+        <a href="#shops-section" class="shop-badge" style="color: #86b817;">
             eBay
         </a>
 
-        <a href="#basCompleteWrapper" class="shop-badge" style="color: #0071dc;">
+        <a href="#shops-section" class="shop-badge" style="color: #0071dc;">
             Walmart
         </a>
 
-        <a href="#basCompleteWrapper" class="more-shops">
+        <a href="#shops-section" class="more-shops">
             <strong>50,000+<br>Shops</strong>
         </a>
 
     </div>
 
-    <!-- Shop Now Button (Linked to basCompleteWrapper section) -->
+    <!-- Shop Now Button -->
     <div class="shop-now-container">
 
-        <a href="#basCompleteWrapper" class="shop-now-btn">
+        <a href="index.html?openCategory=1" class="shop-now-btn">
             <span>🛒 SHOP NOW ❯</span>
             <span class="shop-sub-text">(50,000+ SHOPS)</span>
         </a>
@@ -531,7 +539,7 @@
 
     </div>
 
-    <!-- Install Icon / PWA Card (Updated from Save to Install) -->
+    <!-- Save Icon / PWA Card -->
     <div class="bas-save-card" id="basInstallTrigger">
 
         <div class="bas-save-left">
@@ -541,15 +549,15 @@
             </div>
 
             <div class="bas-save-text">
-                <h4>Install Icon</h4>
+                <h4>Save Icon</h4>
                 <p>Quick Access to Shopping</p>
             </div>
 
         </div>
 
-        <button class="bas-save-btn">
-            INSTALL 📥
-        </button>
+        <button class="bas-save-btn" onclick="window.location.href='index.html#basCompleteWrapper';">
+    SAVE 📥
+</button>
 
     </div>
 
@@ -597,7 +605,7 @@
             To install the app properly:<br>
             <b>1.</b> Click <b>Three Dots (...)</b> at top right.<br>
             <b>2.</b> Select <b>"Open in External Browser"</b>.<br>
-            <b>3.</b> Click the <b>INSTALL</b> button!
+            <b>3.</b> Click the <b>SAVE</b> button!
         </p>
 
         <button
@@ -611,15 +619,25 @@
 </div>
 
 <script>
+
 document.addEventListener("DOMContentLoaded", function () {
 
     let deferredPrompt;
 
-    const installTrigger = document.getElementById("basInstallTrigger");
-    const fbModal = document.getElementById("basFbModal");
+    const installTrigger =
+        document.getElementById("basInstallTrigger");
+
+    const fbModal =
+        document.getElementById("basFbModal");
+
 
     function isFacebookApp() {
-        var ua = navigator.userAgent || navigator.vendor || window.opera;
+
+        var ua =
+            navigator.userAgent ||
+            navigator.vendor ||
+            window.opera;
+
         return (
             ua.indexOf("FBAN") > -1 ||
             ua.indexOf("FBAV") > -1 ||
@@ -627,33 +645,53 @@ document.addEventListener("DOMContentLoaded", function () {
         );
     }
 
+
     window.addEventListener("beforeinstallprompt", (e) => {
+
         e.preventDefault();
+
         deferredPrompt = e;
+
     });
 
+
     if (installTrigger) {
+
         installTrigger.addEventListener("click", async () => {
+
             if (isFacebookApp()) {
+
                 if (fbModal) {
                     fbModal.style.display = "flex";
                 }
+
                 return;
             }
 
+
             if (deferredPrompt) {
+
                 deferredPrompt.prompt();
-                const { outcome } = await deferredPrompt.userChoice;
+
+                const { outcome } =
+                    await deferredPrompt.userChoice;
+
                 deferredPrompt = null;
+
             } else {
+
                 alert(
                     "App is ready! You can add it to your home screen from your browser menu."
                 );
+
             }
+
         });
+
     }
 
 });
+
 </script>
 
 </body>
