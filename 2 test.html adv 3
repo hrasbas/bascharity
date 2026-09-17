@@ -1,0 +1,698 @@
+  <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BAS Charity International</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: #f7f3ed;
+            color: #1b382b;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 10px;
+        }
+
+        .phone-frame {
+            width: 100%;
+            max-width: 380px;
+            background: #faf6f0;
+            border-radius: 35px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            border: 6px solid #222;
+            position: relative;
+        }
+
+        /* Top Bar */
+        .top-bar {
+            background: #1b382b;
+            color: #fff;
+            padding: 10px 15px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 12px;
+        }
+
+        .home-link {
+            color: #fff;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 4px;
+            font-weight: 600;
+        }
+
+        /* Header Section */
+        .header-section {
+            padding: 12px 15px;
+            text-align: center;
+            background: #faf6f0;
+            border-bottom: 1px solid rgba(0,0,0,0.05);
+        }
+
+        .nav-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 8px;
+        }
+
+        .menu-icon {
+            font-size: 20px;
+            cursor: pointer;
+        }
+
+        .logo-area {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 6px;
+        }
+
+        /* logo.png — dotted outline removed */
+        .logo-png-slot {
+            width: 50px;
+            height: 50px;
+            border: none;
+            border-radius: 6px;
+            display: block;
+            object-fit: contain;
+            background: transparent;
+        }
+
+        .logo-text h1 {
+            font-size: 16px;
+            font-weight: 900;
+            color: #1b382b;
+            line-height: 1;
+            text-shadow:
+                1px 1px 0 #d5d0c7,
+                2px 2px 3px rgba(0,0,0,0.18);
+        }
+
+        /* INTERNATIONAL™ same heading size */
+        .logo-text span {
+            font-size: 16px;
+            letter-spacing: 0.5px;
+            color: #555;
+            display: block;
+            font-weight: 800;
+            line-height: 1.1;
+            margin-top: 3px;
+            text-shadow:
+                1px 1px 0 #d5d0c7,
+                2px 2px 3px rgba(0,0,0,0.15);
+        }
+
+        .lang-dropdowns {
+            display: flex;
+            gap: 4px;
+        }
+
+        .dropdown-btn {
+            background: #fff;
+            border: 1px solid #ccc;
+            padding: 3px 6px;
+            border-radius: 4px;
+            font-size: 11px;
+            cursor: pointer;
+        }
+
+        .hub-tag {
+            background: #e6dfd1;
+            display: inline-block;
+            padding: 3px 12px;
+            border-radius: 20px;
+            font-size: 10px;
+            font-weight: 700;
+            color: #5c4a32;
+            margin-top: 4px;
+        }
+
+        /* Hero Banner */
+        .hero-banner {
+            background: linear-gradient(135deg, #fdfbfa 0%, #f0e6d6 100%);
+            padding: 15px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .hero-content {
+            max-width: 55%;
+        }
+
+        .hero-content h2 {
+            font-size: 24px;
+            line-height: 1.1;
+            color: #1b382b;
+            font-weight: 800;
+            margin-bottom: 8px;
+        }
+
+        .hero-content p {
+            font-size: 12px;
+            color: #444;
+            line-height: 1.3;
+            margin-bottom: 8px;
+        }
+
+        .hero-quote {
+            font-style: italic;
+            font-size: 11px;
+            color: #333;
+        }
+
+        /* adv.png — dotted outline removed */
+        .hero-png-slot {
+            width: 140px;
+            height: 140px;
+            border: none;
+            border-radius: 50%;
+            display: block;
+            object-fit: cover;
+            background: transparent;
+            flex-shrink: 0;
+        }
+
+        /* Shops Row */
+        .shops-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 12px 15px;
+            background: #fff;
+            gap: 5px;
+        }
+
+        .shop-badge {
+            background: #f4f4f4;
+            padding: 6px 4px;
+            border-radius: 6px;
+            font-size: 10px;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex: 1;
+            text-decoration: none;
+            color: #333;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.03);
+            border: 1px solid #eaeaea;
+            height: 32px;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .shop-badge:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 10px rgba(0,0,0,0.10);
+        }
+
+        .more-shops {
+            font-size: 9px;
+            text-align: center;
+            font-weight: 700;
+            color: #333;
+            background: #f4eade;
+            padding: 4px;
+            border-radius: 6px;
+            text-decoration: none;
+            flex: 1;
+            height: 32px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        /* Shop Now Button */
+        .shop-now-container {
+            padding: 15px;
+            text-align: center;
+            background: #faf6f0;
+        }
+
+        .shop-now-btn {
+            background: #1b382b;
+            color: #fff;
+            width: 100%;
+            padding: 14px;
+            border-radius: 30px;
+            border: none;
+            font-size: 16px;
+            font-weight: 700;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            text-decoration: none;
+            box-shadow:
+                0 5px 15px rgba(27, 56, 43, 0.25),
+                0 0 0 rgba(255,255,255,0);
+            position: relative;
+            overflow: hidden;
+            transition: transform 0.2s ease;
+        }
+
+        .shop-now-btn:hover {
+            transform: translateY(-2px);
+        }
+
+        /* ചെറിയ shine effect */
+        .shop-now-btn::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: -80%;
+            width: 45%;
+            height: 100%;
+            background: linear-gradient(
+                90deg,
+                transparent,
+                rgba(255,255,255,0.35),
+                transparent
+            );
+            transform: skewX(-20deg);
+            animation: shopShine 3.5s infinite;
+        }
+
+        @keyframes shopShine {
+            0% {
+                left: -80%;
+            }
+            45%, 100% {
+                left: 140%;
+            }
+        }
+
+        .shop-sub-text {
+            font-size: 11px;
+            font-weight: 400;
+            opacity: 0.85;
+            margin-top: 2px;
+        }
+
+        .links-info {
+            font-size: 11px;
+            color: #444;
+            margin-top: 8px;
+        }
+
+        /* Save Card / PWA Install */
+        .bas-save-card {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background: linear-gradient(135deg, #f5efe6 0%, #e8dfd1 100%);
+            border: 1px solid rgba(139, 115, 85, 0.2);
+            border-radius: 14px;
+            padding: 12px 15px;
+            margin: 8px 15px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+            cursor: pointer;
+        }
+
+        .bas-save-left {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .bas-save-icon-box {
+            background: #1b382b;
+            color: #fff;
+            width: 38px;
+            height: 38px;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 18px;
+        }
+
+        .bas-save-text h4 {
+            margin: 0;
+            font-size: 14px;
+            font-weight: 800;
+            color: #1b382b;
+        }
+
+        .bas-save-text p {
+            margin: 2px 0 0 0;
+            font-size: 11px;
+            color: #555;
+        }
+
+        .bas-save-btn {
+            background: #1b382b;
+            color: #fff;
+            border: none;
+            padding: 8px 14px;
+            font-size: 12px;
+            font-weight: 700;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+
+        /* Features Footer Icons */
+        .features-footer {
+            display: flex;
+            justify-content: space-around;
+            padding: 12px 8px;
+            background: #fff;
+            border-top: 1px solid #eee;
+            font-size: 10px;
+            color: #333;
+            text-align: center;
+        }
+
+        .feature-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 2px;
+        }
+
+        .feature-item span {
+            font-size: 14px;
+        }
+
+        /* Bottom Branding */
+        .bottom-branding {
+            background: #1b382b;
+            color: #fff;
+            text-align: center;
+            padding: 15px;
+        }
+
+        .bottom-branding p:first-child {
+            font-size: 12px;
+            font-weight: 600;
+            margin-bottom: 2px;
+        }
+
+        .bottom-branding p:last-child {
+            font-size: 11px;
+            opacity: 0.8;
+        }
+
+        /* Facebook Modal */
+        #basFbModal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.85);
+            z-index: 999999;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .bas-fb-content {
+            background: #ffffff;
+            padding: 20px;
+            border-radius: 16px;
+            max-width: 320px;
+            width: 100%;
+            text-align: center;
+        }
+
+        .bas-fb-close {
+            background: #1b382b;
+            color: #fff;
+            border: none;
+            padding: 8px 16px;
+            border-radius: 6px;
+            font-weight: 700;
+            margin-top: 12px;
+            cursor: pointer;
+            width: 100%;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="phone-frame" id="shops-section">
+
+    <!-- Top Bar -->
+    <div class="top-bar">
+        <span>Your Purchase Satisfies a Hunger™</span>
+        <a href="#" class="home-link">🏠 Home</a>
+    </div>
+
+    <!-- Header Section -->
+    <div class="header-section">
+        <div class="nav-row">
+
+            <div class="menu-icon">☰</div>
+
+            <div class="logo-area">
+                <img src="logo.png" class="logo-png-slot" alt="BAS Charity Logo">
+
+                <div class="logo-text">
+                    <h1>BAS CHARITY</h1>
+                    <span>INTERNATIONAL™</span>
+                </div>
+            </div>
+
+            <div class="lang-dropdowns">
+                <button class="dropdown-btn">🇺🇸 ▾</button>
+                <button class="dropdown-btn">EN ▾</button>
+            </div>
+
+        </div>
+
+        <div class="hub-tag">AN INTERNATIONAL SHOPPING HUB</div>
+    </div>
+
+    <!-- Hero Banner -->
+    <div class="hero-banner">
+
+        <div class="hero-content">
+            <h2>Shopping + Charity</h2>
+
+            <p>
+                Without spending even a single penny, you can give food to the poor.
+            </p>
+
+            <div class="hero-quote">
+                Together for<br>
+                a Hunger Free World ♡
+            </div>
+        </div>
+
+        <img src="adv.png" class="hero-png-slot" alt="BAS Charity">
+    </div>
+
+    <!-- Shops Row -->
+    <div class="shops-row">
+
+        <a href="#shops-section" class="shop-badge" style="color: #000;">
+            Amazon
+        </a>
+
+        <a href="#shops-section" class="shop-badge" style="color: #2874f0;">
+            Flipkart
+        </a>
+
+        <a href="#shops-section" class="shop-badge" style="color: #86b817;">
+            eBay
+        </a>
+
+        <a href="#shops-section" class="shop-badge" style="color: #0071dc;">
+            Walmart
+        </a>
+
+        <a href="#shops-section" class="more-shops">
+            <strong>50,000+<br>Shops</strong>
+        </a>
+
+    </div>
+
+    <!-- Shop Now Button -->
+    <div class="shop-now-container">
+
+        <a href="index.html?openCategory=1" class="shop-now-btn">
+            <span>🛒 SHOP NOW ❯</span>
+            <span class="shop-sub-text">(50,000+ SHOPS)</span>
+        </a>
+
+        <div class="links-info">
+            Worldwide &nbsp;|&nbsp; All Countries &nbsp;|&nbsp; All Languages
+        </div>
+
+    </div>
+
+    <!-- Save Icon / PWA Card -->
+    <div class="bas-save-card" id="basInstallTrigger">
+
+        <div class="bas-save-left">
+
+            <div class="bas-save-icon-box">
+                📥
+            </div>
+
+            <div class="bas-save-text">
+                <h4>Save Icon</h4>
+                <p>Quick Access to Shopping</p>
+            </div>
+
+        </div>
+
+        <button class="bas-save-btn" onclick="window.location.href='index.html#basCompleteWrapper';">
+    SAVE 📥
+</button>
+
+    </div>
+
+    <!-- Features Footer Icons -->
+    <div class="features-footer">
+
+        <div class="feature-item">
+            <span>🍃</span>
+            Trusted Shops
+        </div>
+
+        <div class="feature-item">
+            <span>🛡️</span>
+            Safe & Secure
+        </div>
+
+        <div class="feature-item">
+            <span>♡</span>
+            Real Impact
+        </div>
+
+        <div class="feature-item">
+            <span>👥</span>
+            A Better Tomorrow
+        </div>
+
+    </div>
+
+    <!-- Bottom Branding -->
+    <div class="bottom-branding">
+        <p>Your Purchase Satisfies a Hunger™</p>
+        <p>bascharity.com</p>
+    </div>
+
+</div>
+
+<!-- Facebook In-App Browser Modal -->
+<div id="basFbModal">
+
+    <div class="bas-fb-content">
+
+        <h3>⚠️ Open in External Browser</h3>
+
+        <p style="font-size:13px; text-align:left; margin-top:10px;">
+            To install the app properly:<br>
+            <b>1.</b> Click <b>Three Dots (...)</b> at top right.<br>
+            <b>2.</b> Select <b>"Open in External Browser"</b>.<br>
+            <b>3.</b> Click the <b>SAVE</b> button!
+        </p>
+
+        <button
+            class="bas-fb-close"
+            onclick="document.getElementById('basFbModal').style.display='none'">
+            Got It
+        </button>
+
+    </div>
+
+</div>
+
+<script>
+
+document.addEventListener("DOMContentLoaded", function () {
+
+    let deferredPrompt;
+
+    const installTrigger =
+        document.getElementById("basInstallTrigger");
+
+    const fbModal =
+        document.getElementById("basFbModal");
+
+
+    function isFacebookApp() {
+
+        var ua =
+            navigator.userAgent ||
+            navigator.vendor ||
+            window.opera;
+
+        return (
+            ua.indexOf("FBAN") > -1 ||
+            ua.indexOf("FBAV") > -1 ||
+            ua.indexOf("Instagram") > -1
+        );
+    }
+
+
+    window.addEventListener("beforeinstallprompt", (e) => {
+
+        e.preventDefault();
+
+        deferredPrompt = e;
+
+    });
+
+
+    if (installTrigger) {
+
+        installTrigger.addEventListener("click", async () => {
+
+            if (isFacebookApp()) {
+
+                if (fbModal) {
+                    fbModal.style.display = "flex";
+                }
+
+                return;
+            }
+
+
+            if (deferredPrompt) {
+
+                deferredPrompt.prompt();
+
+                const { outcome } =
+                    await deferredPrompt.userChoice;
+
+                deferredPrompt = null;
+
+            } else {
+
+                alert(
+                    "App is ready! You can add it to your home screen from your browser menu."
+                );
+
+            }
+
+        });
+
+    }
+
+});
+
+</script>
+
+</body>
+</html>
