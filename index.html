@@ -9143,6 +9143,229 @@ body.bas-pwa-installed #fbPrismStrip,
   });
 })();
 </script>
+
+ <!-- 001 -->
+<script>
+/* 002 — BAS COUNTRY / SHOP SAFE LOADER */
+(function () {
+  "use strict";
+
+  const BAS_RETRY_LIMIT = 20;
+  const BAS_RETRY_DELAY = 500;
+
+  let basRetryTimer = null;
+  let basRetryCount = 0;
+  let basLastCountry = "";
+
+  function basCountryName(country) {
+    return String(country || "india").trim().toLowerCase();
+  }
+
+  function basShowLoading() {
+    const box = document.getElementById("featuredShops");
+
+    if (box && !box.children.length) {
+      box.innerHTML =
+        '<div style="text-align:center;padding:20px;color:#ff9800;font-weight:bold;">' +
+        'Loading shops...' +
+        '</div>';
+    }
+  }
+
+  function basCountryReady(country) {
+    const c = basCountryName(country);
+
+    return (
+      window.countryShops &&
+      Array.isArray(window.countryShops[c]) &&
+      window.countryShops[c].length > 0
+    );
+  }
+
+  function basRefreshCountry(country) {
+    const c = basCountryName(country);
+
+    if (!basCountryReady(c)) {
+      return false;
+    }
+
+    basLastCountry = c;
+
+    try {
+      localStorage.setItem("selectedCountry", c);
+    } catch (e) {}
+
+    /* Existing shop system */
+    if (typeof window.loadShops === "function") {
+      window.loadShops(window.countryShops[c]);
+    }
+
+    /* Existing category system */
+    if (typeof window.changeCountry === "function") {
+      try {
+        window.changeCountry(c);
+      } catch (e) {}
+    }
+
+    return true;
+  }
+
+  function basRetryCountry(country) {
+    const c = basCountryName(country);
+
+    clearTimeout(basRetryTimer);
+
+    if (basRefreshCountry(c)) {
+      basRetryCount = 0;
+      return;
+    }
+
+    if (basRetryCount >= BAS_RETRY_LIMIT) {
+      basRetryCount = 0;
+      return;
+    }
+
+    basRetryCount++;
+
+    basRetryTimer = setTimeout(function () {
+      basRetryCountry(c);
+    }, BAS_RETRY_DELAY);
+  }
+
+  /*
+   * Existing country loader is used first.
+   * We do NOT create another country JS loader.
+   */
+  function basStartCountry(country) {
+    const c = basCountryName(country);
+
+    basRetryCount = 0;
+    basLastCountry = "";
+
+    clearTimeout(basRetryTimer);
+
+    basShowLoading();
+
+    try {
+      localStorage.setItem("selectedCountry", c);
+    } catch (e) {}
+
+    /*
+     * Use the site's existing function.
+     */
+    if (typeof window.setSelectedCountry === "function") {
+      window.setSelectedCountry(c);
+    } else if (typeof window.renderCountry === "function") {
+      window.renderCountry(c);
+    }
+
+    /*
+     * If country file is slow, keep checking.
+     */
+    basRetryCountry(c);
+  }
+
+  /*
+   * Wait until the existing page is ready.
+   */
+  function basInitialize() {
+    let savedCountry = "india";
+
+    try {
+      savedCountry =
+        localStorage.getItem("selectedCountry") || "india";
+    } catch (e) {}
+
+    savedCountry = basCountryName(savedCountry);
+
+    /*
+     * Do not replace the existing country buttons.
+     * Just make sure their clicks get a retry check.
+     */
+    document.querySelectorAll(".country-btn").forEach(function (btn) {
+      if (btn.dataset.basSafeLoader === "1") return;
+
+      btn.dataset.basSafeLoader = "1";
+
+      btn.addEventListener("click", function () {
+        const country =
+          btn.getAttribute("data-country") ||
+          btn.textContent ||
+          "india";
+
+        setTimeout(function () {
+          basRetryCount = 0;
+          basRetryCountry(country);
+        }, 100);
+      });
+    });
+
+    /*
+     * Existing ALL COUNTRIES dropdown.
+     */
+    const allCountries =
+      document.getElementById("allCountries");
+
+    if (
+      allCountries &&
+      allCountries.dataset.basSafeLoader !== "1"
+    ) {
+      allCountries.dataset.basSafeLoader = "1";
+
+      allCountries.addEventListener("change", function () {
+        if (!this.value) return;
+
+        const country = this.value;
+
+        setTimeout(function () {
+          basRetryCount = 0;
+          basRetryCountry(country);
+        }, 100);
+      });
+    }
+
+    /*
+     * Initial country.
+     */
+    basStartCountry(savedCountry);
+  }
+
+  if (document.readyState === "loading") {
+    document.addEventListener(
+      "DOMContentLoaded",
+      basInitialize,
+      false
+    );
+  } else {
+    basInitialize();
+  }
+
+  /*
+   * Final safety check after everything has loaded.
+   */
+  window.addEventListener("load", function () {
+    let country = "india";
+
+    try {
+      country =
+        localStorage.getItem("selectedCountry") || "india";
+    } catch (e) {}
+
+    country = basCountryName(country);
+
+    setTimeout(function () {
+      if (
+        !basCountryReady(country) ||
+        basLastCountry !== country
+      ) {
+        basRetryCount = 0;
+        basRetryCountry(country);
+      }
+    }, 300);
+  });
+
+})();
+</script>
 </body> <!-- ഇതിന് തൊട്ടു മുകളിൽ -->
 </html>
 
