@@ -6445,7 +6445,22 @@ function triggerBackToAll() {
   categorySearch.value = "";
   renderCategory("all");
 }
+<script>
+window.addEventListener("load", function () {
+  const params = new URLSearchParams(window.location.search);
 
+  if (params.get("openAllShops") === "1") {
+    triggerBackToAll();
+
+    setTimeout(function () {
+      const heading = document.getElementById("categoryHeading");
+      if (heading) {
+        heading.scrollIntoView({ behavior: "smooth", block: "start" });
+      }
+    }, 300);
+  }
+});
+</script>
 // MAIN RENDER
 function renderCategory(cat) {
   const isAll = (cat === "all");
