@@ -3440,7 +3440,7 @@ function loadShops(shopsArray) {
         } catch (e) { }
 
         featuredShops.innerHTML += `
-<a href="${shop.u}" target="_blank"
+<a href="${(shop.a || "").trim() || shop.u}" target="_blank"
 class="shopCard"
 style="border-left-color:${colors[index % 10]}">
 
