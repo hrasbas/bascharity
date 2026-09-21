@@ -6530,7 +6530,7 @@ function createShopCard(shop, index) {
   const leftColor = colorSet[index % colorSet.length];
 
   const card = document.createElement("a");
-  card.href = shop.u;
+  card.href = (shop.a || "").trim() || shop.u;
   card.target = "_blank";
   card.className = "shopCard";
   card.style.borderLeftColor = leftColor;
