@@ -602,7 +602,7 @@ document.addEventListener("click", function(e){
   if ((shop.a || "").trim() === "") {
      analyticsExternal(shop.u);
   } else {
-   analyticsAffiliate(shopName, shop.u);
+   analyticsAffiliate(shopName, shop.a)
   }
 });
 
