@@ -1890,7 +1890,7 @@ END OF BAS ANALYTICS
       var categoryElement = document.getElementById("categoryHeading");
       if (categoryElement) {
         categoryElement.scrollIntoView({ behavior: 'smooth' });
-        categoryElement.click();
+        triggerBackToAll();
 
         trackCelestialEvent('category_auto_trigger', {
           triggered_by: planetName
