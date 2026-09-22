@@ -6419,10 +6419,53 @@ categorySearch.addEventListener("input", function () {
 
   categoryShops.innerHTML = "";
 
-  filtered.forEach((shop, index) => {
-    createShopCard(shop, index);
-  });
-});
+  // --- LAZY LOADING & MORE SHOPS (10, 10, 10 BATCH SYSTEM) ---
+
+let currentLoadedCount = 0;
+const batchStep = 10;
+const maxLazyLimit = 50; // ആദ്യത്തെ 50 വരെ ലേസി ലോഡിംഗ് / അതിനുശേഷം MORE SHOPS വഴിയും 10, 10 വെച്ച് കൂട്ടാം
+
+// പഴയ scroll handler ഉണ്ടെങ്കിൽ നീക്കം ചെയ്യുക
+if (window._currentShopScrollHandler) {
+  window.removeEventListener("scroll", window._currentShopScrollHandler);
+  window._currentShopScrollHandler = null;
+}
+
+function renderNextBatch() {
+  if (currentLoadedCount >= shops.length) {
+    return;
+  }
+
+  const nextLimit = Math.min(currentLoadedCount + batchStep, shops.length);
+
+  for (let i = currentLoadedCount; i < nextLimit; i++) {
+    createShopCard(shops[i], i);
+  }
+
+  currentLoadedCount = nextLimit;
+  
+  // നിലവിലുള്ള 50-shop / MORE SHOPS UI കൺട്രോളുകൾ അപ്ഡേറ്റ് ചെയ്യാൻ
+  if (typeof setupShopControls === 'function') {
+    setupShopControls();
+  }
+}
+
+// ആദ്യത്തെ 10 എണ്ണം ലോഡ് ചെയ്യുന്നു
+renderNextBatch();
+
+// സ്ക്രോൾ ചെയ്യുമ്പോൾ ആദ്യത്തെ 50 വരെ 10, 10 വെച്ച് ഓട്ടോമാറ്റിക്കായി വരാൻ
+window._currentShopScrollHandler = function () {
+  if (currentLoadedCount >= maxLazyLimit || currentLoadedCount >= shops.length) {
+    return;
+  }
+
+  if (window.innerHeight + window.scrollY >= document.body.offsetHeight - 400) {
+    renderNextBatch();
+  }
+};
+
+window.addEventListener("scroll", window._currentShopScrollHandler);
+
 
 // COUNTRY CHANGE (PART 1)
 function changeCountry(countryName) {
