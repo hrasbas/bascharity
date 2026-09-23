@@ -2373,20 +2373,69 @@ loader = new THREE.TextureLoader();
 earthGroup = new THREE.Group(); 
 
 // ഗ്ലോബിലേക്ക് ഭൂമിയുടെ സാറ്റലൈറ്റ് മാപ്പ് ടെക്സ്ചർ ലോഡ് ചെയ്യുന്നു
-earth = new THREE.Mesh(
-new THREE.SphereGeometry(2, 32, 32),
-new THREE.MeshStandardMaterial({
-map: loader.load(
-'https://raw.githubusercontent.com/mrdoob/three.js/master/examples/textures/planets/earth_atmos_2048.jpg',
-undefined,
-undefined,
-function () { console.error('Earth texture failed to load'); }
-),
-metalness: 0.2,
-roughness: 0.8
-})
+/* 2379 */
+const textureLoader = new THREE.TextureLoader();
+textureLoader.crossOrigin = 'anonymous';
+
+/* 2380 */
+const earthTexture = textureLoader.load(
+  'https://unpkg.com/three-globe/example/img/earth-blue-marble.jpg',
+  function (texture) {
+    texture.generateMipmaps = true;
+    texture.minFilter = THREE.LinearMipmapLinearFilter;
+
+    if (
+      typeof renderer !== 'undefined' &&
+      typeof scene !== 'undefined' &&
+      typeof camera !== 'undefined'
+    ) {
+      renderer.render(scene, camera);
+    }
+  },
+  undefined,
+  function () {
+    console.error('Earth texture failed to load');
+  }
 );
-earthGroup.add(earth); 
+
+/* 2381 */
+if (typeof renderer !== 'undefined') {
+  renderer.setPixelRatio(
+    Math.min(window.devicePixelRatio, 1.5)
+  );
+}
+
+/* 2382 */
+const earthMaterial = new THREE.MeshStandardMaterial({
+  map: earthTexture,
+  metalness: 0.1,
+  roughness: 0.9
+});
+
+/* 2383 */
+earth = new THREE.Mesh(
+  new THREE.SphereGeometry(2, 32, 32),
+  earthMaterial
+);
+
+/* 2384 */
+earthGroup.add(earth);
+
+/* 2385 */
+/* Earth texture and material completed */
+
+/* 2386 */
+/* Existing BAS logo/canvas code continues below */
+
+/* 2387 */
+/* Do not delete the code starting with:
+   let canvas = document.createElement('canvas');
+*/
+
+/* 2388 */
+/* End of replacement */
+
+/* 2389 */
 
 // ഭൂമിക്ക് മുകളിലായി കറങ്ങുന്ന രീതിയിൽ BAS എന്ന അക്ഷരങ്ങൾ ക്യാൻവാസ് വഴി വരച്ച് ചേർക്കുന്നു
 let canvas = document.createElement('canvas');
