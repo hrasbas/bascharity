@@ -1,0 +1,454 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>BAS Charity - Hunger Video</title>
+
+<style>
+/* 001 */
+html,body{
+  margin:0;
+  padding:0;
+  background:#111;
+  color:white;
+  font-family:Arial,sans-serif;
+  text-align:center;
+}
+
+/* 002 */
+#videoCanvas{
+  width:100%;
+  max-width:600px;
+  aspect-ratio:9/16;
+  display:block;
+  margin:10px auto;
+  background:#111;
+}
+
+/* 003 */
+#recordBtn{
+  background:#e53935;
+  color:white;
+  border:0;
+  border-radius:10px;
+  padding:14px 24px;
+  font-size:18px;
+  font-weight:bold;
+  cursor:pointer;
+}
+
+/* 004 */
+#downloadLink{
+  display:none;
+  margin:12px auto;
+  width:max-content;
+  background:#168a3a;
+  color:white;
+  padding:12px 20px;
+  border-radius:8px;
+  text-decoration:none;
+  font-weight:bold;
+}
+</style>
+</head>
+
+<body>
+
+<!-- 005 -->
+<canvas id="videoCanvas" width="540" height="960"></canvas>
+
+<!-- 006 -->
+<button id="recordBtn">🔴 RECORD VIDEO</button>
+
+<!-- 007 -->
+<a id="downloadLink" download="bas-charity-hunger.mp4">
+  ⬇️ SAVE VIDEO
+</a>
+
+<script>
+
+/* 008 */
+const canvas = document.getElementById("videoCanvas");
+const ctx = canvas.getContext("2d");
+
+const recordBtn = document.getElementById("recordBtn");
+const downloadLink = document.getElementById("downloadLink");
+
+let recording = false;
+let startTime = 0;
+let recorder;
+let chunks = [];
+
+
+/* 009 — DRAW BACKGROUND */
+function drawBackground(){
+
+  const g = ctx.createLinearGradient(
+    0,0,
+    canvas.width,canvas.height
+  );
+
+  g.addColorStop(0,"#171717");
+  g.addColorStop(0.55,"#342719");
+  g.addColorStop(1,"#f1c27d");
+
+  ctx.fillStyle = g;
+  ctx.fillRect(
+    0,0,
+    canvas.width,
+    canvas.height
+  );
+}
+
+
+/* 010 — DRAW SKELETON */
+function drawSkeleton(x,y,scale){
+
+  ctx.save();
+
+  ctx.translate(x,y);
+  ctx.scale(scale,scale);
+
+  ctx.strokeStyle="#e5e5e5";
+  ctx.fillStyle="#e5e5e5";
+  ctx.lineWidth=8;
+  ctx.lineCap="round";
+
+  /* skull */
+  ctx.beginPath();
+  ctx.arc(0,-170,48,0,Math.PI*2);
+  ctx.stroke();
+
+  /* eyes */
+  ctx.fillStyle="#222";
+
+  ctx.beginPath();
+  ctx.arc(-17,-180,8,0,Math.PI*2);
+  ctx.fill();
+
+  ctx.beginPath();
+  ctx.arc(17,-180,8,0,Math.PI*2);
+  ctx.fill();
+
+  /* mouth */
+  ctx.beginPath();
+  ctx.moveTo(-22,-150);
+  ctx.lineTo(22,-150);
+  ctx.stroke();
+
+  /* neck */
+  ctx.strokeStyle="#e5e5e5";
+
+  ctx.beginPath();
+  ctx.moveTo(0,-120);
+  ctx.lineTo(0,-95);
+  ctx.stroke();
+
+  /* spine */
+  ctx.beginPath();
+  ctx.moveTo(0,-95);
+  ctx.lineTo(0,100);
+  ctx.stroke();
+
+  /* ribs */
+  for(let i=0;i<5;i++){
+
+    const yy=-75+(i*32);
+
+    ctx.beginPath();
+    ctx.moveTo(0,yy);
+    ctx.quadraticCurveTo(
+      -55,yy+5,
+      -58,yy+25
+    );
+    ctx.stroke();
+
+    ctx.beginPath();
+    ctx.moveTo(0,yy);
+    ctx.quadraticCurveTo(
+      55,yy+5,
+      58,yy+25
+    );
+    ctx.stroke();
+  }
+
+  /* left arm */
+  ctx.beginPath();
+  ctx.moveTo(-5,-80);
+  ctx.lineTo(-80,-20);
+  ctx.lineTo(-130,45);
+  ctx.stroke();
+
+  /* right arm reaching */
+  ctx.beginPath();
+  ctx.moveTo(5,-80);
+  ctx.lineTo(75,-20);
+  ctx.lineTo(150,-5);
+  ctx.stroke();
+
+  /* legs */
+  ctx.beginPath();
+  ctx.moveTo(0,100);
+  ctx.lineTo(-55,190);
+  ctx.lineTo(-75,285);
+  ctx.stroke();
+
+  ctx.beginPath();
+  ctx.moveTo(0,100);
+  ctx.lineTo(55,190);
+  ctx.lineTo(75,285);
+  ctx.stroke();
+
+  ctx.restore();
+}
+
+
+/* 011 — FOOD BAG */
+function drawFoodBag(x,y){
+
+  ctx.save();
+
+  ctx.fillStyle="#c88b4a";
+
+  ctx.fillRect(
+    x-90,
+    y-70,
+    180,
+    140
+  );
+
+  ctx.fillStyle="#fff";
+
+  ctx.font="bold 22px Arial";
+  ctx.textAlign="center";
+
+  ctx.fillText(
+    "FOOD",
+    x,
+    y-5
+  );
+
+  ctx.font="18px Arial";
+
+  ctx.fillText(
+    "❤️",
+    x,
+    y+35
+  );
+
+  ctx.restore();
+}
+
+
+/* 012 — MAIN ANIMATION */
+function drawScene(time){
+
+  const elapsed =
+    time-startTime;
+
+  const seconds =
+    elapsed/1000;
+
+  drawBackground();
+
+  /* TITLE */
+  ctx.textAlign="center";
+
+  ctx.fillStyle="#fff";
+  ctx.font="bold 30px Arial";
+
+  ctx.fillText(
+    "BAS CHARITY INTERNATIONAL",
+    canvas.width/2,
+    55
+  );
+
+
+  /* SKELETON */
+  let skeletonX=190;
+
+  if(seconds>3 && seconds<7){
+
+    skeletonX =
+      190 +
+      Math.sin(
+        (seconds-3)*3
+      )*35;
+  }
+
+  drawSkeleton(
+    skeletonX,
+    570,
+    1.05
+  );
+
+
+  /* HUNGER MESSAGE */
+  if(seconds<8){
+
+    ctx.fillStyle="#fff";
+    ctx.font="bold 32px Arial";
+
+    ctx.fillText(
+      "I'M HUNGRY...",
+      canvas.width/2,
+      820
+    );
+  }
+
+
+  /* FOOD APPEARS */
+  if(seconds>=5){
+
+    drawFoodBag(
+      410,
+      430
+    );
+  }
+
+
+  /* FINAL MESSAGE */
+  if(seconds>=8){
+
+    ctx.fillStyle="#fff";
+
+    ctx.font=
+      "bold 32px Arial";
+
+    ctx.fillText(
+      "YOUR PURCHASE",
+      canvas.width/2,
+      760
+    );
+
+    ctx.fillStyle="#ffd21c";
+
+    ctx.font=
+      "bold 34px Arial";
+
+    ctx.fillText(
+      "SATISFIES THE HUNGER",
+      canvas.width/2,
+      805
+    );
+
+    ctx.fillStyle="#fff";
+
+    ctx.font="20px Arial";
+
+    ctx.fillText(
+      "YOU SHOP  →  WE SHARE  →  HUNGER ENDS",
+      canvas.width/2,
+      860
+    );
+  }
+
+
+  /* WEBSITE */
+  ctx.fillStyle="#fff";
+
+  ctx.font="bold 22px Arial";
+
+  ctx.fillText(
+    "bascharity.com",
+    canvas.width/2,
+    920
+  );
+
+
+  /* CONTINUE */
+  if(recording){
+
+    if(seconds<12){
+
+      requestAnimationFrame(
+        drawScene
+      );
+
+    }else{
+
+      recording=false;
+
+      recorder.stop();
+
+      recordBtn.innerText=
+        "🔴 RECORD VIDEO";
+    }
+
+  }else{
+
+    requestAnimationFrame(
+      drawScene
+    );
+  }
+}
+
+
+/* 013 — RECORD VIDEO */
+recordBtn.onclick=function(){
+
+  if(recording) return;
+
+  chunks=[];
+
+  const stream =
+    canvas.captureStream(30);
+
+  recorder =
+    new MediaRecorder(
+      stream,
+      {
+        mimeType:
+        "video/webm;codecs=vp9"
+      }
+    );
+
+  recorder.ondataavailable=function(e){
+
+    if(e.data.size>0){
+      chunks.push(e.data);
+    }
+  };
+
+
+  recorder.onstop=function(){
+
+    const blob =
+      new Blob(
+        chunks,
+        {type:"video/webm"}
+      );
+
+    const url =
+      URL.createObjectURL(blob);
+
+    downloadLink.href=url;
+
+    downloadLink.download=
+      "BAS-CHARITY-HUNGER.webm";
+
+    downloadLink.style.display=
+      "block";
+  };
+
+
+  recording=true;
+
+  recordBtn.innerText=
+    "⏺ RECORDING...";
+
+  startTime=
+    performance.now();
+
+  requestAnimationFrame(
+    drawScene
+  );
+
+  recorder.start();
+};
+
+</script>
+
+</body>
+</html>
