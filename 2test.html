@@ -1,4 +1,4 @@
- <!DOCTYPE html> 
+  <!DOCTYPE html> 
 <html lang="en">
 <head>
   
@@ -2364,7 +2364,9 @@ renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
 
 if (logoSpace) {
 logoSpace.appendChild(renderer.domElement);
-}ബട്ടൺൺmbient = new THREE.AmbientLight(0xffffff, 1.2);
+} 
+
+ambient = new THREE.AmbientLight(0xffffff, 1.2);
 scene.add(ambient); 
 
 loader = new THREE.TextureLoader();
@@ -6419,57 +6421,12 @@ categorySearch.addEventListener("input", function () {
 
   categoryShops.innerHTML = "";
 
+  filtered.forEach((shop, index) => {
+    createShopCard(shop, index);
+  });
+});
 
-
-   // --- FINAL & VERIFIED BATCH LOADING SYSTEM ---
-  // നിലവിലുള്ള ഷോപ്പ് കണ്ടെയ്നർ ആദ്യം ക്ലിയർ ചെയ്യുക (ഡ്യൂപ്ലിക്കേറ്റ് വരാതിരിക്കാൻ)
-  // (ഉദാഹരണത്തിന്: shopsContainer.innerHTML = ""; എന്നോ നിങ്ങളുടെ കോഡിലെ കണ്ടെയ്നർ നെമോ നൽകുക)
-
-  let currentLoadedCount = 0;
-  const batchStep = 10;
-  const maxLazyLimit = 50;
-
-  if (window._currentShopScrollHandler) {
-    window.removeEventListener("scroll", window._currentShopScrollHandler);
-    window._currentShopScrollHandler = null;
-  }
-
-  function renderNextBatch() {
-    if (currentLoadedCount >= filtered.length) {
-      return;
-    }
-
-    const nextLimit = Math.min(currentLoadedCount + batchStep, filtered.length);
-
-    for (let i = currentLoadedCount; i < nextLimit; i++) {
-      createShopCard(filtered[i], i);
-    }
-
-    currentLoadedCount = nextLimit;
-    
-    if (typeof setupShopControls === 'function') {
-      setupShopControls();
-    }
-  }
-
-  // ആദ്യത്തെ 10 ഷോപ്പുകൾ റെൻഡർ ചെയ്യുന്നു
-  renderNextBatch();
-
-  // സ്ക്രോൾ ചെയ്യുമ്പോൾ അടുത്ത ബാച്ച് ലോഡ് ചെയ്യാൻ
-  window._currentShopScrollHandler = function () {
-    if (currentLoadedCount >= maxLazyLimit || currentLoadedCount >= filtered.length) {
-      return;
-    }
-
-    if (window.innerHeight + window.scrollY >= document.body.offsetHeight - 400) {
-      renderNextBatch();
-    }
-  };
-
-  window.addEventListener("scroll", window._currentShopScrollHandler);
-
-
- // COUNTRY CHANGE (PART 1)
+// COUNTRY CHANGE (PART 1)
 function changeCountry(countryName) {
   currentCountry = countryName.toLowerCase().trim();
    /* 001 */ basTrack("country_change", { country: currentCountry });
@@ -6855,7 +6812,7 @@ YOUR PURCHASE SATISFIES A HUNGER™
        
 
     
-     PERFECT SHOP LIMIT CODE <style>
+    <!-- PERFECT SHOP LIMIT CODE <style>
   .bas-shop-btn-container {
     text-align: center;
     margin: 20px auto;
