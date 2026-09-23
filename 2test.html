@@ -9079,7 +9079,7 @@ body.bas-pwa-installed #fbPrismStrip,
 </style>
 
 
-<div id="fbPrismStrip">
+<!--<div id="fbPrismStrip">
   <div>
     <strong>Bas Charity Icon Installing Guide in FB</strong>
   </div>
@@ -9142,9 +9142,103 @@ body.bas-pwa-installed #fbPrismStrip,
     document.body.classList.add("bas-pwa-installed");
   });
 })();
-</script>
+</script>-->
 
  <!-- 001 -->
+  <!-- 001 -->
+<style>
+/* 002 — FACEBOOK INSTALL GUIDE */
+#fbInstallGuide {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+#fbInstallGuideBtn {
+  width: 100%;
+  padding: 5px 8px;
+  border: 0;
+  border-radius: 0;
+  background: #1877F2;
+  color: #FFFFFF;
+  font-size: 14px;
+  font-weight: 800;
+  line-height: 1.2;
+  cursor: pointer;
+}
+
+#fbInstallGuideText {
+  width: 100%;
+  padding: 4px 6px;
+  background: #1877F2;
+  color: #FFFFFF;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 1.35;
+  box-sizing: border-box;
+}
+
+#fbInstallGuideText div {
+  margin: 1px 0;
+}
+
+#fbInstallGuideText strong {
+  font-weight: 900;
+}
+</style>
+
+<!-- 003 -->
+<div id="fbInstallGuide">
+
+  <!-- 004 -->
+  <button
+    type="button"
+    id="fbInstallGuideBtn"
+    aria-expanded="false"
+    aria-controls="fbInstallGuideText"
+  >
+    FOR FACEBOOK INSTALL
+  </button>
+
+  <!-- 005 -->
+  <div id="fbInstallGuideText" hidden>
+    <div>
+      Click <strong>THREE DOTS</strong> ➜ Click <strong>External Browser</strong>
+    </div>
+    <div>
+      Then Click <strong>Balloon</strong> ➜ <strong>Install</strong>
+    </div>
+  </div>
+
+</div>
+
+<!-- 006 -->
+<script>
+(function () {
+
+  const btn = document.getElementById("fbInstallGuideBtn");
+  const text = document.getElementById("fbInstallGuideText");
+
+  if (!btn || !text) return;
+
+  btn.addEventListener("click", function () {
+
+    const isOpen =
+      btn.getAttribute("aria-expanded") === "true";
+
+    btn.setAttribute(
+      "aria-expanded",
+      String(!isOpen)
+    );
+
+    text.hidden = isOpen;
+
+  });
+
+})();
+</script>
 <script>
 /* 002 — BAS COUNTRY / SHOP SAFE LOADER */
 (function () {
