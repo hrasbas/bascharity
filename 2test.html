@@ -9366,6 +9366,54 @@ body.bas-pwa-installed #fbPrismStrip,
 
 })();
 </script>
+    <!-- മറ്റെല്ലാ കോഡുകളും -->
+  
+  <script>
+  // --- SIMPLE SCROLL-BASED LAZY LOADING (10 AT A TIME) ---
+  let currentLoadedCount = 0;
+  const batchStep = 10;
+  let filtered = [];
+
+  if (window._currentShopScrollHandler) {
+    window.removeEventListener("scroll", window._currentShopScrollHandler);
+    window._currentShopScrollHandler = null;
+  }
+
+  function renderNextBatch() {
+    if (currentLoadedCount >= filtered.length) {
+      return;
+    }
+
+    const nextLimit = Math.min(currentLoadedCount + batchStep, filtered.length);
+
+    for (let i = currentLoadedCount; i < nextLimit; i++) {
+      createShopCard(filtered[i], i);
+    }
+
+    currentLoadedCount = nextLimit;
+    
+    if (typeof setupShopControls === 'function') {
+      setupShopControls();
+    }
+  }
+
+  renderNextBatch();
+
+  window._currentShopScrollHandler = function () {
+    if (currentLoadedCount >= filtered.length) {
+      return;
+    }
+
+    if (window.innerHeight + window.scrollY >= document.body.offsetHeight - 400) {
+      renderNextBatch();
+    }
+  };
+
+  window.addEventListener("scroll", window._currentShopScrollHandler);
+  </script>
+  
+  </body>
+  </html>
 </body> <!-- ഇതിന് തൊട്ടു മുകളിൽ -->
 </html>
 
