@@ -17,7 +17,7 @@ c:"travel,software,business",
 u:"https://www.timesprime.com",
 d:"Times Prime is a digital subscription platform offering premium memberships, travel and hotel deals, OTT and entertainment subscriptions, dining offers and partner benefits in India.",
 k:"times prime, subscription, membership, travel offers, hotel deals, entertainment, OTT, dining deals, partner benefits",
-a:"https://extp.in/ZMd1Nw"
+a:"https://fkrt.co/ExaZCl"
 },
 
 {
