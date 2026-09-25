@@ -27,7 +27,7 @@ c:"electronics,home,fashion,beauty,health,food,sports,travel,books,software,busi
 u:"https://www.flipkart.com",
 d:"Flipkart is a leading Indian e-commerce marketplace offering mobiles, electronics, fashion, home and kitchen products, groceries, medicines, travel bookings and more.",
 k:"flipkart, online shopping india, mobiles, electronics, fashion, home kitchen, furniture, grocery, pharmacy, sports, toys, travel",
-a:"https://fkrt.co/4qfbAT"
+a:"https://fkrt.co/ExaZCl"
 },
 
 {
