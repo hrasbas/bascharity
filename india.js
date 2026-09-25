@@ -17,7 +17,7 @@ c:"travel,software,business",
 u:"https://www.timesprime.com",
 d:"Times Prime is a digital subscription platform offering premium memberships, travel and hotel deals, OTT and entertainment subscriptions, dining offers and partner benefits in India.",
 k:"times prime, subscription, membership, travel offers, hotel deals, entertainment, OTT, dining deals, partner benefits",
-a:"https://fkrt.co/ExaZCl"
+a:"https://bilty.co/H1A7Uo"
 },
 
 {
@@ -27,7 +27,7 @@ c:"electronics,home,fashion,beauty,health,food,sports,travel,books,software,busi
 u:"https://www.flipkart.com",
 d:"Flipkart is a leading Indian e-commerce marketplace offering mobiles, electronics, fashion, home and kitchen products, groceries, medicines, travel bookings and more.",
 k:"flipkart, online shopping india, mobiles, electronics, fashion, home kitchen, furniture, grocery, pharmacy, sports, toys, travel",
-a:"https://fkrt.co/ExaZCl"
+a:"https://fkrt.co/I4WyaC"
 },
 
 {
@@ -37,7 +37,7 @@ c:"electronics,home,fashion,beauty,health,food,sports,business",
 u:"https://www.shopsy.in",
 d:"Shopsy by Flipkart is a budget-friendly online marketplace offering electronics, fashion, home essentials, groceries, beauty and personal care products at low prices.",
 k:"shopsy, flipkart shopsy, budget shopping, electronics, fashion, home kitchen, grocery, beauty, personal care",
-a:"https://extp.in/Gs6Rb1"
+a:"https://bilty.co/6o6rVm"
 },
 
 {
