@@ -37,7 +37,7 @@ c:"electronics,home,fashion,beauty,health,food,sports,business",
 u:"https://www.shopsy.in",
 d:"Shopsy by Flipkart is a budget-friendly online marketplace offering electronics, fashion, home essentials, groceries, beauty and personal care products at low prices.",
 k:"shopsy, flipkart shopsy, budget shopping, electronics, fashion, home kitchen, grocery, beauty, personal care",
-a:"https://bilty.co/6o6rVm"
+a:"https://bilty.co/C8VMmr"
 },
 
 {
