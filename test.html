@@ -4,227 +4,277 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Learn English - Lesson 1</title>
-
+<title>Learn English Easily | Lesson 1</title>
 <style>
 * { box-sizing: border-box; }
 body {
   margin: 0;
   font-family: Arial, sans-serif;
-  background: linear-gradient(135deg,#101b48,#54258b,#087e8b);
-  color: white;
+  color: #fff;
   text-align: center;
+  background: linear-gradient(135deg,#101a45,#512783,#087e8b);
 }
-header { padding: 28px 12px 12px; }
+header { padding: 25px 12px; }
 h1 { color: #ffe66d; font-size: 32px; }
-.subtitle { font-size: 19px; line-height: 1.6; }
-#lesson { padding: 12px; max-width: 700px; margin: auto; }
-.card {
-  margin: 18px auto;
-  padding: 22px 10px;
+.intro {
+  margin: 12px;
+  padding: 24px 14px;
   border-radius: 22px;
-  box-shadow: 0 6px 20px #0005;
+  background: #fff1a8;
+  color: #342500;
+  font-size: 21px;
+  line-height: 1.7;
 }
-.malayalam { font-size: 25px; font-weight: bold; }
-.english { font-size: 32px; font-weight: bold; margin: 12px 0; }
-.note { font-size: 17px; }
-.green { background: #d9ffdf; color: #075e32; }
-.orange { background: #fff0cc; color: #8b3e00; }
-.purple { background: #f0ddff; color: #54208a; }
-.blue { background: #d9f2ff; color: #064b85; }
-.intro { background: #fff4a8; color: #342600; }
-button {
-  border: 0; border-radius: 30px; padding: 15px 20px;
-  margin: 6px; font-size: 18px; font-weight: bold;
+#status {
+  color: #fff3a5;
+  font-size: 18px;
+  padding: 14px;
 }
-#start { background: #ffe66d; color: #15234c; }
-#stop { background: #ffb5b5; color: #6b1111; }
-#status { font-size: 18px; padding: 14px; color: #fff6a5; }
-footer { padding: 25px 10px 45px; font-size: 20px; }
+.card {
+  margin: 25px 12px;
+  padding: 24px 10px;
+  border-radius: 24px;
+  min-height: 190px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 12px;
+  box-shadow: 0 7px 22px #0004;
+  transition: transform .5s;
+}
+.card.active { transform: scale(1.025); }
+.ml { font-size: 25px; font-weight: bold; }
+.en { font-size: 34px; font-weight: bold; }
+.pron { font-size: 17px; }
+.c1 { background:#d8ffe5; color:#075d34; }
+.c2 { background:#d8f0ff; color:#064c82; }
+.c3 { background:#ffedcf; color:#8b4100; }
+.c4 { background:#f0ddff; color:#59218a; }
+.c5 { background:#ffe0e7; color:#922347; }
+.c6 { background:#fff6b8; color:#6e5200; }
+.c7 { background:#d7fff8; color:#075b58; }
+.c8 { background:#e4e6ff; color:#302c8a; }
+#ending {
+  padding: 30px 15px 65px;
+  font-size: 23px;
+  line-height: 1.8;
+  color: #ffe66d;
+}
+.small { font-size: 17px; }
 </style>
 </head>
-
 <body>
+
 <header>
   <h1>🌍 LEARN ENGLISH 🌍</h1>
-  <div class="subtitle">
-    Learn English Easily!<br>
-    ഇംഗ്ലീഷ് അനായാസമായി പഠിക്കാം!
-  </div>
+  <div>English Made Easy | ഇംഗ്ലീഷ് എളുപ്പത്തിൽ പഠിക്കാം</div>
 </header>
 
-<div id="lesson">
-  <section class="card intro">
-    <h2>WELCOME TO LESSON 1!</h2>
-    <div class="malayalam">
-      ഇംഗ്ലീഷുകാരുടെ കുട്ടികൾ പഠിക്കുന്നതുപോലെ,
-      നമുക്കും ഇംഗ്ലീഷ് അനായാസമായി പഠിക്കാം!
-    </div>
-    <p class="note">
-      Listen carefully. Repeat after me.
-      ശ്രദ്ധിച്ചു കേൾക്കൂ. എന്നോടൊപ്പം പറയൂ.
-    </p>
+<section class="intro">
+  <h2>WELCOME TO LESSON 1!</h2>
+  <p>
+    Children learn English by listening and repeating.
+    We can learn easily in the same way.
+  </p>
+  <p>
+    കുട്ടികൾ കേട്ടും ആവർത്തിച്ചുമാണ് ഇംഗ്ലീഷ് പഠിക്കുന്നത്.
+    നമുക്കും അതുപോലെ എളുപ്പത്തിൽ പഠിക്കാം.
+  </p>
+  <p>
+    We do not have to spend a long time memorising.
+    Let us listen, repeat and learn!
+  </p>
+  <p>
+    മനഃപാഠമാക്കാൻ ഒരുപാട് സമയം ചെലവഴിക്കേണ്ട.
+    നമുക്ക് കേട്ട്, ആവർത്തിച്ച്, പഠിക്കാം!
+  </p>
+</section>
+
+<div id="status">Our lesson is beginning... പാഠം തുടങ്ങുന്നു...</div>
+
+<main id="lesson">
+  <section class="card c1">
+    <div class="ml">ഞാൻ പതിവായി വരാറുണ്ട്</div>
+    <div class="en">I come.</div>
+    <div class="pron">ഐ കം</div>
   </section>
 
-  <div id="status">Ready to learn? 📚</div>
-
-  <section class="card green">
-    <h2>1. PRESENT CONTINUOUS</h2>
-    <div class="malayalam">ഞാൻ വരുന്നു</div>
-    <div class="english">I am coming.</div>
-    <div class="note">ഐ ആം കമിങ്</div>
+  <section class="card c2">
+    <div class="ml">ഞാൻ വന്നു</div>
+    <div class="en">I came.</div>
+    <div class="pron">ഐ കേം</div>
   </section>
 
-  <section class="card blue">
-    <h2>2. SIMPLE PRESENT</h2>
-    <div class="malayalam">ഞാൻ പതിവായി വരാറുണ്ട്</div>
-    <div class="english">I come.</div>
-    <div class="note">ഐ കം</div>
+  <section class="card c3">
+    <div class="ml">ഞാൻ വരും</div>
+    <div class="en">I will come.</div>
+    <div class="pron">ഐ വിൽ കം</div>
   </section>
 
-  <section class="card orange">
-    <h2>3. SIMPLE PAST</h2>
-    <div class="malayalam">ഞാൻ വന്നു</div>
-    <div class="english">I came.</div>
-    <div class="note">ഐ കേം</div>
+  <section class="card c4">
+    <div class="ml">ഞാൻ വരുന്നു</div>
+    <div class="en">I am coming.</div>
+    <div class="pron">ഐ ആം കമിങ്</div>
   </section>
 
-  <section class="card purple">
-    <h2>4. SIMPLE FUTURE</h2>
-    <div class="malayalam">ഞാൻ വരും</div>
-    <div class="english">I will come.</div>
-    <div class="note">ഐ വിൽ കം</div>
+  <section class="card c5">
+    <div class="ml">ഞാൻ വരികയായിരുന്നു</div>
+    <div class="en">I was coming.</div>
+    <div class="pron">ഐ വസ് കമിങ്</div>
   </section>
 
-  <section class="card intro">
-    <h2>🔁 LET'S REPEAT!</h2>
-    <div class="malayalam">
-      നമുക്ക് ഓരോ വാക്യവും പത്ത് പ്രാവശ്യം ആവർത്തിക്കാം.
-      ഓരോ തവണയും നിങ്ങൾക്കും പറയാൻ ശ്രമിക്കൂ!
-    </div>
-    <p>Listen → Repeat → Learn</p>
+  <section class="card c6">
+    <div class="ml">ഞാൻ വരികയായിരിക്കും</div>
+    <div class="en">I will be coming.</div>
+    <div class="pron">ഐ വിൽ ബി കമിങ്</div>
   </section>
 
-  <section class="card green">
-    <h2>YOUR TURN!</h2>
-    <div class="english">Say it again!</div>
-    <div class="malayalam">വീണ്ടും പറയുക!</div>
+  <section class="card c7">
+    <div class="ml">ഞാൻ വന്നിട്ടുണ്ട്</div>
+    <div class="en">I have come.</div>
+    <div class="pron">ഐ ഹാവ് കം</div>
   </section>
-</div>
 
-<button id="start" onclick="startLesson()">▶ START LESSON</button>
-<button id="stop" onclick="stopLesson()">■ STOP</button>
+  <section class="card c8">
+    <div class="ml">ഞാൻ വന്നിട്ടുണ്ടായിരുന്നു</div>
+    <div class="en">I had come.</div>
+    <div class="pron">ഐ ഹാഡ് കം</div>
+  </section>
+</main>
 
-<footer>
-  ⭐ Practise Every Day ⭐<br>
-  ദിവസവും പരിശീലിക്കൂ!
+<section id="ending">
+  <div>🔁 LET'S REPEAT!</div>
+  <div>നമുക്ക് വീണ്ടും ആവർത്തിക്കാം!</div>
+  <p class="small">
+    Listen carefully. Say each sentence aloud.
+  </p>
+  <p class="small">
+    ശ്രദ്ധിച്ചു കേൾക്കൂ. ഓരോ വാക്യവും ഉറക്കെ പറയൂ.
+  </p>
+  <div>LISTEN • REPEAT • REMEMBER</div>
+  <div>കേൾക്കൂ • ആവർത്തിക്കൂ • ഓർമ്മിക്കൂ</div>
+  <p>Excellent! Well done!</p>
+  <p>വളരെ നന്നായി! ദിവസവും പരിശീലിക്കൂ!</p>
   <p>BAS CHARITY INTERNATIONAL</p>
-</footer>
+</section>
 
 <script>
-const phrases = [
-  { en: "I am coming.", ml: "ഞാൻ വരുന്നു" },
-  { en: "I come.", ml: "ഞാൻ പതിവായി വരാറുണ്ട്" },
-  { en: "I came.", ml: "ഞാൻ വന്നു" },
-  { en: "I will come.", ml: "ഞാൻ വരും" }
+const lessons = [
+  ["ഞാൻ പതിവായി വരാറുണ്ട്", "I come."],
+  ["ഞാൻ വന്നു", "I came."],
+  ["ഞാൻ വരും", "I will come."],
+  ["ഞാൻ വരുന്നു", "I am coming."],
+  ["ഞാൻ വരികയായിരുന്നു", "I was coming."],
+  ["ഞാൻ വരികയായിരിക്കും", "I will be coming."],
+  ["ഞാൻ വന്നിട്ടുണ്ട്", "I have come."],
+  ["ഞാൻ വന്നിട്ടുണ്ടായിരുന്നു", "I had come."]
 ];
 
-let stopped = true;
-let runId = 0;
-
-function speak(text, lang, rate = 0.8) {
-  return new Promise(resolve => {
-    if (stopped) return resolve();
-
-    const u = new SpeechSynthesisUtterance(text);
-    u.lang = lang;
-    u.rate = rate;
-    u.onend = resolve;
-    u.onerror = resolve;
-
-    speechSynthesis.speak(u);
-  });
-}
+let running = false;
+let activeCard = -1;
 
 function wait(ms) {
   return new Promise(resolve => setTimeout(resolve, ms));
 }
 
-function scrollToCard(selector) {
-  const el = document.querySelector(selector);
-  if (el) {
-    el.scrollIntoView({ behavior: "smooth", block: "center" });
-  }
+function say(text, lang, rate = 0.82) {
+  return new Promise(resolve => {
+    if (!running) return resolve();
+
+    if (!("speechSynthesis" in window)) {
+      resolve();
+      return;
+    }
+
+    const utterance = new SpeechSynthesisUtterance(text);
+    utterance.lang = lang;
+    utterance.rate = rate;
+    utterance.onend = resolve;
+    utterance.onerror = resolve;
+
+    speechSynthesis.speak(utterance);
+  });
 }
 
-async function startLesson() {
-  stopLesson();
-  stopped = false;
-  const thisRun = ++runId;
+function showCard(index) {
+  const cards = document.querySelectorAll(".card");
+  cards.forEach(card => card.classList.remove("active"));
 
-  document.getElementById("status").textContent =
-    "Lesson starting... പാഠം തുടങ്ങുന്നു!";
+  const card = cards[index];
+  if (!card) return;
 
-  await speak(
-    "Welcome to lesson one. We can learn English easily, step by step, like children learning their first language.",
-    "en-US", 0.85
+  card.classList.add("active");
+  card.scrollIntoView({
+    behavior: "smooth",
+    block: "center"
+  });
+}
+
+async function runLesson() {
+  if (running) return;
+  running = true;
+
+  await say(
+    "Welcome to lesson one. Children learn English by listening and repeating. We can learn easily in the same way. We do not have to spend a long time memorising. Let us listen, repeat and learn.",
+    "en-US"
   );
-  if (stopped || thisRun !== runId) return;
 
-  await speak(
-    "ഇംഗ്ലീഷുകാരുടെ കുട്ടികൾ പഠിക്കുന്നതുപോലെ നമുക്കും ഇംഗ്ലീഷ് അനായാസമായി പഠിക്കാം. ശ്രദ്ധിച്ചു കേൾക്കൂ. എന്നോടൊപ്പം പറയൂ.",
-    "ml-IN", 0.85
+  await say(
+    "പാഠം ഒന്നിലേക്ക് സ്വാഗതം. കുട്ടികൾ കേട്ടും ആവർത്തിച്ചുമാണ് ഇംഗ്ലീഷ് പഠിക്കുന്നത്. നമുക്കും അതുപോലെ എളുപ്പത്തിൽ പഠിക്കാം. മനഃപാഠമാക്കാൻ ഒരുപാട് സമയം ചെലവഴിക്കേണ്ട. നമുക്ക് കേട്ട്, ആവർത്തിച്ച്, പഠിക്കാം.",
+    "ml-IN"
   );
 
-  for (let round = 1; round <= 10; round++) {
-    if (stopped || thisRun !== runId) return;
-
+  for (let round = 1; round <= 10 && running; round++) {
     document.getElementById("status").textContent =
-      "REPETITION " + round + " OF 10";
+      "REPETITION " + round + " / 10  |  ആവർത്തനം " + round + " / 10";
 
-    for (let i = 0; i < phrases.length; i++) {
-      if (stopped || thisRun !== runId) return;
+    for (let i = 0; i < lessons.length && running; i++) {
+      showCard(i);
 
-      const cards = document.querySelectorAll(".card");
-      const card = cards[i + 1];
-      if (card) card.scrollIntoView({
-        behavior: "smooth", block: "center"
-      });
+      await say(lessons[i][0], "ml-IN");
+      if (!running) break;
 
-      await speak(phrases[i].ml, "ml-IN", 0.85);
-      if (stopped || thisRun !== runId) return;
+      await say(lessons[i][1], "en-US", 0.78);
+      if (!running) break;
 
-      await speak(phrases[i].en, "en-US", 0.75);
-      if (stopped || thisRun !== runId) return;
+      await say("Repeat after me.", "en-US");
+      await wait(1800);
 
-      await speak("Repeat after me.", "en-US", 0.85);
-      if (stopped || thisRun !== runId) return;
-
-      await speak(phrases[i].en, "en-US", 0.75);
+      await say(lessons[i][1], "en-US", 0.78);
       await wait(1800);
     }
   }
 
-  if (stopped || thisRun !== runId) return;
+  if (running) {
+    document.getElementById("status").textContent =
+      "LESSON COMPLETE! പാഠം പൂർത്തിയായി!";
+    document.getElementById("ending").scrollIntoView({
+      behavior: "smooth",
+      block: "center"
+    });
 
-  scrollToCard(".card:last-of-type");
-  document.getElementById("status").textContent =
-    "LESSON COMPLETE! WELL DONE!";
-
-  await speak(
-    "Excellent! You have completed lesson one. Practise every day. Well done!",
-    "en-US", 0.85
-  );
-  await speak("വളരെ നന്നായി! ദിവസവും പരിശീലിക്കൂ.", "ml-IN", 0.85);
+    await say(
+      "Excellent! You have practised eight forms of the word come. Listen, repeat and remember. Practise every day.",
+      "en-US"
+    );
+    await say(
+      "വളരെ നന്നായി! Come എന്ന വാക്കിന്റെ എട്ട് രൂപങ്ങൾ നിങ്ങൾ പരിശീലിച്ചു. കേൾക്കൂ, ആവർത്തിക്കൂ, ഓർമ്മിക്കൂ. ദിവസവും പരിശീലിക്കൂ.",
+      "ml-IN"
+    );
+    running = false;
+  }
 }
 
-function stopLesson() {
-  stopped = true;
-  runId++;
-  speechSynthesis.cancel();
-  document.getElementById("status").textContent =
-    "Stopped. വീണ്ടും തുടങ്ങാൻ Start അമർത്തുക.";
-}
+// Automatic start. Some mobile browsers require a first tap
+// before they allow spoken audio.
+window.addEventListener("load", () => {
+  setTimeout(runLesson, 1200);
+});
+
+// If audio autoplay is blocked, tap anywhere once to start.
+document.addEventListener("click", () => {
+  if (!running) runLesson();
+});
 </script>
 </body>
 </html>
