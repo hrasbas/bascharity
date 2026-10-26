@@ -1,566 +1,230 @@
- <!DOCTYPE html>
-<html lang="en">
+ 
+<!DOCTYPE html>
+<html lang="ml">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="theme-color" content="#07152f">
-<meta name="description" content="Shop, compare prices and help satisfy a hunger through BAS Charity International.">
-
-<title>BAS Charity International™ — Shop & Help</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Learn English - Lesson 1</title>
 
 <style>
-/* =========================================================
-   001 — PAGE
-   ========================================================= */
-*{
-  box-sizing:border-box;
-  margin:0;
-  padding:0;
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: linear-gradient(135deg,#101b48,#54258b,#087e8b);
+  color: white;
+  text-align: center;
 }
-
-html,body{
-  width:100%;
-  min-height:100%;
-  font-family:Arial,Helvetica,sans-serif;
-  background:#07152f;
+header { padding: 28px 12px 12px; }
+h1 { color: #ffe66d; font-size: 32px; }
+.subtitle { font-size: 19px; line-height: 1.6; }
+#lesson { padding: 12px; max-width: 700px; margin: auto; }
+.card {
+  margin: 18px auto;
+  padding: 22px 10px;
+  border-radius: 22px;
+  box-shadow: 0 6px 20px #0005;
 }
-
-body{
-  display:flex;
-  justify-content:center;
-  align-items:center;
-  min-height:100vh;
-  overflow-x:hidden;
+.malayalam { font-size: 25px; font-weight: bold; }
+.english { font-size: 32px; font-weight: bold; margin: 12px 0; }
+.note { font-size: 17px; }
+.green { background: #d9ffdf; color: #075e32; }
+.orange { background: #fff0cc; color: #8b3e00; }
+.purple { background: #f0ddff; color: #54208a; }
+.blue { background: #d9f2ff; color: #064b85; }
+.intro { background: #fff4a8; color: #342600; }
+button {
+  border: 0; border-radius: 30px; padding: 15px 20px;
+  margin: 6px; font-size: 18px; font-weight: bold;
 }
-
-/* =========================================================
-   002 — POSTER
-   ========================================================= */
-.poster{
-  width:100%;
-  max-width:600px;
-  min-height:100vh;
-  position:relative;
-  overflow:hidden;
-  padding:22px 18px 28px;
-  text-align:center;
-  background:
-    radial-gradient(circle at 15% 15%,rgba(255,255,255,.18),transparent 18%),
-    radial-gradient(circle at 85% 25%,rgba(255,210,50,.22),transparent 22%),
-    linear-gradient(145deg,#07152f,#123d73 48%,#07152f);
-  color:#fff;
-}
-
-/* =========================================================
-   003 — DECORATION
-   ========================================================= */
-.star{
-  position:absolute;
-  color:rgba(255,255,255,.65);
-  font-size:16px;
-  animation:twinkle 2s infinite alternate;
-}
-
-.s1{top:8%;left:8%}
-.s2{top:18%;right:10%}
-.s3{top:48%;left:5%}
-.s4{top:63%;right:7%}
-.s5{bottom:12%;left:12%}
-.s6{bottom:20%;right:13%}
-
-@keyframes twinkle{
-  from{opacity:.3;transform:scale(.8)}
-  to{opacity:1;transform:scale(1.2)}
-}
-
-/* =========================================================
-   004 — BRAND
-   ========================================================= */
-.brand{
-  position:relative;
-  z-index:2;
-  margin-top:4px;
-}
-
-.brand h1{
-  font-size:clamp(25px,7vw,42px);
-  line-height:1.05;
-  font-weight:900;
-  letter-spacing:.5px;
-  text-shadow:0 3px 12px rgba(0,0,0,.45);
-}
-
-.tm{
-  font-size:.42em;
-  vertical-align:top;
-}
-
-.sub{
-  margin-top:8px;
-  font-size:14px;
-  font-weight:bold;
-  letter-spacing:2px;
-  color:#ffe36e;
-}
-
-/* =========================================================
-   005 — MAIN HOOK
-   ========================================================= */
-.hook{
-  position:relative;
-  z-index:2;
-  margin:26px auto 15px;
-  padding:17px 12px;
-  border-radius:22px;
-  background:rgba(255,255,255,.11);
-  border:1px solid rgba(255,255,255,.25);
-  backdrop-filter:blur(8px);
-}
-
-.hook .big{
-  font-size:clamp(28px,8vw,46px);
-  font-weight:900;
-  line-height:1.05;
-  color:#fff;
-}
-
-.hook .yellow{
-  color:#ffe34f;
-}
-
-.hook p{
-  margin-top:10px;
-  font-size:16px;
-  font-weight:bold;
-}
-
-/* =========================================================
-   006 — SHOPPING BOX
-   ========================================================= */
-.shopping{
-  position:relative;
-  z-index:2;
-  margin:18px auto;
-  padding:18px 12px;
-  border-radius:22px;
-  background:#fff;
-  color:#07152f;
-  box-shadow:0 12px 30px rgba(0,0,0,.3);
-}
-
-.shopping .cart{
-  font-size:48px;
-  margin-bottom:6px;
-}
-
-.shopping h2{
-  font-size:25px;
-  font-weight:900;
-}
-
-.shopping p{
-  margin-top:7px;
-  font-size:15px;
-  font-weight:bold;
-  line-height:1.4;
-}
-
-.shops{
-  margin-top:13px;
-  display:flex;
-  flex-wrap:wrap;
-  justify-content:center;
-  gap:7px;
-}
-
-.shop{
-  padding:7px 11px;
-  border-radius:20px;
-  background:#eef3fa;
-  font-size:12px;
-  font-weight:800;
-}
-
-/* =========================================================
-   007 — CHARITY MESSAGE
-   ========================================================= */
-.charity{
-  position:relative;
-  z-index:2;
-  margin:18px auto;
-  padding:18px 12px;
-  border-radius:22px;
-  background:linear-gradient(135deg,#ffcf32,#ff8a00);
-  color:#07152f;
-  box-shadow:0 10px 25px rgba(0,0,0,.25);
-}
-
-.charity .heart{
-  font-size:36px;
-}
-
-.charity h2{
-  margin-top:5px;
-  font-size:22px;
-  font-weight:900;
-}
-
-.charity p{
-  margin-top:7px;
-  font-size:15px;
-  font-weight:bold;
-  line-height:1.4;
-}
-
-/* =========================================================
-   008 — CLICKABLE BUTTONS
-   ========================================================= */
-.buttons{
-  position:relative;
-  z-index:3;
-  display:flex;
-  flex-direction:column;
-  gap:12px;
-  margin:20px auto;
-}
-
-.btn{
-  display:block;
-  width:100%;
-  padding:16px 14px;
-  border:0;
-  border-radius:18px;
-  text-decoration:none;
-  font-size:18px;
-  font-weight:900;
-  cursor:pointer;
-  box-shadow:0 7px 16px rgba(0,0,0,.28);
-  transition:transform .15s ease;
-}
-
-.btn:active{
-  transform:scale(.97);
-}
-
-.shopbtn{
-  background:#fff;
-  color:#07152f;
-}
-
-.savebtn{
-  background:#ffe04a;
-  color:#07152f;
-}
-
-.sitebtn{
-  background:#20d67b;
-  color:#05251a;
-}
-
-/* =========================================================
-   009 — WEBSITE ADDRESS
-   ========================================================= */
-.website{
-  position:relative;
-  z-index:3;
-  margin:12px auto 5px;
-}
-
-.website a{
-  display:inline-block;
-  padding:9px 18px;
-  border-radius:30px;
-  background:rgba(255,255,255,.12);
-  border:1px solid rgba(255,255,255,.3);
-  color:#fff;
-  text-decoration:none;
-  font-size:19px;
-  font-weight:900;
-}
-
-/* =========================================================
-   010 — FOOTER
-   ========================================================= */
-.footer{
-  position:relative;
-  z-index:2;
-  margin-top:18px;
-  font-size:12px;
-  line-height:1.5;
-  color:rgba(255,255,255,.82);
-}
-
-.motto{
-  margin-top:7px;
-  color:#ffe34f;
-  font-size:14px;
-  font-weight:900;
-}
-
-/* =========================================================
-   011 — INSTALL MESSAGE
-   ========================================================= */
-#installMessage{
-  display:none;
-  position:fixed;
-  left:50%;
-  bottom:18px;
-  transform:translateX(-50%);
-  width:calc(100% - 30px);
-  max-width:560px;
-  padding:15px;
-  border-radius:18px;
-  background:#fff;
-  color:#07152f;
-  z-index:20;
-  box-shadow:0 10px 35px rgba(0,0,0,.45);
-  font-size:14px;
-  font-weight:bold;
-}
-
-#installMessage button{
-  margin-top:10px;
-  padding:9px 16px;
-  border:0;
-  border-radius:12px;
-  background:#07152f;
-  color:#fff;
-  font-weight:bold;
-}
-
-/* =========================================================
-   012 — SMALL SCREEN
-   ========================================================= */
-@media(max-width:380px){
-  .poster{
-    padding:18px 13px 22px;
-  }
-
-  .hook{
-    margin-top:20px;
-  }
-
-  .shopping,
-  .charity{
-    margin:13px auto;
-  }
-
-  .btn{
-    padding:14px 10px;
-    font-size:16px;
-  }
-}
+#start { background: #ffe66d; color: #15234c; }
+#stop { background: #ffb5b5; color: #6b1111; }
+#status { font-size: 18px; padding: 14px; color: #fff6a5; }
+footer { padding: 25px 10px 45px; font-size: 20px; }
 </style>
 </head>
 
 <body>
-
-<div class="poster">
-
-  <!-- 013 — DECORATIVE STARS -->
-  <span class="star s1">✦</span>
-  <span class="star s2">✧</span>
-  <span class="star s3">✦</span>
-  <span class="star s4">✧</span>
-  <span class="star s5">✦</span>
-  <span class="star s6">✧</span>
-
-  <!-- 014 — BRAND -->
-  <div class="brand">
-    <h1>BAS CHARITY INTERNATIONAL<span class="tm">™</span></h1>
-    <div class="sub">SUPER INTERNATIONAL SHOPPING HUB</div>
+<header>
+  <h1>🌍 LEARN ENGLISH 🌍</h1>
+  <div class="subtitle">
+    Learn English Easily!<br>
+    ഇംഗ്ലീഷ് അനായാസമായി പഠിക്കാം!
   </div>
+</header>
 
-  <!-- 015 — MAIN HOOK -->
-  <div class="hook">
-    <div class="big">
-      SHOP SMART.<br>
-      <span class="yellow">HELP SOMEONE.</span>
+<div id="lesson">
+  <section class="card intro">
+    <h2>WELCOME TO LESSON 1!</h2>
+    <div class="malayalam">
+      ഇംഗ്ലീഷുകാരുടെ കുട്ടികൾ പഠിക്കുന്നതുപോലെ,
+      നമുക്കും ഇംഗ്ലീഷ് അനായാസമായി പഠിക്കാം!
     </div>
-
-    <p>
-      Compare prices and choose what is best for you.
+    <p class="note">
+      Listen carefully. Repeat after me.
+      ശ്രദ്ധിച്ചു കേൾക്കൂ. എന്നോടൊപ്പം പറയൂ.
     </p>
-  </div>
+  </section>
 
-  <!-- 016 — SHOPPING -->
-  <div class="shopping">
+  <div id="status">Ready to learn? 📚</div>
 
-    <div class="cart">🛒</div>
+  <section class="card green">
+    <h2>1. PRESENT CONTINUOUS</h2>
+    <div class="malayalam">ഞാൻ വരുന്നു</div>
+    <div class="english">I am coming.</div>
+    <div class="note">ഐ ആം കമിങ്</div>
+  </section>
 
-    <h2>SHOP • COMPARE • SAVE</h2>
+  <section class="card blue">
+    <h2>2. SIMPLE PRESENT</h2>
+    <div class="malayalam">ഞാൻ പതിവായി വരാറുണ്ട്</div>
+    <div class="english">I come.</div>
+    <div class="note">ഐ കം</div>
+  </section>
 
-    <p>
-      Find shopping options from thousands of shops
-      through one simple hub.
-    </p>
+  <section class="card orange">
+    <h2>3. SIMPLE PAST</h2>
+    <div class="malayalam">ഞാൻ വന്നു</div>
+    <div class="english">I came.</div>
+    <div class="note">ഐ കേം</div>
+  </section>
 
-    <div class="shops">
-      <span class="shop">Amazon</span>
-      <span class="shop">Walmart</span>
-      <span class="shop">eBay</span>
-      <span class="shop">Target</span>
-      <span class="shop">Best Buy</span>
-      <span class="shop">Etsy</span>
-      <span class="shop">Macy's</span>
-      <span class="shop">And More</span>
+  <section class="card purple">
+    <h2>4. SIMPLE FUTURE</h2>
+    <div class="malayalam">ഞാൻ വരും</div>
+    <div class="english">I will come.</div>
+    <div class="note">ഐ വിൽ കം</div>
+  </section>
+
+  <section class="card intro">
+    <h2>🔁 LET'S REPEAT!</h2>
+    <div class="malayalam">
+      നമുക്ക് ഓരോ വാക്യവും പത്ത് പ്രാവശ്യം ആവർത്തിക്കാം.
+      ഓരോ തവണയും നിങ്ങൾക്കും പറയാൻ ശ്രമിക്കൂ!
     </div>
+    <p>Listen → Repeat → Learn</p>
+  </section>
 
-  </div>
-
-  <!-- 017 — CHARITY -->
-  <div class="charity">
-
-    <div class="heart">❤️</div>
-
-    <h2>YOUR PURCHASE<br>SATISFIES A HUNGER™</h2>
-
-    <p>
-      When you purchase through BAS Charity links,
-      the associated affiliate benefit can support
-      hunger-relief and charitable work.
-    </p>
-
-  </div>
-
-  <!-- 018 — CLICKABLE ACTIONS -->
-  <div class="buttons">
-
-    <a
-      class="btn shopbtn"
-      href="https://bascharity.com"
-      target="_blank"
-      rel="noopener">
-      🛒 CLICK TO SHOP
-    </a>
-
-    <button
-      class="btn savebtn"
-      id="saveButton"
-      type="button">
-      📲 SAVE THIS ICON
-    </button>
-
-    <a
-      class="btn sitebtn"
-      href="https://bascharity.com"
-      target="_blank"
-      rel="noopener">
-      🌐 OPEN BASCHARITY.COM
-    </a>
-
-  </div>
-
-  <!-- 019 — WEBSITE -->
-  <div class="website">
-    <a
-      href="https://bascharity.com"
-      target="_blank"
-      rel="noopener">
-      bascharity.com
-    </a>
-  </div>
-
-  <!-- 020 — FOOTER -->
-  <div class="footer">
-    🇺🇸 USA &nbsp; 🇨🇦 Canada &nbsp; 🇬🇧 UK &nbsp; 🌎 Worldwide
-
-    <div class="motto">
-      YOUR PURCHASE SATISFIES A HUNGER™
-    </div>
-
-    <div>
-      Free service • No advertising on the shopping hub
-    </div>
-  </div>
-
+  <section class="card green">
+    <h2>YOUR TURN!</h2>
+    <div class="english">Say it again!</div>
+    <div class="malayalam">വീണ്ടും പറയുക!</div>
+  </section>
 </div>
 
-<!-- 021 — INSTALL FALLBACK MESSAGE -->
-<div id="installMessage">
-  <div id="installText"></div>
-  <button onclick="closeInstallMessage()">CLOSE</button>
-</div>
+<button id="start" onclick="startLesson()">▶ START LESSON</button>
+<button id="stop" onclick="stopLesson()">■ STOP</button>
+
+<footer>
+  ⭐ Practise Every Day ⭐<br>
+  ദിവസവും പരിശീലിക്കൂ!
+  <p>BAS CHARITY INTERNATIONAL</p>
+</footer>
 
 <script>
-/* =========================================================
-   022 — PWA INSTALL
-   ========================================================= */
+const phrases = [
+  { en: "I am coming.", ml: "ഞാൻ വരുന്നു" },
+  { en: "I come.", ml: "ഞാൻ പതിവായി വരാറുണ്ട്" },
+  { en: "I came.", ml: "ഞാൻ വന്നു" },
+  { en: "I will come.", ml: "ഞാൻ വരും" }
+];
 
-let deferredPrompt = null;
+let stopped = true;
+let runId = 0;
 
-window.addEventListener("beforeinstallprompt", function(event){
+function speak(text, lang, rate = 0.8) {
+  return new Promise(resolve => {
+    if (stopped) return resolve();
 
-  event.preventDefault();
+    const u = new SpeechSynthesisUtterance(text);
+    u.lang = lang;
+    u.rate = rate;
+    u.onend = resolve;
+    u.onerror = resolve;
 
-  deferredPrompt = event;
+    speechSynthesis.speak(u);
+  });
+}
 
-});
+function wait(ms) {
+  return new Promise(resolve => setTimeout(resolve, ms));
+}
 
-/* =========================================================
-   023 — SAVE BUTTON
-   ========================================================= */
+function scrollToCard(selector) {
+  const el = document.querySelector(selector);
+  if (el) {
+    el.scrollIntoView({ behavior: "smooth", block: "center" });
+  }
+}
 
-document.getElementById("saveButton").addEventListener("click", async function(){
+async function startLesson() {
+  stopLesson();
+  stopped = false;
+  const thisRun = ++runId;
 
-  if(deferredPrompt){
+  document.getElementById("status").textContent =
+    "Lesson starting... പാഠം തുടങ്ങുന്നു!";
 
-    deferredPrompt.prompt();
+  await speak(
+    "Welcome to lesson one. We can learn English easily, step by step, like children learning their first language.",
+    "en-US", 0.85
+  );
+  if (stopped || thisRun !== runId) return;
 
-    const result = await deferredPrompt.userChoice;
+  await speak(
+    "ഇംഗ്ലീഷുകാരുടെ കുട്ടികൾ പഠിക്കുന്നതുപോലെ നമുക്കും ഇംഗ്ലീഷ് അനായാസമായി പഠിക്കാം. ശ്രദ്ധിച്ചു കേൾക്കൂ. എന്നോടൊപ്പം പറയൂ.",
+    "ml-IN", 0.85
+  );
 
-    deferredPrompt = null;
+  for (let round = 1; round <= 10; round++) {
+    if (stopped || thisRun !== runId) return;
 
-    return;
+    document.getElementById("status").textContent =
+      "REPETITION " + round + " OF 10";
+
+    for (let i = 0; i < phrases.length; i++) {
+      if (stopped || thisRun !== runId) return;
+
+      const cards = document.querySelectorAll(".card");
+      const card = cards[i + 1];
+      if (card) card.scrollIntoView({
+        behavior: "smooth", block: "center"
+      });
+
+      await speak(phrases[i].ml, "ml-IN", 0.85);
+      if (stopped || thisRun !== runId) return;
+
+      await speak(phrases[i].en, "en-US", 0.75);
+      if (stopped || thisRun !== runId) return;
+
+      await speak("Repeat after me.", "en-US", 0.85);
+      if (stopped || thisRun !== runId) return;
+
+      await speak(phrases[i].en, "en-US", 0.75);
+      await wait(1800);
+    }
   }
 
-  showInstallMessage();
+  if (stopped || thisRun !== runId) return;
 
-});
+  scrollToCard(".card:last-of-type");
+  document.getElementById("status").textContent =
+    "LESSON COMPLETE! WELL DONE!";
 
-/* =========================================================
-   024 — FALLBACK MESSAGE
-   ========================================================= */
-
-function showInstallMessage(){
-
-  const box = document.getElementById("installMessage");
-  const text = document.getElementById("installText");
-
-  text.innerHTML =
-    "📲 To save BAS Charity on your phone:<br><br>" +
-    "Open <b>bascharity.com</b> in your phone browser, " +
-    "then use the browser menu and choose " +
-    "<b>Add to Home screen</b> or <b>Install app</b>.";
-
-  box.style.display = "block";
+  await speak(
+    "Excellent! You have completed lesson one. Practise every day. Well done!",
+    "en-US", 0.85
+  );
+  await speak("വളരെ നന്നായി! ദിവസവും പരിശീലിക്കൂ.", "ml-IN", 0.85);
 }
 
-/* =========================================================
-   025 — CLOSE MESSAGE
-   ========================================================= */
-
-function closeInstallMessage(){
-
-  document.getElementById("installMessage").style.display = "none";
-
+function stopLesson() {
+  stopped = true;
+  runId++;
+  speechSynthesis.cancel();
+  document.getElementById("status").textContent =
+    "Stopped. വീണ്ടും തുടങ്ങാൻ Start അമർത്തുക.";
 }
-
-/* =========================================================
-   026 — INSTALLED EVENT
-   ========================================================= */
-
-window.addEventListener("appinstalled", function(){
-
-  const box = document.getElementById("installMessage");
-
-  box.style.display = "block";
-
-  document.getElementById("installText").innerHTML =
-    "✅ BAS Charity has been saved to your device.";
-
-});
 </script>
-
 </body>
 </html>
